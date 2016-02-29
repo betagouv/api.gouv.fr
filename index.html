@@ -15,12 +15,30 @@ additional_css: homepage
 		    <i class="search icon"></i>
 		  </div>
 		</div>
-		<a class="ui big orange basic button" href="#how">Découvrez comment&nbsp;&nbsp;⬇︎</a>
+		<a class="ui big orange basic button" href="#type">Découvrez comment&nbsp;&nbsp;⬇︎</a>
 		<a class="ui big teal button" href="{{ site.baseurl }}api">Explorez les {{ site.api | size }} API déjà disponibles&nbsp;&nbsp;➤</a>
   </div>
 
 </section>
 
-<section id="how">
-  THE CONTENT
+<section id="type" >
+  <h2 class="ui divider horizontal">Les Différentes API</h2>
+  <div class="ui items">
+    {% for type in site.api_type %}
+    <div class="item">
+      <div class="ui small image">
+        <img src="/img/logo.svg">
+      </div>
+      <div class="content">
+        <h3 class="header">{{ type.name }} &nbsp;&nbsp; <a class="ui button" href="{{ site.baseurl }}api/{{ type.name }}">➤</a></h3>
+        <div class="description">
+          <p>
+            {{ type.description }}
+          </p>
+        </div>
+      </div>
+
+    </div>
+  	{% endfor %}
+  </div>
 </section>

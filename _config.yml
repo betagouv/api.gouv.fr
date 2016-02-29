@@ -10,5 +10,20 @@ title: api.gouv.fr
 baseurl: ""
 url: "https://api.gouv.fr"
 
+# vertical-rhythm
+api_type:
+  - name: Données confidentiel
+    description: Accès sécurisé à des données confidentielles d'un ou d'une entreprise
+
+  - name: Données de référence
+    description: Aide à la saisie & contrôle de cohérence vis à vis données de référence tabulaires ou géographiques
+
+  - name: Calcul et simulation
+    description: "Le droit exécutable : éligibilité et calculs fiscaux & sociaux, pour entreprises et particuliers"
+
+  - name: Smart Data
+    description: Accès à des données temps-réel et à des algorithmes exploitant des Big Data
+
+
 # Build settings
 markdown: kramdown

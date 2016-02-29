@@ -18,3 +18,15 @@
 
 	text-transform: uppercase;
 }
+
+#type h2 {
+    max-width: 60rem;
+    margin: 1em auto;
+    font-size: 150%;
+
+}
+
+#type div {
+    max-width: 60rem;
+    margin: 1em auto;
+}

@@ -1,22 +1,18 @@
 <!DOCTYPE html>
 <html>
-{% include head.html %}
-<body class="pushable">
+  {% include head.html %}
 
-<!-- Page Contents -->
-<div class="pusher">
+  <body class="pushable">
 
-  <a href="{{ site.baseurl }}">
-    <header>
-      <img src="/img/logo.svg" alt="{{ site.title }}" />
-    </header>
-  </a>
+    <div class="pusher">
+      <a href="{{ site.baseurl }}">
+        <header>
+          <img src="/img/logo.svg" alt="{{ site.title }}" />
+        </header>
+      </a>
 
-  {{ content }}
+      {{ content }}
 
-</div>
-
-
-
-
-</body></html>
+    </div>
+  </body>
+</html>
