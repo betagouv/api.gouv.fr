@@ -3,18 +3,17 @@
 {% include head.html %}
 <body class="pushable">
 
-{% include menu.html %}
-
-
 <!-- Page Contents -->
 <div class="pusher">
 
-  {% include header.html %}
+  <a href="{{ site.baseurl }}">
+    <header>
+      <img src="/img/logo.svg" alt="{{ site.title }}" />
+    </header>
+  </a>
 
-  CONTENT
+  {{ content }}
 
-
-  {% include footer.html %}
 </div>
 
 
