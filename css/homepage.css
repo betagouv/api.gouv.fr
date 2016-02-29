@@ -23,10 +23,24 @@
     max-width: 60rem;
     margin: 1em auto;
     font-size: 150%;
-
 }
 
 #type div {
     max-width: 60rem;
     margin: 1em auto;
+}
+
+#services h2 {
+    max-width: 60rem;
+    margin: 1em auto;
+    font-size: 150%;
+}
+
+#services div {
+  max-width: 100rem;
+  margin: 1em auto;
+}
+
+#apiButton {
+  margin-bottom: 3%
 }

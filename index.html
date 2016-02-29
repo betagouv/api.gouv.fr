@@ -21,7 +21,7 @@ additional_css: homepage
 
 </section>
 
-<section id="type" >
+<section id="type">
   <h2 class="ui divider horizontal">Les Différentes API</h2>
   <div class="ui items">
     {% for type in site.api_type %}
@@ -42,3 +42,34 @@ additional_css: homepage
   	{% endfor %}
   </div>
 </section>
+
+<section id="services">
+  <h2 class="ui divider horizontal">Ils l'utilisent déjà</h2>
+  <div class="ui two stackable cards">
+    {% for service in site.services %}
+    <div class="ui card">
+      <div class="image">
+        <img src="{{ "img/" | append: service.screenshot | append: ".jpg" | prepend: site.baseurl }}">
+      </div>
+      <div class="content">
+        <a class="header" href="{{ service.url }}">{{ service.name }}</a>
+        <div class="meta">
+          {% for api in service.api %}
+            <a class="ui label" href="{{ api.url }}">{{ api.name}}</a>
+          {% endfor %}
+        </div>
+        <div class="description">
+          {{ service.description }}
+        </div>
+      </div>
+      <!--div class="extra content">
+        {{ service.reutilisation }}
+      </div -->
+    </div>
+  	{% endfor %}
+  </div>
+</section>
+
+<div class="ui container">
+	<a id="apiButton" class="ui right floated big orange button" href="/api">Explorez les {{ site.api | size }} API déjà disponibles&nbsp;&nbsp;➤</a>
+</div>
