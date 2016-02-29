@@ -10,18 +10,42 @@ title: api.gouv.fr
 baseurl: ""
 url: "https://api.gouv.fr"
 
+collections:
+  api:
+    output: true
+
+defaults:
+  -
+    scope:
+      path: ""	# means "all files"
+      type: api	# targets a collection
+    values:
+      layout: api
+  -
+    scope:
+      path: ""  # means "all files"
+    values:
+      layout: default
+      logo: /img/logo-generique-startup-carre.jpg
+
+
+
 # vertical-rhythm
 api_type:
-  - name: Données confidentiel
+  - id: confidential
+    name: Données confidentielles
     description: Accès sécurisé à des données confidentielles d'un ou d'une entreprise
 
-  - name: Données de référence
+  - id: reference
+    name: Données de référence
     description: Aide à la saisie & contrôle de cohérence vis à vis données de référence tabulaires ou géographiques
 
-  - name: Calcul et simulation
+  - id: simulation
+    name: Calcul et simulation
     description: "Le droit exécutable : éligibilité et calculs fiscaux & sociaux, pour entreprises et particuliers"
 
-  - name: Smart Data
+  - id: smartData
+    name: Smart Data
     description: Accès à des données temps-réel et à des algorithmes exploitant des Big Data
 
 services:

@@ -1,0 +1,14 @@
+#list {
+  background-color: #0E1546;
+}
+
+.tag.label.reference {
+  background-color: #CC3636;
+  color: white;
+}
+
+
+.tag.label.confidential {
+  background-color: #2828B1;
+  color: white;
+}

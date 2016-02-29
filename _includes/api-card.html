@@ -1,0 +1,30 @@
+<a class="ui fluid card" href="{{ include.description.url }}">
+	<div class="content">
+		<img class="right floated mini ui image" src="{{ include.description.logo }}" alt="{{ include.description.title }}"/>
+
+		<div class="header">{{ include.description.name }}</div>
+		<div class="meta">
+			{% include owner.html owner=include.description.owner %}
+		</div>
+
+		<div class="description">
+			{{ include.description.tagline }}
+		</div>
+	</div>
+	<div class="extra content">
+		<div class="left floated">
+			{%if include.description.domain %}
+				{{ include.description.domain }}
+			{% else %}
+				<em>Pas encore de site public</em>
+			{% endif %}
+		</div>
+
+		<div class="right floated">
+			<div class="ui tag {{ include.description.type }} label">
+				{% assign type = site.api_type | where:"id", include.description.type | first %}
+			  <i class="file icon"></i> {{  type.name }}
+			</div>
+		</div>
+	</div>
+</a>

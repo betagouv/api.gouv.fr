@@ -16,7 +16,7 @@ additional_css: homepage
 		  </div>
 		</div>
 		<a class="ui big orange basic button" href="#type">Découvrez comment&nbsp;&nbsp;⬇︎</a>
-		<a class="ui big teal button" href="{{ site.baseurl }}api">Explorez les {{ site.api | size }} API déjà disponibles&nbsp;&nbsp;➤</a>
+		<a class="ui big teal button" href="{{ site.baseurl }}/api">Explorez les {{ site.api | size }} API déjà disponibles&nbsp;&nbsp;➤</a>
   </div>
 
 </section>
@@ -55,7 +55,7 @@ additional_css: homepage
         <a class="header" href="{{ service.url }}">{{ service.name }}</a>
         <div class="meta">
           {% for api in service.api %}
-            <a class="ui label" href="{{ api.url }}">{{ api.name}}</a>
+            <a class="ui label" href="{{ "api/" | append: api.url | append: ".html" | prepend: site.baseurl }}">{{ api.name}}</a>
           {% endfor %}
         </div>
         <div class="description">
