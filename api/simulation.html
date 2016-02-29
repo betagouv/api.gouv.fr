@@ -1,0 +1,21 @@
+---
+layout: default
+additional_css: catalog
+current: simulation
+---
+
+<section id="list" class="ui two stackable cards container">
+	{% assign type = site.api_type | where:"id", page.current | first %}
+
+	<h2 class="ui divider horizontal inverted">Toutes les API de l'État : {{  type.name }}</h2>
+
+	{% for api in site.api %}
+    {% if api.type ==  page.current %}
+		  {% include api-card.html description=api %}
+    {% endif %}
+	{% endfor %}
+</section>
+
+<div class="ui container">
+	<a id="apiButton" class="ui right floated big orange button" href="{{ site.baseurl }}/api">Explorez toutes les API &nbsp;&nbsp;➤</a>
+</div>

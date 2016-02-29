@@ -7,7 +7,7 @@
 
 # Site settings
 title: api.gouv.fr
-baseurl: ""
+baseurl: "/api.gouv.fr"
 url: "https://api.gouv.fr"
 
 collections:

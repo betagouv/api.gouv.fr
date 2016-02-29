@@ -27,8 +27,9 @@
   {% if page.additional_css %}
     <link rel="stylesheet" type="text/css" href="{{ "/css/" | append: page.additional_css | append: ".css" | prepend: site.baseurl }}">
   {% endif %}
-  <link rel="stylesheet" type="text/css" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-
+  <style>
+  {% include main.css %}
+  </style>
 
 
   <script src="//oss.maxcdn.com/jquery/2.2.1/jquery.js"></script>

@@ -27,10 +27,10 @@ additional_css: homepage
     {% for type in site.api_type %}
     <div class="item">
       <div class="ui small image">
-        <img src="/img/logo.svg">
+        <img src="{{ site.baseurl }}/img/logo.svg">
       </div>
       <div class="content">
-        <h3 class="header">{{ type.name }} &nbsp;&nbsp; <a class="ui button" href="{{ site.baseurl }}api/{{ type.name }}">➤</a></h3>
+        <h3 class="header">{{ type.name }} &nbsp;&nbsp; <a class="ui button" href="{{ site.baseurl }}/api/{{ type.id }}">➤</a></h3>
         <div class="description">
           <p>
             {{ type.description }}
@@ -49,13 +49,13 @@ additional_css: homepage
     {% for service in site.services %}
     <div class="ui card">
       <div class="image">
-        <img src="{{ "img/" | append: service.screenshot | append: ".jpg" | prepend: site.baseurl }}">
+        <img src="{{ "/img/" | append: service.screenshot | append: ".jpg" | prepend: site.baseurl }}">
       </div>
       <div class="content">
         <a class="header" href="{{ service.url }}">{{ service.name }}</a>
         <div class="meta">
           {% for api in service.api %}
-            <a class="ui label" href="{{ "api/" | append: api.url | append: ".html" | prepend: site.baseurl }}">{{ api.name}}</a>
+            <a class="ui label" href="{{ "/api/" | append: api.url | append: ".html" | prepend: site.baseurl }}">{{ api.name}}</a>
           {% endfor %}
         </div>
         <div class="description">
@@ -71,5 +71,5 @@ additional_css: homepage
 </section>
 
 <div class="ui container">
-	<a id="apiButton" class="ui right floated big orange button" href="/api">Explorez les {{ site.api | size }} API déjà disponibles&nbsp;&nbsp;➤</a>
+	<a id="apiButton" class="ui right floated big orange button" href="{{ site.baseurl }}/api">Explorez les {{ site.api | size }} API déjà disponibles&nbsp;&nbsp;➤</a>
 </div>
