@@ -2,15 +2,24 @@
   background-color: #0E1546;
 }
 
-.tag.label.reference {
-  background-color: #CC3636;
+.tag.label {
   color: white;
 }
 
+.tag.label.smartData {
+  background-color: #46320E;
+}
 
 .tag.label.confidential {
-  background-color: #2828B1;
-  color: white;
+  background-color: #460E0E;
+}
+
+.tag.label.reference {
+  background-color: #380E46;
+}
+
+.tag.label.simulation {
+  background-color: #0E1F46;
 }
 
 #apiButton {
