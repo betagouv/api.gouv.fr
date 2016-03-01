@@ -5,6 +5,14 @@ doc_tech: https://apiparticulier.sgmap.fr/tech
 domain: https://apiparticulier.sgmap.fr
 owner: DINSIC
 type: confidential
+keywords:
+  - Impots
+  - DGFIP
+  - CAF
+  - Caisse Allocations Familiales
+  - Quotient Familiale
+  - Revenu Fiscal de Référence
+  - Adresse
 ---
 
 
