@@ -2,17 +2,34 @@
 layout: default
 ---
 
-<div class="ui container">
-  <h1>{{ page.name }}</h1>
+<section id="mission-statement" class="ui vertical center aligned segment {{ page.type }}">
 
-  <h2>{{ page.tagline }}</h2>
+  <div class="ui text container">
+    <h1 class="ui inverted header">
+      {{ page.name }}
+    </h1>
+    <h2 class="ui inverted header">
+      {{ page.tagline }}
+    </h2>
 
-  <p>
-    <a href="{{ page.domain }}">Description</a>
-  </p>
-  <p>
-      <a href="{{ page.doc_tech }}">Tech</a>
-  </p>
+		<a class="ui big orange inverted button" href="#description">Découvrez comment&nbsp;&nbsp;⬇︎</a>
+  </div>
 
+</section>
+
+<div id="description" class="ui text container">
   {{ content }}
 </div>
+
+<section id="call2action" class="ui vertical center aligned segment {{ page.type }}">
+    <a class="large ui inverted yellow button" href="{{ page.doc_tech }}">
+      Documentation technique &nbsp;&nbsp;
+      <i class="code icon"></i>
+    </a>
+    {% if page.access_link %}
+    <a class="large ui inverted teal button" href="{{ page.access_link }}">
+      Demander l'accès &nbsp;&nbsp;
+      <i class="ticket icon"></i>
+    </a>
+    {% endif %}
+</section>
