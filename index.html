@@ -15,6 +15,9 @@ additional_css: homepage
 		    <i class="search icon"></i>
 		  </div>
 		</div>
+    <p class="searchExamples">
+      Exemples : <a href="#">cadastre</a>, <a href="#">quotient familiale</a>, <a href="#">revenu fiscal de référence</a>
+    </p>
 		<a class="ui big orange basic button" href="#type">Découvrez comment&nbsp;&nbsp;⬇︎</a>
 		<a class="ui big teal button" href="{{ site.baseurl }}/api">Explorez les {{ site.api | size }} API déjà disponibles&nbsp;&nbsp;➤</a>
   </div>
@@ -76,12 +79,20 @@ additional_css: homepage
 
 <script>
 $(document).ready(function() {
+  var $searchDiv = $('.ui.search')
+  var $searchInput = $searchDiv.find('.prompt')
+  $(".searchExamples a").click(function(e) {
+    var q = $(this).text()
+    $searchInput.val(q)
+    $searchDiv.search('query').search('show results')
+  ;
+  })
   $.get( "{{ site.baseurl }}/api.json", function( data ) {
     $.each(data, function(index, item) {
       item.keywords = item.keywords.join('').replace(" ", "");
     })
-    $('.ui.search')
-    .search({
+
+    $searchDiv.search({
       minCharacters : 2,
       searchFields   : [
         'title',
