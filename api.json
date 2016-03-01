@@ -1,0 +1,27 @@
+---
+layout: null
+---
+[
+  {% for api in site.api %}
+    {
+      "title" : "{{ api.name }}",
+      "url": "{{ api.url | prepend: site.baseurl }}",
+      "description" : "{{ api.tagline }}",
+      "image" : "{{ api.logo | prepend: site.baseurl }}",
+      "domain" : "{{ api.domain }}",
+      "owner" : "{{ api.owner }}",
+      "type" : "{{ api.type }}",
+      "keywords": [
+        {% for keyword in api.keywords %}
+        "{{ keyword }}"
+        {% if forloop.last == false %}
+        ,
+        {% endif %}
+      {% endfor %}
+      ]
+    }
+    {% if forloop.last == false %}
+    ,
+    {% endif %}
+  {% endfor %}
+]
