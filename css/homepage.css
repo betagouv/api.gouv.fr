@@ -19,6 +19,10 @@
 	text-transform: uppercase;
 }
 
+#mission-statement .results {
+  width: 100%
+}
+
 #type h2 {
     max-width: 60rem;
     margin: 1em auto;

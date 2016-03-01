@@ -10,7 +10,7 @@ additional_css: homepage
       {{ site.description }}
     </h1>
     <div class="ui search">
-		  <div class="ui left icon input">
+		  <div class="ui fluid left icon input">
 		    <input class="prompt" placeholder="De quelles données avez-vous besoin ?" type="text">
 		    <i class="search icon"></i>
 		  </div>
@@ -73,3 +73,26 @@ additional_css: homepage
 <div class="ui container">
 	<a id="apiButton" class="ui right floated big orange button" href="{{ site.baseurl }}/api">Explorez les {{ site.api | size }} API déjà disponibles&nbsp;&nbsp;➤</a>
 </div>
+
+<script>
+$(document).ready(function() {
+  $.get( "{{ site.baseurl }}/api.json", function( data ) {
+    $.each(data, function(index, item) {
+      item.keywords = item.keywords.join('').replace(" ", "");
+    })
+    $('.ui.search')
+    .search({
+      minCharacters : 2,
+      searchFields   : [
+        'title',
+        'description',
+        'keywords',
+        'owner'
+      ],
+      searchFullText: true,
+      source: data
+    })
+  });
+})
+
+</script>
