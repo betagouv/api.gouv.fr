@@ -19,6 +19,23 @@
 	text-transform: uppercase;
 }
 
+#mission-statement .results {
+  width: 100%
+}
+
+#mission-statement .searchExamples {
+  color: #BDBDBD;
+}
+
+#mission-statement .searchExamples a {
+  color: white;
+  text-decoration: underline;
+}
+
+#mission-statement .searchExamples a:hover {
+  text-decoration: none;
+}
+
 #type h2 {
     max-width: 60rem;
     margin: 1em auto;

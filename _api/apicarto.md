@@ -5,6 +5,11 @@ doc_tech: https://apicarto.sgmap.fr/apidoc
 domain: http://apicarto.ign.fr
 owner: IGN
 type: reference
+keywords:
+  - carte
+  - ign
+  - cadastre
+  - code postal
 ---
 
 L’API Carto est une brique logicielle offrant des webservices de traitements et de calculs, facilement intégrables dans les interfaces avec les usagers des services publics (front offices) reposant sur un ensemble de données géographiques de référence détenues par différents organismes.

@@ -1,6 +1,10 @@
 ---
 layout: default
 additional_css: homepage
+searchExamples:
+  - quotient familial
+  - revenu fiscal de référence
+  - cadastre
 ---
 
 <section id="mission-statement" class="ui vertical center aligned segment">
@@ -10,11 +14,20 @@ additional_css: homepage
       {{ site.description }}
     </h1>
     <div class="ui search">
-		  <div class="ui left icon input">
+		  <div class="ui fluid left icon input">
 		    <input class="prompt" placeholder="De quelles données avez-vous besoin ?" type="text">
 		    <i class="search icon"></i>
 		  </div>
 		</div>
+    <p class="searchExamples">
+      Exemples :
+      {% for searchSample in page.searchExamples %}
+        <a href="#">{{ searchSample }}</a>
+        {% if forloop.last == false %}
+        ,
+        {% endif %}
+      {% endfor %}
+    </p>
 		<a class="ui big orange basic button" href="#type">Découvrez comment&nbsp;&nbsp;⬇︎</a>
 		<a class="ui big teal button" href="{{ site.baseurl }}/api">Explorez les {{ site.api | size }} API déjà disponibles&nbsp;&nbsp;➤</a>
   </div>
@@ -73,3 +86,34 @@ additional_css: homepage
 <div class="ui container">
 	<a id="apiButton" class="ui right floated big orange button" href="{{ site.baseurl }}/api">Explorez les {{ site.api | size }} API déjà disponibles&nbsp;&nbsp;➤</a>
 </div>
+
+<script>
+$(document).ready(function() {
+  var $searchDiv = $('.ui.search')
+  var $searchInput = $searchDiv.find('.prompt')
+  $(".searchExamples a").click(function(e) {
+    var q = $(this).text()
+    $searchInput.val(q)
+    $searchDiv.search('query').search('show results')
+  ;
+  })
+  $.get( "{{ site.baseurl }}/api.json", function( data ) {
+    $.each(data, function(index, item) {
+      item.keywords = item.keywords.join('').replace(" ", "");
+    })
+
+    $searchDiv.search({
+      minCharacters : 2,
+      searchFields   : [
+        'title',
+        'description',
+        'keywords',
+        'owner'
+      ],
+      searchFullText: true,
+      source: data
+    })
+  });
+})
+
+</script>
