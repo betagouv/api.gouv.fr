@@ -37,13 +37,14 @@ Pour obtenir un agrément, vous devez justifier d'une simplification pour les ci
 ## Comprendre la différence avec FranceConnect
 {:.ui .header}
 
-API Particulier et FranceConnect sont deux systèmes indenpendants mais complémentaires.
+API Particulier et FranceConnect sont deux systèmes indépendants mais complémentaires.
 
 |                | FranceConnect                                | API Particulier                                                           |
 |----------------|----------------------------------------------|---------------------------------------------------------------------------|
-| Nature         | fournisseur d'identité et tiers de confiance | fournisseur données                                                       |
-| Identification | Citoyen et Fournisseur de service            | Fournisseur de service                                                    |
-| Type de donnée | liée à la personne                           | liée à la personne, liée au foyer familial, liée aus parents, aux enfants |
+| Nature         | Fournisseur d'Identité et tiers de confiance | Fournisseur de Données                                                       |
+| Identification | Citoyen et Fournisseur de Service            | Fournisseur de Service                                                    |
+| Type de donnée | liée à la personne                           | liée à la personne, liée au foyer familial, liée aux parents, aux enfants |
 {:.ui .celled .table}
+
 
 API Particulier et FranceConnect peuvent être utilisés seul ou conjointement.
