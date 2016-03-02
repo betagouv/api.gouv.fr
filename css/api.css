@@ -24,23 +24,23 @@
 	text-transform: uppercase;
 }
 
-#mission-statement.confidential, #call2action.confidential{
+#mission-statement.confidential, #callToAction.confidential{
   background-color: #460E0E;
 }
 
-#mission-statement.reference, #call2action.reference{
+#mission-statement.reference, #callToAction.reference{
   background-color: #380E46;
 }
 
-#mission-statement.simulation, #call2action.simulation{
+#mission-statement.simulation, #callToAction.simulation{
   background-color: #0E1F46;
 }
 
-#mission-statement.smartData, #call2action.smartData{
+#mission-statement.smartData, #callToAction.smartData{
   background-color: #46320E;
 }
 
-#call2action {
+#callToAction {
   margin-top: 2%;
   padding-top: 2%;
   padding-bottom: 2%;
