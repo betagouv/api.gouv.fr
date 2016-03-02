@@ -1,6 +1,10 @@
 ---
 layout: default
 additional_css: homepage
+searchExamples:
+  - quotient familial
+  - revenu fiscal de référence
+  - cadastre
 ---
 
 <section id="mission-statement" class="ui vertical center aligned segment">
@@ -16,7 +20,13 @@ additional_css: homepage
 		  </div>
 		</div>
     <p class="searchExamples">
-      Exemples : <a href="#">cadastre</a>, <a href="#">quotient familiale</a>, <a href="#">revenu fiscal de référence</a>
+      Exemples :
+      {% for searchSample in page.searchExamples %}
+        <a href="#">{{ searchSample }}</a>
+        {% if forloop.last == false %}
+        ,
+        {% endif %}
+      {% endfor %}
     </p>
 		<a class="ui big orange basic button" href="#type">Découvrez comment&nbsp;&nbsp;⬇︎</a>
 		<a class="ui big teal button" href="{{ site.baseurl }}/api">Explorez les {{ site.api | size }} API déjà disponibles&nbsp;&nbsp;➤</a>
