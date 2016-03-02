@@ -7,7 +7,7 @@ additional_css: homepage
 
   <div class="ui text container">
     <h1 class="ui inverted header">
-      Fabriquez des services en ligne plus simples
+      {{ site.description }}
     </h1>
     <div class="ui search">
 		  <div class="ui left icon input">
@@ -27,7 +27,7 @@ additional_css: homepage
     {% for type in site.api_type %}
     <div class="item">
       <div class="ui small image">
-        <img src="{{ site.baseurl }}/img/logo.svg">
+        <img src="{{ site.baseurl }}/img/logo.svg" alt="logo">
       </div>
       <div class="content">
         <h3 class="header">{{ type.name }} &nbsp;&nbsp; <a class="ui button" href="{{ site.baseurl }}/api/{{ type.id }}">➤</a></h3>
@@ -49,7 +49,7 @@ additional_css: homepage
     {% for service in site.services %}
     <div class="ui card">
       <div class="image">
-        <img src="{{ "/img/" | append: service.screenshot | append: ".jpg" | prepend: site.baseurl }}">
+        <img src="{{ "/img/" | append: service.screenshot | append: ".jpg" | prepend: site.baseurl }}" alt="{{ service.name }} screenshot">
       </div>
       <div class="content">
         <a class="header" href="{{ service.url }}">{{ service.name }}</a>
