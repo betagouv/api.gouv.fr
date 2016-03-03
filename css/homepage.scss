@@ -4,13 +4,13 @@
 
 
 #mission-statement {
-  padding-top: 10%;
-  padding-bottom: 10%;
+  padding-top: 8%;
+  padding-bottom: 8%;
   background-color: #0E1546;
 
   .input {
    min-width: 60%;
-   margin-bottom: 5%
+   margin-bottom: 3%
  }
 
  h1 {
@@ -27,13 +27,13 @@
  }
  .searchExamples {
    color: #BDBDBD;
- }
- .searchExamples a {
-   color: white;
-   text-decoration: underline;
- }
- .searchExamples a:hover {
-   text-decoration: none;
+   a {
+     color: white;
+     text-decoration: underline;
+     &:hover {
+      text-decoration: none;
+    }
+   }
  }
 }
 
