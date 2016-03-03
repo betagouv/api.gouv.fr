@@ -1,0 +1,68 @@
+---
+# Homepage pages style
+---
+
+
+#mission-statement {
+  padding-top: 10%;
+  padding-bottom: 10%;
+  background-color: #0E1546;
+
+  .input {
+   min-width: 60%;
+   margin-bottom: 5%
+ }
+
+ h1 {
+ 	padding: .2em 0;
+
+ 	font-size: 200%;
+ 	line-height: 1.8;
+ 	letter-spacing: .08em;
+
+ 	text-transform: uppercase;
+ }
+ .results {
+   width: 100%
+ }
+ .searchExamples {
+   color: #BDBDBD;
+ }
+ .searchExamples a {
+   color: white;
+   text-decoration: underline;
+ }
+ .searchExamples a:hover {
+   text-decoration: none;
+ }
+}
+
+#type {
+  h2 {
+    max-width: 60rem;
+    margin: 1em auto;
+    font-size: 150%;
+  }
+
+  div {
+      max-width: 60rem;
+      margin: 1em auto;
+  }
+}
+
+#services {
+  h2 {
+      max-width: 60rem;
+      margin: 1em auto;
+      font-size: 150%;
+  }
+
+  div {
+    max-width: 100rem;
+    margin: 1em auto;
+  }
+}
+
+#apiButton {
+  margin-bottom: 3%
+}

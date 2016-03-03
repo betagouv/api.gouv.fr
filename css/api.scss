@@ -1,0 +1,65 @@
+---
+# API pages style
+---
+
+@import "variables";
+@import "markdown";
+
+#mission-statement {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  margin-bottom: 2%;
+  h1 {
+  	padding: .2em 0;
+  	font-size: 200%;
+  	line-height: 1.8;
+  	letter-spacing: .08em;
+  	text-transform: uppercase;
+  }
+
+  h2 {
+  	padding: .2em 0;
+  	font-size: 150%;
+  	line-height: 1.4;
+  	letter-spacing: .05em;
+  	text-transform: uppercase;
+  }
+
+  &.confidential {
+    background-color: $confidential-color;
+  }
+
+  &.reference {
+    background-color: $reference-color;
+  }
+
+  &.simulation {
+    background-color: $simulation-color;
+  }
+
+  &.smartData {
+    background-color: $smartData-color;
+  }
+}
+
+#callToAction {
+  margin-top: 2%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+
+  &.confidential {
+    background-color: $confidential-color;
+  }
+
+  &.reference {
+    background-color: $reference-color;
+  }
+
+  &.simulation {
+    background-color: $simulation-color;
+  }
+
+  &.smartData {
+    background-color: $smartData-color;
+  }
+}
