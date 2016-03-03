@@ -138,18 +138,25 @@ $(document).ready(function() {
     $searchDiv.search('query').search('show results')
   ;
   })
+  function indexCollection(item, name) {
+    item[name] = item[name].join('').replace(" ", "")
+  }
   $.get( "{{ site.baseurl }}/api.json", function( data ) {
     $.each(data, function(index, item) {
-      item.keywords = item.keywords.join('').replace(" ", "");
+      indexCollection(item, 'keywords');
+      indexCollection(item, 'clients');
+      indexCollection(item, 'partners');
     })
-
     $searchDiv.search({
       minCharacters : 2,
       searchFields   : [
         'title',
         'description',
         'keywords',
-        'owner'
+        'owner',
+        'clients',
+        'partners',
+        'contract'
       ],
       searchFullText: true,
       source: data

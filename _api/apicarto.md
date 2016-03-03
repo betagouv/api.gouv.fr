@@ -15,7 +15,6 @@ owner: IGN
 type: reference
 keywords:
   - carte
-  - ign
   - cadastre
   - code postal
 additional_css: api

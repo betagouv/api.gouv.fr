@@ -16,10 +16,9 @@ owner: DINSIC
 type: confidential
 keywords:
   - Impots
-  - DGFIP
   - CAF
   - Caisse Allocations Familiales
-  - Quotient Familiale
+  - Quotient Familial
   - Revenu Fiscal de Référence
   - Adresse
 additional_css: api
