@@ -34,26 +34,30 @@ searchExamples:
 
 </section>
 
-<section id="type">
-  <h2 class="ui divider horizontal">Les Différentes API</h2>
-  <div class="ui items">
+<section id="type" class="ui container">
+  <ul class="ui fluid grid">
     {% for type in site.api_type %}
-    <div class="item">
-      <div class="ui small image">
-        <img src="{{ site.baseurl }}/img/logo.svg" alt="logo">
-      </div>
-      <div class="content">
-        <h3 class="header">{{ type.name }} &nbsp;&nbsp; <a class="ui button" href="{{ site.baseurl }}/api/{{ type.id }}">➤</a></h3>
-        <div class="description">
-          <p>
-            {{ type.description }}
-          </p>
-        </div>
-      </div>
+    <li class="eight wide column">
+      <h3 class="header">{{ type.name }}</h3>
+      <p>
+        {{ type.description }}
+      </p>
+      {% assign api_type_size = site.api | where:"type", type.id |size %}
 
-    </div>
-  	{% endfor %}
-  </div>
+      <p class="discoverAPI">
+        <a href="{{ site.baseurl }}/api/{{ type.id }}">
+          {% if api_type_size == 0 %}
+            Aucune API n'est encore disponible
+          {% elsif api_type_size == 1 %}
+            Explorer la première API
+          {% else %}
+            Explorer ces {{ api_type_size }} API
+          {% endif %}
+        </a>
+      </p>
+    </li>
+    {% endfor %}
+  </ul>
 </section>
 
 <section id="services">
