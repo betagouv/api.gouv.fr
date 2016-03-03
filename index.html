@@ -5,6 +5,46 @@ searchExamples:
   - quotient familial
   - revenu fiscal de référence
   - cadastre
+
+services:
+  - name: La bonne boite
+    url: http://labonneboite.pole-emploi.fr
+    description: Votre adresse se complète au fils de sa saisie
+    api:
+      - name: BAN
+        url: api/ban
+    screenshot: ecran_labonneboite.jpg
+    reutilisation: En utilisant l'auto-completion de la Base Adresse Nationale (BAN), laBonneBoite simplifie la saisie d'une adresse pour l'usager en recherche d'emploi. Les adresses fournies par la BAN sont géocodées en latitude et longitude, ce qui permet ensuite à laBonneBoite de cibler les entreprises dans un rayon géographique autour de l'adresse.
+
+  - name: Mes aides
+    url: http://mes-aides.gouv.fr
+    description: Simulez toutes vos aides sociales en ligne
+    api:
+      - name: OpenFisca
+        url: openfisca
+    screenshot: ecran_mesaides.png
+    reutilisation: Dans le maquis des aides sociales, c'est à l'usager de déterminer le bon guichet pour connaître ses droits. Grâce à mes-aides, l'usager peut en quelques clics découvrir toutes les aides auxquelles il a droit en décrivant sa situation une seule fois. Le simulateur OpenFisca prend en compte toute la législation fiscale et sociale et permet donc de répondre précisément à la question "à quelles aides ai-je droit ?
+
+  - name: Vitiplantation
+    url: http://www.franceagrimer.fr/filiere-vin-et-cidriculture/Vin/En-un-clic/Vitiplantation
+    description: En quelques clics, les viticulteurs gèrent leur parcelle
+    api:
+      - name: API Carto
+        url: apicarto
+    screenshot: ecran_vitiplantation.jpg
+    reutilisation: Pour un vigneron, réaliser un acte de gestion sur ses parcelles est un exercice compliqué car le formulaire Cerfa se prête mal à l'échange d'informations géographiques avec l'administration et conduit à des approximations, des erreurs et beaucoup de ressaisies dans les services instructeurs de FranceAgrimer. Pour réaliser des économies et simplifier la vie des vignerons, le téléservice Vitiplantation permet d'affecter à la vigne de nouvelles parcelles en quelques clics grâce à l'API Carto.
+
+  - name: MPS
+    url: https://www.marches-securises.fr/entreprise
+    description: Un siret pour candidater uniquement pour un marché public
+    api:
+      - name: API Entreprise
+        url: apientreprise
+      - name: API Carto
+        url: apicarto
+    screenshot: ecran_MPS.jpg
+    reutilisation: En adoptant MPS, la plateforme de dématérialisation Marchés Sécurisés permet aux entreprises de candidater à un marché public sans remplir de formulaire complexe ni fournir de pièces justificatives. Les entreprises saisisissent leur numéro de SIRET, valident leur consentement à ce que l'acheteur public accède aux attestations sociales ou fiscales, et déposent simplement leur offre.
+
 ---
 
 <section id="mission-statement" class="ui vertical center aligned segment">
@@ -60,25 +100,25 @@ searchExamples:
 <section id="services">
   <h2 class="ui divider horizontal">Ils l'utilisent déjà</h2>
   <div class="ui two stackable cards">
-    {% for service in site.services %}
+    {% for service in page.services %}
     <div class="ui card">
       <div class="image">
-        <img src="{{ "/img/" | append: service.screenshot | append: ".jpg" | prepend: site.baseurl }}" alt="{{ service.name }} screenshot">
+        <img src="{{ "/img/" | append: service.screenshot | prepend: site.baseurl }}" alt="{{ service.name }} screenshot">
       </div>
       <div class="content">
         <a class="header" href="{{ service.url }}">{{ service.name }}</a>
         <div class="meta">
           {% for api in service.api %}
-            <a class="ui label" href="{{ "/api/" | append: api.url | append: ".html" | prepend: site.baseurl }}">{{ api.name}}</a>
+            <a class="ui label" href="{{ "/" | append: api.url | append: ".html" | prepend: site.baseurl }}">{{ api.name}}</a>
           {% endfor %}
         </div>
-        <div class="description">
-          {{ service.description }}
-        </div>
+        <p class="description">
+          {{ service.reutilisation }}
+        </p>
       </div>
-      <!--div class="extra content">
-        {{ service.reutilisation }}
-      </div -->
+      <div class="extra content">
+        {{ service.description }}
+      </div>
     </div>
   	{% endfor %}
   </div>
