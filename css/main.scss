@@ -1,0 +1,20 @@
+---
+# Main pages style
+---
+
+header {
+	background-image: url({{ site.baseurl }}/img/marianne.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: .8em;
+	background-color: #FEFEFE;
+	color: #555;
+	height: 2.4em;
+	
+	img {
+		float: right;
+		margin-top: .1em;
+		height: 80%;
+		margin-right: .8em;
+	}
+}
