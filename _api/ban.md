@@ -3,6 +3,16 @@ name: Base Adresse Nationnale
 tagline: "Un référentiel national ouvert : de l'adresse à la coordonnée géographique"
 doc_tech: http://adresse.data.gouv.fr/api/
 domain: http://adresse.data.gouv.fr/
+contract: OUVERT
+restriction:
+clients:
+  - particuliers
+  - entreprises
+  - collectivités
+  - ministères
+partners:
+  - La poste
+  - IGN
 owner: ETALAB
 type: reference
 keywords:
