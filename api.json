@@ -14,28 +14,13 @@ layout: null
       "restriction" : "{{ api.restriction }}",
       "type" : "{{ api.type }}",
       "keywords": [
-        {% for keyword in api.keywords %}
-        "{{ keyword }}"
-        {% if forloop.last == false %}
-        ,
-        {% endif %}
-      {% endfor %}
+        "{{ api.keyword | join: '","' }}"
       ],
       "clients": [
-        {% for client in api.clients %}
-        "{{ client }}"
-        {% if forloop.last == false %}
-        ,
-        {% endif %}
-      {% endfor %}
+        "{{ api.clients | join: '","' }}"
       ],
       "partners": [
-        {% for partner in api.partners %}
-        "{{ partner }}"
-        {% if forloop.last == false %}
-        ,
-        {% endif %}
-      {% endfor %}
+        "{{ api.partners | join: '","' }}"
       ]
     }
     {% if forloop.last == false %}

@@ -44,12 +44,7 @@ layout: default
             <div class="content">
               <div class="header">Clients cibles</div>
               <div class="description">
-              {% for client in page.clients %}
-                {{ client }}
-                {% if forloop.last == false %}
-                &amp;
-                {% endif %}
-              {% endfor %}
+               {{ page.clients | join: ' &amp; ' }}
               </div>
             </div>
           </div>
@@ -57,12 +52,7 @@ layout: default
             <div class="content">
               <div class="header">Sources et partenaires</div>
               <div class="description">
-              {% for partner in page.partners %}
-                {{ partner }}
-                {% if forloop.last == false %}
-                &amp;
-                {% endif %}
-              {% endfor %}
+                {{ page.partners | join: ' &amp; ' }}
               </div>
             </div>
           </div>
