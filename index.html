@@ -101,13 +101,13 @@ services:
     {% for service in page.services %}
     <div class="ui card">
       <div class="image">
-        <img src="{{ "/img/" | append: service.screenshot | prepend: site.baseurl }}" alt="{{ service.name }} screenshot">
+        <img src="{{ site.baseurl }}/img/{{ service.screenshot }}" alt="{{ service.name }} screenshot">
       </div>
       <div class="content">
         <a class="header" href="{{ service.url }}">{{ service.name }}</a>
         <div class="meta">
           {% for api in service.api %}
-            <a class="ui label" href="{{ "/" | append: api.url | append: ".html" | prepend: site.baseurl }}">{{ api.name}}</a>
+            <a class="ui label" href="{{ site.baseurl }}/{{ api.url }}.html"> {{ api.name}}</a>
           {% endfor %}
         </div>
         <p class="description">
