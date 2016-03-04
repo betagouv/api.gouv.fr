@@ -21,7 +21,6 @@ keywords:
   - Quotient Familial
   - Revenu Fiscal de Référence
   - Adresse
-additional_css: api
 ---
 
 
