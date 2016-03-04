@@ -101,7 +101,9 @@ services:
     {% for service in page.services %}
     <div class="ui card">
       <div class="image">
-        <img src="{{ site.baseurl }}/img/{{ service.screenshot }}" alt="{{ service.name }} screenshot">
+        <div>
+          <img src="{{ site.baseurl }}/img/{{ service.screenshot }}" alt="{{ service.name }} screenshot">
+        </div>
       </div>
       <div class="content">
         <a class="header" href="{{ service.url }}">{{ service.name }}</a>

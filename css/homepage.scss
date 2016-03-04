@@ -92,6 +92,17 @@ $border-type-color: #eff3f6;
       margin: 1em auto;
       font-size: 150%;
   }
+  .ui.cards>.card>.image {
+    padding: 5%;
+    div {
+      overflow: hidden;
+      height: 15em;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
 }
 
 #apiButton {
