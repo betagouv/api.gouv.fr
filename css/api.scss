@@ -5,6 +5,12 @@
 @import "variables";
 @import "markdown";
 
+
+@mixin linearBackground($color) {
+  background-color: $color;
+  background: linear-gradient(to bottom, $color, lighten($color, 10));
+
+}
 #mission-statement {
   padding-top: 5%;
   padding-bottom: 5%;
@@ -26,19 +32,19 @@
   }
 
   &.confidential {
-    background-color: $confidential-color;
+    @include linearBackground($confidential-color);
   }
 
   &.reference {
-    background-color: $reference-color;
+    @include linearBackground($reference-color);
   }
 
   &.simulation {
-    background-color: $simulation-color;
+    @include linearBackground($simulation-color);
   }
 
   &.smartData {
-    background-color: $smartData-color;
+    @include linearBackground($smartData-color);
   }
 }
 #description {
@@ -55,18 +61,18 @@
   padding-bottom: 2%;
 
   &.confidential {
-    background-color: $confidential-color;
+    @include linearBackground($confidential-color);
   }
 
   &.reference {
-    background-color: $reference-color;
+    @include linearBackground($reference-color);
   }
 
   &.simulation {
-    background-color: $simulation-color;
+    @include linearBackground($simulation-color);
   }
 
   &.smartData {
-    background-color: $smartData-color;
+    @include linearBackground($smartData-color);
   }
 }
