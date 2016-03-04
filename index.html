@@ -61,9 +61,12 @@ services:
 </section>
 
 <section id="type" class="ui container">
-  <ul class="ui fluid grid">
+  <ul class="ui fluid stackable grid">
     {% for type in site.api_type %}
     <li class="eight wide column">
+      <div class="icon {{ type.id }}">
+
+      </div>
       <h3 class="header">{{ type.name }}</h3>
       <p>
         {{ type.description }}
