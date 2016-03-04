@@ -53,19 +53,10 @@ services:
     </h1>
     <div class="ui search">
 		  <div class="ui fluid left icon input">
-		    <input class="prompt" placeholder="De quelles données avez-vous besoin ?" type="text">
+		    <input class="prompt" placeholder="Ex: {{ page.searchExamples | join: ', '}}..." type="text">
 		    <i class="search icon"></i>
 		  </div>
 		</div>
-    <p class="searchExamples">
-      Exemples :
-      {% for searchSample in page.searchExamples %}
-        <a href="#">{{ searchSample }}</a>
-        {% if forloop.last == false %}
-        ,
-        {% endif %}
-      {% endfor %}
-    </p>
   </div>
 </section>
 
@@ -131,13 +122,6 @@ services:
 <script>
 $(document).ready(function() {
   var $searchDiv = $('.ui.search');
-  var $searchInput = $searchDiv.find('.prompt');
-  $(".searchExamples a").click(function(e) {
-    var q = $(this).text();
-    $searchInput.val(q);
-    $searchDiv.search('query').search('show results');
-    $searchInput.focus()
-  })
   function indexCollection(item, name) {
     item[name] = item[name].join('').replace(" ", "");
   }
