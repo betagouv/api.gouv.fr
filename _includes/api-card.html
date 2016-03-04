@@ -15,6 +15,9 @@
 		<div class="left floated">
 			{%if include.description.contract %}
 				{{ include.description.contract }}
+			{% else%}
+			<!-- le build fails -->
+			{% include missing-contract.html %}
 			{% endif %}
 		</div>
 
