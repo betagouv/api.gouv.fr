@@ -4,13 +4,8 @@
 
 @import "variables";
 @import "markdown";
+@import "mixins";
 
-
-@mixin linearBackground($color) {
-  background-color: $color;
-  background: linear-gradient(to bottom, $color, lighten($color, 10));
-
-}
 #mission-statement {
   padding-top: 5%;
   padding-bottom: 5%;

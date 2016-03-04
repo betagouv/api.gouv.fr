@@ -4,7 +4,7 @@ additional_css: catalog
 current: smartData
 ---
 
-<section id="list" class="ui two stackable cards container">
+<section id="list" class="ui two stackable cards container {{ page.current }}">
 	{% assign type = site.api_type | where:"id", page.current | first %}
 
 	<h2 class="ui divider horizontal inverted">Toutes les API de l'État : {{  type.name }}</h2>

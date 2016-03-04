@@ -3,9 +3,29 @@
 ---
 
 @import "variables";
+@import "mixins";
 
 #list {
-  background-color: #0E1546;
+
+  &.main {
+    @include linearBackground($main-color);
+  }
+
+  &.smartData {
+    @include linearBackground($smartData-color);
+  }
+
+  &.confidential {
+    @include linearBackground($confidential-color);
+  }
+
+  &.reference {
+    @include linearBackground($reference-color);
+  }
+
+  &.simulation {
+    @include linearBackground($simulation-color);
+  }
 }
 
 .tag.label {
