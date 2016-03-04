@@ -35,6 +35,9 @@
   <link rel="stylesheet" type="text/css" class="ui" href="//oss.maxcdn.com/semantic-ui/2.1.8/components/list.min.css">
 
   <link rel="stylesheet" type="text/css" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  {% if page.layout != 'default' %}
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/{{ page.layout }}.css">
+  {% endif %}
   {% if page.additional_css %}
     <link rel="stylesheet" type="text/css" href="{{ "/css/" | append: page.additional_css | append: ".css" | prepend: site.baseurl }}">
   {% endif %}
