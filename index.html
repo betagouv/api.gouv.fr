@@ -130,16 +130,16 @@ services:
 
 <script>
 $(document).ready(function() {
-  var $searchDiv = $('.ui.search')
-  var $searchInput = $searchDiv.find('.prompt')
+  var $searchDiv = $('.ui.search');
+  var $searchInput = $searchDiv.find('.prompt');
   $(".searchExamples a").click(function(e) {
-    var q = $(this).text()
-    $searchInput.val(q)
-    $searchDiv.search('query').search('show results')
-  ;
+    var q = $(this).text();
+    $searchInput.val(q);
+    $searchDiv.search('query').search('show results');
+    $searchInput.focus()
   })
   function indexCollection(item, name) {
-    item[name] = item[name].join('').replace(" ", "")
+    item[name] = item[name].join('').replace(" ", "");
   }
   $.get( "{{ site.baseurl }}/api.json", function( data ) {
     $.each(data, function(index, item) {
