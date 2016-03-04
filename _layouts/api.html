@@ -17,8 +17,51 @@ layout: default
 
 </section>
 
-<div id="description" class="ui text container markdown-body">
-  {{ content }}
+<div id="description" class="ui text container ">
+  <div class="ui segment markdown-body">
+    <div class="ui right dividing rail">
+      <div class="ui inverted segment">
+        <div class="ui inverted relaxed divided list">
+          <div class="item">
+            <div class="content">
+              <div class="header">Conditions d'utilisation</div>
+              <div class="description">
+                {{ page.contract }}
+              </div>
+            </div>
+          </div>
+          {% if page.restriction %}
+          <div class="item">
+            <div class="content">
+              <div class="header">Contraintes</div>
+              <div class="description">
+                {{ page.restriction }}
+              </div>
+            </div>
+          </div>
+          {% endif %}
+          <div class="item">
+            <div class="content">
+              <div class="header">Clients cibles</div>
+              <div class="description">
+               {{ page.clients | join: ' &amp; ' }}
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="content">
+              <div class="header">Sources et partenaires</div>
+              <div class="description">
+                {{ page.partners | join: ' &amp; ' }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{ content }}
+  </div>
+
 </div>
 
 <section id="callToAction" class="ui vertical center aligned segment {{ page.type }}">

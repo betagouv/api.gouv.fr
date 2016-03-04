@@ -13,10 +13,11 @@
 	</div>
 	<div class="extra content">
 		<div class="left floated">
-			{%if include.description.domain %}
-				{{ include.description.domain }}
-			{% else %}
-				<em>Pas encore de site public</em>
+			{%if include.description.contract %}
+				{{ include.description.contract }}
+			{% else%}
+			<!-- le build fails -->
+			{% include missing-contract.html %}
 			{% endif %}
 		</div>
 

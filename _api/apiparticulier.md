@@ -4,14 +4,21 @@ tagline: Simplifiez les démarches de vos usagers, ne demandez plus de justifica
 doc_tech: https://apiparticulier.sgmap.fr/tech
 access_link: https://apiparticulier.sgmap.fr/#/registration
 domain: https://apiparticulier.sgmap.fr
+contract: OUVERT sous contrat
+restriction: simplication des démarches des usagers
+clients:
+  - collectivités
+  - ministères
+partners:
+  - DGFIP
+  - CNAF
 owner: DINSIC
 type: confidential
 keywords:
   - Impots
-  - DGFIP
   - CAF
   - Caisse Allocations Familiales
-  - Quotient Familiale
+  - Quotient Familial
   - Revenu Fiscal de Référence
   - Adresse
 additional_css: api

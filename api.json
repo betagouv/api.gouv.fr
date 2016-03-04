@@ -10,14 +10,17 @@ layout: null
       "image" : "{{ api.logo | prepend: site.baseurl }}",
       "domain" : "{{ api.domain }}",
       "owner" : "{{ api.owner }}",
+      "contract" : "{{ api.contract }}",
+      "restriction" : "{{ api.restriction }}",
       "type" : "{{ api.type }}",
       "keywords": [
-        {% for keyword in api.keywords %}
-        "{{ keyword }}"
-        {% if forloop.last == false %}
-        ,
-        {% endif %}
-      {% endfor %}
+        "{{ api.keyword | join: '","' }}"
+      ],
+      "clients": [
+        "{{ api.clients | join: '","' }}"
+      ],
+      "partners": [
+        "{{ api.partners | join: '","' }}"
       ]
     }
     {% if forloop.last == false %}

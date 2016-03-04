@@ -3,18 +3,11 @@ name: API Carto
 tagline: L’information géolocalisée dans vos formulaires administratifs
 doc_tech: https://apicarto.sgmap.fr/apidoc
 domain: http://apicarto.ign.fr
-contract: OUVERT
-restriction:
-clients:
-  - particuliers
-  - entreprises
-  - collectivités
-partners:
-  - IGN
 owner: IGN
 type: reference
 keywords:
   - carte
+  - ign
   - cadastre
   - code postal
 additional_css: api
