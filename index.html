@@ -7,14 +7,14 @@ searchExamples:
   - cadastre
 
 services:
-  - name: La bonne boite
+  - name: La Bonne Boîte
     url: http://labonneboite.pole-emploi.fr
-    description: Votre adresse se complète au fils de sa saisie
+    description: Votre adresse se complète au fil de sa saisie
     api:
       - name: BAN
         url: api/ban
     screenshot: ecran_labonneboite.jpg
-    reutilisation: En utilisant l'auto-completion de la Base Adresse Nationale (BAN), laBonneBoite simplifie la saisie d'une adresse pour l'usager en recherche d'emploi. Les adresses fournies par la BAN sont géocodées en latitude et longitude, ce qui permet ensuite à laBonneBoite de cibler les entreprises dans un rayon géographique autour de l'adresse.
+    reutilisation: En utilisant l'auto-completion de la Base Adresse Nationale, La Bonne Boîte simplifie la saisie d'une adresse pour l'usager en recherche d'emploi. Les adresses fournies par la BAN sont géocodées en latitude et longitude, ce qui permet ensuite à laBonneBoite de cibler les entreprises dans un rayon géographique autour de l'adresse.
 
   - name: Mes aides
     url: http://mes-aides.gouv.fr
@@ -23,7 +23,7 @@ services:
       - name: OpenFisca
         url: openfisca
     screenshot: ecran_mesaides.png
-    reutilisation: Dans le maquis des aides sociales, c'est à l'usager de déterminer le bon guichet pour connaître ses droits. Grâce à mes-aides, l'usager peut en quelques clics découvrir toutes les aides auxquelles il a droit en décrivant sa situation une seule fois. Le simulateur OpenFisca prend en compte toute la législation fiscale et sociale et permet donc de répondre précisément à la question "à quelles aides ai-je droit ?
+    reutilisation: Dans le maquis des aides sociales, c'est à l'usager de déterminer le bon guichet pour connaître ses droits. Grâce à mes-aides, l'usager peut en quelques clics découvrir toutes les aides auxquelles il a droit en décrivant sa situation une seule fois. Le simulateur OpenFisca prend en compte toute la législation fiscale et sociale et permet donc de répondre précisément à la question &laquo;&nbsp;à quelles aides ai-je droit ?&nbsp;&raquo;
 
   - name: Vitiplantation
     url: http://www.franceagrimer.fr/filiere-vin-et-cidriculture/Vin/En-un-clic/Vitiplantation
@@ -36,12 +36,10 @@ services:
 
   - name: MPS
     url: https://www.marches-securises.fr/entreprise
-    description: Un siret pour candidater uniquement pour un marché public
+    description: Un SIRET pour candidater uniquement pour un marché public
     api:
       - name: API Entreprise
         url: apientreprise
-      - name: API Carto
-        url: apicarto
     screenshot: ecran_MPS.jpg
     reutilisation: En adoptant MPS, la plateforme de dématérialisation Marchés Sécurisés permet aux entreprises de candidater à un marché public sans remplir de formulaire complexe ni fournir de pièces justificatives. Les entreprises saisisissent leur numéro de SIRET, valident leur consentement à ce que l'acheteur public accède aux attestations sociales ou fiscales, et déposent simplement leur offre.
 
