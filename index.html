@@ -53,19 +53,10 @@ services:
     </h1>
     <div class="ui search">
 		  <div class="ui fluid left icon input">
-		    <input class="prompt" placeholder="De quelles données avez-vous besoin ?" type="text">
+		    <input class="prompt" placeholder="{{ page.searchExamples | join: ', '}}…" type="search">
 		    <i class="search icon"></i>
 		  </div>
 		</div>
-    <p class="searchExamples">
-      Exemples :
-      {% for searchSample in page.searchExamples %}
-        <a href="#">{{ searchSample }}</a>
-        {% if forloop.last == false %}
-        ,
-        {% endif %}
-      {% endfor %}
-    </p>
   </div>
 </section>
 
@@ -130,23 +121,16 @@ services:
 
 <script>
 $(document).ready(function() {
-  var $searchDiv = $('.ui.search')
-  var $searchInput = $searchDiv.find('.prompt')
-  $(".searchExamples a").click(function(e) {
-    var q = $(this).text()
-    $searchInput.val(q)
-    $searchDiv.search('query').search('show results')
-  ;
-  })
+  var $searchDiv = $('.ui.search');
   function indexCollection(item, name) {
-    item[name] = item[name].join('').replace(" ", "")
+    item[name] = item[name].join('').replace(" ", "");
   }
-  $.get( "{{ site.baseurl }}/api.json", function( data ) {
+  $.get("{{ site.baseurl }}/api.json", function( data ) {
     $.each(data, function(index, item) {
       indexCollection(item, 'keywords');
       indexCollection(item, 'clients');
       indexCollection(item, 'partners');
-    })
+    });
     $searchDiv.search({
       minCharacters : 2,
       searchFields   : [
@@ -160,8 +144,14 @@ $(document).ready(function() {
       ],
       searchFullText: true,
       source: data
+    });
+    $searchDiv.keyup(function(e) {
+      if(e.keyCode == 13) {
+        var $link = $searchDiv.find('.results.visible a.result.active');
+         window.location.href = $link.attr('href');
+      }
     })
   });
-})
+});
 
 </script>
