@@ -125,7 +125,7 @@ $(document).ready(function() {
   function indexCollection(item, name) {
     item[name] = item[name].join('').replace(" ", "");
   }
-  $.get( "{{ site.baseurl }}/api.json", function( data ) {
+  $.get("{{ site.baseurl }}/api.json", function( data ) {
     $.each(data, function(index, item) {
       indexCollection(item, 'keywords');
       indexCollection(item, 'clients');
@@ -145,6 +145,12 @@ $(document).ready(function() {
       searchFullText: true,
       source: data
     });
+    $searchDiv.keyup(function(e) {
+      if(e.keyCode == 13) {
+        var $link = $searchDiv.find('.results.visible a.result.active');
+         window.location.href = $link.attr('href');
+      }
+    })
   });
 });
 
