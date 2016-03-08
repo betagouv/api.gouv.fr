@@ -36,7 +36,7 @@ api_type:
   - id: confidential
     name: Données confidentielles
     logo: privacy
-    description: Accès sécurisé à des données confidentielles d'un ou d'une entreprise
+    description: Accès sécurisé à des données confidentielles d'un particulier ou d'une entreprise
 
   - id: reference
     name: Données de référence
