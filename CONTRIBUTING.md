@@ -20,11 +20,11 @@ Modifier le fichier de description de l'API dans le dossier [`_api`](https://git
 
 ## Modifier les types d'API
 
-Mettre à jour la propriété `api_type` [`_config.yml`](https://github.com/sgmap/api.gouv.fr/tree/gh-pages/_config.yml).
+Mettre à jour la propriété `api_type` dans [`_config.yml`](https://github.com/sgmap/api.gouv.fr/tree/gh-pages/_config.yml).
 
-## Modifier exemples de recherches
+## Modifier les exemples de recherches
 
-Mettre à jour la propriété `searchExamples` [`index.html`](https://github.com/sgmap/api.gouv.fr/tree/gh-pages/index.html).
+Mettre à jour la propriété `searchExamples` dans [`index.html`](https://github.com/sgmap/api.gouv.fr/tree/gh-pages/index.html).
 
 
 ## Modifier la présentation du site
@@ -50,4 +50,4 @@ inkscape --export-text-to-path $path_to_repo/_sources/logo.svg -l $path_to_repo/
 
 Ce site est déployé en continu avec [Github Pages](https://pages.github.com).
 
-Pousser sur `master`, c’est partager avec le monde… ce qui signifie donc qu'il faut être très prudent avec ce pouvoir et privilégier l'usage de [pull requests](https://guides.github.com/introduction/flow/) :wink:
+Pousser sur `gh-pages`, c’est partager avec le monde… ce qui signifie donc qu'il faut être très prudent avec ce pouvoir et privilégier l'usage de [pull requests](https://guides.github.com/introduction/flow/) :wink:
