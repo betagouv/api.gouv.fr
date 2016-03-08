@@ -64,9 +64,7 @@ services:
   <ul class="ui fluid stackable grid">
     {% for type in site.api_type %}
     <li class="eight wide column">
-      <div class="icon {{ type.id }}">
-
-      </div>
+      <i class="icon huge {{ type.logo }} {{ type.id }}"></i>
       <h2 class="header">{{ type.name }}</h2>
       <p>
         {{ type.description }}

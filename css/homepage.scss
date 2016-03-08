@@ -57,24 +57,18 @@ $border-type-color: #eff3f6;
 
   li {
     .icon {
-      width: 80px;
-      height: 80px;
-      border-radius: 40px;
+
       &.confidential {
-        background-color: $confidential-color;
-        background: radial-gradient(lighten($confidential-color, 10), $confidential-color);
+        color: $confidential-color;
       }
       &.reference {
-        background-color: $reference-color;
-        background: radial-gradient(lighten($reference-color, 10), $reference-color);
+        color: $reference-color;
       }
       &.simulation {
-        background-color: $simulation-color;
-        background: radial-gradient(lighten($simulation-color, 10), $simulation-color);
+        color: $simulation-color;
       }
       &.smartData {
-        background-color: $smartData-color;
-        background: radial-gradient(lighten($smartData-color, 10), $smartData-color);
+        color: $smartData-color;
       }
     }
   }
