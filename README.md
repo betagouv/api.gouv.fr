@@ -15,7 +15,7 @@
 
 ## `api.gouv.fr`
 
-Ce nom de domaine héberge une présentation des différentes API proposées par l'État et ses administrations.
+Ce nom de domaine héberge une présentation des différentes API proposées par l'État et les administrations.
 
 ## Installation locale
 
