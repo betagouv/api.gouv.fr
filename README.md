@@ -30,7 +30,7 @@ Il existe ensuite deux manières de lancer le site sur sa machine :
  * Il est possible d'utiliser Jekyll directement
  * Il est possible d'utiliser Docker
 
-Chacune de ces méthodes est détaillée en dessus.
+Chacune de ces méthodes sont indépendantes et sont détaillées en dessous.
 
 ### jekyll
 
