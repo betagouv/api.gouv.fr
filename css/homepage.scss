@@ -57,18 +57,24 @@ $border-type-color: #eff3f6;
 
   li {
     .icon {
+      color: white;
+      height: 1.5em;
+      width: 1.5em;
+      border-radius: 50%;
+      vertical-align: middle;
+      display: table-cell;
 
       &.confidential {
-        color: $confidential-color;
+        background-color: $confidential-color;
       }
       &.reference {
-        color: $reference-color;
+        background-color: $reference-color;
       }
       &.simulation {
-        color: $simulation-color;
+        background-color: $simulation-color;
       }
       &.smartData {
-        color: $smartData-color;
+        background-color: $smartData-color;
       }
     }
   }
