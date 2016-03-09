@@ -82,7 +82,7 @@ layout: default
     {% endif %}
   {% endfor %}
 {% endcapture %}
-{% assign reUseWithoutSpace = reUse | strip_newlines | replace: ' ', '' %}
+{% assign reUseWithoutSpace = reUse | strip_newlines | strip %}
 {% if reUseWithoutSpace != "" %}
 <section id="services" class="ui container">
   <h2 class="ui divider horizontal">Les ré-utilisations</h2>
