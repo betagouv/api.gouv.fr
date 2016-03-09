@@ -1,0 +1,21 @@
+<div class="ui card">
+	<div class="image">
+		<div>
+			<img src="{{ site.baseurl }}/img/{{ include.description.screenshot }}" alt="{{ include.description.name }} screenshot">
+		</div>
+	</div>
+	<div class="content">
+		<a class="header" href="{{ include.description.link }}">{{ include.description.name }}</a>
+		<div class="meta">
+			{% for api in include.description.api %}
+				<a class="ui label" href="{{ site.baseurl }}/{{ api.url }}.html"> {{ api.name}}</a>
+			{% endfor %}
+		</div>
+		<p class="description">
+			{{ include.description.content | markdownify }}
+		</p>
+	</div>
+	<div class="extra content">
+		{{ include.description.description }}
+	</div>
+</div>

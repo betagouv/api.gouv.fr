@@ -54,29 +54,9 @@ searchExamples:
   <h2 class="ui divider horizontal">Ils l'utilisent déjà</h2>
   <div class="ui two stackable cards">
     {% for service in site.reutilisation %}
-    {% if service.featured %}
-    <div class="ui card">
-      <div class="image">
-        <div>
-          <img src="{{ site.baseurl }}/img/{{ service.screenshot }}" alt="{{ service.name }} screenshot">
-        </div>
-      </div>
-      <div class="content">
-        <a class="header" href="{{ service.url }}">{{ service.name }}</a>
-        <div class="meta">
-          {% for api in service.api %}
-            <a class="ui label" href="{{ site.baseurl }}/{{ api.url }}.html"> {{ api.name}}</a>
-          {% endfor %}
-        </div>
-        <p class="description">
-          {{ service.content }}
-        </p>
-      </div>
-      <div class="extra content">
-        {{ service.description }}
-      </div>
-    </div>
-    {% endif %}
+      {% if service.featured %}
+        {% include reuse-card.html description=service %}
+      {% endif %}
   	{% endfor %}
   </div>
 </section>

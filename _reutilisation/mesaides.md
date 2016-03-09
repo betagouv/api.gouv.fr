@@ -1,6 +1,6 @@
 ---
 name: Mes aides
-url: http://mes-aides.gouv.fr
+link: http://mes-aides.gouv.fr
 description: Simulez toutes vos aides sociales en ligne
 api:
   - name: OpenFisca

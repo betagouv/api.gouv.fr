@@ -1,6 +1,6 @@
 ---
 name: MPS
-url: https://www.marches-securises.fr/entreprise
+link: https://www.marches-securises.fr/entreprise
 description: Un SIRET pour candidater uniquement pour un marché public
 api:
   - name: API Entreprise
