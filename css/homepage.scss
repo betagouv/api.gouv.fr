@@ -4,6 +4,7 @@
 
 @import "variables";
 @import "mixins";
+@import "reuse";
 
 #mission-statement {
   padding-top: 8%;
@@ -97,26 +98,19 @@ $border-type-color: #eff3f6;
   }
 }
 
-#services {
-  h2 {
-      max-width: 60rem;
-      margin: 1em auto;
-      font-size: 150%;
-  }
-  .ui.cards>.card>.image {
-    padding: 5%;
-    div {
-      overflow: hidden;
-      height: 15em;
-      img {
-        max-width: 100%;
-        height: auto;
-      }
+p {
+  text-align: center;
+  a.ui.big.button.moreButton {
+    margin-bottom: 4%;
+    margin-top: 4%;
+    box-shadow: 0 0 0 0 rgba(34,36,38,.15) inset;
+    background-color: $main-color;
+    color: #fff;
+    text-shadow: none;
+    background-image: none;
+
+    &:hover {
+      background-color: darken($main-color, 5%)
     }
   }
-}
-
-#apiButton {
-  margin-bottom: 4%;
-  margin-top: 4%;
 }

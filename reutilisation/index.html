@@ -1,0 +1,15 @@
+---
+layout: default
+additional_css: catalog_reuse
+---
+
+<section id="services" class="ui container">
+  <h2 class="ui divider horizontal">Toutes les Ré-utilisation</h2>
+  <div class="ui two stackable cards">
+    {% for service in site.reutilisation %}
+      {% if service.featured %}
+        {% include reuse-card.html description=service %}
+      {% endif %}
+  	{% endfor %}
+  </div>
+</section>
