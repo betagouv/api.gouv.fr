@@ -8,8 +8,7 @@
 		<a class="header" href="{{ site.baseurl }}/{{ include.description.url }}">{{ include.description.name }}</a>
 		<div class="meta">
 			{% for apiName in include.description.api %}
-			{% assign apis = site.api | where: "name", apiName %}
-			{% assign api = apis | first %}
+			{% assign api = site.api | where: "name", apiName | first %}
 				<a class="ui label" href="{{ site.baseurl }}/{{ api.url }}"> {{ api.name }}</a>
 			{% endfor %}
 		</div>
