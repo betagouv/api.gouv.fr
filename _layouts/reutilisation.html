@@ -23,7 +23,7 @@ layout: default
         {% for apiName in page.api %}
         {% assign api = site.api | where: "name", apiName | first %}
           <div class="item">
-            <img class="ui avatar image" src="{{ site.baseurl }}/{{ api.logo }}" alt="logo {{ api.name }}">
+            <img class="ui avatar image" src="{{ site.baseurl }}/{{ api.logo }}" alt="logo de {{ api.name }}">
             <div class="content">
               <a href="{{ site.baseurl }}/{{ api.url }}" class="header">{{ api.name }}</a>
               <div class="description">{{ api.tagline }}</div>
@@ -37,7 +37,7 @@ layout: default
         <div class="ui segment">
           <h4>{{ page.description }}</h4>
           <div>
-            <img class="ui bordered rounded fluid image" src="{{ site.baseurl }}/img/{{ page.screenshot }}" alt="screenshot {{ page.name }}">
+            <img class="ui bordered rounded fluid image" src="{{ site.baseurl }}/img/{{ page.screenshot }}" alt="capture d'écran de {{ page.name }}">
           </div>
           <div class="markdown-body">
             {{ content }}
