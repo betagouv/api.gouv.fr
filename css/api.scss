@@ -4,6 +4,7 @@
 
 @import "variables";
 @import "markdown";
+@import "mixins";
 
 #mission-statement {
   padding-top: 5%;
@@ -26,19 +27,19 @@
   }
 
   &.confidential {
-    background-color: $confidential-color;
+    @include linearBackground($confidential-color);
   }
 
   &.reference {
-    background-color: $reference-color;
+    @include linearBackground($reference-color);
   }
 
   &.simulation {
-    background-color: $simulation-color;
+    @include linearBackground($simulation-color);
   }
 
   &.smartData {
-    background-color: $smartData-color;
+    @include linearBackground($smartData-color);
   }
 }
 #description {
@@ -50,23 +51,23 @@
   }
 }
 #callToAction {
-  margin-top: 2%;
-  padding-top: 2%;
+  margin-top: 3%;
+  padding-top: 3%;
   padding-bottom: 2%;
 
   &.confidential {
-    background-color: $confidential-color;
+    @include linearBackground($confidential-color);
   }
 
   &.reference {
-    background-color: $reference-color;
+    @include linearBackground($reference-color);
   }
 
   &.simulation {
-    background-color: $simulation-color;
+    @include linearBackground($simulation-color);
   }
 
   &.smartData {
-    background-color: $smartData-color;
+    @include linearBackground($smartData-color);
   }
 }

@@ -1,16 +1,16 @@
 ---
 layout: default
 additional_css: catalog
-current: smartData
+id: smartData
 ---
 
-<section id="list" class="ui two stackable cards container">
-	{% assign type = site.api_type | where:"id", page.current | first %}
+<section id="list" class="ui two stackable cards container {{ page.id }}">
+	{% assign type = site.api_type | where:"id", page.id | first %}
 
-	<h2 class="ui divider horizontal inverted">Toutes les API de l'État : {{  type.name }}</h2>
+	<h2 class="ui divider horizontal inverted">Toutes les API de l'administration : {{  type.name }}</h2>
 
 	{% for api in site.api %}
-    {% if api.type ==  page.current %}
+    {% if api.type ==  page.id %}
 		  {% include api-card.html description=api %}
     {% endif %}
 	{% endfor %}

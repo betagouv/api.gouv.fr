@@ -3,9 +3,10 @@
 ---
 
 @import "variables";
+@import "mixins";
 
 #list {
-  background-color: #0E1546;
+  @include linearBackground($main-color);
 }
 
 .tag.label {

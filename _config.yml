@@ -35,18 +35,22 @@ defaults:
 api_type:
   - id: confidential
     name: Données confidentielles
-    description: Accès sécurisé à des données confidentielles d'un ou d'une entreprise
+    logo: privacy
+    description: Accès sécurisé à des données confidentielles d'un particulier ou d'une entreprise
 
   - id: reference
     name: Données de référence
+    logo: sitemap
     description: Aide à la saisie & contrôle de cohérence vis à vis données de référence tabulaires ou géographiques
 
   - id: simulation
     name: Calcul et simulation
+    logo: cogs
     description: "Le droit exécutable : éligibilité et calculs fiscaux & sociaux, pour entreprises et particuliers"
 
   - id: smartData
     name: Smart Data
+    logo: magic
     description: Accès à des données temps-réel et à des algorithmes exploitant des Big Data
 
 # Build settings
