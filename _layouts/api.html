@@ -64,10 +64,14 @@ layout: default
 </div>
 
 <section id="callToAction" class="ui vertical center aligned segment {{ page.type }}">
+    {% if page.doc_tech %}
     <a class="large ui secondary button" href="{{ page.doc_tech }}">
       Documentation technique &nbsp;&nbsp;
       <i class="code icon"></i>
     </a>
+    {% else %}
+    {% include missing-doc_tech.html %}
+    {% endif %}
     {% if page.access_link %}
     <a class="large ui secondary button" href="{{ page.access_link }}">
       Demandez l'accès &nbsp;&nbsp;
