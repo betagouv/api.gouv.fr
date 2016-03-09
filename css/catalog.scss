@@ -6,26 +6,7 @@
 @import "mixins";
 
 #list {
-
-  &.main {
-    @include linearBackground($main-color);
-  }
-
-  &.smartData {
-    @include linearBackground($smartData-color);
-  }
-
-  &.confidential {
-    @include linearBackground($confidential-color);
-  }
-
-  &.reference {
-    @include linearBackground($reference-color);
-  }
-
-  &.simulation {
-    @include linearBackground($simulation-color);
-  }
+  @include linearBackground($main-color);
 }
 
 .tag.label {
