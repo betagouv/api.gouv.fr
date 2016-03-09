@@ -30,17 +30,18 @@ layout: default
             </div>
           </div>
         {% endfor %}
-      </div>
+        </div>
 
-      <div class="twelve wide column">
-        <h2 class="ui divider horizontal">Le service</h2>
-        <div class="ui segment">
-          <h4>{{ page.description }}</h4>
-          <div>
-            <img class="ui bordered rounded fluid image" src="{{ site.baseurl }}/img/{{ page.screenshot }}">
-          </div>
-          <div class="markdown-body">
-            {{ content }}
+        <div class="twelve wide column">
+          <h2 class="ui divider horizontal">Le service</h2>
+          <div class="ui segment">
+            <h4>{{ page.description }}</h4>
+            <div>
+              <img class="ui bordered rounded fluid image" src="{{ site.baseurl }}/img/{{ page.screenshot }}" alt="screenshot {{ page.name }}">
+            </div>
+            <div class="markdown-body">
+              {{ content }}
+            </div>
           </div>
         </div>
       </div>
