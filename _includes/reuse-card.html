@@ -5,17 +5,14 @@
 		</div>
 	</div>
 	<div class="content">
-		<a class="header" href="{{ include.description.link }}">{{ include.description.name }}</a>
+		<a class="header" href="{{ site.baseurl }}/{{ include.description.url }}">{{ include.description.name }}</a>
 		<div class="meta">
 			{% for api in include.description.api %}
 				<a class="ui label" href="{{ site.baseurl }}/{{ api.url }}.html"> {{ api.name}}</a>
 			{% endfor %}
 		</div>
 		<p class="description">
-			{{ include.description.content | markdownify }}
+			{{ include.description.description }}
 		</p>
-	</div>
-	<div class="extra content">
-		{{ include.description.description }}
 	</div>
 </div>

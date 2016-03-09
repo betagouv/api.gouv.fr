@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<section id="mission-statement" class="ui vertical center aligned segment">
+
+  <div class="ui text container">
+    <h1 class="ui inverted header">
+      <a class="header" href="{{ site.baseurl }}/{{ page.site }}">{{ page.name }}</a>
+
+    </h1>
+  </div>
+
+</section>
+
+<div id="description" class="ui text container ">
+  <div>
+    <img class="ui bordered rounded fluid image" src="{{ site.baseurl }}/img/{{ page.screenshot }}">
+  </div>
+  <div class="ui segment markdown-body">
+    {{ content }}
+  </div>
+
+</div>
