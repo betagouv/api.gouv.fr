@@ -3,7 +3,7 @@ name: La Bonne Boîte
 link: http://labonneboite.pole-emploi.fr
 description: Votre adresse se complète au fil de sa saisie
 api:
- - Base adresse nationale
+ - Base Adresse Nationale
 screenshot: ecran_labonneboite.jpg
 featured: true
 ---

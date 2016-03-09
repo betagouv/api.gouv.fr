@@ -3,7 +3,7 @@ name: Vitiplantation
 link: http://www.franceagrimer.fr/filiere-vin-et-cidriculture/Vin/En-un-clic/Vitiplantation
 description: En quelques clics, les viticulteurs gèrent leur parcelle
 api:
-  - Api carto
+  - API Carto
 screenshot: ecran_vitiplantation.jpg
 featured: true
 ---

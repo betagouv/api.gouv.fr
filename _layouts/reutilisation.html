@@ -20,8 +20,8 @@ layout: default
         <h2 class="ui divider horizontal">Les API utilisées</h2>
 
         <div class="ui list">
-        {% for apiTitle in page.api %}
-        {% assign api = site.api | where: "title", apiTitle | first %}
+        {% for apiName in page.api %}
+        {% assign api = site.api | where: "name", apiName | first %}
           <div class="item">
             <img class="ui avatar image" src="{{ site.baseurl }}/{{ api.logo }}" alt="logo {{ api.name }}">
             <div class="content">
