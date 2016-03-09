@@ -10,15 +10,40 @@ layout: default
 
     </h1>
   </div>
-
 </section>
 
-<div id="description" class="ui text container ">
-  <div>
-    <img class="ui bordered rounded fluid image" src="{{ site.baseurl }}/img/{{ page.screenshot }}">
+
+<div class="ui container">
+  <div class="ui grid">
+  <div class="row">
+    <div class="four wide column">
+      <h2 class="ui divider horizontal">Les API utilisées</h2>
+
+      <div class="ui list">
+      {% for apiTitle in page.api %}
+      {% assign api = site.api | where: "title", apiTitle | first %}
+        <div class="item">
+          <img class="ui avatar image" src="{{ site.baseurl }}/{{ api.logo }}">
+          <div class="content">
+            <a href="{{ site.baseurl }}/{{ api.url }}" class="header">{{ api.name }}</a>
+            <div class="description">{{ api.tagline }}</div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
   </div>
-  <div class="ui segment markdown-body">
-    {{ content }}
+  <div class="twelve wide column">
+    <h2 class="ui divider horizontal">Le service</h2>
+    <div class="ui segment">
+      <h4>{{ page.description }}</h4>
+      <div>
+        <img class="ui bordered rounded fluid image" src="{{ site.baseurl }}/img/{{ page.screenshot }}">
+      </div>
+      <div class="markdown-body">
+        {{ content }}
+      </div>
+    </div>
   </div>
+</div>
 
 </div>
