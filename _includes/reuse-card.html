@@ -1,19 +1,19 @@
 <div class="ui card">
 	<div class="image">
 		<div>
-			<img src="{{ site.baseurl }}/img/{{ include.description.screenshot }}" alt="capture d'écran de {{ include.description.name }}">
+			<img src="{{ site.baseurl }}/img/{{ include.reuse.screenshot }}" alt="capture d'écran de {{ include.reuse.name }}">
 		</div>
 	</div>
 	<div class="content">
-		<a class="header" href="{{ site.baseurl }}/{{ include.description.url }}">{{ include.description.name }}</a>
+		<a class="header" href="{{ site.baseurl }}/{{ include.reuse.url }}">{{ include.reuse.name }}</a>
 		<div class="meta">
-			{% for apiName in include.description.api %}
+			{% for apiName in include.reuse.api %}
 			{% assign api = site.api | where: "name", apiName | first %}
 				<a class="ui label" href="{{ site.baseurl }}/{{ api.url }}"> {{ api.name }}</a>
 			{% endfor %}
 		</div>
-		<p class="description">
-			{{ include.description.description }}
+		<p class="reuse">
+			{{ include.reuse.description }}
 		</p>
 	</div>
 </div>

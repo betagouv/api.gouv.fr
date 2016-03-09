@@ -79,7 +79,7 @@ layout: default
 {% capture reUse %}
   {% for service in site.reutilisation %}
     {% if service.api contains page.name%}
-      {% include reuse-card.html description=service %}
+      {% include reuse-card.html reuse=service %}
     {% endif %}
   {% endfor %}
 {% endcapture %}

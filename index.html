@@ -61,7 +61,7 @@ searchExamples:
   <div class="ui two stackable cards">
     {% for service in site.reutilisation %}
       {% if service.featured %}
-        {% include reuse-card.html description=service %}
+        {% include reuse-card.html reuse=service %}
       {% endif %}
   	{% endfor %}
   </div>
