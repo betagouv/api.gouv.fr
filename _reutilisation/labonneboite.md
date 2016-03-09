@@ -3,8 +3,7 @@ name: La Bonne Boîte
 link: http://labonneboite.pole-emploi.fr
 description: Votre adresse se complète au fil de sa saisie
 api:
-  - name: BAN
-    url: api/ban
+ - Base adresse nationnale
 screenshot: ecran_labonneboite.jpg
 featured: true
 ---
