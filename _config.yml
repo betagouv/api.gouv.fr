@@ -14,6 +14,8 @@ description: Fabriquez des services en ligne plus simples
 collections:
   api:
     output: true
+  reutilisation:
+    output: true
 
 defaults:
   -
@@ -22,12 +24,19 @@ defaults:
       type: api	# targets a collection
     values:
       layout: api
+      logo: /img/logo-generique-startup-carre.jpg
+
+  -
+    scope:
+      path: ""	# means "all files"
+      type: reutilisation	# targets a collection
+    values:
+      layout: reutilisation
   -
     scope:
       path: ""  # means "all files"
     values:
       layout: default
-      logo: /img/logo-generique-startup-carre.jpg
 
 
 
