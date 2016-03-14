@@ -50,17 +50,17 @@ api_type:
   - id: reference
     name: Données de référence
     logo: sitemap
-    description: Aide à la saisie & contrôle de cohérence vis à vis données de référence tabulaires ou géographiques
+    description: Aide à la saisie & contrôle de cohérence vis à vis données de référence
 
   - id: simulation
-    name: Calcul et simulation
+    name: Le droit exécutable
     logo: cogs
-    description: "Le droit exécutable : éligibilité et calculs fiscaux & sociaux, pour entreprises et particuliers"
+    description: "Calcul et simulation : éligibilité et calculs fiscaux & sociaux, pour entreprises et particuliers"
 
   - id: smartData
-    name: Smart Data
+    name: Big Data
     logo: magic
-    description: Accès à des données temps-réel et à des algorithmes exploitant des Big Data
+    description: Accès à des données temps-réel et à des algorithmes valorisant des données massives
 
 # Build settings
 markdown: kramdown
