@@ -8,6 +8,13 @@
 > Sinon, offline : créer un nouveau fichier de description dans le dossier [`_api`](https://github.com/sgmap/api.gouv.fr/tree/gh-pages/_api) et renseigner les informations en prenant exemple sur un fichier de description existant déjà dans ce dossier.
 
 
+## Ajouter une réutilisation
+
+### [En un clic par l'interface web de GitHub](https://github.com/sgmap/api.gouv.fr/new/gh-pages/_reutilisation?filename=_reutilisation/nom_reuse.md&value=---%0D%0Aname%3A+Nom+Service+%23nom+du+service%0D%0Alink%3A+http%3A%2F%2Fservice.com+%23+lien+vers+le+service%0D%0Adescription%3A+Lorem+Ipsum+%23+description+rapide+du+service%0D%0Aapi%3A+%23+liste+des+API+utilis%C3%A9es+dans+le+service+%28utiliser+l%27attribut+name+de+l%27API%29%0D%0A+-+Nom+API%0D%0Ascreenshot%3A+screenshot.jpg+%23ajouter+un+screenshot+de+l%27API%0D%0Afeatured%3A+false+%23+est-ce+que+la+r%C3%A9utilisation+doit+%C3%AAtre+affich%C3%A9e+sur+la+page+d%27accueil.%0D%0A---%0D%0A%0D%0A%23%23+Description+du+service%0D%0A%0D%0ATexte+libre+au+format+%5BMarkdown%5D%28http%3A%2F%2Fricostacruz.com%2Fcheatsheets%2Fmarkdown.html%29.%0D%0A%0D%0A%0D%0A%23%23+Rappel%0D%0A%0D%0A-+%5B+%5D+Modifier+le+nom+du+fichier+%60nom_service.md%60+dans+le+champ+ci-dessus.%0D%0A-+%5B+%5D+Cr%C3%A9er+une+nouvelle+branche+pour+l%27ajout+de+ce+fichier%2C+et+la+nommer+du+m%C3%AAme+nom+que+le+fichier+%60nom_service%60.%0D%0A-+%5B+%5D+Ouvrir+une+pull+request+pour+valider+l%27int%C3%A9gration.%0D%0A-+%5B+%5D+Effacer+ce+texte+une+fois+que+vous+l%27avez+lu%0D%0A) :smiley:
+
+> Sinon, offline : créer un nouveau fichier de description dans le dossier [`_reutilisation`](https://github.com/sgmap/api.gouv.fr/tree/gh-pages/_reutilisation) et renseigner les informations en prenant exemple sur un fichier de description existant déjà dans ce dossier.
+
+
 ## Éditer la description d'une API
 
 Modifier le fichier de description de l'API dans le dossier [`_api`](https://github.com/sgmap/api.gouv.fr/tree/gh-pages/_api).
