@@ -55,7 +55,7 @@
       position: relative;
       &:first-child {
         margin-right: 1.8em;
-        &:after {
+        &::after {
           content: "";
           position: absolute;
           right: -17px;
@@ -68,12 +68,12 @@
         }
       }
       a {
-        &:hover:before {
+        &:hover::before {
           transform:none;
           opacity:1;
           transition-duration:.4s
         }
-        &:before {
+        &::before {
           content: "";
           position: absolute;
           width: 100%;
@@ -141,12 +141,12 @@ $border-type-color: #eff3f6;
   }
 
   p.discoverAPI {
-    a:after {
+    a::after {
       content: url({{ site.baseurl }}/img/arrow-more.svg);
       display: inline-block;
       margin-left: 7px;
     }
-    a:hover:after {
+    a:hover::after {
       animation:arrow-bounce 1s cubic-bezier(.4,.04,.4,1)
     }
     @keyframes arrow-bounce {
