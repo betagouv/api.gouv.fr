@@ -40,11 +40,11 @@
     font-size: 20em;
     color: #400727;
   }
-  p {
+  p, ul {
     line-height: 1.5em;
     color: #6f7c82
   }
-  ul {
+  ul.link {
     display: flex;
     font-size: 1.1em;
     padding-top: 1em;
