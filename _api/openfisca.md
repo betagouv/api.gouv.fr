@@ -21,7 +21,7 @@ keywords: # liste des mots clés utilisés lors de la recherche
   - prestations sociales
   - droit
   - simulateur
-# logo: http://www.openfisca.fr/hotlinks/logo-openfisca.svg
+logo: /img/logo-openfisca.svg
 ---
 
 ## Description de l'API
