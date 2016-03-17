@@ -6,7 +6,7 @@
 	</div>
 	<div class="content">
 		<h3>
-			<a class="header" href="{{ site.baseurl }}/{{ include.reuse.url }}">{{ include.reuse.name }}</a>
+			<a class="header" href="{{ site.baseurl }}{{ include.reuse.url }}">{{ include.reuse.name }}</a>
 		</h3>
 		<div class="meta">
 			{{ include.reuse.description }}
@@ -15,7 +15,7 @@
 	<div class="extra content">
 		{% for apiName in include.reuse.api %}
 		{% assign api = site.api | where: "name", apiName | first %}
-			<a class="ui label" href="{{ site.baseurl }}/{{ api.url }}"> {{ api.name }}</a>
+			<a class="ui label" href="{{ site.baseurl }}{{ api.url }}"> {{ api.name }}</a>
 		{% endfor %}
 	</div>
 </div>

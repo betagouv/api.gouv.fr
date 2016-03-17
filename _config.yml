@@ -7,7 +7,7 @@
 
 # Site settings
 title: api.gouv.fr
-baseurl: "/api.gouv.fr"
+baseurl: ""
 url: "https://api.gouv.fr"
 description: Fabriquez des services en ligne plus simples
 
