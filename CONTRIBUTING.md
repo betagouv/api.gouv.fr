@@ -50,7 +50,7 @@ La source du logo est dans le répertoire `_sources`. Il s'agit d'un SVG contena
 Cela peut être fait à la ligne de commande avec [Inkscape](https://inkscape.org/fr/) :
 
 ```shell
-inkscape --export-text-to-path $path_to_repo/_sources/logo.svg -l $path_to_repo/img/logo.svg
+inkscape --export-text-to-path `pwd`/_sources/logo.svg -l `pwd`/img/logo.svg
 ```
 
 ## Déployer
