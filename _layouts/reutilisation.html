@@ -6,7 +6,7 @@ layout: default
 
   <div class="ui text container">
     <h1 class="ui inverted header">
-      <a class="header" href="{{ site.baseurl }}/{{ page.site }}">{{ page.name }}</a>
+      <a class="header" href="{{ page.link }}">{{ page.name }}</a>
 
     </h1>
   </div>
@@ -23,9 +23,9 @@ layout: default
         {% for apiName in page.api %}
         {% assign api = site.api | where: "name", apiName | first %}
           <div class="item">
-            <img class="ui avatar image" src="{{ site.baseurl }}/{{ api.logo }}" alt="logo de {{ api.name }}">
+            <img class="ui avatar image" src="{{ site.baseurl }}{{ api.logo }}" alt="logo de {{ api.name }}">
             <div class="content">
-              <a href="{{ site.baseurl }}/{{ api.url }}" class="header">{{ api.name }}</a>
+              <a href="{{ site.baseurl }}{{ api.url }}" class="header">{{ api.name }}</a>
               <div class="description">{{ api.tagline }}</div>
             </div>
           </div>
