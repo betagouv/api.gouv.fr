@@ -45,6 +45,26 @@ FranceConnect cible les partenaires suivants :
 * Fournisseurs d'identité : Vous garantissez l’identification et l’authentification d’un usager.
 * Fournisseurs de données : Vous transmettez des données aux fournisseurs de service suite au consentement de l'usager.
 
+## Événement FranceConnect
+
+### Présentations Générales FranceConnect
+
+Ces événements sont organisés une fois par mois afin de présenter FranceConnect tant sur ses aspects fonctionnels que sur ses mécanismes.
+
+Les publics visés sont les représentants des organisations publiques ou privées intéressées à devenir fournisseur de service, fournisseur d'identité ou encore fournisseur de données.
+
+Les responsables projet FranceConnect seront présents afin de répondre à l'ensemble des questions et de faciliter la mise en oeuvre du dispositif.
+
+<a href="https://doc.integ01.dev-franceconnect.fr/evenements" target="_blank">Retrouvez toutes les prochaines présentations générales FranceConnect</a>
+
+### Ateliers implémentation FranceConnect (pour les développeurs)
+
+C'est l'occasion de venir discuter avec l'équipe FranceConnect et les autres participants et de demander de l'aide sur des sujets comme comment se raccorder, ou encore la norme OpenID Connect.
+
+Comme les formations seront organisés de manière ad-hoc (selon le nombre de personnes intéressées qui se manifestent), l'inscription via le meetup ne garantit pas une place à proprement parler, mais le fait d'être prévenu qu'une formation va se tenir lorsqu'une date sera arrêtée.
+
+Rejoignez notre groupe <a href="http://www.meetup.com/fr-FR/FranceConnect/" target="_blank">Meetup</a> afin d'être tenu informé des dates des prochains ateliers FranceConnect Développement.
+
 ## Sites de démonstration
 
 FranceConnect Particulier :
