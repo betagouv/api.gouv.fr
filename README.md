@@ -1,6 +1,6 @@
 # Api.gouv.fr
 
-> Le site public listant les API au sein du gouvernement Français
+> Le site public listant les API au sein du Système d'Information des Services Publics Français
 
 
 ## Public visé
@@ -10,12 +10,15 @@
 3. **Administrations** proposant des données au travers d'API.
 
 
-### Fourniseur de données ? [Ajoute ton API](https://github.com/sgmap/api.gouv.fr/blob/gh-pages/CONTRIBUTING.md) !
+### Fourniseur d'API ? [Ajoute ton API](https://github.com/sgmap/api.gouv.fr/blob/gh-pages/CONTRIBUTING.md) !
 
+### Réutilisateurs d'API ? [Ajoute ta réutilisation](https://github.com/sgmap/api.gouv.fr/blob/gh-pages/CONTRIBUTING.md) !
 
 ## `api.gouv.fr`
 
-Ce nom de domaine héberge une présentation des différentes API proposées par l'État et les administrations.
+Ce nom de domaine héberge :
+  * une présentation des différentes API proposées par l'État et les administrations
+  * une présentation des réutilisations, sites ou services utilisant des API présentées
 
 ## Installation locale
 
