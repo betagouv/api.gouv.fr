@@ -28,10 +28,15 @@
   @include linearBackground($main-color);
 
 }
-  .markdown-body {
-    border: none;
-    -webkit-box-shadow: none;
-  	-moz-box-shadow: none;
-  	box-shadow: none;
-    margin-top: 2em;
-  }
+
+.logoAPI {
+  margin-top: 0.5em;
+}
+
+.markdown-body {
+  border: none;
+  -webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+  margin-top: 2em;
+}
