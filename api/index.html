@@ -3,10 +3,11 @@ layout: default
 additional_css: catalog
 ---
 
-<section id="list" class="ui two stackable cards container main">
-	<h2 class="ui divider horizontal inverted">Toutes les API de l'administration</h2>
-
-	{% for api in site.api %}
-		{% include api-card.html description=api %}
-	{% endfor %}
+<section id="list" class="ui container main">
+	<h2 class="ui divider horizontal">Toutes les API de l'administration</h2>
+	<div class="ui two stackable cards">
+		{% for api in site.api %}
+			{% include api-card.html description=api %}
+		{% endfor %}
+	</div>
 </section>
