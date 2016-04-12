@@ -22,9 +22,9 @@
 		</div>
 
 		<div class="right floated">
-			<div class="ui tag {{ include.description.type }} label">
+			<div class="ui {{ include.description.type }} label">
 				{% assign type = site.api_type | where:"id", include.description.type | first %}
-			  <i class="file icon"></i> {{  type.name }}
+			  <i class="{{ type.logo }} icon"></i> {{  type.name }}
 			</div>
 		</div>
 	</div>
