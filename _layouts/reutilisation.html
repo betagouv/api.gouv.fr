@@ -6,9 +6,16 @@ layout: default
 
   <div class="ui text container">
     <h1 class="ui inverted header">
-      <a class="header" href="{{ page.link }}">{{ page.name }}</a>
-
+      {{ page.name }}
     </h1>
+
+    <h2 class="ui inverted header">
+      {{ page.description }}
+    </h2>
+
+    <a class="large ui secondary button" href="{{ page.link }}">
+      Accédez au service &nbsp;&nbsp;<i class="rocket icon"></i>
+    </a>
   </div>
 </section>
 
@@ -35,7 +42,6 @@ layout: default
       <div class="twelve wide column">
         <h2 class="ui divider horizontal">Le service</h2>
         <div class="ui segment">
-          <h4>{{ page.description }}</h4>
           <div>
             <img class="ui bordered rounded fluid image" src="{{ site.baseurl }}/img/{{ page.screenshot }}" alt="capture d'écran de {{ page.name }}">
           </div>
