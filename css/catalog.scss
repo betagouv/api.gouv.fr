@@ -5,8 +5,8 @@
 @import "variables";
 @import "mixins";
 
-#list {
-  @include linearBackground($main-color);
+body {
+  background-color: #F3F3F3;
 }
 
 .tag.label {
