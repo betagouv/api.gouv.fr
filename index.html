@@ -117,6 +117,10 @@ $(document).ready(function() {
       indexCollection(item, 'clients');
       indexCollection(item, 'partners');
     });
+    var action = {
+      url: '{{ site.baseurl }}/api/',
+      text: "Explorez les {{ site.api | size }} API déjà disponibles"
+    }
     $searchDiv.search({
       minCharacters : 2,
       searchFields   : [
@@ -129,7 +133,61 @@ $(document).ready(function() {
         'contract'
       ],
       searchFullText: true,
-      source: data
+      source: data,
+      templates: {
+        message: function(type, message) {
+          html = '<p class="searchError">Aucune API ne correspond à votre recherche</p>'
+          + '<a href="' + action.url + '" class="action">'
+          +   action.text
+          + '</a>';
+          return html;
+        },
+        standard: function(response, fields) {
+          var
+            html = ''
+          ;
+          if(response[fields.results] !== undefined) {
+
+            // each result
+            $.each(response[fields.results], function(index, result) {
+              if(result[fields.url]) {
+                html  += '<a class="result" href="' + result[fields.url] + '">';
+              }
+              else {
+                html  += '<a class="result">';
+              }
+              if(result[fields.image] !== undefined) {
+                html += ''
+                  + '<div class="image">'
+                  + ' <img src="' + result[fields.image] + '">'
+                  + '</div>'
+                ;
+              }
+              html += '<div class="content">';
+              if(result[fields.price] !== undefined) {
+                html += '<div class="price">' + result[fields.price] + '</div>';
+              }
+              if(result[fields.title] !== undefined) {
+                html += '<div class="title">' + result[fields.title] + '</div>';
+              }
+              if(result[fields.description] !== undefined) {
+                html += '<div class="description">' + result[fields.description] + '</div>';
+              }
+              html  += ''
+                + '</div>'
+              ;
+              html += '</a>';
+            });
+            if(action) {
+              html += ''
+              + '<a href="' + action.url + '" class="action">'
+              +   action.text
+              + '</a>';
+            }
+            return html;
+          }
+        }
+      }
     });
     $searchDiv.keyup(function(e) {
       if(e.keyCode == 13) {
