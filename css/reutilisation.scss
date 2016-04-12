@@ -10,17 +10,12 @@
   padding-top: 5%;
   padding-bottom: 5%;
   margin-bottom: 2%;
-  h1 a {
-  	padding: .2em 0;
-  	font-size: 200%;
-    color: white;
-    text-decoration: underline;
-  	line-height: 1.8;
-  	letter-spacing: .08em;
-  	text-transform: uppercase;
-    &:hover {
-      text-decoration: none;
-    }
+  h1 {
+    padding: .2em 0;
+    font-size: 200%;
+    line-height: 1.8;
+    letter-spacing: .08em;
+    text-transform: uppercase;
   }
 
   h2 {
