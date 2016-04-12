@@ -27,7 +27,11 @@
  	text-transform: uppercase;
  }
  .results {
-   width: 100%
+   width: 100%;
+
+   .searchError {
+     margin-top: 1em;
+   }
  }
 }
 
