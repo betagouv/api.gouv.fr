@@ -4,26 +4,30 @@ layout: default
 
 <section id="mission-statement" class="ui vertical center aligned segment {{ page.type }}">
 
-  <div class="ui text container">
-    <h1 class="ui inverted header">
-      {{ page.name }}
-    </h1>
-    <h2 class="ui inverted header">
-      {{ page.tagline }}
-    </h2>
-    {% if page.doc_tech %}
-    <a class="large ui secondary button" href="{{ page.doc_tech }}">
-      Documentation technique &nbsp;&nbsp;<i class="code icon"></i>
-    </a>
-    {% else %}
-    {% include missing-doc_tech.html %}
-    {% endif %}
-    {% if page.access_link %}
-    <a class="large ui secondary button" href="{{ page.access_link }}">
-      Demandez l'accès &nbsp;&nbsp;
-      <i class="ticket icon"></i>
-    </a>
-    {% endif %}
+  <div class="ui container">
+    <div class="ui grid">
+      <div class="twelve wide centered column">
+        <h1 class="ui inverted header">
+          {{ page.name }}
+        </h1>
+        <h2 class="ui inverted header">
+          {{ page.tagline }}
+        </h2>
+        {% if page.doc_tech %}
+        <a class="large ui secondary button" href="{{ page.doc_tech }}">
+          Documentation technique &nbsp;&nbsp;<i class="code icon"></i>
+        </a>
+        {% else %}
+        {% include missing-doc_tech.html %}
+        {% endif %}
+        {% if page.access_link %}
+        <a class="large ui secondary button" href="{{ page.access_link }}">
+          Demandez l'accès &nbsp;&nbsp;
+          <i class="ticket icon"></i>
+        </a>
+        {% endif %}
+      </div>
+    </div>
   </div>
 
 </section>
