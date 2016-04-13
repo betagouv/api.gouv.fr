@@ -19,11 +19,11 @@
   }
 
   h2 {
-  	padding: .2em 0;
-  	font-size: 150%;
-  	line-height: 1.4;
-  	letter-spacing: .05em;
-  	text-transform: uppercase;
+    padding: .2em 0;
+    font-size: 150%;
+    line-height: 1.4;
+    letter-spacing: .05em;
+    text-transform: uppercase;
   }
   @include linearBackground($reuse-color);
 
@@ -36,8 +36,8 @@
 .markdown-body {
   border: none;
   -webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
   margin-top: 2em;
 }
 

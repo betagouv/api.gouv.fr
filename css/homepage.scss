@@ -13,26 +13,26 @@
 
 
   .input {
-   min-width: 60%;
-   margin-bottom: 3%
+    min-width: 60%;
+    margin-bottom: 3%
  }
 
- h1 {
- 	padding: .2em 0;
+h1 {
+  padding: .2em 0;
 
- 	font-size: 200%;
- 	line-height: 1.8;
- 	letter-spacing: .08em;
+  font-size: 200%;
+  line-height: 1.8;
+  letter-spacing: .08em;
 
- 	text-transform: uppercase;
- }
- .results {
-   width: 100%;
+  text-transform: uppercase;
+}
+  .results {
+    width: 100%;
 
-   .searchError {
-     margin-top: 1em;
-   }
- }
+    .searchError {
+      margin-top: 1em;
+    }
+  }
 }
 
 #description {
