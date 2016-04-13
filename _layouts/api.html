@@ -28,51 +28,54 @@ layout: default
 
 </section>
 
-<div id="description" class="ui text container ">
-  <div class="ui segment markdown-body">
-    <div class="ui right rail">
-      <div class="ui segment">
-        <div class="ui relaxed divided list">
-          <div class="item">
-            <div class="content">
-              <div class="header">Conditions d'utilisation</div>
-              <div class="description">
-                {{ page.contract }}
+<div id="description" class="ui container ">
+  <div class="ui reversed stackable grid">
+    <div class="row">
+      <div class="four wide column">
+        <div class="ui segment">
+          <div class="ui relaxed divided list">
+            <div class="item">
+              <div class="content">
+                <div class="header">Conditions d'utilisation</div>
+                <div class="description">
+                  {{ page.contract }}
+                </div>
               </div>
             </div>
-          </div>
-          {% if page.restriction %}
-          <div class="item">
-            <div class="content">
-              <div class="header">Contraintes</div>
-              <div class="description">
-                {{ page.restriction }}
+            {% if page.restriction %}
+            <div class="item">
+              <div class="content">
+                <div class="header">Contraintes</div>
+                <div class="description">
+                  {{ page.restriction }}
+                </div>
               </div>
             </div>
-          </div>
-          {% endif %}
-          <div class="item">
-            <div class="content">
-              <div class="header">Clients cibles</div>
-              <div class="description">
-               {{ page.clients | join: ' &amp; ' }}
+            {% endif %}
+            <div class="item">
+              <div class="content">
+                <div class="header">Clients cibles</div>
+                <div class="description">
+                 {{ page.clients | join: ' &amp; ' }}
+                </div>
               </div>
             </div>
-          </div>
-          <div class="item">
-            <div class="content">
-              <div class="header">Sources et partenaires</div>
-              <div class="description">
-                {{ page.partners | join: ' &amp; ' }}
+            <div class="item">
+              <div class="content">
+                <div class="header">Sources et partenaires</div>
+                <div class="description">
+                  {{ page.partners | join: ' &amp; ' }}
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <div class="twelve wide column markdown-body">
+        {{ content }}
+      </div>
     </div>
-    {{ content }}
   </div>
-
 </div>
 
 {% capture reUse %}
