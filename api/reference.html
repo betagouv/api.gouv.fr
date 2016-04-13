@@ -12,9 +12,9 @@ id: reference
 	<div class="ui two stackable cards">
 
 		{% for api in site.api %}
-	    {% if api.type ==  page.id %}
-			  {% include api-card.html description=api %}
-	    {% endif %}
+			{% if api.type == page.id %}
+				{% include api-card.html description=api %}
+			{% endif %}
 		{% endfor %}
 	</div>
 </section>
