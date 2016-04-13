@@ -8,7 +8,8 @@ layout: default
     <div class="ui grid">
       <div class="twelve wide centered column">
         <h1 class="ui inverted header">
-          {{ page.name }}
+          {% assign type = site.api_type | where:"id", page.type | first %}
+          <i class="{{ type.logo }} icon"></i>{{ page.name }}
         </h1>
         <h2 class="ui inverted header">
           {{ page.tagline }}
