@@ -4,15 +4,18 @@
 
   <body>
 
-    <div>
-      <a href="{{ site.baseurl }}/">
-        <header>
-          <img src="{{ site.baseurl }}/img/logo.svg" alt="{{ site.title }}" />
-        </header>
-      </a>
-
-      {{ content }}
-
+    <div id="wrapper">
+      <div id="content">
+        <div>
+          <a href="{{ site.baseurl }}/">
+            <header>
+              <img src="{{ site.baseurl }}/img/logo.svg" alt="{{ site.title }}" />
+            </header>
+          </a>
+          {{ content }}
+        </div>
+        {% include footer.html %}
+      </div>
     </div>
 
     {% include analytics.html %}
