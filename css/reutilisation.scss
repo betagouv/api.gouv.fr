@@ -25,7 +25,7 @@
   	letter-spacing: .05em;
   	text-transform: uppercase;
   }
-  @include linearBackground($main-color);
+  @include linearBackground($reuse-color);
 
 }
 
