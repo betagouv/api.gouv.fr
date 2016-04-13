@@ -43,7 +43,7 @@ defaults:
 # vertical-rhythm
 api_type:
   - id: confidential
-    name: Données personnelles
+    name: Données confidentielles
     logo: privacy
     description: Accès sécurisé à des données confidentielles d'un particulier ou d'une entreprise
 
