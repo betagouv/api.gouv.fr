@@ -2,6 +2,9 @@
 # Main pages style
 ---
 
+@import "variables";
+
+
 header {
 	background-image: url({{ site.baseurl }}/img/marianne.svg);
 	background-repeat: no-repeat;
@@ -10,11 +13,29 @@ header {
 	background-color: #FEFEFE;
 	color: #555;
 	height: 2.4em;
-	
+
 	img {
 		float: right;
 		margin-top: .1em;
 		height: 80%;
 		margin-right: .8em;
 	}
+}
+
+footer {
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:80px;
+    padding: 20px 0;
+    background-color: #f8f8f8;
+}
+
+#wrapper {
+  min-height:100%;
+  position:relative;
+}
+
+#content {
+  padding-bottom:80px;
 }
