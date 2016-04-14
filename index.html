@@ -157,12 +157,9 @@ $(document).ready(function() {
               html += '</div>';
               html += '</a>';
             });
-            if(action) {
-              html += ''
-              + '<a href="' + action.url + '" class="action">'
+              html += '<a href="' + action.url + '" class="action">'
               +   action.text
               + '</a>';
-            }
             return html;
           }
         }
