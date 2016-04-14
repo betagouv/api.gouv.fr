@@ -145,8 +145,7 @@ $(document).ready(function() {
                 html += ''
                   + '<div class="image">'
                   + ' <img src="' + result[fields.image] + '">'
-                  + '</div>'
-                ;
+                  + '</div>';
               }
               html += '<div class="content">';
               [ 'price', 'title', 'description' ].forEach(function(property) {
@@ -157,9 +156,9 @@ $(document).ready(function() {
               html += '</div>';
               html += '</a>';
             });
-              html += '<a href="' + action.url + '" class="action">'
-              +   action.text
-              + '</a>';
+            html += '<a href="' + action.url + '" class="action">'
+            +   action.text
+            + '</a>';
             return html;
           }
         }
@@ -168,7 +167,7 @@ $(document).ready(function() {
     $searchDiv.keyup(function(e) {
       if(e.keyCode == 13) {
         var $link = $searchDiv.find('.results.visible a.result.active');
-         window.location.href = $link.attr('href');
+          window.location.href = $link.attr('href');
       }
     })
   });
