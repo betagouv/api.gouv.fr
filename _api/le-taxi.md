@@ -9,6 +9,7 @@ restriction: faciliter l'accès des clients aux taxis
 clients:
   - particulier
   - entreprise
+logo: /img/logo_le.taxi.svg
 partners:
   - Ministère de l'Intérieur
   - G7
