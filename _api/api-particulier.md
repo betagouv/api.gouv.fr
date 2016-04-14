@@ -2,7 +2,7 @@
 name: API Particulier
 tagline: Simplifiez les démarches de vos usagers, ne demandez plus de justificatifs
 doc_tech: https://apiparticulier.sgmap.fr/tech
-access_link: https://apiparticulier.sgmap.fr/#/registration
+access_link: https://apiparticulier.sgmap.fr/#/registration/charte
 domain: https://apiparticulier.sgmap.fr
 contract: OUVERT sous contrat
 restriction: simplication des démarches des usagers
