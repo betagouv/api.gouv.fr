@@ -39,3 +39,10 @@ footer {
 #page {
 	padding-bottom: 80px;
 }
+
+input:focus::-webkit-input-placeholder{
+    color: transparent!important;
+}
+input:focus::-moz-placeholder{
+    color: transparent!important;
+}
