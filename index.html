@@ -16,7 +16,9 @@ searchExamples:
     </h1>
     <div class="ui search">
 		  <div class="ui fluid left icon input">
-		    <input class="prompt" placeholder="{{ page.searchExamples | join: ', '}}…" type="search">
+		    <input class="prompt"
+              placeholder="{{ page.searchExamples | join: ', '}}…"
+              type="search">
 		    <i class="search icon"></i>
 		  </div>
 		</div>
@@ -25,13 +27,16 @@ searchExamples:
 
 <section id="description" class="ui container">
   <div class="ui fluid centered stackable grid">
-    <div class="six wide column">
-      <img src="{{ site.baseurl }}/img/main_image.jpg" alt="image of usage of the API" />
+    <div class="five wide column">
+      <img src="{{ site.baseurl }}/img/Apigouv_visual.svg" alt="image of usage of the API" />
     </div>
-    <div class="six wide column">
+    <div class="five wide column">
       <h2>Pourquoi api.gouv ?</h2>
       <p>
-        Les API proposées par l'administration vous permettront de :
+        Vous êtes une administration, une collectivité, un éditeur de solutions pour les particuliers ou les entreprises et souhaitez simplifier radicalement la relation des usagers à l’administration.
+      </p>
+      <p>
+        Les API proposées vous permettent de&nbsp;:
       </p>
       <ul>
         <li>simplifier les démarches d'un usager</li>
@@ -39,16 +44,9 @@ searchExamples:
         <li>récupérer des informations que l'administration possède déjà</li>
         <li>…à vous d'inventer la suite !</li>
       </ul>
-
-      <p>Vous êtes une administration, une collectivité, un éditeur de solutions pour
-        les particuliers ou les entreprises ? Libérez votre créativité pour simplifier
-        radicalement la relation des usagers à l'administration.</p>
       <ul class="link">
         <li>
-          <a href="https://thibaut6.typeform.com/to/dfwyyt">Ajouter une API</a>
-        </li>
-        <li>
-          <a href="https://thibaut6.typeform.com/to/quiFdr">Ajouter une réutilisation</a>
+          <a href="{{ site.baseurl }}/api/">Explorez les {{ site.api | size }} API déjà disponibles</a>
         </li>
       </ul>
     </div>
@@ -82,14 +80,10 @@ searchExamples:
   </ul>
 </section>
 
-<div class="ui container">
-  <p class="buttonContainer">
-	   <a class="ui big button moreButton" href="{{ site.baseurl }}/api/">Explorez les {{ site.api | size }} API déjà disponibles&nbsp;&nbsp;➤</a>
-  </p>
-</div>
+
 
 <section id="services" class="ui container">
-  <h2 class="ui divider horizontal">Ils l'utilisent déjà</h2>
+  <h2 class="ui divider horizontal">Toutes les réutilisations</h2>
   <div class="ui two stackable cards">
     {% for service in site.reutilisation %}
       {% if service.featured %}
@@ -117,6 +111,10 @@ $(document).ready(function() {
       indexCollection(item, 'clients');
       indexCollection(item, 'partners');
     });
+    var action = {
+      url: '{{ site.baseurl }}/api/',
+      text: "Explorez les {{ site.api | size }} API déjà disponibles"
+    }
     $searchDiv.search({
       minCharacters : 2,
       searchFields   : [
@@ -129,12 +127,47 @@ $(document).ready(function() {
         'contract'
       ],
       searchFullText: true,
-      source: data
+      source: data,
+      templates: {
+        message: function(type, message) {
+          var html = '<p class="searchError">Aucune API ne correspond à votre recherche</p>'
+          + '<a href="' + action.url + '" class="action">'
+          +   action.text
+          + '</a>';
+          return html;
+        },
+        standard: function(response, fields) {
+          var html = '';
+          if(response[fields.results]) {
+            $.each(response[fields.results], function(index, result) {
+              html  += '<a class="result" href="' + result[fields.url] + '">';
+              if(result[fields.image]) {
+                html += ''
+                  + '<div class="image">'
+                  + ' <img src="' + result[fields.image] + '">'
+                  + '</div>';
+              }
+              html += '<div class="content">';
+              [ 'price', 'title', 'description' ].forEach(function(property) {
+                if(result[fields[property]] !== undefined) {
+                  html += '<div class="'+ property +'">' + result[fields[property]] + '</div>';
+                }
+              });
+              html += '</div>';
+              html += '</a>';
+            });
+            html += '<a href="' + action.url + '" class="action">'
+            +   action.text
+            + '</a>';
+            return html;
+          }
+        }
+      }
     });
     $searchDiv.keyup(function(e) {
       if(e.keyCode == 13) {
         var $link = $searchDiv.find('.results.visible a.result.active');
-         window.location.href = $link.attr('href');
+          window.location.href = $link.attr('href');
       }
     })
   });

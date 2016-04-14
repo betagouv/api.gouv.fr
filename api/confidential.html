@@ -4,16 +4,17 @@ additional_css: catalog
 id: confidential
 ---
 
-<section id="list" class="ui two stackable cards container {{ page.id }}">
+<section id="list" class="ui container">
 	{% assign type = site.api_type | where:"id", page.id | first %}
 
-	<h2 class="ui divider horizontal inverted">Toutes les API de l'administration : {{  type.name }}</h2>
-
-	{% for api in site.api %}
-    {% if api.type ==  page.id %}
-		  {% include api-card.html description=api %}
-    {% endif %}
-	{% endfor %}
+	<h2 class="ui divider horizontal">Toutes les API de l'administration : {{  type.name }}</h2>
+	<div class="ui two stackable cards">
+		{% for api in site.api %}
+			{% if api.type == page.id %}
+				{% include api-card.html description=api %}
+			{% endif %}
+		{% endfor %}
+	</div>
 </section>
 
 <div class="ui container">
