@@ -5,15 +5,13 @@
   <body>
 
     <div id="wrapper">
-      <div id="content">
-        <div>
-          <a href="{{ site.baseurl }}/">
-            <header>
-              <img src="{{ site.baseurl }}/img/logo.svg" alt="{{ site.title }}" />
-            </header>
-          </a>
-          {{ content }}
-        </div>
+      <div id="page">
+        <a href="{{ site.baseurl }}/">
+          <header>
+            <img src="{{ site.baseurl }}/img/logo.svg" alt="{{ site.title }}" />
+          </header>
+        </a>
+        {{ content }}
         {% include footer.html %}
       </div>
     </div>
