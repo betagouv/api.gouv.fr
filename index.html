@@ -130,7 +130,7 @@ $(document).ready(function() {
       source: data,
       templates: {
         message: function(type, message) {
-          html = '<p class="searchError">Aucune API ne correspond à votre recherche</p>'
+          var html = '<p class="searchError">Aucune API ne correspond à votre recherche</p>'
           + '<a href="' + action.url + '" class="action">'
           +   action.text
           + '</a>';
