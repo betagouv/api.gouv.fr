@@ -37,6 +37,15 @@ layout: default
   <div class="ui mobile reversed stackable grid">
     <div class="four wide column">
       <div class="ui segment">
+        {% if page.experimentale %}
+        <div class="ui yellow ribbon label" >
+          <span class="tooltip" title="L'interface de l'API n'est pas stable">Expérimentale</span>
+        </div>
+        {% else %}
+        <div class="ui green ribbon label">
+          <span class="tooltip" title="L'interface de l'API est stable">Stable</span>
+        </div>
+        {% endif %}
         <div class="ui relaxed divided list">
           <div class="item">
             <div class="ui fluid image">
