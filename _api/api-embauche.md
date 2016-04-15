@@ -4,6 +4,7 @@ tagline: Estimer le coût d'embauche en France
 doc_tech: https://embauche.beta.gouv.fr/api-cotisations-sociales.html
 domain: https://embauche.beta.gouv.fr
 contract: OUVERT
+experimentale: true
 clients:
   - Entreprise
 partners:
