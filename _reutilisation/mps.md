@@ -1,7 +1,7 @@
 ---
 name: MPS
-link: https://www.marches-securises.fr/entreprise
-description: Un SIRET pour candidater uniquement pour un marché public
+link: https://mps.apientreprise.fr
+description: Candidater à un marché public avec seulement votre SIRET.
 screenshot: ecran_MPS.jpg
 featured: false
 api:
