@@ -36,18 +36,28 @@ layout: default
     <div class="four wide column">
       <div class="ui segment">
         {% if page.experimentale %}
-        <div class="ui yellow ribbon label" >
-          <span class="tooltip" title="L'interface de l'API n'est pas stable">Expérimentale</span>
+        <div class="ui yellow left ribbon label" >
+          Expérimentale
         </div>
         {% else %}
-        <div class="ui green ribbon label">
-          <span class="tooltip" title="L'interface de l'API est stable">Stable</span>
+        <div class="ui green left ribbon label">
+          Stable
         </div>
         {% endif %}
-        <div class="ui relaxed divided list">
-          <div class="item">
-            <div class="ui fluid image">
+        <div class="ui relaxed divided list metadata">
+          <div class="item logoWrapper">
+            <div class="ui small image">
               <img src="{{ page.logo }}" alt="{{ page.name }}" />
+            </div>
+          </div>
+          <div class="item stat">
+            <div class="ui statistic">
+              <div class="value">
+                5,550
+              </div>
+              <div class="label">
+                Appels lors du <br> dernier mois
+              </div>
             </div>
           </div>
           <div class="item">
