@@ -4,41 +4,49 @@
 
 @import "variables";
 
-
-header {
-	background-image: url({{ site.baseurl }}/img/marianne.svg);
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: .8em;
-	background-color: #FEFEFE;
-	color: #555;
-	height: 2.4em;
-
-	img {
-		float: right;
-		margin-top: .1em;
-		height: 80%;
-		margin-right: .8em;
-	}
-}
-
-footer {
-		position: absolute;
-		bottom: 0;
-		width: 100%;
-		height: 80px;
-		padding: 20px 0;
-		background-color: #f8f8f8;
-}
-
 #wrapper {
 	min-height: 100%;
 	position: relative;
+
+	#page {
+		padding-bottom: 80px;
+
+		header {
+			background-image: url({{ site.baseurl }}/img/marianne.svg);
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: .8em;
+			background-color: #FEFEFE;
+			color: #555;
+			height: 2.4em;
+
+			img {
+				float: right;
+				margin-top: .1em;
+				height: 80%;
+				margin-right: .8em;
+			}
+		}
+
+		#content {
+			margin-bottom: 3em;
+		}
+
+		footer {
+			margin-top: 4em;
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			height: 80px;
+			padding: 20px 0;
+			background-color: #f8f8f8;
+		}
+	}
 }
 
-#page {
-	padding-bottom: 80px;
-}
+
+
+
 
 input:focus::-webkit-input-placeholder{
     color: transparent!important;
