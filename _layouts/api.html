@@ -33,7 +33,7 @@ layout: default
 
 </section>
 
-<div id="description" class="ui container ">
+<div id="description" class="ui container">
   <div class="ui mobile reversed stackable grid">
     <div class="four wide column">
       <div class="ui segment">
@@ -89,8 +89,27 @@ layout: default
         </div>
       </div>
     </div>
-    <div class="twelve wide column markdown-body">
-      {{ content }}
+    <div class="twelve wide column">
+      <div class="ui secondary pointing menu">
+        <a class="item active" data-tab="funk">Description</a>
+        <a class="item" data-tab="tech">Technique</a>
+      </div>
+      <div class="ui active tab" data-tab="funk">
+        <section class="markdown-body">
+          {{ content }}
+        </section>
+      </div>
+      <div class="ui tab" data-tab="tech">
+        {% if page.openapi_definition %}
+          <section class="ui container">
+            {% include swagger.html %}
+          </section>
+        {% else %}
+          <p>
+            Vous pouvez retrouver la documentation technique sur <a href="{{ page.doc_tech }}">le site de l'API</a>
+          </p>
+        {% endif %}
+      </div>
     </div>
   </div>
 </div>
@@ -111,3 +130,10 @@ layout: default
   </div>
 </section>
 {% endif %}
+
+
+<script>
+  $(function() {
+    $('.menu .item').tab();
+  });
+</script>

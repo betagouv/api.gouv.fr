@@ -57,6 +57,17 @@
     -moz-box-shadow: none;
     box-shadow: none;
   }
+  .menu {
+    margin-bottom: 2em;
+    .item {
+      font-size: 1.2em;
+    }
+  }
+  .swagger-section {
+    .info_title {
+      display: none;
+    }
+  }
 }
 #callToAction {
   margin-top: 3%;
