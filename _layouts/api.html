@@ -68,16 +68,7 @@ layout: default
               </div>
             </div>
           </div>
-          {% if page.restriction %}
-          <div class="item">
-            <div class="content">
-              <div class="header">Contraintes</div>
-              <div class="description">
-                {{ page.restriction }}
-              </div>
-            </div>
-          </div>
-          {% endif %}
+          {% if page.clients %}
           <div class="item">
             <div class="content">
               <div class="header">Clients cibles</div>
@@ -86,6 +77,8 @@ layout: default
               </div>
             </div>
           </div>
+          {% endif %}
+          {% if page.partners %}
           <div class="item">
             <div class="content">
               <div class="header">Sources et partenaires</div>
@@ -94,6 +87,7 @@ layout: default
               </div>
             </div>
           </div>
+          {% endif %}
         </div>
       </div>
     </div>
