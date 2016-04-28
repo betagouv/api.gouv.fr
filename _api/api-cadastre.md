@@ -26,6 +26,7 @@ __Attention : Cette API est en construction. Le contenu et la documentation chan
 L'API Cadastre vous permet de consulter simplement les parcelles d'une commune, ou de rechercher un ensemble de parcelles en particulier.
 
 Le cadastre est un référentiel essentiel pour de nombreux usages :
+
 * Aménagement du territoire
 * Agriculture / Sylviculture
 * Droit / Fiscalité
