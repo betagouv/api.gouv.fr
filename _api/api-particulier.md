@@ -6,7 +6,9 @@ access_link: https://apiparticulier.sgmap.fr/#/registration/charte
 domain: https://apiparticulier.sgmap.fr
 contract: OUVERT sous contrat
 restriction: simplication des démarches des usagers
-openapi_definition: https://apiparticulier.sgmap.fr/docs/api-particulier.yaml
+openapi:
+  definition: https://apiparticulier-test.sgmap.fr/docs/api-particulier.yaml
+
 clients:
   - collectivités
   - ministères
