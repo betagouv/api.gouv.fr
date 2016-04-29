@@ -12,7 +12,7 @@ layout: null
       "owner" : "{{ api.owner }}",
       "contract" : "{{ api.contract }}",
       "restriction" : "{{ api.restriction }}",
-      "type" : "{{ api.type }}",
+      "category" : "{{ api.category }}",
       "keywords": [
         {% if api.keywords %}
         "{{ api.keywords | join: '","' }}"

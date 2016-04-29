@@ -6,13 +6,13 @@ id: reference
 
 
 <section id="list" class="ui container">
-	{% assign type = site.api_type | where:"id", page.id | first %}
+	{% assign category = site.api_category | where:"id", page.id | first %}
 
-	<h2 class="ui divider horizontal">Toutes les API de l'administration : {{  type.name }}</h2>
+	<h2 class="ui divider horizontal">Toutes les API de l'administration : {{  category.name }}</h2>
 	<div class="ui two stackable cards">
 
 		{% for api in site.api %}
-			{% if api.type == page.id %}
+			{% if api.category == page.id %}
 				{% include api-card.html description=api %}
 			{% endif %}
 		{% endfor %}

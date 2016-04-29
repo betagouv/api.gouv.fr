@@ -27,7 +27,7 @@ Modifier le fichier de description de l'API dans le dossier [`_api`](https://git
 
 ## Modifier les types d'API
 
-Mettre à jour la propriété `api_type` dans [`_config.yml`](https://github.com/sgmap/api.gouv.fr/tree/gh-pages/_config.yml).
+Mettre à jour la propriété `api_category` dans [`_config.yml`](https://github.com/sgmap/api.gouv.fr/tree/gh-pages/_config.yml).
 
 ## Modifier les exemples de recherches
 

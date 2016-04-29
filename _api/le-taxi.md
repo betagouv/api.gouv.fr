@@ -31,7 +31,7 @@ partners:
   - TRAM Montpellier
   - UNT
 owner: DINSIC
-type: smartData
+category: smartData
 keywords:
   - Impots
   - CAF

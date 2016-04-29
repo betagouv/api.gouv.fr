@@ -11,7 +11,7 @@ clients:
 partners:
   - DGFiP
 owner: DINSIC
-type: reference
+category: reference
 experimentale: true
 keywords:
   - Cadastre

@@ -43,7 +43,7 @@ defaults:
 
 
 # vertical-rhythm
-api_type:
+api_category:
   - id: confidential
     name: Données confidentielles
     logo: privacy

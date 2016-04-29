@@ -20,7 +20,7 @@ stat:
   label: Adresses géocodées
   path:
     - queries_week
-type: reference
+category: reference
 keywords:
   - carte
   - adresse

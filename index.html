@@ -61,23 +61,23 @@ searchExamples:
 
 <section id="type" class="ui container">
   <ul class="ui fluid stackable grid">
-    {% for type in site.api_type %}
+    {% for type in site.api_category %}
     <li class="eight wide column">
       <i class="icon huge {{ type.logo }} {{ type.id }}"></i>
       <h2 class="header">{{ type.name }}</h2>
       <p>
         {{ type.description }}
       </p>
-      {% assign api_type_size = site.api | where:"type", type.id |size %}
+      {% assign api_category_size = site.api | where:"category", type.id |size %}
 
       <p class="discoverAPI">
         <a href="{{ site.baseurl }}/api/{{ type.id }}">
-          {% if api_type_size == 0 %}
+          {% if api_category_size == 0 %}
             Aucune API n'est encore disponible
-          {% elsif api_type_size == 1 %}
+          {% elsif api_category_size == 1 %}
             Explorer la première API
           {% else %}
-            Explorer ces {{ api_type_size }} API
+            Explorer ces {{ api_category_size }} API
           {% endif %}
         </a>
       </p>
