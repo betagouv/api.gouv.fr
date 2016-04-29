@@ -8,7 +8,27 @@ contract: OUVERT sous contrat
 restriction: simplication des démarches des usagers
 openapi:
   definition: https://apiparticulier-test.sgmap.fr/docs/api-particulier.yaml
+  override_description: |
 
+      Bienvenue sur la documentation exécutable d'API Particulier
+
+      #### Environnements
+
+      Il existe plusieurs environnements:
+
+      |             | Domain                       | Documentation                                     | API Key     | Stable |
+      |-------------|------------------------------|---------------------------------------------------|-------------|--------|
+      | Production  | apiparticulier.sgmap.fr      |[Lien](https://apiparticulier.sgmap.fr/docs/)      | Secret      | Oui    |
+      | Test        | apiparticulier-test.sgmap.fr |[Lien](https://apiparticulier-test.sgmap.fr/docs/) | `test-token`| Oui    |
+      | Dev         | apiparticulier-dev.sgmap.fr  |[Lien](https://apiparticulier-dev.sgmap.fr/docs/)  | Secret      | Non    |
+      | Mocks       | apiparticulier-mock.sgmap.fr |[Lien](https://apiparticulier-mock.sgmap.fr/docs/) | ``          | Oui    |
+
+      La documentation ci-dessous propose des données bidons pour faire des tests avec le token `test-token`.
+
+      Pour la caf vous pouvez utiliser le numéro d'allocataire `0000354` et le département `99148`.
+      Pour les impots vous pouvez utiliser le numéro fiscal `1562456789521` et la référence d'avis `1512456789521`.
+
+      Essayez par vous même !
 clients:
   - collectivités
   - ministères
