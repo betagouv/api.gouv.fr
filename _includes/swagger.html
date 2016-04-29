@@ -1,8 +1,18 @@
-<div class="swagger-section">
-   <div id="swagger-ui-container" class="swagger-ui-wrap"></div>
+
+{% if page.openapi.override_description %}
+<style type="text/css" scoped>
+.swagger-section .info_description {
+    display: none;
+  }
+</style>
+<div class="markdown-body">
+   {{ page.openapi.override_description | markdownify }}
 </div>
+{% endif %}
 
-
+<div class="swagger-section">
+  <div id="swagger-ui-container" class="swagger-ui-wrap"></div>
+</div>
 
 <script src="//cdn.jsdelivr.net/jquery.mb.browser/0.1/jquery.mb.browser.min.js"></script>
 <script src="//cdn.rawgit.com/swagger-api/swagger-ui/v2.1.3/dist/lib/jquery.slideto.min.js"></script>
@@ -17,7 +27,7 @@
 <script src="//cdn.rawgit.com/swagger-api/swagger-ui/v2.1.3/dist/lib/swagger-oauth.js"></script>
 <script type="text/javascript">
  window.swaggerUi = new SwaggerUi({
-   url: '{{ page.openapi_definition }}',
+   url: '{{ page.openapi.definition }}',
    dom_id: 'swagger-ui-container'
  });
 

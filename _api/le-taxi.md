@@ -6,7 +6,8 @@ access_link: http://le.taxi/join.html
 domain: https://le.taxi
 contract: OUVERT sous contrat
 restriction: faciliter l'accès des clients aux taxis
-openapi_definition: https://api.taxi/swagger.json
+openapi:
+  definition: https://apiparticulier.sgmap.fr/docs/api-particulier.yaml
 clients:
   - particulier
   - entreprise
