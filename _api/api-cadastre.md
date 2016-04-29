@@ -2,7 +2,7 @@
 name: API Cadastre
 tagline: Consultez ou affichez le cadastre vectoriel
 contract: OUVERT
-openapi_definition: http://cadastre.api.gouv.fr/definition.yml
+openapi_definition: https://cadastre.api.gouv.fr/definition.yml
 clients:
   - collectivités
   - ministères
