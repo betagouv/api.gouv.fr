@@ -50,16 +50,18 @@ layout: default
               <img src="{{ page.logo }}" alt="{{ page.name }}" />
             </div>
           </div>
-          <div class="item stat">
-            <div class="ui statistic">
-              <div class="value">
-                5,550
-              </div>
-              <div class="label">
-                Appels lors du <br> dernier mois
+          {% if page.stat.url %}
+            <div class="item stat">
+              <div class="ui statistic">
+                <div class="value">
+                  0
+                </div>
+                <div class="label">
+                  {{ page.stat.label }}
+                </div>
               </div>
             </div>
-          </div>
+          {% endif %}
           <div class="item">
             <div class="content">
               <div class="header">Conditions d'utilisation</div>
@@ -137,5 +139,10 @@ layout: default
 <script>
   $(function() {
     $('.menu .item').tab();
+    {% if page.stat.url %}
+      $.get( "{{ page.stat.url }}", function( data ) {
+        $( ".statistic .value" ).text( data );
+      });
+    {% endif %}
   });
 </script>
