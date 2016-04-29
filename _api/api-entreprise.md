@@ -10,7 +10,7 @@ clients:
   - Ministères
   - Places de marchés
 partners:
-  - DGFIP
+  - DGFiP
   - ACOSS
   - CNETP
   - INSEE

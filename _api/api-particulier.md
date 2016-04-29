@@ -11,7 +11,7 @@ clients:
   - collectivités
   - ministères
 partners:
-  - DGFIP
+  - DGFiP
   - CNAF
 owner: DINSIC
 type: confidential
@@ -27,7 +27,7 @@ keywords:
 
 ## Ne plus demander de pièces justificatives inutiles
 
-Limiter les demandes des pièces justificatives ou informations lorsqu’elles sont détenues par d’autres administrations ( CAF, DGFIP, Pôle Emploi…).
+Limiter les demandes des pièces justificatives ou informations lorsqu’elles sont détenues par d’autres administrations ( CAF, DGFiP, Pôle Emploi…).
 
 Limiter le risque de fraude documentaire en récupérant des informations certifiées à la source dans un point d'accès unique.
 

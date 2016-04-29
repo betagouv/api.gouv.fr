@@ -33,7 +33,7 @@ Le cadastre est un référentiel essentiel pour de nombreux usages :
 * Urbanisme
 * Positionnement géographique
 
-Les données proviennent de la [Direction Générale des Finances Publiques](http://www.economie.gouv.fr/dgfip).
+Les données proviennent de la [Direction Générale des Finances Publiques](http://www.economie.gouv.fr/DGFiP).
 
 __Couverture du territoire :__ 90% des communes
 
