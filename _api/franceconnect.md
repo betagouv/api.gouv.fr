@@ -11,7 +11,7 @@ clients:
   - entreprises
   - collectivités
 partners:
-  - DGFIP
+  - DGFiP
   - IDN
 owner: DINSIC
 type: confidential
@@ -67,7 +67,7 @@ Rejoignez notre groupe <a href="http://www.meetup.com/fr-FR/FranceConnect/" targ
 
 Utilisez un de nos comptes de démonstration pour vous connecter et tester le service :
 
-| Comptes        | AMELI                                        | DGFIP                                                                     |
+| Comptes        | AMELI                                        | DGFiP                                                                     |
 |----------------|----------------------------------------------|---------------------------------------------------------------------------|
 | Identifiant    | 18712345678912345                            | 1234567891011                                                             |
 | Mot de passe   | 123                                          | 123                                                                       |
