@@ -140,9 +140,27 @@ layout: default
   $(function() {
     $('.menu .item').tab();
     {% if page.stat.url %}
+      var $divStat = $( ".statistic .value" )
       $.get( "{{ page.stat.url }}", function( data ) {
-        $( ".statistic .value" ).text( data );
+        var step = Math.round(data / 15);
+        incrementValue(0, data, step)()
       });
+      function incrementValue(current, max, step) {
+        return function() {
+          printStat(current)
+          step = isCounterOverflowing(current, step, max) ? max - current : step;
+          if(current < max) {
+            setTimeout(incrementValue(current + step, max, step), 60)
+          }
+        }
+      }
+      function printStat(data) {
+        $divStat.text( data );
+      }
+
+      function isCounterOverflowing(current, step, max) {
+        return current + step >= max
+      }
     {% endif %}
   });
 </script>
