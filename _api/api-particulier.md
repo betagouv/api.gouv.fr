@@ -14,6 +14,8 @@ partners:
   - DGFiP
   - CNAF
 owner: DINSIC
+stat:
+  url: https://apiparticulier.sgmap.fr/api/analytics/requestsLast30days
 type: confidential
 keywords:
   - Impots
