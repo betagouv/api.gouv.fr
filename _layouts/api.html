@@ -158,7 +158,7 @@ layout: default
         }
       }
       function printStat(data) {
-        $divStat.text( data );
+        $divStat.text( parseInt( data ).toLocaleString('fr-FR') );
       }
 
       function isCounterOverflowing(current, step, max) {
