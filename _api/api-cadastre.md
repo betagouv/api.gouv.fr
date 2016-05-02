@@ -47,6 +47,7 @@ L'API retourne actuellement des données au format [GeoJSON](http://geojson.org/
 * Elles ne peuvent en aucun cas servir à reconstituer une base de données à usage commerciale.
 
 ## Derniers changements
+* 02/05 : Ajout de la validation du code commune INSEE
 * 28/04 : Ajout de la possibilité de filtrer par section cadastrale et numéro de parcelle
 
 ## Contact
