@@ -4,6 +4,8 @@ tagline: Simplifier les démarches des entreprises en récupérant pour elles le
 doc_tech: https://api.apientreprise.fr/docs
 domain: http://api.apientreprise.fr
 contract: OUVERT sous contrat
+stat:
+  url: https://dashboard.apientreprise.fr/api/stats/apientreprise/last_30_days_requests
 clients:
   - Collectivités
   - Administrations

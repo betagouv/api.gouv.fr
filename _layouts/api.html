@@ -36,20 +36,32 @@ layout: default
     <div class="four wide column">
       <div class="ui segment">
         {% if page.experimentale %}
-        <div class="ui yellow ribbon label" >
-          <span class="tooltip" title="L'interface de l'API n'est pas stable">Expérimentale</span>
+        <div class="ui yellow left ribbon label" >
+          Expérimentale
         </div>
         {% else %}
-        <div class="ui green ribbon label">
-          <span class="tooltip" title="L'interface de l'API est stable">Stable</span>
+        <div class="ui green left ribbon label">
+          Stable
         </div>
         {% endif %}
-        <div class="ui relaxed divided list">
-          <div class="item">
-            <div class="ui fluid image">
+        <div class="ui relaxed divided list metadata">
+          <div class="item logoWrapper">
+            <div class="ui small image">
               <img src="{{ page.logo }}" alt="{{ page.name }}" />
             </div>
           </div>
+          {% if page.stat.url %}
+            <div class="item stat">
+              <div class="ui statistic">
+                <div class="value">
+                  -
+                </div>
+                <div class="label">
+                  {{ page.stat.label }}
+                </div>
+              </div>
+            </div>
+          {% endif %}
           <div class="item">
             <div class="content">
               <div class="header">Conditions d'utilisation</div>
@@ -58,16 +70,7 @@ layout: default
               </div>
             </div>
           </div>
-          {% if page.restriction %}
-          <div class="item">
-            <div class="content">
-              <div class="header">Contraintes</div>
-              <div class="description">
-                {{ page.restriction }}
-              </div>
-            </div>
-          </div>
-          {% endif %}
+          {% if page.clients %}
           <div class="item">
             <div class="content">
               <div class="header">Clients cibles</div>
@@ -76,14 +79,17 @@ layout: default
               </div>
             </div>
           </div>
+          {% endif %}
+          {% if page.partners %}
           <div class="item">
             <div class="content">
               <div class="header">Sources et partenaires</div>
               <div class="description">
-                {{ page.partners | join: ' &amp; ' }}
+                {{ page.partners | join: ' - ' }}
               </div>
             </div>
           </div>
+          {% endif %}
         </div>
       </div>
     </div>
@@ -133,5 +139,31 @@ layout: default
 <script>
   $(function() {
     $('.menu .item').tab();
+    {% if page.stat.url %}
+      var $divStat = $( ".statistic .value" )
+      $.get( "{{ page.stat.url }}", function( data ) {
+        var step = Math.round(data / 15);
+        {% if page.stat.path %}
+          data = data["{{ page.stat.path | join: '"]["' }}"]
+        {% endif %}
+        incrementValue(0, data, step)()
+      });
+      function incrementValue(current, max, step) {
+        return function() {
+          printStat(current)
+          step = isCounterOverflowing(current, step, max) ? max - current : step;
+          if(current < max) {
+            setTimeout(incrementValue(current + step, max, step), 60)
+          }
+        }
+      }
+      function printStat(data) {
+        $divStat.text( parseInt( data ).toLocaleString('fr-FR') );
+      }
+
+      function isCounterOverflowing(current, step, max) {
+        return current + step >= max
+      }
+    {% endif %}
   });
 </script>

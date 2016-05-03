@@ -48,8 +48,21 @@
   }
 }
 #description {
-  .tooltip {
-    border-bottom: 1px dashed;
+  .metadata {
+    margin-top: -1em;
+    z-index: -200;
+  }
+  .ribbon {
+    z-index: 200;
+  }
+
+  .logoWrapper {
+    text-align: center;
+  }
+
+  .stat {
+    text-align: center;
+    border: none;
   }
   .markdown-body {
     border: none;

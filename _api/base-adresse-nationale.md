@@ -14,6 +14,11 @@ partners:
   - La poste
   - IGN
 owner: ETALAB
+stat:
+  url: https://api-adresse.data.gouv.fr/analytics/stats.json
+  label: Appels lors de <br> la semaine passée
+  path:
+    - queries_week
 type: reference
 keywords:
   - carte
