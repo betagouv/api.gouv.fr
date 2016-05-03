@@ -44,7 +44,7 @@ L'API retourne actuellement des données au format [GeoJSON](http://geojson.org/
 ## Restrictions à l'usage des données
 
 * Les données collectées via cette API ne peuvent être rediffusées sans l'accord explicite de la DGFiP.
-* Elles ne peuvent en aucun cas servir à reconstituer une base de données à usage commerciale.
+* Elles ne peuvent en aucun cas servir à reconstituer une base de données à usage commercial.
 
 ## Derniers changements
 * 02/05 : Ajout de la validation du code commune INSEE
