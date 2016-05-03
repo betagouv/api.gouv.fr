@@ -26,7 +26,7 @@ defaults:
       layout: api
       logo: /img/logo-generique-startup-carre.jpg
       stat:
-        label: Appels lors du <br> dernier mois
+        label: Appels lors des <br> 30 derniers jours
 
   -
     scope:

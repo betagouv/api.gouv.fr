@@ -142,10 +142,10 @@ layout: default
     {% if page.stat.url %}
       var $divStat = $( ".statistic .value" )
       $.get( "{{ page.stat.url }}", function( data ) {
-        var step = Math.round(data / 15);
         {% if page.stat.path %}
           data = data["{{ page.stat.path | join: '"]["' }}"]
         {% endif %}
+        var step = Math.round(data / 15);
         incrementValue(0, data, step)()
       });
       function incrementValue(current, max, step) {
