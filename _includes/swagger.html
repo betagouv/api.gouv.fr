@@ -20,16 +20,17 @@
 <script src="//cdn.rawgit.com/swagger-api/swagger-ui/v2.1.4/dist/lang/fr.js"></script>
 <script type="text/javascript">
  window.swaggerUi = new SwaggerUi({
-   url: '{{ page.openapi_definition }}',
-   dom_id: 'swagger-ui-container',
-   onComplete: function(swaggerApi, swaggerUi){
-          if(window.SwaggerTranslator) {
-            window.SwaggerTranslator.translate();
-          }
-          $('pre code').each(function(i, e) {
-            hljs.highlightBlock(e)
-          });
-        }
+  url: '{{ page.openapi_definition }}',
+  dom_id: 'swagger-ui-container',
+  onComplete: function(swaggerApi, swaggerUi){
+    if(window.SwaggerTranslator) {
+      window.SwaggerTranslator.translate();
+    }
+    $('pre code').each(function(i, e) {
+      hljs.highlightBlock(e)
+    });
+  },
+  docExpansion: 'list'
  });
 
  window.swaggerUi.load();
