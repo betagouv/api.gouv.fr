@@ -4,7 +4,7 @@ tagline: FranceConnect est un dispositif qui garantit l’identité d’un usage
 doc_tech: https://doc.integ01.dev-franceconnect.fr/documentation
 access_link: https://doc.integ01.dev-franceconnect.fr/inscription
 domain: https://doc.integ01.dev-franceconnect.fr/
-contract: OUVERT
+contract: OUVERT sous contrat
 restriction:
 clients:
   - particuliers
@@ -63,7 +63,7 @@ Rejoignez notre groupe <a href="http://www.meetup.com/fr-FR/FranceConnect/" targ
 ### FranceConnect Particulier :
 
 * [Guichet des Nantais](https://guichet-nantes.integ01.dev-franceconnect.fr/) : Effectuer une démarche très rapide d'inscription à la cantine scolaire. 
-* [Guichet des Parisiens](https://guichet-nantes.integ01.dev-franceconnect.fr/) : Effectuer une démarche plus aboutie d'inscription à la cantine scolaire. 
+* [Guichet des Parisiens](https://guichet-parisien.integ01.dev-franceconnect.fr/) : Effectuer une démarche plus aboutie d'inscription à la cantine scolaire. 
 
 Utilisez un de nos comptes de démonstration pour vous connecter et tester le service :
 
