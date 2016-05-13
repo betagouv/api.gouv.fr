@@ -89,9 +89,9 @@ searchExamples:
 
 
 <section id="services" class="ui container">
-  <h2 class="ui divider horizontal">Réutilisations</h2>
+  <h2 class="ui divider horizontal">Services</h2>
   <div class="ui two stackable cards">
-    {% for service in site.reutilisation %}
+    {% for service in site.service %}
       {% if service.featured %}
         {% include reuse-card.html reuse=service %}
       {% endif %}
@@ -101,7 +101,7 @@ searchExamples:
 
 <div class="ui container">
   <p class="buttonContainer">
-	   <a class="ui big button moreButton" href="{{ site.baseurl }}/reutilisations">Découvrez les {{ site.reutilisation | size }} réutilisations&nbsp;&nbsp;➤</a>
+	   <a class="ui big button moreButton" href="{{ site.baseurl }}/services">Découvrez les {{ site.service | size }} services&nbsp;&nbsp;➤</a>
   </p>
 </div>
 

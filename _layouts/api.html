@@ -119,7 +119,7 @@ layout: default
 </div>
 
 {% capture reUse %}
-  {% for service in site.reutilisation %}
+  {% for service in site.service %}
     {% if service.api contains page.name%}
       {% include reuse-card.html reuse=service %}
     {% endif %}

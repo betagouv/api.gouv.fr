@@ -14,7 +14,7 @@ description: Fabriquez des services en ligne plus simples
 collections:
   api:
     output: true
-  reutilisation:
+  service:
     output: true
 
 defaults:
@@ -31,9 +31,9 @@ defaults:
   -
     scope:
       path: ""	# means "all files"
-      type: reutilisation	# targets a collection
+      type: service	# targets a collection
     values:
-      layout: reutilisation
+      layout: service
   -
     scope:
       path: ""  # means "all files"
