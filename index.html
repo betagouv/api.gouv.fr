@@ -99,7 +99,7 @@ searchExamples:
   <div class="ui two stackable cards">
     {% for service in site.service %}
       {% if service.featured %}
-        {% include reuse-card.html reuse=service %}
+        {% include service-card.html service=service %}
       {% endif %}
   	{% endfor %}
   </div>
