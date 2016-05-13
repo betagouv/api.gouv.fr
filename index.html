@@ -21,6 +21,8 @@ searchExamples:
               type="search">
 		    <i class="search icon"></i>
 		  </div>
+      <div class="results transition hidden">
+      </div>
 		</div>
   </div>
 </section>
@@ -108,78 +110,56 @@ searchExamples:
 
 <script>
 $(document).ready(function() {
+  var client = $.algolia.Client('MOAD3NGUET', '253f1cf2d19fbf72080b70c3a5fcd18f');
+  var index = client.initIndex('api_gouv');
+
   var $searchDiv = $('.ui.search');
-  function indexCollection(item, name) {
-    item[name] = item[name].join('').replace(" ", "");
-  }
-  $.get("{{ site.baseurl }}/api.json", function( data ) {
-    $.each(data, function(index, item) {
-      indexCollection(item, 'keywords');
-      indexCollection(item, 'clients');
-      indexCollection(item, 'partners');
-    });
-    var action = {
-      url: '{{ site.baseurl }}/api/',
-      text: "Explorez les {{ site.api | size }} API déjà disponibles"
-    }
-    $searchDiv.search({
-      minCharacters : 2,
-      searchFields   : [
-        'title',
-        'description',
-        'keywords',
-        'owner',
-        'clients',
-        'partners',
-        'contract'
-      ],
-      searchFullText: true,
-      source: data,
-      templates: {
-        message: function(type, message) {
-          var html = '<p class="searchError">Aucune API ne correspond à votre recherche</p>'
-          + '<a href="' + action.url + '" class="action">'
-          +   action.text
-          + '</a>';
-          return html;
-        },
-        standard: function(response, fields) {
-          var html = '';
-          if(response[fields.results]) {
-            $.each(response[fields.results], function(index, result) {
-              html  += '<a class="result" href="' + result[fields.url] + '">';
-              if(result[fields.image]) {
-                html += ''
-                  + '<div class="image">'
-                  + ' <img src="' + result[fields.image] + '">'
-                  + '</div>';
-              }
-              html += '<div class="content">';
-              [ 'price', 'title', 'description' ].forEach(function(property) {
-                if(result[fields[property]] !== undefined) {
-                  html += '<div class="'+ property +'">' + result[fields[property]] + '</div>';
-                }
-              });
-              html += '</div>';
-              html += '</a>';
-            });
-            html += '<a href="' + action.url + '" class="action">'
-            +   action.text
-            + '</a>';
-            return html;
-          }
-        }
+  var $resultDiv = $searchDiv.find('.results');
+  var $searchInput = $searchDiv.find('.prompt')
+  $searchInput.keyup(function(e) {
+    var query = $searchInput.val();
+    if(query.length <= 3) return;
+    search(query, function (err, content) {
+      if(err) {
+        console.error('an error has occured', err)
+        return;
       }
-    });
-    $searchDiv.keyup(function(e) {
-      if(e.keyCode == 13) {
-        var $link = $searchDiv.find('.results.visible a.result.active');
-        if($link.length) {
-          window.location.href = $link.attr('href');
-        }
-      }
+      showResult(content)
     })
-  });
+  })
+
+  function search(query, callback) {
+    index.search(query, {
+      facetFilters: 'type:document,layout:api'
+    }, callback);
+  }
+
+  function showResult(content) {
+    var html = '';
+    $.each(content.hits, function( index, value ) {
+      html += formatResult(value)
+    });
+    html += '<a href="{{ site.baseurl }}/api/" class="action">Explorez les {{ site.api | size }} API déjà disponibles</a>'
+    $resultDiv
+      .addClass("visible")
+      .removeClass('hidden');
+    $resultDiv.html(html);
+  }
+
+  function formatResult(value) {
+    var html = '<a class="result" href="{{ site.baseurl }}'+ value.url +'">'
+    html += '<div class="image"> <img src="{{ site.baseurl }}'+ value.logo +'"></div>'
+    html += '<div class="content">'
+    html += '<div class="title">' + value.name + '</div>'
+    html += '<div class="description">' + value.tagline + '</div>'
+    html += '</div>'
+    html += '</a>'
+    return html
+  }
+
 });
+
+
+
 
 </script>
