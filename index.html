@@ -90,6 +90,12 @@ searchExamples:
 
 <section id="services" class="ui container">
   <h2 class="ui divider horizontal">Services</h2>
+  <div class="ui centered grid">
+    <p class="servicesDescription">
+      Ces services utilisent les API afin récupérer les données au bon endroit pour répondre aux besoins des utilisateurs
+    </p>
+  </div>
+
   <div class="ui two stackable cards">
     {% for service in site.service %}
       {% if service.featured %}
