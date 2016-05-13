@@ -5,7 +5,7 @@ additional_css: catalog_service
 
 <section id="services" class="ui container">
   <h2 class="ui divider horizontal">Toutes les réutilisations</h2>
-  <div class="ui two stackable cards">
+  <div class="ui three stackable cards">
     {% for service in site.service %}
       {% include service-card.html service=service %}
   	{% endfor %}
