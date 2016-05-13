@@ -89,11 +89,17 @@ searchExamples:
 
 
 <section id="services" class="ui container">
-  <h2 class="ui divider horizontal">Réutilisations</h2>
-  <div class="ui two stackable cards">
-    {% for service in site.reutilisation %}
+  <h2 class="ui divider horizontal">Services</h2>
+  <div class="ui centered grid">
+    <p class="servicesDescription">
+      Ces services utilisent les API afin récupérer les données au bon endroit pour répondre aux besoins des utilisateurs
+    </p>
+  </div>
+
+  <div class="ui three stackable cards">
+    {% for service in site.service %}
       {% if service.featured %}
-        {% include reuse-card.html reuse=service %}
+        {% include service-card.html service=service %}
       {% endif %}
   	{% endfor %}
   </div>
@@ -101,7 +107,7 @@ searchExamples:
 
 <div class="ui container">
   <p class="buttonContainer">
-	   <a class="ui big button moreButton" href="{{ site.baseurl }}/reutilisations">Découvrez les {{ site.reutilisation | size }} réutilisations&nbsp;&nbsp;➤</a>
+	   <a class="ui big button moreButton" href="{{ site.baseurl }}/services">Découvrez les {{ site.service | size }} services&nbsp;&nbsp;➤</a>
   </p>
 </div>
 

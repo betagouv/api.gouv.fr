@@ -118,19 +118,19 @@ layout: default
   </div>
 </div>
 
-{% capture reUse %}
-  {% for service in site.reutilisation %}
+{% capture serviceHtml %}
+  {% for service in site.service %}
     {% if service.api contains page.name%}
-      {% include reuse-card.html reuse=service %}
+      {% include service-card.html service=service %}
     {% endif %}
   {% endfor %}
 {% endcapture %}
-{% assign reUseWithoutSpace = reUse | strip_newlines | strip %}
-{% if reUseWithoutSpace != "" %}
+{% assign serviceHtmlWithoutSpace = serviceHtml | strip_newlines | strip %}
+{% if serviceHtmlWithoutSpace != "" %}
 <section id="services" class="ui container">
   <h2 class="ui divider horizontal">Les réutilisations</h2>
   <div class="ui two stackable cards">
-    {{ reUse }}
+    {{ serviceHtml }}
   </div>
 </section>
 {% endif %}

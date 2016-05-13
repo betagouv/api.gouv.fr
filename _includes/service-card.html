@@ -1,0 +1,23 @@
+<div class="ui card">
+	<div class="content">
+		<h3>
+			<a class="header" href="{{ site.baseurl }}{{ include.service.url }}">{{ include.service.name }}</a>
+		</h3>
+		<div class="meta">
+			{{ include.service.description }}
+		</div>
+	</div>
+	<div class="image">
+		<div>
+			<a href="{{ site.baseurl }}{{ include.service.url }}">
+				<img src="{{ site.baseurl }}/img/{{ include.service.screenshot }}" alt="">
+			</a>
+		</div>
+	</div>
+	<div class="extra content">
+		{% for apiName in include.service.api %}
+		{% assign api = site.api | where: "name", apiName | first %}
+			<a class="ui label" href="{{ site.baseurl }}{{ api.url }}"> {{ api.name }}</a>
+		{% endfor %}
+	</div>
+</div>
