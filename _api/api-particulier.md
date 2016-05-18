@@ -1,12 +1,12 @@
 ---
 name: API Particulier
 tagline: Simplifiez les démarches de vos usagers, ne demandez plus de justificatifs
-doc_tech: https://apiparticulier.sgmap.fr/tech
-access_link: https://apiparticulier.sgmap.fr/#/registration/charte
-domain: https://apiparticulier.sgmap.fr
+doc_tech: https://particulier.api.gouv.fr/tech
+access_link: https://particulier.api.gouv.fr/#/registration/charte
+domain: https://particulier.api.gouv.fr
 contract: OUVERT sous contrat
 restriction: simplication des démarches des usagers
-openapi_definition: https://apiparticulier.sgmap.fr/docs/api-particulier.yaml
+openapi_definition: https://particulier.api.gouv.fr/docs/api-particulier.yaml
 clients:
   - collectivités
   - ministères
@@ -15,7 +15,7 @@ partners:
   - CNAF
 owner: DINSIC
 stat:
-  url: https://apiparticulier.sgmap.fr/api/analytics/requestsLast30days
+  url: https://particulier.api.gouv.fr/api/analytics/requestsLast30days
 type: confidential
 keywords:
   - Impots
