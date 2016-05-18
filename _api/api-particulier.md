@@ -16,6 +16,7 @@ partners:
 owner: DINSIC
 stat:
   url: https://particulier.api.gouv.fr/api/analytics/requestsLast30days
+  label: Pièces justificatives dématérialisées lors des 30 derniers jours
 type: confidential
 keywords:
   - Impots
