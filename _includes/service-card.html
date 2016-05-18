@@ -15,6 +15,7 @@
 		</div>
 	</div>
 	<div class="extra content">
+		API utilisée{% if include.service.api.size > 1 %}s{% endif %}&nbsp;:
 		{% for apiName in include.service.api %}
 		{% assign api = site.api | where: "name", apiName | first %}
 			<a class="ui label" href="{{ site.baseurl }}{{ api.url }}"> {{ api.name }}</a>

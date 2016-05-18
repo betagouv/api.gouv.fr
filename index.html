@@ -89,12 +89,7 @@ searchExamples:
 
 
 <section id="services" class="ui container">
-  <h2 class="ui divider horizontal">Services</h2>
-  <div class="ui centered grid">
-    <p class="servicesDescription">
-      Ces services utilisent les API afin récupérer les données au bon endroit pour répondre aux besoins des utilisateurs
-    </p>
-  </div>
+  <h2 class="ui divider horizontal">Services utilisant les API</h2>
 
   <div class="ui three stackable cards">
     {% for service in site.service %}
@@ -179,7 +174,9 @@ $(document).ready(function() {
     $searchDiv.keyup(function(e) {
       if(e.keyCode == 13) {
         var $link = $searchDiv.find('.results.visible a.result.active');
+        if($link.length) {
           window.location.href = $link.attr('href');
+        }
       }
     })
   });
