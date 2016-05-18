@@ -15,6 +15,7 @@ partners:
   - CNAF
 owner: DINSIC
 stat:
+  lastXdays: 30
   url: https://particulier.api.gouv.fr/api/analytics/requestsLast30days
   label: Pièces justificatives dématérialisées lors des 30 derniers jours
 type: confidential

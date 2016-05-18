@@ -5,8 +5,9 @@ doc_tech: https://api.apientreprise.fr/docs
 domain: http://api.apientreprise.fr
 contract: OUVERT sous contrat
 stat:
+  lastXdays: 30
   url: https://dashboard.apientreprise.fr/api/stats/apientreprise/last_30_days_requests
-  label: informations non redemandées aux entreprises lors des 30 derniers jours
+  label: informations non redemandées aux entreprises
 clients:
   - Collectivités
   - Administrations
