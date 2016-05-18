@@ -174,7 +174,9 @@ $(document).ready(function() {
     $searchDiv.keyup(function(e) {
       if(e.keyCode == 13) {
         var $link = $searchDiv.find('.results.visible a.result.active');
+        if($link.length) {
           window.location.href = $link.attr('href');
+        }
       }
     })
   });
