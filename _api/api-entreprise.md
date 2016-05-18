@@ -6,6 +6,7 @@ domain: http://api.apientreprise.fr
 contract: OUVERT sous contrat
 stat:
   url: https://dashboard.apientreprise.fr/api/stats/apientreprise/last_30_days_requests
+  label: informations non redemandées aux entreprises lors des 30 derniers jours
 clients:
   - Collectivités
   - Administrations
