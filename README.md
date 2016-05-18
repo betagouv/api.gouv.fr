@@ -12,13 +12,13 @@
 
 ### Fournisseur d'API ? [Ajoute ton API](https://github.com/sgmap/api.gouv.fr/blob/gh-pages/CONTRIBUTING.md) !
 
-### Réutilisateurs d'API ? [Ajoute ta réutilisation](https://github.com/sgmap/api.gouv.fr/blob/gh-pages/CONTRIBUTING.md) !
+### Réutilisateurs d'API ? [Ajoute ton service](https://github.com/sgmap/api.gouv.fr/blob/gh-pages/CONTRIBUTING.md) !
 
 ## `api.gouv.fr`
 
 Ce nom de domaine héberge :
   * une présentation des différentes API proposées par l'État et les administrations
-  * une présentation des réutilisations, sites ou services, utilisant des API présentées
+  * une présentation des services utilisant des API présentées
 
 ## Installation locale
 
