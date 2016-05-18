@@ -66,20 +66,19 @@ layout: default
             <div class="content">
               <div class="header">Conditions d'utilisation</div>
               <div class="description">
-                {{ page.contract }}
+                {% if page.contract == "OUVERT sous contrat"%}
+                  {{ page.contract }} au :
+                    <ul>
+                      {% for client in page.clients %}
+                        <li>{{ client }}</li>
+                      {% endfor%}
+                    </ul>
+                {% else %}
+                  {{ page.contract }}
+                {% endif %}
               </div>
             </div>
           </div>
-          {% if page.clients %}
-          <div class="item">
-            <div class="content">
-              <div class="header">Clients cibles</div>
-              <div class="description">
-               {{ page.clients | join: ' &amp; ' }}
-              </div>
-            </div>
-          </div>
-          {% endif %}
           {% if page.partners %}
           <div class="item">
             <div class="content">

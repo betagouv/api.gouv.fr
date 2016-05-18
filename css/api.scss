@@ -51,7 +51,13 @@
   .metadata {
     margin-top: -1em;
     z-index: -200;
+
+    ul {
+      margin-top: 0.3em;
+      margin-bottom: 0.6em;
+    }
   }
+
   .ribbon {
     z-index: 200;
   }
