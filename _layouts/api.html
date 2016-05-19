@@ -51,13 +51,18 @@ layout: default
             </div>
           </div>
           {% if page.stat.url %}
-            <div class="item stat">
-              <div class="ui statistic">
-                <div class="value">
-                  -
-                </div>
-                <div class="label">
-                  {{ page.stat.label }}
+            <div class="item">
+              <div class="content stat">
+                <div class="header">Lors des {{ page.stat.lastXdays }} derniers jours :</div>
+                <div class="description">
+                  <div class="ui statistic">
+                    <div class="value">
+                      -
+                    </div>
+                    <div class="label">
+                      {{ page.stat.label }}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

@@ -15,8 +15,9 @@ partners:
   - IGN
 owner: ETALAB
 stat:
+  lastXdays: 7
   url: https://api-adresse.data.gouv.fr/analytics/stats.json
-  label: Appels lors de <br> la semaine passée
+  label: Adresses géocodées
   path:
     - queries_week
 type: reference

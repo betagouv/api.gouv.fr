@@ -65,11 +65,6 @@
   .logoWrapper {
     text-align: center;
   }
-
-  .stat {
-    text-align: center;
-    border: none;
-  }
   .markdown-body {
     border: none;
     -webkit-box-shadow: none;
@@ -90,6 +85,13 @@
 
   #validator {
     display: none
+  }
+  .ui.statistic {
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+    &>.value {
+        font-size: 3rem;
+    }
   }
 }
 #callToAction {
