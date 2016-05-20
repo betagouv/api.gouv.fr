@@ -117,22 +117,72 @@ $(document).ready(function() {
   var $resultDiv = $searchDiv.find('.results');
   var $searchInput = $searchDiv.find('.prompt');
   var htmlFooter = '<a href="{{ site.baseurl }}/api/" class="action">Explorez les {{ site.api | size }} API déjà disponibles</a>';
+
+  function isEnterPressed(event) {
+    return event.keyCode === 13
+  }
+  function isUpPressed(event) {
+    return event.keyCode === 38
+  }
+  function isDownPressed(event) {
+    return event.keyCode === 40
+  }
+
+  function followSelectedResult() {
+    var $link = $searchDiv.find('a.result.active');
+    if($link.length) {
+      window.location.href = $link.attr('href');
+    }
+  }
+
+  function selectNextElementInResults() {
+    var $activeElement = $resultDiv.find('a.result.active');
+    if($activeElement.length === 0) {
+      $resultDiv.find('a.result').first().addClass('active')
+    } else {
+      $activeElement
+        .removeClass('active')
+        .next()
+        .addClass('active');
+    }
+  }
+
+  function selectPreviousElementInResults() {
+    var $activeElement = $resultDiv.find('a.result.active');
+    if($activeElement.length === 0) {
+      $resultDiv.find('a.result').first().addClass('active')
+    } else {
+      $activeElement
+        .removeClass('active')
+        .prev()
+        .addClass('active');
+    }
+  }
+
   $searchInput.keyup(function(e) {
-    var query = $searchInput.val();
-    if(query.length === 0) return hideResultDiv();
-    if(query.length <= 3) return;
-    search(query, function (err, content) {
-      if(err) {
-        console.error('an error has occured', err)
-        return;
-      }
-      var hits = content.hits;
-      if(hits.length > 0) {
-        showResult(hits);
-      } else {
-        showNoResult();
-      }
-    })
+    if(isEnterPressed(e)) {
+      followSelectedResults();
+    } else if(isUpPressed(e)) {
+      selectPreviousElementInResults();
+    } else if(isDownPressed(e)) {
+      selectNextElementInResults();
+    } else {
+      var query = $searchInput.val();
+      if(query.length === 0) return hideResultDiv();
+      if(query.length <= 3) return;
+      search(query, function (err, content) {
+        if(err) {
+          console.error('an error has occured', err)
+          return;
+        }
+        var hits = content.hits;
+        if(hits.length > 0) {
+          showResult(hits);
+        } else {
+          showNoResult();
+        }
+      })
+    }
   })
 
   function search(query, callback) {
