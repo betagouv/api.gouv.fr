@@ -164,7 +164,8 @@ $(document).ready(function() {
     html += '<div class="image"> <img src="{{ site.baseurl }}'+ value.logo +'"></div>'
     html += '<div class="content">'
     html += '<div class="title">' + value._highlightResult.name.value + '</div>'
-    html += '<div class="description">' + value._highlightResult.tagline.value + '</div>'
+    html += '<div class="description">' + value._highlightResult.tagline.value
+    html += getHightlightedHtml(value._highlightResult) + '</div>'
     html += '</div>'
     html += '</a>'
     return html
@@ -180,6 +181,42 @@ $(document).ready(function() {
     $resultDiv
       .addClass("hidden")
       .removeClass('visible');
+  }
+
+  function getHightlightedHtml(highlightResult) {
+    var keywordHighlightedHtml = getKeywordHighlightedHtml(highlightResult.keywords);
+    if(keywordHighlightedHtml) return keywordHighlightedHtml;
+    var partnerHighlightedHtml = getPartnerHighlightedHtml(highlightResult.partners);
+    if(partnerHighlightedHtml) return partnerHighlightedHtml;
+    var clientHighlightedHtml = getClientHighlightedHtml(highlightResult.clients);
+    if(clientHighlightedHtml) return clientHighlightedHtml;
+    return '';
+  }
+
+  function getKeywordHighlightedHtml(keywords) {
+    return getHighLightFromArray(keywords, 'tags')
+  }
+
+  function getPartnerHighlightedHtml(partners) {
+    return getHighLightFromArray(partners, 'partenaires')
+  }
+
+  function getClientHighlightedHtml(clients) {
+    return getHighLightFromArray(clients, 'clients')
+  }
+
+  function getHighLightFromArray(array, label) {
+    var termHighlighted = []
+    $.each(array, function( index, item ) {
+      if(item.matchLevel === 'full') {
+        termHighlighted.push(item.value)
+      }
+    });
+    if(termHighlighted.length > 0) {
+      return '<br>' + label + '&nbsp;: ' + termHighlighted.slice(0, 3).join(', ');
+    } else {
+      return ''
+    }
   }
 });
 </script>
