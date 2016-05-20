@@ -76,3 +76,23 @@ gems:
 algolia:
   application_id: 'MOAD3NGUET'
   index_name:     'api_gouv'
+  settings:
+    attributesForFaceting:
+      - type
+      - layout
+      - categories
+      - clients
+      - contract
+    attributesToIndex:
+      - name
+      - tagline
+      - keywords
+      - contract
+      - partners
+      - clients
+      - owner
+      - h1
+      - h2
+      - text
+    disableTypoToleranceOnAttributes:
+      - text
