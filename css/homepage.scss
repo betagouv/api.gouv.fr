@@ -32,6 +32,11 @@ h1 {
     .searchError {
       margin-top: 1em;
     }
+
+    .algolia__result-highlight {
+      font-weight: 600;
+      font-size: 130%;
+    }
   }
 }
 

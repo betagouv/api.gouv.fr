@@ -152,6 +152,7 @@ $(document).ready(function() {
     var html = '';
     $.each(hits, function( index, value ) {
       html += formatResult(value)
+      console.log(value)
     });
     html += htmlFooter
     showResultDiv();
@@ -162,8 +163,8 @@ $(document).ready(function() {
     var html = '<a class="result" href="{{ site.baseurl }}'+ value.url +'">'
     html += '<div class="image"> <img src="{{ site.baseurl }}'+ value.logo +'"></div>'
     html += '<div class="content">'
-    html += '<div class="title">' + value.name + '</div>'
-    html += '<div class="description">' + value.tagline + '</div>'
+    html += '<div class="title">' + value._highlightResult.name.value + '</div>'
+    html += '<div class="description">' + value._highlightResult.tagline.value + '</div>'
     html += '</div>'
     html += '</a>'
     return html
