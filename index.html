@@ -119,6 +119,7 @@ $(document).ready(function() {
   var htmlFooter = '<a href="{{ site.baseurl }}/api/" class="action">Explorez les {{ site.api | size }} API déjà disponibles</a>';
   $searchInput.keyup(function(e) {
     var query = $searchInput.val();
+    if(query.length === 0) return hideResultDiv();
     if(query.length <= 3) return;
     search(query, function (err, content) {
       if(err) {
@@ -173,9 +174,11 @@ $(document).ready(function() {
       .addClass("visible")
       .removeClass('hidden');
   }
+
+  function hideResultDiv() {
+    $resultDiv
+      .addClass("hidden")
+      .removeClass('visible');
+  }
 });
-
-
-
-
 </script>
