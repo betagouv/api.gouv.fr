@@ -35,8 +35,8 @@ La Base Adresse Nationale est une base de données qui a pour but de référence
 
 Elle est constituée par la collaboration entre:
 
- * des acteurs nationaux tels que l'[IGN](ign.fr/) et [La Poste](legroupe.laposte.fr/),
+ * des acteurs nationaux tels que l'[IGN](http://ign.fr/) et [La Poste](http://legroupe.laposte.fr/),
  * des acteurs locaux tels que les collectivités, les communes, les SDIS,
- * des citoyens par exemple à travers le projet [OpenStreetMap](osm.org) et l'association [OpenStreetMap France](http://openstreetmap.fr/).
+ * des citoyens par exemple à travers le projet [OpenStreetMap](http://osm.org) et l'association [OpenStreetMap France](http://openstreetmap.fr/).
 
 Le projet est co-gouverné par [l'Administrateur Général des Données](http://www.modernisation.gouv.fr/laction-publique-se-transforme/en-ouvrant-les-donnees-publiques/administrateur-general-des-donnees-chief-data-officer-interview-henri-verdier) et le [Conseil National de l'Information Géographique](http://cnig.gouv.fr).
