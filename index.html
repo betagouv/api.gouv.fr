@@ -115,7 +115,8 @@ $(document).ready(function() {
 
   var $searchDiv = $('.ui.search');
   var $resultDiv = $searchDiv.find('.results');
-  var $searchInput = $searchDiv.find('.prompt')
+  var $searchInput = $searchDiv.find('.prompt');
+  var htmlFooter = '<a href="{{ site.baseurl }}/api/" class="action">Explorez les {{ site.api | size }} API déjà disponibles</a>';
   $searchInput.keyup(function(e) {
     var query = $searchInput.val();
     if(query.length <= 3) return;
@@ -124,7 +125,12 @@ $(document).ready(function() {
         console.error('an error has occured', err)
         return;
       }
-      showResult(content)
+      var hits = content.hits;
+      if(hits.length > 0) {
+        showResult(hits);
+      } else {
+        showNoResult();
+      }
     })
   })
 
@@ -134,15 +140,20 @@ $(document).ready(function() {
     }, callback);
   }
 
-  function showResult(content) {
+  function showNoResult() {
+    var html = '<p class="searchError">Aucune API ne correspond à votre recherche</p>';
+    html += htmlFooter
+    showResultDiv();
+    $resultDiv.html(html);
+  }
+
+  function showResult(hits) {
     var html = '';
-    $.each(content.hits, function( index, value ) {
+    $.each(hits, function( index, value ) {
       html += formatResult(value)
     });
-    html += '<a href="{{ site.baseurl }}/api/" class="action">Explorez les {{ site.api | size }} API déjà disponibles</a>'
-    $resultDiv
-      .addClass("visible")
-      .removeClass('hidden');
+    html += htmlFooter
+    showResultDiv();
     $resultDiv.html(html);
   }
 
@@ -157,6 +168,11 @@ $(document).ready(function() {
     return html
   }
 
+  function showResultDiv() {
+    $resultDiv
+      .addClass("visible")
+      .removeClass('hidden');
+  }
 });
 
 
