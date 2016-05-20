@@ -137,7 +137,8 @@ $(document).ready(function() {
 
   function search(query, callback) {
     index.search(query, {
-      facetFilters: 'type:document,layout:api'
+      facetFilters: 'type:document,layout:api',
+      hitsPerPage: 6
     }, callback);
   }
 
