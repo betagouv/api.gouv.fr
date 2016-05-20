@@ -19,5 +19,8 @@ test:
     - bundle exec htmlproofer ./_site --assume-extension --check-html --disable-external --empty-alt-ignore
     - html5validator --root _site
 
-  post:
-    - bundle exec jekyll algolia push
+deployment:
+  index:
+    branch: gh-pages
+    commands:
+      - bundle exec jekyll algolia push
