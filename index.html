@@ -161,7 +161,7 @@ $(document).ready(function() {
 
   $searchInput.keyup(function(e) {
     if(isEnterPressed(e)) {
-      followSelectedResults();
+      followSelectedResult();
     } else if(isUpPressed(e)) {
       selectPreviousElementInResults();
     } else if(isDownPressed(e)) {
@@ -169,7 +169,7 @@ $(document).ready(function() {
     } else {
       var query = $searchInput.val();
       if(query.length === 0) return hideResultDiv();
-      if(query.length <= 3) return;
+      if(query.length <= 1) return;
       search(query, function (err, content) {
         if(err) {
           console.error('an error has occured', err)
