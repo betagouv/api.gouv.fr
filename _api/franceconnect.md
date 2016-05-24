@@ -14,7 +14,7 @@ partners:
   - DGFiP
   - IDN
 owner: DINSIC
-type: confidential
+category: confidential
 keywords:
   - Authentification
   - Identification

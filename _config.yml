@@ -11,6 +11,9 @@ baseurl: ""
 url: "https://api.gouv.fr"
 description: Fabriquez des services en ligne plus simples
 
+# see https://jekyllrb.com/docs/continuous-integration/
+exclude: [vendor]
+
 collections:
   api:
     output: true
@@ -43,7 +46,7 @@ defaults:
 
 
 # vertical-rhythm
-api_type:
+api_category:
   - id: confidential
     name: Données confidentielles
     logo: privacy
@@ -66,3 +69,30 @@ api_type:
 
 # Build settings
 markdown: kramdown
+
+gems:
+  - algoliasearch-jekyll
+
+algolia:
+  application_id: 'MOAD3NGUET'
+  index_name:     'api_gouv'
+  settings:
+    attributesForFaceting:
+      - type
+      - layout
+      - categories
+      - clients
+      - contract
+    attributesToIndex:
+      - name
+      - tagline
+      - keywords
+      - contract
+      - partners
+      - clients
+      - owner
+      - h1
+      - h2
+      - text
+    disableTypoToleranceOnAttributes:
+      - text

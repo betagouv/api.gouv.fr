@@ -2,14 +2,14 @@
 layout: default
 ---
 
-<section id="mission-statement" class="ui vertical center aligned segment {{ page.type }}">
+<section id="mission-statement" class="ui vertical center aligned segment {{ page.category }}">
 
   <div class="ui container">
     <div class="ui grid">
       <div class="twelve wide centered column">
         <h1 class="ui inverted header">
-          {% assign type = site.api_type | where:"id", page.type | first %}
-          <i class="{{ type.logo }} icon"></i>{{ page.name }}
+          {% assign category = site.api_category | where:"id", page.category | first %}
+          <i class="{{ category.logo }} icon"></i>{{ page.name }}
         </h1>
         <h2 class="ui inverted header">
           {{ page.tagline }}
