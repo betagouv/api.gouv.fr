@@ -14,7 +14,7 @@ partners:
   - INSEE
   - OpenStreetMap
 owner: DINSIC
-type: reference
+category: reference
 experimentale: true
 keywords:
   - Communes
