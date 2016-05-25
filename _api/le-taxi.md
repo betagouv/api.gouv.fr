@@ -8,8 +8,8 @@ contract: OUVERT sous contrat
 restriction: faciliter l'accès des clients aux taxis
 openapi_definition: https://api.taxi/swagger.json
 clients:
-  - particulier
-  - entreprise
+  - particuliers
+  - entreprises
 logo: /img/logo_le.taxi.svg
 partners:
   - Ministère de l'Intérieur
