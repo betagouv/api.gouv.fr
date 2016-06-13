@@ -164,6 +164,18 @@ $border-type-color: #eff3f6;
   }
 }
 
+#blog {
+  font-size: 130%;
+  line-height: 2;
+  text-align: center;
+  background-color: #FEFEFE;
+  ul {
+    list-style-position: inside;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+}
+
 p.buttonContainer {
   text-align: center;
   a.ui.big.button.moreButton {

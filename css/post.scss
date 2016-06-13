@@ -1,0 +1,24 @@
+---
+# blog css page
+---
+
+@import "variables";
+@import "mixins";
+@import "markdown";
+
+#masthead {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  margin-bottom: 2%;
+  @include linearBackground($blog-color);
+  h1 {
+    padding: .2em 0;
+    text-align: center;
+    color: white;
+    font-size: 200%;
+    line-height: 1.8;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+
+}

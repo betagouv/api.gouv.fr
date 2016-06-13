@@ -88,6 +88,17 @@ searchExamples:
   </ul>
 </section>
 
+<section id="blog" class="ui container">
+	<h2 class="ui divider horizontal">Dernières publications</h2>
+
+  <ul>
+    {% for post in site.posts | limit:5 %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
 
 
 <section id="services" class="ui container">
