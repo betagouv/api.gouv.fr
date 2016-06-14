@@ -1,0 +1,13 @@
+{
+  {% for cat in site.api_category %}
+    "{{ cat.id }}": {
+      "id" : "{{ cat.id }}",
+      "name" : "{{ cat.name }}",
+      "description" : "{{ cat.description }}",
+      "logo" : "{{ cat.logo }}"
+    }
+    {% if forloop.last == false %}
+    ,
+    {% endif %}
+  {% endfor %}
+}

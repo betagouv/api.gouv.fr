@@ -57,10 +57,9 @@ additional_css: apis
       <div class="left floated">
         {% raw %}{{ contract }}{% endraw %}
       </div>
-
       <div class="right floated">
-        <div class="ui confidential label">
-          <i class="confidential icon"></i> Confidentiel
+        <div class="ui {% raw %}{{ category.id }}{% endraw %} label">
+          <i class="{% raw %}{{ category.logo }}{% endraw %} icon"></i> {% raw %}{{ category.name }}{% endraw %}
         </div>
       </div>
     </div>
@@ -76,6 +75,8 @@ additional_css: apis
 </script>
 
 <script>
+
+var categories = {% include categories.json %};
 var search = instantsearch({
   appId: 'MOAD3NGUET',
   apiKey: '253f1cf2d19fbf72080b70c3a5fcd18f',
@@ -110,6 +111,15 @@ var widgets = [
     templates: {
       allItems: getTemplate('hits'),
       empty: getTemplate('no-results')
+    },
+    transformData: {
+      allItems: function replaceIdWithName(result) {
+        result.hits = result.hits.map(function(hit) {
+          hit.category = categories[hit.category]
+          return hit;
+        })
+        return result;
+      }
     }
   }),
   instantsearch.widgets.stats({
@@ -131,6 +141,12 @@ var widgets = [
     operator: 'or',
     templates: {
       header: getHeader('Catégories')
+    },
+    transformData: {
+      item: function replaceIdWithName(item) {
+        item.name = categories[item.name].name
+        return item;
+      }
     }
   }),
   instantsearch.widgets.refinementList({
