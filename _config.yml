@@ -82,7 +82,9 @@ algolia:
       - layout
       - categories
       - clients
+      - owner
       - contract
+      - partners
     attributesToIndex:
       - name
       - tagline

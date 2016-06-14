@@ -1,0 +1,173 @@
+---
+layout: default
+additional_css: apis
+---
+
+<section id="list" class="ui container main">
+  <h2 class="ui divider horizontal">Toutes les API de l'administration</h2>
+  <div class="searchbox">
+    <div class="ui search">
+		  <div class="ui fluid left icon input">
+		    <input class="prompt"
+              id="search-input"
+              placeholder="Rechercher une API"
+              type="search">
+		    <i class="search icon"></i>
+		  </div>
+		</div>
+  </div>
+  <div class="ui grid">
+    <div class="row">
+      <div class="four wide column">
+        <div class="ui fluid vertical menu">
+          <div id="category" class="facet item"></div>
+          <div id="contract" class="facet item"></div>
+          <div id="clients" class="facet item"></div>
+          <div id="owner" class="facet item"></div>
+          <div id="partners" class="facet item"></div>
+        </div>
+      </div>
+      <div class="twelve wide column">
+        <div id="stats"></div>
+        <div id="hits"></div>
+        <div id="pagination"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="//cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
+
+<script type="text/html" id="hit-template">
+  <div class="content">
+    <img class="right floated mini ui image" src="{{ site.baseurl }}{% raw %}{{{ logo }}}{% endraw %}" alt="logo de {% raw %}{{{ name }}}{% endraw %}}"/>
+    <a class="header" href="{{ site.baseurl }}{% raw %}{{{ url }}}{% endraw %}">{% raw %}{{{ name }}}{% endraw %}</a>
+    <div class="meta">
+      {% raw %}{{{ owner }}}{% endraw %}
+    </div>
+
+    <div class="description">
+      {% raw %}{{{ tagline }}}{% endraw %}
+    </div>
+  </div>
+  <div class="extra content">
+    <div class="left floated">
+      {% raw %}{{{ contract }}}{% endraw %}
+    </div>
+
+    <div class="right floated">
+      {% raw %}{{{ category }}}{% endraw %}
+    </div>
+  </div>
+</script>
+
+<script type="text/html" id="no-results-template">
+  <div id="no-results-message">
+    <p>Aucun résultats retournés <em>"{% raw %}{{{ query }}}{% endraw %}"</em>.</p>
+    <a href="." class='clear-all'>Réinitialiser la recherche</a>
+  </div>
+</script>
+
+<script>
+var search = instantsearch({
+  appId: 'MOAD3NGUET',
+  apiKey: '253f1cf2d19fbf72080b70c3a5fcd18f',
+  indexName: 'api_gouv',
+  searchParameters: {
+    facets: ['type', 'layout'],
+    facetsRefinements: {
+      type: ['document'],
+      layout: ['api']
+    }
+  },
+  urlSync: {
+    trackedParameters: ['query']
+  }
+});
+function getTemplate(templateName) {
+  return document.querySelector('#' + templateName + '-template').innerHTML;
+}
+
+var widgets = [
+  instantsearch.widgets.searchBox({
+    container: '#search-input',
+    placeholder: 'Rechercher une API'
+  }),
+  instantsearch.widgets.hits({
+    container: '#hits',
+    hitsPerPage: 10,
+    cssClasses: {
+      root: 'ui two stackable cards',
+      item: 'ui card'
+    },
+    templates: {
+      item: getTemplate('hit'),
+      empty: getTemplate('no-results')
+    }
+  }),
+  instantsearch.widgets.stats({
+    container: '#stats'
+  }),
+  instantsearch.widgets.pagination({
+    container: '#pagination',
+    cssClasses: {
+      root: "ui pagination menu",
+      item: "item",
+      active: "active",
+      disabled: "disabled"
+    }
+  }),
+  instantsearch.widgets.refinementList({
+    container: '#category',
+    attributeName: 'categories',
+    limit: 10,
+    operator: 'or',
+    templates: {
+      header: getHeader('Catégories')
+    }
+  }),
+  instantsearch.widgets.refinementList({
+    container: '#contract',
+    attributeName: 'contract',
+    limit: 10,
+    operator: 'or',
+    templates: {
+      header: getHeader('Contrat')
+    }
+  }),
+  instantsearch.widgets.refinementList({
+    container: '#clients',
+    attributeName: 'clients',
+    limit: 10,
+    operator: 'or',
+    templates: {
+      header: getHeader('Clients')
+    }
+  }),
+  instantsearch.widgets.refinementList({
+    container: '#owner',
+    attributeName: 'owner',
+    limit: 10,
+    operator: 'or',
+    templates: {
+      header: getHeader('Porteur')
+    }
+  }),
+  instantsearch.widgets.refinementList({
+    container: '#partners',
+    attributeName: 'partners',
+    limit: 10,
+    operator: 'or',
+    templates: {
+      header: getHeader('Partenaire')
+    }
+  }),
+];
+
+function getHeader(title) {
+  return '<h4 class="header">' + title + '</h4>';
+}
+widgets.forEach(search.addWidget, search);
+
+search.start();
+</script>

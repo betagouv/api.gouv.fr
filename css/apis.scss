@@ -1,0 +1,62 @@
+---
+# list of API pages style
+---
+
+@import "variables";
+
+
+.searchbox {
+  margin: 2em auto;
+  max-width: 40em;
+}
+
+body {
+  background-color: #F3F3F3;
+}
+.ais-search-box {
+  width: 100%;
+  input.prompt {
+    width: 75%;
+    padding-right: 7.5%;
+    padding-left: 7.5%;
+  }
+}
+
+#pagination {
+  margin-top: 2em;
+  .pagination {
+    justify-content: center;
+  }
+}
+
+.pagination.menu {
+  padding: 0;
+}
+
+.ui.label {
+  color: white;
+
+  &.smartData {
+    background-color: $smartData-color;
+  }
+
+  &.confidential {
+    background-color: $confidential-color;
+  }
+
+  &.reference {
+    background-color: $reference-color;
+  }
+
+  &.simulation {
+    background-color: $simulation-color;
+  }
+}
+#apiButton {
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+footer {
+  background-color: white;
+}
