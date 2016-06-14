@@ -43,26 +43,27 @@ additional_css: apis
   <a class="ui fluid card" href="{{ site.baseurl }}{% raw %}{{ url }}{% endraw %}">
     <div class="content">
       <img class="right floated mini ui image" src="{{ site.baseurl }}{% raw %}{{ logo }}{% endraw %}" alt="logo de {% raw %}{{ name }}{% endraw %}"/>
-
-      <div class="header">{% raw %}{{ name }}{% endraw %}</div>
+      {% raw %}
+      <div class="header">{{ name }}</div>
       <div class="meta">
-        {% raw %}{{ owner }}{% endraw %}
+        {{ owner }}
       </div>
 
       <div class="description">
-        {% raw %}{{ tagline }}{% endraw %}
+        {{ tagline }}
       </div>
     </div>
     <div class="extra content">
       <div class="left floated">
-        {% raw %}{{ contract }}{% endraw %}
+        {{ contract }}
       </div>
       <div class="right floated">
-        <div class="ui {% raw %}{{ category.id }}{% endraw %} label">
-          <i class="{% raw %}{{ category.logo }}{% endraw %} icon"></i> {% raw %}{{ category.name }}{% endraw %}
+        <div class="ui {{ category.id }} label">
+          <i class="{{ category.logo }} icon"></i> {{ category.name }}
         </div>
       </div>
     </div>
+    {% endraw %}
   </a>
   {% raw %}{{/hits}}{% endraw %}
 </script>
@@ -72,6 +73,21 @@ additional_css: apis
     <p>Aucun résultats retournés <em>"{% raw %}{{{ query }}}{% endraw %}"</em>.</p>
     <a href="." class='clear-all'>Réinitialiser la recherche</a>
   </div>
+</script>
+
+<script type="text/html" id="checkbox-template">
+  {% raw %}
+  <div class="ui checkbox">
+    {{#isRefined}}
+    <input type="checkbox" checked>
+    {{/isRefined}}
+    {{^isRefined}}
+    <input type="checkbox">
+    {{/isRefined}}
+    <input type="checkbox">
+    <label>{{ name }}</label>
+  </div>
+{% endraw %}
 </script>
 
 <script>
@@ -140,7 +156,8 @@ var widgets = [
     limit: 10,
     operator: 'or',
     templates: {
-      header: getHeader('Catégories')
+      header: getHeader('Catégories'),
+      item: getTemplate('checkbox')
     },
     transformData: {
       item: function replaceIdWithName(item) {
@@ -155,7 +172,8 @@ var widgets = [
     limit: 10,
     operator: 'or',
     templates: {
-      header: getHeader('Contrat')
+      header: getHeader('Contrat'),
+      item: getTemplate('checkbox')
     }
   }),
   instantsearch.widgets.refinementList({
@@ -164,7 +182,8 @@ var widgets = [
     limit: 10,
     operator: 'or',
     templates: {
-      header: getHeader('Clients')
+      header: getHeader('Clients'),
+      item: getTemplate('checkbox')
     }
   }),
   instantsearch.widgets.refinementList({
@@ -173,7 +192,8 @@ var widgets = [
     limit: 10,
     operator: 'or',
     templates: {
-      header: getHeader('Porteur')
+      header: getHeader('Porteur'),
+      item: getTemplate('checkbox')
     }
   }),
   instantsearch.widgets.refinementList({
@@ -182,7 +202,8 @@ var widgets = [
     limit: 10,
     operator: 'or',
     templates: {
-      header: getHeader('Partenaire')
+      header: getHeader('Partenaire'),
+      item: getTemplate('checkbox')
     }
   }),
 ];
