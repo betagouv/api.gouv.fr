@@ -1,0 +1,29 @@
+<script type="text/html" id="hits-template">
+  {% raw %}{{#hits}}{% endraw %}
+  <a class="ui fluid card" href="{{ site.baseurl }}{% raw %}{{ url }}{% endraw %}">
+    <div class="content">
+      <img class="right floated mini ui image" src="{{ site.baseurl }}{% raw %}{{ logo }}{% endraw %}" alt="logo de {% raw %}{{ name }}{% endraw %}"/>
+      {% raw %}
+      <div class="header">{{ name }}</div>
+      <div class="meta">
+        {{ owner }}
+      </div>
+
+      <div class="description">
+        {{ tagline }}
+      </div>
+    </div>
+    <div class="extra content">
+      <div class="left floated">
+        {{ contract }}
+      </div>
+      <div class="right floated">
+        <div class="ui {{ category.id }} label">
+          <i class="{{ category.logo }} icon"></i> {{ category.name }}
+        </div>
+      </div>
+    </div>
+    {% endraw %}
+  </a>
+  {% raw %}{{/hits}}{% endraw %}
+</script>
