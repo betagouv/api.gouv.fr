@@ -28,7 +28,13 @@ additional_css: apis
         </div>
       </div>
       <div class="twelve wide column">
-        <div id="hits"></div>
+        <div id="hits">
+          <div class="ui two stackable cards">
+            {% for api in site.api %}
+              {% include api-card.html description=api %}
+            {% endfor %}
+          </div>
+        </div>
         <div id="stats"></div>
         <div id="pagination"></div>
       </div>
