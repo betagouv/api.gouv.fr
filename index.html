@@ -73,7 +73,7 @@ searchExamples:
       {% assign api_category_size = site.api | where:"category", type.id |size %}
 
       <p class="discoverAPI">
-        <a href="{{ site.baseurl }}/apis?q=&amp;dFR%5Bcategories%5D%5B0%5D={{ type.id }}">
+        <a href="{{ site.baseurl }}/apis?q=&amp;{{ "dFR[categories][0]" | url_encode }}={{ type.id }}">
           {% if api_category_size == 0 %}
             Aucune API n'est encore disponible
           {% elsif api_category_size == 1 %}
