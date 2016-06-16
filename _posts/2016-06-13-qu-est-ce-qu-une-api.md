@@ -13,8 +13,7 @@ Il n'est pas nécessaire d'avoir une API afin que deux programmes puissent commu
 > **Avec API&nbsp;:**
 > Une application récupère les données météo à Paris en utilisant l'API [donneespubliques.meteofrance.fr](https://donneespubliques.meteofrance.fr/) et qui renvoie une reponse structurée compréhensible par un ordinateur.
 
-
-Vous les utilisez peut-être déjà sans le savoir&nbsp;: lorsque vous effectuez une démarche sur Internet et que certaines informations vous concernant sont récupérées automatiquement.
+Les entreprises Française l'utilisent tous les mois&nbsp;: elles ne communiquent plus les données de leur employés par papier aux diverses Administrations sociales mais utilisent directement des API pour pousser ces données dans les systèmes d'information de ces Administrations.
 
 Cette définition très abstraite mérite une métaphore afin de l'expliciter et comprendre les implications lorsqu'une API est exposée.
 
