@@ -27,15 +27,12 @@ body {
 }
 
 #pagination {
-  margin-top: 2em;
-  .pagination {
-    justify-content: center;
+  margin-bottom: 2em;
+  &.menu {
+    padding: 0;
   }
 }
 
-.pagination.menu {
-  padding: 0;
-}
 
 .ui.label {
   color: white;
