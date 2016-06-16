@@ -64,7 +64,7 @@ var widgets = [
   instantsearch.widgets.refinementList({
     container: '#category',
     attributeName: 'categories',
-    limit: 10,
+    limit: 6,
     operator: 'or',
     templates: {
       header: getHeader('Catégories'),
@@ -80,7 +80,7 @@ var widgets = [
   instantsearch.widgets.refinementList({
     container: '#contract',
     attributeName: 'contract',
-    limit: 10,
+    limit: 6,
     operator: 'or',
     templates: {
       header: getHeader('Contrat'),
@@ -90,7 +90,7 @@ var widgets = [
   instantsearch.widgets.refinementList({
     container: '#clients',
     attributeName: 'clients',
-    limit: 10,
+    limit: 6,
     operator: 'or',
     templates: {
       header: getHeader('Clients'),
@@ -100,7 +100,7 @@ var widgets = [
   instantsearch.widgets.refinementList({
     container: '#owner',
     attributeName: 'owner',
-    limit: 10,
+    limit: 6,
     operator: 'or',
     templates: {
       header: getHeader('Porteur'),
@@ -110,7 +110,7 @@ var widgets = [
   instantsearch.widgets.refinementList({
     container: '#partners',
     attributeName: 'partners',
-    limit: 10,
+    limit: 6,
     operator: 'or',
     templates: {
       header: getHeader('Partenaire'),

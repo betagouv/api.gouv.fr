@@ -60,7 +60,39 @@ body {
   margin-top: 3%;
   margin-bottom: 3%;
 }
-
+.ais-refinement-list--item {
+  margin: 4px 0;
+}
 footer {
   background-color: white;
+}
+
+#category {
+  .ais-refinement-list--list {
+    height: 80px;
+  }
+}
+
+#contract {
+  .ais-refinement-list--list {
+    height: 38px;
+  }
+}
+
+#clients {
+  .ais-refinement-list--list {
+    height: 122px;
+  }
+}
+
+#owner {
+  .ais-refinement-list--list {
+    height: 38px;
+  }
+}
+
+#partners {
+  .ais-refinement-list--list {
+    height: 122px;
+  }
 }
