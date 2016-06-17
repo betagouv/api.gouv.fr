@@ -25,7 +25,7 @@ Pour résumer cette comparaison, voici un tableau présentant les différentes c
 | Offre        | électricité                      | données                                   |
 | Complexité cachée| origine, moyen de transport      | origine, moyen de transport               |
 | Protocole de communication       | prise française/prise américaine | HTTP/TCP                                 |
-| Contenu      | X volt et Y ampère               | données financières/Données Géographique |
+| Contenu      | X volt et Y ampère               | données financières/données Géographique |
 
 ## Les avantages pour le producteur d'API
 
