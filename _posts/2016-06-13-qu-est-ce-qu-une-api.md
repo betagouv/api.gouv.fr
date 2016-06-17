@@ -36,7 +36,7 @@ Pour résumer cette comparaison, voici un tableau présentant les différentes c
 ## Les avantages pour le consommateur d'API
 
   * Proposer des services plus complets à l'usager en limitant la saisie d'information;
-  * Economiser de l'argent en permettant de mettre en commun ertaines briques logicielles.
+  * Economiser de l'argent en permettant de mettre en commun certaines briques logicielles.
 
 
 #### Pour aller plus loin
@@ -44,3 +44,4 @@ Pour résumer cette comparaison, voici un tableau présentant les différentes c
   * [Métaphore faite par 18F [Anglais]](https://18f.gsa.gov/2016/04/22/what-is-an-api/)
   * [API dans le gouvernement Américain [Anglais]](https://www.digitalgov.gov/2013/04/30/apis-in-government/)
   * [Réponse sur Quora [Anglais]](https://www.quora.com/What-is-an-API-4)
+  * [Voir toutes les API]({{ site.baseurl }}/apis)
