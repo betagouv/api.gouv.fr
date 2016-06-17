@@ -5,7 +5,7 @@ doc_tech: http://rva.data.rennes-metropole.fr/documentation.php
 access_link: http://rva.data.rennes-metropole.fr/inscription.php
 domain: http://rva.data.rennes-metropole.fr/
 contract: OUVERT
-logo: 
+logo: /img/rennesmetropole-rva.png
 clients:
   - particuliers
   - entreprises
