@@ -5,14 +5,6 @@ layout: post
 
 Une API est un acronyme anglo-saxon signifiant *Application Programming Interface*. La notion la plus importante est **interface** : une API est en réalité un contrat passé entre deux systèmes informatiques afin qu'ils puissent communiquer ensemble.
 
-Il n'est pas nécessaire d'avoir une API afin que deux programmes puissent communiquer ensemble, un programme peut utiliser une inferface humaine&nbsp;:
-
-> **Sans API&nbsp;:**
-> Une application récupère les données météo à Paris en ouvrant la page [meteofrance.com](http://www.meteofrance.com/previsions-meteo-france/paris/75) et en la lisant tel qu'un humain le ferait, méthode qui n'est pas fiable car il n'y a pas de contrat explicite (le format et l'agencement de la page peut évoluer).
-
-> **Avec API&nbsp;:**
-> Une application récupère les données météo à Paris en utilisant l'API [donneespubliques.meteofrance.fr](https://donneespubliques.meteofrance.fr/) et qui renvoie une reponse structurée compréhensible par un ordinateur.
-
 Les entreprises Française l'utilisent tous les mois&nbsp;: elles ne communiquent plus les données de leur employés par papier aux diverses Administrations sociales mais utilisent directement des API pour pousser ces données dans les systèmes d'information de ces Administrations.
 
 Cette définition très abstraite mérite une métaphore afin de l'expliciter et comprendre les implications lorsqu'une API est exposée.
