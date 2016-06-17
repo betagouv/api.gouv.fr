@@ -32,7 +32,7 @@ Pour résumer cette comparaison, voici un tableau présentant les différentes c
 ## Les avantages pour le consommateur d'API
 
   * Proposer des services plus complets à l'usager en limitant la saisie d'information;
-  * Economiser de l'argent en permettant de mettre en commun ertaines briques logicielles.
+  * Economiser de l'argent en permettant de mettre en commun certaines briques logicielles.
 
 #### Pour aller plus loin
 
