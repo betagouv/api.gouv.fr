@@ -2,7 +2,7 @@
 name: Déchets malins
 link: http://dechets.rennesmetropole.fr/
 description: Le guide des déchets de Rennes Métropole
-screenshot: /img/rennesmetropole-dechets.png
+screenshot: rennesmetropole-dechets.png
 featured: false
 api:
   - API RVA Rennes Métropole
