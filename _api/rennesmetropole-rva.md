@@ -25,6 +25,7 @@ Le RVA a pour ambition d’être la base de données voies et adresses la plus f
 En plus des données disponibles sous forme de fichiers sur cette page, Rennes Métropole met ici à disposition les données du RVA sous la forme d’une API afin de faciliter la réutilisation des données voies et adresses de Rennes Métropole dans des applications.
 
 ## Conditions d’utilisation
+
 ### Modalités d’accès
 Votre inscription est nécessaire pour accéder à l’API et l’utiliser. Une clé unique vous est ainsi attribuée. Il vous est interdit de la communiquer à des tiers.
 Les informations fournies ne serviront qu’à des fins de statistiques et de surveillance du service et d’information sur les évolutions du service.
@@ -50,5 +51,3 @@ Merci de lire les conditions d'utilisation avant de vous inscrire [en cliquant i
 Reportez-vous à la [documentation de l’API](http://rva.data.rennes-metropole.fr/documentation.php) ainsi qu’aux métadonnées disponibles.
 
 L’API ne vous suffit pas ? [Contactez-nous](mailto:sigsupport@rennesmetropole.fr?subject=%5BAPI%20RVA%5D%20Contact) pour envisager ensemble les évolutions nécessaires.
-
-
