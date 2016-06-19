@@ -5,13 +5,13 @@ layout: post
 
 Une API est un acronyme anglo-saxon signifiant *Application Programming Interface*. La notion la plus importante est **interface** : une API est en réalité un contrat passé entre deux systèmes informatiques afin qu'ils puissent communiquer ensemble.
 
-Les entreprises Française l'utilisent tous les mois&nbsp;: elles ne communiquent plus les données de leur employés par papier aux diverses Administrations sociales mais utilisent directement des API pour pousser ces données dans les systèmes d'information de ces Administrations.
+Les entreprises françaises utilisent par exemple tous les mois une API&nbsp;: celle de la [DSN](http://www.dsn-info.fr/api-dsn.htm). Elles ne communiquent plus les données de leur employés manuellement aux Administrations sociales mais utilisent directement des API pour déposer les déclarations sociales nominatives automatiquement depuis leur logiciel de paie.
 
 Cette définition très abstraite mérite une métaphore afin de l'expliciter et comprendre les implications lorsqu'une API est exposée.
 
 ## Et la prise électrique ?
 
-Une API peut-être vue comme une prise électrique&nbsp;:  votre lampe est le consommateur d'une resource dont elle a besoin, l'électricité. Mais il y plusieurs choses qu’elle n’a pas besoin de savoir&nbsp;: l'endroit où électricité a été produite, la manière dont elle a été produite (hydrolique, nucléaire&hellip;), la manière dont elle a été transportée jusqu'à votre lampe.
+Une API peut-être vue comme une prise électrique&nbsp;:  votre lampe est le consommateur d'une resource dont elle a besoin, l'électricité. Mais il y plusieurs choses qu’elle n’a pas besoin de savoir&nbsp;: l'endroit où électricité a été produite, la manière dont elle a été produite (hydraulique, nucléaire&hellip;), la manière dont elle a été transportée jusqu'à votre lampe.
 
 Concrètement, le constructeur de votre lampe a passé un contrat avec votre prise électrique afin de suivre un standard pour récupérer une ressource dont la lampe à besoin. Différents standards de communication ont émergé&nbsp;: la prise française, américaine&hellip; Il en est de même pour les API&nbsp;: HTTP, TCP&hellip;
 
