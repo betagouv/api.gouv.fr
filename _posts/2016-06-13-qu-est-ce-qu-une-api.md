@@ -44,4 +44,4 @@ Pour résumer cette comparaison, voici un tableau présentant les différentes c
   * [Métaphore faite par 18F [Anglais]](https://18f.gsa.gov/2016/04/22/what-is-an-api/)
   * [API dans le gouvernement Américain [Anglais]](https://www.digitalgov.gov/2013/04/30/apis-in-government/)
   * [Réponse sur Quora [Anglais]](https://www.quora.com/What-is-an-API-4)
-  * [Voir toutes les API]({{ site.baseurl }}/apis)
+  * [Voir toutes les API]({{ site.baseurl }}/api)
