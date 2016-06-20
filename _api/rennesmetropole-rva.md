@@ -10,8 +10,6 @@ clients:
   - particuliers
   - entreprises
   - collectivités
-partners:
-  - Keolis Rennes
 owner: Rennes Métropole
 category: reference
 keywords:
