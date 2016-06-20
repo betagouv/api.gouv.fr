@@ -14,6 +14,6 @@ Actualisés quotidiennement pour tenir compte de l’impact des chantiers sur le
 
 Grâce à cette application, les automobilistes peuvent planifier leurs déplacements où qu’ils se trouvent.
 
-Télécharger pour Androïd : [https://play.google.com/store/apps/details?id=air.com.rennes.rencircul](https://play.google.com/store/apps/details?id=air.com.rennes.rencircul)
+Télécharger pour Androïd : [https://play.google.com/store/apps/details?id=com.rennes.rencircul](https://play.google.com/store/apps/details?id=com.rennes.rencircul)
 
 Télécharger pour iOS : [https://itunes.apple.com/fr/app/rencircul/id735128367?mt=8](https://itunes.apple.com/fr/app/rencircul/id735128367?mt=8)
