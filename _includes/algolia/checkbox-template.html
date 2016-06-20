@@ -1,0 +1,13 @@
+{% raw %}
+  <script type="text/html" id="checkbox-template">
+    <div class="ui checkbox">
+      {{#isRefined}}
+      <input type="checkbox" checked>
+      {{/isRefined}}
+      {{^isRefined}}
+      <input type="checkbox">
+      {{/isRefined}}
+      <label>{{ name }}</label>
+    </div>
+  </script>
+{% endraw %}

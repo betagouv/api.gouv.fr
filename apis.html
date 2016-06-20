@@ -1,0 +1,55 @@
+---
+layout: default
+additional_css: apis
+---
+
+<section id="list" class="ui container main">
+  <h2 class="ui divider horizontal">Toutes les API de l'administration</h2>
+  <div class="searchbox">
+    <div class="ui search">
+      <div class="ui fluid left icon input">
+        <input class="prompt"
+              id="search-input"
+              placeholder="Rechercher une API"
+              type="search">
+        <i class="search icon"></i>
+      </div>
+    </div>
+  </div>
+  <div class="ui grid">
+    <div class="row">
+      <div class="four wide column">
+        <div class="ui fluid vertical menu">
+          <div id="category" class="facet item"></div>
+          <div id="contract" class="facet item"></div>
+          <div id="clients" class="facet item"></div>
+          <div id="owner" class="facet item"></div>
+          <div id="partners" class="facet item"></div>
+        </div>
+      </div>
+      <div class="twelve wide column">
+        <div id="hits">
+          <div class="ui two stackable cards">
+            {% for api in site.api %}
+              {% include api-card.html description=api %}
+            {% endfor %}
+          </div>
+        </div>
+        <div id="stats"></div>
+      </div>
+    </div>
+    <div class="centered row">
+      <div id="pagination"></div>
+    </div>
+  </div>
+</section>
+
+<script src="//cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
+
+{% include algolia/hits-template.html %}
+
+{% include algolia/no-results-template.html %}
+
+{% include algolia/checkbox-template.html %}
+
+<script src="{{ site.baseurl }}/js/apis.js"></script>
