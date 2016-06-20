@@ -20,6 +20,7 @@ Concrètement, le constructeur de votre lampe utilise le standard de la prise é
   * Augmenter la portée de ses services en permettant à d'autres administrations ou entreprises intégrer et tirer parti des données.
   * Économiser en permettant à des innovateurs de créer des services annexes pour lesquels il n'a pas les ressources.
   * Créer des marchés en facilitant l'accès aux données gouvernementales.
+  * Répondre à coût marginal aux exigences règlementaires de transparence et d'échange de données de plus en plus fortes (loi DCRA…).
 
 ### Pour le consommateur
 
