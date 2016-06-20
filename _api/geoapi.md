@@ -3,6 +3,7 @@ name: GéoAPI
 tagline: Interrogez les référentiels géographiques plus facilement
 contract: OUVERT
 openapi_definition: https://geo.api.gouv.fr/definition.yml
+doc_tech: https://sgmap.github.io/geoapi-doc
 clients:
   - collectivités
   - ministères
@@ -15,7 +16,6 @@ partners:
   - OpenStreetMap
 owner: DINSIC
 category: reference
-experimentale: true
 keywords:
   - Communes
   - Codes postaux
@@ -31,14 +31,15 @@ La __GéoAPI__ est une boîte-à-outils __facile à prendre en main__ pour rendr
 Grâce à elle vous pouvez notamment :
 
 * Rechercher des communes par nom, code postal ou coordonnées géographiques
-* Connaître les groupements auxquels appartient une commune, ainsi que leurs compétences
-* Savoir si une parcelle appartient à certains zonages (appellations d'origine, quartiers prioritaires…)
+* Connaître les groupements auxquels appartient une commune, ainsi que leurs compétences _(bientôt)_
+* Savoir si une parcelle appartient à certains zonages (appellations d'origine, quartiers prioritaires…) _(bientôt)_
 
 Les différentes fonctionnalités arrivant progressivement, restez informés en suivant cette page ou [en nous contactant](mailto:geo@api.gouv.fr).
 
 
 ## Derniers changements
-* 21/05 : Mise en service de l'API
+* 20/06 : Ajout des départements, des régions, de la population municipale et amélioration de la recherche par nom de commune
+* 21/05 : Mise en service de l'API. Recherche de communes par nom, code postal et coordonnées géographiques
 
 ## Informations complémentaires
 
