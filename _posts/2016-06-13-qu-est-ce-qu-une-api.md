@@ -3,40 +3,31 @@ title: Qu'est-ce qu'une API ?
 layout: post
 ---
 
-Une API est un acronyme anglo-saxon signifiant *Application Programming Interface*. La notion la plus importante est **interface** : une API est en réalité un contrat passé entre deux systèmes informatiques afin qu'ils puissent communiquer ensemble.
+« API » est un acronyme anglo-saxon signifiant _Application Programming Interface_. Une API est une interface, un contrat passé entre deux systèmes informatiques qui leur permet de communiquer.
 
-Les entreprises françaises utilisent par exemple tous les mois une API&nbsp;: celle de la [Déclaration Sociale Nominative](http://www.dsn-info.fr/api-dsn.htm). Les entreprises ne communiquent plus les données de leur employés manuellement aux Administrations sociales. Elles utilisent directement des API pour déposer les déclarations (DSN) automatiquement depuis leur logiciel de paie.
+Les API permettent de nombreux usages. Elles sont déjà utilisées largement. Par exemple, les entreprise françaises utilisent tous les mois celle de la [Déclaration Sociale Nominative](http://www.dsn-info.fr/api-dsn.htm). Les entreprises ne communiquent pas les données de leur employés manuellement à l'administration : leur logiciel de paie transmet directement ces données grâce à une API.
 
-Cette définition très abstraite mérite une métaphore afin de l'expliciter et comprendre les implications lorsqu'une API est exposée.
+## Métaphore
 
-## Et la prise électrique ?
+Une lampe a besoin d'électricité. Mais elle n'a pas besoin de connaître la source de cette électricité (hydraulique, nucléaire…), ni le parcours emprunté par la ligne haute tension. Toute cette complexité est inutile pour la lampe : elle a juste besoin d'être branchée sur une prise standard.
 
-Une API peut-être vue comme une prise électrique&nbsp;:  votre lampe est le consommateur d'une resource dont elle a besoin, l'électricité. Mais il y a plusieurs choses qu’elle n’a pas besoin de savoir&nbsp;: l'endroit où électricité a été produite, la manière dont elle a été produite (hydraulique, nucléaire&hellip;), la manière dont elle a été transportée jusqu'à votre lampe. Toute cette compléxité a été masquée à la lampe.
+Concrètement, le constructeur de votre lampe utilise le standard de la prise électrique pour récupérer la ressource. Différents standards ont émergé&nbsp;: la prise française, américaine&hellip; Il en est de même pour les API. La seule contrainte pour les utiliser est donc de partager le standard utilisé.
 
-Concrètement, le constructeur de votre lampe a passé un contrat avec votre prise électrique afin de suivre un standard pour récupérer une ressource dont la lampe à besoin. Différents standards de communication ont émergé&nbsp;: la prise française, américaine&hellip; Il en est de même pour les API&nbsp;: <abbr title="Hypertext Transfer Protocol">HTTP</abbr>, <abbr  title="Hypertext Transfer Protocol Secure">HTTPS</abbr>&hellip;
+## Les avantages des API
 
-Pour résumer cette comparaison, voici un tableau présentant les différentes caractéristiques d'une prise électrique et leurs contreparties pour une API
+### Pour le producteur
 
-|                    | Prise Electrique                 | API                                       |
-|--------------------|----------------------------------|-------------------------------------------|
-| Offre              | électricité                      | données                                   |
-| Complexité cachée  | origine, moyen de transport      | origine, moyen de transport               |
-| Connexion          | prise française/prise américaine | HTTP/HTTPS                                |
+  * Augmenter la portée de ses services en permettant à d'autres administrations ou entreprises intégrer et tirer parti des données.
+  * Économiser en permettant à des innovateurs de créer des services annexes pour lesquels il n'a pas les ressources.
+  * Créer des marchés en facilitant l'accès aux données gouvernementales.
 
-## Les avantages pour le producteur d'API
+### Pour le consommateur
 
-  * Augmenter la portée des services en laissant d'autres Administrations, partenaires ou entreprises intégrer et tirer parti des données ainsi que des fonctionnalités;
-  * Economiser de l'argent en permettant à des innovateurs de créer des services impactants pour lesquels les Administrations n'ont peut être pas le temps ou le budget;
-  * Créer des marchés en améliorant l'accès aux ressources gouvernementales comme l'économie, la santé, l'éducation ou les ressources géographiques.
+  * Proposer des services plus complets à l'usager tout en diminuant la saisie d'information.
+  * Économiser en mutualisant des briques logicielles.
 
-## Les avantages pour le consommateur d'API
+## Pour aller plus loin
 
-  * Proposer des services plus complets à l'usager en limitant la saisie d'information;
-  * Economiser de l'argent en permettant de mettre en commun certaines briques logicielles.
-
-#### Pour aller plus loin
-
-  * [Métaphore faite par 18F [Anglais]](https://18f.gsa.gov/2016/04/22/what-is-an-api/)
-  * [API dans le gouvernement Américain [Anglais]](https://www.digitalgov.gov/2013/04/30/apis-in-government/)
-  * [Réponse sur Quora [Anglais]](https://www.quora.com/What-is-an-API-4)
-  * [Voir toutes les API]({{ site.baseurl }}/api)
+  * [Une API est comme une épicerie (18F, en anglais)](https://18f.gsa.gov/2016/04/22/what-is-an-api/).
+  * [L'usage des API dans gouvernement américain (en anglais)](https://www.digitalgov.gov/2013/04/30/apis-in-government/).
+  * Voir [toutes les API référencées]({{ site.baseurl }}/api).
