@@ -11,7 +11,7 @@ Les API permettent de nombreux usages. Elles sont déjà utilisées largement. P
 
 Une lampe a besoin d'électricité. Mais elle n'a pas besoin de connaître la source de cette électricité (hydraulique, nucléaire…), ni le parcours emprunté par la ligne haute tension. Toute cette complexité est inutile pour la lampe : elle a juste besoin d'être branchée sur une prise standard.
 
-Concrètement, le constructeur de votre lampe utilise le standard de la prise électrique pour récupérer la ressource. Différents standards ont émergé&nbsp;: la prise française, américaine&hellip; Il en est de même pour les API. La seule contrainte pour les utiliser est donc de partager le standard utilisé.
+Concrètement, le constructeur de la lampe utilise le standard de la prise électrique pour récupérer la ressource. Différents standards ont émergé&nbsp;: la prise française, américaine&hellip; Il en est de même pour les API. La seule contrainte pour les utiliser est donc de partager le standard utilisé.
 
 ## Les avantages des API
 
