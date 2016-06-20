@@ -8,29 +8,33 @@ contract: OUVERT sous contrat
 restriction: faciliter l'accès des clients aux taxis
 openapi_definition: https://api.taxi/swagger.json
 clients:
-  - particulier
-  - entreprise
+  - collectivités
+  - entreprises
+  - éditeurs d'applications
 logo: /img/logo_le.taxi.svg
 partners:
-  - Ministère de l'Intérieur
-  - G7
-  - Atlantis Taxi
-  - Allo Taxi Lyon
   - Allo Taxi Roubaix
+  - Allo Taxi Lyon
+  - Atlantis Taxi
   - Axygest
+  - Doko
+  - FNAT
+  - G7
   - Les Taxis Marseillais
-  - Tessa
   - mob1Taxi
-  - monTaxi
-  - Taxis Bleus du Midi
+  - Mon Appli Taxi
+  - Offwigo
+  - Taxis Radio Artisans Montpellier
+  - Taxi Bleu du Midi
+  - Taxi Radio Marseille
   - Taxiloc
   - TaxiProxi
   - TaxiConnect
   - Taxi Radio Aixois
   - Taxis Rennais
-  - TRAM Montpellier
+  - Tessa
   - UNT
-owner: DINSIC
+owner: etalab (DINSIC) &amp; DSCR (Ministère de l'Intérieur)
 category: smartData
 ---
 
