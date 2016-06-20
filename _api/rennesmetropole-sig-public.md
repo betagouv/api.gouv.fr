@@ -44,7 +44,9 @@ Se référer à la métadonnée de chaque donnée pour connaître la licence de 
 Rennes Métropole met en œuvre les moyens qu’elle juge nécessaires pour garantir le bon fonctionnement de ce service (disponibilité, temps de réponse). Rennes Métropole se réserve le droit d’interrompre de manière temporaire ou définitive de ce site / ce service.
 Ce service de données est fourni « comme tel ». En aucun cas Rennes Métropole ne peut être tenue responsable des dommages directs ou indirects liés à l’utilisation, conforme ou non conforme, des données fournies via ce site / ce service ou de l’interruption temporaire ou définitive du site / du service.
 
-## Documentation sur le serveur de données / l'API de données
+## Documentation
+
+### Documentation sur le serveur de données / l'API de données
 
 GeoServer est un logiciel open source de référence dans le monde géomatique. Il est spécialisé dans la founiture de service de données aux standards ouverts rédigés par l'Open GIS Consortium (OGC).
 
@@ -53,7 +55,7 @@ GeoServer est un logiciel open source de référence dans le monde géomatique. 
   - Documentation spécifique à l’API REST : http://docs.geoserver.org/stable/en/user/rest/
 
   
-## Documentation sur le serveur de données / l'API de données
+### Documentation sur le serveur de métadonnées / l'API de métadonnées
 
 GeoNetwork est le logiciel de référence en terme de gestion de catalogues de métadonnées géographiques. On le retrouve dans beaucoup d'infrastrucures de données géographiques (IDG).
 
