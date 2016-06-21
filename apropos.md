@@ -8,7 +8,7 @@ A Propos
 Objectif du site
 ----------------
 
-Le site api.gouv.fr a pour objectif de publier la liste exhaustive des API fournies par les différentes administrations, les collectivités territoriales, les établissements publics à caractère administratif. Chaque page de description d'une API comporte une courte description fonctionnelles, les ressources disponibles ainsi que des liens vers la documentation technique, et vers le processus d'inscription ou d'enrolement à cette API.
+Le site api.gouv.fr a pour objectif de publier la liste des API fournies par les administrations centrales, les collectivités territoriales, les établissements publics à caractère administratif. Chaque page de description d'une API comporte une courte description fonctionnelles, les ressources disponibles ainsi que des liens vers la documentation technique, et vers le processus d'inscription ou d'enrolement à cette API.
 
 Les API sont mises en valeur à travers des services illustrant leur utilisation.
 
