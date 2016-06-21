@@ -29,7 +29,7 @@ Votre inscription est nécessaire pour accéder à l’API et l’utiliser. Une 
 Les informations fournies ne serviront qu’à des fins de statistiques et de surveillance du service et d’information sur les évolutions du service.
 
 ### Licence des données
-Les données fournies au travers de la présente API sont sous licence ODbL.
+Les données fournies au travers de la présente API sont sous [Licence Ouverte](https://www.etalab.gouv.fr/licence-ouverte-open-licence).
 Les utilisateurs de l’API RVA acceptent donc les termes cette licence dans le cadre de la réutilisation des données accessibles via ce site / ce service.
 
 ### Garantie de disponibilité et support
