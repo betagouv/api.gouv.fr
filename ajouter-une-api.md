@@ -3,13 +3,13 @@ layout: pages
 ---
 # Ajouter votre API
 
-Vérifier l'éligibilité de votre API en consultant les critères ci-dessous&nbsp;:
+Vérifiez l'éligibilité de votre API en consultant les critères ci-dessous&nbsp;:
 
 ## Eligibilité d'une API sur API.GOUV.fr
 
 ### Finalité
 
-Etre produite et exploitée par une autorité administrative. Cela inclue les administrations de l’Etat (centralisées et décentralisées), les collectivités territoriales, les établissements publics à caractère
+Etre produite et exploitée par une autorité administrative. Cela inclut les administrations de l’Etat (centralisées et décentralisées), les collectivités territoriales, les établissements publics à caractère
 administratif, les organismes gérant des régimes de protection sociale relevant du code de la sécurité sociale et du code rural ou mentionnés aux articles L. 223-16 et L.351-21 du code du travail et les autres organismes chargés de la gestion d'un service public administratif.
 
 Présenter un intérêt pour des réutilisateurs publics ou privés.
