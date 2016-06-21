@@ -2,27 +2,26 @@
 layout: pages
 ---
 
-A Propos
+À propos
 ========
 
-Objectif du site
-----------------
+Un catalogue
+------------
 
-Le site api.gouv.fr a pour objectif de publier la liste des API fournies par les administrations centrales, les collectivités territoriales, les établissements publics à caractère administratif. Chaque page de description d'une API comporte une courte description fonctionnelles, les ressources disponibles ainsi que des liens vers la documentation technique, et vers le processus d'inscription ou d'enrolement à cette API.
-
-Les API sont mises en valeur à travers des services illustrant leur utilisation.
+api.gouv.fr catalogue les API offertes par les administrations centrales, les collectivités territoriales, les établissements publics… À chaque API est associée une courte description fonctionnelles, une documentation technique, les modalités d'accès, d'éventuelles ressources supplémentaires et surtout des services qui l'utilisent.
 
 Public visé
 -----------
 
-Le site api.gouv.fr s'adresse avant tout aux créateurs de services informatiques, « consommateurs » d'API. Son ambition est de leur faciliter la découverte, la compréhension et l'accès aux API et aux producteurs d'API.
-Le site s'adresse également aux fournisseurs d'API : il leur offre un moyen simple de faire connaître leur produit et le référencer dans un catalogue public. Il leur permet également de présenter succintement les conditions de fonctionnement nominal du service qu'ils proposent.
+api.gouv.fr s'adresse avant tout aux créateurs de services, les consommateurs d'API. Pour cela, nous facilitons la découverte, la compréhension et l'accès aux API et à leurs producteurs.
+
+Les fournisseurs, de leur côté, ont avec ce catalogue un moyen simple de faire connaître leurs API.
 
 Définitions
 -----------
 
-**API** : Une API est un programme informatique web permettant la communication et l'échange de données entre applications et systèmes hétérogènes. Il s'agit donc d'un ensemble de fonctionnalités disponibles, par et pour des applications ou machines, sans intervention humaine.
+**API** : interface permettant la communication et l'échange de données entre des systèmes hétérogènes. Cela permet l'interconnexion entre des applications et des machines, sans intervention humaine. Dans api.gouv.fr, nous ne référençons que des API accessibles par internet.
 
-**Fournisseur** : Le fournisseur d'API, également appelé producteur d'API, est responsable de l'exposition de ses ressources. C'est lui qui définit les conditions d'utilisation que devra respecter le consommateur. Dans le cadre d'api.gouv.fr, les fournisseurs sont tous issus de la sphère publique : l'État ou ses représentants, collectivités, autorités administratives…
+**Fournisseur** : également appelé _producteur_ d'API, il est responsable de l'exposition de ses ressources. C'est l'acteur qui définit les conditions d'utilisation que devra respecter le consommateur. Dans api.gouv.fr, les fournisseurs sont tous issus de la sphère publique : l'État ou ses représentants, collectivités, autorités administratives…
 
-**Consommateur** : Le consommateur d'API prend contact avec le fournisseur afin de pouvoir consommer les ressources. Les consommateurs peuvent être issus de la sphère publique ou de la sphère privée. C'est le fournisseur de l'API qui détermine les consommateurs qu'il veut servir. Dans le cas des API ouvertes sans conditions, il n'est pas nécessaire de contacter le fournisseur avant de consommer les ressources.
+**Consommateur** : acteur qui accède aux ressources du fournisseur. Il peut être issu de la sphère publique ou de la sphère privée : c'est le fournisseur qui détermine les types de consommateurs auquel il offre accès à ses ressources. Il peut notamment demander le respect de conditions spécifiques, voire une autorisation préalable.
