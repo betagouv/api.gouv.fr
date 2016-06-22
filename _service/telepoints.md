@@ -3,7 +3,6 @@ name: Télépoints
 link: https://permisdeconduire.ants.gouv.fr/Vos-demarches/Le-permis-a-points/Solde-de-vos-points-Via-France-Connect
 description: Consulter votre solde de points de permis de conduire en un instant grâce à FranceConnect
 screenshot: ecran_telepoints.png
-featured: false
 api:
   - FranceConnect
 ---

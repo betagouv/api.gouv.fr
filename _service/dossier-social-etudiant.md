@@ -3,7 +3,6 @@ name: Dossier Social Étudiant
 link: https://www.messervices.etudiant.gouv.fr/envole/portal/index.php#
 description: Le Dossier Social Etudiant permet aux étudiants de candidater aux bourses et aux logements sociaux
 screenshot: dse-etudiant.png
-featured: false
 api:
   - API Particulier
 ---
