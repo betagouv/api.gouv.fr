@@ -9,10 +9,10 @@
 2. **Structure de droit privé** (entreprise, association…) souhaitant fournir des services.
 3. **Administrations** proposant des données au travers d'API.
 
+### Fournisseur d'API ? [Ajoutez votre API](https://github.com/sgmap/api.gouv.fr/blob/gh-pages/CONTRIBUTING.md#ajouter-une-api) !
 
-### Fournisseur d'API ? [Ajoute ton API](https://github.com/sgmap/api.gouv.fr/blob/gh-pages/CONTRIBUTING.md) !
+### Réutilisateur d'API ? [Ajoutez votre service](https://github.com/sgmap/api.gouv.fr/blob/gh-pages/CONTRIBUTING.md#ajouter-un-service) !
 
-### Réutilisateurs d'API ? [Ajoute ton service](https://github.com/sgmap/api.gouv.fr/blob/gh-pages/CONTRIBUTING.md) !
 
 ## `api.gouv.fr`
 
