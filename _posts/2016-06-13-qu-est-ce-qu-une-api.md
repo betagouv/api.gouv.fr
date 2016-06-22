@@ -3,7 +3,7 @@ title: Qu'est-ce qu'une API ?
 layout: post
 ---
 
-« API » est un acronyme anglo-saxon signifiant _Application Programming Interface_. Une API est une interface, un contrat passé entre deux systèmes informatiques qui leur permet de communiquer.
+« API » est un acronyme anglo-saxon signifiant _Application Programming Interface_. Une API est une interface, un contrat passé entre deux systèmes informatiques pour leur permettre de communiquer.
 
 Les API permettent de nombreux usages. Elles sont déjà utilisées largement. Par exemple, les entreprise françaises utilisent tous les mois celle de la [Déclaration Sociale Nominative](http://www.dsn-info.fr/api-dsn.htm). Les entreprises ne communiquent pas les données de leur employés manuellement à l'administration : leur logiciel de paie transmet directement ces données grâce à une API.
 
@@ -17,8 +17,8 @@ Concrètement, le constructeur de la lampe utilise le standard de la prise élec
 
 ### Pour le producteur
 
-  * Augmenter la portée de ses services en permettant à d'autres administrations ou entreprises intégrer et tirer parti des données.
-  * Économiser en permettant à des innovateurs de créer des services annexes pour lesquels il n'a pas les ressources.
+  * Augmenter la portée de ses services en permettant à d'autres administrations ou entreprises d'intégrer et tirer parti de ses ressources.
+  * Innover tout en économisant en permettant à des acteurs externes de créer des services adossés à ses données.
   * Créer des marchés en facilitant l'accès aux données gouvernementales.
   * Répondre à coût marginal aux exigences règlementaires de transparence et d'échange de données de plus en plus fortes (loi DCRA…).
 
