@@ -20,7 +20,7 @@ Concrètement, le constructeur de la lampe utilise le standard de la prise élec
   * Augmenter la portée de ses services en permettant à d'autres administrations ou entreprises d'intégrer et tirer parti de ses ressources.
   * Innover tout en économisant en permettant à des acteurs externes de créer des services adossés à ses données.
   * Créer des marchés en facilitant l'accès aux données gouvernementales.
-  * Répondre à coût marginal aux exigences règlementaires de transparence et d'échange de données de plus en plus fortes (loi DCRA…).
+  * Répondre à coût marginal aux exigences règlementaires de transparence et d'échange de données de plus en plus fortes (loi <abbr title="Droits des Citoyens dans leurs Relations avec les Administrations">DCRA</abbr>, Dites-le Nous Une Fois…).
 
 ### Pour le consommateur
 
