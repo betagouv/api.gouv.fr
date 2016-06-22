@@ -5,8 +5,8 @@
 
 ## Public visé
 
-1. **Administrations** (Collectivités, Ministères, etc) souhaitant fournir des services aux citoyens français.
-2. **Structure de droit privé** (entreprise, association…) souhaitant fournir des services.
+1. **Administrations** (Collectivités, Ministères, etc) fournissant des services aux citoyens français.
+2. **Structures de droit privé** (entreprise, association…) fournissant fournir des services.
 3. **Administrations** proposant des données au travers d'API.
 
 ### Fournisseur d'API ? [Ajoutez votre API](https://github.com/sgmap/api.gouv.fr/blob/gh-pages/CONTRIBUTING.md#ajouter-une-api) !
