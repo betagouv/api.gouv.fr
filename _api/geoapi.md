@@ -56,6 +56,10 @@ Elle peut renvoyer des données au format JSON ou  [GeoJSON](http://geojson.org)
 
 Tout le monde. Mais si vos besoins sont massifs, [contactez-nous](mailto:geo@api.gouv.fr) au préalable.
 
+#### Données source
+
+[Toutes les données utilisées](https://github.com/sgmap/api-communes#données-sources) sont sous licences Open Data.
+
 #### Contact
 
 geo@api.gouv.fr
