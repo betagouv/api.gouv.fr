@@ -5,7 +5,6 @@ doc_tech: https://particulier.api.gouv.fr/tech
 access_link: https://particulier.api.gouv.fr/#/registration/charte
 domain: https://particulier.api.gouv.fr
 contract: OUVERT sous contrat
-restriction: simplication des démarches des usagers
 openapi_definition: https://particulier.api.gouv.fr/docs/api-particulier.yaml
 clients:
   - collectivités

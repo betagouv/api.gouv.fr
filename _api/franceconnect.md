@@ -5,7 +5,6 @@ doc_tech: https://doc.integ01.dev-franceconnect.fr/documentation
 access_link: https://doc.integ01.dev-franceconnect.fr/inscription
 domain: https://doc.integ01.dev-franceconnect.fr/
 contract: OUVERT sous contrat
-restriction:
 clients:
   - particuliers
   - entreprises

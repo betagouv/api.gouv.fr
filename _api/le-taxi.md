@@ -5,7 +5,6 @@ doc_tech: https://api.taxi/documentation
 access_link: http://le.taxi/join.html
 domain: https://le.taxi
 contract: OUVERT sous contrat
-restriction: faciliter l'accès des clients aux taxis
 openapi_definition: https://api.taxi/swagger.json
 clients:
   - collectivités
