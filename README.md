@@ -16,8 +16,10 @@ Les fournisseurs, de leur côté, ont avec ce catalogue un moyen simple de faire
 ## `api.gouv.fr`
 
 Ce nom de domaine héberge :
-  * une présentation des différentes API proposées par l'État et les administrations
-  * une présentation des services utilisant des API présentées
+
+* une présentation des différentes API proposées par l'État et les administrations ;
+* une présentation des services utilisant des API présentées.
+
 
 ## Installation locale
 
@@ -34,14 +36,14 @@ Il existe ensuite deux manières de lancer le site sur sa machine :
 
 Ces deux méthodes sont indépendantes et détaillées ci-dessous.
 
-### jekyll
+### Jekyll
 
 Le site utilise [Jekyll], un générateur de site statique en [Ruby].
 
 #### Dépendances
 
- * [Ruby](https://www.ruby-lang.org/en/downloads/). Il est recommandé d'utiliser un système de virtualisation comme [RVM](https://rvm.io/) ou [RbEnv](https://github.com/rbenv/rbenv). La version à utiliser est : `2.2.3`
- * la gem `github-pages` qui contient jekyll ainsi que les plugins sont disponibles sur github : `gem install github-pages -v 2.4.8`
+* [Ruby](https://www.ruby-lang.org/en/downloads/). Il est recommandé d'utiliser un système de virtualisation comme [RVM](https://rvm.io/) ou [RbEnv](https://github.com/rbenv/rbenv). La version à utiliser est : `2.2.3`
+* la gem `github-pages` qui contient jekyll ainsi que les plugins sont disponibles sur github : `gem install github-pages -v 2.4.8`
 
 #### Commandes
 
@@ -52,8 +54,8 @@ Le site utilise [Jekyll], un générateur de site statique en [Ruby].
 
 #### Dépendances
 
-  * [Docker](https://docs.docker.com/engine/installation/)  (version > 1.10)
-  * [Docker-compose](https://docs.docker.com/compose/install/) (version > 1.6)
+* [Docker](https://docs.docker.com/engine/installation/) (version > 1.10)
+* [docker-compose](https://docs.docker.com/compose/install/) (version > 1.6)
 
 #### Commandes
 
@@ -61,7 +63,7 @@ Le site utilise [Jekyll], un générateur de site statique en [Ruby].
 
 ## Déploiement
 
-Pour déployer ce site, il suffit de pousser les modifications vers la branche `gh-pages` sur [github.com/sgmap/api.gouv.fr](https://github.com/sgmap/api.gouv.fr). Cette branche étant protégée, il convient de faire [des pull requests](https://help.github.com/articles/using-pull-requests/) car le projet utilise [github flow](https://guides.github.com/introduction/flow/).
+Pour déployer ce site, il suffit de pousser les modifications vers la branche `gh-pages` sur [github.com/sgmap/api.gouv.fr](https://github.com/sgmap/api.gouv.fr). Cette branche étant protégée, il convient de faire [des pull requests](https://help.github.com/articles/using-pull-requests/) car le projet utilise [GitHub flow](https://guides.github.com/introduction/flow/).
 
 
 [Jekyll]: http://jekyllrb.com/
