@@ -20,7 +20,7 @@ Les fournisseurs, de leur côté, ont avec ce catalogue un moyen simple de faire
 Définitions
 -----------
 
-**API** : interface permettant la communication et l'échange de données entre des systèmes hétérogènes. Cela permet l'interconnexion entre des applications et des machines, sans intervention humaine. Dans api.gouv.fr, nous ne référençons que des API accessibles par internet. Une définition plus complète de [ce qu'est une API]({{  site.baseurl }}/qu-est-ce-qu-une-api)) est également disponible.
+**API** : interface permettant la communication et l'échange de données entre des systèmes hétérogènes. Cela permet l'interconnexion entre des applications et des machines, sans intervention humaine. Dans api.gouv.fr, nous ne référençons que des API accessibles par internet. Une définition plus complète de [ce qu'est une API]({{  site.baseurl }}/qu-est-ce-qu-une-api) est également disponible.
 
 **Fournisseur** : également appelé _producteur_ d'API, il est responsable de l'exposition de ses ressources. C'est l'acteur qui définit les conditions d'utilisation que devra respecter le consommateur. Dans api.gouv.fr, les fournisseurs sont tous issus de la sphère publique : l'État ou ses représentants, collectivités, autorités administratives…
 
