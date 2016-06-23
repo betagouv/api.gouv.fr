@@ -13,12 +13,11 @@ Les fournisseurs, de leur côté, ont avec ce catalogue un moyen simple de faire
 ### Réutilisateur d'API ? [Ajoutez votre service](https://github.com/sgmap/api.gouv.fr/blob/gh-pages/CONTRIBUTING.md#ajouter-un-service) !
 
 
-## `api.gouv.fr`
+## Sous-domaines
 
-Ce nom de domaine héberge :
+Le nom de domaine `api.gouv.fr` héberge un catalogue d'API et de services les réutilisant.
 
-* une présentation des différentes API proposées par l'État et les administrations ;
-* une présentation des services utilisant des API présentées.
+Les sous-domaines en `*.api.gouv.fr` hébergent les API cataloguées sur `api.gouv.fr` et maintenues par la <abbr title="Direction interministérielle du numérique et du système d'information et de communication">DINSIC</abbr>.
 
 
 ## Installation locale
