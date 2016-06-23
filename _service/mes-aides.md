@@ -3,7 +3,6 @@ name: Mes aides
 link: http://mes-aides.gouv.fr
 description: Simulez toutes vos aides sociales en ligne
 screenshot: ecran_mesaides.png
-featured: true
 api:
   - OpenFisca
 ---

@@ -3,7 +3,6 @@ name: RenCircul
 link: http://circulation.rennesmetropole.fr
 description: L’information travaux sur mobiles et tablettes
 screenshot: rennesmetropole-rencircul.png
-featured: false
 api:
   - API travaux Rennes Métropole
 ---

@@ -5,6 +5,11 @@ searchExamples:
   - quotient familial
   - revenu fiscal de référence
   - cadastre
+
+featuredServices:
+  - La Bonne Boîte
+  - Mes aides
+  - Simulateur de coût d'embauche
 ---
 
 <section id="mission-statement" class="ui vertical center aligned segment">
@@ -95,7 +100,7 @@ searchExamples:
 
   <div class="ui three stackable cards">
     {% for service in site.service %}
-      {% if service.featured %}
+      {% if page.featuredServices contains service.name %}
         {% include service-card.html service=service %}
       {% endif %}
     {% endfor %}
