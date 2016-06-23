@@ -42,8 +42,8 @@ Le site utilise [Jekyll], un générateur de site statique en [Ruby].
 
 #### Dépendances
 
-* [Ruby](https://www.ruby-lang.org/en/downloads/). Il est recommandé d'utiliser un système de virtualisation comme [RVM](https://rvm.io/) ou [RbEnv](https://github.com/rbenv/rbenv). La version à utiliser est&nbsp;: `2.2.3`
- * [bundle](http://bundler.io/). La commande a lancer est&nbsp;: `gem install bundle`
+* [Ruby](https://www.ruby-lang.org/en/downloads/). Il est recommandé d'utiliser un système de virtualisation comme [RVM](https://rvm.io/) ou [RbEnv](https://github.com/rbenv/rbenv). La version à utiliser est : `2.2.3`
+ * [bundle](http://bundler.io/). La commande a lancer est : `gem install bundle`
 
 #### Commandes
 
