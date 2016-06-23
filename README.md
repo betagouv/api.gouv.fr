@@ -1,13 +1,12 @@
-# Api.gouv.fr
-
-> Le site public listant les API au sein du Système d'Information des Services Publics Français
+api.gouv.fr catalogue les API offertes par les administrations centrales, les collectivités territoriales, les établissements publics… À chaque API est associée une courte description fonctionnelles, une documentation technique, les modalités d'accès, d'éventuelles ressources supplémentaires et surtout des services qui l'utilisent.
 
 
 ## Public visé
 
-1. **Administrations** (Collectivités, Ministères, etc) fournissant des services aux citoyens français.
-2. **Structures de droit privé** (entreprise, association…) fournissant fournir des services.
-3. **Administrations** proposant des données au travers d'API.
+api.gouv.fr s'adresse avant tout aux créateurs de services, les consommateurs d'API. Pour cela, nous facilitons la découverte, la compréhension et l'accès aux API et à leurs producteurs.
+
+Les fournisseurs, de leur côté, ont avec ce catalogue un moyen simple de faire connaître leurs API.
+
 
 ### Fournisseur d'API ? [Ajoutez votre API](https://github.com/sgmap/api.gouv.fr/blob/gh-pages/CONTRIBUTING.md#ajouter-une-api) !
 
