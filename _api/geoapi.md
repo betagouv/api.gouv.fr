@@ -1,5 +1,5 @@
 ---
-name: GéoAPI
+title: GéoAPI
 tagline: Interrogez les référentiels géographiques plus facilement
 contract: OUVERT
 openapi_definition: https://geo.api.gouv.fr/definition.yml

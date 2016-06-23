@@ -1,5 +1,5 @@
 ---
-name: API Prélèvements sociaux
+title: API Prélèvements sociaux
 tagline: Estimer le coût d'embauche en France
 doc_tech: https://embauche.beta.gouv.fr/api-prelevements-sociaux.html
 domain: https://embauche.beta.gouv.fr

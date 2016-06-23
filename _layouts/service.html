@@ -27,17 +27,17 @@ layout: default
         <h3 class="ui divider horizontal">Les API utilisées</h3>
         <div class="ui segments">
           {% for apiName in page.api %}
-          {% assign api = site.api | where: "name", apiName | first %}
+          {% assign api = site.api | where: "title", apiName | first %}
 
           <div class="ui segment">
             <div class="ui grid">
               <div class="row">
                 <div class="three wide column">
-                  <img class="ui fluid image logoAPI" src="{{ site.baseurl }}{{ api.logo }}" alt="logo de {{ api.name }}">
+                  <img class="ui fluid image logoAPI" src="{{ site.baseurl }}{{ api.logo }}" alt="logo de {{ api.title }}">
                 </div>
                 <div class="thirteen wide column">
                   <h4>
-                    <a href="{{ site.baseurl }}{{ api.url }}" class="header">{{ api.name }}</a>
+                    <a href="{{ site.baseurl }}{{ api.url }}" class="header">{{ api.title }}</a>
                   </h4>
                   {{ api.tagline }}
                 </div>

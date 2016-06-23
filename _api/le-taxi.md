@@ -1,5 +1,5 @@
 ---
-name: le.Taxi
+title: le.Taxi
 tagline: Un clic, un taxi
 doc_tech: https://api.taxi/documentation
 access_link: http://le.taxi/join.html

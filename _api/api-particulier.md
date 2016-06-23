@@ -1,5 +1,5 @@
 ---
-name: API Particulier
+title: API Particulier
 tagline: Simplifiez les démarches de vos usagers, ne demandez plus de justificatifs
 doc_tech: https://particulier.api.gouv.fr/tech
 access_link: https://particulier.api.gouv.fr/#/registration/charte

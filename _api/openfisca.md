@@ -1,5 +1,5 @@
 ---
-name: OpenFisca
+title: OpenFisca
 tagline: Moteur ouvert de simulation du système socio-fiscal
 doc_tech: http://doc.openfisca.fr
 domain: http://api.openfisca.fr
