@@ -5,7 +5,6 @@ searchExamples:
   - quotient familial
   - revenu fiscal de référence
   - cadastre
-
 ---
 
 <section id="mission-statement" class="ui vertical center aligned segment">
@@ -15,15 +14,15 @@ searchExamples:
       {{ site.description }}
     </h1>
     <div class="ui search">
-		  <div class="ui fluid left icon input">
-		    <input class="prompt"
+      <div class="ui fluid left icon input">
+        <input class="prompt"
               placeholder="{{ page.searchExamples | join: ', '}}…"
               type="search">
-		    <i class="search icon"></i>
-		  </div>
+        <i class="search icon"></i>
+      </div>
       <div class="results transition hidden">
       </div>
-		</div>
+    </div>
   </div>
 </section>
 
@@ -98,13 +97,13 @@ searchExamples:
       {% if service.featured %}
         {% include service-card.html service=service %}
       {% endif %}
-  	{% endfor %}
+    {% endfor %}
   </div>
 </section>
 
 <div class="ui container">
   <p class="buttonContainer">
-	   <a class="ui big button moreButton" href="{{ site.baseurl }}/services">Découvrez les {{ site.service | size }} services&nbsp;&nbsp;➤</a>
+     <a class="ui big button moreButton" href="{{ site.baseurl }}/services">Découvrez les {{ site.service | size }} services&nbsp;&nbsp;➤</a>
   </p>
 </div>
 
