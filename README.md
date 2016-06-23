@@ -41,11 +41,12 @@ Le site utilise [Jekyll], un générateur de site statique en [Ruby].
 
 #### Dépendances
 
- * [Ruby](https://www.ruby-lang.org/en/downloads/). Il est recommandé d'utiliser un système de virtualisation comme [RVM](https://rvm.io/) ou [RbEnv](https://github.com/rbenv/rbenv). La version à utiliser est : `2.2.3`
- * la gem `github-pages` qui contient jekyll ainsi que les plugins sont disponibles sur github : `gem install github-pages -v 2.4.8`
+ * [Ruby](https://www.ruby-lang.org/en/downloads/). Il est recommandé d'utiliser un système de virtualisation comme [RVM](https://rvm.io/) ou [RbEnv](https://github.com/rbenv/rbenv). La version à utiliser est&nbsp;: `2.2.3`
+ * [bundle](http://bundler.io/). La commande a lancer est&nbsp;: `gem install bundle`
 
 #### Commandes
 
+ * `bundle install` pour installer toutes les dépendances nécessaires
  * `jekyll serve` pour lancer un serveur de développement. Il suffit de se rendre sur l'URL indiquée
  * `jekyll build` pour générer le site dans le répertoire `_site`
 
