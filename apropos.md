@@ -25,3 +25,10 @@ Définitions
 **Fournisseur** : également appelé _producteur_ d'API, il est responsable de l'exposition de ses ressources. C'est l'acteur qui définit les conditions d'utilisation que devra respecter le consommateur. Dans api.gouv.fr, les fournisseurs sont tous issus de la sphère publique : l'État ou ses représentants, collectivités, autorités administratives…
 
 **Consommateur** : acteur qui accède aux ressources du fournisseur. Il peut être issu de la sphère publique ou de la sphère privée : c'est le fournisseur qui détermine les types de consommateurs auquel il offre accès à ses ressources. Il peut notamment demander le respect de conditions spécifiques, voire une autorisation préalable.
+
+Remerciements
+-------------
+<p>
+  Recherche par : <br>
+  <img class="ui tiny image" src="{{ site.baseurl }}/img/algolia_logo.svg" alt="algolia logo">
+</p>
