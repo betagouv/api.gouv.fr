@@ -12,6 +12,7 @@ category: reference
 layout: api
 logo: /img/logo-generique-startup-carre.jpg
 experimentale: true
+openapi_definition: /api-gouv.yml
 ---
 
 Cette API est une version très simple, si vous avez des besoins spécifiques qui ne sont pas couvert par cette première version merci de nous contacter en envoyant un mail à [contact@api.gouv.fr](mailto:contact@api.gouv.fr)
