@@ -31,8 +31,9 @@ cd api.gouv.fr
 ```
 
 Il existe ensuite deux manières de lancer le site sur sa machine :
- * Il est possible d'utiliser Jekyll directement
- * Il est possible d'utiliser Docker
+
+* Utiliser Jekyll directement.
+* Utiliser Docker.
 
 Ces deux méthodes sont indépendantes et détaillées ci-dessous.
 
@@ -47,8 +48,8 @@ Le site utilise [Jekyll], un générateur de site statique en [Ruby].
 
 #### Commandes
 
- * `jekyll serve` pour lancer un serveur de développement. Il suffit de se rendre sur l'URL indiquée
- * `jekyll build` pour générer le site dans le répertoire `_site`
+* `jekyll serve` pour lancer un serveur de développement. Il suffit de se rendre sur l'URL indiquée à l'exécution de la commande.
+* `jekyll build` pour générer le site dans le répertoire `_site`.
 
 ### Docker
 
@@ -59,7 +60,7 @@ Le site utilise [Jekyll], un générateur de site statique en [Ruby].
 
 #### Commandes
 
- * `docker-compose up`, Il suffit de se rendre sur l'URL indiquée
+* `docker-compose up`. Il suffit de se rendre sur l'URL indiquée à l'exécution de la commande.
 
 ## Déploiement
 
