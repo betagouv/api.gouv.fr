@@ -5,7 +5,7 @@ description: Réaliser sa demande de bourse en ligne # description rapide du ser
 api: # liste des API utilisées dans le service (utiliser l'attribut name de l'API)
  - API Particulier
 screenshot: bourse.png #ajouter un screenshot de l'API
-featured: true # est-ce que la réutilisation doit être affichée sur la page d'accueil.
+featured: false # est-ce que la réutilisation doit être affichée sur la page d'accueil.
 ---
 
 ## Description du service
