@@ -38,6 +38,17 @@
       color: black;
     }
   }
+
+  .powerby {
+    font-size: 13px;
+    padding: 5px;
+    text-align: right;
+    img {
+      height: 14px;
+      position: relative;
+      top: 3px;
+    }
+  }
 }
 
 #description {
