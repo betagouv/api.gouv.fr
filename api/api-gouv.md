@@ -11,7 +11,7 @@ owner: DINSIC
 category: reference
 layout: api
 logo: /img/logo-generique-startup-carre.jpg
-experimentale: true
+experimental: true
 openapi_definition: /api-gouv.yml
 ---
 
