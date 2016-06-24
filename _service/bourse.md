@@ -1,5 +1,5 @@
 ---
-name: BourseSCO #nom du service
+title: BourseSCO #nom du service
 link: https://bourse.beta.gouv.fr/ # lien vers le service
 description: Réaliser sa demande de bourse en ligne # description rapide du service
 api: # liste des API utilisées dans le service (utiliser l'attribut name de l'API)

@@ -1,5 +1,5 @@
 ---
-name: tedyCab
+title: tedyCab
 link: http://www.tedycab.com/
 description: Tous les taxis dans votre appli
 screenshot: ecran_tedycab.jpg

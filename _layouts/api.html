@@ -9,7 +9,7 @@ layout: default
       <div class="twelve wide centered column">
         <h1 class="ui inverted header">
           {% assign category = site.api_category | where:"id", page.category | first %}
-          <i class="{{ category.logo }} icon"></i>{{ page.name }}
+          <i class="{{ category.logo }} icon"></i>{{ page.title }}
         </h1>
         <h2 class="ui inverted header">
           {{ page.tagline }}
@@ -35,7 +35,7 @@ layout: default
   <div class="ui mobile reversed stackable grid">
     <div class="four wide column">
       <div class="ui segment">
-        {% if page.experimentale %}
+        {% if page.experimental %}
         <div class="ui yellow left ribbon label" >
           Expérimentale
         </div>
@@ -47,7 +47,7 @@ layout: default
         <div class="ui relaxed divided list metadata">
           <div class="item logoWrapper">
             <div class="ui small image">
-              <img src="{{ page.logo }}" alt="{{ page.name }}" />
+              <img src="{{ page.logo }}" alt="{{ page.title }}" />
             </div>
           </div>
           {% if page.stat.url %}
@@ -124,7 +124,7 @@ layout: default
 
 {% capture serviceHtml %}
   {% for service in site.service %}
-    {% if service.api contains page.name%}
+    {% if service.api contains page.title%}
       {% include service-card.html service=service %}
     {% endif %}
   {% endfor %}

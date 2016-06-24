@@ -1,5 +1,5 @@
 ---
-name: API RVA Rennes Métropole
+title: API RVA Rennes Métropole
 tagline: "Voies et adresses de Rennes Métropole"
 doc_tech: http://rva.data.rennes-metropole.fr/documentation.php
 access_link: http://rva.data.rennes-metropole.fr/inscription.php

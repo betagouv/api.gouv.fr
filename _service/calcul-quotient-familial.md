@@ -1,5 +1,5 @@
 ---
-name: "Lyon : Mon compte"
+title: "Lyon : Mon compte"
 link: http://www.lyon.fr/demarches-lyon-en-direct/tourisme-loisirs/loisirs/calcul-du-quotient-familial-municipal.html
 description: Calcul du quotient familial de la ville de Lyon
 api:
