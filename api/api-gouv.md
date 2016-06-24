@@ -1,5 +1,5 @@
 ---
-title: API Gouv
+title: api.gouv.fr
 tagline:  Fabriquez des services en ligne plus simples
 contract: OUVERT
 clients:
