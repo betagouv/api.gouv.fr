@@ -98,7 +98,7 @@ featuredServices:
 
   <div class="ui three stackable cards">
     {% for service in site.service %}
-      {% if page.featuredServices contains service.name %}
+      {% if page.featuredServices contains service.title %}
         {% include service-card.html service=service %}
       {% endif %}
     {% endfor %}
@@ -219,7 +219,7 @@ $(document).ready(function() {
     var html = '<a class="result" href="{{ site.baseurl }}'+ value.url +'">'
     html += '<div class="image"> <img src="{{ site.baseurl }}'+ value.logo +'"></div>'
     html += '<div class="content">'
-    html += '<div class="title">' + value._highlightResult.name.value + '</div>'
+    html += '<div class="title">' + value._highlightResult.title.value + '</div>'
     html += '<div class="description">' + value._highlightResult.tagline.value
     html += getHightlightedHtml(value._highlightResult) + '</div>'
     html += '</div>'

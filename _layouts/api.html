@@ -47,7 +47,7 @@ layout: default
         <div class="ui relaxed divided list metadata">
           <div class="item logoWrapper">
             <div class="ui small image">
-              <img src="{{ page.logo }}" alt="{{ page.name }}" />
+              <img src="{{ page.logo }}" alt="{{ page.title }}" />
             </div>
           </div>
           {% if page.stat.url %}
@@ -124,7 +124,7 @@ layout: default
 
 {% capture serviceHtml %}
   {% for service in site.service %}
-    {% if service.api contains page.name%}
+    {% if service.api contains page.title%}
       {% include service-card.html service=service %}
     {% endif %}
   {% endfor %}

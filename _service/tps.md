@@ -1,5 +1,5 @@
 ---
-name: TPS
+title: TPS
 link: https://tps.apientreprise.fr
 description: Simplifiez toutes vos démarches pour les rendre 100% en ligne.
 screenshot: ecran_TPS.jpg

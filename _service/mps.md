@@ -1,5 +1,5 @@
 ---
-name: MPS
+title: MPS
 link: https://mps.apientreprise.fr
 description: Candidater à un marché public avec seulement votre SIRET.
 screenshot: ecran_MPS.jpg

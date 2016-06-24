@@ -1,5 +1,5 @@
 ---
-name: Simulateur de coût d'embauche
+title: Simulateur de coût d'embauche
 link: http://embauche.beta.gouv.fr/
 description: Simulez le coût d'une embauche en France
 screenshot: ecran_simulateur-cout-embauche.png

@@ -1,5 +1,5 @@
 ---
-name: Site web du Réseau STAR
+title: Site web du Réseau STAR
 link: http://m.starbusmetro.fr/
 description: Site web du réseau de transport public de Rennes Métropole
 screenshot: rennesmetropole-star.png

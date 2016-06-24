@@ -1,5 +1,5 @@
 ---
-name: Zaléou
+title: Zaléou
 link: http://www.zaleou.com/
 description: Trouvez un taxi autour de vous avec l'application Zaléou
 screenshot: ecran_zaleou.png

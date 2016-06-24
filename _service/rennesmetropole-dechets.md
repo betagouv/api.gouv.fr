@@ -1,5 +1,5 @@
 ---
-name: Déchets malins
+title: Déchets malins
 link: http://dechets.rennesmetropole.fr/
 description: Le guide des déchets de Rennes Métropole
 screenshot: rennesmetropole-dechets.png
