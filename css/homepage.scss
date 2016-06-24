@@ -17,15 +17,15 @@
     margin-bottom: 3%
  }
 
-h1 {
-  padding: .2em 0;
+  h1 {
+    padding: .2em 0;
 
-  font-size: 200%;
-  line-height: 1.8;
-  letter-spacing: .08em;
+    font-size: 200%;
+    line-height: 1.8;
+    letter-spacing: .08em;
 
-  text-transform: uppercase;
-}
+    text-transform: uppercase;
+  }
   .results {
     width: 100%;
 
@@ -36,6 +36,17 @@ h1 {
     .algolia__result-highlight {
       font-weight: 600;
       color: black;
+    }
+  }
+
+  .poweredBy {
+    font-size: 95%;
+    padding: 0.5em;
+    text-align: right;
+    img {
+      height: 1em;
+      position: relative;
+      top: 0.2em;
     }
   }
 }
