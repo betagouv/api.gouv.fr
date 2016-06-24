@@ -115,7 +115,7 @@ featuredServices:
 $(document).ready(function() {
   var client = $.algolia.Client('MOAD3NGUET', '253f1cf2d19fbf72080b70c3a5fcd18f');
   var index = client.initIndex('api_gouv');
-
+  var minChar = 1;
   var $searchDiv = $('.ui.search');
   var $resultDiv = $searchDiv.find('.results');
   var $searchInput = $searchDiv.find('.prompt');
@@ -172,7 +172,7 @@ $(document).ready(function() {
     } else {
       var query = $searchInput.val();
       if(query.length === 0) return hideResultDiv();
-      if(query.length <= 1) return;
+      if(query.length < minChar) return;
       search(query, function (err, content) {
         if(err) {
           console.error('an error has occured', err)
