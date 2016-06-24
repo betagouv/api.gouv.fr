@@ -80,7 +80,7 @@ algolia:
       - clients
       - contract
     attributesToIndex:
-      - name
+      - title
       - tagline
       - keywords
       - contract
