@@ -30,5 +30,5 @@ Remerciements
 -------------
 <p>
   Recherche par : <br>
-  <img class="ui tiny image" src="{{ site.baseurl }}/img/algolia_logo.svg" alt="algolia logo">
+  <img class="ui tiny image" src="{{ site.baseurl }}/img/algolia_logo.svg" alt="algolia">
 </p>
