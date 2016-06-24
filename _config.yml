@@ -43,9 +43,6 @@ defaults:
     values:
       layout: default
 
-
-
-# vertical-rhythm
 api_category:
   - id: confidential
     name: Données confidentielles
@@ -67,7 +64,6 @@ api_category:
     logo: magic
     description: Accès à des données temps-réel et à des algorithmes valorisant des données massives
 
-# Build settings
 markdown: kramdown
 
 gems:
