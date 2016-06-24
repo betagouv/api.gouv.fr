@@ -120,7 +120,7 @@ $(document).ready(function() {
   var $resultDiv = $searchDiv.find('.results');
   var $searchInput = $searchDiv.find('.prompt');
   var htmlFooter = '<a href="{{ site.baseurl }}/api/" class="action">Explorez les {{ site.api | size }} API déjà disponibles</a>';
-  var htmlPowerBy = '<p class="powerby">Recherche par&nbsp;:&nbsp;&nbsp;<img src="/img/algolia_logo.svg" alt="algolia"></p>';
+  var htmlPowerBy = '<p class="powerby">Recherche par : <img src="/img/algolia_logo.svg" alt="algolia"></p>';
 
   function isEnterPressed(event) {
     return event.keyCode === 13
