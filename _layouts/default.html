@@ -6,11 +6,15 @@
 
     <div id="wrapper">
       <div id="page">
-        <a href="{{ site.baseurl }}/">
-          <header>
-            <img src="{{ site.baseurl }}/img/logo.svg" alt="{{ site.title }}" />
-          </header>
-        </a>
+        <header>
+          <nav class="ui secondary menu">
+            <div class="right menu">
+              <a class="item" href="{{ site.baseurl }}/api"><h4>API</h4></a>
+              <a class="large screen only item" href="{{ site.baseurl }}/services"><h4>Services</h4></a>
+              <a class="item" id="logo" href="{{ site.baseurl }}/">api.gouv.fr</a>
+            </div>
+          </nav>
+        </header>
         <main>
           {{ content }}
         </main>
