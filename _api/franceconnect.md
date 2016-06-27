@@ -18,7 +18,7 @@ keywords:
   - Authentification
   - Identification
   - SSO
-logo: /img/logo-fc.png
+logo: logo-fc.png
 ---
 
 ## Qu'est-ce que FranceConnect ?

@@ -10,7 +10,7 @@ clients:
 owner: DINSIC
 category: reference
 layout: api
-logo: /img/logo-generique-startup-carre.jpg
+logo: logo-generique-startup-carre.jpg
 experimental: true
 openapi_definition: /api-gouv.yml
 ---

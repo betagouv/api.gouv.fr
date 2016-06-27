@@ -27,7 +27,7 @@ defaults:
       type: api	# targets a collection
     values:
       layout: api
-      logo: /img/logo-generique-startup-carre.jpg
+      logo: logo-generique-startup-carre.jpg
       stat:
         label: Appels lors des <br> 30 derniers jours
 
