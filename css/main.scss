@@ -24,6 +24,11 @@ header {
 	.ui.secondary.menu {
 		padding: 0.5em;
 	}
+	.menu {
+		h4 {
+			margin-bottom: 0;
+		}
+	}
 
 	#logo {
 		color: transparent;
