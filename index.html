@@ -217,7 +217,7 @@ $(document).ready(function() {
 
   function formatResult(value) {
     var html = '<a class="result" href="{{ site.baseurl }}'+ value.url +'">'
-    html += '<div class="image"> <img src="{{ site.baseurl }}'+ value.logo +'"></div>'
+    html += '<div class="image"> <img src="{{ site.baseurl }}/img/'+ value.logo +'"></div>'
     html += '<div class="content">'
     html += '<div class="title">' + value._highlightResult.title.value + '</div>'
     html += '<div class="description">' + value._highlightResult.tagline.value

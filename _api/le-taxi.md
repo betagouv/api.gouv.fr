@@ -10,7 +10,7 @@ clients:
   - collectivités
   - entreprises
   - éditeurs d'applications
-logo: /img/logo_le.taxi.svg
+logo: logo_le.taxi.svg
 partners:
   - Allo Taxi Roubaix
   - Allo Taxi Lyon

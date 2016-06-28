@@ -5,7 +5,7 @@ doc_tech: http://travaux.data.rennesmetropole.fr/
 access_link: http://travaux.data.rennesmetropole.fr/
 domain: http://travaux.data.rennesmetropole.fr/
 contract: OUVERT
-logo: /img/rennesmetropole-travaux.png
+logo: rennesmetropole-travaux.png
 clients:
   - particuliers
   - entreprises
