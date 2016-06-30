@@ -2,7 +2,7 @@
 layout: pages
 ---
 
-# Qu'est qu'une API
+# Qu'est ce qu'une API
 
 « API » est un acronyme anglo-saxon signifiant _Application Programming Interface_. Une API est une interface, un contrat passé entre deux systèmes informatiques pour leur permettre de communiquer.
 
