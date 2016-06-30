@@ -4,6 +4,8 @@ tagline: "Un référentiel national ouvert : de l'adresse à la coordonnée g�
 doc_tech: http://adresse.data.gouv.fr/api/
 domain: http://adresse.data.gouv.fr/
 contract: OUVERT
+contact:
+  email: adresse@data.gouv.fr
 clients:
   - particuliers
   - entreprises

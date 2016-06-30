@@ -4,6 +4,8 @@ tagline: Simplifiez les démarches de vos usagers, ne demandez plus de justifica
 doc_tech: https://particulier.api.gouv.fr/tech
 access_link: https://particulier.api.gouv.fr/#/registration/charte
 domain: https://particulier.api.gouv.fr
+contact:
+  email: contact@particulier.api.gouv.fr
 contract: OUVERT sous contrat
 openapi_definition: https://particulier.api.gouv.fr/docs/api-particulier.yaml
 clients:

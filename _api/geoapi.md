@@ -4,6 +4,8 @@ tagline: Interrogez les référentiels géographiques plus facilement
 contract: OUVERT
 openapi_definition: https://geo.api.gouv.fr/definition.yml
 doc_tech: https://sgmap.github.io/geoapi-doc
+contact:
+  email: geo@api.gouv.fr
 clients:
   - collectivités
   - ministères
