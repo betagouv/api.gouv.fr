@@ -84,6 +84,20 @@ layout: default
               </div>
             </div>
           </div>
+          {% if page.contact %}
+          <div class="item">
+            <div class="content">
+              <div class="header">Contact</div>
+              <div class="description">
+                {% if page.contact.email %}
+                <a href="mailto:{{ page.contact.email }}?subject=[API gouv] Contact" target="_blank">{{ page.contact.email }}</a>
+                {% elsif page.contact.link %}
+                <a href="{{ page.contact.link }}" target="_blank">Formulaire</a>
+                {% endif%}
+              </div>
+            </div>
+          </div>
+          {% endif %}
           {% if page.partners %}
           <div class="item">
             <div class="content">
