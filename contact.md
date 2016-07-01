@@ -3,26 +3,23 @@ layout: pages
 ---
 # Contact
 
-## Besoin d'information sur une API
+## Détails d'une API
 
-> Ais-je accès aux données de l'API XXX
+Contactez directement le producteur de l'API en question. Vous trouverez un lien de contact sur la page la décrivant. Trouvez la page correspondante depuis la [liste des API]({{ site.baseurl}}/api).
 
-Contacter directement les producteurs des API en question en passant par la page de description de l'API.
+api.gouv.fr se contente de référencer des API existantes. Nous ne pouvons donc pas vous renseigner sur une API spécifique.
 
-## Evolution du site api.gouv.fr
+## Amélioration du site api.gouv.fr
 
-> Je pense qu'il faut ajouter XXX pour chaque API
+Vous avez repéré un problème ou souhaitez proposer une amélioration du catalogue ?
 
-Vous avez repéré un bug ou vous souhaitez proposer une amélioration du site.
+Vérifiez que cette amélioration ne soit pas [déjà prévue](https://github.com/sgmap/api.gouv.fr/issues) et, si ce n'est pas le cas, [suggérez-la](https://github.com/sgmap/api.gouv.fr/issues/new) sur GitHub !
+Vous ne savez pas comment faire ? [Écrivez-nous](mailto:contact@api.gouv.fr?subject=Evolution+du+site).
 
-[Ouvrez une issue](https://github.com/sgmap/api.gouv.fr/issues/new) sur GitHub ou [Écrivez-nous](mailto:contact@api.gouv.fr?subject=Evolution+du+site)
+## Demande de nouvelles API
 
-## Demande pour de nouvelles API
-
-> J'ai besoin d'une API qui me récupérer le nom des villes françaises
-
-Contactez directement les propriétaires de la donnée, nous travaillons sur un système capable de centraliser ces demandes.
+Contactez directement l'organisme qui produit la donnée ou le service auquel vous souhaiteriez accéder. Vous pouvez nous [informer de votre démarche](mailto:contact@api.gouv.fr?subject=Demande+ouverture) et nous tenterons de vous aider, mais nous n'avons pas d'autorité pour forcer l'ouverture d'API.
 
 ## Autres
 
-Votre sujet ne correspond à aucun des cas ci-dessus ? [Écrivez-nous](mailto:contact@api.gouv.fr?subject=Autre+sujet) un mail _concis_  ;)
+Votre sujet ne correspond à aucun des cas ci-dessus ? [Écrivez-nous](mailto:contact@api.gouv.fr?subject=Autre+sujet).
