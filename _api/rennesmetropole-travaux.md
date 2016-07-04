@@ -2,7 +2,6 @@
 title: API travaux Rennes Métropole
 tagline: "Connaître à l'avance les perturbations dûes aux travaux sur Rennes Métropole"
 doc_tech: http://travaux.data.rennesmetropole.fr/
-access_link: http://travaux.data.rennesmetropole.fr/
 domain: http://travaux.data.rennesmetropole.fr/
 contract: OUVERT
 logo: rennesmetropole-travaux.png
