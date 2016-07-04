@@ -9,23 +9,7 @@
         <header>
           <nav class="ui secondary menu">
             <div class="right menu">
-              <div class="ui dropdown item">
-              <h4>API</h4>
-              <i class="dropdown icon"></i>
-              <div class="menu">
-                <a class="item" href="{{ site.baseurl }}/api">
-                  <h4>
-                    Toutes les API
-                  </h4>
-                </a>
-                {% for type in site.api_category %}
-                  <a class="item" href="{{ site.baseurl }}/api/{{ type.id }}">
-                    <i class="icon huge {{ type.logo }}"></i>
-                    {{ type.name }}
-                  </a>
-                {% endfor %}
-              </div>
-            </div>
+              <a class="item" href="{{ site.baseurl }}/index#type"><h4>API</h4></a>
               <a class="large screen only item" href="{{ site.baseurl }}/services"><h4>Services</h4></a>
               <a class="item" id="logo" href="{{ site.baseurl }}/">api.gouv.fr</a>
             </div>
