@@ -5,8 +5,7 @@ doc_tech: https://doc.integ01.dev-franceconnect.fr/documentation
 access_link: https://doc.integ01.dev-franceconnect.fr/inscription
 domain: https://doc.integ01.dev-franceconnect.fr/
 contract: OUVERT sous contrat
-contact:
-  email: support@dev-franceconnect.fr
+contact: support@dev-franceconnect.fr
 clients:
   - particuliers
   - entreprises

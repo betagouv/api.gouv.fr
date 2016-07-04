@@ -3,8 +3,7 @@ title: API Prélèvements sociaux
 tagline: Estimer le coût d'embauche en France
 doc_tech: https://embauche.beta.gouv.fr/api-prelevements-sociaux.html
 domain: https://embauche.beta.gouv.fr
-contact:
-  email: contact@embauche.beta.gouv.fr
+contact: contact@embauche.beta.gouv.fr
 contract: OUVERT
 experimental: true
 clients:
