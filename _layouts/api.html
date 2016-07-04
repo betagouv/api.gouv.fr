@@ -15,12 +15,12 @@ layout: default
           {{ page.tagline }}
         </h2>
         {% if page.doc_tech %}
-        <a class="large ui secondary button" href="{{ page.doc_tech }}" target="_blank">
+        <a class="large ui secondary button" href="{{ page.doc_tech }}" rel="noopener" target="_blank">
           Documentation technique &nbsp;&nbsp;<i class="code icon"></i>
         </a>
         {% endif %}
         {% if page.access_link %}
-        <a class="large ui secondary button" href="{{ page.access_link }}" target="_blank">
+        <a class="large ui secondary button" href="{{ page.access_link }}" rel="noopener" target="_blank">
           Demandez l'accès &nbsp;&nbsp;
           <i class="ticket icon"></i>
         </a>
@@ -128,7 +128,7 @@ layout: default
           </section>
         {% else %}
           <p>
-            Vous pouvez retrouver la documentation technique sur <a href="{{ page.doc_tech }}" target="_blank">le site de l'API</a>
+            Vous pouvez retrouver la documentation technique sur <a href="{{ page.doc_tech }}" rel="noopener" target="_blank">le site de l'API</a>
           </p>
         {% endif %}
       </div>
