@@ -6,6 +6,7 @@ access_link: http://rva.data.rennes-metropole.fr/inscription.php
 domain: http://rva.data.rennes-metropole.fr/
 contract: OUVERT
 logo: rennesmetropole-rva.png
+contact: sigsupport@rennesmetropole.fr
 clients:
   - particuliers
   - entreprises

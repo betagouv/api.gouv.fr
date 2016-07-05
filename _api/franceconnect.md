@@ -5,6 +5,7 @@ doc_tech: https://doc.integ01.dev-franceconnect.fr/documentation
 access_link: https://doc.integ01.dev-franceconnect.fr/inscription
 domain: https://doc.integ01.dev-franceconnect.fr/
 contract: OUVERT sous contrat
+contact: support@dev-franceconnect.fr
 clients:
   - particuliers
   - entreprises
@@ -47,7 +48,7 @@ Les publics visés sont les représentants des organisations publiques ou privé
 
 Les responsables projet FranceConnect seront présents afin de répondre à l'ensemble des questions et de faciliter la mise en oeuvre du dispositif.
 
-<a href="https://doc.integ01.dev-franceconnect.fr/evenements" target="_blank">Retrouvez toutes les prochaines présentations générales FranceConnect</a>
+<a href="https://doc.integ01.dev-franceconnect.fr/evenements" rel="noopener" target="_blank">Retrouvez toutes les prochaines présentations générales FranceConnect</a>
 
 ### Ateliers implémentation FranceConnect (pour les développeurs)
 
@@ -55,7 +56,7 @@ C'est l'occasion de venir discuter avec l'équipe FranceConnect et les autres pa
 
 Comme les formations seront organisés de manière ad-hoc (selon le nombre de personnes intéressées qui se manifestent), l'inscription via le meetup ne garantit pas une place à proprement parler, mais le fait d'être prévenu qu'une formation va se tenir lorsqu'une date sera arrêtée.
 
-Rejoignez notre groupe <a href="http://www.meetup.com/fr-FR/FranceConnect/" target="_blank">Meetup</a> afin d'être tenu informé des dates des prochains ateliers FranceConnect Développement.
+Rejoignez notre groupe <a href="http://www.meetup.com/fr-FR/FranceConnect/" rel="noopener" target="_blank">Meetup</a> afin d'être tenu informé des dates des prochains ateliers FranceConnect Développement.
 
 ## Sites de démonstration
 

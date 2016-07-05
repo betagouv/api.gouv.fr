@@ -15,12 +15,12 @@ layout: default
           {{ page.tagline }}
         </h2>
         {% if page.doc_tech %}
-        <a class="large ui secondary button" href="{{ page.doc_tech }}" target="_blank">
+        <a class="large ui secondary button" href="{{ page.doc_tech }}" rel="noopener" target="_blank">
           Documentation technique &nbsp;&nbsp;<i class="code icon"></i>
         </a>
         {% endif %}
         {% if page.access_link %}
-        <a class="large ui secondary button" href="{{ page.access_link }}" target="_blank">
+        <a class="large ui secondary button" href="{{ page.access_link }}" rel="noopener" target="_blank">
           Demandez l'accès &nbsp;&nbsp;
           <i class="ticket icon"></i>
         </a>
@@ -84,6 +84,20 @@ layout: default
               </div>
             </div>
           </div>
+          {% if page.contact %}
+          <div class="item">
+            <div class="content">
+              <div class="header">Contact</div>
+              <div class="description">
+                {% if page.contact contains "@" %}
+                <a href="mailto:{{ page.contact }}?subject={{ "Contact via api.gouv.fr" | url_encode }}">{{ page.contact }}</a>
+                {% else %}
+                <a href="{{ page.contact }}" target="_blank" rel="noopener">Formulaire</a>
+                {% endif%}
+              </div>
+            </div>
+          </div>
+          {% endif %}
           {% if page.partners %}
           <div class="item">
             <div class="content">
@@ -114,7 +128,7 @@ layout: default
           </section>
         {% else %}
           <p>
-            Vous pouvez retrouver la documentation technique sur <a href="{{ page.doc_tech }}" target="_blank">le site de l'API</a>
+            Vous pouvez retrouver la documentation technique sur <a href="{{ page.doc_tech }}" rel="noopener" target="_blank">le site de l'API</a>
           </p>
         {% endif %}
       </div>
