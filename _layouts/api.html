@@ -90,7 +90,7 @@ layout: default
               <div class="header">Contact</div>
               <div class="description">
                 {% if page.contact contains "@" %}
-                <a href="mailto:{{ page.contact }}?subject={{ "[API gouv] Contact" | url_encode }}">{{ page.contact }}</a>
+                <a href="mailto:{{ page.contact }}?subject={{ "Contact via api.gouv.fr" | url_encode }}">{{ page.contact }}</a>
                 {% else %}
                 <a href="{{ page.contact }}" target="_blank" rel="noopener">Formulaire</a>
                 {% endif%}
