@@ -20,12 +20,23 @@ header {
 	background-position: .8em;
 	background-color: #FEFEFE;
 	color: #555;
-	height: 2.4em;
 
-	img {
-		float: right;
-		margin-top: .1em;
-		height: 80%;
+	.ui.secondary.menu {
+		padding: 0.5em;
+	}
+	.menu {
+		a.item {
+			font-weight: bold;
+		}
+	}
+
+	#logo {
+		color: transparent;
+		background-image: url(/img/logo.svg);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: left center;
+		padding-right: 1.5em;
 		margin-right: .8em;
 	}
 }

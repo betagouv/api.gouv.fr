@@ -6,15 +6,15 @@
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    version="1.1"
-   width="310"
-   height="60">
+   width="280"
+   height="53">
 
   <metadata>
     <rdf:RDF>
       <cc:Work>
         <dc:format>image/svg+xml</dc:format>
         <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title>Logo beta.gouv.fr</dc:title>
+        <dc:title>Logo api.gouv.fr</dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -22,14 +22,11 @@
   <text
     xml:space="preserve"
     transform="scale(1.04,0.96)"
-    style="font-size: 47px; fill: #373c42;">
+    style="font-size: 50px; fill: #373c42;">
     <tspan
       x="0"
-      y="50"
-      style="font-weight: bold; font-family: 'Century Gothic Std';">
-      api.gouv<tspan
-        style="font-weight: normal; font-style: italic; font-size: 56.25px; font-family: 'Times New Roman';">.fr
-      </tspan>
+      y="42"
+      style="font-weight: bold; font-family: 'Century Gothic Std';">api.gouv<tspan style="font-weight: normal; font-style: italic; font-size: 56.25px; font-family: 'Times New Roman';">.fr</tspan>
     </tspan>
   </text>
 </svg>
