@@ -50,6 +50,15 @@
     }
   }
 }
+#diff-data-api {
+  .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: justify;
+  }
+}
+
 
 #description {
   margin-top: 5rem;
