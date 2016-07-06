@@ -12,7 +12,7 @@ url: "https://api.gouv.fr"
 description: Fabriquez des services en ligne plus simples
 
 # see https://jekyllrb.com/docs/continuous-integration/
-exclude: [vendor]
+exclude: [vendor, app.json]
 
 collections:
   api:
