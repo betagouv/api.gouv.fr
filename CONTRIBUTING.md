@@ -7,6 +7,18 @@
 
 > Sinon, offline : créer un nouveau fichier de description dans le dossier [`_api`](https://github.com/sgmap/api.gouv.fr/tree/gh-pages/_api) et renseigner les informations en prenant exemple sur un fichier de description existant déjà dans ce dossier.
 
+Nous vous recommandons de :
+
+- Fournir la documentation au format [OpenAPI](https://openapis.org/).
+- Décrire de manière claire et concise les modalités d'accès à l'API (CGU, licence…).
+- Donner des exemples pertinents démontrant des utilisations réelles de l'API.
+- Fournir des statistiques publiques donnant des mesures d'impact plus que des volumes techniques (par exemple : nombre de courses de taxi plutôt que nombre de requêtes de géolocalisation).
+
+Dans le cas d'API fermées :
+
+- Rendre accessible un environnement « bac à sable » permettant de tester l'API.
+- Automatiser et simplifier autant que possible la procédure d'enrôlement.
+
 
 ## Ajouter un service
 

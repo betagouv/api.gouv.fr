@@ -1,42 +1,42 @@
 ---
 layout: pages
 ---
-# Ajouter votre API
 
-Vérifiez l'éligibilité de votre API en consultant les critères ci-dessous&nbsp;:
+# Ajouter une API
 
-## Eligibilité d'une API sur API.GOUV.fr
+## Eligibilité
 
-### Finalité
+Une API peut être référencée sur `api.gouv.fr` si elle répond aux critères suivants.
 
-Etre produite et exploitée par une autorité administrative. Cela inclut les administrations de l’Etat (centralisées et décentralisées), les collectivités territoriales, les établissements publics à caractère
-administratif, les organismes gérant des régimes de protection sociale relevant du code de la sécurité sociale et du code rural ou mentionnés aux articles L. 223-16 et L.351-21 du code du travail et les autres organismes chargés de la gestion d'un service public administratif.
+### Opérateur
 
-Présenter un intérêt pour des réutilisateurs publics ou privés.
+L'API doit être produite et exploitée par un organisme chargé de la gestion d'un service public administratif.
 
-### Exigences
+> Par exemple :
+> - Administrations de l’État centralisées et décentralisées ;
+> - Collectivités territoriales ;
+> - Établissements publics à caractère administratif ;
+> - Organismes <abbr title="Relevant du code de la sécurité sociale et du code rural ou mentionnés aux articles L. 223-16 et L.351-21 du code du travail">gérant</abbr> des régimes de protection sociale…
 
-* avoir une description fonctionnelle claire et succincte de l'API à renseigner sur API.GOUV,
-* avoir une documentation technique en ligne et claire,
-* disposer d'une procédure en ligne pour demander l'accès à l'API si elle n'est pas totalement ouverte.
+### Réutilisabilité
 
-Le critère d'acceptation principal est de pouvoir tester l'API en moins d'une journée et de l'intégrer en moins d'une semaine.
+L'API doit permettre l'amélioration ou la création de services rendus par d'autres organismes (publics ou privés).
 
-### Bonnes pratiques
+### Accessibilité
 
- * fournir une documentation sous le format [OPEN API](https://openapis.org/)
- * fournir des exemples pertinents démontrant l'utilisation de l'API
- * fournir une page de statistiques publique exhibant les volumétries pertinentes pour l'API concernée (nombre de hits, mais surtout mesures sectorielles comme nombre de courses de taxi (le.taxi), nombre de candidatures simplifiées aux marchés publics (API Entreprise) ...
- * décrire simplement les modalités d'accès à l'API (CGU, licence ..) et simplifier au maximum l'enrôlement
- * avoir un environnement Bac à sable pour tester facilement l'API
+L'API doit avoir une documentation technique claire accessible par internet.
 
-## Utiliser Github
+Si une demande doit être faite par les réutilisateurs pour y accéder, la procédure de demande doit également être accessible par internet.
 
-Si vous êtes familier avec [GitHub], vous pouvez suivre les consignes décrites dans le fichier [CONTRIBUTING.MD](https://github.com/sgmap/api.gouv.fr/blob/gh-pages/CONTRIBUTING.md) du dépot de ce site.
-
-## Nous contacter
-
-Si vous n'êtes pas familier avec [GitHub], vous pouvez nous communiquer vos coordonnées sur [contact@api.gouv.fr](mailto:contact@api.gouv.fr) afin que nous vous recontactions.
+Dans tous les cas, il doit être possible de tester l'API en moins de 24h.
 
 
-[GitHub]: https://github.com/
+## Ajout
+
+Votre API répond aux critères ci-dessus ? Parfait !
+
+La demande d'ajout au catalogue se fait de manière autonome [via GitHub](https://github.com/sgmap/api.gouv.fr/blob/gh-pages/CONTRIBUTING.md). Votre demande sera revue aussi vite que possible, et nous vous aiderons à l'améliorer le cas échéant.
+
+## Contact
+
+Vous avez d'autres questions ? [Contactez-nous]({{ site.baseurl }}/contact) !
