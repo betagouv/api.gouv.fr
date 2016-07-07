@@ -1,17 +1,27 @@
 ---
 layout: pages
 ---
-# Ajouter votre service
 
-Votre service doit être un service accessible depuis Internet (un site web, une application mobile&hellip;).
+# Ajouter un service
 
-## Utiliser Github
+## Eligibilité
 
-Si vous êtes familier avec [GitHub], vous pouvez suivre les consignes décrites dans le fichier [CONTRIBUTING.MD](https://github.com/sgmap/api.gouv.fr/blob/gh-pages/CONTRIBUTING.md) du dépot de ce site.
+Un service peut être référencé sur `api.gouv.fr` s'il répond aux critères suivants.
 
-## Nous contacter
+### Consommation
 
-Si vous n'êtes pas familier avec [GitHub], vous pouvez nous communiquer vos coordonnées sur [contact@api.gouv.fr](mailto:contact@api.gouv.fr) afin d'être recontacté.
+Le service doit dépendre pour une de ses fonctionnalités essentielles d'une ou plusieurs API référencées sur `api.gouv.fr`. Ce n'est pas encore le cas ? [Explorez nos API]({{ site.baseurl }}/api) ou [ajoutez une API]({{ site.baseurl }}/ajouter-une-api) !
 
+### Accessibilité
 
-[GitHub]: https://github.com/
+Le service doit être accessible au grand public par internet.
+
+## Ajout
+
+Votre service répond aux critères ci-dessus ? Parfait !
+
+La demande d'ajout au catalogue se fait de manière autonome [via GitHub](https://github.com/sgmap/api.gouv.fr/blob/gh-pages/CONTRIBUTING.md). Votre demande sera revue aussi vite que possible, et nous vous aiderons à l'améliorer le cas échéant.
+
+## Contact
+
+Vous avez d'autres questions ? [Contactez-nous]({{ site.baseurl }}/contact) !
