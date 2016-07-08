@@ -1,9 +1,9 @@
 ---
 title: FranceConnect
 tagline: FranceConnect est un dispositif qui garantit l’identité d’un usager en se reposant sur des comptes certifiés existants.
-doc_tech: https://doc.integ01.dev-franceconnect.fr/documentation
-access_link: https://doc.integ01.dev-franceconnect.fr/inscription
-domain: https://doc.integ01.dev-franceconnect.fr/
+doc_tech: https://www.franceconnect.gouv.fr/documentation
+access_link: https://www.franceconnect.gouv.fr/inscription
+domain: https://www.franceconnect.gouv.fr/
 contract: OUVERT sous contrat
 contact: support@dev-franceconnect.fr
 clients:
@@ -48,7 +48,7 @@ Les publics visés sont les représentants des organisations publiques ou privé
 
 Les responsables projet FranceConnect seront présents afin de répondre à l'ensemble des questions et de faciliter la mise en oeuvre du dispositif.
 
-<a href="https://doc.integ01.dev-franceconnect.fr/evenements" rel="noopener" target="_blank">Retrouvez toutes les prochaines présentations générales FranceConnect</a>
+<a href="https://www.franceconnect.gouv.fr/evenements" rel="noopener" target="_blank">Retrouvez toutes les prochaines présentations générales FranceConnect</a>
 
 ### Ateliers implémentation FranceConnect (pour les développeurs)
 
