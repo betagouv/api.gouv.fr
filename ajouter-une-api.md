@@ -13,6 +13,7 @@ Une API peut être référencée sur `api.gouv.fr` si elle répond aux critères
 L'API doit être produite et exploitée par un organisme chargé de la gestion d'un service public administratif.
 
 > Par exemple :
+>
 > - Administrations de l’État centralisées et décentralisées ;
 > - Collectivités territoriales ;
 > - Établissements publics à caractère administratif ;
