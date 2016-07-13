@@ -55,16 +55,16 @@ inkscape --export-text-to-path `pwd`/_sources/logo.svg -l `pwd`/img/logo.svg
 
 ## Déploiement
 
+### Prévisualisation (staging)
+
+Chaque pull request est déployée dans Heroku, une fois le [build passé](https://circleci.com/gh/sgmap/api.gouv.fr). Une notification est envoyée sur la pull request :
+
+![notification de déploiement en prévisualisation](http://i.imgur.com/7ZuC2Zw.png)
+
+Vous pouvez suivre le lien de la notification pour accéder à la version de l'application correspondant à la pull request.
+
 ### Production
 
 Ce site est déployé en continu avec [Github Pages](https://pages.github.com).
 
 Pousser sur `gh-pages`, c’est partager avec le monde… ce qui signifie donc qu'il faut être très prudent avec ce pouvoir et privilégier l'usage de [pull requests](https://guides.github.com/introduction/flow/) :wink:
-
-### Pull requests
-
-Chaque pull request est déployée dans heroku, une fois le [build passé](https://circleci.com/gh/sgmap/api.gouv.fr). Une notification est envoyée sur la pull request :
-
-![capture d'écran d'une notification](http://i.imgur.com/7ZuC2Zw.png)
-
-Vous pouvez suivre le lien de la notification pour accèder à l'application correspondant à la pull request.
