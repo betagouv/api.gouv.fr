@@ -12,7 +12,7 @@ Nous vous recommandons de :
 - Fournir la documentation au format [OpenAPI](https://openapis.org/).
 - Décrire de manière claire et concise les modalités d'accès à l'API (CGU, licence…).
 - Donner des exemples pertinents démontrant des utilisations réelles de l'API.
-- Fournir des statistiques publiques donnant des mesures d'impact plus que des volumes techniques (par exemple : nombre de courses de taxi plutôt que nombre de requêtes de géolocalisation).
+- Fournir des statistiques publiques donnant des mesures d'impact (par exemple : nombre de courses de taxi, de pièces justificatives non réclamées…).
 
 Dans le cas d'API fermées :
 

@@ -20,7 +20,7 @@ L'API doit être produite et exploitée par un organisme chargé de la gestion d
 
 ### Réutilisabilité
 
-L'API doit permettre l'amélioration ou la création de services rendus par d'autres organismes (publics ou privés).
+L'API doit permettre l'amélioration ou la création de services rendus par d'autres organismes (publics ou privés) selon des règles claires, stables et communiquées à l'avance.
 
 ### Accessibilité
 
@@ -28,7 +28,9 @@ L'API doit avoir une documentation technique claire accessible par internet.
 
 Si une demande doit être faite par les réutilisateurs pour y accéder, la procédure de demande doit également être accessible par internet.
 
-Dans tous les cas, il doit être possible de tester l'API en moins de 24h.
+Dans tous les cas, il doit être possible de tester l'API sans intervention humaine.
+
+> Cela peut être obtenu par le biais d'une instance publique, de la distribution de jetons test, ou encore d'un environnement « bac à sable » qui renvoie des données fausses mais à des formats identiques à celles obtenues après enrôlement.
 
 
 ## Ajout
