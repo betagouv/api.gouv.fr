@@ -66,3 +66,5 @@ Pousser sur `gh-pages`, c’est partager avec le monde… ce qui signifie donc q
 Chaque pull request est déployée dans heroku, une fois le [build passé](https://circleci.com/gh/sgmap/api.gouv.fr). Une notification est envoyée sur la pull request :
 
 ![capture d'écran d'une notification](http://i.imgur.com/7ZuC2Zw.png)
+
+Vous pouvez suivre le lien de la notification pour accèder à l'application correspondant à la pull request.
