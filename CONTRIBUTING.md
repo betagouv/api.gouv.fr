@@ -53,8 +53,16 @@ Cela peut être fait à la ligne de commande avec [Inkscape](https://inkscape.or
 inkscape --export-text-to-path `pwd`/_sources/logo.svg -l `pwd`/img/logo.svg
 ```
 
-## Déployer
+## Déploiement
+
+### Production
 
 Ce site est déployé en continu avec [Github Pages](https://pages.github.com).
 
 Pousser sur `gh-pages`, c’est partager avec le monde… ce qui signifie donc qu'il faut être très prudent avec ce pouvoir et privilégier l'usage de [pull requests](https://guides.github.com/introduction/flow/) :wink:
+
+### Pull requests
+
+Chaque pull request est déployée dans heroku, une fois le [build passé](https://circleci.com/gh/sgmap/api.gouv.fr). Une notification est envoyée sur la pull request :
+
+![capture d'écran d'une notification](http://i.imgur.com/7ZuC2Zw.png)
