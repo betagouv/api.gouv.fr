@@ -48,8 +48,9 @@ Le site utilise [Jekyll], un générateur de site statique en [Ruby].
 #### Commandes
 
 * `bundle install` pour installer toutes les dépendances nécessaires
-* `jekyll serve` pour lancer un serveur de développement. Il suffit de se rendre sur l'URL indiquée à l'exécution de la commande.
-* `jekyll build` pour générer le site dans le répertoire `_site`.
+* `bundle exec jekyll serve` pour lancer un serveur de développement. Il suffit de se rendre sur l'URL indiquée à l'exécution de la commande.
+* `bundle exec jekyll build` pour générer le site dans le répertoire `_site`.
+* `bundle update` pour mettre à jour les dépendances et le `Gemfile.lock`
 
 ### Docker
 
@@ -64,8 +65,18 @@ Le site utilise [Jekyll], un générateur de site statique en [Ruby].
 
 ## Déploiement
 
+### Production
+
 Pour déployer ce site, il suffit de pousser les modifications vers la branche `gh-pages` sur [github.com/sgmap/api.gouv.fr](https://github.com/sgmap/api.gouv.fr). Cette branche étant protégée, il convient de faire [des pull requests](https://help.github.com/articles/using-pull-requests/) car le projet utilise [GitHub flow](https://guides.github.com/introduction/flow/).
+
+
+### Développement
+
+Chaque pull request est déployé dans des [review app](https://devcenter.heroku.com/articles/github-integration-review-apps) sur [Heroku].
+Le compte utilisé est le compte de [Thibaut Géry](https://github.com/ThibautGery/)
+
 
 
 [Jekyll]: http://jekyllrb.com/
 [Ruby]: https://www.ruby-lang.org
+[heroku]: https://dashboard.heroku.com/

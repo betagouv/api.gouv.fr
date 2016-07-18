@@ -53,7 +53,17 @@ Cela peut être fait à la ligne de commande avec [Inkscape](https://inkscape.or
 inkscape --export-text-to-path `pwd`/_sources/logo.svg -l `pwd`/img/logo.svg
 ```
 
-## Déployer
+## Déploiement
+
+### Prévisualisation (staging)
+
+Chaque pull request est déployée dans Heroku, une fois le [build passé](https://circleci.com/gh/sgmap/api.gouv.fr). Une notification est envoyée sur la pull request :
+
+![notification de déploiement en prévisualisation](http://i.imgur.com/7ZuC2Zw.png)
+
+Vous pouvez suivre le lien de la notification pour accéder à la version de l'application correspondant à la pull request.
+
+### Production
 
 Ce site est déployé en continu avec [Github Pages](https://pages.github.com).
 

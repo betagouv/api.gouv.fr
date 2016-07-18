@@ -5,7 +5,6 @@ _site
 _algolia_api_key
 
 # Bundler
-Gemfile.lock
 .bundle
 
 # Ruby
