@@ -48,8 +48,8 @@ Le site utilise [Jekyll], un générateur de site statique en [Ruby].
 #### Commandes
 
 * `bundle install` pour installer toutes les dépendances nécessaires
-* `bundle jekyll serve` pour lancer un serveur de développement. Il suffit de se rendre sur l'URL indiquée à l'exécution de la commande.
-* `bundle jekyll build` pour générer le site dans le répertoire `_site`.
+* `bundle exec jekyll serve` pour lancer un serveur de développement. Il suffit de se rendre sur l'URL indiquée à l'exécution de la commande.
+* `bundle exec jekyll build` pour générer le site dans le répertoire `_site`.
 * `bundle update` pour mettre à jour les dépendances et le `Gemfile.lock`
 
 ### Docker
