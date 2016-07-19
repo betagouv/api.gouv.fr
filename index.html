@@ -114,31 +114,20 @@ featuredServices:
 <section class="ui container grid">
   <h2 class="ui divider horizontal">Notions importantes</h2>
 
+  {% for notion in site.data.notions %}
   <div class="item eight wide column">
-    <h3 class="ui top attached header">API</h3>
+    <h3 class="ui top attached header">
+      {% if notion.link %}
+        <a href="{{ notion.link }}">{{ notion.name }}</a>
+      {% else %}
+        {{ notion.name }}
+      {% endif %}
+    </h3>
     <p class="ui attached segment">
-      Interface permettant d'interagir automatiquement avec un système d'information. Cela inclut généralement la récupération de données à la demande, mais peut également en permettre la modification.
+      {{ notion.definition }}
     </p>
   </div>
-  <div class="item eight wide column">
-    <h3 class="ui top attached header">Jeux de données</h3>
-    <p class="ui attached segment">
-      Représentation statique (fichier, base de données…) de données extraites d'un système d'information.
-    </p>
-  </div>
-
-  <div class="item eight wide column">
-    <h3 class="ui top attached header"><a href="https://api.gouv.fr">api.gouv.fr</a></h3>
-    <p class="ui attached segment">
-      Catalogue d'API ouvertes ou fermées fournies par les administrations.
-    </p>
-  </div>
-  <div class="item eight wide column">
-    <h3 class="ui top attached header"><a href="https://data.gouv.fr">data.gouv.fr</a></h3>
-    <p class="ui attached segment">
-      Catalogue des jeux de données ouverts.
-    </p>
-  </div>
+  {% endfor %}
 </section>
 
 <script>
