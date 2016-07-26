@@ -111,6 +111,25 @@ featuredServices:
   </p>
 </div>
 
+<section class="ui container grid">
+  <h2 class="ui divider horizontal">Notions importantes</h2>
+
+  {% for notion in site.data.notions %}
+  <div class="item eight wide column">
+    <h3 class="ui top attached header">
+      {% if notion.link %}
+        <a href="{{ notion.link }}">{{ notion.name }}</a>
+      {% else %}
+        {{ notion.name }}
+      {% endif %}
+    </h3>
+    <p class="ui attached segment">
+      {{ notion.definition }}
+    </p>
+  </div>
+  {% endfor %}
+</section>
+
 <script>
 $(document).ready(function() {
   var client = $.algolia.Client('MOAD3NGUET', '253f1cf2d19fbf72080b70c3a5fcd18f');
