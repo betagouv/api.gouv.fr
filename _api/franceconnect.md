@@ -5,7 +5,7 @@ doc_tech: https://www.franceconnect.gouv.fr/documentation
 access_link: https://www.franceconnect.gouv.fr/inscription
 domain: https://www.franceconnect.gouv.fr/
 contract: OUVERT sous contrat
-contact: support@dev-franceconnect.fr
+contact: support.partenaires@franceconnect.gouv.fr
 clients:
   - particuliers
   - entreprises
