@@ -1,6 +1,6 @@
 ---
-title: Données temps-réel transports Brest métropole
-tagline: Mettre à disposition des réutilisateurs les données en temps-réel des transports publics de Brest métropole
+title: Données transports Brest métropole
+tagline: Données théoriques et temps-réel des transports publics de Brest métropole
 owner: Brest métropole
 category: reference
 contract: OUVERT
