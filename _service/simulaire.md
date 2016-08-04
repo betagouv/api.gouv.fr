@@ -10,7 +10,9 @@ screenshot: simulaire.png
 
 ## Description du service
 
-Calculez le salaire brut, le salaire net et le coût d'embauche.
-Convertir votre salaire brut en salaire net, ou inversement
-Calculer le coût d'embauche d'un salarié en fonction de votre situation
-Simulation calculée d'après les dernières données disponibles à ce jour
+Convertir un salaire brut en salaire net, ou inversement.
+
+Calculer le coût d'embauche d'un salarié en fonction de critères définis.
+
+Simulation calculée d'après les données disponibles grâce à l'API embauche.beta.gouv.fr
+
