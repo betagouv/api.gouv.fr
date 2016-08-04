@@ -24,11 +24,11 @@ logo: logo-fc.png
 
 ## Qu'est-ce que FranceConnect ?
 
-FranceConnect est un dispositif qui permet aux internautes de s'identifier et s'authentifier chez nos partenaires fournisseurs de services par l'intermédiaire de fournisseurs d'identité existants.
+FranceConnect est un dispositif qui permet aux internautes de s'identifier sur un service en ligne par l'intermédiaire d'un compte existant (impots.gouv.fr, ameli.fr...).
 
 L'authentification est transparente pour une application utilisant FranceConnect (elle ne converse jamais directement avec le fournisseur d'identité, c'est FranceConnect qui s'en charge).
 
-FranceConnect fournit aux différents acteurs une identité vérifiée sur une personne physique, appelée l'identité pivot.
+FranceConnect fournit au service en ligne l'identité vérifiée d'une personne physique, appelée l'identité pivot.
 
 ## A qui s'adresse FranceConnect ?
 
@@ -40,23 +40,18 @@ FranceConnect cible les partenaires suivants :
 
 ## Événement FranceConnect
 
+<a href="https://www.franceconnect.gouv.fr/evenements" rel="noopener" target="_blank">Retrouvez tous les prochains événements FranceConnect</a>
+
 ### Présentations Générales FranceConnect
 
-Ces événements sont organisés une fois par mois afin de présenter FranceConnect tant sur ses aspects fonctionnels que sur ses mécanismes.
+Ces événements sont organisés une fois par mois afin de présenter FranceConnect tant sur ses aspects fonctionnels que sur ses mécanismes. L'équipe FranceConnect sera présente afin de répondre à vos questions et de faciliter la mise en oeuvre du dispositif.
 
-Les publics visés sont les représentants des organisations publiques ou privées intéressées à devenir fournisseur de service, fournisseur d'identité ou encore fournisseur de données.
-
-Les responsables projet FranceConnect seront présents afin de répondre à l'ensemble des questions et de faciliter la mise en oeuvre du dispositif.
-
-<a href="https://www.franceconnect.gouv.fr/evenements" rel="noopener" target="_blank">Retrouvez toutes les prochaines présentations générales FranceConnect</a>
+Les publics visés sont les représentants des organisations publiques ou privées souhaitant devenir fournisseur de service, fournisseur d'identité ou encore fournisseur de données.
 
 ### Ateliers implémentation FranceConnect (pour les développeurs)
 
-C'est l'occasion de venir discuter avec l'équipe FranceConnect et les autres participants et de demander de l'aide sur des sujets comme comment se raccorder, ou encore la norme OpenID Connect.
+C'est l'occasion de venir implémenter votre cas d'usage avec l'équipe FranceConnect et les autres participants, et de demander de l'aide sur la procédure de raccordement, ou encore sur la norme OpenID Connect.
 
-Comme les formations seront organisés de manière ad-hoc (selon le nombre de personnes intéressées qui se manifestent), l'inscription via le meetup ne garantit pas une place à proprement parler, mais le fait d'être prévenu qu'une formation va se tenir lorsqu'une date sera arrêtée.
-
-Rejoignez notre groupe <a href="http://www.meetup.com/fr-FR/FranceConnect/" rel="noopener" target="_blank">Meetup</a> afin d'être tenu informé des dates des prochains ateliers FranceConnect Développement.
 
 ## Sites de démonstration
 
