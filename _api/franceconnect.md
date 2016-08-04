@@ -24,7 +24,7 @@ logo: logo-fc.png
 
 ## Qu'est-ce que FranceConnect ?
 
-FranceConnect est un dispositif qui permet aux internautes de s'identifier sur un service en ligne par l'intermédiaire d'un fournisseur d'identité existant.
+FranceConnect est un dispositif qui permet aux internautes de s'identifier sur un service en ligne par l'intermédiaire d'un compte existant (impots.gouv.fr, ameli.fr...).
 
 L'authentification est transparente pour une application utilisant FranceConnect (elle ne converse jamais directement avec le fournisseur d'identité, c'est FranceConnect qui s'en charge).
 
