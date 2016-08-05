@@ -32,4 +32,4 @@ Concrètement, le constructeur de la lampe utilise le standard de la prise élec
 
   * [Une API est comme une épicerie (18F, en anglais)](https://18f.gsa.gov/2016/04/22/what-is-an-api/).
   * [L'usage des API dans gouvernement américain (en anglais)](https://www.digitalgov.gov/2013/04/30/apis-in-government/).
-  * Voir [toutes les API référencées]({{ site.baseurl }}/api).
+  * Voir [toutes les API référencées]({{ site.baseurl }}/api/).
