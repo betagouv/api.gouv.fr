@@ -19,6 +19,9 @@ category: reference
 keywords:
   - medicament
   - presentation
+  - sécurité sociale
+  - génériques
+  - haute autorité de santé
 ---
 
 ## Présentation
