@@ -5,7 +5,7 @@ doc_tech: https://medicaments.api.gouv.fr/
 domain: https://medicaments.api.gouv.fr
 contact: contact@medicaments.api.gouv.fr
 contract: OUVERT
-openapi_definition: https://medicaments.api.gouv.fr/api-meds-openapi.yml
+openapi_definition: https://medicaments.api.gouv.fr/doc/api-meds-openapi.yml
 clients:
   - particuliers
   - entreprises
