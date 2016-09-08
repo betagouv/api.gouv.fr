@@ -1,0 +1,32 @@
+---
+layout: null
+---
+to_search = [
+  {% for api  in site.api %}
+    {
+          "title" : "{{ api.title }}",
+          "url": "{{ api.url | prepend: site.baseurl }}",
+          "description" : "{{ api.tagline }}",
+          "image" : "{{ api.logo | prepend: site.baseurl }}",
+          "domain" : "{{ api.domain }}",
+          "owner" : "{{ api.owner }}",
+          "contract" : "{{ api.contract }}",
+          "category" : "{{ api.category }}",
+          "keywords": [
+            {% if api.keywords %}
+            "{{ api.keywords | join: '","' }}"
+            {% endif %}
+          ],
+          "clients": [
+            {% if api.clients %}
+            "{{ api.clients | join: '","' }}"
+            {% endif %}
+          ],
+          "partners": [
+            {% if api.partners %}
+            "{{ api.partners | join: '","' }}"
+            {% endif %}
+          ]
+    }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]

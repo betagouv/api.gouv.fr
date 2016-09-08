@@ -65,30 +65,3 @@ api_category:
     description: Accès à des données temps-réel et à des algorithmes valorisant des données massives
 
 markdown: kramdown
-
-gems:
-  - algoliasearch-jekyll
-
-algolia:
-  application_id: 'MOAD3NGUET'
-  index_name:     'api_gouv'
-  settings:
-    attributesForFaceting:
-      - type
-      - layout
-      - categories
-      - clients
-      - contract
-    attributesToIndex:
-      - title
-      - tagline
-      - keywords
-      - contract
-      - partners
-      - clients
-      - owner
-      - h1
-      - h2
-      - text
-    disableTypoToleranceOnAttributes:
-      - text

@@ -33,7 +33,7 @@
       margin-top: 1em;
     }
 
-    .algolia__result-highlight {
+    .result-highlight {
       font-weight: 600;
       color: black;
     }
@@ -194,4 +194,7 @@ p.buttonContainer {
       background-color: darken($service-color, 5%)
     }
   }
+}
+div.hidden {
+  display: none;
 }

@@ -8,16 +8,6 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     addressable (2.4.0)
-    algoliasearch (1.11.0)
-      httpclient (~> 2.8.2)
-      json (>= 1.5.1)
-    algoliasearch-jekyll (0.7.0)
-      algoliasearch (~> 1.4)
-      appraisal (~> 2.1.0)
-      awesome_print (~> 1.6)
-      json (~> 1.8)
-      nokogiri (~> 1.6)
-      verbal_expressions (~> 0.1.5)
     appraisal (2.1.0)
       bundler
       rake
@@ -164,7 +154,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  algoliasearch-jekyll (~> 0.7.0)
   github-pages (= 96)
   html-proofer
   json
