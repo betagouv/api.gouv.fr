@@ -1,7 +1,7 @@
 ---
 layout: null
 ---
-to_search = [
+[
   {% for api  in site.api %}
     {
           "title" : "{{ api.title }}",
