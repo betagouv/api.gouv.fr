@@ -136,7 +136,7 @@ $(document).ready(function() {
   var htmlFooter = '<a href="{{ site.baseurl }}/api/" class="action">Explorez les {{ site.api | size }} API déjà disponibles</a>';
   $('.ui.search').search({
      type: 'custom',
-     source: to_search,
+     source:     to_search,
      searchFields: ['title', 'description', 'category', 'keywords'],
      onSearchQuery: function(searchTerm) {
        //this part higlights results
@@ -165,16 +165,19 @@ $(document).ready(function() {
      templates: {
        custom: function(response, fields) {
          var html = '';
-         $.each(response[fields.results], function(index, value) {
-           html += '<a class="result" href="{{ site.baseurl }}'+ value.url +'">'
-                +  '<div class="image"> <img src="{{ site.baseurl }}/img/'+ value.image +'"></div>'
+         $.each(response[fields.results], function() {
+           var result = this;
+           html += '<a class="result" href="{{ site.baseurl }}'+ result.url +'">'
+                +  '<div class="image"> <img src="{{ site.baseurl }}/img/'+ result.image +'"></div>'
                 +  '<div class="content">'
-                +  '<div class="title">' + value.title + '</div>'
-                +  '<div class="description">' + value.description + '</div>';
-           $.each(['keywords', 'clients', 'partners'], function(i, key) {
-             html += '<div class="' + key + '" hidden="true"><ul>';
-               $.each(value[key], function(i, v) {
-                 html += '<li>' + v + '</li>';
+                +  '<div class="title">' + result.title + '</div>'
+                +  '<div class="description">' + result.description + '</div>';
+           //we store for each result its keywords, clients, partners
+           //in a hidden list.
+           $.each(['keywords', 'clients', 'partners'], function() {
+             html += '<div class="' + this + '" hidden="true"><ul>';
+               $.each(result[this], function() {
+                 html += '<li>' + this + '</li>';
                });
              html += '</ul></div>';
            });
