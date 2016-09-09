@@ -172,7 +172,7 @@ $(document).ready(function() {
            html += '<div class="title">' + value.title + '</div>'
            html += '<div class="description">' + value.description + '</div>';
            $.each(['keywords', 'clients', 'partners'], function(i, key) {
-             html += '<div class="' + key + ' hidden"><ul>';
+             html += '<div class="' + key + '" hidden="true"><ul>';
                $.each(value[key], function(i, v) {
                  html += '<li>' + v + '</li>';
                });
