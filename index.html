@@ -167,10 +167,10 @@ $(document).ready(function() {
          var html = '';
          $.each(response[fields.results], function(index, value) {
            html += '<a class="result" href="{{ site.baseurl }}'+ value.url +'">'
-           html += '<div class="image"> <img src="{{ site.baseurl }}/img/'+ value.image +'"></div>'
-           html += '<div class="content">'
-           html += '<div class="title">' + value.title + '</div>'
-           html += '<div class="description">' + value.description + '</div>';
+                +  '<div class="image"> <img src="{{ site.baseurl }}/img/'+ value.image +'"></div>'
+                +  '<div class="content">'
+                +  '<div class="title">' + value.title + '</div>'
+                +  '<div class="description">' + value.description + '</div>';
            $.each(['keywords', 'clients', 'partners'], function(i, key) {
              html += '<div class="' + key + '" hidden="true"><ul>';
                $.each(value[key], function(i, v) {
@@ -190,7 +190,7 @@ $(document).ready(function() {
     return value.replace(/[|\\{}()[\]^$+*?.]/g, "\\$&");
   }
   function spanHighlight(val) {
-    return '<span class="result-highlight">'+val+'</span>'
+    return '<span class="result-highlight">'+val+'</span>';
   }
   function highlight(value, term) {
     var pattern = '(' + escapeRegExChars(term) + ')';
