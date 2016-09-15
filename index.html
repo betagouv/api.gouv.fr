@@ -223,10 +223,10 @@ function customTemplate(response, fields) {
 }
 
 $(document).ready(function() {
-  $.getJSON('to_search.json', function(to_search) {
+  $.getJSON('to_search.json', function(toSearch) {
     $('.ui.search').search({
        type: 'custom',
-       source: to_search,
+       source: toSearch,
        searchFields: ['title', 'description', 'category', 'keywords'],
        onSearchQuery: onSearchQuery,
        templates: {
