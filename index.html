@@ -141,23 +141,23 @@ function spanHighlight(val) {
 }
 
 function highlight(value, term) {
- var pattern = '(' + accentedForm(escapeRegExChars(term)) + ')';
- return value.replace(new RegExp(pattern, 'gi'), spanHighlight('$1'));
+  var pattern = '(' + accentedForm(escapeRegExChars(term)) + ')';
+  return value.replace(new RegExp(pattern, 'gi'), spanHighlight('$1'));
 }
 
 function accentedForm(str) {
- var accentedForms = {
-   'e': 'éèêë',
-   'a': 'àáâ',
-   'i': 'îï',
-   'c': 'ç',
-   'o': 'ôö',
-   'u': 'ûüù'
- };
- for (var s in accentedForms) {
-      str = str.replace(s, '[' + s + accentedForms[s] + ']');
- }
- return str;
+  var accentedForms = {
+    'e': 'éèêë',
+    'a': 'àáâ',
+    'i': 'îï',
+    'c': 'ç',
+    'o': 'ôö',
+    'u': 'ûüù'
+  };
+  for (var s in accentedForms) {
+       str = str.replace(s, '[' + s + accentedForms[s] + ']');
+  }
+  return str;
 }
 
 function getHighLightFromArray(array, label, searchTerm) {
