@@ -223,7 +223,7 @@ function customTemplate(response, fields) {
 }
 
 $(document).ready(function() {
-  $.getJSON('to_search.json', function(toSearch) {
+    $.getJSON('{{ site.baseurl }}/to_search.json', function(toSearch) {
     $('.ui.search').search({
        type: 'custom',
        source: toSearch,
