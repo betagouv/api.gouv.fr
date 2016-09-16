@@ -141,23 +141,20 @@ function spanHighlight(val) {
 }
 
 function highlight(value, term) {
-  var pattern = '(' + accentedForm(escapeRegExChars(term)) + ')';
-  return value.replace(new RegExp(pattern, 'gi'), spanHighlight('$1'));
-}
-
-function accentedForm(str) {
-  var accentedForms = {
-    'e': 'éèêë',
-    'a': 'àáâ',
-    'i': 'îï',
-    'c': 'ç',
-    'o': 'ôö',
-    'u': 'ûüù'
-  };
-  for (var s in accentedForms) {
-       str = str.replace(s, '[' + s + accentedForms[s] + ']');
-  }
-  return str;
+    var term = term.unidecode().toLowerCase();
+    var value_unidecoded = value.unidecode().toLowerCase();
+    var pos_occurences = [];
+    var pos = value_unidecoded.indexOf(term);
+    while(pos != -1) {
+        pos_occurences.push(pos);
+        pos = value_unidecoded.indexOf(term, pos+1);
+    }
+    $.each(pos_occurences.reverse(), function() {
+        value = value.substring(0, this)
+              + spanHighlight(value.substr(this, term.length))
+              + value.substring(this + term.length);
+    });
+    return value;
 }
 
 function getHighLightFromArray(array, label, searchTerm) {
@@ -224,10 +221,25 @@ function customTemplate(response, fields) {
 
 $(document).ready(function() {
     $.getJSON('{{ site.baseurl }}/to_search.json', function(toSearch) {
+        searchFields = ['title', 'description', 'keywords'];
+        for(var i=0; i<toSearch.length; i++) {
+            toSearch[i]['unidecoded'] = searchFields.map(
+                        function(v){return toSearch[i][v];})
+                     .join()
+                     .unidecode()
+            ;
+        }
+        searchFields.push('unidecoded');
     $('.ui.search').search({
        type: 'custom',
        source: toSearch,
-       searchFields: ['title', 'description', 'category', 'keywords'],
+       searchFields: searchFields,
+       searchFullText: false,
+       showNoResults: true,
+       regExp: {
+         escape     : /[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g,
+         beginsWith : ''
+       },
        onSearchQuery: onSearchQuery,
        templates: {
          custom: customTemplate
