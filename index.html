@@ -142,12 +142,12 @@ function spanHighlight(val) {
 
 function highlight(value, term) {
     var term = term.unidecode().toLowerCase();
-    var value_unidecoded = value.unidecode().toLowerCase();
+    var valueUnidecoded = value.unidecode().toLowerCase();
     var pos_occurences = [];
-    var pos = value_unidecoded.indexOf(term);
+    var pos = valueUnidecoded.indexOf(term);
     while(pos != -1) {
         pos_occurences.push(pos);
-        pos = value_unidecoded.indexOf(term, pos+1);
+        pos = valueUnidecoded.indexOf(term, pos+1);
     }
     $.each(pos_occurences.reverse(), function() {
         value = value.substring(0, this)
