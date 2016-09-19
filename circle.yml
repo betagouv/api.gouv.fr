@@ -21,6 +21,6 @@ test:
 
 deployment:
   index:
-    branch: gh-pages
+    branch: master
     commands:
       - bundle exec jekyll push
