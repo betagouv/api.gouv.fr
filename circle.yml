@@ -18,9 +18,3 @@ test:
     - grep "css/main.css" _site/index.html # smoke test that something was actually compiled
     - bundle exec htmlproofer ./_site --assume-extension --check-html --disable-external --empty-alt-ignore
     - html5validator --root _site
-
-deployment:
-  index:
-    branch: master
-    commands:
-      - bundle exec jekyll push
