@@ -38,7 +38,7 @@ Dans tous les cas, il doit être possible de tester l'API sans intervention huma
 
 Votre API répond aux critères ci-dessus ? Parfait !
 
-La demande d'ajout au catalogue se fait de manière autonome [via GitHub](https://github.com/sgmap/api.gouv.fr/blob/gh-pages/CONTRIBUTING.md). Votre demande sera revue aussi vite que possible, et nous vous aiderons à l'améliorer le cas échéant.
+La demande d'ajout au catalogue se fait de manière autonome [via GitHub](https://github.com/sgmap/api.gouv.fr/blob/master/CONTRIBUTING.md). Votre demande sera revue aussi vite que possible, et nous vous aiderons à l'améliorer le cas échéant.
 
 ## Contact
 

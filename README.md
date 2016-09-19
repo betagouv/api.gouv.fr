@@ -8,9 +8,9 @@ api.gouv.fr s'adresse avant tout aux créateurs de services, les consommateurs d
 Les fournisseurs, de leur côté, ont avec ce catalogue un moyen simple de faire connaître leurs API.
 
 
-### Fournisseur d'API ? [Ajoutez votre API](https://github.com/sgmap/api.gouv.fr/blob/gh-pages/CONTRIBUTING.md#ajouter-une-api) !
+### Fournisseur d'API ? [Ajoutez votre API](https://github.com/sgmap/api.gouv.fr/blob/master/CONTRIBUTING.md#ajouter-une-api) !
 
-### Réutilisateur d'API ? [Ajoutez votre service](https://github.com/sgmap/api.gouv.fr/blob/gh-pages/CONTRIBUTING.md#ajouter-un-service) !
+### Réutilisateur d'API ? [Ajoutez votre service](https://github.com/sgmap/api.gouv.fr/blob/master/CONTRIBUTING.md#ajouter-un-service) !
 
 
 ## Sous-domaines
@@ -67,7 +67,7 @@ Le site utilise [Jekyll], un générateur de site statique en [Ruby].
 
 ### Production
 
-Pour déployer ce site, il suffit de pousser les modifications vers la branche `gh-pages` sur [github.com/sgmap/api.gouv.fr](https://github.com/sgmap/api.gouv.fr). Cette branche étant protégée, il convient de faire [des pull requests](https://help.github.com/articles/using-pull-requests/) car le projet utilise [GitHub flow](https://guides.github.com/introduction/flow/).
+Pour déployer ce site, il suffit de pousser les modifications vers la branche `master` sur [github.com/sgmap/api.gouv.fr](https://github.com/sgmap/api.gouv.fr). Cette branche étant protégée, il convient de faire [des pull requests](https://help.github.com/articles/using-pull-requests/) car le projet utilise [GitHub flow](https://guides.github.com/introduction/flow/).
 
 
 ### Développement
