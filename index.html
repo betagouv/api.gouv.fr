@@ -131,167 +131,120 @@ featuredServices:
 </section>
 
 <script>
-$(document).ready(function() {
-  var client = $.algolia.Client('MOAD3NGUET', '253f1cf2d19fbf72080b70c3a5fcd18f');
-  var index = client.initIndex('api_gouv');
-  var minChar = 1;
-  var $searchDiv = $('.ui.search');
-  var $resultDiv = $searchDiv.find('.results');
-  var $searchInput = $searchDiv.find('.prompt');
-  var htmlFooter = '<a href="{{ site.baseurl }}/api/" class="action">Explorez les {{ site.api | size }} API déjà disponibles</a>';
-  var htmlPowerBy = '<p class="poweredBy">Recherche par : <img src="/img/algolia_logo.svg" alt="algolia"></p>';
+var minChar = 1;
+var htmlFooter = '<a href="{{ site.baseurl }}/api/" class="action">Explorez les {{ site.api | size }} API déjà disponibles</a>';
+function escapeRegExChars(value) {
+  return value.replace(/[|\\{}()[\]^$+*?.]/g, "\\$&");
+}
+function spanHighlight(val) {
+  return '<span class="result-highlight">'+val+'</span>';
+}
 
-  function isEnterPressed(event) {
-    return event.keyCode === 13
-  }
-  function isUpPressed(event) {
-    return event.keyCode === 38
-  }
-  function isDownPressed(event) {
-    return event.keyCode === 40
-  }
-
-  function followSelectedResult() {
-    var $link = $searchDiv.find('a.result.active');
-    if($link.length) {
-      window.location.href = $link.attr('href');
+function highlight(value, term) {
+    var term = term.unidecode().toLowerCase();
+    var valueUnidecoded = value.unidecode().toLowerCase();
+    var pos_occurences = [];
+    var pos = valueUnidecoded.indexOf(term);
+    while(pos != -1) {
+        pos_occurences.push(pos);
+        pos = valueUnidecoded.indexOf(term, pos+1);
     }
-  }
-
-  function selectNextElementInResults() {
-    var $activeElement = $resultDiv.find('a.result.active');
-    if($activeElement.length === 0) {
-      $resultDiv.find('a.result').first().addClass('active')
-    } else {
-      $activeElement
-        .removeClass('active')
-        .next()
-        .addClass('active');
-    }
-  }
-
-  function selectPreviousElementInResults() {
-    var $activeElement = $resultDiv.find('a.result.active');
-    if($activeElement.length === 0) {
-      $resultDiv.find('a.result').first().addClass('active')
-    } else {
-      $activeElement
-        .removeClass('active')
-        .prev()
-        .addClass('active');
-    }
-  }
-
-  $searchInput.keyup(function(e) {
-    if(isEnterPressed(e)) {
-      followSelectedResult();
-    } else if(isUpPressed(e)) {
-      selectPreviousElementInResults();
-    } else if(isDownPressed(e)) {
-      selectNextElementInResults();
-    } else {
-      var query = $searchInput.val();
-      if(query.length === 0) return hideResultDiv();
-      if(query.length < minChar) return;
-      search(query, function (err, content) {
-        if(err) {
-          console.error('an error has occured', err)
-          return;
-        }
-        var hits = content.hits;
-        if(hits.length > 0) {
-          showResult(hits);
-        } else {
-          showNoResult();
-        }
-      })
-    }
-  })
-
-  function search(query, callback) {
-    index.search(query, {
-      facetFilters: 'type:document,layout:api',
-      hitsPerPage: 6
-    }, callback);
-  }
-
-  function showNoResult() {
-    var html = '<p class="searchError">Aucune API ne correspond à votre recherche</p>';
-    html += htmlFooter;
-    html += htmlPowerBy;
-    showResultDiv();
-    $resultDiv.html(html);
-  }
-
-  function showResult(hits) {
-    var html = '';
-    $.each(hits, function( index, value ) {
-      html += formatResult(value)
+    $.each(pos_occurences.reverse(), function() {
+        value = value.substring(0, this)
+              + spanHighlight(value.substr(this, term.length))
+              + value.substring(this + term.length);
     });
-    html += htmlFooter;
-    html += htmlPowerBy;
-    showResultDiv();
-    $resultDiv.html(html);
-  }
+    return value;
+}
 
-  function formatResult(value) {
-    var html = '<a class="result" href="{{ site.baseurl }}'+ value.url +'">'
-    html += '<div class="image"> <img src="{{ site.baseurl }}/img/'+ value.logo +'"></div>'
-    html += '<div class="content">'
-    html += '<div class="title">' + value._highlightResult.title.value + '</div>'
-    html += '<div class="description">' + value._highlightResult.tagline.value
-    html += getHightlightedHtml(value._highlightResult) + '</div>'
+function getHighLightFromArray(array, label, searchTerm) {
+  var termHighlighted = []
+  $.each(array, function(){
+    var val = this.innerHTML;
+    if (val.search(searchTerm) != -1) {
+      termHighlighted.push(spanHighlight(val));
+    }
+  });
+  if(termHighlighted.length > 0) {
+    return '<br>' + label + '&nbsp;: ' + termHighlighted.slice(0, 3).join(', ');
+  } else {
+    return ''
+  }
+}
+
+function onSearchQuery(searchTerm) {
+  //this part higlights results
+  var module = $(this);
+  $.each(module.find('.content'), function() {
+    var content = $(this);
+    $.each(content.find('.description'), function() {
+      var description = $(this);
+      description.html(highlight($(this).html(), searchTerm));
+      $.each([['keywords', 'tags'],
+            ['partners', 'partenaires'],
+            ['clients', 'clients']], function() {
+        var HighLightFromArray = getHighLightFromArray(
+                                   content.find('.'+this[0]+ ' ul li'),
+                                   this[1],
+                                   searchTerm
+        );
+        if (HighLightFromArray) {
+          description.append(HighLightFromArray);
+          return false;
+        }
+      });
+    });
+  });
+}
+
+function customTemplate(response, fields) {
+  var html = '';
+  $.each(response[fields.results], function(index, value) {
+    html += '<a class="result" href="{{ site.baseurl }}'+ value.url +'">'
+         +  '<div class="image"> <img src="{{ site.baseurl }}/img/'+ value.image +'"></div>'
+         +  '<div class="content">'
+         +  '<div class="title">' + value.title + '</div>'
+         +  '<div class="description">' + value.description + '</div>';
+    $.each(['keywords', 'clients', 'partners'], function(i, key) {
+      html += '<div class="' + key + '" hidden="true"><ul>';
+        $.each(value[key], function(i, v) {
+          html += '<li>' + v + '</li>';
+        });
+      html += '</ul></div>';
+    });
     html += '</div>'
     html += '</a>'
-    return html
-  }
+  });
+  html += htmlFooter;
+  return html;
+}
 
-  function showResultDiv() {
-    $resultDiv
-      .addClass("visible")
-      .removeClass('hidden');
-  }
-
-  function hideResultDiv() {
-    $resultDiv
-      .addClass("hidden")
-      .removeClass('visible');
-  }
-
-  function getHightlightedHtml(highlightResult) {
-    var keywordHighlightedHtml = getKeywordHighlightedHtml(highlightResult.keywords);
-    if(keywordHighlightedHtml) return keywordHighlightedHtml;
-    var partnerHighlightedHtml = getPartnerHighlightedHtml(highlightResult.partners);
-    if(partnerHighlightedHtml) return partnerHighlightedHtml;
-    var clientHighlightedHtml = getClientHighlightedHtml(highlightResult.clients);
-    if(clientHighlightedHtml) return clientHighlightedHtml;
-    return '';
-  }
-
-  function getKeywordHighlightedHtml(keywords) {
-    return getHighLightFromArray(keywords, 'tags')
-  }
-
-  function getPartnerHighlightedHtml(partners) {
-    return getHighLightFromArray(partners, 'partenaires')
-  }
-
-  function getClientHighlightedHtml(clients) {
-    return getHighLightFromArray(clients, 'clients')
-  }
-
-  function getHighLightFromArray(array, label) {
-    var termHighlighted = []
-    $.each(array, function( index, item ) {
-      if(item.matchLevel === 'full') {
-        termHighlighted.push(item.value)
-      }
+$(document).ready(function() {
+    $.getJSON('{{ site.baseurl }}/to_search.json', function(toSearch) {
+        searchFields = ['title', 'description', 'keywords'];
+        for(var i=0; i<toSearch.length; i++) {
+            toSearch[i]['unidecoded'] = searchFields.map(
+                        function(v){return toSearch[i][v];})
+                     .join()
+                     .unidecode()
+            ;
+        }
+        searchFields.push('unidecoded');
+    $('.ui.search').search({
+       type: 'custom',
+       source: toSearch,
+       searchFields: searchFields,
+       searchFullText: false,
+       showNoResults: true,
+       regExp: {
+         escape     : /[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g,
+         beginsWith : ''
+       },
+       onSearchQuery: onSearchQuery,
+       templates: {
+         custom: customTemplate
+       }
     });
-    if(termHighlighted.length > 0) {
-      return '<br>' + label + '&nbsp;: ' + termHighlighted.slice(0, 3).join(', ');
-    } else {
-      return ''
-    }
-  }
+  })
 });
 </script>

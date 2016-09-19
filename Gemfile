@@ -53,6 +53,4 @@ rescue => standard_error
   gem 'github-pages'
 end
 
-gem 'algoliasearch-jekyll', '~> 0.7.0', group: :jekyll_plugins
-
 gem 'html-proofer', group: :test

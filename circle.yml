@@ -23,4 +23,4 @@ deployment:
   index:
     branch: gh-pages
     commands:
-      - bundle exec jekyll algolia push
+      - bundle exec jekyll push
