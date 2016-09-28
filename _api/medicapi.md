@@ -1,7 +1,7 @@
 ---
 title: Médicapi
 tagline: Base de données publique des médicaments de l'Agence nationale de sécurité du médicament et des produits de santé
-doc_tech: https://medicaments.api.gouv.fr/
+doc_tech: https://medicaments.api.gouv.fr/doc
 domain: https://medicaments.api.gouv.fr
 contact: contact@medicaments.api.gouv.fr
 contract: OUVERT
