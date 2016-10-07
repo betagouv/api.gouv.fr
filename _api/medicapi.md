@@ -26,7 +26,7 @@ keywords:
 
 ## Présentation
 
-Cette API expose les [médicaments](https://www.data.gouv.fr/fr/datasets/base-de-donnees-publique-des-medicaments-base-officielle/) référencés [<abbr title="Agence nationale de Sécurité du Médicament">ANSM</abbr>](http://ansm.sante.fr/) mises à jour le 24/06/2016.
+Cette API expose les [médicaments](https://www.data.gouv.fr/fr/datasets/base-de-donnees-publique-des-medicaments-base-officielle/) référencés [<abbr title="Agence nationale de Sécurité du Médicament">ANSM</abbr>](http://ansm.sante.fr/) mises à jour le 03/10/2016.
 
 Ces données comportent, entre autre :
 
