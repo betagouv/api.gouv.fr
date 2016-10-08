@@ -34,7 +34,7 @@ featuredServices:
 <section id="description" class="ui container">
   <div class="ui fluid centered stackable grid">
     <div class="six wide column">
-      <img src="{{ site.baseurl }}/img/Apigouv_visual.svg" alt="Une API connecte des services à la puissance d'internet" />
+      <img src="/img/Apigouv_visual.svg" alt="Une API connecte des services à la puissance d'internet" />
     </div>
     <div class="six wide column">
       <h2>Pourquoi api.gouv.fr ?</h2>
@@ -54,10 +54,10 @@ featuredServices:
       </ul>
       <ul class="link">
         <li>
-          <a href="{{ site.baseurl }}/api/">Explorez les {{ site.api | size }} API</a>
+          <a href="/api/">Explorez les {{ site.api | size }} API</a>
         </li>
         <li>
-          <a href="{{ site.baseurl }}/apropos">En savoir plus</a>
+          <a href="/apropos">En savoir plus</a>
         </li>
       </ul>
     </div>
@@ -76,7 +76,7 @@ featuredServices:
       {% assign api_category_size = site.api | where:"category", type.id |size %}
 
       <p class="discoverAPI">
-        <a href="{{ site.baseurl }}/api/{{ type.id }}">
+        <a href="/api/{{ type.id }}">
           {% if api_category_size == 0 %}
             Aucune API n'est encore disponible
           {% elsif api_category_size == 1 %}
@@ -107,7 +107,7 @@ featuredServices:
 
 <div class="ui container">
   <p class="buttonContainer">
-     <a class="ui big button moreButton" href="{{ site.baseurl }}/services">Découvrez les {{ site.service | size }} services&nbsp;&nbsp;➤</a>
+     <a class="ui big button moreButton" href="/services">Découvrez les {{ site.service | size }} services&nbsp;&nbsp;➤</a>
   </p>
 </div>
 
@@ -132,7 +132,7 @@ featuredServices:
 
 <script>
 var minChar = 1;
-var htmlFooter = '<a href="{{ site.baseurl }}/api/" class="action">Explorez les {{ site.api | size }} API déjà disponibles</a>';
+var htmlFooter = '<a href="/api/" class="action">Explorez les {{ site.api | size }} API déjà disponibles</a>';
 function escapeRegExChars(value) {
   return value.replace(/[|\\{}()[\]^$+*?.]/g, "\\$&");
 }
@@ -200,8 +200,8 @@ function onSearchQuery(searchTerm) {
 function customTemplate(response, fields) {
   var html = '';
   $.each(response[fields.results], function(index, value) {
-    html += '<a class="result" href="{{ site.baseurl }}'+ value.url +'">'
-         +  '<div class="image"> <img src="{{ site.baseurl }}/img/'+ value.image +'"></div>'
+    html += '<a class="result" href="'+ value.url +'">'
+         +  '<div class="image"> <img src="/img/'+ value.image +'"></div>'
          +  '<div class="content">'
          +  '<div class="title">' + value.title + '</div>'
          +  '<div class="description">' + value.description + '</div>';
@@ -220,7 +220,7 @@ function customTemplate(response, fields) {
 }
 
 $(document).ready(function() {
-    $.getJSON('{{ site.baseurl }}/to_search.json', function(toSearch) {
+    $.getJSON('/to_search.json', function(toSearch) {
         searchFields = ['title', 'description', 'keywords'];
         for(var i=0; i<toSearch.length; i++) {
             toSearch[i]['unidecoded'] = searchFields.map(

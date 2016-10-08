@@ -5,9 +5,9 @@ layout: null
   {% for api in site.api %}
     {
       "title" : "{{ api.name }}",
-      "url": "{{ api.url | prepend: site.baseurl }}",
+      "url": "{{ api.url }}",
       "description" : "{{ api.tagline }}",
-      "image" : "{{ api.logo | prepend: site.baseurl }}",
+      "image" : "{{ api.logo }}",
       "domain" : "{{ api.domain }}",
       "owner" : "{{ api.owner }}",
       "contract" : "{{ api.contract }}",

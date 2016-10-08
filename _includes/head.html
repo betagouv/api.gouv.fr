@@ -9,11 +9,11 @@
   <meta property="og:title" content="{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}" >
   <meta property="og:type" content="website">
   <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" >
-  <meta property="og:image" content="{{ site.baseurl }}/img/logo.svg" >
+  <meta property="og:image" content="/img/logo.svg" >
 
   <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
 
-  <link rel="shortcut icon" href="{{ site.baseurl }}/img/favicon.ico" type="image/x-icon" >
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" >
 
   <link rel="stylesheet" type="text/css" class="ui" href="//cdn.jsdelivr.net/semantic-ui/2.2/components/site.min.css">
   <link rel="stylesheet" type="text/css" class="ui" href="//cdn.jsdelivr.net/semantic-ui/2.2/components/reset.min.css">
@@ -40,12 +40,12 @@
   <link rel="stylesheet" type="text/css" class="ui" href="//cdn.jsdelivr.net/semantic-ui/2.2/components/statistic.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/2.1.3/css/screen.min.css" >
 
-  <link rel="stylesheet" type="text/css" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
   {% if page.layout != 'default' %}
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/{{ page.layout }}.css">
+    <link rel="stylesheet" type="text/css" href="/css/{{ page.layout }}.css">
   {% endif %}
   {% if page.additional_css %}
-    <link rel="stylesheet" type="text/css" href="{{ "/css/" | append: page.additional_css | append: ".css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" type="text/css" href="{{ "/css/" | append: page.additional_css | append: ".css" }}">
   {% endif %}
 
   <script src="//cdn.jsdelivr.net/jquery/2.2.1/jquery.js"></script>
@@ -54,5 +54,5 @@
   <script src="//cdn.jsdelivr.net/semantic-ui/2.2/components/dropdown.min.js"></script>
   <script src="//cdn.jsdelivr.net/semantic-ui/2.2/components/tab.min.js"></script>
   <script src="//cdn.jsdelivr.net/semantic-ui/2.2/components/search.min.js"></script>
-  <script src="{{ site.baseurl}}/js/unidecode.min.js"></script>
+  <script src="/js/unidecode.min.js"></script>
 </head>

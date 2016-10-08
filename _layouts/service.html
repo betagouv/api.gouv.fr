@@ -33,11 +33,11 @@ layout: default
             <div class="ui grid">
               <div class="row">
                 <div class="three wide column">
-                  <img class="ui fluid image logoAPI" src="{{ site.baseurl }}/img/{{ api.logo }}" alt="logo de {{ api.title }}">
+                  <img class="ui fluid image logoAPI" src="/img/{{ api.logo }}" alt="logo de {{ api.title }}">
                 </div>
                 <div class="thirteen wide column">
                   <h4>
-                    <a href="{{ site.baseurl }}{{ api.url }}" class="header">{{ api.title }}</a>
+                    <a href="{{ api.url }}" class="header">{{ api.title }}</a>
                   </h4>
                   {{ api.tagline }}
                 </div>
@@ -52,7 +52,7 @@ layout: default
           {{ content }}
         </div>
         <div>
-          <img class="ui bordered rounded fluid image" src="{{ site.baseurl }}/img/{{ page.screenshot }}" alt="capture d'écran de {{ page.title }}">
+          <img class="ui bordered rounded fluid image" src="/img/{{ page.screenshot }}" alt="capture d'écran de {{ page.title }}">
         </div>
       </div>
     </div>

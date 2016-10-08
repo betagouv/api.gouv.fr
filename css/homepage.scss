@@ -163,7 +163,7 @@ $border-type-color: #eff3f6;
 
   p.discoverAPI {
     a::after {
-      content: url({{ site.baseurl }}/img/arrow-more.svg);
+      content: url(/img/arrow-more.svg);
       display: inline-block;
       margin-left: 7px;
     }

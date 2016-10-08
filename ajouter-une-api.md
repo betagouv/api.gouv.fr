@@ -42,4 +42,4 @@ La demande d'ajout au catalogue se fait de manière autonome [via GitHub](https:
 
 ## Contact
 
-Vous avez d'autres questions ? [Contactez-nous]({{ site.baseurl }}/contact) !
+Vous avez d'autres questions ? [Contactez-nous](/contact) !
