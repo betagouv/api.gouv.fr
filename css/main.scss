@@ -59,3 +59,9 @@ input:focus::-webkit-input-placeholder{
 input:focus::-moz-placeholder{
     color: transparent!important;
 }
+
+@media (max-width: 30em) {
+	.medium.screen.only {
+		display: none !important;
+	}
+}
