@@ -14,20 +14,15 @@
 }
 
 header {
-	background-image: url(/img/marianne.svg);
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: .8em;
+	padding: 0.5em;
 	background-color: #FEFEFE;
 	color: #555;
 
-	.ui.secondary.menu {
-		padding: 0.5em;
-	}
-	.menu {
-		a.item {
-			font-weight: bold;
-		}
+	> nav.ui.secondary.menu {
+	  background-image: url(/img/marianne.svg);
+	  background-repeat: no-repeat;
+	  background-size: contain;
+	  background-position: 99%;
 	}
 
 	#logo {
@@ -63,4 +58,10 @@ input:focus::-webkit-input-placeholder{
 }
 input:focus::-moz-placeholder{
     color: transparent!important;
+}
+
+@media (max-width: 30em) {
+	.medium.screen.only {
+		display: none !important;
+	}
 }
