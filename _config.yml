@@ -17,6 +17,7 @@ exclude: [vendor, app.json, Gemfile.lock]
 collections:
   api:
     output: true
+    permalink: /explorer/:path/
   service:
     output: true
 

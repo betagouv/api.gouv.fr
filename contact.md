@@ -5,7 +5,7 @@ layout: pages
 
 ## Détails d'une API
 
-Contactez directement le producteur de l'API en question. Vous trouverez un lien de contact sur la page la décrivant. Trouvez la page correspondante depuis la [liste des API](/api/).
+Contactez directement le producteur de l'API en question. Vous trouverez un lien de contact sur la page la décrivant. Trouvez la page correspondante depuis la [liste des API](/explorer/).
 
 api.gouv.fr se contente de référencer des API existantes. Nous ne pouvons donc pas vous renseigner sur une API spécifique.
 
