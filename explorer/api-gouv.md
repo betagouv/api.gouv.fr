@@ -19,7 +19,7 @@ Cette API est une version très simple, si vous avez des besoins spécifiques qu
 
 ## Lecture
 
-Il existe un endpoint qui renvoie la totalité des API disponibles : [api.json](/api.json).
+Il existe un endpoint qui renvoie la totalité des API disponibles : [api.json](/api/v1/api.json).
 
 ## Écriture
 Le site est généré avec [Jekyll](http://jekyllrb.com/) hébergé sur [GitHub Pages](https://pages.github.com). Si vous souhaitez apporter des modifications à vos données, merci d'utiliser l'[API GitHub](https://developer.github.com/v3).
