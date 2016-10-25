@@ -3,7 +3,7 @@ info:
   title: api.gouv.fr
   description: Catalogue des API des administrations françaises
   version: 0.1.0
-basePath: /
+basePath: /api/v1
 produces:
   - application/json
 paths:
