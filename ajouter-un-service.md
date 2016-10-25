@@ -10,7 +10,7 @@ Un service peut être référencé sur `api.gouv.fr` s'il répond aux critères 
 
 ### Consommation
 
-Le service doit dépendre pour une de ses fonctionnalités essentielles d'une ou plusieurs API référencées sur `api.gouv.fr`. Ce n'est pas encore le cas ? [Explorez nos API](/api/) ou [ajoutez une API](/ajouter-une-api) !
+Le service doit dépendre pour une de ses fonctionnalités essentielles d'une ou plusieurs API référencées sur `api.gouv.fr`. Ce n'est pas encore le cas ? [Explorez nos API](/liste-des-api/) ou [ajoutez une API](/ajouter-une-api) !
 
 ### Accessibilité
 
