@@ -3,14 +3,11 @@
 ---
 
 @import "variables";
-@import "mixins";
 @import "service";
 
 #mission-statement {
   padding-top: 8%;
   padding-bottom: 8%;
-  @include linearBackground($main-color);
-
 
   .input {
     min-width: 60%;
@@ -22,10 +19,18 @@
 
     font-size: 200%;
     line-height: 1.8;
-    letter-spacing: .08em;
-
-    text-transform: uppercase;
   }
+
+  .header-with-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      margin-right: 3em;
+    }
+  }
+
   .results {
     width: 100%;
 
@@ -48,6 +53,22 @@
       position: relative;
       top: 0.2em;
     }
+  }
+}
+
+section {
+  padding: 4% 0;
+
+  h2 {
+    text-align: center;
+  }
+}
+
+section#apis {
+  background: $backgroundBlue;
+
+  h2 {
+    color: #fff;
   }
 }
 
@@ -182,16 +203,14 @@ $border-type-color: #eff3f6;
 p.buttonContainer {
   text-align: center;
   a.ui.big.button.moreButton {
-    margin-bottom: 4%;
     margin-top: 4%;
-    box-shadow: 0 0 0 0 rgba(34,36,38,.15) inset;
-    background-color: $service-color;
+    background-color: $simulation-color;
     color: #fff;
     text-shadow: none;
     background-image: none;
 
     &:hover {
-      background-color: darken($service-color, 5%)
+      background-color: darken($simulation-color, 5%)
     }
   }
 }

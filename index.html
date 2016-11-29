@@ -5,96 +5,57 @@ searchExamples:
   - quotient familial
   - revenu fiscal de référence
   - cadastre
-
+featuredApis:
+  - FranceConnect
+  - Base Adresse Nationale
+  - le.Taxi
 featuredServices:
   - La Bonne Boîte
   - Mes aides
   - Simulateur de coût d'embauche
 ---
 
-<section id="mission-statement" class="ui vertical center aligned segment">
-
-  <div class="ui text container">
-    <h1 class="ui inverted header">
-      {{ site.description }}
-    </h1>
-    <div class="ui search">
-      <div class="ui fluid left icon input">
-        <input class="prompt"
-              placeholder="{{ page.searchExamples | join: ', '}}…"
-              type="search">
-        <i class="search icon"></i>
-      </div>
-      <div class="results transition hidden">
+<section id="mission-statement">
+  <div class="header-with-image">
+    <img class="ui small image" src="/img/Apigouv_visual.svg" alt="Une API connecte des services à la puissance d'internet" />
+    <div>
+      <h1 class="ui header">
+        {{ site.description }}
+      </h1>
+      <div class="ui search">
+        <div class="ui fluid left icon input">
+          <input class="prompt"
+                placeholder="{{ page.searchExamples | join: ', '}}…"
+                type="search">
+          <i class="search icon"></i>
+        </div>
+        <div class="results transition hidden">
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="description" class="ui container">
-  <div class="ui fluid centered stackable grid">
-    <div class="six wide column">
-      <img src="/img/Apigouv_visual.svg" alt="Une API connecte des services à la puissance d'internet" />
+<section id="apis">
+  <div class="ui container">
+    <h2>Les API à la une</h2>
+
+    <div class="ui three stackable cards">
+      {% for api in site.api %}
+        {% if page.featuredApis contains api.title %}
+          {% include api-card.html description=api %}
+        {% endif %}
+      {% endfor %}
     </div>
-    <div class="six wide column">
-      <h2>Pourquoi api.gouv.fr ?</h2>
-      <p>
-        Vous êtes une administration, une collectivité, un éditeur de solutions pour les particuliers ou les entreprises et souhaitez simplifier radicalement la relation des usagers à l’administration.
-      </p>
-      <p>Une <abbr title="Application Programming Interface">API</abbr> permet la communication entre des systèmes informatiques qui n'ont pas forcément été conçus ensemble à l'origine.</p>
-      <p>Dans api.gouv.fr, nous ne référençons que des API accessibles par internet. Curieux ? Découvrez en détails <a href="/qu-est-ce-qu-une-api">ce qu'est une API</a>.</p>
-      <p>
-        Les API proposées vous permettent de&nbsp;:
-      </p>
-      <ul>
-        <li>simplifier les démarches ;</li>
-        <li>guider l'usager dans la saisie d'informations ;</li>
-        <li>récupérer des informations connues de l'administration ;</li>
-        <li>à vous d'inventer la suite !</li>
-      </ul>
-      <ul class="link">
-        <li>
-          <a href="/apis">Explorez les {{ site.api | size }} API</a>
-        </li>
-        <li>
-          <a href="/apropos">En savoir plus</a>
-        </li>
-      </ul>
-    </div>
+
+    <p class="buttonContainer">
+       <a class="ui big button moreButton" href="/apis">Découvrez les {{ site.api | size }} API&nbsp;&nbsp;➤</a>
+    </p>
   </div>
 </section>
-
-<section id="type" class="ui container">
-  <ul class="ui fluid stackable grid">
-    {% for type in site.api_category %}
-    <li class="eight wide column">
-      <i class="icon huge {{ type.logo }} {{ type.id }}"></i>
-      <h2 class="header">{{ type.name }}</h2>
-      <p>
-        {{ type.description }}
-      </p>
-      {% assign api_category_size = site.api | where:"category", type.id |size %}
-
-      <p class="discoverAPI">
-        <a href="/apis{{ type.id }}">
-          {% if api_category_size == 0 %}
-            Aucune API n'est encore disponible
-          {% elsif api_category_size == 1 %}
-            Explorer la première API
-          {% else %}
-            Explorer ces {{ api_category_size }} API
-          {% endif %}
-        </a>
-      </p>
-    </li>
-    {% endfor %}
-  </ul>
-</section>
-
-
 
 <section id="services" class="ui container">
-  <h2 class="ui divider horizontal">Services utilisant les API</h2>
+  <h2>Services utilisant les API</h2>
 
   <div class="ui three stackable cards">
     {% for service in site.service %}
@@ -103,32 +64,34 @@ featuredServices:
       {% endif %}
     {% endfor %}
   </div>
-</section>
 
-<div class="ui container">
   <p class="buttonContainer">
-     <a class="ui big button moreButton" href="/services">Découvrez les {{ site.service | size }} services&nbsp;&nbsp;➤</a>
+    <a class="ui big button moreButton" href="/services">Découvrez les {{ site.service | size }} services&nbsp;&nbsp;➤</a>
   </p>
-</div>
-
-<section class="ui container grid">
-  <h2 class="ui divider horizontal">Notions importantes</h2>
-
-  {% for notion in site.data.notions %}
-  <div class="item eight wide column">
-    <h3 class="ui top attached header">
-      {% if notion.link %}
-        <a href="{{ notion.link }}">{{ notion.name }}</a>
-      {% else %}
-        {{ notion.name }}
-      {% endif %}
-    </h3>
-    <p class="ui attached segment">
-      {{ notion.definition }}
-    </p>
-  </div>
-  {% endfor %}
 </section>
+
+<div id="description" class="ui container">
+  <div class="ui floating message">
+    <div class="header">
+      Pourquoi api.gouv.fr ?
+    </div>
+    <p>
+      Vous êtes une administration, une collectivité, un éditeur de solutions pour les particuliers ou les entreprises et souhaitez simplifier radicalement la relation des usagers à l’administration.
+    </p>
+    <p>Une <abbr title="Application Programming Interface">API</abbr> permet la communication entre des systèmes informatiques qui n'ont pas forcément été conçus ensemble à l'origine. Dans api.gouv.fr, nous ne référençons que des API accessibles par internet. Curieux ? Découvrez en détails <a href="/qu-est-ce-qu-une-api">ce qu'est une API</a>.</p>
+    <p>
+      Les API proposées vous permettent de&nbsp;:
+    </p>
+    <ul>
+      <li>simplifier les démarches ;</li>
+      <li>guider l'usager dans la saisie d'informations ;</li>
+      <li>récupérer des informations connues de l'administration ;</li>
+      <li>à vous d'inventer la suite !</li>
+    </ul>
+
+    <a href="/apropos">En savoir plus</a>
+  </div>
+</div>
 
 <script>
 var minChar = 1;

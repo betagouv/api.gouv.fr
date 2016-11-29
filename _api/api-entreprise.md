@@ -27,7 +27,6 @@ partners:
   - QUALIBAT
   - MIN INTERIEUR
 owner: DINSIC
-category: confidential
 keywords:
   - Établissement
   - Entreprise

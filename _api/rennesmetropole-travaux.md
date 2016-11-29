@@ -10,7 +10,6 @@ clients:
   - entreprises
   - collectivités
 owner: Rennes Métropole
-category: reference
 keywords:
   - Travaux
   - Circulation

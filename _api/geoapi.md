@@ -16,7 +16,6 @@ partners:
   - INSEE
   - OpenStreetMap
 owner: DINSIC
-category: reference
 keywords:
   - Communes
   - Codes postaux

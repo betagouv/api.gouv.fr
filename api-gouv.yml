@@ -36,8 +36,6 @@ definitions:
         type: string
       contract:
         type: string
-      category:
-        type: string
       keywords:
         type: array
         items:

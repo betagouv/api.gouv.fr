@@ -8,7 +8,6 @@ clients:
   - Enterprises
   - Ministères
 owner: DINSIC
-category: reference
 layout: api
 logo: logo-generique-startup-carre.jpg
 experimental: true

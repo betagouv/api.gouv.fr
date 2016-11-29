@@ -35,7 +35,6 @@ partners:
   - Tessa
   - UNT
 owner: ETALAB (DINSIC) &amp; DSCR (Ministère de l'Intérieur)
-category: smartData
 keywords:
   - Transport
   - Taxi

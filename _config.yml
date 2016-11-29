@@ -41,25 +41,4 @@ defaults:
     values:
       layout: default
 
-api_category:
-  - id: confidential
-    name: Données confidentielles
-    logo: privacy
-    description: Accès sécurisé à des données confidentielles d'un particulier ou d'une entreprise
-
-  - id: reference
-    name: Données de référence
-    logo: sitemap
-    description: Aide à la saisie & contrôle de cohérence vis à vis données de référence
-
-  - id: simulation
-    name: Le droit exécutable
-    logo: cogs
-    description: "Calcul et simulation : éligibilité et calculs fiscaux & sociaux, pour entreprises et particuliers"
-
-  - id: smartData
-    name: Big Data
-    logo: magic
-    description: Accès à des données temps-réel et à des algorithmes valorisant des données massives
-
 markdown: kramdown

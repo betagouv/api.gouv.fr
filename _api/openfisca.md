@@ -13,7 +13,6 @@ partners: # liste des partenaires
   - IPP
   - Incubateur des startups de l'État
 owner: Etalab # organisme gérant l'API
-category: simulation # category de donnée, voir le champs id dans le fichier _config
 keywords: # liste des mots clés utilisés lors de la recherche
   - Impôts
   - Fiscalité

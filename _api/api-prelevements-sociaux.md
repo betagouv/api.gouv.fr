@@ -11,7 +11,6 @@ clients:
   - Administrations
   - Associations
 owner: DINSIC
-category: simulation
 keywords:
   - Coût d'embauche
   - Fiches de paie

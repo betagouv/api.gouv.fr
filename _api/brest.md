@@ -2,18 +2,15 @@
 title: Données transports Brest métropole
 tagline: Données théoriques et temps-réel des transports publics de Brest métropole
 owner: Brest métropole
-category: reference
 contract: OUVERT
 logo: Logo_Brest_metropole.png
 contact: deplacements@brest-metropole.fr
 doc_tech: https://geo.pays-de-brest.fr/donnees/Documents/Public/DocWebServicesTransport.pdf
-
 clients:
   - particuliers
   - entreprises
   - collectivités
   - ministères
-
 partners:
   - Bibus-Keolis Brest
 keywords:

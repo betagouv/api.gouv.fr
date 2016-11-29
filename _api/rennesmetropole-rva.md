@@ -12,7 +12,6 @@ clients:
   - entreprises
   - collectivités
 owner: Rennes Métropole
-category: reference
 keywords:
   - Voie
   - Adresse

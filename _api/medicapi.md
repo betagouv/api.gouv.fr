@@ -15,7 +15,6 @@ experimental: true
 partners:
   - ANSM
 owner: DINSIC
-category: reference
 keywords:
   - Médicament
   - Présentation

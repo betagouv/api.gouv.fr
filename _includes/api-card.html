@@ -15,21 +15,11 @@
 			{{ include.description.tagline }}
 		</div>
 	</div>
-	<div class="extra content">
-		<div class="left floated">
-			{%if include.description.contract %}
-				{{ include.description.contract }}
-			{% else%}
-			<!-- le build fails -->
-			{% include missing-contract.html %}
-			{% endif %}
-		</div>
-
-		<div class="right floated">
-			<div class="ui {{ include.description.category }} label">
-				{% assign category = site.api_category | where:"id", include.description.category | first %}
-			  <i class="{{ category.logo }} icon"></i> {{  category.name }}
+  <div class="extra content">
+    {% for keywords in include.description.keywords %}
+			<div class="ui tiny label">
+				{{ keywords }}
 			</div>
-		</div>
+    {% endfor %}
 	</div>
 </a>
