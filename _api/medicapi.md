@@ -15,13 +15,12 @@ experimental: true
 partners:
   - ANSM
 owner: DINSIC
-category: reference
 keywords:
-  - medicament
-  - presentation
-  - sécurité sociale
-  - génériques
-  - haute autorité de santé
+  - Médicament
+  - Présentation
+  - Sécurité sociale
+  - Génériques
+  - Haute autorité de santé
 ---
 
 ## Présentation

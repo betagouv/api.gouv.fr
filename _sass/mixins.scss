@@ -1,4 +1,0 @@
-@mixin linearBackground($color) {
-  background-color: $color;
-  background: linear-gradient(to bottom, $color, lighten($color, 10));
-}

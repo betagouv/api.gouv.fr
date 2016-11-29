@@ -4,7 +4,6 @@
 
 @import "variables";
 @import "markdown";
-@import "mixins";
 
 #title {
   padding-top: 5%;
@@ -25,8 +24,8 @@
     letter-spacing: .05em;
     text-transform: uppercase;
   }
-  @include linearBackground($service-color);
 
+  background: $backgroundBlue;
 }
 
 .logoAPI {

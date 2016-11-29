@@ -33,7 +33,11 @@ layout: default
             <div class="ui grid">
               <div class="row">
                 <div class="three wide column">
-                  <img class="ui fluid image logoAPI" src="/img/{{ api.logo }}" alt="logo de {{ api.title }}">
+                  {% if api.logo %}
+                    <img class="ui fluid image logoAPI" src="/img/{{ api.logo }}" alt="logo de {{ api.title }}"/>
+                  {% else %}
+                    <img class="ui fluid image logoAPI" src="/img/{{ api.default_logo }}" alt="logo générique"/>
+                  {% endif %}
                 </div>
                 <div class="thirteen wide column">
                   <h4>

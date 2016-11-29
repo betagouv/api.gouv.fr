@@ -18,8 +18,6 @@ stat:
   lastXdays: 30
   url: https://particulier.api.gouv.fr/api/analytics/requestsLast30days
   label: Pièces justificatives dématérialisées
-category: confidential
-
 keywords:
   - Impots
   - CAF

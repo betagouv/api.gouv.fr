@@ -4,7 +4,6 @@
 
 @import "variables";
 @import "markdown";
-@import "mixins";
 @import "service";
 
 
@@ -31,21 +30,7 @@
     text-transform: uppercase;
   }
 
-  &.confidential {
-    @include linearBackground($confidential-color);
-  }
-
-  &.reference {
-    @include linearBackground($reference-color);
-  }
-
-  &.simulation {
-    @include linearBackground($simulation-color);
-  }
-
-  &.smartData {
-    @include linearBackground($smartData-color);
-  }
+  background: $backgroundBlue;
 }
 #description {
   .metadata {
@@ -99,21 +84,7 @@
   padding-top: 3%;
   padding-bottom: 2%;
 
-  &.confidential {
-    @include linearBackground($confidential-color);
-  }
-
-  &.reference {
-    @include linearBackground($reference-color);
-  }
-
-  &.simulation {
-    @include linearBackground($simulation-color);
-  }
-
-  &.smartData {
-    @include linearBackground($smartData-color);
-  }
+  background: $backgroundBlue;
 }
 
 #services {
