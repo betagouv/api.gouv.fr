@@ -220,7 +220,7 @@ function customTemplate(response, fields) {
 }
 
 $(document).ready(function() {
-    $.getJSON('/to_search.json', function(toSearch) {
+    $.getJSON('/api/v1/api.json', function(toSearch) {
         searchFields = ['title', 'description', 'keywords'];
         for(var i=0; i<toSearch.length; i++) {
             toSearch[i]['unidecoded'] = searchFields.map(
