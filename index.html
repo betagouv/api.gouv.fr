@@ -89,9 +89,32 @@ featuredServices:
       <li>à vous d'inventer la suite !</li>
     </ul>
 
-    <a href="/apropos">En savoir plus</a>
+    <a class="ui button moreButton" href="/apropos">En savoir plus</a>
+
+    <div class="header padded">
+      Notions importantes
+    </div>
+
+    <div class="ui grid">
+      {% for notion in site.data.notions %}
+      <div class="item eight wide column">
+        <h3 class="ui top attached header">
+          {% if notion.link %}
+            <a href="{{ notion.link }}">{{ notion.name }}</a>
+          {% else %}
+            {{ notion.name }}
+          {% endif %}
+        </h3>
+        <div class="ui attached segment">
+          {{ notion.definition }}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
   </div>
+
 </div>
+
 
 <script>
 var minChar = 1;
