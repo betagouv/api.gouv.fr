@@ -29,9 +29,9 @@ partners:
 owner: DINSIC
 category: confidential
 keywords:
-  - etablissement
-  - entreprise
-  - certification
+  - Établissement
+  - Entreprise
+  - Certification
 access_link: https://tps.apientreprise.fr/users/dossiers/new?procedure_id=33
 ---
 

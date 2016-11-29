@@ -13,13 +13,13 @@ clients:
 owner: DINSIC
 category: simulation
 keywords:
-  - coût d'embauche
-  - fiches de paie
-  - cotisations sociales
-  - contributions sociales
-  - aides à l'emploi
-  - salaire net
-  - salaire brut
+  - Coût d'embauche
+  - Fiches de paie
+  - Cotisations sociales
+  - Contributions sociales
+  - Aides à l'emploi
+  - Salaire net
+  - Salaire brut
 ---
 
 Permet l'estimation rapide et précise du coût d'une embauche quelque soit le contexte de l'entreprise et du salarié : salaire, category de contrat de travail (CDD, CDI, interim, indépendant ..), temps partiel, activité, géographie, taille, ... Vous obtiendrez précisément le décompte des cotisations salariales et patronales dans ce contexte. Par exemple, deux requêtes identiques hormis leur lieu d'embauche pourra donner deux résultats différents car le taux du versement transport n'y est pas forcément le même.

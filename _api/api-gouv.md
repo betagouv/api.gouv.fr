@@ -3,16 +3,18 @@ title: api.gouv.fr
 tagline:  Fabriquez des services en ligne plus simples
 contract: OUVERT
 clients:
-  - collectivités
-  - particuliers
-  - enterprises
-  - ministères
+  - Collectivités
+  - Particuliers
+  - Enterprises
+  - Ministères
 owner: DINSIC
 category: reference
 layout: api
 logo: logo-generique-startup-carre.jpg
 experimental: true
 openapi_definition: /api-gouv.yml
+keywords:
+  - Utilitaire
 ---
 
 Cette API est une version très simple, si vous avez des besoins spécifiques qui ne sont pas couverts par cette première version merci de nous contacter en envoyant un mail à [contact@api.gouv.fr](mailto:contact@api.gouv.fr).

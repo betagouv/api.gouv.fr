@@ -12,9 +12,9 @@ clients:
 owner: Rennes Métropole
 category: reference
 keywords:
-  - travaux
-  - circulation
-  - déplacement
+  - Travaux
+  - Circulation
+  - Déplacement
 ---
 
 ## Présentation

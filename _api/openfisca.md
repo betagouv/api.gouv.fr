@@ -15,13 +15,13 @@ partners: # liste des partenaires
 owner: Etalab # organisme gérant l'API
 category: simulation # category de donnée, voir le champs id dans le fichier _config
 keywords: # liste des mots clés utilisés lors de la recherche
-  - impôts
-  - fiscalité
-  - cotisations sociales
-  - prélèvements sociaux
-  - prestations sociales
-  - droit
-  - simulateur
+  - Impôts
+  - Fiscalité
+  - Cotisations sociales
+  - Prélèvements sociaux
+  - Prestations sociales
+  - Droit
+  - Simulateur
 logo: logo-openfisca.svg
 ---
 

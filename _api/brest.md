@@ -17,10 +17,10 @@ clients:
 partners:
   - Bibus-Keolis Brest
 keywords:
-  - bus
-  - tramway
-  - téléphérique
-  - transport
+  - Bus
+  - Tramway
+  - Téléphérique
+  - Transport
 ---
 
 ## Description de l'API

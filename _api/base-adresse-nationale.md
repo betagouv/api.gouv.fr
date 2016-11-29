@@ -22,10 +22,10 @@ stat:
     - queries_week
 category: reference
 keywords:
-  - carte
-  - adresse
+  - Carte
+  - Adresse
   - GPS
-  - code postal
+  - Code postal
 additional_css: api
 ---
 
