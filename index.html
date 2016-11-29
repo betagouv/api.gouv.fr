@@ -54,7 +54,7 @@ featuredServices:
       </ul>
       <ul class="link">
         <li>
-          <a href="/explorer/">Explorez les {{ site.api | size }} API</a>
+          <a href="/apis">Explorez les {{ site.api | size }} API</a>
         </li>
         <li>
           <a href="/apropos">En savoir plus</a>
@@ -76,7 +76,7 @@ featuredServices:
       {% assign api_category_size = site.api | where:"category", type.id |size %}
 
       <p class="discoverAPI">
-        <a href="/explorer/{{ type.id }}">
+        <a href="/apis{{ type.id }}">
           {% if api_category_size == 0 %}
             Aucune API n'est encore disponible
           {% elsif api_category_size == 1 %}
@@ -132,7 +132,7 @@ featuredServices:
 
 <script>
 var minChar = 1;
-var htmlFooter = '<a href="/explorer/" class="action">Explorez les {{ site.api | size }} API déjà disponibles</a>';
+var htmlFooter = '<a href="/apis" class="action">Explorez les {{ site.api | size }} API déjà disponibles</a>';
 function escapeRegExChars(value) {
   return value.replace(/[|\\{}()[\]^$+*?.]/g, "\\$&");
 }
