@@ -1,6 +1,10 @@
 <a class="ui fluid card" href="{{ include.description.url }}">
 	<div class="content">
-		<img class="right floated mini ui image" src="/img/{{ include.description.logo }}" alt="logo de {{ include.description.title }}"/>
+    {% if include.description.logo %}
+      <img class="right floated mini ui image" src="/img/{{ include.description.logo }}" alt="logo de {{ include.description.title }}"/>
+    {% else %}
+      <img class="right floated mini ui image" src="/img/{{ include.description.default_logo }}" alt="logo générique api.gouv"/>
+    {% endif %}
 
 		<div class="header">{{ include.description.title }}</div>
 		<div class="meta">

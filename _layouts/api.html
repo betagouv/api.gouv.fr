@@ -47,7 +47,11 @@ layout: default
         <div class="ui relaxed divided list metadata">
           <div class="item logoWrapper">
             <div class="ui small image">
-              <img src="/img/{{ page.logo }}" alt="{{ page.title }}" />
+              {% if page.logo %}
+                <img src="/img/{{ page.logo }}" alt="{{ page.title }}" />
+              {% else %}
+                <img src="/img/{{ page.default_logo }}" alt="{{ page.title }}" />
+              {% endif %}
             </div>
           </div>
           {% if page.stat.url %}
@@ -60,7 +64,11 @@ layout: default
                       -
                     </div>
                     <div class="label">
-                      {{ page.stat.label }}
+                      {% if page.stat.label %}
+                        {{ page.stat.label }}
+                      {% else %}
+                        Appels lors des <br> 30 derniers jours
+                      {% endif %}
                     </div>
                   </div>
                 </div>
