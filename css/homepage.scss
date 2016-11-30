@@ -97,3 +97,20 @@ a.ui.button.moreButton {
 a.ui.big.button.moreButton {
   margin-top: 4%;
 }
+
+@media (max-width: 768px) {
+	.header-with-image {
+		flex-direction: column;
+	}
+
+  #mission-statement .header-with-image img {
+    width: 30%;
+    margin: 0;
+  }
+
+  #mission-statement h1 {
+    padding: 0 10px;
+    margin-top: 10px;
+    font-size: 1.3em;
+  }
+}
