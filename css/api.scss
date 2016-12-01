@@ -11,12 +11,9 @@
   padding-top: 5%;
   padding-bottom: 5%;
   margin-bottom: 2%;
+
   h1 {
     padding: .2em 0;
-    font-size: 200%;
-    line-height: 1.8;
-    letter-spacing: .08em;
-    text-transform: uppercase;
     i.icon {
       height: inherit;
     }
@@ -24,13 +21,13 @@
 
   h2 {
     padding: .2em 0;
-    font-size: 150%;
-    line-height: 1.4;
-    letter-spacing: .05em;
-    text-transform: uppercase;
   }
 
   background: $backgroundBlue;
+
+  .large.ui.secondary.button {
+    margin: 10px;
+  }
 }
 #description {
   .metadata {
