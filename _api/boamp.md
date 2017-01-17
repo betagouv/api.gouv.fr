@@ -1,6 +1,6 @@
 ---
 title: API BOAMP
-tagline: Rechercher et consulter les annonces du Bulletin Officiel des Annonces et Marchés Publics
+tagline: Rechercher et consulter les annonces du Bulletin Officiel des Annonces de Marchés Publics
 doc_tech: http://api.dila.fr
 domain: http://api.dila.fr
 contract: OUVERT
