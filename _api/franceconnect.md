@@ -1,7 +1,7 @@
 ---
 title: FranceConnect
 tagline: FranceConnect est un dispositif qui garantit l’identité d’un usager en se reposant sur des comptes certifiés existants.
-doc_tech: https://www.franceconnect.gouv.fr/documentation
+doc_tech: https://partenaires.franceconnect.gouv.fr/oeuvre
 access_link: https://www.franceconnect.gouv.fr/inscription
 domain: https://www.franceconnect.gouv.fr/
 contract: OUVERT sous contrat
