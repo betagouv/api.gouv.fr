@@ -4,7 +4,7 @@ link: https://play.google.com/store/apps/details?id=fr.cgt.droid.pharma
 description: Application dédiée à la consultation des médicaments référencés par l'agence nationale de la sécurité médicale. 
 api:  # lister toutes les API référencées dans api.gouv.fr et utilisées par le service
  - Medicapi  # utiliser le nom de l'API
-screenshot: pharma.jpg  # nom de fichier relatif au dossier /img
+screenshot: ecran_pharma.png # nom de fichier relatif au dossier /img
 ---
 
 ## Description du service
