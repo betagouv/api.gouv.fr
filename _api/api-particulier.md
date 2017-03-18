@@ -6,7 +6,7 @@ access_link: https://particulier.api.gouv.fr/registration/charte.html
 domain: https://particulier.api.gouv.fr
 contact: contact@particulier.api.gouv.fr
 contract: OUVERT sous contrat
-openapi_definition: https://particulier.api.gouv.fr/docs/api-particulier.yaml
+openapi_definition: https://particulier.api.gouv.fr/api/swagger.yaml
 clients:
   - collectivités
   - ministères
