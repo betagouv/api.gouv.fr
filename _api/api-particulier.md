@@ -1,8 +1,8 @@
 ---
 title: API Particulier
 tagline: Simplifiez les démarches de vos usagers, ne demandez plus de justificatifs
-doc_tech: https://particulier.api.gouv.fr/tech
-access_link: https://particulier.api.gouv.fr/registration/charte.html
+doc_tech: https://particulier.api.gouv.fr/documentation-technique.html
+access_link: https://particulier.api.gouv.fr/charte.html
 domain: https://particulier.api.gouv.fr
 contact: contact@particulier.api.gouv.fr
 contract: OUVERT sous contrat
@@ -14,10 +14,6 @@ partners:
   - DGFiP
   - CNAF
 owner: DINSIC
-stat:
-  lastXdays: 30
-  url: https://particulier.api.gouv.fr/api/analytics/requestsLast30days
-  label: Pièces justificatives dématérialisées
 keywords:
   - Impots
   - CAF
