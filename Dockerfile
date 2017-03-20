@@ -3,6 +3,7 @@ FROM ruby:2.3
 RUN mkdir -p /opt/site
 
 RUN gem install github-pages --no-ri --no-rdoc
+RUN gem install html-proofer
 RUN gem install mini_racer
 
 WORKDIR /opt/site
