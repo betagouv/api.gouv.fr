@@ -22,4 +22,3 @@ Consultation des rubriques suivantes :
 - Prix et base de remboursement si connus
 - Date de mise sur le marché
 ...
-
