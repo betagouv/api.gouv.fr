@@ -41,4 +41,10 @@ defaults:
     values:
       layout: default
 
+gems:
+  - jekyll-redirect-from
+
+whitelist:
+  - jekyll-redirect-from
+
 markdown: kramdown

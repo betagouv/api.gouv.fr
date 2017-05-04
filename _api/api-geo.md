@@ -1,5 +1,6 @@
 ---
-title: GéoAPI
+title: API Géo
+redirect_from: /api/geoapi.html
 tagline: Interrogez les référentiels géographiques plus facilement
 contract: OUVERT
 openapi_definition: https://geo.api.gouv.fr/definition.yml
@@ -26,7 +27,7 @@ keywords:
   - Distance
 ---
 
-La __GéoAPI__ est une boîte-à-outils __facile à prendre en main__ pour rendre vos applications et bases de données plus intelligentes, en terme de positionnement et de connaissance des territoires.
+L' __API Géo__ est une boîte-à-outils __facile à prendre en main__ pour rendre vos applications et bases de données plus intelligentes, en terme de positionnement et de connaissance des territoires.
 
 Grâce à elle vous pouvez notamment :
 
@@ -35,11 +36,6 @@ Grâce à elle vous pouvez notamment :
 * Savoir si une parcelle appartient à certains zonages (appellations d'origine, quartiers prioritaires…) _(bientôt)_
 
 Les différentes fonctionnalités arrivant progressivement, restez informés en suivant cette page ou [en nous contactant](mailto:geo@api.gouv.fr).
-
-
-## Derniers changements
-* 20/06 : Ajout des départements, des régions, de la population municipale et amélioration de la recherche par nom de commune
-* 21/05 : Mise en service de l'API. Recherche de communes par nom, code postal et coordonnées géographiques
 
 ## Informations complémentaires
 
