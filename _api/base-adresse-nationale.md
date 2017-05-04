@@ -13,7 +13,7 @@ clients:
 partners:
   - La poste
   - IGN
-owner: ETALAB
+owner: ETALAB (DINSIC)
 stat:
   lastXdays: 7
   url: https://api-adresse.data.gouv.fr/analytics/stats.json

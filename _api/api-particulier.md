@@ -13,7 +13,7 @@ clients:
 partners:
   - DGFiP
   - CNAF
-owner: DINSIC
+owner: ETALAB (DINSIC)
 keywords:
   - Impots
   - CAF
