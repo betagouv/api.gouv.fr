@@ -1,19 +1,20 @@
 ---
 title: OpenFisca
-tagline: Moteur ouvert de simulation du système socio-fiscal
-doc_tech: http://doc.openfisca.fr
-domain: http://api.openfisca.fr
+tagline: Calculer l'impôt, les cotisations, les aides sociales…
+doc_tech: https://doc.openfisca.fr/openfisca-web-api/index.html
+domain: https://api.openfisca.fr
 contract: OUVERT
 contact: contact@openfisca.fr
 clients:
   - citoyens
   - entreprises
   - administrations
-partners: # liste des partenaires
-  - IPP
-  - Incubateur des startups de l'État
-owner: Etalab # organisme gérant l'API
-keywords: # liste des mots clés utilisés lors de la recherche
+partners:
+  - beta.gouv.fr
+  - Etalab
+  - Institut des Politiques Publiques
+owner: Etalab
+keywords:
   - Impôts
   - Fiscalité
   - Cotisations sociales
@@ -24,11 +25,17 @@ keywords: # liste des mots clés utilisés lors de la recherche
 logo: logo-openfisca.svg
 ---
 
-## Description de l'API
+## Calculer le droit
 
- OpenFisca est un moteur ouvert de micro-simulation du système socio-fiscal.
- Il permet de calculer simplement un grand nombre de prélèvements sociaux, prestations sociales et d'impôts payés
- par les ménages, et de simuler l'impact de réformes sur leur budget.
+OpenFisca est un moteur de calcul libre et ouvert qui permet de modéliser le système socio-fiscal de manière collaborative et transparente. Il permet de calculer un grand nombre de prélèvements sociaux, prestations sociales et d'impôts, et de simuler l'impact de réformes sur ces montants.
+Envoyez une situation, précisez ce que vous souhaitez calculer, et recevez des résultats en quelques millisecondes !
 
-Il s'agit d'un outil à la fois pédagogique pour aider les citoyens à mieux comprendre le système socio-fiscal,
-et utilisé en production par des services publics.
+Plusieurs milliers de variables sont calculables, et une [interface simple et claire](https://legislation.openfisca.fr) vous permet de toutes les découvrir.
+
+## Obtenir les valeurs définies par la loi
+
+En plus de ses capacités de calcul, OpenFisca expose également l'intégralité des valeurs de référence de la législation ([tranches d'imposition](https://legislation.openfisca.fr/impot_revenu.bareme), [taux AT/MP](https://legislation.openfisca.fr/cotsoc.accident.faible), montant du SMIC…), avec une couverture historique qui peut se compter en décennies.
+
+## Exemples
+
+Ce logiciel est utilisé par des chercheurs en économie et des services publics comme mes-aides.gouv.fr, embauche.beta.gouv.fr ou mesdroitssociaux.gouv.fr.
