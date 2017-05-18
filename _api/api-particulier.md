@@ -6,7 +6,7 @@ access_link: https://particulier.api.gouv.fr/charte.html
 domain: https://particulier.api.gouv.fr
 contact: contact@particulier.api.gouv.fr
 contract: OUVERT sous contrat
-openapi_definition: https://particulier-swagger.api.gouv.fr/api/swagger.yaml
+openapi_definition: https://particulier-sandbox.api.gouv.fr/api/swagger.yaml
 clients:
   - collectivités
   - ministères
