@@ -1,0 +1,35 @@
+---
+title: ARPENT(résultats)
+tagline: Accéder aux calendriers de délibération et aux résultats aux examens de l'enseignement agricole.
+doc_tech: https://ensagri.agriculture.gouv.fr/arpent-resultats-api/swagger-ui.html
+owner: Ministère de l'agriculture et de l'alimentation
+category: public
+contract: OUVERT
+logo: maa.png
+openapi_definition: https://ensagri.agriculture.gouv.fr/arpent-resultats-api/v2/api-docs?group=arpent-resultats
+contact:  arpent-resultat.sg@agriculture.gouv.fr
+clients:
+  - particuliers
+  - entreprises
+  - presse
+  - collectivités
+  - ministères
+keywords:
+  - Résultats aux examens
+  - Résultats
+  - Examens
+  - Enseignement agricole
+  - ExamAgri
+---
+
+Les organes de presses publient chaque année les résultats aux examens de leur région.
+
+Dans le respect des données personnelles des candidats, ARPENT(résultats) vous propose d'accéder aux informations de l'enseignement agricole : 
+- Calendriers de délibération pour identifier le nombre de candidats potentiellement admis afin de calculer la taille de l'encart sur le journal papier
+- Résultats aux examens des candidats reçus ou admis au rattrapage
+
+Au delà des résultats, vous trouverez l'ensemble des référentiels de l'enseignement agricole nécessaires à la lisibilité de ces données : nom de l'établissement, nom du diplôme, ...
+
+### Besoin d'un exemple ?
+
+N'hésitez pas à consulter le code source d'ARPENT(résultats) qui implémente cette API : [https://github.com/AGRILAB/arpent-resultats](https://github.com/AGRILAB/arpent-resultats)
