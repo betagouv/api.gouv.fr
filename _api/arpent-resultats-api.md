@@ -46,16 +46,14 @@ L'API Résultats aux examens exposant des données à caractère personnel, le m
 
 ### Aller à l'essentiel... 
 
-Nous avons choisi d'exposer toutes les ressources utilisées par le service : [https://ensagri.agriculture.gouv.fr/arpent-resultats/](https://ensagri.agriculture.gouv.fr/arpent-resultats/)
+Nous avons choisi d'exposer toutes les ressources utilisées par le service [ARPENT(résultats)](https://ensagri.agriculture.gouv.fr/arpent-resultats/). La [documentation technique Swagger](https://ensagri.agriculture.gouv.fr/arpent-resultats-api/swagger-ui.html#/) peut donc paraître assez riche. 
+A noter aussi : certaines ressources relevent d'une authentification renforcée. Les modalités d'accès seront fournies ultérieurement.
 
 Voici les ressources principales qui exposent les résultats des candidats de l'enseignement agricole : 
 - Calendriers de délibération et nombre de candidats potentiels : 
 
 ```sh 
-curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{
-  "ina": "string",
-  "numGestion": "string"
-}' 'https://ensagri.agriculture.gouv.fr/arpent-resultats-api/api/arpent-resultats/audit-notes/credentials'
+Curl -X GET --header 'Accept: application/json' 'https://ensagri.agriculture.gouv.fr/arpent-resultats-api/api/arpent-resultats/resultats-grand-public/calendriers?departement=30'
 ```
 
 ```Json
