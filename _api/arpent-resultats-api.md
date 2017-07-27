@@ -17,7 +17,7 @@ clients:
 keywords:
   - Résultats aux examens
   - Résultats
-  - Examens
+  - Examen
   - Enseignement agricole
   - ExamAgri
   - Etudiant
@@ -32,9 +32,9 @@ keywords:
 
 ### Pourquoi ?
 
-Les organes de presses publient chaque année les résultats aux examens de leur région.
+Les journaux publient chaque année les résultats aux examens de leur région.
 
-Dans le respect des données personnelles des candidats, ARPENT(résultats) vous propose d'accéder aux informations de l'enseignement agricole : 
+Dans le respect des données personnelles des candidats, ARPENT(résultats) vous propose d'accéder aux données de l'enseignement agricole : 
 - Calendriers de délibération pour identifier le nombre de candidats potentiellement admis afin de calculer la taille de l'encart sur le journal papier
 - Résultats aux examens des candidats reçus ou admis au rattrapage
 
@@ -42,13 +42,12 @@ Au delà des résultats, vous trouverez l'ensemble des référentiels de l'ensei
 
 ### Loi CNIL
 
-L'API Résultats aux examens exposant des données à caractère personnel, le ministère en charge de l'agriculture attire votre attention sur les obligations légales qui en découlent. Le traitement de ces données relève des obligations de déclaration de la Loi 78-17 du 6 janvier 1978 modifiée, dîte Loi CNIL : [https://www.cnil.fr/fr/loi-78-17-du-6-janvier-1978-modifiee](https://www.cnil.fr/fr/loi-78-17-du-6-janvier-1978-modifiee)
+L'API Résultats aux examens exposant des **données à caractère personnel**, le ministère en charge de l'agriculture attire votre attention sur les **obligations légales** qui en découlent. Le traitement de ces données relève des obligations de déclaration de la Loi 78-17 du 6 janvier 1978 modifiée, dîte Loi CNIL : [https://www.cnil.fr/fr/loi-78-17-du-6-janvier-1978-modifiee](https://www.cnil.fr/fr/loi-78-17-du-6-janvier-1978-modifiee)
 
 ### Aller à l'essentiel... 
 
-Nous avons choisi d'exposer toutes les ressources utilisées par le service [ARPENT(résultats)](https://ensagri.agriculture.gouv.fr/arpent-resultats/). La [documentation technique Swagger](https://ensagri.agriculture.gouv.fr/arpent-resultats-api/swagger-ui.html#/) peut donc paraître assez riche. 
-
-A noter : certaines ressources relevent d'une authentification renforcée. Les modalités d'accès seront fournies ultérieurement.
+Nous avons choisi d'exposer toutes les ressources utilisées par le service [ARPENT(résultats)](https://ensagri.agriculture.gouv.fr/arpent-resultats/). La [documentation technique](https://ensagri.agriculture.gouv.fr/arpent-resultats-api/swagger-ui.html#/) peut donc paraître assez riche. 
+*A noter : certaines ressources relevent d'une authentification renforcée. Les modalités d'accès seront fournies ultérieurement.*
 
 Pour aller à l'essentiel, voici celles qui exposent le plus simplement les calendriers et résultats aux examens : 
 - Calendriers de délibération : 
@@ -82,4 +81,3 @@ curl -X GET --header 'Accept: application/json' 'https://ensagri.agriculture.gou
     "resultat": "Admission"
  }
  ```
-
