@@ -6,7 +6,6 @@ screenshot: arpent-resultats.png
 api:
   - API Géo
   - API Résultats aux examens
-  - API Relevés de notes
 ---
 
 ARPENT(résultats) permet aux candidats aux examens de l'enseignement agricole de connaître leur résultats et d'éditer leur relevé de notes. Grâce à l'API Géo, ARPENT(résultats) vous guide suivant un axe géographique pour retrouver votre établissement scolaire sans être obligé d'utiliser la carte.
