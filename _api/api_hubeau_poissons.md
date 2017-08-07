@@ -4,7 +4,7 @@ tagline: Données sur les poissons de rivières
 contract: OUVERT
 openapi_definition: http://hubeau.eaufrance.fr/api/v0/api-docs?group=etat_piscicole
 doc_tech: http://hubeau.eaufrance.fr/page/documentation_poisson/
-logo:logo_hubeau.png
+logo: logo_hubeau.png
 contact: t.vilmus@brgm.fr
 clients:
   - particuliers
