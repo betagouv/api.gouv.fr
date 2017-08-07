@@ -26,7 +26,7 @@ keywords:
 
 L'API Etat Piscicole de Hub'Eau ou __API Poissons__ permet de connaître les poissons décomptés par pêche électrique dans une rivière.
 La source de données est : [Informations sur les Milieux Aquatiques pour la Gestion Environnementale (IMAGE)](http://www.image.eaufrance.fr/).
-Il s'agit des données de taille des poissons pêchés au moyen de [pêches électriques](#pêche-électrique). Elles proviennent essentiellement de l'AFB (anciennement ONEMA, anciennement CSP).
+Il s'agit des données de taille des poissons pêchés au moyen de pêches électriques. Elles proviennent essentiellement de l'AFB (anciennement ONEMA, anciennement CSP).
 Les données sont exposées sous la forme d'une API REST, les formats supportés sont : JSON, GeoJSON et CSV.
 
 Les différentes opérations possibles sont :
