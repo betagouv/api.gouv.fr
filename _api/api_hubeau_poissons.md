@@ -26,19 +26,19 @@ keywords:
 
 L'API Etat Piscicole de Hub'Eau ou __API Poissons__ permet de connaître les poissons décomptés par pêche électrique dans une rivière.
 La source de données est : [Informations sur les Milieux Aquatiques pour la Gestion Environnementale (IMAGE)](http://www.image.eaufrance.fr/).
-Il s'agit des données de taille des poissons pêchés au moyen de [pêches électriques](#pêche-électrique). Elles proviennent essentiellement de [l'AFB](#afb) (anciennement ONEMA, anciennement CSP).
+Il s'agit des données de taille des poissons pêchés au moyen de [pêches électriques](#pêche-électrique). Elles proviennent essentiellement de l'AFB (anciennement ONEMA, anciennement CSP).
 Les données sont exposées sous la forme d'une API REST, les formats supportés sont : JSON, GeoJSON et CSV.
 
 Les différentes opérations possibles sont :
 
-* code_espece_poisson : obtenir les correspondances des codes des espèces de poissons entre le référentiel AFB (3 lettres) et le référentiel [SANDRE](#sandre) (code numérique). Cette API permet également d'obtenir les noms commun et latin des espèces à partir des codes AFB ou SANDRE ; 
-* lieux_peche : connaître les lieux où ont été effectuées des [pêches électriques](#pêche-électrique). A partir d'une ou plusieurs espèces de poissons, l'API fournit les [stations](#station) et cours d'eau où ont été pêchés ces poissons. Il est possible de limiter la recherche en entrant un rectangle d'emprise géographique, un département, une commune, un sous-secteur hydrographique et une période d'opération ;
-* poissons : connaître les poissons décomptés par [pêche électrique](#pêche-électrique) dans une rivière. A partir cette fois des codes des différentes stations, on récupère d'abord des informations sur la [station](#station) (localisation, cours d'eau) puis sur les différentes opérations de pêche électrique qui y ont eu lieu : date, espèces de poissons pêchées, effectifs de chaque espèce, classes de taille de chaque espèce. Il est possible de limiter la recherche à une période précise.
+* code_espece_poisson : obtenir les correspondances des codes des espèces de poissons entre le référentiel AFB (3 lettres) et le référentiel SANDRE (code numérique). Cette API permet également d'obtenir les noms commun et latin des espèces à partir des codes AFB ou SANDRE ; 
+* lieux_peche : connaître les lieux où ont été effectuées des pêches électriques. A partir d'une ou plusieurs espèces de poissons, l'API fournit les stations et cours d'eau où ont été pêchés ces poissons. Il est possible de limiter la recherche en entrant un rectangle d'emprise géographique, un département, une commune, un sous-secteur hydrographique et une période d'opération ;
+* poissons : connaître les poissons décomptés par pêche électrique dans une rivière. A partir cette fois des codes des différentes stations, on récupère d'abord des informations sur la station (localisation, cours d'eau) puis sur les différentes opérations de pêche électrique qui y ont eu lieu : date, espèces de poissons pêchées, effectifs de chaque espèce, classes de taille de chaque espèce. Il est possible de limiter la recherche à une période précise.
 
 Dernières évolutions de l'API Etat piscicole de Hub'Eau:
 
 * 04/05/2017 : mise à jour de l'adresse de l'API api.hubeau.fr vers [hubeau.eaufrance.fr/](http://hubeau.eaufrance.fr/)
-* 21/09/2016 : ajout des libellés [SANDRE](#SANDRE : Service d'Administration Nationale des Données et Référentiels sur l'Eau) à côté des codes SANDRE dans la réponse
+* 21/09/2016 : ajout des libellés SANDRE à côté des codes SANDRE dans la réponse
 * 08/08/2016 : ajout du paramètre fields, la valeur est une liste des champs souhaités dans la réponse (fonctionnalité expérimentale), par exemple fields=code_station,localisation
 
 Prochaines évolutions : accès à des données plus récentes et mise à disposition de nouveaux attributs (IPR, scores, méthodes et modes de prospection), prévu pour le 2e trimestre 2018.
@@ -50,7 +50,7 @@ Hub’Eau est la solution pour accéder aux  données sur l’eau sans être con
 Hub’Eau offre plusieurs interfaces (API) facilitant la réutilisation de données grâce au potentiel de jeux de données immédiatement intelligibles et exploitables.
 Hub’Eau c’est un service pérenne de la toile Eau France. 
 Osez l’expérience Hub’Eau : proposez-nous de nouveaux terrains de jeux, et mettons en commun notre intelligence pour créer la valeur de demain.
-Hub’Eau c’est le résultat de la collaboration de l’[AFB](#afb) et du [BRGM](#brgm) dans le cadre du pôle de recherche et d'innovation en interopérabilité des systèmes d'information distribués sur l'eau : [INSIDE](http://www.pole-inside.fr/fr).  
+Hub’Eau c’est le résultat de la collaboration de l’AFB et du BRGM dans le cadre du pôle de recherche et d'innovation en interopérabilité des systèmes d'information distribués sur l'eau : [INSIDE](http://www.pole-inside.fr/fr).  
 
 Les autres API disponibles à ce jour dans Hub'Eau sont :
 
