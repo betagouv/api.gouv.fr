@@ -2,7 +2,7 @@
 title: Hub'Eau - Etat piscicole des rivières
 tagline: Données sur les poissons de rivières
 contract: OUVERT
-openapi_definition: https://hubeau.eaufrance.fr/api/v0/api-docs?group=etat_piscicole
+openapi_definition: https://hubeau.eaufrance.fr/api/v0/etat_piscicole/api-docs
 doc_tech: http://hubeau.eaufrance.fr/page/documentation_poisson/
 logo: logo_hubeau.png
 contact: t.vilmus@brgm.fr
