@@ -9,7 +9,7 @@ contract: OUVERT sous contrat
 openapi_definition: https://particulier-sandbox.api.gouv.fr/api/swagger.yaml
 stat:
   lastXdays: 30
-  url: https://particulier.api.gouv.fr/api/analytics/requestsLast30Days
+  url: https://monitoring.particulier.api.gouv.fr/api/stats/count/particulier.api.gouv.fr?range[@timestamp][gte]=now-30d&match[status-code]=200
   label: Justificatifs papier évités
 clients:
   - collectivités
