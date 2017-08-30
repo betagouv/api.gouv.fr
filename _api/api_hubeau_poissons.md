@@ -22,7 +22,7 @@ keywords:
   - Etat piscicole
 ---
 
-###Description fonctionnelle de l'API Poissons
+### Description fonctionnelle de l'API Poissons
 
 L'API Etat Piscicole de Hub'Eau ou __API Poissons__ permet de connaître les poissons décomptés par pêche électrique dans une rivière.
 La source de données est : [Informations sur les Milieux Aquatiques pour la Gestion Environnementale (IMAGE)](http://www.image.eaufrance.fr/).
@@ -43,7 +43,7 @@ Dernières évolutions de l'API Etat piscicole de Hub'Eau:
 
 Prochaines évolutions : accès à des données plus récentes et mise à disposition de nouveaux attributs (IPR, scores, méthodes et modes de prospection), prévu pour le 2e trimestre 2018.
 
-###Connaissez-vous Hub'Eau ?
+### Connaissez-vous Hub'Eau ?
 
 [Hub’Eau](http://hubeau.eaufrance.fr) c’est la plateforme qu’il vous faut pour manipuler facilement les données ouvertes disponibles sur l’eau.
 Hub’Eau est la solution pour accéder aux  données sur l’eau sans être confronté aux problèmes d’hétérogénéité, de sources multiples, …. 
@@ -59,25 +59,25 @@ Les autres API disponibles à ce jour dans Hub'Eau sont :
 * Qualité physico-chimique des cours d'eau.
 
 
-###Exemples de réutilisation
+### Exemples de réutilisation
 
 * [Cartographie de la présence des espèces de poissons](http://hubeau.eaufrance.fr/sites/default/files/api/demo/poissons.html)
 * [Mortalité des saumons et des anguilles par les turbines hydroélectriques](https://public.tableau.com/views/Devalpomi/Devalpomi?:showVizHome=no), par l'association [Logrami - Loire Grands Migrateurs](http://www.logrami.fr/)
 * [Présence du Silure en France](https://public.tableau.com/views/HubEau/PrsenceduSilure?%3AshowVizHome=no), par l'association [Logrami - Loire Grands Migrateurs](http://www.logrami.fr/)
 
-###Glossaire
+### Glossaire
 
-####AFB
+#### AFB
 L'[AFB (Agence Française de la Biodiversité)](http://www.afbiodiversite.fr/) a pris le relais du CSP (Conseil Supérieur de la Pêche) puis de l'ONEMA (Office National de l'Eau et des Milieux Aquatiques) pour (entres autres) l'acquisition et la diffusion de données piscicoles. Les missions de l'AFB vont bien au-delà de cet aspect : plus généralement, l'AFB, établissement public du ministère de la Transition écologie et solidaire, exerce des missions d’appui à la mise en oeuvre des politiques publiques dans les domaines de la connaissance, la préservation, la gestion et la restauration de la biodiversité des milieux terrestres, aquatiques et marins. Elle vient en appui aux acteurs publics mais travaille également en partenariat étroit avec les acteurs socio-économiques. Elle a aussi vocation à aller à la rencontre du public pour mobiliser les citoyens en faveur de la biodiversité.
 
-####BRGM
+#### BRGM
 Le [BRGM (Bureau de Recherches Géologiques et Minières)](http://www.brgm.fr/), service géologique national français, est l'établissement public de référence dans les applications des sciences de la Terre pour gérer les ressources et les risques du sol et du sous-sol. Le BRGM assure notamment la diffusion de données géologiques et environnementales via les technologies de l’information et de la communication, avec pour objectif la mise à disposition des pouvoirs publics, des acteurs économiques et du grand public d'informations géoréférencées pour appuyer leurs décisions. Parmi les domaines de compétence du BRGM figurent les infrastructures informatiques de diffusion, calcul, simulation-visualisation 3D et réalité virtuelle ainsi que l'interopérabilité.
 
-####Pêche électrique
+#### Pêche électrique
 Opération d'inventaire des organismes aquatiques (poissons en général mais aussi crustacés) au moyen d'un courant électrique. Les poissons sont attirés puis paralysés par le champ magnétique, ainsi ils remontent à la surface, sont capturés, identifiés, comptés, mesurés puis relachés dans leur milieu.
 
-####SANDRE
+#### SANDRE
 Le [SANDRE (Service d'Administration Nationale des Données et Référentiels sur l'Eau)](http://www.sandre.eaufrance.fr/) a pour mission d'établir et de mettre à disposition le référentiel des données sur l'eau du SIE (Système d'Information sur l'Eau). Ce référentiel, composé de spécifications techniques et de listes de codes libres d'utilisation, décrit les modalités d'échange des données sur l'eau à l'échelle de la France. D'un point de vue informatique, le Sandre garantit l'interopérabilité des systèmes d'information relatifs à l'eau.
 
-####Station
+#### Station
 Lieu de pêche électrique. Les stations ont un code numérique à 8 chiffres, des coordonnées X, Y et sont rattachées à un cours d'eau. Les stations sont le lieu de pêches électriques à diverses périodes où on prélève les poissons pour déterminer les différentes espèces, les effectifs par espèce puis les classes de tailles par espèce. Les classes de taille ont en général une largeur de 10mm.
