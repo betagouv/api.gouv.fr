@@ -2,15 +2,15 @@
 title: API La Bonne Boite # nom commercial de l'API
 tagline: Accédez aux taux de retour à l'emploi par formation  # une phrase maximum
 owner: Pôle Emploi  # producteur de l'API
-category: ouverte  # type de donnée exposée, voir api_category dans le fichier _config.yml
+category: ???  # type de donnée exposée, voir api_category dans le fichier _config.yml
 contract: OUVERT sous contrat  # peut être "OUVERT" ou "OUVERT sous contrat"
-logo: https://ma-super-api.fr/logo.svg  # URL d'un logo de l'API
-openapi_definition: https://ma-super-api.fr/spec.yaml # URL de la documentation au format OpenAPI <https://github.com/OAI/OpenAPI-Specification>
-contact:  contact@ma-super-api.fr #moyen de contact, soit un mail, soit un lien vers formulaire de contact
-doc_tech: https://ma-super-api.fr/doc  # URL de la documentation technique de l'API au format HTML
-access_link: https://ma-super-api.fr/register  # URL d'une page de demande d'accès si l'API est à accès restreint
+logo: https://www.emploi-store-dev.fr/portail-developpeur-cms/files/live/sites/emploi-store-dev/files/contenu/documentation/pole_emploi_quadri35449.zip  # URL d'un logo de l'API
+openapi_definition: # URL de la documentation au format OpenAPI <https://github.com/OAI/OpenAPI-Specification>
+contact:  contact@emploi-store-dev.fr #moyen de contact, soit un mail, soit un lien vers formulaire de contact
+doc_tech: https://www.emploi-store-dev.fr/portail-developpeur-cms/home/catalogue-des-api/documentation-des-api/api-la-bonne-boite-v1.html  # URL de la documentation technique de l'API au format HTML
+access_link: https://www.emploi-store-dev.fr/portail-developpeur/detailapicatalogue/labonneboite  # URL d'une page de demande d'accès si l'API est à accès restreint
 stat:
-  url: https://ma-super-api.fr/stats  # adresse à laquelle un nombre d'appels à l'API est publié, en content-type application/json
+  url: https://www.emploi-store-dev.fr/portail-developpeur-cms/stats  # adresse à laquelle un nombre d'appels à l'API est publié, en content-type application/json
   label: Appels  # description d'un appel à l'API
   lastXdays: 30  # nombre de jours sur lequel les appels à l'API sont comptabilisés
 clients:  # types d'entités habilitées à utiliser l'API
@@ -19,21 +19,23 @@ clients:  # types d'entités habilitées à utiliser l'API
   - collectivités
   - ministères
 partners:  # liste de co-producteurs de l'API
-  - fournisseur local  # texte libre
+  - Pôle emploi
+  - La Bonne Boite
+  # texte libre
 keywords: # utilisé dans la recherche
-  - adresse  # texte libre
-  - SIRET
+  - Pôle emploi
+  - Travail
+  - Emploi
+  - La Bonne Boite
+  - Embauche
+  - Entreprise
+  - Recrutement
 ---
 
 ## Description de l'API
 
-Texte libre au format [Markdown](http://ricostacruz.com/cheatsheets/markdown.html).
+La Bonne Boite cible les entreprises ayant des perspectives d'embauche élevées et permet d’être plus efficace dans l’envoi de candidatures spontanées. Ce ciblage est obtenu par l'analyse de millions de recrutements sur toutes les entreprises françaises. L’API La Bonne Boite permet de récupérer la liste des entreprises classées par potentiel d'embauche pour un métier (code ROME) et/ou activité (code NAF) donné, pour une localisation donnée.
 
-Ne pas utiliser le premier niveau de titre `h1` car il est réservé.
+Vous découvrirez des formats de fichiers supplémentaires, des outils de visualisation et d'autres  API liées à l'emploi sur https://www.emploi-store-dev.fr/
 
-## Rappel
 
-- [ ] Modifier le nom du fichier `nom_api.md` dans le champ ci-dessus.
-- [ ] Créer une nouvelle branche pour l'ajout de ce fichier, et la nommer du même nom que le fichier `nom_api`.
-- [ ] Ouvrir une pull request pour valider l'intégration.
-- [ ] Effacer ce texte une fois que vous l'avez lu
