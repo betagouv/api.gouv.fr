@@ -68,7 +68,9 @@
   #validator {
     display: none
   }
+
   .ui.statistic {
+    display: block;
     margin-top: 0.8em;
     margin-bottom: 0.8em;
     &>.value {
