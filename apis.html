@@ -5,7 +5,7 @@ additional_css: catalog
 
 <section id="list" class="ui container main">
 	<h2 class="ui divider horizontal">Toutes les API de l'administration</h2>
-	<div class="ui two stackable cards">
+	<div class="ui three stackable cards">
 		{% for api in site.api %}
 			{% include api-card.html description=api %}
 		{% endfor %}
