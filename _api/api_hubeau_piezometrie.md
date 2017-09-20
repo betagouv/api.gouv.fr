@@ -1,6 +1,6 @@
 ---
 title: Hub'Eau - Piézométrie
-tagline: Piézométrie : niveaux des nappes d'eau souterraines
+tagline: Piézométrie (niveaux des nappes d'eau souterraines)
 contract: OUVERT
 openapi_definition: https://hubeau.eaufrance.fr/api/v0/niveaux_aquiferes/api-docs
 doc_tech: http://hubeau.eaufrance.fr/page/documentation_piezometrie
