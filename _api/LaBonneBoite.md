@@ -2,7 +2,6 @@
 title: API La Bonne Boite # nom commercial de l'API
 tagline: Accédez aux taux de retour à l'emploi par formation  # une phrase maximum
 owner: Pôle Emploi  # producteur de l'API
-category: # type de donnée exposée, voir api_category dans le fichier _config.yml
 contract: OUVERT sous contrat  # peut être "OUVERT" ou "OUVERT sous contrat"
 logo: https://www.emploi-store-dev.fr/portail-developpeur-cms/files/live/sites/emploi-store-dev/files/contenu/documentation/pole_emploi_quadri35449.zip  # URL d'un logo de l'API
 openapi_definition: # URL de la documentation au format OpenAPI <https://github.com/OAI/OpenAPI-Specification>
