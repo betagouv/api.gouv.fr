@@ -1,0 +1,30 @@
+---
+title: Annuaire des établissements publics de l'administration
+contract: OUVERT
+openapi_definition: http://etablissements-publics.api.gouv.fr/definition.yml
+doc_tech: http://etablissements-publics.api.gouv.fr
+owner: beta.gouv.fr (DINSIC)
+layout: api
+logo: logo-generique-startup-carre.jpg
+contact: contact@beta.gouv.fr
+clients:
+  - particuliers
+  - entreprises
+  - bureaux d'études
+  - collectivités
+  - ministères
+keywords:
+  - Annuaire
+  - Établissements
+  - Publics
+  - Administration
+---
+
+# Annuaire des établissements publics de l'administration
+
+Cette API recense plus de 60 000 guichets publics locaux (mairies, organismes sociaux, services de l'état, etc.). Elle fournit leurs coordonnées (adresses, téléphones, site internet, horaires d'ouverture, coordonnées de géolocalisation) en [Licence Ouverte / Open Licence](https://www.etalab.gouv.fr/licence-ouverte-open-licence).
+
+> Le contenu de cet annuaire est généré automatiquement à partir des données de [data.gouv.fr](https://www.data.gouv.fr/fr/datasets/service-public-fr-annuaire-de-l-administration-base-de-donnees-locales/),
+> par le script d'import disponible sur [github.com/sgmap/annuaire-import](https://github.com/sgmap/annuaire-import)
+
+>La Base de données locales référence plus de 60 000 guichets publics locaux (mairies, organismes sociaux, services de l'état, etc.). Elle fournit leurs coordonnées (adresses, téléphones, site internet, horaires d'ouverture, coordonnées de géolocalisation). En complément, sont indexés plus de 36 000 fichiers des communes, précisant la compétence géographique des guichets. La liste des types d'organismes référencés dans la base est consultable dans le fichier PDF joint ci-dessous. Le schéma et sa documentation sont disponibles à l'adresse : https://www.service-public.fr/partenaires/comarquage/documentation
