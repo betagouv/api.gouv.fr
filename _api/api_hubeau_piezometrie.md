@@ -1,9 +1,9 @@
 ---
-title: Hub'Eau - Etat piscicole des rivières
-tagline: Données sur les poissons de rivières
+title: Hub'Eau - Piézométrie
+tagline: Piézométrie (niveaux des nappes d'eau souterraines)
 contract: OUVERT
-openapi_definition: https://hubeau.eaufrance.fr/api/v0/etat_piscicole/api-docs
-doc_tech: http://hubeau.eaufrance.fr/page/documentation_poisson/
+openapi_definition: https://hubeau.eaufrance.fr/api/v0/niveaux_aquiferes/api-docs
+doc_tech: http://hubeau.eaufrance.fr/page/documentation_piezometrie
 logo: logo_hubeau.png
 contact: t.vilmus@brgm.fr
 clients:
@@ -16,32 +16,32 @@ partners:
   - BRGM
 owner: AFB
 keywords:
-  - Poissons
-  - Pêche électrique
-  - Cours d'eau
-  - Etat piscicole
+  - Piézométrie
+  - Aquifère
+  - Nappe
+  - Niveau d'eau
+  - Eau souterraine
+  - Hydrogéologie
 ---
 
-### Description fonctionnelle de l'API Poissons
+### Description fonctionnelle de l'API Piézométrie
 
-[L'API Etat Piscicole](http://hubeau.eaufrance.fr/page/api-poisson) de Hub'Eau ou __API Poissons__ permet de connaître les poissons décomptés par pêche électrique dans une rivière.
-La source de données est : [Informations sur les Milieux Aquatiques pour la Gestion Environnementale (IMAGE)](http://www.image.eaufrance.fr/).
-Il s'agit des données de taille des poissons pêchés au moyen de pêches électriques. Elles proviennent essentiellement de l'AFB (anciennement ONEMA, anciennement CSP).
+[L'API Piézométrie](http://hubeau.eaufrance.fr/page/api-piezometrie) de Hub'Eau permet d'accéder aux données sur le niveau des nappes d'eau souterraines. 
+Ces données sont issues de la banque [ADES](http://www.ades.eaufrance.fr). Il s'agit des chroniques de hauteur d'eau dans les piézomètres.
+Les données sont mises à jour au fil de l'eau dans ADES, et une fois par semaine (le lundi matin) dans Hub'Eau.
 Les données sont exposées sous la forme d'une API REST, les formats supportés sont : JSON, GeoJSON et CSV.
 
 Les différentes opérations possibles sont :
 
-* code_espece_poisson : obtenir les correspondances des codes des espèces de poissons entre le référentiel AFB (3 lettres) et le référentiel SANDRE (code numérique). Cette API permet également d'obtenir les noms commun et latin des espèces à partir des codes AFB ou SANDRE ; 
-* lieux_peche : connaître les lieux où ont été effectuées des pêches électriques. A partir d'une ou plusieurs espèces de poissons, l'API fournit les stations et cours d'eau où ont été pêchés ces poissons. Il est possible de limiter la recherche en entrant un rectangle d'emprise géographique, un département, une commune, un sous-secteur hydrographique et une période d'opération ;
-* poissons : connaître les poissons décomptés par pêche électrique dans une rivière. A partir cette fois des codes des différentes stations, on récupère d'abord des informations sur la station (localisation, cours d'eau) puis sur les différentes opérations de pêche électrique qui y ont eu lieu : date, espèces de poissons pêchées, effectifs de chaque espèce, classes de taille de chaque espèce. Il est possible de limiter la recherche à une période précise.
+* chroniques : permet de lister les niveaux des nappes d'eau (chroniques piézométriques) d'une station de mesure des eaux souterraines (piézomètre) ; 
+* stations : permet de rechercher les stations de mesure des niveaux des nappes d'eau (stations piézométriques ou piézomètres).
 
-Dernières évolutions de l'API Etat piscicole de Hub'Eau:
+Dernières évolutions de l'API Piézométrie de Hub'Eau:
 
 * 04/05/2017 : mise à jour de l'adresse de l'API api.hubeau.fr vers [hubeau.eaufrance.fr/](http://hubeau.eaufrance.fr/)
+* 24/11/2016 : ajout de l'attribut "timestamp_mesure" sur l'opération "chroniques" 
 * 21/09/2016 : ajout des libellés SANDRE à côté des codes SANDRE dans la réponse
 * 08/08/2016 : ajout du paramètre fields, la valeur est une liste des champs souhaités dans la réponse (fonctionnalité expérimentale), par exemple fields=code_station,localisation
-
-Prochaines évolutions : accès à des données plus récentes et mise à disposition de nouveaux attributs (IPR, scores, méthodes et modes de prospection), prévu pour le 2e trimestre 2018.
 
 ### Connaissez-vous Hub'Eau ?
 
@@ -54,30 +54,40 @@ Hub’Eau c’est le résultat de la collaboration de l’AFB et du BRGM dans le
 
 Les autres API disponibles à ce jour dans Hub'Eau sont :
 
+* Etat piscicole ;
 * Indicateurs Eau potable et Assainissement ;
-* Piézométrie ;
 * Qualité physico-chimique des cours d'eau.
 
 
 ### Exemples de réutilisation
 
-* [Cartographie de la présence des espèces de poissons](http://hubeau.eaufrance.fr/sites/default/files/api/demo/poissons.html)
-* [Mortalité des saumons et des anguilles par les turbines hydroélectriques](https://public.tableau.com/views/Devalpomi/Devalpomi?:showVizHome=no), par l'association [Logrami - Loire Grands Migrateurs](http://www.logrami.fr/)
-* [Présence du Silure en France](https://public.tableau.com/views/HubEau/PrsenceduSilure?%3AshowVizHome=no), par l'association [Logrami - Loire Grands Migrateurs](http://www.logrami.fr/)
+* [Soumettez le votre sur la page des réutilisateurs](http://hubeau.eaufrance.fr/page/proposez-exemples-dusage)
 
 ### Glossaire
+
+#### ADES
+[ADES](http://www.ades.eaufrance.fr) est la banque nationale d’Accès aux Données sur les Eaux Souterraines qui rassemble sur son site internet public des données quantitatives et qualitatives relatives aux eaux souterraines, dont les objectifs sont de constituer un outil de collecte et de conservation des données sur les eaux souterraines, d’être mobilisable par un large ensemble de partenaires, de permettre les traitements nécessaires à l’action de chacun des partenaires, d’être le guichet d’accès aux informations sur les eaux souterraines, d’avoir un suivi de l’état patrimonial des ressources pour répondre à la politique des eaux souterraines, et enfin d’adopter au niveau national un principe de transparence et d’accessibilité aux données sur les eaux souterraines. 
 
 #### AFB
 L'[AFB (Agence Française de la Biodiversité)](http://www.afbiodiversite.fr/) a pris le relais du CSP (Conseil Supérieur de la Pêche) puis de l'ONEMA (Office National de l'Eau et des Milieux Aquatiques) pour (entres autres) l'acquisition et la diffusion de données piscicoles. Les missions de l'AFB vont bien au-delà de cet aspect : plus généralement, l'AFB, établissement public du ministère de la Transition écologie et solidaire, exerce des missions d’appui à la mise en oeuvre des politiques publiques dans les domaines de la connaissance, la préservation, la gestion et la restauration de la biodiversité des milieux terrestres, aquatiques et marins. Elle vient en appui aux acteurs publics mais travaille également en partenariat étroit avec les acteurs socio-économiques. Elle a aussi vocation à aller à la rencontre du public pour mobiliser les citoyens en faveur de la biodiversité.
 
+#### Aquifère
+Un aquifère est une formation géologique ou une roche, suffisamment poreuse et/ou fissurée (pour stocker de grandes quantités d'eau) tout en étant suffisamment perméable pour que l'eau puisse y circuler librement. Pour se représenter un aquifère, il faut imaginer un vaste réservoir naturel de stockage d'eau souterraine.
+
 #### BRGM
 Le [BRGM (Bureau de Recherches Géologiques et Minières)](http://www.brgm.fr/), service géologique national français, est l'établissement public de référence dans les applications des sciences de la Terre pour gérer les ressources et les risques du sol et du sous-sol. Le BRGM assure notamment la diffusion de données géologiques et environnementales via les technologies de l’information et de la communication, avec pour objectif la mise à disposition des pouvoirs publics, des acteurs économiques et du grand public d'informations géoréférencées pour appuyer leurs décisions. Parmi les domaines de compétence du BRGM figurent les infrastructures informatiques de diffusion, calcul, simulation-visualisation 3D et réalité virtuelle ainsi que l'interopérabilité.
 
-#### Pêche électrique
-Opération d'inventaire des organismes aquatiques (poissons en général mais aussi crustacés) au moyen d'un courant électrique. Les poissons sont attirés puis paralysés par le champ magnétique, ainsi ils remontent à la surface, sont capturés, identifiés, comptés, mesurés puis relachés dans leur milieu.
+#### Eaux souterraines
+Les eaux souterraines désignent toutes les eaux se trouvant sous la surface du sol en contact direct avec le sol ou le sous-sol et qui transitent plus ou moins rapidement dans les fissures et les pores du sol. 
+
+#### Nappe d'eau souterraine
+Une nappe d'eau souterraine est une eau contenue dans les interstices ou les fissures d'une roche du sous-sol qu'on nomme aquifère.
+
+#### Niveau piézométrique
+Le niveau piézométrique caractérise la pression de la nappe en un point donné. Il est exprimé soit par rapport au sol en mètre, soit par rapport à l’altitude zéro du niveau de la mer en mètre NGF (Nivellement Général Français). Autrement dit, c'est le niveau libre de l'eau observé dans un piézomètre.
+
+#### Piézomètre
+Les piézomètres constituent les stations de mesure du niveau piézométrique (niveau d'eau dans la nappe). Un piézomètre est un forage non exploité qui permet la mesure du niveau de l'eau souterraine en un point donné de la nappe. Ce niveau qui varie avec l'exploitation renseigne sur la capacité de production de l'aquifère. 
 
 #### SANDRE
 Le [SANDRE (Service d'Administration Nationale des Données et Référentiels sur l'Eau)](http://www.sandre.eaufrance.fr/) a pour mission d'établir et de mettre à disposition le référentiel des données sur l'eau du SIE (Système d'Information sur l'Eau). Ce référentiel, composé de spécifications techniques et de listes de codes libres d'utilisation, décrit les modalités d'échange des données sur l'eau à l'échelle de la France. D'un point de vue informatique, le Sandre garantit l'interopérabilité des systèmes d'information relatifs à l'eau.
-
-#### Station
-Lieu de pêche électrique. Les stations ont un code numérique à 8 chiffres, des coordonnées X, Y et sont rattachées à un cours d'eau. Les stations sont le lieu de pêches électriques à diverses périodes où on prélève les poissons pour déterminer les différentes espèces, les effectifs par espèce puis les classes de tailles par espèce. Les classes de taille ont en général une largeur de 10mm.
