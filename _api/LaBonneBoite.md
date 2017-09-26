@@ -3,7 +3,7 @@ title: API La Bonne Boite # nom commercial de l'API
 tagline: Accédez aux taux de retour à l'emploi par formation  # une phrase maximum
 owner: Pôle Emploi  # producteur de l'API
 contract: OUVERT sous contrat  # peut être "OUVERT" ou "OUVERT sous contrat"
-logo: https://www.emploi-store-dev.fr/portail-developpeur-cms/files/live/sites/emploi-store-dev/files/contenu/documentation/pole_emploi_quadri35449.zip  # URL d'un logo de l'API
+logo: logo_la_bonne_boite.jpg  # URL d'un logo de l'API
 openapi_definition: # URL de la documentation au format OpenAPI <https://github.com/OAI/OpenAPI-Specification>
 contact:  contact@emploi-store-dev.fr #moyen de contact, soit un mail, soit un lien vers formulaire de contact
 doc_tech: https://www.emploi-store-dev.fr/portail-developpeur-cms/home/catalogue-des-api/documentation-des-api/api-la-bonne-boite-v1.html  # URL de la documentation technique de l'API au format HTML
@@ -36,5 +36,3 @@ keywords: # utilisé dans la recherche
 La Bonne Boite cible les entreprises ayant des perspectives d'embauche élevées et permet d’être plus efficace dans l’envoi de candidatures spontanées. Ce ciblage est obtenu par l'analyse de millions de recrutements sur toutes les entreprises françaises. L’API La Bonne Boite permet de récupérer la liste des entreprises classées par potentiel d'embauche pour un métier (code ROME) et/ou activité (code NAF) donné, pour une localisation donnée.
 
 Vous découvrirez des formats de fichiers supplémentaires, des outils de visualisation et d'autres  API liées à l'emploi sur https://www.emploi-store-dev.fr/
-
-
