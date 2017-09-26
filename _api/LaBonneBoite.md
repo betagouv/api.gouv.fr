@@ -1,6 +1,6 @@
 ---
 title: API La Bonne Boite # nom commercial de l'API
-tagline: Accédez aux taux de retour à l'emploi par formation  # une phrase maximum
+tagline: Récupérez la liste des entreprises classées par potentiel d'embauche  # une phrase maximum
 owner: Pôle Emploi  # producteur de l'API
 contract: OUVERT sous contrat  # peut être "OUVERT" ou "OUVERT sous contrat"
 logo: logo_la_bonne_boite.jpg  # URL d'un logo de l'API
