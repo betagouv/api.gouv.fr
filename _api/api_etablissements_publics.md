@@ -1,8 +1,7 @@
 ---
 title: Annuaire des établissements publics de l'administration
 contract: OUVERT
-openapi_definition: http://etablissements-publics.api.gouv.fr/definition.yml
-doc_tech: http://etablissements-publics.api.gouv.fr
+openapi_definition: https://etablissements-publics.api.gouv.fr/definition.yml
 owner: beta.gouv.fr (DINSIC)
 layout: api
 logo: logo-generique-startup-carre.jpg
