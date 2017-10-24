@@ -69,3 +69,7 @@ input:focus::-moz-placeholder{
 		display: none !important;
 	}
 }
+
+.swagger-ui .topbar {
+	display: none;
+}
