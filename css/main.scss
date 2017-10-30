@@ -3,6 +3,7 @@
 ---
 
 @import "variables";
+@import "header";
 
 #wrapper {
 	min-height: 100%;
@@ -11,29 +12,6 @@
 
 #page {
 	padding-bottom: 10rem;
-}
-
-header {
-	padding: 0.5em;
-	background-color: #FEFEFE;
-	color: #555;
-
-	> nav.ui.secondary.menu {
-	  background-image: url(/img/marianne.svg);
-	  background-repeat: no-repeat;
-	  background-size: contain;
-	  background-position: 99%;
-	}
-
-	#logo {
-		color: transparent;
-		background-image: url(/img/logo.svg);
-		background-repeat: no-repeat;
-		background-size: contain;
-		background-position: left center;
-		padding-right: 1.5em;
-		margin-right: .8em;
-	}
 }
 
 .ui.tiny.label {
