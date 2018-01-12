@@ -1,6 +1,6 @@
 machine:
   ruby:
-    version: 2.3.1
+    version: 2.4.2
   java:  # see <https://github.com/svenkreiss/html5validator#integration-with-circleci>
     version: oraclejdk8
   environment:
