@@ -56,7 +56,8 @@ Les autres API disponibles à ce jour dans Hub'Eau sont :
 
 * Indicateurs Eau potable et Assainissement ;
 * Piézométrie ;
-* Qualité physico-chimique des cours d'eau.
+* Qualité physico-chimique des cours d'eau ;
+* Qualité physico-chimique des nappes d'eau souterraines.
 
 
 ### Exemples de réutilisation

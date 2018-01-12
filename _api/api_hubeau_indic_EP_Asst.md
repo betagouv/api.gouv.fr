@@ -62,7 +62,8 @@ Les autres API disponibles à ce jour dans Hub'Eau sont :
 
 * Etat piscicole ;
 * Piézométrie ;
-* Qualité physico-chimique des cours d'eau.
+* Qualité physico-chimique des cours d'eau ;
+* Qualité des nappes d'eau souterraine.
 
 
 ### Exemples de réutilisation
