@@ -9,7 +9,7 @@ machine:
 dependencies:
   post:
     - bundle exec jekyll --version # print it out
-    - sudo pip install html5validator
+    - pip install --user html5validator==0.2.7
 
 test:
   override:
