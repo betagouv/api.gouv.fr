@@ -2,10 +2,10 @@ _site
 .sass-cache
 .jekyll-metadata
 .DS_Store
-_algolia_api_key
 
 # Bundler
 .bundle
 
 # Ruby
 .ruby-gemset
+Gemfile.lock
