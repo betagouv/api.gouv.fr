@@ -8,4 +8,3 @@ _site
 
 # Ruby
 .ruby-gemset
-Gemfile.lock
