@@ -2,10 +2,10 @@ _site
 .sass-cache
 .jekyll-metadata
 .DS_Store
+Gemfile.lock
 
 # Bundler
 .bundle
 
 # Ruby
 .ruby-gemset
-Gemfile.lock

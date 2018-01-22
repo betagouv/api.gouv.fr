@@ -4,7 +4,7 @@ redirect_from: /api/geoapi.html
 tagline: Interrogez les référentiels géographiques plus facilement
 contract: OUVERT
 openapi_definition: https://geo.api.gouv.fr/definition.yml
-doc_tech: https://docs.geo.api.gouv.fr
+doc_tech: https://geo.api.gouv.fr
 contact: geo@api.gouv.fr
 clients:
   - collectivités
