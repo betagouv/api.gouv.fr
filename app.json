@@ -4,7 +4,7 @@
   "env": {},
   "formation": {},
   "addons": [],
-  "buildpacks": [
-    {"url": "https://github.com/sgmap/heroku-buildpack-ruby"}
-  ]
+  "buildpacks": [{
+    "url": "https://github.com/sgmap/heroku-buildpack-ruby"
+  }]
 }
