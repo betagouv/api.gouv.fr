@@ -1,6 +1,6 @@
 ---
 title: Offres d'emploi # nom commercial de l'API
-tagline: Restitué en temps réel les offres d'emploi actives déposées à Pôle emploi  # une phrase maximum
+tagline: Restituer en temps réel les offres d'emploi actives déposées à Pôle emploi  # une phrase maximum
 owner: Pôle Emploi  # producteur de l'API
 category: Public  # type de donnée exposée, voir api_category dans le fichier _config.yml
 contract: OUVERT sous contrat  # peut être "OUVERT" ou "OUVERT sous contrat"
@@ -28,5 +28,5 @@ L'API Offres d'emploi restitue en temps réel les offres d'emploi actives dépos
 
 Deux ressources sont exposées pour :
 
-- rechercher une offre à partir d'une combinaison de critères (géographique, métier, langue, etc.) et récupérer une liste de résultats paginée,
-- consulter le détail d'une offre à partir de son identifiant.
+- rechercher une offre à partir d'une combinaison de critères (géographique, métier, langue, etc.) et récupérer une liste de résultats paginée
+- consulter le détail d'une offre à partir de son identifiant
