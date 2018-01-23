@@ -47,4 +47,4 @@ Appellations, définition, accès à l’emploi, conditions d’exercice de l’
 - **Statistiques sur le marché du travail** :
 Données statistiques sur la demande d’emploi
 
-Plus d'information sur [l'Emploi Store Développeur](https://www.emploi-store-dev.fr/portail-developpeur-cms/home.html)
+Plus d'information sur [l'Emploi Store Développeurs](https://www.emploi-store-dev.fr/portail-developpeur-cms/home.html)
