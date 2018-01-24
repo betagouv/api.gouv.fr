@@ -70,16 +70,17 @@ Hub’Eau c’est le résultat de la collaboration de l’AFB et du BRGM dans le
 
 Les autres API disponibles à ce jour dans Hub'Eau sont :
 
-* Etat piscicole ;
-* Indicateurs Eau potable et Assainissement ;
-* Piézométrie ;
-* Chimie des cours d'eau.
+* [Etat piscicole](../api_hubeau_poissons.html) ;
+* [Indicateurs Eau potable et Assainissement](../api_hubeau_indic_EP_Asst.html) ;
+* [Piézométrie](../api_hubeau_piezometrie.html) ;
+* [Qualité physico-chimique des cours d'eau](../api_hubeau_qualite_rivieres.html).
 
 
 ### Exemples de réutilisation
 
 * [Qualité des nappes d'eau souterraine dans votre commune](http://www.nalguise.net/quales/quales.php)
 * [Cartographie de la qualité des nappes d'eau souterraine en France](http://www.nalguise.net/quales/quales_carto.php)
+* [Soumettez le votre sur la page des réutilisateurs](http://hubeau.eaufrance.fr/page/proposez-exemples-dusage)
 
 ### Glossaire
 

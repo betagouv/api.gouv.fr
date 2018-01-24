@@ -54,10 +54,10 @@ Hub’Eau c’est le résultat de la collaboration de l’AFB et du BRGM dans le
 
 Les autres API disponibles à ce jour dans Hub'Eau sont :
 
-* Indicateurs Eau potable et Assainissement ;
-* Piézométrie ;
-* Qualité physico-chimique des cours d'eau ;
-* Qualité physico-chimique des nappes d'eau souterraines.
+* [Indicateurs Eau potable et Assainissement](../api_hubeau_indic_EP_Asst.html) ;
+* [Piézométrie](../api_hubeau_piezometrie.html) ;
+* [Qualité physico-chimique des cours d'eau](../api_hubeau_qualite_rivieres.html) ;
+* [Qualité des nappes d'eau souterraine](../api_hubeau_qualite_nappes_eau_sout.html).
 
 
 ### Exemples de réutilisation
@@ -65,6 +65,7 @@ Les autres API disponibles à ce jour dans Hub'Eau sont :
 * [Cartographie de la présence des espèces de poissons](http://hubeau.eaufrance.fr/sites/default/files/api/demo/poissons.html)
 * [Mortalité des saumons et des anguilles par les turbines hydroélectriques](https://public.tableau.com/views/Devalpomi/Devalpomi?:showVizHome=no), par l'association [Logrami - Loire Grands Migrateurs](http://www.logrami.fr/)
 * [Présence du Silure en France](https://public.tableau.com/views/HubEau/PrsenceduSilure?%3AshowVizHome=no), par l'association [Logrami - Loire Grands Migrateurs](http://www.logrami.fr/)
+* [Soumettez le votre sur la page des réutilisateurs](http://hubeau.eaufrance.fr/page/proposez-exemples-dusage)
 
 ### Glossaire
 

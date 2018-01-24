@@ -26,9 +26,13 @@ keywords:
 ### Description fonctionnelle de l'API Indicateurs eau potable et assainissement
 
 [L'API Indicateurs eau potable et assainissement](http://hubeau.eaufrance.fr/page/documentation-api-indicateurs-services-eau-assainissement) de Hub'Eau permet de connaître les __indicateurs__ réglementaires sur les services publics d'eau, d'assainissement et sur l'assainissement non collectif.
-En effet, dans le but d’évaluer les performances de chacun de ces services et afin de permettre les comparaisons d’une année sur l’autre et entre services similaires, le ministère chargé de l’écologie a piloté dès 2004 l’élaboration d’un référentiel commun en concertation avec les acteurs de l’eau. Une trentaine d’indicateurs sur des aspects économiques, techniques, sociaux et environnementaux ont ainsi été créés. Il s’agit d’indicateurs permettant de suivre les différentes composantes du service et qui, pris dans leur ensemble, offrent une vision globale de ses performances. Ces indicateurs constituent des outils de pilotage facilitant l’inscription des services dans une démarche de progrès.
+En effet, dans le but d’évaluer les performances de chacun de ces services et afin de permettre les comparaisons d’une année sur l’autre et entre services similaires, le ministère chargé de l’écologie a piloté dès 2004 l’élaboration d’un référentiel commun en concertation avec les acteurs de l’eau.
+
+Une trentaine d’indicateurs sur des aspects économiques, techniques, sociaux et environnementaux ont ainsi été créés. Il s’agit d’indicateurs permettant de suivre les différentes composantes du service et qui, pris dans leur ensemble, offrent une vision globale de ses performances. Ces indicateurs constituent des outils de pilotage facilitant l’inscription des services dans une démarche de progrès.
 La source de données est [le Système d'Information sur les Services Publics d'Eau et d'Assainissement (SISPEA), hébergé sur le site Services de la toile EauFrance](http://www.services.eaufrance.fr/).
+
 Les données sont mises à jour au fil des remontées de données par les collectivités locales sur le site Service, et tous les mois (le 1er du mois) sur Hub'Eau.
+
 Les données sont exposées sous la forme d'une API REST, les formats supportés sont : JSON, GeoJSON et CSV.
 
 Trois thématiques sont disponibles :
@@ -60,10 +64,10 @@ Hub’Eau c’est le résultat de la collaboration de l’AFB et du BRGM dans le
 
 Les autres API disponibles à ce jour dans Hub'Eau sont :
 
-* Etat piscicole ;
-* Piézométrie ;
-* Qualité physico-chimique des cours d'eau ;
-* Qualité des nappes d'eau souterraine.
+* [Etat piscicole](../api_hubeau_poissons.html) ;
+* [Piézométrie](../api_hubeau_piezometrie.html) ;
+* [Qualité physico-chimique des cours d'eau](../api_hubeau_qualite_rivieres.html) ;
+* [Qualité des nappes d'eau souterraine](../api_hubeau_qualite_nappes_eau_sout.html).
 
 
 ### Exemples de réutilisation
