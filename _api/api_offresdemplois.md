@@ -1,7 +1,7 @@
 ---
 title: Offres d'emploi # nom commercial de l'API
 tagline: Restituer en temps réel les offres d'emploi actives déposées à Pôle emploi  # une phrase maximum
-owner: Pôle Emploi  # producteur de l'API
+owner: Pôle emploi  # producteur de l'API
 category: Public  # type de donnée exposée, voir api_category dans le fichier _config.yml
 contract: OUVERT sous contrat  # peut être "OUVERT" ou "OUVERT sous contrat"
 logo: logo-emploi-store-developpeurs.png  # URL d'un logo de l'API
@@ -10,13 +10,12 @@ doc_tech: https://www.emploi-store-dev.fr/portail-developpeur-cms/home/catalogue
 access_link: https://www.emploi-store-dev.fr/portail-developpeur/detailapicatalogue/59438edb243a5f952c5d9e8c  # URL d'une page de demande d'accès si l'API est à accès restreint
 stat:
   url: https://www.emploi-store-dev.fr/portail-developpeur-cms/stats # adresse à laquelle un nombre d'appels à l'API est publié, en content-type application/json
-  label: Appels  # description d'un appel à l'API
-  lastXdays: 440 169  # nombre de jours sur lequel les appels à l'API sont comptabilisés
+  label: 440 169 Appels  # description d'un appel à l'API
+  lastXdays: 30  # nombre de jours sur lequel les appels à l'API sont comptabilisés
 clients:  # types d'entités habilitées à utiliser l'API
   - particuliers  # texte libre en minuscules
   - entreprises  # ajoutez ou supprimez des types d'entités
-  - collectivités
-  - ministères
+  - collectivités territoriales
 partners:  # liste de co-producteurs de l'API
   - Pôle Emploi  # texte libre
 keywords: # utilisé dans la recherche
