@@ -8,16 +8,12 @@ logo: logo-emploi-store-developpeurs.png  # URL d'un logo de l'API
 contact:  support@emploi-store-dev.fr #moyen de contact, soit un mail, soit un lien vers formulaire de contact
 doc_tech: https://www.emploi-store-dev.fr/portail-developpeur-cms/home/catalogue-des-api/documentation-des-api/api-offres-demploi-v1.html # URL de la documentation technique de l'API au format HTML
 access_link: https://www.emploi-store-dev.fr/portail-developpeur/detailapicatalogue/59438edb243a5f952c5d9e8c  # URL d'une page de demande d'accès si l'API est à accès restreint
-stat:
-  url: https://www.emploi-store-dev.fr/portail-developpeur-cms/stats # adresse à laquelle un nombre d'appels à l'API est publié, en content-type application/json
-  label: 440 169 Appels  # description d'un appel à l'API
-  lastXdays: 30  # nombre de jours sur lequel les appels à l'API sont comptabilisés
 clients:  # types d'entités habilitées à utiliser l'API
   - particuliers  # texte libre en minuscules
   - entreprises  # ajoutez ou supprimez des types d'entités
   - collectivités territoriales
 partners:  # liste de co-producteurs de l'API
-  - Pôle Emploi  # texte libre
+  - Pôle emploi  # texte libre
 keywords: # utilisé dans la recherche
   - Offres # texte libre
 ---
