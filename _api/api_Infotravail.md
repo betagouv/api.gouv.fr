@@ -7,17 +7,13 @@ contract: OUVERT sous contrat  # peut être "OUVERT" ou "OUVERT sous contrat"
 contact:  support@emploi-store-dev.fr #moyen de contact, soit un mail, soit un lien vers formulaire de contact
 doc_tech: https://www.emploi-store-dev.fr/portail-developpeur-cms/home/catalogue-des-api/documentation-des-api/api-infotravail-v1.html # URL de la documentation technique de l'API au format HTML
 access_link: https://www.emploi-store-dev.fr/portail-developpeur/detailapicatalogue/57909ba23b2b8d019ee6cc5e # URL d'une page de demande d'accès si l'API est à accès restreint
-stat:
-  url: https://www.emploi-store-dev.fr/portail-developpeur-cms/stats # adresse à laquelle un nombre d'appels à l'API est publié, en content-type application/json
-  label: Appels  # description d'un appel à l'API
-  lastXdays: 8109  # nombre de jours sur lequel les appels à l'API sont comptabilisés
 clients:  # types d'entités habilitées à utiliser l'API
   - particuliers  # texte libre en minuscules
   - entreprises  # ajoutez ou supprimez des types d'entités
   - collectivités
   - ministères
 partners:  # liste de co-producteurs de l'API
-  - Pôle Emploi  # texte libre
+  - Pôle emploi  # texte libre
 keywords: # utilisé dans la recherche
   - Travail  # texte libre
   - Marché du travail
