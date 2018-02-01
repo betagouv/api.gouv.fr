@@ -5,6 +5,6 @@
   "formation": {},
   "addons": [],
   "buildpacks": [{
-    "url": "https://github.com/sgmap/heroku-buildpack-ruby"
+    "url": "https://github.com/betagouv/heroku-buildpack-ruby"
   }]
 }

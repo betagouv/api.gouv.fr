@@ -7,7 +7,7 @@ logo: logo_la_bonne_boite.jpg  # URL d'un logo de l'API
 openapi_definition: # URL de la documentation au format OpenAPI <https://github.com/OAI/OpenAPI-Specification>
 contact:  contact@emploi-store-dev.fr #moyen de contact, soit un mail, soit un lien vers formulaire de contact
 doc_tech: https://www.emploi-store-dev.fr/portail-developpeur-cms/home/catalogue-des-api/documentation-des-api/api-la-bonne-boite-v1.html  # URL de la documentation technique de l'API au format HTML
-access_link: https://www.emploi-store-dev.fr/portail-developpeur/detailapicatalogue/labonneboite  # URL d'une page de demande d'accès si l'API est à accès restreint
+access_link: https://www.emploi-store-dev.fr/portail-developpeur/detailapicatalogue/57909ba23b2b8d019ee6cc5f  # URL d'une page de demande d'accès si l'API est à accès restreint
 stat:
   url: https://www.emploi-store-dev.fr/portail-developpeur-cms/stats  # adresse à laquelle un nombre d'appels à l'API est publié, en content-type application/json
   label: Appels  # description d'un appel à l'API
