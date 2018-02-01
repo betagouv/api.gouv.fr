@@ -1,6 +1,6 @@
 ---
 title: Offres d'emploi # nom commercial de l'API
-tagline: Restituer en temps réel les offres d'emploi actives déposées à Pôle emploi  # une phrase maximum
+tagline: Accédez aux offres d'emploi disponibles sur pole-emploi.fr  # une phrase maximum
 owner: Pôle emploi  # producteur de l'API
 category: Public  # type de donnée exposée, voir api_category dans le fichier _config.yml
 contract: OUVERT sous contrat  # peut être "OUVERT" ou "OUVERT sous contrat"
@@ -11,11 +11,13 @@ access_link: https://www.emploi-store-dev.fr/portail-developpeur/detailapicatalo
 clients:  # types d'entités habilitées à utiliser l'API
   - particuliers  # texte libre en minuscules
   - entreprises  # ajoutez ou supprimez des types d'entités
+  - startups
   - collectivités territoriales
 partners:  # liste de co-producteurs de l'API
   - Pôle emploi  # texte libre
 keywords: # utilisé dans la recherche
   - Offres # texte libre
+  - Emploi
 ---
 
 ## Description de l'API
