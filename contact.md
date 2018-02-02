@@ -13,7 +13,7 @@ api.gouv.fr se contente de référencer des API existantes. Nous ne pouvons donc
 
 Vous avez repéré un problème ou souhaitez proposer une amélioration du catalogue ?
 
-Vérifiez que cette amélioration ne soit pas [déjà prévue](https://github.com/sgmap/api.gouv.fr/issues) et, si ce n'est pas le cas, [suggérez-la](https://github.com/sgmap/api.gouv.fr/issues/new) sur GitHub !
+Vérifiez que cette amélioration ne soit pas [déjà prévue](https://github.com/betagouv/api.gouv.fr/issues) et, si ce n'est pas le cas, [suggérez-la](https://github.com/betagouv/api.gouv.fr/issues/new) sur GitHub !
 Vous ne savez pas comment faire ? [Écrivez-nous](mailto:contact@api.gouv.fr?subject=Evolution+du+site).
 
 ## Demande de nouvelles API
