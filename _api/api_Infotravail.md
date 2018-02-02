@@ -1,24 +1,25 @@
 ---
 title: Infotravail # nom commercial de l'API
 tagline: Recense des jeux de données liés au marché du travail # une phrase maximum
-owner: Pôle Emploi  # producteur de l'API
+owner: Pôle emploi  # producteur de l'API
 category: Public  # type de donnée exposée, voir api_category dans le fichier _config.yml
 contract: OUVERT sous contrat  # peut être "OUVERT" ou "OUVERT sous contrat"
+logo: logo-emploi-store-developpeurs.png  # URL d'un logo de l'API
 contact:  support@emploi-store-dev.fr #moyen de contact, soit un mail, soit un lien vers formulaire de contact
 doc_tech: https://www.emploi-store-dev.fr/portail-developpeur-cms/home/catalogue-des-api/documentation-des-api/api-infotravail-v1.html # URL de la documentation technique de l'API au format HTML
 access_link: https://www.emploi-store-dev.fr/portail-developpeur/detailapicatalogue/57909ba23b2b8d019ee6cc5e # URL d'une page de demande d'accès si l'API est à accès restreint
 clients:  # types d'entités habilitées à utiliser l'API
   - particuliers  # texte libre en minuscules
   - entreprises  # ajoutez ou supprimez des types d'entités
-  - collectivités
-  - ministères
+  - startups
+  - collectivités territoriales
 partners:  # liste de co-producteurs de l'API
   - Pôle emploi  # texte libre
 keywords: # utilisé dans la recherche
   - Travail  # texte libre
+  - Emploi
   - Marché du travail
-  - référentiel
-  - Offres 
+  - Statistiques
 ---
 
 ## Description de l'API
@@ -42,5 +43,3 @@ Appellations, définition, accès à l’emploi, conditions d’exercice de l’
 
 - **Statistiques sur le marché du travail** :
 Données statistiques sur la demande d’emploi
-
-Plus d'information sur [l'Emploi Store Développeurs](https://www.emploi-store-dev.fr/portail-developpeur-cms/home.html)
