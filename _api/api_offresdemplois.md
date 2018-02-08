@@ -4,7 +4,7 @@ tagline: Accédez aux offres d'emploi disponibles sur pole-emploi.fr  # une phra
 owner: Pôle emploi  # producteur de l'API
 category: Public  # type de donnée exposée, voir api_category dans le fichier _config.yml
 contract: OUVERT sous contrat  # peut être "OUVERT" ou "OUVERT sous contrat"
-logo: logo-emploi-store-developpeurs.png  # URL d'un logo de l'API
+logo: logo_pole_emploi.jpg  # URL d'un logo de l'API
 contact:  support@emploi-store-dev.fr #moyen de contact, soit un mail, soit un lien vers formulaire de contact
 doc_tech: https://www.emploi-store-dev.fr/portail-developpeur-cms/home/catalogue-des-api/documentation-des-api/api-offres-demploi-v1.html # URL de la documentation technique de l'API au format HTML
 access_link: https://www.emploi-store-dev.fr/portail-developpeur/detailapicatalogue/59438edb243a5f952c5d9e8c  # URL d'une page de demande d'accès si l'API est à accès restreint
