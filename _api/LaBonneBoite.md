@@ -3,7 +3,7 @@ title: API La Bonne Boite # nom commercial de l'API
 tagline: Récupérez la liste des entreprises classées par potentiel d'embauche  # une phrase maximum
 owner: Pôle Emploi  # producteur de l'API
 contract: OUVERT sous contrat  # peut être "OUVERT" ou "OUVERT sous contrat"
-logo: logo_la_bonne_boite.jpg  # URL d'un logo de l'API
+logo: logo_pole_emploi.jpg  # URL d'un logo de l'API
 openapi_definition: # URL de la documentation au format OpenAPI <https://github.com/OAI/OpenAPI-Specification>
 contact:  contact@emploi-store-dev.fr #moyen de contact, soit un mail, soit un lien vers formulaire de contact
 doc_tech: https://www.emploi-store-dev.fr/portail-developpeur-cms/home/catalogue-des-api/documentation-des-api/api-la-bonne-boite-v1.html  # URL de la documentation technique de l'API au format HTML
