@@ -7,7 +7,7 @@ clients:
   - Particuliers
   - Enterprises
   - Ministères
-owner: DINSIC
+owner: Incubateur de services numériques (DINSIC)
 layout: api
 logo: logo-generique-startup-carre.jpg
 experimental: true
