@@ -1,9 +1,9 @@
 ---
-title: Hub'Eau - Piézométrie
-tagline: Piézométrie (niveaux des nappes d'eau souterraines)
+title: Hub'Eau - Qualité des nappes d'eau souterraine
+tagline: Qualité physico-chimique des nappes d'eau souterraines
 contract: OUVERT
-openapi_definition: https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/api-docs
-doc_tech: https://hubeau.eaufrance.fr/page/documentation_piezometrie
+openapi_definition: https://hubeau.eaufrance.fr/api/v1/qualite_nappes/api-docs
+doc_tech: http://hubeau.eaufrance.fr/page/documentation-qualite-nappes-deau-souterraines
 logo: logo_hubeau.png
 contact: t.vilmus@brgm.fr
 clients:
@@ -16,32 +16,48 @@ partners:
   - BRGM
 owner: AFB
 keywords:
-  - Piézométrie
-  - Aquifère
-  - Nappe
-  - Niveau d'eau
+  - Qualité physico-chimique
+  - Nappe d'eau
   - Eau souterraine
+  - Aquifère
   - Hydrogéologie
 ---
 
-### Description fonctionnelle de l'API Piézométrie
+### Description fonctionnelle de l'API Qualité des nappes d'eau souterraine
 
-[L'API Piézométrie](http://hubeau.eaufrance.fr/page/api-piezometrie) de Hub'Eau permet d'accéder aux données sur le niveau des nappes d'eau souterraines. 
-Ces données sont issues de la banque [ADES](http://www.ades.eaufrance.fr). Il s'agit des chroniques de hauteur d'eau dans les piézomètres.
-Les données sont mises à jour au fil de l'eau dans ADES, et une fois par semaine (le lundi matin) dans Hub'Eau.
+[L'API Qualité des nappes d'eau souterraine](http://hubeau.eaufrance.fr/page/api-qualite-nappes-deau-souterraines) de Hub'Eau permet d'accéder aux données sur la qualité physico-chimique des nappes d'eau souterraines françaises. 
+Ces données sont issues de la [banque nationale d'Accès aux Données sur les Eaux Souterraines ADES](http://ades.eaufrance.fr/).
+Au 29 novembre 2017, les données concernent 67 millions d'analyses réparties sur 74000 points d'eau.
 Les données sont exposées sous la forme d'une API REST, les formats supportés sont : JSON, GeoJSON et CSV.
 
 Les différentes opérations possibles sont :
 
-* chroniques : permet de lister les niveaux des nappes d'eau (chroniques piézométriques) d'une station de mesure des eaux souterraines (piézomètre) ; 
-* stations : permet de rechercher les stations de mesure des niveaux des nappes d'eau (stations piézométriques ou piézomètres).
+* stations : permet de rechercher les stations de mesure de la qualité des eaux souterraines (ou points d'eau : puits, forages et sources) ; 
+* analyses : permet de récupérer les résultats des analyses, concernant différents paramètres physico-chimiques comme la conductivité, les nitrates, les substances pesticides, les métaux...
 
-Dernières évolutions de l'API Piézométrie de Hub'Eau:
+La recherche des analyses est possible via de nombeaux critères :
+* code du point d'eau, 
+* code ou nom de commune,
+* département ou région,
+* code ou nom de bassin ou de circonscription administrative de bassin,
+* code ou nom d'aquifère (selon le référentiel BD LISA),
+* code ou nom de masse d'eau,
+* code ou nom de réseau de mesures,
+* coordonnées géographiques,
+* producteur des données,
+* code du paramètre analysé (nitrates, pH, glyphosate, etc) ou du groupe de paramètres (pesticides, métaux, etc),
+* code ou nom de la fraction analysée (eau brute, eau filtrée, etc),
+* code remarque de l'analyse (domaine de validité, < seuil de détection, > seuil de saturation, traces, etc),
+* code ou nom de la méthode d'analyse,
+* code ou nom du statut de l'analyse (donnée brute, contrôlée ou interprétée),
+* code ou nom de la qualification du résultat (correcte, incorrecte, incertaine),
+* dates mini et maxi de prélèvement,
+* valeurs mini et maxi du résultat de l'analyse.
 
-* 04/05/2017 : mise à jour de l'adresse de l'API api.hubeau.fr vers [hubeau.eaufrance.fr/](http://hubeau.eaufrance.fr/)
-* 24/11/2016 : ajout de l'attribut "timestamp_mesure" sur l'opération "chroniques" 
-* 21/09/2016 : ajout des libellés SANDRE à côté des codes SANDRE dans la réponse
-* 08/08/2016 : ajout du paramètre fields, la valeur est une liste des champs souhaités dans la réponse (fonctionnalité expérimentale), par exemple fields=code_station,localisation
+
+Dernières évolutions de l'API Qualité des nappes d'eau souterraine:
+
+* 29/11/2017 : mise à disposition de la v1
 
 ### Connaissez-vous Hub'Eau ?
 
@@ -56,12 +72,14 @@ Les autres API disponibles à ce jour dans Hub'Eau sont :
 
 * [Etat piscicole](../api_hubeau_poissons.html) ;
 * [Indicateurs Eau potable et Assainissement](../api_hubeau_indic_EP_Asst.html) ;
-* [Qualité physico-chimique des cours d'eau](../api_hubeau_qualite_rivieres.html) ;
-* [Qualité des nappes d'eau souterraine](../api_hubeau_qualite_nappes_eau_sout.html).
+* [Piézométrie](../api_hubeau_piezometrie.html) ;
+* [Qualité physico-chimique des cours d'eau](../api_hubeau_qualite_rivieres.html).
 
 
 ### Exemples de réutilisation
 
+* [Qualité des nappes d'eau souterraine dans votre commune](http://www.nalguise.net/quales/quales.php)
+* [Cartographie de la qualité des nappes d'eau souterraine en France](http://www.nalguise.net/quales/quales_carto.php)
 * [Soumettez le votre sur la page des réutilisateurs](http://hubeau.eaufrance.fr/page/proposez-exemples-dusage)
 
 ### Glossaire
@@ -83,12 +101,6 @@ Les eaux souterraines désignent toutes les eaux se trouvant sous la surface du 
 
 #### Nappe d'eau souterraine
 Une nappe d'eau souterraine est une eau contenue dans les interstices ou les fissures d'une roche du sous-sol qu'on nomme aquifère.
-
-#### Niveau piézométrique
-Le niveau piézométrique caractérise la pression de la nappe en un point donné. Il est exprimé soit par rapport au sol en mètre, soit par rapport à l’altitude zéro du niveau de la mer en mètre NGF (Nivellement Général Français). Autrement dit, c'est le niveau libre de l'eau observé dans un piézomètre.
-
-#### Piézomètre
-Les piézomètres constituent les stations de mesure du niveau piézométrique (niveau d'eau dans la nappe). Un piézomètre est un forage non exploité qui permet la mesure du niveau de l'eau souterraine en un point donné de la nappe. Ce niveau qui varie avec l'exploitation renseigne sur la capacité de production de l'aquifère. 
 
 #### SANDRE
 Le [SANDRE (Service d'Administration Nationale des Données et Référentiels sur l'Eau)](http://www.sandre.eaufrance.fr/) a pour mission d'établir et de mettre à disposition le référentiel des données sur l'eau du SIE (Système d'Information sur l'Eau). Ce référentiel, composé de spécifications techniques et de listes de codes libres d'utilisation, décrit les modalités d'échange des données sur l'eau à l'échelle de la France. D'un point de vue informatique, le Sandre garantit l'interopérabilité des systèmes d'information relatifs à l'eau.

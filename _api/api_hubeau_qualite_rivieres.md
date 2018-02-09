@@ -25,7 +25,7 @@ keywords:
 ### Description fonctionnelle de l'API Chimie des cours d'eau
 
 [L'API Chimie des cours d'eau](http://hubeau.eaufrance.fr/page/api-chimie-cours-deau) de Hub'Eau permet d'accéder aux données sur la qualité physico-chimique des fleuves et rivières. 
-Ces données sont issues des banques de bassin des agences de l'eau Adour Garonne et Loire Bretagne. Pour la fin de l'année 2017, l'ensemble des données des bassins sera disponible, en provenance de [Naïades](http://naiades.eaufrance.fr/).
+Ces données sont issues des banques de bassin des agences de l'eau Adour Garonne et Loire Bretagne. Pour la fin du premier trimestre 2018, l'ensemble des données des bassins sera disponible, en provenance de [Naïades](http://naiades.eaufrance.fr/).
 Ces données ne sont pas mises à jour actuellement.
 Les données sont exposées sous la forme d'une API REST, les formats supportés sont : JSON, GeoJSON et CSV.
 
@@ -54,9 +54,10 @@ Hub’Eau c’est le résultat de la collaboration de l’AFB et du BRGM dans le
 
 Les autres API disponibles à ce jour dans Hub'Eau sont :
 
-* Etat piscicole ;
-* Indicateurs Eau potable et Assainissement ;
-* Piézométrie.
+* [Etat piscicole](../api_hubeau_poissons.html) ;
+* [Indicateurs Eau potable et Assainissement](../api_hubeau_indic_EP_Asst.html) ;
+* [Piézométrie](../api_hubeau_piezometrie.html) ;
+* [Qualité des nappes d'eau souterraine](../api_hubeau_qualite_nappes_eau_sout.html).
 
 
 ### Exemples de réutilisation
