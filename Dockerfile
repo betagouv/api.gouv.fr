@@ -6,8 +6,8 @@ RUN gem install github-pages --no-ri --no-rdoc \
      html-proofer \
      mini_racer \
      minitest
+
 COPY Gemfile /tmp/
-COPY Gemfile.lock /tmp/
 RUN (cd /tmp && bundle install -V )
 
 WORKDIR /opt/site
