@@ -1,10 +1,14 @@
-FROM ruby:2.3
+FROM ruby:2.4.3
 
 RUN mkdir -p /opt/site
 
-RUN gem install github-pages --no-ri --no-rdoc
-RUN gem install html-proofer
-RUN gem install mini_racer
+RUN gem install github-pages --no-ri --no-rdoc \
+     html-proofer \
+     mini_racer \
+     minitest
+
+COPY Gemfile /tmp/
+RUN (cd /tmp && bundle install -V )
 
 WORKDIR /opt/site
 
