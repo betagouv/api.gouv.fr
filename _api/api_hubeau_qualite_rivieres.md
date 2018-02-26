@@ -1,10 +1,10 @@
 ---
-title: Hub'Eau - Chimie des cours d'eau
+title: Hub'Eau - Qualité des cours d'eau
 tagline: Qualité physico-chimique des cours d'eau
 contract: OUVERT
-openapi_definition: https://hubeau.eaufrance.fr/api/v0/qualite_rivieres/api-docs
+openapi_definition: https://hubeau.eaufrance.fr/api/v1/qualite_rivieres/api-docs
 doc_tech: http://hubeau.eaufrance.fr/page/documentation_chimie_riviere
-logo: logo_hubeau.png
+logo: 04-qualite_rivieres.png
 contact: t.vilmus@brgm.fr
 clients:
   - particuliers
@@ -22,26 +22,28 @@ keywords:
   - Rivière
 ---
 
-### Description fonctionnelle de l'API Chimie des cours d'eau
+### Description fonctionnelle de l'API Qualité des cours d'eau
 
-[L'API Chimie des cours d'eau](http://hubeau.eaufrance.fr/page/api-chimie-cours-deau) de Hub'Eau permet d'accéder aux données sur la qualité physico-chimique des fleuves et rivières. 
-Ces données sont issues des banques de bassin des agences de l'eau Adour Garonne et Loire Bretagne. Pour la fin du premier trimestre 2018, l'ensemble des données des bassins sera disponible, en provenance de [Naïades](http://naiades.eaufrance.fr/).
-Ces données ne sont pas mises à jour actuellement.
+[L'API Chimie des cours d'eau](http://hubeau.eaufrance.fr/page/api-qualite-cours-deau) de Hub'Eau permet d'accéder aux données sur la qualité physico-chimique des fleuves, rivières et plans d'eau. 
+Depuis la fin février 2018, l'ensemble des données sur la France entière (y compris les DROM) est disponible, en provenance de [Naïades](http://naiades.eaufrance.fr/).
+Plus de 125 millions d'analyses réparties sur 18 000 stations sont disponibles. 
 Les données sont exposées sous la forme d'une API REST, les formats supportés sont : JSON, GeoJSON et CSV.
 
-Les différentes opérations possibles sont :
+Un ensemble de 4 API permet de rechercher l'ensemble des informations liées à la qualité physico-chimiques des eaux superficielles continentales (cours d'eau et plans d'eau) :
 
-* lieux_mesure : permet de rechercher les lieux de mesure (stations) de la chimie des cours d'eau (eaux superficielles continentales). Pour le moment, les données disponibles sont les lieux de mesure de l'agence de l'eau Adour-Garonne (AEAG) et l'agence de l'eau Loire-Bretagne (AELB) ; 
-* mesures : permet de rechercher les mesures des lieux de mesure des agences de l'eau Adour-Garonne et Loire-Bretagne. Les mesures concernent différents paramètres physico-chimiques comme la conductivité, les nitrates, les substances pesticides...
+* station_pc : permet de rechercher les stations (lieux de mesure) sur les cours d'eau ou plans d'eau où des prélèvements d'eau ont eu lieu en vue de faire des analyses de la qualité de l'eau ;
+* operation_pc : permet de connaître les opérations de prélèvement ayant eu lieu sur les stations ;
+* condition_environnementale_pc : permet de rechercher les conditions environnementales (température de l'air, présence de feuilles, mousses, irisations, etc) lors des opérations de prélèvements physico-chimiques ;
+* analyse_pc : permet de rechercher les analyses physico-chimiques effectuées sur les échantillons confectionnés lors des opérations de prélèvement sur les différentes stations. Ces analyses concernent différents paramètres physico-chimiques comme la conductivité, les nitrates, les substances pesticides, les métaux lourds...
 
-Dernières évolutions de l'API Chimie des cours d'eau de Hub'Eau:
+Dernières évolutions de l'API Qualité des cours d'eau de Hub'Eau:
 
+* 26/02/2018 : passage à la v1 : changement de la structure de l'API avec mise à disposition des données sur la France entière (la v0 ne proposait que les bassins Adour-Garonne et Loire-Bretagne) et ajout d'informations comme les conditions environnementales des prélèvements
+* 29/11/2017 : ajout de l'attribut api_version (string) dans la réponse : version de l'API
 * 04/05/2017 : mise à jour de l'adresse de l'API api.hubeau.fr vers [hubeau.eaufrance.fr/](http://hubeau.eaufrance.fr/)
 * 25/10/2016 : ajout des données qualité des rivières de l'agence de l'eau Loire Bretagne
 * 21/09/2016 : ajout des libellés SANDRE à côté des codes SANDRE dans la réponse
-* 08/08/2016 : ajout du paramètre fields, la valeur est une liste des champs souhaités dans la réponse (fonctionnalité expérimentale), par exemple fields=code_station,localisation
-
-Prochainement, l'ensemble des données des 6 Agences de l'Eau sera disponible, au lieu de 2 actuellement.
+* 08/08/2016 : ajout du paramètre fields, la valeur est une liste des champs souhaités dans la réponse, par exemple fields=code_station,localisation
 
 ### Connaissez-vous Hub'Eau ?
 
