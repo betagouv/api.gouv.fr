@@ -1,10 +1,10 @@
 ---
 title: Hub'Eau - Qualité des nappes d'eau souterraine
-tagline: Qualité physico-chimique des nappes d'eau souterraines
+tagline: Qualité physico-chimique des nappes d'eau souterraine
 contract: OUVERT
 openapi_definition: https://hubeau.eaufrance.fr/api/v1/qualite_nappes/api-docs
 doc_tech: http://hubeau.eaufrance.fr/page/documentation-qualite-nappes-deau-souterraines
-logo: logo_hubeau.png
+logo: 05-qualite_nappes.png
 contact: t.vilmus@brgm.fr
 clients:
   - particuliers
