@@ -70,10 +70,10 @@ Hub’Eau c’est le résultat de la collaboration de l’AFB et du BRGM dans le
 
 Les autres API disponibles à ce jour dans Hub'Eau sont :
 
-* [Etat piscicole](../api_hubeau_poissons.html) ;
-* [Indicateurs Eau potable et Assainissement](../api_hubeau_indic_EP_Asst.html) ;
-* [Piézométrie](../api_hubeau_piezometrie.html) ;
-* [Qualité physico-chimique des cours d'eau](../api_hubeau_qualite_rivieres.html).
+* [Etat piscicole](/api/api_hubeau_poissons.html) ;
+* [Indicateurs Eau potable et Assainissement](/api/api_hubeau_indic_EP_Asst.html) ;
+* [Piézométrie](/api/api_hubeau_piezometrie.html) ;
+* [Qualité physico-chimique des cours d'eau](/api/api_hubeau_qualite_rivieres.html).
 
 
 ### Exemples de réutilisation

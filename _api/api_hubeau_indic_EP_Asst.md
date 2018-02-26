@@ -64,10 +64,10 @@ Hub’Eau c’est le résultat de la collaboration de l’AFB et du BRGM dans le
 
 Les autres API disponibles à ce jour dans Hub'Eau sont :
 
-* [Etat piscicole](../api_hubeau_poissons.html) ;
-* [Piézométrie](../api_hubeau_piezometrie.html) ;
-* [Qualité physico-chimique des cours d'eau](../api_hubeau_qualite_rivieres.html) ;
-* [Qualité des nappes d'eau souterraine](../api_hubeau_qualite_nappes_eau_sout.html).
+* [Etat piscicole](/api/api_hubeau_poissons.html) ;
+* [Piézométrie](/api/api_hubeau_piezometrie.html) ;
+* [Qualité physico-chimique des cours d'eau](/api/api_hubeau_qualite_rivieres.html) ;
+* [Qualité des nappes d'eau souterraine](/api/api_hubeau_qualite_nappes_eau_sout.html).
 
 
 ### Exemples de réutilisation
