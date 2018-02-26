@@ -54,7 +54,7 @@ Tout le monde. Mais si vos besoins sont massifs, [contactez-nous](mailto:geo@api
 
 #### Données source
 
-[Toutes les données utilisées](https://github.com/betagouv/api-communes#données-sources) sont sous licences Open Data.
+[Toutes les données utilisées](https://github.com/etalab/api-communes#données-sources) sont sous licences Open Data.
 
 #### Contact
 
