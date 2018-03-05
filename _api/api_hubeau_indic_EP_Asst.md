@@ -4,7 +4,7 @@ tagline: Indicateurs des services d'eau et d'assainissement
 contract: OUVERT
 openapi_definition: https://hubeau.eaufrance.fr/api/v0/indicateurs_services/api-docs
 doc_tech: http://hubeau.eaufrance.fr/page/documentation-eau_potable-assainissement
-logo: logo_hubeau.png
+logo: 02-indicateurs_services.png
 contact: t.vilmus@brgm.fr
 clients:
   - particuliers
@@ -51,7 +51,7 @@ Dernières évolutions de l'API Indicateurs eau potable et assainissement de Hub
 
 * 04/05/2017 : mise à jour de l'adresse de l'API api.hubeau.fr vers [hubeau.eaufrance.fr/](http://hubeau.eaufrance.fr/)
 * 21/09/2016 : ajout des libellés SANDRE à côté des codes SANDRE dans la réponse
-* 08/08/2016 : ajout du paramètre fields, la valeur est une liste des champs souhaités dans la réponse (fonctionnalité expérimentale), par exemple fields=code_station,localisation
+* 08/08/2016 : ajout du paramètre fields, la valeur est une liste des champs souhaités dans la réponse, par exemple fields=code_station,localisation
 
 ### Connaissez-vous Hub'Eau ?
 
@@ -64,10 +64,10 @@ Hub’Eau c’est le résultat de la collaboration de l’AFB et du BRGM dans le
 
 Les autres API disponibles à ce jour dans Hub'Eau sont :
 
-* [Etat piscicole](/api/api_hubeau_poissons.html) ;
-* [Piézométrie](/api/api_hubeau_piezometrie.html) ;
-* [Qualité physico-chimique des cours d'eau](/api/api_hubeau_qualite_rivieres.html) ;
-* [Qualité des nappes d'eau souterraine](/api/api_hubeau_qualite_nappes_eau_sout.html).
+* [Etat piscicole](https://api.gouv.fr/api_hubeau_poissons.html) ;
+* [Piézométrie](https://api.gouv.fr/api_hubeau_piezometrie.html) ;
+* [Qualité physico-chimique des cours d'eau](https://api.gouv.fr/api_hubeau_qualite_rivieres.html) ;
+* [Qualité des nappes d'eau souterraine](https://api.gouv.fr/api_hubeau_qualite_nappes_eau_sout.html).
 
 
 ### Exemples de réutilisation
