@@ -5,7 +5,7 @@ contract: OUVERT sous contrat
 owner: IGN Géoportail
 category: Public 
 layout: api
-logo: https://geoservices.ign.fr/images/logoIGN.png
+logo: img/look4-geoportail.jpg
 contact: contact.geoservices@ign.fr
 doc_tech: https://ignf.github.io/look4/latest/jsdoc/
 access_link: http://professionnels.ign.fr/ign/contrats
@@ -26,7 +26,7 @@ keywords:
 # API Look4 Géoportail  
 ##  recherche géographique multithématique - adresses, lieux, cadastre, PR etc
 
-Look4 est une API de recherche “nouvelle génération” proposé par l’IGN qui fournit une interface unique à l’utilisateur pour de multiples sources de données. Look4 sert les besoins du site Géoportail, mais est disponible pour tout site ou application.
+Look4 est une API de recherche “nouvelle génération” proposée par l’IGN qui fournit une interface unique à l’utilisateur pour de multiples sources de données. Look4 sert les besoins du site Géoportail, mais est disponible pour tout site ou application.
 
 Look4 permet, en un seul outil, de faire des recherches sur de nombreuses sources de données géolocalisées préconfigurées, telles que des adresses, des parcelles, des lieux-dits, des contenus du Géoportail, du Géocatalogue ou de data.gouv.fr, ainsi que des index spécialisés tels que les points de repère routiers. 
 
@@ -44,12 +44,12 @@ Look4 propose à l’utilisateur une API REST en JSON qui fournit des méthodes 
 - connaître les données mises à disposition de l’utilisateur (API de découverte) ;
 - effectuer des recherches dans les données selon les critères de l’utilisateur (API de recherche).
 
-L’accès à Look4 se fait par l’URL suivante : https://wxs.ign.fr/VOTRE_CLE_API/look4/user/
+L’accès à Look4 se fait par les URL suivantes : https://wxs.ign.fr/VOTRE_CLE_API/look4/user/discover (API de découverte) et https://wxs.ign.fr/VOTRE_CLE_API/look4/user/search (API de recherche)
 
 La documentation complète de l’API est disponible à la page : https://ignf.github.io/look4/latest/jsdoc
 
 
-Look4 est disponible pour test sur la clé “beta” de l’IGN : https://wxs.ign.fr/beta/look4/user/.
+Look4 est disponible pour test sur la clé “beta” de l’IGN : https://wxs.ign.fr/beta/look4/user/discover et https://wxs.ign.fr/beta/look4/user/search.
 Une clé d’accès pérenne aux index de Look4, comme pour l’accès à l’ensemble des ressources du Géoportail, peut être obtenue sur l’Espace professionnel (http://professionnels.ign.fr).
 
 Les ressources publiées sont découvrables via http://wxs.ign.fr/look4/user/discover/) :
