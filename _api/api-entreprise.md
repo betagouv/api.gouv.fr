@@ -26,7 +26,7 @@ partners:
   - PRO BTP
   - QUALIBAT
   - MIN INTERIEUR
-owner: ETALAB (DINSIC)
+owner: Etalab (DINSIC)
 keywords:
   - Établissement
   - Entreprise
