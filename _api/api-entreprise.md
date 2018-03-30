@@ -1,9 +1,9 @@
 ---
 title: API Entreprise
 tagline: Simplifier les démarches des entreprises en récupérant pour elles leurs documents administratifs
-doc_tech: https://api.apientreprise.fr/docs
-domain: http://api.apientreprise.fr
-contact: contact@apientreprise.fr
+doc_tech: https://entreprise.api.gouv.fr/documentation
+domain: https://entreprise.api.gouv.fr/
+contact: tech@entreprise.api.gouv.fr
 contract: OUVERT sous contrat
 stat:
   lastXdays: 30
