@@ -34,7 +34,7 @@ partners:
   - Taxis Rennais
   - Tessa
   - UNT
-owner: ETALAB (DINSIC) &amp; DSCR (Ministère de l'Intérieur)
+owner: Etalab (DINSIC) &amp; DSCR (Ministère de l'Intérieur)
 keywords:
   - Transport
   - Taxi

@@ -16,7 +16,7 @@ partners:
   - La Poste
   - INSEE
   - OpenStreetMap
-owner: ETALAB (DINSIC)
+owner: Etalab (DINSIC)
 keywords:
   - Communes
   - Codes postaux
