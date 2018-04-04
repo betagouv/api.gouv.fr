@@ -7,7 +7,7 @@ contact: tech@entreprise.api.gouv.fr
 contract: OUVERT sous contrat
 stat:
   lastXdays: 30
-  url: https://dashboard.apientreprise.fr/api/stats/apientreprise/last_30_days_requests
+  url: https://dashboard.entreprise.api.gouv.fr/api/watchdoge/stats/last_30_days_usage
   label: informations non redemandées aux entreprises
 clients:
   - Collectivités
