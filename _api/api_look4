@@ -26,7 +26,7 @@ keywords:
 # API Look4 Géoportail  
 ##  recherche géographique multithématique - adresses, lieux, cadastre, PR etc
 
-Look4 est une API de recherche “nouvelle génération” proposée par l’IGN qui fournit une interface unique à l’utilisateur pour de multiples sources de données. Look4 sert les besoins du site Géoportail, mais est disponible pour tout site ou application.
+Look4 est une API de recherche proposée par l’IGN qui fournit une interface unique à l’utilisateur pour de multiples sources de données. Look4 sert les besoins du site Géoportail, mais est disponible pour tout site ou application.
 
 Look4 permet, en un seul outil, de faire des recherches sur de nombreuses sources de données géolocalisées préconfigurées, telles que des adresses, des parcelles, des lieux-dits, des contenus du Géoportail, du Géocatalogue ou de data.gouv.fr, ainsi que des index spécialisés tels que les points de repère routiers. 
 
@@ -48,11 +48,18 @@ L’accès à Look4 se fait par les URL suivantes : https://wxs.ign.fr/VOTRE_CLE
 
 La documentation complète de l’API est disponible à la page : https://ignf.github.io/look4/latest/jsdoc
 
+##Look4 - les conditions d'utilisation
 
 Look4 est disponible pour test sur la clé “beta” de l’IGN : https://wxs.ign.fr/beta/look4/user/discover et https://wxs.ign.fr/beta/look4/user/search.
 Une clé d’accès pérenne aux index de Look4, comme pour l’accès à l’ensemble des ressources du Géoportail, peut être obtenue sur l’Espace professionnel (http://professionnels.ign.fr).
+Pour un usage grand public, hors conditions particulières plus avantageuses (recherche et enseignement, missions de service public), l'usage gratuit de Look4 est possible dans la limite de 2M transactions par an, une transaction équivalent à 32 appels à Look4.
 
-Les ressources publiées sont découvrables via http://wxs.ign.fr/look4/user/discover/) :
+Les licences des différentes ressources accédées par Look4 sont détaillées sur https://geoservices.ign.fr/documentation/donnees-ressources-autres.html#liste-des-ressources-de-look4
+Les conditions de réutilisation des ressources sous licence IGN accédées par Look4 sont en outre détaillées sur https://geoservices.ign.fr/documentation/donnees-ressources-autres.html#conditions-dutilisation-des-r%C3%A9sultats-de-look4
+
+##Look4 - les ressources disponibles via Look4
+
+Les ressources publiées sont découvrables via http://wxs.ign.fr/look4/user/discover/). Elles comprennent :
 
 - **locating** : un index regroupant les résultats du moteur de géocodage (adresses, lieux-dits habités, lieux-dits non habités) ET les points de repère routiers.
 - **wwwLayers** : les couches du site Géoportail ;
