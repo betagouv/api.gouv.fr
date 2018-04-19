@@ -4,7 +4,6 @@ link: http://embauche.beta.gouv.fr/
 description: Simulez le coût d'une embauche en France
 screenshot: ecran_simulateur-cout-embauche.png
 api:
-  - OpenFisca
   - API Géo
 ---
 
