@@ -16,10 +16,25 @@
 		</div>
 	</div>
   <div class="extra content">
-    {% for keywords in include.description.keywords %}
-			<div class="ui tiny label">
-				{{ keywords }}
+		{% if include.description.partners != null %}
+			<small>Partenaires</small>
+			<div>
+				{% for partner in include.description.partners %}
+					<div class="ui tiny label">
+						{{ partner }}
+					</div>
+				{% endfor %}
 			</div>
-    {% endfor %}
+		{% endif %}
+
+		<small>Tags</small>
+		<div>
+			{% for keywords in include.description.keywords %}
+				<div class="ui tiny label">
+					{{ keywords }}
+				</div>
+			{% endfor %}
+		</div>
+
 	</div>
 </a>
