@@ -1,6 +1,6 @@
 ---
 title: API Particulier
-tagline: Simplifiez les démarches de vos usagers, ne demandez plus de justificatifs
+tagline: Pour accélérer l’ouverture des données personnelles et leur réutilisation, automatisez vos demandes de pièces justificatives
 access_link: https://particulier.api.gouv.fr/charte.html
 domain: https://particulier.api.gouv.fr
 contact: contact@particulier.api.gouv.fr
@@ -19,8 +19,6 @@ partners:
 owner: Incubateur de services numériques (DINSIC)
 keywords:
   - Impots
-  - CAF
-  - Caisse Allocations Familiales
   - Quotient Familial
   - Revenu Fiscal de Référence
   - Adresse
