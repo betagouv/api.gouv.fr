@@ -1,7 +1,6 @@
 ---
 title: API Particulier
 tagline: Pour accélérer l’ouverture des données personnelles et leur réutilisation, automatisez vos demandes de pièces justificatives
-doc_tech: https://particulier.api.gouv.fr/documentation-technique.html
 access_link: https://particulier.api.gouv.fr/charte.html
 domain: https://particulier.api.gouv.fr
 contact: contact@particulier.api.gouv.fr
