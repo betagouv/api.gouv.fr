@@ -13,6 +13,11 @@ layout: default
         <h2 class="ui inverted header">
           {{ page.tagline }}
         </h2>
+        {% if page.access_link %}
+        <a class="large ui secondary button" href="{{ page.access_link }}" rel="noopener" target="_blank">
+          Demandez l'accès
+        </a>
+        {% endif %}
       </div>
     </div>
   </div>
