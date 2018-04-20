@@ -6,6 +6,14 @@
 @import "markdown";
 @import "service";
 
+.section-title {
+  font-size: 1.3em;
+  border-bottom: 1px solid #289fdc;
+}
+
+section + section {
+  margin-top: 2em;
+}
 
 #mission-statement {
   padding-top: 5%;
@@ -60,9 +68,20 @@
     }
   }
   .swagger-section {
+    background-color: whitesmoke;
+    padding: 10px 2em;
+
+    hgroup.main h2 {
+      font-size: 1em;
+    }
     .info_title {
       display: none;
     }
+
+    .swagger-ui .wrapper section.models {
+      background-color: #fff;
+    }
+
   }
 
   #validator {
