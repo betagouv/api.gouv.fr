@@ -13,15 +13,9 @@ layout: default
         <h2 class="ui inverted header">
           {{ page.tagline }}
         </h2>
-        {% if page.doc_tech %}
-        <a class="large ui secondary button" href="{{ page.doc_tech }}" rel="noopener" target="_blank">
-          Documentation technique &nbsp;&nbsp;<i class="code icon"></i>
-        </a>
-        {% endif %}
         {% if page.access_link %}
         <a class="large ui secondary button" href="{{ page.access_link }}" rel="noopener" target="_blank">
-          Demandez l'accès &nbsp;&nbsp;
-          <i class="ticket icon"></i>
+          Demandez l'accès
         </a>
         {% endif %}
       </div>
@@ -106,7 +100,11 @@ layout: default
             <div class="content">
               <div class="header">Sources et partenaires</div>
               <div class="description">
-                {{ page.partners | join: ' - ' }}
+                <ul>
+                  {% for partner in page.partners %}
+                    <li>{{ partner }}</li>
+                  {% endfor %}
+                </ul>
               </div>
             </div>
           </div>
@@ -115,47 +113,43 @@ layout: default
       </div>
     </div>
     <div class="ten wide tablet twelve wide computer column">
-      <div class="ui secondary pointing menu">
-        <a class="item tab active" data-tab="funk">Description</a>
-        <a class="item tab" data-tab="tech">Technique</a>
-      </div>
-      <div class="ui active tab" data-tab="funk">
-        <section class="markdown-body">
+      <section id="api-description">
+        <h2 class="section-title">Description</h2>
+        <div class="markdown-body" >
           {{ content }}
-        </section>
-      </div>
-      <div class="ui tab" data-tab="tech">
+        </div>
+      </section>
+
+      <section id="technique">
+        <h2 class="section-title">Documentation technique</h2>
         {% if page.openapi_definition %}
-          <section class="ui container">
-            {% include swagger.html %}
-          </section>
+          {% include swagger.html %}
         {% else %}
           <p>
             Vous pouvez retrouver la documentation technique sur <a href="{{ page.doc_tech }}" rel="noopener" target="_blank">le site de l'API</a>
           </p>
         {% endif %}
-      </div>
+      </section>
+
+      {% capture serviceHtml %}
+        {% for service in site.service %}
+          {% if service.api contains page.title%}
+            {% include service-card.html service=service %}
+          {% endif %}
+        {% endfor %}
+      {% endcapture %}
+      {% assign serviceHtmlWithoutSpace = serviceHtml | strip_newlines | strip %}
+      {% if serviceHtmlWithoutSpace != "" %}
+      <section id="services" class="ui container">
+        <h2 class="section-title">Les services</h2>
+        <div class="ui two stackable cards">
+          {{ serviceHtml }}
+        </div>
+      </section>
+      {% endif %}
     </div>
   </div>
 </div>
-
-{% capture serviceHtml %}
-  {% for service in site.service %}
-    {% if service.api contains page.title%}
-      {% include service-card.html service=service %}
-    {% endif %}
-  {% endfor %}
-{% endcapture %}
-{% assign serviceHtmlWithoutSpace = serviceHtml | strip_newlines | strip %}
-{% if serviceHtmlWithoutSpace != "" %}
-<section id="services" class="ui container">
-  <h2 class="ui divider horizontal">Les services</h2>
-  <div class="ui two stackable cards">
-    {{ serviceHtml }}
-  </div>
-</section>
-{% endif %}
-
 
 <script>
   $(function() {
