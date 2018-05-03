@@ -40,7 +40,7 @@ Elle vous permet de :
 - calculer des IFT au niveau des traitements phytopharmaceutiques
 - certifier des IFT soumis aux contrôles des agents de l'ASP
 
-Pour plus d'information sur l'IFT, vous pouvez consulter le site institutionnel du ministère à l'adresse : http://agriculture.gouv.fr/indicateur-de-frequence-de-traitements-phytosanitaires-ift
+Pour plus d'information sur l'IFT, vous pouvez consulter le site institutionnel du ministère à l'adresse : [http://agriculture.gouv.fr/indicateur-de-frequence-de-traitements-phytosanitaires-ift](http://agriculture.gouv.fr/indicateur-de-frequence-de-traitements-phytosanitaires-ift)
 
 ### Aller à l'essentiel... 
 
@@ -49,21 +49,21 @@ Dans la majorité des cas, les API vous permettent de requêter et de paginer le
 - Lister les cultures commençant par "ci" : 
 ```sh
     curl -X GET --header 'Accept: application/json' 'https://alim.agriculture.gouv.fr/ift-api/api/cultures?filtre=ci'
-``` 
+```
 
  - Calculer un IFT non certifié : Campagne culturale 2017, Traitement d'herbicide, Citronnier, Produit ACOMAC pour 6 L/HA
 ```sh
     curl -X GET --header 'Accept: application/json' 'https://alim.agriculture.gouv.fr/ift-api/api/ift/traitement?campagneIdMetier=2017&numeroAmmIdMetier=2090125&cultureIdMetier=1055&typeTraitementIdMetier=T21&dose=6'
-``` 
- - Calculer un IFT certifié car soumis à un contrôle : Campagne culturale 2017, Traitement d'herbicide, Citronnier, Produit ACOMAC pour 6 L/HA
+```
 
+ - Calculer un IFT certifié car soumis à un contrôle : Campagne culturale 2017, Traitement d'herbicide, Citronnier, Produit ACOMAC pour 6 L/HA
 ```sh
     curl -X GET --header 'Accept: application/json' 'https://alim.agriculture.gouv.fr/ift-api/api/ift/traitement/certifie?campagneIdMetier=2017&numeroAmmIdMetier=2090125&cultureIdMetier=1055&typeTraitementIdMetier=T21&dose=6'
-``` 
+```
 
 ### Se lancer !
  
-Le ministère en charge de l’agriculture met à votre disposition un environnement de pré-production pour tester vos développements. Il est accessible à l’adresse : https://alim-pprd.agriculture.gouv.fr/ift-api/swagger-ui.html
+Le ministère en charge de l’agriculture met à votre disposition un environnement de pré-production pour tester vos développements. Il est accessible à l’adresse : [https://alim-pprd.agriculture.gouv.fr/ift-api/swagger-ui.html](https://alim-pprd.agriculture.gouv.fr/ift-api/swagger-ui.html)
 
 - Entrez dans la matrice :
 ```sh
@@ -72,4 +72,4 @@ Le ministère en charge de l’agriculture met à votre disposition un environne
 
 - En cas de problèmes de sécurité, n'oubliez pas d'installer le certificat de l'API dans votre key store ;)
 
-- Codes sources et codes exemples sont disponibles sur GitHub : https://github.com/MINAGRI-INITIAL
+- Codes sources et codes exemples sont disponibles sur GitHub : [https://github.com/MINAGRI-INITIAL](https://github.com/MINAGRI-INITIAL)
