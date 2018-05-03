@@ -24,15 +24,15 @@ keywords:
 ---
 
 # API Look4 Géoportail  
-##  recherche géographique multithématique - adresses, lieux, cadastre, PR etc
+##  recherche géographique multithématique - adresses, lieux, cadastre, points routiers etc
 
 Look4 est une API de recherche proposée par l’IGN qui fournit une interface unique à l’utilisateur pour de multiples sources de données. Look4 sert les besoins du site Géoportail, mais est disponible pour tout site ou application.
 
 Look4 permet, en un seul outil, de faire des recherches sur de nombreuses sources de données géolocalisées préconfigurées, telles que des adresses, des parcelles, des lieux-dits, des contenus du Géoportail, du Géocatalogue ou de data.gouv.fr, ainsi que des index spécialisés tels que les points de repère routiers. 
 
-Look4 propose donc une recherche puissante et multidimensionnelle avec une interface simple.
+Look4 propose donc une recherche multidimensionnelle via une interface unique et simplifiée.
 
-Les sources de données proposées par Look4 peuvent être de deux natures :
+Les sources de données proposées par Look4 sont de deux natures :
 
 - des sources indexées directement par Look4 ;
 - des web services de recherche tiers existants.
@@ -100,4 +100,4 @@ Lors d’une requête au service, l’utilisateur doit préciser les différents
 - la recherche standard ("fuzzy") : l’utilisateur saisit la totalité de sa recherche. Look4 cherche alors le ou les termes saisis indépendamment ou ensemble, avec une tolérance aux fautes d’orthographe.
 -  Le nombre de résultats (nb), optionnel, permet de préciser le nombre maximum de résultats retournés, avec un maximum de 200. En l’absence de ce paramètre, le nombre de résultats est de 20.
 
-La liste complète des paramètres est décrite dans la documentation.
+La liste complète des paramètres est accessible dans la documentation.
