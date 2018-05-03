@@ -36,6 +36,7 @@ Les sources de données proposées par Look4 peuvent être de deux natures :
 
 - des sources indexées directement par Look4 ;
 - des web services de recherche tiers existants.
+
 Ces sources s’enrichissent progressivement : il est possible de solliciter l’IGN (en écrivant à l’adresse contact.geoservices@ign.fr) pour en rajouter de nouvelles.
 
 ##Comment s’utilise Look4 ?
@@ -48,14 +49,17 @@ L’accès à Look4 se fait par les URL suivantes : https://wxs.ign.fr/VOTRE_CLE
 
 La documentation complète de l’API est disponible à la page : https://ignf.github.io/look4/latest/jsdoc
 
-##Look4 - les conditions d'utilisation
+##Look4 - les conditions d'utilisation de L'API Look4 et de ses ressources
+
+L'utilisation de Look4 est gratuite pour l'Etat et ses EPA, les collectivités, les EPCI à fiscalité propre, les SDIS et les organismes d'enseignement et de recherche.
+Pour les autres utilisateurs, et dans un contexte d'usage grand public, l'utilisation gratuite de Look4 est possible dans la limite de 2M transactions par an, une transaction équivalent à 32 appels à Look4.
 
 Look4 est disponible pour test sur la clé “beta” de l’IGN : https://wxs.ign.fr/beta/look4/user/discover et https://wxs.ign.fr/beta/look4/user/search.
-Une clé d’accès pérenne aux index de Look4, comme pour l’accès à l’ensemble des ressources du Géoportail, peut être obtenue sur l’Espace professionnel (http://professionnels.ign.fr).
-Pour un usage grand public, hors conditions particulières plus avantageuses (recherche et enseignement, missions de service public), l'usage gratuit de Look4 est possible dans la limite de 2M transactions par an, une transaction équivalent à 32 appels à Look4.
 
-Les licences des différentes ressources accédées par Look4 sont détaillées sur https://geoservices.ign.fr/documentation/donnees-ressources-autres.html#liste-des-ressources-de-look4
-Les conditions de réutilisation des ressources sous licence IGN accédées par Look4 sont en outre détaillées sur https://geoservices.ign.fr/documentation/donnees-ressources-autres.html#conditions-dutilisation-des-r%C3%A9sultats-de-look4
+Une clé d’accès pérenne aux ressources de Look4 peut, comme pour l’accès à l’ensemble des ressources du Géoportail, être obtenue sur l’Espace professionnel (http://professionnels.ign.fr).
+
+Les ressources disponibles via Look4 ont diverses licences (IGN, opendata, etc). La licence de chacune des ressources est détaillée sur https://geoservices.ign.fr/documentation/donnees-ressources-autres.html#liste-des-ressources-de-look4
+Les conditions de réutilisation des ressources sous licence IGN servies par Look4 sont explicitées sur https://geoservices.ign.fr/documentation/donnees-ressources-autres.html#conditions-dutilisation-des-r%C3%A9sultats-de-look4
 
 ##Look4 - les ressources disponibles via Look4
 
@@ -84,7 +88,6 @@ Pour toutes les requêtes possibles, voir https://ignf.github.io/look4/latest/js
 Important : la liste renvoie l’ensemble des index existants. Un index n’est effectivement interrogeable qu’une fois rajouté à sa propre clé d’accès via le site "espace professionnel".
 
 NB : l’API de découverte de Look4 ne nécessite pas de clé d’accès.
-
 
 ##Look4 - l’API de recherche
 L'API de recherche de Look4 permet aux utilisateurs de lancer des recherches dans les différents index disponibles, avec plusieurs méthodes et options.
