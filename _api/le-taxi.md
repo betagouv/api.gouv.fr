@@ -13,28 +13,12 @@ clients:
   - éditeurs d'applications
 logo: logo_le.taxi.svg
 partners:
-  - Allo Taxi Roubaix
-  - Allo Taxi Lyon
   - Atlantis Taxi
-  - Axygest
-  - Doko
-  - FNAT
   - G7
-  - Les Taxis Marseillais
-  - mob1Taxi
-  - Mon Appli Taxi
-  - Offwigo
-  - Taxis Radio Artisans Montpellier
-  - Taxi Bleu du Midi
-  - Taxi Radio Marseille
+  - Tako
   - Taxiloc
-  - TaxiProxi
-  - TaxiConnect
-  - Taxi Radio Aixois
   - Taxis Rennais
-  - Tessa
-  - UNT
-owner: ETALAB (DINSIC) &amp; DSCR (Ministère de l'Intérieur)
+owner: Etalab (DINSIC) &amp; DGITM (Ministère chargé des transports)
 keywords:
   - Transport
   - Taxi
