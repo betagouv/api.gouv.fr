@@ -3,7 +3,7 @@ title: API Look4 Géoportail
 tagline: la recherche géographique multithématique du Géoportail - adresses, lieux, cadastre, points routiers, etc
 contract: OUVERT sous contrat
 owner: IGN Géoportail
-category: Public 
+category: Public
 layout: api
 logo: look4-geoportail.jpg
 contact: contact.geoservices@ign.fr
@@ -23,12 +23,12 @@ keywords:
   - points routiers
 ---
 
-# API Look4 Géoportail  
+# API Look4 Géoportail
 ##  recherche géographique multithématique - adresses, lieux, cadastre, points routiers etc
 
 Look4 est une API de recherche proposée par l’IGN qui fournit une interface unique à l’utilisateur pour de multiples sources de données. Look4 sert les besoins du site Géoportail, mais est disponible pour tout site ou application.
 
-Look4 permet, en un seul outil, de faire des recherches sur de nombreuses sources de données géolocalisées préconfigurées, telles que des adresses, des parcelles, des lieux-dits, des contenus du Géoportail, du Géocatalogue ou de data.gouv.fr, ainsi que des index spécialisés tels que les points de repère routiers. 
+Look4 permet, en un seul outil, de faire des recherches sur de nombreuses sources de données géolocalisées préconfigurées, telles que des adresses, des parcelles, des lieux-dits, des contenus du Géoportail, du Géocatalogue ou de data.gouv.fr, ainsi que des index spécialisés tels que les points de repère routiers.
 
 Look4 propose donc une recherche multidimensionnelle via une interface unique et simplifiée.
 
@@ -39,7 +39,7 @@ Les sources de données proposées par Look4 sont de deux natures :
 
 Ces sources s’enrichissent progressivement : il est possible de solliciter l’IGN (en écrivant à l’adresse contact.geoservices@ign.fr) pour en rajouter de nouvelles.
 
-##Comment s’utilise Look4 ?
+## Comment s’utilise Look4 ?
 Look4 propose à l’utilisateur une API REST en JSON qui fournit des méthodes pour :
 
 - connaître les données mises à disposition de l’utilisateur (API de découverte) ;
@@ -52,7 +52,7 @@ La documentation complète de l’API est disponible à la page : https://ignf.g
 Look4 est disponible pour test sur la clé “beta” de l’IGN : https://wxs.ign.fr/beta/look4/user/discover et https://wxs.ign.fr/beta/look4/user/search. Une clé d’accès pérenne aux ressources de Look4 peut, comme pour l’accès à l’ensemble des ressources du Géoportail, être obtenue sur l’Espace professionnel (http://professionnels.ign.fr).
 
 
-##Look4 - les conditions d'utilisation de Look4 et de ses ressources
+## Look4 - les conditions d'utilisation de Look4 et de ses ressources
 
 L'utilisation de Look4 est gratuite pour l'Etat et ses EPA, les collectivités, les EPCI à fiscalité propre et les SDIS ([décision n°2018/241](http://www.ign.fr/institut/sites/all/files/2018.241_tarification_geoservices_ign.pdf) de l'institut).
 Pour les autres utilisateurs, et dans un contexte d'usage grand public, l'utilisation gratuite de Look4 est possible dans la limite de 2M transactions par an (10 000 pour un usage professionnel, une transaction équivalent à 32 appels à Look4.
@@ -60,7 +60,7 @@ Pour les autres utilisateurs, et dans un contexte d'usage grand public, l'utilis
 Les ressources disponibles via Look4 ont différentes licences (IGN, opendata, etc). La licence de chacune des ressources est détaillée sur https://geoservices.ign.fr/documentation/donnees-ressources-autres.html#liste-des-ressources-de-look4
 Les conditions de réutilisation des ressources sous licence IGN servies par Look4 sont détaillées sur https://geoservices.ign.fr/documentation/donnees-ressources-autres.html#conditions-dutilisation-des-r%C3%A9sultats-de-look4
 
-##Look4 - les ressources disponibles via Look4
+## Look4 - les ressources disponibles via Look4
 
 Les ressources publiées sont découvrables via http://wxs.ign.fr/look4/user/discover/). Elles comprennent :
 
@@ -69,17 +69,17 @@ Les ressources publiées sont découvrables via http://wxs.ign.fr/look4/user/dis
 - **geocatLayers** : des couches de visualisation issues de serveurs référencés par le Géocatalogue
 - **content** : le contenu éditorial du site Géoportail
 - **voies_nommees** : un index des rues de France par région, commune, département, utilisable par exemple dans des formulaires en ligne
- 
-##Look4 - l’API de découverte
+
+## Look4 - l’API de découverte
 L'API de découverte de Look4 permet à l’utilisateur de faire une série d’opérations permettant de découvrir les contenus proposés. Il propose en particulier les possibilités suivantes :
 
 - récupérer la liste des index existants : https://wxs.ign.fr/look4/user/discover/
-- obtenir le détail d’un index : http://wxs.ign.fr/look4/user/discover/<id> (“id” étant l’identifiant d’un index)
+- obtenir le détail d’un index : http://wxs.ign.fr/look4/user/discover/&lt;id&gt; (“id” étant l’identifiant d’un index)
 Exemple : https://wxs.ign.fr/look4/user/discover/voies_nommees retourne la description et les types de données de l’index :
 
-- obtenir la description des types de données contenus dans un index : http://wxs.ign.fr/look4/user/discover/<id>/type (“id” étant l’identifiant d’un index)
+- obtenir la description des types de données contenus dans un index : http://wxs.ign.fr/look4/user/discover/&lt;id&gt;/type (“id” étant l’identifiant d’un index)
 Exemple : https://wxs.ign.fr/look4/user/discover/voies_nommees/type
-- obtenir le détail d’un type de données : https://wxs.ign.fr/look4/user/discover/type/<id> (“id” étant l’identifiant d’un type de données)
+- obtenir le détail d’un type de données : https://wxs.ign.fr/look4/user/discover/type/&lt;id&gt; (“id” étant l’identifiant d’un type de données)
 Exemple : https://wxs.ign.fr/look4/user/discover/type/route
 
 Pour toutes les requêtes possibles, voir https://ignf.github.io/look4/latest/jsdoc/#api-Decouverte
@@ -88,7 +88,7 @@ Important : la liste renvoie l’ensemble des index existants. Un index n’est 
 
 NB : l’API de découverte de Look4 ne nécessite pas de clé d’accès.
 
-##Look4 - l’API de recherche
+## Look4 - l’API de recherche
 L'API de recherche de Look4 permet aux utilisateurs de lancer des recherches dans les différents index disponibles, avec plusieurs méthodes et options.
 
 Lors d’une requête au service, l’utilisateur doit préciser les différents paramètres de sa recherche pour obtenir les réponses recherchées, tels que :
