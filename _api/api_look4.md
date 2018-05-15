@@ -74,12 +74,12 @@ Les ressources publiées sont découvrables via http://wxs.ign.fr/look4/user/dis
 L'API de découverte de Look4 permet à l’utilisateur de faire une série d’opérations permettant de découvrir les contenus proposés. Il propose en particulier les possibilités suivantes :
 
 - récupérer la liste des index existants : https://wxs.ign.fr/look4/user/discover/
-- obtenir le détail d’un index : http://wxs.ign.fr/look4/user/discover/<id> (“id” étant l’identifiant d’un index)
+- obtenir le détail d’un index : http://wxs.ign.fr/look4/user/discover/&lt;id&gt; (“id” étant l’identifiant d’un index)
 Exemple : https://wxs.ign.fr/look4/user/discover/voies_nommees retourne la description et les types de données de l’index :
 
-- obtenir la description des types de données contenus dans un index : http://wxs.ign.fr/look4/user/discover/<id>/type (“id” étant l’identifiant d’un index)
+- obtenir la description des types de données contenus dans un index : http://wxs.ign.fr/look4/user/discover/&lt;id&gt;/type (“id” étant l’identifiant d’un index)
 Exemple : https://wxs.ign.fr/look4/user/discover/voies_nommees/type
-- obtenir le détail d’un type de données : https://wxs.ign.fr/look4/user/discover/type/<id> (“id” étant l’identifiant d’un type de données)
+- obtenir le détail d’un type de données : https://wxs.ign.fr/look4/user/discover/type/&lt;id&gt; (“id” étant l’identifiant d’un type de données)
 Exemple : https://wxs.ign.fr/look4/user/discover/type/route
 
 Pour toutes les requêtes possibles, voir https://ignf.github.io/look4/latest/jsdoc/#api-Decouverte
