@@ -28,7 +28,7 @@ keywords:
 
 # API carto - module cadastre
 
-L'API carto - module cadastre permet d'obtenir les les informations suivantes issues de la BD PARCELLAIRE :
+L'API carto - module cadastre permet d'obtenir les informations suivantes issues de la BD PARCELLAIRE :
 
 - Obtenir les géométries pour une commune
 - Obtenir les divisions parcellaires d’une commune
@@ -53,8 +53,8 @@ Récupération d'informations sur les parcelles dans les zones non vecteur (issu
 
 ## Conditions d'utilisation
 
-Ce service repose sur l’appel à des services WFS de l’API géoportail de l’IGN. Une clé sur le serveur API Carto, il faut passer une clé IGN en paramètre sous le nom apikey.
-Pour obtenir une clé Geoportail, vous devez vous connecter au site : http://professionnels.ign.fr/. Lors de votre demande de clé Geoportail, vous devez commander les flux “Ressources WFS Géoportail - BD PARCELLAIRE®” ci-dessous:
+Ce service repose sur l’appel à des services WFS de l’API géoportail de l’IGN. Pour ne pas avoir recours à la clé par défaut du serveur API Carto, il faut passer une clé IGN en paramètre sous le nom apikey.
+Pour obtenir une clé Geoportail, vous devez vous connecter au site : http://professionnels.ign.fr/. Lors de votre demande de clé Geoportail, vous devez lui allouer les flux “Ressources WFS Géoportail - BD PARCELLAIRE®” ci-dessous :
 
 - bdpv_COMMUNE
 - bdpv_DIVCAD
