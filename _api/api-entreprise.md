@@ -31,7 +31,7 @@ keywords:
   - Établissement
   - Entreprise
   - Certification
-access_link: https://tps.apientreprise.fr/users/dossiers/new?procedure_id=33
+access_link: https://www.demarches-simplifiees.fr/commencer/33
 ---
 
 L’API Entreprise est une plateforme d’échange opérée par la DINSIC qui met à disposition des opérateurs publics et des administrations, des données et des documents administratifs de référence, relatifs aux entreprises et association, qui sont délivrés par les administrations et les organismes publics, à fin de simplifier les démarches administratives et la gestion des dossiers.
