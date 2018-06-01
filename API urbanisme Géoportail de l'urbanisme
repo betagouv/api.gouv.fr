@@ -1,5 +1,5 @@
 ---
-title: API urbanisme du Géoportail de l'urbanisme
+title: API Carto - module urbanisme (Géoportail de l'urbanisme)
 tagline: l'accès aux données d'urbanisme du GPU
 contract: OUVERT
 owner: IGN Géoportail / MTES-DHUP
@@ -23,12 +23,12 @@ keywords:
   - SCOT
   - GPU
   - Géoportail
-  - APICARTO
+  - API Carto
 ---
 
-# API urbanisme du Géoportail de l'urbanisme (GPU)
+# API Carto - module urbanisme (GPU)
 
-Le service d’interrogation du GPU permet d’obtenir les différentes informations d’urbanisme intersectant une géométrie (ponctuelle ou surfacique).
+L'API Carto - module urbanisme est une API d’interrogation du Géoportail de l'urbanisme (GPU) permet d’obtenir les différentes informations d’urbanisme intersectant une géométrie (ponctuelle ou surfacique).
 
 Ces informations sont celles disponibles en consultation et en téléchargement sur le [Géoportail de l'urbanisme](https://geoportail-urbanisme.gouv.fr).
 
@@ -55,7 +55,7 @@ Les conditions de réutilisation des ressources sous licence IGN servies par Loo
 ## Conditions d'utilisation
 
 Les données servies par l'API urbanisme sont en licence ouverte.
-L'API urbanisme est en usage libre.
+L'API Carto - module urbanisme est en usage libre.
 
 
 
