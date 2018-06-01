@@ -8,7 +8,7 @@ layout: api
 logo: look4-geoportail.jpg
 contact: contact.geoservices@ign.fr
 doc_tech: https://apicarto.ign.fr/api/doc/aoc
-access_link: http://professionnels.ign.fr/ign/contrats
+access_link: https://geoservices.ign.fr/
 clients:
   - développeurs
   - entreprises
