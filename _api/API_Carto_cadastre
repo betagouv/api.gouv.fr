@@ -1,0 +1,67 @@
+---
+title: API carto - module cadastre
+tagline: l'accès simplifié aux données du parcellaire cadastral de la BD PARCELLAIRE
+contract: OUVERT sous contrat
+owner: IGN Géoportail 
+category: Public
+layout: api
+logo: look4-geoportail.jpg
+contact: contact.geoservices@ign.fr
+doc_tech: https://apicarto.ign.fr/api/doc/cadastre
+access_link: https://www.geoservices.ign.fr
+clients:
+   - professionnels du cadastre
+   - développeurs
+   - entreprises
+   - organismes publics, administrations
+   - collectivités territoriales
+keywords:
+  - urbanisme
+  - cadastre
+  - parcellaire
+  - communes
+  - parcelles
+  - rge
+  - Géoportail
+  - API Carto
+---
+
+# API carto - module cadastre
+
+L'API carto - module cadastre permet d'obtenir les les informations suivantes issues de la BD PARCELLAIRE :
+
+- Obtenir les géométries pour une commune
+- Obtenir les divisions parcellaires d’une commune
+- Obtenir la géométrie d’une parcelle cadastrale
+- Obtenir le centroïde d’une parcelle ou d’une commune (localisants)
+
+## Communes
+
+Récupération de la géométrie d'une commune.
+
+## Divisions
+
+Récupération d'informations sur les divisions parcellaires d'une commune.
+
+## Parcelles
+
+Récupération d'informations sur les parcelles cadastrales d'une commune.
+
+## Localisants
+
+Récupération d'informations sur les parcelles dans les zones non vecteur (issues du PCI image).
+
+## Conditions d'utilisation
+
+Ce service repose sur l’appel à des services WFS de l’API géoportail de l’IGN. Une clé sur le serveur API Carto, il faut passer une clé IGN en paramètre sous le nom apikey.
+Pour obtenir une clé Geoportail, vous devez vous connecter au site : http://professionnels.ign.fr/. Lors de votre demande de clé Geoportail, vous devez commander les flux “Ressources WFS Géoportail - BD PARCELLAIRE®” ci-dessous:
+
+- bdpv_COMMUNE
+- bdpv_DIVCAD
+- bdpv_LOCALISANT
+- bdpv_PARCELLE
+
+L'utilisation d'API Carto - module cadastre est gratuite pour l'Etat et ses EPA, les collectivités, les EPCI à fiscalité propre et les SDIS ([décision n°2018/241](http://www.ign.fr/institut/sites/all/files/2018.241_tarification_geoservices_ign.pdf) de l'institut).
+Pour les autres utilisateurs, et dans un contexte d'usage grand public, l'utilisation est gratuite dans la limite de 2M requêtes par an (10 000 pour un usage professionnel).
+
+Les droits et obligations liés à la réutilisation des ressources en ligne sous licence IGN sont détaillées [ici] http://professionnels.ign.fr/doc/CGU-ressourcesgeoportail.pdf
