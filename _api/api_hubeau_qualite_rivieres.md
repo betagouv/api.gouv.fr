@@ -67,10 +67,10 @@ Hub’Eau est le résultat de la collaboration de l’AFB et du BRGM dans le cad
 
 Les autres API disponibles à ce jour dans Hub'Eau sont :
 
-* [Etat piscicole](https://api.gouv.fr/api/api_hubeau_poissons.html) ;
-* [Indicateurs Eau potable et Assainissement](https://api.gouv.fr/api/api_hubeau_indic_EP_Asst.html) ;
-* [Piézométrie](https://api.gouv.fr/api/api_hubeau_piezometrie.html) ;
-* [Qualité des nappes d'eau souterraine](https://api.gouv.fr/api/api_hubeau_qualite_nappes_eau_sout.html).
+* [Etat piscicole](/api/api_hubeau_poissons.html) ;
+* [Indicateurs Eau potable et Assainissement](/api/api_hubeau_indic_EP_Asst.html) ;
+* [Piézométrie](/api/api_hubeau_piezometrie.html) ;
+* [Qualité des nappes d'eau souterraine](/api/api_hubeau_qualite_nappes_eau_sout.html).
 
 #### Un service en co-construction
 Pour des APIs toujours plus en phase avec les besoins utilisateurs, Hub'Eau inaugure en 2018 une [politique de bêta testing](https://hubeau.eaufrance.fr/page/apis-version-beta) en organisant une campagne de tests ouverte avant la mise la mise en production de chaque nouvelle API.
