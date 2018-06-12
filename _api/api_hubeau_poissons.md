@@ -43,21 +43,7 @@ Dernières évolutions de l'API Etat piscicole de Hub'Eau:
 
 Prochaines évolutions : accès à des données plus récentes et mise à disposition de nouveaux attributs (IPR, scores, méthodes et modes de prospection), prévu pour la fin de l'année 2018.
 
-### Connaissez-vous Hub'Eau ?
-
-[Hub’Eau](http://hubeau.eaufrance.fr) c’est la plateforme qu’il vous faut pour manipuler facilement les données ouvertes disponibles sur l’eau.
-Hub’Eau est la solution pour accéder aux  données sur l’eau sans être confronté aux problèmes d’hétérogénéité, de sources multiples, …. 
-Hub’Eau offre plusieurs interfaces (API) facilitant la réutilisation de données grâce au potentiel de jeux de données immédiatement intelligibles et exploitables.
-Hub’Eau c’est un service pérenne de la toile Eau France. 
-Osez l’expérience Hub’Eau : proposez-nous de nouveaux terrains de jeux, et mettons en commun notre intelligence pour créer la valeur de demain.
-Hub’Eau c’est le résultat de la collaboration de l’AFB et du BRGM dans le cadre du pôle de recherche et d'innovation en interopérabilité des systèmes d'information distribués sur l'eau : [INSIDE](http://www.pole-inside.fr/fr).  
-
-Les autres API disponibles à ce jour dans Hub'Eau sont :
-
-* [Indicateurs Eau potable et Assainissement](/api/api_hubeau_indic_EP_Asst.html) ;
-* [Piézométrie](/api/api_hubeau_piezometrie.html) ;
-* [Qualité physico-chimique des cours d'eau](/api/api_hubeau_qualite_rivieres.html) ;
-* [Qualité des nappes d'eau souterraine](/api/api_hubeau_qualite_nappes_eau_sout.html).
+{% include hubeau_connaissez_vous.md %}
 
 
 ### Exemples de réutilisation
