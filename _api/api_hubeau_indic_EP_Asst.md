@@ -3,7 +3,7 @@ title: Hub'Eau - Indicateurs Eau potable et Assainissement
 tagline: Indicateurs des services d'eau et d'assainissement
 contract: OUVERT
 openapi_definition: https://hubeau.eaufrance.fr/api/v0/indicateurs_services/api-docs
-doc_tech: http://hubeau.eaufrance.fr/page/documentation-eau_potable-assainissement
+doc_tech: https://hubeau.eaufrance.fr/page/documentation-eau_potable-assainissement
 logo: 02-indicateurs_services.png
 contact: t.vilmus@brgm.fr
 clients:
@@ -25,7 +25,7 @@ keywords:
 
 ### Description fonctionnelle de l'API Indicateurs eau potable et assainissement
 
-[L'API Indicateurs eau potable et assainissement](http://hubeau.eaufrance.fr/page/documentation-api-indicateurs-services-eau-assainissement) de Hub'Eau permet de connaître les __indicateurs__ réglementaires sur les services publics d'eau, d'assainissement et sur l'assainissement non collectif.
+[L'API Indicateurs eau potable et assainissement](https://hubeau.eaufrance.fr/page/documentation-api-indicateurs-services-eau-assainissement) de Hub'Eau permet de connaître les __indicateurs__ réglementaires sur les services publics d'eau, d'assainissement et sur l'assainissement non collectif.
 En effet, dans le but d’évaluer les performances de chacun de ces services et afin de permettre les comparaisons d’une année sur l’autre et entre services similaires, le ministère chargé de l’écologie a piloté dès 2004 l’élaboration d’un référentiel commun en concertation avec les acteurs de l’eau.
 
 Une trentaine d’indicateurs sur des aspects économiques, techniques, sociaux et environnementaux ont ainsi été créés. Il s’agit d’indicateurs permettant de suivre les différentes composantes du service et qui, pris dans leur ensemble, offrent une vision globale de ses performances. Ces indicateurs constituent des outils de pilotage facilitant l’inscription des services dans une démarche de progrès.
@@ -55,12 +55,10 @@ Dernières évolutions de l'API Indicateurs eau potable et assainissement de Hub
 
 ### Connaissez-vous Hub'Eau ?
 
-[Hub’Eau](http://hubeau.eaufrance.fr) c’est la plateforme qu’il vous faut pour manipuler facilement les données ouvertes disponibles sur l’eau.
-Hub’Eau est la solution pour accéder aux  données sur l’eau sans être confronté aux problèmes d’hétérogénéité, de sources multiples, …. 
-Hub’Eau offre plusieurs interfaces (API) facilitant la réutilisation de données grâce au potentiel de jeux de données immédiatement intelligibles et exploitables.
-Hub’Eau c’est un service pérenne de la toile Eau France. 
-Osez l’expérience Hub’Eau : proposez-nous de nouveaux terrains de jeux, et mettons en commun notre intelligence pour créer la valeur de demain.
-Hub’Eau c’est le résultat de la collaboration de l’AFB et du BRGM dans le cadre du pôle de recherche et d'innovation en interopérabilité des systèmes d'information distribués sur l'eau : [INSIDE](http://www.pole-inside.fr/fr).  
+#### Simplifier l'accès aux données sur l'eau
+Service pérenne de la toile [Eau France](https://www.eaufrance.fr), [Hub'Eau](https://hubeau.eaufrance.fr/) met à disposition des API Rest favorisant l’accès aux données du [SIE](https://www.eaufrance.fr/donnees) dans des formats simples d’emploi et propices à la réutilisation (CSV, JSON, GeoJSON).
+Fondé sur une infrastructure et des méthodes adaptées au traitement et au stockage de données massives, les APIs Hub'Eau garantissent les meilleures performances de disponibilité.
+Hub’Eau est le résultat de la collaboration de l’AFB et du BRGM dans le cadre du pôle de recherche et d'innovation en interopérabilité des systèmes d'information distribués sur l'eau : [INSIDE](http://www.pole-inside.fr/fr).  
 
 Les autres API disponibles à ce jour dans Hub'Eau sont :
 
@@ -69,15 +67,20 @@ Les autres API disponibles à ce jour dans Hub'Eau sont :
 * [Qualité physico-chimique des cours d'eau](/api/api_hubeau_qualite_rivieres.html) ;
 * [Qualité des nappes d'eau souterraine](/api/api_hubeau_qualite_nappes_eau_sout.html).
 
+#### Un service en co-construction
+Pour des APIs toujours plus en phase avec les besoins utilisateurs, Hub'Eau inaugure en 2018 une [politique de bêta testing](https://hubeau.eaufrance.fr/page/apis-version-beta) en organisant une campagne de tests ouverte avant la mise la mise en production de chaque nouvelle API.
+D'une durée de 30 à 45 jours, ces campagnes ont pour objectif de recueillir un maximum de retour d’expérience des utilisateurs sur les points forts et les points faibles des API en construction.
+Pour être informé de la sortie des nouvelles API et les tester en avant-première, inscrivez-vous à la [newsletter](https://hubeau.eaufrance.fr/page/news-letter-hubeau) !
+
 
 ### Exemples de réutilisation
 
-* [Soumettez le votre sur la page des réutilisateurs](http://hubeau.eaufrance.fr/page/proposez-exemples-dusage)
+* [Soumettez le votre sur la page GitHub des utilisateurs de Hub'Eau](https://github.com/BRGM/hubeau)
 
 ### Glossaire
 
 #### AFB
-L'[AFB (Agence Française de la Biodiversité)](http://www.afbiodiversite.fr/) a pris le relais du CSP (Conseil Supérieur de la Pêche) puis de l'ONEMA (Office National de l'Eau et des Milieux Aquatiques) pour (entres autres) l'acquisition et la diffusion de données piscicoles. Les missions de l'AFB vont bien au-delà de cet aspect : plus généralement, l'AFB, établissement public du ministère de la Transition écologie et solidaire, exerce des missions d’appui à la mise en oeuvre des politiques publiques dans les domaines de la connaissance, la préservation, la gestion et la restauration de la biodiversité des milieux terrestres, aquatiques et marins. Elle vient en appui aux acteurs publics mais travaille également en partenariat étroit avec les acteurs socio-économiques. Elle a aussi vocation à aller à la rencontre du public pour mobiliser les citoyens en faveur de la biodiversité.
+L'[AFB (Agence Française de la Biodiversité)](http://www.afbiodiversite.fr/) a été créée le 1er janvier 2017. Elle regroupe l'Agence des aires marines protégées, l'Atelier technique des espaces naturels, l'Office national de l'eau et des milieux aquatiques et les Parcs nationaux de France. L'AFB , établissement public du ministère en charge de l'environnement, exerce des missions d’appui à la mise en œuvre des politiques publiques dans les domaines de la connaissance, la préservation, la gestion et la restauration de la biodiversité et des milieux terrestres, aquatiques et marins. Elle vient en appui aux acteurs publics mais travaille également en partenariat étroit avec les acteurs socio-économiques. Elle a aussi vocation à aller à la rencontre du public pour mobiliser les citoyens en faveur de la biodiversité. En matière d’espaces protégés, elle gère notamment les parcs naturels marins et le sanctuaire de mammifères marins Agoa aux Antilles. Elle est opératrice et animatrice de sites Natura 2000 en mer. Les parcs nationaux sont rattachés à l’Agence, des synergies fortes sont mises en place avec eux.
 
 #### BRGM
 Le [BRGM (Bureau de Recherches Géologiques et Minières)](http://www.brgm.fr/), service géologique national français, est l'établissement public de référence dans les applications des sciences de la Terre pour gérer les ressources et les risques du sol et du sous-sol. Le BRGM assure notamment la diffusion de données géologiques et environnementales via les technologies de l’information et de la communication, avec pour objectif la mise à disposition des pouvoirs publics, des acteurs économiques et du grand public d'informations géoréférencées pour appuyer leurs décisions. Parmi les domaines de compétence du BRGM figurent les infrastructures informatiques de diffusion, calcul, simulation-visualisation 3D et réalité virtuelle ainsi que l'interopérabilité.
