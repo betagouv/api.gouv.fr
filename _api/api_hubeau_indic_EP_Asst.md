@@ -5,7 +5,7 @@ contract: OUVERT
 openapi_definition: https://hubeau.eaufrance.fr/api/v0/indicateurs_services/api-docs
 doc_tech: https://hubeau.eaufrance.fr/page/documentation-eau_potable-assainissement
 logo: 02-indicateurs_services.png
-contact: t.vilmus@brgm.fr
+contact: newshubeau@brgm.fr
 clients:
   - particuliers
   - entreprises
@@ -13,8 +13,10 @@ clients:
   - collectivités
   - ministères
 partners:
+  - AFB
   - BRGM
-owner: AFB
+  - Observatoire national des services d'eau et d'assainissement
+owner: AFB / BRGM
 keywords:
   - Indicateurs
   - Performance
