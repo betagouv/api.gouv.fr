@@ -43,7 +43,7 @@ Dernières évolutions de l'API Etat piscicole de Hub'Eau:
 
 Prochaines évolutions : accès à des données plus récentes et mise à disposition de nouveaux attributs (IPR, scores, méthodes et modes de prospection), prévu pour la fin de l'année 2018.
 
-{% include_relative include/hubeau_connaissez_vous.md %}
+{% include_relative hubeau_connaissez_vous.md %}
 
 
 ### Exemples de réutilisation
