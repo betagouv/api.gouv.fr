@@ -45,7 +45,8 @@ Quelques statistiques sur les données :
 
 * 18 088 stations ont fait l'objet d'au moins une opération de prélèvement.
 * 1 120 560 opérations de prélèvement sont répertoriées entre 1960 et 2017.
-* Ces opérations de prélèvement ont donné lieu à 125 746 527 analyses concernant 1792 paramètres physico-chimiques différents.</li><li>Le paramètre le plus mesuré est la Température de l'eau (code 1301) avec 1 190 072 analyses.
+* Ces opérations de prélèvement ont donné lieu à 125 746 527 analyses concernant 1792 paramètres physico-chimiques différents.
+* Le paramètre le plus mesuré est la Température de l'eau (code 1301) avec 1 190 072 analyses.
 * L'année comportant le plus de mesures est l'année 2015 où ont eu lieu 59 298 opérations de prélèvement ayant conduit à 13 109 401 analyses.
 * La station la plus suivie est le "Rhône à Arles 2 au Pont de Trinquetaille", de code 06131550, avec 423 481 analyses.
 

@@ -2,8 +2,8 @@
 title: Hub'Eau - Température des cours d'eau (BETA)
 tagline: Température en continu dans les cours d'eau
 contract: OUVERT
-openapi_definition: https://hubeau.eaufrance.fr/api/v1/qualite_rivieres/api-docs
-doc_tech: https://hubeau.eaufrance.fr/api/vbeta/temperature/api-docs
+openapi_definition: https://hubeau.eaufrance.fr/api/vbeta/temperature/api-docs
+doc_tech: https://hubeau.eaufrance.fr/page/documentation-temperature-cours-deau
 logo: 06-temperature_rivieres.png
 contact: newshubeau@brgm.fr
 clients:
@@ -45,6 +45,7 @@ Les données sont exposées sous la forme d'une API REST, les formats supportés
 
 Dernières évolutions de l'API Température en continu des cours d'eau de Hub'Eau:
 
+* 14/06/2018 : publication de la version bêta-1, correction bug chroniques.csv
 * 31/05/2018 : mise à disposition de la version bêta
 
 ### Connaissez-vous Hub'Eau ?
