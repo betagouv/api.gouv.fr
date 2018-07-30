@@ -54,67 +54,47 @@ featuredServices:
   </div>
 </section>
 
-<section id="services" class="ui container">
-  <h2>Services utilisant les API</h2>
+<div id="description" class="ui container secondary segment">
+  <h2>
+    Pourquoi api.gouv.fr ?
+  </h2>
+  <p>
+    Vous êtes une administration, une collectivité, un éditeur de solutions pour les particuliers ou les entreprises et souhaitez simplifier radicalement la relation des usagers à l’administration.
+  </p>
+  <p>Une <abbr title="Application Programming Interface">API</abbr> permet la communication entre des systèmes informatiques qui n'ont pas forcément été conçus ensemble à l'origine. Dans api.gouv.fr, nous ne référençons que des API accessibles par internet. Curieux ? Découvrez en détails <a href="/qu-est-ce-qu-une-api">ce qu'est une API</a>.</p>
+  <p>
+    Les API proposées vous permettent de&nbsp;:
+  </p>
+  <ul>
+    <li>simplifier les démarches ;</li>
+    <li>guider l'usager dans la saisie d'informations ;</li>
+    <li>récupérer des informations connues de l'administration ;</li>
+    <li>à vous d'inventer la suite !</li>
+  </ul>
 
-  <div class="ui three stackable cards">
-    {% for service in site.service %}
-      {% if page.featuredServices contains service.title %}
-        {% include service-card.html service=service %}
-      {% endif %}
+  <a class="ui button moreButton" href="/apropos">En savoir plus</a>
+
+  <div class="header padded">
+    Notions importantes
+  </div>
+
+  <div class="ui stackable grid container">
+    {% for notion in site.data.notions %}
+    <div class="item eight wide column">
+      <h3 class="ui top attached header">
+        {% if notion.link %}
+          <a href="{{ notion.link }}">{{ notion.name }}</a>
+        {% else %}
+          {{ notion.name }}
+        {% endif %}
+      </h3>
+      <div class="ui attached segment">
+        {{ notion.definition }}
+      </div>
+    </div>
     {% endfor %}
   </div>
-
-  <p class="buttonContainer">
-    <a class="ui big button moreButton" href="/services">Découvrez les {{ site.service | size }} services&nbsp;&nbsp;➤</a>
-  </p>
-</section>
-
-<div id="description" class="ui container">
-  <div class="ui floating message">
-    <div class="header">
-      Pourquoi api.gouv.fr ?
-    </div>
-    <p>
-      Vous êtes une administration, une collectivité, un éditeur de solutions pour les particuliers ou les entreprises et souhaitez simplifier radicalement la relation des usagers à l’administration.
-    </p>
-    <p>Une <abbr title="Application Programming Interface">API</abbr> permet la communication entre des systèmes informatiques qui n'ont pas forcément été conçus ensemble à l'origine. Dans api.gouv.fr, nous ne référençons que des API accessibles par internet. Curieux ? Découvrez en détails <a href="/qu-est-ce-qu-une-api">ce qu'est une API</a>.</p>
-    <p>
-      Les API proposées vous permettent de&nbsp;:
-    </p>
-    <ul>
-      <li>simplifier les démarches ;</li>
-      <li>guider l'usager dans la saisie d'informations ;</li>
-      <li>récupérer des informations connues de l'administration ;</li>
-      <li>à vous d'inventer la suite !</li>
-    </ul>
-
-    <a class="ui button moreButton" href="/apropos">En savoir plus</a>
-
-    <div class="header padded">
-      Notions importantes
-    </div>
-
-    <div class="ui stackable grid container">
-      {% for notion in site.data.notions %}
-      <div class="item eight wide column">
-        <h3 class="ui top attached header">
-          {% if notion.link %}
-            <a href="{{ notion.link }}">{{ notion.name }}</a>
-          {% else %}
-            {{ notion.name }}
-          {% endif %}
-        </h3>
-        <div class="ui attached segment">
-          {{ notion.definition }}
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-
 </div>
-
 
 <script>
 var minChar = 1;
