@@ -5,14 +5,6 @@ searchExamples:
   - quotient familial
   - revenu fiscal de référence
   - cadastre
-featuredApis:
-  - API Indicateur de Fréquences de Traitements phytopharmaceutiques
-  - Base Adresse Nationale
-  - FranceConnect
-featuredServices:
-  - La Bonne Boîte
-  - Mes aides
-  - Simulateur de coût d'embauche
 ---
 
 <section id="mission-statement">
@@ -38,67 +30,16 @@ featuredServices:
 
 <section id="apis">
   <div class="ui container">
-    <h2>Les API à la une</h2>
-
     <div class="ui three stackable cards">
       {% for api in site.api %}
-        {% if page.featuredApis contains api.title %}
-          {% include api-card.html description=api %}
-        {% endif %}
+        {% include api-card.html description=api %}
       {% endfor %}
     </div>
-
-    <p class="buttonContainer">
-       <a class="ui big button moreButton" href="/apis">Découvrez les {{ site.api | size }} API&nbsp;&nbsp;➤</a>
-    </p>
   </div>
 </section>
 
-<div id="description" class="ui container secondary segment">
-  <h2>
-    Pourquoi api.gouv.fr ?
-  </h2>
-  <p>
-    Vous êtes une administration, une collectivité, un éditeur de solutions pour les particuliers ou les entreprises et souhaitez simplifier radicalement la relation des usagers à l’administration.
-  </p>
-  <p>Une <abbr title="Application Programming Interface">API</abbr> permet la communication entre des systèmes informatiques qui n'ont pas forcément été conçus ensemble à l'origine. Dans api.gouv.fr, nous ne référençons que des API accessibles par internet. Curieux ? Découvrez en détails <a href="/qu-est-ce-qu-une-api">ce qu'est une API</a>.</p>
-  <p>
-    Les API proposées vous permettent de&nbsp;:
-  </p>
-  <ul>
-    <li>simplifier les démarches ;</li>
-    <li>guider l'usager dans la saisie d'informations ;</li>
-    <li>récupérer des informations connues de l'administration ;</li>
-    <li>à vous d'inventer la suite !</li>
-  </ul>
-
-  <a class="ui button moreButton" href="/apropos">En savoir plus</a>
-
-  <div class="header padded">
-    Notions importantes
-  </div>
-
-  <div class="ui stackable grid container">
-    {% for notion in site.data.notions %}
-    <div class="item eight wide column">
-      <h3 class="ui top attached header">
-        {% if notion.link %}
-          <a href="{{ notion.link }}">{{ notion.name }}</a>
-        {% else %}
-          {{ notion.name }}
-        {% endif %}
-      </h3>
-      <div class="ui attached segment">
-        {{ notion.definition }}
-      </div>
-    </div>
-    {% endfor %}
-  </div>
-</div>
-
 <script>
 var minChar = 1;
-var htmlFooter = '<a href="/apis" class="action">Explorez les {{ site.api | size }} API déjà disponibles</a>';
 function escapeRegExChars(value) {
   return value.replace(/[|\\{}()[\]^$+*?.]/g, "\\$&");
 }
@@ -181,13 +122,12 @@ function customTemplate(response, fields) {
     html += '</div>'
     html += '</a>'
   });
-  html += htmlFooter;
   return html;
 }
 
 $(document).ready(function() {
     $.getJSON('/api/v1/api.json', function(toSearch) {
-        searchFields = ['title', 'description', 'keywords'];
+        searchFields = ['title', 'description', 'keywords', 'tags', 'partners'];
         for(var i=0; i<toSearch.length; i++) {
             toSearch[i]['unidecoded'] = searchFields.map(
                         function(v){return toSearch[i][v];})
