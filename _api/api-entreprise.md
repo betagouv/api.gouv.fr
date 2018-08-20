@@ -25,10 +25,10 @@ partners:
   - OPQIBI
   - PRO BTP
   - QUALIBAT
-  - MIN INTERIEUR
+  - Ministère intérieur
   - INPI
   - AGEFIPH
-  - Banque de France
+  - Banque de france
 owner: Etalab (DINSIC)
 keywords:
   - Établissement

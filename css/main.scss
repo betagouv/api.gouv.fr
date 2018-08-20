@@ -4,35 +4,15 @@
 
 @import "variables";
 @import "header";
+@import "footer";
 
 #wrapper {
 	min-height: 100%;
 	position: relative;
 }
 
-#page {
-	padding-bottom: 10rem;
-}
-
 .ui.tiny.label {
 	margin-bottom: 2px;
-}
-
-main {
-	margin-bottom: 3em;
-}
-
-footer {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	height: 10rem;
-	padding: 1.5em 0;
-	background-color: #f8f8f8;
-
-	.incubateur {
-		text-align: center;
-	}
 }
 
 input:focus::-webkit-input-placeholder{
@@ -50,6 +30,11 @@ input:focus::-moz-placeholder{
 
 .swagger-ui .topbar {
 	display: none;
+}
+
+.ui.text.container {
+	padding-top: 4em;
+	padding-bottom: 4em;
 }
 
 /* Override SemanticUI default for improved a11y - contrast 4.5 */
