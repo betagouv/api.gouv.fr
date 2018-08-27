@@ -45,3 +45,26 @@ Les API permettent de nombreux usages. Elles sont déjà utilisées largement. P
 api.gouv.fr s'adresse avant tout aux créateurs de services, les consommateurs d'API. Pour cela, nous facilitons la découverte, la compréhension et l'accès aux API et à leurs producteurs.
 
 Les fournisseurs, de leur côté, ont avec ce catalogue un moyen simple de faire connaître leurs API.
+
+## Mentions légales
+
+### Editeur
+
+Incubateur des services numériques, Direction interministérielle du numérique et du système d'information et de communication de l'Etat (DINSIC), Services du Premier ministre.
+
+### Directeur de la publication
+
+M. Henri Verdier, Directeur interministériel du numérique et du système d'information et de communication de l'Etat (DINSIC).
+
+### Prestataire d'hébergement
+
+**OVH**
+RCS Roubaix – Tourcoing 424 761 419 00045
+
+Code APE 6202A
+
+N° TVA : FR 22 424 761 419
+
+Siège social : 2 rue Kellermann - 59100 Roubaix - France
+
+### <a href='/contact' title='Nous contacter'>Nous contacter</a>
