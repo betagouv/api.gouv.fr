@@ -6,8 +6,8 @@
 @import "service";
 
 #mission-statement {
-  padding-top: 8%;
-  padding-bottom: 8%;
+  padding-top: 4em;
+  padding-bottom: 4em;
 
   .input {
     min-width: 60%;
@@ -57,7 +57,7 @@
 }
 
 section {
-  padding: 4% 0;
+  padding: 4em 0;
 
   h2 {
     text-align: center;
@@ -102,6 +102,10 @@ a.ui.big.button.moreButton {
 	.header-with-image {
 		flex-direction: column;
 	}
+
+  #mission-statement {
+    padding: 4em 2em;
+  }
 
   #mission-statement .header-with-image img {
     width: 30%;

@@ -20,6 +20,13 @@ keywords: # utilisé dans la recherche
   - Emploi
   - Marché du travail
   - Statistiques
+score: 3
+score_detail:
+  access_link: true
+  contact: true
+  openapi_definition: true
+  uptime: true
+  sandbox: true
 ---
 
 ## Description de l'API
@@ -29,7 +36,7 @@ L’API Infotravail recense les jeux de données suivants :
 - **Informations sur le marché du travail** :
 Données sur les recrutements, statistiques sur les offres et la demande d’emploi
 
-- **Offres d’emploi Pôle emploi** : 
+- **Offres d’emploi Pôle emploi** :
 Offres d'emploi anonymisées, déposées à Pôle emploi par des recruteurs
 
 - **Référentiel des agences Pôle emploi** :

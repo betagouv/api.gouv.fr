@@ -10,6 +10,29 @@ title: api.gouv.fr
 baseurl: ""
 url: "https://api.gouv.fr"
 description: Fabriquez des services en ligne plus simples
+menu_options: [
+  {
+    id: "access",
+    label: "Accès"
+  },
+  {
+    id: "contact",
+    label: "Support"
+  },
+  {
+    id: "monitoring",
+    label: "Monitoring"
+  },
+  {
+    id: "openapi_definition",
+    label: "Documentation technique"
+  },
+  {
+    id: "rate_limiting",
+    label: "Limite d'usage"
+  },
+]
+
 
 # see https://jekyllrb.com/docs/continuous-integration/
 exclude: [vendor, app.json, Gemfile.lock]

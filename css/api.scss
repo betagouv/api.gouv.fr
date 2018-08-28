@@ -46,6 +46,19 @@ section + section {
       margin-top: 0.3em;
       margin-bottom: 0.6em;
     }
+
+    ul.unstyled {
+      list-style: none;
+      padding-left: 15px;
+    }
+
+    .check.icon {
+      color: green;
+    }
+
+    .warning.icon {
+      color: indianred;
+    }
   }
 
   .ribbon {
@@ -55,18 +68,14 @@ section + section {
   .logoWrapper {
     text-align: center;
   }
+
   .markdown-body {
     border: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
   }
-  .menu {
-    margin-bottom: 2em;
-    .item {
-      font-size: 1.2em;
-    }
-  }
+
   .swagger-section {
     background-color: whitesmoke;
     padding: 10px 2em;

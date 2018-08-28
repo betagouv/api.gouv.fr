@@ -2,160 +2,217 @@
 layout: default
 ---
 
+{% assign detail = page.score.detail %}
+
+{% assign contact_link = detail.contact.link %}
+{% assign contact_description = detail.contact.description %}
+
+{% assign openapi_definition_link = detail.openapi_definition.link %}
+{% assign openapi_definition_description = detail.openapi_definition.description %}
+
+{% assign access_link = detail.access.link %}
+{% assign access_description = detail.access.description %}
+
+{% assign monitoring_link = detail.monitoring.link %}
+{% assign monitoring_description = detail.monitoring.description %}
+
+{% assign rate_limiting_description = detail.rate_limiting.description %}
+
 <section id="mission-statement" class="ui vertical center aligned segment">
-
   <div class="ui container">
-    <div class="ui grid">
-      <div class="twelve wide centered column">
-        <h1 class="ui inverted header">
-          {{ page.title }}
-        </h1>
-        <h2 class="ui inverted header">
-          {{ page.tagline }}
-        </h2>
-        {% if page.access_link %}
-        <a class="large ui secondary button" href="{{ page.access_link }}">
-          Demandez l'accès
-        </a>
-        {% endif %}
+    <h1 class="ui center aligned inverted header">
+      {% if page.logo %}
+        <img src="/img/{{ page.logo }}" alt="{{ page.title }}" class="ui circular image" />
+      {% else %}
+        <img src="/img/{{ page.default_logo }}" alt="{{ page.title }}" class="ui circular image" />
+      {% endif %}
+      <div>{{ page.title }}</div>
+      <div class="sub header">
+        {{ page.tagline }}
       </div>
-    </div>
-  </div>
+      {% if page.stat.url %}
+        <div class="sub header">
+          <strong id="stat_value">-</strong>
+          {% if page.stat.label %}
+            {{ page.stat.label }} lors des {{ page.stat.lastXdays }} derniers jours
+          {% else %}
+            Appels lors des <br> 30 derniers jours
+          {% endif %}
+        </div>
+      {% endif %}
+    </h1>
 
+    {% if access_link %}
+      <a class="large ui secondary button" href="{{ access_link }}">
+        Demandez l'accès
+      </a>
+    {% else if openapi_definition_link %}
+      <a class="large ui secondary button" href="#openapi_definition">
+        Essayer
+      </a>
+    {% endif %}
+  </div>
 </section>
 
+<div class="ui stackable container menu">
+  <a class="header item" href="#api-description">Description</a>
+  {% for menu_option in site.menu_options %}
+    {% if page.score.detail[menu_option.id] %}
+      <a class="item" href="#{{menu_option.id}}">
+        {{ menu_option.label }}
+      </a>
+    {% else %}
+      <a class="item" href="#{{menu_option.id}}">
+        {{ menu_option.label }}
+        <div class="ui grey mini label">Non renseigné</div>
+      </a>
+    {% endif %}
+
+  {% endfor %}
+  <a class="item" href="#services">Services</a>
+</div>
+
 <div id="description" class="ui container">
-  <div class="ui mobile reversed stackable grid">
-    <div class="six wide tablet four wide computer column">
-      <div class="ui segment">
-        {% if page.experimental %}
-        <div class="ui yellow left ribbon label" >
-          Expérimentale
-        </div>
-        {% endif %}
-        <div class="ui relaxed divided list metadata">
-          <div class="item logoWrapper">
-            <div class="ui small image">
-              {% if page.logo %}
-                <img src="/img/{{ page.logo }}" alt="{{ page.title }}" />
-              {% else %}
-                <img src="/img/{{ page.default_logo }}" alt="{{ page.title }}" />
-              {% endif %}
-            </div>
-          </div>
-          {% if page.stat.url %}
-            <div class="item">
-              <div class="content stat">
-                <div class="header">Lors des {{ page.stat.lastXdays }} derniers jours :</div>
-                <div class="description">
-                  <div class="ui statistic">
-                    <div class="value">
-                      -
-                    </div>
-                    <div class="label">
-                      {% if page.stat.label %}
-                        {{ page.stat.label }}
-                      {% else %}
-                        Appels lors des <br> 30 derniers jours
-                      {% endif %}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          {% endif %}
-          <div class="item">
-            <div class="content">
-              <div class="header">Conditions d'utilisation</div>
-              <div class="description">
-                {% if page.contract == "OUVERT sous contrat"%}
-                  {{ page.contract }} au :
-                    <ul>
-                      {% for client in page.clients %}
-                        <li>{{ client }}</li>
-                      {% endfor%}
-                    </ul>
-                {% else %}
-                  {{ page.contract }}
-                {% endif %}
-              </div>
-            </div>
-          </div>
-          {% if page.contact %}
-          <div class="item">
-            <div class="content">
-              <div class="header">Contact</div>
-              <div class="description">
-                {% if page.contact contains "@" %}
-                <a href="mailto:{{ page.contact }}?subject={{ "Contact via api.gouv.fr" | url_encode }}">{{ page.contact }}</a>
-                {% else %}
-                <a href="{{ page.contact }}" target="_blank" rel="noopener">Formulaire</a>
-                {% endif%}
-              </div>
-            </div>
-          </div>
-          {% endif %}
-          {% if page.partners %}
-          <div class="item">
-            <div class="content">
-              <div class="header">Sources et partenaires</div>
-              <div class="description">
-                <ul>
-                  {% for partner in page.partners %}
-                    <li>{{ partner }}</li>
-                  {% endfor %}
-                </ul>
-              </div>
-            </div>
-          </div>
-          {% endif %}
-        </div>
-      </div>
-    </div>
-    <div class="ten wide tablet twelve wide computer column">
-      <section id="api-description">
-        <h2 class="section-title">Description</h2>
-        <div class="markdown-body" >
-          {{ content }}
-        </div>
-      </section>
+    <section id="api-description">
+      <h2 class="ui dividing header">Description</h2>
 
-      <section id="technique">
-        <h2 class="section-title">Documentation technique</h2>
-        {% if page.openapi_definition %}
-          {% include swagger.html %}
-        {% else %}
-          <p>
-            Vous pouvez retrouver la documentation technique sur <a href="{{ page.doc_tech }}" rel="noopener" target="_blank">le site de l'API</a>
-          </p>
-        {% endif %}
-      </section>
+      {{ page.description }}
+    </section>
 
-      {% capture serviceHtml %}
-        {% for service in site.service %}
-          {% if service.api contains page.title%}
-            {% include service-card.html service=service %}
+    <section id="access_link">
+      <h2 class="ui dividing header">Accès</h2>
+      {% if access_link %}
+        {% if access_description %}
+          {{ access_description }}
+        {% endif %}
+
+        <p>
+          {% if page.contract == "OUVERT sous contrat"%}
+            {{ page.contract }} pour :
+              <ul>
+                {% for client in page.clients %}
+                  <li>{{ client }}</li>
+                {% endfor%}
+              </ul>
+          {% else %}
+            {{ page.contract }}
           {% endif %}
-        {% endfor %}
-      {% endcapture %}
-      {% assign serviceHtmlWithoutSpace = serviceHtml | strip_newlines | strip %}
-      {% if serviceHtmlWithoutSpace != "" %}
-      <section id="services" class="ui container">
-        <h2 class="section-title">Les services</h2>
-        <div class="ui two stackable cards">
-          {{ serviceHtml }}
-        </div>
-      </section>
+        </p>
+
+        <a class="large ui button" href="{{ access_link }}">
+          <i class="icon key"></i>Demandez l'accès
+        </a>
+      {% else %}
+        <p>Accès à l'API non documenté</p>
       {% endif %}
-    </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="ui dividing header">Support</h2>
+
+      {% if contact_description %}
+        {{ contact_description }}
+      {% endif %}
+
+      {% if contact_link %}
+        <p>Vous pouvez contacter le support de cette API
+        {% if contact_link contains "@" %}
+          par email.</p>
+
+          <a class="large ui button" href="mailto:{{ contact_link }}?subject={{ "Contact via api.gouv.fr" | url_encode }}">
+            <i class="icon mail"></i> Envoyer un mail à {{ contact_link }}
+          </a>
+        {% else %}
+          en utilisant un formulaire.
+
+          <a class="large ui button" href="{{ contact_link }}" target="_blank" rel="noopener">
+            <i class="icon linkify"></i> Accéder au formulaire de contact
+          </a>
+        {% endif%}
+      {% else %}
+        <p>Moyen de contact non renseigné.</p>
+      {% endif %}
+    </section>
+
+    <section id="monitoring">
+      <h2 class="ui dividing header">Monitoring</h2>
+
+        {% if monitoring_description %}
+          {{ monitoring_description }}
+        {% endif %}
+
+      {% if monitoring_link %}
+        <p>Les moniteurs de cette API sont disponibles publiquement.</p>
+
+        <a class="large ui button" href="{{ monitoring_link }}" target="_blank" rel="noopener">
+          <i class="icon linkify"></i> Accéder au monitoring
+        </a>
+      {% else %}
+        <p>Les moniteurs de cette API ne sont pas disponibles publiquement.</p>
+      {% endif %}
+    </section>
+
+    <section id="rate_limiting">
+      <h2 class="ui dividing header">Limitations d'usage</h2>
+
+      {% if rate_limiting_description %}
+        {{ rate_limiting_description }}
+      {% else %}
+        <p>Les limitations d'usage de cette API ne sont pas disponibles publiquement.</p>
+      {% endif %}
+    </section>
+
+    <section id="openapi_definition">
+      <h2 class="ui dividing header">Documentation technique</h2>
+
+      {% if openapi_definition_description %}
+        {{ openapi_definition_description }}
+      {% endif %}
+
+      {% if openapi_definition_link %}
+        {% include swagger.html url=openapi_definition_link %}
+      {% else %}
+        <p>
+          Documentation au format OpenAPI non renseignée, vous pouvez retrouver la documentation technique sur <a href="{{ page.doc_tech }}" rel="noopener" target="_blank">le site de l'API</a>
+        </p>
+      {% endif %}
+    </section>
+
+    <section id="partenaires">
+      <h2 class="ui dividing header">Partenaires</h2>
+
+      {% if page.partners %}
+        <ul class="ui list">
+          {% for partner in page.partners %}
+            <li class="item">{{ partner }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </section>
+
+    {% capture serviceHtml %}
+      {% for service in site.service %}
+        {% if service.api contains page.title%}
+          {% include service-card.html service=service %}
+        {% endif %}
+      {% endfor %}
+    {% endcapture %}
+    {% assign serviceHtmlWithoutSpace = serviceHtml | strip_newlines | strip %}
+    {% if serviceHtmlWithoutSpace != "" %}
+    <section id="services" class="ui container">
+      <h2 class="ui dividing header">Les services</h2>
+      <div class="ui three stackable cards">
+        {{ serviceHtml }}
+      </div>
+    </section>
+    {% endif %}
   </div>
 </div>
 
 <script>
   $(function() {
-    $('.menu .item.tab').tab();
     {% if page.stat.url %}
-      var $divStat = $( ".statistic .value" )
+      var $divStat = $( "#stat_value" )
       $.get( "{{ page.stat.url }}", function( data ) {
         {% if page.stat.path %}
           data = data["{{ page.stat.path | join: '"]["' }}"]
