@@ -1,8 +1,7 @@
 source 'https://rubygems.org'
 Encoding.default_external = Encoding::UTF_8
 Encoding.default_internal = Encoding::UTF_8
-
-ruby "2.4.3"
+ruby "2.5.1"
 
 gem 'github-pages', '>= 172'
 gem 'yajl-ruby', '>= 1.3.0'

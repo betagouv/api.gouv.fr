@@ -5,7 +5,7 @@ contract: OUVERT
 openapi_definition: https://hubeau.eaufrance.fr/api/v1/qualite_rivieres/api-docs
 doc_tech: http://hubeau.eaufrance.fr/page/documentation_chimie_riviere
 logo: 04-qualite_rivieres.png
-contact: t.vilmus@brgm.fr
+contact: newshubeau@brgm.fr
 clients:
   - particuliers
   - entreprises
@@ -45,7 +45,8 @@ Quelques statistiques sur les données :
 
 * 18 088 stations ont fait l'objet d'au moins une opération de prélèvement.
 * 1 120 560 opérations de prélèvement sont répertoriées entre 1960 et 2017.
-* Ces opérations de prélèvement ont donné lieu à 125 746 527 analyses concernant 1792 paramètres physico-chimiques différents.</li><li>Le paramètre le plus mesuré est la Température de l'eau (code 1301) avec 1 190 072 analyses.
+* Ces opérations de prélèvement ont donné lieu à 125 746 527 analyses concernant 1792 paramètres physico-chimiques différents.
+* Le paramètre le plus mesuré est la Température de l'eau (code 1301) avec 1 190 072 analyses.
 * L'année comportant le plus de mesures est l'année 2015 où ont eu lieu 59 298 opérations de prélèvement ayant conduit à 13 109 401 analyses.
 * La station la plus suivie est le "Rhône à Arles 2 au Pont de Trinquetaille", de code 06131550, avec 423 481 analyses.
 
@@ -60,12 +61,10 @@ Dernières évolutions de l'API Qualité des cours d'eau de Hub'Eau:
 
 ### Connaissez-vous Hub'Eau ?
 
-[Hub’Eau](http://hubeau.eaufrance.fr) c’est la plateforme qu’il vous faut pour manipuler facilement les données ouvertes disponibles sur l’eau.
-Hub’Eau est la solution pour accéder aux  données sur l’eau sans être confronté aux problèmes d’hétérogénéité, de sources multiples, …. 
-Hub’Eau offre plusieurs interfaces (API) facilitant la réutilisation de données grâce au potentiel de jeux de données immédiatement intelligibles et exploitables.
-Hub’Eau c’est un service pérenne de la toile Eau France. 
-Osez l’expérience Hub’Eau : proposez-nous de nouveaux terrains de jeux, et mettons en commun notre intelligence pour créer la valeur de demain.
-Hub’Eau c’est le résultat de la collaboration de l’AFB et du BRGM dans le cadre du pôle de recherche et d'innovation en interopérabilité des systèmes d'information distribués sur l'eau : [INSIDE](http://www.pole-inside.fr/fr).  
+#### Simplifier l'accès aux données sur l'eau
+Service pérenne de la toile [Eau France](https://www.eaufrance.fr), [Hub'Eau](https://hubeau.eaufrance.fr/) met à disposition des API Rest favorisant l’accès aux données du [SIE](https://www.eaufrance.fr/donnees) dans des formats simples d’emploi et propices à la réutilisation (CSV, JSON, GeoJSON).
+Fondé sur une infrastructure et des méthodes adaptées au traitement et au stockage de données massives, les APIs Hub'Eau garantissent les meilleures performances de disponibilité.
+Hub’Eau est le résultat de la collaboration de l’AFB et du BRGM dans le cadre du pôle de recherche et d'innovation en interopérabilité des systèmes d'information distribués sur l'eau : [INSIDE](http://www.pole-inside.fr/fr).  
 
 Les autres API disponibles à ce jour dans Hub'Eau sont :
 
@@ -74,10 +73,14 @@ Les autres API disponibles à ce jour dans Hub'Eau sont :
 * [Piézométrie](/api/api_hubeau_piezometrie.html) ;
 * [Qualité des nappes d'eau souterraine](/api/api_hubeau_qualite_nappes_eau_sout.html).
 
+#### Un service en co-construction
+Pour des APIs toujours plus en phase avec les besoins utilisateurs, Hub'Eau inaugure en 2018 une [politique de bêta testing](https://hubeau.eaufrance.fr/page/apis-version-beta) en organisant une campagne de tests ouverte avant la mise la mise en production de chaque nouvelle API.
+D'une durée de 30 à 45 jours, ces campagnes ont pour objectif de recueillir un maximum de retour d’expérience des utilisateurs sur les points forts et les points faibles des API en construction.
+Pour être informé de la sortie des nouvelles API et les tester en avant-première, inscrivez-vous à la [newsletter](https://hubeau.eaufrance.fr/page/news-letter-hubeau) !
 
 ### Exemples de réutilisation
 
-* [Soumettez le votre sur la page des réutilisateurs](http://hubeau.eaufrance.fr/page/proposez-exemples-dusage)
+* [Soumettez le votre sur la page GitHub des utilisateurs de Hub'Eau](https://github.com/BRGM/hubeau)
 
 ### Glossaire
 
