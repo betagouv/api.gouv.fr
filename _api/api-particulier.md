@@ -30,13 +30,15 @@ keywords:
 API Particulier simplifie les démarches des usagers en permettant l’échange d’information les concernant d’une administration à une autre.
 
 Pour les administration, des informations certifiées à la source :
+
 - Affranchissez vous des pièces justificatives
 - Réduisez le nombre d’erreurs de saisies
 - Écartez le risque de fraude documentaire
 
 Pour l’usager, une démarche 100% dématérialisée :
+
 1. Je me connecte sur le site de ma commune pour réaliser une démarche.
 2. En lieu de justificatif de revenu, je saisis mon numéro fiscal et mon numéro d’avis d’imposition.
 3. Ma commune récupère immédiatement mon revenu fiscal de référence et je n’ai plus rien à faire !
 
-Plus d'information sur notre site dédié https://particulier.api.gouv.fr/
+Plus d'information sur notre site dédié [https://particulier.api.gouv.fr/](https://particulier.api.gouv.fr/).
