@@ -1,0 +1,39 @@
+---
+title: API carto - module AOC
+tagline: l'accès aux zonages AOC de l'INAO
+contract: OUVERT 
+owner: IGN Géoportail - INAO
+category: Public
+layout: api
+logo: look4-geoportail.jpg
+contact: contact.geoservices@ign.fr
+doc_tech: https://apicarto.ign.fr/api/doc/aoc
+access_link: https://geoservices.ign.fr/
+clients:
+  - développeurs
+  - entreprises
+  - organismes publics
+  - collectivités territoriales
+  - ministères
+keywords:
+  - vin
+  - inao
+  - viticulture
+  - zonages
+---
+
+# API carto - module AOC
+
+L'API carto - module AOC permet d'obtenir les AOC viticoles de l’INAO intersectant une géométrie GeoJSON.
+Les données sources sont les Délimitation Parcellaire des AOC Viticoles de l’INAO
+
+## Appellations
+
+Récupération des zones d'AOC qui intersectent la géométrie concernée.
+
+## Conditions d'accès
+
+L'utilisation d'API Carto - module AOC est gratuite pour l'Etat et ses EPA, les collectivités, les EPCI à fiscalité propre et les SDIS ([décision n°2018/241](http://www.ign.fr/institut/sites/all/files/2018.241_tarification_geoservices_ign.pdf) de l'institut).
+Pour les autres utilisateurs, et dans un contexte d'usage grand public, l'utilisation est gratuite dans la limite de 2M requêtes par an (10 000 pour un usage professionnel).
+
+Les données AOC accessibles via API Carto - module AOC sont sous licence ouverte.
