@@ -1,0 +1,37 @@
+---
+title: API carto - module codes postaux
+tagline: l'accès simplifié d'accès aux codes postaux
+contract: OUVERT 
+owner: IGN Géoportail
+category: Public
+layout: api
+logo: look4-geoportail.jpg
+contact: contact.geoservices@ign.fr
+doc_tech: https://apicarto.ign.fr/api/doc/codes-postaux
+access_link: https://geoservices.ign.fr/
+clients:
+  - développeurs
+  - entreprises
+  - organismes publics
+  - collectivités territoriales
+  - ministères
+keywords:
+  - poste
+  - codes postaux
+  - géomarketing
+---
+
+# API carto - module codes postaux
+
+L'API carto - module codes postaux permet de récupérer les communes associées à un code postal donné.
+Voir https://github.com/etalab/codes-postaux#codes-postaux pour plus d’information sur les sources de données.
+
+## Codes postaux
+
+Récupération des communes associées à un code postal donné
+
+## Conditions d'accès
+
+L'utilisation d'API Carto - module codes postaux est ouverte.
+
+Les données accessibles via API Carto - module codes postaux sont sous licence ouverte.
