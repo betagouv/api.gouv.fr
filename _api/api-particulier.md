@@ -25,29 +25,20 @@ keywords:
 ---
 
 
-## Ne plus demander de pièces justificatives inutiles
+## Vos démarches sans pièces justificatives
 
-Limiter les demandes des pièces justificatives ou informations lorsqu’elles sont détenues par d’autres administrations ( CAF, DGFiP, Pôle Emploi…).
+API Particulier simplifie les démarches des usagers en permettant l’échange d’informations les concernant d’une administration à une autre.
 
-Limiter le risque de fraude documentaire en récupérant des informations certifiées à la source dans un point d'accès unique.
+Pour les administrations, des informations certifiées à la source :
 
+- Affranchissez-vous des pièces justificatives
+- Réduisez le nombre d’erreurs de saisie
+- Écartez le risque de fraude documentaire
 
-## Accéder aux données de façon sécurisée
+Pour l’usager, une démarche 100% dématérialisée :
 
-L'accès aux données est réalisé au travers de protocoles de communications sécurisés et seuls les opérateurs agréés peuvent se connecter à l'API.
+1. Je me connecte sur le site de ma commune pour réaliser une démarche.
+2. En lieu de justificatif de revenu, je saisis mon numéro fiscal et mon numéro d’avis d’imposition.
+3. Ma commune récupère immédiatement mon revenu fiscal de référence et je n’ai plus rien à faire !
 
-Pour obtenir un agrément, vous devez justifier d'une simplification pour les citoyens, et vous engager à n'accéder aux données personnelles qu'avec *l'accord explicite de l'usager*.
-
-
-## Comprendre la différence avec FranceConnect
-
-API Particulier et FranceConnect sont deux systèmes indépendants mais complémentaires.
-
-|                | FranceConnect                                | API Particulier                                                           |
-|----------------|----------------------------------------------|---------------------------------------------------------------------------|
-| Nature         | Fournisseur d'Identité et tiers de confiance | Fournisseur de Données                                                       |
-| Identification | Citoyen et Fournisseur de Service            | Fournisseur de Service                                                    |
-| Type de donnée | liée à la personne                           | liée à la personne, liée au foyer familial, liée aux parents, aux enfants |
-
-
-API Particulier et FranceConnect peuvent être utilisés seul ou conjointement.
+Plus d'information sur notre site dédié [https://particulier.api.gouv.fr/](https://particulier.api.gouv.fr/).
