@@ -27,12 +27,12 @@ keywords:
 
 ## Vos démarches sans pièces justificatives
 
-API Particulier simplifie les démarches des usagers en permettant l’échange d’information les concernant d’une administration à une autre.
+API Particulier simplifie les démarches des usagers en permettant l’échange d’informations les concernant d’une administration à une autre.
 
-Pour les administration, des informations certifiées à la source :
+Pour les administrations, des informations certifiées à la source :
 
-- Affranchissez vous des pièces justificatives
-- Réduisez le nombre d’erreurs de saisies
+- Affranchissez-vous des pièces justificatives
+- Réduisez le nombre d’erreurs de saisie
 - Écartez le risque de fraude documentaire
 
 Pour l’usager, une démarche 100% dématérialisée :
