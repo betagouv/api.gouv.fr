@@ -1,23 +1,29 @@
 ---
-title: Offres d'emploi # nom commercial de l'API
-tagline: Accédez aux offres d'emploi disponibles sur pole-emploi.fr  # une phrase maximum
-owner: Pôle emploi  # producteur de l'API
-category: Public  # type de donnée exposée, voir api_category dans le fichier _config.yml
-contract: OUVERT sous contrat  # peut être "OUVERT" ou "OUVERT sous contrat"
-logo: logo_pole_emploi.jpg  # URL d'un logo de l'API
-contact:  support@emploi-store-dev.fr #moyen de contact, soit un mail, soit un lien vers formulaire de contact
-doc_tech: https://www.emploi-store-dev.fr/portail-developpeur-cms/home/catalogue-des-api/documentation-des-api/api/api-offres-demploi-v1.html # URL de la documentation technique de l'API au format HTML
-access_link: https://www.emploi-store-dev.fr/portail-developpeur/detailapicatalogue/59438edb243a5f952c5d9e8c  # URL d'une page de demande d'accès si l'API est à accès restreint
-clients:  # types d'entités habilitées à utiliser l'API
-  - particuliers  # texte libre en minuscules
-  - entreprises  # ajoutez ou supprimez des types d'entités
+title: Offres d'emploi
+tagline: Accédez aux offres d'emploi disponibles sur pole-emploi.fr  
+owner: Pôle emploi  
+category: Public  
+contract: OUVERT sous contrat  
+logo: logo_pole_emploi.jpg  
+external_site: https://www.emploi-store-dev.fr/portail-developpeur-cms/home/catalogue-des-api/documentation-des-api/api/api-offres-demploi-v1.html
+clients:  
+  - particuliers  
+  - entreprises  
   - startups
   - collectivités territoriales
-partners:  # liste de co-producteurs de l'API
-  - Pôle emploi  # texte libre
-keywords: # utilisé dans la recherche
-  - Offres # texte libre
+partners:  
+  - Pôle emploi  
+keywords:
+  - Offres
   - Emploi
+score:
+  detail:
+    contact:
+      link: support@emploi-store-dev.fr
+    access:
+      link: https://www.emploi-store-dev.fr/portail-developpeur/detailapicatalogue/59438edb243a5f952c5d9e8c
+    doc_tech:
+      link: https://www.emploi-store-dev.fr/portail-developpeur-cms/home/catalogue-des-api/documentation-des-api/api/api-offres-demploi-v1.html
 ---
 
 ## Description de l'API

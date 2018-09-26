@@ -3,9 +3,7 @@ title: API Géo
 redirect_from: /api/geoapi.html
 tagline: Interrogez les référentiels géographiques plus facilement
 contract: OUVERT
-openapi_definition: https://geo.api.gouv.fr/definition.yml
-doc_tech: https://geo.api.gouv.fr
-contact: geo@api.gouv.fr
+external_site: https://geo.api.gouv.fr
 clients:
   - collectivités
   - ministères
@@ -25,6 +23,14 @@ keywords:
   - EPCI
   - Surface
   - Distance
+score:
+  detail:
+    access:
+      is_open: true
+    contact:
+      link: geo@api.gouv.fr
+    doc_tech:
+      link: https://geo.api.gouv.fr/definition.yml
 ---
 
 L' __API Géo__ est une boîte-à-outils __facile à prendre en main__ pour rendre vos applications et bases de données plus intelligentes, en terme de positionnement et de connaissance des territoires.
@@ -56,6 +62,6 @@ Tout le monde. Mais si vos besoins sont massifs, [contactez-nous](mailto:geo@api
 
 [Toutes les données utilisées](https://github.com/etalab/api-communes#données-sources) sont sous licences Open Data.
 
-#### Contact
+#### Mail de contact
 
 geo@api.gouv.fr

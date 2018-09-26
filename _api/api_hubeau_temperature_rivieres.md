@@ -2,10 +2,8 @@
 title: Hub'Eau - Température des cours d'eau (BETA)
 tagline: Température en continu dans les cours d'eau
 contract: OUVERT
-openapi_definition: https://hubeau.eaufrance.fr/api/vbeta/temperature/api-docs
-doc_tech: https://hubeau.eaufrance.fr/page/documentation-temperature-cours-deau
+external_site: https://hubeau.eaufrance.fr/page/documentation-temperature-cours-deau
 logo: 06-temperature_rivieres.png
-contact: newshubeau@brgm.fr
 clients:
   - particuliers
   - entreprises
@@ -24,6 +22,14 @@ keywords:
   - Fleuve
   - Plan d'eau
   - Rivière
+score:
+  detail:
+    access:
+      is_open: true
+    contact:
+      link: newshubeau@brgm.fr
+    doc_tech:
+      link: https://hubeau.eaufrance.fr/api/vbeta/temperature/api-docs
 ---
 
 ### Description fonctionnelle de l'API Température en continu des cours d'eau
@@ -40,7 +46,7 @@ Deux opérations (endpoints) sont disponibles :
 * __stations__ : permet de rechercher les stations sur lesquelles sont mesurées les températures en continu dans les cours d'eau ;
 * __chroniques__ : permet de rechercher les chroniques de températures en continu dans les cours d'eau mesurées aux différentes stations.
 
-Les données sont issues de la [base de données Naïades](http://www.naiades.eaufrance.fr/). Elles sont mises à jour trimestriellement. 
+Les données sont issues de la [base de données Naïades](http://www.naiades.eaufrance.fr/). Elles sont mises à jour trimestriellement.
 Les données sont exposées sous la forme d'une API REST, les formats supportés sont : JSON, GeoJSON et CSV.
 
 Dernières évolutions de l'API Température en continu des cours d'eau de Hub'Eau:

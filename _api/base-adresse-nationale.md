@@ -1,10 +1,8 @@
 ---
 title: Base Adresse Nationale
 tagline: "Un référentiel national ouvert : de l'adresse à la coordonnée géographique"
-doc_tech: https://adresse.data.gouv.fr/api
-domain: https://adresse.data.gouv.fr
+external_site: https://adresse.data.gouv.fr
 contract: OUVERT
-contact: adresse@data.gouv.fr
 clients:
   - particuliers
   - entreprises
@@ -26,6 +24,14 @@ keywords:
   - GPS
   - Code postal
 additional_css: api
+score:
+  detail:
+    access:
+      is_open: true
+    contact:
+      link: adresse@data.gouv.fr
+    doc_tech:
+      external: https://adresse.data.gouv.fr/api
 ---
 
 Pour que les services d'urgence arrivent au bon endroit, pour vous permettre de réaliser une analyse cartographique en quelques clics ou encore pour que les opérateurs publics et privés coordonnent mieux leurs chantiers, ce référentiel, véritable enjeu de souveraineté pour la France, est la première alliance entre l'État et la société civile.

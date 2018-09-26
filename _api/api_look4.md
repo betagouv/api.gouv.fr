@@ -6,9 +6,7 @@ owner: IGN Géoportail
 category: Public
 layout: api
 logo: look4-geoportail.jpg
-contact: contact.geoservices@ign.fr
-doc_tech: https://ignf.github.io/look4/latest/jsdoc/
-access_link: http://professionnels.ign.fr/ign/contrats
+external_site: https://ignf.github.io/look4/latest/jsdoc/
 clients:
   - développeurs
   - entreprises
@@ -21,6 +19,12 @@ keywords:
   - lieux-dits habités
   - lieux-dits inhabités
   - points routiers
+score:
+  detail:
+    access:
+      link: http://professionnels.ign.fr/ign/contrats
+    contact:
+      link: contact.geoservices@ign.fr
 ---
 
 # API Look4 Géoportail

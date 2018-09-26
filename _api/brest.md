@@ -4,8 +4,6 @@ tagline: Données théoriques et temps-réel des transports publics de Brest mé
 owner: Brest métropole
 contract: OUVERT
 logo: Logo_Brest_metropole.png
-contact: deplacements@brest-metropole.fr
-doc_tech: https://geo.pays-de-brest.fr/donnees/Documents/Public/DocWebServicesTransport.pdf
 clients:
   - particuliers
   - entreprises
@@ -18,6 +16,12 @@ keywords:
   - Tramway
   - Téléphérique
   - Transport
+score:
+  detail:
+    contact:
+      link: deplacements@brest-metropole.fr
+    doc_tech:
+      external: https://geo.pays-de-brest.fr/donnees/Documents/Public/DocWebServicesTransport.pdf
 ---
 
 ## Description de l'API

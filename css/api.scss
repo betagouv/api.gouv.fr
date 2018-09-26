@@ -21,10 +21,7 @@ section + section {
   margin-bottom: 2%;
 
   h1 {
-    padding: .2em 0;
-    i.icon {
-      height: inherit;
-    }
+    margin: 0;
   }
 
   h2 {
@@ -35,6 +32,11 @@ section + section {
 
   .large.ui.secondary.button {
     margin: 10px;
+  }
+
+  #stat_value {
+    font-size: 2em;
+    margin-bottom: 0.7em;
   }
 }
 #description {
@@ -116,4 +118,10 @@ section + section {
 
 #services {
   margin-bottom: 3em;
+}
+
+.sub.header .stat {
+  color: white;
+  font-size: 1.4em;
+  margin-top: 1em;
 }

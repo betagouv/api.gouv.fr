@@ -1,9 +1,7 @@
 ---
 title: API Entreprise
 tagline: Simplifier les démarches des entreprises en récupérant pour elles leurs documents administratifs
-doc_tech: https://doc.entreprise.api.gouv.fr
-domain: https://entreprise.api.gouv.fr/
-contact: tech@entreprise.api.gouv.fr
+external_site: https://entreprise.api.gouv.fr/
 contract: OUVERT sous contrat
 stat:
   lastXdays: 30
@@ -34,7 +32,19 @@ keywords:
   - Établissement
   - Entreprise
   - Certification
-access_link: https://signup.entreprise.api.gouv.fr
+score:
+  detail:
+    access:
+      link: https://signup.entreprise.api.gouv.fr
+    rate_limiting:
+      description: |
+        <p>Actuellement, le nombre d’appels aux API Entreprise est limité à 1000 requêtes par heures par adresses IP. Au delà, l’adresse IP est bannie de nos serveurs, et ces derniers ne répondent alors simplement pas. Si vous pensez être dans cette situation, vous pouvez nous contacter à tech@entreprise.api.gouv.fr.</p>
+    contact:
+      link: tech@entreprise.api.gouv.fr
+    doc_tech:
+      external: https://doc.entreprise.api.gouv.fr
+    monitoring:
+      link: https://dashboard.entreprise.api.gouv.fr
 ---
 
 [L’API Entreprise](https://entreprise.api.gouv.fr/) est une plateforme d’échange opérée par la DINSIC qui met à disposition des opérateurs publics et des administrations, des données et des documents administratifs de référence, relatifs aux entreprises et association, qui sont délivrés par les administrations et les organismes publics, à fin de simplifier les démarches administratives et la gestion des dossiers.

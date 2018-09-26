@@ -21,10 +21,10 @@ menu_options: [
   },
   {
     id: "monitoring",
-    label: "Monitoring"
+    label: "Supervision"
   },
   {
-    id: "openapi_definition",
+    id: "doc_tech",
     label: "Documentation technique"
   },
   {
