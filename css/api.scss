@@ -21,10 +21,7 @@ section + section {
   margin-bottom: 2%;
 
   h1 {
-    padding: .2em 0;
-    i.icon {
-      height: inherit;
-    }
+    margin: 0;
   }
 
   h2 {
@@ -36,6 +33,11 @@ section + section {
   .large.ui.secondary.button {
     margin: 10px;
   }
+
+  #stat_value {
+    font-size: 2em;
+    margin-bottom: 0.7em;
+  }
 }
 #description {
   .metadata {
@@ -46,6 +48,19 @@ section + section {
       margin-top: 0.3em;
       margin-bottom: 0.6em;
     }
+
+    ul.unstyled {
+      list-style: none;
+      padding-left: 15px;
+    }
+
+    .check.icon {
+      color: green;
+    }
+
+    .warning.icon {
+      color: indianred;
+    }
   }
 
   .ribbon {
@@ -55,18 +70,14 @@ section + section {
   .logoWrapper {
     text-align: center;
   }
+
   .markdown-body {
     border: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
   }
-  .menu {
-    margin-bottom: 2em;
-    .item {
-      font-size: 1.2em;
-    }
-  }
+
   .swagger-section {
     background-color: whitesmoke;
     padding: 10px 2em;
@@ -107,4 +118,10 @@ section + section {
 
 #services {
   margin-bottom: 3em;
+}
+
+.sub.header .stat {
+  color: white;
+  font-size: 1.4em;
+  margin-top: 1em;
 }

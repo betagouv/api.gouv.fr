@@ -2,10 +2,8 @@
 title: Hub'Eau - Indicateurs Eau potable et Assainissement
 tagline: Indicateurs des services d'eau et d'assainissement
 contract: OUVERT
-openapi_definition: https://hubeau.eaufrance.fr/api/v0/indicateurs_services/api-docs
-doc_tech: https://hubeau.eaufrance.fr/page/documentation-eau_potable-assainissement
+external_site: https://hubeau.eaufrance.fr/page/documentation-eau_potable-assainissement
 logo: 02-indicateurs_services.png
-contact: newshubeau@brgm.fr
 clients:
   - particuliers
   - entreprises
@@ -23,6 +21,14 @@ keywords:
   - Services
   - Eau potable
   - Assainissement
+score:
+  detail:
+    access:
+      is_open: true
+    contact:
+      link: newshubeau@brgm.fr
+    doc_tech:
+      link: https://hubeau.eaufrance.fr/api/v0/indicateurs_services/api-docs
 ---
 
 ### Description fonctionnelle de l'API Indicateurs eau potable et assainissement
@@ -45,7 +51,7 @@ Trois thématiques sont disponibles :
 
 Les différentes opérations possibles sont :
 
-* communes : retourne les indicateurs de performance des services publics d'eau et d'assainissement par commune (un minimum, maximum et moyenne sont calculés quand il existe plusieurs services publics sur une même commune) ; 
+* communes : retourne les indicateurs de performance des services publics d'eau et d'assainissement par commune (un minimum, maximum et moyenne sont calculés quand il existe plusieurs services publics sur une même commune) ;
 * indicateurs : retourne la liste des valeurs de performance pour un ou plusieurs indicateurs donnés ;
 * services : retourne la liste des indicateurs de performance d'un type de service donné (AEP, AC ou ANC) ;
 
@@ -97,5 +103,5 @@ Les 35000 services publics de l’eau et de l’assainissement en France ont pou
 La loi sur l’eau de 1992 et le Code Général des Collectivités Territoriales imposent aux communautés de communes ou aux communes qui ne réalisent pas de dispositif d’assainissement collectif de mettre en place un Service Public d’Assainissement Non Collectif (SPANC). Le SPANC a pour mission de contrôler les installations d’assainissement non collectif afin de prévenir les risques sanitaires. Le SPANC peut également être apte à réaliser et à entretenir les installations d’assainissement autonome.
 
 #### SISPEA
-Le [SISPEA, Système d'Information (ou Observatoire National) sur les Services Publics d'Eau et d'Assainissement] (http://www.services.eaufrance.fr/), donne accès à la description et aux données des services publics d'eau potable et d'assainissement, qu’il s’agisse de leur organisation, de leur tarif ou de leur performance. Il est aussi une source d’informations sur le fonctionnement des services d’eau et d’assainissement en France, la composition d’une facture d’eau, les textes réglementaires dans le domaine de la gestion de l’eau et de l’assainissement collectif ou non collectif. 
+Le [SISPEA, Système d'Information (ou Observatoire National) sur les Services Publics d'Eau et d'Assainissement] (http://www.services.eaufrance.fr/), donne accès à la description et aux données des services publics d'eau potable et d'assainissement, qu’il s’agisse de leur organisation, de leur tarif ou de leur performance. Il est aussi une source d’informations sur le fonctionnement des services d’eau et d’assainissement en France, la composition d’une facture d’eau, les textes réglementaires dans le domaine de la gestion de l’eau et de l’assainissement collectif ou non collectif.
 L’observatoire sur les services d’eau et d’assainissement a été créé en 2009 et depuis les communes ou groupements intercommunaux peuvent y saisir leurs indicateurs. Cette saisie est devenue obligatoire à partir du 1er janvier 2016 pour les communes ou groupements intercommunaux de plus de 3500 habitants. Issu d’un partenariat entre l’ensemble des acteurs de l’eau, l’observatoire est un outil destiné aux collectivités locales pour piloter leurs services, suivre leurs évolutions d’années en années, comparer leurs performances. De plus, il apporte une réponse aux exigences des usagers et des citoyens soucieux d’avoir une information transparente. Enfin, l’observatoire permet l’élaboration d’une base de données nationale des prix de l’eau et des performances des services publics d’eau et d’assainissement.

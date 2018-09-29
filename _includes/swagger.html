@@ -7,7 +7,7 @@
 
 <script type="text/javascript">
   var ui = SwaggerUIBundle({
-    url: '{{ page.openapi_definition }}',
+    url: '{{ include.url }}',
     dom_id: '#swagger-ui-container',
     presets: [
       SwaggerUIBundle.presets.apis,

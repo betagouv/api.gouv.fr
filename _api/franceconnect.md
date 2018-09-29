@@ -1,11 +1,8 @@
 ---
 title: FranceConnect
 tagline: FranceConnect est un dispositif qui garantit l’identité d’un usager en se reposant sur des comptes certifiés existants.
-doc_tech: https://partenaires.franceconnect.gouv.fr/fournisseur-service
-access_link: https://partenaires.franceconnect.gouv.fr/monprojet/decouverte
-domain: https://www.franceconnect.gouv.fr/
+external_site: https://www.franceconnect.gouv.fr/
 contract: OUVERT sous contrat
-contact: support.partenaires@franceconnect.gouv.fr
 clients:
   - particuliers
   - entreprises
@@ -19,6 +16,14 @@ keywords:
   - Identification
   - SSO
 logo: logo-fc.png
+score:
+  detail:
+    access:
+      link: https://partenaires.franceconnect.gouv.fr/monprojet/decouverte
+    contact:
+      link: support.partenaires@franceconnect.gouv.fr
+    doc_tech:
+      external: https://partenaires.franceconnect.gouv.fr/fournisseur-service
 ---
 
 ## Qu'est-ce que FranceConnect ?

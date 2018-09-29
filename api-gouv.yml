@@ -30,7 +30,7 @@ definitions:
         type: string
       image:
         type: string
-      domain:
+      external_site:
         type: string
       owner:
         type: string

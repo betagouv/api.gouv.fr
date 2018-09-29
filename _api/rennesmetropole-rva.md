@@ -1,12 +1,9 @@
 ---
 title: API RVA Rennes Métropole
 tagline: "Voies et adresses de Rennes Métropole"
-doc_tech: http://rva.data.rennes-metropole.fr/documentation.php
-access_link: http://rva.data.rennes-metropole.fr/inscription.php
-domain: http://rva.data.rennes-metropole.fr/
+external_site: http://rva.data.rennes-metropole.fr/
 contract: OUVERT
 logo: rennesmetropole-rva.png
-contact: sigsupport@rennesmetropole.fr
 clients:
   - particuliers
   - entreprises
@@ -15,6 +12,14 @@ owner: Rennes Métropole
 keywords:
   - Voie
   - Adresse
+score:
+  detail:
+    contact:  
+      link: sigsupport@rennesmetropole.fr
+    access:
+      link: http://rva.data.rennes-metropole.fr/inscription.php
+    doc_tech:
+      external: http://rva.data.rennes-metropole.fr/documentation.php
 ---
 
 ## Présentation

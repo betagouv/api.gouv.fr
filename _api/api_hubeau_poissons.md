@@ -2,10 +2,8 @@
 title: Hub'Eau - Etat piscicole des rivières
 tagline: Données sur les poissons de rivières
 contract: OUVERT
-openapi_definition: https://hubeau.eaufrance.fr/api/v0/etat_piscicole/api-docs
-doc_tech: https://hubeau.eaufrance.fr/page/documentation_poisson/
+external_site: https://hubeau.eaufrance.fr/page/documentation_poisson/
 logo: 01-poisson.png
-contact: newshubeau@brgm.fr
 clients:
   - particuliers
   - entreprises
@@ -21,6 +19,14 @@ keywords:
   - Pêche électrique
   - Cours d'eau
   - Etat piscicole
+score:
+  detail:
+    access:
+      is_open: true
+    contact:
+      link: newshubeau@brgm.fr
+    doc_tech:
+      link: https://hubeau.eaufrance.fr/api/v0/etat_piscicole/api-docs
 ---
 
 ### Description fonctionnelle de l'API Poissons
@@ -32,7 +38,7 @@ Les données sont exposées sous la forme d'une API REST, les formats supportés
 
 Les différentes opérations possibles sont :
 
-* __code_espece_poisson__ : obtenir les correspondances des codes des espèces de poissons entre le référentiel AFB (3 lettres) et le référentiel SANDRE (code numérique). Cette API permet également d'obtenir les noms commun et latin des espèces à partir des codes AFB ou SANDRE ; 
+* __code_espece_poisson__ : obtenir les correspondances des codes des espèces de poissons entre le référentiel AFB (3 lettres) et le référentiel SANDRE (code numérique). Cette API permet également d'obtenir les noms commun et latin des espèces à partir des codes AFB ou SANDRE ;
 * __lieux_peche__ : connaître les lieux où ont été effectuées des pêches électriques. A partir d'une ou plusieurs espèces de poissons, l'API fournit les stations et cours d'eau où ont été pêchés ces poissons. Il est possible de limiter la recherche en entrant un rectangle d'emprise géographique, un département, une commune, un sous-secteur hydrographique et une période d'opération ;
 * __poissons__ : connaître les poissons décomptés par pêche électrique dans une rivière. A partir cette fois des codes des différentes stations, on récupère d'abord des informations sur la station (localisation, cours d'eau) puis sur les différentes opérations de pêche électrique qui y ont eu lieu : date, espèces de poissons pêchées, effectifs de chaque espèce, classes de taille de chaque espèce. Il est possible de limiter la recherche à une période précise.
 

@@ -1,10 +1,8 @@
 ---
 title: OpenFisca
 tagline: Calculer l'impôt, les cotisations, les aides sociales…
-doc_tech: https://doc.openfisca.fr/openfisca-web-api/index.html
-domain: https://api.openfisca.fr
+external_site: https://api.openfisca.fr
 contract: OUVERT
-contact: contact@openfisca.fr
 clients:
   - citoyens
   - entreprises
@@ -23,6 +21,14 @@ keywords:
   - Droit
   - Simulateur
 logo: logo-openfisca.svg
+score:
+  detail:
+    contact:  
+      link: contact@openfisca.fr
+    access:
+      is_open: true
+    doc_tech:
+      external: https://doc.openfisca.fr/openfisca-web-api/index.html
 ---
 
 ## Calculer le droit
