@@ -2,7 +2,7 @@
 title: API Carto 
 tagline: l'accès simplifié aux données de référence : urbanisme, zonages AOC de l'INAO, codes postaux, parcellaire,...
 contract: OUVERT 
-owner: IGN Géoportail (+INAO pour certaines données) 
+owner: IGN Géoportail
 category: Public
 layout: api
 logo: look4-geoportail.jpg
@@ -15,7 +15,10 @@ clients:
   - organismes publics
   - collectivités territoriales
   - ministères
-keywords:
+partners:
+  - INAO
+  - Ministère de la cohésion des territoires
+ keywords:
   - poste
   - codes postaux
   - géomarketing
