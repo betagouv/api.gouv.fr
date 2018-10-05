@@ -3,12 +3,13 @@ title: API Carto
 tagline: l'accès simplifié aux données de référence : urbanisme, zonages AOC de l'INAO, codes postaux, parcellaire,...
 contract: OUVERT 
 owner: IGN Géoportail
+contract: OUVERT (sous contrat pour certaines données)
 category: Public
 layout: api
 logo: look4-geoportail.jpg
-contact: contact.geoservices@ign.fr
+contact: link:contact.geoservices@ign.fr
 doc_tech: https://apicarto.ign.fr/api/doc/
-access_link: https://geoservices.ign.fr/documentation/geoservices/apicarto.html
+external_site : https://apicarto.ign.fr
 clients:
   - développeurs
   - entreprises
