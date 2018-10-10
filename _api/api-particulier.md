@@ -34,7 +34,7 @@ score:
     contact:
       link: contact@particulier.api.gouv.fr
     doc_tech:
-      link: https://particulier-sandbox.api.gouv.fr/api/swagger.yaml
+      link: https://particulier-sandbox.infra.beta.gouv.fr/api/swagger.yaml
     monitoring:
       link: https://status.particulier.api.gouv.fr
       description: |
