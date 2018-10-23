@@ -1,5 +1,5 @@
 ---
-title: Hub'Eau - Température des cours d'eau (BETA)
+title: Hub'Eau - Température des cours d'eau
 tagline: Température en continu dans les cours d'eau
 contract: OUVERT
 openapi_definition: https://hubeau.eaufrance.fr/api/v1/temperature/api-docs
