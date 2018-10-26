@@ -2,10 +2,9 @@
 title: Hub'Eau - Hydrométrie (BETA)
 tagline: Hydrométrie temps réel
 contract: OUVERT
-openapi_definition: https://hubeau.eaufrance.fr/api/vbeta/hydrometrie/api-docs
-doc_tech: https://hubeau.eaufrance.fr/page/api-hydrometrie-version-beta
+openapi_definition: 
+external_site: https://hubeau.eaufrance.fr/page/api-hydrometrie-version-beta
 logo: 07-hydrometrie.png
-contact: newshubeau@brgm.fr
 clients:
   - particuliers
   - entreprises
@@ -27,6 +26,14 @@ keywords:
   - Cours d'eau
   - Fleuve
   - Rivière
+score:
+  detail:
+    access:
+      is_open: true
+    contact:
+      link: newshubeau@brgm.fr
+    doc_tech:
+      link: https://hubeau.eaufrance.fr/api/vbeta/hydrometrie/api-docs
 ---
 
 ### Description fonctionnelle de l'API Hydrométrie
