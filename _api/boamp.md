@@ -1,16 +1,20 @@
 ---
 title: API BOAMP
 tagline: Rechercher et consulter les annonces du Bulletin Officiel des Annonces de Marchés Publics
-doc_tech: http://api.dila.fr
-domain: http://api.dila.fr
+external_site: http://api.dila.fr
 contract: OUVERT
 keywords:
   - Marchés publics
   - Annonces
   - Bulletin officiel
-contact: donnees-dila@dila.gouv.fr
 owner: DILA
 logo: logo-carre-Boamp.png
+score:
+  detail:
+    contact:
+      link: donnees-dila@dila.gouv.fr
+    doc_tech:
+      external: http://api.dila.fr
 ---
 
 ### Contenu des données

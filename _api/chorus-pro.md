@@ -1,12 +1,8 @@
 ---
 title: API Chorus Pro
 tagline: Envoyer facilement vos factures électroniques à une entité publique française
-doc_tech: https://communaute.chorus-pro.gouv.fr/documentation/api/
-access_link: https://chorus-pro.gouv.fr/qualif/
-domain: https://www.chorus-pro.gouv.fr/
-contact : api-choruspro.aife@finances.gouv.fr
+external_site: https://www.chorus-pro.gouv.fr/
 contract: OUVERT sous contrat
-openapi_definition: http://localhost:4000/api/chorus-portail.pro.json
 clients:
   - Editeurs
   - Entreprises
@@ -23,25 +19,33 @@ keywords:
   - Comptabilité
   - Portail professionel
 logo: ChorusPro.jpg
+score:
+  detail:
+    access:
+      link: https://chorus-pro.gouv.fr/qualif/
+    contact:
+      link: api-choruspro.aife@finances.gouv.fr
+    doc_tech:
+      external: https://communaute.chorus-pro.gouv.fr/documentation/api/
 ---
 
 ## Qu’est-ce que Chorus Pro ?
-Chorus Pro est la solution mutualisée de facturation électronique qui a été  mise en place pour tous les fournisseurs de la sphère publique afin de répondre aux obligations fixées par l’ordonnance du 26 juin 2014. Cette solution a remplacé en septembre 2016 Chorus Factures, utilisé depuis le 1 er janvier 2012 par les fournisseurs de l’État. 
+Chorus Pro est la solution mutualisée de facturation électronique qui a été  mise en place pour tous les fournisseurs de la sphère publique afin de répondre aux obligations fixées par l’ordonnance du 26 juin 2014. Cette solution a remplacé en septembre 2016 Chorus Factures, utilisé depuis le 1 er janvier 2012 par les fournisseurs de l’État.
 La construction de cette solution a démarré en 2015, après une vaste phase de concertation tant avec les représentants des entreprises qu’avec ceux de la sphère publique. Elle s’est  poursuivi tout au long de l’année 2016 avec en ligne de mire son déploiement au premier janvier 2017.
 
-L’ordonnance du 26 juin 2014 relative au développement de la facturation électronique prévoit une dématérialisation des factures à compter du 1er janvier 2017  pour les grandes entreprises et les entités publiques , puis une généralisation progressive d’ici le 1er janvier 2020 en tenant compte de la taille des entreprises concernées : 
-- au 1er janvier 2017 : pour les grandes entreprises (plus de 5000 salariés) et les personnes publiques ; 
-- au 1er janvier 2018 : pour les entreprises de taille intermédiaire (250 à 5000 salariés) ; 
-- au 1er janvier 2019 : pour les petites et moyennes entreprises(10 à 250 salariés) ; 
-- au 1er janvier 2020 : pour les microentreprises (moins de 10 salariés). 
+L’ordonnance du 26 juin 2014 relative au développement de la facturation électronique prévoit une dématérialisation des factures à compter du 1er janvier 2017  pour les grandes entreprises et les entités publiques , puis une généralisation progressive d’ici le 1er janvier 2020 en tenant compte de la taille des entreprises concernées :
+- au 1er janvier 2017 : pour les grandes entreprises (plus de 5000 salariés) et les personnes publiques ;
+- au 1er janvier 2018 : pour les entreprises de taille intermédiaire (250 à 5000 salariés) ;
+- au 1er janvier 2019 : pour les petites et moyennes entreprises(10 à 250 salariés) ;
+- au 1er janvier 2020 : pour les microentreprises (moins de 10 salariés).
 
 ## A qui s’adresse Chorus Pro ?
-Chorus Pro s’adresse à l’ensemble des acteurs de la commande publique : 
--	**Côté émetteurs** : la plateforme s’adresse à l’ensemble des fournisseurs tant privés que publics, afin de leur permettre de transmettre de façon efficace et automatique leurs factures à destination de la sphère publique. La solution Chorus Pro prend également en compte le processus de gestion et de validation des factures de travaux. 
+Chorus Pro s’adresse à l’ensemble des acteurs de la commande publique :
+-	**Côté émetteurs** : la plateforme s’adresse à l’ensemble des fournisseurs tant privés que publics, afin de leur permettre de transmettre de façon efficace et automatique leurs factures à destination de la sphère publique. La solution Chorus Pro prend également en compte le processus de gestion et de validation des factures de travaux.
 -	**Côté récepteurs** : la plateforme s’adresse aux entités du **secteur public** : l’Etat, les établissements publics nationaux (EPN), les collectivités territoriales et les établissements publics locaux (EPL). Elle leur permet de traiter l’ensemble des factures de manière optimisée en réduisant les délais de validation et d’enregistrement.
 
 ## Chorus Pro côté émetteur :
-Les fournisseurs qu’ils soient issus du domaine privé ou du secteur public ont accès via Chorus Pro à l’ensemble des fonctionnalités suivantes : 
+Les fournisseurs qu’ils soient issus du domaine privé ou du secteur public ont accès via Chorus Pro à l’ensemble des fonctionnalités suivantes :
 -	[Dépôt](https://communaute.chorus-pro.gouv.fr/deposer-flux-facture/) ou [saisie d’une facture](https://communaute.chorus-pro.gouv.fr/soumettre-facture/),
 -	[Suivi du traitement de ses factures](https://communaute.chorus-pro.gouv.fr/rechercher-facture-par-fournisseur/),
 -	[Ajout de pièces complémentaires nécessaires au traitement de sa facture](https://communaute.chorus-pro.gouv.fr/completer-facture/),

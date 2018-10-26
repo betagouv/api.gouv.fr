@@ -1,13 +1,10 @@
 ---
 title: API Résultats aux examens
 tagline: Accéder aux calendriers de délibération et aux résultats des examens de l'enseignement agricole.
-doc_tech: https://ensagri.agriculture.gouv.fr/arpent-resultats-api/swagger-ui.html
 owner: Ministère de l'agriculture et de l'alimentation
 category: public
 contract: OUVERT
 logo: maa.png
-openapi_definition: https://ensagri.agriculture.gouv.fr/arpent-resultats-api/v2/api-docs?group=arpent-resultats
-contact: arpent-resultat.sg@agriculture.gouv.fr
 clients:
   - particuliers
   - entreprises
@@ -28,13 +25,19 @@ keywords:
   - BTS
   - Arpent
   - Diplôme
+score:
+  detail:
+    contact:
+      link: arpent-resultat.sg@agriculture.gouv.fr
+    doc_tech:
+      link: https://ensagri.agriculture.gouv.fr/arpent-resultats-api/v2/api-docs?group=arpent-resultats
 ---
 
 ### Pourquoi ?
 
 Les journaux publient chaque année les résultats aux examens de leur région.
 
-Dans le respect des données personnelles des candidats, ARPENT(résultats) vous propose d'accéder aux données de l'enseignement agricole : 
+Dans le respect des données personnelles des candidats, ARPENT(résultats) vous propose d'accéder aux données de l'enseignement agricole :
 - Calendriers de délibération pour identifier le nombre de candidats potentiellement admis afin de calculer la taille de l'encart sur le journal papier
 - Résultats aux examens des candidats reçus ou admis au rattrapage
 
@@ -44,15 +47,15 @@ Au delà des résultats, vous trouverez l'ensemble des référentiels de l'ensei
 
 L'API Résultats aux examens exposant des **données à caractère personnel**, le ministère en charge de l'agriculture attire votre attention sur les **obligations légales** qui en découlent. Le traitement de ces données relève des obligations de déclaration de la Loi 78-17 du 6 janvier 1978 modifiée, dîte Loi CNIL : [https://www.cnil.fr/fr/loi-78-17-du-6-janvier-1978-modifiee](https://www.cnil.fr/fr/loi-78-17-du-6-janvier-1978-modifiee)
 
-### Aller à l'essentiel... 
+### Aller à l'essentiel...
 
-Nous avons choisi d'exposer toutes les ressources utilisées par le service [ARPENT(résultats)](https://ensagri.agriculture.gouv.fr/arpent-resultats/). La [documentation technique](https://ensagri.agriculture.gouv.fr/arpent-resultats-api/swagger-ui.html#/) peut donc paraître assez riche. 
+Nous avons choisi d'exposer toutes les ressources utilisées par le service [ARPENT(résultats)](https://ensagri.agriculture.gouv.fr/arpent-resultats/). La [documentation technique](https://ensagri.agriculture.gouv.fr/arpent-resultats-api/swagger-ui.html#/) peut donc paraître assez riche.
 *A noter : certaines ressources relevent d'une authentification renforcée. Les modalités d'accès seront fournies ultérieurement.*
 
-Pour aller à l'essentiel, voici celles qui exposent le plus simplement les calendriers et résultats aux examens : 
-- Calendriers de délibération : 
+Pour aller à l'essentiel, voici celles qui exposent le plus simplement les calendriers et résultats aux examens :
+- Calendriers de délibération :
 
-```sh 
+```sh
 Curl -X GET --header 'Accept: application/json' 'https://ensagri.agriculture.gouv.fr/arpent-resultats-api/api/arpent-resultats/resultats-grand-public/calendriers?departement=30'
 ```
 
@@ -81,9 +84,8 @@ curl -X GET --header 'Accept: application/json' 'https://ensagri.agriculture.gou
     "resultat": "Admission"
  }
  ```
- 
+
 ### Se lancer !
- 
-Le ministère en charge de l'agriculture met à votre disposition un environnement de pré-production pour tester vos développements. 
+
+Le ministère en charge de l'agriculture met à votre disposition un environnement de pré-production pour tester vos développements.
 Il est accessible à l'adresse : [https://ensagri-pprd.agriculture.gouv.fr/arpent-resultats-api/swagger-ui.html](https://ensagri-pprd.agriculture.gouv.fr/arpent-resultats-api/swagger-ui.html)
- 

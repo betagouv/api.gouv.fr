@@ -41,7 +41,7 @@ Deux opérations (endpoints) sont disponibles :
 * __stations__ : permet de rechercher les stations sur lesquelles sont mesurées les températures en continu dans les cours d'eau ;
 * __chroniques__ : permet de rechercher les chroniques de températures en continu dans les cours d'eau mesurées aux différentes stations.
 
-Les données sont issues de la [base de données Naïades](http://www.naiades.eaufrance.fr/). Elles sont mises à jour trimestriellement. 
+Les données sont issues de la [base de données Naïades](http://www.naiades.eaufrance.fr/). Elles sont mises à jour trimestriellement.
 Les données sont exposées sous la forme d'une API REST, les formats supportés sont : JSON, GeoJSON et CSV.
 
 Dernières évolutions de l'API Température en continu des cours d'eau de Hub'Eau:
