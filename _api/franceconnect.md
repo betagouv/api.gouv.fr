@@ -1,7 +1,7 @@
 ---
 title: FranceConnect
 tagline: FranceConnect est un dispositif qui garantit l’identité d’un usager en se reposant sur des comptes certifiés existants.
-external_site: https://www.franceconnect.gouv.fr/
+external_site: https://franceconnect.gouv.fr/
 contract: OUVERT sous contrat
 clients:
   - particuliers
@@ -19,11 +19,11 @@ logo: logo-fc.png
 score:
   detail:
     access:
-      link: https://partenaires.franceconnect.gouv.fr/monprojet/decouverte
+      link: https://signup-staging.api.gouv.fr/franceconnect
     contact:
       link: support.partenaires@franceconnect.gouv.fr
     doc_tech:
-      external: https://partenaires.franceconnect.gouv.fr/fournisseur-service
+      external: https://partenaires.franceconnect.gouv.fr/fcp/fournisseur-service
 ---
 
 ## Qu'est-ce que FranceConnect ?
@@ -56,34 +56,28 @@ Les publics visés sont les représentants des organisations publiques ou privé
 
 C'est l'occasion de venir implémenter votre cas d'usage avec l'équipe FranceConnect et les autres participants, et de demander de l'aide sur la procédure de raccordement, ou encore sur la norme OpenID Connect.
 
-
 ## Sites de démonstration
 
-### FranceConnect Particulier :
+### Tester l'identification avec FranceConnect du point de vue usager
 
-* [Guichet des Parisiens](https://guichet-parisiens.integ01.dev-franceconnect.fr/) : Effectuer une démarche plus aboutie d'inscription à la cantine scolaire.
+1. se rendre sur le site de test : https://service-provider-example.herokuapp.com/
+2. cliquer sur "se connecter" puis sur "s'identifier avec FranceConnect"
+3. choisir "identity-provider-example" comme fournisseur d'identité
+4. utiliser les identifiants suivants : 3_melaine | 123 (d'autres identifiants de test sont disponibles [ici](https://github.com/france-connect/identity-providers-examples/blob/master/NodeJSES6/data/database.csv), le mot de passe est toujours 123)
+5. une fois revenu sur le site, vous êtes connectés
 
-Utilisez un de nos comptes de démonstration pour vous connecter et tester le service :
+### Tester l'échange de donnée avec FranceConnect du point de vue usager
 
-| Comptes        | AMELI                                        | DGFiP                                                                     |
-|----------------|----------------------------------------------|---------------------------------------------------------------------------|
-| Identifiant    | 18712345678912345                            | 1234567891011                                                             |
-| Mot de passe   | 123                                          | 123                                                                       |
+1. sur le site de test, cliquer sur le bouton "récuperer mes données via FranceConnect"
+2. dans la mire France Connect de consentement d'échange de données, cliquer sur "Accepter"
+3. vous devriez voir apparaître les données relatives à l'identifiant FranceConnect choisi (d'autres données sont disponible [ici](https://github.com/france-connect/data-providers-examples/blob/master/nodejs_ES6/database.csv))
 
-### FranceConnect Entreprise :
+### Test du point de vue fournisseur de service
 
-* [E-bourgogne](https://fse2.integ01.dev-franceconnect.fr/) : Un accès rapide à un espace entreprises.
 
-Utilisez un de nos comptes de démonstration pour vous connecter et tester le service :
+L'interface qui est en ligne peut être installée sur votre poste de travail, ce qui vous permettra de voir :
+- les échanges entre France Connect et le FS
+- les échanges entre le FS et l'API de test Impôts Particulier
+- les échanges entre l'API de test Impôts Particulier et le FS
 
-| Compte                    | Net-Entreprises                                                                                               |
-|---------------------------|---------------------------------------------------------------------------------------------------------------|
-| SIRET                     | 73282932000074                                                                                                |
-| Nom                       | Bloch                                                                                                         |
-| Prénom                    | Jean-Damien                                                                                                   |
-| Mot de passe              | 123                                                                                                           |
-
-| Compte                    | Impôts - Espace professionnel                                                                                 |
-|---------------------------|---------------------------------------------------------------------------------------------------------------|
-| Adresse électronique      | 73282932000074                                                                                                |
-| Nom                       | Bloch                                                                                                         |
+Le code et la procédure d'installation sont disponible sur notre dépôt de code github : https://github.com/france-connect/service-providers-examples/tree/master/NodeJSES6.
