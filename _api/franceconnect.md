@@ -19,7 +19,7 @@ logo: logo-fc.png
 score:
   detail:
     access:
-      link: https://signup-staging.api.gouv.fr/franceconnect
+      link: https://signup.api.gouv.fr/franceconnect
     contact:
       link: support.partenaires@franceconnect.gouv.fr
     doc_tech:
