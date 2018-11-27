@@ -42,4 +42,8 @@ Vérifiez que cette amélioration ne soit pas [déjà prévue](https://github.co
 
 ## Autres
 
+Votre demande concerne l'utilisation de FranceConnect, écrivez au [support FranceConnect](mailto:support.usagers@franceconnect.gouv.fr).
+
+Votre demande concerne l'une des api du catalogue, contacter directement le fournisseur en utilsant le mail de contact présent sur la page de description de l'api.
+
 Votre sujet ne correspond à aucun des cas ci-dessus ? [Écrivez-nous](mailto:contact@api.gouv.fr?subject=Autre+sujet).
