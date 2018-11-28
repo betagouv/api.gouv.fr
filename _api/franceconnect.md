@@ -67,6 +67,6 @@ FranceConnect cible les partenaires suivants :
 L'interface qui est en ligne peut être installée sur votre poste de travail, ce qui vous permettra de voir :
 - les échanges entre FranceConnect et le FS
 - les échanges entre le FS et l'API de test Impôts Particulier
-- les échanges entre l'API de test Impôts Particulier et le FS
+- les échanges entre l'API de test Impôts Particulier et FranceConnect
 
 Le code et la procédure d'installation sont disponibles sur notre dépôt de code github : [https://github.com/france-connect/service-provider-example/](https://github.com/france-connect/service-provider-example/).
