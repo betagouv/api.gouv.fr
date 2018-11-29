@@ -251,19 +251,21 @@ GEM
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     unicode-display_width (1.4.0)
+    yajl-ruby (1.4.1)
     yell (2.0.7)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  github-pages
+  github-pages (>= 172)
   html-proofer
   jekyll-redirect-from
   mini_racer
+  yajl-ruby (>= 1.3.0)
 
 RUBY VERSION
    ruby 2.5.1p57
 
 BUNDLED WITH
-   1.16.2
+   1.16.5
