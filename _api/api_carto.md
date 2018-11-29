@@ -43,7 +43,7 @@ L’API Carto est une API REST compatible avec la spécification OpenAPI permett
 Le format utilisé est JSON/GeoJSON
 La projection utilisée est WGS84 (coordonnées en longitude,latitude)
 
-L'API Carto offrent des opérations génériques de filtrage simple :
+L'API Carto offre des opérations génériques de filtrage simple :
 Par attribut sous la forme (?nom_attribut=valeur)
 Par intersection géométrique (?geom=géométrie GeoJSON)
 Remarques :
