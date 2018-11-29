@@ -53,20 +53,20 @@ FranceConnect cible les partenaires suivants :
 1. se rendre sur le site de test : [https://service-provider-example.herokuapp.com/](https://service-provider-example.herokuapp.com/)
 2. cliquer sur "se connecter" puis sur "s'identifier avec FranceConnect"
 3. choisir "identity-provider-example" comme fournisseur d'identité
-4. utiliser les identifiants suivants : 3_melaine \| 123 (d'autres identifiants de test sont disponibles [ici](https://github.com/france-connect/identity-providers-examples/blob/master/NodeJSES6/data/database.csv), le mot de passe est toujours 123)
+4. utiliser les identifiants suivants : 3_melaine \| 123 (d'autres identifiants de test sont disponibles [ici](https://github.com/france-connect/identity-provider-example/blob/master/data/database.csv), le mot de passe est toujours 123)
 5. une fois revenu sur le site, vous êtes connecté
 
 ### Tester l'échange de données avec FranceConnect du point de vue usager
 
 1. sur le site de test, cliquer sur le bouton "récuperer mes données via FranceConnect"
 2. dans la mire FranceConnect de consentement d'échange de données, cliquer sur "Accepter"
-3. vous devriez voir apparaître les données relatives à l'identifiant FranceConnect choisi (d'autres données sont disponibles [ici](https://github.com/france-connect/data-providers-examples/blob/master/nodejs_ES6/database.csv))
+3. vous devriez voir apparaître les données relatives à l'identifiant FranceConnect choisi (d'autres données sont disponibles [ici](https://github.com/france-connect/data-provider-example/blob/master/database.csv))
 
 ### Test du point de vue fournisseur de service
 
 L'interface qui est en ligne peut être installée sur votre poste de travail, ce qui vous permettra de voir :
 - les échanges entre FranceConnect et le FS
 - les échanges entre le FS et l'API de test Impôts Particulier
-- les échanges entre l'API de test Impôts Particulier et le FS
+- les échanges entre l'API de test Impôts Particulier et FranceConnect
 
-Le code et la procédure d'installation sont disponibles sur notre dépôt de code github : [https://github.com/france-connect/service-providers-examples/tree/master/NodeJSES6](https://github.com/france-connect/service-providers-examples/tree/master/NodeJSES6).
+Le code et la procédure d'installation sont disponibles sur notre dépôt de code github : [https://github.com/france-connect/service-provider-example/](https://github.com/france-connect/service-provider-example/).
