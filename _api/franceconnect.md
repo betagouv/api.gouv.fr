@@ -19,7 +19,7 @@ logo: logo-fc.png
 score:
   detail:
     access:
-      link: https://api.gouv.fr/api/franceconnect.html#access
+      link: https://franceconnect.gouv.fr/partenaires
     contact:
       link: support.partenaires@franceconnect.gouv.fr
     doc_tech:
