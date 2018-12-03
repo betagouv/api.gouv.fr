@@ -1,5 +1,5 @@
 ---
-title: API FranceConnect
+title: FranceConnect
 tagline: FranceConnect est un dispositif qui garantit l’identité d’un usager en se reposant sur des comptes certifiés existants.
 external_site: https://franceconnect.gouv.fr/partenaires
 contract: OUVERT sous contrat
