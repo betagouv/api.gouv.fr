@@ -1,12 +1,12 @@
 ---
-title: FranceConnect
+title: API FranceConnect
 tagline: FranceConnect est un dispositif qui garantit l’identité d’un usager en se reposant sur des comptes certifiés existants.
-external_site: https://franceconnect.gouv.fr/
+external_site: https://franceconnect.gouv.fr/partenaires
 contract: OUVERT sous contrat
 clients:
-  - particuliers
-  - entreprises
-  - collectivités
+  - Particuliers, pour contactez FranceConnect, <a href="mailto:support@franceconnect.gouv.fr">cliquez ici</a>
+  - Entreprises, si vous avez vérifié votre éligibilité, vous pouvez demander à <a href="https://signup.api.gouv.fr/franceconnect">intégrer le bouton FranceConnect</a>.
+  - Collectivités, vous souhaiter intégrer le bouton FranceConnect, <a href="https://signup.api.gouv.fr/franceconnect">faites votre demande d'accès</a>
 partners:
   - DGFiP
   - IDN
@@ -19,7 +19,7 @@ logo: logo-fc.png
 score:
   detail:
     access:
-      link: https://signup.api.gouv.fr/franceconnect
+      link: https://franceconnect.gouv.fr/partenaires
     contact:
       link: support.partenaires@franceconnect.gouv.fr
     doc_tech:
