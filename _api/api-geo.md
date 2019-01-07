@@ -20,6 +20,12 @@ keywords:
   - Départements
   - Régions
   - EPCI
+stat:
+  lastXdays: 7
+  url: https://geo.api.gouv.fr/stats.json
+  label: recherches effectuées
+  path:
+    - last7DaysQueries
 score:
   detail:
     access:
