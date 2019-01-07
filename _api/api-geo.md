@@ -11,7 +11,6 @@ clients:
   - particuliers
 partners:
   - Etalab
-  - La Poste
   - INSEE
   - OpenStreetMap
 owner: Etalab (DINSIC)
@@ -21,8 +20,6 @@ keywords:
   - Départements
   - Régions
   - EPCI
-  - Surface
-  - Distance
 score:
   detail:
     access:
