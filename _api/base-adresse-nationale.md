@@ -32,6 +32,10 @@ score:
       link: adresse@data.gouv.fr
     doc_tech:
       external: https://adresse.data.gouv.fr/api
+    rate_limiting:
+      description: |
+        <p>L'API unitaire est disponible à hauteur de 10 appels par seconde et par adresse IP.</p>
+        <p>Le géocodage de masse (CSV) est disponible à hauteur d'un appel simultané par adresse IP.</p>
 ---
 
 Pour que les services d'urgence arrivent au bon endroit, pour vous permettre de réaliser une analyse cartographique en quelques clics ou encore pour que les opérateurs publics et privés coordonnent mieux leurs chantiers, ce référentiel, véritable enjeu de souveraineté pour la France, est la première alliance entre l'État et la société civile.

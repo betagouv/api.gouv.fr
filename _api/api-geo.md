@@ -11,7 +11,6 @@ clients:
   - particuliers
 partners:
   - Etalab
-  - La Poste
   - INSEE
   - OpenStreetMap
 owner: Etalab (DINSIC)
@@ -21,8 +20,12 @@ keywords:
   - Départements
   - Régions
   - EPCI
-  - Surface
-  - Distance
+stat:
+  lastXdays: 7
+  url: https://geo.api.gouv.fr/stats.json
+  label: recherches effectuées
+  path:
+    - last7DaysQueries
 score:
   detail:
     access:
@@ -31,6 +34,9 @@ score:
       link: geo@api.gouv.fr
     doc_tech:
       link: https://geo.api.gouv.fr/definition.yml
+    rate_limiting:
+      description: |
+        <p>L'API est disponible à hauteur de 10 appels par seconde et par adresse IP.</p>
 ---
 
 L' __API Géo__ est une boîte-à-outils __facile à prendre en main__ pour rendre vos applications et bases de données plus intelligentes, en terme de positionnement et de connaissance des territoires.
