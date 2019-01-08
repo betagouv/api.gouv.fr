@@ -53,7 +53,7 @@ FranceConnect cible les partenaires suivants :
 1. se rendre sur le site de test : [https://service-provider-example.herokuapp.com/](https://service-provider-example.herokuapp.com/)
 2. cliquer sur "se connecter" puis sur "s'identifier avec FranceConnect"
 3. choisir "identity-provider-example" comme fournisseur d'identité
-4. utiliser les identifiants suivants : 3_melaine \| 123 (d'autres identifiants de test sont disponibles [ici](https://github.com/france-connect/identity-provider-example/blob/master/data/database.csv), le mot de passe est toujours 123)
+4. utiliser les identifiants suivants : 3_melaine \| 123 (d'autres identifiants de test sont disponibles [ici](https://github.com/france-connect/identity-provider-example/blob/master/database.csv), le mot de passe est toujours 123)
 5. une fois revenu sur le site, vous êtes connecté
 
 ### Tester l'échange de données avec FranceConnect du point de vue usager
