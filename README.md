@@ -1,4 +1,4 @@
-api.gouv.fr catalogue les API offertes par les administrations centrales, les collectivités territoriales, les établissements publics… À chaque API est associée une courte description fonctionnelles, une documentation technique, les modalités d'accès, d'éventuelles ressources supplémentaires et surtout des services qui l'utilisent.
+api.gouv.fr catalogue les API offertes par les administrations centrales, les collectivités territoriales, les établissements publics… Chaque API est associée à une courte description fonctionnelle, une documentation technique, les modalités d'accès, d'éventuelles ressources supplémentaires et surtout des liens vers les services qui l'utilisent.
 
 
 ## Public visé
