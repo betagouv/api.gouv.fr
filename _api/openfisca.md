@@ -28,7 +28,7 @@ score:
     access:
       is_open: true
     doc_tech:
-      external: https://doc.openfisca.fr/openfisca-web-api/index.html
+      external: https://openfisca.org/doc/openfisca-web-api/
 ---
 
 ## Calculer le droit
