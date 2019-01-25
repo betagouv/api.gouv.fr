@@ -9,7 +9,7 @@
 title: api.gouv.fr
 baseurl: ""
 url: "https://api.gouv.fr"
-description: Fabriquez des services en ligne plus simples
+description: Un accès unique aux API de l'État
 menu_options: [
   {
     id: "access",
