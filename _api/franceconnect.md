@@ -9,7 +9,10 @@ clients:
   - Collectivités, vous souhaitez intégrer le bouton FranceConnect, <a href='https://signup.api.gouv.fr/franceconnect'>faites votre demande d'accès</a>
 partners:
   - DGFiP
-  - IDN
+  - Ameli
+  - La Poste
+  - MobileConnect & Moi
+  - MSA
 owner: DINSIC
 keywords:
   - Authentification
