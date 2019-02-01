@@ -108,11 +108,11 @@ function customTemplate(response, fields) {
   var html = '';
   $.each(response[fields.results], function(index, value) {
     html += '<a class="result" href="'+ value.url +'">'
-         +  '<div class="image"> <img src="/img/'+ value.image +'"></div>'
+         +  '<div class="image"><img src="/img/'+ value.image +'" /></div>'
          +  '<div class="content">'
          +  '<div class="title">' + value.title + '</div>'
          +  '<div class="description">' + value.description + '</div>';
-    $.each(['keywords', 'clients', 'partners'], function(i, key) {
+    $.each(['keywords', 'partners'], function(i, key) {
       html += '<div class="' + key + '" hidden="true"><ul>';
         $.each(value[key], function(i, v) {
           html += '<li>' + v + '</li>';
