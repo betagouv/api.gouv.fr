@@ -42,7 +42,7 @@ Vérifiez que cette amélioration ne soit pas [déjà prévue](https://github.co
 
 ## Autres
 
-Votre demande concerne l'une des api du catalogue, contacter directement le fournisseur en utilsant le mail de contact présent sur la page de description de l'api.
+Votre demande concerne l'une des api du catalogue, contactez directement le fournisseur en utilsant le mail de contact présent sur la page de description de l'api.
 
 Votre sujet concerne API.gouv.fr en général ? [Écrivez-nous](mailto:contact@api.gouv.fr?subject=Autre+sujet).
 
