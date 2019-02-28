@@ -42,8 +42,13 @@ Vérifiez que cette amélioration ne soit pas [déjà prévue](https://github.co
 
 ## Autres
 
+Votre demande concerne l'une des api du catalogue, contactez directement le fournisseur en utilsant le mail de contact présent sur la page de description de l'api.
+
+Votre sujet concerne API.gouv.fr en général, [Écrivez-nous](mailto:contact@api.gouv.fr?subject=Autre+sujet).
+
+## FranceConnect et ANTS
+
 Votre demande concerne l'utilisation de FranceConnect, écrivez au [support FranceConnect](mailto:support.usagers@franceconnect.gouv.fr).
 
-Votre demande concerne l'une des api du catalogue, contacter directement le fournisseur en utilsant le mail de contact présent sur la page de description de l'api.
+Votre demande concerne une demande d'immatriculation ou de carte grise, [contactez l'ANTS](https://ants.gouv.fr/Contacter-l-ANTS/Nous-contacter).
 
-Votre sujet ne correspond à aucun des cas ci-dessus ? [Écrivez-nous](mailto:contact@api.gouv.fr?subject=Autre+sujet).
