@@ -1,4 +1,4 @@
-<a class="ui fluid card" href="{{ include.description.url }}">
+<a class="ui fluid card api-card" href="{{ include.description.url }}">
 	<div class="content">
     {% if include.description.logo %}
       <img class="right floated mini ui image" src="/img/{{ include.description.logo }}" alt="logo de {{ include.description.title }}"/>
@@ -29,9 +29,9 @@
 
 		<small>Tags</small>
 		<div>
-			{% for keywords in include.description.keywords %}
-				<div class="ui tiny label">
-					{{ keywords }}
+			{% for keyword in include.description.keywords %}
+				<div class="ui tiny label api-tag {{ keyword  | slugify: 'ascii' }}">
+					{{ keyword }}
 				</div>
 			{% endfor %}
 		</div>

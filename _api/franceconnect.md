@@ -18,6 +18,7 @@ keywords:
   - Authentification
   - Identification
   - SSO
+  - Signup
 logo: logo-fc.png
 score:
   detail:
