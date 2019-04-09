@@ -20,6 +20,7 @@ keywords:
   - Revenu Fiscal de Référence
   - Adresse
   - Justificatif de domicile
+  - Signup
 score:
   detail:
     access:

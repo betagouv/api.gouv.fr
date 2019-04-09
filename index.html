@@ -122,6 +122,15 @@ function customTemplate(response, fields) {
   return html;
 }
 
+// from https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript#answer-901144
+function getFilterInQueryParams() {
+  var regex = new RegExp('[?&]filter(=([^&#]*)|&|#|$)');
+  var results = regex.exec(window.location.href);
+  if (!results) return null;
+  if (!results[2]) return null;
+  return results[2];
+}
+
 $(document).ready(function () {
   $.getJSON('/api/v1/api.json', function (toSearch) {
     var searchFields = ['title', 'description', 'keywords', 'tags', 'partners'];
@@ -151,5 +160,11 @@ $(document).ready(function () {
       }
     });
   });
+
+  var filter = getFilterInQueryParams();
+
+  if (filter) {
+    $('.api-card').not(":has(.api-tag." + filter + ")").css('display', 'none');
+  }
 });
 </script>
