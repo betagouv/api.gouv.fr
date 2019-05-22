@@ -26,7 +26,7 @@ score:
     access:
       link: https://signup.api.gouv.fr/api-particulier
       description: |
-        <p>API Particulier est utilisable sans limitation d'usage par toute collectivité et ministère justifiant de la nécessité de receuillir une information personnelle pour une démarche administrative (justificatif de domicile, revenu fiscal de référence, etc).</p>
+        <p>API Particulier est utilisable sans limitation d'usage par toute collectivité et ministère justifiant de la nécessité de recueillir une information personnelle pour une démarche administrative (justificatif de domicile, revenu fiscal de référence, etc).</p>
 
         <p>Les demandes d'accès pour API Particulier utilisent signup.api.gouv.fr, un outil mis à disposition pour toutes les API catalogués sur api.gouv.fr.</p>
     rate_limiting:
