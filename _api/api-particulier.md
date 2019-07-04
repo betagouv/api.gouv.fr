@@ -3,10 +3,6 @@ title: API Particulier
 tagline: Pour accélérer l’ouverture des données personnelles et leur réutilisation, automatisez vos demandes de pièces justificatives
 external_site: https://particulier.api.gouv.fr
 contract: OUVERT sous contrat
-stat:
-  lastXdays: 30
-  url: https://monitoring.particulier.api.gouv.fr/api/stats/count/particulier.api.gouv.fr?range[@timestamp][gte]=now-30d&match[status-code]=200
-  label: justificatifs papier évités
 clients:
   - collectivités
   - ministères
