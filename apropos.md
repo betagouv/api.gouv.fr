@@ -54,7 +54,7 @@ Incubateur des services numériques, Direction interministérielle du numérique
 
 ### Directeur de la publication
 
-M. Henri Verdier, Directeur interministériel du numérique et du système d'information et de communication de l'Etat (DINSIC).
+Le Directeur interministériel du numérique et du système d'information et de communication de l'Etat (DINSIC).
 
 ### Prestataire d'hébergement
 

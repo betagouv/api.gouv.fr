@@ -4,17 +4,21 @@ tagline: FranceConnect est un dispositif qui garantit l’identité d’un usage
 external_site: https://franceconnect.gouv.fr/partenaires
 contract: OUVERT sous contrat
 clients:
-  - Particuliers, pour contactez FranceConnect, <a href="mailto:support@franceconnect.gouv.fr">cliquez ici</a>
-  - Entreprises, si vous avez vérifié votre éligibilité, vous pouvez demander à <a href="https://signup.api.gouv.fr/franceconnect">intégrer le bouton FranceConnect</a>.
-  - Collectivités, vous souhaiter intégrer le bouton FranceConnect, <a href="https://signup.api.gouv.fr/franceconnect">faites votre demande d'accès</a>
+  - Particuliers, pour contacter FranceConnect, <a href='mailto:support@franceconnect.gouv.fr'>cliquez ici</a>
+  - Entreprises, si vous avez vérifié votre éligibilité, vous pouvez demander à <a href='https://signup.api.gouv.fr/franceconnect'>intégrer le bouton FranceConnect</a>.
+  - Collectivités, vous souhaitez intégrer le bouton FranceConnect, <a href='https://signup.api.gouv.fr/franceconnect'>faites votre demande d'accès</a>
 partners:
   - DGFiP
-  - IDN
+  - Ameli
+  - La Poste
+  - MobileConnect & Moi
+  - MSA
 owner: DINSIC
 keywords:
   - Authentification
   - Identification
   - SSO
+  - Signup
 logo: logo-fc.png
 score:
   detail:
@@ -50,10 +54,10 @@ FranceConnect cible les partenaires suivants :
 
 ### Tester l'identification avec FranceConnect du point de vue usager
 
-1. se rendre sur le site de test : [https://service-provider-example.herokuapp.com/](https://service-provider-example.herokuapp.com/)
+1. se rendre sur le site de test : [http://fournisseur-de-service.dev-franceconnect.fr/](http://fournisseur-de-service.dev-franceconnect.fr/)
 2. cliquer sur "se connecter" puis sur "s'identifier avec FranceConnect"
 3. choisir "identity-provider-example" comme fournisseur d'identité
-4. utiliser les identifiants suivants : 3_melaine \| 123 (d'autres identifiants de test sont disponibles [ici](https://github.com/france-connect/identity-provider-example/blob/master/data/database.csv), le mot de passe est toujours 123)
+4. utiliser les identifiants suivants : 3_melaine \| 123 (d'autres identifiants de test sont disponibles [ici](https://github.com/france-connect/identity-provider-example/blob/master/database.csv), le mot de passe est toujours 123)
 5. une fois revenu sur le site, vous êtes connecté
 
 ### Tester l'échange de données avec FranceConnect du point de vue usager

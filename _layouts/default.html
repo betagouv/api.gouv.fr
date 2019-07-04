@@ -11,6 +11,7 @@
             <a href="/"><img class="nav__logo" src="/img/logo_api.svg" alt="Accueil de api.gouv.fr" /></a>
 
             <ul class="nav__links">
+              <li id="signup-link" style="display: none"><a href="https://signup.api.gouv.fr">Mes demandes</a></li>
               <li><a href="/services">Tous les services</a></li>
               <li><a href="/apropos">À propos</a></li>
               <li><a href="/contact">Nous contacter</a></li>
@@ -25,6 +26,16 @@
     </div>
     <script>
     $('.ui.dropdown').dropdown();
+    $(document).ready(function () {
+      // this function is defined in api.gouv.fr/index.html
+      var filter = getFilterInQueryParams();
+
+      if (filter === 'signup') {
+        // we show a link to get back to signup when signup filter is activated
+        // this is a quick win toward linking api.gouv & signup.api.gouv
+        document.getElementById('signup-link').style.display = 'inline';
+      }
+    });
     </script>
     {% include analytics.html %}
   </body>
