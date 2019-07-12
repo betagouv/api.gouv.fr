@@ -5,7 +5,7 @@ external_site: https://particulier.api.gouv.fr
 contract: OUVERT sous contrat
 stat:
   lastXdays: 30
-  url: https://monitoring.particulier.api.gouv.fr/api/stats/count/particulier.api.gouv.fr?range[@timestamp][gte]=now-30d&match[status-code]=200
+  url: https://monitoring.particulier.api.gouv.fr/api/stats/
   label: justificatifs papier évités
 clients:
   - collectivités
