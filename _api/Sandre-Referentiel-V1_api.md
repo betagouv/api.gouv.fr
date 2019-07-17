@@ -4,7 +4,7 @@ tagline: L'API Sandre Référentiel version 1 donne accès à l'ensemble des jeu
 owner: OIEau/AFB  # producteur de l'API
 category:  # type de donnée exposée, voir api_category dans le fichier _config.yml
 contract: OUVERT sous contrat  # peut être "OUVERT" ou "OUVERT sous contrat"
-logo: logoSandre[1].png # URL d'un logo de l'API
+logo: logoSandre.png # URL d'un logo de l'API
 doc_tech:  # URL de la documentation au format OpenAPI <https://github.com/OAI/OpenAPI-Specification>
 contact:  sandre@sandre.eaufrance.fr #moyen de contact, soit un mail, soit un lien vers formulaire de contact
 doc_tech: https://api.sandre.eaufrance.fr/referentiels/v1/ # URL de la documentation technique de l'API au format HTML
