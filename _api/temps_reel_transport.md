@@ -21,7 +21,7 @@ score:
     contact:
       link: contact@transport.beta.gouv.fr
     doc_tech:
-      external: http://tr.transport.data.gouv.fr/spec
+      link: http://tr.transport.data.gouv.fr/spec
 ---
 
 ## Description de l'API
