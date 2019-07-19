@@ -23,7 +23,7 @@ score:
     contact:
       link: https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/help.jag#contact
     doc_tech:
-      link: https://api.insee.fr/catalogue/api-docs/insee/Nomenclatures/v1
+      link: https://api.insee.fr/catalogue/api-docs/carbon.super/Nomenclatures/v1?envName=Production%20and%20Sandbox
 ---
 
 L'API Nomenclatures donne accès aux métadonnées statistiques de la statistique publique.
