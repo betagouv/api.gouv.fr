@@ -2,7 +2,6 @@
 title: Sirene
 tagline: API Sirene donne accès aux informations concernant les entreprises et les établissements immatriculés au répertoire interadministratif Sirene
 external_site: https://api.insee.fr
-contract: OUVERT sous contrat
 clients:
   - collectivités
   - ministères
@@ -15,6 +14,7 @@ logo: Logo_Insee.svg
 score:
   detail:
     access:
+      description: Cette API est ouverte à tous.
       link: https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/item-info.jag?name=Sirene&version=V3&provider=insee
     rate_limiting:
       description: |
@@ -23,7 +23,7 @@ score:
     contact:
       link: https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/help.jag#contact
     doc_tech:
-      link: https://api.insee.fr/catalogue/api-docs/insee/Sirene/V3
+      link: https://api.insee.fr/catalogue/api-docs/carbon.super/Sirene/V3?envName=Production%20and%20Sandbox
 ---
 
 API Sirene donne accès aux informations concernant les entreprises et les établissements immatriculés au répertoire interadministratif Sirene depuis sa création en 1973, y compris les unités fermées.
@@ -48,11 +48,14 @@ En effet, selon l’[Article A123-96 du code de commerce](http://www.legifrance.
 
 [L'article A123-90 du code de commerce](https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000020165042&cidTexte=LEGITEXT000005634379&dateTexte=20151223) indique que "Le droit d'accès prévu par l'article 39 de la loi du 6 janvier 1978 s'exerce auprès du directeur régional de l'Institut national de la statistique et des études économiques."
 
-## Homologation provisoire RGS (Référentiel général de sécurité)
+## Homologation RGS (Référentiel général de sécurité)
 
 Le directeur général de l’Insee, après avoir recueilli l’avis des membres de la commission d’homologation de sécurité, atteste que le système "API Sirene" est protégé, conformément aux objectifs fixés par le maître d’ouvrage, pour répondre, de manière proportionnée, aux besoins de protection du système et des informations, face aux risques identifiés.
 
-Paris le 22 Juin 2018
+Paris le 24 Juin 2019
+
 Pour le directeur général de l’Insee
+
 Par délégation
+
 Le secrétaire général de l’Insee
