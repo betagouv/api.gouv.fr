@@ -2,7 +2,6 @@
 title: Hub'Eau - Hydrométrie
 tagline: Hydrométrie temps réel
 contract: OUVERT
-openapi_definition: 
 external_site: https://hubeau.eaufrance.fr/page/api-hydrometrie
 logo: 07-hydrometrie.png
 clients:
