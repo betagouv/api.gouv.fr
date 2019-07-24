@@ -2,10 +2,8 @@
 title: Hub'Eau - Prélèvements en eau
 tagline: Prélèvements en eau
 contract: OUVERT
-openapi_definition: https://hubeau.eaufrance.fr/api/vbeta/prelevements/api-docs
-doc_tech: https://hubeau.eaufrance.fr/page/api-prelevements-eau
+external_site: https://hubeau.eaufrance.fr/page/api-prelevements-eau
 logo: 08-prelevements.png
-contact: newshubeau@brgm.fr
 clients:
   - particuliers
   - entreprises
@@ -21,6 +19,14 @@ keywords:
   - Prélèvements en eau
   - Ressource en eau
   - BNPE
+score:
+  detail:
+    access:
+      is_open: true
+    contact:
+      link: newshubeau@brgm.fr
+    doc_tech:
+      link: https://hubeau.eaufrance.fr/api/v1/prelevements/api-docs
 ---
 
 ### Description fonctionnelle de l'API Prélèvements en eau
@@ -80,8 +86,8 @@ La [banque nationale des prélèvements quantitatifs en eau (BNPE)](https://bnpe
 #### BRGM
 Le [BRGM (Bureau de Recherches Géologiques et Minières)](http://www.brgm.fr/), service géologique national français, est l'établissement public de référence dans les applications des sciences de la Terre pour gérer les ressources et les risques du sol et du sous-sol. Le BRGM assure notamment la diffusion de données géologiques et environnementales via les technologies de l’information et de la communication, avec pour objectif la mise à disposition des pouvoirs publics, des acteurs économiques et du grand public d'informations géoréférencées pour appuyer leurs décisions. Parmi les domaines de compétence du BRGM figurent les infrastructures informatiques de diffusion, calcul, simulation-visualisation 3D et réalité virtuelle ainsi que l'interopérabilité.
 
-####Ouvrage de prélèvement en eau
+#### Ouvrage de prélèvement en eau
 Un ouvrage de prélèvement en eau désigne un ensemble de dispositifs techniques de captage, de stockage et de canalisation d'eau, provenant d'une ressource et à destination d'un usage principal. L’ouvrage est connecté à une seule ressource en eau, par l'intermédiaire d'un ou plusieurs points de prélèvement géographiquement individualisés.
 
-####Point de prélèvement en eau
+#### Point de prélèvement en eau
 Un point de prélèvement d'eau matérialise un point de connexion physique entre la ressource en eau et un dispositif technique de captage d'eau se rapportant à l'ouvrage de prélèvement en question. Par définition, un point de prélèvement est donc rattaché à un seul et unique ouvrage de prélèvement.

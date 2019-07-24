@@ -2,7 +2,6 @@
 title: Hub'Eau - Hydrométrie
 tagline: Hydrométrie temps réel
 contract: OUVERT
-openapi_definition: 
 external_site: https://hubeau.eaufrance.fr/page/api-hydrometrie
 logo: 07-hydrometrie.png
 clients:
@@ -71,7 +70,8 @@ Les autres API disponibles à ce jour dans Hub'Eau sont :
 * [Piézométrie](/api/api_hubeau_piezometrie.html) ;
 * [Qualité physico-chimique des cours d'eau](/api/api_hubeau_qualite_rivieres.html) ;
 * [Qualité des nappes d'eau souterraine](/api/api_hubeau_qualite_nappes_eau_sout.html) ;
-* [Température des cours d'eau](/api/api_hubeau_temperature_rivieres.html).
+* [Température des cours d'eau](/api/api_hubeau_temperature_rivieres.html) ;
+* [Prélèvements en eau (beta)](/api/api_hubeau_prelevements.html).
 
 #### Un service en co-construction
 Pour des APIs toujours plus en phase avec les besoins utilisateurs, Hub'Eau inaugure en 2018 une [politique de bêta testing](https://hubeau.eaufrance.fr/page/apis-version-beta) en organisant une campagne de tests ouverte avant la mise la mise en production de chaque nouvelle API.
