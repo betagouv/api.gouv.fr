@@ -25,6 +25,12 @@ keywords:
   - Cours d'eau
   - Fleuve
   - Rivière
+stat:
+  lastXdays: 30
+  url: https://hubeau.eaufrance.fr/sites/default/files/api/stats.json
+  label: recherches effectuées
+  path:
+    - Hydro_last30DaysQueries
 score:
   detail:
     access:
