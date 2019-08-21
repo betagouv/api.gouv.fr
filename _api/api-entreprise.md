@@ -27,6 +27,7 @@ partners:
   - INPI
   - AGEFIPH
   - Banque de france
+  - ADEME
 owner: Etalab (DINSIC)
 keywords:
   - Établissement
