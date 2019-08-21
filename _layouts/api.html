@@ -55,11 +55,11 @@ layout: default
       <a class="large ui secondary button" href="{{ access_link }}">
         Demandez l'accès
       </a>
-    {% else if doc_tech_link %}
+    {% elsif doc_tech_link %}
       <a class="large ui secondary button" href="#doc_tech">
         Voir la documentation technique
       </a>
-    {% else if doc_tech_external %}
+    {% elsif doc_tech_external %}
       <a class="large ui secondary button" href="{{ doc_tech_external }}">
         Voir la documentation technique
       </a>
@@ -96,7 +96,7 @@ layout: default
     <h2 class="ui dividing header">Accès</h2>
     {% if access_open %}
       <p>L'API est ouverte sans conditions.</p>
-    {% else if access_link %}
+    {% elsif access_link %}
       {% if access_description %}
         {{ access_description }}
       {% endif %}

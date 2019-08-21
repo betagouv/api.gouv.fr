@@ -2,7 +2,6 @@
 title: Hub'Eau - Hydrométrie
 tagline: Hydrométrie temps réel
 contract: OUVERT
-openapi_definition: 
 external_site: https://hubeau.eaufrance.fr/page/api-hydrometrie
 logo: 07-hydrometrie.png
 clients:
@@ -26,6 +25,12 @@ keywords:
   - Cours d'eau
   - Fleuve
   - Rivière
+stat:
+  lastXdays: 30
+  url: https://hubeau.eaufrance.fr/sites/default/files/api/stats.json
+  label: recherches effectuées
+  path:
+    - Hydro_last30DaysQueries
 score:
   detail:
     access:
@@ -38,7 +43,7 @@ score:
 
 ### Description fonctionnelle de l'API Hydrométrie
 
-Les données publiques de [l'API "Hydrométrie"](https://hubeau.eaufrance.fr/page/api-hydrometrie-version-beta) de Hub'Eau sont issues de la Plate-forme HYDRO Centrale (PHyC), opérée par le Service Central d’Hydrométéorologie et d’Appui à la Prévision des Inondations (SCHAPI).
+Les données publiques de [l'API "Hydrométrie"](https://hubeau.eaufrance.fr/page/api-hydrometrie) de Hub'Eau sont issues de la Plate-forme HYDRO Centrale (PHyC), opérée par le Service Central d’Hydrométéorologie et d’Appui à la Prévision des Inondations (SCHAPI).
 Cette Plate-forme stocke les mesures quasi temps-réel provenant d’environ 3000 stations hydrométriques qui constituent le réseau de mesure français, opéré par les Directions Régionales de l’Environnement de l’Aménagement et du Logement (DREAL) ou autres producteurs (collectivités, etc.)
 L'API permet d'interroger le __référentiel hydrométrique__ ainsi que les __observations en quasi temps réel__, mises à jour par leur producteur toutes les 5 à 60 minutes dans la plateforme source (PHyC du SCHAPI). Hub'Eau interroge la source des données toutes les 2 minutes et maintient une profondeur d'historique égale à 1 mois.  
 
@@ -71,7 +76,8 @@ Les autres API disponibles à ce jour dans Hub'Eau sont :
 * [Piézométrie](/api/api_hubeau_piezometrie.html) ;
 * [Qualité physico-chimique des cours d'eau](/api/api_hubeau_qualite_rivieres.html) ;
 * [Qualité des nappes d'eau souterraine](/api/api_hubeau_qualite_nappes_eau_sout.html) ;
-* [Température des cours d'eau](/api/api_hubeau_temperature_rivieres.html).
+* [Température des cours d'eau](/api/api_hubeau_temperature_rivieres.html) ;
+* [Prélèvements en eau (beta)](/api/api_hubeau_prelevements.html).
 
 #### Un service en co-construction
 Pour des APIs toujours plus en phase avec les besoins utilisateurs, Hub'Eau inaugure en 2018 une [politique de bêta testing](https://hubeau.eaufrance.fr/page/apis-version-beta) en organisant une campagne de tests ouverte avant la mise la mise en production de chaque nouvelle API.
