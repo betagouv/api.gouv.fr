@@ -132,7 +132,7 @@ layout: default
       {% if contact_link contains "@" %}
         par email.</p>
 
-        <a class="large ui button" href="mailto:{{ contact_link }}?subject={{ "Contact via api.gouv.fr" | url_encode }}">
+        <a class="large ui button" href="mailto:{{ contact_link }}?subject=Contact%20via%20api.gouv.fr">
           <i class="icon mail"></i> Envoyer un mail à {{ contact_link }}
         </a>
       {% else %}
