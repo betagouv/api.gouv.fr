@@ -33,6 +33,7 @@ keywords:
   - Établissement
   - Entreprise
   - Certification
+  - Signup
 score:
   detail:
     access:
