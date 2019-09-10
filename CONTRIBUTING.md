@@ -77,6 +77,11 @@ Vous pouvez suivre le lien de la notification pour accéder à la version de l'a
 
 ### Production
 
-Ce site est déployé en continu avec [Github Pages](https://pages.github.com).
+La branche `master` de ce dépot git est déployée en continu avec [Github Pages](https://pages.github.com).
 
-Pousser sur `master`, c’est partager avec le monde… ce qui signifie donc qu'il faut être très prudent avec ce pouvoir et privilégier l'usage de [pull requests](https://guides.github.com/introduction/flow/) :wink:
+Pour merger des changements sur la branche `master` il faut :
+
+1. soumettre une [pull requests](https://guides.github.com/introduction/flow/)
+2. receuillir une approbation auprès des membres de l'équipe api.gouv.fr (des retours seront parfois à prendre en compte)
+
+Une fois approuvée, un membre de notre équipe viendra merger la pull request dans la branche `master`. Le site sera ensuite mis à jour dans la minute qui suit.
