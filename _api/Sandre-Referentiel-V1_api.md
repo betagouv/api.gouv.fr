@@ -4,9 +4,9 @@ tagline: L'API Sandre Référentiel version 1 donne accès à l'ensemble des jeu
 owner: OIEau/AFB  # producteur de l'API
 logo: logoSandre.png  # URL d'un logo de l'API
 stat:
-  url: https://ma-super-api.fr/stats  # adresse à laquelle un nombre d'appels à l'API est publié, en content-type application/json
-  label: Appels  # description d'un appel à l'API
-  lastXdays: 30  # nombre de jours sur lequel les appels à l'API sont comptabilisés
+  url:  # adresse à laquelle un nombre d'appels à l'API est publié, en content-type application/json
+  label:   # description d'un appel à l'API
+  lastXdays:  # nombre de jours sur lequel les appels à l'API sont comptabilisés
 clients:  # types d'entités habilitées à utiliser l'API
   - particuliers  # texte libre en minuscules
   - entreprises  # ajoutez ou supprimez des types d'entités
