@@ -30,7 +30,7 @@ API Sirene donne accès aux informations concernant les entreprises et les étab
 
 La recherche peut être unitaire, multicritère, phonétique et porter sur les données courantes et historisées.
 
-Les services actuellement disponibles interrogent les unités légales (Siren) et les établissements (Siret). À venir : prédécesseurs et successeurs d'un établissement et données pluriannuelles.
+Les services actuellement disponibles interrogent les unités légales (Siren), les établissements (Siret) et les liens de succession entre établissements. À venir : données pluriannuelles.
 
 ## Licences
 

@@ -27,7 +27,7 @@ score:
       description: |
         <p>L'API Impôt Particulier est utilisable par toute collectivité ou ministère :</p>
         <ul>
-          <li>ayant déjà prélablement implémenté FranceConnect ;</li>
+          <li>ayant déjà préalablement implémenté FranceConnect ;</li>
           <li>justifiant d'un fondement légal permettant le recueil d'informations fiscales rattachées à une démarche administrative.</li>
         </ul>
         <p>Les demandes d'accès à l'API Impôt Particulier utilisent signup.api.gouv.fr, un outil mis à disposition pour toutes les API catalogués sur api.gouv.fr.</p>
