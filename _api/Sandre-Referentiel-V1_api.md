@@ -22,18 +22,18 @@ keywords: # utilisé dans la recherche
   - Masse d'eau
   - Taxon
   - Appellation de taxons
-  - Etc.
+ 
 score:
   detail:
     access:
-      description: OUVERT sous contrat
+      is_open: true
       link: # URL d'une page de demande d'accès si l'API est à accès restreint
     rate_limiting:
       description: 
     contact:
       link: sandre@sandre.eaufrance.fr #moyen de contact, soit un mail, soit un lien vers formulaire de contact
     doc_tech:
-      link: https://api.sandre.eaufrance.fr/referentiels/v1/ # URL de la documentation au format OpenAPI <https://github.com/OAI/OpenAPI-Specification>
+      link: # URL de la documentation au format OpenAPI <https://github.com/OAI/OpenAPI-Specification>
     monitoring:
       link:  # URL d'une page qui affiche le statut
       description: |
@@ -51,7 +51,7 @@ L'API référentiel permet d'accéder à tous les objets - sans leurs géométri
 
 Le point d'accès à cette API (endpoint) est : https://api.sandre.eaufrance.fr/referentiels/v1/
 
-L'interface de cette API vous aide à construire et à exécuter votre requête sur ces référentiels. Ces interfaces sont inutiles si vous êtes capables de formuler votre requête selon les modèles expliqués dasn l'interface. Les URI d'appel de l'API sont toujours composées du endpoint suivi du nom ou code du référentiel à interroger. Les référentiels utilisables proviennent des mnémoniques de la nomenclature SANDRE n°373 http://id.eaufrance.fr/nsa/373.
+L'interface de cette API vous aide à construire et à exécuter votre requête sur ces référentiels. Ces interfaces sont inutiles si vous êtes capables de formuler votre requête selon les modèles expliqués dasn l'interface. Les URI d'appel de l'API sont toujours composées du endpoint suivi du nom ou code du référentiel à interroger. Les référentiels utilisables proviennent des mnémoniques de la [nomenclature SANDRE n°373](http://id.eaufrance.fr/nsa/373).
 
 Par exemple, l'adresse https://api.sandre.eaufrance.fr/referentiels/v1/appeltaxon vous permet d'extraire toute ou partie du référentiel SANDRE des appellations de taxon.
 
