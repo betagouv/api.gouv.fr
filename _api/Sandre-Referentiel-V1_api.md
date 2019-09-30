@@ -34,6 +34,7 @@ score:
       link: sandre@sandre.eaufrance.fr #moyen de contact, soit un mail, soit un lien vers formulaire de contact
     doc_tech:
       link: # URL de la documentation au format OpenAPI <https://github.com/OAI/OpenAPI-Specification>
+      external: https://api.sandre.eaufrance.fr/referentiels/v1/
     monitoring:
       link:  # URL d'une page qui affiche le statut
       description: |
