@@ -36,9 +36,9 @@ score:
       description: |
         <p>Les éventuelles limitations d’usage vis-à-vis d’un partenaire sont incluses dans la convention.</p>
     contact:
-      link: contact@api.gouv.fr
+      link: partenaires-api-ameli.cnam@assurance-maladie.fr
     doc_tech:
-      link: https://app.swaggerhub.com/apis/netmeecom/beneficiaires/v1-apim
+      link: https://api.swaggerhub.com/apis/netmeecom/beneficiaires/v1-apim
     monitoring:
       link: https://stats.uptimerobot.com/3wEv6hppvv
       description: |
