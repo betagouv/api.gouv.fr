@@ -1,5 +1,5 @@
 ---
-title: API Impot Particulier
+title: API Impôt particulier
 logo: logo-dgfip.jpg
 tagline: Raccordez-vous directement à la DGFiP pour récupérer les éléments fiscaux nécessaires à vos téléservices, éliminez le traitement et le stockage des pièces justificatives
 owner: Direction Générale des Finances Publiques (DGFiP)
@@ -41,7 +41,7 @@ score:
 
 L'API Impôt particulier simplifie les démarches des usagers et le processus de gestion de vos téléservices. Elle permet en effet l’échange d’informations fiscales entre la DGFiP et une administration ou collectivité dans le cadre d'un téléservice FranceConnecté.
  
-Pourquoi une administration devrait utiliser l'API Impôt Particulier ?
+Pourquoi une administration devrait utiliser l'API Impôt particulier ?
 
 - Un usager parfaitement identifié grâce à FranceConnect
 - Réduction des coûts de traitement back-office : pas besoin de pièces justificatives complémentaires
@@ -51,12 +51,10 @@ Pour l’usager, une démarche 100% dématérialisée :
 
 1. Je me "franceconnecte" sur le site de ma commune pour réaliser une démarche.
 2. En lieu du justificatif de revenu papier, je consens lors de ma demande de prestation à la transmission par la DGFiP des seules données fiscales nécessaires au traitement de ma demande (revenu fiscal de référence par exemple).
-3. Ma commune récupère immédiatement mon revenu fiscal de référence. Je n’ai rien d'autre à faire et connait immédiatement mon droit à prestations.
+3. Ma commune récupère immédiatement ces informations. Je n’ai rien d'autre à faire pour déterminer mon droit à prestations.
 
 ### Catalogue des données de l'API Impôt Particulier
 - Revenu fiscal de référence
 - Nombre de parts fiscales
-- Identité des déclarants du foyer fiscal - Le foyer fiscal se compose du contribuable lui-même plus éventuellement du conjoint ou partenaire de PACS
-- Détail et nombre de personnes à charge
-- Situation familiale
 - Adresse principale du contribuable
+- Données du local
