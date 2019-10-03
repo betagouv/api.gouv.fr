@@ -10,7 +10,7 @@ clients:
   - collectivités
   - ministères
 partners:
-  - Bibus-Keolis Brest
+  - Bibus-RATP Dev
 keywords:
   - Bus
   - Tramway
