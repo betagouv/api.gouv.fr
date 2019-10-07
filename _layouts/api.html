@@ -70,7 +70,7 @@ layout: default
 <div class="ui stackable container menu">
   <a class="header item" href="#api-description">Description</a>
   {% for menu_option in site.menu_options %}
-    {% if page.score.detail[menu_option.id] %}
+    {% if page.score.detail[menu_option.id] or menu_option.id == "partenaires" %}
       <a class="item" href="#{{menu_option.id}}">
         {{ menu_option.label }}
       </a>
