@@ -32,7 +32,7 @@ score:
         </ul>
         <p>Les demandes d'accès à l'API Impôt Particulier utilisent signup.api.gouv.fr, un outil mis à disposition pour toutes les API catalogués sur api.gouv.fr.</p>
         <p>Lors de la contractualisation pour accéder à l'API, une convention précise les engagements de chacune des parties et décrit les échanges de données réalisés.</p>
-      link: https://signup.api.gouv.fr/dgfip
+      link: https://signup.api.gouv.fr/api-impot-particulier
     doc_tech:
       link: https://particulier.api.gouv.fr/swagger_api_impots_particulier.yaml
 ---
