@@ -24,6 +24,10 @@ menu_options: [
     label: "Supervision"
   },
   {
+    id: "partenaires",
+    label: "Partenaires"
+  },
+  {
     id: "doc_tech",
     label: "Documentation technique"
   },
