@@ -1,95 +1,55 @@
 ---
-
-title: API  de droits à l'Assurance Maladie
-
+title: API de droits à l'Assurance Maladie
 tagline: Pour accélérer vos démarches en lien avec l'assurance maladie, automatisez la récupération des droits à l’Assurance Maladie de vos clients
-
-external_site: https://app.swaggerhub.com/apis/netmeecom/beneficiaires/v1-apim
-
-logo: cnam.png
-
-contract: OUVERT avec convention
-
-stat: le lien vers une métrique démontrant l’intérêt de l’api
-
+external_site: https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/assurance-maladie-digital/api-droits-fs-doc/master/documentation-open-api.yaml
+contract: OUVERT sous contrat
+logo: cnam.jpg
+stat:
   lastXdays: 30
-
-  url: https://monitoring.ameli.fr/api/stats/
-
-  label: justificatifs papier évités lors des 30 derniers jours
-
+  label: justificatifs papier évités
 clients:
-
   - établissements de soins si éligibles à France Connect
-
   - organismes complémentaires en santé
-
 partners:
-
   - CNAM
-
 owner: Caisse Nationale d'Assurance Maladie (CNAM)
-
 keywords:
-
-  - droits à assurance maladie
-
-  - prise en charge au titre du régime obligatoire, exonérations
-
-  - médecin traitant
-
+  - Droits à assurance maladie
+  - Prise en charge au titre du régime obligatoire
+  - Exonération du ticket modérateur
+  - Médecin traitant
+  - Signup
 score:
-
   detail:
+    access:
+      link: https://signup.api.gouv.fr/api-droits-cnam
+      description: |
+        <p>Cette API est actuellement réservée aux établissements de soins pour leur démarche de pré admission et aux organismes complémentaires en santé pour faciliter leur démarche d’adhésion.</p>
 
-    access: le lien vers le processus d’inscription des clients à l’api
+        <p>Cette API fonctionne uniquement avec FranceConnect; le candidat à l’utilisation de cette API doit être préalablement "fournisseur de services" FranceConnect.</p>
 
-      link: https://signup.api.gouv.fr/api_droits_cnam
+        <p>L’utilisation de l’API est soumise à une convention d’usage avec la Caisse Nationale d’Assurance Maladie. Les données accessibles dépendent également du cas d’usage.</p>
+        <p>La Caisse Nationale se réserve le droit d’évaluer l’éligibilité des candidats au regard des cas d’usage indiqués.</p>
 
-      description:
-
-<p>Cette API est réservée aux établissements de soins pour leur démarche de pré admission et aux organismes complémentaires en santé pour faciliter leur démarche d’adhésion.</p>
-
-<p>Cette API fonctionne uniquement avec FranceConnect; le candidat à l’utilisation de cette API doit être préalablement "fournisseur de services" FranceConnect.</p>
-
-<p>Cette API est réservée aux établissements de soins pour leur démarche de pré admission et aux organismes complémentaires en santé pour faciliter leur démarche d’adhésion.</p>
-
-<p>L’utilisation de l’API est soumise à une convention d’usage avec la Caisse Nationale d’Assurance Maladie. Les données accessibles dépendent également du cas d’usage.</p>
-
-<p>La Caisse Nationale se réserve le droit d’évaluer l’éligibilité des candidats au regard des cas d’usage indiqués.</p>
-
-<p>Les demandes d'accès pour l'API Attestation de droits à l'Assurance Maladie utilisent signup.api.gouv.fr, un outil mis à disposition pour toutes les API catalogués sur api.gouv.fr.</p>
-
+        <p>Les demandes d'accès pour l'API Attestation de droits à l'Assurance Maladie utilisent signup.api.gouv.fr, un outil mis à disposition pour toutes les API cataloguées sur api.gouv.fr.</p>
     rate_limiting:
-
       description: |
-
         <p>Les éventuelles limitations d’usage vis-à-vis d’un partenaire sont incluses dans la convention.</p>
-
-
-
     contact:
-
-      link: contact@api.gouv.fr
-
+      link: partenaires-api-ameli.cnam@assurance-maladie.fr
     doc_tech:
-
-      link: https://app.swaggerhub.com/apis/netmeecom/beneficiaires/v1-apim
-
+      link: https://raw.githubusercontent.com/assurance-maladie-digital/api-droits-fs-doc/master/documentation-open-api.yaml
     monitoring:
-
       link: https://stats.uptimerobot.com/3wEv6hppvv
-
       description: |
-
         <p>Une supervision du service en temps réel est disponible à cette adresse.</p>
-
 ---
 
 ## API attestation de droits à l'Assurance Maladie
+Cette API présente les droits, d’un individu ou d’une famille (enfants rattachés), gérés par le régime général de l’Assurance Maladie.
 
-Cette API retourne les droits, d’un individu ou d’une famille, gérés par le régime général de l’Assurance Maladie.
+Elle permet ainsi de connaître pour chaque individu d’une famille, sa caisse gestionnaire et son niveau de couverture (droits de base, droits à une complémentaire santé solidaire, présence d'un médecin traitant). Les données accessibles dépendent du cas d’usage, ainsi les établissements de soins bénéficient également des motifs d’exonération du ticket modérateur et de l’identification du médecin traitant.
 
-Elle permet ainsi de connaître pour chaque individu d’une famille, sa caisse gestionnaire et son niveau de couverture (droits de base, droits à une complémentaire santé solidaire,médecin traitant)
+**L’utilisation de l’API est soumise à une convention d’usage avec la Caisse Nationale d’Assurance Maladie.**
 
-L’utilisation de l’API est soumise à une convention d’usage avec la Caisse Nationale d’Assurance Maladie. D’autres cas d’usages pourront être étudiés ultérieurement.
+D’autres cas d’usages pourront être étudiés ultérieurement.
