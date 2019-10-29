@@ -19,7 +19,7 @@ keywords:
   - Identification
   - SSO
   - Signup
-logo: logo-fc.png
+logo: /img/logo-fc.png
 score:
   detail:
     access:

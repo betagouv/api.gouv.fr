@@ -34,7 +34,7 @@ layout: default
               <div class="row">
                 <div class="three wide column">
                   {% if api.logo %}
-                    <img class="ui fluid image logoAPI" src="/img/{{ api.logo }}" alt="logo de {{ api.title }}"/>
+                    <img class="ui fluid image logoAPI" src="{{ api.logo }}" alt="logo de {{ api.title }}"/>
                   {% else %}
                     <img class="ui fluid image logoAPI" src="/img/{{ api.default_logo }}" alt="logo générique"/>
                   {% endif %}

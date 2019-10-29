@@ -4,7 +4,7 @@ tagline: Recense des jeux de données liés au marché du travail
 owner: Pôle emploi
 category: Public
 contract: OUVERT sous contrat
-logo: logo_pole_emploi.jpg
+logo: /img/logo_pole_emploi.jpg
 external_site: https://www.emploi-store-dev.fr/portail-developpeur-cms/home/catalogue-des-api/documentation-des-api/api/api-infotravail-v1.html
 clients:
   - particuliers

@@ -5,7 +5,7 @@ contract: OUVERT sous contrat
 owner: IGN Géoportail
 category: Public
 layout: api
-logo: look4-geoportail.jpg
+logo: /img/look4-geoportail.jpg
 external_site: https://ignf.github.io/look4/latest/jsdoc/
 clients:
   - développeurs

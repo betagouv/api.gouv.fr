@@ -8,7 +8,7 @@ keywords:
   - Annonces
   - Bulletin officiel
 owner: DILA
-logo: logo-carre-Boamp.png
+logo: /img/logo-carre-Boamp.png
 score:
   detail:
     contact:

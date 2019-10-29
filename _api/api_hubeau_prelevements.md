@@ -3,7 +3,7 @@ title: Hub'Eau - Prélèvements en eau
 tagline: Prélèvements en eau
 contract: OUVERT
 external_site: https://hubeau.eaufrance.fr/page/api-prelevements-eau
-logo: 08-prelevements.png
+logo: /img/08-prelevements.png
 clients:
   - particuliers
   - entreprises
@@ -31,7 +31,7 @@ score:
 
 ### Description fonctionnelle de l'API Prélèvements en eau
 
-[L'API Prélèvements en eau](https://hubeau.eaufrance.fr/page/api-prelevements) fournit des informations sur les volumes annuels directement prélevés sur la ressource en eau, déclinés par localisation et catégorie d’usage de l’eau. Ces informations sont issues de la gestion des redevances par les agences et offices de l’eau. 
+[L'API Prélèvements en eau](https://hubeau.eaufrance.fr/page/api-prelevements) fournit des informations sur les volumes annuels directement prélevés sur la ressource en eau, déclinés par localisation et catégorie d’usage de l’eau. Ces informations sont issues de la gestion des redevances par les agences et offices de l’eau.
 Source des données : [Banque Nationale des Prélèvements quantitatifs en Eau (BNPE)](https://bnpe.eaufrance.fr/).
 Les données sont exposées sous la forme d'une API REST, les formats supportés sont : JSON, GeoJSON et CSV.
 __L'API est actuellement en version beta.__ Les données et fonctionnalités de l'API peuvent évoluer à tout moment.
@@ -40,7 +40,7 @@ Pendant cette période de test, nous vous invitons à faire remonter toute deman
 
 Les différentes opérations possibles sont :
 
-* __chroniques__ : permet de récupérer les volumes annuels d'eau prélevés par ouvrages. ; 
+* __chroniques__ : permet de récupérer les volumes annuels d'eau prélevés par ouvrages. ;
 * __ouvrages__ : permet de récupérer la description des ouvrages de prélèvement. Les données de volumes annuels prélevés sont rattachées aux ouvrages et non aux points de prélèvement.
 * __points_prelevement__ : permet de récupérer la description des points de prélèvement.
 
@@ -53,7 +53,7 @@ Dernières évolutions de l'API Prélèvements en eau de Hub'Eau:
 #### Simplifier l'accès aux données sur l'eau
 Service pérenne de la toile [Eau France](https://www.eaufrance.fr), [Hub'Eau](https://hubeau.eaufrance.fr/) met à disposition des API Rest favorisant l’accès aux données du [SIE](https://www.eaufrance.fr/donnees) dans des formats simples d’emploi et propices à la réutilisation (CSV, JSON, GeoJSON).
 Fondé sur une infrastructure et des méthodes adaptées au traitement et au stockage de données massives, les APIs Hub'Eau garantissent les meilleures performances de disponibilité.
-Hub’Eau est le résultat de la collaboration de l’AFB et du BRGM dans le cadre du pôle de recherche et d'innovation en interopérabilité des systèmes d'information distribués sur l'eau : [INSIDE](http://www.pole-inside.fr/fr).  
+Hub’Eau est le résultat de la collaboration de l’AFB et du BRGM dans le cadre du pôle de recherche et d'innovation en interopérabilité des systèmes d'information distribués sur l'eau : [INSIDE](http://www.pole-inside.fr/fr).
 
 Les autres API disponibles à ce jour dans Hub'Eau sont :
 

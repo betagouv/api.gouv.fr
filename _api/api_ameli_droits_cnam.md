@@ -3,7 +3,7 @@ title: API de droits à l'Assurance Maladie
 tagline: Pour accélérer vos démarches en lien avec l'assurance maladie, automatisez la récupération des droits à l’Assurance Maladie de vos clients
 external_site: https://app.swaggerhub.com/apis/netmeecom/beneficiaires/v1-apim
 contract: OUVERT sous contrat
-logo: cnam.png
+logo: /img/cnam.png
 stat:
   lastXdays: 30
   label: justificatifs papier évités

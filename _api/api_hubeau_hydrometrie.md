@@ -3,7 +3,7 @@ title: Hub'Eau - Hydrométrie
 tagline: Hydrométrie temps réel
 contract: OUVERT
 external_site: https://hubeau.eaufrance.fr/page/api-hydrometrie
-logo: 07-hydrometrie.png
+logo: /img/07-hydrometrie.png
 clients:
   - particuliers
   - entreprises
@@ -45,7 +45,7 @@ score:
 
 Les données publiques de [l'API "Hydrométrie"](https://hubeau.eaufrance.fr/page/api-hydrometrie) de Hub'Eau sont issues de la Plate-forme HYDRO Centrale (PHyC), opérée par le Service Central d’Hydrométéorologie et d’Appui à la Prévision des Inondations (SCHAPI).
 Cette Plate-forme stocke les mesures quasi temps-réel provenant d’environ 3000 stations hydrométriques qui constituent le réseau de mesure français, opéré par les Directions Régionales de l’Environnement de l’Aménagement et du Logement (DREAL) ou autres producteurs (collectivités, etc.)
-L'API permet d'interroger le __référentiel hydrométrique__ ainsi que les __observations en quasi temps réel__, mises à jour par leur producteur toutes les 5 à 60 minutes dans la plateforme source (PHyC du SCHAPI). Hub'Eau interroge la source des données toutes les 2 minutes et maintient une profondeur d'historique égale à 1 mois.  
+L'API permet d'interroger le __référentiel hydrométrique__ ainsi que les __observations en quasi temps réel__, mises à jour par leur producteur toutes les 5 à 60 minutes dans la plateforme source (PHyC du SCHAPI). Hub'Eau interroge la source des données toutes les 2 minutes et maintient une profondeur d'historique égale à 1 mois.
 
 Trois opérations (endpoints) sont disponibles :
 * __sites__ : interroge les sites du référentiel hydrométrique ;
@@ -68,7 +68,7 @@ Dernières évolutions de l'API Hydrométrie :
 #### Simplifier l'accès aux données sur l'eau
 Service pérenne de la toile [Eau France](https://www.eaufrance.fr), [Hub'Eau](https://hubeau.eaufrance.fr/) met à disposition des API Rest favorisant l’accès aux données du [SIE](https://www.eaufrance.fr/donnees) dans des formats simples d’emploi et propices à la réutilisation (CSV, JSON, GeoJSON).
 Fondé sur une infrastructure et des méthodes adaptées au traitement et au stockage de données massives, les APIs Hub'Eau garantissent les meilleures performances de disponibilité.
-Hub’Eau est le résultat de la collaboration de l’AFB et du BRGM dans le cadre du pôle de recherche et d'innovation en interopérabilité des systèmes d'information distribués sur l'eau : [INSIDE](http://www.pole-inside.fr/fr).  
+Hub’Eau est le résultat de la collaboration de l’AFB et du BRGM dans le cadre du pôle de recherche et d'innovation en interopérabilité des systèmes d'information distribués sur l'eau : [INSIDE](http://www.pole-inside.fr/fr).
 
 Les autres API disponibles à ce jour dans Hub'Eau sont :
 * [Etat piscicole](/api/api_hubeau_poissons.html) ;

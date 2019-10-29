@@ -10,7 +10,7 @@ keywords:
   - Entreprise
   - Etablissements
   - Sirene
-logo: Logo_Insee.svg
+logo: /img/Logo_Insee.svg
 score:
   detail:
     access:

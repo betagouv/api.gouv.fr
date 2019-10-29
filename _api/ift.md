@@ -4,7 +4,7 @@ tagline: "Faciliter et fiabiliser votre calcul de l'Indicateur de Fréquence de 
 owner: Ministère de l'Agriculture et de l'Alimentation
 category: public
 contract: OUVERT
-logo: maa.png
+logo: /img/maa.png
 external_site: https://alim.agriculture.gouv.fr/ift/espace-partenaire
 clients:
   - éditeurs

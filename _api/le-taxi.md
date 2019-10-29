@@ -7,7 +7,7 @@ clients:
   - collectivités
   - entreprises
   - éditeurs d'applications
-logo: logo_le.taxi.svg
+logo: /img/logo_le.taxi.svg
 partners:
   - Atlantis Taxi
   - G7
@@ -20,7 +20,7 @@ keywords:
   - Taxi
 score:
   detail:
-    contact:  
+    contact:
       link: https://le.taxi/join.html
     access:
       link: http://le.taxi/join.html

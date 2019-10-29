@@ -3,7 +3,7 @@ title: Hub'Eau - Température des cours d'eau
 tagline: Température en continu dans les cours d'eau
 contract: OUVERT
 external_site: https://hubeau.eaufrance.fr/page/api-temperature-continu
-logo: 06-temperature_rivieres.png
+logo: /img/06-temperature_rivieres.png
 clients:
   - particuliers
   - entreprises
@@ -54,7 +54,7 @@ Dernières évolutions de l'API Température en continu des cours d'eau de Hub'E
 #### Simplifier l'accès aux données sur l'eau
 Service pérenne de la toile [Eau France](https://www.eaufrance.fr), [Hub'Eau](https://hubeau.eaufrance.fr/) met à disposition des API Rest favorisant l’accès aux données du [SIE](https://www.eaufrance.fr/donnees) dans des formats simples d’emploi et propices à la réutilisation (CSV, JSON, GeoJSON).
 Fondé sur une infrastructure et des méthodes adaptées au traitement et au stockage de données massives, les APIs Hub'Eau garantissent les meilleures performances de disponibilité.
-Hub’Eau est le résultat de la collaboration de l’AFB et du BRGM dans le cadre du pôle de recherche et d'innovation en interopérabilité des systèmes d'information distribués sur l'eau : [INSIDE](http://www.pole-inside.fr/fr).  
+Hub’Eau est le résultat de la collaboration de l’AFB et du BRGM dans le cadre du pôle de recherche et d'innovation en interopérabilité des systèmes d'information distribués sur l'eau : [INSIDE](http://www.pole-inside.fr/fr).
 
 Les autres API disponibles à ce jour dans Hub'Eau sont :
 * [Etat piscicole](/api/api_hubeau_poissons.html) ;

@@ -20,10 +20,10 @@ keywords:
   - Prestations sociales
   - Droit
   - Simulateur
-logo: logo-openfisca.svg
+logo: /img/logo-openfisca.svg
 score:
   detail:
-    contact:  
+    contact:
       link: contact@openfisca.fr
     access:
       is_open: true

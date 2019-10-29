@@ -5,7 +5,7 @@ external_site : https://apicarto.ign.fr
 owner: IGN Géoportail
 contract: OUVERT (sous contrat pour certaines données)
 category: Public
-logo: look4-geoportail.jpg
+logo: /img/look4-geoportail.jpg
 score:
   detail:
     contact:
