@@ -10,7 +10,7 @@ clients:
   - collectivités
   - ministères
 partners:
-  - Bibus-Keolis Brest
+  - Bibus-RATP Dev
 keywords:
   - Bus
   - Tramway
@@ -19,7 +19,7 @@ keywords:
 score:
   detail:
     contact:
-      link: deplacements@brest-metropole.fr
+      link: mobilites@brest-metropole.fr
     doc_tech:
       external: https://geo.pays-de-brest.fr/donnees/Documents/Public/DocWebServicesTransport.pdf
 ---

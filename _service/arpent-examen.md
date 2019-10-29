@@ -1,6 +1,6 @@
 ---
 title: ARPENT(examen)
-link: https://ensagri.agriculture.gouv.fr/arpent-examen/apprenant
+link: https://teleservices-ea.agriculture.gouv.fr/arpent-examen/apprenant
 description: Inscrivez-vous aux examens de l'enseignement agricole
 api:
  - Base Adresse Nationale

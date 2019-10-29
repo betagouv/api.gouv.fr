@@ -70,7 +70,7 @@ layout: default
 <div class="ui stackable container menu">
   <a class="header item" href="#api-description">Description</a>
   {% for menu_option in site.menu_options %}
-    {% if page.score.detail[menu_option.id] %}
+    {% if page.score.detail[menu_option.id] or menu_option.id == "partenaires" %}
       <a class="item" href="#{{menu_option.id}}">
         {{ menu_option.label }}
       </a>
@@ -87,13 +87,19 @@ layout: default
 
 <div id="description" class="ui container">
   <section id="api-description">
-    <h2 class="ui dividing header">Description</h2>
+    <h2 class="ui dividing header">
+      <a href="#api-description" aria-hidden="true" class="header-anchor">#</a>
+      Description
+    </h2>
 
     {{ page.content }}
   </section>
 
   <section id="access">
-    <h2 class="ui dividing header">Accès</h2>
+    <h2 class="ui dividing header">
+      <a href="#access" aria-hidden="true" class="header-anchor">#</a>
+      Accès
+    </h2>
     {% if access_open %}
       <p>L'API est ouverte sans conditions.</p>
     {% elsif access_link %}
@@ -121,7 +127,10 @@ layout: default
   </section>
 
   <section id="contact">
-    <h2 class="ui dividing header">Support</h2>
+    <h2 class="ui dividing header">
+      <a href="#contact" aria-hidden="true" class="header-anchor">#</a>
+      Support
+    </h2>
 
     {% if contact_description %}
       {{ contact_description }}
@@ -148,7 +157,10 @@ layout: default
   </section>
 
   <section id="monitoring">
-    <h2 class="ui dividing header">Supervision</h2>
+    <h2 class="ui dividing header">
+      <a href="#monitoring" aria-hidden="true" class="header-anchor">#</a>
+      Supervision
+    </h2>
 
       {% if monitoring_description %}
         {{ monitoring_description }}
@@ -166,7 +178,10 @@ layout: default
   </section>
 
   <section id="rate_limiting">
-    <h2 class="ui dividing header">Limitations d'usage</h2>
+    <h2 class="ui dividing header">
+      <a href="#rate_limiting" aria-hidden="true" class="header-anchor">#</a>
+      Limitations d'usage
+    </h2>
 
     {% if rate_limiting_description %}
       {{ rate_limiting_description }}
@@ -176,7 +191,10 @@ layout: default
   </section>
 
   <section id="partenaires">
-    <h2 class="ui dividing header">Partenaires</h2>
+    <h2 class="ui dividing header">
+      <a href="#partenaires" aria-hidden="true" class="header-anchor">#</a>
+      Partenaires
+    </h2>
 
     {% if page.partners %}
       <ul class="ui list">
@@ -190,7 +208,10 @@ layout: default
   </section>
 
   <section id="doc_tech">
-    <h2 class="ui dividing header">Documentation technique</h2>
+    <h2 class="ui dividing header">
+      <a href="#doc_tech" aria-hidden="true" class="header-anchor">#</a>
+      Documentation technique
+    </h2>
 
     {% if doc_tech_description %}
       {{ doc_tech_description }}
@@ -214,7 +235,10 @@ layout: default
   {% endcapture %}
   {% assign serviceHtmlWithoutSpace = serviceHtml | strip_newlines | strip %}
   <section id="services" class="ui container">
-    <h2 class="ui dividing header">Services</h2>
+    <h2 class="ui dividing header">
+      <a href="#services" aria-hidden="true" class="header-anchor">#</a>
+      Services
+    </h2>
       {% if serviceHtmlWithoutSpace != "" %}
         <div class="ui three stackable cards">
           {{ serviceHtml }}

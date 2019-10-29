@@ -1,6 +1,6 @@
 ---
 title: ARPENT(résultats)
-link: https://ensagri.agriculture.gouv.fr/arpent-resultats/
+link: https://teleservices-ea.agriculture.gouv.fr/arpent-resultats/
 description: Consultez votre résultat aux examens de l'enseignement agricole et téléchargez votre relevé de notes 
 screenshot: arpent-resultats.png
 api:
