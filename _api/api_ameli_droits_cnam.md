@@ -1,9 +1,9 @@
 ---
 title: API de droits à l'Assurance Maladie
 tagline: Pour accélérer vos démarches en lien avec l'assurance maladie, automatisez la récupération des droits à l’Assurance Maladie de vos clients
-external_site: https://app.swaggerhub.com/apis/netmeecom/beneficiaires/v1-apim
+external_site: https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/assurance-maladie-digital/api-droits-fs-doc/master/documentation-open-api.yaml
 contract: OUVERT sous contrat
-logo: /img/cnam.png
+logo: /img/cnam.jpg
 stat:
   lastXdays: 30
   label: justificatifs papier évités
@@ -38,7 +38,7 @@ score:
     contact:
       link: partenaires-api-ameli.cnam@assurance-maladie.fr
     doc_tech:
-      link: https://api.swaggerhub.com/apis/netmeecom/beneficiaires/v1-apim
+      link: https://raw.githubusercontent.com/assurance-maladie-digital/api-droits-fs-doc/master/documentation-open-api.yaml
     monitoring:
       link: https://stats.uptimerobot.com/3wEv6hppvv
       description: |
