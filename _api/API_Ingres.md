@@ -383,7 +383,7 @@ score:
     contact:  
       link: nicolas.augereau@finances.gouv.fr
     access:
-      link: https://pissarho.cisirh.rie.gouv.fr/actualites/ingres/deploiement-de-deux-api-sur-lapplication-ingres
+      link: https://api.cisirh.rie.gouv.fr/ingres/nomenclatures
     doc_tech:
       external: http://pissarho.cisirh.rie.gouv.fr/sites/default/files/2019-10/INGRES-PIL-API%20Nomenclatures%20Ingres_%20%280_7%29.pptx
 ---
@@ -397,6 +397,41 @@ Evolutions possibles:
 
 En cas de besoin il est tout à fait possible de restituer l’ensemble des attributs gérés dans l'application Ingres pour chacune de ces nomenclatures. Cependant, au regard des développements nécessaires, nous préférons attendre qu’il y ait des besoins avérés.
 Nous vous proposons donc de nous faire part de vos besoins afin de les étudier et de faire évoluer l’API de façon à ce qu’elle réponde au mieux à vos attentes.
+
+Principe d'utilisation et exemples:
+
+Liste des référentiels gérés dans Ingres:
+https://api.cisirh.rie.gouv.fr/ingres/nomenclatures
+
+Extraction de contenu (quel que soit le référentiel) :
+https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/<nomenclature>	=> Extraction de tous les codes de la nomenclature désirée
+https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/<nomenclature>/<code>	=> Extraction d’un seul code dans la nomenclature désirée
+
+Référentiel des Catégories statutaires :
+https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/CATG_STATUTAIRE
+
+Référentiel « Ministères & institutions de la république » :
+https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/MINISTERE
+https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/MINISTERE/MI200 
+https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/MINISTERE/MI200/corps
+https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/MINISTERE/MI200/Corps?categorie=1
+
+Référentiel des Corps:
+https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/CORPS 
+https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/CORPS/00089  
+https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/CORPS/00089/grades 
+https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/CORPS/?categorie=1  
+
+Référentiel des Grades:
+https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/GRADE
+https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/GRADE/00188 
+
+Référentiel des Grilles:
+https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/GRILLE_IND 
+https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/GRILLE_IND/00028
+https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/GRILLE_IND/00028/echelons
+https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/GRILLE_IND/00028/echelons?rang=2  
+
 
 La liste des nomenclatures accessibles est la suivante :
 
