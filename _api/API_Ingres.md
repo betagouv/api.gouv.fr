@@ -404,8 +404,8 @@ Liste des référentiels gérés dans Ingres:
 https://api.cisirh.rie.gouv.fr/ingres/nomenclatures
 
 Extraction de contenu (quel que soit le référentiel) :
-https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/<nomenclature>	=> Extraction de tous les codes de la nomenclature désirée
-https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/<nomenclature>/<code>	=> Extraction d’un seul code dans la nomenclature désirée
+https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/[nomenclature]	=> Extraction de tous les codes de la nomenclature désirée
+https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/[nomenclature]/[code]	=> Extraction d’un seul code dans la nomenclature désirée
 
 Référentiel des Catégories statutaires :
 https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/CATG_STATUTAIRE
