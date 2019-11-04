@@ -24,7 +24,7 @@ keywords:
   - Noyau RH FPE
   - RCC
   - Référentiels de Classification Centrale
-  - Liste des nomenclatures accessibles:
+  - Nomenclatures
   - Activités
   - Adage
   - Affectation principale-secondaire
