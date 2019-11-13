@@ -59,6 +59,7 @@ Pour l’usager, une démarche 100% dématérialisée :
 3. Ma commune récupère immédiatement mon revenu fiscal de référence et je n’ai plus rien à faire !
 
 ### Informations issues de la DGFiP
+
 - Déclarants du foyer fiscal - Le foyer fiscal se compose du contribuable lui-même, du conjoint ou partenaire de Pacs
 - Adresse connue au 1er janvier de l’année d’imposition (exemple au 1er janvier 2018 pour les revenus de 2017)
 - Nombre de parts
@@ -72,7 +73,10 @@ Pour l’usager, une démarche 100% dématérialisée :
 - Date de mise en recouvrement de l’avis d’impôt
 - Date d'établissement
 
+NB: seule les données des deux dernières années sont disponibles. Par exemple en 2019, il n'est pas possible d'obtenir de données sur l'année 2017.
+
 ### Informations issues de la CAF
+
 - Liste des allocataires
 - Liste des enfants
 - Adresse au format de la poste
