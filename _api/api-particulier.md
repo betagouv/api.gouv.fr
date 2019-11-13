@@ -73,7 +73,7 @@ Pour l’usager, une démarche 100% dématérialisée :
 - Date de mise en recouvrement de l’avis d’impôt
 - Date d'établissement
 
-NB: seule les données des deux dernières années sont disponibles. Par exemple en 2019, il n'est pas possible d'obtenir de données sur l'année 2017.
+NB: seules les données des deux dernières années sont disponibles. Par exemple en 2019, il n'est pas possible d'obtenir de données sur l'année 2017.
 
 ### Informations issues de la CAF
 
