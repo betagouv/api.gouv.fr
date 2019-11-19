@@ -58,7 +58,7 @@ Un document JSON :
 stat:
   # Indique la temporalité de l'indicateur en nombre de jours
   lastXdays: 30
-  # L'URL où vous mettez à disposition un chiffre
+  # L'URL où vous mettez à disposition un document JSON contenant des statistiques
   url: https://api.gouv.fr/api/stats
   # La description de votre statistique
   label: justificatifs papier évités
