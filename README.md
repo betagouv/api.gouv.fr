@@ -1,9 +1,16 @@
-api.gouv.fr catalogue les API offertes par les administrations centrales, les collectivités territoriales, les établissements publics… Chaque API est associée à une courte description fonctionnelle, une documentation technique, les modalités d'accès, d'éventuelles ressources supplémentaires et surtout des liens vers les services qui l'utilisent.
+# api.gouv.fr
 
+api.gouv.fr catalogue les API offertes par les administrations centrales, les
+collectivités territoriales, les établissements publics… Chaque API est
+associée à une courte description fonctionnelle, une documentation technique,
+les modalités d'accès, d'éventuelles ressources supplémentaires et surtout des
+liens vers les services qui l'utilisent.
 
 ## Public visé
 
-api.gouv.fr s'adresse avant tout aux créateurs de services, les consommateurs d'API. Pour cela, nous facilitons la découverte, la compréhension et l'accès aux API et à leurs producteurs.
+api.gouv.fr s'adresse avant tout aux créateurs de services, les consommateurs
+d'API. Pour cela, nous facilitons la découverte, la compréhension et l'accès
+aux API et à leurs producteurs.
 
 Les fournisseurs, de leur côté, ont avec ce catalogue un moyen simple de faire connaître leurs API.
 
@@ -17,7 +24,9 @@ Les fournisseurs, de leur côté, ont avec ce catalogue un moyen simple de faire
 
 Le nom de domaine `api.gouv.fr` héberge un catalogue d'API et de services les réutilisant.
 
-Les sous-domaines en `*.api.gouv.fr` hébergent les API cataloguées sur `api.gouv.fr` et maintenues par la <abbr title="Direction interministérielle du numérique et du système d'information et de communication">DINSIC</abbr>.
+Les sous-domaines en `*.api.gouv.fr` hébergent les API cataloguées sur
+`api.gouv.fr` et maintenues par la <abbr title="Direction interministérielle du
+numérique et du système d'information et de communication">DINSIC</abbr>.
 
 
 ## Installation locale
@@ -67,7 +76,12 @@ Le site utilise [Jekyll], un générateur de site statique en [Ruby].
 
 ### Production
 
-Pour déployer ce site, il suffit de pousser les modifications vers la branche `master` sur [github.com/betagouv/api.gouv.fr](https://github.com/betagouv/api.gouv.fr). Cette branche étant protégée, il convient de faire [des pull requests](https://help.github.com/articles/using-pull-requests/) car le projet utilise [GitHub flow](https://guides.github.com/introduction/flow/).
+Pour déployer ce site, il suffit de pousser les modifications vers la branche
+`master` sur
+[github.com/betagouv/api.gouv.fr](https://github.com/betagouv/api.gouv.fr).
+Cette branche étant protégée, il convient de faire [des pull
+requests](https://help.github.com/articles/using-pull-requests/) car le projet
+utilise [GitHub flow](https://guides.github.com/introduction/flow/).
 
 
 ### Développement
