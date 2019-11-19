@@ -36,6 +36,45 @@ Modifier le fichier de description de l'API dans le dossier [`_api`](https://git
 
 [Rechercher le contenu à modifier](https://github.com/betagouv/api.gouv.fr/search?q=contenu+à+modifier&type=Code) et éditer le fichier correspondant.
 
+## Ajouter des statistiques d'usage
+
+Il est possible d'afficher des statistiques d'usage de votre API. Par exemple, le nombre de traitements, le nombre d'appels HTTP etc.
+
+Vous devez renseigner une URL où vous mettez à disposition des statistiques d'usage. 2 possibilités s'offrent à vous : renseigner uniquement un chiffre ou mettre à dispostion un objet JSON avec plusieurs clés (plusieurs indicateurs par exemple).
+
+Uniquement un chiffre :
+```yaml
+stat:
+  # Indique la temporalité de l'indicateur en nombre de jours
+  lastXdays: 30
+  # L'URL où vous mettez à disposition un chiffre
+  url: https://api.gouv.fr/api/stats/justificatifs
+  # La description de votre statistique
+  label: justificatifs papier évités
+```
+
+Un document JSON :
+```yaml
+stat:
+  # Indique la temporalité de l'indicateur en nombre de jours
+  lastXdays: 30
+  # L'URL où vous mettez à disposition un chiffre
+  url: https://api.gouv.fr/api/stats
+  # La description de votre statistique
+  label: justificatifs papier évités
+  # La clé du document JSON que vous souhaitez utiliser
+  path:
+    - justificatifs
+```
+Dans le dernier exemple, votre document JSON devrait avoir la structure suivante :
+
+```json
+{
+    "justificatifs": 42,
+    "non_utilise": 1
+}
+```
+
 
 ## Modifier les types d'API
 
