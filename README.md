@@ -26,7 +26,7 @@ Le nom de domaine `api.gouv.fr` héberge un catalogue d'API et de services les r
 
 Les sous-domaines en `*.api.gouv.fr` hébergent les API cataloguées sur
 `api.gouv.fr` et maintenues par la <abbr title="Direction interministérielle du
-numérique et du système d'information et de communication">DINSIC</abbr>.
+numérique">DINUM</abbr>.
 
 
 ## Installation locale
