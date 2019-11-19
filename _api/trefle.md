@@ -13,7 +13,7 @@ score:
     contact:
       link: https://www.emploi-store-dev.fr/portail-developpeur/detailapicatalogue/simulateur-de-financement-v1?id=5ca702c8243a5f418929f589
     doc_tech:
-      link: https://www.emploi-store-dev.fr/portail-developpeur-cms/home/catalogue-des-api/documentation-des-api/api/api-simulateur-de-financement-v1.html
+      extarnal: https://www.emploi-store-dev.fr/portail-developpeur-cms/home/catalogue-des-api/documentation-des-api/api/api-simulateur-de-financement-v1.html
 
 ---
 
