@@ -1,10 +1,14 @@
 # api.gouv.fr
 
-api.gouv.fr catalogue les API offertes par les administrations centrales, les
+**api.gouv.fr** catalogue les API offertes par les administrations centrales, les
 collectivités territoriales, les établissements publics… Chaque API est
 associée à une courte description fonctionnelle, une documentation technique,
 les modalités d'accès, d'éventuelles ressources supplémentaires et surtout des
 liens vers les services qui l'utilisent.
+
+[![jekyll](https://img.shields.io/badge/jekyll-v3.7-informational)](https://jekyllrb.com/)
+
+[![ruby](https://img.shields.io/badge/ruby-v2.5.1-informational)](https://ruby-doc.org/stdlib-2.5.1/)
 
 
 ## Public visé
@@ -22,10 +26,11 @@ Les fournisseurs, de leur côté, ont avec ce catalogue un moyen simple de faire
 
 ## Installation locale
 
-Nous utilisons docker, il vous faut donc installer :
+Nous utilisons docker, il vous faut donc installer une version au moins égale de :
 
-* [Docker](https://docs.docker.com/engine/installation/) (version > 19.03)
-* [docker-compose](https://docs.docker.com/compose/install/) (version > 1.6)
+[![docker-19.03](https://img.shields.io/badge/docker-v19.03-informational)](https://docs.docker.com/engine/installation/)
+
+[![docker-compose-1.25](https://img.shields.io/badge/docker--compose-v1.25-informational)](https://docs.docker.com/compose/install/)
 
 Pour récupérer les sources :
 
