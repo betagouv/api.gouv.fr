@@ -13,7 +13,7 @@ score:
     access:
       is_open: true
     contact:
-      link: contact@camino.beta.gouv.fr
+      link: camino@beta.gouv.fr
     doc_tech:
       link: https://api.camino.beta.gouv.fr
 ---
@@ -26,4 +26,4 @@ Grâce à elle vous pouvez notamment :
 
 #### Mail de contact
 
-contact@api.camino.beta.gouv.fr
+camino@beta.gouv.fr
