@@ -15,6 +15,7 @@ partners:
   - Institut de radioprotection et de sûreté nucléaire (IRSN)
   - Institut Français de Recherche pour l'Exploitation de la Mer (IFREMER)
 owner: Camino (MTES)
+logo: avatar-camino.svg  # URL d'un logo de l'API
 keywords:
   - mine
   - cadastre
