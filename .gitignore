@@ -9,3 +9,7 @@ Gemfile.lock
 
 # Ruby
 .ruby-gemset
+
+# Node
+node_modules
+/dist

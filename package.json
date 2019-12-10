@@ -1,0 +1,15 @@
+{
+  "name": "api.gouv.fr",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:betagouv/api.gouv.fr.git",
+  "author": "tmerlier <tmerlier@student.42.fr>",
+  "license": "AGPL-3.0-or-later",
+  "scripts": {
+    "build-dataset": "node build-dataset"
+  },
+  "devDependencies": {
+    "front-matter": "^3.0.2",
+    "fs-extra": "^8.1.0"
+  }
+}
