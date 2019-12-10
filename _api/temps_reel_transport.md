@@ -2,7 +2,7 @@
 title: Données temps réel pour les transports
 tagline: Mettre à disposition les données temps réel des transports en commun
 category: Public
-owner: DINSIC
+owner: DINUM
 clients:
   - particuliers
   - entreprises

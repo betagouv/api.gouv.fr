@@ -14,7 +14,7 @@ partners:
   - Tako
   - Taxiloc
   - Taxis Rennais
-owner: Etalab (DINSIC) &amp; DGITM (Ministère chargé des transports)
+owner: Etalab (DINUM) &amp; DGITM (Ministère chargé des transports)
 keywords:
   - Transport
   - Taxi

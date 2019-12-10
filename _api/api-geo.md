@@ -13,7 +13,7 @@ partners:
   - Etalab
   - INSEE
   - OpenStreetMap
-owner: Etalab (DINSIC)
+owner: Etalab (DINUM)
 keywords:
   - Communes
   - Codes postaux

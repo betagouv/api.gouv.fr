@@ -13,7 +13,7 @@ partners:
   - La Poste
   - MobileConnect & Moi
   - MSA
-owner: DINSIC
+owner: DINUM
 keywords:
   - Authentification
   - Identification
