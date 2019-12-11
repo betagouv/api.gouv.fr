@@ -1,7 +1,7 @@
 import "isomorphic-unfetch"; // eslint-disable-line import/no-unassigned-import
-import getConfig from 'next/config'
+import getConfig from "next/config";
 
-import HttpError from './http-error'
+import HttpError from "./http-error";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -32,5 +32,5 @@ export const getAPI = async id => {
 };
 
 export const getAllAPIs = async () => {
-  return _fetch(API_URL + '/api.json')
+  return _fetch(API_URL + "/api.json");
 };
