@@ -16,6 +16,10 @@ app.prepare().then(() => {
     });
   });
 
+  server.get("/apropos", (req, res) => {
+    return app.render(req, res, "/about");
+  });
+
   server.use(express.static(join(__dirname, "dist")));
   server.use(express.static(join(__dirname, "public")));
 
