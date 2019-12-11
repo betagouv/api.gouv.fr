@@ -16,3 +16,7 @@ node_modules
 
 # Next
 .next
+
+# Environment config
+.env*
+!.env.sample
