@@ -12,6 +12,10 @@
     "build-dataset": "node build-dataset"
   },
   "devDependencies": {
+    "babel-plugin-inline-import": "^3.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react-hooks": "^2.3.0",
     "front-matter": "^3.0.2",
     "fs-extra": "^8.1.0"
   },
