@@ -22,6 +22,7 @@
     "next": "^8",
     "next-runtime-dotenv": "^1.2.0",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "underscore.string": "^3.3.5"
   }
 }

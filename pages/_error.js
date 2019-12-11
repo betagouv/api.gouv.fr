@@ -2,6 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import Link from "next/link";
 
+import Meta from "../components/meta";
+import Page from "../layouts/page";
+
 const messages = {
   500: "Une erreur imprévue s’est produite",
   404: "Cette page n'existe pas"
@@ -30,7 +33,10 @@ class ErrorPage extends React.Component {
     const msg = code === 500 ? messages[500] : message || messages[code];
 
     return (
-        <section id="errorContainer" class="ui text container">
+      <Page>
+        <Meta title={title} description={msg} />
+
+        <section id="errorContainer" className="ui text container">
           <h1>Oups</h1>
           <h2>{msg}</h2>
           <div>
@@ -81,6 +87,7 @@ class ErrorPage extends React.Component {
             }
           `}</style>
         </section>
+      </Page>
     );
   }
 }

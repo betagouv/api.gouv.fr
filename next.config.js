@@ -1,7 +1,7 @@
 const nextRuntimeDotenv = require("next-runtime-dotenv");
 
 const withConfig = nextRuntimeDotenv({
-  public: ["API_URL"]
+  public: ["SITE_NAME", "SITE_URL", "API_URL"]
 });
 
 module.exports = withConfig();

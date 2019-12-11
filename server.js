@@ -17,6 +17,7 @@ app.prepare().then(() => {
   });
 
   server.use(express.static(join(__dirname, "dist")));
+  server.use(express.static(join(__dirname, "public")));
 
   server.all("*", (req, res) => {
     return handle(req, res);
