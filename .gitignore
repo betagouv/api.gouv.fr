@@ -13,3 +13,6 @@ Gemfile.lock
 # Node
 node_modules
 /dist
+
+# Next
+.next
