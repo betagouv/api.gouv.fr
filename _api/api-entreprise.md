@@ -28,7 +28,7 @@ partners:
   - AGEFIPH
   - Banque de france
   - ADEME
-owner: Etalab (DINSIC)
+owner: Etalab (DINUM)
 keywords:
   - Établissement
   - Entreprise
@@ -49,8 +49,8 @@ score:
       link: https://dashboard.entreprise.api.gouv.fr
 ---
 
-[L’API Entreprise](https://entreprise.api.gouv.fr/) est une plateforme d’échange opérée par la DINSIC qui met à disposition des opérateurs publics et des administrations, des données et des documents administratifs de référence, relatifs aux entreprises et association, qui sont délivrés par les administrations et les organismes publics, à fin de simplifier les démarches administratives et la gestion des dossiers.
+[L’API Entreprise](https://entreprise.api.gouv.fr/) est une plateforme d’échange opérée par la DINUM qui met à disposition des opérateurs publics et des administrations, des données et des documents administratifs de référence, relatifs aux entreprises et association, qui sont délivrés par les administrations et les organismes publics, à fin de simplifier les démarches administratives et la gestion des dossiers.
 
-Composante de l’État plateforme, l’accès à l’API Entreprise est modérée et régulée par la DINSIC, qui attribue à chaque client des autorisations de récupération d’informations selon la nature des démarches à traiter (Marchés publics, aides publiques,…)
+Composante de l’État plateforme, l’accès à l’API Entreprise est modérée et régulée par la DINUM, qui attribue à chaque client des autorisations de récupération d’informations selon la nature des démarches à traiter (Marchés publics, aides publiques,…)
 
 L'API Entreprise est accessible ici : [https://entreprise.api.gouv.fr/](https://entreprise.api.gouv.fr/)

@@ -13,7 +13,7 @@ clients:
 partners:
   - DGFiP
   - CNAF
-owner: Incubateur de services numériques (DINSIC)
+owner: Incubateur de services numériques (DINUM)
 keywords:
   - Impots
   - Quotient Familial
@@ -39,7 +39,7 @@ score:
     monitoring:
       link: https://status.particulier.api.gouv.fr
       description: |
-        <p>La DINSIC s’engage à ce que le Service soit accessible à 95% et la DINSIC s’engage à améliorer progressivement ce rendement.</p>
+        <p>La DINUM s’engage à ce que le Service soit accessible à 95% et la DINUM s’engage à améliorer progressivement ce rendement.</p>
 ---
 
 ## Vos démarches sans pièces justificatives

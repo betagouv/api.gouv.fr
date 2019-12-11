@@ -50,11 +50,11 @@ Les fournisseurs, de leur côté, ont avec ce catalogue un moyen simple de faire
 
 ### Editeur
 
-Incubateur des services numériques, Direction interministérielle du numérique et du système d'information et de communication de l'Etat (DINSIC), Services du Premier ministre.
+Incubateur des services numériques, Direction interministérielle du numérique (DINUM), Services du Premier ministre.
 
 ### Directeur de la publication
 
-Le Directeur interministériel du numérique et du système d'information et de communication de l'Etat (DINSIC).
+Le Directeur interministériel du numérique (DINUM).
 
 ### Prestataire d'hébergement
 

@@ -1,7 +1,7 @@
 ---
 title: Annuaire des établissements publics de l'administration
 contract: OUVERT
-owner: beta.gouv.fr (DINSIC)
+owner: beta.gouv.fr (DINUM)
 layout: api
 logo: logo-generique-startup-carre.jpg
 clients:
