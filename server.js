@@ -10,6 +10,11 @@ const handle = app.getRequestHandler();
 app.prepare().then(() => {
   const server = express();
 
+  server.get("/api/:apiId", (req, res) => {
+    return app.render(req, res, "/api", {
+      apiId: req.params.apiId
+    });
+  });
 
   server.use(express.static(join(__dirname, "dist")));
 
