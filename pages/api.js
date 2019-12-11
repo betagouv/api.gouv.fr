@@ -1,10 +1,8 @@
 import { getAPI } from "../utils/api";
 
-function API({api}) {
-  if (!api) {
-    return <div>404 - Not found</div>
-  }
+import withErrors from "../components/hoc/with-errors";
 
+function API({api}) {
   return (
     <div>
       <h1>{api.title}</h1>
@@ -14,11 +12,9 @@ function API({api}) {
 }
 
 API.getInitialProps = async ({ query }) => {
-  let api
-  if (query.apiId) {
-    api = await getAPI(query.apiId);
-  }
+  const api = await getAPI(query.apiId);
+
   return {api}
 };
 
-export default API;
+export default withErrors(API);

@@ -1,6 +1,12 @@
 import "isomorphic-unfetch"; // eslint-disable-line import/no-unassigned-import
 import getConfig from 'next/config'
 
+import HttpError from './http-error'
+
+const {
+  publicRuntimeConfig: { API_URL }
+} = getConfig();
+
 export async function _fetch(url) {
   const options = {
     mode: "cors",
@@ -10,6 +16,9 @@ export async function _fetch(url) {
   const response = await fetch(url, options);
   const contentType = response.headers.get("content-type");
 
+  if (!response.ok) {
+    throw new HttpError(response);
+  }
 
   if (response.ok && contentType && contentType.includes("application/json")) {
     return response.json();
@@ -17,10 +26,6 @@ export async function _fetch(url) {
 
   throw new Error("Une erreur est survenue");
 }
-
-const {
-  publicRuntimeConfig: { API_URL }
-} = getConfig();
 
 export const getAPI = async id => {
   return _fetch(API_URL + `/apis/${id}.json`);
