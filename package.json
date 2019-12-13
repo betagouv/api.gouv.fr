@@ -9,7 +9,7 @@
     "dev": "node server.js",
     "start": "NODE_ENV=production node server.js",
     "build": "next build",
-    "lint": "yarn pretty-quick"
+    "lint": "pretty-quick"
   },
   "devDependencies": {
     "babel-plugin-inline-import": "^3.0.0",
