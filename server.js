@@ -49,7 +49,7 @@ app.prepare().then(async () => {
     res.sendStatus(404);
   });
 
-  server.get("/api.json", (req, res) => {
+  server.get("/api/v1/api.json", (req, res) => {
     res.send(summary);
   });
 
