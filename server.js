@@ -41,9 +41,14 @@ app.prepare().then(async () => {
   })
 
   server.get("/api/:apiId", (req, res) => {
-    return app.render(req, res, "/api", {
-      apiId: req.params.apiId
-    });
+    const {apiId} = req.params
+
+    // Support des anciennes URL finissant par .html
+    if (apiId.endsWith('.html')) {
+      return res.redirect('/api/' + apiId.substring(0, apiId.indexOf('.html')))
+    }
+
+    return app.render(req, res, "/api", {apiId});
   });
 
   server.get("/apropos", (req, res) => {
