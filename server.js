@@ -2,6 +2,7 @@ const { join } = require("path");
 const express = require("express");
 const next = require("next");
 const { keyBy } = require("lodash")
+const morgan = require("morgan")
 const { buildDataset } = require('./build-dataset')
 
 const port = process.env.PORT || 3000;
@@ -14,6 +15,10 @@ app.prepare().then(async () => {
   const { summary, apis, services } = await buildDataset()
   const apisIndex = keyBy(apis, 'slug')
   const servicesIndex = keyBy(services, 'slug')
+
+  if (process.env.NODE_ENV !== 'production') {
+    server.use(morgan('dev'))
+  }
 
   server.get("/apis/:apiId.json", (req, res) => {
     if (req.params.apiId in apisIndex) {
