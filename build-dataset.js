@@ -63,7 +63,7 @@ async function buildDataset() {
     summary: apis.map(apiToAPIV1),
     apis,
     services
-  }
+  };
 }
 
 module.exports = { buildDataset };
