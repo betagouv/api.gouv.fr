@@ -15,5 +15,5 @@ export const getAPI = async id => {
 };
 
 export const getAllAPIs = async () => {
-  return fetchJson(`${API_URL}/api.json`);
+  return fetchJson(`${API_URL}/api/v1/api.json`);
 };
