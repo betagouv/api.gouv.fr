@@ -1,11 +1,9 @@
-#!/usr/bin/env node
-const { remove, readFile, readdir, outputJson } = require("fs-extra");
+const { readFile, readdir } = require("fs").promises;
 const { join } = require("path");
 const frontmatter = require("front-matter");
 
 const API_DIR = join(__dirname, "_api");
 const SERVICE_DIR = join(__dirname, "_service");
-const OUTPUT_DIR = join(__dirname, "dist");
 const DEFAULT_LOGO = "img/logo-generique-startup-carre.jpg";
 
 function apiToAPIV1(api) {
@@ -55,30 +53,17 @@ async function readMarkdownDir(dir) {
   );
 }
 
-async function writeJSONFiles(dir, files) {
-  return Promise.all(
-    files.map(async file => {
-      const { slug } = file;
-      await outputJson(join(dir, `${slug}.json`), file);
-    })
-  );
-}
-
-async function main() {
-  await remove(OUTPUT_DIR);
-
+async function buildDataset() {
   const apis = await readMarkdownDir(API_DIR);
   const services = await readMarkdownDir(SERVICE_DIR);
 
   expandAPIsWithServices(apis, services);
 
-  await outputJson(join(OUTPUT_DIR, "api.json"), apis.map(apiToAPIV1));
-
-  await writeJSONFiles(join(OUTPUT_DIR, "apis"), apis);
-  await writeJSONFiles(join(OUTPUT_DIR, "services"), services);
+  return {
+    summary: apis.map(apiToAPIV1),
+    apis,
+    services
+  }
 }
 
-main().catch(error => {
-  console.error(error);
-  process.exit(1);
-});
+module.exports = { buildDataset };
