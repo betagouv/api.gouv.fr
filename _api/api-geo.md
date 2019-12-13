@@ -1,6 +1,7 @@
 ---
 title: API Géo
-redirect_from: /api/geoapi.html
+aliases:
+  - geoapi
 tagline: Interrogez les référentiels géographiques plus facilement
 contract: OUVERT
 external_site: https://geo.api.gouv.fr

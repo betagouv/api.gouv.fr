@@ -10,11 +10,24 @@ const dev = process.env.NODE_ENV !== "production";
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
+function buildAliasesIndex(items) {
+  return items.reduce((aliasesIndex, item) => {
+    if (item.aliases) {
+      item.aliases.forEach(alias => {
+        aliasesIndex[alias] = item
+      })
+    }
+
+    return aliasesIndex;
+  }, {})
+}
+
 app.prepare().then(async () => {
   const server = express();
   const { summary, apis, services } = await buildDataset()
   const apisIndex = keyBy(apis, 'slug')
   const servicesIndex = keyBy(services, 'slug')
+  const apisAliasesIndex = buildAliasesIndex(apis)
 
   if (process.env.NODE_ENV !== 'production') {
     server.use(morgan('dev'))
@@ -46,6 +59,11 @@ app.prepare().then(async () => {
     // Support des anciennes URL finissant par .html
     if (apiId.endsWith('.html')) {
       return res.redirect('/api/' + apiId.substring(0, apiId.indexOf('.html')))
+    }
+
+    // Alias
+    if (apiId in apisAliasesIndex) {
+      return res.redirect('/api/' + apisAliasesIndex[apiId].slug)
     }
 
     return app.render(req, res, "/api", {apiId});
