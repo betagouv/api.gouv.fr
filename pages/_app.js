@@ -19,22 +19,6 @@ class MyApp extends App {
       <>
         <Component {...pageProps} />
         <style>{`
-          #wrapper {
-            min-height: 100%;
-            position: relative;
-          }
-
-          .ui.tiny.label {
-            margin-bottom: 2px;
-          }
-
-          input:focus::-webkit-input-placeholder{
-              color: transparent!important;
-          }
-          input:focus::-moz-placeholder{
-              color: transparent!important;
-          }
-
           @media (max-width: 30em) {
             .medium.screen.only {
               display: none !important;
