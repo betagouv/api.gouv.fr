@@ -4,12 +4,12 @@ const frontmatter = require("front-matter");
 
 const API_DIR = join(__dirname, "_api");
 const SERVICE_DIR = join(__dirname, "_service");
-const DEFAULT_LOGO = "img/logo-generique-startup-carre.jpg";
+const DEFAULT_LOGO = "logo-generique-startup-carre.jpg";
 
 function apiToAPIV1(api) {
   return {
     title: api.title,
-    url: api.url,
+    url: `/api/${api.slug}`,
     description: api.tagline,
     image: api.logo || DEFAULT_LOGO,
     domain: api.domain,
