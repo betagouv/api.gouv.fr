@@ -17,3 +17,7 @@ export const getAPI = async id => {
 export const getAllAPIs = async () => {
   return fetchJson(`${API_URL}/api/v1/api.json`);
 };
+
+export const getService = async id => {
+  return fetchJson(`${API_URL}/services/${id}.json`);
+};
