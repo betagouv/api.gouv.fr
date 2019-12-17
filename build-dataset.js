@@ -29,9 +29,20 @@ function expandAPIsWithServices(apis, services) {
         if (!api.services) {
           api.services = [];
         }
-        api.services.push(service.title);
+        api.services.push(service.slug);
       });
     }
+  });
+}
+
+function expandServicesWithAPIs(services, apis) {
+  services.forEach(service => {
+    const apiList = service.api.map(title => {
+      const api = apis.find(api => api.title === title);
+      return api.slug;
+    });
+
+    service.api = apiList;
   });
 }
 
@@ -47,7 +58,7 @@ async function readMarkdownDir(dir) {
       return {
         slug: fileName.split(".md")[0],
         ...json.attributes,
-        body: json.body
+        content: json.body
       };
     })
   );
@@ -58,6 +69,7 @@ async function buildDataset() {
   const services = await readMarkdownDir(SERVICE_DIR);
 
   expandAPIsWithServices(apis, services);
+  expandServicesWithAPIs(services, apis);
 
   return {
     summary: apis.map(apiToAPIV1),
