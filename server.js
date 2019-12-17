@@ -69,6 +69,10 @@ app.prepare().then(async () => {
     return app.render(req, res, "/api", { apiId });
   });
 
+  server.get("/services/all", (req, res) => {
+    res.send(services);
+  });
+
   server.get("/apropos", (req, res) => {
     return app.render(req, res, "/about");
   });
