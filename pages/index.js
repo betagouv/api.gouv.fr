@@ -1,5 +1,7 @@
-import { getAllAPIs } from "../utils/api";
+import React, { useState, useEffect } from "react";
 import getConfig from "next/config";
+
+import { getAllAPIs } from "../utils/api";
 
 import Page from "../layouts/page";
 
@@ -15,14 +17,18 @@ const {
 } = getConfig();
 
 function Home({ q, filter, apiList }) {
-  let filteredList = apiList;
+  const [filteredList, setFilteredList] = useState(apiList);
 
-  if (filter) {
-    filteredList = apiList.filter(api => {
-      const normalizeKeywords = api.keywords.map(k => normaliseStr(k));
-      return normalizeKeywords.includes(normaliseStr(filter));
-    });
-  }
+  useEffect(() => {
+    if (filter) {
+      const filteredList = apiList.filter(api => {
+        const normalizeKeywords = api.keywords.map(k => normaliseStr(k));
+        return normalizeKeywords.includes(normaliseStr(filter));
+      });
+
+      setFilteredList(filteredList);
+    }
+  }, [filter]);
 
   return (
     <Page>
@@ -45,7 +51,7 @@ function Home({ q, filter, apiList }) {
         <div className="ui container">
           <div className="ui three stackable cards">
             {filteredList.length > 0 ? (
-              filteredList.map(api => <ApiCard key={api.slug} {...api} />)
+              filteredList.map(api => <ApiCard key={api.title} {...api} />)
             ) : (
               <div className="ui big warning message">
                 <div className="header">Aucune API n’a pu être trouvée</div>
@@ -112,7 +118,7 @@ function Home({ q, filter, apiList }) {
   );
 }
 
-Home.getInitialProps = async ({ req }) => {
+Home.getInitialProps = async req => {
   const { q, filter } = req.query;
   const apiList = await getAllAPIs();
 

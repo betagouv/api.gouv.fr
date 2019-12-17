@@ -71,7 +71,7 @@ const ApiCard = ({
 
 ApiCard.propTypes = {
   title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  description: PropTypes.string,
   image: PropTypes.string,
   owner: PropTypes.string,
   tagline: PropTypes.string,
@@ -80,6 +80,7 @@ ApiCard.propTypes = {
 };
 
 ApiCard.defaultProps = {
+  description: null,
   image: null,
   partners: [],
   keywords: []

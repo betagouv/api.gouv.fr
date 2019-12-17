@@ -93,7 +93,7 @@ const APISearchBar = ({ q, list }) => {
           )}
 
           {results.map(api => (
-            <SearchResult api={api} />
+            <SearchResult key={api.title} api={api} />
           ))}
         </div>
 
