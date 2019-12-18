@@ -6,11 +6,6 @@ associée à une courte description fonctionnelle, une documentation technique,
 les modalités d'accès, d'éventuelles ressources supplémentaires et surtout des
 liens vers les services qui l'utilisent.
 
-[![jekyll](https://img.shields.io/badge/jekyll-v3.7-informational)](https://jekyllrb.com/)
-
-[![ruby](https://img.shields.io/badge/ruby-v2.5.1-informational)](https://ruby-doc.org/stdlib-2.5.1/)
-
-
 ## Public visé
 
 api.gouv.fr s'adresse avant tout aux créateurs de services, les consommateurs
@@ -23,43 +18,63 @@ Les fournisseurs, de leur côté, ont avec ce catalogue un moyen simple de faire
 
 ### Réutilisateur d'API ? [Ajoutez votre service](https://github.com/betagouv/api.gouv.fr/blob/master/CONTRIBUTING.md#ajouter-un-service) !
 
-
 ## Installation locale
 
-Nous utilisons docker, il vous faut donc installer une version au moins égale de :
+### Prérequis
 
-[![docker-19.03](https://img.shields.io/badge/docker-v19.03-informational)](https://docs.docker.com/engine/installation/)
+- [Node.js](https://nodejs.org/en/) >= 8
+- [yarn](https://yarnpkg.com) (mais fonctionne également avec npm)
 
-[![docker-compose-1.25](https://img.shields.io/badge/docker--compose-v1.25-informational)](https://docs.docker.com/compose/install/)
+Cette application utilise [Next.js](https://github.com/zeit/next.js).
 
-Pour récupérer les sources :
+1. Installer les dépendances
 
-``` sh
-git clone https://github.com/betagouv/api.gouv.fr.git
-cd api.gouv.fr
+```bash
+yarn
 ```
 
-Pour lancer le serveur en mode dev :
+2. Lancer le serveur de développement
 
-``` sh
-docker-compose up
+```bash
+yarn dev
 ```
 
-Puis il suffit de se rendre sur http://localhost:4000
+Par défaut, il écoutera sur le port `3000`, pour changer, utiliser `yarn dev -p 4242`.
 
+Afin de configurer le projet correctement, il est conseillé de créer un fichier `.env` avec les variables d’environnement nécessaires à l’application.
+
+`.env` permet de persister les variables d’environnement de développement dans un fichier plutôt que de les définir dans le shell, mais les deux fonctionnent. Cela fonctionne avec [dotenv](https://github.com/motdotla/dotenv) et [next-runtime-dotenv](https://github.com/tusbar/next-runtime-dotenv).
+
+Un fichier d’example existe : `.env.example`. Pour obtenir une configuration de base :
+
+```bash
+cp .env.sample .env
+```
 
 ## Déploiement
 
 ### Production
 
-Pour déployer ce site, il suffit de pousser les modifications vers la branche
-`master` sur
-[github.com/betagouv/api.gouv.fr](https://github.com/betagouv/api.gouv.fr).
-Cette branche étant protégée, il convient de faire [des pull
-requests](https://help.github.com/articles/using-pull-requests/) car le projet
-utilise [GitHub flow](https://guides.github.com/introduction/flow/).
+Cette application utilise [Next.js](https://github.com/zeit/next.js).
+
+1. Installer les dépendances
+
+```bash
+yarn
+```
+
+2. Générer les bundles de production
+
+```bash
+yarn build
+```
+
+3. Lancer le serveur de production
+
+```bash
+yarn start
+```
 
 ### Développement
 
 Chaque pull request est déployé dans des [review app](https://devcenter.heroku.com/articles/github-integration-review-apps) sur [Heroku](https://dashboard.heroku.com/)
-
