@@ -1,6 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import ReactMarkdown from "react-markdown";
+
+import withErrors from "../components/hoc/with-errors";
+
 import { getService, getAPI } from "../utils/api";
 
 import colors from "../styles/colors";
@@ -106,6 +109,15 @@ const Service = ({
   );
 };
 
+Service.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
+  apiList: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
+  screenshot: PropTypes.string.isRequired
+};
+
 Service.getInitialProps = async req => {
   const { serviceId } = req.query;
   const service = await getService(serviceId);
@@ -118,4 +130,4 @@ Service.getInitialProps = async req => {
   };
 };
 
-export default Service;
+export default withErrors(Service);

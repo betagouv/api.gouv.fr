@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import withErrors from "../components/hoc/with-errors";
+
 import { getAllServices } from "../utils/api";
 
 import Page from "../layouts/page";
@@ -40,4 +42,4 @@ Services.getInitialProps = async () => {
   };
 };
 
-export default Services;
+export default withErrors(Services);

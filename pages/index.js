@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import getConfig from "next/config";
 
+import withErrors from "../components/hoc/with-errors";
+
 import { getAllAPIs } from "../utils/api";
 
 import Page from "../layouts/page";
@@ -128,4 +130,4 @@ Home.getInitialProps = async req => {
   };
 };
 
-export default Home;
+export default withErrors(Home);
