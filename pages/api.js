@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import getConfig from "next/config";
-import { find } from "lodash";
 
 import { getAPI, getService } from "../utils/api";
 
