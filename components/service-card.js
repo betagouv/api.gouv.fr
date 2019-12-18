@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import Link from "next/link";
 
 import { getAPI } from "../utils/api";
+import LabelList from "./label-list";
 
 const ServiceCard = ({ slug, title, description, api, screenshot }) => {
   const [apiList, setApiList] = useState([]);
@@ -40,12 +41,13 @@ const ServiceCard = ({ slug, title, description, api, screenshot }) => {
         </div>
       </div>
       <div className="extra content">
-        API utilisée{api.length > 1 ? "s" : ""}&nbsp;:&nbsp;
-        {apiList.map(({ slug, title }) => (
-          <Link key={slug} href={`/api/${slug}`}>
-            <a className="ui label">{title}</a>
-          </Link>
-        ))}
+        <LabelList
+          title={`API utilisée${apiList.length > 1 ? "s" : ""}`}
+          labels={apiList.map(({ title, slug }) => {
+            return { title, href: `/api/${slug}` };
+          })}
+          isLink
+        />
       </div>
 
       <style jsx>{`

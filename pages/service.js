@@ -40,7 +40,9 @@ const Service = ({
         <div className="ui stackable grid">
           <div className="row">
             <div className="five wide column">
-              <h3 className="ui divider horizontal">Les API utilisées</h3>
+              <h3 className="ui divider horizontal">
+                {apiList.length > 1 ? "Les API utilisées" : "API utilisée"}
+              </h3>
               <div className="ui segments">
                 {apiList.map(api => (
                   <APICard key={api.slug} {...api} image={api.logo} />

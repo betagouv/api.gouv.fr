@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import PropTypes from "prop-types";
 import getConfig from "next/config";
+import LabelList from "./label-list";
 
 const { publicRuntimeConfig } = getConfig();
 const DEFAULT_LOGO =
@@ -33,50 +34,11 @@ const ApiCard = ({
             <div className="description">{description}</div>
           </div>
           <div className="extra content">
-            {partners.length > 0 && (
-              <div className="labels">
-                <small>Partenaires</small>
-                <div>
-                  {partners.map(partner => (
-                    <div key={`${title}-${partner}`} className="ui tiny label">
-                      {partner}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {keywords.length > 0 && (
-              <div className="labels">
-                <small>Tags</small>
-                <div>
-                  {keywords.map(keyword => (
-                    <div
-                      key={`${title}-${keyword}`}
-                      className="ui tiny label api-tag"
-                    >
-                      {keyword}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
+            <LabelList title="Partenaires" labels={partners} />
+            <LabelList title="Tags" labels={keywords} />
           </div>
         </a>
       </Link>
-
-      <style jsx>{`
-        .labels {
-          display: flex;
-          justify-content: flex-start;
-          flex-flow: wrap;
-          flex-direction: column;
-        }
-
-        .ui.tiny.label {
-          margin: 1px;
-        }
-      `}</style>
     </>
   );
 };
