@@ -48,7 +48,12 @@ const Service = ({
               </h3>
               <div className="ui segments">
                 {apiList.map(api => (
-                  <APICard key={api.slug} {...api} image={api.logo} />
+                  <APICard
+                    key={api.slug}
+                    {...api}
+                    url={`/api/${api.slug}`}
+                    image={api.logo}
+                  />
                 ))}
               </div>
             </div>
