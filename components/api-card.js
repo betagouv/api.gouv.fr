@@ -1,6 +1,11 @@
 import React from "react";
 import Link from "next/link";
 import PropTypes from "prop-types";
+import getConfig from "next/config";
+
+const {
+  publicRuntimeConfig: { DEFAULT_LOGO }
+} = getConfig();
 
 const ApiCard = ({
   title,
@@ -18,8 +23,8 @@ const ApiCard = ({
           <div className="content">
             <img
               className="right floated mini ui image"
-              src={`/static/images/api-logo/${image}`}
-              alt={`logo de ${title}`}
+              src={`/static/images/api-logo/${image || DEFAULT_LOGO}`}
+              alt={image ? `logo de ${title}` : "logo générique api.gouv"}
             />
 
             <div className="header">{title}</div>
@@ -29,7 +34,7 @@ const ApiCard = ({
           </div>
           <div className="extra content">
             {partners.length > 0 && (
-              <>
+              <div className="labels">
                 <small>Partenaires</small>
                 <div>
                   {partners.map(partner => (
@@ -38,11 +43,11 @@ const ApiCard = ({
                     </div>
                   ))}
                 </div>
-              </>
+              </div>
             )}
 
             {keywords.length > 0 && (
-              <>
+              <div className="labels">
                 <small>Tags</small>
                 <div>
                   {keywords.map(keyword => (
@@ -54,15 +59,22 @@ const ApiCard = ({
                     </div>
                   ))}
                 </div>
-              </>
+              </div>
             )}
           </div>
         </a>
       </Link>
 
       <style jsx>{`
+        .labels {
+          display: flex;
+          justify-content: flex-start;
+          flex-flow: wrap;
+          flex-direction: column;
+        }
+
         .ui.tiny.label {
-          margin-bottom: 2px;
+          margin: 1px;
         }
       `}</style>
     </>

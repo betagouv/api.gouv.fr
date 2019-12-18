@@ -73,6 +73,19 @@ app.prepare().then(async () => {
     res.send(services);
   });
 
+  server.get("/service/:serviceId", (req, res) => {
+    const { serviceId } = req.params;
+
+    // Support des anciennes URL finissant par .html
+    if (serviceId.endsWith(".html")) {
+      return res.redirect(
+        "/service/" + serviceId.substring(0, serviceId.indexOf(".html"))
+      );
+    }
+
+    return app.render(req, res, "/service", { serviceId });
+  });
+
   server.get("/apropos", (req, res) => {
     return app.render(req, res, "/about");
   });
