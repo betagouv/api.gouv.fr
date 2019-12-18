@@ -37,9 +37,9 @@ class ErrorPage extends React.Component {
         <Meta title={title} description={msg} />
 
         <section id="errorContainer" className="ui text container">
-          <h1>Oups</h1>
-          <h2>{msg}</h2>
           <div>
+            <h1>Oups</h1>
+            <h2>{msg}</h2>
             <div className="back-home">
               <Link href="/">
                 <a className="ui button">Retour à la page d’accueil</a>
@@ -50,12 +50,13 @@ class ErrorPage extends React.Component {
           <style jsx>{`
             #errorContainer {
               display: flex;
-              height: 100%;
+              flex-direction: column;
+              justify-content: center;
+              height: 75%;
             }
 
             #errorContainer > div {
               display: flex;
-              flex: 1;
               align-items: center;
               flex-direction: column;
               align-self: center;
@@ -74,12 +75,12 @@ class ErrorPage extends React.Component {
             .back-home {
               display: flex;
               justify-content: center;
-              width: 50%;
+              width: 80%;
               border-top: 0.5em #3d4a99 solid;
               padding-top: 2em;
             }
 
-            a {
+            .ui .button {
               background-color: #3d4a99;
               color: white;
               text-align: center;
