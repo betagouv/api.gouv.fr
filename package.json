@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "git@github.com:betagouv/api.gouv.fr.git",
-  "author": "tmerlier <tmerlier@student.42.fr>",
   "license": "AGPL-3.0-or-later",
   "scripts": {
     "dev": "node server.js",
