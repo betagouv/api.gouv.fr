@@ -1,14 +1,5 @@
-_site
-.sass-cache
-.jekyll-metadata
+# MacOS
 .DS_Store
-Gemfile.lock
-
-# Bundler
-.bundle
-
-# Ruby
-.ruby-gemset
 
 # Node
 node_modules
