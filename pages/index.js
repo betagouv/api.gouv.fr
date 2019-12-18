@@ -89,7 +89,6 @@ function Home({ q, filter, apiList }) {
         }
 
         section#apis {
-          height: 100%;
           background: ${colors.backgroundBlue};
         }
 
