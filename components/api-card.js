@@ -3,9 +3,9 @@ import Link from "next/link";
 import PropTypes from "prop-types";
 import getConfig from "next/config";
 
-const {
-  publicRuntimeConfig: { DEFAULT_LOGO }
-} = getConfig();
+const { publicRuntimeConfig } = getConfig();
+const DEFAULT_LOGO =
+  publicRuntimeConfig.DEFAULT_LOGO || "logo-generique-startup-carre.jpg";
 
 const ApiCard = ({
   title,

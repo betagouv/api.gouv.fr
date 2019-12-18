@@ -21,9 +21,9 @@ import TechnicalDocumentation from "../components/api/technical-documentation";
 import Services from "../components/api/services";
 import Content from "../components/api/content";
 
-const {
-  publicRuntimeConfig: { DEFAULT_LOGO }
-} = getConfig();
+const { publicRuntimeConfig } = getConfig();
+const DEFAULT_LOGO =
+  publicRuntimeConfig.DEFAULT_LOGO || "logo-generique-startup-carre.jpg";
 
 const API = ({ api, services }) => {
   const {

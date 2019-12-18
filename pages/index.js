@@ -12,9 +12,9 @@ import colors from "../styles/colors";
 
 import { normaliseStr } from "../utils/normalize";
 
-const {
-  publicRuntimeConfig: { SITE_DESCRIPTION }
-} = getConfig();
+const { publicRuntimeConfig } = getConfig();
+const SITE_DESCRIPTION =
+  publicRuntimeConfig.SITE_DESCRIPTION || "Un accès unique aux API de l'État";
 
 function Home({ q, filter, apiList }) {
   const [filteredList, setFilteredList] = useState(apiList);

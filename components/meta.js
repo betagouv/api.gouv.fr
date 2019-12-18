@@ -5,9 +5,9 @@ import prune from "underscore.string/prune";
 
 import getConfig from "next/config";
 
-const {
-  publicRuntimeConfig: { SITE_NAME, SITE_URL }
-} = getConfig();
+const { publicRuntimeConfig } = getConfig();
+const SITE_NAME = publicRuntimeConfig.SITE_NAME || "api.gouv.fr";
+const SITE_URL = publicRuntimeConfig.SITE_URL || "https://api.gouv.fr";
 
 const Meta = ({ title, description }) => {
   description = prune(description, 160, "…");
