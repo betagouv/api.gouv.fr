@@ -10,3 +10,9 @@ node_modules
 # Environment config
 .env*
 !.env.sample
+
+# intellij folder
+.idea
+
+# npm specific file
+package-lock.json
