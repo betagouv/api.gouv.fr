@@ -2,10 +2,16 @@ import React from "react";
 import PropTypes from "prop-types";
 import Link from "next/link";
 
-const SearchResult = ({ api }) => {
+const SearchResult = ({ api, isSelected, handleHover }) => {
   return (
     <Link href={api.url}>
-      <a className="result">
+      <a
+        onMouseEnter={handleHover}
+        style={{
+          backgroundColor: isSelected ? "whitesmoke" : "white"
+        }}
+        className="result"
+      >
         <div className="image">
           <img src={`/images/api-logo/${api.image}`} />
         </div>
@@ -37,6 +43,10 @@ const SearchResult = ({ api }) => {
 };
 
 SearchResult.protoTypes = {
+  isSelected: false
+};
+
+SearchResult.protoTypes = {
   api: PropTypes.shape({
     url: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
@@ -44,7 +54,9 @@ SearchResult.protoTypes = {
     description: PropTypes.string.isRequired,
     keywords: PropTypes.array.isRequired,
     partners: PropTypes.array.isRequired
-  }).isRequired
+  }).isRequired,
+  isSelected: PropTypes.bool,
+  handleHover: PropTypes.func.isRequired
 };
 
 export default SearchResult;

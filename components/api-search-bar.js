@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import lunr from "lunr";
+import Router from "next/router";
 
 import { useInput } from "../hooks/input";
 
@@ -37,8 +38,24 @@ const normalise = builder => {
 
 const APISearchBar = ({ q, list }) => {
   const [input, setInput] = useInput(q);
+  const [cursor, setCursor] = useState(0);
   const [results, setResults] = useState([]);
   const [idx, setIdx] = useState(null);
+
+  const handleKeyDown = e => {
+    // arrow up/down button select next/previous list element
+    if (e.keyCode === 38 && cursor > 0) {
+      setCursor(cursor - 1);
+    } else if (e.keyCode === 40 && cursor < results.length - 1) {
+      setCursor(cursor + 1);
+    } else if (e.keyCode === 13) {
+      // Enter button select list element
+      const api = results[cursor];
+      if (api) {
+        Router.push(results[cursor].url);
+      }
+    }
+  };
 
   useEffect(() => {
     if (list && list.length > 0) {
@@ -81,6 +98,7 @@ const APISearchBar = ({ q, list }) => {
             className="prompt"
             placeholder={SEARCH_EXAMPLES.join(", ")}
             type="search"
+            onKeyDown={handleKeyDown}
             onChange={setInput}
           />
           <i className="search icon" />
@@ -100,8 +118,13 @@ const APISearchBar = ({ q, list }) => {
             </div>
           )}
 
-          {results.map(api => (
-            <SearchResult key={api.title} api={api} />
+          {results.map((api, key) => (
+            <SearchResult
+              key={api.title}
+              api={api}
+              handleHover={() => setCursor(key)}
+              isSelected={key === cursor}
+            />
           ))}
         </div>
 
