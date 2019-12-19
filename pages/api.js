@@ -12,7 +12,7 @@ import Header from "../components/api/header";
 import Menu from "../components/api/menu";
 
 import Access from "../components/api/access";
-import Support from "../components/api/Support";
+import Support from "../components/api/support";
 import Monitoring from "../components/api/monitoring";
 import RateLimiting from "../components/api/rate-limiting";
 import Partners from "../components/api/partners";
