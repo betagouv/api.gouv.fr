@@ -33,7 +33,13 @@ Cette application utilise [Next.js](https://github.com/zeit/next.js).
 yarn
 ```
 
-2. Lancer le serveur de développement
+2. Copier le fichier de configuration
+
+```bash
+cp .env.sample .env
+```
+
+3. Lancer le serveur de développement
 
 ```bash
 yarn dev
@@ -44,12 +50,6 @@ Par défaut, il écoutera sur le port `3000`, pour changer, utiliser `yarn dev -
 Afin de configurer le projet correctement, il est conseillé de créer un fichier `.env` avec les variables d’environnement nécessaires à l’application.
 
 `.env` permet de persister les variables d’environnement de développement dans un fichier plutôt que de les définir dans le shell, mais les deux fonctionnent. Cela fonctionne avec [dotenv](https://github.com/motdotla/dotenv) et [next-runtime-dotenv](https://github.com/tusbar/next-runtime-dotenv).
-
-Un fichier d’example existe : `.env.example`. Pour obtenir une configuration de base :
-
-```bash
-cp .env.sample .env
-```
 
 ## Déploiement
 
