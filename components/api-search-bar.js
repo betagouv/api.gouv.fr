@@ -8,7 +8,12 @@ import { normaliseStr } from "../utils/normalize";
 import SearchResult from "./search-result";
 
 const RESULTS_LIMIT = 7;
-const SEARCH_FIELDS = ["title", "description", "keywords", "partners"];
+const SEARCH_FIELDS = [
+  { name: "title", boost: 5 },
+  { name: "description", boost: 1 },
+  { name: "keywords", boost: 1 },
+  { name: "partners", boost: 1 }
+];
 const SEARCH_EXAMPLES = [
   "quotient familial",
   "revenu fiscal de référence",
@@ -39,7 +44,9 @@ const APISearchBar = ({ q, list }) => {
     if (list && list.length > 0) {
       const idx = lunr(function() {
         this.ref("url");
-        SEARCH_FIELDS.map(field => this.field(field));
+        SEARCH_FIELDS.map(field =>
+          this.field(field.name, { boost: field.boost })
+        );
 
         this.use(normalise);
 
@@ -55,9 +62,10 @@ const APISearchBar = ({ q, list }) => {
     if (input && idx) {
       const normalise = normaliseStr(input).replace(/:/g, ""); // Remove ":" to avoid lurn fields search
       const lunrResults = idx.search(`${normalise}* ${normalise}`);
-      const results = list.filter(api =>
-        lunrResults.slice(0, RESULTS_LIMIT).find(r => r.ref === api.url)
-      );
+
+      const results = lunrResults
+        .slice(0, RESULTS_LIMIT)
+        .map(r => list.find(api => r.ref === api.url));
       setResults(results);
     } else {
       setResults([]);
