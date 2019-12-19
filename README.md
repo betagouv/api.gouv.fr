@@ -22,7 +22,7 @@ Les fournisseurs, de leur côté, ont avec ce catalogue un moyen simple de faire
 
 ### Prérequis
 
-- [Node.js](https://nodejs.org/en/) >= 8
+- [Node.js](https://nodejs.org/en/) >= 12
 - [yarn](https://yarnpkg.com) (mais fonctionne également avec npm)
 
 Cette application utilise [Next.js](https://github.com/zeit/next.js).
