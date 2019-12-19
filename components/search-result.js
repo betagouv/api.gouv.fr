@@ -7,7 +7,7 @@ const SearchResult = ({ api }) => {
     <Link href={api.url}>
       <a className="result">
         <div className="image">
-          <img src={`/static/images/api-logo/${api.image}`} />
+          <img src={`/images/api-logo/${api.image}`} />
         </div>
         <div className="content">
           <div className="title">{api.title}</div>

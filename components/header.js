@@ -10,7 +10,7 @@ const Header = () => {
             <a>
               <img
                 className="nav__logo"
-                src="/static/images/logo-api.gouv.fr.svg"
+                src="/images/logo-api.gouv.fr.svg"
                 alt="Accueil de api.gouv.fr"
               />
             </a>

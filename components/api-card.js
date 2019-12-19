@@ -24,7 +24,7 @@ const ApiCard = ({
           <div className="content">
             <img
               className="right floated mini ui image"
-              src={`/static/images/api-logo/${image || DEFAULT_LOGO}`}
+              src={`/images/api-logo/${image || DEFAULT_LOGO}`}
               alt={image ? `logo de ${title}` : "logo générique api.gouv"}
             />
 

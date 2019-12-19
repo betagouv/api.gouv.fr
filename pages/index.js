@@ -38,7 +38,7 @@ function Home({ q, filter, apiList }) {
         <div className="header-with-image">
           <img
             className="ui small image"
-            src="/static/images/Apigouv_visual.svg"
+            src="/images/Apigouv_visual.svg"
             alt="Une API connecte des services à la puissance d'internet"
           />
 

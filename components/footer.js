@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="footer__logo">
           <Link href="/">
             <img
-              src="/static/images/logo-api.gouv.fr-white.png"
+              src="/images/logo-api.gouv.fr-white.png"
               alt="logo api.gouv.fr"
             />
           </Link>
@@ -16,7 +16,7 @@ const Footer = () => {
             <li>
               <a href="https://twitter.com/BetaGouv" title="Twitter">
                 <img
-                  src="/static/images/social/twitter.svg"
+                  src="/images/social/twitter.svg"
                   alt="Twitter"
                   className="icon icon-twitter"
                 />
@@ -25,7 +25,7 @@ const Footer = () => {
             <li>
               <a href="https://github.com/betagouv/api.gouv.fr" title="Github">
                 <img
-                  src="/static/images/social/github.svg"
+                  src="/images/social/github.svg"
                   alt="Github"
                   className="icon icon-github"
                 />
@@ -34,7 +34,7 @@ const Footer = () => {
             <li>
               <a href="/contact" title="Nous contacter">
                 <img
-                  src="/static/images/social/email.svg"
+                  src="/images/social/email.svg"
                   alt="Email"
                   className="icon icon-mail"
                 />

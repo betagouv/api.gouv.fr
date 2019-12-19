@@ -38,7 +38,7 @@ const Header = ({
       <div className="ui container">
         <div className="ui center aligned inverted header">
           <img
-            src={`/static/images/api-logo/${logo}`}
+            src={`/images/api-logo/${logo}`}
             alt={title}
             className="ui small bordered image"
           />

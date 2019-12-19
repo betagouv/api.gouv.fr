@@ -64,7 +64,7 @@ const Service = ({
               <div>
                 <img
                   className="ui bordered rounded fluid image"
-                  src={`/static/images/service-screenshot/${screenshot}`}
+                  src={`/images/service-screenshot/${screenshot}`}
                   alt={`capture d'écran de ${title}`}
                 />
               </div>

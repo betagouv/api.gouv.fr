@@ -23,7 +23,7 @@ const Meta = ({ title, description }) => {
 
       {/* Search Engine */}
       <meta name="description" content={description} />
-      <meta name="image" content="/static/images/logo.svg" />
+      <meta name="image" content="/images/logo.svg" />
 
       {/* Schema.org for Google */}
       <meta itemProp="name" content={title} />
@@ -35,7 +35,7 @@ const Meta = ({ title, description }) => {
         content={title ? `${title} - ${SITE_NAME}` : SITE_NAME}
       />
       <meta name="og:description" content={description} />
-      <meta name="og:image" content="/static/images/logo.svg" />
+      <meta name="og:image" content="/images/logo.svg" />
       <meta name="og:url" content={SITE_URL} />
       <meta name="og:site_name" content={SITE_NAME} />
       <meta name="og:locale" content="fr_FR" />

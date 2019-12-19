@@ -33,10 +33,7 @@ const ServiceCard = ({ slug, title, description, api, screenshot }) => {
       <div className="image">
         <div>
           <a href={url}>
-            <img
-              src={`/static/images/service-screenshot/${screenshot}`}
-              alt=""
-            />
+            <img src={`/images/service-screenshot/${screenshot}`} alt="" />
           </a>
         </div>
       </div>
