@@ -12,26 +12,15 @@ partners:  # liste de co-producteurs de l'API
   - BCE (ECB)
   - FMI (IMF)
 keywords: # utilisés pour la recherche
-  - webstat
   - banque de france
-  - bdf
-  - séries chronologiques
-  - données économiques
-  - données financières
-  - données monétaires
-  - taux
-  - cours
   - crédit
   - monnaie
   - épargne
-  - placements
   - comptes nationaux financiers
   - balance des paiements
   - conjoncture
   - entreprises
-  - Eurosystème
-  - données comptables des groupes bancaires français
-  - eurosystème
+
 score:
   detail:
     access:
@@ -43,11 +32,9 @@ score:
     contact:
       link: https://developer.webstat.banque-france.fr/contact #moyen de contact, soit un mail, soit un lien vers formulaire de contact
     doc_tech:
-      link: https://developer.webstat.banque-france.fr/node/296 # URL de la documentation au format OpenAPI <https://github.com/OAI/OpenAPI-Specification>
+      link: https://developer.webstat.banque-france.fr/ibm_apim/swaggerjson/d2Vic3RhdC1iYW5xdWUtZGUtZnJhbmNlLWZyX3YxOjEuMC4wXzQ3MDE%2C # URL de la documentation au format OpenAPI <https://github.com/OAI/OpenAPI-Specification>
 
 ---
-
-## Description de l'API
 
 [Webstat](http://webstat.banque-france.fr/fr/) est le portail statistique de la Banque de France. L'[API Webstat](https://developer.webstat.banque-france.fr) permet d'accéder à plus de 35.000 séries statistiques de la Banque de France et de ses partenaires institutionnels. Obtenez simplement les données économiques et financières sur les entreprises françaises, la conjoncture régionale, le crédit et l'épargne, la monnaie ou la balance des paiements.
 Principales fonctionnalités:
