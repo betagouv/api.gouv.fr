@@ -30,9 +30,9 @@ score:
       description: |
         <p>Les appels API sont limités par quotas par jetons d'accès.</p>
     contact:
-      link: [retours-legifrance-modernise@dila.gouv.fr] (retours-legifrance-modernise@dila.gouv.fr) #moyen de contact, soit un mail, soit un lien vers formulaire de contact
+      link: retours-legifrance-modernise@dila.gouv.fr
     doc_tech:
-      link: Documentation sur le site de PISTE (https://developer.aife.economie.gouv.fr)
+      external: https://developer.aife.economie.gouv.fr
 ---
 
 Afin de faciliter la réutilisation des données juridiques, la DILA met à disposition une API via [le portail PISTE](https://developer.aife.economie.gouv.fr/). Cette API est accessible gratuitement, après inscription.
