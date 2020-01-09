@@ -33,10 +33,7 @@ score:
       link: [retours-legifrance-modernise@dila.gouv.fr] (retours-legifrance-modernise@dila.gouv.fr) #moyen de contact, soit un mail, soit un lien vers formulaire de contact
     doc_tech:
       link: Documentation sur le site de PISTE (https://developer.aife.economie.gouv.fr)
-
 ---
-
-## Description
 
 Afin de faciliter la réutilisation des données juridiques, la DILA met à disposition une API via [le portail PISTE](https://developer.aife.economie.gouv.fr/). Cette API est accessible gratuitement, après inscription.
 
