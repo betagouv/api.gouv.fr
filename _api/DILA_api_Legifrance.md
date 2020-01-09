@@ -36,7 +36,7 @@ score:
 
 ---
 
-## Description de l'API
+## Description
 
 Afin de faciliter la réutilisation des données juridiques, la DILA met à disposition une API via [le portail PISTE](https://developer.aife.economie.gouv.fr/). Cette API est accessible gratuitement, après inscription.
 
