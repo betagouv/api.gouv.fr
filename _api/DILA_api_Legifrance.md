@@ -2,13 +2,13 @@
 title: Légifrance Bêta
 tagline: Réutilisation des données juridiques disponibles sur le site Légifrance # une phrase maximum
 owner: Direction de l'information légale et administrative (DILA) # producteur de l'API
-logo: # FILENAME d'un logo de l'API #png ou jpg logo legifrance bêta à vérifier
-clients:  # types d'entités habilitées à utiliser l'API
-  - particuliers  # texte libre en minuscules
-  - entreprises  # ajoutez ou supprimez des types d'entités
+logo: 
+clients:  
+  - particuliers  
+  - entreprises 
   - administrations
-partners:  # liste de co-producteurs de l'API
-keywords: # utilisés pour la recherche
+partners:  
+keywords: 
   - Journal officiel
   - Codes
   - Textes consolidés
@@ -25,7 +25,7 @@ score:
   detail:
     access:
       description: API publique
-      link:  # URL d'une page de demande d'accès si l'API est à accès restreint
+      link:  
     rate_limiting:
       description: |
         <p>Les appels API sont limités par quotas par jetons d'accès.</p>
