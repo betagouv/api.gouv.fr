@@ -13,11 +13,10 @@ Les API permettent de nombreux usages. Elles sont déjà utilisées largement. P
 <div class="ui info message">
   <h3>Métaphore</h3>
 
-  <p>Une API est comparable à un serveur dans un restaurant. Le serveur permet à tout client (application logicielle) de commander ce qui est disponible en cuisine (base de données). Le serveur (API) va chercher la commande dans la cuisine (base de données) et la livre au client (application logicielle). Tant que le client reçoit son repas, elle n'a pas besoin de savoir ce qu'il se passe dans la cuisine. Cela signifie que les employés peuvent être remplacés ou de nouveaux peuvent être embauchés faciliement..</p>
+  <p>Une API est comparable à un serveur dans un restaurant. Le serveur permet à tout client (application logicielle) de commander ce qui est disponible en cuisine (base de données). Le serveur (API) va chercher la commande dans la cuisine (base de données) et la livre au client (application logicielle). Tant que le client reçoit son repas, elle n'a pas besoin de savoir ce qu'il se passe dans la cuisine. Cela signifie que les employés peuvent être remplacés ou de nouveaux peuvent être embauchés facilement.</p>
 
   <p>De la même façon, une application logicielle qui fait appel à une API n'a pas besoin de savoir si la base de données a été optimisée ou remplacée. Les API proposent à l'application logicielle et à la base de données une manière efficace de collaborer avec un minimum de perturbations provenant de modifications apportées à l'une ou l'autre.</p>
 </div>
-
 
 ## Les avantages des API
 
