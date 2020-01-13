@@ -2,7 +2,7 @@
 title: Légifrance Bêta
 tagline: Réutilisation des données juridiques disponibles sur le site Légifrance # une phrase maximum
 owner: Direction de l'information légale et administrative (DILA) # producteur de l'API
-logo: 
+logo: DILA_logo_Simplifie_beta_v3.svg
 clients:  
   - particuliers  
   - entreprises 
