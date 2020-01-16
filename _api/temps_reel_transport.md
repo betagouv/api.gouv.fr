@@ -24,8 +24,6 @@ score:
       link: https://tr.transport.data.gouv.fr/spec
 ---
 
-## Description de l'API
-
 [Api](http://tr.transport.data.gouv.fr/) simple de mise à disposition de données temps réel pour les transports en commun.
 
 L'api charge des données théoriques de transport en commun (au format GTFS) ainsi que des données temps réel (au format GTFS-RT) et expose ces données consolidées au format GTFS-RT ainsi que SIRI-LITE.

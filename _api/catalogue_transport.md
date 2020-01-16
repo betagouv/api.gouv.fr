@@ -19,8 +19,6 @@ score:
       link: https://transport.data.gouv.fr/api/openapi
 ---
 
-## Description de l'API
-
 [transport.data.gouv.fr](https://transport.data.gouv.fr) est une plateforme publique destinée à rassembler toutes les données de mobilité utiles aux développeurs et éditeurs d'application qui facilitent le calcul d'itinéraire, au bénéfice des voyageurs.
 
 Pour simplifier l'accès aux données de la plateforme, plusieurs API sont mises à disposition et décrites dans la [documentation](https://transport.data.gouv.fr/api/openapi).
