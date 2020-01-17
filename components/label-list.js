@@ -1,9 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Link from "next/link";
+import { isEmpty } from "lodash";
 
 const LabelList = ({ title, labels, isLink }) => {
-  if (labels.length === 0) return null;
+  if (isEmpty(labels) || labels.length === 0) return null;
 
   return (
     <div className="labels">
