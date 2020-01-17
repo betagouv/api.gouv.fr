@@ -21,7 +21,7 @@ score:
 
 [transport.data.gouv.fr](https://transport.data.gouv.fr) est une plateforme publique destinée à rassembler toutes les données de mobilité utiles aux développeurs et éditeurs d'application qui facilitent le calcul d'itinéraire, au bénéfice des voyageurs.
 
-Pour simplifier l'accès aux données de la plateforme, plusieurs API sont mises à disposition et décrites dans la [documentation](https://transport.data.gouv.fr/api/openapi).
+Pour simplifier l'accès aux données de la plateforme, plusieurs API sont mises à disposition et décrites dans la [documentation](https://transport.data.gouv.fr/swaggerui).
 
 Le point d'entrée principal est l'[API](https://transport.data.gouv.fr/api/datasets) pour récupérer la liste de tous les jeux de données de la plateforme.
 
