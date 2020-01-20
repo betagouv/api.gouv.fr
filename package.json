@@ -1,0 +1,38 @@
+{
+  "name": "api.gouv.fr",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:betagouv/api.gouv.fr.git",
+  "license": "AGPL-3.0-or-later",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "NODE_ENV=production node server.js",
+    "build": "next build",
+    "lint": "pretty-quick"
+  },
+  "devDependencies": {
+    "babel-plugin-inline-import": "^3.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "front-matter": "^3.0.2",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "hoist-non-react-statics": "^3.3.1",
+    "isomorphic-unfetch": "^3.0.0",
+    "lodash": "^4.17.15",
+    "lunr": "^2.3.8",
+    "morgan": "^1.9.1",
+    "next": "^8",
+    "next-runtime-dotenv": "^1.2.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-markdown": "^4.2.2",
+    "swagger-ui-dist": "^3.24.3",
+    "underscore.string": "^3.3.5"
+  }
+}

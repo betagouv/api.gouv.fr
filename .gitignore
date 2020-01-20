@@ -1,11 +1,18 @@
-_site
-.sass-cache
-.jekyll-metadata
+# MacOS
 .DS_Store
-Gemfile.lock
 
-# Bundler
-.bundle
+# Node
+node_modules
 
-# Ruby
-.ruby-gemset
+# Next
+.next
+
+# Environment config
+.env*
+!.env.sample
+
+# intellij folder
+.idea
+
+# npm specific file
+package-lock.json
