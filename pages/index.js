@@ -16,7 +16,7 @@ import { normaliseStr } from "../utils/normalize";
 
 const { publicRuntimeConfig } = getConfig();
 const SITE_DESCRIPTION =
-  publicRuntimeConfig.SITE_DESCRIPTION || "Un accès unique aux API de l'État";
+  publicRuntimeConfig.SITE_DESCRIPTION || "Le site qui simplifie le partage et la circulation des données administratives";
 
 function Home({ q, filter, apiList }) {
   const [filteredList, setFilteredList] = useState(apiList);
@@ -36,8 +36,13 @@ function Home({ q, filter, apiList }) {
     <Page>
       <section id="mission-statement">
         <div className="header-with-image">
-          <div>
-            <h1 className="ui header">{SITE_DESCRIPTION}</h1>
+          <img
+            className="nav__logo"
+            src="/images/api.gouv.fr.svg"
+            alt="Logo de api.gouv.fr"
+          />
+          <div className='baseline'>
+            <h2 className="ui header">{SITE_DESCRIPTION}</h2>
             <APISearchBar q={q} list={apiList} />
           </div>
         </div>
@@ -64,20 +69,25 @@ function Home({ q, filter, apiList }) {
           padding-bottom: 4em;
         }
 
-        h1 {
-          padding: 0.2em 0;
-          font-size: 200%;
-          line-height: 1.8;
-        }
-
         .header-with-image {
           display: flex;
           align-items: center;
           justify-content: center;
+          flex-direction: column;
         }
 
         .header-with-image img {
-          margin-right: 3em;
+          margin-bottom: 1em;
+          width: 350px;
+        }
+
+        .baseline {
+          max-width: 450px;
+          text-align: center;
+        }
+
+        .baseline h2 {
+          margin-bottom: 1.5em;
         }
 
         section {
@@ -89,23 +99,12 @@ function Home({ q, filter, apiList }) {
         }
 
         @media (max-width: 768px) {
-          .header-with-image {
-            flex-direction: column;
-          }
-
           #mission-statement {
             padding: 4em 2em;
           }
 
-          #mission-statement .header-with-image img {
-            width: 30%;
-            margin: 0;
-          }
-
-          #mission-statement h1 {
-            padding: 0 10px;
-            margin-top: 10px;
-            font-size: 1.3em;
+          .header-with-image img {
+            width: 250px;
           }
         }
       `}</style>
