@@ -36,12 +36,6 @@ function Home({ q, filter, apiList }) {
     <Page>
       <section id="mission-statement">
         <div className="header-with-image">
-          <img
-            className="ui small image"
-            src="/images/Apigouv_visual.svg"
-            alt="Une API connecte des services à la puissance d'internet"
-          />
-
           <div>
             <h1 className="ui header">{SITE_DESCRIPTION}</h1>
             <APISearchBar q={q} list={apiList} />
