@@ -34,7 +34,7 @@ Dans le cas d'API fermées :
 
 ### Vous souhaitez un accompagnement ?
 
-[Contactez nous](mailto:contact@api.gouv.fr?subject=Ajout%20d%27un%20nouveeau%20service)
+[Contactez nous](mailto:contact@api.gouv.fr?subject=Ajout%20d%27un%20nouveau%20service)
 
 ---
 
