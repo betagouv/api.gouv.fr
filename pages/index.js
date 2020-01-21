@@ -9,6 +9,7 @@ import Page from "../layouts/page";
 
 import ApiCard from "../components/api-card";
 import APISearchBar from "../components/api-search-bar";
+import ButtonLink from "../components/ui/button-link";
 
 import colors from "../styles/colors";
 
@@ -16,7 +17,8 @@ import { normaliseStr } from "../utils/normalize";
 
 const { publicRuntimeConfig } = getConfig();
 const SITE_DESCRIPTION =
-  publicRuntimeConfig.SITE_DESCRIPTION || "Le site qui simplifie le partage et la circulation des données administratives";
+  publicRuntimeConfig.SITE_DESCRIPTION ||
+  "Le site qui simplifie le partage et la circulation des données administratives";
 
 function Home({ q, filter, apiList }) {
   const [filteredList, setFilteredList] = useState(apiList);
@@ -41,7 +43,7 @@ function Home({ q, filter, apiList }) {
             src="/images/api.gouv.fr.svg"
             alt="Logo de api.gouv.fr"
           />
-          <div className='baseline'>
+          <div className="baseline">
             <h2 className="ui header">{SITE_DESCRIPTION}</h2>
             <APISearchBar q={q} list={apiList} />
           </div>
@@ -59,6 +61,26 @@ function Home({ q, filter, apiList }) {
                 Aucun résultat avec le filter: <b>{filter}</b>
               </div>
             )}
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="ui container links">
+          <div>
+            <h3>Vous ne trouvez pas l’API dont vous avez besoin ?</h3>
+            <ButtonLink href="mailto:contact@api.gouv.fr?subject=Demande%20d%27une%20nouvelle%20API">
+              Demander une API
+            </ButtonLink>
+          </div>
+          <div>
+            <h3>Vous voulez partager une API ?</h3>
+            <ButtonLink
+              href="https://github.com/betagouv/api.gouv.fr/blob/master/CONTRIBUTING.md#ajouter-une-api"
+              alt
+            >
+              Partager votre API
+            </ButtonLink>
           </div>
         </div>
       </section>
@@ -98,6 +120,12 @@ function Home({ q, filter, apiList }) {
           background: ${colors.backgroundBlue};
         }
 
+        .links {
+          display: flex;
+          justify-content: space-between;
+          flex-flow: wrap;
+        }
+
         @media (max-width: 768px) {
           #mission-statement {
             padding: 4em 2em;
@@ -105,6 +133,10 @@ function Home({ q, filter, apiList }) {
 
           .header-with-image img {
             width: 250px;
+          }
+
+          .links > div:first-child {
+            margin-bottom: 2em;
           }
         }
       `}</style>
