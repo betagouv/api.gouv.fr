@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-import colors from "../styles/colors";
+import ButtonLink from "./ui/button-link";
 
 const Header = () => {
   return (
@@ -32,18 +32,15 @@ const Header = () => {
               <a href="/contact">Nous contacter</a>
             </li>
             <li className="external">
-              <a
+              <ButtonLink href="mailto:contact@api.gouv.fr?subject=Demande%20d%27une%20nouvelle%20API">
+                Demander une API
+              </ButtonLink>
+              <ButtonLink
                 href="https://github.com/betagouv/api.gouv.fr/blob/master/CONTRIBUTING.md#ajouter-une-api"
-                className="button-link"
+                alt
               >
                 Partager votre API
-              </a>
-              <a
-                href="mailto:contact@api.gouv.fr?subject=Demande%20d%27une%20nouvelle%20API"
-                className="button-link alt"
-              >
-                Demander une API
-              </a>
+              </ButtonLink>
             </li>
           </ul>
         </div>
@@ -125,37 +122,15 @@ const Header = () => {
           flex-flow: wrap;
         }
 
-        .nav a.button-link {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: center;
-          padding: 9px 15px;
-          margin: 0 0.4em;
-
-          width: 162px;
-          height: 38px;
-
-          background: ${colors.smartData};
-          color: #fff;
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-          border-radius: 4px;
-        }
-
-        .nav a.button-link.alt {
-          color: ${colors.smartData};
-          background: #fff;
-        }
-
         @media (max-width: 550px) {
           .nav__links {
             padding-top: 0;
           }
         }
 
-        @media (max-width: 375px) {
-          .nav a.button-link {
-            margin: 0.4em;
+          .nav .external {
+            display: inline-grid;
+            grid-template-columns: 1fr 1fr;
           }
         }
       `}</style>
