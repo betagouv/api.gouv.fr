@@ -33,6 +33,14 @@ const Header = () => {
             </li>
             <li>
               <a
+                href="https://github.com/betagouv/api.gouv.fr/blob/master/CONTRIBUTING.md#ajouter-une-api"
+                className="button-link"
+              >
+                Partager votre API
+              </a>
+            </li>
+            <li>
+              <a
                 href="mailto:contact@api.gouv.fr?subject=Demande%20d%27une%20nouvelle%20API"
                 className="button-link alt"
               >
