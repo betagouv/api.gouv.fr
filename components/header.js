@@ -31,15 +31,13 @@ const Header = () => {
             <li>
               <a href="/contact">Nous contacter</a>
             </li>
-            <li>
+            <li className="external">
               <a
                 href="https://github.com/betagouv/api.gouv.fr/blob/master/CONTRIBUTING.md#ajouter-une-api"
                 className="button-link"
               >
                 Partager votre API
               </a>
-            </li>
-            <li>
               <a
                 href="mailto:contact@api.gouv.fr?subject=Demande%20d%27une%20nouvelle%20API"
                 className="button-link alt"
@@ -85,6 +83,7 @@ const Header = () => {
         .nav__links li {
           padding: 0;
           display: inline;
+          margin: 0 0.2em;
           line-height: 2em;
         }
 
@@ -120,6 +119,12 @@ const Header = () => {
           justify-content: space-between;
         }
 
+        .nav .external {
+          display: inline-flex;
+          justify-content: space-between;
+          flex-flow: wrap;
+        }
+
         .nav a.button-link {
           display: flex;
           flex-direction: row;
@@ -145,6 +150,12 @@ const Header = () => {
         @media (max-width: 550px) {
           .nav__links {
             padding-top: 0;
+          }
+        }
+
+        @media (max-width: 375px) {
+          .nav a.button-link {
+            margin: 0.4em;
           }
         }
       `}</style>
