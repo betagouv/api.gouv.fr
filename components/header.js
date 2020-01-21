@@ -1,6 +1,8 @@
 import React from "react";
 import Link from "next/link";
 
+import colors from "../styles/colors";
+
 const Header = () => {
   return (
     <header role="navigation">
@@ -29,6 +31,14 @@ const Header = () => {
             <li>
               <a href="/contact">Nous contacter</a>
             </li>
+            <li>
+              <a
+                href="mailto:contact@api.gouv.fr?subject=Demande%20d%27une%20nouvelle%20API"
+                className="button-link alt"
+              >
+                Demander une API
+              </a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -42,6 +52,7 @@ const Header = () => {
 
         .nav__container {
           display: flex;
+          flex: 1;
           justify-content: space-between;
           flex-wrap: wrap;
           align-items: center;
@@ -55,11 +66,12 @@ const Header = () => {
         }
 
         .nav__links {
-          display: inline;
+          display: inline-flex;
           margin: 0;
           padding: 0.5em 1em;
           list-style-type: none;
-          text-align: right;
+          align-items: center;
+          flex-flow: wrap;
         }
 
         .nav__links li {
@@ -92,6 +104,34 @@ const Header = () => {
           outline: none;
           cursor: pointer;
           text-decoration: none;
+        }
+
+        .nav {
+          display: flex;
+          align-items: baseline;
+          justify-content: space-between;
+        }
+
+        .nav a.button-link {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          padding: 9px 15px;
+          margin: 0 0.4em;
+
+          width: 162px;
+          height: 38px;
+
+          background: ${colors.smartData};
+          color: #fff;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          border-radius: 4px;
+        }
+
+        .nav a.button-link.alt {
+          color: ${colors.smartData};
+          background: #fff;
         }
 
         @media (max-width: 550px) {
