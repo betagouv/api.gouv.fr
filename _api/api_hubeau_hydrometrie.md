@@ -13,7 +13,8 @@ clients:
 partners:
   - SCHAPI
   - BRGM
-owner: SCHAPI / BRGM
+owner: Service central d'hydrométéorologie et d'appui à la prévision des inondations & Bureau de Recherches Géologiques et Minières
+owner_acronym: SCHAPI & BRGM
 keywords:
   - Hydrométrie
   - Référentiel hydrométrique

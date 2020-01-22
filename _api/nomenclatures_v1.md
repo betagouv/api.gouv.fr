@@ -6,7 +6,8 @@ contract: OUVERT sous contrat
 clients:
   - collectivités
   - ministères
-owner: INSEE
+owner: Institut national de la statistique et des études économiques
+owner_acronym: INSEE
 keywords:
   - Nomenclatures
   - Métadonnées

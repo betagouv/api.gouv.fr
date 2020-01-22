@@ -11,7 +11,8 @@ clients:
 partners:
   - La poste
   - IGN
-owner: Etalab (DINUM)
+owner: Direction interministérielle du numérique
+owner_acronym: DINUM
 stat:
   lastXdays: 7
   url: https://api-adresse.data.gouv.fr/analytics/stats.json

@@ -2,7 +2,8 @@
 title: API Impôt particulier
 logo: logo-dgfip.jpg
 tagline: Raccordez-vous directement à la DGFiP pour récupérer les éléments fiscaux nécessaires à vos téléservices, éliminez le traitement et le stockage des pièces justificatives
-owner: Direction Générale des Finances Publiques (DGFiP)
+owner: Direction Générale des Finances Publiques
+owner_acronym: DGFIP
 contract: OUVERT sous contrat
 clients:
   - collectivités

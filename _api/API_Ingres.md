@@ -1,7 +1,8 @@
 ---
 title: API Ingres
 tagline: Récupérez l'ensemble des référentiels utilisés par les SIRH de la Fonction Publique d'Etat
-owner: CISIRH - Centre Interministériel des Systèmes d'Information relatifs aux Ressources Humaines 
+owner: Centre Interministériel des Systèmes d'Information relatifs aux Ressources Humaines
+owner_acronym: CISIRH
 contract: OUVERT (utilisation restreinte au Réseau Interministériel de l'Etat (RIE))
 logo: logo_cisirh.png
 external_site: https://pissarho.cisirh.rie.gouv.fr/actualites/ingres/deploiement-de-deux-api-sur-lapplication-ingres

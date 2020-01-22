@@ -1,8 +1,6 @@
 ---
-title: API Référentiel SANDRE Version 1  # nom commercial de l'API
-tagline: L'API Sandre Référentiel version 1 donne accès à l'ensemble des jeux de données de référence diffusé par le Service d'Administration Nationale des Données et Référentiels sur l'Eau (SANDRE)  # une phrase maximum
-owner: OIEau/AFB  # producteur de l'API
-logo: logoSandre.png  # URL d'un logo de l'API
+owner: Office International de l’Eau & Agence française pour la biodiversité # producteur de l'API
+owner_acronym: OIEau & AFB
 stat:
   url:  # adresse à laquelle un nombre d'appels à l'API est publié, en content-type application/json
   label:   # description d'un appel à l'API

@@ -14,8 +14,8 @@ partners:
   - Office national des forêts (ONF)
   - Institut de radioprotection et de sûreté nucléaire (IRSN)
   - Institut Français de Recherche pour l'Exploitation de la Mer (IFREMER)
-owner: Camino (MTES)
-logo: avatar-camino.svg  # URL d'un logo de l'API
+owner: Ministère de la Transition écologique et solidaire
+owner_acronym: MTES
 keywords:
   - mine
   - cadastre

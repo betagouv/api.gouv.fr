@@ -2,7 +2,8 @@
 title: Données temps réel pour les transports
 tagline: Mettre à disposition les données temps réel des transports en commun
 category: Public
-owner: DINUM
+owner: Direction interministérielle du numérique
+owner_acronym: DINUM
 clients:
   - particuliers
   - entreprises

@@ -2,7 +2,8 @@
 title: API Look4 Géoportail
 tagline: la recherche géographique multithématique du Géoportail - adresses, lieux, cadastre, points routiers, etc
 contract: OUVERT sous contrat
-owner: IGN Géoportail
+owner: Institut national de l’information géographique et forestière
+owner_acronym: IGN
 category: Public
 layout: api
 logo: look4-geoportail.jpg

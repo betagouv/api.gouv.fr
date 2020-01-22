@@ -1,8 +1,9 @@
 ---
 title: API Carto
 tagline: "L'accès simplifié aux données de référence : urbanisme, zonages AOC de l'INAO, codes postaux, identifiants de parcelles BD Parcellaire,..."
-external_site : https://apicarto.ign.fr
-owner: IGN Géoportail
+external_site: https://apicarto.ign.fr
+owner: Institut national de l’information géographique et forestière
+owner_acronym: IGN
 contract: OUVERT (sous contrat pour certaines données)
 category: Public
 logo: look4-geoportail.jpg

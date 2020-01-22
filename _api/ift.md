@@ -2,6 +2,7 @@
 title: API Indicateur de Fréquences de Traitements phytopharmaceutiques
 tagline: "Faciliter et fiabiliser votre calcul de l'Indicateur de Fréquence de Traitements (IFT) : anonyme & gratuit !"
 owner: Ministère de l'Agriculture et de l'Alimentation
+owner_acronym: MAA
 category: public
 contract: OUVERT
 logo: maa.png

@@ -12,7 +12,8 @@ clients:
 partners:
   - AIFE
   - DGFiP
-owner: AIFE
+owner: Agence pour l'informatique financière de l'État
+owner_acronym: AIFE
 keywords:
   - Factures
   - Dématérialisation

@@ -28,7 +28,8 @@ partners:
   - AGEFIPH
   - Banque de france
   - ADEME
-owner: Etalab (DINUM)
+owner: Direction interministérielle du numérique
+owner_acronym: DINUM
 keywords:
   - Établissement
   - Entreprise

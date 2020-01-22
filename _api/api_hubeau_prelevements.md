@@ -14,7 +14,8 @@ partners:
   - AFB
   - BRGM
   - BNPE
-owner: AFB / BRGM
+owner: Agence française pour la biodiversité & Bureau de Recherches Géologiques et Minières
+owner_acronym: AFB & BRGM
 keywords:
   - Prélèvements en eau
   - Ressource en eau

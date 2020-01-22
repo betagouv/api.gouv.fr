@@ -13,7 +13,8 @@ partners:
   - La Poste
   - MobileConnect & Moi
   - MSA
-owner: DINUM
+owner: Direction interministérielle du numérique
+owner_acronym: DINUM
 keywords:
   - Authentification
   - Identification

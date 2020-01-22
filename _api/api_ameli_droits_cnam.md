@@ -12,7 +12,8 @@ clients:
   - organismes complémentaires en santé
 partners:
   - CNAM
-owner: Caisse Nationale d'Assurance Maladie (CNAM)
+owner: Caisse Nationale d'Assurance Maladie
+owner_acronym: CNAM
 keywords:
   - Droits à assurance maladie
   - Prise en charge au titre du régime obligatoire

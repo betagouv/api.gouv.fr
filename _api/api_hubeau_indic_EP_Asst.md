@@ -14,7 +14,8 @@ partners:
   - AFB
   - BRGM
   - Observatoire national des services d'eau et d'assainissement
-owner: AFB / BRGM
+owner: Agence française pour la biodiversité & Bureau de Recherches Géologiques et Minières
+owner_acronym: AFB & BRGM
 keywords:
   - Indicateurs
   - Performance

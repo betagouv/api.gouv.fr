@@ -11,7 +11,8 @@ partners:
   - beta.gouv.fr
   - Etalab
   - Institut des Politiques Publiques
-owner: Etalab
+owner: Direction interministérielle du numérique
+owner_acronym: DINUM
 keywords:
   - Impôts
   - Fiscalité

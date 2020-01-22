@@ -1,8 +1,8 @@
 ---
 title: API MENJ
 tagline: "Découvrez les jeux de données publiques ouverts et n’hésitez pas à nous faire connaître vos réutilisations de données et créations de nouveaux services !"
-external_site : https://data.education.gouv.fr/
-owner: Ministère de l'Education Nationale et de la Jeunesse
+owner: Ministère de l'Éducation Nationale et de la Jeunesse
+owner_acronym: MENJ
 contract: OUVERT (sous contrat pour certaines données)
 category: Public
 logo: logo_menj.jpeg

@@ -14,7 +14,8 @@ partners:
   - Etalab
   - INSEE
   - OpenStreetMap
-owner: Etalab (DINUM)
+owner: Direction interministérielle du numérique
+owner_acronym: DINUM
 keywords:
   - Communes
   - Codes postaux
