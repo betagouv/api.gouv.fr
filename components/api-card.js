@@ -28,7 +28,7 @@ const ApiCard = ({ title, url, contract, image, owner, description }) => {
 
           <div className="card-extra">
             <div>
-              <b>Produit par :</b> {owner}
+              <b>{owner.includes("&") ? "Cop" : "P"}roduit par :</b> {owner}
             </div>
           </div>
 
