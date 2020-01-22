@@ -40,7 +40,7 @@ const Header = ({
           <img
             src={`/images/api-logo/${logo}`}
             alt={title}
-            className="ui small bordered image"
+            className="ui tiny bordered image"
           />
           <h1>{title}</h1>
           <div className="sub header">{tagline}</div>
@@ -85,32 +85,20 @@ const Header = ({
 
       <style jsx>{`
         #mission-statement {
-          padding-top: 5%;
-          padding-bottom: 5%;
-          margin-bottom: 2%;
           background: ${colors.backgroundBlue};
         }
 
         #mission-statement h1 {
-          margin: 0;
+          margin: 0.2em;
         }
 
-        #mission-statement h2 {
-          padding: 0.2em 0;
-        }
-
-        #mission-statement .large.ui.secondary.button {
-          margin: 10px;
-        }
-
-        .sub.header .stat {
+         .sub.header .stat {
           color: white;
           font-size: 1.4em;
           margin-top: 1em;
         }
 
         #stat_value {
-          font-size: 2em;
           margin-bottom: 0.7em;
         }
       `}</style>
