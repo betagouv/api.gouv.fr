@@ -48,6 +48,7 @@ visits_2019: 576
 ---
 
 ## API attestation de droits à l'Assurance Maladie
+
 Cette API présente les droits, d’un individu ou d’une famille (enfants rattachés), gérés par le régime général de l’Assurance Maladie.
 
 Elle permet ainsi de connaître pour chaque individu d’une famille, sa caisse gestionnaire et son niveau de couverture (droits de base, droits à une complémentaire santé solidaire, présence d'un médecin traitant). Les données accessibles dépendent du cas d’usage, ainsi les établissements de soins bénéficient également des motifs d’exonération du ticket modérateur et de l’identification du médecin traitant.

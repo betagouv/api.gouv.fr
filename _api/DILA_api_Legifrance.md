@@ -4,12 +4,12 @@ tagline: Réutilisation des données juridiques disponibles sur le site Légifra
 owner: Direction de l'information légale et administrative
 owner_acronym: DILA
 logo: DILA_logo_Simplifie_beta_v3.svg
-clients:  
-  - particuliers  
-  - entreprises 
+clients:
+  - particuliers
+  - entreprises
   - administrations
-partners:  
-keywords: 
+partners:
+keywords:
   - Journal officiel
   - Codes
   - Textes consolidés
@@ -26,7 +26,7 @@ score:
   detail:
     access:
       description: API publique
-      link:  
+      link:
     rate_limiting:
       description: |
         <p>Les appels API sont limités par quotas par jetons d'accès.</p>
@@ -43,9 +43,10 @@ Cette version de l'API est une version bêta. Elle permet de recueillir vos rema
 
 Les données juridiques disponibles via l'API sont celles de la version bêta du site Légifrance. Toutefois, le droit opposable issu du Journal officiel électronique ne sera valablement authentifié que sur le site https://www.legifrance.gouv.fr.
 Principales fonctionnalités:
- - mise à disposition de l'ensemble des jeux de données de Légifrance
- - téléchargement des données et métadonnées
- - nombreuses possibilités de filtrage
- - format JSON
- - recherche avec mots-clés, filtres et critères
- - suggestions de résultats pertinents à partir de mots-clés
+
+- mise à disposition de l'ensemble des jeux de données de Légifrance
+- téléchargement des données et métadonnées
+- nombreuses possibilités de filtrage
+- format JSON
+- recherche avec mots-clés, filtres et critères
+- suggestions de résultats pertinents à partir de mots-clés

@@ -24,7 +24,7 @@ keywords:
 logo: logo-openfisca.svg
 score:
   detail:
-    contact:  
+    contact:
       link: contact@openfisca.fr
     access:
       is_open: true

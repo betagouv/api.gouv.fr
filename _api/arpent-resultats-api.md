@@ -40,6 +40,7 @@ visits_2019: 2050
 Les journaux publient chaque année les résultats aux examens de leur région.
 
 Dans le respect des données personnelles des candidats, ARPENT(résultats) vous propose d'accéder aux données de l'enseignement agricole :
+
 - Calendriers de délibération pour identifier le nombre de candidats potentiellement admis afin de calculer la taille de l'encart sur le journal papier
 - Résultats aux examens des candidats reçus ou admis au rattrapage
 
@@ -52,9 +53,10 @@ L'API Résultats aux examens exposant des **données à caractère personnel**, 
 ### Aller à l'essentiel...
 
 Nous avons choisi d'exposer toutes les ressources utilisées par le service [ARPENT(résultats)](https://ensagri.agriculture.gouv.fr/arpent-resultats/). La [documentation technique](https://ensagri.agriculture.gouv.fr/arpent-resultats-api/swagger-ui.html#/) peut donc paraître assez riche.
-*A noter : certaines ressources relevent d'une authentification renforcée. Les modalités d'accès seront fournies ultérieurement.*
+_A noter : certaines ressources relevent d'une authentification renforcée. Les modalités d'accès seront fournies ultérieurement._
 
 Pour aller à l'essentiel, voici celles qui exposent le plus simplement les calendriers et résultats aux examens :
+
 - Calendriers de délibération :
 
 ```sh
@@ -72,9 +74,11 @@ Curl -X GET --header 'Accept: application/json' 'https://ensagri.agriculture.gou
 ```
 
 - Résultats d'un département :
+
 ```sh
 curl -X GET --header 'Accept: application/json' 'https://ensagri.agriculture.gouv.fr/arpent-resultats-api/api/arpent-resultats/resultats-grand-public/resultats?departement=30'
 ```
+
 ```Json
  {
     "filiere": "Baccalauréat Professionnel",
@@ -85,7 +89,7 @@ curl -X GET --header 'Accept: application/json' 'https://ensagri.agriculture.gou
     "prenoms": "Hermione Célia Julie Laure",
     "resultat": "Admission"
  }
- ```
+```
 
 ### Se lancer !
 

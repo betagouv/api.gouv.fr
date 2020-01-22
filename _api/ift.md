@@ -43,6 +43,7 @@ L'Indicateur de Fréquence de Traitements phytopharmaceutiques (IFT) est un indi
 Si votre application propose une fonction de calcul de l'IFT ? Ou l'édition de bilans d'IFT ? Inutile de dupliquer nos référentiels ou de développer un service de calcul, cette API est faite pour vous !
 
 Elle vous permet de :
+
 - consommer l'ensemble des données de référence à la base du calcul de l'IFT : campagnes culturales, produits, cibles, doses de références,...
 - calculer des IFT au niveau des traitements phytopharmaceutiques
 - certifier des IFT soumis aux contrôles des agents de l'ASP
@@ -54,16 +55,19 @@ Pour plus d'information sur l'IFT, vous pouvez consulter le site institutionnel 
 Dans la majorité des cas, les API vous permettent de requêter et de paginer les résultats sur les données de références :
 
 - Lister les cultures commençant par "ci" :
+
 ```sh
     curl -X GET --header 'Accept: application/json' 'https://alim.agriculture.gouv.fr/ift-api/api/cultures?filtre=ci'
 ```
 
- - Calculer un IFT non certifié : Campagne culturale 2017, Traitement d'herbicide, Citronnier, Produit ACOMAC pour 6 L/HA
+- Calculer un IFT non certifié : Campagne culturale 2017, Traitement d'herbicide, Citronnier, Produit ACOMAC pour 6 L/HA
+
 ```sh
     curl -X GET --header 'Accept: application/json' 'https://alim.agriculture.gouv.fr/ift-api/api/ift/traitement?campagneIdMetier=2017&numeroAmmIdMetier=2090125&cultureIdMetier=1055&typeTraitementIdMetier=T21&dose=6'
 ```
 
- - Calculer un IFT certifié car soumis à un contrôle : Campagne culturale 2017, Traitement d'herbicide, Citronnier, Produit ACOMAC pour 6 L/HA
+- Calculer un IFT certifié car soumis à un contrôle : Campagne culturale 2017, Traitement d'herbicide, Citronnier, Produit ACOMAC pour 6 L/HA
+
 ```sh
     curl -X GET --header 'Accept: application/json' 'https://alim.agriculture.gouv.fr/ift-api/api/ift/traitement/certifie?campagneIdMetier=2017&numeroAmmIdMetier=2090125&cultureIdMetier=1055&typeTraitementIdMetier=T21&dose=6'
 ```
@@ -73,6 +77,7 @@ Dans la majorité des cas, les API vous permettent de requêter et de paginer le
 Le ministère en charge de l’agriculture met à votre disposition un environnement de pré-production pour tester vos développements. Il est accessible à l’adresse : [https://alim-pprd.agriculture.gouv.fr/ift-api/swagger-ui.html](https://alim-pprd.agriculture.gouv.fr/ift-api/swagger-ui.html)
 
 - Entrez dans la matrice :
+
 ```sh
     curl -X GET --header 'Accept: application/json' 'https://alim-pprd.agriculture.gouv.fr/ift-api/api/hello'
 ```

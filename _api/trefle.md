@@ -1,7 +1,7 @@
 ---
-title: Trèfle  # nom commercial de l'API
-tagline: Moteur de financement de formations  # une phrase maximum
-owner: Pôle emploi  # producteur de l'API
+title: Trèfle # nom commercial de l'API
+tagline: Moteur de financement de formations # une phrase maximum
+owner: Pôle emploi # producteur de l'API
 keywords: # utilisé dans la recherche
   - moteur de financement
   - formation
@@ -26,4 +26,3 @@ L’API est accessible pour les demandeurs d’emploi et les salariés du secteu
 Cette API est produite et mise en production par le service La Bonne Formation.
 
 Le code source est opensource est disponible ici : https://git.beta.pole-emploi.fr/open-source/trefle
-

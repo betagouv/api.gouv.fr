@@ -1,18 +1,18 @@
 ---
 title: Offres d'emploi
-tagline: Accédez aux offres d'emploi disponibles sur pole-emploi.fr  
-owner: Pôle emploi  
-category: Public  
-contract: OUVERT sous contrat  
-logo: logo_pole_emploi.jpg  
+tagline: Accédez aux offres d'emploi disponibles sur pole-emploi.fr
+owner: Pôle emploi
+category: Public
+contract: OUVERT sous contrat
+logo: logo_pole_emploi.jpg
 external_site: https://www.emploi-store-dev.fr/portail-developpeur-cms/home/catalogue-des-api/documentation-des-api/api/api-offres-demploi-v2.html
-clients:  
-  - particuliers  
-  - entreprises  
+clients:
+  - particuliers
+  - entreprises
   - startups
   - collectivités territoriales
-partners:  
-  - Pôle emploi  
+partners:
+  - Pôle emploi
 keywords:
   - Offres
   - Emploi
@@ -34,8 +34,9 @@ L'API Offres d'emploi restitue en temps réel les offres d'emploi actives collec
 Elle vous permet de développer des solutions personnalisées de recherche d'emploi pour votre site ou votre application.
 
 Trois ressources sont exposées pour :
+
 - Réaliser une recherche d'offres à partir de critères de sélection et récupérer une liste de résultats paginée
-- Consulter le détail d'une offre (intitulé, lieu,  entreprise, contrat...)
+- Consulter le détail d'une offre (intitulé, lieu, entreprise, contrat...)
 - Restituer les référentiels utilisés par l'API Offres d'emploi (Lieu, Secteurs d'activités, contrats, formations, métiers...)
 
 L'API Offres d'emploi offre la possibilité de filtrer sur plusieurs métiers, communes, départements, contrats.

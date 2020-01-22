@@ -33,8 +33,9 @@ visits_2019: 1346
 L'api charge des données théoriques de transport en commun (au format GTFS) ainsi que des données temps réel (au format GTFS-RT) et expose ces données consolidées au format GTFS-RT ainsi que SIRI-LITE.
 
 L'api est utilisée sur le site du [Point d’Accès National aux données de transport](https://transport.data.gouv.fr/) pour permettre de:
-* convertir les données en format GTFS-RT vers le format siri-lite ;
-* limiter la charge sur les serveurs fournisseurs de données.
+
+- convertir les données en format GTFS-RT vers le format siri-lite ;
+- limiter la charge sur les serveurs fournisseurs de données.
 
 [Une documentation](https://doc.transport.data.gouv.fr/producteurs/temps-reel-des-transports-en-commun) est disponible pour plus d'information sur les données temps réel.
 

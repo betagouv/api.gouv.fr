@@ -21,7 +21,7 @@ keywords:
   - Taxi
 score:
   detail:
-    contact:  
+    contact:
       link: https://le.taxi/join.html
     access:
       link: http://le.taxi/join.html
