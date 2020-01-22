@@ -25,6 +25,7 @@ score:
       link: http://professionnels.ign.fr/ign/contrats
     contact:
       link: contact.geoservices@ign.fr
+visits_2019: 1266
 ---
 
 # API Look4 Géoportail

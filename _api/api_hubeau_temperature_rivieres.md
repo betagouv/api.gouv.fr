@@ -30,6 +30,7 @@ score:
       link: newshubeau@brgm.fr
     doc_tech:
       link: https://hubeau.eaufrance.fr/api/v1/temperature/api-docs
+visits_2019: 2868
 ---
 
 ### Description fonctionnelle de l'API Température en continu des cours d'eau

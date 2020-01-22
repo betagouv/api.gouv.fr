@@ -15,6 +15,7 @@ score:
       link: donnees-dila@dila.gouv.fr
     doc_tech:
       external: http://api.dila.fr
+visits_2019: 1332
 ---
 
 ### Contenu des données

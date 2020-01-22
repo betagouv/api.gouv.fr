@@ -31,6 +31,7 @@ score:
       link: arpent-resultat.sg@agriculture.gouv.fr
     doc_tech:
       link: https://ensagri.agriculture.gouv.fr/arpent-resultats-api/v2/api-docs?group=arpent-resultats
+visits_2019: 2050
 ---
 
 ### Pourquoi ?

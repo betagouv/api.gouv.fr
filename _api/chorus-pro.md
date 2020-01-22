@@ -27,6 +27,7 @@ score:
       link: api-choruspro.aife@finances.gouv.fr
     doc_tech:
       external: https://communaute.chorus-pro.gouv.fr/documentation/api/
+visits_2019: 40978
 ---
 
 ## Qu’est-ce que Chorus Pro ?

@@ -20,6 +20,7 @@ score:
       link: http://rva.data.rennes-metropole.fr/inscription.php
     doc_tech:
       external: http://rva.data.rennes-metropole.fr/documentation.php
+visits_2019: 160
 ---
 
 ## Présentation

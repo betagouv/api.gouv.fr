@@ -39,6 +39,7 @@ score:
       link:  # URL d'une page qui affiche le statut
       description: |
         <p>L'OIEau s’engage à ce que ce service soit accessible à 95% et l'OIEau s’engage à améliorer progressivement ce rendement.</p>
+visits_2019: 122
 ---
 
 ## Description de l'API

@@ -33,6 +33,7 @@ score:
       link: retours-legifrance-modernise@dila.gouv.fr
     doc_tech:
       external: https://developer.aife.economie.gouv.fr
+visits_2019: 0
 ---
 
 Afin de faciliter la réutilisation des données juridiques, la DILA met à disposition une API via [le portail PISTE](https://developer.aife.economie.gouv.fr/). Cette API est accessible gratuitement, après inscription.

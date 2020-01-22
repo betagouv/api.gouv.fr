@@ -29,6 +29,7 @@ score:
       is_open: true
     doc_tech:
       external: https://openfisca.org/doc/openfisca-web-api/
+visits_2019: 1982
 ---
 
 ## Calculer le droit

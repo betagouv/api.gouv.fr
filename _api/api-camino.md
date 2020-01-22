@@ -38,6 +38,7 @@ score:
       link: camino@beta.gouv.fr
     doc_tech:
       external: https://api.camino.beta.gouv.fr
+visits_2019: 41
 ---
 
 L'__API Camino__ offre un accès à l'ensemble des données publiques administratives relatives aux projets miniers, sur l'ensemble du territoire national sur lequel l'Etat dispose de la compétence minière, dans un format ouvert et réutilisable. 

@@ -13,7 +13,8 @@ clients:
 partners:
   - DGFiP
   - CNAF
-owner: Incubateur de services numériques (DINUM)
+owner: Direction interministérielle du numérique
+owner_acronym: DINUM
 keywords:
   - Impots
   - Quotient Familial
@@ -40,6 +41,7 @@ score:
       link: https://status.particulier.api.gouv.fr
       description: |
         <p>La DINUM s’engage à ce que le Service soit accessible à 95% et la DINUM s’engage à améliorer progressivement ce rendement.</p>
+visits_2019: 8642
 ---
 
 ## Vos démarches sans pièces justificatives

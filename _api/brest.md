@@ -22,6 +22,7 @@ score:
       link: mobilites@brest-metropole.fr
     doc_tech:
       external: https://geo.pays-de-brest.fr/donnees/Documents/Public/DocWebServicesTransport.pdf
+visits_2019: 450
 ---
 
 ## Description de l'API

@@ -38,6 +38,7 @@ score:
     rate_limiting:
       description: |
         <p>L'API est disponible à hauteur de 10 appels par seconde et par adresse IP.</p>
+visits_2019: 26602
 ---
 
 L' __API Géo__ est une boîte-à-outils __facile à prendre en main__ pour rendre vos applications et bases de données plus intelligentes, en terme de positionnement et de connaissance des territoires.

@@ -26,6 +26,7 @@ score:
       link: https://www.emploi-store-dev.fr/portail-developpeur/detailapicatalogue/57909ba23b2b8d019ee6cc5e
     doc_tech:
       external: https://www.emploi-store-dev.fr/portail-developpeur-cms/home/catalogue-des-api/documentation-des-api/api/api-infotravail-v1.html
+visits_2019: 953
 ---
 
 ## Description de l'API

@@ -29,6 +29,7 @@ score:
       link: newshubeau@brgm.fr
     doc_tech:
       link: https://hubeau.eaufrance.fr/api/v1/qualite_nappes/api-docs
+visits_2019: 381
 ---
 
 ### Description fonctionnelle de l'API Qualité des nappes d'eau souterraine

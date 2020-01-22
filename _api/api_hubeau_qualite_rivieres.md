@@ -29,6 +29,7 @@ score:
       link: newshubeau@brgm.fr
     doc_tech:
       link: https://hubeau.eaufrance.fr/api/v1/qualite_rivieres/api-docs
+visits_2019: 509
 ---
 
 ### Description fonctionnelle de l'API Qualité des cours d'eau

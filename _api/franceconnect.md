@@ -28,6 +28,7 @@ score:
       link: support.partenaires@franceconnect.gouv.fr
     doc_tech:
       external: https://partenaires.franceconnect.gouv.fr/fcp/fournisseur-service
+visits_2019: 120883
 ---
 
 ## Qu'est-ce que FranceConnect ?
