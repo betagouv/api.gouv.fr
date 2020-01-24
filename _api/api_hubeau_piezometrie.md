@@ -36,6 +36,7 @@ score:
       link: newshubeau@brgm.fr
     doc_tech:
       link: https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/api-docs
+visits_2019: 328
 ---
 
 ### Description fonctionnelle de l'API Piézométrie

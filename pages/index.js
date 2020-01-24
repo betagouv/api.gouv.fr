@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import getConfig from "next/config";
+import { orderBy } from "lodash";
 
 import withErrors from "../components/hoc/with-errors";
 
@@ -54,7 +55,9 @@ function Home({ q, filter, apiList }) {
         <div className="ui container">
           <div className="ui three stackable cards">
             {filteredList.length > 0 ? (
-              filteredList.map(api => <ApiCard key={api.title} {...api} />)
+              orderBy(filteredList, "visits_2019", "desc").map(api => (
+                <ApiCard key={api.title} {...api} />
+              ))
             ) : (
               <div className="ui big warning message">
                 <div className="header">Aucune API n’a pu être trouvée</div>

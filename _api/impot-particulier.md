@@ -35,6 +35,7 @@ score:
       link: https://signup.api.gouv.fr/api-impot-particulier
     doc_tech:
       link: https://particulier.api.gouv.fr/swagger_api_impots_particulier.yaml
+visits_2019: 1324
 ---
 
 ## Récupérez les informations fiscales nécessaires à votre téléservice directement auprès de la DGFiP

@@ -27,6 +27,7 @@ score:
       link: newshubeau@brgm.fr
     doc_tech:
       link: https://hubeau.eaufrance.fr/api/v1/prelevements/api-docs
+visits_2019: 55
 ---
 
 ### Description fonctionnelle de l'API Prélèvements en eau

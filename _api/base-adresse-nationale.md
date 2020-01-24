@@ -36,6 +36,7 @@ score:
       description: |
         <p>L'API unitaire est disponible à hauteur de 10 appels par seconde et par adresse IP.</p>
         <p>Le géocodage de masse (CSV) est disponible à hauteur d'un appel simultané par adresse IP.</p>
+visits_2019: 6460
 ---
 
 Pour que les services d'urgence arrivent au bon endroit, pour vous permettre de réaliser une analyse cartographique en quelques clics ou encore pour que les opérateurs publics et privés coordonnent mieux leurs chantiers, ce référentiel, véritable enjeu de souveraineté pour la France, est la première alliance entre l'État et la société civile.

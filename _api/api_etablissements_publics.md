@@ -23,6 +23,7 @@ score:
       link: contact@beta.gouv.fr
     doc_tech:
       link: https://etablissements-publics.api.gouv.fr/v3/definitions.yaml
+visits_2019: 2089
 ---
 
 ## Annuaire des établissements publics de l'administration

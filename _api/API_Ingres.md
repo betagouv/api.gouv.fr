@@ -34,6 +34,7 @@ score:
       link: https://api.cisirh.rie.gouv.fr/ingres/nomenclatures
     doc_tech:
       external: http://pissarho.cisirh.rie.gouv.fr/sites/default/files/2019-10/INGRES-PIL-API%20Nomenclatures%20Ingres_%20%280_7%29.pptx
+visits_2019: 127
 ---
 L’API Nomenclature permet d’accéder à toutes les nomenclatures noyau gérées dans l’application Ingres du CISIRH, soit plus de 350 nomenclatures accessibles.
 

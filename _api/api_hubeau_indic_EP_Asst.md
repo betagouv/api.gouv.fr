@@ -29,6 +29,7 @@ score:
       link: newshubeau@brgm.fr
     doc_tech:
       link: https://hubeau.eaufrance.fr/api/v0/indicateurs_services/api-docs
+visits_2019: 430
 ---
 
 ### Description fonctionnelle de l'API Indicateurs eau potable et assainissement

@@ -43,6 +43,7 @@ score:
       link: https://stats.uptimerobot.com/3wEv6hppvv
       description: |
         <p>Une supervision du service en temps réel est disponible à cette adresse.</p>
+visits_2019: 576
 ---
 
 ## API attestation de droits à l'Assurance Maladie

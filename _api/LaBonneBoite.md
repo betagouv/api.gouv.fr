@@ -33,6 +33,7 @@ score:
       link: https://www.emploi-store-dev.fr/portail-developpeur/detailapicatalogue/57909ba23b2b8d019ee6cc5f
     doc_tech:
       external: https://www.emploi-store-dev.fr/portail-developpeur-cms/home/catalogue-des-api/documentation-des-api/api/api-la-bonne-boite-v1.html
+visits_2019: 2397
 ---
 
 La Bonne Boite cible les entreprises ayant des perspectives d'embauche élevées et permet d’être plus efficace dans l’envoi de candidatures spontanées. Ce ciblage est obtenu par l'analyse de millions de recrutements sur toutes les entreprises françaises. L’API La Bonne Boite permet de récupérer la liste des entreprises classées par potentiel d'embauche pour un métier (code ROME) et/ou activité (code NAF) donné, pour une localisation donnée.
