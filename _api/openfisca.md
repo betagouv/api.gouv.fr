@@ -11,7 +11,8 @@ partners:
   - beta.gouv.fr
   - Etalab
   - Institut des Politiques Publiques
-owner: Etalab
+owner: Direction interministérielle du numérique
+owner_acronym: DINUM
 keywords:
   - Impôts
   - Fiscalité
@@ -23,7 +24,7 @@ keywords:
 logo: logo-openfisca.svg
 score:
   detail:
-    contact:  
+    contact:
       link: contact@openfisca.fr
     access:
       is_open: true

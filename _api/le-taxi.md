@@ -14,13 +14,14 @@ partners:
   - Tako
   - Taxiloc
   - Taxis Rennais
-owner: Etalab (DINUM) &amp; DGITM (Ministère chargé des transports)
+owner: Direction interministérielle du numérique & Direction générale des Infrastructures, des Transports et de la Mer
+owner_acronym: DINUM & DGITM
 keywords:
   - Transport
   - Taxi
 score:
   detail:
-    contact:  
+    contact:
       link: https://le.taxi/join.html
     access:
       link: http://le.taxi/join.html

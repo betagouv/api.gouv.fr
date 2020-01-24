@@ -1,12 +1,13 @@
 ---
 title: API Ingres
 tagline: Récupérez l'ensemble des référentiels utilisés par les SIRH de la Fonction Publique d'Etat
-owner: CISIRH - Centre Interministériel des Systèmes d'Information relatifs aux Ressources Humaines 
+owner: Centre Interministériel des Systèmes d'Information relatifs aux Ressources Humaines
+owner_acronym: CISIRH
 contract: OUVERT (utilisation restreinte au Réseau Interministériel de l'Etat (RIE))
 logo: logo_cisirh.png
 external_site: https://pissarho.cisirh.rie.gouv.fr/actualites/ingres/deploiement-de-deux-api-sur-lapplication-ingres
 stat:
-  url: 
+  url:
   label: Appels
   lastXdays: 30
 clients:
@@ -16,7 +17,7 @@ clients:
   - ministères
 partners:
   - CISIRH -- BSRMRH > Application Ingres
-  - CISIRH -- Département Innovation > Application El Greco 
+  - CISIRH -- Département Innovation > Application El Greco
   - CISIRH -- BSRMRH > Application RenoiRH (Self Mobile)
 keywords:
   - CISIRH
@@ -25,10 +26,10 @@ keywords:
   - RCC
   - Référentiels de Classification Centrale
   - Nomenclatures
-  
+
 score:
   detail:
-    contact:  
+    contact:
       link: nicolas.augereau@finances.gouv.fr
     access:
       link: https://api.cisirh.rie.gouv.fr/ingres/nomenclatures
@@ -36,9 +37,11 @@ score:
       external: http://pissarho.cisirh.rie.gouv.fr/sites/default/files/2019-10/INGRES-PIL-API%20Nomenclatures%20Ingres_%20%280_7%29.pptx
 visits_2019: 127
 ---
+
 L’API Nomenclature permet d’accéder à toutes les nomenclatures noyau gérées dans l’application Ingres du CISIRH, soit plus de 350 nomenclatures accessibles.
 
 ## Conditions Générales d'Utilisation:
+
 Le CISIRH met à disposition cette API exploitable accessible uniquement par les ministères ou institutions ayant accès au Réseau Interministériel de l'Etat (RIE).
 Son utilisation par une application tierce ne saurait engager la responsabilité du CISIRH, par exemple, en termes de disponibilité.
 
@@ -59,88 +62,101 @@ Ces référentiels couvrent les domaines fonctionnels suivants:
 ### Référentiels de classification centraux (RCC)
 
 #### Nomenclatures RCC:
-* Catégories
-* Corps
-* Grade
-* Emplois fonctionnels
-* Groupe dans un emploi fonctionnel
-* Grilles
-* Echelons
-* Indices
-* Spécialités
-* ...
+
+- Catégories
+- Corps
+- Grade
+- Emplois fonctionnels
+- Groupe dans un emploi fonctionnel
+- Grilles
+- Echelons
+- Indices
+- Spécialités
+- ...
 
 #### Nomenclatures militaires:
-* Grades militaires
-* Hiérarchie
-* Appellations
-* ...
+
+- Grades militaires
+- Hiérarchie
+- Appellations
+- ...
 
 ### Nomenclatures du noyau RH FPE:
-* Ministères et institutions de la république
-* Modalités de service
-* Positions
-* Pays
-* Régions
-* Départements
-* ...
+
+- Ministères et institutions de la république
+- Modalités de service
+- Positions
+- Pays
+- Régions
+- Départements
+- ...
 
 ### Nomenclatures Fichier GEST
-* Annexes 14/15
-* Codes BJ
-* Codes taux
-* PABA22
-* ...
+
+- Annexes 14/15
+- Codes BJ
+- Codes taux
+- PABA22
+- ...
 
 ### Nomenclatures FIP
-* Code administration
-* Code affectation
-* ...
+
+- Code administration
+- Code affectation
+- ...
 
 ### Nomenclatures externes
-* ADAGE
-* Code NNE
-* Hexaposte
-* Tabank/SEPA
-* Programmes/Ministères
-* Centre de coût
-* Centre de profit
-* Centre financier
-* ...
+
+- ADAGE
+- Code NNE
+- Hexaposte
+- Tabank/SEPA
+- Programmes/Ministères
+- Centre de coût
+- Centre de profit
+- Centre financier
+- ...
 
 La liste exhaustive est trop longue pour être listée ici, vous pouvez y accéder via cet appel à l'API:
-https://api.cisirh.rie.gouv.fr/ingres/nomenclatures 
+https://api.cisirh.rie.gouv.fr/ingres/nomenclatures
 
 ## Principe d'utilisation et exemples:
 
 ### Liste des référentiels gérés dans Ingres:
-* https://api.cisirh.rie.gouv.fr/ingres/nomenclatures
+
+- https://api.cisirh.rie.gouv.fr/ingres/nomenclatures
 
 ### Extraction de contenu (quel que soit le référentiel) :
-* https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/[nomenclature]	=> Extraction de tous les codes de la nomenclature désirée
-* https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/[nomenclature]/[code]	=> Extraction d’un seul code dans la nomenclature désirée
+
+- https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/[nomenclature] => Extraction de tous les codes de la nomenclature désirée
+- https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/[nomenclature]/[code] => Extraction d’un seul code dans la nomenclature désirée
 
 ### Référentiel des Catégories statutaires :
-* https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/CATG_STATUTAIRE
+
+- https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/CATG_STATUTAIRE
 
 ### Référentiel « Ministères & institutions de la république » :
-* https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/MINISTERE
-* https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/MINISTERE/MI200 
-* https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/MINISTERE/MI200/corps
-* https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/MINISTERE/MI200/Corps?categorie=1
+
+- https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/MINISTERE
+- https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/MINISTERE/MI200
+- https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/MINISTERE/MI200/corps
+- https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/MINISTERE/MI200/Corps?categorie=1
 
 ### Référentiel des Corps:
-* https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/CORPS 
-* https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/CORPS/00089  
-* https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/CORPS/00089/grades 
-* https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/CORPS/?categorie=1  
+
+- https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/CORPS
+- https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/CORPS/00089
+- https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/CORPS/00089/grades
+- https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/CORPS/?categorie=1
 
 ### Référentiel des Grades:
-* https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/GRADE
-* https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/GRADE/00188 
+
+- https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/GRADE
+- https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/GRADE/00188
 
 ### Référentiel des Grilles:
-* https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/GRILLE_IND 
-* https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/GRILLE_IND/00028
-* https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/GRILLE_IND/00028/echelons
-* https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/GRILLE_IND/00028/echelons?rang=2  
+
+- https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/GRILLE_IND
+- https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/GRILLE_IND/00028
+- https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/GRILLE_IND/00028/echelons
+- https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/GRILLE_IND/00028/echelons?rang=2

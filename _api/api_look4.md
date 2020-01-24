@@ -2,7 +2,8 @@
 title: API Look4 Géoportail
 tagline: la recherche géographique multithématique du Géoportail - adresses, lieux, cadastre, points routiers, etc
 contract: OUVERT sous contrat
-owner: IGN Géoportail
+owner: Institut national de l’information géographique et forestière
+owner_acronym: IGN
 category: Public
 layout: api
 logo: look4-geoportail.jpg
@@ -29,7 +30,8 @@ visits_2019: 1266
 ---
 
 # API Look4 Géoportail
-##  recherche géographique multithématique - adresses, lieux, cadastre, points routiers etc
+
+## recherche géographique multithématique - adresses, lieux, cadastre, points routiers etc
 
 Look4 est une API de recherche proposée par l’IGN qui fournit une interface unique à l’utilisateur pour de multiples sources de données. Look4 sert les besoins du site Géoportail, mais est disponible pour tout site ou application.
 
@@ -45,6 +47,7 @@ Les sources de données proposées par Look4 sont de deux natures :
 Ces sources s’enrichissent progressivement : il est possible de solliciter l’IGN (en écrivant à l’adresse contact.geoservices@ign.fr) pour en rajouter de nouvelles.
 
 ## Comment s’utilise Look4 ?
+
 Look4 propose à l’utilisateur une API REST en JSON qui fournit des méthodes pour :
 
 - connaître les données mises à disposition de l’utilisateur (API de découverte) ;
@@ -55,7 +58,6 @@ L’accès à Look4 se fait par les URL suivantes : https://wxs.ign.fr/VOTRE_CLE
 La documentation complète de l’API est disponible à la page : https://ignf.github.io/look4/latest/jsdoc
 
 Look4 est disponible pour test sur la clé “beta” de l’IGN : https://wxs.ign.fr/beta/look4/user/discover et https://wxs.ign.fr/beta/look4/user/search. Une clé d’accès pérenne aux ressources de Look4 peut, comme pour l’accès à l’ensemble des ressources du Géoportail, être obtenue sur l’Espace professionnel (http://professionnels.ign.fr).
-
 
 ## Look4 - les conditions d'utilisation de Look4 et de ses ressources
 
@@ -76,16 +78,17 @@ Les ressources publiées sont découvrables via http://wxs.ign.fr/look4/user/dis
 - **voies_nommees** : un index des rues de France par région, commune, département, utilisable par exemple dans des formulaires en ligne
 
 ## Look4 - l’API de découverte
+
 L'API de découverte de Look4 permet à l’utilisateur de faire une série d’opérations permettant de découvrir les contenus proposés. Il propose en particulier les possibilités suivantes :
 
 - récupérer la liste des index existants : https://wxs.ign.fr/look4/user/discover/
 - obtenir le détail d’un index : http://wxs.ign.fr/look4/user/discover/&lt;id&gt; (“id” étant l’identifiant d’un index)
-Exemple : https://wxs.ign.fr/look4/user/discover/voies_nommees retourne la description et les types de données de l’index :
+  Exemple : https://wxs.ign.fr/look4/user/discover/voies_nommees retourne la description et les types de données de l’index :
 
 - obtenir la description des types de données contenus dans un index : http://wxs.ign.fr/look4/user/discover/&lt;id&gt;/type (“id” étant l’identifiant d’un index)
-Exemple : https://wxs.ign.fr/look4/user/discover/voies_nommees/type
+  Exemple : https://wxs.ign.fr/look4/user/discover/voies_nommees/type
 - obtenir le détail d’un type de données : https://wxs.ign.fr/look4/user/discover/type/&lt;id&gt; (“id” étant l’identifiant d’un type de données)
-Exemple : https://wxs.ign.fr/look4/user/discover/type/route
+  Exemple : https://wxs.ign.fr/look4/user/discover/type/route
 
 Pour toutes les requêtes possibles, voir https://ignf.github.io/look4/latest/jsdoc/#api-Decouverte
 
@@ -94,14 +97,15 @@ Important : la liste renvoie l’ensemble des index existants. Un index n’est 
 NB : l’API de découverte de Look4 ne nécessite pas de clé d’accès.
 
 ## Look4 - l’API de recherche
+
 L'API de recherche de Look4 permet aux utilisateurs de lancer des recherches dans les différents index disponibles, avec plusieurs méthodes et options.
 
 Lors d’une requête au service, l’utilisateur doit préciser les différents paramètres de sa recherche pour obtenir les réponses recherchées, tels que :
 
- - Le ou les index à utiliser (indices). L’utilisateur précise le (ou les) index dans lesquels il veut effectuer la recherche.
- - La méthode de recherche (method). Look4 propose 2 types de recherche :
+- Le ou les index à utiliser (indices). L’utilisateur précise le (ou les) index dans lesquels il veut effectuer la recherche.
+- La méthode de recherche (method). Look4 propose 2 types de recherche :
 - L’auto-complétion (prefix) : cette méthode propose des résultats à partir d’une recherche incomplète (par exemple au fur et à mesure de la saisie utilisateur dans un champ de recherche sur une page web). Dans le cas d’une recherche d’auto-complétion, le matching se fait sur le début des mots. Cette méthode n’accepte pas de faute de frappe ou d’orthographe ;
 - la recherche standard ("fuzzy") : l’utilisateur saisit la totalité de sa recherche. Look4 cherche alors le ou les termes saisis indépendamment ou ensemble, avec une tolérance aux fautes d’orthographe.
--  Le nombre de résultats (nb), optionnel, permet de préciser le nombre maximum de résultats retournés, avec un maximum de 200. En l’absence de ce paramètre, le nombre de résultats est de 20.
+- Le nombre de résultats (nb), optionnel, permet de préciser le nombre maximum de résultats retournés, avec un maximum de 200. En l’absence de ce paramètre, le nombre de résultats est de 20.
 
 La liste complète des paramètres est accessible dans la documentation.

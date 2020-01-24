@@ -13,7 +13,8 @@ partners:
   - La Poste
   - MobileConnect & Moi
   - MSA
-owner: DINUM
+owner: Direction interministérielle du numérique
+owner_acronym: DINUM
 keywords:
   - Authentification
   - Identification
@@ -43,9 +44,9 @@ FranceConnect fournit au service en ligne l'identité vérifiée d'une personne 
 
 FranceConnect cible les partenaires suivants :
 
-* Fournisseurs de services : Vous proposez des services en ligne aux usagers.
-* Fournisseurs d'identité : Vous garantissez l’identification et l’authentification d’un usager.
-* Fournisseurs de données : Vous transmettez des données aux fournisseurs de service suite au consentement de l'usager.
+- Fournisseurs de services : Vous proposez des services en ligne aux usagers.
+- Fournisseurs d'identité : Vous garantissez l’identification et l’authentification d’un usager.
+- Fournisseurs de données : Vous transmettez des données aux fournisseurs de service suite au consentement de l'usager.
 
 ## Événement FranceConnect
 
@@ -70,6 +71,7 @@ FranceConnect cible les partenaires suivants :
 ### Test du point de vue fournisseur de service
 
 L'interface qui est en ligne peut être installée sur votre poste de travail, ce qui vous permettra de voir :
+
 - les échanges entre FranceConnect et le FS
 - les échanges entre le FS et l'API de test Impôts Particulier
 - les échanges entre l'API de test Impôts Particulier et FranceConnect

@@ -1,8 +1,9 @@
 ---
 title: API Carto
 tagline: "L'accès simplifié aux données de référence : urbanisme, zonages AOC de l'INAO, codes postaux, identifiants de parcelles BD Parcellaire,..."
-external_site : https://apicarto.ign.fr
-owner: IGN Géoportail
+external_site: https://apicarto.ign.fr
+owner: Institut national de l’information géographique et forestière
+owner_acronym: IGN
 contract: OUVERT (sous contrat pour certaines données)
 category: Public
 logo: look4-geoportail.jpg
@@ -80,7 +81,6 @@ Récupération des communes associées à un code postal donné
 L'utilisation d'API Carto - module codes postaux est ouverte.
 Les données accessibles via API Carto - module codes postaux sont sous licence ouverte.
 
-
 # API Carto - module cadastre
 
 L'API Carto - module cadastre permet d'obtenir les les informations suivantes issues de la BD PARCELLAIRE :
@@ -116,14 +116,13 @@ Pour obtenir une clé Geoportail, vous devez vous connecter au site : http://pro
 - bdpv_LOCALISANT
 - bdpv_PARCELLE
 
-Les dates de mise à jour de la BD PARCELLAIRE sont accessibles sur le [Géoportail](https://www.geoportail.gouv.fr/carte?c=3.935401397390178,46.560407124677226&z=6&l0=ORTHOIMAGERY.ORTHOPHOTOS::GEOPORTAIL:OGC:WMTS(0.39;h)&l1=CADASTRALPARCELS.GRAPHE::GEOPORTAIL:OGC:WMS(1)&permalink=yes) ainsi que via des web services :
+Les dates de mise à jour de la BD PARCELLAIRE sont accessibles sur le [Géoportail](<https://www.geoportail.gouv.fr/carte?c=3.935401397390178,46.560407124677226&z=6&l0=ORTHOIMAGERY.ORTHOPHOTOS::GEOPORTAIL:OGC:WMTS(0.39;h)&l1=CADASTRALPARCELS.GRAPHE::GEOPORTAIL:OGC:WMS(1)&permalink=yes>) ainsi que via des web services :
 https://wxs.ign.fr/metadata/geoportail/v/wms?service=WMS&request=GetCapabilities
 https://wxs.ign.fr/metadata/geoportail/wfs?service=WFS&request=GetCapabilities
 
-
 L'utilisation d'API Carto - module cadastre est gratuite pour l'Etat et ses EPA, les collectivités, les EPCI à fiscalité propre et les SDIS ([décision n°2018/241](http://www.ign.fr/institut/sites/all/files/2018.241_tarification_geoservices_ign.pdf) de l'institut).
 Pour les autres utilisateurs, et dans un contexte d'usage grand public, l'utilisation est gratuite dans la limite de 2M requêtes par an (10 000 pour un usage professionnel).
-Les droits et obligations liés à la réutilisation des ressources en ligne sous licence IGN sont détaillées [ici]( http://professionnels.ign.fr/doc/CGU-ressourcesgeoportail.pdf)
+Les droits et obligations liés à la réutilisation des ressources en ligne sous licence IGN sont détaillées [ici](http://professionnels.ign.fr/doc/CGU-ressourcesgeoportail.pdf)
 
 # API CARTO - module urbanisme du Géoportail de l'urbanisme (GPU)
 

@@ -5,7 +5,8 @@ external_site: https://api.insee.fr
 clients:
   - collectivités
   - ministères
-owner: INSEE
+owner: Institut national de la statistique et des études économiques
+owner_acronym: INSEE
 keywords:
   - Entreprise
   - Etablissements

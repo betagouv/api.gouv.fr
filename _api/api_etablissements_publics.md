@@ -1,7 +1,8 @@
 ---
 title: Annuaire des établissements publics de l'administration
 contract: OUVERT
-owner: beta.gouv.fr (DINUM)
+owner: Direction interministérielle du numérique
+owner_acronym: DINUM
 layout: api
 logo: logo-generique-startup-carre.jpg
 clients:

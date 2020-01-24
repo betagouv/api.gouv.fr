@@ -14,7 +14,8 @@ partners:
   - Etalab
   - INSEE
   - OpenStreetMap
-owner: Etalab (DINUM)
+owner: Direction interministérielle du numérique
+owner_acronym: DINUM
 keywords:
   - Communes
   - Codes postaux
@@ -41,13 +42,13 @@ score:
 visits_2019: 26602
 ---
 
-L' __API Géo__ est une boîte-à-outils __facile à prendre en main__ pour rendre vos applications et bases de données plus intelligentes, en terme de positionnement et de connaissance des territoires.
+L' **API Géo** est une boîte-à-outils **facile à prendre en main** pour rendre vos applications et bases de données plus intelligentes, en terme de positionnement et de connaissance des territoires.
 
 Grâce à elle vous pouvez notamment :
 
-* Rechercher des communes par nom, code postal ou coordonnées géographiques
-* Connaître les groupements auxquels appartient une commune, ainsi que leurs compétences _(bientôt)_
-* Savoir si une parcelle appartient à certains zonages (appellations d'origine, quartiers prioritaires…) _(bientôt)_
+- Rechercher des communes par nom, code postal ou coordonnées géographiques
+- Connaître les groupements auxquels appartient une commune, ainsi que leurs compétences _(bientôt)_
+- Savoir si une parcelle appartient à certains zonages (appellations d'origine, quartiers prioritaires…) _(bientôt)_
 
 Les différentes fonctionnalités arrivant progressivement, restez informés en suivant cette page ou [en nous contactant](mailto:geo@api.gouv.fr).
 
@@ -60,7 +61,7 @@ France métropolitaine et [DROM](https://fr.wikipedia.org/wiki/D%C3%A9partement_
 #### Coordonnées géographiques
 
 Cette API utilise exclusivement des coordonnées géographiques [WGS-84](https://fr.wikipedia.org/wiki/WGS_84).
-Elle peut renvoyer des données au format JSON ou  [GeoJSON](http://geojson.org).
+Elle peut renvoyer des données au format JSON ou [GeoJSON](http://geojson.org).
 
 #### Qui peut utiliser cette API ?
 
