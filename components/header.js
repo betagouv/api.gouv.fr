@@ -117,20 +117,20 @@ const Header = () => {
         }
 
         .nav .external {
-          display: inline-flex;
-          justify-content: space-between;
-          flex-flow: wrap;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 1em;
         }
 
         @media (max-width: 550px) {
           .nav__links {
             padding-top: 0;
           }
-        }
 
           .nav .external {
-            display: inline-grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(162px, 1fr));
+            grid-gap: 0.5em;
+            width: 100%;
           }
         }
       `}</style>

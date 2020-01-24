@@ -14,7 +14,6 @@ const ButtonLink = ({ href, alt, children }) => (
         align-items: center;
         justify-content: center;
         padding: 9px 15px;
-        margin: 0 0.4em;
 
         width: 162px;
         height: 38px;
