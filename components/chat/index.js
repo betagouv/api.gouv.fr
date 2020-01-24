@@ -11,7 +11,9 @@ const Chat = () => {
   const [body, setBody] = useState();
 
   const getMailto = useCallback(() => {
-    return encodeURI(`mailto:contact@api.gouv.fr?subject=${subject}&body=${body}`);
+    return encodeURI(
+      `mailto:contact@api.gouv.fr?subject=[Question api.gouv.fr] ${subject}&body=${body}`
+    );
   }, [subject, body])
 
   return (
