@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import getConfig from "next/config";
 import { orderBy } from "lodash";
 
@@ -21,19 +21,21 @@ const SITE_DESCRIPTION =
   publicRuntimeConfig.SITE_DESCRIPTION ||
   "Le site qui simplifie le partage et la circulation des données administratives";
 
+const filterAPI = (list, filter) => {
+  let filteredList = list;
+
+  if (filter) {
+    filteredList = list.filter(api => {
+      const normalizeKeywords = api.keywords.map(k => normaliseStr(k));
+      return normalizeKeywords.includes(normaliseStr(filter));
+    });
+  }
+
+  return filteredList;
+};
+
 function Home({ q, filter, apiList }) {
-  const [filteredList, setFilteredList] = useState(apiList);
-
-  useEffect(() => {
-    if (filter) {
-      const filteredList = apiList.filter(api => {
-        const normalizeKeywords = api.keywords.map(k => normaliseStr(k));
-        return normalizeKeywords.includes(normaliseStr(filter));
-      });
-
-      setFilteredList(filteredList);
-    }
-  }, [filter]);
+  const filteredList = filterAPI(apiList, filter);
 
   return (
     <Page>
@@ -55,9 +57,11 @@ function Home({ q, filter, apiList }) {
         <div className="ui container">
           <div className="ui three stackable cards">
             {filteredList.length > 0 ? (
-              orderBy(filteredList, "visits_2019", "desc").map(api => (
-                <ApiCard key={api.title} {...api} />
-              ))
+              orderBy(
+                filteredList,
+                [api => api.visits_2019 || 0],
+                ["desc"]
+              ).map(api => <ApiCard key={api.title} {...api} />)
             ) : (
               <div className="ui big warning message">
                 <div className="header">Aucune API n’a pu être trouvée</div>
