@@ -3,7 +3,7 @@ import { MessageSquare, X } from "react-feather";
 
 import colors from "../../styles/colors";
 
-import ButtonLink from '../ui/button-link'
+import ButtonLink from "../ui/button-link";
 
 const Chat = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +14,7 @@ const Chat = () => {
     return encodeURI(
       `mailto:contact@api.gouv.fr?subject=[Question api.gouv.fr] ${subject}&body=${body}`
     );
-  }, [subject, body])
+  }, [subject, body]);
 
   return (
     <div className={`chat-container ${isOpen ? "show" : "hidden"}`}>
@@ -41,10 +41,7 @@ const Chat = () => {
       </div>
 
       <div className="submit">
-        <ButtonLink
-          href={getMailto()}
-          disabled={!Boolean(subject || body)}
-        >
+        <ButtonLink href={getMailto()} disabled={!Boolean(subject || body)}>
           Envoyer
         </ButtonLink>
       </div>
@@ -53,19 +50,20 @@ const Chat = () => {
         .chat-container {
           z-index: 999;
           position: fixed;
-          bottom: 5%;
-          right: 3%;
+          bottom: 0;
+          right: 0;
           width: 380px;
           height: 390px;
           padding: 1em;
           background: #fff;
+          margin: 1em;
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           -webkit-transition: all 500ms ease-in-out;
         }
 
         .chat-container.hidden {
-          bottom: -30%;
-          right: -23%;
+          bottom: -330px;
+          right: -320px;
           box-shadow: none;
           background: none;
         }
@@ -142,14 +140,22 @@ const Chat = () => {
             position: fixed;
             height: 100%;
             width: 100%;
-            right: unset;
-            bottom: unset;
             padding: 1em;
+            margin: 0;
           }
 
           .chat-container.hidden {
-            left: 80%;
-            top: 88%;
+            width: 60px;
+            height: 60px;
+            right: 10px;
+            bottom: 10px;
+            background: none;
+            box-shadow: none;
+          }
+
+          .chat-container.hidden .title,
+          .chat-container.hidden .close {
+            display: none;
           }
         }
       `}</style>
