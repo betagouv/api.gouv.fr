@@ -2,6 +2,8 @@ import React from "react";
 import App from "next/app";
 import getConfig from "next/config";
 
+import Chat from "../components/chat";
+
 const {
   publicRuntimeConfig: { PIWIK_URL, PIWIK_SITE_ID }
 } = getConfig();
@@ -46,7 +48,8 @@ class MyApp extends App {
     return (
       <>
         <Component {...pageProps} />
-        <style>{`
+        <Chat />
+        <style jsx>{`
           @media (max-width: 30em) {
             .medium.screen.only {
               display: none !important;
@@ -64,7 +67,7 @@ class MyApp extends App {
 
           /* Override SemanticUI default for improved a11y - contrast 4.5 */
           a {
-            color: #3A73C0
+            color: #3a73c0;
           }
         `}</style>
       </>
