@@ -106,13 +106,10 @@ function Home({ q, filter, apiList }) {
           width: 350px;
         }
 
-        .baseline {
-          max-width: 450px;
-          text-align: center;
-        }
-
         .baseline h2 {
           margin-bottom: 1.5em;
+          max-width: 450px;
+          text-align: center;
         }
 
         section {
