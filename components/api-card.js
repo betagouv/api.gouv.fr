@@ -5,11 +5,34 @@ import getConfig from "next/config";
 
 import { Unlock, Lock } from "react-feather";
 
+import colors from "../styles/colors";
+
 const { publicRuntimeConfig } = getConfig();
 const DEFAULT_LOGO =
   publicRuntimeConfig.DEFAULT_LOGO || "logo-generique-startup-carre.jpg";
 
-const ApiCard = ({ title, url, contract, image, owner, description }) => {
+const getUptimeState = uptime => {
+  const {red, orange, green} = colors
+  let color = red // Red
+
+  if (uptime >= 98) {
+    color = green; // Green
+  } else if (uptime >= 90) {
+    color = orange // Orange
+  }
+
+  return color
+}
+
+const ApiCard = ({
+  title,
+  url,
+  contract,
+  uptime,
+  image,
+  owner,
+  description
+}) => {
   return (
     <>
       <Link href={url}>
@@ -33,17 +56,26 @@ const ApiCard = ({ title, url, contract, image, owner, description }) => {
           </div>
 
           <div className="card-extra">
-            <div className="contract">
-              {contract === "OUVERT" ? (
-                <>
-                  <Unlock />
-                  <div>Accès libre</div>
-                </>
-              ) : (
-                <>
-                  <Lock />
-                  <div>Sous habilitation</div>
-                </>
+            <div className="badges">
+              <div className="badge contract">
+                {contract === "OUVERT" ? (
+                  <>
+                    <Unlock size={20} />
+                    <div>Accès libre</div>
+                  </>
+                ) : (
+                  <>
+                    <Lock size={20} />
+                    <div>Sous habilitation</div>
+                  </>
+                )}
+              </div>
+
+              {uptime && (
+                <div className="badge uptime">
+                  <div className="uptime-stat" />
+                  {uptime}% actif / dernier mois
+                </div>
               )}
             </div>
           </div>
@@ -56,16 +88,32 @@ const ApiCard = ({ title, url, contract, image, owner, description }) => {
           color: #222;
         }
 
-        .contract {
+        .badges {
+          display: flex;
+          align-items: center;
+          flex-flow: wrap;
+        }
+
+        .badge {
           display: inline-flex;
           align-items: center;
           background-color: #ebeff3;
           padding: 0.4em;
           border-radius: 4px;
+          margin: 0.2em;
+          font-size: small;
         }
 
         .contract div {
           margin-left: 0.5em;
+        }
+
+        .uptime-stat {
+          width: 10px;
+          height: 10px;
+          border-radius: 100%;
+          margin: 0 0.2em;
+          background-color: ${getUptimeState(uptime)};
         }
       `}</style>
     </>
@@ -78,12 +126,14 @@ ApiCard.propTypes = {
   contract: PropTypes.string.isRequired,
   image: PropTypes.string,
   owner: PropTypes.string,
-  tagline: PropTypes.string
+  tagline: PropTypes.string,
+  uptime: PropTypes.number
 };
 
 ApiCard.defaultProps = {
   description: null,
-  image: null
+  image: null,
+  uptime: null
 };
 
 export default ApiCard;

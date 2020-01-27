@@ -9,5 +9,8 @@ export default {
   smartData: "#1E4C8E",
   service: "#AF2341",
   main: "#275166",
-  backgroundBlue: `linear-gradient(${simulation}, ${lightenSimulation})`
+  backgroundBlue: `linear-gradient(${simulation}, ${lightenSimulation})`,
+  red: '#DC3545',
+  green: "#17BD3D",
+  orange: "#FFC107"
 };
