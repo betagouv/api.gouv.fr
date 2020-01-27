@@ -40,6 +40,7 @@ score:
       description: |
         <p>L'API est disponible à hauteur de 10 appels par seconde et par adresse IP.</p>
 visits_2019: 26602
+uptime: 100
 ---
 
 L' **API Géo** est une boîte-à-outils **facile à prendre en main** pour rendre vos applications et bases de données plus intelligentes, en terme de positionnement et de connaissance des territoires.

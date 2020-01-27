@@ -30,6 +30,7 @@ score:
     doc_tech:
       external: https://partenaires.franceconnect.gouv.fr/fcp/fournisseur-service
 visits_2019: 120883
+uptime: 99.89
 ---
 
 ## Qu'est-ce que FranceConnect ?
