@@ -49,7 +49,6 @@ score:
     monitoring:
       link: https://dashboard.entreprise.api.gouv.fr
 visits_2019: 12610
-uptime: 100
 ---
 
 [L’API Entreprise](https://entreprise.api.gouv.fr/) est une plateforme d’échange opérée par la DINUM qui met à disposition des opérateurs publics et des administrations, des données et des documents administratifs de référence, relatifs aux entreprises et association, qui sont délivrés par les administrations et les organismes publics, à fin de simplifier les démarches administratives et la gestion des dossiers.
