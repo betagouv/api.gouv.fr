@@ -36,28 +36,32 @@ const Header = ({
       className="ui vertical center aligned segment"
     >
       <div className="ui container">
-        <div className="ui center aligned inverted header">
-          <img
-            src={`/images/api-logo/${logo}`}
-            alt={title}
-            className="ui tiny bordered image"
-          />
-          <h1>{title}</h1>
-          <div className="sub header">{tagline}</div>
-          {stat && stat.url && (
-            <div className="sub header">
-              <div className="stat" id="stat_value">
-                {stats ? parseInt(stats).toLocaleString("fr-FR") : "-"}
-              </div>
-              {stat.label ? (
-                <>
-                  {stat.label} lors des {stat.lastXdays} derniers jours
-                </>
-              ) : (
-                <>appels lors des 30 derniers jours</>
-              )}
+        <div className="ui center aligned inverted header test">
+          <div className='content'>
+            <div className="title">
+              <img
+                src={`/images/api-logo/${logo}`}
+                alt={title}
+                className="ui image"
+              />
+              <h1>{title}</h1>
             </div>
-          )}
+            <div className="tagline">{tagline}</div>
+            {stat && stat.url && (
+              <div className="sub header">
+                <div className="stat" id="stat_value">
+                  {stats ? parseInt(stats).toLocaleString("fr-FR") : "-"}
+                </div>
+                {stat.label ? (
+                  <>
+                    {stat.label} lors des {stat.lastXdays} derniers jours
+                  </>
+                ) : (
+                  <>appels lors des 30 derniers jours</>
+                )}
+              </div>
+            )}
+          </div>
         </div>
 
         {external_site && (
@@ -88,11 +92,7 @@ const Header = ({
           background: ${colors.backgroundBlue};
         }
 
-        #mission-statement h1 {
-          margin: 0.2em;
-        }
-
-         .sub.header .stat {
+        .sub.header .stat {
           color: white;
           font-size: 1.4em;
           margin-top: 1em;
@@ -100,6 +100,42 @@ const Header = ({
 
         #stat_value {
           margin-bottom: 0.7em;
+        }
+
+        .content {
+          max-width: 400px;
+        }
+
+        .title {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 1em;
+        }
+
+        .title img {
+          border-radius: 100%;
+          width: 48px;
+          height: 48px;
+        }
+
+        .title h1 {
+          font-family: Evolventa;
+          margin: 0 0.5em;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 32px;
+          line-height: 43px;
+          text-align: center;
+        }
+
+        .tagline {
+          font-family: Evolventa;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 15px;
+          line-height: 20px;
+          text-align: center;
         }
       `}</style>
     </section>
