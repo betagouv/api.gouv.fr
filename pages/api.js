@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import getConfig from "next/config";
+import Router from 'next/router'
 
 import { getAPI, getService } from "../utils/api";
 
@@ -25,6 +26,8 @@ const { publicRuntimeConfig } = getConfig();
 const DEFAULT_LOGO = publicRuntimeConfig.DEFAULT_LOGO || "logo-beta-gouv.svg";
 
 const API = ({ api, services }) => {
+  const [selected, setSelected] = useState();
+
   const {
     title,
     tagline,
@@ -65,6 +68,23 @@ const API = ({ api, services }) => {
     resume: rate_limiting_resume
   } = rate_limiting || {};
 
+    const handleHashChange = () => {
+      const { hash } = window.location;
+
+      if (hash) {
+        const selected = hash.substr(1);
+        setSelected(selected);
+      }
+    };
+
+    useEffect(() => {
+      handleHashChange();
+      Router.events.on("hashChangeComplete", handleHashChange);
+      return () => {
+        Router.events.off("hashChangeComplete", handleHashChange);
+      };
+    }, []);
+
   return (
     <Page>
       <Header
@@ -85,40 +105,47 @@ const API = ({ api, services }) => {
         rate_limiting={rate_limiting_resume}
       />
 
-      <Menu detail={detail} />
-
       <div id="description" className="ui container">
-        <Content content={content} />
+        <div className="ui equal width grid padded">
+          <div className="four wide column computer only">
+            <Menu detail={detail} selected={selected} />
+          </div>
+          <div className="column">
+            <Content content={content} />
 
-        <Access
-          access_open={access_open}
-          access_link={access_link}
-          access_description={access_description}
-          contract={contract}
-          clients={clients}
-        />
+            <Access
+              access_open={access_open}
+              access_link={access_link}
+              access_description={access_description}
+              contract={contract}
+              clients={clients}
+            />
 
-        <Support
-          contact_description={contact_description}
-          contact_link={contact_link}
-        />
+            <Support
+              contact_description={contact_description}
+              contact_link={contact_link}
+            />
 
-        <Monitoring
-          monitoring_description={monitoring_description}
-          monitoring_link={monitoring_link}
-        />
+            <Monitoring
+              monitoring_description={monitoring_description}
+              monitoring_link={monitoring_link}
+            />
 
-        <RateLimiting rate_limiting_description={rate_limiting_description} />
+            <Partners partners={partners} />
 
-        <Partners partners={partners} />
+            <TechnicalDocumentation
+              doc_tech_description={doc_tech_description}
+              doc_tech_link={doc_tech_link}
+              doc_tech_external={doc_tech_external}
+            />
 
-        <TechnicalDocumentation
-          doc_tech_description={doc_tech_description}
-          doc_tech_link={doc_tech_link}
-          doc_tech_external={doc_tech_external}
-        />
+            <RateLimiting
+              rate_limiting_description={rate_limiting_description}
+            />
 
-        <Services services={services} />
+            <Services services={services} />
+          </div>
+        </div>
       </div>
     </Page>
   );

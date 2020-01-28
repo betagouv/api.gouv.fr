@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Link from "next/link";
+import colors from "../../styles/colors";
 
 const MENU_OPTIONS = [
   {
@@ -29,28 +30,63 @@ const MENU_OPTIONS = [
   }
 ];
 
-const Menu = ({ detail }) => {
+const Menu = ({ detail, selected }) => {
   return (
-    <div className="ui stackable container menu">
+    <div className="menu">
       <Link href="#api-description">
-        <a className="header item">Description</a>
+        <a
+          className={`item ${selected === "api-description" ? "selected" : ""}`}
+        >
+          Description
+        </a>
       </Link>
       {MENU_OPTIONS.map(menu => (
-        <div key={menu.id}>
-          <Link href={`#${menu.id}`}>
-            <a className="item">
-              {menu.label}
-              {!detail[menu.id] && menu.id !== "partenaires" && (
-                <div className="ui grey mini label">Non renseigné</div>
-              )}
-            </a>
-          </Link>
-        </div>
+        <Link key={menu.id} href={`#${menu.id}`}>
+          <a className={`item ${selected === menu.id ? "selected" : ""}`}>
+            {menu.label}
+            {!detail[menu.id] && menu.id !== "partenaires" && (
+              <div className="ui grey mini label">Non renseigné</div>
+            )}
+          </a>
+        </Link>
       ))}
-
       <Link href="#services">
-        <a className="item">Services</a>
+        <a className={`item ${selected === "services" ? "selected" : ""}`}>
+          Services
+        </a>
       </Link>
+
+      <style jsx>{`
+        .menu {
+          position: fixed;
+          width: 17%;
+          max-width: 245px;
+          display: flex;
+          flex-direction: column;
+          box-shadow: 0.5px 0px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        .item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 1em;
+          font-weight: bold;
+          font-size: 14px;
+          line-height: 18px;
+          color: black;
+        }
+
+        .item:hover {
+          background-color: ${colors.smartData};
+          color: #fff;
+        }
+
+        .item.selected {
+          border-left: 7px solid ${colors.smartData};
+          border-bottom: 0.25px solid ${colors.smartData};
+        }
+      `}</style>
     </div>
   );
 };
