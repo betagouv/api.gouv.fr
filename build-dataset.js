@@ -15,6 +15,7 @@ function apiToAPIV1(api) {
     domain: api.domain,
     owner: api.owner,
     contract: api.contract,
+    uptime: api.uptime,
     visits_2019: api.visits_2019,
     keywords: api.keywords,
     clients: api.clients,
