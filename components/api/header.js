@@ -36,7 +36,7 @@ const Header = ({
       className="ui vertical center aligned segment"
     >
       <div className="ui container">
-        <div className="ui center aligned inverted header test">
+        <div className="ui center aligned inverted header">
           <div className='content'>
             <div className="title">
               <img
@@ -117,6 +117,7 @@ const Header = ({
           border-radius: 100%;
           width: 48px;
           height: 48px;
+          background-color: #fff;
         }
 
         .title h1 {
