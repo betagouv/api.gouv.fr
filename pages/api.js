@@ -21,8 +21,7 @@ import Services from "../components/api/services";
 import Content from "../components/api/content";
 
 const { publicRuntimeConfig } = getConfig();
-const DEFAULT_LOGO =
-  publicRuntimeConfig.DEFAULT_LOGO || "logo-generique-startup-carre.jpg";
+const DEFAULT_LOGO = publicRuntimeConfig.DEFAULT_LOGO || "logo-beta-gouv.svg";
 
 const API = ({ api, services }) => {
   const {

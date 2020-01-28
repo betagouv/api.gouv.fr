@@ -4,7 +4,7 @@ const frontmatter = require("front-matter");
 
 const API_DIR = join(__dirname, "_api");
 const SERVICE_DIR = join(__dirname, "_service");
-const DEFAULT_LOGO = "logo-generique-startup-carre.jpg";
+const DEFAULT_LOGO = "logo-beta-gouv.svg";
 
 function apiToAPIV1(api) {
   return {
