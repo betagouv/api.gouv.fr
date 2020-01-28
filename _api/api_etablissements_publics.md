@@ -4,7 +4,6 @@ contract: OUVERT
 owner: Direction interministérielle du numérique
 owner_acronym: DINUM
 layout: api
-logo: logo-generique-startup-carre.jpg
 clients:
   - particuliers
   - entreprises
