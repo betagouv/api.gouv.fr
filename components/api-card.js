@@ -8,8 +8,7 @@ import { Unlock, Lock } from "react-feather";
 import colors from "../styles/colors";
 
 const { publicRuntimeConfig } = getConfig();
-const DEFAULT_LOGO =
-  publicRuntimeConfig.DEFAULT_LOGO || "logo-generique-startup-carre.jpg";
+const DEFAULT_LOGO = publicRuntimeConfig.DEFAULT_LOGO || "logo-beta-gouv.svg";
 
 const getUptimeState = uptime => {
   const {red, orange, green} = colors
