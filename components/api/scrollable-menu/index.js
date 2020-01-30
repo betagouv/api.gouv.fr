@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState, useCallback, useRef } from "react";
 import Router from 'next/router'
 import { find, throttle } from "lodash";
 
@@ -7,16 +7,18 @@ import Menu from '../menu'
 export const ScrollableMenuContext = React.createContext();
 
 const ScrollableMenu = ({detail, children}) => {
-  const [refs, setRefs] = useState({})
+  const refContainer = useRef()
+  const [refs, setRefs] = useState({});
   const [currentSection, setCurrentSection] = useState(null)
 
   const addRef = useCallback(ref => {
     const {id, offsetTop, offsetHeight} = ref
+    const offsetTopMarge = offsetTop + refContainer.current.offsetTop;
 
     refs[id] = {
       id,
-      offsetTop: offsetTop,
-      offsetBottom: offsetTop + offsetHeight
+      offsetTop: offsetTopMarge,
+      offsetBottom: offsetHeight + offsetTopMarge
     };
 
     setRefs(refs);
@@ -33,7 +35,9 @@ const ScrollableMenu = ({detail, children}) => {
 
   const getSection = useCallback(() => {
     const {scrollY} = window
-    return find(refs, ({id, offsetTop, offsetBottom}) => id !== currentSection && scrollY > offsetTop && scrollY < offsetBottom)
+    const scrollView = scrollY + refContainer.current.offsetTop + 40;
+
+    return find(refs, ({id, offsetTop, offsetBottom}) => id !== currentSection && scrollView > offsetTop && scrollView < offsetBottom)
   }, [refs, currentSection])
 
   const handleScroll = throttle(() => {
@@ -41,8 +45,7 @@ const ScrollableMenu = ({detail, children}) => {
     if (currentSection) {
       setCurrentSection(currentSection.id)
     }
-    // approx 8 frames
-  }, 16 * 8);
+  }, 100);
 
   useEffect(() => {
     if (currentSection) {
@@ -71,7 +74,7 @@ const ScrollableMenu = ({detail, children}) => {
   }, []);
 
   return (
-    <div className="ui equal width grid padded">
+    <div className="ui equal width grid padded" ref={refContainer}>
       <div className="four wide column computer only">
         <Menu detail={detail} selected={currentSection} />
       </div>
