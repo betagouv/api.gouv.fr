@@ -3,11 +3,11 @@ import PropTypes from "prop-types";
 
 import ServiceCard from "../service-card";
 
-import Section from "./section";
+import ScrollableSection from "./scrollable-menu/scrollable-section";
 
-const Services = ({ services }) => {
+const Services = ({ services, addRef }) => {
   return (
-    <Section id="services" title="Services">
+    <ScrollableSection id="services" title="Services" addRef={addRef}>
       <div className="ui container services-container">
         {services ? (
           <div className="ui three stackable cards">
@@ -28,7 +28,7 @@ const Services = ({ services }) => {
           margin-bottom: 3em;
         }
       `}</style>
-    </Section>
+    </ScrollableSection>
   );
 };
 

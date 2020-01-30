@@ -1,16 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import Section from "./section";
+import ScrollableSection from "./scrollable-menu/scrollable-section";
 import SwaggerUI from "./swagger";
 
 const TechnicalDocumentation = ({
   doc_tech_description,
   doc_tech_link,
-  doc_tech_external
+  doc_tech_external,
+  addRef
 }) => {
   return (
-    <Section id="doc_tech" title="Documentation technique">
+    <ScrollableSection
+      id="doc_tech"
+      title="Documentation technique"
+      addRef={addRef}
+    >
       <>
         {doc_tech_description && (
           <div dangerouslySetInnerHTML={{ __html: doc_tech_description }} />
@@ -27,7 +32,7 @@ const TechnicalDocumentation = ({
           </p>
         )}
       </>
-    </Section>
+    </ScrollableSection>
   );
 };
 

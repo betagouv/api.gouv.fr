@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import getConfig from "next/config";
-import Router from 'next/router'
 
 import { getAPI, getService } from "../utils/api";
 
@@ -10,7 +9,6 @@ import withErrors from "../components/hoc/with-errors";
 import Page from "../layouts/page";
 
 import Header from "../components/api/header";
-import Menu from "../components/api/menu";
 
 import Access from "../components/api/access";
 import Support from "../components/api/support";
@@ -21,13 +19,12 @@ import TechnicalDocumentation from "../components/api/technical-documentation";
 import Services from "../components/api/services";
 import Content from "../components/api/content";
 import Thumbnails from "../components/api/thumbnails";
+import ScrollableMenu, {ScrollableMenuContext} from "../components/api/scrollable-menu";
 
 const { publicRuntimeConfig } = getConfig();
 const DEFAULT_LOGO = publicRuntimeConfig.DEFAULT_LOGO || "logo-beta-gouv.svg";
 
 const API = ({ api, services }) => {
-  const [selected, setSelected] = useState();
-
   const {
     title,
     tagline,
@@ -68,23 +65,6 @@ const API = ({ api, services }) => {
     resume: rate_limiting_resume
   } = rate_limiting || {};
 
-    const handleHashChange = () => {
-      const { hash } = window.location;
-
-      if (hash) {
-        const selected = hash.substr(1);
-        setSelected(selected);
-      }
-    };
-
-    useEffect(() => {
-      handleHashChange();
-      Router.events.on("hashChangeComplete", handleHashChange);
-      return () => {
-        Router.events.off("hashChangeComplete", handleHashChange);
-      };
-    }, []);
-
   return (
     <Page>
       <Header
@@ -106,46 +86,52 @@ const API = ({ api, services }) => {
       />
 
       <div id="description" className="ui container">
-        <div className="ui equal width grid padded">
-          <div className="four wide column computer only">
-            <Menu detail={detail} selected={selected} />
-          </div>
-          <div className="column">
-            <Content content={content} />
+        <ScrollableMenu detail={detail}>
+          <ScrollableMenuContext.Consumer>
+            {({ addRef }) => (
+              <>
+                <Content content={content} addRef={addRef} />
 
-            <Access
-              access_open={access_open}
-              access_link={access_link}
-              access_description={access_description}
-              contract={contract}
-              clients={clients}
-            />
+                <Access
+                  access_open={access_open}
+                  access_link={access_link}
+                  access_description={access_description}
+                  contract={contract}
+                  clients={clients}
+                  addRef={addRef}
+                />
 
-            <Support
-              contact_description={contact_description}
-              contact_link={contact_link}
-            />
+                <Support
+                  contact_description={contact_description}
+                  contact_link={contact_link}
+                  addRef={addRef}
+                />
 
-            <Monitoring
-              monitoring_description={monitoring_description}
-              monitoring_link={monitoring_link}
-            />
+                <Monitoring
+                  monitoring_description={monitoring_description}
+                  monitoring_link={monitoring_link}
+                  addRef={addRef}
+                />
 
-            <Partners partners={partners} />
+                <Partners partners={partners} addRef={addRef} />
 
-            <TechnicalDocumentation
-              doc_tech_description={doc_tech_description}
-              doc_tech_link={doc_tech_link}
-              doc_tech_external={doc_tech_external}
-            />
+                <TechnicalDocumentation
+                  doc_tech_description={doc_tech_description}
+                  doc_tech_link={doc_tech_link}
+                  doc_tech_external={doc_tech_external}
+                  addRef={addRef}
+                />
 
-            <RateLimiting
-              rate_limiting_description={rate_limiting_description}
-            />
+                <RateLimiting
+                  rate_limiting_description={rate_limiting_description}
+                  addRef={addRef}
+                />
 
-            <Services services={services} />
-          </div>
-        </div>
+                <Services services={services} addRef={addRef} />
+              </>
+            )}
+          </ScrollableMenuContext.Consumer>
+        </ScrollableMenu>
       </div>
     </Page>
   );

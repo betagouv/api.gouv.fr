@@ -1,11 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import Section from "./section";
+import ScrollableSection from "./scrollable-menu/scrollable-section";
 
-const Monitoring = ({ monitoring_description, monitoring_link }) => {
+const Monitoring = ({
+  monitoring_description,
+  monitoring_link,
+  addRef
+}) => {
   return (
-    <Section id="monitoring" title="Supervision">
+    <ScrollableSection id="monitoring" title="Supervision" addRef={addRef}>
       <>
         {monitoring_description && (
           <div dangerouslySetInnerHTML={{ __html: monitoring_description }} />
@@ -30,7 +34,7 @@ const Monitoring = ({ monitoring_description, monitoring_link }) => {
           </p>
         )}
       </>
-    </Section>
+    </ScrollableSection>
   );
 };
 

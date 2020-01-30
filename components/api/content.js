@@ -2,13 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import ReactMarkdown from "react-markdown";
 
-import Section from "./section";
+import ScrollableSection from "./scrollable-menu/scrollable-section";
 
-const Content = ({ content }) => {
+const Content = ({ content, addRef }) => {
   return (
-    <Section id="api-description" title="Description">
+    <ScrollableSection id="api-description" title="Description" addRef={addRef}>
       <ReactMarkdown source={content} />
-    </Section>
+    </ScrollableSection>
   );
 };
 

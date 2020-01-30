@@ -1,17 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import Section from "./section";
+import ScrollableSection from "./scrollable-menu/scrollable-section";
 
 const Access = ({
   access_open,
   access_link,
   access_description,
   contract,
-  clients
+  clients,
+  addRef
 }) => {
   return (
-    <Section id="access" title="Accès">
+    <ScrollableSection id="access" title="Accès" addRef={addRef}>
       {access_open ? (
         <p>L'API est ouverte sans conditions.</p>
       ) : access_link ? (
@@ -39,7 +40,7 @@ const Access = ({
       ) : (
         <p>Accès à l'API non documenté</p>
       )}
-    </Section>
+    </ScrollableSection>
   );
 };
 

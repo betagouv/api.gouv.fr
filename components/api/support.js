@@ -1,11 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import Section from "./section";
+import ScrollableSection from "./scrollable-menu/scrollable-section";
 
-const Support = ({ contact_description, contact_link }) => {
+const Support = ({
+  contact_description,
+  contact_link,
+  addRef
+}) => {
   return (
-    <Section id="contact" title="Support">
+    <ScrollableSection id="contact" title="Support" addRef={addRef}>
       <>
         {contact_description && (
           <div dangerouslySetInnerHTML={{ __html: contact_description }} />
@@ -45,7 +49,7 @@ const Support = ({ contact_description, contact_link }) => {
           <p>Le contact de cette API n'est pas disponible publiquement.</p>
         )}
       </>
-    </Section>
+    </ScrollableSection>
   );
 };
 

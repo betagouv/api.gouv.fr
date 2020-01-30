@@ -1,11 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import Section from "./section";
+import ScrollableSection from "./scrollable-menu/scrollable-section";
 
-const RateLimiting = ({ rate_limiting_description }) => {
+const RateLimiting = ({ rate_limiting_description, addRef }) => {
   return (
-    <Section id="rate_limiting" title="Limitations d’usage">
+    <ScrollableSection
+      id="rate_limiting"
+      title="Limitations d’usage"
+      addRef={addRef}
+    >
       {rate_limiting_description ? (
         <div
           dangerouslySetInnerHTML={{
@@ -18,7 +22,7 @@ const RateLimiting = ({ rate_limiting_description }) => {
           publiquement.
         </p>
       )}
-    </Section>
+    </ScrollableSection>
   );
 };
 

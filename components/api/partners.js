@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import Section from "./section";
+import ScrollableSection from "./scrollable-menu/scrollable-section";
 
-const Partners = ({ partners }) => {
+const Partners = ({ partners, addRef }) => {
   return (
-    <Section id="partenaires" title="Partenaires">
+    <ScrollableSection id="partenaires" title="Partenaires" addRef={addRef}>
       {partners ? (
         <ul className="ui list">
           {partners.map(partner => (
@@ -17,7 +17,7 @@ const Partners = ({ partners }) => {
       ) : (
         <p>Cette API ne recense pas ses partenariats publiquement.</p>
       )}
-    </Section>
+    </ScrollableSection>
   );
 };
 
