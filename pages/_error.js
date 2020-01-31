@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import Link from "next/link";
 
-import Meta from "../components/meta";
 import Page from "../layouts/page";
 
 const messages = {
@@ -33,8 +32,7 @@ class ErrorPage extends React.Component {
     const msg = code === 500 ? messages[500] : message || messages[code];
 
     return (
-      <Page>
-        <Meta title={title} description={msg} />
+      <Page title={title} description={msg}>
 
         <section id="errorContainer" className="ui text container">
           <div>
