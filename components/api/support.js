@@ -3,11 +3,7 @@ import PropTypes from "prop-types";
 
 import ScrollableSection from "./scrollable-menu/scrollable-section";
 
-const Support = ({
-  contact_description,
-  contact_link,
-  addRef
-}) => {
+const Support = ({ contact_description, contact_link, addRef }) => {
   return (
     <ScrollableSection id="contact" title="Support" addRef={addRef}>
       <>

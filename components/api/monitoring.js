@@ -3,11 +3,7 @@ import PropTypes from "prop-types";
 
 import ScrollableSection from "./scrollable-menu/scrollable-section";
 
-const Monitoring = ({
-  monitoring_description,
-  monitoring_link,
-  addRef
-}) => {
+const Monitoring = ({ monitoring_description, monitoring_link, addRef }) => {
   return (
     <ScrollableSection id="monitoring" title="Supervision" addRef={addRef}>
       <>

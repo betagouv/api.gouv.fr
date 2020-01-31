@@ -1,28 +1,31 @@
 import React, { useEffect, useState, useCallback, useRef } from "react";
-import Router from 'next/router'
+import Router from "next/router";
 import { find, throttle } from "lodash";
 
-import Menu from '../menu'
+import Menu from "../menu";
 
 export const ScrollableMenuContext = React.createContext();
 
-const ScrollableMenu = ({detail, children}) => {
-  const refContainer = useRef()
+const ScrollableMenu = ({ detail, children }) => {
+  const refContainer = useRef();
   const [refs, setRefs] = useState({});
-  const [currentSection, setCurrentSection] = useState(null)
+  const [currentSection, setCurrentSection] = useState(null);
 
-  const addRef = useCallback(ref => {
-    const {id, offsetTop, offsetHeight} = ref
-    const offsetTopMarge = offsetTop + refContainer.current.offsetTop;
+  const addRef = useCallback(
+    ref => {
+      const { id, offsetTop, offsetHeight } = ref;
+      const offsetTopMarge = offsetTop + refContainer.current.offsetTop;
 
-    refs[id] = {
-      id,
-      offsetTop: offsetTopMarge,
-      offsetBottom: offsetHeight + offsetTopMarge
-    };
+      refs[id] = {
+        id,
+        offsetTop: offsetTopMarge,
+        offsetBottom: offsetHeight + offsetTopMarge
+      };
 
-    setRefs(refs);
-  }, [refs])
+      setRefs(refs);
+    },
+    [refs]
+  );
 
   const handleHashChange = () => {
     const { hash } = window.location;
@@ -34,16 +37,22 @@ const ScrollableMenu = ({detail, children}) => {
   };
 
   const getSection = useCallback(() => {
-    const {scrollY} = window
+    const { scrollY } = window;
     const scrollView = scrollY + refContainer.current.offsetTop + 40;
 
-    return find(refs, ({id, offsetTop, offsetBottom}) => id !== currentSection && scrollView > offsetTop && scrollView < offsetBottom)
-  }, [refs, currentSection])
+    return find(
+      refs,
+      ({ id, offsetTop, offsetBottom }) =>
+        id !== currentSection &&
+        scrollView > offsetTop &&
+        scrollView < offsetBottom
+    );
+  }, [refs, currentSection]);
 
   const handleScroll = throttle(() => {
-    const currentSection = getSection()
+    const currentSection = getSection();
     if (currentSection) {
-      setCurrentSection(currentSection.id)
+      setCurrentSection(currentSection.id);
     }
   }, 100);
 
@@ -52,14 +61,10 @@ const ScrollableMenu = ({detail, children}) => {
       const hash = window.location.hash ? window.location.hash.substr(1) : null;
 
       if (hash !== currentSection) {
-        window.history.replaceState(
-          undefined,
-          undefined,
-          `#${currentSection}`
-              );
+        window.history.replaceState(undefined, undefined, `#${currentSection}`);
       }
     }
-  }, [currentSection])
+  }, [currentSection]);
 
   useEffect(() => {
     handleHashChange();
@@ -85,6 +90,6 @@ const ScrollableMenu = ({detail, children}) => {
       </div>
     </div>
   );
-}
+};
 
-export default ScrollableMenu
+export default ScrollableMenu;

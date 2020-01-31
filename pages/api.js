@@ -19,7 +19,9 @@ import TechnicalDocumentation from "../components/api/technical-documentation";
 import Services from "../components/api/services";
 import Content from "../components/api/content";
 import Thumbnails from "../components/api/thumbnails";
-import ScrollableMenu, {ScrollableMenuContext} from "../components/api/scrollable-menu";
+import ScrollableMenu, {
+  ScrollableMenuContext
+} from "../components/api/scrollable-menu";
 
 const { publicRuntimeConfig } = getConfig();
 const DEFAULT_LOGO = publicRuntimeConfig.DEFAULT_LOGO || "logo-beta-gouv.svg";
