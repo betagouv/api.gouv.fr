@@ -31,6 +31,7 @@ score:
 
         <p>Les demandes d'accès pour API Particulier utilisent signup.api.gouv.fr, un outil mis à disposition pour toutes les API catalogués sur api.gouv.fr.</p>
     rate_limiting:
+      resume: 20 appels / seconde / jeton
       description: |
         <p>L'API est disponible à hauteur de 20 appels par secondes et par jetons d'accès.</p>
     contact:

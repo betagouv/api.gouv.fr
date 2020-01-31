@@ -34,6 +34,7 @@ score:
 
         <p>Les demandes d'accès pour l'API Attestation de droits à l'Assurance Maladie utilisent signup.api.gouv.fr, un outil mis à disposition pour toutes les API cataloguées sur api.gouv.fr.</p>
     rate_limiting:
+      resume: Incluses dans la convention
       description: |
         <p>Les éventuelles limitations d’usage vis-à-vis d’un partenaire sont incluses dans la convention.</p>
     contact:

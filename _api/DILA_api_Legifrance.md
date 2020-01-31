@@ -28,6 +28,7 @@ score:
       description: API publique
       link:
     rate_limiting:
+      resume: quota / jeton
       description: |
         <p>Les appels API sont limités par quotas par jetons d'accès.</p>
     contact:
