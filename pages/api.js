@@ -60,7 +60,7 @@ const API = ({ api, services }) => {
   const { description: rate_limiting_description } = rate_limiting || {};
 
   return (
-    <Page>
+    <Page title={title} description={content}>
       <Header
         title={title}
         logo={logo || DEFAULT_LOGO}

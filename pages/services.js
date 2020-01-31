@@ -11,7 +11,7 @@ import ServiceCard from "../components/service-card";
 
 const Services = ({ services }) => {
   return (
-    <Page>
+    <Page title='Les réalisations' description="Les services qui utilisent les API">
       <section id="services" className="ui container main">
         <h2 className="ui divider horizontal">Tous les services</h2>
         <div className="ui three stackable cards">

@@ -1,7 +1,7 @@
 import Page from "../layouts/page";
 
 const Contact = () => (
-  <Page>
+  <Page title='Contact' description='Qui contacter pour bien se renseigner'>
     <div className="ui text container">
       <h1>Contact</h1>
 

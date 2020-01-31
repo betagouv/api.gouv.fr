@@ -3,7 +3,7 @@ import Link from "next/link";
 import Page from "../layouts/page";
 
 const About = () => (
-  <Page>
+  <Page title="À propos" description="Tous ce qu’il faut savoir">
     <div className="ui text container">
       <h1>À propos</h1>
 
