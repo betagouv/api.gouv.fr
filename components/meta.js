@@ -10,6 +10,9 @@ import Fonts from "./styles/fonts";
 const { publicRuntimeConfig } = getConfig();
 const SITE_NAME = publicRuntimeConfig.SITE_NAME || "api.gouv.fr";
 const SITE_URL = publicRuntimeConfig.SITE_URL || "https://api.gouv.fr";
+const SITE_DESCRIPTION =
+  publicRuntimeConfig.SITE_DESCRIPTION ||
+  "Le site qui simplifie le partage et la circulation des données administratives";
 
 const Meta = ({ title, description }) => {
   description = prune(description, 160, "…");
@@ -24,19 +27,19 @@ const Meta = ({ title, description }) => {
       )}
 
       {/* Search Engine */}
-      <meta name="description" content={description} />
+      <meta name="description" content={description || SITE_DESCRIPTION} />
       <meta name="image" content="/images/api.gouv.fr.svg" />
 
       {/* Schema.org for Google */}
       <meta itemProp="name" content={title} />
-      <meta itemProp="description" content={description} />
+      <meta itemProp="description" content={description || SITE_DESCRIPTION} />
 
       {/* Open Graph general (Facebook, Pinterest & Google+) */}
       <meta
         name="og:title"
         content={title ? `${title} - ${SITE_NAME}` : SITE_NAME}
       />
-      <meta name="og:description" content={description} />
+      <meta name="og:description" content={description || SITE_DESCRIPTION} />
       <meta name="og:image" content="/images/api.gouv.fr.svg" />
       <meta name="og:url" content={SITE_URL} />
       <meta name="og:site_name" content={SITE_NAME} />

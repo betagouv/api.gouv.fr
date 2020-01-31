@@ -19,7 +19,7 @@ import { normaliseStr } from "../utils/normalize";
 const { publicRuntimeConfig } = getConfig();
 const SITE_DESCRIPTION =
   publicRuntimeConfig.SITE_DESCRIPTION ||
-  "Simplifiez le partage et la circulation des données administratives";
+  "Le site qui simplifie le partage et la circulation des données administratives";
 
 const filterAPI = (list, filter) => {
   let filteredList = list;
@@ -38,7 +38,7 @@ function Home({ q, filter, apiList }) {
   const filteredList = filterAPI(apiList, filter);
 
   return (
-    <Page>
+    <Page description={SITE_DESCRIPTION}>
       <section id="mission-statement">
         <div className="header-with-image">
           <img
