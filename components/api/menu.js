@@ -85,7 +85,6 @@ const Menu = ({ detail, selected }) => {
 
         .item.selected {
           border-left: 7px solid ${colors.smartData};
-          border-bottom: 0.25px solid ${colors.smartData};
         }
       `}</style>
     </div>
