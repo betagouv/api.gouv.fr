@@ -19,6 +19,7 @@ import Partners from "../components/api/partners";
 import TechnicalDocumentation from "../components/api/technical-documentation";
 import Services from "../components/api/services";
 import Content from "../components/api/content";
+import Thumbnails from "../components/api/thumbnails";
 
 const { publicRuntimeConfig } = getConfig();
 const DEFAULT_LOGO = publicRuntimeConfig.DEFAULT_LOGO || "logo-beta-gouv.svg";
@@ -29,6 +30,8 @@ const API = ({ api, services }) => {
     tagline,
     logo,
     stat,
+    owner,
+    uptime,
     score: { detail },
     external_site,
     content,
@@ -57,7 +60,10 @@ const API = ({ api, services }) => {
   const { link: monitoring_link, description: monitoring_description } =
     monitoring || {};
 
-  const { description: rate_limiting_description } = rate_limiting || {};
+  const {
+    description: rate_limiting_description,
+    resume: rate_limiting_resume
+  } = rate_limiting || {};
 
   return (
     <Page>
@@ -70,6 +76,13 @@ const API = ({ api, services }) => {
         access_link={access_link}
         doc_tech_link={doc_tech_link}
         doc_tech_external={doc_tech_external}
+      />
+
+      <Thumbnails
+        is_open={access_open}
+        uptime={uptime}
+        owner={owner}
+        rate_limiting={rate_limiting_resume}
       />
 
       <Menu detail={detail} />

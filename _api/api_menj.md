@@ -16,6 +16,7 @@ score:
     doc_tech:
       external: https://data.education.gouv.fr/api/v1/console/datasets/1.0/search/
     rate_limiting:
+      resume: 5000 appels / jour / IP
       description: |
         <p>Le nombre d'appels API pour un utilisateur anonyme est limité à 5000 appels par adresse IP et par jour.</p>
 partners:

@@ -37,6 +37,7 @@ score:
     doc_tech:
       link: https://geo.api.gouv.fr/definition.yml
     rate_limiting:
+      resume: 10 appels / seconde / IP
       description: |
         <p>L'API est disponible à hauteur de 10 appels par seconde et par adresse IP.</p>
 visits_2019: 26602

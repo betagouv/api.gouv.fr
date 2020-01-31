@@ -5,23 +5,10 @@ import getConfig from "next/config";
 
 import { Unlock, Lock } from "react-feather";
 
-import colors from "../styles/colors";
+import {getUptimeState} from '../lib/uptime'
 
 const { publicRuntimeConfig } = getConfig();
 const DEFAULT_LOGO = publicRuntimeConfig.DEFAULT_LOGO || "logo-beta-gouv.svg";
-
-const getUptimeState = uptime => {
-  const {red, orange, green} = colors
-  let color = red // Red
-
-  if (uptime >= 98) {
-    color = green; // Green
-  } else if (uptime >= 90) {
-    color = orange // Orange
-  }
-
-  return color
-}
 
 const ApiCard = ({
   title,

@@ -34,6 +34,7 @@ score:
     doc_tech:
       external: https://adresse.data.gouv.fr/api
     rate_limiting:
+      resume: 10 appels / seconde / IP
       description: |
         <p>L'API unitaire est disponible à hauteur de 10 appels par seconde et par adresse IP.</p>
         <p>Le géocodage de masse (CSV) est disponible à hauteur d'un appel simultané par adresse IP.</p>
