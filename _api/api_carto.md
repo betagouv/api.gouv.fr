@@ -39,7 +39,6 @@ keywords:
   - Géoportail
   - API Carto
 visits_2019: 2840
-uptime: 99.889 # https://uptimerobot.com/dashboard#777776475
 ---
 
 L’API Carto est une API REST compatible avec la spécification OpenAPI permettant d'accéder simplement à des données de référence : urbanisme, cadastre, AOC, codes postaux, etc.

@@ -40,6 +40,7 @@ score:
       resume: 10 appels / seconde / IP
       description: |
         <p>L'API est disponible à hauteur de 10 appels par seconde et par adresse IP.</p>
+uptime: 100 # https://uptimerobot.com/dashboard#777757460
 visits_2019: 26602
 ---
 
