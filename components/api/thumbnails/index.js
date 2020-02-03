@@ -1,10 +1,10 @@
 import Thumbnail from "./thumbnail"
 
-import { Lock, Unlock, Activity, User, Sliders } from "react-feather";
+import { Lock, Unlock, Activity, Calendar, User, Sliders } from "react-feather";
 
 import { getUptimeState } from "../../../lib/uptime";
 
-const Thumbnails = ({ is_open, uptime, owner, rate_limiting }) => {
+const Thumbnails = ({ is_open, uptime, lastUpdate, owner, rate_limiting }) => {
   return (
     <div className="ui container thumbnails">
       {is_open ? (
@@ -24,6 +24,9 @@ const Thumbnails = ({ is_open, uptime, owner, rate_limiting }) => {
           </div>
         </Thumbnail>
       )}
+      <Thumbnail title="Activité" icon={<Calendar />}>
+        Dernière modification le {lastUpdate}
+      </Thumbnail>
       <Thumbnail title="Producteur" icon={<User />}>
         {owner}
       </Thumbnail>
