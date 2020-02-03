@@ -29,6 +29,7 @@ score:
     doc_tech:
       external: https://communaute.chorus-pro.gouv.fr/documentation/api/
 visits_2019: 40978
+last_update: 07/08/2017
 ---
 
 ## Qu’est-ce que Chorus Pro ?

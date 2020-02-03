@@ -23,6 +23,7 @@ score:
     doc_tech:
       external: https://geo.pays-de-brest.fr/donnees/Documents/Public/DocWebServicesTransport.pdf
 visits_2019: 450
+last_update: 03/10/2019
 ---
 
 ## Description de l'API

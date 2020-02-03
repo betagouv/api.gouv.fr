@@ -21,6 +21,7 @@ score:
     doc_tech:
       external: http://rva.data.rennes-metropole.fr/documentation.php
 visits_2019: 160
+last_update: 29/11/2016
 ---
 
 ## Présentation

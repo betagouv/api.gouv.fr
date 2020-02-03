@@ -31,6 +31,7 @@ score:
       external: https://partenaires.franceconnect.gouv.fr/fcp/fournisseur-service
 visits_2019: 120883
 uptime: 99.893 # https://uptimerobot.com/dashboard.php#778110642
+last_update: 10/12/2019
 ---
 
 ## Qu'est-ce que FranceConnect ?

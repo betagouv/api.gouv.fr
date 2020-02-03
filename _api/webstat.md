@@ -34,6 +34,7 @@ score:
     doc_tech:
       link: https://developer.webstat.banque-france.fr/ibm_apim/swaggerjson/d2Vic3RhdC1iYW5xdWUtZGUtZnJhbmNlLWZyX3YxOjEuMC4wXzQ3MDE%2C # URL de la documentation au format OpenAPI <https://github.com/OAI/OpenAPI-Specification>
 visits_2019: 8
+last_update: 20/12/2019
 ---
 
 [Webstat](http://webstat.banque-france.fr/fr/) est le portail statistique de la Banque de France. L'[API Webstat](https://developer.webstat.banque-france.fr) permet d'accéder à plus de 35.000 séries statistiques de la Banque de France et de ses partenaires institutionnels. Obtenez simplement les données économiques et financières sur les entreprises françaises, la conjoncture régionale, le crédit et l'épargne, la monnaie ou la balance des paiements.

@@ -31,6 +31,7 @@ score:
     doc_tech:
       link: https://hubeau.eaufrance.fr/api/v1/qualite_nappes/api-docs
 visits_2019: 381
+last_update: 11/06/2018
 ---
 
 ### Description fonctionnelle de l'API Qualité des nappes d'eau souterraine

@@ -40,6 +40,7 @@ score:
         <p>Le géocodage de masse (CSV) est disponible à hauteur d'un appel simultané par adresse IP.</p>
 visits_2019: 6460
 uptime: 100 # https://uptimerobot.com/dashboard.php#778110635
+last_update: 10/12/2019
 ---
 
 Pour que les services d'urgence arrivent au bon endroit, pour vous permettre de réaliser une analyse cartographique en quelques clics ou encore pour que les opérateurs publics et privés coordonnent mieux leurs chantiers, ce référentiel, véritable enjeu de souveraineté pour la France, est la première alliance entre l'État et la société civile.

@@ -32,6 +32,7 @@ score:
     doc_tech:
       link: https://alim.agriculture.gouv.fr/ift-api/v2/api-docs?group=ift
 visits_2019: 324
+last_update: 03/05/2018
 ---
 
 ## Description de l'API

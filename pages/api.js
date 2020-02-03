@@ -32,6 +32,7 @@ const API = ({ api, services }) => {
     stat,
     owner,
     uptime,
+    last_update,
     score: { detail },
     external_site,
     content,
@@ -81,6 +82,7 @@ const API = ({ api, services }) => {
       <Thumbnails
         is_open={access_open}
         uptime={uptime}
+        lastUpdate={last_update}
         owner={owner}
         rate_limiting={rate_limiting_resume}
       />

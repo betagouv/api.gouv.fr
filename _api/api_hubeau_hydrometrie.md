@@ -41,6 +41,7 @@ score:
     doc_tech:
       link: https://hubeau.eaufrance.fr/api/v1/hydrometrie/api-docs
 visits_2019: 801
+last_update: 31/07/2019
 ---
 
 ### Description fonctionnelle de l'API Hydrométrie

@@ -44,6 +44,7 @@ score:
         <p>La DINUM s’engage à ce que le Service soit accessible à 95% et la DINUM s’engage à améliorer progressivement ce rendement.</p>
 visits_2019: 8642
 uptime: 99.992 # https://uptimerobot.com/dashboard#777746216 * https://uptimerobot.com/dashboard#778826562 / 2
+last_update: 10/12/2019
 ---
 
 ## Vos démarches sans pièces justificatives
