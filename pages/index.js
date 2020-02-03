@@ -1,10 +1,11 @@
 import React from "react";
-import getConfig from "next/config";
 import { orderBy } from "lodash";
 
 import withErrors from "../components/hoc/with-errors";
 
 import { getAllAPIs } from "../utils/api";
+
+import {SITE_DESCRIPTION} from '../components/meta'
 
 import Page from "../layouts/page";
 
@@ -15,11 +16,6 @@ import ButtonLink from "../components/ui/button-link";
 import colors from "../styles/colors";
 
 import { normaliseStr } from "../utils/normalize";
-
-const { publicRuntimeConfig } = getConfig();
-const SITE_DESCRIPTION =
-  publicRuntimeConfig.SITE_DESCRIPTION ||
-  "Simplifiez le partage et la circulation des données administratives";
 
 const filterAPI = (list, filter) => {
   let filteredList = list;

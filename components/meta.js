@@ -10,9 +10,8 @@ import Fonts from "./styles/fonts";
 const { publicRuntimeConfig } = getConfig();
 const SITE_NAME = publicRuntimeConfig.SITE_NAME || "api.gouv.fr";
 const SITE_URL = publicRuntimeConfig.SITE_URL || "https://api.gouv.fr";
-const SITE_DESCRIPTION =
-  publicRuntimeConfig.SITE_DESCRIPTION ||
-  "Simplifiez le partage et la circulation des données administratives";
+
+export const SITE_DESCRIPTION = "Simplifiez le partage et la circulation des données administratives";
 
 const Meta = ({ title, description }) => {
   description = prune(description, 160, "…");
