@@ -29,10 +29,7 @@ keywords:
   - Référentiels de Classification Centrale
   - Nomenclatures
 contact_link: nicolas.augereau@finances.gouv.fr
-score:
-  detail:
-    doc_tech:
-      external: http://pissarho.cisirh.rie.gouv.fr/sites/default/files/2019-10/INGRES-PIL-API%20Nomenclatures%20Ingres_%20%280_7%29.pptx
+doc_tech_external: http://pissarho.cisirh.rie.gouv.fr/sites/default/files/2019-10/INGRES-PIL-API%20Nomenclatures%20Ingres_%20%280_7%29.pptx
 visits_2019: 127
 last_update: 29/11/2019
 ---

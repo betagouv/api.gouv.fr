@@ -21,10 +21,7 @@ keywords:
   - Cours d'eau
   - Etat piscicole
 contact_link: newshubeau@brgm.fr
-score:
-  detail:
-    doc_tech:
-      link: https://hubeau.eaufrance.fr/api/v0/etat_piscicole/api-docs
+doc_tech_link: https://hubeau.eaufrance.fr/api/v0/etat_piscicole/api-docs
 visits_2019: 568
 last_update: 12/06/2018
 ---

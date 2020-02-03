@@ -28,10 +28,7 @@ rate_limiting_resume: quota / jeton
 rate_limiting_description: |
   <p>Les appels API sont limités par quotas par jetons d'accès.</p>
 contact_link: retours-legifrance-modernise@dila.gouv.fr
-score:
-  detail:
-    doc_tech:
-      external: https://developer.aife.economie.gouv.fr
+doc_tech_external: https://developer.aife.economie.gouv.fr
 visits_2019: 0
 last_update: 13/01/2020
 ---

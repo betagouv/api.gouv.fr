@@ -32,10 +32,7 @@ keywords:
 stat:
   link: https://camino.beta.gouv.fr/statistiques
 contact_link: camino@beta.gouv.fr
-score:
-  detail:
-    doc_tech:
-      external: https://api.camino.beta.gouv.fr
+doc_tech_external: https://api.camino.beta.gouv.fr
 visits_2019: 41
 last_update: 10/12/2019
 ---

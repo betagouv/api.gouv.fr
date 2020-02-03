@@ -23,10 +23,7 @@ keywords:
   - Portail professionel
 logo: ChorusPro.jpg
 contact_link: api-choruspro.aife@finances.gouv.fr
-score:
-  detail:
-    doc_tech:
-      external: https://communaute.chorus-pro.gouv.fr/documentation/api/
+doc_tech_external: https://communaute.chorus-pro.gouv.fr/documentation/api/
 visits_2019: 40978
 last_update: 07/08/2017
 ---

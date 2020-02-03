@@ -11,10 +11,7 @@ owner: Direction de l'information légale et administrative
 owner_acronym: DILA
 logo: logo-carre-Boamp.png
 contact_link: donnees-dila@dila.gouv.fr
-score:
-  detail:
-    doc_tech:
-      external: http://api.dila.fr
+doc_tech_external: http://api.dila.fr
 visits_2019: 1332
 last_update: 18/01/2017
 ---

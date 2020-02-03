@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import PropTypes from "prop-types";
 import getConfig from "next/config";
 
@@ -33,7 +33,6 @@ const API = ({ api, services }) => {
     owner,
     uptime,
     last_update,
-    score: { detail },
     external_site,
     content,
     clients,
@@ -41,21 +40,15 @@ const API = ({ api, services }) => {
     access_condition,
     access_description,
     access_link,
+    partners,
     rate_limiting_resume,
     rate_limiting_description,
     monitoring_link,
     monitoring_description,
     contact_link,
-    partners
+    doc_tech_link,
+    doc_tech_external
   } = api;
-
-  const { doc_tech } = detail;
-
-  const {
-    link: doc_tech_link,
-    external: doc_tech_external,
-    description: doc_tech_description
-  } = doc_tech || {};
 
   return (
     <Page>
@@ -78,7 +71,7 @@ const API = ({ api, services }) => {
         rate_limiting={rate_limiting_resume}
       />
 
-      <Menu detail={detail} />
+      <Menu />
 
       <div id="description" className="ui container">
         <Content content={content} />
@@ -103,9 +96,8 @@ const API = ({ api, services }) => {
         <Partners partners={partners} />
 
         <TechnicalDocumentation
-          doc_tech_description={doc_tech_description}
-          doc_tech_link={doc_tech_link}
-          doc_tech_external={doc_tech_external}
+          link={doc_tech_link}
+          external={doc_tech_external}
         />
 
         <Services services={services} />
@@ -155,7 +147,9 @@ API.propTypes = {
     rate_limiting_description: PropTypes.string,
     monitoring_link: PropTypes.string,
     monitoring_description: PropTypes.string,
-    contact_link: PropTypes.string
+    contact_link: PropTypes.string,
+    doc_tech_link: PropTypes.string,
+    doc_tech_external: PropTypes.string
   }).isRequired
 };
 

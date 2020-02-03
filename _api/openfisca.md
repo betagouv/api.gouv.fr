@@ -23,10 +23,7 @@ keywords:
   - Simulateur
 logo: logo-openfisca.svg
 contact_link: contact@openfisca.fr
-score:
-  detail:
-    doc_tech:
-      external: https://openfisca.org/doc/openfisca-web-api/
+doc_tech_external: https://openfisca.org/doc/openfisca-web-api/
 visits_2019: 1982
 last_update: 15/01/2019
 ---

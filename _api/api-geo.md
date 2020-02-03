@@ -32,10 +32,7 @@ stat:
   path:
     - last7DaysQueries
 contact_link: geo@api.gouv.fr
-score:
-  detail:
-    doc_tech:
-      link: https://geo.api.gouv.fr/definition.yml
+doc_tech_link: https://geo.api.gouv.fr/definition.yml
 uptime: 100 # https://uptimerobot.com/dashboard#777757460
 visits_2019: 26602
 last_update: 17/01/2020

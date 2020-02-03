@@ -21,10 +21,7 @@ keywords:
   - Marché du travail
   - Statistiques
 contact_link: support@emploi-store-dev.fr
-score:
-  detail:
-    doc_tech:
-      external: https://www.emploi-store-dev.fr/portail-developpeur-cms/home/catalogue-des-api/documentation-des-api/api/api-infotravail-v1.html
+doc_tech_external: https://www.emploi-store-dev.fr/portail-developpeur-cms/home/catalogue-des-api/documentation-des-api/api/api-infotravail-v1.html
 visits_2019: 953
 last_update: 26/09/2018
 ---

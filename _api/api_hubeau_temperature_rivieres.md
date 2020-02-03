@@ -24,10 +24,7 @@ keywords:
   - Plan d'eau
   - Rivière
 contact_link: newshubeau@brgm.fr
-score:
-  detail:
-    doc_tech:
-      link: https://hubeau.eaufrance.fr/api/v1/temperature/api-docs
+doc_tech_link: https://hubeau.eaufrance.fr/api/v1/temperature/api-docs
 visits_2019: 2868
 last_update: 18/06/2018
 ---

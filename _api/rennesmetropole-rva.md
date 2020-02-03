@@ -14,10 +14,7 @@ keywords:
   - Voie
   - Adresse
 contact_link: sigsupport@rennesmetropole.fr
-score:
-  detail:
-    doc_tech:
-      external: http://rva.data.rennes-metropole.fr/documentation.php
+doc_tech_external: http://rva.data.rennes-metropole.fr/documentation.php
 visits_2019: 160
 last_update: 29/11/2016
 ---

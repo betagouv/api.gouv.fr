@@ -23,10 +23,7 @@ keywords:
   - Eau potable
   - Assainissement
 contact_link: newshubeau@brgm.fr
-score:
-  detail:
-    doc_tech:
-      link: https://hubeau.eaufrance.fr/api/v0/indicateurs_services/api-docs
+doc_tech_link: https://hubeau.eaufrance.fr/api/v0/indicateurs_services/api-docs
 visits_2019: 430
 last_update: 12/06/2018
 ---

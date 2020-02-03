@@ -33,10 +33,7 @@ stat:
   path:
     - Hydro_last30DaysQueries
 contact_link: newshubeau@brgm.fr
-score:
-  detail:
-    doc_tech:
-      link: https://hubeau.eaufrance.fr/api/v1/hydrometrie/api-docs
+doc_tech_link: https://hubeau.eaufrance.fr/api/v1/hydrometrie/api-docs
 visits_2019: 801
 last_update: 31/07/2019
 ---

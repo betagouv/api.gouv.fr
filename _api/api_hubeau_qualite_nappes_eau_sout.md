@@ -23,10 +23,7 @@ keywords:
   - Aquifère
   - Hydrogéologie
 contact_link: newshubeau@brgm.fr
-score:
-  detail:
-    doc_tech:
-      link: https://hubeau.eaufrance.fr/api/v1/qualite_nappes/api-docs
+doc_tech_link: https://hubeau.eaufrance.fr/api/v1/qualite_nappes/api-docs
 visits_2019: 381
 last_update: 11/06/2018
 ---

@@ -20,10 +20,7 @@ rate_limiting_description: |
   <p>L'usage d'API Sirene est soumis à une limite de 30 interrogations par minute.</p>
   <p>L'Insee se réserve le droit de changer cette limite en cas de nécessité.</p>
 contact_link: https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/help.jag#contact
-score:
-  detail:
-    doc_tech:
-      link: https://api.insee.fr/catalogue/api-docs/carbon.super/Sirene/V3?envName=Production%20and%20Sandbox
+doc_tech_link: https://api.insee.fr/catalogue/api-docs/carbon.super/Sirene/V3?envName=Production%20and%20Sandbox
 visits_2019: 3785
 last_update: 22/08/2019
 ---

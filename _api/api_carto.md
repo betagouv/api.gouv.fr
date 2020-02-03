@@ -9,10 +9,7 @@ acces_condition: OUVERT (sous contrat pour certaines données)
 category: Public
 logo: look4-geoportail.jpg
 contact_link: contact.geoservices@ign.fr
-score:
-  detail:
-    doc_tech:
-      external: https://apicarto.ign.fr/api/doc
+doc_tech_external: https://apicarto.ign.fr/api/doc
 clients:
   - développeurs
   - entreprises

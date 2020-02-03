@@ -29,7 +29,7 @@ const MENU_OPTIONS = [
   }
 ];
 
-const Menu = ({ detail }) => {
+const Menu = () => {
   return (
     <div className="ui stackable container menu">
       <Link href="#api-description">
@@ -40,9 +40,6 @@ const Menu = ({ detail }) => {
           <Link href={`#${menu.id}`}>
             <a className="item">
               {menu.label}
-              {!detail[menu.id] && menu.id !== "partenaires" && (
-                <div className="ui grey mini label">Non renseigné</div>
-              )}
             </a>
           </Link>
         </div>

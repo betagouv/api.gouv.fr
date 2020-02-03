@@ -21,10 +21,7 @@ keywords:
   - Ressource en eau
   - BNPE
 contact_link: newshubeau@brgm.fr
-score:
-  detail:
-    doc_tech:
-      link: https://hubeau.eaufrance.fr/api/v1/prelevements/api-docs
+doc_tech_link: https://hubeau.eaufrance.fr/api/v1/prelevements/api-docs
 visits_2019: 55
 last_update: 24/07/2019
 ---

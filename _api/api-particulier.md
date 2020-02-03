@@ -35,10 +35,7 @@ monitoring_link: https://status.particulier.api.gouv.fr
 monitoring_description: |
     <p>La DINUM s’engage à ce que le Service soit accessible à 95% et la DINUM s’engage à améliorer progressivement ce rendement.</p>
 contact_link: contact@particulier.api.gouv.fr
-score:
-  detail:
-    doc_tech:
-      link: https://particulier.api.gouv.fr/documentation-open-api.yaml
+doc_tech_link: https://particulier.api.gouv.fr/documentation-open-api.yaml
 visits_2019: 8642
 uptime: 99.992 # https://uptimerobot.com/dashboard#777746216 * https://uptimerobot.com/dashboard#778826562 / 2
 last_update: 10/12/2019

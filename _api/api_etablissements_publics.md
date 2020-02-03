@@ -16,10 +16,7 @@ keywords:
   - Publics
   - Administration
 contact_link: contact@beta.gouv.fr
-score:
-  detail:
-    doc_tech:
-      link: https://etablissements-publics.api.gouv.fr/v3/definitions.yaml
+doc_tech_link: https://etablissements-publics.api.gouv.fr/v3/definitions.yaml
 visits_2019: 2089
 last_update: 10/12/2019
 ---

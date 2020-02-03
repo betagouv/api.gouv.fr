@@ -38,10 +38,7 @@ monitoring_link: https://stats.uptimerobot.com/3wEv6hppvv
 monitoring_description: |
   <p>Une supervision du service en temps réel est disponible à cette adresse.</p>
 contact_link: partenaires-api-ameli.cnam@assurance-maladie.fr
-score:
-  detail:
-    doc_tech:
-      link: https://raw.githubusercontent.com/assurance-maladie-digital/api-droits-fs-doc/master/documentation-open-api.yaml
+doc_tech_link: https://raw.githubusercontent.com/assurance-maladie-digital/api-droits-fs-doc/master/documentation-open-api.yaml
 visits_2019: 576
 uptime: 99.998 # https://stats.uptimerobot.com/3wEv6hppvv
 last_update: 17/10/2019

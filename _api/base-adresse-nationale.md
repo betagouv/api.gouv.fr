@@ -30,10 +30,7 @@ rate_limiting_description: |
   <p>Le géocodage de masse (CSV) est disponible à hauteur d'un appel simultané par adresse IP.</p>
 additional_css: api
 contact_link: adresse@data.gouv.fr
-score:
-  detail:
-    doc_tech:
-      external: https://adresse.data.gouv.fr/api
+doc_tech_external: https://adresse.data.gouv.fr/api
 visits_2019: 6460
 uptime: 100 # https://uptimerobot.com/dashboard.php#778110635
 last_update: 10/12/2019
