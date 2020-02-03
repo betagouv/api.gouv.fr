@@ -25,6 +25,7 @@ score:
     doc_tech:
       link: https://www.emploi-store-dev.fr/portail-developpeur-cms/home/catalogue-des-api/documentation-des-api/api/api-offres-demploi-v2.html
 visits_2019: 1227
+last_update: 14/11/2019
 ---
 
 ## Description de l'API

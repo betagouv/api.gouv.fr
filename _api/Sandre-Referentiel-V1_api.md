@@ -41,6 +41,7 @@ score:
       description: |
         <p>L'OIEau s’engage à ce que ce service soit accessible à 95% et l'OIEau s’engage à améliorer progressivement ce rendement.</p>
 visits_2019: 122
+last_update: 30/09/2019
 ---
 
 ## Description de l'API

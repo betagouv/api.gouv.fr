@@ -24,6 +24,7 @@ score:
     doc_tech:
       link: https://tr.transport.data.gouv.fr/spec
 visits_2019: 1346
+last_update: 10/12/2019
 ---
 
 ## Description de l'API

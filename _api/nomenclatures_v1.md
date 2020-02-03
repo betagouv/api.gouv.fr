@@ -27,6 +27,7 @@ score:
     doc_tech:
       link: https://api.insee.fr/catalogue/api-docs/carbon.super/Nomenclatures/v1?envName=Production%20and%20Sandbox
 visits_2019: 727
+last_update: 19/07/2019
 ---
 
 L'API Nomenclatures donne accès aux métadonnées statistiques de la statistique publique.

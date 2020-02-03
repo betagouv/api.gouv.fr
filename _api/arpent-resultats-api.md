@@ -33,6 +33,7 @@ score:
     doc_tech:
       link: https://ensagri.agriculture.gouv.fr/arpent-resultats-api/v2/api-docs?group=arpent-resultats
 visits_2019: 2050
+last_update: 27/07/2017
 ---
 
 ### Pourquoi ?

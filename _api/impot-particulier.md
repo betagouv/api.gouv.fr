@@ -38,6 +38,7 @@ score:
     doc_tech:
       link: https://particulier.api.gouv.fr/swagger_api_impots_particulier.yaml
 visits_2019: 1324
+last_update: 08/10/2019
 ---
 
 ## Récupérez les informations fiscales nécessaires à votre téléservice directement auprès de la DGFiP

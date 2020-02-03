@@ -38,6 +38,7 @@ score:
     doc_tech:
       link: https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/api-docs
 visits_2019: 328
+last_update: 31/07/2019
 ---
 
 ### Description fonctionnelle de l'API Piézométrie

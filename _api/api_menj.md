@@ -30,6 +30,7 @@ keywords:
   - finances
   - personnels
 visits_2019: 37
+last_update: 05/12/2019
 ---
 
 Dans le contexte du vaste mouvement d’ouverture et de partage des données publiques tant au niveau interministériel, qu’au niveau des collectivités territoriales, avec une circulation facilitée des données entre tous les acteurs (administrations centrales, services de l’État en régions, collectivités territoriales, secteur privé, etc.), le ministère amplifie cette démarche volontariste pour ouvrir et partager de nouvelles données publiques sur l’enseignement scolaire, en lien étroit avec celle déjà ouverte de l’enseignement supérieur et de la recherche.
