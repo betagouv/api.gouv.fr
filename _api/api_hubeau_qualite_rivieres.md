@@ -22,10 +22,9 @@ keywords:
   - Fleuve
   - Plan d'eau
   - Rivière
+contact_link: newshubeau@brgm.fr
 score:
   detail:
-    contact:
-      link: newshubeau@brgm.fr
     doc_tech:
       link: https://hubeau.eaufrance.fr/api/v1/qualite_rivieres/api-docs
 visits_2019: 509

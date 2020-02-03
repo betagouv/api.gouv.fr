@@ -21,10 +21,9 @@ owner_acronym: DINUM & DGITM
 keywords:
   - Transport
   - Taxi
+contact_link: https://le.taxi/join.html
 score:
   detail:
-    contact:
-      link: https://le.taxi/join.html
     doc_tech:
       link: https://api.taxi/swagger.json
 visits_2019: 1477

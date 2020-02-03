@@ -22,10 +22,7 @@ keywords:
   - lieux-dits habités
   - lieux-dits inhabités
   - points routiers
-score:
-  detail:
-    contact:
-      link: contact.geoservices@ign.fr
+contact_link: contact.geoservices@ign.fr
 visits_2019: 1266
 last_update: 15/05/2018
 ---

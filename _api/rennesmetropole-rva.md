@@ -13,10 +13,9 @@ owner: Rennes Métropole
 keywords:
   - Voie
   - Adresse
+contact_link: sigsupport@rennesmetropole.fr
 score:
   detail:
-    contact:
-      link: sigsupport@rennesmetropole.fr
     doc_tech:
       external: http://rva.data.rennes-metropole.fr/documentation.php
 visits_2019: 160

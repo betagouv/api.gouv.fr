@@ -29,10 +29,9 @@ rate_limiting_description: |
   <p>Votre volume d'utilisation de l'API Impôt Particulier n'est pas limité par défaut mais fait l'objet d'une déclaration lors de votre demande d'accès. En cas d'utilisation abusive, la DGFiP se réserve le droit de restreindre et/ou couper votre accès à tout moment.</p>
 monitoring_description: |
         <p>La DGFIP s’engage à ce que le service soit accessible à plus de 98,5% et à communiquer sur les coupures de service ponctuelles qui pourraient survenir.</p>
+contact_link: impot.particulier@api.gouv.fr
 score:
   detail:
-    contact:
-      link: impot.particulier@api.gouv.fr
     doc_tech:
       link: https://particulier.api.gouv.fr/swagger_api_impots_particulier.yaml
 visits_2019: 1324

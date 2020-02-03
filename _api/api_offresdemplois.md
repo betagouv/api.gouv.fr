@@ -18,10 +18,9 @@ partners:
 keywords:
   - Offres
   - Emploi
+contact_link: support@emploi-store-dev.fr
 score:
   detail:
-    contact:
-      link: support@emploi-store-dev.fr
     doc_tech:
       link: https://www.emploi-store-dev.fr/portail-developpeur-cms/home/catalogue-des-api/documentation-des-api/api/api-offres-demploi-v2.html
 visits_2019: 1227

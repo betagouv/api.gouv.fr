@@ -23,10 +23,9 @@ keywords:
   - SSO
   - Signup
 logo: logo-fc.png
+contact_link: support.partenaires@franceconnect.gouv.fr
 score:
   detail:
-    contact:
-      link: support.partenaires@franceconnect.gouv.fr
     doc_tech:
       external: https://partenaires.franceconnect.gouv.fr/fcp/fournisseur-service
 visits_2019: 120883

@@ -27,10 +27,9 @@ keywords:
   - Embauche
   - Entreprise
   - Recrutement
+contact_link: contact@emploi-store-dev.fr
 score:
   detail:
-    contact:
-      link: contact@emploi-store-dev.fr
     doc_tech:
       external: https://www.emploi-store-dev.fr/portail-developpeur-cms/home/catalogue-des-api/documentation-des-api/api/api-la-bonne-boite-v1.html
 visits_2019: 2397

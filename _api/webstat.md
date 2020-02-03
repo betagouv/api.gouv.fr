@@ -26,10 +26,9 @@ keywords: # utilisés pour la recherche
 rate_limiting_resume: 5 appels / seconde / jeton
 rate_limiting_description: |
   <p>L'API est disponible à hauteur de 5 appels par secondes et par jetons d'accès.</p>
+contact_link: https://developer.webstat.banque-france.fr/contact
 score:
   detail:
-    contact:
-      link: https://developer.webstat.banque-france.fr/contact #moyen de contact, soit un mail, soit un lien vers formulaire de contact
     doc_tech:
       link: https://developer.webstat.banque-france.fr/ibm_apim/swaggerjson/d2Vic3RhdC1iYW5xdWUtZGUtZnJhbmNlLWZyX3YxOjEuMC4wXzQ3MDE%2C # URL de la documentation au format OpenAPI <https://github.com/OAI/OpenAPI-Specification>
 visits_2019: 8

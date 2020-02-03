@@ -26,10 +26,9 @@ keywords: # utilisé dans la recherche
   - Appellation de taxons
 monitoring_description: |
   <p>L'OIEau s’engage à ce que ce service soit accessible à 95% et l'OIEau s’engage à améliorer progressivement ce rendement.</p>
+contact_link: sandre@sandre.eaufrance.fr
 score:
   detail:
-    contact:
-      link: sandre@sandre.eaufrance.fr #moyen de contact, soit un mail, soit un lien vers formulaire de contact
     doc_tech:
       link: # URL de la documentation au format OpenAPI <https://github.com/OAI/OpenAPI-Specification>
       external: https://api.sandre.eaufrance.fr/referentiels/v1/

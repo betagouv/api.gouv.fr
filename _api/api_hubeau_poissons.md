@@ -20,10 +20,9 @@ keywords:
   - Pêche électrique
   - Cours d'eau
   - Etat piscicole
+contact_link: newshubeau@brgm.fr
 score:
   detail:
-    contact:
-      link: newshubeau@brgm.fr
     doc_tech:
       link: https://hubeau.eaufrance.fr/api/v0/etat_piscicole/api-docs
 visits_2019: 568

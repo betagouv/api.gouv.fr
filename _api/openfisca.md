@@ -22,10 +22,9 @@ keywords:
   - Droit
   - Simulateur
 logo: logo-openfisca.svg
+contact_link: contact@openfisca.fr
 score:
   detail:
-    contact:
-      link: contact@openfisca.fr
     doc_tech:
       external: https://openfisca.org/doc/openfisca-web-api/
 visits_2019: 1982

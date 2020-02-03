@@ -23,10 +23,9 @@ keywords:
   - Fleuve
   - Plan d'eau
   - Rivière
+contact_link: newshubeau@brgm.fr
 score:
   detail:
-    contact:
-      link: newshubeau@brgm.fr
     doc_tech:
       link: https://hubeau.eaufrance.fr/api/v1/temperature/api-docs
 visits_2019: 2868

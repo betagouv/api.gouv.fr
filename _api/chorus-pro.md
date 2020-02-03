@@ -22,10 +22,9 @@ keywords:
   - Comptabilité
   - Portail professionel
 logo: ChorusPro.jpg
+contact_link: api-choruspro.aife@finances.gouv.fr
 score:
   detail:
-    contact:
-      link: api-choruspro.aife@finances.gouv.fr
     doc_tech:
       external: https://communaute.chorus-pro.gouv.fr/documentation/api/
 visits_2019: 40978

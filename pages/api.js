@@ -45,13 +45,11 @@ const API = ({ api, services }) => {
     rate_limiting_description,
     monitoring_link,
     monitoring_description,
+    contact_link,
     partners
   } = api;
 
-  const { contact, doc_tech } = detail;
-
-  const { link: contact_link, description: contact_description } =
-    contact || {};
+  const { doc_tech } = detail;
 
   const {
     link: doc_tech_link,
@@ -93,10 +91,7 @@ const API = ({ api, services }) => {
           clients={clients}
         />
 
-        <Support
-          contact_description={contact_description}
-          contact_link={contact_link}
-        />
+        <Support link={contact_link} />
 
         <Monitoring
           description={monitoring_description}
@@ -146,7 +141,7 @@ API.propTypes = {
           link: PropTypes.string,
           external: PropTypes.string,
           description: PropTypes.string
-        }),
+        })
       }).isRequired
     }).isRequired,
     content: PropTypes.string.isRequired,
@@ -159,7 +154,8 @@ API.propTypes = {
     rate_limiting_resume: PropTypes.string,
     rate_limiting_description: PropTypes.string,
     monitoring_link: PropTypes.string,
-    monitoring_description: PropTypes.string
+    monitoring_description: PropTypes.string,
+    contact_link: PropTypes.string
   }).isRequired
 };
 

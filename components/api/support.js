@@ -3,24 +3,20 @@ import PropTypes from "prop-types";
 
 import Section from "./section";
 
-const Support = ({ contact_description, contact_link }) => {
+const Support = ({ link }) => {
   return (
     <Section id="contact" title="Support">
       <>
-        {contact_description && (
-          <div dangerouslySetInnerHTML={{ __html: contact_description }} />
-        )}
-
-        {contact_link ? (
+        {link ? (
           <>
-            {contact_link.includes("@") ? (
+            {link.includes("@") ? (
               <>
                 <p>Vous pouvez contacter le support de cette API par mail. .</p>
                 <a
                   className="large ui button"
-                  href={`mailto:${contact_link}?subject=Contact%20via%20api.gouv.fr`}
+                  href={`mailto:${link}?subject=Contact%20via%20api.gouv.fr`}
                 >
-                  <i className="icon mail"></i> Envoyer un mail à {contact_link}
+                  <i className="icon mail"></i> Envoyer un mail à {link}
                 </a>
               </>
             ) : (
@@ -31,7 +27,7 @@ const Support = ({ contact_description, contact_link }) => {
                 </p>
                 <a
                   className="large ui button"
-                  href={contact_link}
+                  href={link}
                   target="_blank"
                   rel="noopener"
                 >
@@ -50,13 +46,11 @@ const Support = ({ contact_description, contact_link }) => {
 };
 
 Support.defaultProps = {
-  contact_description: null,
-  contact_link: null
+  link: null
 };
 
 Support.propTypes = {
-  contact_description: PropTypes.string,
-  contact_link: PropTypes.string
+  link: PropTypes.string
 };
 
 export default Support;

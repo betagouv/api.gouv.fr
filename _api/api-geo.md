@@ -31,10 +31,9 @@ stat:
   label: recherches effectuées
   path:
     - last7DaysQueries
+contact_link: geo@api.gouv.fr
 score:
   detail:
-    contact:
-      link: geo@api.gouv.fr
     doc_tech:
       link: https://geo.api.gouv.fr/definition.yml
 uptime: 100 # https://uptimerobot.com/dashboard#777757460

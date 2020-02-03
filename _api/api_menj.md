@@ -12,10 +12,9 @@ logo: logo_menj.jpeg
 rate_limiting_resume: 5000 appels / jour / IP
 rate_limiting_description: |
     <p>Le nombre d'appels API pour un utilisateur anonyme est limité à 5000 appels par adresse IP et par jour.</p>
+contact_link: https://data.education.gouv.fr/pages/contact/
 score:
   detail:
-    contact:
-      link: https://data.education.gouv.fr/pages/contact/
     doc_tech:
       external: https://data.education.gouv.fr/api/v1/console/datasets/1.0/search/
 partners:

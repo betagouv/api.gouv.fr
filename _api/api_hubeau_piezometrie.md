@@ -29,10 +29,9 @@ stat:
   label: recherches effectuées
   path:
     - Piezo_last30DaysQueries
+contact_link: newshubeau@brgm.fr
 score:
   detail:
-    contact:
-      link: newshubeau@brgm.fr
     doc_tech:
       link: https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/api-docs
 visits_2019: 328

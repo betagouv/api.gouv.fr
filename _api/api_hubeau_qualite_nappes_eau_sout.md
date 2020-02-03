@@ -22,10 +22,9 @@ keywords:
   - Eau souterraine
   - Aquifère
   - Hydrogéologie
+contact_link: newshubeau@brgm.fr
 score:
   detail:
-    contact:
-      link: newshubeau@brgm.fr
     doc_tech:
       link: https://hubeau.eaufrance.fr/api/v1/qualite_nappes/api-docs
 visits_2019: 381

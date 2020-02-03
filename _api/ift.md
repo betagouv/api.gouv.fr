@@ -24,10 +24,9 @@ keywords:
   - Transition agro-écologique
   - MAEC
   - Ferme Dephy
+contact_link: calculette-ift.dgpaat@agriculture.gouv.fr
 score:
   detail:
-    contact:
-      link: calculette-ift.dgpaat@agriculture.gouv.fr
     doc_tech:
       link: https://alim.agriculture.gouv.fr/ift-api/v2/api-docs?group=ift
 visits_2019: 324

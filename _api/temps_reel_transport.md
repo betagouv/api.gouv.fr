@@ -15,10 +15,9 @@ keywords:
   - siri-lite
 external_site: https://transport.data.gouv.fr
 monitoring_link: http://stats.transport.data.gouv.fr/
+contact_link: contact@transport.beta.gouv.fr
 score:
   detail:
-    contact:
-      link: contact@transport.beta.gouv.fr
     doc_tech:
       link: https://tr.transport.data.gouv.fr/spec
 visits_2019: 1346
