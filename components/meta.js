@@ -3,13 +3,10 @@ import PropTypes from "prop-types";
 import Head from "next/head";
 import prune from "underscore.string/prune";
 
-import getConfig from "next/config";
-
 import Fonts from "./styles/fonts";
 
-const { publicRuntimeConfig } = getConfig();
-const SITE_NAME = publicRuntimeConfig.SITE_NAME || "api.gouv.fr";
-const SITE_URL = publicRuntimeConfig.SITE_URL || "https://api.gouv.fr";
+const SITE_NAME = "api.gouv.fr";
+const SITE_URL = "https://api.gouv.fr";
 
 export const SITE_DESCRIPTION = "Simplifiez le partage et la circulation des données administratives";
 
