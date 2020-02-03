@@ -2,7 +2,9 @@
 title: Nomenclatures
 tagline: API Nomenclatures donne accès aux métadonnées statistiques de la statistique publique
 external_site: https://api.insee.fr
-contract: OUVERT sous contrat
+is_open: false
+access_condition: OUVERT sous contrat
+access_link: https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/item-info.jag?name=Nomenclatures&version=v1&provider=insee
 clients:
   - collectivités
   - ministères
@@ -15,8 +17,6 @@ keywords:
 logo: Logo_Insee.svg
 score:
   detail:
-    access:
-      link: https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/item-info.jag?name=Nomenclatures&version=v1&provider=insee
     rate_limiting:
       resume: 30 appels / minute
       description: |

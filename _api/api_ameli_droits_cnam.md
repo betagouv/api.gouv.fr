@@ -2,7 +2,18 @@
 title: API de droits à l'Assurance Maladie
 tagline: Pour accélérer vos démarches en lien avec l'assurance maladie, automatisez la récupération des droits à l’Assurance Maladie de vos clients
 external_site: https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/assurance-maladie-digital/api-droits-fs-doc/master/documentation-open-api.yaml
-contract: OUVERT sous contrat
+is_open: false
+access_condition: OUVERT sous contrat
+access_link: https://signup.api.gouv.fr/api-droits-cnam
+access_description: |
+  <p>Cette API est actuellement réservée aux établissements de soins pour leur démarche de pré admission et aux organismes complémentaires en santé pour faciliter leur démarche d’adhésion.</p>
+
+  <p>Cette API fonctionne uniquement avec FranceConnect; le candidat à l’utilisation de cette API doit être préalablement "fournisseur de services" FranceConnect.</p>
+
+  <p>L’utilisation de l’API est soumise à une convention d’usage avec la Caisse Nationale d’Assurance Maladie. Les données accessibles dépendent également du cas d’usage.</p>
+  <p>La Caisse Nationale se réserve le droit d’évaluer l’éligibilité des candidats au regard des cas d’usage indiqués.</p>
+
+  <p>Les demandes d'accès pour l'API Attestation de droits à l'Assurance Maladie utilisent signup.api.gouv.fr, un outil mis à disposition pour toutes les API cataloguées sur api.gouv.fr.</p>
 logo: cnam.jpg
 stat:
   lastXdays: 30
@@ -22,17 +33,6 @@ keywords:
   - Signup
 score:
   detail:
-    access:
-      link: https://signup.api.gouv.fr/api-droits-cnam
-      description: |
-        <p>Cette API est actuellement réservée aux établissements de soins pour leur démarche de pré admission et aux organismes complémentaires en santé pour faciliter leur démarche d’adhésion.</p>
-
-        <p>Cette API fonctionne uniquement avec FranceConnect; le candidat à l’utilisation de cette API doit être préalablement "fournisseur de services" FranceConnect.</p>
-
-        <p>L’utilisation de l’API est soumise à une convention d’usage avec la Caisse Nationale d’Assurance Maladie. Les données accessibles dépendent également du cas d’usage.</p>
-        <p>La Caisse Nationale se réserve le droit d’évaluer l’éligibilité des candidats au regard des cas d’usage indiqués.</p>
-
-        <p>Les demandes d'accès pour l'API Attestation de droits à l'Assurance Maladie utilisent signup.api.gouv.fr, un outil mis à disposition pour toutes les API cataloguées sur api.gouv.fr.</p>
     rate_limiting:
       resume: Incluses dans la convention
       description: |

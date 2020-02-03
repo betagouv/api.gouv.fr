@@ -4,7 +4,8 @@ tagline: "L'accès simplifié aux données de référence : urbanisme, zonages A
 external_site: https://apicarto.ign.fr
 owner: Institut national de l’information géographique et forestière
 owner_acronym: IGN
-contract: OUVERT (sous contrat pour certaines données)
+is_open: false
+acces_condition: OUVERT (sous contrat pour certaines données)
 category: Public
 logo: look4-geoportail.jpg
 score:

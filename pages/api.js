@@ -37,11 +37,14 @@ const API = ({ api, services }) => {
     external_site,
     content,
     clients,
-    contract,
+    is_open,
+    access_condition,
+    access_description,
+    access_link,
     partners
   } = api;
 
-  const { contact, doc_tech, access, monitoring, rate_limiting } = detail;
+  const { contact, doc_tech, monitoring, rate_limiting } = detail;
 
   const { link: contact_link, description: contact_description } =
     contact || {};
@@ -51,12 +54,6 @@ const API = ({ api, services }) => {
     external: doc_tech_external,
     description: doc_tech_description
   } = doc_tech || {};
-
-  const {
-    is_open: access_open,
-    link: access_link,
-    description: access_description
-  } = access || {};
 
   const { link: monitoring_link, description: monitoring_description } =
     monitoring || {};
@@ -80,7 +77,7 @@ const API = ({ api, services }) => {
       />
 
       <Thumbnails
-        is_open={access_open}
+        is_open={is_open}
         uptime={uptime}
         lastUpdate={last_update}
         owner={owner}
@@ -93,10 +90,10 @@ const API = ({ api, services }) => {
         <Content content={content} />
 
         <Access
-          access_open={access_open}
-          access_link={access_link}
-          access_description={access_description}
-          contract={contract}
+          is_open={is_open}
+          condition={access_condition}
+          description={access_description}
+          link={access_link}
           clients={clients}
         />
 
@@ -154,11 +151,6 @@ API.propTypes = {
           external: PropTypes.string,
           description: PropTypes.string
         }),
-        access: PropTypes.shape({
-          is_open: PropTypes.bool,
-          link: PropTypes.string,
-          description: PropTypes.string
-        }),
         monitoring: PropTypes.shape({
           link: PropTypes.string,
           description: PropTypes.string
@@ -170,7 +162,10 @@ API.propTypes = {
     }).isRequired,
     content: PropTypes.string.isRequired,
     clients: PropTypes.array,
-    contract: PropTypes.string,
+    is_open: PropTypes.bool.isRequired,
+    access_condition: PropTypes.string,
+    access_description: PropTypes.string,
+    access_link: PropTypes.string,
     partners: PropTypes.array
   }).isRequired
 };

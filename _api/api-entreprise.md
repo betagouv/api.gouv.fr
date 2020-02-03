@@ -2,7 +2,9 @@
 title: API Entreprise
 tagline: Simplifier les démarches des entreprises en récupérant pour elles leurs documents administratifs
 external_site: https://entreprise.api.gouv.fr/
-contract: OUVERT sous contrat
+is_open: false
+access_condition: OUVERT sous contrat
+access_link: https://signup.entreprise.api.gouv.fr
 stat:
   lastXdays: 30
   url: https://dashboard.entreprise.api.gouv.fr/api/watchdoge/stats/last_30_days_usage
@@ -37,8 +39,6 @@ keywords:
   - Signup
 score:
   detail:
-    access:
-      link: https://signup.entreprise.api.gouv.fr
     rate_limiting:
       resume: 2000 appels / 10 minutes / IP
       description: |

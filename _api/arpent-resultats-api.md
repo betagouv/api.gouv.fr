@@ -4,7 +4,7 @@ tagline: Accéder aux calendriers de délibération et aux résultats des examen
 owner: Ministère de l'agriculture et de l'alimentation
 owner_acronym: MAA
 category: public
-contract: OUVERT
+is_open: true
 logo: maa.png
 clients:
   - particuliers

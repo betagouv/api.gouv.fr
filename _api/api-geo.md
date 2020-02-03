@@ -3,7 +3,7 @@ title: API Géo
 aliases:
   - geoapi
 tagline: Interrogez les référentiels géographiques plus facilement
-contract: OUVERT
+is_open: true
 external_site: https://geo.api.gouv.fr
 clients:
   - collectivités
@@ -30,8 +30,6 @@ stat:
     - last7DaysQueries
 score:
   detail:
-    access:
-      is_open: true
     contact:
       link: geo@api.gouv.fr
     doc_tech:

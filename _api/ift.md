@@ -4,7 +4,8 @@ tagline: "Faciliter et fiabiliser votre calcul de l'Indicateur de Fréquence de 
 owner: Ministère de l'Agriculture et de l'Alimentation
 owner_acronym: MAA
 category: public
-contract: OUVERT
+is_open: true
+access_link: https://alim.agriculture.gouv.fr/ift/espace-partenaire
 logo: maa.png
 external_site: https://alim.agriculture.gouv.fr/ift/espace-partenaire
 clients:
@@ -25,8 +26,6 @@ keywords:
   - Ferme Dephy
 score:
   detail:
-    access:
-      link: https://alim.agriculture.gouv.fr/ift/espace-partenaire
     contact:
       link: calculette-ift.dgpaat@agriculture.gouv.fr
     doc_tech:

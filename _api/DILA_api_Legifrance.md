@@ -4,6 +4,8 @@ tagline: Réutilisation des données juridiques disponibles sur le site Légifra
 owner: Direction de l'information légale et administrative
 owner_acronym: DILA
 logo: DILA_logo_Simplifie_beta_v3.svg
+is_open: false
+access_description: API publique
 clients:
   - particuliers
   - entreprises
@@ -24,9 +26,6 @@ keywords:
   - Dossiers législatifs
 score:
   detail:
-    access:
-      description: API publique
-      link:
     rate_limiting:
       resume: quota / jeton
       description: |

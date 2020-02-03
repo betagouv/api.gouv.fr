@@ -4,6 +4,7 @@ tagline: Mettre à disposition les données temps réel des transports en commun
 category: Public
 owner: Direction interministérielle du numérique
 owner_acronym: DINUM
+is_open: true
 clients:
   - particuliers
   - entreprises
@@ -15,8 +16,6 @@ keywords:
 external_site: https://transport.data.gouv.fr
 score:
   detail:
-    access:
-      is_open: true
     monitoring:
       link: http://stats.transport.data.gouv.fr/
     contact:

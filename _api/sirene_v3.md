@@ -7,6 +7,9 @@ clients:
   - ministères
 owner: Institut national de la statistique et des études économiques
 owner_acronym: INSEE
+is_open: true
+access_description: Cette API est ouverte à tous.
+access_link: https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/item-info.jag?name=Sirene&version=V3&provider=insee
 keywords:
   - Entreprise
   - Etablissements
@@ -14,9 +17,6 @@ keywords:
 logo: Logo_Insee.svg
 score:
   detail:
-    access:
-      description: Cette API est ouverte à tous.
-      link: https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/item-info.jag?name=Sirene&version=V3&provider=insee
     rate_limiting:
       resume: 30 appels / minute
       description: |

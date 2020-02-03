@@ -1,7 +1,7 @@
 ---
 title: Hub'Eau - Qualité des nappes d'eau souterraine
 tagline: Qualité physico-chimique des nappes d'eau souterraine
-contract: OUVERT
+is_open: true
 external_site: http://hubeau.eaufrance.fr/page/documentation-qualite-nappes-deau-souterraines
 logo: 05-qualite_nappes.png
 clients:
@@ -24,8 +24,6 @@ keywords:
   - Hydrogéologie
 score:
   detail:
-    access:
-      is_open: true
     contact:
       link: newshubeau@brgm.fr
     doc_tech:

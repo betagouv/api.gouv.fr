@@ -2,7 +2,13 @@
 title: API Particulier
 tagline: Pour accélérer l’ouverture des données personnelles et leur réutilisation, automatisez vos demandes de pièces justificatives
 external_site: https://particulier.api.gouv.fr
-contract: OUVERT sous contrat
+is_open: false
+access_condition: OUVERT sous contrat
+access_link: https://signup.api.gouv.fr/api-particulier
+access_description: |
+        <p>API Particulier est utilisable sans limitation d'usage par toute collectivité et ministère justifiant de la nécessité de recueillir une information personnelle pour une démarche administrative (justificatif de domicile, revenu fiscal de référence, etc).</p>
+
+        <p>Les demandes d'accès pour API Particulier utilisent signup.api.gouv.fr, un outil mis à disposition pour toutes les API catalogués sur api.gouv.fr.</p>
 stat:
   lastXdays: 30
   url: https://monitoring.particulier.api.gouv.fr/api/stats/
@@ -24,12 +30,6 @@ keywords:
   - Signup
 score:
   detail:
-    access:
-      link: https://signup.api.gouv.fr/api-particulier
-      description: |
-        <p>API Particulier est utilisable sans limitation d'usage par toute collectivité et ministère justifiant de la nécessité de recueillir une information personnelle pour une démarche administrative (justificatif de domicile, revenu fiscal de référence, etc).</p>
-
-        <p>Les demandes d'accès pour API Particulier utilisent signup.api.gouv.fr, un outil mis à disposition pour toutes les API catalogués sur api.gouv.fr.</p>
     rate_limiting:
       resume: 20 appels / seconde / jeton
       description: |

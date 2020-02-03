@@ -2,7 +2,7 @@
 title: Base Adresse Nationale
 tagline: "Un référentiel national ouvert : de l'adresse à la coordonnée géographique"
 external_site: https://adresse.data.gouv.fr
-contract: OUVERT
+is_open: true
 clients:
   - particuliers
   - entreprises
@@ -27,8 +27,6 @@ keywords:
 additional_css: api
 score:
   detail:
-    access:
-      is_open: true
     contact:
       link: adresse@data.gouv.fr
     doc_tech:

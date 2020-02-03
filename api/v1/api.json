@@ -10,7 +10,7 @@ layout: null
       "image" : {% if api.logo %}"{{ api.logo }}"{% else %}"{{ api.default_logo }}"{% endif %},
       "domain" : "{{ api.domain }}",
       "owner" : "{{ api.owner }}",
-      "contract" : "{{ api.contract }}",
+      "is_open" : "{{ api.is_open }}",
       "keywords": [{% if api.keywords %}"{{ api.keywords | join: '","' }}"{% endif %}],
       "clients": [{% if api.clients %}"{{ api.clients | join: '","' }}"{% endif %}],
       "partners": [{% if api.partners %}"{{ api.partners | join: '","' }}"{% endif %}]

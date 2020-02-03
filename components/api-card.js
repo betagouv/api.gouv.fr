@@ -13,7 +13,7 @@ const DEFAULT_LOGO = publicRuntimeConfig.DEFAULT_LOGO || "logo-beta-gouv.svg";
 const ApiCard = ({
   title,
   url,
-  contract,
+  is_open,
   uptime,
   image,
   owner,
@@ -43,8 +43,8 @@ const ApiCard = ({
 
           <div className="card-extra">
             <div className="badges">
-              <div className="badge contract">
-                {contract === "OUVERT" ? (
+              <div className="badge access">
+                {is_open ? (
                   <>
                     <Unlock size={20} />
                     <div>Accès libre</div>
@@ -90,7 +90,7 @@ const ApiCard = ({
           font-size: small;
         }
 
-        .contract div {
+        .access div {
           margin-left: 0.5em;
         }
 
@@ -109,7 +109,7 @@ const ApiCard = ({
 ApiCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string,
-  contract: PropTypes.string.isRequired,
+  is_open: PropTypes.bool.isRequired,
   image: PropTypes.string,
   owner: PropTypes.string,
   tagline: PropTypes.string,

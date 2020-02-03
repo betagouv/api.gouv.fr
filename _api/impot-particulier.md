@@ -4,7 +4,17 @@ logo: logo-dgfip.jpg
 tagline: Raccordez-vous directement à la DGFiP pour récupérer les éléments fiscaux nécessaires à vos téléservices, éliminez le traitement et le stockage des pièces justificatives
 owner: Direction Générale des Finances Publiques
 owner_acronym: DGFIP
-contract: OUVERT sous contrat
+is_open: false
+access_condition: OUVERT sous contrat
+access_description: |
+        <p>L'API Impôt Particulier est utilisable par toute collectivité ou ministère :</p>
+        <ul>
+          <li>ayant déjà préalablement implémenté FranceConnect ;</li>
+          <li>justifiant d'un fondement légal permettant le recueil d'informations fiscales rattachées à une démarche administrative.</li>
+        </ul>
+        <p>Les demandes d'accès à l'API Impôt Particulier utilisent signup.api.gouv.fr, un outil mis à disposition pour toutes les API catalogués sur api.gouv.fr.</p>
+        <p>Lors de la contractualisation pour accéder à l'API, une convention précise les engagements de chacune des parties et décrit les échanges de données réalisés.</p>
+access_link: https://signup.api.gouv.fr/api-impot-particulier
 clients:
   - collectivités
   - ministères
@@ -25,16 +35,6 @@ score:
         <p>Votre volume d'utilisation de l'API Impôt Particulier n'est pas limité par défaut mais fait l'objet d'une déclaration lors de votre demande d'accès. En cas d'utilisation abusive, la DGFiP se réserve le droit de restreindre et/ou couper votre accès à tout moment.</p>
     contact:
       link: impot.particulier@api.gouv.fr
-    access:
-      description: |
-        <p>L'API Impôt Particulier est utilisable par toute collectivité ou ministère :</p>
-        <ul>
-          <li>ayant déjà préalablement implémenté FranceConnect ;</li>
-          <li>justifiant d'un fondement légal permettant le recueil d'informations fiscales rattachées à une démarche administrative.</li>
-        </ul>
-        <p>Les demandes d'accès à l'API Impôt Particulier utilisent signup.api.gouv.fr, un outil mis à disposition pour toutes les API catalogués sur api.gouv.fr.</p>
-        <p>Lors de la contractualisation pour accéder à l'API, une convention précise les engagements de chacune des parties et décrit les échanges de données réalisés.</p>
-      link: https://signup.api.gouv.fr/api-impot-particulier
     doc_tech:
       link: https://particulier.api.gouv.fr/swagger_api_impots_particulier.yaml
 visits_2019: 1324

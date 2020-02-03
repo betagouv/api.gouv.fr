@@ -2,7 +2,9 @@
 title: le.Taxi
 tagline: Un clic, un taxi
 external_site: https://le.taxi
-contract: OUVERT sous contrat
+is_open: false
+access_condition: OUVERT sous contrat
+access_link: http://le.taxi/join.html
 clients:
   - collectivités
   - entreprises
@@ -23,8 +25,6 @@ score:
   detail:
     contact:
       link: https://le.taxi/join.html
-    access:
-      link: http://le.taxi/join.html
     doc_tech:
       link: https://api.taxi/swagger.json
 visits_2019: 1477

@@ -1,6 +1,6 @@
 ---
 title: Annuaire des établissements publics de l'administration
-contract: OUVERT
+is_open: true
 owner: Direction interministérielle du numérique
 owner_acronym: DINUM
 layout: api
@@ -17,8 +17,6 @@ keywords:
   - Administration
 score:
   detail:
-    access:
-      is_open: true
     contact:
       link: contact@beta.gouv.fr
     doc_tech:

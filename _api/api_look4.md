@@ -1,9 +1,11 @@
 ---
 title: API Look4 Géoportail
 tagline: la recherche géographique multithématique du Géoportail - adresses, lieux, cadastre, points routiers, etc
-contract: OUVERT sous contrat
 owner: Institut national de l’information géographique et forestière
 owner_acronym: IGN
+is_open: false
+access_condition: OUVERT sous contrat
+access_link: http://professionnels.ign.fr/ign/contrats
 category: Public
 layout: api
 logo: look4-geoportail.jpg
@@ -22,8 +24,6 @@ keywords:
   - points routiers
 score:
   detail:
-    access:
-      link: http://professionnels.ign.fr/ign/contrats
     contact:
       link: contact.geoservices@ign.fr
 visits_2019: 1266
