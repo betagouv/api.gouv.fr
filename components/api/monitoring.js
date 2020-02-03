@@ -3,21 +3,21 @@ import PropTypes from "prop-types";
 
 import Section from "./section";
 
-const Monitoring = ({ monitoring_description, monitoring_link }) => {
+const Monitoring = ({ description, link }) => {
   return (
     <Section id="monitoring" title="Supervision">
       <>
-        {monitoring_description && (
-          <div dangerouslySetInnerHTML={{ __html: monitoring_description }} />
+        {description && (
+          <div dangerouslySetInnerHTML={{ __html: description }} />
         )}
 
-        {monitoring_link ? (
+        {link ? (
           <>
             <p>Les moniteurs de cette API sont disponibles publiquement.</p>
 
             <a
               className="large ui button"
-              href={monitoring_link}
+              href={link}
               target="_blank"
               rel="noopener"
             >
@@ -35,13 +35,13 @@ const Monitoring = ({ monitoring_description, monitoring_link }) => {
 };
 
 Monitoring.defaultProps = {
-  monitoring_description: null,
-  monitoring_link: null
+  description: null,
+  link: null
 };
 
 Monitoring.propTypes = {
-  monitoring_description: PropTypes.string,
-  monitoring_link: PropTypes.string
+  description: PropTypes.string,
+  link: PropTypes.string
 };
 
 export default Monitoring;

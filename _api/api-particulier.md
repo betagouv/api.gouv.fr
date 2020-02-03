@@ -31,16 +31,15 @@ keywords:
 rate_limiting_resume: 20 appels / seconde / jeton
 rate_limiting_description: |
   <p>L'API est disponible à hauteur de 20 appels par secondes et par jetons d'accès.</p>
+monitoring_link: https://status.particulier.api.gouv.fr
+monitoring_description: |
+    <p>La DINUM s’engage à ce que le Service soit accessible à 95% et la DINUM s’engage à améliorer progressivement ce rendement.</p>
 score:
   detail:
     contact:
       link: contact@particulier.api.gouv.fr
     doc_tech:
       link: https://particulier.api.gouv.fr/documentation-open-api.yaml
-    monitoring:
-      link: https://status.particulier.api.gouv.fr
-      description: |
-        <p>La DINUM s’engage à ce que le Service soit accessible à 95% et la DINUM s’engage à améliorer progressivement ce rendement.</p>
 visits_2019: 8642
 uptime: 99.992 # https://uptimerobot.com/dashboard#777746216 * https://uptimerobot.com/dashboard#778826562 / 2
 last_update: 10/12/2019

@@ -24,7 +24,8 @@ keywords: # utilisé dans la recherche
   - Masse d'eau
   - Taxon
   - Appellation de taxons
-
+monitoring_description: |
+  <p>L'OIEau s’engage à ce que ce service soit accessible à 95% et l'OIEau s’engage à améliorer progressivement ce rendement.</p>
 score:
   detail:
     contact:
@@ -32,10 +33,6 @@ score:
     doc_tech:
       link: # URL de la documentation au format OpenAPI <https://github.com/OAI/OpenAPI-Specification>
       external: https://api.sandre.eaufrance.fr/referentiels/v1/
-    monitoring:
-      link: # URL d'une page qui affiche le statut
-      description: |
-        <p>L'OIEau s’engage à ce que ce service soit accessible à 95% et l'OIEau s’engage à améliorer progressivement ce rendement.</p>
 visits_2019: 122
 last_update: 30/09/2019
 ---

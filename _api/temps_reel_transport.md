@@ -14,10 +14,9 @@ keywords:
   - gtfs-rt
   - siri-lite
 external_site: https://transport.data.gouv.fr
+monitoring_link: http://stats.transport.data.gouv.fr/
 score:
   detail:
-    monitoring:
-      link: http://stats.transport.data.gouv.fr/
     contact:
       link: contact@transport.beta.gouv.fr
     doc_tech:
