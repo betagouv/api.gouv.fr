@@ -22,6 +22,9 @@ keywords:
   - Départements
   - Régions
   - EPCI
+rate_limiting_resume: 10 appels / seconde / IP
+rate_limiting_description: |
+  <p>L'API est disponible à hauteur de 10 appels par seconde et par adresse IP.</p>
 stat:
   lastXdays: 7
   url: https://geo.api.gouv.fr/stats.json
@@ -34,10 +37,6 @@ score:
       link: geo@api.gouv.fr
     doc_tech:
       link: https://geo.api.gouv.fr/definition.yml
-    rate_limiting:
-      resume: 10 appels / seconde / IP
-      description: |
-        <p>L'API est disponible à hauteur de 10 appels par seconde et par adresse IP.</p>
 uptime: 100 # https://uptimerobot.com/dashboard#777757460
 visits_2019: 26602
 last_update: 17/01/2020

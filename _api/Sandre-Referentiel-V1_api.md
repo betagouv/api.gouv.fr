@@ -27,8 +27,6 @@ keywords: # utilisé dans la recherche
 
 score:
   detail:
-    rate_limiting:
-      description:
     contact:
       link: sandre@sandre.eaufrance.fr #moyen de contact, soit un mail, soit un lien vers formulaire de contact
     doc_tech:

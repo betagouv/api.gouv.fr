@@ -15,13 +15,12 @@ keywords:
   - Etablissements
   - Sirene
 logo: Logo_Insee.svg
+rate_limiting_resume: 30 appels / minute
+rate_limiting_description: |
+  <p>L'usage d'API Sirene est soumis à une limite de 30 interrogations par minute.</p>
+  <p>L'Insee se réserve le droit de changer cette limite en cas de nécessité.</p>
 score:
   detail:
-    rate_limiting:
-      resume: 30 appels / minute
-      description: |
-        <p>L'usage d'API Sirene est soumis à une limite de 30 interrogations par minute.</p>
-        <p>L'Insee se réserve le droit de changer cette limite en cas de nécessité.</p>
     contact:
       link: https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/help.jag#contact
     doc_tech:

@@ -3,13 +3,13 @@ import PropTypes from "prop-types";
 
 import Section from "./section";
 
-const RateLimiting = ({ rate_limiting_description }) => {
+const RateLimiting = ({ description }) => {
   return (
     <Section id="rate_limiting" title="Limitations d’usage">
-      {rate_limiting_description ? (
+      {description ? (
         <div
           dangerouslySetInnerHTML={{
-            __html: rate_limiting_description
+            __html: description
           }}
         />
       ) : (
@@ -23,11 +23,11 @@ const RateLimiting = ({ rate_limiting_description }) => {
 };
 
 RateLimiting.defaultProps = {
-  rate_limiting_description: null
+  description: null
 };
 
 RateLimiting.propTypes = {
-  rate_limiting_description: PropTypes.string
+  description: PropTypes.string
 };
 
 export default RateLimiting;

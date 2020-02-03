@@ -28,12 +28,11 @@ keywords:
   - Adresse
   - Justificatif de domicile
   - Signup
+rate_limiting_resume: 20 appels / seconde / jeton
+rate_limiting_description: |
+  <p>L'API est disponible à hauteur de 20 appels par secondes et par jetons d'accès.</p>
 score:
   detail:
-    rate_limiting:
-      resume: 20 appels / seconde / jeton
-      description: |
-        <p>L'API est disponible à hauteur de 20 appels par secondes et par jetons d'accès.</p>
     contact:
       link: contact@particulier.api.gouv.fr
     doc_tech:

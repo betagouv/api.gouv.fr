@@ -24,12 +24,11 @@ keywords:
   - Accords de branche et conventions collectives
   - Documents administratifs
   - Dossiers législatifs
+rate_limiting_resume: quota / jeton
+rate_limiting_description: |
+  <p>Les appels API sont limités par quotas par jetons d'accès.</p>
 score:
   detail:
-    rate_limiting:
-      resume: quota / jeton
-      description: |
-        <p>Les appels API sont limités par quotas par jetons d'accès.</p>
     contact:
       link: retours-legifrance-modernise@dila.gouv.fr
     doc_tech:

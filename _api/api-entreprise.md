@@ -37,12 +37,11 @@ keywords:
   - Entreprise
   - Certification
   - Signup
+rate_limiting_resume: 2000 appels / 10 minutes / IP
+rate_limiting_description: |
+  <p>Actuellement, le nombre d’appels aux API Entreprise est limité à 2000 requêtes tranche de 10 minutes par IP. Au delà, l’adresse IP est bannie de nos serveurs, et ces derniers ne répondent alors simplement pas. Si vous pensez être dans cette situation, vous pouvez nous contacter à support@entreprise.api.gouv.fr.</p>
 score:
   detail:
-    rate_limiting:
-      resume: 2000 appels / 10 minutes / IP
-      description: |
-        <p>Actuellement, le nombre d’appels aux API Entreprise est limité à 2000 requêtes tranche de 10 minutes par IP. Au delà, l’adresse IP est bannie de nos serveurs, et ces derniers ne répondent alors simplement pas. Si vous pensez être dans cette situation, vous pouvez nous contacter à support@entreprise.api.gouv.fr.</p>
     contact:
       link: support@entreprise.api.gouv.fr
     doc_tech:

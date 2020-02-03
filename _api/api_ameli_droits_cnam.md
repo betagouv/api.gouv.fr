@@ -31,12 +31,11 @@ keywords:
   - Exonération du ticket modérateur
   - Médecin traitant
   - Signup
+rate_limiting_resume: Incluses dans la convention
+rate_limiting_description: |
+    <p>Les éventuelles limitations d’usage vis-à-vis d’un partenaire sont incluses dans la convention.</p>
 score:
   detail:
-    rate_limiting:
-      resume: Incluses dans la convention
-      description: |
-        <p>Les éventuelles limitations d’usage vis-à-vis d’un partenaire sont incluses dans la convention.</p>
     contact:
       link: partenaires-api-ameli.cnam@assurance-maladie.fr
     doc_tech:

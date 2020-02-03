@@ -23,12 +23,11 @@ keywords: # utilisés pour la recherche
   - balance des paiements
   - conjoncture
   - entreprises
-
+rate_limiting_resume: 5 appels / seconde / jeton
+rate_limiting_description: |
+  <p>L'API est disponible à hauteur de 5 appels par secondes et par jetons d'accès.</p>
 score:
   detail:
-    rate_limiting:
-      description: |
-        <p>L'API est disponible à hauteur de 5 appels par secondes et par jetons d'accès.</p>
     contact:
       link: https://developer.webstat.banque-france.fr/contact #moyen de contact, soit un mail, soit un lien vers formulaire de contact
     doc_tech:

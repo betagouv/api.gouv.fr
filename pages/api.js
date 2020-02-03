@@ -41,10 +41,12 @@ const API = ({ api, services }) => {
     access_condition,
     access_description,
     access_link,
+    rate_limiting_resume,
+    rate_limiting_description,
     partners
   } = api;
 
-  const { contact, doc_tech, monitoring, rate_limiting } = detail;
+  const { contact, doc_tech, monitoring } = detail;
 
   const { link: contact_link, description: contact_description } =
     contact || {};
@@ -57,11 +59,6 @@ const API = ({ api, services }) => {
 
   const { link: monitoring_link, description: monitoring_description } =
     monitoring || {};
-
-  const {
-    description: rate_limiting_description,
-    resume: rate_limiting_resume
-  } = rate_limiting || {};
 
   return (
     <Page>
@@ -107,7 +104,7 @@ const API = ({ api, services }) => {
           monitoring_link={monitoring_link}
         />
 
-        <RateLimiting rate_limiting_description={rate_limiting_description} />
+        <RateLimiting description={rate_limiting_description} />
 
         <Partners partners={partners} />
 
@@ -154,9 +151,6 @@ API.propTypes = {
         monitoring: PropTypes.shape({
           link: PropTypes.string,
           description: PropTypes.string
-        }),
-        rate_limiting: PropTypes.shape({
-          description: PropTypes.string
         })
       }).isRequired
     }).isRequired,
@@ -166,7 +160,9 @@ API.propTypes = {
     access_condition: PropTypes.string,
     access_description: PropTypes.string,
     access_link: PropTypes.string,
-    partners: PropTypes.array
+    partners: PropTypes.array,
+    rate_limiting_resume: PropTypes.string,
+    rate_limiting_description: PropTypes.string
   }).isRequired
 };
 
