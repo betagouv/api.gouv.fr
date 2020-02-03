@@ -19,7 +19,7 @@ import { normaliseStr } from "../utils/normalize";
 const { publicRuntimeConfig } = getConfig();
 const SITE_DESCRIPTION =
   publicRuntimeConfig.SITE_DESCRIPTION ||
-  "Le site qui simplifie le partage et la circulation des données administratives";
+  "Simplifiez le partage et la circulation des données administratives";
 
 const filterAPI = (list, filter) => {
   let filteredList = list;
