@@ -105,6 +105,7 @@ const API = ({ api, services }) => {
 
   const selectAnchor = anchor => {
     setMenuItem(anchor);
+    scrollToAnchor(anchor);
   };
 
   const getVisibleAnchor = () => {

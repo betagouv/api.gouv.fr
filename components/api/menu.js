@@ -46,19 +46,17 @@ const Menu = ({ detail, selectedItem, select }) => {
     <div className="menu">
       {MENU_OPTIONS.map(menu => (
         <div key={menu.id}>
-          <Link href={`#${menu.id}`}>
-            <a
-              className={`item ${selectedItem === menu.id && "selected"}`}
-              onClick={() => select(menu.id)}
-            >
-              {menu.label}
-              {!menu.hasNoDetails &&
-                !detail[menu.id] &&
-                menu.id !== "partenaires" && (
-                  <div className="ui grey mini label">Non renseigné</div>
-                )}
-            </a>
-          </Link>
+          <div
+            className={`item ${selectedItem === menu.id && "selected"}`}
+            onClick={() => select(menu.id)}
+          >
+            {menu.label}
+            {!menu.hasNoDetails &&
+              !detail[menu.id] &&
+              menu.id !== "partenaires" && (
+                <div className="ui grey mini label">Non renseigné</div>
+              )}
+          </div>
         </div>
       ))}
       <style jsx>{`
