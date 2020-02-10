@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import getConfig from "next/config";
 
 import { getAPI, getService } from "../utils/api";
+import { roundUptime } from "../utils/uptime";
 
 import withErrors from "../components/hoc/with-errors";
 
@@ -81,7 +82,7 @@ const API = ({ api, services }) => {
 
       <Thumbnails
         is_open={access_open}
-        uptime={uptime}
+        uptime={roundUptime(0)(uptime)}
         lastUpdate={last_update}
         owner={owner}
         rate_limiting={rate_limiting_resume}
