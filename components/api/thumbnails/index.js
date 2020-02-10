@@ -1,4 +1,4 @@
-import Thumbnail from "./thumbnail"
+import Thumbnail from "./thumbnail";
 
 import { Lock, Unlock, Activity, Calendar, User, Sliders } from "react-feather";
 
@@ -34,7 +34,9 @@ const Thumbnails = ({ is_open, uptime, lastUpdate, owner, rate_limiting }) => {
         <Thumbnail title="Limite d’usage" icon={<Sliders />}>
           <div>
             {rate_limiting.split("/").map(rate => (
-              <div className="rate">{rate}</div>
+              <div className="rate" key={rate}>
+                {rate}
+              </div>
             ))}
           </div>
         </Thumbnail>
@@ -76,4 +78,4 @@ const Thumbnails = ({ is_open, uptime, lastUpdate, owner, rate_limiting }) => {
   );
 };
 
-export default Thumbnails
+export default Thumbnails;

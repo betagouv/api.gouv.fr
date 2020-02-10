@@ -86,7 +86,8 @@ const API = ({ api, services }) => {
         `#${currentVisibleAnchor}`
       );
     }
-  }, 100);
+    // approx 8 frames
+  }, 16 * 8);
 
   const scrollToAnchor = (anchor, smooth = false) => {
     const anchorElem = document.getElementById(anchor);
