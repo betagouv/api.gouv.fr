@@ -5,7 +5,7 @@ import getConfig from "next/config";
 
 import { Unlock, Lock } from "react-feather";
 
-import {getUptimeState} from '../lib/uptime'
+import { getUptimeState, roundUptime } from "../utils/uptime";
 
 const { publicRuntimeConfig } = getConfig();
 const DEFAULT_LOGO = publicRuntimeConfig.DEFAULT_LOGO || "logo-beta-gouv.svg";
@@ -60,7 +60,7 @@ const ApiCard = ({
               {uptime && (
                 <div className="badge uptime">
                   <div className="uptime-stat" />
-                  {uptime}% actif / dernier mois
+                  {roundUptime(0)(uptime)}% actif / dernier mois
                 </div>
               )}
             </div>

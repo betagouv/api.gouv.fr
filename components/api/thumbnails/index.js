@@ -1,8 +1,8 @@
-import Thumbnail from "./thumbnail"
+import Thumbnail from "./thumbnail";
 
 import { Lock, Unlock, Activity, Calendar, User, Sliders } from "react-feather";
 
-import { getUptimeState } from "../../../lib/uptime";
+import { getUptimeState } from "../../../utils/uptime";
 
 const Thumbnails = ({ is_open, uptime, lastUpdate, owner, rate_limiting }) => {
   return (
@@ -76,4 +76,4 @@ const Thumbnails = ({ is_open, uptime, lastUpdate, owner, rate_limiting }) => {
   );
 };
 
-export default Thumbnails
+export default Thumbnails;
