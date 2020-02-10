@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Link from "next/link";
 
+import colors from "../../styles/colors";
+
 const MENU_OPTIONS = [
+  {
+    id: "api-description",
+    label: "Description",
+    hasNoDetails: true
+  },
   {
     id: "access",
     label: "Accès"
@@ -16,6 +23,10 @@ const MENU_OPTIONS = [
     label: "Supervision"
   },
   {
+    id: "rate_limiting",
+    label: "Limite d'usage"
+  },
+  {
     id: "partenaires",
     label: "Partenaires"
   },
@@ -24,33 +35,63 @@ const MENU_OPTIONS = [
     label: "Documentation technique"
   },
   {
-    id: "rate_limiting",
-    label: "Limite d'usage"
+    id: "services",
+    label: "Services",
+    hasNoDetails: true
   }
 ];
 
-const Menu = ({ detail }) => {
+const Menu = ({ detail, selectedItem, select }) => {
   return (
-    <div className="ui stackable container menu">
-      <Link href="#api-description">
-        <a className="header item">Description</a>
-      </Link>
+    <div className="menu">
       {MENU_OPTIONS.map(menu => (
         <div key={menu.id}>
           <Link href={`#${menu.id}`}>
-            <a className="item">
+            <a
+              className={`item ${selectedItem === menu.id && "selected"}`}
+              onClick={() => select(menu.id)}
+            >
               {menu.label}
-              {!detail[menu.id] && menu.id !== "partenaires" && (
-                <div className="ui grey mini label">Non renseigné</div>
-              )}
+              {!menu.hasNoDetails &&
+                !detail[menu.id] &&
+                menu.id !== "partenaires" && (
+                  <div className="ui grey mini label">Non renseigné</div>
+                )}
             </a>
           </Link>
         </div>
       ))}
-
-      <Link href="#services">
-        <a className="item">Services</a>
-      </Link>
+      <style jsx>{`
+        .menu {
+          position: sticky;
+          overflow: hidden;
+          border-radius: 4px;
+          top: 2em;
+          max-width: 245px;
+          display: flex;
+          flex-direction: column;
+          background-color: #fff;
+          border: 2px solid ${colors.lightGrey};
+        }
+        .item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 1em;
+          font-weight: bold;
+          font-size: 14px;
+          line-height: 18px;
+          color: black;
+          transition: background 300ms ease-in-out, border 50ms ease-in-out;
+          cursor: pointer;
+        }
+        .item:hover {
+          background-color: ${colors.lightBlue};
+        }
+        .item.selected {
+          border-left: 5px solid ${colors.smartData};
+        }
+      `}</style>
     </div>
   );
 };

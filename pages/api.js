@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { throttle } from "lodash";
+
 import PropTypes from "prop-types";
 import getConfig from "next/config";
+
+import { isElementVisible } from "../utils";
 
 import { getAPI, getService } from "../utils/api";
 
@@ -24,6 +28,9 @@ import Thumbnails from "../components/api/thumbnails";
 const { publicRuntimeConfig } = getConfig();
 const DEFAULT_LOGO = publicRuntimeConfig.DEFAULT_LOGO || "logo-beta-gouv.svg";
 
+const getWindowHash = () =>
+  window.location.hash ? window.location.hash.substr(1) : null;
+
 const API = ({ api, services }) => {
   const {
     title,
@@ -40,6 +47,9 @@ const API = ({ api, services }) => {
     contract,
     partners
   } = api;
+
+  const [menuItem, setMenuItem] = useState("api-description");
+  const contentContainer = useRef(null);
 
   const { contact, doc_tech, access, monitoring, rate_limiting } = detail;
 
@@ -66,6 +76,68 @@ const API = ({ api, services }) => {
     resume: rate_limiting_resume
   } = rate_limiting || {};
 
+  const handleScroll = throttle(() => {
+    const currentVisibleAnchor = getVisibleAnchor();
+    if (currentVisibleAnchor !== getWindowHash()) {
+      setMenuItem(currentVisibleAnchor);
+      window.history.replaceState(
+        undefined,
+        undefined,
+        `#${currentVisibleAnchor}`
+      );
+    }
+  }, 100);
+
+  const scrollToAnchor = (anchor, smooth = false) => {
+    const anchorElem = document.getElementById(anchor);
+
+    if (!anchorElem) {
+      return;
+    }
+
+    if (smooth) {
+      anchorElem.scrollIntoView({ behavior: "smooth" });
+    } else {
+      anchorElem.scrollIntoView();
+    }
+  };
+
+  const selectAnchor = anchor => {
+    setMenuItem(anchor);
+  };
+
+  const getVisibleAnchor = () => {
+    if (!contentContainer || !contentContainer.current) {
+      return;
+    }
+
+    const sectionCollection = contentContainer.current.children;
+
+    for (let i = 0; i < sectionCollection.length; i++) {
+      const isVisible = isElementVisible(sectionCollection[i]);
+      if (isVisible) {
+        return sectionCollection[i].id;
+      }
+    }
+  };
+
+  useEffect(() => {
+    // scroll if any anchor in url - only applies on refresh
+    const hash = getWindowHash();
+
+    if (hash) {
+      scrollToAnchor(hash, true);
+    }
+
+    // add scrollListeners
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      // clean listeners
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <Page>
       <Header
@@ -87,40 +159,51 @@ const API = ({ api, services }) => {
         rate_limiting={rate_limiting_resume}
       />
 
-      <Menu detail={detail} />
-
       <div id="description" className="ui container">
-        <Content content={content} />
+        <div className="ui equal width grid padded">
+          <div className="four wide column computer only">
+            <Menu
+              detail={detail}
+              selectedItem={menuItem}
+              select={selectAnchor}
+            />
+          </div>
+          <div className="column" ref={contentContainer}>
+            <Content content={content} />
 
-        <Access
-          access_open={access_open}
-          access_link={access_link}
-          access_description={access_description}
-          contract={contract}
-          clients={clients}
-        />
+            <Access
+              access_open={access_open}
+              access_link={access_link}
+              access_description={access_description}
+              contract={contract}
+              clients={clients}
+            />
 
-        <Support
-          contact_description={contact_description}
-          contact_link={contact_link}
-        />
+            <Support
+              contact_description={contact_description}
+              contact_link={contact_link}
+            />
 
-        <Monitoring
-          monitoring_description={monitoring_description}
-          monitoring_link={monitoring_link}
-        />
+            <Monitoring
+              monitoring_description={monitoring_description}
+              monitoring_link={monitoring_link}
+            />
 
-        <RateLimiting rate_limiting_description={rate_limiting_description} />
+            <RateLimiting
+              rate_limiting_description={rate_limiting_description}
+            />
 
-        <Partners partners={partners} />
+            <Partners partners={partners} />
 
-        <TechnicalDocumentation
-          doc_tech_description={doc_tech_description}
-          doc_tech_link={doc_tech_link}
-          doc_tech_external={doc_tech_external}
-        />
+            <TechnicalDocumentation
+              doc_tech_description={doc_tech_description}
+              doc_tech_link={doc_tech_link}
+              doc_tech_external={doc_tech_external}
+            />
 
-        <Services services={services} />
+            <Services services={services} />
+          </div>
+        </div>
       </div>
     </Page>
   );
