@@ -1,35 +1,30 @@
-import React, { useState, useEffect, useRef } from "react";
-import { throttle } from "lodash";
-
+import React, { useState, useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import getConfig from "next/config";
+import { throttle } from "lodash";
 
 import { isElementVisible } from "../utils";
-
 import { getAPI, getService } from "../utils/api";
-
 import withErrors from "../components/hoc/with-errors";
-
 import Page from "../layouts/page";
 
-import Header from "../components/api/header";
-import Menu from "../components/api/menu";
-
-import Access from "../components/api/access";
-import Support from "../components/api/support";
-import Monitoring from "../components/api/monitoring";
-import RateLimiting from "../components/api/rate-limiting";
-import Partners from "../components/api/partners";
-import TechnicalDocumentation from "../components/api/technical-documentation";
-import Services from "../components/api/services";
-import Content from "../components/api/content";
-import Thumbnails from "../components/api/thumbnails";
+import {
+  Header,
+  Menu,
+  Access,
+  Support,
+  Monitoring,
+  RateLimiting,
+  Partners,
+  TechnicalDocumentation,
+  Services,
+  Content,
+  Thumbnails
+} from "../components/api";
+import { getWindowHash } from "../utils";
 
 const { publicRuntimeConfig } = getConfig();
 const DEFAULT_LOGO = publicRuntimeConfig.DEFAULT_LOGO || "logo-beta-gouv.svg";
-
-const getWindowHash = () =>
-  window.location.hash ? window.location.hash.substr(1) : null;
 
 const API = ({ api, services }) => {
   const {
@@ -49,6 +44,7 @@ const API = ({ api, services }) => {
   } = api;
 
   const [menuItem, setMenuItem] = useState("api-description");
+
   const contentContainer = useRef(null);
 
   const { contact, doc_tech, access, monitoring, rate_limiting } = detail;
@@ -76,8 +72,38 @@ const API = ({ api, services }) => {
     resume: rate_limiting_resume
   } = rate_limiting || {};
 
+  const getVisibleAnchor = () => {
+    if (!contentContainer || !contentContainer.current) {
+      return;
+    }
+
+    const sectionCollection = contentContainer.current.children;
+
+    for (let i = 0; i < sectionCollection.length; i++) {
+      const elem = sectionCollection[i];
+      if (isElementVisible(elem)) {
+        return elem.id;
+      }
+    }
+  };
+
+  const setVisibleAnchor = (anchor, smooth = false) => {
+    const anchorElem = document.getElementById(anchor);
+
+    if (!anchorElem) {
+      return;
+    }
+    anchorElem.scrollIntoView({ behavior: smooth ? "smooth" : "auto" });
+  };
+
+  const onMenuItemClick = anchor => {
+    setMenuItem(anchor);
+    setVisibleAnchor(anchor);
+  };
+
   const handleScroll = throttle(() => {
     const currentVisibleAnchor = getVisibleAnchor();
+    console.log(currentVisibleAnchor);
     if (currentVisibleAnchor !== getWindowHash()) {
       setMenuItem(currentVisibleAnchor);
       window.history.replaceState(
@@ -89,46 +115,12 @@ const API = ({ api, services }) => {
     // approx 8 frames
   }, 16 * 8);
 
-  const scrollToAnchor = (anchor, smooth = false) => {
-    const anchorElem = document.getElementById(anchor);
-
-    if (!anchorElem) {
-      return;
-    }
-
-    if (smooth) {
-      anchorElem.scrollIntoView({ behavior: "smooth" });
-    } else {
-      anchorElem.scrollIntoView();
-    }
-  };
-
-  const selectAnchor = anchor => {
-    setMenuItem(anchor);
-    scrollToAnchor(anchor);
-  };
-
-  const getVisibleAnchor = () => {
-    if (!contentContainer || !contentContainer.current) {
-      return;
-    }
-
-    const sectionCollection = contentContainer.current.children;
-
-    for (let i = 0; i < sectionCollection.length; i++) {
-      const isVisible = isElementVisible(sectionCollection[i]);
-      if (isVisible) {
-        return sectionCollection[i].id;
-      }
-    }
-  };
-
   useEffect(() => {
     // scroll if any anchor in url - only applies on refresh
     const hash = getWindowHash();
 
     if (hash) {
-      scrollToAnchor(hash, true);
+      setVisibleAnchor(hash, true);
     }
 
     // add scrollListeners
@@ -167,7 +159,7 @@ const API = ({ api, services }) => {
             <Menu
               detail={detail}
               selectedItem={menuItem}
-              select={selectAnchor}
+              select={onMenuItemClick}
             />
           </div>
           <div className="column" ref={contentContainer}>

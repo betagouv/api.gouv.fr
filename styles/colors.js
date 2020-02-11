@@ -8,7 +8,7 @@ export default {
   reference: "#23B0B7",
   smartData: "#1E4C8E",
   lightBlue: "#F0F5FB",
-  lightGrey: "#efefef",
+  lightGrey: "#EFEFEF",
   service: "#AF2341",
   main: "#275166",
   backgroundBlue: `linear-gradient(${simulation}, ${lightenSimulation})`,
