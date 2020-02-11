@@ -9,7 +9,7 @@ import withErrors from "../components/hoc/with-errors";
 
 import Page from "../layouts/page";
 
-import Header from "../components/api/header";
+import ApiPageHeader from "../components/api/header";
 import Menu from "../components/api/menu";
 
 import Access from "../components/api/access";
