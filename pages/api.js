@@ -69,7 +69,7 @@ const API = ({ api, services }) => {
 
   return (
     <Page>
-      <Header
+      <ApiPageHeader
         title={title}
         logo={logo || DEFAULT_LOGO}
         tagline={tagline}
