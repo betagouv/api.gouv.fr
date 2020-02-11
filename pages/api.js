@@ -103,7 +103,6 @@ const API = ({ api, services }) => {
 
   const handleScroll = throttle(() => {
     const currentVisibleAnchor = getVisibleAnchor();
-    console.log(currentVisibleAnchor);
     if (currentVisibleAnchor !== getWindowHash()) {
       setMenuItem(currentVisibleAnchor);
       window.history.replaceState(
