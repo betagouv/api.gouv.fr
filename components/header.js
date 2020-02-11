@@ -1,11 +1,36 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Link from "next/link";
+import { throttle } from "lodash";
 
 import ButtonLink from "./ui/button-link";
 
 const Header = () => {
+  const header = useRef(null);
+
+  const handleScroll = throttle(() => {
+    if (!header) {
+      return;
+    }
+    const headerClasses = header.current.classList;
+    const hasScrolledClass = headerClasses.contains("scrolled");
+    if (
+      (window.scrollY !== 0 && !hasScrolledClass) ||
+      (window.scrollY === 0 && hasScrolledClass)
+    ) {
+      headerClasses.toggle("scrolled");
+    }
+  }, 100);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header role="navigation">
+    <header role="navigation" ref={header}>
       <nav className="nav">
         <div className="nav__container">
           <Link href="/">
@@ -47,6 +72,17 @@ const Header = () => {
       </nav>
 
       <style jsx>{`
+        header {
+          position: fixed;
+          top: 0;
+          z-index: 1000;
+          width: 100%;
+          border-bottom: 1px solid transparent;
+        }
+        header.scrolled {
+          border-color: #efefef;
+        }
+
         .nav {
           width: 100%;
           background: #fff;
@@ -59,6 +95,7 @@ const Header = () => {
           justify-content: space-between;
           flex-wrap: wrap;
           align-items: center;
+          height: 75px;
         }
 
         .nav__home,

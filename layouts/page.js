@@ -27,6 +27,7 @@ class Page extends React.Component {
 
           main {
             flex: 1;
+            margin-top: 75px;
           }
         `}</style>
       </div>
