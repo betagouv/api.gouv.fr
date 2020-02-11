@@ -1,8 +1,8 @@
-import React, { useEffect, useRef } from "react";
-import Link from "next/link";
-import { throttle } from "lodash";
+import React, { useEffect, useRef } from 'react';
+import Link from 'next/link';
+import { throttle } from 'lodash';
 
-import ButtonLink from "./ui/button-link";
+import ButtonLink from './ui/button-link';
 
 const Header = () => {
   const header = useRef(null);
@@ -12,20 +12,20 @@ const Header = () => {
       return;
     }
     const headerClasses = header.current.classList;
-    const hasScrolledClass = headerClasses.contains("scrolled");
+    const hasScrolledClass = headerClasses.contains('scrolled');
     if (
       (window.scrollY !== 0 && !hasScrolledClass) ||
       (window.scrollY === 0 && hasScrolledClass)
     ) {
-      headerClasses.toggle("scrolled");
+      headerClasses.toggle('scrolled');
     }
   }, 100);
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -44,7 +44,7 @@ const Header = () => {
           </Link>
 
           <ul className="nav__links">
-            <li id="signup-link" style={{ display: "none" }}>
+            <li id="signup-link" style={{ display: 'none' }}>
               <a href="https://signup.api.gouv.fr">Mes demandes</a>
             </li>
             <li>
@@ -77,7 +77,7 @@ const Header = () => {
           top: 0;
           z-index: 1000;
           width: 100%;
-          border-bottom: 1px solid transparent;
+          border-bottom: 1px solid #fff;
         }
         header.scrolled {
           border-color: #efefef;
@@ -159,15 +159,10 @@ const Header = () => {
           grid-gap: 1em;
         }
 
-        @media (max-width: 550px) {
-          .nav__links {
-            padding-top: 0;
-          }
-
-          .nav .external {
-            grid-template-columns: repeat(auto-fit, minmax(162px, 1fr));
-            grid-gap: 0.5em;
-            width: 100%;
+        @media (max-width: 900px) {
+          .nav__links,
+          .external {
+            display: none;
           }
         }
       `}</style>

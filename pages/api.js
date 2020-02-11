@@ -1,29 +1,29 @@
-import React from "react";
-import PropTypes from "prop-types";
-import getConfig from "next/config";
+import React from 'react';
+import PropTypes from 'prop-types';
+import getConfig from 'next/config';
 
-import { getAPI, getService } from "../utils/api";
-import { roundUptime } from "../utils/uptime";
+import { getAPI, getService } from '../utils/api';
+import { roundUptime } from '../utils/uptime';
 
-import withErrors from "../components/hoc/with-errors";
+import withErrors from '../components/hoc/with-errors';
 
-import Page from "../layouts/page";
+import Page from '../layouts/page';
 
-import ApiPageHeader from "../components/api/header";
-import Menu from "../components/api/menu";
+import PageHeader from '../components/api/pageheader';
+import Menu from '../components/api/menu';
 
-import Access from "../components/api/access";
-import Support from "../components/api/support";
-import Monitoring from "../components/api/monitoring";
-import RateLimiting from "../components/api/rate-limiting";
-import Partners from "../components/api/partners";
-import TechnicalDocumentation from "../components/api/technical-documentation";
-import Services from "../components/api/services";
-import Content from "../components/api/content";
-import Thumbnails from "../components/api/thumbnails";
+import Access from '../components/api/access';
+import Support from '../components/api/support';
+import Monitoring from '../components/api/monitoring';
+import RateLimiting from '../components/api/rate-limiting';
+import Partners from '../components/api/partners';
+import TechnicalDocumentation from '../components/api/technical-documentation';
+import Services from '../components/api/services';
+import Content from '../components/api/content';
+import Thumbnails from '../components/api/thumbnails';
 
 const { publicRuntimeConfig } = getConfig();
-const DEFAULT_LOGO = publicRuntimeConfig.DEFAULT_LOGO || "logo-beta-gouv.svg";
+const DEFAULT_LOGO = publicRuntimeConfig.DEFAULT_LOGO || 'logo-beta-gouv.svg';
 
 const API = ({ api, services }) => {
   const {
@@ -39,7 +39,7 @@ const API = ({ api, services }) => {
     content,
     clients,
     contract,
-    partners
+    partners,
   } = api;
 
   const { contact, doc_tech, access, monitoring, rate_limiting } = detail;
@@ -50,13 +50,13 @@ const API = ({ api, services }) => {
   const {
     link: doc_tech_link,
     external: doc_tech_external,
-    description: doc_tech_description
+    description: doc_tech_description,
   } = doc_tech || {};
 
   const {
     is_open: access_open,
     link: access_link,
-    description: access_description
+    description: access_description,
   } = access || {};
 
   const { link: monitoring_link, description: monitoring_description } =
@@ -64,20 +64,16 @@ const API = ({ api, services }) => {
 
   const {
     description: rate_limiting_description,
-    resume: rate_limiting_resume
+    resume: rate_limiting_resume,
   } = rate_limiting || {};
 
   return (
     <Page>
-      <ApiPageHeader
+      <PageHeader
         title={title}
         logo={logo || DEFAULT_LOGO}
         tagline={tagline}
         stat={stat}
-        external_site={external_site}
-        access_link={access_link}
-        doc_tech_link={doc_tech_link}
-        doc_tech_external={doc_tech_external}
       />
 
       <Thumbnails
@@ -128,7 +124,7 @@ const API = ({ api, services }) => {
 };
 
 API.defaultProps = {
-  services: null
+  services: null,
 };
 
 API.propTypes = {
@@ -142,38 +138,38 @@ API.propTypes = {
       url: PropTypes.string,
       path: PropTypes.array,
       label: PropTypes.string,
-      lastXdays: PropTypes.number
+      lastXdays: PropTypes.number,
     }),
     score: PropTypes.shape({
       detail: PropTypes.shape({
         contact: PropTypes.shape({
           link: PropTypes.string,
-          description: PropTypes.string
+          description: PropTypes.string,
         }),
         doc_tech: PropTypes.shape({
           link: PropTypes.string,
           external: PropTypes.string,
-          description: PropTypes.string
+          description: PropTypes.string,
         }),
         access: PropTypes.shape({
           is_open: PropTypes.bool,
           link: PropTypes.string,
-          description: PropTypes.string
+          description: PropTypes.string,
         }),
         monitoring: PropTypes.shape({
           link: PropTypes.string,
-          description: PropTypes.string
+          description: PropTypes.string,
         }),
         rate_limiting: PropTypes.shape({
-          description: PropTypes.string
-        })
-      }).isRequired
+          description: PropTypes.string,
+        }),
+      }).isRequired,
     }).isRequired,
     content: PropTypes.string.isRequired,
     clients: PropTypes.array,
     contract: PropTypes.string,
-    partners: PropTypes.array
-  }).isRequired
+    partners: PropTypes.array,
+  }).isRequired,
 };
 
 API.getInitialProps = async ({ query }) => {
