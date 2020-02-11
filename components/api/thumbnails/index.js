@@ -2,7 +2,7 @@ import Thumbnail from "./thumbnail";
 
 import { Lock, Unlock, Activity, Calendar, User, Sliders } from "react-feather";
 
-import { getUptimeState } from "../../../utils/uptime";
+import { getUptimeState, roundUptime } from "../../../utils/uptime";
 
 const Thumbnails = ({ is_open, uptime, lastUpdate, owner, rate_limiting }) => {
   return (
@@ -20,7 +20,7 @@ const Thumbnails = ({ is_open, uptime, lastUpdate, owner, rate_limiting }) => {
         <Thumbnail title="Disponibilité" icon={<Activity />}>
           <div className="badge uptime">
             <div className="uptime-stat" />
-            {uptime}% actif / dernier mois
+            {roundUptime(0)(uptime)}% actif / dernier mois
           </div>
         </Thumbnail>
       )}
