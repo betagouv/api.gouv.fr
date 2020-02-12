@@ -160,7 +160,7 @@ const API = ({ api, services }) => {
                 select={setVisibleAnchor}
               />
               <div>
-                <ButtonLink href={'hey'}>Tester cette API →</ButtonLink>
+                <ButtonLink href={external_site}>Tester cette API →</ButtonLink>
               </div>
             </div>
           </div>
