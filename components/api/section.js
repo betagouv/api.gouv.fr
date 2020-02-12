@@ -1,10 +1,15 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Link from "next/link";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Link from 'next/link';
+
+import globals from '../../const';
 
 const Section = ({ id, title, children }) => {
   return (
-    <section id={id}>
+    <section>
+      <a className="hidden-anchor" id={id}>
+        HEY
+      </a>
       <h2 className="ui dividing header">
         <Link href={`#${id}`}>
           <a aria-hidden="true" className="header-anchor">
@@ -19,6 +24,7 @@ const Section = ({ id, title, children }) => {
       <style jsx>{`
         section {
           margin-top: 2em;
+          position: relative;
         }
 
         a.header-anchor {
@@ -33,6 +39,12 @@ const Section = ({ id, title, children }) => {
         h2:hover .header-anchor {
           opacity: 1;
         }
+        a.hidden-anchor {
+          display: block;
+          position: absolute;
+          top: -${globals.HEADER_HEIGHT + 15}px;
+          visibility: hidden;
+        }
       `}</style>
     </section>
   );
@@ -41,7 +53,7 @@ const Section = ({ id, title, children }) => {
 Section.propTypes = {
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default Section;

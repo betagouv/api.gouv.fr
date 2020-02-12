@@ -1,7 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import Section from "./section";
+import Section from './section';
+import ButtonLink from '../ui/button-link';
 
 const Support = ({ contact_description, contact_link }) => {
   return (
@@ -13,15 +14,17 @@ const Support = ({ contact_description, contact_link }) => {
 
         {contact_link ? (
           <>
-            {contact_link.includes("@") ? (
+            {contact_link.includes('@') ? (
               <>
                 <p>Vous pouvez contacter le support de cette API par mail. .</p>
-                <a
+                <ButtonLink
                   className="large ui button"
                   href={`mailto:${contact_link}?subject=Contact%20via%20api.gouv.fr`}
+                  alt
+                  large
                 >
                   <i className="icon mail"></i> Envoyer un mail à {contact_link}
-                </a>
+                </ButtonLink>
               </>
             ) : (
               <>
@@ -29,15 +32,16 @@ const Support = ({ contact_description, contact_link }) => {
                   Vous pouvez contacter le support de cette API en utilisant un
                   formulaire.
                 </p>
-                <a
-                  className="large ui button"
+                <ButtonLink
                   href={contact_link}
                   target="_blank"
                   rel="noopener"
+                  alt
+                  large
                 >
                   <i className="icon linkify"></i> Accéder au formulaire de
                   contact
-                </a>
+                </ButtonLink>
               </>
             )}
           </>
@@ -51,12 +55,12 @@ const Support = ({ contact_description, contact_link }) => {
 
 Support.defaultProps = {
   contact_description: null,
-  contact_link: null
+  contact_link: null,
 };
 
 Support.propTypes = {
   contact_description: PropTypes.string,
-  contact_link: PropTypes.string
+  contact_link: PropTypes.string,
 };
 
 export default Support;

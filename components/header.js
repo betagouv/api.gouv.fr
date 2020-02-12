@@ -3,12 +3,13 @@ import Link from 'next/link';
 import { throttle } from 'lodash';
 
 import ButtonLink from './ui/button-link';
+import constants from '../const';
 
 const Header = () => {
   const header = useRef(null);
 
   const handleScroll = throttle(() => {
-    if (!header) {
+    if (!header || !header.current) {
       return;
     }
     const headerClasses = header.current.classList;
@@ -45,7 +46,7 @@ const Header = () => {
 
           <ul className="nav__links">
             <li id="signup-link" style={{ display: 'none' }}>
-              <a href="https://signup.api.gouv.fr">Mes demandes</a>
+              <a href={constants.SIGNUP}>Mes demandes</a>
             </li>
             <li>
               <a href="/services">Voir les réalisations</a>
@@ -60,10 +61,7 @@ const Header = () => {
               <ButtonLink href="mailto:contact@api.gouv.fr?subject=Demande%20d%27une%20nouvelle%20API">
                 Demander une API
               </ButtonLink>
-              <ButtonLink
-                href="https://github.com/betagouv/api.gouv.fr/blob/master/CONTRIBUTING.md#ajouter-une-api"
-                alt
-              >
+              <ButtonLink href={constants.ADD_API} alt>
                 Partager votre API
               </ButtonLink>
             </li>
@@ -95,7 +93,7 @@ const Header = () => {
           justify-content: space-between;
           flex-wrap: wrap;
           align-items: center;
-          height: 75px;
+          height: ${constants.HEADER_HEIGHT}px;
         }
 
         .nav__home,
@@ -114,7 +112,7 @@ const Header = () => {
           flex-flow: wrap;
         }
 
-        .nav__links li {
+        .nav__links li:not(.external) {
           padding: 0;
           display: inline;
           margin: 0 0.2em;

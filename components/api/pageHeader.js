@@ -1,8 +1,8 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 
-import colors from '../../../styles/colors';
+import colors from '../../styles/colors';
 
 const Title = ({ title, logo }) => (
   <>
@@ -15,10 +15,12 @@ const Title = ({ title, logo }) => (
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-bottom: 1em;
+        margin-bottom: 1rem;
+        flex-shrink: 0;
       }
 
       .title img {
+        flex-shrink: 0;
         border-radius: 100%;
         width: 48px;
         height: 48px;
@@ -27,7 +29,7 @@ const Title = ({ title, logo }) => (
 
       .title h1 {
         font-family: Evolventa;
-        margin: 0 0.5em;
+        margin: 0 0.5rem;
         font-style: normal;
         font-weight: bold;
         font-size: 32px;
@@ -50,14 +52,19 @@ const Tagline = ({ tagline }) => (
         line-height: 20px;
         text-align: center;
       }
+
+      .inline {
+        padding: 0.5rem 0rem 0.5rem 1rem;
+        text-align: left;
+      }
     `}</style>
   </>
 );
 
-const PageHeader = ({ inline, title, logo, tagline }) => (
-  <section id="mission-statement" className={`${inline ? 'inline' : ''}`}>
+const PageHeader = ({ title, logo, tagline }) => (
+  <section id="mission-statement">
     <Link href="/">
-      <a className="back-button">← Retour</a>
+      <a className="back-button">← Page d’accueil</a>
     </Link>
     <div className="ui container content">
       <Title title={title} logo={logo} />
@@ -69,27 +76,15 @@ const PageHeader = ({ inline, title, logo, tagline }) => (
         background: ${colors.backgroundBlueGradient};
         color: white;
         width: 100%;
+        position: relative;
       }
 
       .content {
         padding: 50px 0;
         display: flex;
         flex-direction: column;
-      }
-
-      #mission-statement.inline {
-        position: fixed;
-        top: 75px;
-        opacity: 0;
-        transform: translateY(-100%);
-      }
-      #mission-statement.visible {
-        transform: translateY(0%);
-        opacity: 1;
-      }
-
-      #mission-statement.inline > .content {
-        flex-direction: row;
+        align-items: center;
+        justify-content: center;
       }
 
       .back-button {
