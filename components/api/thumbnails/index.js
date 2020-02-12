@@ -34,7 +34,9 @@ const Thumbnails = ({ is_open, uptime, lastUpdate, owner, rate_limiting }) => {
         <Thumbnail title="Limite d’usage" icon={<Sliders />}>
           <div>
             {rate_limiting.split("/").map(rate => (
-              <div className="rate">{rate}</div>
+              <div className="rate" key={rate}>
+                {rate}
+              </div>
             ))}
           </div>
         </Thumbnail>

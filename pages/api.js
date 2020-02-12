@@ -1,25 +1,27 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import getConfig from "next/config";
+import { throttle } from "lodash";
 
+import { isElementVisible } from "../utils";
 import { getAPI, getService } from "../utils/api";
-
 import withErrors from "../components/hoc/with-errors";
-
 import Page from "../layouts/page";
 
-import Header from "../components/api/header";
-import Menu from "../components/api/menu";
-
-import Access from "../components/api/access";
-import Support from "../components/api/support";
-import Monitoring from "../components/api/monitoring";
-import RateLimiting from "../components/api/rate-limiting";
-import Partners from "../components/api/partners";
-import TechnicalDocumentation from "../components/api/technical-documentation";
-import Services from "../components/api/services";
-import Content from "../components/api/content";
-import Thumbnails from "../components/api/thumbnails";
+import {
+  Header,
+  Menu,
+  Access,
+  Support,
+  Monitoring,
+  RateLimiting,
+  Partners,
+  TechnicalDocumentation,
+  Services,
+  Content,
+  Thumbnails
+} from "../components/api";
+import { getWindowHash } from "../utils";
 
 const { publicRuntimeConfig } = getConfig();
 const DEFAULT_LOGO = publicRuntimeConfig.DEFAULT_LOGO || "logo-beta-gouv.svg";
@@ -40,6 +42,10 @@ const API = ({ api, services }) => {
     contract,
     partners
   } = api;
+
+  const [menuItem, setMenuItem] = useState("api-description");
+
+  const contentContainer = useRef(null);
 
   const { contact, doc_tech, access, monitoring, rate_limiting } = detail;
 
@@ -66,6 +72,65 @@ const API = ({ api, services }) => {
     resume: rate_limiting_resume
   } = rate_limiting || {};
 
+  const getVisibleAnchor = () => {
+    if (!contentContainer || !contentContainer.current) {
+      return;
+    }
+
+    const sectionCollection = contentContainer.current.children;
+
+    for (let i = 0; i < sectionCollection.length; i++) {
+      const elem = sectionCollection[i];
+      if (isElementVisible(elem)) {
+        return elem.id;
+      }
+    }
+  };
+
+  const setVisibleAnchor = (anchor, smooth = false) => {
+    const anchorElem = document.getElementById(anchor);
+
+    if (!anchorElem) {
+      return;
+    }
+    anchorElem.scrollIntoView({ behavior: smooth ? "smooth" : "auto" });
+  };
+
+  const onMenuItemClick = anchor => {
+    setMenuItem(anchor);
+    setVisibleAnchor(anchor);
+  };
+
+  const handleScroll = throttle(() => {
+    const currentVisibleAnchor = getVisibleAnchor();
+    if (currentVisibleAnchor !== getWindowHash()) {
+      setMenuItem(currentVisibleAnchor);
+      window.history.replaceState(
+        undefined,
+        undefined,
+        `#${currentVisibleAnchor}`
+      );
+    }
+    // approx 8 frames
+  }, 16 * 8);
+
+  useEffect(() => {
+    // scroll if any anchor in url - only applies on refresh
+    const hash = getWindowHash();
+
+    if (hash) {
+      setVisibleAnchor(hash, true);
+    }
+
+    // add scrollListeners
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      // clean listeners
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <Page>
       <Header
@@ -87,40 +152,51 @@ const API = ({ api, services }) => {
         rate_limiting={rate_limiting_resume}
       />
 
-      <Menu detail={detail} />
-
       <div id="description" className="ui container">
-        <Content content={content} />
+        <div className="ui equal width grid padded">
+          <div className="four wide column computer only">
+            <Menu
+              detail={detail}
+              selectedItem={menuItem}
+              select={onMenuItemClick}
+            />
+          </div>
+          <div className="column" ref={contentContainer}>
+            <Content content={content} />
 
-        <Access
-          access_open={access_open}
-          access_link={access_link}
-          access_description={access_description}
-          contract={contract}
-          clients={clients}
-        />
+            <Access
+              access_open={access_open}
+              access_link={access_link}
+              access_description={access_description}
+              contract={contract}
+              clients={clients}
+            />
 
-        <Support
-          contact_description={contact_description}
-          contact_link={contact_link}
-        />
+            <Support
+              contact_description={contact_description}
+              contact_link={contact_link}
+            />
 
-        <Monitoring
-          monitoring_description={monitoring_description}
-          monitoring_link={monitoring_link}
-        />
+            <Monitoring
+              monitoring_description={monitoring_description}
+              monitoring_link={monitoring_link}
+            />
 
-        <RateLimiting rate_limiting_description={rate_limiting_description} />
+            <RateLimiting
+              rate_limiting_description={rate_limiting_description}
+            />
 
-        <Partners partners={partners} />
+            <Partners partners={partners} />
 
-        <TechnicalDocumentation
-          doc_tech_description={doc_tech_description}
-          doc_tech_link={doc_tech_link}
-          doc_tech_external={doc_tech_external}
-        />
+            <TechnicalDocumentation
+              doc_tech_description={doc_tech_description}
+              doc_tech_link={doc_tech_link}
+              doc_tech_external={doc_tech_external}
+            />
 
-        <Services services={services} />
+            <Services services={services} />
+          </div>
+        </div>
       </div>
     </Page>
   );
