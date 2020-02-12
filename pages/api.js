@@ -9,7 +9,7 @@ import withErrors from '../components/hoc/with-errors';
 
 import Page from '../layouts/page';
 
-import PageHeader from '../components/api/pageheader';
+import { PageHeaderWrapper } from '../components/api/pageHeader';
 import Menu from '../components/api/menu';
 
 import Access from '../components/api/access';
@@ -69,7 +69,7 @@ const API = ({ api, services }) => {
 
   return (
     <Page>
-      <PageHeader
+      <PageHeaderWrapper
         title={title}
         logo={logo || DEFAULT_LOGO}
         tagline={tagline}
