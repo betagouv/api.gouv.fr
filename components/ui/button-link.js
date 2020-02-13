@@ -17,9 +17,11 @@ const ButtonLink = ({ href, alt, rel, target, disabled, children, large }) => (
       <div className="content-wrapper">{children}</div>
     </a>
     <style jsx>{`
-      .button-link {
+      a.button-link {
         display: inline-block;
+        text-decoration: none !important;
       }
+
       .button-link > .content-wrapper {
         font-size: 1rem;
         padding: 8px 15px;

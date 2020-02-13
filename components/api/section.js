@@ -7,9 +7,7 @@ import globals from '../../const';
 const Section = ({ id, title, children }) => {
   return (
     <section>
-      <a className="hidden-anchor" id={id}>
-        HEY
-      </a>
+      <a className="hidden-anchor" id={id}></a>
       <h2 className="ui dividing header">
         <Link href={`#${id}`}>
           <a aria-hidden="true" className="header-anchor">

@@ -46,7 +46,7 @@ const Header = () => {
 
           <ul className="nav__links">
             <li id="signup-link" style={{ display: 'none' }}>
-              <a href={constants.SIGNUP}>Mes demandes</a>
+              <a href={constants.SIGNUP_LINK}>Mes demandes</a>
             </li>
             <li>
               <a href="/services">Voir les réalisations</a>
@@ -58,7 +58,7 @@ const Header = () => {
               <a href="/contact">Nous contacter</a>
             </li>
             <li className="external">
-              <ButtonLink href={constants.MAIL_REQUEST_API}>
+              <ButtonLink href={constants.REQUEST_API_MAILTO_LINK}>
                 Demander une API
               </ButtonLink>
             </li>
