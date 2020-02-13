@@ -58,11 +58,8 @@ const Header = () => {
               <a href="/contact">Nous contacter</a>
             </li>
             <li className="external">
-              <ButtonLink href="mailto:contact@api.gouv.fr?subject=Demande%20d%27une%20nouvelle%20API">
+              <ButtonLink href={constants.MAIL_REQUEST_API}>
                 Demander une API
-              </ButtonLink>
-              <ButtonLink href={constants.ADD_API} alt>
-                Partager votre API
               </ButtonLink>
             </li>
           </ul>
@@ -149,12 +146,6 @@ const Header = () => {
           display: flex;
           align-items: baseline;
           justify-content: space-between;
-        }
-
-        .nav .external {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          grid-gap: 1em;
         }
 
         @media (max-width: 900px) {

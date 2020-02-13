@@ -24,6 +24,8 @@ const ButtonLink = ({ href, alt, rel, target, disabled, children, large }) => (
         font-size: 1rem;
         padding: 8px 15px;
         background-color: ${colors.blue};
+        border: 1px solid ${colors.blue};
+
         color: #fff;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         border-radius: 4px;
@@ -36,7 +38,7 @@ const ButtonLink = ({ href, alt, rel, target, disabled, children, large }) => (
         pointer-events: none;
         cursor: default;
         background-color: ${colors.smartData}B0;
-        border: 1px solid transparent;
+        border: 1px solid ${colors.smartData}B0;
       }
 
       .button-link.alt > .content-wrapper {

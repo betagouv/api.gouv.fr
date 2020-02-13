@@ -76,14 +76,16 @@ const Menu = ({ detail, selectedItem, select }) => {
           font-size: 14px;
           line-height: 18px;
           color: black;
-          transition: background 300ms ease-in-out, border 50ms ease-in-out;
+          transition: background 100ms ease-in-out, border 100ms ease-in-out;
           cursor: pointer;
         }
-        .item:hover {
+        .item:hover,
+        .item.selected:hover {
           background-color: ${colors.lightBlue};
         }
         .item.selected {
           border-left: 5px solid ${colors.blue};
+          background-color: ${colors.lightestBlue};
         }
       `}</style>
     </div>

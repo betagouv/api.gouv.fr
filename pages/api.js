@@ -159,9 +159,6 @@ const API = ({ api, services }) => {
                 selectedItem={menuItem}
                 select={setVisibleAnchor}
               />
-              <div>
-                <ButtonLink href={external_site}>Tester cette API →</ButtonLink>
-              </div>
             </div>
           </div>
           <div className="column" ref={contentContainer}>
@@ -208,11 +205,6 @@ const API = ({ api, services }) => {
           overflow: hidden;
           top: ${globals.HEADER_HEIGHT + 20}px;
           padding-bottom: 15px;
-        }
-        .sticky-column > div:last-of-type {
-          display: flex;
-          justify-content: center;
-          margin-top: 20px;
         }
       `}</style>
     </Page>
