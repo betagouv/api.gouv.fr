@@ -29,7 +29,7 @@ const ButtonLink = ({ href, alt, rel, target, disabled, children, large }) => (
         border-radius: 4px;
         vertical-align: baseline;
         user-select: none;
-        transition: transform 100ms ease-in-out;
+        transition: transform 100ms ease-in-out, box-shadow 100ms ease-in-out;
       }
 
       .button-link.disabled > .content-wrapper {
@@ -56,6 +56,7 @@ const ButtonLink = ({ href, alt, rel, target, disabled, children, large }) => (
 
       .button-link:hover > .content-wrapper {
         transform: translateY(-2px);
+        box-shadow: 0px 6px 7px rgba(0, 0, 0, 0.25);
       }
     `}</style>
   </>

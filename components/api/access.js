@@ -58,8 +58,9 @@ const Access = ({
           align-items: flex-end;
         }
 
-        .get-access > div:first-of-type {
+        .get-access > div {
           width: 100%;
+          margin-bottom: 10px;
         }
       `}</style>
     </Section>
