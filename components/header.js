@@ -78,6 +78,10 @@ const Header = () => {
           border-color: #efefef;
         }
 
+        header a {
+          text-decoration: none;
+        }
+
         .nav {
           width: 100%;
           background: #fff;

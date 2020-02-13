@@ -31,7 +31,7 @@ class Page extends React.Component {
             margin-top: 75px;
           }
 
-          #page-layout a {
+          a {
             text-decoration: underline;
           }
         `}</style>
