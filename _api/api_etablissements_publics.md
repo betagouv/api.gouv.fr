@@ -15,6 +15,8 @@ keywords:
   - Établissements
   - Publics
   - Administration
+themes: 
+  - Administration & législation
 score:
   detail:
     access:

@@ -22,6 +22,8 @@ keywords:
   - Services
   - Eau potable
   - Assainissement
+themes: 
+  - Environnement
 score:
   detail:
     access:

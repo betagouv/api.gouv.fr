@@ -16,6 +16,8 @@ keywords:
   - Tramway
   - Téléphérique
   - Transport
+themes: 
+  - Transport
 score:
   detail:
     contact:

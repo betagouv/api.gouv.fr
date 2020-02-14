@@ -12,6 +12,8 @@ keywords:
   - transport
   - gtfs-rt
   - siri-lite
+themes: 
+  - Transport
 external_site: https://transport.data.gouv.fr
 score:
   detail:

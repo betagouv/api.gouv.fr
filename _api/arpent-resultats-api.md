@@ -26,6 +26,8 @@ keywords:
   - BTS
   - Arpent
   - Diplôme
+themes: 
+  - Education
 score:
   detail:
     contact:

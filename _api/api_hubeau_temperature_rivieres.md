@@ -23,6 +23,8 @@ keywords:
   - Fleuve
   - Plan d'eau
   - Rivière
+themes: 
+  - Environnement
 score:
   detail:
     access:

@@ -12,6 +12,8 @@ keywords:
   - Nomenclatures
   - Métadonnées
   - Statistiques
+themes:
+  - Administration & législation
 logo: Logo_Insee.svg
 score:
   detail:

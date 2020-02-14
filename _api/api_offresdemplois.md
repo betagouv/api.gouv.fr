@@ -16,6 +16,8 @@ partners:
 keywords:
   - Offres
   - Emploi
+themes: 
+  - Emploi
 score:
   detail:
     contact:
