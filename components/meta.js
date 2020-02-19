@@ -1,18 +1,18 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Head from "next/head";
-import prune from "underscore.string/prune";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Head from 'next/head';
+import prune from 'underscore.string/prune';
 
-import getConfig from "next/config";
+import getConfig from 'next/config';
 
-import Fonts from "./styles/fonts";
+import Fonts from '../styles/fonts';
 
 const { publicRuntimeConfig } = getConfig();
-const SITE_NAME = publicRuntimeConfig.SITE_NAME || "api.gouv.fr";
-const SITE_URL = publicRuntimeConfig.SITE_URL || "https://api.gouv.fr";
+const SITE_NAME = publicRuntimeConfig.SITE_NAME || 'api.gouv.fr';
+const SITE_URL = publicRuntimeConfig.SITE_URL || 'https://api.gouv.fr';
 
 const Meta = ({ title, description }) => {
-  description = prune(description, 160, "…");
+  description = prune(description, 160, '…');
   return (
     <Head>
       {title ? (
@@ -50,12 +50,12 @@ const Meta = ({ title, description }) => {
 
 Meta.propTypes = {
   title: PropTypes.string,
-  description: PropTypes.string
+  description: PropTypes.string,
 };
 
 Meta.defaultProps = {
   title: null,
-  description: "Un accès unique aux API de l’État"
+  description: 'Un accès unique aux API de l’État',
 };
 
 export default Meta;

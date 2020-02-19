@@ -1,25 +1,25 @@
-import React from "react";
-import getConfig from "next/config";
-import { orderBy } from "lodash";
+import React from 'react';
+import getConfig from 'next/config';
+import { orderBy } from 'lodash';
 
-import withErrors from "../components/hoc/with-errors";
+import withErrors from '../components/hoc/with-errors';
 
-import { getAllAPIs } from "../utils/api";
+import { getAllAPIs } from '../utils/api';
 
-import Page from "../layouts/page";
+import Page from '../layouts/page';
 
-import ApiCard from "../components/api-card";
-import APISearchBar from "../components/api-search-bar";
-import ButtonLink from "../components/ui/button-link";
+import ApiCard from '../components/api-card';
+import APISearchBar from '../components/api-search-bar';
+import PreFooter from '../components/preFooter';
 
-import colors from "../styles/colors";
+import colors from '../styles/colors';
 
-import { normaliseStr } from "../utils/normalize";
+import { normaliseStr } from '../utils/normalize';
 
 const { publicRuntimeConfig } = getConfig();
 const SITE_DESCRIPTION =
   publicRuntimeConfig.SITE_DESCRIPTION ||
-  "Simplifiez le partage et la circulation des données administratives";
+  'Simplifiez le partage et la circulation des données administratives';
 
 const filterAPI = (list, filter) => {
   let filteredList = list;
@@ -60,7 +60,7 @@ function Home({ q, filter, apiList }) {
               orderBy(
                 filteredList,
                 [api => api.visits_2019 || 0],
-                ["desc"]
+                ['desc']
               ).map(api => <ApiCard key={api.title} {...api} />)
             ) : (
               <div className="ui big warning message">
@@ -72,25 +72,7 @@ function Home({ q, filter, apiList }) {
         </div>
       </section>
 
-      <section>
-        <div className="ui container links">
-          <div>
-            <h3>Vous ne trouvez pas l’API dont vous avez besoin ?</h3>
-            <ButtonLink href="mailto:contact@api.gouv.fr?subject=Demande%20d%27une%20nouvelle%20API">
-              Demander une API
-            </ButtonLink>
-          </div>
-          <div>
-            <h3>Vous voulez partager une API ?</h3>
-            <ButtonLink
-              href="https://github.com/betagouv/api.gouv.fr/blob/master/CONTRIBUTING.md#ajouter-une-api"
-              alt
-            >
-              Partager votre API
-            </ButtonLink>
-          </div>
-        </div>
-      </section>
+      <PreFooter />
 
       <style jsx>{`
         #mission-statement {
@@ -155,7 +137,7 @@ Home.getInitialProps = async req => {
   return {
     q,
     filter,
-    apiList
+    apiList,
   };
 };
 

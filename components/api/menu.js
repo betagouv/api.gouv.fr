@@ -1,44 +1,43 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
-import Link from "next/link";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import colors from "../../styles/colors";
+import colors from '../../styles/colors';
 
 const MENU_OPTIONS = [
   {
-    id: "api-description",
-    label: "Description",
-    hasNoDetails: true
+    id: 'api-description',
+    label: 'Description',
+    hasNoDetails: true,
   },
   {
-    id: "access",
-    label: "Accès"
+    id: 'access',
+    label: 'Accès',
   },
   {
-    id: "contact",
-    label: "Support"
+    id: 'contact',
+    label: 'Support',
   },
   {
-    id: "monitoring",
-    label: "Supervision"
+    id: 'monitoring',
+    label: 'Supervision',
   },
   {
-    id: "rate_limiting",
-    label: "Limite d'usage"
+    id: 'rate_limiting',
+    label: "Limite d'usage",
   },
   {
-    id: "partenaires",
-    label: "Partenaires"
+    id: 'partenaires',
+    label: 'Partenaires',
   },
   {
-    id: "doc_tech",
-    label: "Documentation technique"
+    id: 'doc_tech',
+    label: 'Documentation technique',
   },
   {
-    id: "services",
-    label: "Services",
-    hasNoDetails: true
-  }
+    id: 'services',
+    label: 'Services',
+    hasNoDetails: true,
+  },
 ];
 
 const Menu = ({ detail, selectedItem, select }) => {
@@ -47,13 +46,13 @@ const Menu = ({ detail, selectedItem, select }) => {
       {MENU_OPTIONS.map(menu => (
         <div key={menu.id}>
           <div
-            className={`item ${selectedItem === menu.id && "selected"}`}
+            className={`item ${selectedItem === menu.id && 'selected'}`}
             onClick={() => select(menu.id)}
           >
             {menu.label}
             {!menu.hasNoDetails &&
               !detail[menu.id] &&
-              menu.id !== "partenaires" && (
+              menu.id !== 'partenaires' && (
                 <div className="ui grey mini label">Non renseigné</div>
               )}
           </div>
@@ -61,10 +60,7 @@ const Menu = ({ detail, selectedItem, select }) => {
       ))}
       <style jsx>{`
         .menu {
-          position: sticky;
-          overflow: hidden;
           border-radius: 4px;
-          top: 2em;
           max-width: 245px;
           display: flex;
           flex-direction: column;
@@ -80,14 +76,16 @@ const Menu = ({ detail, selectedItem, select }) => {
           font-size: 14px;
           line-height: 18px;
           color: black;
-          transition: background 300ms ease-in-out, border 50ms ease-in-out;
+          transition: background 100ms ease-in-out, border 100ms ease-in-out;
           cursor: pointer;
         }
-        .item:hover {
+        .item:hover,
+        .item.selected:hover {
           background-color: ${colors.lightBlue};
         }
         .item.selected {
-          border-left: 5px solid ${colors.smartData};
+          border-left: 5px solid ${colors.blue};
+          background-color: ${colors.lightestBlue};
         }
       `}</style>
     </div>
@@ -95,7 +93,7 @@ const Menu = ({ detail, selectedItem, select }) => {
 };
 
 Menu.propTypes = {
-  detail: PropTypes.object.isRequired
+  detail: PropTypes.object.isRequired,
 };
 
 export default Menu;

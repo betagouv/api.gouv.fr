@@ -1,11 +1,37 @@
-import React from "react";
-import Link from "next/link";
+import React, { useEffect, useRef } from 'react';
+import Link from 'next/link';
+import { throttle } from 'lodash';
 
-import ButtonLink from "./ui/button-link";
+import ButtonLink from './ui/button-link';
+import constants from '../const';
 
 const Header = () => {
+  const header = useRef(null);
+
+  const handleScroll = throttle(() => {
+    if (!header || !header.current) {
+      return;
+    }
+    const headerClasses = header.current.classList;
+    const hasScrolledClass = headerClasses.contains('scrolled');
+    if (
+      (window.scrollY !== 0 && !hasScrolledClass) ||
+      (window.scrollY === 0 && hasScrolledClass)
+    ) {
+      headerClasses.toggle('scrolled');
+    }
+  }, 100);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <header role="navigation">
+    <header role="navigation" ref={header}>
       <nav className="nav">
         <div className="nav__container">
           <Link href="/">
@@ -19,8 +45,8 @@ const Header = () => {
           </Link>
 
           <ul className="nav__links">
-            <li id="signup-link" style={{ display: "none" }}>
-              <a href="https://signup.api.gouv.fr">Mes demandes</a>
+            <li id="signup-link" style={{ display: 'none' }}>
+              <a href={constants.SIGNUP_LINK}>Mes demandes</a>
             </li>
             <li>
               <a href="/services">Voir les réalisations</a>
@@ -32,14 +58,8 @@ const Header = () => {
               <a href="/contact">Nous contacter</a>
             </li>
             <li className="external">
-              <ButtonLink href="mailto:contact@api.gouv.fr?subject=Demande%20d%27une%20nouvelle%20API">
+              <ButtonLink href={constants.REQUEST_API_MAILTO_LINK}>
                 Demander une API
-              </ButtonLink>
-              <ButtonLink
-                href="https://github.com/betagouv/api.gouv.fr/blob/master/CONTRIBUTING.md#ajouter-une-api"
-                alt
-              >
-                Partager votre API
               </ButtonLink>
             </li>
           </ul>
@@ -47,6 +67,21 @@ const Header = () => {
       </nav>
 
       <style jsx>{`
+        header {
+          position: fixed;
+          top: 0;
+          z-index: 1000;
+          width: 100%;
+          border-bottom: 1px solid #fff;
+        }
+        header.scrolled {
+          border-color: #efefef;
+        }
+
+        header a {
+          text-decoration: none;
+        }
+
         .nav {
           width: 100%;
           background: #fff;
@@ -59,6 +94,7 @@ const Header = () => {
           justify-content: space-between;
           flex-wrap: wrap;
           align-items: center;
+          height: ${constants.HEADER_HEIGHT}px;
         }
 
         .nav__home,
@@ -77,7 +113,7 @@ const Header = () => {
           flex-flow: wrap;
         }
 
-        .nav__links li {
+        .nav__links li:not(.external) {
           padding: 0;
           display: inline;
           margin: 0 0.2em;
@@ -116,21 +152,10 @@ const Header = () => {
           justify-content: space-between;
         }
 
-        .nav .external {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          grid-gap: 1em;
-        }
-
-        @media (max-width: 550px) {
-          .nav__links {
-            padding-top: 0;
-          }
-
-          .nav .external {
-            grid-template-columns: repeat(auto-fit, minmax(162px, 1fr));
-            grid-gap: 0.5em;
-            width: 100%;
+        @media (max-width: 900px) {
+          .nav__links,
+          .external {
+            display: none;
           }
         }
       `}</style>

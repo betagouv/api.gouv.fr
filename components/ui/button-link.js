@@ -1,49 +1,66 @@
-import React from "react";
+import React from 'react';
 
-import colors from "../../styles/colors";
+import colors from '../../styles/colors';
 
-const ButtonLink = ({ href, alt, disabled, children }) => (
+const ButtonLink = ({ href, alt, rel, target, disabled, children, large }) => (
   <>
     <a
-      className={`button-link ${alt ? "alt" : "default"} ${
-        disabled ? "disabled" : ""
-      }`}
+      rel={rel}
+      target={target}
+      className={`button-link ${alt ? 'alt' : 'default'} ${
+        disabled ? 'disabled' : ''
+      }
+        ${large ? 'large' : 'small'}
+      `}
       href={href}
     >
-      {children}
+      <div className="content-wrapper">{children}</div>
     </a>
     <style jsx>{`
       a.button-link {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        padding: 9px 15px;
+        display: inline-block;
+        text-decoration: none !important;
+      }
 
-        width: 162px;
-        height: 38px;
+      .button-link > .content-wrapper {
+        font-size: 1rem;
+        padding: 8px 15px;
+        background-color: ${colors.blue};
+        border: 1px solid ${colors.blue};
 
-        background-color: ${colors.smartData};
         color: #fff;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         border-radius: 4px;
+        vertical-align: baseline;
+        user-select: none;
+        transition: transform 100ms ease-in-out, box-shadow 100ms ease-in-out;
       }
 
-      a.button-link.disabled {
+      .button-link.disabled > .content-wrapper {
         pointer-events: none;
         cursor: default;
         background-color: ${colors.smartData}B0;
+        border: 1px solid ${colors.smartData}B0;
       }
 
-      a.button-link.alt {
+      .button-link.alt > .content-wrapper {
         color: ${colors.smartData};
         background-color: #fff;
         border: 1px solid ${colors.smartData};
       }
+      .button-link.large > .content-wrapper {
+        padding: 12px 20px;
+        font-size: 1.15rem;
+      }
 
-      a.button-link.alt.disabled {
+      .button-link.alt.disabled > .content-wrapper {
         color: ${colors.smartData}B0;
         border: 1px solid ${colors.smartData}B0;
+      }
+
+      .button-link:hover > .content-wrapper {
+        transform: translateY(-2px);
+        box-shadow: 0px 6px 7px rgba(0, 0, 0, 0.25);
       }
     `}</style>
   </>

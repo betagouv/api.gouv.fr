@@ -1,7 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import Section from "./section";
+import Section from './section';
+import ButtonLink from '../ui/button-link';
 
 const Monitoring = ({ monitoring_description, monitoring_link }) => {
   return (
@@ -15,14 +16,16 @@ const Monitoring = ({ monitoring_description, monitoring_link }) => {
           <>
             <p>Les moniteurs de cette API sont disponibles publiquement.</p>
 
-            <a
+            <ButtonLink
               className="large ui button"
               href={monitoring_link}
               target="_blank"
               rel="noopener"
+              alt
+              large
             >
               <i className="icon linkify"></i> Accéder au monitoring
-            </a>
+            </ButtonLink>
           </>
         ) : (
           <p>
@@ -36,12 +39,12 @@ const Monitoring = ({ monitoring_description, monitoring_link }) => {
 
 Monitoring.defaultProps = {
   monitoring_description: null,
-  monitoring_link: null
+  monitoring_link: null,
 };
 
 Monitoring.propTypes = {
   monitoring_description: PropTypes.string,
-  monitoring_link: PropTypes.string
+  monitoring_link: PropTypes.string,
 };
 
 export default Monitoring;

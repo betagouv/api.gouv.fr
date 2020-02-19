@@ -1,14 +1,14 @@
-import React from "react";
-import Link from "next/link";
-import PropTypes from "prop-types";
-import getConfig from "next/config";
+import React from 'react';
+import Link from 'next/link';
+import PropTypes from 'prop-types';
+import getConfig from 'next/config';
 
-import { Unlock, Lock } from "react-feather";
+import { Unlock, Lock } from 'react-feather';
 
-import { getUptimeState, roundUptime } from "../utils/uptime";
+import { getUptimeState, roundUptime } from '../utils/uptime';
 
 const { publicRuntimeConfig } = getConfig();
-const DEFAULT_LOGO = publicRuntimeConfig.DEFAULT_LOGO || "logo-beta-gouv.svg";
+const DEFAULT_LOGO = publicRuntimeConfig.DEFAULT_LOGO || 'logo-beta-gouv.svg';
 
 const ApiCard = ({
   title,
@@ -17,7 +17,7 @@ const ApiCard = ({
   uptime,
   image,
   owner,
-  description
+  description,
 }) => {
   return (
     <>
@@ -27,7 +27,7 @@ const ApiCard = ({
             <img
               className="right floated mini ui image"
               src={`/images/api-logo/${image || DEFAULT_LOGO}`}
-              alt={image ? `logo de ${title}` : "logo générique api.gouv"}
+              alt={image ? `logo de ${title}` : 'logo générique api.gouv'}
             />
 
             <div className="header">{title}</div>
@@ -37,14 +37,14 @@ const ApiCard = ({
 
           <div className="card-extra">
             <div>
-              <b>{owner.includes("&") ? "Cop" : "P"}roduit par :</b> {owner}
+              <b>{owner.includes('&') ? 'Cop' : 'P'}roduit par :</b> {owner}
             </div>
           </div>
 
           <div className="card-extra">
             <div className="badges">
               <div className="badge contract">
-                {contract === "OUVERT" ? (
+                {contract === 'OUVERT' ? (
                   <>
                     <Unlock size={20} />
                     <div>Accès libre</div>
@@ -69,6 +69,9 @@ const ApiCard = ({
       </Link>
 
       <style jsx>{`
+        a.api-card {
+          text-decoration: none;
+        }
         .card-extra {
           padding: 0.5em 1em;
           color: #222;
@@ -113,13 +116,13 @@ ApiCard.propTypes = {
   image: PropTypes.string,
   owner: PropTypes.string,
   tagline: PropTypes.string,
-  uptime: PropTypes.number
+  uptime: PropTypes.number,
 };
 
 ApiCard.defaultProps = {
   description: null,
   image: null,
-  uptime: null
+  uptime: null,
 };
 
 export default ApiCard;

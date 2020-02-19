@@ -1,15 +1,17 @@
-import React, { useState, useRef, useEffect } from "react";
-import PropTypes from "prop-types";
-import getConfig from "next/config";
-import { throttle } from "lodash";
+import React, { useState, useRef, useEffect } from 'react';
+import PropTypes from 'prop-types';
+import getConfig from 'next/config';
+import { throttle } from 'lodash';
 
-import { isElementVisible } from "../utils";
-import { getAPI, getService } from "../utils/api";
-import withErrors from "../components/hoc/with-errors";
-import Page from "../layouts/page";
+import { isElementVisible } from '../utils';
+import { getAPI, getService } from '../utils/api';
+import withErrors from '../components/hoc/with-errors';
+import Page from '../layouts/page';
+import globals from '../const';
+import ButtonLink from '../components/ui/button-link';
 
 import {
-  Header,
+  PageHeader,
   Menu,
   Access,
   Support,
@@ -19,12 +21,15 @@ import {
   TechnicalDocumentation,
   Services,
   Content,
-  Thumbnails
-} from "../components/api";
-import { getWindowHash } from "../utils";
+  Thumbnails,
+} from '../components/api';
+
+import { getWindowHash } from '../utils';
+import PreFooter from '../components/preFooter';
+import colors from '../styles/colors';
 
 const { publicRuntimeConfig } = getConfig();
-const DEFAULT_LOGO = publicRuntimeConfig.DEFAULT_LOGO || "logo-beta-gouv.svg";
+const DEFAULT_LOGO = publicRuntimeConfig.DEFAULT_LOGO || 'logo-beta-gouv.svg';
 
 const API = ({ api, services }) => {
   const {
@@ -40,10 +45,10 @@ const API = ({ api, services }) => {
     content,
     clients,
     contract,
-    partners
+    partners,
   } = api;
 
-  const [menuItem, setMenuItem] = useState("api-description");
+  const [menuItem, setMenuItem] = useState('api-description');
 
   const contentContainer = useRef(null);
 
@@ -55,13 +60,13 @@ const API = ({ api, services }) => {
   const {
     link: doc_tech_link,
     external: doc_tech_external,
-    description: doc_tech_description
+    description: doc_tech_description,
   } = doc_tech || {};
 
   const {
     is_open: access_open,
     link: access_link,
-    description: access_description
+    description: access_description,
   } = access || {};
 
   const { link: monitoring_link, description: monitoring_description } =
@@ -69,7 +74,7 @@ const API = ({ api, services }) => {
 
   const {
     description: rate_limiting_description,
-    resume: rate_limiting_resume
+    resume: rate_limiting_resume,
   } = rate_limiting || {};
 
   const getVisibleAnchor = () => {
@@ -81,24 +86,21 @@ const API = ({ api, services }) => {
 
     for (let i = 0; i < sectionCollection.length; i++) {
       const elem = sectionCollection[i];
-      if (isElementVisible(elem)) {
-        return elem.id;
+      if (isElementVisible(elem, globals.HEADER_HEIGHT)) {
+        return elem.children[0].id;
       }
     }
   };
 
   const setVisibleAnchor = (anchor, smooth = false) => {
+    setMenuItem(anchor);
+
     const anchorElem = document.getElementById(anchor);
 
     if (!anchorElem) {
       return;
     }
-    anchorElem.scrollIntoView({ behavior: smooth ? "smooth" : "auto" });
-  };
-
-  const onMenuItemClick = anchor => {
-    setMenuItem(anchor);
-    setVisibleAnchor(anchor);
+    anchorElem.scrollIntoView({ behavior: smooth ? 'smooth' : 'auto' });
   };
 
   const handleScroll = throttle(() => {
@@ -123,25 +125,21 @@ const API = ({ api, services }) => {
     }
 
     // add scrollListeners
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
       // clean listeners
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   return (
     <Page>
-      <Header
+      <PageHeader
         title={title}
         logo={logo || DEFAULT_LOGO}
         tagline={tagline}
         stat={stat}
-        external_site={external_site}
-        access_link={access_link}
-        doc_tech_link={doc_tech_link}
-        doc_tech_external={doc_tech_external}
       />
 
       <Thumbnails
@@ -155,11 +153,13 @@ const API = ({ api, services }) => {
       <div id="description" className="ui container">
         <div className="ui equal width grid padded">
           <div className="four wide column computer only">
-            <Menu
-              detail={detail}
-              selectedItem={menuItem}
-              select={onMenuItemClick}
-            />
+            <div className=" sticky-column">
+              <Menu
+                detail={detail}
+                selectedItem={menuItem}
+                select={setVisibleAnchor}
+              />
+            </div>
           </div>
           <div className="column" ref={contentContainer}>
             <Content content={content} />
@@ -198,12 +198,21 @@ const API = ({ api, services }) => {
           </div>
         </div>
       </div>
+      <PreFooter background={colors.lightestGrey} />
+      <style jsx>{`
+        .sticky-column {
+          position: sticky;
+          overflow: hidden;
+          top: ${globals.HEADER_HEIGHT + 20}px;
+          padding-bottom: 15px;
+        }
+      `}</style>
     </Page>
   );
 };
 
 API.defaultProps = {
-  services: null
+  services: null,
 };
 
 API.propTypes = {
@@ -217,38 +226,38 @@ API.propTypes = {
       url: PropTypes.string,
       path: PropTypes.array,
       label: PropTypes.string,
-      lastXdays: PropTypes.number
+      lastXdays: PropTypes.number,
     }),
     score: PropTypes.shape({
       detail: PropTypes.shape({
         contact: PropTypes.shape({
           link: PropTypes.string,
-          description: PropTypes.string
+          description: PropTypes.string,
         }),
         doc_tech: PropTypes.shape({
           link: PropTypes.string,
           external: PropTypes.string,
-          description: PropTypes.string
+          description: PropTypes.string,
         }),
         access: PropTypes.shape({
           is_open: PropTypes.bool,
           link: PropTypes.string,
-          description: PropTypes.string
+          description: PropTypes.string,
         }),
         monitoring: PropTypes.shape({
           link: PropTypes.string,
-          description: PropTypes.string
+          description: PropTypes.string,
         }),
         rate_limiting: PropTypes.shape({
-          description: PropTypes.string
-        })
-      }).isRequired
+          description: PropTypes.string,
+        }),
+      }).isRequired,
     }).isRequired,
     content: PropTypes.string.isRequired,
     clients: PropTypes.array,
     contract: PropTypes.string,
-    partners: PropTypes.array
-  }).isRequired
+    partners: PropTypes.array,
+  }).isRequired,
 };
 
 API.getInitialProps = async ({ query }) => {
