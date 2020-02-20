@@ -5,8 +5,6 @@ import prune from 'underscore.string/prune';
 
 import getConfig from 'next/config';
 
-import Fonts from '../styles/fonts';
-
 const { publicRuntimeConfig } = getConfig();
 const SITE_NAME = publicRuntimeConfig.SITE_NAME || 'api.gouv.fr';
 const SITE_URL = publicRuntimeConfig.SITE_URL || 'https://api.gouv.fr';
@@ -42,8 +40,6 @@ const Meta = ({ title, description }) => {
       <meta name="og:site_name" content={SITE_NAME} />
       <meta name="og:locale" content="fr_FR" />
       <meta name="og:type" content="website" />
-
-      <Fonts />
     </Head>
   );
 };
