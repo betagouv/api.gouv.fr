@@ -1,16 +1,17 @@
-import React from "react";
-import PropTypes from "prop-types";
-import ReactMarkdown from "react-markdown";
+import React from 'react';
+import PropTypes from 'prop-types';
+import ReactMarkdown from 'react-markdown';
 
-import withErrors from "../components/hoc/with-errors";
+import withErrors from '../components/hoc/with-errors';
 
-import { getService, getAPI } from "../utils/api";
+import { getService, getAPI } from '../utils/api';
 
-import colors from "../styles/colors";
+import colors from '../styles/colors';
 
-import Page from "../layouts/page";
+import Page from '../layouts/page';
 
-import APICard from "../components/api-card";
+import APICard from '../components/searchApis/apiCard';
+import { HEADER_PAGE } from '../components/header';
 
 const Service = ({
   title,
@@ -18,10 +19,10 @@ const Service = ({
   link,
   apiList,
   content,
-  screenshot
+  screenshot,
 }) => {
   return (
-    <Page>
+    <Page headerKey={HEADER_PAGE.SERVICES}>
       <section id="title" className="ui vertical center aligned segment">
         <div className="ui text container">
           <h1 className="ui inverted header">{title}</h1>
@@ -39,12 +40,12 @@ const Service = ({
         </div>
       </section>
 
-      <div className="ui container content">
+      <div className="content-container content">
         <div className="ui stackable grid">
           <div className="row">
             <div className="five wide column">
               <h3 className="ui divider horizontal">
-                {apiList.length > 1 ? "Les API utilisées" : "API utilisée"}
+                {apiList.length > 1 ? 'Les API utilisées' : 'API utilisée'}
               </h3>
               <div className="ui segments">
                 {apiList.map(api => (
@@ -120,7 +121,7 @@ Service.propTypes = {
   link: PropTypes.string.isRequired,
   apiList: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
-  screenshot: PropTypes.string.isRequired
+  screenshot: PropTypes.string.isRequired,
 };
 
 Service.getInitialProps = async req => {
@@ -131,7 +132,7 @@ Service.getInitialProps = async req => {
 
   return {
     ...service,
-    apiList: api
+    apiList: api,
   };
 };
 

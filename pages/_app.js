@@ -1,11 +1,11 @@
-import React from "react";
-import App from "next/app";
-import getConfig from "next/config";
+import React from 'react';
+import App from 'next/app';
+import getConfig from 'next/config';
 
-import Chat from "../components/chat";
+import Chat from '../components/chat';
 
 const {
-  publicRuntimeConfig: { PIWIK_URL, PIWIK_SITE_ID }
+  publicRuntimeConfig: { PIWIK_URL, PIWIK_SITE_ID },
 } = getConfig();
 
 class MyApp extends App {

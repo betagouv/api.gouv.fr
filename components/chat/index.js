@@ -1,9 +1,9 @@
-import React, { useState, useCallback } from "react";
-import { MessageSquare, X } from "react-feather";
+import React, { useState, useCallback } from 'react';
+import { MessageSquare, X } from 'react-feather';
 
-import colors from "../../styles/colors";
+import colors from '../../styles/colors';
 
-import ButtonLink from "../ui/button-link";
+import { ButtonLink } from '../../uiComponents/button';
 
 const Chat = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +17,7 @@ const Chat = () => {
   }, [subject, body]);
 
   return (
-    <div className={`chat-container ${isOpen ? "show" : "hidden"}`}>
+    <div className={`chat-container ${isOpen ? 'show' : 'hidden'}`}>
       <div className="chat-header">
         <div className="chat-icon" onClick={() => setIsOpen(!isOpen)}>
           <MessageSquare color={colors.smartData} />
