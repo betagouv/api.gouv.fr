@@ -1,10 +1,10 @@
-const { readFile, readdir } = require("fs").promises;
-const { join } = require("path");
-const frontmatter = require("front-matter");
+const { readFile, readdir } = require('fs').promises;
+const { join } = require('path');
+const frontmatter = require('front-matter');
 
-const API_DIR = join(__dirname, "_api");
-const SERVICE_DIR = join(__dirname, "_service");
-const DEFAULT_LOGO = "logo-beta-gouv.svg";
+const API_DIR = join(__dirname, '_api');
+const SERVICE_DIR = join(__dirname, '_service');
+const DEFAULT_LOGO = 'logo-beta-gouv.svg';
 
 function apiToAPIV1(api) {
   return {
@@ -14,12 +14,13 @@ function apiToAPIV1(api) {
     image: api.logo || DEFAULT_LOGO,
     domain: api.domain,
     owner: api.owner,
+    themes: api.themes,
     contract: api.contract,
     uptime: api.uptime,
     visits_2019: api.visits_2019,
     keywords: api.keywords,
     clients: api.clients,
-    partners: api.partners
+    partners: api.partners,
   };
 }
 
@@ -54,13 +55,13 @@ async function readMarkdownDir(dir) {
   return Promise.all(
     files.map(async fileName => {
       const filePath = join(dir, fileName);
-      const file = await readFile(filePath, { encoding: "utf-8" });
+      const file = await readFile(filePath, { encoding: 'utf-8' });
       const json = frontmatter(file);
 
       return {
-        slug: fileName.split(".md")[0],
+        slug: fileName.split('.md')[0],
         ...json.attributes,
-        content: json.body
+        content: json.body,
       };
     })
   );
@@ -76,7 +77,7 @@ async function buildDataset() {
   return {
     summary: apis.map(apiToAPIV1),
     apis,
-    services
+    services,
   };
 }
 
