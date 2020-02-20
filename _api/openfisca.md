@@ -21,6 +21,8 @@ keywords:
   - Prestations sociales
   - Droit
   - Simulateur
+themes:
+  - Administration & législation
 logo: logo-openfisca.svg
 score:
   detail:

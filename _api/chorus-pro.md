@@ -19,6 +19,8 @@ keywords:
   - Dématérialisation
   - Comptabilité
   - Portail professionel
+themes: 
+  - Administration & législation
 logo: ChorusPro.jpg
 score:
   detail:

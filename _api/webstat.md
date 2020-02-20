@@ -20,7 +20,8 @@ keywords: # utilisés pour la recherche
   - balance des paiements
   - conjoncture
   - entreprises
-
+themes: 
+  - Administration & législation
 score:
   detail:
     access:

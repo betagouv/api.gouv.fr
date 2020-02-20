@@ -12,6 +12,9 @@ owner: Rennes Métropole
 keywords:
   - Voie
   - Adresse
+themes:
+  - Transport
+  - Géographie
 score:
   detail:
     contact:
