@@ -1,12 +1,12 @@
-import Thumbnail from "./thumbnail";
+import Thumbnail from './thumbnail';
 
-import { Lock, Unlock, Activity, Calendar, User, Sliders } from "react-feather";
+import { Lock, Unlock, Activity, Calendar, User, Sliders } from 'react-feather';
 
-import { getUptimeState, roundUptime } from "../../../utils/uptime";
+import { getUptimeState, roundUptime } from '../../../utils/uptime';
 
 const Thumbnails = ({ is_open, uptime, lastUpdate, owner, rate_limiting }) => {
   return (
-    <div className="ui container thumbnails">
+    <div className="content-container thumbnails">
       {is_open ? (
         <Thumbnail title="Accès" icon={<Unlock />}>
           API ouvert à tous
@@ -33,7 +33,7 @@ const Thumbnails = ({ is_open, uptime, lastUpdate, owner, rate_limiting }) => {
       {rate_limiting && (
         <Thumbnail title="Limite d’usage" icon={<Sliders />}>
           <div>
-            {rate_limiting.split("/").map(rate => (
+            {rate_limiting.split('/').map(rate => (
               <div className="rate" key={rate}>
                 {rate}
               </div>
@@ -65,7 +65,7 @@ const Thumbnails = ({ is_open, uptime, lastUpdate, owner, rate_limiting }) => {
         }
 
         .rate:not(:first-child):before {
-          content: "/ ";
+          content: '/ ';
         }
 
         @media (max-width: 445px) {

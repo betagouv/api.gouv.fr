@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Section from './section';
-import ButtonLink from '../ui/button-link';
+import { ButtonLink } from '../../uiComponents/button';
+
 import colors from '../../styles/colors';
 
 const Access = ({

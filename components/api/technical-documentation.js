@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import Section from './section';
 import SwaggerUI from './swagger';
-import ButtonLink from '../ui/button-link';
+import { ButtonLink } from '../../uiComponents/button';
 
 const TechnicalDocumentation = ({
   doc_tech_description,

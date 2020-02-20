@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Section from './section';
-import ButtonLink from '../ui/button-link';
+import { ButtonLink } from '../../uiComponents/button';
 
 const Monitoring = ({ monitoring_description, monitoring_link }) => {
   return (
