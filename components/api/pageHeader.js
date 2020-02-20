@@ -80,7 +80,7 @@ const PageHeader = ({ title, logo, tagline }) => (
       }
 
       .content {
-        padding: 50px 0;
+        padding: 5px 0 15px;
         display: flex;
         flex-direction: column;
         align-items: center;
