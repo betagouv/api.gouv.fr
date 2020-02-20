@@ -1,0 +1,54 @@
+@import '../styles/colors.scss';
+
+.layout-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-container {
+  margin-left: auto !important;
+  margin-right: auto !important;
+
+  @media only screen and (min-width: 1124px) {
+    width: 1100px;
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1124px) {
+    width: calc(100% - 100px);
+  }
+
+  @media only screen and (min-width: 550px) and (max-width: 768px) {
+    width: calc(100% - 80px);
+  }
+
+  @media only screen and (min-width: 1px) and (max-width: 600px) {
+    width: calc(100% - 50px);
+  }
+}
+
+h1 {
+  font-size: 2.8rem;
+  line-height: 3.1rem;
+  margin: 15px 0;
+  color: $darkestGrey;
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 2.1rem;
+  margin: 10px 0 16px;
+  color: $darkestGrey;
+}
+
+h3 {
+  font-size: 1.3rem;
+  line-height: 1.9rem;
+  margin: 12px 0 16px;
+}
+
+h4 {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  margin: 12px 0 16px;
+}
