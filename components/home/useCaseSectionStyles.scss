@@ -41,11 +41,25 @@ section#use-cases {
       }
     }
 
-    &:nth-child(even) {
-      flex-direction: row-reverse;
+    @media (min-width: 768px) and (max-width: 768px) {
+      &:nth-child(even) {
+        flex-direction: row-reverse;
 
-      > .img-wrapper {
-        margin: 0 70px 0 0;
+        > .img-wrapper {
+          margin: 0 70px 0 0;
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      padding: 50px 0 10px;
+
+      .content-wrapper {
+        width: 100%;
+      }
+      .img-wrapper {
+        margin: 15px 0 0;
       }
     }
   }
