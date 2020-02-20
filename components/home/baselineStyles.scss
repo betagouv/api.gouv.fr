@@ -1,0 +1,19 @@
+section#mission-statement {
+  padding: 50px 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  h2 {
+    margin-bottom: 1rem;
+    max-width: 650px;
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    #mission-statement {
+      padding: 4em 2em;
+    }
+  }
+}
