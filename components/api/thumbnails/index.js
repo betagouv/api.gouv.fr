@@ -48,7 +48,7 @@ const Thumbnails = ({ is_open, uptime, lastUpdate, owner, rate_limiting }) => {
           grid-template-columns: repeat(auto-fit, 200px);
           justify-content: space-between;
           grid-gap: 1em;
-          margin: 1em;
+          margin: 1em auto;
         }
 
         .badge {
