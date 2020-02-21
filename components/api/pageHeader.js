@@ -28,13 +28,13 @@ const Title = ({ title, logo }) => (
       }
 
       .title h1 {
-        font-family: Evolventa;
         margin: 0 0.5rem;
         font-style: normal;
         font-weight: bold;
         font-size: 32px;
         line-height: 43px;
         text-align: center;
+        color: #fff;
       }
     `}</style>
   </>
@@ -42,15 +42,16 @@ const Title = ({ title, logo }) => (
 
 const Tagline = ({ tagline }) => (
   <>
-    <div className="tagline">{tagline}</div>
+    <h2 className="tagline">{tagline}</h2>
     <style jsx>{`
       .tagline {
-        font-family: Evolventa;
         font-style: normal;
         font-weight: bold;
         font-size: 15px;
         line-height: 20px;
         text-align: center;
+        margin: 0;
+        color: #fff;
       }
 
       .inline {
@@ -63,10 +64,10 @@ const Tagline = ({ tagline }) => (
 
 const PageHeader = ({ title, logo, tagline }) => (
   <section id="mission-statement">
-    <Link href="/">
-      <a className="back-button">← Page d’accueil</a>
+    <Link href="/rechercher-api">
+      <a className="back-button">← Retour</a>
     </Link>
-    <div className="ui container content">
+    <div className="content-container content">
       <Title title={title} logo={logo} />
       <Tagline tagline={tagline} />
     </div>
@@ -74,13 +75,12 @@ const PageHeader = ({ title, logo, tagline }) => (
     <style jsx>{`
       #mission-statement {
         background: ${colors.backgroundBlueGradient};
-        color: white;
         width: 100%;
         position: relative;
       }
 
       .content {
-        padding: 50px 0;
+        padding: 5px 0 15px;
         display: flex;
         flex-direction: column;
         align-items: center;

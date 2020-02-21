@@ -22,6 +22,8 @@ keywords:
   - Départements
   - Régions
   - EPCI
+themes: 
+  - Géographie
 stat:
   lastXdays: 7
   url: https://geo.api.gouv.fr/stats.json

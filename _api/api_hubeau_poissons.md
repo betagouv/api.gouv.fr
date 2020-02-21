@@ -20,6 +20,8 @@ keywords:
   - Pêche électrique
   - Cours d'eau
   - Etat piscicole
+themes: 
+  - Environnement
 score:
   detail:
     access:

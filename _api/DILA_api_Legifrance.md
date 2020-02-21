@@ -22,6 +22,8 @@ keywords:
   - Accords de branche et conventions collectives
   - Documents administratifs
   - Dossiers législatifs
+themes: 
+  - Administration & législation
 score:
   detail:
     access:

@@ -1,0 +1,27 @@
+# CircleCI 2.0 configuration file. See <https://circleci.com/docs/2.0/language-ruby/>.
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:12.9.1-browsers
+
+    working_directory: ~/api.gouv.fr
+
+    steps:
+      - checkout
+
+      # Note the YAML heredoc '|' for nicer formatting
+      - run: |
+          npm i
+
+      - restore_cache:
+          keys:
+            - v1-api.gouv.fr-{{ checksum "project.clj" }}
+
+      - save_cache:
+          key: v1-api.gouv.fr-{{ checksum "project.clj" }}
+          paths:
+            - node_modules
+
+      - run: |
+          npm run lint

@@ -1,5 +1,5 @@
-import React from "react";
-import Link from "next/link";
+import React from 'react';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -133,6 +133,7 @@ const Footer = () => {
         }
 
         .footer__links h2 {
+          color: #fff;
           margin-top: 0;
           margin-bottom: 0.5em;
         }

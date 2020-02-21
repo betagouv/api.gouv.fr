@@ -24,6 +24,8 @@ keywords:
   - Adresse
   - GPS
   - Code postal
+themes: 
+  - Géographie
 additional_css: api
 score:
   detail:

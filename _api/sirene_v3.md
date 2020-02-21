@@ -11,6 +11,8 @@ keywords:
   - Entreprise
   - Etablissements
   - Sirene
+themes: 
+  - Entreprise
 logo: Logo_Insee.svg
 score:
   detail:

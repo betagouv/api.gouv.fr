@@ -22,6 +22,8 @@ keywords:
   - Eau souterraine
   - Aquifère
   - Hydrogéologie
+themes: 
+  - Environnement
 score:
   detail:
     access:

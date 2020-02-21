@@ -13,6 +13,7 @@ export default {
   service: '#AF2341',
   main: '#275166',
   blue: '#0048B3',
+  darkBlue: '#003189',
   vividBlue: '#0064F9',
   lightBlue: '#E5EFFF;',
   lightestBlue: '#F8FAFF;',

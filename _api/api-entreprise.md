@@ -35,6 +35,8 @@ keywords:
   - Entreprise
   - Certification
   - Signup
+themes: 
+  - Entreprise
 score:
   detail:
     access:

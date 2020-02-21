@@ -23,6 +23,8 @@ keywords:
   - Niveau d'eau
   - Eau souterraine
   - Hydrogéologie
+themes: 
+  - Environnement
 stat:
   lastXdays: 30
   url: https://hubeau.eaufrance.fr/sites/default/files/api/stats.json

@@ -1,12 +1,11 @@
 import React from 'react';
 
 import constants from '../const';
-import colors from '../styles/colors';
-import ButtonLink from '../components/ui/button-link';
+import { ButtonLink } from '../uiComponents/button';
 
 const PreFooter = ({ background }) => (
   <section>
-    <div className="ui container links">
+    <div className="content-container links">
       <div>
         <h3>Vous ne trouvez pas l’API dont vous avez besoin ?</h3>
         <ButtonLink href={constants.REQUEST_API_MAILTO_LINK}>
@@ -28,6 +27,7 @@ const PreFooter = ({ background }) => (
       section > div {
         padding: 4rem 0;
         display: flex;
+        flex-direction: row;
         align-items: center;
         justify-content: space-evenly;
       }
@@ -36,6 +36,14 @@ const PreFooter = ({ background }) => (
         flex-direction: column;
         align-items: center;
         justify-content: center;
+      }
+      @media (max-width: 768px) {
+        section > div {
+          flex-direction: column;
+        }
+        section > div > div {
+          margin: 20px 0;
+        }
       }
     `}</style>
   </section>

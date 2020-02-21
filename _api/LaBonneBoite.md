@@ -25,6 +25,8 @@ keywords:
   - Embauche
   - Entreprise
   - Recrutement
+themes:
+  - Emploi
 score:
   detail:
     contact:

@@ -29,6 +29,8 @@ keywords:
   - hydrocarbure
   - géothermie
   - carrière
+themes: 
+  - Géographie
 stat:
   link: https://camino.beta.gouv.fr/statistiques
 score:

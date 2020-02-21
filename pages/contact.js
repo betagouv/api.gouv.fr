@@ -1,7 +1,8 @@
-import Page from "../layouts/page";
+import Page from '../layouts/page';
+import { HEADER_PAGE } from '../components/header';
 
 const Contact = () => (
-  <Page>
+  <Page headerKey={HEADER_PAGE.CONTACT}>
     <div className="ui text container">
       <h1>Contact</h1>
 
@@ -21,7 +22,7 @@ const Contact = () => (
       <div>
         <h2>Ajouter une API</h2>
         <p>
-          La demande d'ajout au catalogue se fait de manière autonome{" "}
+          La demande d'ajout au catalogue se fait de manière autonome{' '}
           <a href="https://github.com/betagouv/api.gouv.fr/blob/master/CONTRIBUTING.md">
             via GitHub
           </a>
@@ -39,10 +40,10 @@ const Contact = () => (
             gestion d'un service public administratif (par exemple :
             Administrations de l’État centralisées et décentralisées;
             Collectivités territoriales; Établissements publics à caractère
-            administratif; Organismes{" "}
+            administratif; Organismes{' '}
             <abbr title="Relevant du code de la sécurité sociale et du code rural ou mentionnés aux articles L. 223-16 et L.351-21 du code du travail">
               gérant
-            </abbr>{" "}
+            </abbr>{' '}
             des régimes de protection sociale… ).
           </li>
           <li>
@@ -72,7 +73,7 @@ const Contact = () => (
       <div>
         <h2>Ajouter un service</h2>
         <p>
-          La demande d'ajout au catalogue se fait de manière autonome{" "}
+          La demande d'ajout au catalogue se fait de manière autonome{' '}
           <a href="https://github.com/betagouv/api.gouv.fr/blob/master/CONTRIBUTING.md">
             via GitHub
           </a>
@@ -97,14 +98,14 @@ const Contact = () => (
         </p>
 
         <p>
-          Vérifiez que cette amélioration ne soit pas{" "}
+          Vérifiez que cette amélioration ne soit pas{' '}
           <a href="https://github.com/betagouv/api.gouv.fr/issues">
             déjà prévue
-          </a>{" "}
-          et, si ce n'est pas le cas,{" "}
+          </a>{' '}
+          et, si ce n'est pas le cas,{' '}
           <a href="https://github.com/betagouv/api.gouv.fr/issues/new">
             suggérez-la
-          </a>{" "}
+          </a>{' '}
           sur GitHub.
         </p>
       </div>
@@ -117,7 +118,7 @@ const Contact = () => (
           la page de description de l'api.
         </p>
         <p>
-          Votre sujet concerne API.gouv.fr en général,{" "}
+          Votre sujet concerne API.gouv.fr en général,{' '}
           <a href="mailto:contact@api.gouv.fr?subject=Autre%20sujet">
             Écrivez-nous
           </a>
@@ -128,10 +129,10 @@ const Contact = () => (
       <div>
         <h2>FranceConnect et ANTS</h2>
         <p>
-          Votre demande concerne l'utilisation de FranceConnect, écrivez au{" "}
+          Votre demande concerne l'utilisation de FranceConnect, écrivez au{' '}
           <a href="mailto:support.usagers@franceconnect.gouv.fr">
             support FranceConnect
-          </a>{" "}
+          </a>{' '}
           .
         </p>
         <p>
@@ -139,7 +140,7 @@ const Contact = () => (
           grise,
           <a href="https://ants.gouv.fr/Contacter-l-ANTS/Nous-contacter">
             contactez l'ANTS
-          </a>{" "}
+          </a>{' '}
           .
         </p>
       </div>

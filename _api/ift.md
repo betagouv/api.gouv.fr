@@ -23,6 +23,8 @@ keywords:
   - Transition agro-écologique
   - MAEC
   - Ferme Dephy
+themes:
+  - Environnement
 score:
   detail:
     access:

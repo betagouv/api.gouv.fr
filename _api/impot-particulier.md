@@ -14,6 +14,8 @@ keywords:
   - Adresse
   - Justificatif de domicile
   - Signup
+themes: 
+  - Particulier
 score:
   detail:
     monitoring:

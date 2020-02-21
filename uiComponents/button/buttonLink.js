@@ -19,7 +19,7 @@ const ButtonLink = ({ href, alt, rel, target, disabled, children, large }) => (
     <style jsx>{`
       a.button-link {
         display: inline-block;
-        text-decoration: none !important;
+        text-decoration: none;
       }
 
       .button-link > .content-wrapper {

@@ -1,9 +1,9 @@
-import React from "react";
-import Document, { Head, Main, NextScript } from "next/document";
-import getConfig from "next/config";
+import React from 'react';
+import Document, { Head, Main, NextScript } from 'next/document';
+import getConfig from 'next/config';
 
 const {
-  publicRuntimeConfig: { PIWIK_URL, PIWIK_SITE_ID }
+  publicRuntimeConfig: { PIWIK_URL, PIWIK_SITE_ID },
 } = getConfig();
 
 class MyDocument extends Document {
@@ -177,7 +177,7 @@ class MyDocument extends Document {
             href="//cdn.jsdelivr.net/gh/swagger-api/swagger-ui@v3.4.0/dist/swagger-ui.css"
           ></link>
 
-          <style>{`
+          <style jsx>{`
             html {
               height: 100%;
             }
