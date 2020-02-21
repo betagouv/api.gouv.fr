@@ -2,6 +2,7 @@ import React, { useState, useCallback } from 'react';
 import { MessageSquare, X } from 'react-feather';
 
 import colors from '../../styles/colors';
+import constants from '../../const';
 
 import { ButtonLink } from '../../uiComponents/button';
 
@@ -138,7 +139,7 @@ const Chat = () => {
           .chat-container {
             z-index: 999;
             position: fixed;
-            height: 100%;
+            height: calc(100% - ${constants.HEADER_HEIGHT}px);
             width: 100%;
             padding: 1em;
             margin: 0;

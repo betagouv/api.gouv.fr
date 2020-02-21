@@ -12,8 +12,10 @@ section#mission-statement {
   }
 
   @media (max-width: 768px) {
-    #mission-statement {
-      padding: 4em 2em;
+    h1,
+    h2 {
+      text-align: left;
+      width: 100%;
     }
   }
 }

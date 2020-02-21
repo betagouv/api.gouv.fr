@@ -1,0 +1,10 @@
+@import '../../styles/colors.scss';
+
+section#api-results {
+  padding: 35px 0 60px;
+  background: $lightGrey;
+
+  .results-counter {
+    margin: 0 0 15px;
+  }
+}

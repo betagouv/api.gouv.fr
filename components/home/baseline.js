@@ -1,15 +1,19 @@
 import React from 'react';
 
-import { TypingCarroussel } from '../../uiComponents';
+import { TypingCarousel } from '../../uiComponents';
 
 import './baselineStyles.scss';
 
 const Baseline = () => (
   <section id="mission-statement" className="content-container layout-center">
     <h1>
-      <TypingCarroussel
+      <TypingCarousel
         txtBefore="Vous êtes"
-        sentences={[' une collectivité ?', ' un ministère ?', ' un éditeur ?']}
+        sentences={[
+          ' une collectivité ?',
+          ' un ministère ?',
+          ' une entreprise ?',
+        ]}
       />
     </h1>
     <h2>

@@ -8,12 +8,12 @@ import {
   computeSearchResults,
 } from './filtersLogic';
 
-const SearchApis = ({ allApis, allThemes }) => {
+const SearchApis = ({ allApis, allThemes, searchFromQueryString = '' }) => {
   const [apiList, setApiList] = useState(allApis);
 
-  const [theme, setFilterTheme] = useState(null);
-  const [access, setFilterAccess] = useState(false);
-  const [searchTerms, setFilterSearch] = useState([]);
+  const [theme, setTheme] = useState(null);
+  const [isAccessOpen, setIsAccessOpen] = useState(false);
+  const [searchTerms, setSearchTerms] = useState(searchFromQueryString);
 
   const allThemesOptions = allThemes.map((el, index) => {
     return { value: index, label: el };
@@ -21,42 +21,31 @@ const SearchApis = ({ allApis, allThemes }) => {
 
   useEffect(() => {
     let res = allApis;
-    if (searchTerms.length > 0) {
+    const cleanedSearchTerms = searchTerms.split(' ').filter(t => !!t);
+
+    if (cleanedSearchTerms.length > 0) {
       res = allApis
-        .map(computeSearchResults(searchTerms))
+        .map(computeSearchResults(cleanedSearchTerms))
         .filter(api => api.score !== 0);
     }
 
     const newApiList = res
-      .filter(filterAccess(access))
+      .filter(filterAccess(isAccessOpen))
       .filter(filterTheme(theme))
       .sort((a, b) => ((a.visits_2019 || 0) < b.visits_2019 ? 1 : -1));
 
     setApiList(newApiList);
     return () => {};
-  }, [theme, access, searchTerms]);
-
-  const setSearchTerm = str => {
-    // split by search keywords and remove trailing spaces
-    const cleanedSearchTerms = str.split(' ').filter(t => !!t);
-    setFilterSearch(cleanedSearchTerms);
-  };
-
-  const setThemes = themeIdx => {
-    if (!themeIdx) {
-      // no theme selected
-      setFilterTheme(null);
-    }
-    setFilterTheme(allThemes[themeIdx]);
-  };
-
+  }, [theme, isAccessOpen, searchTerms]);
   return (
     <>
       <FilterHeader
         allThemesOptions={allThemesOptions}
-        setFilterTheme={setThemes}
-        setFilterAccess={setFilterAccess}
-        setFilterSearch={setSearchTerm}
+        setTheme={setTheme}
+        setIsAccessOpen={setIsAccessOpen}
+        search={setSearchTerms}
+        searchFromQueryString={searchFromQueryString}
+        isAccessOpen={isAccessOpen}
       />
       <Results apiList={apiList} />
     </>

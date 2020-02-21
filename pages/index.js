@@ -16,7 +16,7 @@ const SITE_DESCRIPTION =
   publicRuntimeConfig.SITE_DESCRIPTION ||
   'Simplifiez le partage et la circulation des données administratives';
 
-const Home = ({ q, filter, apiList }) => (
+const Home = ({ apiList }) => (
   <Page>
     <Baseline />
     <ApiTripletSection apiList={apiList} />
@@ -34,12 +34,9 @@ const Home = ({ q, filter, apiList }) => (
 );
 
 Home.getInitialProps = async req => {
-  const { q, filter } = req.query;
   const apiList = await getAllAPIs();
 
   return {
-    q,
-    filter,
     apiList,
   };
 };

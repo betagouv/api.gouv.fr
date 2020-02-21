@@ -1,7 +1,5 @@
 const nextRuntimeDotenv = require('next-runtime-dotenv');
-
 const withFonts = require('nextjs-fonts');
-
 const withSass = require('@zeit/next-sass');
 
 const withConfig = nextRuntimeDotenv({

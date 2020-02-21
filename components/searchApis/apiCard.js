@@ -61,12 +61,19 @@ const ApiCard = ({
 
           <div className="card-extra">
             <div className="badges">
-              {contract !== 'OUVERT' && (
-                <div className="badge contract">
-                  <Lock size={20} />
-                  <div>Sous habilitation</div>
-                </div>
-              )}
+              <div className="badge contract">
+                {contract === 'OUVERT' ? (
+                  <>
+                    <Unlock size={20} />
+                    <div>Accès libre</div>
+                  </>
+                ) : (
+                  <>
+                    <Lock size={20} />
+                    <div>Sous habilitation</div>
+                  </>
+                )}
+              </div>
 
               {uptime && (
                 <div className="badge uptime">

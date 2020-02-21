@@ -7,6 +7,7 @@ import colors from '../../styles/colors';
 const SearchBar = ({
   onSearch,
   placeholder,
+  defaultValue,
   label,
   debounceRate = 100,
   width = 400,
@@ -32,6 +33,7 @@ const SearchBar = ({
             ref={searchInput}
             onFocus={() => setFocus(true)}
             onBlur={() => setFocus(false)}
+            defaultValue={defaultValue}
           />
           <button onClick={onChange}>
             <Search size={20} color={colors.blue} />

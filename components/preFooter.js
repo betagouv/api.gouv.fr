@@ -27,6 +27,7 @@ const PreFooter = ({ background }) => (
       section > div {
         padding: 4rem 0;
         display: flex;
+        flex-direction: row;
         align-items: center;
         justify-content: space-evenly;
       }
@@ -35,6 +36,14 @@ const PreFooter = ({ background }) => (
         flex-direction: column;
         align-items: center;
         justify-content: center;
+      }
+      @media (max-width: 768px) {
+        section > div {
+          flex-direction: column;
+        }
+        section > div > div {
+          margin: 20px 0;
+        }
       }
     `}</style>
   </section>

@@ -4,15 +4,17 @@ import { SearchBar, Toggle, Dropdown } from '../../uiComponents';
 import './filterHeaderStyles.scss';
 
 export const FilterHeader = ({
-  setFilterSearch,
-  setFilterTheme,
-  setFilterAccess,
+  search,
+  setTheme,
+  setIsAccessOpen,
+  isAccessOpen,
   allThemesOptions,
+  searchFromQueryString,
 }) => (
   <section id="search-api-filters" className="content-container ">
     <Dropdown
       label="Thématique"
-      onChange={setFilterTheme}
+      onChange={setTheme}
       selectOptions={allThemesOptions}
     />
     <div className="habilitation-wrapper">
@@ -20,12 +22,14 @@ export const FilterHeader = ({
       <div>
         <Toggle
           label="Uniquement les APIs ouvertes à tous"
-          onChange={setFilterAccess}
+          onChange={setIsAccessOpen}
+          isToggled={isAccessOpen}
         />
       </div>
     </div>
     <SearchBar
-      onSearch={setFilterSearch}
+      onSearch={search}
+      defaultValue={searchFromQueryString}
       placeholder="Recherchez un service, un ministère"
       label="Rechercher"
       width={450}

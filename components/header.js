@@ -8,7 +8,7 @@ import colors from '../styles/colors';
 
 export const HEADER_PAGE = {
   APIS: 'apis',
-  REQUESTS: 'requests',
+  FROM_SIGNUP: 'requests',
   SERVICES: 'services',
   ABOUT: 'about',
   CONTACT: 'contact',
@@ -21,22 +21,19 @@ const HEADER = [
     key: HEADER_PAGE.APIS,
   },
   {
-    href: `${constants.SIGNUP_LINK}`,
-    txt: 'Mes demandes',
-    id: 'signup-link',
-    hide: true,
-    key: HEADER_PAGE.REQUESTS,
-  },
-  {
     href: '/services',
     txt: 'Voir les réalisations',
-    key: 'services',
+    key: HEADER_PAGE.SERVICES,
   },
-  { href: '/apropos', txt: 'À propos', key: 'about' },
-  { href: '/contact', txt: 'Nous contacter', key: 'contact', hide: true },
+  { href: '/apropos', txt: 'À propos', key: HEADER_PAGE.ABOUT },
+  {
+    href: '/contact',
+    txt: 'Nous contacter',
+    key: HEADER_PAGE.CONTACT,
+  },
 ];
 
-const Header = ({ headerKey = 'home' }) => {
+const Header = ({ headerKey = 'home', filter = '' }) => {
   const header = useRef(null);
 
   const handleScroll = throttle(() => {
@@ -76,23 +73,31 @@ const Header = ({ headerKey = 'home' }) => {
           </Link>
 
           <ul className="nav__links">
-            {HEADER.map(item => (
-              <Fragment key={item.href}>
-                {!item.hide && (
-                  <li
-                    id={item.id || ''}
-                    className={`${headerKey === item.key ? 'current' : ''}`}
-                  >
-                    <a href={`${item.href}`}>{item.txt}</a>
-                  </li>
-                )}
-              </Fragment>
-            ))}
-            <li className="external">
-              <ButtonLink href={constants.REQUEST_API_MAILTO_LINK}>
-                Demander une API
-              </ButtonLink>
-            </li>
+            {headerKey !== HEADER_PAGE.FROM_SIGNUP ? (
+              <>
+                {HEADER.map(item => (
+                  <Fragment key={item.href}>
+                    {!item.hide && (
+                      <li
+                        id={item.id || ''}
+                        className={`${headerKey === item.key ? 'current' : ''}`}
+                      >
+                        <a href={`${item.href}`}>{item.txt}</a>
+                      </li>
+                    )}
+                  </Fragment>
+                ))}
+                <li className="external">
+                  <ButtonLink href={constants.REQUEST_API_MAILTO_LINK}>
+                    Demander une API
+                  </ButtonLink>
+                </li>
+              </>
+            ) : (
+              <li>
+                <a href={`${constants.SIGNUP_LINK}`}>Mes demandes</a>
+              </li>
+            )}
           </ul>
         </div>
       </nav>
@@ -177,9 +182,6 @@ const Header = ({ headerKey = 'home' }) => {
         .nav__links li:not(.current):not(.external):hover:after {
           width: 58%;
           opacity: 1;
-        }
-        .nav__links li:not(.external) > a:focus {
-          text-decoration: underline;
         }
 
         .nav__links a {

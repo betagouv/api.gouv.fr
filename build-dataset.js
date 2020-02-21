@@ -14,6 +14,7 @@ function apiToAPIV1(api) {
     image: api.logo || DEFAULT_LOGO,
     domain: api.domain,
     owner: api.owner,
+    owner_acronym: api.owner_acronym,
     themes: api.themes,
     contract: api.contract,
     uptime: api.uptime,

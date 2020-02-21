@@ -59,7 +59,8 @@ const Access = ({
           align-items: flex-end;
         }
 
-        .get-access > div {
+        .get-access > div,
+        .get-access > p {
           width: 100%;
           margin-bottom: 10px;
         }
