@@ -20,6 +20,8 @@ keywords:
   - lieux-dits habités
   - lieux-dits inhabités
   - points routiers
+themes: 
+  - Géographie
 score:
   detail:
     access:

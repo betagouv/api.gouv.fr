@@ -1,0 +1,33 @@
+@import '../../styles/colors.scss';
+
+section#search-api-filters {
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  > .habilitation-wrapper {
+    margin: 0 20px;
+
+    > div {
+      min-width: 170px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+    }
+    > label {
+      line-height: 18px;
+      font-weight: 600;
+      color: $darkestGrey;
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    > .habilitation-wrapper {
+      margin: 10px 0;
+    }
+  }
+}

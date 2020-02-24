@@ -1,14 +1,14 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import ServiceCard from "../service-card";
+import ServiceCard from '../service-card';
 
-import Section from "./section";
+import Section from './section';
 
 const Services = ({ services }) => {
   return (
     <Section id="services" title="Services">
-      <div className="ui container services-container">
+      <div className="content-container services-container">
         {services ? (
           <div className="ui three stackable cards">
             {services.map(service => (
@@ -33,11 +33,11 @@ const Services = ({ services }) => {
 };
 
 Services.defaultProps = {
-  services: null
+  services: null,
 };
 
 Services.propTypes = {
-  services: PropTypes.array
+  services: PropTypes.array,
 };
 
 export default Services;

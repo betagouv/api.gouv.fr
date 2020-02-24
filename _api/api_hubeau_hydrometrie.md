@@ -26,6 +26,8 @@ keywords:
   - Cours d'eau
   - Fleuve
   - Rivière
+themes: 
+  - Environnement
 stat:
   lastXdays: 30
   url: https://hubeau.eaufrance.fr/sites/default/files/api/stats.json

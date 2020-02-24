@@ -19,6 +19,8 @@ owner_acronym: DINUM & DGITM
 keywords:
   - Transport
   - Taxi
+themes:
+  - Transport
 score:
   detail:
     contact:

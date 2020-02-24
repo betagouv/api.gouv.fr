@@ -26,7 +26,8 @@ keywords:
   - RCC
   - Référentiels de Classification Centrale
   - Nomenclatures
-
+themes: 
+  - Administration & législation
 score:
   detail:
     contact:

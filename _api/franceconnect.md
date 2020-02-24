@@ -20,6 +20,8 @@ keywords:
   - Identification
   - SSO
   - Signup
+themes: 
+  - Particulier
 logo: logo-fc.png
 score:
   detail:

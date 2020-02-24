@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Section from './section';
-import ButtonLink from '../ui/button-link';
+import { ButtonLink } from '../../uiComponents/button';
+
 import colors from '../../styles/colors';
 
 const Access = ({
@@ -58,7 +59,8 @@ const Access = ({
           align-items: flex-end;
         }
 
-        .get-access > div {
+        .get-access > div,
+        .get-access > p {
           width: 100%;
           margin-bottom: 10px;
         }

@@ -1,16 +1,17 @@
-import Link from "next/link";
+import Link from 'next/link';
 
-import Page from "../layouts/page";
+import Page from '../layouts/page';
+import { HEADER_PAGE } from '../components/header';
 
 const About = () => (
-  <Page>
+  <Page headerKey={HEADER_PAGE.ABOUT}>
     <div className="ui text container">
       <h1>À propos</h1>
 
       <div>
         <h2>Qu'est ce qu'une API</h2>
         <p>
-          « API » est un acronyme anglo-saxon signifiant{" "}
+          « API » est un acronyme anglo-saxon signifiant{' '}
           <i>Application Programming Interface</i>. Une API est une interface,
           un contrat passé entre deux systèmes informatiques pour leur permettre
           de communiquer.
@@ -18,10 +19,10 @@ const About = () => (
         <p>
           Les API permettent de nombreux usages. Elles sont déjà utilisées
           largement. Par exemple, les entreprise françaises utilisent tous les
-          mois celle de la{" "}
+          mois celle de la{' '}
           <a href="http://www.dsn-info.fr/api-dsn.htm">
             Déclaration Sociale Nominative
-          </a>{" "}
+          </a>{' '}
           . Les entreprises ne communiquent pas les données de leur employés
           manuellement à l'administration : leur logiciel de paie transmet
           directement ces données grâce à une API.
@@ -78,7 +79,7 @@ const About = () => (
           </li>
           <li>
             Répondre à coût marginal aux exigences règlementaires de
-            transparence et d'échange de données de plus en plus fortes (loi{" "}
+            transparence et d'échange de données de plus en plus fortes (loi{' '}
             <abbr title="Droits des Citoyens dans leurs Relations avec les Administrations">
               DCRA
             </abbr>

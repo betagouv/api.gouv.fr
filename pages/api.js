@@ -6,9 +6,8 @@ import { throttle } from 'lodash';
 import { isElementVisible } from '../utils';
 import { getAPI, getService } from '../utils/api';
 import withErrors from '../components/hoc/with-errors';
-import Page from '../layouts/page';
+import Page from '../layouts';
 import globals from '../const';
-import ButtonLink from '../components/ui/button-link';
 
 import {
   PageHeader,
@@ -25,8 +24,8 @@ import {
 } from '../components/api';
 
 import { getWindowHash } from '../utils';
-import PreFooter from '../components/preFooter';
 import colors from '../styles/colors';
+import { HEADER_PAGE } from '../components/header';
 
 const { publicRuntimeConfig } = getConfig();
 const DEFAULT_LOGO = publicRuntimeConfig.DEFAULT_LOGO || 'logo-beta-gouv.svg';
@@ -134,7 +133,10 @@ const API = ({ api, services }) => {
   }, []);
 
   return (
-    <Page>
+    <Page
+      preFooterBackground={colors.lightestGrey}
+      headerKey={HEADER_PAGE.APIS}
+    >
       <PageHeader
         title={title}
         logo={logo || DEFAULT_LOGO}
@@ -150,7 +152,7 @@ const API = ({ api, services }) => {
         rate_limiting={rate_limiting_resume}
       />
 
-      <div id="description" className="ui container">
+      <div id="description" className="content-container">
         <div className="ui equal width grid padded">
           <div className="four wide column computer only">
             <div className=" sticky-column">
@@ -198,7 +200,6 @@ const API = ({ api, services }) => {
           </div>
         </div>
       </div>
-      <PreFooter background={colors.lightestGrey} />
       <style jsx>{`
         .sticky-column {
           position: sticky;

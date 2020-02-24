@@ -20,7 +20,9 @@ keywords:
   - Exonération du ticket modérateur
   - Médecin traitant
   - Signup
-score:
+themes: 
+  - Particulier
+score: 
   detail:
     access:
       link: https://signup.api.gouv.fr/api-droits-cnam

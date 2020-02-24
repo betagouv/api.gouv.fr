@@ -18,6 +18,8 @@ keywords:
   - Emploi
   - Marché du travail
   - Statistiques
+themes: 
+  - Emploi
 score:
   detail:
     contact:

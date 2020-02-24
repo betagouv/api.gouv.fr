@@ -1,18 +1,19 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import withErrors from "../components/hoc/with-errors";
+import withErrors from '../components/hoc/with-errors';
 
-import { getAllServices } from "../utils/api";
+import { getAllServices } from '../utils/api';
 
-import Page from "../layouts/page";
+import Page from '../layouts/page';
 
-import ServiceCard from "../components/service-card";
+import ServiceCard from '../components/service-card';
+import { HEADER_PAGE } from '../components/header';
 
 const Services = ({ services }) => {
   return (
-    <Page>
-      <section id="services" className="ui container main">
+    <Page headerKey={HEADER_PAGE.SERVICES}>
+      <section id="services" className="content-container main">
         <h2 className="ui divider horizontal">Tous les services</h2>
         <div className="ui three stackable cards">
           {services.map(service => (
@@ -31,14 +32,14 @@ const Services = ({ services }) => {
 };
 
 Services.propTypes = {
-  services: PropTypes.array.isRequired
+  services: PropTypes.array.isRequired,
 };
 
 Services.getInitialProps = async () => {
   const services = await getAllServices();
 
   return {
-    services
+    services,
   };
 };
 

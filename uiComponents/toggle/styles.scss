@@ -1,0 +1,70 @@
+@import '../../styles/colors';
+
+.toggle-wrapper {
+  cursor: pointer;
+  display: flex;
+
+  /* The switch - the box around the slider */
+  .switch {
+    flex-shrink: 0;
+    position: relative;
+    display: inline-block;
+    width: 35px;
+    height: 20px;
+
+    /* Hide default HTML checkbox */
+    input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+
+      &:checked + .slider {
+        background-color: $blue;
+        border-color: transparent;
+
+        &:before {
+          background-color: #fff;
+          -webkit-transform: translateX(14px);
+          -ms-transform: translateX(14px);
+          transform: translateX(14px);
+        }
+      }
+
+      &:focus + .slider {
+        box-shadow: 0 0 1px $blue;
+      }
+    }
+  }
+
+  /* The slider */
+  .slider {
+    border-radius: 34px;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid #ccc;
+    -webkit-transition: 0.15s;
+    transition: 0.15s;
+
+    &:before {
+      border-radius: 50%;
+      position: absolute;
+      content: '';
+      height: 14px;
+      width: 14px;
+      left: 2px;
+      bottom: 2px;
+      background-color: #ccc;
+      -webkit-transition: 0.15s;
+      transition: 0.15s;
+    }
+  }
+
+  label {
+    margin-left: 5px;
+    cursor: pointer;
+  }
+}

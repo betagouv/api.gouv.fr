@@ -5,6 +5,8 @@ owner: Pôle emploi # producteur de l'API
 keywords: # utilisé dans la recherche
   - moteur de financement
   - formation
+themes: 
+  - Emploi
 score:
   detail:
     access:

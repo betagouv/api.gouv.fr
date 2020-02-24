@@ -13,6 +13,9 @@ keywords:
   - Travaux
   - Circulation
   - Déplacement
+themes:
+  - Transport
+  - Géographie
 score:
   detail:
     doc_tech:

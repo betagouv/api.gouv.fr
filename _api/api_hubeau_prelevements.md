@@ -20,6 +20,8 @@ keywords:
   - Prélèvements en eau
   - Ressource en eau
   - BNPE
+themes: 
+  - Environnement
 score:
   detail:
     access:

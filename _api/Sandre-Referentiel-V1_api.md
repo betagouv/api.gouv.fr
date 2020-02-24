@@ -23,7 +23,8 @@ keywords: # utilisé dans la recherche
   - Masse d'eau
   - Taxon
   - Appellation de taxons
-
+themes: 
+  - Environnement
 score:
   detail:
     access:
