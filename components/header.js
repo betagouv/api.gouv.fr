@@ -88,7 +88,7 @@ const Header = ({ headerKey = 'home', filter = '' }) => {
                   </Fragment>
                 ))}
                 <li className="external">
-                  <ButtonLink href={constants.REQUEST_API_MAILTO_LINK}>
+                  <ButtonLink href={constants.mailto.REQUEST_API_MAILTO_LINK}>
                     Demander une API
                   </ButtonLink>
                 </li>
