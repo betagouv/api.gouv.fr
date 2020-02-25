@@ -1,17 +1,17 @@
-import React, { useEffect } from "react";
-import PropTypes from "prop-types";
-import { SwaggerUIBundle, SwaggerUIStandalonePreset } from "swagger-ui-dist";
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
+import { SwaggerUIBundle, SwaggerUIStandalonePreset } from 'swagger-ui-dist';
 
 const Swagger = ({ url }) => {
   useEffect(() => {
     const ui = SwaggerUIBundle({
       url,
-      dom_id: "#swagger-ui-container",
+      dom_id: '#swagger-ui-container',
       presets: [SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset],
       plugins: [SwaggerUIBundle.plugins.DownloadUrl],
-      layout: "StandaloneLayout",
+      layout: 'StandaloneLayout',
       validatorUrl: null,
-      defaultModelExpandDepth: 0
+      defaultModelExpandDepth: 0,
     });
 
     window.ui = ui;
@@ -43,7 +43,7 @@ const Swagger = ({ url }) => {
 };
 
 Swagger.propTypes = {
-  url: PropTypes.string.isRequired
+  url: PropTypes.string.isRequired,
 };
 
 export default Swagger;

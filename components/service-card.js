@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
-import PropTypes from "prop-types";
-import Link from "next/link";
+import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
+import Link from 'next/link';
 
-import { getAPI } from "../utils/api";
-import LabelList from "./label-list";
+import { getAPI } from '../utils/api';
+import LabelList from './label-list';
 
 const ServiceCard = ({ slug, title, description, api, screenshot }) => {
   const [apiList, setApiList] = useState([]);
@@ -39,7 +39,7 @@ const ServiceCard = ({ slug, title, description, api, screenshot }) => {
       </div>
       <div className="extra content">
         <LabelList
-          title={`API utilisée${apiList.length > 1 ? "s" : ""}`}
+          title={`API utilisée${apiList.length > 1 ? 's' : ''}`}
           labels={apiList.map(({ title, slug }) => {
             return { title, href: `/api/${slug}` };
           })}
@@ -68,7 +68,7 @@ ServiceCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   screenshot: PropTypes.string.isRequired,
-  api: PropTypes.array.isRequired
+  api: PropTypes.array.isRequired,
 };
 
 export default ServiceCard;

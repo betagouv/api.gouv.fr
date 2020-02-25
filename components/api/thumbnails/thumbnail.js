@@ -1,4 +1,4 @@
-import colors from "../../../styles/colors";
+import colors from '../../../styles/colors';
 
 const Thumbnail = ({ title, icon, children }) => (
   <div className="thumbnail-container">

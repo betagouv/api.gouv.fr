@@ -1,4 +1,4 @@
-import { deburr } from "lodash";
+import { deburr } from 'lodash';
 
 export const normaliseStr = str => {
   return deburr(str).toLowerCase();

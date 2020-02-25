@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import Section from "./section";
+import Section from './section';
 
 const RateLimiting = ({ rate_limiting_description }) => {
   return (
@@ -9,7 +9,7 @@ const RateLimiting = ({ rate_limiting_description }) => {
       {rate_limiting_description ? (
         <div
           dangerouslySetInnerHTML={{
-            __html: rate_limiting_description
+            __html: rate_limiting_description,
           }}
         />
       ) : (
@@ -23,11 +23,11 @@ const RateLimiting = ({ rate_limiting_description }) => {
 };
 
 RateLimiting.defaultProps = {
-  rate_limiting_description: null
+  rate_limiting_description: null,
 };
 
 RateLimiting.propTypes = {
-  rate_limiting_description: PropTypes.string
+  rate_limiting_description: PropTypes.string,
 };
 
 export default RateLimiting;

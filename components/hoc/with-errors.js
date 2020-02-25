@@ -1,27 +1,27 @@
-import React from "react";
-import PropTypes from "prop-types";
-import hoist from "hoist-non-react-statics";
+import React from 'react';
+import PropTypes from 'prop-types';
+import hoist from 'hoist-non-react-statics';
 
-import ErrorPage from "../../pages/_error";
+import ErrorPage from '../../pages/_error';
 
 export default Page => {
   const Extended = hoist(
     class extends React.Component {
       static propTypes = {
-        err: PropTypes.object
+        err: PropTypes.object,
       };
 
       static defaultProps = {
-        err: null
+        err: null,
       };
 
       state = {
-        err: null
+        err: null,
       };
 
       componentDidCatch(err) {
         this.setState({
-          err
+          err,
         });
       }
 
@@ -52,7 +52,7 @@ export default Page => {
         }
 
         return {
-          err
+          err,
         };
       }
     }
