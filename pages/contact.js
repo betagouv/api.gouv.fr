@@ -1,3 +1,5 @@
+import React from 'react';
+
 import Page from '../layouts/page';
 import { HEADER_PAGE } from '../components/header';
 
