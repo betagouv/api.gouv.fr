@@ -23,14 +23,13 @@ Les fournisseurs, de leur côté, ont avec ce catalogue un moyen simple de faire
 ### Prérequis
 
 - [Node.js](https://nodejs.org/en/) >= 12
-- [yarn](https://yarnpkg.com) (mais fonctionne également avec npm)
 
 Cette application utilise [Next.js](https://github.com/zeit/next.js).
 
 1. Installer les dépendances
 
 ```bash
-yarn
+npm i
 ```
 
 2. Copier le fichier de configuration
@@ -42,10 +41,10 @@ cp .env.sample .env
 3. Lancer le serveur de développement
 
 ```bash
-yarn dev
+npm run dev
 ```
 
-Par défaut, il écoutera sur le port `3000`, pour changer, utiliser `yarn dev -p 4242`.
+Par défaut, il écoutera sur le port `3000`, pour changer, utiliser `npm run dev -p 4242`.
 
 Afin de configurer le projet correctement, il est conseillé de créer un fichier `.env` avec les variables d’environnement nécessaires à l’application.
 
@@ -60,19 +59,19 @@ Cette application utilise [Next.js](https://github.com/zeit/next.js).
 1. Installer les dépendances
 
 ```bash
-yarn
+npm i
 ```
 
 2. Générer les bundles de production
 
 ```bash
-yarn build
+npm run build
 ```
 
 3. Lancer le serveur de production
 
 ```bash
-yarn start
+npm run start
 ```
 
 ### Développement
