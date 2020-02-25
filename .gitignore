@@ -14,5 +14,3 @@ node_modules
 # intellij folder
 .idea
 
-# npm specific file
-package-lock.json
