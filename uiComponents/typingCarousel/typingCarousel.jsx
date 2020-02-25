@@ -76,7 +76,7 @@ const TypingCarousel = ({ textToType }) => {
     };
 
     infiniteType();
-  }, [index]);
+  }, [index, textToType]);
 
   return (
     <>

@@ -15,7 +15,7 @@ const Swagger = ({ url }) => {
     });
 
     window.ui = ui;
-  }, []);
+  }, [url]);
 
   return (
     <div className="swagger-section">

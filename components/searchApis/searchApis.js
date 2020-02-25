@@ -36,7 +36,7 @@ const SearchApis = ({ allApis, allThemes, searchFromQueryString = '' }) => {
 
     setApiList(newApiList);
     return () => {};
-  }, [theme, isAccessOpen, searchTerms]);
+  }, [theme, isAccessOpen, searchTerms, allApis]);
   return (
     <>
       <FilterHeader

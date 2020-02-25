@@ -32,8 +32,8 @@ const Service = ({
           <a
             className="large ui secondary button"
             href={link}
-            rel="noopener"
             target="_blank"
+            rel="noopener noreferrer"
           >
             Accédez au service &nbsp;&nbsp;<i className="rocket icon"></i>
           </a>

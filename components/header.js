@@ -36,21 +36,21 @@ const HEADER = [
 const Header = ({ headerKey = 'home', filter = '' }) => {
   const header = useRef(null);
 
-  const handleScroll = throttle(() => {
-    if (!header || !header.current) {
-      return;
-    }
-    const headerClasses = header.current.classList;
-    const hasScrolledClass = headerClasses.contains('scrolled');
-    if (
-      (window.scrollY !== 0 && !hasScrolledClass) ||
-      (window.scrollY === 0 && hasScrolledClass)
-    ) {
-      headerClasses.toggle('scrolled');
-    }
-  }, 100);
-
   useEffect(() => {
+    const handleScroll = throttle(() => {
+      if (!header || !header.current) {
+        return;
+      }
+      const headerClasses = header.current.classList;
+      const hasScrolledClass = headerClasses.contains('scrolled');
+      if (
+        (window.scrollY !== 0 && !hasScrolledClass) ||
+        (window.scrollY === 0 && hasScrolledClass)
+      ) {
+        headerClasses.toggle('scrolled');
+      }
+    }, 100);
+
     window.addEventListener('scroll', handleScroll);
 
     return () => {

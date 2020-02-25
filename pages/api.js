@@ -40,7 +40,6 @@ const API = ({ api, services }) => {
     uptime,
     last_update,
     score: { detail },
-    external_site,
     content,
     clients,
     contract,
@@ -102,20 +101,20 @@ const API = ({ api, services }) => {
     anchorElem.scrollIntoView({ behavior: smooth ? 'smooth' : 'auto' });
   };
 
-  const handleScroll = throttle(() => {
-    const currentVisibleAnchor = getVisibleAnchor();
-    if (currentVisibleAnchor !== getWindowHash()) {
-      setMenuItem(currentVisibleAnchor);
-      window.history.replaceState(
-        undefined,
-        undefined,
-        `#${currentVisibleAnchor}`
-      );
-    }
-    // approx 8 frames
-  }, 16 * 8);
-
   useEffect(() => {
+    const handleScroll = throttle(() => {
+      const currentVisibleAnchor = getVisibleAnchor();
+      if (currentVisibleAnchor !== getWindowHash()) {
+        setMenuItem(currentVisibleAnchor);
+        window.history.replaceState(
+          undefined,
+          undefined,
+          `#${currentVisibleAnchor}`
+        );
+      }
+      // approx 8 frames
+    }, 16 * 8);
+
     // scroll if any anchor in url - only applies on refresh
     const hash = getWindowHash();
 
