@@ -48,7 +48,7 @@ const UseCaseSection = () => (
           <div>{useCase.content}</div>
           {useCase.apis && (
             <div className="apis">
-              <b>APIs utilisées :</b> {useCase.apis.join(', ')}
+              <b>APIs utilisées&nbsp;:</b> {useCase.apis.join(', ')}
             </div>
           )}
           {useCase.button && (

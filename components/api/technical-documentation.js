@@ -23,7 +23,7 @@ const TechnicalDocumentation = ({
           <>
             <p>
               Vous pouvez retrouver la documentation technique sur le site de
-              l’API :
+              l’API&nbsp;:
             </p>
             <ButtonLink
               href={doc_tech_external}

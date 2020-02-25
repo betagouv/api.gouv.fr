@@ -21,7 +21,7 @@ const Home = ({ apiList }) => (
     <Baseline />
     <ApiTripletSection apiList={apiList} />
     <div className="content-container layout-center">
-      <h2>Ils ont créé de nouveaux services innovants avec des APIs :</h2>
+      <h2>Ils ont créé de nouveaux services innovants avec des APIs&nbsp;:</h2>
     </div>
     <UseCaseSection />
 
