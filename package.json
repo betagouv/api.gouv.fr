@@ -27,14 +27,14 @@
     "typescript": "^3.7.5"
   },
   "dependencies": {
-    "front-matter": "^3.0.2",
     "@zeit/next-sass": "^1.0.1",
     "express": "^4.17.1",
+    "front-matter": "^3.0.2",
     "hoist-non-react-statics": "^3.3.1",
     "isomorphic-unfetch": "^3.0.0",
     "lodash": "^4.17.15",
     "morgan": "^1.9.1",
-    "next": "^8",
+    "next": "^9.2.2",
     "next-runtime-dotenv": "^1.2.0",
     "nextjs-fonts": "^0.22.0",
     "node-sass": "^4.13.1",
