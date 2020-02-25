@@ -2,6 +2,14 @@
   "extends": ["react-app", "plugin:jsx-a11y/recommended"],
   "plugins": ["prettier", "jsx-a11y"],
   "rules": {
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": ["Link"],
+        "specialLink": ["hrefLeft", "hrefRight"],
+        "aspects": ["invalidHref", "preferButton"]
+      }
+    ]
   }
 }
