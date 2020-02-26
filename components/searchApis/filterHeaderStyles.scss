@@ -9,13 +9,13 @@ section#search-api-filters {
   > .habilitation-wrapper {
     margin: 0 20px;
 
-    > div {
+    > div.toggle {
       min-width: 170px;
       height: 38px;
       display: flex;
       align-items: center;
     }
-    > label {
+    > div.label {
       line-height: 18px;
       font-weight: 600;
       color: $darkestGrey;

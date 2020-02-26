@@ -201,7 +201,6 @@ const Header = ({ headerKey = 'home', filter = '' }) => {
 
         .nav a {
           color: #333;
-          outline: none;
           cursor: pointer;
           text-decoration: none;
         }

@@ -22,7 +22,7 @@ const Dropdown = ({
   return (
     <div className="dropdown-wrapper" style={{ width: `${width}px` }}>
       <label htmlFor={id || 'dropdown'}>{label}</label>
-      <select id={id || 'dropdown'} onChange={onSelect}>
+      <select id={id || 'dropdown'} onChange={onSelect} onBlur={onSelect}>
         <option value={-1}>
           {placeholder || 'Veuillez selectionner une option'}
         </option>

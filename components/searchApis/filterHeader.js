@@ -18,8 +18,8 @@ export const FilterHeader = ({
       selectOptions={allThemesOptions}
     />
     <div className="habilitation-wrapper">
-      <label>Habilitation</label>
-      <div>
+      <div className="label">Habilitation</div>
+      <div className="toggle">
         <Toggle
           label="Uniquement les APIs ouvertes à tous"
           onChange={setIsAccessOpen}

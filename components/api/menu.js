@@ -41,12 +41,21 @@ const MENU_OPTIONS = [
 ];
 
 const Menu = ({ detail, selectedItem, select }) => {
+  const onKeyDown = (keyEvent, id) => {
+    // toggle on Space or Enter
+    if (keyEvent.keyCode === 13) {
+      select(id);
+    }
+  };
   return (
     <div className="menu">
       {MENU_OPTIONS.map(menu => (
         <div key={menu.id}>
           <div
             className={`item ${selectedItem === menu.id && 'selected'}`}
+            role="button"
+            tabIndex={0}
+            onKeyDown={e => onKeyDown(e, menu.id)}
             onClick={() => select(menu.id)}
           >
             {menu.label}
