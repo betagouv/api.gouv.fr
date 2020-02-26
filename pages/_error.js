@@ -1,24 +1,24 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Link from "next/link";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Link from 'next/link';
 
-import Meta from "../components/meta";
-import Page from "../layouts/page";
+import Meta from '../components/meta';
+import Page from '../layouts/page';
 
 const messages = {
-  500: "Une erreur imprévue s’est produite",
-  404: "Cette page n'existe pas"
+  500: 'Une erreur imprévue s’est produite',
+  404: "Cette page n'existe pas",
 };
 
 class ErrorPage extends React.Component {
   static propTypes = {
     code: PropTypes.number,
-    message: PropTypes.string
+    message: PropTypes.string,
   };
 
   static defaultProps = {
     code: 500,
-    message: null
+    message: null,
   };
 
   static getInitialProps({ res, err }) {

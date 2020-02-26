@@ -1,3 +1,5 @@
+import React from 'react';
+
 import Thumbnail from './thumbnail';
 
 import { Lock, Unlock, Activity, Calendar, User, Sliders } from 'react-feather';

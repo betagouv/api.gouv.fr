@@ -56,7 +56,7 @@ const UseCaseSection = () => (
           )}
         </div>
         <div className="img-wrapper">
-          <img src={useCase.picture} />
+          <img src={useCase.picture} alt={useCase.title} />
         </div>
       </div>
     ))}

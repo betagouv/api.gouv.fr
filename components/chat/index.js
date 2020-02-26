@@ -20,15 +20,15 @@ const Chat = () => {
   return (
     <div className={`chat-container ${isOpen ? 'show' : 'hidden'}`}>
       <div className="chat-header">
-        <div className="chat-icon" onClick={() => setIsOpen(!isOpen)}>
+        <button className="chat-icon" onClick={() => setIsOpen(!isOpen)}>
           <MessageSquare color={colors.smartData} />
-        </div>
+        </button>
         <div className="chat-title">
           Vous avez une question ? L’équipe d'api.gouv.fr vous répond.
         </div>
-        <div className="close" onClick={() => setIsOpen(false)}>
+        <button className="close" onClick={() => setIsOpen(false)}>
           <X size={24} />
-        </div>
+        </button>
       </div>
       <div className="form">
         <input
@@ -90,6 +90,7 @@ const Chat = () => {
           padding: 0.8em;
           background: #fff;
           border-radius: 100%;
+          border: none;
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         }
 
@@ -106,6 +107,8 @@ const Chat = () => {
 
         .close {
           align-self: normal;
+          background: transparent;
+          border: none;
         }
 
         .close:hover {

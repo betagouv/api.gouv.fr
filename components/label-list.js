@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Link from "next/link";
-import { isEmpty } from "lodash";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Link from 'next/link';
+import { isEmpty } from 'lodash';
 
 const LabelList = ({ title, labels, isLink }) => {
   if (isEmpty(labels) || labels.length === 0) return null;
@@ -41,13 +41,13 @@ const LabelList = ({ title, labels, isLink }) => {
 };
 
 LabelList.defaultProps = {
-  isLink: false
+  isLink: false,
 };
 
 LabelList.propTypes = {
   title: PropTypes.string.isRequired,
   labels: PropTypes.array.isRequired,
-  isLink: PropTypes.bool
+  isLink: PropTypes.bool,
 };
 
 export default LabelList;

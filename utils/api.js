@@ -1,8 +1,8 @@
-import "isomorphic-unfetch"; // eslint-disable-line import/no-unassigned-import
-import getConfig from "next/config";
+import 'isomorphic-unfetch'; // eslint-disable-line import/no-unassigned-import
+import getConfig from 'next/config';
 
 const { publicRuntimeConfig } = getConfig();
-const API_URL = publicRuntimeConfig.API_URL || "https://api.gouv.fr";
+const API_URL = publicRuntimeConfig.API_URL || 'https://api.gouv.fr';
 export async function fetchJson(url) {
   const response = await fetch(url);
   return response.json();

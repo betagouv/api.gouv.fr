@@ -7,7 +7,10 @@ import globals from '../../const';
 const Section = ({ id, title, children }) => {
   return (
     <section>
-      <a className="hidden-anchor" id={id}></a>
+      <a className="hidden-anchor" id={id}>
+        This is a hidden anchor. It is a trick to avoid having the header hiding
+        the top of the page.
+      </a>
       <h2 className="ui dividing header">
         <Link href={`#${id}`}>
           <a aria-hidden="true" className="header-anchor">
