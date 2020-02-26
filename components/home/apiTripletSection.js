@@ -7,7 +7,7 @@ import { ButtonLink } from '../../uiComponents';
 const ApiTripletSection = ({ apiList }) => (
   <section id="apis">
     <div className="content-container">
-      <h3>Découvrez des APIs du service public :</h3>
+      <h3>Découvrez des APIs du service public&nbsp;:</h3>
       <div className="ui three stackable cards">
         {apiList
           .sort((a, b) => (a.visits_2019 > b.visits_2019 ? -1 : 1))
