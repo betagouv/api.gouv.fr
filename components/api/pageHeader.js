@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 
-import colors from '../../styles/colors';
+import constants from '../../const';
 
 const Title = ({ title, logo }) => (
   <>
@@ -74,7 +74,7 @@ const PageHeader = ({ title, logo, tagline }) => (
 
     <style jsx>{`
       #mission-statement {
-        background: ${colors.backgroundBlueGradient};
+        background: ${constants.colors.backgroundBlueGradient};
         width: 100%;
         position: relative;
       }

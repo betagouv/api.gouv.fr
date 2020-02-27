@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import colors from '../../styles/colors';
+import constants from '../../const';
 
 const MENU_OPTIONS = [
   {
@@ -74,7 +74,7 @@ const Menu = ({ detail, selectedItem, select }) => {
           display: flex;
           flex-direction: column;
           background-color: #fff;
-          border: 2px solid ${colors.lightGrey};
+          border: 2px solid ${constants.colors.lightGrey};
         }
         .item {
           display: flex;
@@ -90,11 +90,11 @@ const Menu = ({ detail, selectedItem, select }) => {
         }
         .item:hover,
         .item.selected:hover {
-          background-color: ${colors.lightBlue};
+          background-color: ${constants.colors.lightBlue};
         }
         .item.selected {
-          border-left: 5px solid ${colors.blue};
-          background-color: ${colors.lightestBlue};
+          border-left: 5px solid ${constants.colors.blue};
+          background-color: ${constants.colors.lightestBlue};
         }
       `}</style>
     </div>

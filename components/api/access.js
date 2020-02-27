@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Section from './section';
 import { ButtonLink } from '../../uiComponents/button';
 
-import colors from '../../styles/colors';
+import constants from '../../const';
 
 const Access = ({
   access_open,
@@ -50,9 +50,9 @@ const Access = ({
       )}
       <style jsx>{`
         .get-access {
-          border-left: 5px solid ${colors.blue};
-          background-color: ${colors.lightBlue};
-          color: ${colors.blue};
+          border-left: 5px solid ${constants.colors.blue};
+          background-color: ${constants.colors.lightBlue};
+          color: ${constants.colors.blue};
           padding: 1.5rem 2rem;
           display: flex;
           flex-direction: column;

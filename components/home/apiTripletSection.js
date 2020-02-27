@@ -1,7 +1,8 @@
 import React from 'react';
 
 import ApiCard from '../searchApis/apiCard';
-import colors from '../../styles/colors';
+import constants from '../../const';
+
 import { ButtonLink } from '../../uiComponents';
 
 const ApiTripletSection = ({ apiList }) => (
@@ -24,7 +25,7 @@ const ApiTripletSection = ({ apiList }) => (
     </div>
     <style jsx>{`
       section#apis {
-        background-color: ${colors.darkBlue};
+        background-color: ${constants.colors.darkBlue};
         padding: 50px 0;
       }
 

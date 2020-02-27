@@ -1,6 +1,6 @@
 import React from 'react';
 
-import colors from '../../../styles/colors';
+import constants from '../../../const';
 
 const Thumbnail = ({ title, icon, children }) => (
   <div className="thumbnail-container">
@@ -21,8 +21,8 @@ const Thumbnail = ({ title, icon, children }) => (
         align-items: center;
         font-weight: bold;
         font-size: larger;
-        color: ${colors.smartData};
-        border-bottom: 2px solid ${colors.smartData};
+        color: ${constants.colors.smartData};
+        border-bottom: 2px solid ${constants.colors.smartData};
       }
 
       .thumbnail-icon {

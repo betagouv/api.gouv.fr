@@ -7,7 +7,7 @@ import { isElementVisible } from '../utils';
 import { getAPI, getService } from '../utils/api';
 import withErrors from '../components/hoc/with-errors';
 import Page from '../layouts';
-import globals from '../const';
+import constants from '../const';
 
 import {
   PageHeader,
@@ -24,8 +24,7 @@ import {
 } from '../components/api';
 
 import { getWindowHash } from '../utils';
-import colors from '../styles/colors';
-import { HEADER_PAGE } from '../components';
+import { HEADER_PAGE } from '../components/header';
 
 const { publicRuntimeConfig } = getConfig();
 const DEFAULT_LOGO = publicRuntimeConfig.DEFAULT_LOGO || 'logo-beta-gouv.svg';
@@ -84,7 +83,7 @@ const API = ({ api, services }) => {
 
     for (let i = 0; i < sectionCollection.length; i++) {
       const elem = sectionCollection[i];
-      if (isElementVisible(elem, globals.HEADER_HEIGHT)) {
+      if (isElementVisible(elem, constants.layout.HEADER_HEIGHT)) {
         return elem.children[0].id;
       }
     }
@@ -133,7 +132,7 @@ const API = ({ api, services }) => {
 
   return (
     <Page
-      preFooterBackground={colors.lightestGrey}
+      preFooterBackground={constants.colors.lightestGrey}
       headerKey={HEADER_PAGE.APIS}
     >
       <PageHeader
@@ -203,7 +202,7 @@ const API = ({ api, services }) => {
         .sticky-column {
           position: sticky;
           overflow: hidden;
-          top: ${globals.HEADER_HEIGHT + 20}px;
+          top: ${constants.layout.HEADER_HEIGHT + 20}px;
           padding-bottom: 15px;
         }
       `}</style>

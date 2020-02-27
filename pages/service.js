@@ -6,7 +6,7 @@ import withErrors from '../components/hoc/with-errors';
 
 import { getService, getAPI } from '../utils/api';
 
-import colors from '../styles/colors';
+import { colors } from '../../../const';
 
 import Page from '../layouts/page';
 

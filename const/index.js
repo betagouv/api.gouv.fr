@@ -1,6 +1,9 @@
 import links from './links';
+import layout from './layout.scss';
+import colors from './colors.scss';
 
 export default {
-  HEADER_HEIGHT: 60,
-  ...links,
+  links: links,
+  layout: layout,
+  colors: colors,
 };

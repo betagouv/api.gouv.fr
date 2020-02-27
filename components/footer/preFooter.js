@@ -8,13 +8,13 @@ const PreFooter = ({ background }) => (
     <div className="content-container links">
       <div>
         <h3>Vous ne trouvez pas l’API dont vous avez besoin ?</h3>
-        <ButtonLink href={constants.mailto.REQUEST_API_MAILTO_LINK}>
+        <ButtonLink href={constants.links.mailto.REQUEST_API}>
           Demander une API
         </ButtonLink>
       </div>
       <div>
         <h3>Vous voulez partager une API ?</h3>
-        <ButtonLink href={constants.ADD_API_LINK} alt>
+        <ButtonLink href={constants.links.ADD_API} alt>
           Partager votre API
         </ButtonLink>
       </div>
