@@ -202,7 +202,7 @@ const API = ({ api, services }) => {
         .sticky-column {
           position: sticky;
           overflow: hidden;
-          top: ${constants.layout.HEADER_HEIGHT + 20}px;
+          top: ${parseInt(constants.layout.HEADER_HEIGHT, 10) + 20}px;
           padding-bottom: 15px;
         }
       `}</style>

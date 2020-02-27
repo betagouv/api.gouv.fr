@@ -25,7 +25,7 @@ const ApiTripletSection = ({ apiList }) => (
     </div>
     <style jsx>{`
       section#apis {
-        background-color: ${constants.colors.darkBlue};
+        background: ${constants.colors.backgroundBlueGradient};
         padding: 50px 0;
       }
 

@@ -43,7 +43,7 @@ const Section = ({ id, title, children }) => {
         a.hidden-anchor {
           display: block;
           position: absolute;
-          top: -${globals.layout.HEADER_HEIGHT + 15}px;
+          top: -${parseInt(globals.layout.HEADER_HEIGHT, 10) + 15}px;
           visibility: hidden;
         }
       `}</style>

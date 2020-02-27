@@ -79,7 +79,7 @@ const Service = ({
           padding-top: 5%;
           padding-bottom: 5%;
           margin-bottom: 2%;
-          background: ${constants.colors.backgroundBlue};
+          background: ${constants.colors.backgroundBlueGradient};
         }
 
         h1 {
