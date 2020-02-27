@@ -6,7 +6,7 @@ import withErrors from '../components/hoc/with-errors';
 
 import { getService, getAPI } from '../utils/api';
 
-import { colors } from '../../../const';
+import constants from '../const';
 
 import Page from '../layouts/page';
 
@@ -79,7 +79,7 @@ const Service = ({
           padding-top: 5%;
           padding-bottom: 5%;
           margin-bottom: 2%;
-          background: ${colors.backgroundBlue};
+          background: ${constants.colors.backgroundBlue};
         }
 
         h1 {
