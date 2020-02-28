@@ -1,9 +1,6 @@
 import React from 'react';
 
-import Meta from '../components/meta';
-import Header from '../components/header';
-import Footer from '../components/footer';
-import PreFooter from '../components/preFooter';
+import { Footer, PreFooter, Header, Meta } from '../components';
 import constants from '../const/index';
 import '../styles/fonts.scss';
 import './layout.scss';
@@ -31,6 +28,14 @@ const Page = props => (
       }
 
       a {
+        text-decoration: underline;
+        background-color: #0058ff00;
+        border-radius: 4px;
+        transition: background-color 120ms ease-in-out;
+        padding: 2px;
+      }
+      a:not(.dont-apply-link-style):hover {
+        background-color: #0058ff14;
         text-decoration: underline;
       }
     `}</style>

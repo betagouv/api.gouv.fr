@@ -25,7 +25,7 @@ import {
 
 import { getWindowHash } from '../utils';
 import colors from '../styles/colors';
-import { HEADER_PAGE } from '../components/header';
+import { HEADER_PAGE } from '../components';
 
 const { publicRuntimeConfig } = getConfig();
 const DEFAULT_LOGO = publicRuntimeConfig.DEFAULT_LOGO || 'logo-beta-gouv.svg';

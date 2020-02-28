@@ -4,7 +4,7 @@ import withErrors from '../components/hoc/with-errors';
 import { getAllAPIs } from '../utils/api';
 import Page from '../layouts/page';
 import SearchApis from '../components/searchApis';
-import { HEADER_PAGE } from '../components/header';
+import { HEADER_PAGE } from '../components';
 import { flatten, uniq } from 'lodash';
 
 const RechercherApi = ({ allApis, allThemes, filter = '' }) => {

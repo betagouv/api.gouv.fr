@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Page from '../layouts/page';
-import { HEADER_PAGE } from '../components/header';
+import { HEADER_PAGE } from '../components';
 
 const Contact = () => (
   <Page headerKey={HEADER_PAGE.CONTACT}>
