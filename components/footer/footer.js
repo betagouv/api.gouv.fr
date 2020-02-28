@@ -84,6 +84,12 @@ const Footer = () => {
               Améliorer cette page
             </a>
           </li>
+          <li>
+            <a href="/mentions-legales">Mentions Légales</a>
+          </li>
+          <li>
+            <a href="/vie-privee">Suivi d'audience & vie privée</a>
+          </li>
         </ul>
       </div>
     </footer>

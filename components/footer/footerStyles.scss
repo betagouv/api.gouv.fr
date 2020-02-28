@@ -5,9 +5,13 @@
 
   a {
     opacity: 0.4;
+    text-decoration: none;
+
     &:hover,
     &:focus {
       opacity: 1;
+      background-color: transparent;
+      text-decoration: underline;
     }
   }
 
