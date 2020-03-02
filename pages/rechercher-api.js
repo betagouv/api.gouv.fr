@@ -6,11 +6,15 @@ import Page from '../layouts/page';
 import SearchApis from '../components/searchApis';
 import { HEADER_PAGE } from '../components';
 import { flatten, uniq } from 'lodash';
+import constants from '../constants';
 
 const RechercherApi = ({ allApis, allThemes, filter = '' }) => {
   const fromSignup = filter.toLowerCase() === 'signup';
   return (
-    <Page headerKey={fromSignup ? HEADER_PAGE.FROM_SIGNUP : HEADER_PAGE.APIS}>
+    <Page
+      headerKey={fromSignup ? HEADER_PAGE.FROM_SIGNUP : HEADER_PAGE.APIS}
+      preFooterBackground={constants.colors.white}
+    >
       <section id="rechercher-api-baseline" className="content-container">
         <h2>
           Vous recherchez une API du service public ? Vous êtes au bon endroit !

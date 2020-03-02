@@ -2,9 +2,8 @@ import React from 'react';
 import { shuffle } from 'lodash';
 
 import ApiCard from '../searchApis/apiCard';
-import constants from '../../constants';
-
 import { ButtonLink } from '../../uiComponents';
+import constants from '../../constants';
 
 const ApiTripletSection = ({ apiList }) => {
   const selectApis = shuffle(
@@ -29,7 +28,7 @@ const ApiTripletSection = ({ apiList }) => {
       </div>
       <style jsx>{`
         section#apis {
-          background-color: ${constants.colors.darkBlue};
+          background: ${constants.colors.backgroundBlueGradient};
           padding: 50px 0;
         }
 

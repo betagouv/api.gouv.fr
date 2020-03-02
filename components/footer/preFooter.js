@@ -7,7 +7,9 @@ import './preFooterStyles.scss';
 const PreFooter = ({ background }) => (
   <section
     id="pre-footer"
-    style={{ bacgroundColor: background ? background : '#fff' }}
+    style={{
+      backgroundColor: background || constants.colors.lightestGrey,
+    }}
   >
     <div className="content-container links">
       <div>

@@ -67,7 +67,7 @@ const Privacy = () => (
         Pour l'outil Matomo, vous pouvez décider de ne jamais être suivi, y
         compris anonymement :
         <iframe
-          className="optout"
+          className="matomo-optout"
           title="Optout cookie"
           src="https://stats.data.gouv.fr/index.php?module=CoreAdminHome&action=optOut&language=fr&backgroundColor=&fontColor=333&fontSize=16px&fontFamily=sans-serif&overflow=visible"
         ></iframe>

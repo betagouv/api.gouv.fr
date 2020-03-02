@@ -5,11 +5,11 @@ import { HEADER_PAGE } from '../components';
 
 const About = () => (
   <Page headerKey={HEADER_PAGE.ABOUT}>
-    <div className="ui text container">
-      <h1>À propos</h1>
+    <div className="text-container">
+      <h1 className="layout-center">À propos</h1>
 
       <div>
-        <h2>Qu'est ce qu'une API</h2>
+        <h2>Qu’est ce qu'une API ?</h2>
         <p>
           « API » est un acronyme anglo-saxon signifiant{' '}
           <i>Application Programming Interface</i>. Une API est une interface,
@@ -52,10 +52,10 @@ const About = () => (
         </p>
       </div>
 
-      <h1>Les avantages des API</h1>
+      <h2>Les avantages des API</h2>
 
       <div>
-        <h2>Pour le fournisseur</h2>
+        <h3>Pour le fournisseur</h3>
         <div className="ui info message">
           Également appelé <strong>producteur</strong> d'API, il est responsable
           de l'exposition de ses ressources. C'est l'acteur qui définit les
@@ -89,7 +89,7 @@ const About = () => (
       </div>
 
       <div>
-        <h2>Pour le consommateur</h2>
+        <h3>Pour le consommateur</h3>
         <div className="ui info message">
           Acteur qui <strong>accède aux ressources</strong> du fournisseur. Il
           peut être issu de la sphère publique ou de la sphère privée, selon le

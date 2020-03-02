@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Footer, PreFooter, Header, Meta } from '../components';
 import './fonts.scss';
-import './layout.scss';
+import './pageStyles.scss';
 
 const Page = ({
   title,
