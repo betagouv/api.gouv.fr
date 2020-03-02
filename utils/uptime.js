@@ -1,7 +1,7 @@
-import colors from '../styles/colors';
+import constants from '../constants';
 
 export const getUptimeState = uptime => {
-  const { red, orange, green } = colors;
+  const { red, orange, green } = constants.colors;
   let color = red; // Red
 
   if (uptime >= 98) {

@@ -1,51 +1,28 @@
 import React from 'react';
 
-import constants from '../../const';
+import constants from '../../constants';
 import { ButtonLink } from '../../uiComponents/button';
+import './preFooterStyles.scss';
 
 const PreFooter = ({ background }) => (
-  <section>
+  <section
+    id="pre-footer"
+    style={{ bacgroundColor: background ? background : '#fff' }}
+  >
     <div className="content-container links">
       <div>
         <h3>Vous ne trouvez pas l’API dont vous avez besoin ?</h3>
-        <ButtonLink href={constants.mailto.REQUEST_API_MAILTO_LINK}>
+        <ButtonLink href={constants.links.mailto.REQUEST_API}>
           Demander une API
         </ButtonLink>
       </div>
       <div>
         <h3>Vous voulez partager une API ?</h3>
-        <ButtonLink href={constants.ADD_API_LINK} alt>
+        <ButtonLink href={constants.links.ADD_API} alt>
           Partager votre API
         </ButtonLink>
       </div>
     </div>
-
-    <style jsx>{`
-      section {
-        background-color: ${background ? background : '#fff'};
-      }
-      section > div {
-        padding: 4rem 0;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-evenly;
-      }
-      section > div > div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-      @media (max-width: 768px) {
-        section > div {
-          flex-direction: column;
-        }
-        section > div > div {
-          margin: 20px 0;
-        }
-      }
-    `}</style>
   </section>
 );
 

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './useCaseSectionStyles.scss';
-import constants from '../../const';
+import constants from '../../constants';
 
 const USE_CASES = [
   {
@@ -12,7 +12,7 @@ const USE_CASES = [
     picture: '/images/home/nantes.jpg',
     button: {
       txt: 'Aidez-moi à simplifier un service administratif',
-      linkTo: constants.mailto.VILLE_DE_NANTES_MAILTO_LINK,
+      linkTo: constants.links.mailto.VILLE_DE_NANTES,
     },
   },
   {
@@ -23,7 +23,7 @@ const USE_CASES = [
     picture: '/images/home/nouvelleAquitaine.jpg',
     button: {
       txt: 'Je cherche à faciliter les démarches des familles',
-      linkTo: constants.mailto.NOUVELLE_AQUITAINE_MAILTO_LINK,
+      linkTo: constants.links.mailto.NOUVELLE_AQUITAINE,
     },
   },
   {
@@ -34,7 +34,7 @@ const USE_CASES = [
     picture: '/images/home/metz.jpg',
     button: {
       txt: 'Aidez-moi à dématérialiser des justificatifs',
-      linkTo: constants.mailto.PASS_METZ_MAILTO_LINK,
+      linkTo: constants.links.mailto.PASS_METZ,
     },
   },
 ];

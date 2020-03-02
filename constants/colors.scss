@@ -1,0 +1,38 @@
+$confidential: #10c6b0;
+$reference: #23b0b7;
+$smartData: #1e4c8e;
+$lightGrey: #efefef;
+$lightestGrey: #fcfcfc;
+$darkestGrey: #373c42;
+$service: #af2341;
+$main: #275166;
+$darkBlue: #003189;
+$blue: #0048b3;
+$vividBlue: #0064f9;
+$lightBlue: #e5efff;
+$lightestBlue: #f8faff;
+$backgroundBlueGradient: linear-gradient(45deg, #003189, #005adf);
+$red: #dc3545;
+$green: #17bd3d;
+$orange: #ffc107;
+
+// the :export directive is the magic sauce for webpack
+:export {
+  confidential: $confidential;
+  reference: $reference;
+  smartData: $smartData;
+  lightGrey: $lightGrey;
+  lightestGrey: $lightestGrey;
+  darkestGrey: $darkestGrey;
+  service: $service;
+  main: $main;
+  darkBlue: $darkBlue;
+  blue: $blue;
+  vividBlue: $vividBlue;
+  lightBlue: $lightBlue;
+  lightestBlue: $lightestBlue;
+  backgroundBlueGradient: $backgroundBlueGradient;
+  red: $red;
+  green: $green;
+  orange: $orange;
+}

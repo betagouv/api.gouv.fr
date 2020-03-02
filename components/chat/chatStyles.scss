@@ -1,0 +1,131 @@
+@import '../../constants/colors.scss';
+@import '../../constants/layout.scss';
+
+#chat-container {
+  z-index: 999;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 380px;
+  height: 390px;
+  padding: 1em;
+  background: #fff;
+  border-radius: 2px;
+  margin: 1em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: right 350ms ease-in-out, bottom 350ms ease-in-out;
+
+  &.hidden {
+    bottom: -330px;
+    right: -320px;
+    box-shadow: none;
+    background: none;
+
+    textarea,
+    input,
+    label,
+    .chat-title,
+    .close,
+    .submit {
+      display: none;
+    }
+  }
+
+  > .chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+
+    > .chat-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.8em;
+      background: #fff;
+      border-radius: 100%;
+      border: none;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+      &:hover {
+        cursor: pointer;
+        box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.25);
+      }
+    }
+    > .chat-title {
+      font-weight: bold;
+      font-size: large;
+      margin: 0 1em;
+    }
+
+    > .close {
+      align-self: normal;
+      background: transparent;
+      border: none;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+
+    > label {
+      line-height: 18px;
+      font-weight: 600;
+      color: $darkestGrey;
+      font-size: 0.9rem;
+    }
+
+    > input,
+    > textarea {
+      padding: 1em 0.5em;
+      margin: 0.5em 0;
+      border-radius: 4px;
+      border: 1px solid #dde2e5;
+
+      &:focus {
+        border-color: $blue;
+      }
+      &:invalid {
+        outline: none;
+      }
+    }
+    > textarea {
+      resize: none;
+      height: 130px;
+    }
+
+    > div {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+
+  @media (max-width: 700px) {
+    z-index: 999;
+    position: fixed;
+    height: calc(100% - #{$headerHeight+'px'});
+    width: 100%;
+    padding: 1em;
+    margin: 0;
+    transition: width 350ms ease-in-out, height 350ms ease-in-out;
+
+    &.hidden {
+      width: 60px;
+      height: 60px;
+      right: 10px;
+      bottom: 10px;
+      background: none;
+      box-shadow: none;
+
+      .title,
+      .close {
+        display: none;
+      }
+    }
+  }
+}

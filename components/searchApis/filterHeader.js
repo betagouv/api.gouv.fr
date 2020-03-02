@@ -32,7 +32,6 @@ export const FilterHeader = ({
       defaultValue={searchFromQueryString}
       placeholder="Recherchez un service, un ministère"
       label="Rechercher"
-      width={450}
     />
   </section>
 );

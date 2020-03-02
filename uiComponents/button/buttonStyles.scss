@@ -1,0 +1,52 @@
+@import '../../constants/colors.scss';
+
+a.button-link,
+button.button-link {
+  display: inline-block;
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+
+  > .content-wrapper {
+    font-size: 1rem;
+    padding: 8px 15px;
+    background-color: $blue;
+    border: 1px solid $blue;
+
+    color: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    vertical-align: baseline;
+    user-select: none;
+    transition: transform 100ms ease-in-out, box-shadow 100ms ease-in-out;
+  }
+
+  &.disabled > .content-wrapper {
+    pointer-events: none;
+    cursor: default;
+    background-color: #{$smartData + 'B0'};
+    border: 1px solid #{$smartData + 'B0'};
+  }
+
+  &.alt > .content-wrapper {
+    color: $smartData;
+    background-color: #fff;
+    border: 1px solid $smartData;
+  }
+
+  &.large > .content-wrapper {
+    padding: 12px 20px;
+    font-size: 1.15rem;
+  }
+  &.alt.disabled > .content-wrapper {
+    color: #{$smartData + 'B0'};
+    border: 1px solid #{$smartData + 'B0'};
+  }
+
+  &:hover > .content-wrapper {
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 7px rgba(0, 0, 0, 0.25);
+  }
+}

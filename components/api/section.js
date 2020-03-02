@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 
-import globals from '../../const';
+import globals from '../../constants';
 
 const Section = ({ id, title, children }) => {
   return (
@@ -43,7 +43,7 @@ const Section = ({ id, title, children }) => {
         a.hidden-anchor {
           display: block;
           position: absolute;
-          top: -${globals.HEADER_HEIGHT + 15}px;
+          top: -${parseInt(globals.layout.HEADER_HEIGHT, 10) + 15}px;
           visibility: hidden;
         }
       `}</style>

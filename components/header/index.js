@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { throttle } from 'lodash';
 
 import { ButtonLink } from '../../uiComponents/button';
-import constants from '../../const';
+import constants from '../../constants';
 import './headerStyles.scss';
 
 export const HEADER_PAGE = {
@@ -104,7 +104,7 @@ const Header = ({ headerKey = 'home', filter = '' }) => {
                   </Fragment>
                 ))}
                 <li className="external">
-                  <ButtonLink href={constants.mailto.REQUEST_API_MAILTO_LINK}>
+                  <ButtonLink href={constants.links.mailto.REQUEST_API}>
                     Demander une API
                   </ButtonLink>
                 </li>
