@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, Fragment, useState } from 'react';
+import React, { useEffect, useRef, Fragment } from 'react';
 import Link from 'next/link';
 import { throttle } from 'lodash';
 
@@ -67,7 +67,7 @@ const Header = ({ headerKey = 'home', filter = '' }) => {
           id="menu-btn"
           aria-label="ouverture-menu"
         />
-        <label class="hamburger-menu" htmlFor="menu-btn">
+        <label className="hamburger-menu" htmlFor="menu-btn">
           <span />
           <span />
           <span />
