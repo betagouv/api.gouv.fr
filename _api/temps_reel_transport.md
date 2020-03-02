@@ -40,6 +40,6 @@ L'api est utilisée sur le site du [Point d’Accès National aux données de tr
 - convertir les données en format GTFS-RT vers le format siri-lite ;
 - limiter la charge sur les serveurs fournisseurs de données.
 
-[Une documentation](https://doc.transport.data.gouv.fr/producteurs/temps-reel-des-transports-en-commun) est disponible pour plus d'information sur les données temps réel.
+[Une documentation](https://doc.transport.data.gouv.fr/producteurs/operateurs-de-transport-regulier-de-personnes/temps-reel-des-transports-en-commun) est disponible pour plus d'information sur les données temps réel.
 
 Le code source est disponible [sur github](https://github.com/etalab/transpo-rt).
