@@ -11,7 +11,7 @@ import colors from '../styles/colors';
 import Page from '../layouts/page';
 
 import APICard from '../components/searchApis/apiCard';
-import { HEADER_PAGE } from '../components/header';
+import { HEADER_PAGE } from '../components';
 
 const Service = ({
   title,

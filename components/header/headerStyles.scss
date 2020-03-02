@@ -1,0 +1,215 @@
+@import '../../styles/colors.scss';
+
+header {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0px -1px 3px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 300ms ease-in;
+  height: 60px;
+
+  &.scrolled {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #333;
+
+    &:hover {
+      color: #333;
+    }
+  }
+
+  .nav {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+
+    .nav__container {
+      display: flex;
+      flex: 1;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+      height: 100%;
+
+      a.nav__logo-wrapper {
+        display: flex;
+        align-items: center;
+        margin: 0 14px;
+
+        .nav__logo {
+          height: 40px;
+          padding: 0;
+          box-sizing: content-box;
+        }
+      }
+
+      .nav__links {
+        display: inline-flex;
+        margin: 0;
+        padding: 0em 1em;
+        list-style-type: none;
+        align-items: center;
+        height: 100%;
+
+        a {
+          padding: 8px 10px;
+          margin: 0 5px;
+          border-radius: 3px;
+
+          &:after {
+            content: none;
+          }
+        }
+
+        > li {
+          &:not(.external) {
+            position: relative;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            height: 100%;
+          }
+          &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            margin: auto;
+            width: 0%;
+            height: 3px;
+            background-color: $blue;
+            transition: width 200ms ease-in-out, opacity 200ms ease-in-out;
+            opacity: 0;
+          }
+          &.current:after {
+            width: 58%;
+            opacity: 1;
+          }
+          &:not(.current):not(.external):hover:after {
+            width: 58%;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .menu-btn {
+    display: none;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 18px;
+
+    .external {
+      display: none;
+    }
+
+    .nav > .nav__container > .nav__links {
+      opacity: 0;
+      display: none;
+      height: auto;
+    }
+
+    .menu-btn:checked ~ .nav__container {
+      height: 100vh;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #fff;
+
+      .nav__links {
+        display: block;
+        opacity: 1;
+        display: flex;
+        flex-direction: column;
+
+        > li {
+          margin: 10px 0;
+        }
+      }
+      a.nav__logo-wrapper {
+        display: none;
+      }
+    }
+
+    /* menu icon */
+
+    .hamburger-menu {
+      display: block;
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      cursor: pointer;
+
+      &:focus {
+        outline: none;
+      }
+
+      span {
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 30px;
+        background: $blue;
+        opacity: 1;
+        right: 0;
+        transform: rotate(0deg);
+        transition: 250ms ease-in-out;
+        right: 20px;
+
+        &:nth-child(1) {
+          top: 18px;
+          width: 30px;
+        }
+
+        &:nth-child(2) {
+          top: 29px;
+          width: 30px;
+          right: 20px;
+        }
+
+        &:nth-child(3) {
+          top: 40px;
+          width: 30px;
+        }
+      }
+    }
+
+    .menu-btn:checked + .hamburger-menu {
+      position: fixed;
+
+      > span {
+        &:nth-child(1) {
+          width: 35px;
+          top: 32px;
+          transform: rotate(135deg);
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+          right: 80px;
+        }
+
+        &:nth-child(3) {
+          width: 35px;
+          top: 32px;
+          transform: rotate(-135deg);
+        }
+      }
+    }
+  }
+}

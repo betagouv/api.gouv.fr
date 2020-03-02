@@ -25,7 +25,7 @@ const ApiCard = ({
   return (
     <>
       <Link href={url}>
-        <a className="ui fluid card api-card">
+        <a className="ui fluid card api-card dont-apply-link-style">
           <div className="content">
             <img
               className="right floated mini ui image"
@@ -59,7 +59,7 @@ const ApiCard = ({
             </div>
           </div>
 
-          <div className="card-extra">
+          <div className="card-extra card-footer">
             <div className="badges">
               <div className="badge contract">
                 {contract === 'OUVERT' ? (
@@ -74,11 +74,12 @@ const ApiCard = ({
                   </>
                 )}
               </div>
+              <div className="badge filler"></div>
 
               {uptime && (
                 <div className="badge uptime">
                   <div className="uptime-stat" />
-                  {roundUptime(0)(uptime)}% actif / dernier mois
+                  {roundUptime(2)(uptime)}% actif / dernier mois
                 </div>
               )}
             </div>
@@ -107,6 +108,12 @@ const ApiCard = ({
           color: #222;
         }
 
+        .card-footer {
+          background-color: #fafafa;
+          border-top: 1px solid #eaeaea;
+          padding: 15px;
+        }
+
         .badges {
           display: flex;
           align-items: center;
@@ -116,11 +123,11 @@ const ApiCard = ({
         .badge {
           display: inline-flex;
           align-items: center;
-          background-color: #ebeff3;
-          padding: 0.4em;
-          border-radius: 4px;
-          margin: 0.2em;
           font-size: small;
+        }
+
+        .badge.filler {
+          flex-grow: 1;
         }
 
         .contract div {

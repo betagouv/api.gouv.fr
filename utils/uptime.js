@@ -19,7 +19,8 @@ export const roundUptime = (digits = 2) => {
       return uptime.toFixed(digits);
     } else {
       // should fail if uptime is neither a string nor a number
-      const upTimeAsNum = parseInt(uptime, 10);
+      const multiplier = Math.pow(10, digits);
+      const upTimeAsNum = parseInt(uptime * multiplier, 10) / multiplier;
       return upTimeAsNum.toFixed(digits);
     }
   };

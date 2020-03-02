@@ -8,7 +8,7 @@ import { getAllServices } from '../utils/api';
 import Page from '../layouts/page';
 
 import ServiceCard from '../components/service-card';
-import { HEADER_PAGE } from '../components/header';
+import { HEADER_PAGE } from '../components';
 
 const Services = ({ services }) => {
   return (

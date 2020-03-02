@@ -22,7 +22,7 @@ const Thumbnails = ({ is_open, uptime, lastUpdate, owner, rate_limiting }) => {
         <Thumbnail title="Disponibilité" icon={<Activity />}>
           <div className="badge uptime">
             <div className="uptime-stat" />
-            {roundUptime(0)(uptime)}% actif / dernier mois
+            {roundUptime(2)(uptime)}% actif / dernier mois
           </div>
         </Thumbnail>
       )}

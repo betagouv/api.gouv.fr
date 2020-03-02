@@ -3,7 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 
 import Page from '../layouts/page';
-import { HEADER_PAGE } from '../components/header';
+import { HEADER_PAGE } from '../components';
 
 const About = () => (
   <Page headerKey={HEADER_PAGE.ABOUT}>

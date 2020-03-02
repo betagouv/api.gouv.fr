@@ -7,9 +7,9 @@ const ButtonLink = ({ href, alt, rel, target, disabled, children, large }) => (
     <a
       rel={rel}
       target={target}
-      className={`button-link ${alt ? 'alt' : 'default'} ${
-        disabled ? 'disabled' : ''
-      }
+      className={`dont-apply-link-style button-link ${
+        alt ? 'alt' : 'default'
+      } ${disabled ? 'disabled' : ''}
         ${large ? 'large' : 'small'}
       `}
       href={href}

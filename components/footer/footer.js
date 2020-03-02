@@ -75,7 +75,7 @@ const Footer = () => {
           </li>
           <li>
             <a
-              href="https://github.com/betagouv/api.gouv.fr/edit/master/{{ page.path }}"
+              href="https://github.com/betagouv/api.gouv.fr/blob/master/CONTRIBUTING.md"
               rel="noopener noreferrer"
               target="_blank"
             >
