@@ -1,4 +1,22 @@
 @import '../constants/colors.scss';
+@import '../constants/layout.scss';
+
+#page-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #fff;
+
+  > main {
+    flex: 1;
+    margin-top: #{$headerHeight + 'px'};
+  }
+}
+
+a {
+  text-decoration: underline;
+}
 
 .layout-center {
   display: flex;
@@ -24,6 +42,70 @@
 
   @media only screen and (min-width: 1px) and (max-width: 600px) {
     width: calc(100% - 50px);
+  }
+}
+
+.text-container {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+  color: $darkestGrey;
+
+  @media only screen and (min-width: 1124px) {
+    width: 780px;
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1124px) {
+    width: calc(100% - 100px);
+  }
+
+  @media only screen and (min-width: 550px) and (max-width: 768px) {
+    width: calc(100% - 80px);
+  }
+
+  @media only screen and (min-width: 1px) and (max-width: 600px) {
+    width: calc(100% - 50px);
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    line-height: 3rem;
+    margin: 30px 0 50px;
+    color: $darkGrey;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+    margin: 20px 0 20px;
+    color: $darkestGrey;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+    line-height: 1.9rem;
+    margin: 12px 0 16px;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    margin: 12px 0 16px;
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+    margin: 5px 0 40px;
+
+    br {
+      margin-bottom: 15px;
+    }
+
+    ul {
+      list-style: none;
+    }
   }
 }
 

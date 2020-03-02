@@ -4,28 +4,30 @@ import Page from '../layouts/page';
 import { HEADER_PAGE } from '../components/header';
 
 const About = () => (
-  <Page headerKey={HEADER_PAGE.HOME}>
-    <div className="ui text container">
+  <Page headerKey={HEADER_PAGE.HOME} usePreFooter={false}>
+    <div className="text-container">
+      <h1 className="layout-center">Mentions légales</h1>
       <div>
-        <h2>Mentions légales</h2>
-        <div>
-          <h3>Éditeur</h3>
-          <p>
-            Incubateur des services numériques, Direction interministérielle du
-            numérique (DINUM), Services du Premier ministre.
-          </p>
+        <h2>Éditeur</h2>
+        <p>
+          Incubateur des services numériques, Direction interministérielle du
+          numérique (DINUM), Services du Premier ministre.
+        </p>
 
-          <h3>Directeur de la publication</h3>
-          <p>Le Directeur interministériel du numérique (DINUM).</p>
+        <h2>Directeur de la publication</h2>
+        <p>Le Directeur interministériel du numérique (DINUM).</p>
 
-          <h3>Prestataire d'hébergement</h3>
-          <p>
-            <b>OVH</b> RCS Roubaix – Tourcoing 424 761 419 00045
-            <br /> Code APE 6202A
-            <br /> N° TVA : FR 22 424 761 419
-            <br /> Siège social : 2 rue Kellermann - 59100 Roubaix - France
-          </p>
-        </div>
+        <h2>Prestataire d'hébergement</h2>
+        <p>
+          <ul>
+            <li>
+              <b>OVH</b> RCS Roubaix – Tourcoing 424 761 419 00045 Code APE
+              6202A
+            </li>
+            <li>N° TVA : FR 22 424 761 419</li>
+            <li>Siège social : 2 rue Kellermann - 59100 Roubaix - France</li>
+          </ul>
+        </p>
       </div>
     </div>
   </Page>
