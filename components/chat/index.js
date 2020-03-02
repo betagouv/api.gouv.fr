@@ -39,27 +39,29 @@ const Chat = () => {
           <X size={24} />
         </button>
       </div>
-      <form onSubmit={openMail}>
-        <label htmlFor="question">Votre question</label>
-        <input
-          id="question"
-          placeholder="Comment pouvons nous vous aider ?"
-          type="text"
-          ref={subject}
-          required
-        />
-        <label htmlFor="description">Description</label>
-        <textarea
-          id="description"
-          placeholder="Détaillez ici votre question"
-          type="text"
-          ref={body}
-          required
-        />
-        <div className="submit">
-          <ButtonLink type="submit">Envoyer</ButtonLink>
-        </div>
-      </form>
+      {isOpen && (
+        <form onSubmit={openMail}>
+          <label htmlFor="question">Votre question</label>
+          <input
+            id="question"
+            placeholder="Comment pouvons nous vous aider ?"
+            type="text"
+            ref={subject}
+            required
+          />
+          <label htmlFor="description">Description</label>
+          <textarea
+            id="description"
+            placeholder="Détaillez ici votre question"
+            type="text"
+            ref={body}
+            required
+          />
+          <div className="submit">
+            <ButtonLink type="submit">Envoyer</ButtonLink>
+          </div>
+        </form>
+      )}
     </div>
   );
 };

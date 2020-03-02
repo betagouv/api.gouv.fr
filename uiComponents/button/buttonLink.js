@@ -14,7 +14,7 @@ const LinkAsAButton = ({
   <a
     rel={rel}
     target={target}
-    className={`button-link ${alt ? 'alt' : 'default'} ${
+    className={`dont-apply-link-style button-link ${alt ? 'alt' : 'default'} ${
       disabled ? 'disabled' : ''
     }
   ${large ? 'large' : 'small'}
@@ -29,7 +29,7 @@ const ClassicButton = ({ type, onClick, alt, large, disabled, children }) => (
   <button
     onClick={onClick}
     type={type}
-    className={`button-link ${alt ? 'alt' : 'default'} ${
+    className={`dont-apply-link-style button-link ${alt ? 'alt' : 'default'} ${
       disabled ? 'disabled' : ''
     }
   ${large ? 'large' : 'small'}

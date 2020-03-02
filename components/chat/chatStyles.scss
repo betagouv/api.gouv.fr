@@ -89,6 +89,9 @@
       &:focus {
         border-color: $blue;
       }
+      &:invalid {
+        outline: none;
+      }
     }
     > textarea {
       resize: none;
