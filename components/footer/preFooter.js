@@ -1,7 +1,7 @@
 import React from 'react';
 
-import constants from '../../const';
-import { ButtonLink } from '../../uiComponents/button';
+import constants from '../constants';
+import { ButtonLink } from '../uiComponents/button';
 
 const PreFooter = ({ background }) => (
   <section>

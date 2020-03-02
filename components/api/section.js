@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 
-import globals from '../../const';
+import globals from '../../constants';
 
 const Section = ({ id, title, children }) => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import constants from '../../../const';
+import constants from '../../../constants';
 
 const Thumbnail = ({ title, icon, children }) => (
   <div className="thumbnail-container">

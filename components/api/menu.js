@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import constants from '../../const';
+import constants from '../../constants';
 
 const MENU_OPTIONS = [
   {

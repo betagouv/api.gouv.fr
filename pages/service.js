@@ -6,7 +6,7 @@ import withErrors from '../components/hoc/with-errors';
 
 import { getService, getAPI } from '../utils/api';
 
-import constants from '../const';
+import constants from '../constants';
 
 import Page from '../layouts/page';
 

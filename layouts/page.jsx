@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Footer, PreFooter, Header, Meta } from '../components';
-import constants from '../const/index';
+import constants from '../constants';
 import './fonts.scss';
 import './layout.scss';
 

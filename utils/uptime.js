@@ -1,4 +1,4 @@
-import constants from '../const';
+import constants from '../constants';
 
 export const getUptimeState = uptime => {
   const { red, orange, green } = constants.colors;

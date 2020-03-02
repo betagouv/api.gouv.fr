@@ -1,7 +1,7 @@
 import React from 'react';
 
 import ApiCard from '../searchApis/apiCard';
-import constants from '../../const';
+import constants from '../../constants';
 
 import { ButtonLink } from '../../uiComponents';
 

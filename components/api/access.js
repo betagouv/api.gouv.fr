@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Section from './section';
 import { ButtonLink } from '../../uiComponents/button';
 
-import constants from '../../const';
+import constants from '../../constants';
 
 const Access = ({
   access_open,

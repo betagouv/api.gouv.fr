@@ -3,8 +3,7 @@ import Link from 'next/link';
 import { throttle } from 'lodash';
 
 import { ButtonLink } from '../uiComponents/button';
-
-import constants from '../const';
+import constants from '../constants';
 
 export const HEADER_PAGE = {
   APIS: 'apis',

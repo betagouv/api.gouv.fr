@@ -8,7 +8,7 @@ export default {
       'mailto:contact@api.gouv.fr?subject=Faciliter%20les%20démarches%20des%20familles',
     NOUVELLE_AQUITAINE:
       'mailto:contact@api.gouv.fr?subject=Dématerialiser%20des%20justificatifs',
-    CHAT_QUESTION: 'mailto:contact@api.gouv.fr?subject=[Question api.gouv.fr]',
+    SUPPORT: 'mailto:contact@api.gouv.fr',
   },
   ADD_API:
     'https://github.com/betagouv/api.gouv.fr/blob/master/CONTRIBUTING.md#ajouter-une-api',

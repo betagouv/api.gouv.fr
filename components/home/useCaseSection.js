@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './useCaseSectionStyles.scss';
-import constants from '../../const';
+import constants from '../../constants';
 
 const USE_CASES = [
   {

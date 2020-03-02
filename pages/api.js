@@ -7,7 +7,7 @@ import { isElementVisible } from '../utils';
 import { getAPI, getService } from '../utils/api';
 import withErrors from '../components/hoc/with-errors';
 import Page from '../layouts';
-import constants from '../const';
+import constants from '../constants';
 
 import {
   PageHeader,

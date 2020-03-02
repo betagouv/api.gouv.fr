@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { MessageSquare, X } from 'react-feather';
 
-import constants from '../../const';
+import constants from '../../constants';
 import { ButtonLink } from '../../uiComponents';
 import './chatStyles.scss';
 
@@ -20,7 +20,7 @@ const Chat = () => {
       return;
     }
     window.location.href = encodeURI(
-      `${constants.links.mailto.CHAT_QUESTION} ${subjectVal}&body=${bodyVal}`
+      `${constants.links.mailto.SUPPORT}?subject=[Question api.gouv.fr] ${subjectVal}&body=${bodyVal}`
     );
   };
 
