@@ -22,6 +22,8 @@ const Chat = () => {
     window.location.href = encodeURI(
       `${constants.links.mailto.SUPPORT}?subject=[Question api.gouv.fr] ${subjectVal}&body=${bodyVal}`
     );
+    e.preventDefault();
+    setIsOpen(false);
   };
 
   return (
