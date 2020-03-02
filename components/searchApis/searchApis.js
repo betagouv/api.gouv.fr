@@ -23,7 +23,6 @@ const logResultsInMatomo = debounce((search, theme, resultCounts) => {
     );
 
     if (tracker) {
-      console.log(search, theme, resultCounts);
       tracker.trackSiteSearch(search, theme, resultCounts);
     }
   }
