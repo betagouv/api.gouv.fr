@@ -17,7 +17,7 @@ export const HEADER_PAGE = {
 const HEADER = [
   {
     href: '/rechercher-api',
-    txt: 'Découvrir les APIs de l’État',
+    txt: 'Découvrir les APIs du service public',
     key: HEADER_PAGE.APIS,
   },
   {
