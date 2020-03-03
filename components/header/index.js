@@ -113,7 +113,7 @@ const Header = ({ headerKey = 'home', filter = '' }) => {
               <li>
                 <a
                   className="dont-apply-link-style"
-                  href={`${constants.SIGNUP_LINK}`}
+                  href={`${constants.links.SIGNUP}`}
                 >
                   Mes demandes
                 </a>
