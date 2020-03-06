@@ -5,8 +5,8 @@ import { HEADER_PAGE } from '../components';
 
 const Contact = () => (
   <Page headerKey={HEADER_PAGE.CONTACT}>
-    <div className="ui text container">
-      <h1>Contact</h1>
+    <div className="text-container">
+      <h1 className="layout-center">Contact</h1>
 
       <div>
         <h2>Obtenir des détails sur une API</h2>

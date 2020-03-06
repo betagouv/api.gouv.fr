@@ -17,7 +17,7 @@ export const HEADER_PAGE = {
 const HEADER = [
   {
     href: '/rechercher-api',
-    txt: 'Découvrir les APIs de l’État',
+    txt: 'Découvrir les APIs du service public',
     key: HEADER_PAGE.APIS,
   },
   {
@@ -113,7 +113,7 @@ const Header = ({ headerKey = 'home', filter = '' }) => {
               <li>
                 <a
                   className="dont-apply-link-style"
-                  href={`${constants.SIGNUP_LINK}`}
+                  href={`${constants.links.SIGNUP}`}
                 >
                   Mes demandes
                 </a>

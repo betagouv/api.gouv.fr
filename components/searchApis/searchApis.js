@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { debounce } from 'lodash';
 
 import FilterHeader from './filterHeader';
 import Results from './results';
@@ -7,6 +8,25 @@ import {
   filterAccess,
   computeSearchResults,
 } from './filtersLogic';
+
+import getConfig from 'next/config';
+
+const {
+  publicRuntimeConfig: { PIWIK_URL, PIWIK_SITE_ID },
+} = getConfig();
+
+const logResultsInMatomo = debounce((search, theme, resultCounts) => {
+  if (window.Piwik) {
+    const tracker = window.Piwik.getTracker(
+      `${PIWIK_URL}/piwik.php`,
+      PIWIK_SITE_ID
+    );
+
+    if (tracker) {
+      tracker.trackSiteSearch(search, theme, resultCounts);
+    }
+  }
+}, 1000);
 
 const SearchApis = ({ allApis, allThemes, searchFromQueryString = '' }) => {
   const [apiList, setApiList] = useState(allApis);
@@ -33,6 +53,9 @@ const SearchApis = ({ allApis, allThemes, searchFromQueryString = '' }) => {
       .filter(filterAccess(isAccessOpen))
       .filter(filterTheme(theme))
       .sort((a, b) => ((a.visits_2019 || 0) < b.visits_2019 ? 1 : -1));
+
+    const themeAndAccess = `${theme}${isAccessOpen ? '-only-access-open' : ''}`;
+    logResultsInMatomo(searchTerms, themeAndAccess, newApiList.length);
 
     setApiList(newApiList);
     return () => {};

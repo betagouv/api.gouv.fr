@@ -131,10 +131,7 @@ const API = ({ api, services }) => {
   }, []);
 
   return (
-    <Page
-      preFooterBackground={constants.colors.lightestGrey}
-      headerKey={HEADER_PAGE.APIS}
-    >
+    <Page headerKey={HEADER_PAGE.APIS}>
       <PageHeader
         title={title}
         logo={logo || DEFAULT_LOGO}
