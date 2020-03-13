@@ -1,7 +1,9 @@
 import React from 'react';
 
+import { ButtonLink } from '../../uiComponents';
+
 import constants from '../../constants';
-import { ButtonLink } from '../../uiComponents/button';
+
 import './preFooterStyles.scss';
 
 const PreFooter = ({ background }) => (

@@ -1,15 +1,16 @@
-#footer {
+@import '../../constants/colors.scss';
+
+div#footer {
   background: #26353f;
   color: #fff;
   padding: 2em 0;
 
   a {
-    opacity: 0.4;
+    opacity: 1;
     text-decoration: none;
 
     &:hover,
     &:focus {
-      opacity: 1;
       background-color: transparent;
       text-decoration: underline;
     }
@@ -29,9 +30,13 @@
     }
 
     .icon {
+      opacity: 0.4;
       width: 35px;
       height: 35px;
       fill: #fff;
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 
@@ -46,7 +51,10 @@
     }
 
     a {
-      color: #fff;
+      color: $grey;
+      &:hover {
+        color: #fff;
+      }
     }
   }
 

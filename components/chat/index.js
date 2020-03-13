@@ -1,8 +1,10 @@
 import React, { useState, useRef } from 'react';
 import { MessageSquare, X } from 'react-feather';
 
-import constants from '../../constants';
 import { ButtonLink } from '../../uiComponents';
+
+import constants from '../../constants';
+
 import './chatStyles.scss';
 
 const Chat = () => {
@@ -27,15 +29,27 @@ const Chat = () => {
   };
 
   return (
-    <div id="chat-container" className={`${isOpen ? 'show' : 'hidden'}`}>
+    <div
+      role="dialog"
+      id="chat-container"
+      className={`${isOpen ? 'show' : 'hidden'}`}
+    >
       <div className="chat-header">
-        <button className="chat-icon" onClick={() => setIsOpen(!isOpen)}>
+        <button
+          aria-label="Ouvrir chat"
+          className="chat-icon"
+          onClick={() => setIsOpen(!isOpen)}
+        >
           <MessageSquare color={constants.colors.smartData} />
         </button>
         <div className="chat-title">
           Vous avez une question ? L’équipe d'api.gouv.fr vous répond.
         </div>
-        <button className="close" onClick={() => setIsOpen(false)}>
+        <button
+          aria-label="Fermer chat"
+          className="close"
+          onClick={() => setIsOpen(false)}
+        >
           <X size={24} />
         </button>
       </div>

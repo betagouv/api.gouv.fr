@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Footer, PreFooter, Header, Meta } from '../components';
+
 import './fonts.scss';
 import './pageStyles.scss';
 
@@ -15,8 +16,10 @@ const Page = ({
   <div id="page-layout">
     <Meta title={title} description={description} />
     <Header headerKey={headerKey || 'home'} />
-    <main>{children}</main>
-    {usePreFooter && <PreFooter background={preFooterBackground} />}
+    <main>
+      {children}
+      {usePreFooter && <PreFooter background={preFooterBackground} />}
+    </main>
     <Footer />
   </div>
 );

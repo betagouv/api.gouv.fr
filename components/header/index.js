@@ -2,8 +2,10 @@ import React, { useEffect, useRef, Fragment } from 'react';
 import Link from 'next/link';
 import { throttle } from 'lodash';
 
-import { ButtonLink } from '../../uiComponents/button';
+import { ButtonLink } from '../../uiComponents';
+
 import constants from '../../constants';
+
 import './headerStyles.scss';
 
 export const HEADER_PAGE = {
@@ -59,7 +61,7 @@ const Header = ({ headerKey = 'home', filter = '' }) => {
   }, []);
 
   return (
-    <header role="navigation" ref={header}>
+    <div id="header" role="banner" ref={header}>
       <nav className="nav">
         <input
           className="menu-btn"
@@ -122,7 +124,7 @@ const Header = ({ headerKey = 'home', filter = '' }) => {
           </ul>
         </div>
       </nav>
-    </header>
+    </div>
   );
 };
 

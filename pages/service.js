@@ -5,13 +5,11 @@ import ReactMarkdown from 'react-markdown';
 import withErrors from '../components/hoc/with-errors';
 
 import { getService, getAPI } from '../utils/api';
-
-import constants from '../constants';
-
 import Page from '../layouts/page';
-
 import APICard from '../components/searchApis/apiCard';
 import { HEADER_PAGE } from '../components';
+
+import constants from '../constants';
 
 const Service = ({
   title,
