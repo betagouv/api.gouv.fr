@@ -12,7 +12,6 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint",
       "pre-push": "npm run lint"
     }
   },
@@ -31,6 +30,7 @@
     "husky": "^4.2.3",
     "lunr": "^2.3.8",
     "prettier": "^1.19.1",
+    "react-axe": "^3.4.1",
     "typescript": "^3.7.5"
   },
   "dependencies": {

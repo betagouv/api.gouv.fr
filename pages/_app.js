@@ -4,6 +4,24 @@ import getConfig from 'next/config';
 
 import Chat from '../components/chat';
 
+/**
+ * Determines if we are running on server or in client.
+ * @return {boolean} true if running on server
+ */
+const getIsServerRendered = () => {
+  return typeof window === 'undefined';
+};
+
+/**
+ * Accessibility tool - outputs to devtools console on dev only and client-side only.
+ * @see https://github.com/dequelabs/react-axe
+ */
+if (process.env.NODE_ENV !== 'production' && !getIsServerRendered()) {
+  const ReactDOM = require('react-dom');
+  const axe = require('react-axe');
+  axe(React, ReactDOM, 1000);
+}
+
 const {
   publicRuntimeConfig: { PIWIK_URL, PIWIK_SITE_ID },
 } = getConfig();
