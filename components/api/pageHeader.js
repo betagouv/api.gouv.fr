@@ -65,7 +65,7 @@ const Tagline = ({ tagline }) => (
 const PageHeader = ({ title, logo, tagline }) => (
   <section id="mission-statement">
     <Link href="/rechercher-api">
-      <a className="back-button">← Retour</a>
+      <a className="back-button">← Toutes les API</a>
     </Link>
     <div className="content-container content">
       <Title title={title} logo={logo} />
