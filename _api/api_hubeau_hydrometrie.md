@@ -50,7 +50,9 @@ last_update: 31/07/2019
 
 Les données publiques de [l'API "Hydrométrie"](https://hubeau.eaufrance.fr/page/api-hydrometrie) de Hub'Eau sont issues de la Plate-forme HYDRO Centrale (PHyC), opérée par le Service Central d’Hydrométéorologie et d’Appui à la Prévision des Inondations (SCHAPI).
 Cette Plate-forme stocke les mesures quasi temps-réel provenant d’environ 3000 stations hydrométriques qui constituent le réseau de mesure français, opéré par les Directions Régionales de l’Environnement de l’Aménagement et du Logement (DREAL) ou autres producteurs (collectivités, etc.)
-L'API permet d'interroger le **référentiel hydrométrique** ainsi que les **observations en quasi temps réel**, mises à jour par leur producteur toutes les 5 à 60 minutes dans la plateforme source (PHyC du SCHAPI). Hub'Eau interroge la source des données toutes les 2 minutes et maintient une profondeur d'historique égale à 1 mois.
+L'API permet d'interroger le **référentiel hydrométrique** ainsi que les **observations en quasi temps réel**, mises à jour par leur producteur toutes les 5 à 60 minutes dans la plateforme source (PHyC du SCHAPI). Hub'Eau interroge la source des données toutes les 2 minutes et maintient une profondeur d'historique égale à 1 mois **mais pour le moment, aucun traitement des données n'est appliqué au-delà des 24 dernières heures. Les données accessibles sont celles mesurées sur le terrain sans expertise et sans les améliorations apportées par les hydromètres.** Par exemple, un changement de courbe de tarage n'est actuellement pas pris en compte sur les données antérieures à ce changement. Une évolution est en préparation afin prendre en compte cette expertise au-delà des 24 dernières heures.
+
+Les observations sont exprimées en **mm** pour les hauteurs d'eau et en **l/s** pour les débits.  
 
 Trois opérations (endpoints) sont disponibles :
 
@@ -62,21 +64,20 @@ Les données sont exposées sous la forme d'une API REST, les formats supportés
 
 Dernières évolutions de l'API Hydrométrie :
 
+- 05/03/2020 : passage sur serveur dédié pour tenir la charge (10 appels/s en moyenne)
+- 03/01/2019 : v1.0.1 : correction [bug sur l'API observations](https://github.com/BRGM/hubeau/issues/15)
 - 03/12/2018 : suppression de la version beta, passage en production de la v1
 - 29/11/2018 : endpoints observations : ajout du paramètre timestep permettant la récupération de données à un pas de temps déterminé
 - 12/11/2018 : endpoints xml : les valeurs du paramètre fields sont maintenant les noms des champs xml
 - 25/10/2018 : endpoints observations_tr : changement de l'ordre de tri par défaut, le tri par défaut est maintenant date d'observation décroissante (desc) permettant d'obtenir d'abord les observations les plus récentes
-- 08/10/2018 : endpoints observations_tr : correction bug curseur (paramètre cursor), le tri ne concerne maintenant plus que la date d'observation (date_obs), tri ascendant par défaut (les données les plus anciennes d'abord)
-- 20/09/2018 : version bêta publique
-- 10/07/2018 : prototype à des fins de tests internes au SCHAPI
 
 ### Connaissez-vous Hub'Eau ?
 
 #### Simplifier l'accès aux données sur l'eau
 
 Service pérenne de la toile [Eau France](https://www.eaufrance.fr), [Hub'Eau](https://hubeau.eaufrance.fr/) met à disposition des API Rest favorisant l’accès aux données du [SIE](https://www.eaufrance.fr/donnees) dans des formats simples d’emploi et propices à la réutilisation (CSV, JSON, GeoJSON).
-Fondé sur une infrastructure et des méthodes adaptées au traitement et au stockage de données massives, les APIs Hub'Eau garantissent les meilleures performances de disponibilité.
-Hub’Eau est le résultat de la collaboration de l’AFB et du BRGM dans le cadre du pôle de recherche et d'innovation en interopérabilité des systèmes d'information distribués sur l'eau : [INSIDE](http://www.pole-inside.fr/fr).
+Fondé sur une infrastructure et des méthodes adaptées au traitement et au stockage de données massives, les APIs Hub'Eau garantissent les meilleures performances de disponibilité (9 téra-octets de données fournies en 76 millions d'appels pour le 2e semestre 2019).
+Hub’Eau est le résultat de la collaboration de l’OFB et du BRGM dans le cadre du pôle de recherche et d'innovation en interopérabilité des systèmes d'information distribués sur l'eau : [INSIDE](http://www.pole-inside.fr/fr).
 
 Les autres API disponibles à ce jour dans Hub'Eau sont :
 
@@ -90,7 +91,7 @@ Les autres API disponibles à ce jour dans Hub'Eau sont :
 
 #### Un service en co-construction
 
-Pour des APIs toujours plus en phase avec les besoins utilisateurs, Hub'Eau inaugure en 2018 une [politique de bêta testing](https://hubeau.eaufrance.fr/page/apis-version-beta) en organisant une campagne de tests ouverte avant la mise la mise en production de chaque nouvelle API.
+Pour des APIs toujours plus en phase avec les besoins utilisateurs, Hub'Eau a inauguré en 2018 une [politique de bêta testing](https://hubeau.eaufrance.fr/page/apis-version-beta) en organisant une campagne de tests ouverte avant la mise la mise en production de chaque nouvelle API.
 D'une durée de 30 à 45 jours, ces campagnes ont pour objectif de recueillir un maximum de retour d’expérience des utilisateurs sur les points forts et les points faibles des API en construction.
 Pour être informé de la sortie des nouvelles API et les tester en avant-première, inscrivez-vous à la [newsletter](https://hubeau.eaufrance.fr/page/news-letter-hubeau) !
 Faites-nous part de vos observations sur la [page de contribution GitHub](https://github.com/BRGM/hubeau/issues).
@@ -100,10 +101,6 @@ Faites-nous part de vos observations sur la [page de contribution GitHub](https:
 - [Soumettez le votre sur la page GitHub des utilisateurs de Hub'Eau](https://github.com/BRGM/hubeau)
 
 ### Glossaire
-
-#### BRGM
-
-Le [BRGM (Bureau de Recherches Géologiques et Minières)](http://www.brgm.fr/), service géologique national français, est l'établissement public de référence dans les applications des sciences de la Terre pour gérer les ressources et les risques du sol et du sous-sol. Le BRGM assure notamment la diffusion de données géologiques et environnementales via les technologies de l’information et de la communication, avec pour objectif la mise à disposition des pouvoirs publics, des acteurs économiques et du grand public d'informations géoréférencées pour appuyer leurs décisions. Parmi les domaines de compétence du BRGM figurent les infrastructures informatiques de diffusion, calcul, simulation-visualisation 3D et réalité virtuelle ainsi que l'interopérabilité.
 
 #### grandeur hydrométrique
 
