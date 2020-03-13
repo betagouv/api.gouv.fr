@@ -7,6 +7,9 @@ jobs:
 
     working_directory: ~/api.gouv.fr
 
+    before_install:
+      - npx audit-ci -m
+
     steps:
       - checkout
 
@@ -16,12 +19,14 @@ jobs:
 
       - restore_cache:
           keys:
-            - v1-api.gouv.fr-{{ checksum "project.clj" }}
+            - v1-api.gouv.fr-{{ checksum "package.json" }}
 
       - save_cache:
-          key: v1-api.gouv.fr-{{ checksum "project.clj" }}
+          key: v1-api.gouv.fr-{{ checksum "package.json" }}
           paths:
             - node_modules
 
       - run: |
           npm run lint
+      # - run: |
+      #     npm run test
