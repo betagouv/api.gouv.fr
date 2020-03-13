@@ -1,6 +1,4 @@
 import React from 'react';
-import getConfig from 'next/config';
-
 import withErrors from '../components/hoc/with-errors';
 
 import { getAllAPIs } from '../utils/api';
@@ -11,13 +9,8 @@ import UseCaseSection from '../components/home/useCaseSection';
 import ApiTripletSection from '../components/home/apiTripletSection';
 import Baseline from '../components/home/baseline';
 
-const { publicRuntimeConfig } = getConfig();
-const SITE_DESCRIPTION =
-  publicRuntimeConfig.SITE_DESCRIPTION ||
-  'Simplifiez le partage et la circulation des données administratives';
-
 const Home = ({ apiList }) => (
-  <Page>
+  <Page title="Api.gouv.fr : le site qui référence toutes les APIs du service public">
     <Baseline />
     <ApiTripletSection apiList={apiList} />
     <div className="content-container layout-center">
