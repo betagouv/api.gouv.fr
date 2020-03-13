@@ -2,6 +2,7 @@
 title: Trèfle # nom commercial de l'API
 tagline: Moteur de financement de formations # une phrase maximum
 owner: Pôle emploi # producteur de l'API
+logo: logo_pole_emploi.jpg
 keywords: # utilisé dans la recherche
   - moteur de financement
   - formation
