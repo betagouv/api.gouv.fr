@@ -13,8 +13,8 @@ const Services = ({ services }) => {
     <Page headerKey={HEADER_PAGE.SERVICES}>
       <section className="content-container page-baseline">
         <h2>
-          Depuis 2016, nous aidons les acteurs public à réaliser des services
-          numériques pour tous les français
+          Depuis 2016, nous accompagnons les acteurs publics dans la réalisation
+          de services numériques pour tous les francais
         </h2>
       </section>
       <section id="realisations" className="page-body-container">
