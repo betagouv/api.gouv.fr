@@ -6,27 +6,24 @@ import withErrors from '../components/hoc/with-errors';
 import { getAllServices } from '../utils/api';
 
 import Page from '../layouts/page';
-
-import ServiceCard from '../components/service-card';
-import { HEADER_PAGE } from '../components';
+import { HEADER_PAGE, ServiceCard } from '../components';
 
 const Services = ({ services }) => {
   return (
     <Page headerKey={HEADER_PAGE.SERVICES}>
-      <section id="services" className="content-container main">
-        <h2 className="ui divider horizontal">Tous les services</h2>
-        <div className="ui three stackable cards">
+      <section className="content-container page-baseline">
+        <h2>
+          Depuis 2016, nous aidons les acteurs public à réaliser des services
+          numériques pour tous les français
+        </h2>
+      </section>
+      <section id="realisations" className="page-body-container">
+        <div className="content-container default-grid">
           {services.map(service => (
             <ServiceCard key={service.slug} {...service} />
           ))}
         </div>
       </section>
-
-      <style jsx>{`
-        #services {
-          margin-bottom: 2em;
-        }
-      `}</style>
     </Page>
   );
 };

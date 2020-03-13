@@ -5,7 +5,7 @@ import './resultsStyles.scss';
 
 const Results = ({ apiList }) => {
   return (
-    <section id="api-results">
+    <section id="api-results" className="page-body-container">
       <div className="content-container">
         <div className="results-counter">
           {apiList.length} résultat{apiList.length > 1 && 's'}

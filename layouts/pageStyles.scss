@@ -12,6 +12,32 @@
     flex: 1;
     margin-top: #{$headerHeight + 'px'};
   }
+
+  section.page-baseline {
+    margin: 30px auto;
+    text-align: left;
+  }
+
+  section.page-body-container {
+    padding: 35px 0 60px;
+    background: $lightGrey;
+  }
+
+  .default-grid {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-gap: 50px 3%;
+
+    @media only screen and (min-width: 550px) and (max-width: 920px) {
+      grid-template-columns: 48% 48%;
+      grid-gap: 40px 4%;
+    }
+
+    @media only screen and (min-width: 1px) and (max-width: 600px) {
+      grid-template-columns: 100%;
+      grid-gap: 40px 0%;
+    }
+  }
 }
 
 a {
