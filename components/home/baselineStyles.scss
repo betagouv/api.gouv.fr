@@ -1,4 +1,4 @@
-section#mission-statement {
+section#homepage-mission-statement {
   padding: 50px 0 30px;
   display: flex;
   align-items: center;
@@ -16,6 +16,14 @@ section#mission-statement {
     h2 {
       text-align: left;
       width: 100%;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+    h1 {
+      font-size: 2.4rem;
+      height: 100px;
     }
   }
 }
