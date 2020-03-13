@@ -8,7 +8,8 @@
     "dev": "node server.js",
     "start": "NODE_ENV=production node server.js",
     "build": "next build",
-    "lint": "eslint '**/*.{js,jsx}' --max-warnings 20"
+    "lint": "eslint '**/*.{js,jsx}' --max-warnings 20",
+    "check-html": "axe http://localhost:3000 && blc http://localhost:3000"
   },
   "husky": {
     "hooks": {
@@ -18,7 +19,9 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.20.0",
     "@typescript-eslint/parser": "^2.20.0",
+    "axe-cli": "^3.2.0",
     "babel-eslint": "^10.0.3",
+    "broken-link-checker": "^0.7.8",
     "eslint": "^6.8.0",
     "eslint-config-react-app": "^5.2.0",
     "eslint-plugin-flowtype": "^3.13.0",
