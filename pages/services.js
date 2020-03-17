@@ -14,8 +14,8 @@ const Services = ({ services }) => {
   return (
     <Page
       headerKey={HEADER_PAGE.SERVICES}
-      title="Tous nos exemples d'utilisation d’API du service public"
-      description="Vous vous demandez comment utiliser une APIs ? Inspirez-vous d’un cas pratique."
+      title="Les exemples d'utilisation"
+      description="Vous vous demandez comment utiliser une APIs du service public ? Inspirez-vous d’un cas pratique."
     >
       <section id="services" className="content-container main">
         <h2 className="ui divider horizontal">Tous les services</h2>

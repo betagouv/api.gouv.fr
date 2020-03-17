@@ -8,7 +8,7 @@ const Privacy = () => (
   <Page
     headerKey={HEADER_PAGE.HOME}
     usePreFooter={false}
-    title="Notre politique de confidentialité"
+    title="Politique de confidentialité"
   >
     <div id="privacy-page" className="text-container">
       <h1 className="layout-center">Politique de confidentialité</h1>

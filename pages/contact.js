@@ -6,7 +6,7 @@ import { HEADER_PAGE } from '../components';
 const Contact = () => (
   <Page
     headerKey={HEADER_PAGE.CONTACT}
-    title="Contacter api.gouv.fr"
+    title="Nous contacter"
     description="Comment entrer en contact avec la très motivée équipe d’api.gouv.fr"
   >
     <div className="text-container">

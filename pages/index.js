@@ -10,7 +10,10 @@ import ApiTripletSection from '../components/home/apiTripletSection';
 import Baseline from '../components/home/baseline';
 
 const Home = ({ apiList }) => (
-  <Page title="Api.gouv.fr : le site qui référence toutes les APIs du service public">
+  <Page
+    title="Api.gouv.fr"
+    description="Simplifiez le partage et la circulation des données administratives grace à api.gouv, le site qui référence toutes les APIs du service public."
+  >
     <Baseline />
     <ApiTripletSection apiList={apiList} />
     <div className="content-container layout-center">
