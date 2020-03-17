@@ -12,7 +12,7 @@ const ApiTripletSection = ({ apiList }) => {
       .slice(0, 15)
   ).slice(0, 3);
   return (
-    <section id="apis">
+    <section id="api-triplet">
       <div className="content-container">
         <h3>Découvrez des APIs du service public&nbsp;:</h3>
         <div className="ui three stackable cards">
@@ -27,14 +27,15 @@ const ApiTripletSection = ({ apiList }) => {
         </ButtonLink>
       </div>
       <style jsx>{`
-        section#apis {
+        section#api-triplet {
           background: ${constants.colors.backgroundBlueGradient};
           padding: 50px 0;
         }
 
-        section#apis h3 {
+        section#api-triplet h3 {
           color: #fff;
           font-weight: 400;
+          padding-bottom: 10px;
         }
         section > div:last-child {
           padding: 40px 0 0;
