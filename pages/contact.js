@@ -4,7 +4,11 @@ import Page from '../layouts/page';
 import { HEADER_PAGE } from '../components';
 
 const Contact = () => (
-  <Page headerKey={HEADER_PAGE.CONTACT}>
+  <Page
+    headerKey={HEADER_PAGE.CONTACT}
+    title="Nous contacter"
+    description="Comment entrer en contact avec la très motivée équipe d’api.gouv.fr"
+  >
     <div className="text-container">
       <h1 className="layout-center">Contact</h1>
 
