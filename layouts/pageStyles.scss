@@ -9,7 +9,7 @@
   background-color: #fff;
 
   > main {
-    flex: 1;
+    flex-grow: 1;
     margin-top: #{$headerHeight + 'px'};
   }
 

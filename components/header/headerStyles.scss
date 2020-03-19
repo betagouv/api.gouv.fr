@@ -35,7 +35,7 @@ header {
 
     .nav__container {
       display: flex;
-      flex: 1;
+      flex-grow: 1;
       justify-content: space-between;
       flex-wrap: wrap;
       align-items: center;
