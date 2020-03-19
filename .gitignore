@@ -14,3 +14,5 @@ node_modules
 # intellij folder
 .idea
 
+public/url-list.txt
+public/sitemap.xml
