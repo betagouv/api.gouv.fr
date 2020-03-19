@@ -4,11 +4,7 @@ import Page from '../layouts/page';
 import { HEADER_PAGE } from '../components/header';
 
 const About = () => (
-  <Page
-    headerKey={HEADER_PAGE.HOME}
-    usePreFooter={false}
-    title="Mentions légales"
-  >
+  <Page headerKey={HEADER_PAGE.HOME} usePreFooter={false}>
     <div className="text-container">
       <h1 className="layout-center">Mentions légales</h1>
       <div>
