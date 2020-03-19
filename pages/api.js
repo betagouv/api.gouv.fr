@@ -131,11 +131,7 @@ const API = ({ api, services }) => {
   }, []);
 
   return (
-    <Page
-      headerKey={HEADER_PAGE.APIS}
-      title={title}
-      description={`${title} est une des APIs du service public. ${tagline}`}
-    >
+    <Page headerKey={HEADER_PAGE.APIS}>
       <PageHeader
         title={title}
         logo={logo || DEFAULT_LOGO}
