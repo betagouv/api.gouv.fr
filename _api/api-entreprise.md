@@ -40,7 +40,7 @@ themes:
 score:
   detail:
     access:
-      link: https://signup.entreprise.api.gouv.fr
+      link: https://signup.api.gouv.fr/api-entreprise
     rate_limiting:
       resume: 2000 appels / 10 minutes / IP
       description: |
