@@ -1,7 +1,7 @@
 ---
 title: API Entreprise
 tagline: Simplifier les démarches des entreprises en récupérant pour elles leurs documents administratifs
-external_site: https://entreprise.api.gouv.fr/
+external_site: https://entreprise.api.gouv.fr/demander_un_acces/
 contract: OUVERT sous contrat
 stat:
   lastXdays: 30
