@@ -1,7 +1,7 @@
 ---
 title: API Entreprise
 tagline: Simplifier les démarches des entreprises en récupérant pour elles leurs documents administratifs
-external_site: https://entreprise.api.gouv.fr/demander_un_acces/
+external_site: https://entreprise.api.gouv.fr/
 contract: OUVERT sous contrat
 stat:
   lastXdays: 30
@@ -40,7 +40,7 @@ themes:
 score:
   detail:
     access:
-      link: https://signup.api.gouv.fr/api-entreprise
+      link: https://entreprise.api.gouv.fr/demander_un_acces/
     rate_limiting:
       resume: 2000 appels / 10 minutes / IP
       description: |
