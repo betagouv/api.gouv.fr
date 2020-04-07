@@ -10,7 +10,11 @@ import { HEADER_PAGE, ServiceCard } from '../components';
 
 const Services = ({ services }) => {
   return (
-    <Page headerKey={HEADER_PAGE.SERVICES}>
+    <Page
+      headerKey={HEADER_PAGE.SERVICES}
+      title="Les exemples d'utilisation"
+      description="Vous vous demandez comment utiliser une APIs du service public ? Inspirez-vous d’un cas pratique."
+    >
       <section className="content-container page-baseline">
         <h2>
           Depuis 2016, nous accompagnons les acteurs publics à la réalisation de

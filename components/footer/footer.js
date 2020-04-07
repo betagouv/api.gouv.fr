@@ -68,15 +68,6 @@ const Footer = () => {
           </li>
           <li>
             <a
-              href="https://etatplateforme.modernisation.gouv.fr/"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Un site de l'État plateforme
-            </a>
-          </li>
-          <li>
-            <a
               href="https://github.com/betagouv/api.gouv.fr/blob/master/CONTRIBUTING.md"
               rel="noopener noreferrer"
               target="_blank"
