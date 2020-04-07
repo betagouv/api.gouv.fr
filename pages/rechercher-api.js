@@ -14,7 +14,7 @@ const RechercherApi = ({ allApis, allThemes, filter = '' }) => {
     <Page
       headerKey={fromSignup ? HEADER_PAGE.FROM_SIGNUP : HEADER_PAGE.APIS}
       preFooterBackground={constants.colors.white}
-      title="Recherchez une API du service public"
+      title="Rechercher une API du service public"
       description="Vous faites partie d'un ministère ou d'une collectivité et vous cherchez une API du service public ? Vous êtes au bon endroit."
     >
       <section className="content-container page-baseline">

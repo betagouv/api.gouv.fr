@@ -12,7 +12,7 @@ const Services = ({ services }) => {
   return (
     <Page
       headerKey={HEADER_PAGE.SERVICES}
-      title="Les exemples d'utilisation"
+      title="Les exemples de services en ligne réalisés avec des APIs"
       description="Vous vous demandez comment utiliser une APIs du service public ? Inspirez-vous d’un cas pratique."
     >
       <section className="content-container page-baseline">
