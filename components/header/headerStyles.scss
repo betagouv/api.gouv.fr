@@ -35,7 +35,7 @@ div#header {
 
     .nav__container {
       display: flex;
-      flex: 1;
+      flex-grow: 1;
       justify-content: space-between;
       flex-wrap: wrap;
       align-items: center;
@@ -109,7 +109,7 @@ div#header {
     display: none;
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1124px) {
     font-size: 18px;
 
     .external {

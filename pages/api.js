@@ -18,7 +18,7 @@ import {
   RateLimiting,
   Partners,
   TechnicalDocumentation,
-  Services,
+  ApiRelatedServices,
   Content,
   Thumbnails,
 } from '../components/api';
@@ -131,7 +131,11 @@ const API = ({ api, services }) => {
   }, []);
 
   return (
-    <Page headerKey={HEADER_PAGE.APIS}>
+    <Page
+      headerKey={HEADER_PAGE.APIS}
+      title={title}
+      description={`${title} est une des APIs du service public. ${tagline}`}
+    >
       <PageHeader
         title={title}
         logo={logo || DEFAULT_LOGO}
@@ -150,7 +154,7 @@ const API = ({ api, services }) => {
       <div id="description" className="content-container">
         <div className="ui equal width grid padded">
           <div className="four wide column computer only">
-            <div className=" sticky-column">
+            <div className="sticky-column">
               <Menu
                 detail={detail}
                 selectedItem={menuItem}
@@ -191,7 +195,7 @@ const API = ({ api, services }) => {
               doc_tech_external={doc_tech_external}
             />
 
-            <Services services={services} />
+            <ApiRelatedServices services={services} />
           </div>
         </div>
       </div>

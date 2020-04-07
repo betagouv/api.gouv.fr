@@ -6,7 +6,11 @@ import { HEADER_PAGE } from '../components/header';
 import './styles/viePriveeStyles.scss';
 
 const Privacy = () => (
-  <Page headerKey={HEADER_PAGE.HOME} usePreFooter={false}>
+  <Page
+    headerKey={HEADER_PAGE.HOME}
+    usePreFooter={false}
+    title="Politique de confidentialité"
+  >
     <div id="privacy-page" className="text-container">
       <h1 className="layout-center">Politique de confidentialité</h1>
       <h2>Cookies déposés</h2>

@@ -5,7 +5,10 @@ import { TypingCarousel } from '../../uiComponents';
 import './baselineStyles.scss';
 
 const Baseline = () => (
-  <section id="mission-statement" className="content-container layout-center">
+  <section
+    id="homepage-mission-statement"
+    className="content-container layout-center"
+  >
     <h1>
       <TypingCarousel
         txtBefore="Vous êtes"
