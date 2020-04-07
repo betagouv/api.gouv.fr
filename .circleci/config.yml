@@ -30,7 +30,7 @@ jobs:
           npm run lint
         # get server up and running in the background
       - run:
-          command: npm run build && npm run start
+          command: npm run start
           background: true
 
       # wait for the server to start responding. We expect Bad Request 400 once it starts listening.
@@ -38,7 +38,7 @@ jobs:
       - run:
           shell: /bin/sh
           command: |
-            wget --retry-connrefused --waitretry=5 --read-timeout=20 --timeout=15 -t 100 http://localhost:3000/sitemap.xml
+            wget --retry-connrefused --waitretry=5 --read-timeout=10 --timeout=15 -t 50 http://localhost:3000/sitemap.xml
             :
 
       - run: |
