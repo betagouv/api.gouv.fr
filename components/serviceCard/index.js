@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 
-import { getAPI } from '../utils/api';
-import LabelList from './label-list';
+import { getAPI } from '../../utils/api';
+import LabelList from './labelList';
+
+import './styles.scss';
 
 const ServiceCard = ({ slug, title, description, api, screenshot }) => {
   const [apiList, setApiList] = useState([]);
@@ -21,23 +23,22 @@ const ServiceCard = ({ slug, title, description, api, screenshot }) => {
   }, [api]);
 
   return (
-    <div className="ui card">
-      <div className="content">
-        <h3>
-          <Link href={url}>
-            <a className="header">{title}</a>
-          </Link>
-        </h3>
-        <div className="meta">{description}</div>
-      </div>
-      <div className="image">
-        <div>
-          <a href={url}>
-            <img src={`/images/service-screenshot/${screenshot}`} alt="" />
-          </a>
-        </div>
-      </div>
-      <div className="extra content">
+    <div className="service-card">
+      <Link href={url}>
+        <a className="dont-apply-link-style">
+          <div className="image">
+            <img
+              src={`/images/service-screenshot/${screenshot}`}
+              alt={`illustration du service ${title}`}
+            />
+          </div>
+          <div className="content">
+            <h3>{title}</h3>
+            <div className="meta">{description}</div>
+          </div>
+        </a>
+      </Link>
+      <div className="footer">
         <LabelList
           title={`API utilisée${apiList.length > 1 ? 's' : ''}`}
           labels={apiList.map(({ title, slug }) => {
@@ -46,19 +47,6 @@ const ServiceCard = ({ slug, title, description, api, screenshot }) => {
           isLink
         />
       </div>
-
-      <style jsx>{`
-        .image div {
-          overflow: hidden;
-          margin: 3% 5%;
-          height: 15em;
-        }
-
-        img {
-          max-width: 100%;
-          height: auto;
-        }
-      `}</style>
     </div>
   );
 };

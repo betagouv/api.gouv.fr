@@ -39,7 +39,7 @@ const Service = ({
             target="_blank"
             rel="noopener noreferrer"
           >
-            Accédez au service &nbsp;&nbsp;<i className="rocket icon"></i>
+            Accédez au service &nbsp;<i className="rocket icon"></i>
           </a>
         </div>
       </section>

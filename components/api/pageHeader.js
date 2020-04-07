@@ -28,7 +28,7 @@ const Title = ({ title, logo }) => (
       }
 
       .title h1 {
-        margin: 0 0.5rem;
+        margin: 30px 0.5rem 15px;
         font-style: normal;
         font-weight: bold;
         font-size: 32px;
@@ -50,7 +50,7 @@ const Tagline = ({ tagline }) => (
         font-size: 15px;
         line-height: 20px;
         text-align: center;
-        margin: 0;
+        margin: 0 auto 15px;
         color: #fff;
       }
 
@@ -65,7 +65,7 @@ const Tagline = ({ tagline }) => (
 const PageHeader = ({ title, logo, tagline }) => (
   <section id="mission-statement">
     <Link href="/rechercher-api">
-      <a className="back-button">← Toutes les API</a>
+      <a className="back-button dont-apply-link-style">← Toutes les API</a>
     </Link>
     <div className="content-container content">
       <Title title={title} logo={logo} />

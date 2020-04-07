@@ -5,7 +5,7 @@ import Monitoring from './monitoring';
 import RateLimiting from './rate-limiting';
 import Partners from './partners';
 import TechnicalDocumentation from './technical-documentation';
-import Services from './services';
+import ApiRelatedServices from './apiRelatedServices';
 import Content from './content';
 import Thumbnails from './thumbnails';
 import PageHeader from './pageHeader';
@@ -19,7 +19,7 @@ export {
   RateLimiting,
   Partners,
   TechnicalDocumentation,
-  Services,
+  ApiRelatedServices,
   Content,
   Thumbnails,
 };

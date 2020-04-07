@@ -17,7 +17,7 @@ const RechercherApi = ({ allApis, allThemes, filter = '' }) => {
       title="Recherchez une API du service public"
       description="Vous faites partie d'un ministère ou d'une collectivité et vous cherchez une API du service public ? Vous êtes au bon endroit."
     >
-      <section id="rechercher-api-baseline" className="content-container">
+      <section className="content-container page-baseline">
         <h2>
           Vous recherchez une API du service public ? Vous êtes au bon endroit !
         </h2>
@@ -28,13 +28,6 @@ const RechercherApi = ({ allApis, allThemes, filter = '' }) => {
         allThemes={allThemes}
         searchFromQueryString={filter}
       />
-
-      <style jsx>{`
-        #rechercher-api-baseline {
-          margin: 30px auto;
-          text-align: left;
-        }
-      `}</style>
     </Page>
   );
 };
