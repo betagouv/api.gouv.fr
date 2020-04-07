@@ -22,7 +22,11 @@ const Service = ({
   screenshot,
 }) => {
   return (
-    <Page headerKey={HEADER_PAGE.SERVICES}>
+    <Page
+      headerKey={HEADER_PAGE.SERVICES}
+      title={title}
+      description={`${title} est un exemple d’utilisation d'API du service public. ${description}`}
+    >
       <section id="title" className="ui vertical center aligned segment">
         <div className="ui text container">
           <h1 className="ui inverted header">{title}</h1>
