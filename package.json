@@ -10,7 +10,8 @@
     "build": "npm run sitemap && next build",
     "start": "NODE_ENV=production node server.js",
     "lint": "eslint '**/*.{js,jsx}' --max-warnings 20",
-    "check-html": "node ./scripts/check-a11y.js && blc http://localhost:3000 -ro"
+    "check-accessibility": "node ./scripts/check-a11y.js",
+    "check-broken-links": "npx blc http://localhost:3000 -ro"
   },
   "husky": {
     "hooks": {
@@ -22,7 +23,6 @@
     "@typescript-eslint/parser": "^2.20.0",
     "axe-cli": "^3.2.0",
     "babel-eslint": "^10.0.3",
-    "broken-link-checker": "^0.7.8",
     "eslint": "^6.8.0",
     "eslint-config-react-app": "^5.2.0",
     "eslint-plugin-flowtype": "^3.13.0",
