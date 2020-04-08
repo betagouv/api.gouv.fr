@@ -1,5 +1,5 @@
 require('dotenv').config();
-const { buildDataset } = require('./build-dataset');
+const { buildDataset } = require('../build-dataset');
 
 /**
  * Save the list of url in a text file. For testing purposes and for sitemap generation

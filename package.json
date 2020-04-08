@@ -5,12 +5,12 @@
   "repository": "git@github.com:betagouv/api.gouv.fr.git",
   "license": "AGPL-3.0-or-later",
   "scripts": {
-    "sitemap": "node save-url-list.js && sitemap < ./public/url-list.txt > ./public/sitemap.xml",
+    "sitemap": "node ./scripts/save-url-list.js && sitemap < ./public/url-list.txt > ./public/sitemap.xml",
     "dev": "npm run sitemap && node server.js",
     "build": "npm run sitemap && next build",
     "start": "NODE_ENV=production node server.js",
     "lint": "eslint '**/*.{js,jsx}' --max-warnings 20",
-    "check-html": "axe http://localhost:3000 && blc http://localhost:3000 -ro"
+    "check-html": "node ./scripts/check-a11y.js && blc http://localhost:3000 -ro"
   },
   "husky": {
     "hooks": {
