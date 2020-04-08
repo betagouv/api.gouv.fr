@@ -8,7 +8,7 @@
     "sitemap": "node save-url-list.js && sitemap < ./public/url-list.txt > ./public/sitemap.xml",
     "dev": "npm run sitemap && node server.js",
     "start": "NODE_ENV=production node server.js",
-    "build": "next build",
+    "build": "npm run sitemap && next build",
     "lint": "eslint '**/*.{js,jsx}' --max-warnings 20"
   },
   "husky": {
