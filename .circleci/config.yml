@@ -30,6 +30,10 @@ jobs:
           npm run lint
         # get server up and running in the background
       - run:
+          command: echo $SITE_URL
+          environment: SITE_URL:'http://localhost:3000'
+
+      - run:
           command: npm run build && npm run start
           background: true
 
