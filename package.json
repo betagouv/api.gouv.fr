@@ -43,7 +43,7 @@
     "isomorphic-unfetch": "^3.0.0",
     "lodash": "^4.17.15",
     "morgan": "^1.9.1",
-    "next": "^8",
+    "next": "^9",
     "next-runtime-dotenv": "^1.2.0",
     "next-seo": "^4.4.0",
     "nextjs-fonts": "^0.22.0",
