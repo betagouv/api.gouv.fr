@@ -31,7 +31,7 @@ score:
     contact:
       link: https://scanr.enseignementsup-recherche.gouv.fr/contact #moyen de contact, soit un mail, soit un lien vers formulaire de contact
     doc_tech:
-      link: https://scanr-api.enseignementsup-recherche.gouv.fr/api/swagger-ui.html # URL de la documentation au format OpenAPI <https://github.com/OAI/OpenAPI-Specification>
+      link: https://scanr-api.enseignementsup-recherche.gouv.fr/api/v2/api-docs # URL de la documentation au format OpenAPI <https://github.com/OAI/OpenAPI-Specification>
     monitoring:
       link: https://scanr-api.enseignementsup-recherche.gouv.fr/api/services/counts # URL d'une page qui affiche le statut
 ---
