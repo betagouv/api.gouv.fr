@@ -32,7 +32,7 @@ async function main() {
     '/vie-privee',
     ...apis.map(api => `/api/${api.slug}`),
     ...services.map(service => `/service/${service.slug}`),
-  ].map(url => `${process.env.SITE_URL}${url}`);
+  ].map(url => `${process.env.SITE_URL || 'https://api.gouv.fr'}${url}`);
   writeUrlListOnDisk(urlList);
 }
 

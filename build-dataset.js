@@ -30,6 +30,9 @@ function expandAPIsWithServices(apis, services) {
     if (service.api && service.api.length > 0) {
       service.api.forEach(apiTitle => {
         const api = apis.find(api => api.title === apiTitle);
+        if (!api) {
+          throw new Error(`cannot find ${apiTitle}`);
+        }
         if (!api.services) {
           api.services = [];
         }
