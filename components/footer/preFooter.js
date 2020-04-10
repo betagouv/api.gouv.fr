@@ -3,6 +3,7 @@ import React from 'react';
 import constants from '../../constants';
 import { ButtonLink } from '../../uiComponents/button';
 import './preFooterStyles.scss';
+import { logDemanderApi } from '../../service/analytics';
 
 const PreFooter = ({ background }) => (
   <section
@@ -14,7 +15,10 @@ const PreFooter = ({ background }) => (
     <div className="content-container links">
       <div>
         <h3>Vous ne trouvez pas l’API dont vous avez besoin ?</h3>
-        <ButtonLink href={constants.links.mailto.REQUEST_API}>
+        <ButtonLink
+          href={constants.links.mailto.REQUEST_API}
+          onClick={logDemanderApi}
+        >
           Demander une API
         </ButtonLink>
       </div>

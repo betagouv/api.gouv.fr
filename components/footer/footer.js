@@ -49,6 +49,9 @@ const Footer = () => {
             <h2>api.gouv.fr</h2>
           </li>
           <li>
+            <a href="/contact">Nous contacter</a>
+          </li>
+          <li>
             <a
               href="https://beta.gouv.fr/"
               rel="noopener noreferrer"
