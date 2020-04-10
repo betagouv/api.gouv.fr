@@ -5,9 +5,12 @@ import { getAllAPIs } from '../utils/api';
 
 import Page from '../layouts/page';
 
-import UseCaseSection from '../components/home/useCaseSection';
-import ApiTripletSection from '../components/home/apiTripletSection';
-import Baseline from '../components/home/baseline';
+import {
+  UseCaseSection,
+  ApiTripletSection,
+  ExplanationSection,
+  Baseline,
+} from '../components/home';
 
 const Home = ({ apiList }) => (
   <Page
@@ -15,6 +18,7 @@ const Home = ({ apiList }) => (
     description="Simplifiez le partage et la circulation des données administratives grace à api.gouv, le site qui référence toutes les APIs du service public."
   >
     <Baseline />
+    <ExplanationSection />
     <ApiTripletSection apiList={apiList} />
     <div className="content-container layout-center">
       <h2>Ils ont créé de nouveaux services innovants avec des APIs&nbsp;:</h2>

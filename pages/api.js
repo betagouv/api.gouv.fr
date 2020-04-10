@@ -260,10 +260,17 @@ API.propTypes = {
   }).isRequired,
 };
 
-API.getInitialProps = async ({ query }) => {
+API.getInitialProps = async ({ query, res }) => {
   const api = await getAPI(query.apiId);
-  let services = null;
 
+  // not the cleanest but I cannot rewrite the whole APP
+  if (api.status === 404 && res) {
+    res.statusCode = 404;
+    res.end('Cette page est introuvable');
+    return;
+  }
+
+  let services = null;
   if (api.services && api.services.length > 0) {
     services = await Promise.all(
       api.services.map(service => getService(service))
