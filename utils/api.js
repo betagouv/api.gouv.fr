@@ -5,6 +5,9 @@ const { publicRuntimeConfig } = getConfig();
 const SITE_URL = publicRuntimeConfig.SITE_URL || 'https://api.gouv.fr';
 export async function fetchJson(url) {
   const response = await fetch(url);
+  if (response.status === 404) {
+    return { status: 404 };
+  }
   return response.json();
 }
 

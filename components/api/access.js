@@ -5,6 +5,7 @@ import Section from './section';
 import { ButtonLink } from '../../uiComponents/button';
 
 import constants from '../../constants';
+import { logDemanderAcces } from '../../service/analytics';
 
 const Access = ({
   access_open,
@@ -41,7 +42,7 @@ const Access = ({
           ) : (
             <p>{contract}</p>
           )}
-          <ButtonLink href={access_link} large>
+          <ButtonLink href={access_link} onClick={logDemanderAcces} large>
             <i className="icon key"></i>Demandez l'accès
           </ButtonLink>
         </div>

@@ -10,10 +10,12 @@ const LinkAsAButton = ({
   disabled,
   children,
   large,
+  onClick = () => {},
 }) => (
   <a
     rel={rel}
     target={target}
+    onClick={onClick}
     className={`dont-apply-link-style button-link ${alt ? 'alt' : 'default'} ${
       disabled ? 'disabled' : ''
     }
@@ -60,6 +62,7 @@ const ButtonLink = ({
         disabled={disabled}
         children={children}
         large={large}
+        onClick={onClick}
       />
     );
   }
