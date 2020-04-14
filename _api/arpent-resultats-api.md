@@ -28,6 +28,8 @@ keywords:
   - Diplôme
 contact_link: arpent-resultat.sg@agriculture.gouv.fr
 doc_tech_link: https://ensagri.agriculture.gouv.fr/arpent-resultats-api/v2/api-docs?group=arpent-resultats
+themes:
+  - Education
 visits_2019: 2050
 last_update: 27/07/2017
 ---

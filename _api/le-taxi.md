@@ -23,6 +23,8 @@ keywords:
   - Taxi
 contact_link: https://le.taxi/join.html
 doc_tech_link: https://api.taxi/swagger.json
+themes:
+  - Transport
 visits_2019: 1477
 last_update: 10/12/2019
 ---

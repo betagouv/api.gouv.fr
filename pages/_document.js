@@ -1,10 +1,5 @@
-import React from "react";
-import Document, { Head, Main, NextScript } from "next/document";
-import getConfig from "next/config";
-
-const {
-  publicRuntimeConfig: { PIWIK_URL, PIWIK_SITE_ID }
-} = getConfig();
+import React from 'react';
+import Document, { Head, Main, NextScript } from 'next/document';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -177,7 +172,7 @@ class MyDocument extends Document {
             href="//cdn.jsdelivr.net/gh/swagger-api/swagger-ui@v3.4.0/dist/swagger-ui.css"
           ></link>
 
-          <style>{`
+          <style jsx>{`
             html {
               height: 100%;
             }
@@ -201,8 +196,8 @@ class MyDocument extends Document {
         <body>
           <Main />
           <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Array.prototype.includes,modernizr:es6string,modernizr:es6array,Promise,fetch" />
-          {PIWIK_URL && PIWIK_SITE_ID && (
-            <script defer async src={`${PIWIK_URL}/piwik.js`} />
+          {process.env.PIWIK_URL && process.env.PIWIK_SITE_ID && (
+            <script defer async src={`${process.env.PIWIK_URL}/piwik.js`} />
           )}
           <NextScript />
         </body>

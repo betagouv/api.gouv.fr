@@ -6,9 +6,9 @@ is_open: false
 access_condition: OUVERT sous contrat
 access_link: https://signup.api.gouv.fr/api-particulier
 access_description: |
-        <p>API Particulier est utilisable sans limitation d'usage par toute collectivité et ministère justifiant de la nécessité de recueillir une information personnelle pour une démarche administrative (justificatif de domicile, revenu fiscal de référence, etc).</p>
+  <p>API Particulier est utilisable sans limitation d'usage par toute collectivité et ministère justifiant de la nécessité de recueillir une information personnelle pour une démarche administrative (justificatif de domicile, revenu fiscal de référence, etc).</p>
 
-        <p>Les demandes d'accès pour API Particulier utilisent signup.api.gouv.fr, un outil mis à disposition pour toutes les API catalogués sur api.gouv.fr.</p>
+  <p>Les demandes d'accès pour API Particulier utilisent signup.api.gouv.fr, un outil mis à disposition pour toutes les API catalogués sur api.gouv.fr.</p>
 stat:
   lastXdays: 30
   url: https://monitoring.particulier.api.gouv.fr/api/stats/
@@ -33,9 +33,11 @@ rate_limiting_description: |
   <p>L'API est disponible à hauteur de 20 appels par secondes et par jetons d'accès.</p>
 monitoring_link: https://status.particulier.api.gouv.fr
 monitoring_description: |
-    <p>La DINUM s’engage à ce que le Service soit accessible à 95% et la DINUM s’engage à améliorer progressivement ce rendement.</p>
+  <p>La DINUM s’engage à ce que le Service soit accessible à 95% et la DINUM s’engage à améliorer progressivement ce rendement.</p>
 contact_link: contact@particulier.api.gouv.fr
 doc_tech_link: https://particulier.api.gouv.fr/documentation-open-api.yaml
+themes:
+  - Particulier
 visits_2019: 8642
 uptime: 99.992 # https://uptimerobot.com/dashboard#777746216 * https://uptimerobot.com/dashboard#778826562 / 2
 last_update: 10/12/2019

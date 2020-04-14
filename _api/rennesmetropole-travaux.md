@@ -14,6 +14,9 @@ keywords:
   - Circulation
   - Déplacement
 doc_tech_external: http://travaux.data.rennesmetropole.fr/
+themes:
+  - Transport
+  - Géographie
 visits_2019: 315
 last_update: 29/11/2016
 ---

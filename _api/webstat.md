@@ -28,6 +28,8 @@ rate_limiting_description: |
   <p>L'API est disponible à hauteur de 5 appels par secondes et par jetons d'accès.</p>
 contact_link: https://developer.webstat.banque-france.fr/contact
 doc_tech_link: https://developer.webstat.banque-france.fr/ibm_apim/swaggerjson/d2Vic3RhdC1iYW5xdWUtZGUtZnJhbmNlLWZyX3YxOjEuMC4wXzQ3MDE%2C
+themes:
+  - Administration & législation
 visits_2019: 8
 last_update: 20/12/2019
 ---

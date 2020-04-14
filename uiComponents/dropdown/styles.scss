@@ -1,0 +1,24 @@
+@import '../../constants/colors.scss';
+
+.dropdown-wrapper {
+  label {
+    line-height: 18px;
+    font-weight: 600;
+    color: $darkestGrey;
+    font-size: 0.9rem;
+  }
+  select {
+    font-size: 1.1rem;
+    height: 38px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    padding: 0;
+  }
+
+  select:focus {
+    outline: none;
+    border-color: $blue;
+  }
+}

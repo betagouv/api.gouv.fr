@@ -1,12 +1,11 @@
-import React from "react";
-import App from "next/app";
-import getConfig from "next/config";
+import React from 'react';
+import App from 'next/app';
 
-import Chat from "../components/chat";
+import '../layouts/fonts.scss';
+import '../layouts/pageStyles.scss';
+import '../layouts/imports.scss';
 
-const {
-  publicRuntimeConfig: { PIWIK_URL, PIWIK_SITE_ID }
-} = getConfig();
+import Chat from '../components/chat';
 
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
@@ -22,8 +21,8 @@ class MyApp extends App {
   logPageView() {
     if (window.Piwik) {
       const tracker = window.Piwik.getTracker(
-        `${PIWIK_URL}/piwik.php`,
-        PIWIK_SITE_ID
+        `${process.env.PIWIK_URL}/piwik.php`,
+        process.env.PIWIK_SITE_ID
       );
 
       if (tracker) {

@@ -1,12 +1,14 @@
-import Thumbnail from "./thumbnail"
+import React from 'react';
 
-import { Lock, Unlock, Activity, Calendar, User, Sliders } from "react-feather";
+import Thumbnail from './thumbnail';
 
-import { getUptimeState } from "../../../lib/uptime";
+import { Lock, Unlock, Activity, Calendar, User, Sliders } from 'react-feather';
+
+import { getUptimeState, roundUptime } from '../../../utils/uptime';
 
 const Thumbnails = ({ is_open, uptime, lastUpdate, owner, rate_limiting }) => {
   return (
-    <div className="ui container thumbnails">
+    <div className="content-container thumbnails">
       {is_open ? (
         <Thumbnail title="Accès" icon={<Unlock />}>
           API ouvert à tous
@@ -20,7 +22,7 @@ const Thumbnails = ({ is_open, uptime, lastUpdate, owner, rate_limiting }) => {
         <Thumbnail title="Disponibilité" icon={<Activity />}>
           <div className="badge uptime">
             <div className="uptime-stat" />
-            {uptime}% actif / dernier mois
+            {roundUptime(2)(uptime)}% actif / dernier mois
           </div>
         </Thumbnail>
       )}
@@ -33,8 +35,10 @@ const Thumbnails = ({ is_open, uptime, lastUpdate, owner, rate_limiting }) => {
       {rate_limiting && (
         <Thumbnail title="Limite d’usage" icon={<Sliders />}>
           <div>
-            {rate_limiting.split("/").map(rate => (
-              <div className="rate">{rate}</div>
+            {rate_limiting.split('/').map(rate => (
+              <div className="rate" key={rate}>
+                {rate}
+              </div>
             ))}
           </div>
         </Thumbnail>
@@ -46,7 +50,7 @@ const Thumbnails = ({ is_open, uptime, lastUpdate, owner, rate_limiting }) => {
           grid-template-columns: repeat(auto-fit, 200px);
           justify-content: space-between;
           grid-gap: 1em;
-          margin: 1em;
+          margin: 1em auto;
         }
 
         .badge {
@@ -63,7 +67,7 @@ const Thumbnails = ({ is_open, uptime, lastUpdate, owner, rate_limiting }) => {
         }
 
         .rate:not(:first-child):before {
-          content: "/ ";
+          content: '/ ';
         }
 
         @media (max-width: 445px) {
@@ -76,4 +80,4 @@ const Thumbnails = ({ is_open, uptime, lastUpdate, owner, rate_limiting }) => {
   );
 };
 
-export default Thumbnails
+export default Thumbnails;

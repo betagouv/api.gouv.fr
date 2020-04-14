@@ -14,6 +14,8 @@ keywords:
   - Nomenclatures
   - Métadonnées
   - Statistiques
+themes:
+  - Administration & législation
 logo: Logo_Insee.svg
 rate_limiting_resume: 30 appels / minute
 rate_limiting_description: |

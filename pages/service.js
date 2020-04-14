@@ -1,16 +1,17 @@
-import React from "react";
-import PropTypes from "prop-types";
-import ReactMarkdown from "react-markdown";
+import React from 'react';
+import PropTypes from 'prop-types';
+import ReactMarkdown from 'react-markdown';
 
-import withErrors from "../components/hoc/with-errors";
+import withErrors from '../components/hoc/with-errors';
 
-import { getService, getAPI } from "../utils/api";
+import { getService, getAPI } from '../model/api';
 
-import colors from "../styles/colors";
+import constants from '../constants';
 
-import Page from "../layouts/page";
+import Page from '../layouts/page';
 
-import APICard from "../components/api-card";
+import APICard from '../components/searchApis/apiCard';
+import { HEADER_PAGE } from '../components';
 
 const Service = ({
   title,
@@ -18,10 +19,14 @@ const Service = ({
   link,
   apiList,
   content,
-  screenshot
+  screenshot,
 }) => {
   return (
-    <Page>
+    <Page
+      headerKey={HEADER_PAGE.SERVICES}
+      title={title}
+      description={`${title} est un exemple d’utilisation d'API du service public. ${description}`}
+    >
       <section id="title" className="ui vertical center aligned segment">
         <div className="ui text container">
           <h1 className="ui inverted header">{title}</h1>
@@ -31,20 +36,20 @@ const Service = ({
           <a
             className="large ui secondary button"
             href={link}
-            rel="noopener"
             target="_blank"
+            rel="noopener noreferrer"
           >
-            Accédez au service &nbsp;&nbsp;<i className="rocket icon"></i>
+            Accédez au service &nbsp;<i className="rocket icon"></i>
           </a>
         </div>
       </section>
 
-      <div className="ui container content">
+      <div className="content-container content">
         <div className="ui stackable grid">
           <div className="row">
             <div className="five wide column">
               <h3 className="ui divider horizontal">
-                {apiList.length > 1 ? "Les API utilisées" : "API utilisée"}
+                {apiList.length > 1 ? 'Les API utilisées' : 'API utilisée'}
               </h3>
               <div className="ui segments">
                 {apiList.map(api => (
@@ -78,7 +83,7 @@ const Service = ({
           padding-top: 5%;
           padding-bottom: 5%;
           margin-bottom: 2%;
-          background: ${colors.backgroundBlue};
+          background: ${constants.colors.backgroundBlueGradient};
         }
 
         h1 {
@@ -120,10 +125,10 @@ Service.propTypes = {
   link: PropTypes.string.isRequired,
   apiList: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
-  screenshot: PropTypes.string.isRequired
+  screenshot: PropTypes.string.isRequired,
 };
 
-Service.getInitialProps = async req => {
+Service.getInitialProps = async ({ req }) => {
   const { serviceId } = req.query;
   const service = await getService(serviceId);
 
@@ -131,7 +136,7 @@ Service.getInitialProps = async req => {
 
   return {
     ...service,
-    apiList: api
+    apiList: api,
   };
 };
 

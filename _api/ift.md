@@ -26,6 +26,8 @@ keywords:
   - Ferme Dephy
 contact_link: calculette-ift.dgpaat@agriculture.gouv.fr
 doc_tech_link: https://alim.agriculture.gouv.fr/ift-api/v2/api-docs?group=ift
+themes:
+  - Environnement
 visits_2019: 324
 last_update: 03/05/2018
 ---

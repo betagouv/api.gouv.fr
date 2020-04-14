@@ -1,0 +1,66 @@
+@import '../../constants/colors.scss';
+
+section#use-cases {
+  > .use-case {
+    padding: 100px 0 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: $darkestGrey;
+    justify-content: space-between;
+
+    > .content-wrapper {
+      width: 60%;
+      max-width: 600px;
+      font-size: 17px;
+      line-height: 28px;
+
+      > div:first-of-type {
+        margin-bottom: 20px;
+      }
+
+      > div:nth-of-type(2) {
+        margin-bottom: 20px;
+        font-size: 15px;
+      }
+
+      > a {
+        font-size: 16px;
+        color: $blue;
+        cursor: pointer;
+      }
+    }
+
+    > .img-wrapper {
+      width: auto;
+      flex-grow: 1;
+      margin: 0 0 0 70px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    @media (min-width: 768px) {
+      &:nth-child(even) {
+        flex-direction: row-reverse;
+
+        > .img-wrapper {
+          margin: 0 70px 0 0;
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      padding: 50px 0 10px;
+
+      .content-wrapper {
+        width: 100%;
+      }
+      .img-wrapper {
+        margin: 15px 0 0;
+      }
+    }
+  }
+}

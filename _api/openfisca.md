@@ -21,6 +21,8 @@ keywords:
   - Prestations sociales
   - Droit
   - Simulateur
+themes:
+  - Administration & législation
 logo: logo-openfisca.svg
 contact_link: contact@openfisca.fr
 doc_tech_external: https://openfisca.org/doc/openfisca-web-api/

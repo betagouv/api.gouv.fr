@@ -1,59 +1,108 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Link from "next/link";
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import constants from '../../constants';
 
 const MENU_OPTIONS = [
   {
-    id: "access",
-    label: "Accès"
+    id: 'api-description',
+    label: 'Description',
+    hasNoDetails: true,
   },
   {
-    id: "contact",
-    label: "Support"
+    id: 'access',
+    label: 'Accès',
   },
   {
-    id: "monitoring",
-    label: "Supervision"
+    id: 'contact',
+    label: 'Support',
   },
   {
-    id: "partenaires",
-    label: "Partenaires"
+    id: 'monitoring',
+    label: 'Supervision',
   },
   {
-    id: "doc_tech",
-    label: "Documentation technique"
+    id: 'rate_limiting',
+    label: "Limite d'usage",
   },
   {
-    id: "rate_limiting",
-    label: "Limite d'usage"
-  }
+    id: 'partenaires',
+    label: 'Partenaires',
+  },
+  {
+    id: 'doc_tech',
+    label: 'Documentation technique',
+  },
+  {
+    id: 'services',
+    label: 'Services',
+    hasNoDetails: true,
+  },
 ];
 
-const Menu = () => {
+const Menu = ({ detail, selectedItem, select }) => {
+  const onKeyDown = (keyEvent, id) => {
+    // toggle on Space or Enter
+    if (keyEvent.keyCode === 13) {
+      select(id);
+    }
+  };
   return (
-    <div className="ui stackable container menu">
-      <Link href="#api-description">
-        <a className="header item">Description</a>
-      </Link>
+    <div className="menu">
       {MENU_OPTIONS.map(menu => (
         <div key={menu.id}>
-          <Link href={`#${menu.id}`}>
-            <a className="item">
-              {menu.label}
-            </a>
-          </Link>
+          <div
+            className={`item ${selectedItem === menu.id && 'selected'}`}
+            role="button"
+            tabIndex={0}
+            onKeyDown={e => onKeyDown(e, menu.id)}
+            onClick={() => select(menu.id)}
+          >
+            {menu.label}
+            {!menu.hasNoDetails &&
+              !detail[menu.id] &&
+              menu.id !== 'partenaires' && (
+                <div className="ui grey mini label">Non renseigné</div>
+              )}
+          </div>
         </div>
       ))}
-
-      <Link href="#services">
-        <a className="item">Services</a>
-      </Link>
+      <style jsx>{`
+        .menu {
+          border-radius: 4px;
+          max-width: 245px;
+          display: flex;
+          flex-direction: column;
+          background-color: #fff;
+          border: 2px solid ${constants.colors.lightGrey};
+        }
+        .item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 1em;
+          font-weight: bold;
+          font-size: 14px;
+          line-height: 18px;
+          color: black;
+          transition: background 100ms ease-in-out, border 100ms ease-in-out;
+          cursor: pointer;
+        }
+        .item:hover,
+        .item.selected:hover {
+          background-color: ${constants.colors.lightBlue};
+        }
+        .item.selected {
+          border-left: 5px solid ${constants.colors.blue};
+          background-color: ${constants.colors.lightestBlue};
+        }
+      `}</style>
     </div>
   );
 };
 
 Menu.propTypes = {
-  detail: PropTypes.object.isRequired
+  detail: PropTypes.object.isRequired,
 };
 
 export default Menu;

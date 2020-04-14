@@ -22,6 +22,8 @@ keywords:
   - Identification
   - SSO
   - Signup
+themes: 
+  - Particulier
 logo: logo-fc.png
 contact_link: support.partenaires@franceconnect.gouv.fr
 doc_tech_external: https://partenaires.franceconnect.gouv.fr/fcp/fournisseur-service

@@ -18,6 +18,8 @@ keywords:
   - Transport
 contact_link: mobilites@brest-metropole.fr
 doc_tech_external: https://geo.pays-de-brest.fr/donnees/Documents/Public/DocWebServicesTransport.pdf
+themes:
+  - Transport
 visits_2019: 450
 last_update: 03/10/2019
 ---

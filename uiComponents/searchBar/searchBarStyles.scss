@@ -1,0 +1,51 @@
+@import '../../constants/colors.scss';
+
+#search-wrapper {
+  max-width: 450px;
+  width: 100%;
+
+  > label {
+    line-height: 18px;
+    font-weight: 600;
+    color: $darkestGrey;
+    font-size: 0.9rem;
+  }
+  > .search-bar {
+    font-size: 1.1rem;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    padding: 0;
+    transition: border-color 300ms ease-in-out;
+
+    &.focus {
+      border-color: $blue;
+    }
+
+    > input[type='text'] {
+      line-height: 38px;
+      padding: 0 10px;
+      margin: 0;
+      border: none;
+      background: none;
+      flex-grow: 1;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    > button {
+      border: none;
+      background: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        background-color: #eee;
+      }
+    }
+  }
+}

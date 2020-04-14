@@ -1,6 +1,6 @@
 ---
 title: API RVA Rennes Métropole
-tagline: "Voies et adresses de Rennes Métropole"
+tagline: 'Voies et adresses de Rennes Métropole'
 external_site: http://rva.data.rennes-metropole.fr/
 is_open: true
 access_link: http://rva.data.rennes-metropole.fr/inscription.php
@@ -15,6 +15,9 @@ keywords:
   - Adresse
 contact_link: sigsupport@rennesmetropole.fr
 doc_tech_external: http://rva.data.rennes-metropole.fr/documentation.php
+themes:
+  - Transport
+  - Géographie
 visits_2019: 160
 last_update: 29/11/2016
 ---

@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
 
-import Section from "./section";
+import Section from './section';
+import { ButtonLink } from '../../uiComponents/button';
 
 const Support = ({ link }) => {
   return (
@@ -9,15 +9,17 @@ const Support = ({ link }) => {
       <>
         {link ? (
           <>
-            {link.includes("@") ? (
+            {link.includes('@') ? (
               <>
                 <p>Vous pouvez contacter le support de cette API par mail. .</p>
-                <a
+                <ButtonLink
                   className="large ui button"
                   href={`mailto:${link}?subject=Contact%20via%20api.gouv.fr`}
+                  alt
+                  large
                 >
                   <i className="icon mail"></i> Envoyer un mail à {link}
-                </a>
+                </ButtonLink>
               </>
             ) : (
               <>
@@ -25,15 +27,16 @@ const Support = ({ link }) => {
                   Vous pouvez contacter le support de cette API en utilisant un
                   formulaire.
                 </p>
-                <a
-                  className="large ui button"
+                <ButtonLink
                   href={link}
                   target="_blank"
                   rel="noopener"
+                  alt
+                  large
                 >
                   <i className="icon linkify"></i> Accéder au formulaire de
                   contact
-                </a>
+                </ButtonLink>
               </>
             )}
           </>
@@ -43,14 +46,6 @@ const Support = ({ link }) => {
       </>
     </Section>
   );
-};
-
-Support.defaultProps = {
-  link: null
-};
-
-Support.propTypes = {
-  link: PropTypes.string
 };
 
 export default Support;

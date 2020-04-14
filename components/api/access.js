@@ -1,51 +1,65 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import Section from "./section";
+import Section from './section';
+import { ButtonLink } from '../../uiComponents/button';
 
-const Access = ({
-  is_open,
-  condition,
-  description,
-  link,
-  clients
-}) => {
+import constants from '../../constants';
+import { logDemanderAcces } from '../../service/analytics';
+
+const Access = ({ is_open, link, description, condition, clients }) => {
   return (
     <Section id="access" title="Accès">
       {is_open ? (
-        <p>L'API est ouverte sans conditions.</p>
+        <p>L'API est ouverte à tous.</p>
+      ) : link ? (
+        <div className="get-access">
+          {description && (
+            <div dangerouslySetInnerHTML={{ __html: description }} />
+          )}
+
+          {condition && condition === 'OUVERT sous contrat' ? (
+            <div>
+              <p>
+                L’API nécessite une habilitation, son accès est restreint aux
+                entités suivantes :
+              </p>
+              <ul>
+                {clients.map(client => (
+                  <li
+                    key={client}
+                    dangerouslySetInnerHTML={{ __html: client }}
+                  />
+                ))}
+              </ul>
+            </div>
+          ) : (
+            <p>{condition}</p>
+          )}
+          <ButtonLink href={link} onClick={logDemanderAcces} large>
+            <i className="icon key"></i>Demandez l'accès
+          </ButtonLink>
+        </div>
       ) : (
-        <>
-        {description || condition || link ? (
-          <>
-            {description && (
-              <div dangerouslySetInnerHTML={{ __html: description }} />
-            )}
-
-            {condition && condition === "OUVERT sous contrat" ? (
-              <>
-                <p>{condition} pour :</p>
-                <ul>
-                  {clients.map(client => (
-                    <li key={client}>{client}</li>
-                  ))}
-                </ul>
-              </>
-            ) : (
-              <p>{condition}</p>
-            )}
-
-            {link && (
-              <a className="large ui button" href={link}>
-                <i className="icon key"></i>Demandez l'accès
-              </a>
-            )}
-          </>
-        ) : (
-          <p>Accès à l'API non documenté</p>
-        )}
-        </>
+        <p>Accès à l'API non documenté</p>
       )}
+      <style jsx>{`
+        .get-access {
+          border-left: 5px solid ${constants.colors.blue};
+          background-color: ${constants.colors.lightBlue};
+          color: ${constants.colors.blue};
+          padding: 1.5rem 2rem;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+        }
+
+        .get-access > div,
+        .get-access > p {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+      `}</style>
     </Section>
   );
 };
@@ -55,7 +69,7 @@ Access.defaultProps = {
   link: null,
   description: null,
   condition: null,
-  clients: []
+  clients: [],
 };
 
 Access.propTypes = {
@@ -63,7 +77,7 @@ Access.propTypes = {
   link: PropTypes.string,
   description: PropTypes.string,
   condition: PropTypes.string,
-  clients: PropTypes.array
+  clients: PropTypes.array,
 };
 
 export default Access;

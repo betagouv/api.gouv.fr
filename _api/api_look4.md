@@ -23,6 +23,8 @@ keywords:
   - lieux-dits inhabités
   - points routiers
 contact_link: contact.geoservices@ign.fr
+themes:
+  - Géographie
 visits_2019: 1266
 last_update: 15/05/2018
 ---

@@ -4,7 +4,7 @@ tagline: Simplifier les démarches des entreprises en récupérant pour elles le
 external_site: https://entreprise.api.gouv.fr/
 is_open: false
 access_condition: OUVERT sous contrat
-access_link: https://signup.entreprise.api.gouv.fr
+access_link: https://entreprise.api.gouv.fr/demander_un_acces/
 stat:
   lastXdays: 30
   url: https://dashboard.entreprise.api.gouv.fr/api/watchdoge/stats/last_30_days_usage
@@ -43,6 +43,8 @@ rate_limiting_description: |
 monitoring_link: https://dashboard.entreprise.api.gouv.fr
 contact_link: support@entreprise.api.gouv.fr
 doc_tech_external: https://doc.entreprise.api.gouv.fr
+themes:
+  - Entreprise
 visits_2019: 12610
 last_update: 10/12/2019
 ---

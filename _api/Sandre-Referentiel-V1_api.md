@@ -28,6 +28,8 @@ monitoring_description: |
   <p>L'OIEau s’engage à ce que ce service soit accessible à 95% et l'OIEau s’engage à améliorer progressivement ce rendement.</p>
 contact_link: sandre@sandre.eaufrance.fr
 doc_tech_external: https://api.sandre.eaufrance.fr/referentiels/v1/
+themes:
+  - Environnement
 visits_2019: 122
 last_update: 30/09/2019
 ---

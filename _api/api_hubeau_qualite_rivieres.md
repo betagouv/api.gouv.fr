@@ -24,6 +24,8 @@ keywords:
   - Rivière
 contact_link: newshubeau@brgm.fr
 doc_tech_link: https://hubeau.eaufrance.fr/api/v1/qualite_rivieres/api-docs
+themes:
+  - Environnement
 visits_2019: 509
 last_update: 18/06/2018
 ---

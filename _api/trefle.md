@@ -10,6 +10,9 @@ keywords: # utilisé dans la recherche
   - formation
 contact_link: https://www.emploi-store-dev.fr/portail-developpeur/detailapicatalogue/simulateur-de-financement-v1?id=5ca702c8243a5f418929f589
 doc_tech_external: https://www.emploi-store-dev.fr/portail-developpeur-cms/home/catalogue-des-api/documentation-des-api/api/api-simulateur-de-financement-v1.html
+logo: logo_pole_emploi.jpg
+themes:
+  - Emploi
 visits_2019: 80
 last_update: 19/11/2019
 ---
