@@ -35,7 +35,11 @@ const About = () => (
         </p>
         <p>
           Par exemple, quand les entreprises françaises font leur
-          <a href="http://www.dsn-info.fr/api-dsn.htm">
+          <a
+            target="blank"
+            rel="noopener noreferrer"
+            href="http://www.dsn-info.fr/api-dsn.htm"
+          >
             Déclaration Sociale Nominative
           </a>
           {', '}
@@ -45,7 +49,7 @@ const About = () => (
         <p>
           Afin d'aider toutes les organisations qui veulent{' '}
           <b>construire un service informatique</b>, api.gouv.fr{' '}
-          <a href="/rechercher-une-api">
+          <a href="/rechercher-api">
             référence les API de toutes les administrations
           </a>{' '}
           qui rendent leur données disponibles.
@@ -68,7 +72,7 @@ const About = () => (
         </p>
         <p>
           Toutes nos APIs{' '}
-          <a href="/rechercher-une-api"> sont visibles sur cette page,</a>. Vous
+          <a href="/rechercher-api"> sont visibles sur cette page,</a>. Vous
           pouvez les filtrer par thématique, ou bien utiliser la recherche pour
           trouver l'API qui vous convient.
         </p>
@@ -85,8 +89,15 @@ const About = () => (
         </h2>
         <p>
           Une grande partie des données publique sont libres d'accès. C'est ce
-          que l'on appelle <a href="https://data.gouv.fr">l’Open data.</a> Tout
-          le monde peut y accèder.
+          que l'on appelle{' '}
+          <a
+            target="blank"
+            rel="noopener noreferrer"
+            href="https://data.gouv.fr"
+          >
+            l’Open data.
+          </a>{' '}
+          Tout le monde peut y accèder.
         </p>
         <p>
           D'autres données, comme par exemple les données fiscales, sont
