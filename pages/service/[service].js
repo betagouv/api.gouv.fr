@@ -2,16 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
 
-import withErrors from '../components/hoc/with-errors';
+import withErrors from '../../components/hoc/with-errors';
 
-import { getService, getAPI } from '../model/api';
+import { getService, getAPI, getAllAPIs } from '../../model/api';
 
-import constants from '../constants';
+import constants from '../../constants';
 
-import Page from '../layouts/page';
+import Page from '../../layouts/page';
 
-import APICard from '../components/searchApis/apiCard';
-import { HEADER_PAGE } from '../components';
+import APICard from '../../components/searchApis/apiCard';
+import { HEADER_PAGE } from '../../components';
 
 const Service = ({
   title,
@@ -128,21 +128,16 @@ Service.propTypes = {
   screenshot: PropTypes.string.isRequired,
 };
 
-Service.getInitialProps = async ({ query, res }) => {
-  const { serviceId } = query;
-  const service = await getService(serviceId);
-  // not the cleanest but I cannot rewrite the whole APP
-  if (service.status === 404 && res) {
-    res.statusCode = 404;
-    res.end('Cette page est introuvable');
-    return;
-  }
+Service.getInitialProps = async ({ query }) => {
+  const serviceName = query.service;
+  const service = await getService(serviceName);
+  const allApis = await getAllAPIs();
 
-  const api = await Promise.all(service.api.map(api => getAPI(api)));
+  const apis = allApis.filter(api => service.api.indexOf(api.slug) > -1);
 
   return {
     ...service,
-    apiList: api,
+    apiList: apis,
   };
 };
 

@@ -1,9 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
-import PropTypes from 'prop-types';
 import { throttle } from 'lodash';
 
 import { isElementVisible } from '../../utils';
-import { getAPI, getService } from '../../model/api';
+import { getAPI, getAllServices } from '../../model/api';
 import withErrors from '../../components/hoc/with-errors';
 import Page from '../../layouts';
 import constants from '../../constants';
@@ -27,7 +26,7 @@ import { HEADER_PAGE } from '../../components/header';
 
 const DEFAULT_LOGO = process.env.DEFAULT_LOGO || 'logo-beta-gouv.svg';
 
-const API = ({ api, services }) => {
+const API = ({ api, services = null }) => {
   const {
     title,
     tagline,
@@ -36,42 +35,26 @@ const API = ({ api, services }) => {
     owner,
     uptime,
     last_update,
-    score: { detail },
-    content,
-    clients,
-    contract,
-    partners,
+    contact_link,
+    doc_tech_link,
+    doc_tech_external,
+    doc_tech_description,
+    access_link,
+    access_description,
+    access_condition,
+    monitoring_link,
+    monitoring_description,
+    rate_limiting_description,
+    rate_limiting_resume,
+    body,
     is_open,
+    clients,
+    partners,
   } = api;
 
   const [menuItem, setMenuItem] = useState('api-description');
 
   const contentContainer = useRef(null);
-
-  const { contact, doc_tech, access, monitoring, rate_limiting } = detail;
-
-  const { link: contact_link, description: contact_description } =
-    contact || {};
-
-  const {
-    link: doc_tech_link,
-    external: doc_tech_external,
-    description: doc_tech_description,
-  } = doc_tech || {};
-
-  const {
-    is_open: access_open,
-    link: access_link,
-    description: access_description,
-  } = access || {};
-
-  const { link: monitoring_link, description: monitoring_description } =
-    monitoring || {};
-
-  const {
-    description: rate_limiting_description,
-    resume: rate_limiting_resume,
-  } = rate_limiting || {};
 
   const getVisibleAnchor = () => {
     if (!contentContainer || !contentContainer.current) {
@@ -154,44 +137,35 @@ const API = ({ api, services }) => {
         <div className="ui equal width grid padded">
           <div className="four wide column computer only">
             <div className="sticky-column">
-              <Menu
-                detail={detail}
-                selectedItem={menuItem}
-                select={setVisibleAnchor}
-              />
+              <Menu selectedItem={menuItem} select={setVisibleAnchor} />
             </div>
           </div>
           <div className="column" ref={contentContainer}>
-            <Content content={content} />
+            <Content content={body} />
 
             <Access
-              access_open={access_open}
-              access_link={access_link}
-              access_description={access_description}
-              contract={contract}
+              is_open={is_open}
+              link={access_link}
+              description={access_description}
+              condition={access_condition}
               clients={clients}
             />
 
-            <Support
-              contact_description={contact_description}
-              contact_link={contact_link}
-            />
+            <Support link={contact_link} />
 
             <Monitoring
-              monitoring_description={monitoring_description}
-              monitoring_link={monitoring_link}
+              description={monitoring_description}
+              link={monitoring_link}
             />
 
-            <RateLimiting
-              rate_limiting_description={rate_limiting_description}
-            />
+            <RateLimiting description={rate_limiting_description} />
 
             <Partners partners={partners} />
 
             <TechnicalDocumentation
-              doc_tech_description={doc_tech_description}
-              doc_tech_link={doc_tech_link}
-              doc_tech_external={doc_tech_external}
+              description={doc_tech_description}
+              link={doc_tech_link}
+              external={doc_tech_external}
             />
 
             <ApiRelatedServices services={services} />
@@ -210,68 +184,16 @@ const API = ({ api, services }) => {
   );
 };
 
-API.defaultProps = {
-  services: null,
-};
-
-API.propTypes = {
-  services: PropTypes.array,
-  api: PropTypes.shape({
-    logo: PropTypes.string,
-    title: PropTypes.string.isRequired,
-    tagline: PropTypes.string,
-    external_site: PropTypes.string.isRequired,
-    stat: PropTypes.shape({
-      url: PropTypes.string,
-      path: PropTypes.array,
-      label: PropTypes.string,
-      lastXdays: PropTypes.number,
-    }),
-    score: PropTypes.shape({
-      detail: PropTypes.shape({
-        contact: PropTypes.shape({
-          link: PropTypes.string,
-          description: PropTypes.string,
-        }),
-        doc_tech: PropTypes.shape({
-          link: PropTypes.string,
-          external: PropTypes.string,
-          description: PropTypes.string,
-        }),
-      }).isRequired,
-    }).isRequired,
-    content: PropTypes.string.isRequired,
-    clients: PropTypes.array,
-    is_open: PropTypes.bool.isRequired,
-    access_condition: PropTypes.string,
-    access_description: PropTypes.string,
-    access_link: PropTypes.string,
-    partners: PropTypes.array,
-    rate_limiting_resume: PropTypes.string,
-    rate_limiting_description: PropTypes.string,
-    monitoring_link: PropTypes.string,
-    monitoring_description: PropTypes.string,
-    contact_link: PropTypes.string,
-    doc_tech_link: PropTypes.string,
-    doc_tech_external: PropTypes.string,
-  }).isRequired,
-};
-
 API.getInitialProps = async ({ query }) => {
-  try {
-    const api = await getAPI(query.api);
-  } catch (e) {
-    console.log(e);
-  }
+  const api = await getAPI(query.api);
+  const services = await getAllServices();
 
-  // let services = null;
-  // if (api.services && api.services.length > 0) {
-  //   services = await Promise.all(
-  //     api.services.map(service => getService(service))
-  //   );
-  // }
+  const apiServices = services.filter(service => {
+    return service.api.indexOf(api.slug) > -1;
+  });
+  console.log(apiServices);
 
-  return { api: [], services: null };
+  return { api, services: apiServices };
 };
 
 export default withErrors(API);

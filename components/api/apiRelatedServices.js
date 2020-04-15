@@ -5,10 +5,10 @@ import ServiceCard from '../serviceCard';
 
 import Section from './section';
 
-const ApiRelatedServices = ({ services }) => {
+const ApiRelatedServices = ({ services = [] }) => {
   return (
     <Section id="services" title="Services">
-      {services ? (
+      {services.length > 0 ? (
         <div className="default-grid" style={{ style: '100%' }}>
           {services.map(service => (
             <ServiceCard key={service.slug} {...service} />
@@ -22,14 +22,6 @@ const ApiRelatedServices = ({ services }) => {
       )}
     </Section>
   );
-};
-
-ApiRelatedServices.defaultProps = {
-  services: null,
-};
-
-ApiRelatedServices.propTypes = {
-  services: PropTypes.array,
 };
 
 export default ApiRelatedServices;

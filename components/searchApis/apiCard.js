@@ -15,8 +15,9 @@ const ApiCard = ({
   url,
   contract,
   uptime,
-  image,
+  logo,
   owner,
+  is_open,
   description,
   matches = {},
 }) => {
@@ -27,8 +28,8 @@ const ApiCard = ({
           <div className="content">
             <img
               className="right floated mini ui image"
-              src={`/images/api-logo/${image || DEFAULT_LOGO}`}
-              alt={image ? `logo de ${title}` : 'logo générique api.gouv'}
+              src={`/images/api-logo/${logo || DEFAULT_LOGO}`}
+              alt={logo ? `logo de ${title}` : 'logo générique api.gouv'}
             />
 
             <div
@@ -60,7 +61,7 @@ const ApiCard = ({
           <div className="card-extra card-footer">
             <div className="badges">
               <div className="badge contract">
-                {contract === 'OUVERT' ? (
+                {is_open ? (
                   <>
                     <Unlock size={20} />
                     <div>Accès libre</div>

@@ -12,7 +12,7 @@ export const filterAccess = noAccessRight => {
   if (!noAccessRight) {
     return () => true;
   }
-  return api => api.contract === 'OUVERT';
+  return api => api.is_open;
 };
 
 /**

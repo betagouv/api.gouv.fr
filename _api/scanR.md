@@ -23,7 +23,7 @@ keywords: # utilisé dans la recherche
   - financement de la recherche
   - science ouverte
   - open access
-theme:
+themes:
   - Education
 contact_link: https://scanr.enseignementsup-recherche.gouv.fr/contact
 doc_tech_link: https://scanr-api.enseignementsup-recherche.gouv.fr/api/v2/api-docs

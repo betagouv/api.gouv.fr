@@ -49,11 +49,14 @@ const SearchApis = ({ allApis, allThemes, searchFromQueryString = '' }) => {
       .sort((a, b) => ((a.visits_2019 || 0) < b.visits_2019 ? 1 : -1));
 
     const themeAndAccess = `${theme}${isAccessOpen ? '-only-access-open' : ''}`;
+
     logResultsInMatomo(searchTerms, themeAndAccess, newApiList.length);
 
     setApiList(newApiList);
+
     return () => {};
   }, [theme, isAccessOpen, searchTerms, allApis]);
+
   return (
     <>
       <FilterHeader

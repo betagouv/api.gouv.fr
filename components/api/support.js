@@ -3,7 +3,7 @@ import React from 'react';
 import Section from './section';
 import { ButtonLink } from '../../uiComponents/button';
 
-const Support = ({ link }) => {
+const Support = ({ link, description }) => {
   return (
     <Section id="contact" title="Support">
       <>
