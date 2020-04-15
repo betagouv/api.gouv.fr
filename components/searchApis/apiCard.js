@@ -12,23 +12,23 @@ const DEFAULT_LOGO = process.env.DEFAULT_LOGO || 'logo-beta-gouv.svg';
 
 const ApiCard = ({
   title,
-  url,
-  contract,
+  path,
   uptime,
-  image,
+  logo,
   owner,
+  is_open,
   description,
   matches = {},
 }) => {
   return (
     <>
-      <Link href={url}>
+      <Link href={path}>
         <a className="ui fluid card api-card dont-apply-link-style">
           <div className="content">
             <img
               className="right floated mini ui image"
-              src={`/images/api-logo/${image || DEFAULT_LOGO}`}
-              alt={image ? `logo de ${title}` : 'logo générique api.gouv'}
+              src={`/images/api-logo/${logo || DEFAULT_LOGO}`}
+              alt={logo ? `logo de ${title}` : 'logo générique api.gouv'}
             />
 
             <div
@@ -60,7 +60,7 @@ const ApiCard = ({
           <div className="card-extra card-footer">
             <div className="badges">
               <div className="badge contract">
-                {contract === 'OUVERT' ? (
+                {is_open ? (
                   <>
                     <Unlock size={20} />
                     <div>Accès libre</div>

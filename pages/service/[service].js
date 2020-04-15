@@ -1,26 +1,18 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
 
-import withErrors from '../components/hoc/with-errors';
+import withErrors from '../../components/hoc/with-errors';
 
-import { getService, getAPI } from '../model/api';
+import { getService, getAllAPIs } from '../../model/api';
 
-import constants from '../constants';
+import constants from '../../constants';
 
-import Page from '../layouts/page';
+import Page from '../../layouts/page';
 
-import APICard from '../components/searchApis/apiCard';
-import { HEADER_PAGE } from '../components';
+import APICard from '../../components/searchApis/apiCard';
+import { HEADER_PAGE } from '../../components';
 
-const Service = ({
-  title,
-  description,
-  link,
-  apiList,
-  content,
-  screenshot,
-}) => {
+const Service = ({ title, description, link, apiList, body, screenshot }) => {
   return (
     <Page
       headerKey={HEADER_PAGE.SERVICES}
@@ -56,7 +48,7 @@ const Service = ({
                   <APICard
                     key={api.slug}
                     {...api}
-                    url={`/api/${api.slug}`}
+                    url={api.path}
                     image={api.logo}
                   />
                 ))}
@@ -64,7 +56,7 @@ const Service = ({
             </div>
             <div className="eleven wide column">
               <div className="markdown-body">
-                <ReactMarkdown source={content} />
+                <ReactMarkdown source={body} />
               </div>
               <div>
                 <img
@@ -119,30 +111,15 @@ const Service = ({
   );
 };
 
-Service.propTypes = {
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired,
-  apiList: PropTypes.string.isRequired,
-  content: PropTypes.string.isRequired,
-  screenshot: PropTypes.string.isRequired,
-};
-
-Service.getInitialProps = async ({ query, res }) => {
-  const { serviceId } = query;
-  const service = await getService(serviceId);
-  // not the cleanest but I cannot rewrite the whole APP
-  if (service.status === 404 && res) {
-    res.statusCode = 404;
-    res.end('Cette page est introuvable');
-    return;
-  }
-
-  const api = await Promise.all(service.api.map(api => getAPI(api)));
+Service.getInitialProps = async ({ query }) => {
+  const serviceName = query.service;
+  const service = await getService(serviceName);
+  const allApis = await getAllAPIs();
+  const apis = allApis.filter(api => service.api.indexOf(api.title) > -1);
 
   return {
     ...service,
-    apiList: api,
+    apiList: apis,
   };
 };
 

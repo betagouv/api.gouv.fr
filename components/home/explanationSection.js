@@ -21,7 +21,7 @@ const ExplanationSection = () => (
       <h2>Comment ca marche&nbsp;?</h2>
       <div>
         {explanations.map(explanation => (
-          <div key={explanation}>
+          <div key={explanation.src}>
             <h3 dangerouslySetInnerHTML={{ __html: explanation.title }} />
             <img src={explanation.src} alt="" />
           </div>

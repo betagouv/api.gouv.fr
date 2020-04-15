@@ -12,14 +12,14 @@ import {
   Baseline,
 } from '../components/home';
 
-const Home = ({ apiList }) => (
+const Home = ({ top15Api }) => (
   <Page
     title="Api.gouv.fr"
     description="Simplifiez le partage et la circulation des données administratives grace à api.gouv, le site qui référence toutes les APIs du service public."
   >
     <Baseline />
     <ExplanationSection />
-    <ApiTripletSection apiList={apiList} />
+    <ApiTripletSection apiList={top15Api} />
     <div className="content-container layout-center">
       <h2>Ils ont créé de nouveaux services innovants avec des APIs&nbsp;:</h2>
     </div>
@@ -35,8 +35,11 @@ const Home = ({ apiList }) => (
 
 Home.getInitialProps = async req => {
   const apiList = await getAllAPIs();
+
   return {
-    apiList: apiList,
+    top15Api: apiList
+      .sort((a, b) => ((a.visits_2019 || 0) > (b.visits_2019 || 0) ? -1 : 1))
+      .slice(0, 15),
   };
 };
 

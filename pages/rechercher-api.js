@@ -35,8 +35,17 @@ const RechercherApi = ({ allApis, allThemes, filter = '' }) => {
 RechercherApi.getInitialProps = async req => {
   const { q, filter } = req.query;
   const allApis = await getAllAPIs();
+  const allThemes = uniq(
+    flatten(
+      allApis.map(api => {
+        if (!api.themes) {
+          throw new Error(`API must have at least one theme : ${api.slug}`);
+        }
+        return api.themes;
+      })
+    )
+  ).sort();
 
-  const allThemes = uniq(flatten(allApis.map(api => api.themes))).sort();
   return {
     q,
     filter,

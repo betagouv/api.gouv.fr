@@ -31,8 +31,8 @@ async function main() {
     '/about',
     '/mention-legales',
     '/vie-privee',
-    ...apis.map(api => `/api/${api.slug}`),
-    ...services.map(service => `/service/${service.slug}`),
+    ...apis.map(api => api.path),
+    ...services.map(service => service.path),
   ].map(url => `${process.env.SITE_URL || 'https://api.gouv.fr'}${url}`);
   writeUrlListOnDisk(urlList);
 }
