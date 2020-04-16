@@ -3,7 +3,6 @@ import { NextPage } from 'next';
 
 import Page from '../layouts/page';
 import { HEADER_PAGE } from '../components/header';
-import './styles/viePriveeStyles.scss';
 
 const Privacy: NextPage = () => (
   <Page
