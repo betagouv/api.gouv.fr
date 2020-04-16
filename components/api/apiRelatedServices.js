@@ -1,6 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-
 import ServiceCard from '../serviceCard';
 
 import Section from './section';
