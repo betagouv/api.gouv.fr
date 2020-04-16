@@ -189,9 +189,8 @@ API.getInitialProps = async ({ query }) => {
   const services = await getAllServices();
 
   const apiServices = services.filter(service => {
-    return service.api.indexOf(api.slug) > -1;
+    return service.api.indexOf(api.title) > -1;
   });
-  console.log(apiServices);
 
   return { api, services: apiServices };
 };

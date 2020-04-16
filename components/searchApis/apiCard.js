@@ -12,8 +12,7 @@ const DEFAULT_LOGO = process.env.DEFAULT_LOGO || 'logo-beta-gouv.svg';
 
 const ApiCard = ({
   title,
-  url,
-  contract,
+  path,
   uptime,
   logo,
   owner,
@@ -23,7 +22,7 @@ const ApiCard = ({
 }) => {
   return (
     <>
-      <Link href={url}>
+      <Link href={path}>
         <a className="ui fluid card api-card dont-apply-link-style">
           <div className="content">
             <img

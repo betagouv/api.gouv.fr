@@ -8,18 +8,29 @@ const formatApi = (slug, data) => {
     body: document.body,
     slug,
     description: document.attributes.tagline,
-    url: `/api-publiques/${slug}`,
+    path: `/api-publiques/${slug}`,
   };
 };
 
-const formatService = (slug, data) => {
+const formatServiceWithApis = apis => (slug, data) => {
   const document = frontmatter(data);
+
+  const matchingAPis = document.attributes.api.map(serviceApiTitle => {
+    const match = apis.find(api => api.title === serviceApiTitle);
+    if (!match) {
+      throw new Error(
+        `No matching API for : ${serviceApiTitle} - in service : ${slug}`
+      );
+    }
+    return { title: match.title, path: match.path };
+  });
 
   return {
     ...document.attributes,
     body: document.body,
     slug,
-    url: `/service/${slug}`,
+    path: `/service/${slug}`,
+    apiList: matchingAPis,
   };
 };
 
@@ -43,14 +54,18 @@ const parseMarkdown = (context, formatter) => {
   return data;
 };
 
-const loadServices = async folder => {
+const loadServices = async () => {
   const serviceFolderContext = require.context('../_service', true, /\.md$/);
-  return parseMarkdown(serviceFolderContext, formatService);
+  const apis = await loadApis();
+  const formatter = formatServiceWithApis(Object.values(apis));
+
+  const services = parseMarkdown(serviceFolderContext, formatter);
+  return services;
 };
 
-const loadApis = async folder => {
+const loadApis = async () => {
   const apiFolderContext = require.context('../_api', true, /\.md$/);
   return parseMarkdown(apiFolderContext, formatApi);
 };
 
-export { formatApi, formatService, loadApis, loadServices };
+export { formatApi, formatServiceWithApis, loadApis, loadServices };
