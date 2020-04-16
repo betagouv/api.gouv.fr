@@ -2,7 +2,15 @@ import React from 'react';
 
 import { Footer, PreFooter, Header, Meta } from '../components';
 
-const Page = ({
+interface IProps {
+  title: string;
+  description?: string;
+  headerKey?: string;
+  usePreFooter?: boolean;
+  preFooterBackground?: boolean;
+}
+
+const Page: React.FC<IProps> = ({
   title,
   description,
   headerKey,

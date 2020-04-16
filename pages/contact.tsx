@@ -3,7 +3,7 @@ import React from 'react';
 import Page from '../layouts/page';
 import { HEADER_PAGE } from '../components';
 
-const Contact = () => (
+const Contact: React.FC = () => (
   <Page
     headerKey={HEADER_PAGE.CONTACT}
     title="Nous contacter"

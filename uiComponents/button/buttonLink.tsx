@@ -1,6 +1,34 @@
 import React from 'react';
+interface IProps {
+  href?: string;
+  alt?: boolean;
+  rel?: string;
+  target?: string;
+  disabled?: boolean;
+  large: boolean;
+  onClick?: () => void;
+  type?: 'button' | 'submit' | 'reset';
+}
 
-const LinkAsAButton = ({
+interface ILinkProps {
+  href: string;
+  alt?: boolean;
+  rel?: string;
+  target?: string;
+  disabled?: boolean;
+  large: boolean;
+  onClick: () => void;
+}
+
+interface IButtonProps {
+  alt?: boolean;
+  disabled?: boolean;
+  large: boolean;
+  onClick: () => void;
+  type: 'button' | 'submit' | 'reset';
+}
+
+const LinkAsAButton: React.FC<ILinkProps> = ({
   href,
   alt,
   rel,
@@ -25,7 +53,14 @@ const LinkAsAButton = ({
   </a>
 );
 
-const ClassicButton = ({ type, onClick, alt, large, disabled, children }) => (
+const ClassicButton: React.FC<IButtonProps> = ({
+  type,
+  onClick,
+  alt,
+  large,
+  disabled,
+  children,
+}) => (
   <button
     onClick={onClick}
     type={type}
@@ -39,7 +74,7 @@ const ClassicButton = ({ type, onClick, alt, large, disabled, children }) => (
   </button>
 );
 
-const ButtonLink = ({
+const ButtonLink: React.FC<IProps> = ({
   href,
   alt,
   rel,
@@ -69,7 +104,6 @@ const ButtonLink = ({
       <ClassicButton
         onClick={onClick}
         type={type}
-        target={target}
         alt={alt}
         disabled={disabled}
         children={children}

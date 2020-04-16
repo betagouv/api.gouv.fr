@@ -1,9 +1,11 @@
 import frontmatter from 'front-matter';
+import { IService, IApi } from '.';
 
-const formatApi = (slug, data) => {
+const formatApi = (slug, data): IApi => {
   const document = frontmatter(data);
 
   return {
+    //@ts-ignore
     ...document.attributes,
     body: document.body,
     slug,
@@ -12,9 +14,10 @@ const formatApi = (slug, data) => {
   };
 };
 
-const formatServiceWithApis = apis => (slug, data) => {
+const formatServiceWithApis = apis => (slug, data): IService => {
   const document = frontmatter(data);
 
+  //@ts-ignore
   const matchingAPis = document.attributes.api.map(serviceApiTitle => {
     const match = apis.find(api => api.title === serviceApiTitle);
     if (!match) {
@@ -26,6 +29,7 @@ const formatServiceWithApis = apis => (slug, data) => {
   });
 
   return {
+    //@ts-ignore
     ...document.attributes,
     body: document.body,
     slug,
@@ -54,7 +58,8 @@ const parseMarkdown = (context, formatter) => {
   return data;
 };
 
-const loadServices = async () => {
+const loadServices = async (): Promise<{ [key: string]: IService }> => {
+  //@ts-ignore
   const serviceFolderContext = require.context('../_service', true, /\.md$/);
   const apis = await loadApis();
   const formatter = formatServiceWithApis(Object.values(apis));
@@ -63,7 +68,8 @@ const loadServices = async () => {
   return services;
 };
 
-const loadApis = async () => {
+const loadApis = async (): Promise<{ [key: string]: IApi }> => {
+  //@ts-ignore
   const apiFolderContext = require.context('../_api', true, /\.md$/);
   return parseMarkdown(apiFolderContext, formatApi);
 };

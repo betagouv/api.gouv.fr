@@ -1,8 +1,8 @@
 import React from 'react';
+import { NextPage } from 'next';
+
 import withErrors from '../components/hoc/with-errors';
-
-import { getAllAPIs } from '../model/api';
-
+import { getAllAPIs, IApi } from '../model';
 import Page from '../layouts/page';
 
 import {
@@ -12,7 +12,11 @@ import {
   Baseline,
 } from '../components/home';
 
-const Home = ({ top15Api }) => (
+interface IProps {
+  top15Api: IApi[];
+}
+
+const Home: NextPage<IProps> = ({ top15Api }) => (
   <Page
     title="Api.gouv.fr"
     description="Simplifiez le partage et la circulation des données administratives grace à api.gouv, le site qui référence toutes les APIs du service public."

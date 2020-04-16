@@ -1,14 +1,18 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { NextPage } from 'next';
 
 import withErrors from '../components/hoc/with-errors';
 
-import { getAllServices } from '../model/api';
+import { getAllServices, IServices } from '../model';
 
 import Page from '../layouts/page';
 import { HEADER_PAGE, ServiceCard } from '../components';
 
-const Services = ({ services }) => {
+interface IProps {
+  services: IServices[];
+}
+
+const Services: NextPage<IProps> = ({ services }) => {
   return (
     <Page
       headerKey={HEADER_PAGE.SERVICES}
@@ -30,10 +34,6 @@ const Services = ({ services }) => {
       </section>
     </Page>
   );
-};
-
-Services.propTypes = {
-  services: PropTypes.array.isRequired,
 };
 
 Services.getInitialProps = async () => {
