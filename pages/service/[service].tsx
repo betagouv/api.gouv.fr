@@ -1,9 +1,10 @@
 import React from 'react';
+import { NextPage } from 'next';
 import ReactMarkdown from 'react-markdown';
 
 import withErrors from '../../components/hoc/with-errors';
 
-import { getService, getAllAPIs } from '../../model/api';
+import { getService, IService } from '../../model';
 
 import constants from '../../constants';
 
@@ -12,7 +13,16 @@ import Page from '../../layouts/page';
 import APICard from '../../components/searchApis/apiCard';
 import { HEADER_PAGE } from '../../components';
 
-const Service = ({ title, description, link, apiList, body, screenshot }) => {
+interface IProps extends IService {}
+
+const Service: NextPage<IProps> = ({
+  title,
+  description,
+  link,
+  apiList,
+  body,
+  screenshot,
+}) => {
   return (
     <Page
       headerKey={HEADER_PAGE.SERVICES}
@@ -114,12 +124,9 @@ const Service = ({ title, description, link, apiList, body, screenshot }) => {
 Service.getInitialProps = async ({ query }) => {
   const serviceName = query.service;
   const service = await getService(serviceName);
-  const allApis = await getAllAPIs();
-  const apis = allApis.filter(api => service.api.indexOf(api.title) > -1);
 
   return {
     ...service,
-    apiList: apis,
   };
 };
 

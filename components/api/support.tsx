@@ -3,7 +3,11 @@ import React from 'react';
 import Section from './section';
 import { ButtonLink } from '../../uiComponents/button';
 
-const Support = ({ link, description }) => {
+interface IProps {
+  link: string;
+}
+
+const Support: React.FC<IProps> = ({ link }) => {
   return (
     <Section id="contact" title="Support">
       <>
@@ -13,7 +17,6 @@ const Support = ({ link, description }) => {
               <>
                 <p>Vous pouvez contacter le support de cette API par mail. .</p>
                 <ButtonLink
-                  className="large ui button"
                   href={`mailto:${link}?subject=Contact%20via%20api.gouv.fr`}
                   alt
                   large

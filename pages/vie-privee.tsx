@@ -1,10 +1,11 @@
 import React from 'react';
+import { NextPage } from 'next';
 
 import Page from '../layouts/page';
 import { HEADER_PAGE } from '../components/header';
 import './styles/viePriveeStyles.scss';
 
-const Privacy = () => (
+const Privacy: NextPage = () => (
   <Page
     headerKey={HEADER_PAGE.HOME}
     usePreFooter={false}

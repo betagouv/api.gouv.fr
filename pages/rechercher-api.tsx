@@ -1,14 +1,25 @@
 import React from 'react';
+import { flatten, uniq } from 'lodash';
+import { NextPage } from 'next';
 
 import withErrors from '../components/hoc/with-errors';
-import { getAllAPIs } from '../model/api';
+import { getAllAPIs, IApi } from '../model';
 import Page from '../layouts/page';
 import SearchApis from '../components/searchApis';
 import { HEADER_PAGE } from '../components';
-import { flatten, uniq } from 'lodash';
 import constants from '../constants';
 
-const RechercherApi = ({ allApis, allThemes, filter = '' }) => {
+interface IProps {
+  allApis: IApi[];
+  allThemes: string[];
+  filter?: string;
+}
+
+const RechercherApi: NextPage<IProps> = ({
+  allApis,
+  allThemes,
+  filter = '',
+}) => {
   const fromSignup = filter.toLowerCase() === 'signup';
   return (
     <Page
@@ -33,7 +44,7 @@ const RechercherApi = ({ allApis, allThemes, filter = '' }) => {
 };
 
 RechercherApi.getInitialProps = async req => {
-  const { q, filter } = req.query;
+  const { filter } = req.query;
   const allApis = await getAllAPIs();
   const allThemes = uniq(
     flatten(
@@ -47,7 +58,6 @@ RechercherApi.getInitialProps = async req => {
   ).sort();
 
   return {
-    q,
     filter,
     allApis,
     allThemes,

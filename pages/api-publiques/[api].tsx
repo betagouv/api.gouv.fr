@@ -1,11 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { NextPage } from 'next';
 import { throttle } from 'lodash';
 
-import { isElementVisible } from '../../utils';
-import { getAPI, getAllServices } from '../../model/api';
+import { getAPI, getAllServices, IService, IApi } from '../../model';
 import withErrors from '../../components/hoc/with-errors';
 import Page from '../../layouts';
-import constants from '../../constants';
 
 import {
   PageHeader,
@@ -20,13 +19,19 @@ import {
   Content,
   Thumbnails,
 } from '../../components/api';
-
-import { getWindowHash } from '../../utils';
 import { HEADER_PAGE } from '../../components/header';
+
+import { getWindowHash, isElementVisible } from '../../utils';
+import constants from '../../constants';
 
 const DEFAULT_LOGO = process.env.DEFAULT_LOGO || 'logo-beta-gouv.svg';
 
-const API = ({ api, services = null }) => {
+interface IProps {
+  api: IApi;
+  services: IService[];
+}
+
+const API: NextPage<IProps> = ({ api, services = null }) => {
   const {
     title,
     tagline,
