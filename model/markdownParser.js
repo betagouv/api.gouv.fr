@@ -41,7 +41,7 @@ const parseMarkdown = (context, formatter) => {
   const data = keys.reduce((accumulator, key, index) => {
     // Create slug from filename
     const slug = key
-      .replace(/^.*[\\\/]/, '')
+      .replace(/^.*[\\/]/, '')
       .split('.')
       .slice(0, -1)
       .join('.');
