@@ -8,18 +8,10 @@ import '../layouts/imports.scss';
 import Chat from '../components/chat';
 
 class MyApp extends App {
-  static async getInitialProps({ Component, ctx }) {
-    let pageProps = {};
-
-    if (Component.getInitialProps) {
-      pageProps = await Component.getInitialProps(ctx);
-    }
-
-    return { pageProps };
-  }
-
   logPageView() {
-    if (window.Piwik) {
+    //@ts-ignore
+    if (typeof window !== 'undefined' && window.Piwik) {
+      //@ts-ignore
       const tracker = window.Piwik.getTracker(
         `${process.env.PIWIK_URL}/piwik.php`,
         process.env.PIWIK_SITE_ID

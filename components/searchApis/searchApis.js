@@ -10,7 +10,9 @@ import {
 } from './filtersLogic';
 
 const logResultsInMatomo = debounce((search, theme, resultCounts) => {
-  if (window.Piwik) {
+  //@ts-ignore
+  if (typeof window !== 'undefined' && window.Piwik) {
+    //@ts-ignore
     const tracker = window.Piwik.getTracker(
       `${process.env.PIWIK_URL}/piwik.php`,
       process.env.PIWIK_SITE_ID

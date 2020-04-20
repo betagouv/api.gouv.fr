@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Link from 'next/link';
 
 import Meta from '../components/meta';
@@ -10,18 +9,18 @@ const messages = {
   404: "Cette page n'existe pas",
 };
 
-class ErrorPage extends React.Component {
-  static propTypes = {
-    code: PropTypes.number,
-    message: PropTypes.string,
-  };
+interface IProps {
+  code: 500 | 404;
+  message?: string;
+}
 
+class ErrorPage extends React.Component<IProps> {
   static defaultProps = {
     code: 500,
     message: null,
   };
 
-  static getInitialProps({ res, err }) {
+  static getInitialProps({ res, err }: any) {
     const code = res ? res.statusCode : err ? err.statusCode : null;
 
     return { code };
@@ -30,15 +29,19 @@ class ErrorPage extends React.Component {
   render() {
     const { code, message } = this.props;
     const title = `Erreur ${code}`;
-    const msg = code === 500 ? messages[500] : message || messages[code];
+    const msg = message || messages[code];
 
     return (
-      <Page>
+      <Page title="Une erreur est survenue">
         <Meta title={title} description={msg} />
 
         <section id="errorContainer" className="ui text container">
           <div>
-            <h1>Oups</h1>
+            <h1>
+              <span role="img" aria-label="emoji malade">
+                🤕
+              </span>
+            </h1>
             <h2>{msg}</h2>
             <div className="back-home">
               <Link href="/">

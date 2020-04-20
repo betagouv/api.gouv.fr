@@ -27,7 +27,7 @@ const HEADER = [
   { href: '/apropos', txt: 'À propos', key: HEADER_PAGE.ABOUT },
 ];
 
-const Header = ({ headerKey = 'home', filter = '' }) => {
+const Header = ({ headerKey = 'home' }) => {
   const header = useRef(null);
 
   useEffect(() => {

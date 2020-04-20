@@ -58,8 +58,8 @@ const Service: NextPage<IProps> = ({
                   <APICard
                     key={api.slug}
                     {...api}
-                    url={api.path}
-                    image={api.logo}
+                    path={api.path}
+                    logo={api.logo}
                   />
                 ))}
               </div>
@@ -123,6 +123,7 @@ const Service: NextPage<IProps> = ({
 
 Service.getInitialProps = async ({ query }) => {
   const serviceName = query.service;
+  //@ts-ignore
   const service = await getService(serviceName);
 
   return {

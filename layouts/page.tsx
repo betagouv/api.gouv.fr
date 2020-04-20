@@ -7,7 +7,7 @@ interface IProps {
   description?: string;
   headerKey?: string;
   usePreFooter?: boolean;
-  preFooterBackground?: boolean;
+  preFooterBackground?: string;
 }
 
 const Page: React.FC<IProps> = ({

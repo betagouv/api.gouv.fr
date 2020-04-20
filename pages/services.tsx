@@ -3,16 +3,16 @@ import { NextPage } from 'next';
 
 import withErrors from '../components/hoc/with-errors';
 
-import { getAllServices, IServices } from '../model';
+import { getAllServices, IService } from '../model';
 
 import Page from '../layouts/page';
 import { HEADER_PAGE, ServiceCard } from '../components';
 
-interface IProps {
-  services: IServices[];
+interface Props {
+  services: IService[];
 }
 
-const Services: NextPage<IProps> = ({ services }) => {
+const Services: NextPage<Props> = ({ services }) => {
   return (
     <Page
       headerKey={HEADER_PAGE.SERVICES}

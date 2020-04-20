@@ -1,14 +1,9 @@
 import React from 'react';
 
 import Page from '../layouts/page';
-import { HEADER_PAGE } from '../components/header';
 
 const About: React.FC = () => (
-  <Page
-    headerKey={HEADER_PAGE.HOME}
-    usePreFooter={false}
-    title="Mentions légales"
-  >
+  <Page usePreFooter={false} title="Mentions légales">
     <div className="text-container">
       <h1 className="layout-center">Mentions légales</h1>
       <div>
