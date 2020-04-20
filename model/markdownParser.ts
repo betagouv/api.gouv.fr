@@ -1,7 +1,7 @@
 import frontmatter from 'front-matter';
 import { IService, IApi } from '.';
 
-const formatApi = (slug, data): IApi => {
+const formatApi = (slug: string, data: any): IApi => {
   const document = frontmatter(data);
 
   return {
@@ -14,7 +14,10 @@ const formatApi = (slug, data): IApi => {
   };
 };
 
-const formatServiceWithApis = apis => (slug, data): IService => {
+const formatServiceWithApis = (apis: IApi[]) => (
+  slug: string,
+  data: any
+): IService => {
   const document = frontmatter(data);
 
   //@ts-ignore
@@ -38,23 +41,33 @@ const formatServiceWithApis = apis => (slug, data): IService => {
   };
 };
 
-const parseMarkdown = (context, formatter) => {
+const parseMarkdown = (
+  context: any,
+  formatter: (slug: string, data: any) => IApi | IService
+) => {
   const keys = context.keys();
   const values = keys.map(context);
 
-  const data = keys.reduce((accumulator, key, index) => {
-    // Create slug from filename
-    const slug = key
-      .replace(/^.*[\\/]/, '')
-      .split('.')
-      .slice(0, -1)
-      .join('.');
-    const value = values[index];
+  const data = keys.reduce(
+    (
+      accumulator: { [key: string]: IApi | IService },
+      key: string,
+      index: number
+    ) => {
+      // Create slug from filename
+      const slug = key
+        .replace(/^.*[\\/]/, '')
+        .split('.')
+        .slice(0, -1)
+        .join('.');
+      const value = values[index];
 
-    // Parse yaml metadata & markdownbody in document
-    accumulator[slug] = formatter(slug, value.default);
-    return accumulator;
-  }, {});
+      // Parse yaml metadata & markdownbody in document
+      accumulator[slug] = formatter(slug, value.default);
+      return accumulator;
+    },
+    {}
+  );
   return data;
 };
 

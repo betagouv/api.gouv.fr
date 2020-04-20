@@ -12,14 +12,11 @@ import constants from '../constants';
 interface IProps {
   allApis: IApi[];
   allThemes: string[];
-  filter?: string;
+  filter: string | string[];
 }
 
-const RechercherApi: NextPage<IProps> = ({
-  allApis,
-  allThemes,
-  filter = '',
-}) => {
+const RechercherApi: NextPage<IProps> = ({ allApis, allThemes, filter }) => {
+  //@ts-ignore
   const fromSignup = filter.toLowerCase() === 'signup';
   return (
     <Page
@@ -37,6 +34,7 @@ const RechercherApi: NextPage<IProps> = ({
       <SearchApis
         allApis={allApis}
         allThemes={allThemes}
+        //@ts-ignore
         searchFromQueryString={filter}
       />
     </Page>
@@ -44,7 +42,7 @@ const RechercherApi: NextPage<IProps> = ({
 };
 
 RechercherApi.getInitialProps = async req => {
-  const { filter } = req.query;
+  const { filter = '' } = req.query;
   const allApis = await getAllAPIs();
   const allThemes = uniq(
     flatten(

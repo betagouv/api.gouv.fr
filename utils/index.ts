@@ -1,4 +1,4 @@
-import { replaceAll, findAll, normalize } from './string';
+import { replaceAll, findAll, normalize, normalizeAndfindAll } from './string';
 import { isElementVisible, getWindowHash } from './browser';
 import { roundUptime, getUptimeState } from './uptime';
 
@@ -9,5 +9,6 @@ export {
   roundUptime,
   getUptimeState,
   findAll,
+  normalizeAndfindAll,
   normalize,
 };

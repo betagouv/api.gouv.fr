@@ -36,14 +36,12 @@ const API: NextPage<IProps> = ({ api, services = null }) => {
     title,
     tagline,
     logo,
-    stat,
     owner,
     uptime,
     last_update,
     contact_link,
     doc_tech_link,
     doc_tech_external,
-    doc_tech_description,
     access_link,
     access_description,
     access_condition,
@@ -65,7 +63,7 @@ const API: NextPage<IProps> = ({ api, services = null }) => {
     if (!contentContainer || !contentContainer.current) {
       return;
     }
-
+    //@ts-ignore
     const sectionCollection = contentContainer.current.children;
 
     for (let i = 0; i < sectionCollection.length; i++) {
@@ -76,7 +74,7 @@ const API: NextPage<IProps> = ({ api, services = null }) => {
     }
   };
 
-  const setVisibleAnchor = (anchor, smooth = false) => {
+  const setVisibleAnchor = (anchor: string, smooth = false) => {
     setMenuItem(anchor);
 
     const anchorElem = document.getElementById(anchor);
@@ -92,11 +90,7 @@ const API: NextPage<IProps> = ({ api, services = null }) => {
       const currentVisibleAnchor = getVisibleAnchor();
       if (currentVisibleAnchor !== getWindowHash()) {
         setMenuItem(currentVisibleAnchor);
-        window.history.replaceState(
-          undefined,
-          undefined,
-          `#${currentVisibleAnchor}`
-        );
+        window.history.replaceState(undefined, '', `#${currentVisibleAnchor}`);
       }
       // approx 8 frames
     }, 16 * 8);
@@ -123,12 +117,7 @@ const API: NextPage<IProps> = ({ api, services = null }) => {
       title={title}
       description={`${title} est une des APIs du service public. ${tagline}`}
     >
-      <PageHeader
-        title={title}
-        logo={logo || DEFAULT_LOGO}
-        tagline={tagline}
-        stat={stat}
-      />
+      <PageHeader title={title} logo={logo || DEFAULT_LOGO} tagline={tagline} />
 
       <Thumbnails
         is_open={is_open}
@@ -168,7 +157,6 @@ const API: NextPage<IProps> = ({ api, services = null }) => {
             <Partners partners={partners} />
 
             <TechnicalDocumentation
-              description={doc_tech_description}
               link={doc_tech_link}
               external={doc_tech_external}
             />
@@ -181,6 +169,7 @@ const API: NextPage<IProps> = ({ api, services = null }) => {
         .sticky-column {
           position: sticky;
           overflow: hidden;
+          //@ts-ignore
           top: ${parseInt(constants.layout.HEADER_HEIGHT, 10) + 20}px;
           padding-bottom: 15px;
         }
@@ -190,6 +179,7 @@ const API: NextPage<IProps> = ({ api, services = null }) => {
 };
 
 API.getInitialProps = async ({ query }) => {
+  //@ts-ignore
   const api = await getAPI(query.api);
   const services = await getAllServices();
 

@@ -1,10 +1,14 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Link from 'next/link';
 
 import constants from '../../constants';
 
-const Title = ({ title, logo }) => (
+interface ITitleProps {
+  title: string;
+  logo: string;
+}
+
+const Title: React.FC<ITitleProps> = ({ title, logo }) => (
   <>
     <div className="title">
       <img src={`/images/api-logo/${logo}`} alt={title} className="ui image" />
@@ -40,7 +44,11 @@ const Title = ({ title, logo }) => (
   </>
 );
 
-const Tagline = ({ tagline }) => (
+interface ITaglineProps {
+  tagline: string;
+}
+
+const Tagline: React.FC<ITaglineProps> = ({ tagline }) => (
   <>
     <h2 className="tagline">{tagline}</h2>
     <style jsx>{`
@@ -62,7 +70,13 @@ const Tagline = ({ tagline }) => (
   </>
 );
 
-const PageHeader = ({ title, logo, tagline }) => (
+interface IProps {
+  title: string;
+  logo: string;
+  tagline: string;
+}
+
+const PageHeader: React.FC<IProps> = ({ title, logo, tagline }) => (
   <section id="mission-statement">
     <Link href="/rechercher-api">
       <a className="back-button dont-apply-link-style">← Toutes les API</a>
@@ -99,12 +113,5 @@ const PageHeader = ({ title, logo, tagline }) => (
     `}</style>
   </section>
 );
-
-PageHeader.propTypes = {
-  title: PropTypes.string.isRequired,
-  logo: PropTypes.string,
-  tagline: PropTypes.string.isRequired,
-  inline: PropTypes.bool,
-};
 
 export default PageHeader;

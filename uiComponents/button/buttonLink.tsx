@@ -6,7 +6,7 @@ interface IProps {
   target?: string;
   disabled?: boolean;
   large: boolean;
-  onClick?: () => void;
+  onClick?: (() => void) | undefined;
   type?: 'button' | 'submit' | 'reset';
 }
 
@@ -17,15 +17,15 @@ interface ILinkProps {
   target?: string;
   disabled?: boolean;
   large: boolean;
-  onClick: () => void;
+  onClick?: (() => void) | undefined;
 }
 
 interface IButtonProps {
   alt?: boolean;
   disabled?: boolean;
   large: boolean;
-  onClick: () => void;
-  type: 'button' | 'submit' | 'reset';
+  onClick?: (() => void) | undefined;
+  type: 'button' | 'submit' | 'reset' | undefined;
 }
 
 const LinkAsAButton: React.FC<ILinkProps> = ({

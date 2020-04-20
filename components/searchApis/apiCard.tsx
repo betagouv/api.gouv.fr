@@ -1,23 +1,33 @@
 import React from 'react';
 import Link from 'next/link';
-import PropTypes from 'prop-types';
 
 import { Unlock, Lock } from 'react-feather';
 
 import { getUptimeState, roundUptime } from '../../utils/uptime';
 
-import { textHighlighter } from './filtersLogic';
+import { textHighlighter, ISearchMatch } from './filtersLogic';
 
 const DEFAULT_LOGO = process.env.DEFAULT_LOGO || 'logo-beta-gouv.svg';
 
-const ApiCard = ({
+interface IProps {
+  title: string;
+  path: string;
+  tagline: string;
+  uptime: number;
+  logo: string;
+  is_open: boolean;
+  owner: string;
+  matches?: ISearchMatch;
+}
+
+const ApiCard: React.FC<IProps> = ({
   title,
   path,
-  uptime,
+  tagline = '',
+  uptime = null,
   logo,
   owner,
   is_open,
-  description,
   matches = {},
 }) => {
   return (
@@ -41,7 +51,7 @@ const ApiCard = ({
             <div
               className="description"
               dangerouslySetInnerHTML={{
-                __html: textHighlighter(matches.description, description),
+                __html: textHighlighter(matches.tagline, tagline),
               }}
             />
           </div>
@@ -142,22 +152,6 @@ const ApiCard = ({
       `}</style>
     </>
   );
-};
-
-ApiCard.propTypes = {
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string,
-  contract: PropTypes.string,
-  image: PropTypes.string,
-  owner: PropTypes.string,
-  tagline: PropTypes.string,
-  uptime: PropTypes.number,
-};
-
-ApiCard.defaultProps = {
-  description: null,
-  image: null,
-  uptime: null,
 };
 
 export default ApiCard;

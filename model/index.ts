@@ -13,10 +13,14 @@ export interface IService {
 }
 
 export interface IApiShort {
-  title: string;
-  path: string;
   slug: string;
   logo: string;
+  uptime: number;
+  title: string;
+  path: string;
+  tagline: string;
+  is_open: boolean;
+  owner: string;
 }
 
 export interface IApi extends IApiShort {
@@ -28,12 +32,11 @@ export interface IApi extends IApiShort {
   logo: string;
   stat: number;
   owner: string;
-  uptime: number;
+  owner_acronym: string;
   last_update: Date;
   contact_link: string;
   doc_tech_link: string;
   doc_tech_external: string;
-  doc_tech_description: string;
   access_link: string;
   access_description: string;
   access_condition: string;
@@ -44,6 +47,8 @@ export interface IApi extends IApiShort {
   is_open: boolean;
   clients: string[];
   partners: string[];
+  themes: string[];
+  keywords: string[];
 }
 
 export { getService, getAllServices, getAllAPIs, getAPI };

@@ -1,12 +1,12 @@
 import { loadApis, loadServices } from './markdownParser';
 import { IService, IApi } from '.';
 
-export const getAPI = async (id): Promise<IApi> => {
+export const getAPI = async (id: string): Promise<IApi> => {
   const data = await loadApis();
   return data[id];
 };
 
-export const getService = async (id): Promise<IService> => {
+export const getService = async (id: string): Promise<IService> => {
   const data = await loadServices();
   return data[id];
 };

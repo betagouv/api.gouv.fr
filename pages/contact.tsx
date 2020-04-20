@@ -1,11 +1,9 @@
 import React from 'react';
 
 import Page from '../layouts/page';
-import { HEADER_PAGE } from '../components';
 
 const Contact: React.FC = () => (
   <Page
-    headerKey={HEADER_PAGE.CONTACT}
     title="Nous contacter"
     description="Comment entrer en contact avec la très motivée équipe d’api.gouv.fr"
   >
