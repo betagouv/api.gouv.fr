@@ -28,7 +28,17 @@ const formatServiceWithApis = (apis: IApi[]) => (
         `No matching API for : ${serviceApiTitle} - in service : ${slug}`
       );
     }
-    return { title: match.title, path: match.path };
+
+    return {
+      slug: match.slug,
+      title: match.title,
+      path: match.path,
+      tagline: match.tagline,
+      uptime: match.uptime,
+      owner: match.owner,
+      is_open: match.is_open,
+      logo: match.logo,
+    };
   });
 
   return {
