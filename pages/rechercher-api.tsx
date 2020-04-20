@@ -44,9 +44,11 @@ const RechercherApi: NextPage<IProps> = ({ allApis, allThemes, filter }) => {
 RechercherApi.getInitialProps = async req => {
   const { filter = '' } = req.query;
   const allApis = await getAllAPIs();
+
   const allThemes = uniq(
     flatten(
       allApis.map(api => {
+        // this must be tested with JEST first, but one never knows
         if (!api.themes) {
           throw new Error(`API must have at least one theme : ${api.slug}`);
         }

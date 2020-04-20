@@ -178,9 +178,18 @@ const API: NextPage<IProps> = ({ api, services = null }) => {
   );
 };
 
-API.getInitialProps = async ({ query }) => {
+API.getInitialProps = async ({ query, res }) => {
   //@ts-ignore
   const api = await getAPI(query.api);
+
+  if (!api) {
+    if (res) {
+      res.statusCode = 404;
+    }
+    const err = new Error("Cette page n'existe pas");
+    throw err;
+  }
+
   const services = await getAllServices();
 
   const apiServices = services.filter(service => {

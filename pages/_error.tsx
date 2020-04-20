@@ -1,12 +1,12 @@
 import React from 'react';
-import Link from 'next/link';
 
 import Meta from '../components/meta';
 import Page from '../layouts/page';
+import { ButtonLink } from '../uiComponents';
 
 const messages = {
-  500: 'Une erreur imprévue s’est produite',
-  404: "Cette page n'existe pas",
+  500: 'Une erreur s’est produite',
+  404: "La page que vous avez demandé n'existe pas",
 };
 
 interface IProps {
@@ -32,7 +32,7 @@ class ErrorPage extends React.Component<IProps> {
     const msg = message || messages[code];
 
     return (
-      <Page title="Une erreur est survenue">
+      <Page title="Page d’erreur">
         <Meta title={title} description={msg} />
 
         <section id="errorContainer" className="ui text container">
@@ -43,11 +43,13 @@ class ErrorPage extends React.Component<IProps> {
               </span>
             </h1>
             <h2>{msg}</h2>
-            <div className="back-home">
-              <Link href="/">
-                <a className="ui button">Retour à la page d’accueil</a>
-              </Link>
-            </div>
+            <h3>
+              Cela ne devrait pas arriver, mais si le problème persiste, vous
+              pouvez <a href="mailto:contact@api.gouv.fr">nous contacter</a>.
+            </h3>
+            <ButtonLink href="/">
+              Cliquez ici pour retourner à la page d’accueil
+            </ButtonLink>
           </div>
 
           <style jsx>{`
@@ -56,6 +58,7 @@ class ErrorPage extends React.Component<IProps> {
               flex-direction: column;
               justify-content: center;
               height: 75%;
+              margin: 70px 0;
             }
 
             #errorContainer > div {
@@ -66,28 +69,21 @@ class ErrorPage extends React.Component<IProps> {
             }
 
             h1,
+            h2,
+            h3 {
+              text-align: center;
+              margin: 10px auto 30px;
+            }
+            h1 {
+              font-size: 6rem;
+            }
             h2 {
-              text-align: center;
-              font-size: 200%;
-              line-height: 1.8;
-              letter-spacing: 0.08em;
-              text-transform: uppercase;
-              margin: 0;
+              font-size: 1.8rem;
+              line-height: 28px;
             }
-
-            .back-home {
-              display: flex;
-              justify-content: center;
-              width: 80%;
-              border-top: 0.5em #3d4a99 solid;
-              padding-top: 2em;
-            }
-
-            .ui .button {
-              background-color: #3d4a99;
-              color: white;
-              text-align: center;
-              margin: auto;
+            h3 {
+              font-size: 1.3rem;
+              color: #444;
             }
           `}</style>
         </section>
