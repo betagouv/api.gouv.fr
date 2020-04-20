@@ -121,10 +121,19 @@ const Service: NextPage<IProps> = ({
   );
 };
 
-Service.getInitialProps = async ({ query }) => {
+Service.getInitialProps = async ({ query, res }) => {
   const serviceName = query.service;
+
   //@ts-ignore
   const service = await getService(serviceName);
+
+  if (!service) {
+    if (res) {
+      res.statusCode = 404;
+    }
+    const err = new Error("Cette page n'existe pas");
+    throw err;
+  }
 
   return {
     ...service,

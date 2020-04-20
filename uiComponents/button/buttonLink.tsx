@@ -5,7 +5,7 @@ interface IProps {
   rel?: string;
   target?: string;
   disabled?: boolean;
-  large: boolean;
+  large?: boolean;
   onClick?: (() => void) | undefined;
   type?: 'button' | 'submit' | 'reset';
 }
@@ -16,14 +16,14 @@ interface ILinkProps {
   rel?: string;
   target?: string;
   disabled?: boolean;
-  large: boolean;
+  large?: boolean;
   onClick?: (() => void) | undefined;
 }
 
 interface IButtonProps {
   alt?: boolean;
   disabled?: boolean;
-  large: boolean;
+  large?: boolean;
   onClick?: (() => void) | undefined;
   type: 'button' | 'submit' | 'reset' | undefined;
 }
