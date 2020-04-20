@@ -1,5 +1,6 @@
 ---
 title: Annuaire des établissements publics de l'administration
+tagline: L’API qui référence les guichets publics locaux
 is_open: true
 owner: Direction interministérielle du numérique
 owner_acronym: DINUM
