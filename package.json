@@ -9,6 +9,7 @@
     "dev": "next",
     "test": "jest",
     "start": "next start",
+    "start-heroku": "next start -p process.env.PORT",
     "build": "next build",
     "lint": "eslint '**/*.{ts,tsx}' --max-warnings 20"
   },
