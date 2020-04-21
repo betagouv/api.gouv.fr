@@ -8,7 +8,7 @@
     "sitemap": "node save-url-list.js && sitemap < ./public/url-list.txt > ./public/sitemap.xml",
     "dev": "next",
     "test": "jest",
-    "start": "next start -p process.env.PORT",
+    "start": "next start -p $PORT",
     "build": "next build",
     "lint": "eslint '**/*.{ts,tsx}' --max-warnings 20"
   },
