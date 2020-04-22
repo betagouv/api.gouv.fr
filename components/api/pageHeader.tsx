@@ -78,9 +78,9 @@ interface IProps {
 
 const PageHeader: React.FC<IProps> = ({ title, logo, tagline }) => (
   <section id="mission-statement">
-    <Link href="/rechercher-api">
-      <a className="back-button dont-apply-link-style">← Toutes les API</a>
-    </Link>
+    <a href="/rechercher-api" className="back-button dont-apply-link-style">
+      ← Toutes les API
+    </a>
     <div className="content-container content">
       <Title title={title} logo={logo} />
       <Tagline tagline={tagline} />

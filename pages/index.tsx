@@ -1,7 +1,6 @@
 import React from 'react';
-import { NextPage } from 'next';
+import { GetStaticProps } from 'next';
 
-import withErrors from '../components/hoc/with-errors';
 import { getAllAPIs, IApi } from '../model';
 import Page from '../layouts/page';
 
@@ -16,7 +15,7 @@ interface IProps {
   top15Api: IApi[];
 }
 
-const Home: NextPage<IProps> = ({ top15Api }) => (
+const Home: React.FC<IProps> = ({ top15Api }) => (
   <Page
     title="Api.gouv.fr"
     description="Simplifiez le partage et la circulation des données administratives grace à api.gouv, le site qui référence toutes les APIs du service public."
@@ -37,14 +36,16 @@ const Home: NextPage<IProps> = ({ top15Api }) => (
   </Page>
 );
 
-Home.getInitialProps = async req => {
+export const getStaticProps: GetStaticProps = async () => {
   const apiList = await getAllAPIs();
 
   return {
-    top15Api: apiList
-      .sort((a, b) => ((a.visits_2019 || 0) > (b.visits_2019 || 0) ? -1 : 1))
-      .slice(0, 15),
+    props: {
+      top15Api: apiList
+        .sort((a, b) => ((a.visits_2019 || 0) > (b.visits_2019 || 0) ? -1 : 1))
+        .slice(0, 15),
+    },
   };
 };
 
-export default withErrors(Home);
+export default Home;

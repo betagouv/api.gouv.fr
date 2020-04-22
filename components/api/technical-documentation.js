@@ -10,7 +10,7 @@ const TechnicalDocumentation = ({ link, external }) => {
       <>
         {link ? (
           <SwaggerUI url={link} />
-        ) : (
+        ) : external ? (
           <>
             <p>
               Vous pouvez retrouver la documentation technique sur le site de
@@ -20,6 +20,10 @@ const TechnicalDocumentation = ({ link, external }) => {
               Accéder à la documentation
             </ButtonLink>
           </>
+        ) : (
+          <p>
+            La documentation de cette API n'est pas disponible publiquement.
+          </p>
         )}
       </>
     </Section>

@@ -12,7 +12,11 @@ const LabelList = ({ title, labels, isLink }) => {
       <div>
         {labels.map(label =>
           isLink ? (
-            <Link key={label.href} href={label.href}>
+            <Link
+              key={label.href}
+              href={'/les-api-publiques/[slug]'}
+              as={label.href}
+            >
               <a className="ui label label">{label.title}</a>
             </Link>
           ) : (

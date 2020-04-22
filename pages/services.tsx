@@ -1,8 +1,6 @@
 import React from 'react';
 import { NextPage } from 'next';
 
-import withErrors from '../components/hoc/with-errors';
-
 import { getAllServices, IService } from '../model';
 
 import Page from '../layouts/page';
@@ -36,12 +34,14 @@ const Services: NextPage<Props> = ({ services }) => {
   );
 };
 
-Services.getInitialProps = async () => {
+export const getStaticProps = async () => {
   const services = await getAllServices();
 
   return {
-    services,
+    props: {
+      services,
+    },
   };
 };
 
-export default withErrors(Services);
+export default Services;

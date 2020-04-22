@@ -9,7 +9,7 @@ access_link: http://professionnels.ign.fr/ign/contrats
 category: Public
 layout: api
 logo: look4-geoportail.jpg
-external_site: https://ignf.github.io/look4/latest/jsdoc/
+doc_tech_external: https://ignf.github.io/look4/latest/jsdoc/
 clients:
   - développeurs
   - entreprises

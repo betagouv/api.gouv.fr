@@ -1,10 +1,8 @@
 import React from 'react';
-import { NextPage } from 'next';
+import { GetStaticProps, GetStaticPaths } from 'next';
 import ReactMarkdown from 'react-markdown';
 
-import withErrors from '../../components/hoc/with-errors';
-
-import { getService, IService } from '../../model';
+import { getService, IService, getAllServices } from '../../model';
 
 import constants from '../../constants';
 
@@ -15,7 +13,7 @@ import { HEADER_PAGE } from '../../components';
 
 interface IProps extends IService {}
 
-const Service: NextPage<IProps> = ({
+const Service: React.FC<IProps> = ({
   title,
   description,
   link,
@@ -121,23 +119,34 @@ const Service: NextPage<IProps> = ({
   );
 };
 
-Service.getInitialProps = async ({ query, res }) => {
-  const serviceName = query.service;
+export const getStaticPaths: GetStaticPaths = async () => {
+  // Return a list of possible value for id
+  const services = await getAllServices();
+
+  return {
+    paths: services.map(service => {
+      return {
+        params: {
+          slug: service.slug,
+        },
+      };
+    }),
+    fallback: false,
+  };
+};
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  //@ts-ignore
+  const serviceName = params.slug;
 
   //@ts-ignore
   const service = await getService(serviceName);
 
-  if (!service) {
-    if (res) {
-      res.statusCode = 404;
-    }
-    const err = new Error("Cette page n'existe pas");
-    throw err;
-  }
-
   return {
-    ...service,
+    props: {
+      ...service,
+    },
   };
 };
 
-export default withErrors(Service);
+export default Service;

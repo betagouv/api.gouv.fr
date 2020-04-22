@@ -1,8 +1,7 @@
 import React from 'react';
 import { flatten, uniq } from 'lodash';
-import { NextPage } from 'next';
+import { GetStaticProps } from 'next';
 
-import withErrors from '../components/hoc/with-errors';
 import { getAllAPIs, IApi } from '../model';
 import Page from '../layouts/page';
 import SearchApis from '../components/searchApis';
@@ -12,15 +11,12 @@ import constants from '../constants';
 interface IProps {
   allApis: IApi[];
   allThemes: string[];
-  filter: string | string[];
 }
 
-const RechercherApi: NextPage<IProps> = ({ allApis, allThemes, filter }) => {
-  //@ts-ignore
-  const fromSignup = filter.toLowerCase() === 'signup';
+const RechercherApi: React.FC<IProps> = ({ allApis, allThemes }) => {
   return (
     <Page
-      headerKey={fromSignup ? HEADER_PAGE.FROM_SIGNUP : HEADER_PAGE.APIS}
+      headerKey={HEADER_PAGE.APIS}
       preFooterBackground={constants.colors.white}
       title="Rechercher une API du service public"
       description="Vous faites partie d'un ministère ou d'une collectivité et vous cherchez une API du service public ? Vous êtes au bon endroit."
@@ -31,18 +27,12 @@ const RechercherApi: NextPage<IProps> = ({ allApis, allThemes, filter }) => {
         </h2>
       </section>
 
-      <SearchApis
-        allApis={allApis}
-        allThemes={allThemes}
-        //@ts-ignore
-        searchFromQueryString={filter}
-      />
+      <SearchApis allApis={allApis} allThemes={allThemes} />
     </Page>
   );
 };
 
-RechercherApi.getInitialProps = async req => {
-  const { filter = '' } = req.query;
+export const getStaticProps: GetStaticProps = async () => {
   const allApis = await getAllAPIs();
 
   const allThemes = uniq(
@@ -58,10 +48,11 @@ RechercherApi.getInitialProps = async req => {
   ).sort();
 
   return {
-    filter,
-    allApis,
-    allThemes,
+    props: {
+      allApis,
+      allThemes,
+    },
   };
 };
 
-export default withErrors(RechercherApi);
+export default RechercherApi;
