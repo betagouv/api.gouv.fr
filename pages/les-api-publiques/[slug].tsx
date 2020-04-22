@@ -9,7 +9,6 @@ import {
   IApi,
   getAllAPIs,
 } from '../../model';
-import withErrors from '../../components/hoc/with-errors';
 import Page from '../../layouts';
 
 import {
@@ -96,7 +95,8 @@ const API: React.FC<IProps> = ({ api, services = null }) => {
       const currentVisibleAnchor = getVisibleAnchor();
       if (currentVisibleAnchor !== getWindowHash()) {
         setMenuItem(currentVisibleAnchor);
-        window.history.replaceState(undefined, '', `#${currentVisibleAnchor}`);
+        const anchor = currentVisibleAnchor ? `#${currentVisibleAnchor}` : '';
+        window.history.replaceState(undefined, '', anchor);
       }
       // approx 8 frames
     }, 16 * 8);
@@ -184,7 +184,6 @@ const API: React.FC<IProps> = ({ api, services = null }) => {
   );
 };
 
-//@ts-ignore
 export const getStaticPaths: GetStaticPaths = async () => {
   // Return a list of possible value for id
   const apis = await getAllAPIs();
@@ -193,7 +192,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     paths: apis.map(api => {
       return {
         params: {
-          id: api.slug,
+          slug: api.slug,
         },
       };
     }),
@@ -203,14 +202,18 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   //@ts-ignore
-  const api = await getAPI(params.id);
+  const slug = params.slug;
+
+  //@ts-ignore
+  const api = await getAPI(slug);
 
   const services = await getAllServices();
 
   const apiServices = services.filter(service => {
     return service.api.indexOf(api.title) > -1;
   });
+
   return { props: { api, services: apiServices } };
 };
 
-export default withErrors(API);
+export default API;

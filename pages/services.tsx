@@ -1,8 +1,6 @@
 import React from 'react';
 import { NextPage } from 'next';
 
-import withErrors from '../components/hoc/with-errors';
-
 import { getAllServices, IService } from '../model';
 
 import Page from '../layouts/page';
@@ -46,4 +44,4 @@ export const getStaticProps = async () => {
   };
 };
 
-export default withErrors(Services);
+export default Services;

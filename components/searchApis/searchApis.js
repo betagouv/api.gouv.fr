@@ -24,12 +24,12 @@ const logResultsInMatomo = debounce((search, theme, resultCounts) => {
   }
 }, 1000);
 
-const SearchApis = ({ allApis, allThemes, searchFromQueryString = '' }) => {
+const SearchApis = ({ allApis, allThemes }) => {
   const [apiList, setApiList] = useState(allApis);
 
   const [theme, setTheme] = useState(null);
   const [isAccessOpen, setIsAccessOpen] = useState(false);
-  const [searchTerms, setSearchTerms] = useState(searchFromQueryString);
+  const [searchTerms, setSearchTerms] = useState('');
 
   const allThemesOptions = allThemes.map((el, index) => {
     return { value: index, label: el };
@@ -66,7 +66,6 @@ const SearchApis = ({ allApis, allThemes, searchFromQueryString = '' }) => {
         setTheme={setTheme}
         setIsAccessOpen={setIsAccessOpen}
         search={setSearchTerms}
-        searchFromQueryString={searchFromQueryString}
         isAccessOpen={isAccessOpen}
       />
       <Results apiList={apiList} />

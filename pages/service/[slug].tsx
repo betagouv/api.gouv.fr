@@ -2,8 +2,6 @@ import React from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import ReactMarkdown from 'react-markdown';
 
-import withErrors from '../../components/hoc/with-errors';
-
 import { getService, IService, getAllServices } from '../../model';
 
 import constants from '../../constants';
@@ -123,13 +121,13 @@ const Service: React.FC<IProps> = ({
 
 export const getStaticPaths: GetStaticPaths = async () => {
   // Return a list of possible value for id
-  const apis = await getAllServices();
+  const services = await getAllServices();
 
   return {
-    paths: apis.map(service => {
+    paths: services.map(service => {
       return {
         params: {
-          service: service.slug,
+          slug: service.slug,
         },
       };
     }),
@@ -139,7 +137,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   //@ts-ignore
-  const serviceName = params.service;
+  const serviceName = params.slug;
 
   //@ts-ignore
   const service = await getService(serviceName);
@@ -151,4 +149,4 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   };
 };
 
-export default withErrors(Service);
+export default Service;

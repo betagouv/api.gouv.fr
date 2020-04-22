@@ -40,10 +40,10 @@ export default Page => {
     Page
   );
 
-  Extended.getStaticProps = async context => {
-    if (Page.getStaticProps) {
+  Extended.getInitialProps = async context => {
+    if (Page.getInitialProps) {
       try {
-        return await Page.getStaticProps(context);
+        return await Page.getInitialProps(context);
       } catch (err) {
         if (context.res) {
           err.code = context.res.statusCode;
