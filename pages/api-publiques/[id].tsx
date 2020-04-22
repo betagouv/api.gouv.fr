@@ -1,8 +1,14 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { NextPage } from 'next';
+import { GetStaticProps, GetStaticPaths } from 'next';
 import { throttle } from 'lodash';
 
-import { getAPI, getAllServices, IService, IApi } from '../../model';
+import {
+  getAPI,
+  getAllServices,
+  IService,
+  IApi,
+  getAllAPIs,
+} from '../../model';
 import withErrors from '../../components/hoc/with-errors';
 import Page from '../../layouts';
 
@@ -31,7 +37,7 @@ interface IProps {
   services: IService[];
 }
 
-const API: NextPage<IProps> = ({ api, services = null }) => {
+const API: React.FC<IProps> = ({ api, services = null }) => {
   const {
     title,
     tagline,
@@ -178,25 +184,33 @@ const API: NextPage<IProps> = ({ api, services = null }) => {
   );
 };
 
-API.getInitialProps = async ({ query, res }) => {
-  //@ts-ignore
-  const api = await getAPI(query.api);
+//@ts-ignore
+export const getStaticPaths: GetStaticPaths = async () => {
+  // Return a list of possible value for id
+  const apis = await getAllAPIs();
 
-  if (!api) {
-    if (res) {
-      res.statusCode = 404;
-    }
-    const err = new Error("Cette page n'existe pas");
-    throw err;
-  }
+  return {
+    paths: apis.map(api => {
+      return {
+        params: {
+          id: api.slug,
+        },
+      };
+    }),
+    fallback: false,
+  };
+};
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  //@ts-ignore
+  const api = await getAPI(params.id);
 
   const services = await getAllServices();
 
   const apiServices = services.filter(service => {
     return service.api.indexOf(api.title) > -1;
   });
-
-  return { api, services: apiServices };
+  return { props: { api, services: apiServices } };
 };
 
 export default withErrors(API);

@@ -32,8 +32,8 @@ const ApiCard: React.FC<IProps> = ({
 }) => {
   return (
     <>
-      <Link href={path}>
-        <a className="ui fluid card api-card dont-apply-link-style">
+      <Link href="api-publiques/[id]" as={path}>
+        <a href={path} className="ui fluid card api-card dont-apply-link-style">
           <div className="content">
             <img
               className="right floated mini ui image"

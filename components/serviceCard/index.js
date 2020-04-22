@@ -11,7 +11,7 @@ const ServiceCard = ({
   apiList = [],
 }) => (
   <div className="service-card">
-    <Link href={path}>
+    <Link href="service/[service]" as={path}>
       <a className="dont-apply-link-style">
         <div className="image">
           <img

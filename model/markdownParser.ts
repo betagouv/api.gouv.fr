@@ -34,10 +34,10 @@ const formatServiceWithApis = (apis: IApi[]) => (
       title: match.title,
       path: match.path,
       tagline: match.tagline,
-      uptime: match.uptime,
+      uptime: match.uptime || null, // for serialization
       owner: match.owner,
       is_open: match.is_open,
-      logo: match.logo,
+      logo: match.logo || null, // for serialization
     };
   });
 

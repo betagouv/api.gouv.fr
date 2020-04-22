@@ -36,11 +36,13 @@ const Services: NextPage<Props> = ({ services }) => {
   );
 };
 
-Services.getInitialProps = async () => {
+export const getStaticProps = async () => {
   const services = await getAllServices();
 
   return {
-    services,
+    props: {
+      services,
+    },
   };
 };
 
