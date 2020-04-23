@@ -9,7 +9,7 @@
     "dev": "next",
     "test": "jest",
     "start": "next start -p $PORT",
-    "build": "next build",
+    "build": "npm run sitemap && next build",
     "lint": "eslint '**/*.{ts,tsx}' --max-warnings 20"
   },
   "husky": {

@@ -1,27 +1,12 @@
-import fs from 'fs';
 import { uniq, flatten } from 'lodash';
 
-import { getAllApisWithFs } from './apiModel.test';
-import { formatServiceWithApis } from './markdownParser';
+import { readAllServicesOnDisk } from './readOnDisk';
 import { IService } from '.';
-
-const getAllServices = async () => {
-  const files = fs.readdirSync('./_service', 'utf8');
-  const allApis = await getAllApisWithFs();
-  const formatter = formatServiceWithApis(allApis);
-
-  return files.map(fileName => {
-    const file = fs.readFileSync(`./_service/${fileName}`, 'utf8');
-
-    // Parse yaml metadata & markdownbody in document
-    return formatter(fileName, file);
-  }, {});
-};
 
 let allServices: IService[];
 
 test('Can load all Apis', async () => {
-  allServices = await getAllServices();
+  allServices = await readAllServicesOnDisk();
 
   expect(allServices.length).toBeGreaterThan(0);
 });

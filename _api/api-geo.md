@@ -1,7 +1,5 @@
 ---
 title: API Géo
-aliases:
-  - geoapi
 tagline: Interrogez les référentiels géographiques plus facilement
 is_open: true
 external_site: https://geo.api.gouv.fr
