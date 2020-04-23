@@ -10,7 +10,7 @@ const formatApi = (slug: string, data: any): IApi => {
     body: document.body,
     slug,
     description: document.attributes.tagline,
-    path: `/les-api-publiques/${slug}`,
+    path: `/les-api/${slug}`,
   };
 };
 
