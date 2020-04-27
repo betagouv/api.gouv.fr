@@ -1,7 +1,7 @@
 ---
 title: Hub'Eau - Qualité des cours d'eau
 tagline: Qualité physico-chimique des cours d'eau
-contract: OUVERT
+is_open: true
 external_site: http://hubeau.eaufrance.fr/page/documentation_chimie_riviere
 logo: 04-qualite_rivieres.png
 clients:
@@ -22,16 +22,10 @@ keywords:
   - Fleuve
   - Plan d'eau
   - Rivière
-themes: 
+contact_link: newshubeau@brgm.fr
+doc_tech_link: https://hubeau.eaufrance.fr/api/v1/qualite_rivieres/api-docs
+themes:
   - Environnement
-score:
-  detail:
-    access:
-      is_open: true
-    contact:
-      link: newshubeau@brgm.fr
-    doc_tech:
-      link: https://hubeau.eaufrance.fr/api/v1/qualite_rivieres/api-docs
 visits_2019: 509
 last_update: 18/06/2018
 ---

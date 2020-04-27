@@ -7,6 +7,9 @@ clients:
   - ministères
 owner: Institut national de la statistique et des études économiques
 owner_acronym: INSEE
+is_open: true
+access_description: Cette API est ouverte à tous.
+access_link: https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/item-info.jag?name=Sirene&version=V3&provider=insee
 keywords:
   - Entreprise
   - Etablissements
@@ -14,20 +17,12 @@ keywords:
 themes: 
   - Entreprise
 logo: Logo_Insee.svg
-score:
-  detail:
-    access:
-      description: Cette API est ouverte à tous.
-      link: https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/item-info.jag?name=Sirene&version=V3&provider=insee
-    rate_limiting:
-      resume: 30 appels / minute
-      description: |
-        <p>L'usage d'API Sirene est soumis à une limite de 30 interrogations par minute.</p>
-        <p>L'Insee se réserve le droit de changer cette limite en cas de nécessité.</p>
-    contact:
-      link: https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/help.jag#contact
-    doc_tech:
-      link: https://api.insee.fr/catalogue/api-docs/carbon.super/Sirene/V3?envName=Production%20and%20Sandbox
+rate_limiting_resume: 30 appels / minute
+rate_limiting_description: |
+  <p>L'usage d'API Sirene est soumis à une limite de 30 interrogations par minute.</p>
+  <p>L'Insee se réserve le droit de changer cette limite en cas de nécessité.</p>
+contact_link: https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/help.jag#contact
+doc_tech_link: https://api.insee.fr/catalogue/api-docs/carbon.super/Sirene/V3?envName=Production%20and%20Sandbox
 visits_2019: 3785
 last_update: 22/08/2019
 ---

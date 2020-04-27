@@ -4,7 +4,8 @@ tagline: "Faciliter et fiabiliser votre calcul de l'Indicateur de Fréquence de 
 owner: Ministère de l'Agriculture et de l'Alimentation
 owner_acronym: MAA
 category: public
-contract: OUVERT
+is_open: true
+access_link: https://alim.agriculture.gouv.fr/ift/espace-partenaire
 logo: maa.png
 external_site: https://alim.agriculture.gouv.fr/ift/espace-partenaire
 clients:
@@ -23,16 +24,10 @@ keywords:
   - Transition agro-écologique
   - MAEC
   - Ferme Dephy
+contact_link: calculette-ift.dgpaat@agriculture.gouv.fr
+doc_tech_link: https://alim.agriculture.gouv.fr/ift-api/v2/api-docs?group=ift
 themes:
   - Environnement
-score:
-  detail:
-    access:
-      link: https://alim.agriculture.gouv.fr/ift/espace-partenaire
-    contact:
-      link: calculette-ift.dgpaat@agriculture.gouv.fr
-    doc_tech:
-      link: https://alim.agriculture.gouv.fr/ift-api/v2/api-docs?group=ift
 visits_2019: 324
 last_update: 03/05/2018
 ---

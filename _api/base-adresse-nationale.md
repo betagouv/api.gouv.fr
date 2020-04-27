@@ -2,7 +2,7 @@
 title: Base Adresse Nationale
 tagline: "Un référentiel national ouvert : de l'adresse à la coordonnée géographique"
 external_site: https://adresse.data.gouv.fr
-contract: OUVERT
+is_open: true
 clients:
   - particuliers
   - entreprises
@@ -24,22 +24,15 @@ keywords:
   - Adresse
   - GPS
   - Code postal
-themes: 
+rate_limiting_resume: 10 appels / seconde / IP
+rate_limiting_description: |
+  <p>L'API unitaire est disponible à hauteur de 10 appels par seconde et par adresse IP.</p>
+  <p>Le géocodage de masse (CSV) est disponible à hauteur d'un appel simultané par adresse IP.</p>
+themes:
   - Géographie
 additional_css: api
-score:
-  detail:
-    access:
-      is_open: true
-    contact:
-      link: adresse@data.gouv.fr
-    doc_tech:
-      external: https://adresse.data.gouv.fr/api
-    rate_limiting:
-      resume: 10 appels / seconde / IP
-      description: |
-        <p>L'API unitaire est disponible à hauteur de 10 appels par seconde et par adresse IP.</p>
-        <p>Le géocodage de masse (CSV) est disponible à hauteur d'un appel simultané par adresse IP.</p>
+contact_link: adresse@data.gouv.fr
+doc_tech_external: https://adresse.data.gouv.fr/api
 visits_2019: 6460
 uptime: 100 # https://uptimerobot.com/dashboard.php#778110635
 last_update: 10/12/2019

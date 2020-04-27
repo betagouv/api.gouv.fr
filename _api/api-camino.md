@@ -1,7 +1,7 @@
 ---
 title: API Camino
 tagline: Ouvrir le cadastre minier pour mieux gérer les projets
-contract: OUVERT
+is_open: true
 external_site: https://api.camino.beta.gouv.fr
 clients:
   - entreprises
@@ -33,14 +33,8 @@ themes:
   - Géographie
 stat:
   link: https://camino.beta.gouv.fr/statistiques
-score:
-  detail:
-    access:
-      is_open: true
-    contact:
-      link: camino@beta.gouv.fr
-    doc_tech:
-      external: https://api.camino.beta.gouv.fr
+contact_link: camino@beta.gouv.fr
+doc_tech_external: https://api.camino.beta.gouv.fr
 visits_2019: 41
 last_update: 10/12/2019
 ---

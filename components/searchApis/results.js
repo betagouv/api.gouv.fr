@@ -1,7 +1,6 @@
 import React from 'react';
 
 import ApiCard from './apiCard';
-import './resultsStyles.scss';
 
 const Results = ({ apiList }) => {
   return (

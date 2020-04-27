@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import constants from '../../constants';
 
@@ -7,7 +6,6 @@ const MENU_OPTIONS = [
   {
     id: 'api-description',
     label: 'Description',
-    hasNoDetails: true,
   },
   {
     id: 'access',
@@ -36,11 +34,10 @@ const MENU_OPTIONS = [
   {
     id: 'services',
     label: 'Services',
-    hasNoDetails: true,
   },
 ];
 
-const Menu = ({ detail, selectedItem, select }) => {
+const Menu = ({ selectedItem, select }) => {
   const onKeyDown = (keyEvent, id) => {
     // toggle on Space or Enter
     if (keyEvent.keyCode === 13) {
@@ -59,11 +56,6 @@ const Menu = ({ detail, selectedItem, select }) => {
             onClick={() => select(menu.id)}
           >
             {menu.label}
-            {!menu.hasNoDetails &&
-              !detail[menu.id] &&
-              menu.id !== 'partenaires' && (
-                <div className="ui grey mini label">Non renseigné</div>
-              )}
           </div>
         </div>
       ))}
@@ -99,10 +91,6 @@ const Menu = ({ detail, selectedItem, select }) => {
       `}</style>
     </div>
   );
-};
-
-Menu.propTypes = {
-  detail: PropTypes.object.isRequired,
 };
 
 export default Menu;
