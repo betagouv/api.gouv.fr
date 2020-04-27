@@ -4,6 +4,8 @@ tagline: Réutilisation des données juridiques disponibles sur le site Légifra
 owner: Direction de l'information légale et administrative
 owner_acronym: DILA
 logo: DILA_logo_Simplifie_beta_v3.svg
+is_open: false
+access_description: API publique
 clients:
   - particuliers
   - entreprises
@@ -22,21 +24,13 @@ keywords:
   - Accords de branche et conventions collectives
   - Documents administratifs
   - Dossiers législatifs
-themes: 
+rate_limiting_resume: quota / jeton
+rate_limiting_description: |
+  <p>Les appels API sont limités par quotas par jetons d'accès.</p>
+contact_link: retours-legifrance-modernise@dila.gouv.fr
+doc_tech_external: https://developer.aife.economie.gouv.fr
+themes:
   - Administration & législation
-score:
-  detail:
-    access:
-      description: API publique
-      link:
-    rate_limiting:
-      resume: quota / jeton
-      description: |
-        <p>Les appels API sont limités par quotas par jetons d'accès.</p>
-    contact:
-      link: retours-legifrance-modernise@dila.gouv.fr
-    doc_tech:
-      external: https://developer.aife.economie.gouv.fr
 visits_2019: 0
 last_update: 13/01/2020
 ---

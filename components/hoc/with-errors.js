@@ -31,9 +31,7 @@ export default Page => {
 
         const err = stateError || propsError;
         if (err) {
-          return (
-            <ErrorPage {...this.props} code={err.code} message={err.message} />
-          );
+          return <ErrorPage {...this.props} code={err.code} />;
         }
 
         return <Page {...this.props} />;
@@ -48,9 +46,8 @@ export default Page => {
         return await Page.getInitialProps(context);
       } catch (err) {
         if (context.res) {
-          context.res.statusCode = err.code || 500;
+          err.code = context.res.statusCode;
         }
-
         return {
           err,
         };

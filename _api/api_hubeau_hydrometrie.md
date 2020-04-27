@@ -1,7 +1,7 @@
 ---
 title: Hub'Eau - Hydrométrie
 tagline: Hydrométrie temps réel
-contract: OUVERT
+is_open: true
 external_site: https://hubeau.eaufrance.fr/page/api-hydrometrie
 logo: 07-hydrometrie.png
 clients:
@@ -34,14 +34,8 @@ stat:
   label: recherches effectuées
   path:
     - Hydro_last30DaysQueries
-score:
-  detail:
-    access:
-      is_open: true
-    contact:
-      link: newshubeau@brgm.fr
-    doc_tech:
-      link: https://hubeau.eaufrance.fr/api/v1/hydrometrie/api-docs
+contact_link: newshubeau@brgm.fr
+doc_tech_link: https://hubeau.eaufrance.fr/api/v1/hydrometrie/api-docs
 visits_2019: 801
 last_update: 31/07/2019
 ---

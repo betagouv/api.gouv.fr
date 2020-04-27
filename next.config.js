@@ -1,24 +1,13 @@
-const nextRuntimeDotenv = require('next-runtime-dotenv');
+const Dotenv = require('dotenv-webpack');
 const withFonts = require('nextjs-fonts');
-const withSass = require('@zeit/next-sass');
 
-const withConfig = nextRuntimeDotenv({
-  public: [
-    'SITE_NAME',
-    'SITE_URL',
-    'SITE_DESCRIPTION',
-    'DEFAULT_LOGO',
-    'PIWIK_URL',
-    'PIWIK_SITE_ID',
-  ],
+module.exports = withFonts({
+  webpack(config, options) {
+    config.module.rules.push({
+      test: /\.md$/,
+      use: 'raw-loader',
+    });
+    config.plugins.push(new Dotenv({ silent: true }));
+    return config;
+  },
 });
-
-module.exports = withConfig(
-  withSass(
-    withFonts({
-      webpack(config, options) {
-        return config;
-      },
-    })
-  )
-);
