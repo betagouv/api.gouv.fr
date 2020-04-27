@@ -2,6 +2,7 @@ import React from 'react';
 
 import constants from '../../constants';
 import { ButtonLink } from '../../uiComponents/button';
+import './preFooterStyles.scss';
 import { logDemanderApi } from '../../service/analytics';
 
 const PreFooter = ({ background }) => (

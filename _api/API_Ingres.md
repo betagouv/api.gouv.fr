@@ -3,9 +3,7 @@ title: API Ingres
 tagline: Récupérez l'ensemble des référentiels utilisés par les SIRH de la Fonction Publique d'Etat
 owner: Centre Interministériel des Systèmes d'Information relatifs aux Ressources Humaines
 owner_acronym: CISIRH
-is_open: false
-access_condition: OUVERT (utilisation restreinte au Réseau Interministériel de l'Etat (RIE))
-acces_link: https://api.cisirh.rie.gouv.fr/ingres/nomenclatures
+contract: OUVERT (utilisation restreinte au Réseau Interministériel de l'Etat (RIE))
 logo: logo_cisirh.png
 external_site: https://pissarho.cisirh.rie.gouv.fr/actualites/ingres/deploiement-de-deux-api-sur-lapplication-ingres
 stat:
@@ -28,10 +26,16 @@ keywords:
   - RCC
   - Référentiels de Classification Centrale
   - Nomenclatures
-contact_link: nicolas.augereau@finances.gouv.fr
-doc_tech_external: http://pissarho.cisirh.rie.gouv.fr/sites/default/files/2019-10/INGRES-PIL-API%20Nomenclatures%20Ingres_%20%280_7%29.pptx
-themes:
+themes: 
   - Administration & législation
+score:
+  detail:
+    contact:
+      link: nicolas.augereau@finances.gouv.fr
+    access:
+      link: https://api.cisirh.rie.gouv.fr/ingres/nomenclatures
+    doc_tech:
+      external: http://pissarho.cisirh.rie.gouv.fr/sites/default/files/2019-10/INGRES-PIL-API%20Nomenclatures%20Ingres_%20%280_7%29.pptx
 visits_2019: 127
 last_update: 29/11/2019
 ---

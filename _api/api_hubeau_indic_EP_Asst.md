@@ -1,7 +1,7 @@
 ---
 title: Hub'Eau - Indicateurs Eau potable et Assainissement
 tagline: Indicateurs des services d'eau et d'assainissement
-is_open: true
+contract: OUVERT
 external_site: https://hubeau.eaufrance.fr/page/documentation-eau_potable-assainissement
 logo: 02-indicateurs_services.png
 clients:
@@ -22,10 +22,16 @@ keywords:
   - Services
   - Eau potable
   - Assainissement
-contact_link: newshubeau@brgm.fr
-doc_tech_link: https://hubeau.eaufrance.fr/api/v0/indicateurs_services/api-docs
-themes:
+themes: 
   - Environnement
+score:
+  detail:
+    access:
+      is_open: true
+    contact:
+      link: newshubeau@brgm.fr
+    doc_tech:
+      link: https://hubeau.eaufrance.fr/api/v0/indicateurs_services/api-docs
 visits_2019: 430
 last_update: 12/06/2018
 ---

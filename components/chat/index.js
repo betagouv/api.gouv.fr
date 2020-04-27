@@ -3,6 +3,7 @@ import { MessageSquare, X } from 'react-feather';
 
 import constants from '../../constants';
 import { ButtonLink } from '../../uiComponents';
+import './chatStyles.scss';
 
 const Chat = () => {
   const [isOpen, setIsOpen] = useState(false);

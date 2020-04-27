@@ -12,9 +12,11 @@ const Section = ({ id, title, children }) => {
         the top of the page.
       </a>
       <h2 className="ui dividing header">
-        <a href={`#${id}`} aria-hidden="true" className="header-anchor">
-          #
-        </a>
+        <Link href={`#${id}`}>
+          <a aria-hidden="true" className="header-anchor">
+            #
+          </a>
+        </Link>
         {title}
       </h2>
 

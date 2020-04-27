@@ -1,7 +1,5 @@
-const {
-  readAllApisOnDisk,
-  readAllServicesOnDisk,
-} = require('./model/readOnDisk');
+require('dotenv').config();
+const { buildDataset } = require('./build-dataset');
 
 /**
  * Save the list of url in a text file. For testing purposes and for sitemap generation
@@ -22,8 +20,7 @@ function writeUrlListOnDisk(urlList) {
 }
 
 async function main() {
-  const apis = await readAllApisOnDisk();
-  const services = await readAllServicesOnDisk();
+  const { apis, services } = await buildDataset();
 
   const urlList = [
     '/',
@@ -33,8 +30,8 @@ async function main() {
     '/about',
     '/mention-legales',
     '/vie-privee',
-    ...apis.map(api => api.path),
-    ...services.map(service => service.path),
+    ...apis.map(api => `/api/${api.slug}`),
+    ...services.map(service => `/service/${service.slug}`),
   ].map(url => `${process.env.SITE_URL || 'https://api.gouv.fr'}${url}`);
   writeUrlListOnDisk(urlList);
 }

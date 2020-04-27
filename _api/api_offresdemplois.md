@@ -3,9 +3,7 @@ title: Offres d'emploi
 tagline: Accédez aux offres d'emploi disponibles sur pole-emploi.fr
 owner: Pôle emploi
 category: Public
-is_open: false
-access_condition: OUVERT sous contrat
-access_link: https://www.emploi-store-dev.fr/portail-developpeur/detailapicatalogue/5ba49d55243a5f9d2c5064a2
+contract: OUVERT sous contrat
 logo: logo_pole_emploi.jpg
 external_site: https://www.emploi-store-dev.fr/portail-developpeur-cms/home/catalogue-des-api/documentation-des-api/api/api-offres-demploi-v2.html
 clients:
@@ -18,10 +16,16 @@ partners:
 keywords:
   - Offres
   - Emploi
-contact_link: support@emploi-store-dev.fr
-doc_tech_link: https://www.emploi-store-dev.fr/portail-developpeur-cms/home/catalogue-des-api/documentation-des-api/api/api-offres-demploi-v2.html
-themes:
+themes: 
   - Emploi
+score:
+  detail:
+    contact:
+      link: support@emploi-store-dev.fr
+    access:
+      link: https://www.emploi-store-dev.fr/portail-developpeur/detailapicatalogue/5ba49d55243a5f9d2c5064a2
+    doc_tech:
+      link: https://www.emploi-store-dev.fr/portail-developpeur-cms/home/catalogue-des-api/documentation-des-api/api/api-offres-demploi-v2.html
 visits_2019: 1227
 last_update: 14/11/2019
 ---

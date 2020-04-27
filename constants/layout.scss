@@ -1,1 +1,6 @@
 $headerHeight: 60;
+
+// the :export directive is the magic sauce for webpack
+:export {
+  HEADER_HEIGHT: $headerHeight;
+}

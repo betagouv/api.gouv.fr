@@ -1,7 +1,7 @@
 ---
 title: Hub'Eau - Piézométrie
 tagline: Piézométrie (niveau des nappes d'eau souterraine)
-is_open: true
+contract: OUVERT
 external_site: https://hubeau.eaufrance.fr/page/documentation_piezometrie
 logo: 03-piezo.png
 clients:
@@ -32,8 +32,14 @@ stat:
   label: recherches effectuées
   path:
     - Piezo_last30DaysQueries
-contact_link: newshubeau@brgm.fr
-doc_tech_link: https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/api-docs
+score:
+  detail:
+    access:
+      is_open: true
+    contact:
+      link: newshubeau@brgm.fr
+    doc_tech:
+      link: https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/api-docs
 visits_2019: 328
 last_update: 10/03/2020
 ---

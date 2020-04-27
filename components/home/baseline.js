@@ -2,6 +2,8 @@ import React from 'react';
 
 import { TypingCarousel } from '../../uiComponents';
 
+import './baselineStyles.scss';
+
 const Baseline = () => (
   <section
     id="homepage-mission-statement"

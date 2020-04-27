@@ -7,18 +7,24 @@ import { ButtonLink } from '../../uiComponents/button';
 import constants from '../../constants';
 import { logDemanderAcces } from '../../service/analytics';
 
-const Access = ({ is_open, link, description, condition, clients }) => {
+const Access = ({
+  access_open,
+  access_link,
+  access_description,
+  contract,
+  clients,
+}) => {
   return (
     <Section id="access" title="Accès">
-      {is_open ? (
+      {access_open ? (
         <p>L'API est ouverte à tous.</p>
-      ) : link ? (
+      ) : access_link ? (
         <div className="get-access">
-          {description && (
-            <div dangerouslySetInnerHTML={{ __html: description }} />
+          {access_description && (
+            <div dangerouslySetInnerHTML={{ __html: access_description }} />
           )}
 
-          {condition && condition === 'OUVERT sous contrat' ? (
+          {contract && contract === 'OUVERT sous contrat' ? (
             <div>
               <p>
                 L’API nécessite une habilitation, son accès est restreint aux
@@ -34,9 +40,9 @@ const Access = ({ is_open, link, description, condition, clients }) => {
               </ul>
             </div>
           ) : (
-            <p>{condition}</p>
+            <p>{contract}</p>
           )}
-          <ButtonLink href={link} onClick={logDemanderAcces} large>
+          <ButtonLink href={access_link} onClick={logDemanderAcces} large>
             <i className="icon key"></i>Demandez l'accès
           </ButtonLink>
         </div>
@@ -65,18 +71,18 @@ const Access = ({ is_open, link, description, condition, clients }) => {
 };
 
 Access.defaultProps = {
-  is_open: false,
-  link: null,
-  description: null,
-  condition: null,
+  access_open: false,
+  access_link: null,
+  access_description: null,
+  contract: null,
   clients: [],
 };
 
 Access.propTypes = {
-  is_open: PropTypes.bool,
-  link: PropTypes.string,
-  description: PropTypes.string,
-  condition: PropTypes.string,
+  access_open: PropTypes.bool,
+  access_link: PropTypes.string,
+  access_description: PropTypes.string,
+  contract: PropTypes.string,
   clients: PropTypes.array,
 };
 

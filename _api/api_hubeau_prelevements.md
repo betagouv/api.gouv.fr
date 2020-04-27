@@ -1,7 +1,7 @@
 ---
 title: Hub'Eau - Prélèvements en eau
 tagline: Prélèvements en eau
-is_open: true
+contract: OUVERT
 external_site: https://hubeau.eaufrance.fr/page/api-prelevements-eau
 logo: 08-prelevements.png
 clients:
@@ -20,10 +20,16 @@ keywords:
   - Prélèvements en eau
   - Ressource en eau
   - BNPE
-contact_link: newshubeau@brgm.fr
-doc_tech_link: https://hubeau.eaufrance.fr/api/v1/prelevements/api-docs
-themes:
+themes: 
   - Environnement
+score:
+  detail:
+    access:
+      is_open: true
+    contact:
+      link: newshubeau@brgm.fr
+    doc_tech:
+      link: https://hubeau.eaufrance.fr/api/v1/prelevements/api-docs
 visits_2019: 55
 last_update: 24/07/2019
 ---

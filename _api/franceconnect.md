@@ -2,9 +2,7 @@
 title: FranceConnect
 tagline: FranceConnect est un dispositif qui garantit l’identité d’un usager en se reposant sur des comptes certifiés existants.
 external_site: https://franceconnect.gouv.fr/partenaires
-is_open: false
-access_condition: OUVERT sous contrat
-access_link: https://franceconnect.gouv.fr/partenaires
+contract: OUVERT sous contrat
 clients:
   - Particuliers, pour contacter FranceConnect, <a href='mailto:support@franceconnect.gouv.fr'>cliquez ici</a>
   - Entreprises, si vous avez vérifié votre éligibilité, vous pouvez demander à <a href='https://signup.api.gouv.fr/franceconnect'>intégrer le bouton FranceConnect</a>.
@@ -25,8 +23,14 @@ keywords:
 themes: 
   - Particulier
 logo: logo-fc.png
-contact_link: support.partenaires@franceconnect.gouv.fr
-doc_tech_external: https://partenaires.franceconnect.gouv.fr/fcp/fournisseur-service
+score:
+  detail:
+    access:
+      link: https://franceconnect.gouv.fr/partenaires
+    contact:
+      link: support.partenaires@franceconnect.gouv.fr
+    doc_tech:
+      external: https://partenaires.franceconnect.gouv.fr/fcp/fournisseur-service
 visits_2019: 120883
 uptime: 99.893 # https://uptimerobot.com/dashboard.php#778110642
 last_update: 10/12/2019

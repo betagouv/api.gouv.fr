@@ -4,6 +4,7 @@ import { throttle } from 'lodash';
 
 import { ButtonLink } from '../../uiComponents/button';
 import constants from '../../constants';
+import './headerStyles.scss';
 import { logDemanderApi } from '../../service/analytics';
 
 export const HEADER_PAGE = {
@@ -27,7 +28,7 @@ const HEADER = [
   { href: '/apropos', txt: 'À propos', key: HEADER_PAGE.ABOUT },
 ];
 
-const Header = ({ headerKey = 'home' }) => {
+const Header = ({ headerKey = 'home', filter = '' }) => {
   const header = useRef(null);
 
   useEffect(() => {
