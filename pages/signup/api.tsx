@@ -12,18 +12,15 @@ interface IProps {
 }
 
 const SignupApis: React.FC<IProps> = ({ signupApis }) => {
-  //@ts-ignore
   return (
     <Page
       headerKey={HEADER_PAGE.FROM_SIGNUP}
+      noIndex={true}
       preFooterBackground={constants.colors.white}
-      title="Rechercher une API du service public"
-      description="Vous faites partie d'un ministère ou d'une collectivité et vous cherchez une API du service public ? Vous êtes au bon endroit."
+      title="Nouvelle demande d’habilitation"
     >
       <section className="content-container page-baseline">
-        <h2>
-          Vous recherchez une API du service public ? Vous êtes au bon endroit !
-        </h2>
+        <h2>Nouvelle demande d’habilitation</h2>
       </section>
 
       <Results apiList={signupApis} />
