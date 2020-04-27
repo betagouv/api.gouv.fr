@@ -1,7 +1,9 @@
 ---
 title: API Géo
+aliases:
+  - geoapi
 tagline: Interrogez les référentiels géographiques plus facilement
-is_open: true
+contract: OUVERT
 external_site: https://geo.api.gouv.fr
 clients:
   - collectivités
@@ -20,10 +22,7 @@ keywords:
   - Départements
   - Régions
   - EPCI
-rate_limiting_resume: 10 appels / seconde / IP
-rate_limiting_description: |
-  <p>L'API est disponible à hauteur de 10 appels par seconde et par adresse IP.</p>
-themes:
+themes: 
   - Géographie
 stat:
   lastXdays: 7
@@ -31,8 +30,18 @@ stat:
   label: recherches effectuées
   path:
     - last7DaysQueries
-contact_link: geo@api.gouv.fr
-doc_tech_link: https://geo.api.gouv.fr/definition.yml
+score:
+  detail:
+    access:
+      is_open: true
+    contact:
+      link: geo@api.gouv.fr
+    doc_tech:
+      link: https://geo.api.gouv.fr/definition.yml
+    rate_limiting:
+      resume: 10 appels / seconde / IP
+      description: |
+        <p>L'API est disponible à hauteur de 10 appels par seconde et par adresse IP.</p>
 uptime: 100 # https://uptimerobot.com/dashboard#777757460
 visits_2019: 26602
 last_update: 17/01/2020

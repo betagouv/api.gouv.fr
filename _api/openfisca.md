@@ -2,7 +2,7 @@
 title: OpenFisca
 tagline: Calculer l'impôt, les cotisations, les aides sociales…
 external_site: https://api.openfisca.fr
-is_open: true
+contract: OUVERT
 clients:
   - citoyens
   - entreprises
@@ -24,8 +24,14 @@ keywords:
 themes:
   - Administration & législation
 logo: logo-openfisca.svg
-contact_link: contact@openfisca.fr
-doc_tech_external: https://openfisca.org/doc/openfisca-web-api/
+score:
+  detail:
+    contact:
+      link: contact@openfisca.fr
+    access:
+      is_open: true
+    doc_tech:
+      external: https://openfisca.org/doc/openfisca-web-api/
 visits_2019: 1982
 last_update: 15/01/2019
 ---

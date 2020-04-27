@@ -16,15 +16,27 @@
       align-items: center;
       position: relative;
 
-      h3 > span {
-        font-size: 3rem;
-        opacity: 0.2;
-        font-weight: 400;
+      &:before {
+        content: '1';
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-family: cursive;
+        font-size: 6rem;
         color: $blue;
+        opacity: 0.15;
       }
 
       &:nth-child(2) {
         flex-direction: column;
+
+        &:before {
+          content: '2';
+          top: 80%;
+        }
+      }
+      &:nth-child(3):before {
+        content: '3';
       }
     }
   }

@@ -2,9 +2,7 @@
 title: le.Taxi
 tagline: Un clic, un taxi
 external_site: https://le.taxi
-is_open: false
-access_condition: OUVERT sous contrat
-access_link: http://le.taxi/join.html
+contract: OUVERT sous contrat
 clients:
   - collectivités
   - entreprises
@@ -21,10 +19,16 @@ owner_acronym: DINUM & DGITM
 keywords:
   - Transport
   - Taxi
-contact_link: https://le.taxi/join.html
-doc_tech_link: https://api.taxi/swagger.json
 themes:
   - Transport
+score:
+  detail:
+    contact:
+      link: https://le.taxi/join.html
+    access:
+      link: http://le.taxi/join.html
+    doc_tech:
+      link: https://api.taxi/swagger.json
 visits_2019: 1477
 last_update: 10/12/2019
 ---

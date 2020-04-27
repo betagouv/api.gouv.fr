@@ -6,7 +6,11 @@ import { ButtonLink } from '../../uiComponents';
 import constants from '../../constants';
 
 const ApiTripletSection = ({ apiList }) => {
-  const selectApis = shuffle(apiList).slice(0, 3);
+  const selectApis = shuffle(
+    apiList
+      .sort((a, b) => (a.visits_2019 > b.visits_2019 ? -1 : 1))
+      .slice(0, 15)
+  ).slice(0, 3);
   return (
     <section id="api-triplet">
       <div className="content-container">

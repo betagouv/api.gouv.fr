@@ -5,7 +5,7 @@ import Monitoring from './monitoring';
 import RateLimiting from './rate-limiting';
 import Partners from './partners';
 import TechnicalDocumentation from './technical-documentation';
-import ApiRelatedServices from './apiRelatedServices.tsx';
+import ApiRelatedServices from './apiRelatedServices';
 import Content from './content';
 import Thumbnails from './thumbnails';
 import PageHeader from './pageHeader';

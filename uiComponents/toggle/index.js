@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './styles.scss';
+
 const Toggle = ({ id, onChange, label, isToggled }) => {
   const onClick = () => {
     onChange(!isToggled);
