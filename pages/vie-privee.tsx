@@ -79,7 +79,7 @@ const Privacy: NextPage = () => (
         </a>
         , sont disponibles en accès libre sur{' '}
         <a
-          href="https://stats.gouv.fr"
+          href="https://stats.data.gouv.fr"
           rel="noopener noreferrer"
           target="_blank"
         >
