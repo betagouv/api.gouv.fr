@@ -57,10 +57,10 @@ app.prepare().then(async () => {
     return res.redirect('/rechercher-api?filter=signup');
   });
 
-  server.get('/les-api/:apiId', (req, res) => {
-    const { apiId } = req.params;
-    return app.render(req, res, '/api', { apiId });
-  });
+  // server.get('/les-api/:apiId', (req, res) => {
+  //   const { apiId } = req.params;
+  //   return app.render(req, res, '/api', { apiId });
+  // });
 
   server.get('/api/:apiId', (req, res) => {
     const { apiId } = req.params;
