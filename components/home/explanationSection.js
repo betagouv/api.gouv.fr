@@ -2,18 +2,15 @@ import React from 'react';
 
 const explanations = [
   {
-    title:
-      '<span>1.</span> Trouvez <a href="/apropos#apis">l’API</a> dont vous avez besoin',
+    title: 'Trouvez <a href="/apropos#apis">l’API</a> dont vous avez besoin',
     src: '/images/home/1.png',
   },
   {
-    title:
-      '<span>2.</span>  Obtenez l’<a href="/apropos#access">accès</a> à l’API',
+    title: 'Obtenez l’<a href="/apropos#access">accès</a> à l’API',
     src: '/images/home/2.png',
   },
   {
-    title:
-      '<span>3.</span>  Construisez votre <a href="/apropos#service">service !</a>',
+    title: 'Construisez votre <a href="/apropos#service">service !</a>',
     src: '/images/home/3.png',
   },
 ];
