@@ -1,6 +1,7 @@
 ---
 title: Annuaire des établissements publics de l'administration
-contract: OUVERT
+tagline: L’API qui référence les guichets publics locaux
+is_open: true
 owner: Direction interministérielle du numérique
 owner_acronym: DINUM
 layout: api
@@ -15,16 +16,10 @@ keywords:
   - Établissements
   - Publics
   - Administration
-themes: 
+contact_link: contact@beta.gouv.fr
+doc_tech_link: https://etablissements-publics.api.gouv.fr/v3/definitions.yaml
+themes:
   - Administration & législation
-score:
-  detail:
-    access:
-      is_open: true
-    contact:
-      link: contact@beta.gouv.fr
-    doc_tech:
-      link: https://etablissements-publics.api.gouv.fr/v3/definitions.yaml
 visits_2019: 2089
 last_update: 10/12/2019
 ---

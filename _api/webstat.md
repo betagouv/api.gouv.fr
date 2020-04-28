@@ -3,6 +3,9 @@ title: Webstat # nom commercial de l'API
 tagline: Accédez aux séries économiques de la Banque de France # une phrase maximum
 owner: Banque de France # producteur de l'API
 logo: webstat.png # FILENAME d'un logo de l'API
+is_open: false
+access_condition: OUVERT sous contrat
+access_link: https://developer.webstat.banque-france.fr/user/register # URL d'une page de demande d'accès si l'API est à accès restreint
 clients: # types d'entités habilitées à utiliser l'API
   - particuliers # texte libre en minuscules
   - entreprises # ajoutez ou supprimez des types d'entités
@@ -20,20 +23,13 @@ keywords: # utilisés pour la recherche
   - balance des paiements
   - conjoncture
   - entreprises
-themes: 
+rate_limiting_resume: 5 appels / seconde / jeton
+rate_limiting_description: |
+  <p>L'API est disponible à hauteur de 5 appels par secondes et par jetons d'accès.</p>
+contact_link: https://developer.webstat.banque-france.fr/contact
+doc_tech_link: https://developer.webstat.banque-france.fr/ibm_apim/swaggerjson/d2Vic3RhdC1iYW5xdWUtZGUtZnJhbmNlLWZyX3YxOjEuMC4wXzQ3MDE%2C
+themes:
   - Administration & législation
-score:
-  detail:
-    access:
-      description: OUVERT sous contrat
-      link: https://developer.webstat.banque-france.fr/user/register # URL d'une page de demande d'accès si l'API est à accès restreint
-    rate_limiting:
-      description: |
-        <p>L'API est disponible à hauteur de 5 appels par secondes et par jetons d'accès.</p>
-    contact:
-      link: https://developer.webstat.banque-france.fr/contact #moyen de contact, soit un mail, soit un lien vers formulaire de contact
-    doc_tech:
-      link: https://developer.webstat.banque-france.fr/ibm_apim/swaggerjson/d2Vic3RhdC1iYW5xdWUtZGUtZnJhbmNlLWZyX3YxOjEuMC4wXzQ3MDE%2C # URL de la documentation au format OpenAPI <https://github.com/OAI/OpenAPI-Specification>
 visits_2019: 8
 last_update: 20/12/2019
 ---

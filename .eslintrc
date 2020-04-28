@@ -1,4 +1,8 @@
 {
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
   "extends": ["react-app", "plugin:jsx-a11y/recommended"],
   "plugins": ["prettier", "jsx-a11y"],
   "rules": {

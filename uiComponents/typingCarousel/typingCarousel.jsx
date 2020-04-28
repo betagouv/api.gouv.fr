@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import './typingCarouselStyles.scss';
 
 /**
  * Generates every string to be displayed

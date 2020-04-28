@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { SearchBar, Toggle, Dropdown } from '../../uiComponents';
-import './filterHeaderStyles.scss';
 
 export const FilterHeader = ({
   search,

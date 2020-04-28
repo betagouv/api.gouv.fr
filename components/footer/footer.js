@@ -1,8 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 
-import './footerStyles.scss';
-
 const Footer = () => {
   return (
     <footer id="footer">
