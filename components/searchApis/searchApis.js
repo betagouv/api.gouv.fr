@@ -59,11 +59,25 @@ const SearchApis = ({ allApis, allThemes }) => {
     return () => {};
   }, [theme, isAccessOpen, searchTerms, allApis]);
 
+  const updateTheme = index => {
+    if (!!index) {
+      // no theme selected
+      setTheme(null);
+    }
+    const newTheme = allThemesOptions.reduce((selectedTheme, theme) => {
+      if (theme.value === index) {
+        return theme.label;
+      }
+      return selectedTheme;
+    }, null);
+    setTheme(newTheme);
+  };
+
   return (
     <>
       <FilterHeader
         allThemesOptions={allThemesOptions}
-        setTheme={setTheme}
+        setTheme={updateTheme}
         setIsAccessOpen={setIsAccessOpen}
         search={setSearchTerms}
         isAccessOpen={isAccessOpen}

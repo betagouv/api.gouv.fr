@@ -98,10 +98,7 @@ const Header = ({ headerKey = 'home' }) => {
                   </Fragment>
                 ))}
                 <li className="external">
-                  <ButtonLink
-                    href={constants.links.mailto.REQUEST_API}
-                    onClick={logDemanderApi}
-                  >
+                  <ButtonLink href="/form" onClick={logDemanderApi}>
                     Demander une API
                   </ButtonLink>
                 </li>
