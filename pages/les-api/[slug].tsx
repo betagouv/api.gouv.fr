@@ -45,6 +45,7 @@ const API: React.FC<IProps> = ({ api, services = null }) => {
     uptime,
     last_update,
     contact_link,
+    external_site,
     doc_tech_link,
     doc_tech_external,
     access_link,
@@ -145,7 +146,7 @@ const API: React.FC<IProps> = ({ api, services = null }) => {
 
             <Access
               is_open={is_open}
-              link={access_link}
+              link={access_link || (is_open ? external_site : '')}
               description={access_description}
               condition={access_condition}
               clients={clients}

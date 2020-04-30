@@ -11,7 +11,20 @@ const Access = ({ is_open, link, description, condition, clients }) => {
   return (
     <Section id="access" title="Accès">
       {is_open ? (
-        <p>L'API est ouverte à tous.</p>
+        <>
+          <p>L'API est ouverte à tous.</p>
+          <p>
+            Pour accèder aux données, consultez la{' '}
+            <a href="#doc_tech">documentation </a>
+            {link ? (
+              <>
+                ou le <a href={link}>site internet</a>
+              </>
+            ) : (
+              ''
+            )}
+          </p>
+        </>
       ) : link ? (
         <div className="get-access">
           {description && (
