@@ -1,7 +1,7 @@
 import { escapeRegExp } from 'lodash';
 
 /**
- * Replaces all occurences of find in a string
+ * Replaces all occurrences of find in a string
  * @param {*} str
  * @param {*} find
  * @param {*} replace
@@ -15,7 +15,7 @@ export const replaceAll = (
 };
 
 /**
- * Find all occurences of needle in a string
+ * Find all occurrences of needle in a string
  */
 export const findAll = (needle: string) => {
   if (needle === '') {

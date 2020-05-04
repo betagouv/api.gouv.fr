@@ -34,7 +34,7 @@ const About: React.FC = () => (
           donnée.
         </p>
         <p>
-          Par exemple, quand les entreprises françaises font leur
+          Par exemple, quand les entreprises françaises font leur{' '}
           <a
             target="blank"
             rel="noopener noreferrer"
