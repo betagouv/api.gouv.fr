@@ -20,14 +20,14 @@ export default () => {
     { value: VISITOR.ENTREPRISE, label: 'Je suis une entreprise' },
   ];
   return (
-    <Page title="Formulaire de contact" usePreFooter={false}>
+    <Page title="Formulaire de contact" usePreFooter={false} useFooter={false}>
       <div className="text-container">
         <h1>
           Bonjour&nbsp;
           <span role="img" aria-label="emoji hello">
             👋
           </span>
-          , comment pouvons nous vous aider&nbsp;?
+          , comment pouvons-nous vous aider&nbsp;?
         </h1>
         <p>
           Pour bien commencer, nous avons besoin d’en apprendre un peu plus sur

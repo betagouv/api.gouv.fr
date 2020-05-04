@@ -7,6 +7,7 @@ interface IProps {
   description?: string;
   headerKey?: string;
   usePreFooter?: boolean;
+  useFooter?: boolean;
   preFooterBackground?: string;
   noIndex?: boolean;
 }
@@ -16,6 +17,7 @@ const Page: React.FC<IProps> = ({
   description,
   headerKey,
   usePreFooter = true,
+  useFooter = true,
   noIndex = false,
   preFooterBackground,
   children,
@@ -25,7 +27,7 @@ const Page: React.FC<IProps> = ({
     <Header headerKey={headerKey || 'home'} />
     <main>{children}</main>
     {usePreFooter && <PreFooter background={preFooterBackground} />}
-    <Footer />
+    {useFooter && <Footer />}
   </div>
 );
 

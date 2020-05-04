@@ -43,7 +43,7 @@ const Chat = () => {
           <label htmlFor="question">Votre question</label>
           <input
             id="question"
-            placeholder="Comment pouvons nous vous aider ?"
+            placeholder="Comment pouvons-nous vous aider ?"
             type="text"
             ref={subject}
             required

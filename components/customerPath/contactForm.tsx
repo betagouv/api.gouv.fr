@@ -15,10 +15,15 @@ const ContactForm: React.FC<IProps> = ({ visitor }) => {
     };
   };
   return (
-    <form onSubmit={submit}>
-      <TextArea onChange={() => null} />
-      <button type="submit">Contact-contact</button>
-    </form>
+    <>
+      <div className="chat-title">
+        Posez votre question ? L’équipe d'api.gouv.fr vous répond.
+      </div>
+      <form onSubmit={submit}>
+        <TextArea onChange={() => null} />
+        <button type="submit">Contact-contact</button>
+      </form>
+    </>
   );
 };
 
