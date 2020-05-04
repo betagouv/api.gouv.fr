@@ -55,7 +55,7 @@ const readAllApisOnDisk = async () => {
     const file = fs.readFileSync(`./_api/${fileName}`, 'utf8');
 
     // Parse yaml metadata & markdownbody in document
-    return formatApi(fileName, file);
+    return formatApi(fileName.replace('.md', ''), file);
   }, {});
 };
 
@@ -68,7 +68,7 @@ const readAllServicesOnDisk = async () => {
     const file = fs.readFileSync(`./_service/${fileName}`, 'utf8');
 
     // Parse yaml metadata & markdownbody in document
-    return formatter(fileName, file);
+    return formatter(fileName.replace('.md', ''), file);
   }, {});
 };
 
