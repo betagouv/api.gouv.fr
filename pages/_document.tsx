@@ -1,5 +1,6 @@
 import React from 'react';
 import Document, { Head, Main, NextScript } from 'next/document';
+import constants from '../constants';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: any) {
@@ -206,9 +207,9 @@ class MyDocument extends Document {
             _paq.push(['trackPageView']);
             _paq.push(['enableLinkTracking']);
             (function() {
-              var u="https://stats.data.gouv.fr/";
+              var u="${constants.links.PIWIK.URL}";
               _paq.push(['setTrackerUrl', u+'piwik.php']);
-              _paq.push(['setSiteId', 22]);
+              _paq.push(['setSiteId', ${constants.links.PIWIK.SITE_ID}]);
               var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
               g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
             })();
