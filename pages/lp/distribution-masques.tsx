@@ -61,7 +61,7 @@ const Masks: React.FC = () => (
           <ul>
             <li>Demandez votre accès à l’API particulier</li>
             <li>Connectez votre portail citoyen</li>
-            <li>Organisez la distribution de masque</li>
+            <li>Organisez la distribution de masques</li>
           </ul>
           <div className="layout-center">
             <ButtonLink
@@ -87,7 +87,7 @@ const Masks: React.FC = () => (
         <p>
           Dans le cadre de la crise sanitaire relative au COVID-19, la DINUM se
           mobilise afin de mettre à disposition des territoires ses outils et
-          son expertise et faciliter ainsi la mise en oeuvre de démarches en
+          son expertise et faciliter ainsi la mise en œuvre de démarches en
           ligne à destination des usagers.
         </p>
       </div>
