@@ -196,27 +196,25 @@ class MyDocument extends Document {
         <body>
           <Main />
           <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Array.prototype.includes,modernizr:es6string,modernizr:es6array,Promise,fetch" />
-          {process.env.PIWIK_URL && process.env.PIWIK_SITE_ID && (
-            <script
-              defer
-              async
-              dangerouslySetInnerHTML={{
-                __html: `
+          <script
+            defer
+            async
+            dangerouslySetInnerHTML={{
+              __html: `
             <!-- Piwik -->
             var _paq = window._paq || [];
             _paq.push(['trackPageView']);
             _paq.push(['enableLinkTracking']);
             (function() {
-              var u="${process.env.PIWIK_URL}";
+              var u="https://stats.data.gouv.fr/";
               _paq.push(['setTrackerUrl', u+'piwik.php']);
-              _paq.push(['setSiteId', ${process.env.PIWIK_SITE_ID}]);
+              _paq.push(['setSiteId', 22]);
               var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
               g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
             })();
           `,
-              }}
-            />
-          )}
+            }}
+          />
           <NextScript />
         </body>
       </html>
