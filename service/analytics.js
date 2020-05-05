@@ -33,7 +33,6 @@ if (typeof window !== 'undefined' && window.Piwik) {
 }
 
 const logLPCTA1 = () => {
-  console.log(typeof window, window._paq, window.location.pathname);
   if (typeof window !== 'undefined' && window._paq) {
     window._paq.push([
       'trackEvent',
