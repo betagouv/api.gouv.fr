@@ -25,7 +25,7 @@ const Masks: React.FC = () => (
       <div className="text-container">
         <p>
           En connectant le portail de votre ville à l’API Particulier, il suffit
-          à vos concitoyens de donner leur numero fiscal et leur numéro
+          à vos concitoyens de donner leur numéro fiscal et leur numéro
           d'allocataire pour que votre équipe puisse accéder à :
         </p>
         <ul>
@@ -45,7 +45,7 @@ const Masks: React.FC = () => (
           naissance.
         </p>
         <p>
-          Organisez la campagne de distribution grace aux adresses recueillies.
+          Organisez la campagne de distribution grâce aux adresses recueillies.
           La distribution de masques dans les foyers français est un{' '}
           <b>impératif de santé publique</b>.
         </p>
@@ -59,7 +59,7 @@ const Masks: React.FC = () => (
         <div>
           Vous êtes prêt à connecter votre ville ? Voici les étapes à suivre :
           <ul>
-            <li>Demandez accès à l’API particulier</li>
+            <li>Demandez votre accès à l’API particulier</li>
             <li>Connectez votre portail citoyen</li>
             <li>Organisez la distribution de masque</li>
           </ul>
