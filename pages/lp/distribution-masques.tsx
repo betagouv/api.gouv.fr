@@ -7,8 +7,8 @@ import { logLPCTA1, logLPCTA2, logLPContact } from '../../service/analytics';
 
 const Masks: React.FC = () => (
   <Page
-    title="Utiliser les APIs pour protéger vos concitoyens"
-    description="Comment utiliser les APIs pour faciliter la distribution de masques pendant la crise du Covid-19"
+    title="Gagnez du temps et protégez vos concitoyens"
+    description="Comment faciliter la distribution de masques pendant la crise du Covid-19"
     usePreFooter={false}
   >
     <div className="hero-section text-container">
