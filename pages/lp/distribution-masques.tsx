@@ -3,6 +3,7 @@ import React from 'react';
 import Page from '../../layouts/page';
 import { ButtonLink } from '../../uiComponents';
 import constants from '../../constants';
+import { logLPCTA1, logLPCTA2, logLPContact } from '../../service/analytics';
 
 const Masks: React.FC = () => (
   <Page
@@ -11,20 +12,23 @@ const Masks: React.FC = () => (
     usePreFooter={false}
   >
     <div className="hero-section text-container">
-      <h1>Gagnez du temps et protégez des vies</h1>
+      <h1>Gagnez du temps et protégez vos concitoyens</h1>
       <h2>
-        Simplifiez la distribution de masques dans votre commune avec une API
+        Simplifiez la distribution de masques dans votre commune grace à une API
       </h2>
-      <ButtonLink href="https://signup.api.gouv.fr/api-particulier">
-        Je veux créer un service de distribution de masques
+      <ButtonLink
+        href="https://signup.api.gouv.fr/api-particulier"
+        onClick={logLPCTA1}
+      >
+        Je veux créer un service de distribution de masques dans ma collectivité
       </ButtonLink>
     </div>
     <div className="question-section section">
       <div className="text-container">
         <p>
-          En utilisant API particulier, il suffit à vos concitoyens de donner
-          leur numero fiscal et leur numéro d'allocataire pour que votre équipe
-          accéde à :
+          En intégrant API particulier à votre portail citoyen, il suffit à vos
+          concitoyens de donner leur numero fiscal et leur numéro d'allocataire
+          pour que votre équipe accéde à :
         </p>
         <ul>
           <li>
@@ -33,7 +37,7 @@ const Masks: React.FC = () => (
           </li>
           <li>
             l'adresse ainsi que la composition de son foyer familial (adulte et
-            enfant) connue par la CAF.
+            enfant) connue par la CAF
           </li>
         </ul>
         <p>
@@ -55,14 +59,17 @@ const Masks: React.FC = () => (
           Comment mettre en place ce service dans ma ville ?
         </h3>
         <div>
-          Prêt à connecter votre ville ?
+          Vous êtes prêt à connecter votre ville ? Voici les étapes à suivre :
           <ul>
             <li>Demandez accès à API particulier</li>
             <li>Connectez votre portail citoyen</li>
             <li>Organisez la distribution de masque</li>
           </ul>
           <div className="layout-center">
-            <ButtonLink href="https://signup.api.gouv.fr/api-particulier">
+            <ButtonLink
+              href="https://signup.api.gouv.fr/api-particulier"
+              onClick={logLPCTA2}
+            >
               Je connecte ma ville à API particulier
             </ButtonLink>
           </div>
@@ -83,7 +90,10 @@ const Masks: React.FC = () => (
           Vous avez besoin d’aide pour connecter un service citoyen a une API ?
         </h3>
         <div className="layout-center">
-          <ButtonLink href={constants.links.mailto.SUPPORT}>
+          <ButtonLink
+            href={constants.links.mailto.SUPPORT}
+            onClick={logLPContact}
+          >
             Comment pouvons-nous vous aider ?
           </ButtonLink>
         </div>
