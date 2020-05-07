@@ -11,7 +11,7 @@ const Masks: React.FC = () => (
     description="Comment faciliter la distribution de masques pendant la crise du Covid-19"
     usePreFooter={false}
   >
-    <div className="hero-section text-container">
+    <div className="hero-section text-wrapper text-style">
       <h1>Gagnez du temps et protégez vos concitoyens</h1>
       <h2>Simplifiez la distribution de masques dans votre commune</h2>
       <ButtonLink
@@ -22,7 +22,7 @@ const Masks: React.FC = () => (
       </ButtonLink>
     </div>
     <div className="question-section section">
-      <div className="text-container">
+      <div className="text-wrapper text-style">
         <p>
           En connectant le portail de votre ville à l’API Particulier, il suffit
           à vos concitoyens de donner leur numéro fiscal et leur numéro
@@ -52,7 +52,7 @@ const Masks: React.FC = () => (
       </div>
     </div>
     <div className="section">
-      <div className="text-container">
+      <div className="text-wrapper text-style">
         <h3 className="text-center">
           Comment mettre en place ce service dans ma ville ?
         </h3>
@@ -76,7 +76,7 @@ const Masks: React.FC = () => (
     </div>
 
     <div className="qui-sommes-nous section">
-      <div className="text-container text-center">
+      <div className="text-wrapper text-style text-center">
         <h3>Qui sommes-nous ?</h3>
         <p>
           La DINUM accompagne les ministères dans leur transformation numérique,
@@ -93,7 +93,7 @@ const Masks: React.FC = () => (
       </div>
     </div>
     <div className="section">
-      <div className="text-container">
+      <div className="text-wrapper text-style">
         <h3 className="text-center">
           Vous avez une question ? <br />
           Vous avez besoin d’aide pour connecter un service citoyen à une API ?

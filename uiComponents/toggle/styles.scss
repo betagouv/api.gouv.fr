@@ -3,6 +3,7 @@
 .toggle-wrapper {
   cursor: pointer;
   display: flex;
+  align-items: center;
 
   /* The switch - the box around the slider */
   &[role='checkbox'] > .switch {
@@ -34,7 +35,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
     -webkit-transition: 0.15s;
     transition: 0.15s;
 
@@ -42,8 +43,8 @@
       border-radius: 50%;
       position: absolute;
       content: '';
-      height: 14px;
-      width: 14px;
+      height: 12px;
+      width: 12px;
       left: 2px;
       bottom: 2px;
       background-color: #ccc;
@@ -55,5 +56,9 @@
   label {
     margin-left: 5px;
     cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    user-select: none;
   }
 }

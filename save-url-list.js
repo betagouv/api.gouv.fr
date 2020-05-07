@@ -31,7 +31,7 @@ async function main() {
     '/rechercher-api',
     '/contact',
     '/about',
-    '/mention-legales',
+    '/mentions-legales',
     '/vie-privee',
     ...apis.map(api => api.path),
     ...services.map(service => service.path),

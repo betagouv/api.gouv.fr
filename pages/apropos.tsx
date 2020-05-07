@@ -9,7 +9,7 @@ const About: React.FC = () => (
     title="A propos"
     description="Qu’est ce qu’une API du service public ? Quelle est la mission de api.gouv.fr ? A qui s’adresse ce site ?"
   >
-    <div className="text-container">
+    <div className="text-wrapper text-style">
       <h1 className="layout-center">Api.gouv.fr, à quoi ca sert ?</h1>
       <p>
         Ce site référence les APIs du service publique, mises à la disposition
@@ -144,7 +144,7 @@ const About: React.FC = () => (
       </div>
     </div>
     <style jsx>{`
-      .text-container > div {
+      .text-wrapper > div {
         position: relative;
       }
       a.hidden-anchor {

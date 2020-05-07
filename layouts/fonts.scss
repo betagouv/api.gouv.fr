@@ -2,6 +2,7 @@
   font-family: Evolventa;
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: local('Evolventa'), local('Evolventa-Regular'),
     url('/fonts/Evolventa-Regular.woff') format('woff');
 }
@@ -10,6 +11,7 @@
   font-family: Evolventa;
   font-style: normal;
   font-weight: 800;
+  font-display: swap;
   src: local('Evolventa Bold'), local('Evolventa-Bold'),
     url('/fonts/Evolventa-Bold.woff') format('woff');
 }
@@ -19,6 +21,8 @@
   font-family: 'Source Sans Pro';
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
+
   src: url('/fonts/source-sans-pro-v13-latin-regular.eot');
   src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'),
     url('/fonts/source-sans-pro-v13-latin-regular.eot?#iefix')
@@ -35,6 +39,7 @@
   font-family: 'Source Sans Pro';
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
   src: url('/fonts/source-sans-pro-v13-latin-700.eot');
   src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'),
     url('/fonts/source-sans-pro-v13-latin-700.eot?#iefix')
@@ -48,6 +53,8 @@
 html,
 body {
   font-size: 16px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.78);
 }
 
 html,
@@ -56,12 +63,12 @@ div,
 p,
 span,
 a {
-  font-family: 'Source Sans Pro', sans-serif !important;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  font-family: Evolventa, sans-serif !important;
+  font-family: Evolventa, sans-serif;
 }

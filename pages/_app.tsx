@@ -1,9 +1,9 @@
 import React from 'react';
 import App from 'next/app';
 
-import '../layouts/fonts.scss';
 import '../layouts/pageStyles.scss';
 import '../layouts/imports.scss';
+import '../layouts/fonts.scss';
 
 import Chat from '../components/chat';
 
@@ -42,27 +42,6 @@ class MyApp extends App {
       <>
         <Component {...pageProps} />
         <Chat />
-        <style jsx>{`
-          @media (max-width: 30em) {
-            .medium.screen.only {
-              display: none !important;
-            }
-          }
-
-          .swagger-ui .topbar {
-            display: none;
-          }
-
-          .ui.text.container {
-            padding-top: 4em;
-            padding-bottom: 4em;
-          }
-
-          /* Override SemanticUI default for improved a11y - contrast 4.5 */
-          a {
-            color: #3a73c0;
-          }
-        `}</style>
       </>
     );
   }

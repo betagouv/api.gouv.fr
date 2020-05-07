@@ -15,14 +15,7 @@ const Monitoring = ({ description, link }) => {
           <>
             <p>Les moniteurs de cette API sont disponibles publiquement.</p>
 
-            <ButtonLink
-              className="large ui button"
-              href={link}
-              target="_blank"
-              rel="noopener"
-              alt
-              large
-            >
+            <ButtonLink href={link} target="_blank" rel="noopener" alt large>
               <i className="icon linkify"></i> Accéder au monitoring
             </ButtonLink>
           </>
