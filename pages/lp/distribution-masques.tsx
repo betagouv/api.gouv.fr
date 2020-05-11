@@ -12,14 +12,19 @@ const Masks: React.FC = () => (
     usePreFooter={false}
   >
     <div className="hero-section text-wrapper text-style">
-      <h1>Gagnez du temps et protégez vos concitoyens</h1>
-      <h2>Simplifiez la distribution de masques dans votre commune</h2>
-      <ButtonLink
-        href="https://signup.api.gouv.fr/api-particulier"
-        onClick={logLPCTA1}
-      >
-        Je veux créer un service de distribution de masques
-      </ButtonLink>
+      <div>
+        <h1>Gagnez du temps et protégez vos concitoyens</h1>
+        <h2>Simplifiez la distribution de masques dans votre commune</h2>
+        <ButtonLink
+          href="https://signup.api.gouv.fr/api-particulier"
+          onClick={logLPCTA1}
+        >
+          Je veux créer un service de distribution de masques
+        </ButtonLink>
+      </div>
+      <div>
+        <img src="/images/landing-page/illu_LP.svg" alt="" />
+      </div>
     </div>
     <div className="question-section section">
       <div className="text-wrapper text-style">
@@ -111,15 +116,39 @@ const Masks: React.FC = () => (
     <style jsx>{`
       .hero-section {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
         margin-bottom: 50px;
+        margin-top: 20px;
       }
-      h2,
-      h1 {
-        text-align: center;
+
+      .hero-section > div:first-of-type {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: left;
       }
+
+      .hero-section > div:last-of-type {
+        width: 600px;
+        margin-left: 20px;
+      }
+
+      .hero-section > div:last-of-type > img {
+        width: 100%;
+      }
+      @media only screen and (min-width: 1px) and (max-width: 600px) {
+        .hero-section > div:first-of-type {
+          align-items: center;
+          text-align: center;
+        }
+        .hero-section > div:last-of-type {
+          display: none;
+        }
+      }
+
       h2 {
         font-size: 1.2rem;
       }
