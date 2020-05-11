@@ -3,7 +3,7 @@ title: Hub'Eau - Qualité des cours d'eau
 tagline: Qualité physico-chimique des cours d'eau
 is_open: true
 external_site: http://hubeau.eaufrance.fr/page/documentation_chimie_riviere
-logo: 04-qualite_rivieres.png
+logo: 04-qualite_rivieres.jpg
 clients:
   - particuliers
   - entreprises

@@ -23,7 +23,7 @@ keywords:
   - Portail professionel
 themes:
   - Administration & législation
-logo: ChorusPro.png
+logo: ChorusPro.jpg
 contact_link: api-choruspro.aife@finances.gouv.fr
 doc_tech_external: https://communaute.chorus-pro.gouv.fr/documentation/api/
 visits_2019: 40978

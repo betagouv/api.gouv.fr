@@ -5,7 +5,7 @@ owner: Ministère de l'agriculture et de l'alimentation
 owner_acronym: MAA
 category: public
 is_open: true
-logo: maa.png
+logo: maa.jpg
 clients:
   - particuliers
   - entreprises

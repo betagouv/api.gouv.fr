@@ -3,7 +3,7 @@ title: Hub'Eau - Prélèvements en eau
 tagline: Prélèvements en eau
 is_open: true
 external_site: https://hubeau.eaufrance.fr/page/api-prelevements-eau
-logo: 08-prelevements.png
+logo: 08-prelevements.jpg
 clients:
   - particuliers
   - entreprises

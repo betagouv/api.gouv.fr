@@ -2,7 +2,7 @@
 title: Mon-entreprise.fr
 link: https://mon-entreprise.fr
 description: L'assistant officiel du créateur d'entreprise
-screenshot: mon-entreprise.png
+screenshot: mon-entreprise.jpg
 api:
   - API Géo
   - API Entreprise

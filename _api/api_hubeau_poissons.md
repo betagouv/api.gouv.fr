@@ -3,7 +3,7 @@ title: Hub'Eau - Etat piscicole des rivières
 tagline: Données sur les poissons de rivières
 is_open: true
 external_site: https://hubeau.eaufrance.fr/page/documentation_poisson/
-logo: 01-poisson.png
+logo: 01-poisson.jpg
 clients:
   - particuliers
   - entreprises
