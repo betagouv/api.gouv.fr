@@ -10,7 +10,7 @@ const About: React.FC = () => (
     description="Qu’est ce qu’une API du service public ? Quelle est la mission de api.gouv.fr ? A qui s’adresse ce site ?"
   >
     <div className="text-wrapper text-style">
-      <h1 className="layout-center">Api.gouv.fr, à quoi ca sert ?</h1>
+      <h1 className="layout-center">Api.gouv.fr, à quoi ça sert ?</h1>
       <p>
         Ce site référence les APIs du service publique, mises à la disposition
         des collectivités, des ministères et des entreprises pour construire des
