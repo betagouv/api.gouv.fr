@@ -20,7 +20,7 @@ const Services: NextPage<Props> = ({ services }) => {
       <section className="content-container page-baseline">
         <h2>
           Depuis 2016, nous accompagnons les acteurs publics à la réalisation de
-          services numériques pour tous les francais
+          services numériques pour tous les français
         </h2>
       </section>
       <section id="realisations" className="page-body-container">

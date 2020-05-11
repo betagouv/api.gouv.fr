@@ -20,18 +20,6 @@ const logDemanderAcces = () => {
   }
 };
 
-if (typeof window !== 'undefined' && window.Piwik) {
-  //@ts-ignore
-  const tracker = window.Piwik.getTracker(
-    `${process.env.PIWIK_URL}/piwik.php`,
-    process.env.PIWIK_SITE_ID
-  );
-
-  if (tracker) {
-    tracker.trackPageView();
-  }
-}
-
 const logLPCTA1 = () => {
   if (typeof window !== 'undefined' && window._paq) {
     window._paq.push([

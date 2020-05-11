@@ -13,7 +13,7 @@ const Support: React.FC<IProps> = ({ link }) => {
       <>
         {link ? (
           <>
-            {link.includes('@') ? (
+            {link.indexOf('@') > -1 ? (
               <>
                 <p>Vous pouvez contacter le support de cette API par mail. .</p>
                 <ButtonLink

@@ -1,6 +1,20 @@
 @import '../constants/colors.scss';
 @import '../constants/layout.scss';
 
+.swagger-ui .topbar {
+  display: none;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #3a73c0;
+}
+
 #page-layout {
   display: flex;
   flex-direction: column;
@@ -25,17 +39,39 @@
 
   .default-grid {
     display: grid;
-    grid-template-columns: 30% 30% 30%;
-    grid-gap: 50px 3%;
+    grid-template-columns: 31% 31% 31%;
+    grid-gap: 30px 3%;
 
     @media only screen and (min-width: 550px) and (max-width: 920px) {
       grid-template-columns: 48% 48%;
-      grid-gap: 40px 4%;
+      grid-gap: 30px 4%;
     }
 
     @media only screen and (min-width: 1px) and (max-width: 600px) {
       grid-template-columns: 100%;
-      grid-gap: 40px 0%;
+      grid-gap: 30px 0%;
+    }
+  }
+
+  .left-column-grid {
+    display: grid;
+    grid-template-columns: 25% 72%;
+    grid-gap: 20px 3%;
+
+    @media only screen and (min-width: 1px) and (max-width: 920px) {
+      grid-template-columns: 100%;
+      grid-gap: 0 0;
+
+      &.desktop-only {
+        > .left-column {
+          display: none;
+        }
+      }
+    }
+    .sticky-column {
+      position: sticky;
+      overflow: hidden;
+      padding-bottom: 15px;
     }
   }
 }
@@ -80,11 +116,8 @@ a:not(.dont-apply-link-style):hover {
     width: calc(100% - 50px);
   }
 }
-.text-container {
+.text-wrapper {
   margin: 80px auto;
-  font-size: 1.1rem;
-  line-height: 1.6rem;
-  color: $darkestGrey;
 
   @media only screen and (min-width: 1124px) {
     width: 780px;
@@ -101,10 +134,16 @@ a:not(.dont-apply-link-style):hover {
   @media only screen and (min-width: 1px) and (max-width: 600px) {
     width: calc(100% - 50px);
   }
+}
+
+.text-style {
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+  color: $darkestGrey;
 
   h1 {
-    font-size: 2.2rem;
-    line-height: 3rem;
+    font-size: 2.3rem;
+    line-height: 3.4rem;
     margin: 30px 0 50px;
     color: $darkGrey;
   }
@@ -141,11 +180,16 @@ a:not(.dont-apply-link-style):hover {
       list-style: none;
     }
   }
+
+  ul {
+    list-style-type: circle;
+    margin-left: 20px;
+  }
 }
 
 h1 {
   font-size: 2.8rem;
-  line-height: 3.1rem;
+  line-height: 3.7rem;
   margin: 15px 0;
   color: $darkestGrey;
 }
@@ -167,4 +211,33 @@ h4 {
   font-size: 1.2rem;
   line-height: 1.8rem;
   margin: 12px 0 16px;
+}
+
+@media only screen and (min-width: 1px) and (max-width: 600px) {
+  h1 {
+    font-size: 2.2rem;
+    line-height: 3.1rem;
+    margin: 12px 0 15px;
+    color: $darkestGrey;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+    margin: 12px 0 16px;
+
+    color: $darkestGrey;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    line-height: 1.9rem;
+    margin: 12px 0 16px;
+  }
+
+  h4 {
+    font-size: 1.1rem;
+    line-height: 1.9rem;
+    margin: 12px 0 16px;
+  }
 }

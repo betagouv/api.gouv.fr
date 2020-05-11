@@ -5,7 +5,7 @@
   "repository": "git@github.com:betagouv/api.gouv.fr.git",
   "license": "AGPL-3.0-or-later",
   "scripts": {
-    "sitemap": "node save-url-list.js && sitemap < ./public/url-list.txt > ./public/sitemap.xml",
+    "sitemap": "node nodeScripts/saveUrlList.js && sitemap < ./public/url-list.txt > ./public/sitemap.xml",
     "dev": "next",
     "test": "jest",
     "start": "next start -p $PORT",
@@ -57,7 +57,7 @@
     "react-dom": "^16.12.0",
     "react-feather": "^2.0.3",
     "react-markdown": "^4.2.2",
-    "swagger-ui-dist": "^3.24.3",
+    "swagger-ui-dist": "^3.25.2",
     "underscore.string": "^3.3.5"
   }
 }

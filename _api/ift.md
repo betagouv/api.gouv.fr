@@ -6,7 +6,7 @@ owner_acronym: MAA
 category: public
 is_open: true
 access_link: https://alim.agriculture.gouv.fr/ift/espace-partenaire
-logo: maa.png
+logo: maa.jpg
 external_site: https://alim.agriculture.gouv.fr/ift/espace-partenaire
 clients:
   - éditeurs

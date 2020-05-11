@@ -7,7 +7,7 @@ const Partners = ({ partners }) => {
   return (
     <Section id="partenaires" title="Partenaires">
       {partners ? (
-        <ul className="ui list">
+        <ul>
           {partners.map(partner => (
             <li key={partner} className="item">
               {partner}

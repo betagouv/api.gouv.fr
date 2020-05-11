@@ -6,16 +6,15 @@ const Results = ({ apiList }) => {
   return (
     <section id="api-results" className="page-body-container">
       <div className="content-container">
-        <div className="results-counter">
+        <div className="results-counter ">
           {apiList.length} résultat{apiList.length > 1 && 's'}
         </div>
-        <div className="ui three stackable cards">
+        <div className="default-grid">
           {apiList.length > 0 ? (
             apiList.map(api => <ApiCard key={api.title} {...api} />)
           ) : (
-            <div className="ui big warning message">
-              <div className="header">Aucune API n’a pu être trouvée</div>
-              Aucun résultat trouvé pour la recherche.
+            <div>
+              <b>Aucun résultat trouvé pour la recherche.</b>
             </div>
           )}
         </div>

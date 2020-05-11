@@ -3,7 +3,7 @@ title: Hub'Eau - Piézométrie
 tagline: Piézométrie (niveau des nappes d'eau souterraine)
 is_open: true
 external_site: https://hubeau.eaufrance.fr/page/documentation_piezometrie
-logo: 03-piezo.png
+logo: 03-piezo.jpg
 clients:
   - particuliers
   - entreprises
@@ -24,7 +24,7 @@ keywords:
   - Eau souterraine
   - Hydrogéologie
   - Temps réel
-themes: 
+themes:
   - Environnement
 stat:
   lastXdays: 30
@@ -41,13 +41,13 @@ last_update: 10/03/2020
 ### Description fonctionnelle de l'API Piézométrie
 
 [L'API Piézométrie](https://hubeau.eaufrance.fr/page/api-piezometrie) de Hub'Eau permet d'accéder aux données sur le niveau des nappes d'eau souterraines. Ces données sont issues du portail [ADES](http://www.ades.eaufrance.fr). Elles portent sur les mesures de piézométrie (niveau d'eau dans les nappes d'eau souterraine), France entière, en provenance de tous les partenaires du système d'information sur l'eau.
-Les mises à jour de la banque ADES sont intégrées quotidiennement à l'API.  
+Les mises à jour de la banque ADES sont intégrées quotidiennement à l'API.
 
-Testez le [démonstrateur de l'API Piézométrie](https://hubeau.eaufrance.fr/sites/default/files/api/demo/piezo/piezo.htm) et récupérez le [code Javascript](https://github.com/BRGM/hubeau/tree/master/demonstrateurs/piezo) qui l'a généré pour construire vous même vos applications basées sur Hub'Eau.  
+Testez le [démonstrateur de l'API Piézométrie](https://hubeau.eaufrance.fr/sites/default/files/api/demo/piezo/piezo.htm) et récupérez le [code Javascript](https://github.com/BRGM/hubeau/tree/master/demonstrateurs/piezo) qui l'a généré pour construire vous même vos applications basées sur Hub'Eau.
 
-**NOUVEAU : l'opération chroniques_tr permet d'interroger en quasi temps-réel les piézomètres qui télé-transmettent leurs données brutes horaires**. Découvrez le [tableau des quelques 1400 Piézomètres Temps Réel](https://hubeau.eaufrance.fr/page/piezos_tr) et [un exemple de visualiseur des données Temps Réel](https://hubeau.eaufrance.fr/sites/default/files/api/demo/piezo/_demo_tr/).  
+**NOUVEAU : l'opération chroniques_tr permet d'interroger en quasi temps-réel les piézomètres qui télé-transmettent leurs données brutes horaires**. Découvrez le [tableau des quelques 1400 Piézomètres Temps Réel](https://hubeau.eaufrance.fr/page/piezos_tr) et [un exemple de visualiseur des données Temps Réel](https://hubeau.eaufrance.fr/sites/default/files/api/demo/piezo/_demo_tr/).
 
-Les données sont exposées sous la forme d'une API REST, les formats supportés sont : JSON, GeoJSON et CSV.  
+Les données sont exposées sous la forme d'une API REST, les formats supportés sont : JSON, GeoJSON et CSV.
 
 Les différentes opérations possibles sont :
 
@@ -79,7 +79,6 @@ Les autres API disponibles à ce jour dans Hub'Eau sont :
 - [Température des cours d'eau](/api/api_hubeau_temperature_rivieres.html) ;
 - [Hydrométrie](/api/api_hubeau_hydrometrie.html) ;
 - [Prélèvements en eau (beta)](/api/api_hubeau_prelevements.html).
-
 
 #### Un service en co-construction
 

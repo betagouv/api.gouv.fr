@@ -2,7 +2,7 @@
 title: eCarto
 link: https://ecarto.banquedesterritoires.fr/#/
 description: Explorez le déploiement du numérique dans les écoles, collèges et lycées français.
-screenshot: ecran_ecarto.png
+screenshot: ecran_ecarto.jpg
 api:
   - API MENJ
 ---

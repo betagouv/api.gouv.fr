@@ -5,7 +5,7 @@ import Page from '../layouts/page';
 
 const Privacy: NextPage = () => (
   <Page usePreFooter={false} title="Politique de confidentialité">
-    <div id="privacy-page" className="text-container">
+    <div id="privacy-page" className="text-wrapper text-style">
       <h1 className="layout-center">Politique de confidentialité</h1>
       <h2>Cookies déposés</h2>
       <p>

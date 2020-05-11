@@ -5,10 +5,10 @@ import ReactMarkdown from 'react-markdown';
 import { getService, IService, getAllServices } from '../../model';
 
 import constants from '../../constants';
-
 import Page from '../../layouts/page';
 
 import APICard from '../../components/searchApis/apiCard';
+import { ButtonLink } from '../../uiComponents';
 import { HEADER_PAGE } from '../../components';
 
 interface IProps extends IService {}
@@ -27,52 +27,49 @@ const Service: React.FC<IProps> = ({
       title={title}
       description={`${title} est un exemple d’utilisation d'API du service public. ${description}`}
     >
-      <section id="title" className="ui vertical center aligned segment">
-        <div className="ui text container">
-          <h1 className="ui inverted header">{title}</h1>
-
-          <h2 className="ui inverted header">{description}</h2>
-
-          <a
-            className="large ui secondary button"
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Accédez au service &nbsp;<i className="rocket icon"></i>
-          </a>
-        </div>
+      <section id="title">
+        <h1>{title}</h1>
+        <h2>{description}</h2>
       </section>
 
       <div className="content-container content">
-        <div className="ui stackable grid">
-          <div className="row">
-            <div className="five wide column">
-              <h3 className="ui divider horizontal">
-                {apiList.length > 1 ? 'Les API utilisées' : 'API utilisée'}
-              </h3>
-              <div className="ui segments">
-                {apiList.map(api => (
-                  <APICard
-                    key={api.slug}
-                    {...api}
-                    path={api.path}
-                    logo={api.logo}
-                  />
-                ))}
+        <div className="left-column-grid">
+          <div className="left-column">
+            <h3>{apiList.length > 1 ? 'Les API utilisées' : 'API utilisée'}</h3>
+            <>
+              {apiList.map(api => (
+                <div key={api.slug}>
+                  <APICard {...api} path={api.path} logo={api.logo} />
+                </div>
+              ))}
+            </>
+          </div>
+          <div className="column">
+            <div className="text-style">
+              <ReactMarkdown source={body} />
+            </div>
+            <div>
+              <h2>Accéder au service</h2>
+              <p>Suivez le lien suivant pour découvrir le service :</p>
+              <div className="layout-center">
+                <ButtonLink
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  large
+                >
+                  Accédez au service{' '}
+                  <span role="img" aria-label="émoji fusée">
+                    🚀
+                  </span>
+                </ButtonLink>
               </div>
             </div>
-            <div className="eleven wide column">
-              <div className="markdown-body">
-                <ReactMarkdown source={body} />
-              </div>
-              <div>
-                <img
-                  className="ui bordered rounded fluid image"
-                  src={`/images/service-screenshot/${screenshot}`}
-                  alt={`capture d'écran de ${title}`}
-                />
-              </div>
+            <div>
+              <img
+                src={`/images/service-screenshot/${screenshot}`}
+                alt={`capture d'écran de ${title}`}
+              />
             </div>
           </div>
         </div>
@@ -80,22 +77,47 @@ const Service: React.FC<IProps> = ({
 
       <style jsx>{`
         #title {
-          padding-top: 5%;
-          padding-bottom: 5%;
-          margin-bottom: 2%;
+          padding: 15px;
+          text-align: center;
           background: ${constants.colors.backgroundBlueGradient};
+          margin-bottom: 30px;
+        }
+        #title h2,
+        #title h1 {
+          color: #fff;
+        }
+        .left-column > h3 {
+          position: relative;
+          padding: 0 5px;
+          text-align: center;
         }
 
-        h1 {
-          padding: 0.2em 0;
+        .left-column > h3:after,
+        .left-column > h3:before {
+          position: absolute;
+          content: '';
+          width: 15%;
+          height: 1px;
+          top: 15px;
+          background-color: #ddd;
+        }
+        .left-column > h3:after {
+          left: 0;
+        }
+        .left-column > h3:before {
+          right: 0;
+        }
+        .left-column > div {
+          margin-bottom: 25px;
         }
 
-        h2 {
-          padding: 0.2em 0;
+        .column {
+          width: 100%;
         }
 
-        .logoAPI {
-          margin-top: 0.5em;
+        .column img {
+          margin-top: 50px;
+          max-width: 100%;
         }
 
         .markdown-body {
@@ -105,10 +127,6 @@ const Service: React.FC<IProps> = ({
           box-shadow: none;
           margin-top: 2em;
           margin-bottom: 2em;
-        }
-
-        .ui.segments {
-          border: none;
         }
 
         .content {

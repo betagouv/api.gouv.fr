@@ -21,7 +21,7 @@ keywords:
   - Dématérialisation
   - Comptabilité
   - Portail professionel
-themes: 
+themes:
   - Administration & législation
 logo: ChorusPro.jpg
 contact_link: api-choruspro.aife@finances.gouv.fr

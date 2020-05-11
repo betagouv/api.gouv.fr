@@ -7,7 +7,7 @@ const Contact: React.FC = () => (
     title="Nous contacter"
     description="Comment entrer en contact avec la très motivée équipe d’api.gouv.fr"
   >
-    <div className="text-container">
+    <div className="text-wrapper text-style">
       <h1 className="layout-center">Contact</h1>
 
       <div>

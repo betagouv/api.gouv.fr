@@ -1,7 +1,7 @@
 const {
   readAllApisOnDisk,
   readAllServicesOnDisk,
-} = require('./model/readOnDisk');
+} = require('../model/readOnDisk');
 
 /**
  * Save the list of url in a text file. For testing purposes and for sitemap generation
@@ -31,7 +31,7 @@ async function main() {
     '/rechercher-api',
     '/contact',
     '/about',
-    '/mention-legales',
+    '/mentions-legales',
     '/vie-privee',
     ...apis.map(api => api.path),
     ...services.map(service => service.path),

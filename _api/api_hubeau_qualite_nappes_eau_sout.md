@@ -3,7 +3,7 @@ title: Hub'Eau - Qualité des nappes d'eau souterraine
 tagline: Qualité physico-chimique des nappes d'eau souterraine
 is_open: true
 external_site: http://hubeau.eaufrance.fr/page/documentation-qualite-nappes-deau-souterraines
-logo: 05-qualite_nappes.png
+logo: 05-qualite_nappes.jpg
 clients:
   - particuliers
   - entreprises

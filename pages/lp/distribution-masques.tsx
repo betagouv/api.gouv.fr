@@ -11,18 +11,23 @@ const Masks: React.FC = () => (
     description="Comment faciliter la distribution de masques pendant la crise du Covid-19"
     usePreFooter={false}
   >
-    <div className="hero-section text-container">
-      <h1>Gagnez du temps et protégez vos concitoyens</h1>
-      <h2>Simplifiez la distribution de masques dans votre commune</h2>
-      <ButtonLink
-        href="https://signup.api.gouv.fr/api-particulier"
-        onClick={logLPCTA1}
-      >
-        Je veux créer un service de distribution de masques
-      </ButtonLink>
+    <div className="hero-section text-wrapper text-style">
+      <div>
+        <h1>Gagnez du temps et protégez vos concitoyens</h1>
+        <h2>Simplifiez la distribution de masques dans votre commune</h2>
+        <ButtonLink
+          href="https://signup.api.gouv.fr/api-particulier"
+          onClick={logLPCTA1}
+        >
+          Je veux créer un service de distribution de masques
+        </ButtonLink>
+      </div>
+      <div>
+        <img src="/images/landing-page/illu_LP.svg" alt="" />
+      </div>
     </div>
     <div className="question-section section">
-      <div className="text-container">
+      <div className="text-wrapper text-style">
         <p>
           En connectant le portail de votre ville à l’API Particulier, il suffit
           à vos concitoyens de donner leur numéro fiscal et leur numéro
@@ -52,7 +57,7 @@ const Masks: React.FC = () => (
       </div>
     </div>
     <div className="section">
-      <div className="text-container">
+      <div className="text-wrapper text-style">
         <h3 className="text-center">
           Comment mettre en place ce service dans ma ville ?
         </h3>
@@ -76,7 +81,7 @@ const Masks: React.FC = () => (
     </div>
 
     <div className="qui-sommes-nous section">
-      <div className="text-container text-center">
+      <div className="text-wrapper text-style text-center">
         <h3>Qui sommes-nous ?</h3>
         <p>
           La DINUM accompagne les ministères dans leur transformation numérique,
@@ -93,7 +98,7 @@ const Masks: React.FC = () => (
       </div>
     </div>
     <div className="section">
-      <div className="text-container">
+      <div className="text-wrapper text-style">
         <h3 className="text-center">
           Vous avez une question ? <br />
           Vous avez besoin d’aide pour connecter un service citoyen à une API ?
@@ -111,15 +116,39 @@ const Masks: React.FC = () => (
     <style jsx>{`
       .hero-section {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
         margin-bottom: 50px;
+        margin-top: 20px;
       }
-      h2,
-      h1 {
-        text-align: center;
+
+      .hero-section > div:first-of-type {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: left;
       }
+
+      .hero-section > div:last-of-type {
+        width: 600px;
+        margin-left: 20px;
+      }
+
+      .hero-section > div:last-of-type > img {
+        width: 100%;
+      }
+      @media only screen and (min-width: 1px) and (max-width: 600px) {
+        .hero-section > div:first-of-type {
+          align-items: center;
+          text-align: center;
+        }
+        .hero-section > div:last-of-type {
+          display: none;
+        }
+      }
+
       h2 {
         font-size: 1.2rem;
       }
