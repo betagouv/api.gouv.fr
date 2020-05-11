@@ -5,7 +5,7 @@
   "repository": "git@github.com:betagouv/api.gouv.fr.git",
   "license": "AGPL-3.0-or-later",
   "scripts": {
-    "sitemap": "node save-url-list.js && sitemap < ./public/url-list.txt > ./public/sitemap.xml",
+    "sitemap": "node nodeScripts/saveUrlList.js && sitemap < ./public/url-list.txt > ./public/sitemap.xml",
     "dev": "next",
     "test": "jest",
     "start": "next start -p $PORT",
