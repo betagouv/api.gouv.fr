@@ -57,7 +57,7 @@ const ApiCard: React.FC<IProps> = ({
 
           <div className="card-extra">
             <div>
-              <b>{owner.includes('&') ? 'Cop' : 'P'}roduit par :</b>{' '}
+              <b>{owner.indexOf('&') > -1 ? 'Cop' : 'P'}roduit par :</b>{' '}
               <span
                 dangerouslySetInnerHTML={{
                   __html: textHighlighter(matches.owner, owner),

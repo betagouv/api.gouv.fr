@@ -22,12 +22,6 @@ class MyDocument extends Document {
 
           <link rel="icon" href="/favicon.ico" />
 
-          <link
-            rel="stylesheet"
-            type="text/css"
-            href="//cdn.jsdelivr.net/gh/swagger-api/swagger-ui@v3.4.0/dist/swagger-ui.css"
-          ></link>
-
           <style jsx>{`
             html {
               height: 100%;
@@ -51,7 +45,6 @@ class MyDocument extends Document {
 
         <body>
           <Main />
-          <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Array.prototype.includes,modernizr:es6string,modernizr:es6array,Promise,fetch" />
           {process.env.NODE_ENV === 'production' && (
             <script
               defer
