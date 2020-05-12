@@ -6,7 +6,7 @@
   "license": "AGPL-3.0-or-later",
   "scripts": {
     "sitemap": "node nodeScripts/saveUrlList.js && sitemap < ./public/url-list.txt > ./public/sitemap.xml",
-    "dev": "next",
+    "dev": "NODE_ENV=development next",
     "test": "jest",
     "start": "next start -p $PORT",
     "build": "npm run sitemap && next build",
@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.9.0",
+    "@next/bundle-analyzer": "^9.4.0",
     "@types/jest": "^25.2.1",
     "@types/lodash": "^4.14.149",
     "@types/react": "^16.9.34",
@@ -27,7 +28,7 @@
     "@typescript-eslint/parser": "^2.28.0",
     "@zeit/next-sass": "^1.0.1",
     "babel-eslint": "^10.1.0",
-    "eslint": "^6.8.0",
+    "eslint": "^7.0.0",
     "eslint-config-react-app": "^5.2.1",
     "eslint-plugin-flowtype": "^4.7.0",
     "eslint-plugin-import": "^2.20.2",
@@ -41,23 +42,22 @@
     "raw-loader": "^4.0.0",
     "sass": "^1.26.3",
     "sitemap": "^6.1.0",
+    "prop-types": "^15.7.2",
     "typescript": "^3.7.5"
   },
   "dependencies": {
-    "dotenv-webpack": "^1.7.0",
+    "node-sass": "^4.13.1",
     "front-matter": "^3.0.2",
-    "hoist-non-react-statics": "^3.3.1",
+    "dotenv-webpack": "^1.7.0",
     "lodash": "^4.17.15",
-    "next": "^9.3.4",
+    "next": "^9.4.0",
     "next-seo": "^4.4.0",
     "nextjs-fonts": "^0.22.0",
-    "node-sass": "^4.13.1",
-    "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-feather": "^2.0.3",
     "react-markdown": "^4.2.2",
-    "swagger-ui-dist": "^3.25.2",
+    "swagger-ui": "^3.25.2",
     "underscore.string": "^3.3.5"
   }
 }
