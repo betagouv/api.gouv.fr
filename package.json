@@ -5,7 +5,7 @@
   "repository": "git@github.com:betagouv/api.gouv.fr.git",
   "license": "AGPL-3.0-or-later",
   "scripts": {
-    "sitemap": "node nodeScripts/saveUrlList.js && sitemap < ./public/url-list.txt > ./public/sitemap.xml",
+    "sitemap": "node nodeScripts/saveUrlList.js && npx sitemap < ./public/url-list.txt > ./public/sitemap.xml",
     "dev": "NODE_ENV=development next",
     "test": "jest",
     "start": "next start -p $PORT",
@@ -23,6 +23,7 @@
     "@next/bundle-analyzer": "^9.4.0",
     "@types/jest": "^25.2.1",
     "@types/lodash": "^4.14.149",
+    "@types/node": "^14.0.1",
     "@types/react": "^16.9.34",
     "@typescript-eslint/eslint-plugin": "^2.28.0",
     "@typescript-eslint/parser": "^2.28.0",
@@ -39,10 +40,9 @@
     "husky": "^4.2.3",
     "jest": "^25.4.0",
     "prettier": "^1.19.1",
+    "prop-types": "^15.7.2",
     "raw-loader": "^4.0.0",
     "sass": "^1.26.3",
-    "sitemap": "^6.1.0",
-    "prop-types": "^15.7.2",
     "typescript": "^3.7.5"
   },
   "dependencies": {
