@@ -119,6 +119,11 @@ const PageHeader: React.FC<IProps> = ({ title, logo, tagline }) => (
       .back-button:hover {
         text-decoration: underline;
       }
+      @media only screen and (min-width: 1px) and (max-width: 900px) {
+        .content-container {
+          padding-top: 35px;
+        }
+      }
     `}</style>
   </section>
 );
