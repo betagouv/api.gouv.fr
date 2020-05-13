@@ -6,7 +6,7 @@
   "license": "AGPL-3.0-or-later",
   "scripts": {
     "sitemap": "node nodeScripts/saveUrlList.js && sitemap < ./public/url-list.txt > ./public/sitemap.xml",
-    "dev": "next",
+    "dev": "NODE_ENV=development next",
     "test": "jest",
     "start": "next start -p $PORT",
     "build": "npm run sitemap && next build",
@@ -57,7 +57,7 @@
     "react-dom": "^16.12.0",
     "react-feather": "^2.0.3",
     "react-markdown": "^4.2.2",
-    "swagger-ui-dist": "^3.25.2",
+    "swagger-ui": "^3.25.2",
     "underscore.string": "^3.3.5"
   }
 }
