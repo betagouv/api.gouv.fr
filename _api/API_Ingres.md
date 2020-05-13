@@ -6,7 +6,7 @@ owner_acronym: CISIRH
 is_open: false
 access_condition: OUVERT (utilisation restreinte au Réseau Interministériel de l'Etat (RIE))
 acces_link: https://api.cisirh.rie.gouv.fr/ingres/nomenclatures
-logo: logo_cisirh.png
+logo: logo_cisirh.jpg
 external_site: https://pissarho.cisirh.rie.gouv.fr/actualites/ingres/deploiement-de-deux-api-sur-lapplication-ingres
 stat:
   url:

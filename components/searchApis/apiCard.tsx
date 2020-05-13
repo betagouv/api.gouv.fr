@@ -33,10 +33,9 @@ const ApiCard: React.FC<IProps> = ({
   return (
     <>
       <Link href="/les-api/[slug]" as={path}>
-        <a className="ui fluid card api-card dont-apply-link-style">
+        <a className="api-card dont-apply-link-style">
           <div className="content">
             <img
-              className="right floated mini ui image"
               src={`/images/api-logo/${logo || DEFAULT_LOGO}`}
               alt={logo ? `logo de ${title}` : 'logo générique api.gouv'}
             />
@@ -58,7 +57,7 @@ const ApiCard: React.FC<IProps> = ({
 
           <div className="card-extra">
             <div>
-              <b>{owner.includes('&') ? 'Cop' : 'P'}roduit par :</b>{' '}
+              <b>{owner.indexOf('&') > -1 ? 'Cop' : 'P'}roduit par :</b>{' '}
               <span
                 dangerouslySetInnerHTML={{
                   __html: textHighlighter(matches.owner, owner),
@@ -96,52 +95,6 @@ const ApiCard: React.FC<IProps> = ({
       </Link>
 
       <style jsx>{`
-        a.api-card {
-          text-decoration: none;
-          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1) !important;
-          transition: transform 200ms ease-in-out !important,
-            box-shadow 200ms ease-in-out !important;
-        }
-
-        a.api-card:hover {
-          transform: translateY(-8px) !important;
-          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2) !important;
-        }
-
-        .api-card img {
-          display: none;
-        }
-        .card-extra {
-          padding: 0.5em 1em;
-          color: #222;
-        }
-
-        .card-footer {
-          background-color: #fafafa;
-          border-top: 1px solid #eaeaea;
-          padding: 15px;
-        }
-
-        .badges {
-          display: flex;
-          align-items: center;
-          flex-flow: wrap;
-        }
-
-        .badge {
-          display: inline-flex;
-          align-items: center;
-          font-size: small;
-        }
-
-        .badge.filler {
-          flex-grow: 1;
-        }
-
-        .contract div {
-          margin-left: 0.5em;
-        }
-
         .uptime-stat {
           width: 10px;
           height: 10px;

@@ -10,7 +10,13 @@ interface ITitleProps {
 const Title: React.FC<ITitleProps> = ({ title, logo }) => (
   <>
     <div className="title">
-      <img src={`/images/api-logo/${logo}`} alt={title} className="ui image" />
+      <span className="layout-center">
+        <img
+          src={`/images/api-logo/${logo}`}
+          alt={title}
+          className="ui image"
+        />
+      </span>
       <h1>{title}</h1>
     </div>
     <style jsx>{`
@@ -22,12 +28,16 @@ const Title: React.FC<ITitleProps> = ({ title, logo }) => (
         flex-shrink: 0;
       }
 
-      .title img {
+      .title span {
         flex-shrink: 0;
         border-radius: 100%;
         width: 48px;
         height: 48px;
         background-color: #fff;
+        overflow: hidden;
+      }
+      .title span > img {
+        width: 100%;
       }
 
       .title h1 {
@@ -108,6 +118,11 @@ const PageHeader: React.FC<IProps> = ({ title, logo, tagline }) => (
       }
       .back-button:hover {
         text-decoration: underline;
+      }
+      @media only screen and (min-width: 1px) and (max-width: 900px) {
+        .content-container {
+          padding-top: 35px;
+        }
       }
     `}</style>
   </section>

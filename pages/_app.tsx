@@ -1,11 +1,15 @@
 import React from 'react';
 import App from 'next/app';
 
-import '../layouts/fonts.scss';
 import '../layouts/pageStyles.scss';
 import '../layouts/imports.scss';
+import '../layouts/fonts.scss';
+
+import 'swagger-ui/dist/swagger-ui.css';
 
 import Chat from '../components/chat';
+
+import constants from '../constants';
 
 class MyApp extends App {
   logPageView() {
@@ -13,8 +17,8 @@ class MyApp extends App {
     if (typeof window !== 'undefined' && window.Piwik) {
       //@ts-ignore
       const tracker = window.Piwik.getTracker(
-        `${process.env.PIWIK_URL}/piwik.php`,
-        process.env.PIWIK_SITE_ID
+        `${constants.links.PIWIK.URL}/piwik.php`,
+        constants.links.PIWIK.SITE_ID
       );
 
       if (tracker) {
@@ -40,27 +44,6 @@ class MyApp extends App {
       <>
         <Component {...pageProps} />
         <Chat />
-        <style jsx>{`
-          @media (max-width: 30em) {
-            .medium.screen.only {
-              display: none !important;
-            }
-          }
-
-          .swagger-ui .topbar {
-            display: none;
-          }
-
-          .ui.text.container {
-            padding-top: 4em;
-            padding-bottom: 4em;
-          }
-
-          /* Override SemanticUI default for improved a11y - contrast 4.5 */
-          a {
-            color: #3a73c0;
-          }
-        `}</style>
       </>
     );
   }

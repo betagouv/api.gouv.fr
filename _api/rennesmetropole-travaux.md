@@ -3,7 +3,7 @@ title: API travaux Rennes Métropole
 tagline: "Connaître à l'avance les perturbations dûes aux travaux sur Rennes Métropole"
 external_site: http://travaux.data.rennesmetropole.fr/
 is_open: true
-logo: rennesmetropole-travaux.png
+logo: rennesmetropole-travaux.jpg
 clients:
   - particuliers
   - entreprises

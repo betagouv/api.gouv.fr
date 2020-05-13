@@ -5,8 +5,8 @@
   "repository": "git@github.com:betagouv/api.gouv.fr.git",
   "license": "AGPL-3.0-or-later",
   "scripts": {
-    "sitemap": "node save-url-list.js && sitemap < ./public/url-list.txt > ./public/sitemap.xml",
-    "dev": "next",
+    "sitemap": "node nodeScripts/saveUrlList.js && sitemap < ./public/url-list.txt > ./public/sitemap.xml",
+    "dev": "NODE_ENV=development next",
     "test": "jest",
     "start": "next start -p $PORT",
     "build": "npm run sitemap && next build",
@@ -15,7 +15,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "npm run lint",
-      "pre-push": "npm run lint"
+      "pre-push": "npm run test"
     }
   },
   "devDependencies": {
@@ -57,7 +57,7 @@
     "react-dom": "^16.12.0",
     "react-feather": "^2.0.3",
     "react-markdown": "^4.2.2",
-    "swagger-ui-dist": "^3.24.3",
+    "swagger-ui": "^3.25.2",
     "underscore.string": "^3.3.5"
   }
 }

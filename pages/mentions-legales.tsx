@@ -4,7 +4,7 @@ import Page from '../layouts/page';
 
 const About: React.FC = () => (
   <Page usePreFooter={false} title="Mentions légales">
-    <div className="text-container">
+    <div className="text-wrapper text-style">
       <h1 className="layout-center">Mentions légales</h1>
       <div>
         <h2>Éditeur</h2>

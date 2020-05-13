@@ -7,7 +7,7 @@ keywords:
   - Marchés publics
   - Annonces
   - Bulletin officiel
-themes: 
+themes:
   - Administration & législation
 owner: Direction de l'information légale et administrative
 owner_acronym: DILA

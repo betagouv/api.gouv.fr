@@ -135,13 +135,13 @@ const API: React.FC<IProps> = ({ api, services = null }) => {
       />
 
       <div id="description" className="content-container">
-        <div className="ui equal width grid padded">
-          <div className="four wide column computer only">
+        <div className="left-column-grid desktop-only">
+          <div className="left-column">
             <div className="sticky-column">
               <Menu selectedItem={menuItem} select={setVisibleAnchor} />
             </div>
           </div>
-          <div className="column" ref={contentContainer}>
+          <div className="column text-style" ref={contentContainer}>
             <Content content={body} />
 
             <Access
@@ -173,12 +173,13 @@ const API: React.FC<IProps> = ({ api, services = null }) => {
         </div>
       </div>
       <style jsx>{`
+        #description {
+          margin-bottom: 70px;
+        }
+
         .sticky-column {
-          position: sticky;
-          overflow: hidden;
           //@ts-ignore
           top: ${parseInt(constants.layout.HEADER_HEIGHT, 10) + 20}px;
-          padding-bottom: 15px;
         }
       `}</style>
     </Page>

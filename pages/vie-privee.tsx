@@ -5,7 +5,7 @@ import Page from '../layouts/page';
 
 const Privacy: NextPage = () => (
   <Page usePreFooter={false} title="Politique de confidentialité">
-    <div id="privacy-page" className="text-container">
+    <div id="privacy-page" className="text-wrapper text-style">
       <h1 className="layout-center">Politique de confidentialité</h1>
       <h2>Cookies déposés</h2>
       <p>
@@ -79,7 +79,7 @@ const Privacy: NextPage = () => (
         </a>
         , sont disponibles en accès libre sur{' '}
         <a
-          href="https://stats.gouv.fr"
+          href="https://stats.data.gouv.fr"
           rel="noopener noreferrer"
           target="_blank"
         >
