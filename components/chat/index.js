@@ -11,13 +11,11 @@ const Chat = () => {
 
   const openMail = e => {
     if (!subject || !subject.current || !body || !body.current) {
+      e.preventDefault();
       return;
     }
     const subjectVal = subject.current.value;
     const bodyVal = body.current.value;
-    if (!subject || !body) {
-      return;
-    }
     window.location.href = encodeURI(
       `${constants.links.mailto.SUPPORT}?subject=[Question api.gouv.fr] ${subjectVal}&body=${bodyVal}`
     );

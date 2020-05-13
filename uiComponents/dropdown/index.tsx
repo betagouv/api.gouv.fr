@@ -39,7 +39,10 @@ const Dropdown: React.FC<IProps> = ({
           {placeholder || 'Veuillez selectionner une option'}
         </option>
         {selectOptions.map(selectOption => (
-          <option key={selectOption.value} value={selectOption.value}>
+          <option
+            key={selectOption.value + selectOption.label}
+            value={selectOption.value}
+          >
             {selectOption.label}
           </option>
         ))}

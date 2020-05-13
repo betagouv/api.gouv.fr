@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { VISITOR, ContactForm } from './index';
 import { Dropdown, ButtonLink } from '../../uiComponents';
-import constants from '../../constants';
 
 enum SUBJECT {
+  FIND_API = 4,
   FRANCECONNECT = 1,
   CARTE_GRISES = 2,
   OTHER = 3,
@@ -15,6 +15,27 @@ interface SubjectProps {
 
 const SubjectRouter: React.FC<SubjectProps> = ({ subject }) => {
   switch (subject) {
+    case SUBJECT.FIND_API:
+      return (
+        <div className="subject-answer">
+          <p>
+            En tant qu'entreprise, vous êtes libre d’utiliser <b>toutes</b> les
+            APIs ouvertes à tous et <b>certaines</b> des APIs nécessitant une
+            habilitation.
+          </p>
+          <p>
+            Toutes nos APIs sont visibles{' '}
+            <a href="rechercher-api">sur cette page</a>. Si une API vous
+            intéresse, pensez à vérifier dans la section <b>Accès</b> de la
+            fiche API quelles sont les conditions d'accès à la donnée.
+          </p>
+          <div className="layout-center">
+            <ButtonLink large href="/rechercher-api">
+              Rechercher une API
+            </ButtonLink>
+          </div>
+        </div>
+      );
     case SUBJECT.FRANCECONNECT:
       return (
         <div className="subject-answer">
@@ -52,17 +73,22 @@ const SubjectRouter: React.FC<SubjectProps> = ({ subject }) => {
     case SUBJECT.CARTE_GRISES:
       return (
         <div className="subject-answer">
-          Il n’existe pas a ce jour d’API qui référence les cartes grises
+          À notre connaissance, il n’existe pas à ce jour d’API qui référence
+          les cartes grises ou les immatriculations de véhicules.
         </div>
       );
     case SUBJECT.OTHER:
-      return <ContactForm visitor={VISITOR.PARTICULIER} />;
+      return <ContactForm visitorType="Entreprise" />;
   }
 };
 
 const Companies: React.FC<{}> = () => {
   const [subject, setSubject] = useState<SUBJECT | null>(null);
   const options = [
+    {
+      value: SUBJECT.FIND_API,
+      label: 'Je cherche une API',
+    },
     {
       value: SUBJECT.FRANCECONNECT,
       label: 'Je veux France Connecter mon entreprise',
@@ -79,19 +105,6 @@ const Companies: React.FC<{}> = () => {
 
   return (
     <>
-      <div className="highlight-info">
-        <p>
-          En tant qu'entreprise, vous êtes libre d’utiliser <b>toutes</b> les
-          APIs ouvertes à tous et <b>certaines</b> des APIs nécessitant une
-          habilitation.
-        </p>
-        <p>
-          Toutes nos APIs sont visibles{' '}
-          <a href="rechercher-api">sur cette page</a>. Si une API vous
-          intéresse, pensez à vérifier dans la section <b>Accès</b> de la fiche
-          API quelles sont les conditions d'accès à la donnée.
-        </p>
-      </div>
       <div className="contact-form-question">
         <span>Comment pouvons vous aider ? </span>
         <Dropdown
@@ -101,33 +114,6 @@ const Companies: React.FC<{}> = () => {
         />
       </div>
       {subject && <SubjectRouter subject={subject} />}
-      <style global jsx>{`
-        .highlight-info {
-          border-left: 5px solid ${constants.colors.blue};
-          background-color: ${constants.colors.lightBlue};
-          color: ${constants.colors.blue};
-          padding: 1.5rem 2rem;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-end;
-          margin: 1.5rem 0;
-        }
-        .subject-answer {
-          border-radius: 15px;
-          padding: 30px;
-          margin: 30px 0;
-          border: 4px solid ${constants.colors.blue};
-          position: relative;
-        }
-        .subject-answer:before {
-          top: -26px;
-          left: 20px;
-          background-color: #fff;
-          padding: 10px;
-          position: absolute;
-          content: 'Explication';
-        }
-      `}</style>
     </>
   );
 };

@@ -68,46 +68,6 @@
       }
     }
   }
-  form {
-    display: flex;
-    flex-direction: column;
-
-    > label {
-      line-height: 18px;
-      font-weight: 600;
-      color: $darkestGrey;
-      font-size: 0.9rem;
-    }
-
-    > input,
-    > textarea {
-      font-size: 1rem;
-      margin: 5px 0 10px;
-      width: calc(100% - 20px);
-      border: 2px solid #ccc;
-      border-radius: 4px;
-      padding: 10px;
-      transition: border-color 300ms ease-in-out;
-      font-family: 'Source Sans Pro', sans-serif;
-
-      &:focus {
-        border-color: $blue;
-      }
-      &:invalid {
-        outline: none;
-      }
-    }
-    > textarea {
-      resize: none;
-      height: 130px;
-    }
-
-    > div {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-    }
-  }
 
   @media (max-width: 700px) {
     z-index: 999;

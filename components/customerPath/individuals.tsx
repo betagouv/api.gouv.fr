@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { VISITOR, ContactForm } from './index';
 import { Dropdown, ButtonLink } from '../../uiComponents';
-import constants from '../../constants';
 
 enum SUBJECT {
   API_PUBLIC = 4,
@@ -34,6 +33,12 @@ const SubjectRouter: React.FC<SubjectProps> = ({ subject }) => {
             <a href="rechercher-api">sur cette page</a>. Cliquez sur "Uniquement
             les APIs ouvertes à tous" pour n’afficher que les APIs ouvertes.
           </p>
+          <div className="layout-center">
+            <ButtonLink large href="/rechercher-api">
+              Rechercher une API
+            </ButtonLink>
+          </div>
+          <br />
           <p>
             Au fait, connaissez-vous le{' '}
             <a href="https://data.gouv.fr">
@@ -85,7 +90,7 @@ const SubjectRouter: React.FC<SubjectProps> = ({ subject }) => {
         </div>
       );
     case SUBJECT.OTHER:
-      return <ContactForm visitor={VISITOR.PARTICULIER} />;
+      return <ContactForm visitorType="Particulier" />;
   }
 };
 
@@ -94,7 +99,7 @@ const Individuals: React.FC<{}> = () => {
   const options = [
     {
       value: SUBJECT.API_PUBLIC,
-      label: 'Je cherche une API du service public',
+      label: 'Je cherche une API',
     },
     {
       value: SUBJECT.FRANCECONNECT,
@@ -112,7 +117,7 @@ const Individuals: React.FC<{}> = () => {
 
   return (
     <>
-      <div className="highlight-warning">
+      {/* <div className="highlight-warning">
         <span role="img" aria-label="emoji warning">
           ⚠️
         </span>
@@ -121,7 +126,7 @@ const Individuals: React.FC<{}> = () => {
         <br />
         Il est probable que n’ayons pas la réponse à votre question, mais nous
         pouvons peut-être vous ré-orienter vers le bon service.
-      </div>
+      </div> */}
       <div className="contact-form-question">
         <span>Comment pouvons vous aider ? </span>
         <Dropdown
@@ -131,33 +136,6 @@ const Individuals: React.FC<{}> = () => {
         />
       </div>
       {subject && <SubjectRouter subject={subject} />}
-      <style global jsx>{`
-        .highlight-warning {
-          border-left: 5px solid ${constants.colors.orange};
-          background-color: ${constants.colors.lightOrange};
-          color: ${constants.colors.darkOrange};
-          padding: 1.5rem 2rem;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-end;
-          margin: 1.5rem 0;
-        }
-        .subject-answer {
-          border-radius: 15px;
-          padding: 30px;
-          margin: 30px 0;
-          border: 4px solid ${constants.colors.blue};
-          position: relative;
-        }
-        .subject-answer:before {
-          top: -26px;
-          left: 20px;
-          background-color: #fff;
-          padding: 10px;
-          position: absolute;
-          content: 'Explication';
-        }
-      `}</style>
     </>
   );
 };

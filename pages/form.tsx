@@ -7,21 +7,31 @@ import { Dropdown } from '../uiComponents';
 export default () => {
   const [statut, setStatut] = useState<VISITOR | null>(null);
   const options = [
-    { value: VISITOR.PARTICULIER, label: 'Je suis un particulier' },
+    {
+      value: VISITOR.PARTICULIER,
+      label: 'Je suis un particulier',
+      shortLabel: 'Particulier',
+    },
     {
       value: VISITOR.ADMINISTRATION,
       label: 'Je suis une administration ou une collectivité',
+      shortLabel: 'Administration ou collectivité',
     },
     {
       value: VISITOR.EDITOR,
       label:
         'Je suis un editeur de logiciel pour une administration ou une collectivité',
+      shortLabel: 'Editeur',
     },
-    { value: VISITOR.ENTREPRISE, label: 'Je suis une entreprise' },
+    {
+      value: VISITOR.ENTREPRISE,
+      label: 'Je suis une entreprise',
+      shortLabel: 'Entreprise',
+    },
   ];
   return (
     <Page title="Formulaire de contact" usePreFooter={false} useFooter={false}>
-      <div className="text-container">
+      <div className="text-wrapper text-style">
         <h1>
           Bonjour&nbsp;
           <span role="img" aria-label="emoji hello">
@@ -45,6 +55,7 @@ export default () => {
       </div>
       <style global jsx>{`
         .contact-form-question {
+          margin: 20px 0 0;
           display: flex;
           align-items: center;
         }

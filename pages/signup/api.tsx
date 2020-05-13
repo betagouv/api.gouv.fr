@@ -4,7 +4,6 @@ import { GetStaticProps } from 'next';
 import { getAllAPIs, IApi } from '../../model';
 import Page from '../../layouts/page';
 import { HEADER_PAGE } from '../../components';
-import constants from '../../constants';
 import Results from '../../components/searchApis/results';
 
 interface IProps {
@@ -16,7 +15,8 @@ const SignupApis: React.FC<IProps> = ({ signupApis }) => {
     <Page
       headerKey={HEADER_PAGE.FROM_SIGNUP}
       noIndex={true}
-      preFooterBackground={constants.colors.white}
+      useFooter={false}
+      usePreFooter={false}
       title="Nouvelle demande d’habilitation"
     >
       <section className="content-container page-baseline">
