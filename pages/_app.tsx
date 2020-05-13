@@ -5,7 +5,7 @@ import '../layouts/pageStyles.scss';
 import '../layouts/imports.scss';
 import '../layouts/fonts.scss';
 
-import 'swagger-ui-dist/swagger-ui.css';
+import 'swagger-ui/dist/swagger-ui.css';
 
 import Chat from '../components/chat';
 
