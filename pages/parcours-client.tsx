@@ -37,7 +37,7 @@ export default () => {
           <span role="img" aria-label="emoji hello">
             👋
           </span>
-          , comment pouvons-nous vous aider&nbsp;?
+          , que recherchez-vous&nbsp;?
         </h1>
         <p>
           Pour bien commencer, nous avons besoin d’en apprendre un peu plus sur

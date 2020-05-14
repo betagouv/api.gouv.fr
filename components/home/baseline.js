@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { TypingCarousel } from '../../uiComponents';
+import { TypingCarousel, ButtonLink } from '../../uiComponents';
 
 const Baseline = () => (
   <section
@@ -21,6 +21,9 @@ const Baseline = () => (
       Accédez aux données de toutes les administrations, pour construire des
       services innovants.
     </h2>
+    <ButtonLink href="/parcours-client?from=home" large>
+      Trouver une API !
+    </ButtonLink>
   </section>
 );
 
