@@ -183,6 +183,11 @@ a:not(.dont-apply-link-style):hover {
     list-style-type: circle;
     margin-left: 20px;
   }
+
+  pre {
+    overflow: auto;
+    color: #001a39;
+  }
 }
 
 h1 {
