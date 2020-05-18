@@ -1,19 +1,21 @@
 @import '../constants/colors.scss';
 
 .subject-answer {
-  border-radius: 15px;
+  border-radius: 8px;
   padding: 30px;
-  margin: 30px 0;
-  border: 4px solid $blue;
+  margin: 50px 0;
+  background-color: #f3f3f3;
   position: relative;
 
   &:before {
-    top: -26px;
-    left: 20px;
+    top: -12px;
+    left: 27px;
     background-color: #fff;
-    padding: 10px;
+    border-radius: 4px;
+    padding: 0px 7px;
     position: absolute;
     content: 'Explication';
+    font-weight: bold;
   }
 }
 

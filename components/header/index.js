@@ -98,11 +98,8 @@ const Header = ({ headerKey = 'home' }) => {
                   </Fragment>
                 ))}
                 <li className="external">
-                  <ButtonLink
-                    href="/parcours-client?from=header"
-                    onClick={logDemanderApi}
-                  >
-                    Trouver une API
+                  <ButtonLink href="/parcours-client" onClick={logDemanderApi}>
+                    Besoin d’aide ?
                   </ButtonLink>
                 </li>
               </>

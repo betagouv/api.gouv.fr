@@ -21,8 +21,8 @@ const Baseline = () => (
       Accédez aux données de toutes les administrations, pour construire des
       services innovants.
     </h2>
-    <ButtonLink href="/parcours-client?from=home" large>
-      Trouver une API !
+    <ButtonLink href="/rechercher-api" large>
+      Rechercher une API
     </ButtonLink>
   </section>
 );

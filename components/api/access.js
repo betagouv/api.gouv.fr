@@ -9,7 +9,7 @@ import { logDemanderAcces } from '../../service/analytics';
 
 const Access = ({ is_open, link, description, condition, clients }) => {
   return (
-    <Section id="access" title="Accès">
+    <Section id="access" title="Conditions d’accès">
       {is_open ? (
         <>
           <p>L'API est ouverte à tous.</p>

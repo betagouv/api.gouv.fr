@@ -1,21 +1,42 @@
-import React from 'react';
-import { VISITOR, Individuals, Companies, Public } from './index';
+import React, { useState, useEffect } from 'react';
+import { VISITOR } from './index';
+import { SUBJECT } from './explanations';
+import { Questions, Explanations } from './explanations';
+import { MultiChoice } from '../../uiComponents';
 
 interface IProps {
   visitor: VISITOR;
 }
 
 const VisitorRouter: React.FC<IProps> = ({ visitor }) => {
-  switch (visitor) {
-    case VISITOR.ADMINISTRATION:
-    case VISITOR.EDITOR:
-      return <Public />;
-    case VISITOR.ENTREPRISE:
-      return <Companies />;
-    case VISITOR.PARTICULIER:
-    default:
-      return <Individuals />;
-  }
+  const [subject, setSubject] = useState<SUBJECT | null>(null);
+
+  const options = Questions.reduce((acc: any, element) => {
+    if (element.public.indexOf(visitor) > -1) {
+      acc.push(element);
+    }
+    return acc;
+  }, []);
+
+  useEffect(() => {
+    setSubject(null);
+  }, [visitor]);
+
+  return (
+    <>
+      <div className="contact-form-question">
+        <div className="question">Comment pouvons vous aider ? </div>
+        <MultiChoice
+          onClick={setSubject}
+          multiChoiceOptions={options}
+          selected={subject}
+        />
+      </div>
+      {subject !== null && (
+        <Explanations subject={subject} visitorType={visitor} />
+      )}
+    </>
+  );
 };
 
 export default VisitorRouter;

@@ -3,15 +3,23 @@ import React, { FormEvent, useRef } from 'react';
 import constants from '../../constants';
 import { ButtonLink } from '../../uiComponents';
 
-interface IProps {
-  visitorType: string;
+export enum VISITOR {
+  ADMINISTRATION = 'Administration',
+  EDITOR = 'Editeur',
+  PARTICULIER = 'Particulier',
+  COLLECTIVITE = 'Collecitvité',
+  ENTREPRISE = 'Entreprise',
 }
 
-const ContactForm: React.FC<IProps> = ({ visitorType }) => {
+interface IProps {
+  visitorType: VISITOR;
+  label?: string;
+}
+
+const ContactForm: React.FC<IProps> = ({ visitorType, label }) => {
   const body = useRef(null);
 
   const openMail = (e: FormEvent) => {
-    console.log(e);
     if (!body || !body.current) {
       e.preventDefault();
       return;
@@ -22,12 +30,14 @@ const ContactForm: React.FC<IProps> = ({ visitorType }) => {
     e.preventDefault();
 
     window.location.href = encodeURI(
-      `${constants.links.mailto.SUPPORT}?subject=[Question api.gouv.fr] ${subjectVal}&body=${bodyVal}`
+      `${constants.links.mailto.SUPPORT}?subject=[${
+        label ? label : 'Question api.gouv.fr'
+      }] ${subjectVal}&body=${bodyVal}`
     );
   };
   return (
     <form id="contact-form" onSubmit={openMail}>
-      <label htmlFor="question">Quelle est votre question ?</label>
+      <label htmlFor="question">{label || 'Quelle est votre question ?'}</label>
       <textarea
         id="description"
         placeholder="Détaillez ici votre question"
