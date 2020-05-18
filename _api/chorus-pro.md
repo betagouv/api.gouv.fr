@@ -30,7 +30,7 @@ visits_2019: 40978
 last_update: 07/08/2017
 ---
 
-## Qu’est-ce que Chorus Pro ?
+### Qu’est-ce que Chorus Pro ?
 
 Chorus Pro est la solution mutualisée de facturation électronique qui a été mise en place pour tous les fournisseurs de la sphère publique afin de répondre aux obligations fixées par l’ordonnance du 26 juin 2014. Cette solution a remplacé en septembre 2016 Chorus Factures, utilisé depuis le 1 er janvier 2012 par les fournisseurs de l’État.
 La construction de cette solution a démarré en 2015, après une vaste phase de concertation tant avec les représentants des entreprises qu’avec ceux de la sphère publique. Elle s’est poursuivi tout au long de l’année 2016 avec en ligne de mire son déploiement au premier janvier 2017.
@@ -42,14 +42,14 @@ L’ordonnance du 26 juin 2014 relative au développement de la facturation éle
 - au 1er janvier 2019 : pour les petites et moyennes entreprises(10 à 250 salariés) ;
 - au 1er janvier 2020 : pour les microentreprises (moins de 10 salariés).
 
-## A qui s’adresse Chorus Pro ?
+### A qui s’adresse Chorus Pro ?
 
 Chorus Pro s’adresse à l’ensemble des acteurs de la commande publique :
 
 - **Côté émetteurs** : la plateforme s’adresse à l’ensemble des fournisseurs tant privés que publics, afin de leur permettre de transmettre de façon efficace et automatique leurs factures à destination de la sphère publique. La solution Chorus Pro prend également en compte le processus de gestion et de validation des factures de travaux.
 - **Côté récepteurs** : la plateforme s’adresse aux entités du **secteur public** : l’Etat, les établissements publics nationaux (EPN), les collectivités territoriales et les établissements publics locaux (EPL). Elle leur permet de traiter l’ensemble des factures de manière optimisée en réduisant les délais de validation et d’enregistrement.
 
-## Chorus Pro côté émetteur :
+### Chorus Pro côté émetteur :
 
 Les fournisseurs qu’ils soient issus du domaine privé ou du secteur public ont accès via Chorus Pro à l’ensemble des fonctionnalités suivantes :
 
@@ -58,7 +58,7 @@ Les fournisseurs qu’ils soient issus du domaine privé ou du secteur public on
 - [Ajout de pièces complémentaires nécessaires au traitement de sa facture](https://communaute.chorus-pro.gouv.fr/completer-facture/),
 - [Consultation des engagements émis par les services de l’Etat](https://communaute.chorus-pro.gouv.fr/rechercher-engagement-juridique/).
 
-## Chorus Pro côté récepteur :
+### Chorus Pro côté récepteur :
 
 Les récepteurs de factures ont la possibilité de réaliser les actions suivantes :
 
@@ -66,7 +66,7 @@ Les récepteurs de factures ont la possibilité de réaliser les actions suivant
 - [Validation ou rejet de dossiers de facturation](https://communaute.chorus-pro.gouv.fr/traiter-facture-recue/),
 - [Recherche de factures reçues/archivées](https://communaute.chorus-pro.gouv.fr/rechercher-facture-par-recipiendaire/).
 
-## Site de qualification
+### Site de qualification
 
 Le portail Chorus Pro de Qualification permet de se connecter à un environnement similaire à l’environnement de production, afin de prendre en main la solution et de monter en compétences.
 Dans cet environnement, il est possible d’exploiter les principales fonctionnalités du portail Chorus Pro : dépôt, traitement et recherche de factures, gestion des espaces, suivi des flux, etc.
@@ -84,10 +84,10 @@ Dans le cadre d’un projet de raccordement, le portail de Qualification permet 
 
 Il est accessible à cette [adresse](https://chorus-pro.gouv.fr/qualif/)
 
-## Site de Production
+### Site de Production
 
 Chorus Pro de production est accessible à cette [adresse](https://chorus-pro.gouv.fr/cpp/)
 
-## Site de la communauté Chorus Pro
+### Site de la communauté Chorus Pro
 
 La communauté Chorus Pro est accessible à cette [adresse](https://communaute-chorus-pro.finances.gouv.fr/)

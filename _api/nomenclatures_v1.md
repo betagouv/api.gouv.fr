@@ -31,6 +31,6 @@ L'API Nomenclatures donne accès aux métadonnées statistiques de la statistiqu
 Les services actuellement disponibles interrogent la nomenclature d'activité française (NAF rév. 2), la nomenclature des catégories juridiques (CJ) et le code officiel géographique (COG).
 La recherche permet, à partir d'un code, de récupérer le libellé et l'URI correspondants.
 
-## Licences
+### Licences
 
 La réutilisation des jeux de données mis à votre disposition à partir de la base Sirene est soumise à la licence [« Licence Ouverte / Open Licence version 2.0 »](https://www.etalab.gouv.fr/licence-ouverte-open-licence) conçue par Etalab, organisme chargé de coordonner l’action des services de l’État et de ses établissements publics pour faciliter la réutilisation la plus large possible de leurs informations publiques.

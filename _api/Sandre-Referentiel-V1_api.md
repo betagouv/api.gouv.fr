@@ -34,7 +34,7 @@ visits_2019: 122
 last_update: 30/09/2019
 ---
 
-## Description de l'API
+### Description de l'API
 
 L'API Référentiel version 1 donne accès librement à l'ensemble des jeux de données de référence diffusé par le Service d'Administration Nationale des Données et Référentiels sur l'Eau (SANDRE) selon la [nomenclature SANDRE n°373](http://id.eaufrance.fr/nsa/373).
 

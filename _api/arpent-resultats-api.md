@@ -34,8 +34,6 @@ visits_2019: 2050
 last_update: 27/07/2017
 ---
 
-### Pourquoi ?
-
 Les journaux publient chaque année les résultats aux examens de leur région.
 
 Dans le respect des données personnelles des candidats, ARPENT(résultats) vous propose d'accéder aux données de l'enseignement agricole :

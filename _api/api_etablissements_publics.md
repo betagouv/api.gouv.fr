@@ -24,8 +24,6 @@ visits_2019: 2089
 last_update: 10/12/2019
 ---
 
-## Annuaire des établissements publics de l'administration
-
 Cette API recense plus de 60 000 guichets publics locaux (mairies, organismes sociaux, services de l'état, etc.). Elle fournit leurs coordonnées (adresses, téléphones, site internet, horaires d'ouverture, coordonnées de géolocalisation) en [Licence Ouverte / Open Licence](https://www.etalab.gouv.fr/licence-ouverte-open-licence).
 
 Le contenu de cet annuaire est généré automatiquement à partir des données de [Service-public.fr - Annuaire de l’administration - Base de données locales](https://www.data.gouv.fr/fr/datasets/53699fe4a3a729239d206227),

@@ -37,8 +37,6 @@ visits_2019: 1324
 last_update: 08/10/2019
 ---
 
-## Récupérez les informations fiscales nécessaires à votre téléservice directement auprès de la DGFiP
-
 L'API Impôt particulier simplifie les démarches des usagers et le processus de gestion de vos téléservices. Elle permet en effet l’échange d’informations fiscales entre la DGFiP et une administration ou collectivité dans le cadre d'un téléservice FranceConnecté.
 
 Pourquoi une administration devrait utiliser l'API Impôt particulier ?
