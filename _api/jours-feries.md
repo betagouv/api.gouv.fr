@@ -17,20 +17,18 @@ doc_tech_link: https://etalab.github.io/jours-feries-france-api/openapi.yml
 last_update: 18/05/2020
 ---
 
-## Description de l'API
-
 En France, certaines fêtes constituent des jours fériés qui peuvent être chômés ou travaillés et rémunérés
 à des conditions qui varient selon les jours concernés. Cette API liste les jours fériés tels que définis
 dans le code du travail, pour différentes zones constituant la France.
 
 Retrouvez des informations complémentaires sur [service-public.fr](https://www.service-public.fr/particuliers/vosdroits/F2405).
 
-## Outils complémentaires
+### Outils complémentaires
 Vous pouvez utiliser des outils à votre disposititon pour d'autres besoins :
 - [La librairie Python](https://github.com/etalab/jours-feries-france) utilisée pour générer les exports de données ;
 - [Des exports de données](https://www.data.gouv.fr/fr/datasets/jours-feries-en-france/) aux formats CSV, JSON et ICS.
 
-## Sources
+### Sources
 La liste des jours fériés est définie dans le code du travail.
 
 Certaines commémorations locales ou professionnelles sont également des jours fériés, parmi lesquelles :
