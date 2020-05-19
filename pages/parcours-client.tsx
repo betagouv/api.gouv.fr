@@ -6,6 +6,7 @@ import { MultiChoice } from '../uiComponents';
 
 export default () => {
   const [statut, setStatut] = useState<VISITOR | null>(null);
+
   const options = [
     {
       value: VISITOR.PARTICULIER,
@@ -28,6 +29,7 @@ export default () => {
       label: 'une entreprise',
     },
   ];
+
   return (
     <Page
       title="Formulaire de contact"

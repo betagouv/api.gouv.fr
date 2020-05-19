@@ -34,7 +34,6 @@ const Questions = [
     label: 'Je cherche une API',
     public: [VISITOR.ADMINISTRATION, VISITOR.COLLECTIVITE, VISITOR.EDITOR],
   },
-
   {
     value: SUBJECT.NEW_API,
     label: 'Je veux ajouter une API au catalogue api.gouv',
@@ -54,6 +53,12 @@ const Questions = [
     value: SUBJECT.FRANCECONNECT_PARTICULIER,
     label: 'Je veux me connecter à France Connect',
     public: [VISITOR.PARTICULIER],
+  },
+  {
+    value: SUBJECT.CARTE_GRISES,
+    label:
+      'Je cherche une API des plaques d’immatriculation ou des cartes grises',
+    public: [VISITOR.ENTREPRISE],
   },
   {
     value: SUBJECT.FRANCECONNECT_ENTREPRISE,
@@ -209,7 +214,10 @@ const Explanations: React.FC<IProps> = ({ subject, visitorType }) => {
             demande :
           </p>
           <div className="layout-center">
-            <ButtonLink large href="https://franceconnect">
+            <ButtonLink
+              large
+              href="https://signup.api.gouv.fr/franceconnect?source=api_gouv_customer_path_entreprise"
+            >
               Remplir une demande
             </ButtonLink>
           </div>
@@ -218,8 +226,19 @@ const Explanations: React.FC<IProps> = ({ subject, visitorType }) => {
     case SUBJECT.CARTE_GRISES:
       return (
         <div className="subject-answer">
-          À notre connaissance, il n’existe pas à ce jour d’API qui référence
-          les cartes grises ou les immatriculations de véhicules.
+          <p>
+            À notre connaissance, il n’existe pas d’API qui référence les cartes
+            grises ou les immatriculations de véhicules.
+          </p>
+          <p>
+            Pour plus d’informations vous pouvez contacter le site internet du
+            ministère de l’intérieur :
+          </p>
+          <div className="layout-center">
+            <ButtonLink large href="https://immatriculation.ants.gouv.fr">
+              Consulter le site de l’ANTS
+            </ButtonLink>
+          </div>
         </div>
       );
     case SUBJECT.TELEPOINT:

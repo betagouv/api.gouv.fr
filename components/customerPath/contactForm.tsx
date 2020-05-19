@@ -31,7 +31,7 @@ const ContactForm: React.FC<IProps> = ({ visitorType, label }) => {
 
     window.location.href = encodeURI(
       `${constants.links.mailto.SUPPORT}?subject=[${
-        label ? label : 'Question api.gouv.fr'
+        label ? label : 'Question'
       }] ${subjectVal}&body=${bodyVal}`
     );
   };
@@ -45,7 +45,9 @@ const ContactForm: React.FC<IProps> = ({ visitorType, label }) => {
         required
       />
       <div className="submit layout-center">
-        <ButtonLink type="submit">Envoyer</ButtonLink>
+        <ButtonLink type="submit" large>
+          Envoyer
+        </ButtonLink>
       </div>
     </form>
   );
