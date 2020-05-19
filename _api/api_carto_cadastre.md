@@ -1,15 +1,22 @@
 ---
-title: API Carto Cadastre
+title: API Carto - module Cadastre
 tagline: L'accès simplifié aux données de cadastre
 external_site: https://apicarto.ign.fr
 owner: Institut national de l’information géographique et forestière
 owner_acronym: IGN
 is_open: false
 acces_condition: OUVERT (sous contrat pour certaines données)
+access_link: http://professionnels.ign.fr/
+access_description: |
+  <p>Vous devez demander une clé Géoportail pour accèder aux données. Lors de votre demande de clé, vous devez commander les flux “Ressources WFS Géoportail - BD PARCELLAIRE®” ci-dessous:</p>
+  <ul><li>bdpv_COMMUNE</li>
+  <li>bdpv_DIVCAD</li>
+  <li>bdpv_LOCALISANT</li>
+  <li>bdpv_PARCELLE</li></ul>
 category: Public
 logo: look4-geoportail.jpg
 contact_link: contact.geoservices@ign.fr
-doc_tech_external: https://apicarto.ign.fr/api/doc/cadastre.yml
+doc_tech_link: https://apicarto.ign.fr/api/doc/cadastre.yml
 clients:
   - développeurs
   - entreprises

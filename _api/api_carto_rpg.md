@@ -1,15 +1,24 @@
 ---
-title: API Carto Cadastre
-tagline: L'accès simplifié aux données de cadastre
+title: API Carto - module RPG
+tagline: L'accès simplifié aux informations du registre parcellaire graphique
 external_site: https://apicarto.ign.fr
 owner: Institut national de l’information géographique et forestière
 owner_acronym: IGN
 is_open: false
 acces_condition: OUVERT (sous contrat pour certaines données)
+access_link: http://professionnels.ign.fr/
+access_description: |
+  <p>Vous devez demander une clé Géoportail pour accèder aux données. Lors de votre demande de clé, vous devez commander les flux “Ressources WFS Géoportail - BD PARCELLAIRE®” suivant l'année désirée:</p>
+  <ul><li>RPG 2010, RPG 2011, RPG 2012, RPG 2013</li>
+  <li>RPG 2014:ilots_anonymes (à venir)</li>
+  <li>RPG 2015:parcelles_graphiques</li>
+  <li>RPG 2016:parcelles_graphiques</li>
+  <li>RPG 2017:parcelles_graphiques</li>
+  <li>RPG 2018:parcelles_graphiques</li></ul>
 category: Public
 logo: look4-geoportail.jpg
 contact_link: contact.geoservices@ign.fr
-doc_tech_external: https://apicarto.ign.fr/api/doc/rpg.yml
+doc_tech_link: https://apicarto.ign.fr/api/doc/rpg.yml
 clients:
   - développeurs
   - entreprises
@@ -22,8 +31,6 @@ partners:
 keywords:
   - poste
   - géomarketing
-  - zonages
-  - cadastre
   - parcellaire
   - communes
   - parcelles

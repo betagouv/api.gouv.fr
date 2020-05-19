@@ -9,7 +9,7 @@ acces_condition: OUVERT
 category: Public
 logo: look4-geoportail.jpg
 contact_link: contact.geoservices@ign.fr
-doc_tech_external: https://apicarto.ign.fr/api/doc/aoc.yml
+doc_tech_link: https://apicarto.ign.fr/api/doc/aoc.yml
 clients:
   - développeurs
   - entreprises
