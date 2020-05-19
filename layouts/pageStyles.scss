@@ -9,6 +9,7 @@ html {
 
 a {
   color: #3a73c0;
+  word-wrap: break-word;
 }
 
 #page-layout {
@@ -182,6 +183,11 @@ a:not(.dont-apply-link-style):hover {
   ul {
     list-style-type: circle;
     margin-left: 20px;
+  }
+
+  pre {
+    overflow: auto;
+    color: #001a39;
   }
 }
 

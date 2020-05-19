@@ -23,18 +23,18 @@ class SwaggerUI extends React.Component {
 
           .swagger-section {
             background-color: whitesmoke;
-            padding: 10px 2em;
-          }
-
-          .swagger-section hgroup.main h2 {
-            font-size: 1em;
-          }
-
-          .swagger-section .info_title {
+            padding: 10px 20px;
+            overflow: auto;
           }
 
           .swagger-section .swagger-ui .wrapper section.models {
             background-color: #fff;
+          }
+
+          @media only screen and (min-width: 1px) and (max-width: 600px) {
+            .swagger-section {
+              padding: 10px 0px;
+            }
           }
         `}</style>
       </div>

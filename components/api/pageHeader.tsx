@@ -49,6 +49,23 @@ const Title: React.FC<ITitleProps> = ({ title, logo }) => (
         text-align: center;
         color: #fff;
       }
+
+      @media only screen and (min-width: 1px) and (max-width: 600px) {
+        .title {
+          flex-shrink: 1;
+          max-width: 100%;
+          flex-direction: column;
+        }
+
+        .title h1 {
+          word-wrap: break-word;
+          max-width: 100%;
+        }
+
+        .title span {
+          flex-shrink: 0;
+        }
+      }
     `}</style>
   </>
 );
