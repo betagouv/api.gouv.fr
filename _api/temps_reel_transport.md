@@ -1,5 +1,5 @@
 ---
-title: Données temps réel pour les transports
+title: Données temps réel pour les transports en commun
 tagline: Mettre à disposition les données temps réel des transports en commun
 category: Public
 owner: Direction interministérielle du numérique
@@ -13,7 +13,7 @@ keywords:
   - transport
   - gtfs-rt
   - siri-lite
-themes: 
+themes:
   - Transport
 external_site: https://transport.data.gouv.fr
 monitoring_link: http://stats.transport.data.gouv.fr/
@@ -22,8 +22,6 @@ doc_tech_link: https://tr.transport.data.gouv.fr/spec
 visits_2019: 1346
 last_update: 10/12/2019
 ---
-
-## Description de l'API
 
 [Api](http://tr.transport.data.gouv.fr/) simple de mise à disposition de données temps réel pour les transports en commun.
 
