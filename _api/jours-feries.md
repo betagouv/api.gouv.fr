@@ -13,7 +13,7 @@ keywords:
 themes:
   - Administration & législation
 contact_link: https://www.etalab.gouv.fr/contact
-doc_tech_link: http://etalab.github.io/jours-feries-france-api/openapi.yml
+doc_tech_link: https://etalab.github.io/jours-feries-france-api/openapi.yml
 last_update: 18/05/2020
 ---
 
