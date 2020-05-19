@@ -2,7 +2,9 @@
 title: API Chorus Pro
 tagline: Envoyer facilement vos factures électroniques à une entité publique française
 external_site: https://www.chorus-pro.gouv.fr/
-contract: OUVERT sous contrat
+is_open: false
+access_condition: OUVERT sous contrat
+access_link: https://chorus-pro.gouv.fr/qualif/
 clients:
   - Editeurs
   - Entreprises
@@ -19,17 +21,11 @@ keywords:
   - Dématérialisation
   - Comptabilité
   - Portail professionel
-themes: 
+themes:
   - Administration & législation
 logo: ChorusPro.jpg
-score:
-  detail:
-    access:
-      link: https://chorus-pro.gouv.fr/qualif/
-    contact:
-      link: api-choruspro.aife@finances.gouv.fr
-    doc_tech:
-      external: https://communaute.chorus-pro.gouv.fr/documentation/api/
+contact_link: api-choruspro.aife@finances.gouv.fr
+doc_tech_external: https://communaute.chorus-pro.gouv.fr/documentation/api/
 visits_2019: 40978
 last_update: 07/08/2017
 ---

@@ -9,17 +9,15 @@ import {
   computeSearchResults,
 } from './filtersLogic';
 
-import getConfig from 'next/config';
-
-const {
-  publicRuntimeConfig: { PIWIK_URL, PIWIK_SITE_ID },
-} = getConfig();
+import constants from '../../constants';
 
 const logResultsInMatomo = debounce((search, theme, resultCounts) => {
-  if (window.Piwik) {
+  //@ts-ignore
+  if (typeof window !== 'undefined' && window.Piwik) {
+    //@ts-ignore
     const tracker = window.Piwik.getTracker(
-      `${PIWIK_URL}/piwik.php`,
-      PIWIK_SITE_ID
+      `${constants.links.PIWIK.URL}/piwik.php`,
+      constants.links.PIWIK.SITE_ID
     );
 
     if (tracker) {
@@ -28,12 +26,12 @@ const logResultsInMatomo = debounce((search, theme, resultCounts) => {
   }
 }, 1000);
 
-const SearchApis = ({ allApis, allThemes, searchFromQueryString = '' }) => {
+const SearchApis = ({ allApis, allThemes }) => {
   const [apiList, setApiList] = useState(allApis);
 
   const [theme, setTheme] = useState(null);
   const [isAccessOpen, setIsAccessOpen] = useState(false);
-  const [searchTerms, setSearchTerms] = useState(searchFromQueryString);
+  const [searchTerms, setSearchTerms] = useState('');
 
   const allThemesOptions = allThemes.map((el, index) => {
     return { value: index, label: el };
@@ -55,11 +53,14 @@ const SearchApis = ({ allApis, allThemes, searchFromQueryString = '' }) => {
       .sort((a, b) => ((a.visits_2019 || 0) < b.visits_2019 ? 1 : -1));
 
     const themeAndAccess = `${theme}${isAccessOpen ? '-only-access-open' : ''}`;
+
     logResultsInMatomo(searchTerms, themeAndAccess, newApiList.length);
 
     setApiList(newApiList);
+
     return () => {};
   }, [theme, isAccessOpen, searchTerms, allApis]);
+
   return (
     <>
       <FilterHeader
@@ -67,7 +68,6 @@ const SearchApis = ({ allApis, allThemes, searchFromQueryString = '' }) => {
         setTheme={setTheme}
         setIsAccessOpen={setIsAccessOpen}
         search={setSearchTerms}
-        searchFromQueryString={searchFromQueryString}
         isAccessOpen={isAccessOpen}
       />
       <Results apiList={apiList} />

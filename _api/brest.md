@@ -2,7 +2,7 @@
 title: Données transports Brest métropole
 tagline: Données théoriques et temps-réel des transports publics de Brest métropole
 owner: Brest métropole
-contract: OUVERT
+is_open: false
 logo: Logo_Brest_metropole.png
 clients:
   - particuliers
@@ -16,14 +16,10 @@ keywords:
   - Tramway
   - Téléphérique
   - Transport
-themes: 
+contact_link: mobilites@brest-metropole.fr
+doc_tech_external: https://geo.pays-de-brest.fr/donnees/Documents/Public/DocWebServicesTransport.pdf
+themes:
   - Transport
-score:
-  detail:
-    contact:
-      link: mobilites@brest-metropole.fr
-    doc_tech:
-      external: https://geo.pays-de-brest.fr/donnees/Documents/Public/DocWebServicesTransport.pdf
 visits_2019: 450
 last_update: 03/10/2019
 ---

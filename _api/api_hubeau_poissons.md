@@ -1,9 +1,9 @@
 ---
 title: Hub'Eau - Etat piscicole des rivières
 tagline: Données sur les poissons de rivières
-contract: OUVERT
+is_open: true
 external_site: https://hubeau.eaufrance.fr/page/documentation_poisson/
-logo: 01-poisson.png
+logo: 01-poisson.jpg
 clients:
   - particuliers
   - entreprises
@@ -20,16 +20,10 @@ keywords:
   - Pêche électrique
   - Cours d'eau
   - Etat piscicole
-themes: 
+contact_link: newshubeau@brgm.fr
+doc_tech_link: https://hubeau.eaufrance.fr/api/v0/etat_piscicole/api-docs
+themes:
   - Environnement
-score:
-  detail:
-    access:
-      is_open: true
-    contact:
-      link: newshubeau@brgm.fr
-    doc_tech:
-      link: https://hubeau.eaufrance.fr/api/v0/etat_piscicole/api-docs
 visits_2019: 568
 last_update: 12/06/2018
 ---

@@ -1,17 +1,38 @@
+/* open-sans-regular - latin */
 @font-face {
-  font-family: Evolventa;
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
-  src: local('Evolventa'), local('Evolventa-Regular'),
-    url('/fonts/Evolventa-Regular.woff') format('woff');
+  font-display: swap;
+  src: url('/fonts/open-sans-v17-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Open Sans Regular'), local('OpenSans-Regular'),
+    url('/fonts/open-sans-v17-latin-regular.eot?#iefix')
+      format('embedded-opentype'),
+    /* IE6-IE8 */ url('/fonts/open-sans-v17-latin-regular.woff2')
+      format('woff2'),
+    /* Super Modern Browsers */ url('/fonts/open-sans-v17-latin-regular.woff')
+      format('woff'),
+    /* Modern Browsers */ url('/fonts/open-sans-v17-latin-regular.ttf')
+      format('truetype'),
+    /* Safari, Android, iOS */
+      url('/fonts/open-sans-v17-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
 }
-
+/* open-sans-700 - latin */
 @font-face {
-  font-family: Evolventa;
+  font-family: 'Open Sans';
   font-style: normal;
-  font-weight: 800;
-  src: local('Evolventa Bold'), local('Evolventa-Bold'),
-    url('/fonts/Evolventa-Bold.woff') format('woff');
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/open-sans-v17-latin-700.eot'); /* IE9 Compat Modes */
+  src: local('Open Sans Bold'), local('OpenSans-Bold'),
+    url('/fonts/open-sans-v17-latin-700.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */ url('/fonts/open-sans-v17-latin-700.woff2') format('woff2'),
+    /* Super Modern Browsers */ url('/fonts/open-sans-v17-latin-700.woff')
+      format('woff'),
+    /* Modern Browsers */ url('/fonts/open-sans-v17-latin-700.ttf')
+      format('truetype'),
+    /* Safari, Android, iOS */
+      url('/fonts/open-sans-v17-latin-700.svg#OpenSans') format('svg'); /* Legacy iOS */
 }
 
 /* source-sans-pro-regular - latin */
@@ -19,6 +40,7 @@
   font-family: 'Source Sans Pro';
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: url('/fonts/source-sans-pro-v13-latin-regular.eot');
   src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'),
     url('/fonts/source-sans-pro-v13-latin-regular.eot?#iefix')
@@ -35,6 +57,7 @@
   font-family: 'Source Sans Pro';
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
   src: url('/fonts/source-sans-pro-v13-latin-700.eot');
   src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'),
     url('/fonts/source-sans-pro-v13-latin-700.eot?#iefix')
@@ -48,6 +71,8 @@
 html,
 body {
   font-size: 16px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.78);
 }
 
 html,
@@ -56,12 +81,12 @@ div,
 p,
 span,
 a {
-  font-family: 'Source Sans Pro', sans-serif !important;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  font-family: Evolventa, sans-serif !important;
+  font-family: 'Open Sans', sans-serif;
 }

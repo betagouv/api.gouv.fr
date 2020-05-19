@@ -4,14 +4,13 @@ import { throttle } from 'lodash';
 
 import { ButtonLink } from '../../uiComponents/button';
 import constants from '../../constants';
-import './headerStyles.scss';
+import { logDemanderApi } from '../../service/analytics';
 
 export const HEADER_PAGE = {
   APIS: 'apis',
   FROM_SIGNUP: 'requests',
   SERVICES: 'services',
   ABOUT: 'about',
-  CONTACT: 'contact',
 };
 
 const HEADER = [
@@ -26,14 +25,9 @@ const HEADER = [
     key: HEADER_PAGE.SERVICES,
   },
   { href: '/apropos', txt: 'À propos', key: HEADER_PAGE.ABOUT },
-  {
-    href: '/contact',
-    txt: 'Nous contacter',
-    key: HEADER_PAGE.CONTACT,
-  },
 ];
 
-const Header = ({ headerKey = 'home', filter = '' }) => {
+const Header = ({ headerKey = 'home' }) => {
   const header = useRef(null);
 
   useEffect(() => {
@@ -104,7 +98,10 @@ const Header = ({ headerKey = 'home', filter = '' }) => {
                   </Fragment>
                 ))}
                 <li className="external">
-                  <ButtonLink href={constants.links.mailto.REQUEST_API}>
+                  <ButtonLink
+                    href={constants.links.mailto.REQUEST_API}
+                    onClick={logDemanderApi}
+                  >
                     Demander une API
                   </ButtonLink>
                 </li>

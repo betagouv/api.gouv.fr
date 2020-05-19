@@ -3,9 +3,8 @@ title: scanR, moteur de la recherche et de l'innovation # nom commercial de l'AP
 tagline: Explorez le monde de la Recherche et de l'Innovation française avec scanR # une phrase maximum
 owner: Ministère de l'Enseignement Supérieur, de la Recherche et de l'Innovation # producteur de l'API
 owner_acronym: MESRI # acronyme du producteur
-contract: OUVERT
+is_open: true
 logo: logo-scanr-blue.jpg # https://scanr.enseignementsup-recherche.gouv.fr/img/logo-scanr-blue.jpg - Nom du fichier de votre logo à placer dans le dossier /images/api-logo
-stat:
 clients: # types d'entités habilitées à utiliser l'API
   - particuliers # texte libre en minuscules
   - entreprises # ajoutez ou supprimez des types d'entités
@@ -24,16 +23,11 @@ keywords: # utilisé dans la recherche
   - financement de la recherche
   - science ouverte
   - open access
-score:
-  detail:
-    access:
-      is_open: true
-    contact:
-      link: https://scanr.enseignementsup-recherche.gouv.fr/contact #moyen de contact, soit un mail, soit un lien vers formulaire de contact
-    doc_tech:
-      link: https://scanr-api.enseignementsup-recherche.gouv.fr/api/swagger-ui.html # URL de la documentation au format OpenAPI <https://github.com/OAI/OpenAPI-Specification>
-    monitoring:
-      link: https://scanr-api.enseignementsup-recherche.gouv.fr/api/services/counts # URL d'une page qui affiche le statut
+themes:
+  - Education
+contact_link: https://scanr.enseignementsup-recherche.gouv.fr/contact
+doc_tech_link: https://scanr-api.enseignementsup-recherche.gouv.fr/api/v2/api-docs
+monitoring_link: https://scanr-api.enseignementsup-recherche.gouv.fr/api/services/counts
 ---
 
 ## Description de l'API

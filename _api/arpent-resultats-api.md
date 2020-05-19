@@ -4,8 +4,8 @@ tagline: Accéder aux calendriers de délibération et aux résultats des examen
 owner: Ministère de l'agriculture et de l'alimentation
 owner_acronym: MAA
 category: public
-contract: OUVERT
-logo: maa.png
+is_open: true
+logo: maa.jpg
 clients:
   - particuliers
   - entreprises
@@ -26,14 +26,10 @@ keywords:
   - BTS
   - Arpent
   - Diplôme
+contact_link: arpent-resultat.sg@agriculture.gouv.fr
+doc_tech_link: https://teleservices-ea.agriculture.gouv.fr/arpent-resultats-api/v2/api-docs?group=arpent-resultats
 themes:
   - Education
-score:
-  detail:
-    contact:
-      link: arpent-resultat.sg@agriculture.gouv.fr
-    doc_tech:
-      link: https://teleservices-ea.agriculture.gouv.fr/arpent-resultats-api/v2/api-docs?group=arpent-resultats
 visits_2019: 2050
 last_update: 27/07/2017
 ---

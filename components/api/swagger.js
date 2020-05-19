@@ -1,49 +1,45 @@
-import React, { useEffect } from 'react';
-import PropTypes from 'prop-types';
-import { SwaggerUIBundle, SwaggerUIStandalonePreset } from 'swagger-ui-dist';
+import React from 'react';
 
-const Swagger = ({ url }) => {
-  useEffect(() => {
-    const ui = SwaggerUIBundle({
-      url,
+class SwaggerUI extends React.Component {
+  componentDidMount() {
+    const SwaggerUi = require('swagger-ui');
+    const { presets } = require('swagger-ui');
+
+    SwaggerUi({
       dom_id: '#swagger-ui-container',
-      presets: [SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset],
-      plugins: [SwaggerUIBundle.plugins.DownloadUrl],
-      layout: 'StandaloneLayout',
-      validatorUrl: null,
-      defaultModelExpandDepth: 0,
+      url: this.props.url,
+      presets: [presets.apis],
     });
+  }
+  render() {
+    return (
+      <div className="swagger-section">
+        <div id="swagger-ui-container" className="swagger-ui-wrap"></div>
 
-    window.ui = ui;
-  }, [url]);
+        <style jsx>{`
+          .swagger-ui .topbar {
+            display: none;
+          }
 
-  return (
-    <div className="swagger-section">
-      <div id="swagger-ui-container" className="swagger-ui-wrap"></div>
+          .swagger-section {
+            background-color: whitesmoke;
+            padding: 10px 20px;
+            overflow: auto;
+          }
 
-      <style jsx>{`
-        .swagger-section {
-          background-color: whitesmoke;
-          padding: 10px 2em;
-        }
+          .swagger-section .swagger-ui .wrapper section.models {
+            background-color: #fff;
+          }
 
-        .swagger-section hgroup.main h2 {
-          font-size: 1em;
-        }
+          @media only screen and (min-width: 1px) and (max-width: 600px) {
+            .swagger-section {
+              padding: 10px 0px;
+            }
+          }
+        `}</style>
+      </div>
+    );
+  }
+}
 
-        .swagger-section .info_title {
-        }
-
-        .swagger-section .swagger-ui .wrapper section.models {
-          background-color: #fff;
-        }
-      `}</style>
-    </div>
-  );
-};
-
-Swagger.propTypes = {
-  url: PropTypes.string.isRequired,
-};
-
-export default Swagger;
+export default SwaggerUI;

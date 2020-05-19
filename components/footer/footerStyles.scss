@@ -53,6 +53,7 @@
   .footer__logo {
     width: 300px;
     height: auto;
+    max-width: 100%;
 
     img {
       width: 100%;
@@ -61,7 +62,7 @@
 
   .container {
     position: relative;
-    width: 100%;
+    width: calc(100% - 40px);
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px;

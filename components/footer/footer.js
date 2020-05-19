@@ -1,8 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 
-import './footerStyles.scss';
-
 const Footer = () => {
   return (
     <footer id="footer">
@@ -47,6 +45,9 @@ const Footer = () => {
         <ul className="footer__links">
           <li>
             <h2>api.gouv.fr</h2>
+          </li>
+          <li>
+            <a href="/contact">Nous contacter</a>
           </li>
           <li>
             <a

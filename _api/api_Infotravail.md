@@ -3,7 +3,9 @@ title: Infotravail
 tagline: Recense des jeux de données liés au marché du travail
 owner: Pôle emploi
 category: Public
-contract: OUVERT sous contrat
+is_open: false
+access_condition: OUVERT sous contrat
+access_link: https://www.emploi-store-dev.fr/portail-developpeur/detailapicatalogue/57909ba23b2b8d019ee6cc5e
 logo: logo_pole_emploi.jpg
 external_site: https://www.emploi-store-dev.fr/portail-developpeur-cms/home/catalogue-des-api/documentation-des-api/api/api-infotravail-v1.html
 clients:
@@ -18,16 +20,10 @@ keywords:
   - Emploi
   - Marché du travail
   - Statistiques
-themes: 
+contact_link: support@emploi-store-dev.fr
+doc_tech_external: https://www.emploi-store-dev.fr/portail-developpeur-cms/home/catalogue-des-api/documentation-des-api/api/api-infotravail-v1.html
+themes:
   - Emploi
-score:
-  detail:
-    contact:
-      link: support@emploi-store-dev.fr
-    access:
-      link: https://www.emploi-store-dev.fr/portail-developpeur/detailapicatalogue/57909ba23b2b8d019ee6cc5e
-    doc_tech:
-      external: https://www.emploi-store-dev.fr/portail-developpeur-cms/home/catalogue-des-api/documentation-des-api/api/api-infotravail-v1.html
 visits_2019: 953
 last_update: 26/09/2018
 ---

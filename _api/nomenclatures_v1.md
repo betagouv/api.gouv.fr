@@ -2,7 +2,9 @@
 title: Nomenclatures
 tagline: API Nomenclatures donne accès aux métadonnées statistiques de la statistique publique
 external_site: https://api.insee.fr
-contract: OUVERT sous contrat
+is_open: false
+access_condition: OUVERT sous contrat
+access_link: https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/item-info.jag?name=Nomenclatures&version=v1&provider=insee
 clients:
   - collectivités
   - ministères
@@ -15,19 +17,12 @@ keywords:
 themes:
   - Administration & législation
 logo: Logo_Insee.svg
-score:
-  detail:
-    access:
-      link: https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/item-info.jag?name=Nomenclatures&version=v1&provider=insee
-    rate_limiting:
-      resume: 30 appels / minute
-      description: |
-        <p>L'usage d'API Sirene est soumis à une limite de 30 interrogations par minute.</p>
-        <p>L'Insee se réserve le droit de changer cette limite en cas de nécessité.</p>
-    contact:
-      link: https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/help.jag#contact
-    doc_tech:
-      link: https://api.insee.fr/catalogue/api-docs/carbon.super/Nomenclatures/v1?envName=Production%20and%20Sandbox
+rate_limiting_resume: 30 appels / minute
+rate_limiting_description: |
+  <p>L'usage d'API Sirene est soumis à une limite de 30 interrogations par minute.</p>
+  <p>L'Insee se réserve le droit de changer cette limite en cas de nécessité.</p>
+contact_link: https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/help.jag#contact
+doc_tech_link: https://api.insee.fr/catalogue/api-docs/carbon.super/Nomenclatures/v1?envName=Production%20and%20Sandbox
 visits_2019: 727
 last_update: 19/07/2019
 ---

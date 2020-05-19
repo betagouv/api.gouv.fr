@@ -2,9 +2,9 @@
 title: IFT
 link: https://alim.agriculture.gouv.fr/ift/
 description: Atelier de calcul de l'Indicateur de Fréquence de Traitements phytopharmaceutiques
-api:  
- - API Indicateur de Fréquences de Traitements phytopharmaceutiques
-screenshot: serviceIFT.png 
+api:
+  - API Indicateur de Fréquences de Traitements phytopharmaceutiques
+screenshot: serviceIFT.jpg
 ---
 
 ## Description du service
@@ -17,4 +17,3 @@ Il propose des fonctionnalités adaptés à chaque usage :
 - Je conseille : préparer et partager les bilans d'IFT des exploitations agricoles
 - Je vérifie : consulter le détail des calculs des IFT certifiés
 - Je développe : accéder à la documentation de notre API et consulter nos codes sources
-

@@ -5,25 +5,20 @@ import Section from './section';
 import { ButtonLink } from '../../uiComponents/button';
 
 import constants from '../../constants';
+import { logDemanderAcces } from '../../service/analytics';
 
-const Access = ({
-  access_open,
-  access_link,
-  access_description,
-  contract,
-  clients,
-}) => {
+const Access = ({ is_open, link, description, condition, clients }) => {
   return (
     <Section id="access" title="Accès">
-      {access_open ? (
+      {is_open ? (
         <p>L'API est ouverte à tous.</p>
-      ) : access_link ? (
+      ) : link ? (
         <div className="get-access">
-          {access_description && (
-            <div dangerouslySetInnerHTML={{ __html: access_description }} />
+          {description && (
+            <div dangerouslySetInnerHTML={{ __html: description }} />
           )}
 
-          {contract && contract === 'OUVERT sous contrat' ? (
+          {condition && condition === 'OUVERT sous contrat' ? (
             <div>
               <p>
                 L’API nécessite une habilitation, son accès est restreint aux
@@ -39,9 +34,9 @@ const Access = ({
               </ul>
             </div>
           ) : (
-            <p>{contract}</p>
+            <p>{condition}</p>
           )}
-          <ButtonLink href={access_link} large>
+          <ButtonLink href={link} onClick={logDemanderAcces} large>
             <i className="icon key"></i>Demandez l'accès
           </ButtonLink>
         </div>
@@ -70,18 +65,18 @@ const Access = ({
 };
 
 Access.defaultProps = {
-  access_open: false,
-  access_link: null,
-  access_description: null,
-  contract: null,
+  is_open: false,
+  link: null,
+  description: null,
+  condition: null,
   clients: [],
 };
 
 Access.propTypes = {
-  access_open: PropTypes.bool,
-  access_link: PropTypes.string,
-  access_description: PropTypes.string,
-  contract: PropTypes.string,
+  is_open: PropTypes.bool,
+  link: PropTypes.string,
+  description: PropTypes.string,
+  condition: PropTypes.string,
   clients: PropTypes.array,
 };
 

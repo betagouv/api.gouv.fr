@@ -1,29 +1,21 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Section from './section';
 import { ButtonLink } from '../../uiComponents/button';
 
-const Monitoring = ({ monitoring_description, monitoring_link }) => {
+const Monitoring = ({ description, link }) => {
   return (
     <Section id="monitoring" title="Supervision">
       <>
-        {monitoring_description && (
-          <div dangerouslySetInnerHTML={{ __html: monitoring_description }} />
+        {description && (
+          <div dangerouslySetInnerHTML={{ __html: description }} />
         )}
 
-        {monitoring_link ? (
+        {link ? (
           <>
             <p>Les moniteurs de cette API sont disponibles publiquement.</p>
 
-            <ButtonLink
-              className="large ui button"
-              href={monitoring_link}
-              target="_blank"
-              rel="noopener"
-              alt
-              large
-            >
+            <ButtonLink href={link} target="_blank" rel="noopener" alt large>
               <i className="icon linkify"></i> Accéder au monitoring
             </ButtonLink>
           </>
@@ -35,16 +27,6 @@ const Monitoring = ({ monitoring_description, monitoring_link }) => {
       </>
     </Section>
   );
-};
-
-Monitoring.defaultProps = {
-  monitoring_description: null,
-  monitoring_link: null,
-};
-
-Monitoring.propTypes = {
-  monitoring_description: PropTypes.string,
-  monitoring_link: PropTypes.string,
 };
 
 export default Monitoring;

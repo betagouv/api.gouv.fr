@@ -1,24 +1,19 @@
 ---
 title: API MENJ
-tagline: "Découvrez les jeux de données publiques ouverts et n’hésitez pas à nous faire connaître vos réutilisations de données et créations de nouveaux services !"
+tagline: 'Découvrez les jeux de données publiques ouverts et n’hésitez pas à nous faire connaître vos réutilisations de données et créations de nouveaux services !'
 external_site: https://data.education.gouv.fr/
 owner: Ministère de l'Éducation Nationale et de la Jeunesse
 owner_acronym: MENJ
-contract: OUVERT (sous contrat pour certaines données)
+is_open: false
+access_condition: OUVERT (sous contrat pour certaines données)
+access_link: https://data.education.gouv.fr/login/
 category: Public
-logo: logo_menj.jpeg
-score:
-  detail:
-    access:
-      link: https://data.education.gouv.fr/login/
-    contact:
-      link: https://data.education.gouv.fr/pages/contact/
-    doc_tech:
-      external: https://data.education.gouv.fr/api/v1/console/datasets/1.0/search/
-    rate_limiting:
-      resume: 5000 appels / jour / IP
-      description: |
-        <p>Le nombre d'appels API pour un utilisateur anonyme est limité à 5000 appels par adresse IP et par jour.</p>
+logo: logo_menj.jpg
+rate_limiting_resume: 5000 appels / jour / IP
+rate_limiting_description: |
+  <p>Le nombre d'appels API pour un utilisateur anonyme est limité à 5000 appels par adresse IP et par jour.</p>
+contact_link: https://data.education.gouv.fr/pages/contact/
+doc_tech_external: https://data.education.gouv.fr/api/v1/console/datasets/1.0/search/
 partners:
   - Enseignement supérieur, Recherche et Innovation
 keywords:
@@ -29,7 +24,7 @@ keywords:
   - organisation
   - finances
   - personnels
-themes: 
+themes:
   - Education
 visits_2019: 37
 last_update: 05/12/2019
