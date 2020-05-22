@@ -18,7 +18,7 @@ const PreFooter = ({ background }) => (
           href="/parcours-client?source=preFooter"
           onClick={logDemanderApi}
         >
-          Contactez-nous
+          Nous contacter
         </ButtonLink>
       </div>
       <div>
