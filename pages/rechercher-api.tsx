@@ -47,9 +47,13 @@ export const getStaticProps: GetStaticProps = async () => {
     )
   ).sort();
 
+  const sortedAllApis = allApis.sort((a, b) =>
+    (a.visits_2019 || 0) < (b.visits_2019 || 0) ? 1 : -1
+  );
+
   return {
     props: {
-      allApis,
+      allApis: sortedAllApis,
       allThemes,
     },
   };

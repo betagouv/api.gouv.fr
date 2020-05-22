@@ -23,7 +23,7 @@ export default () => {
     },
     {
       value: VISITOR.EDITOR,
-      label: 'un editeur pour une collectivité',
+      label: 'un éditeur pour une collectivité',
     },
     {
       value: VISITOR.ENTREPRISE,

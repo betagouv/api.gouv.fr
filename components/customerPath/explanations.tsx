@@ -135,7 +135,7 @@ const Explanations: React.FC<IProps> = ({ subject, visitorType }) => {
         visitorType === VISITOR.ENTREPRISE || visitorType === VISITOR.ASSO
           ? 'acteur privé'
           : visitorType === VISITOR.EDITOR
-          ? 'editeur'
+          ? 'éditeur'
           : 'acteur public';
       return (
         <div className="subject-answer">

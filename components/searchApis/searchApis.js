@@ -50,7 +50,7 @@ const SearchApis = ({ allApis, allThemes }) => {
     const newApiList = res
       .filter(filterAccess(isAccessOpen))
       .filter(filterTheme(theme))
-      .sort((a, b) => ((a.visits_2019 || 0) < b.visits_2019 ? 1 : -1));
+      .sort((a, b) => ((a.visits_2019 || 0) < (b.visits_2019 || 0) ? 1 : -1));
 
     const themeAndAccess = `${theme}${isAccessOpen ? '-only-access-open' : ''}`;
 

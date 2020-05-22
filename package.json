@@ -48,7 +48,7 @@
     "front-matter": "^3.0.2",
     "hoist-non-react-statics": "^3.3.1",
     "lodash": "^4.17.15",
-    "next": "^9.3.4",
+    "next": "^9.4.2",
     "next-seo": "^4.4.0",
     "nextjs-fonts": "^0.22.0",
     "node-sass": "^4.13.1",

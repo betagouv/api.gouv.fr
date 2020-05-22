@@ -48,7 +48,7 @@ const Service: React.FC<IProps> = ({
             <div className="text-style">
               <ReactMarkdown source={body} />
             </div>
-            <div>
+            <div className="text-style">
               <h2>Accéder au service</h2>
               <p>Suivez le lien suivant pour découvrir le service :</p>
               <div className="layout-center">

@@ -13,7 +13,7 @@ const PreFooter = ({ background }) => (
   >
     <div className="content-container links">
       <div>
-        <h3>Vous ne trouvez pas l’API dont vous avez besoin ?</h3>
+        <p>Vous ne trouvez pas l’API dont vous avez besoin ?</p>
         <ButtonLink
           href="/parcours-client?source=preFooter"
           onClick={logDemanderApi}
@@ -22,7 +22,7 @@ const PreFooter = ({ background }) => (
         </ButtonLink>
       </div>
       <div>
-        <h3>Vous voulez partager une API ?</h3>
+        <p>Vous voulez partager une API ?</p>
         <ButtonLink href={constants.links.ADD_API} alt>
           Partager votre API
         </ButtonLink>
