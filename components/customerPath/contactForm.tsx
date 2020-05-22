@@ -2,6 +2,7 @@ import React, { FormEvent, useRef } from 'react';
 
 import constants from '../../constants';
 import { ButtonLink } from '../../uiComponents';
+import { logParcoursClient } from '../../service/analytics';
 
 export enum VISITOR {
   ADMINISTRATION = 'Administration',
@@ -9,12 +10,17 @@ export enum VISITOR {
   PARTICULIER = 'Particulier',
   COLLECTIVITE = 'Collecitvité',
   ENTREPRISE = 'Entreprise',
+  ASSO = 'Association',
 }
 
 interface IProps {
   visitorType: VISITOR;
   label?: string;
 }
+
+export const logClic = () => {
+  logParcoursClient('4. Envoie le formulaire de contact');
+};
 
 const ContactForm: React.FC<IProps> = ({ visitorType, label }) => {
   const body = useRef(null);
@@ -45,7 +51,7 @@ const ContactForm: React.FC<IProps> = ({ visitorType, label }) => {
         required
       />
       <div className="submit layout-center">
-        <ButtonLink type="submit" large>
+        <ButtonLink type="submit" large onClick={logClic}>
           Envoyer
         </ButtonLink>
       </div>

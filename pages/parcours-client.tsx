@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Page from '../layouts/page';
 import { VISITOR, VisitorRouter } from '../components/customerPath';
 import { MultiChoice } from '../uiComponents';
+import { logParcoursClient } from '../service/analytics';
 
 export default () => {
   const [statut, setStatut] = useState<VISITOR | null>(null);
@@ -28,7 +29,19 @@ export default () => {
       value: VISITOR.ENTREPRISE,
       label: 'une entreprise',
     },
+    {
+      value: VISITOR.ASSO,
+      label: 'une association',
+    },
   ];
+
+  useEffect(() => {
+    logParcoursClient('1. Commence le parcours client');
+  }, []);
+
+  useEffect(() => {
+    logParcoursClient('2. Renseigne un statut de visiteur');
+  }, [statut]);
 
   return (
     <Page
@@ -45,10 +58,7 @@ export default () => {
           </span>
           , comment pouvons-nous vous aider&nbsp;?
         </h1>
-        <p>
-          Pour commencer, nous avons besoin d’en apprendre un peu plus sur vous
-          :
-        </p>
+        <p>Pour commencer, nous aimerions faire connaissance :</p>
         <div className="contact-form-question">
           <div className="question">Qui êtes-vous ?</div>
           <MultiChoice

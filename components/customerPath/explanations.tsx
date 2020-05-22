@@ -2,13 +2,13 @@ import React from 'react';
 
 import { ButtonLink } from '../../uiComponents';
 import { VISITOR } from './contactForm';
+import { logParcoursClient } from '../../service/analytics';
 
 import { ContactForm } from './index';
 
 export enum SUBJECT {
-  CHERCHE_API_ENTREPRISE,
+  CHERCHE_API,
   CHERCHE_API_PARTICULIER,
-  CHERCHE_API_PUBLIC,
   FRANCECONNECT_PARTICULIER,
   FRANCECONNECT_ENTREPRISE,
   NEW_API,
@@ -25,18 +25,19 @@ const Questions = [
     public: [VISITOR.PARTICULIER],
   },
   {
-    value: SUBJECT.CHERCHE_API_ENTREPRISE,
+    value: SUBJECT.CHERCHE_API,
     label: 'Je cherche une API',
-    public: [VISITOR.ENTREPRISE],
-  },
-  {
-    value: SUBJECT.CHERCHE_API_PUBLIC,
-    label: 'Je cherche une API',
-    public: [VISITOR.ADMINISTRATION, VISITOR.COLLECTIVITE, VISITOR.EDITOR],
+    public: [
+      VISITOR.ENTREPRISE,
+      VISITOR.ASSO,
+      VISITOR.ADMINISTRATION,
+      VISITOR.COLLECTIVITE,
+      VISITOR.EDITOR,
+    ],
   },
   {
     value: SUBJECT.NEW_API,
-    label: 'Je veux ajouter une API au catalogue api.gouv',
+    label: 'J’ai envie de partager mon API sur api.gouv',
     public: [VISITOR.ADMINISTRATION],
   },
   {
@@ -47,6 +48,7 @@ const Questions = [
       VISITOR.ADMINISTRATION,
       VISITOR.COLLECTIVITE,
       VISITOR.EDITOR,
+      VISITOR.ASSO,
     ],
   },
   {
@@ -62,8 +64,8 @@ const Questions = [
   },
   {
     value: SUBJECT.FRANCECONNECT_ENTREPRISE,
-    label: 'Je veux France Connecter mon entreprise',
-    public: [VISITOR.ENTREPRISE],
+    label: 'Je veux France Connecter mon service',
+    public: [VISITOR.ENTREPRISE, VISITOR.ASSO],
   },
   {
     value: SUBJECT.TELEPOINT,
@@ -72,9 +74,10 @@ const Questions = [
   },
   {
     value: SUBJECT.CONTACT,
-    label: 'J’ai une question pour l’équipe api.gouv.fr',
+    label: 'Autre',
     public: [
       VISITOR.ENTREPRISE,
+      VISITOR.ASSO,
       VISITOR.ADMINISTRATION,
       VISITOR.COLLECTIVITE,
       VISITOR.PARTICULIER,
@@ -87,6 +90,10 @@ interface IProps {
   subject: SUBJECT;
   visitorType: VISITOR;
 }
+
+export const logClic = () => {
+  logParcoursClient('4. Clic sur le CTA');
+};
 
 const Explanations: React.FC<IProps> = ({ subject, visitorType }) => {
   switch (subject) {
@@ -109,7 +116,7 @@ const Explanations: React.FC<IProps> = ({ subject, visitorType }) => {
             les APIs ouvertes à tous" pour n’afficher que les APIs ouvertes.
           </p>
           <div className="layout-center">
-            <ButtonLink large href="/rechercher-api">
+            <ButtonLink large href="/rechercher-api" onClick={logClic}>
               Rechercher une API
             </ButtonLink>
           </div>
@@ -122,12 +129,18 @@ const Explanations: React.FC<IProps> = ({ subject, visitorType }) => {
           </p>
         </div>
       );
-    case SUBJECT.CHERCHE_API_ENTREPRISE:
+    case SUBJECT.CHERCHE_API:
+      const word =
+        visitorType === VISITOR.ENTREPRISE || visitorType === VISITOR.ASSO
+          ? 'acteur privé'
+          : visitorType === VISITOR.EDITOR
+          ? 'editeur'
+          : 'acteur public';
       return (
         <div className="subject-answer">
           <p>
-            En tant qu'entreprise, vous êtes libre d’utiliser <b>toutes</b> les
-            APIs ouvertes à tous et <b>certaines</b> des APIs nécessitant une
+            En tant qu'{word}, vous êtes libre d’utiliser <b>toutes</b> les APIs
+            ouvertes à tous et <b>certaines</b> des APIs nécessitant une
             habilitation.
           </p>
           <p>
@@ -137,28 +150,7 @@ const Explanations: React.FC<IProps> = ({ subject, visitorType }) => {
             fiche API quelles sont les conditions d'accès à la donnée.
           </p>
           <div className="layout-center">
-            <ButtonLink large href="/rechercher-api">
-              Rechercher une API
-            </ButtonLink>
-          </div>
-        </div>
-      );
-    case SUBJECT.CHERCHE_API_PUBLIC:
-      return (
-        <div className="subject-answer">
-          <p>
-            En tant qu'acteur public, vous êtes libre d’utiliser <b>toutes</b>{' '}
-            les APIs ouvertes à tous et <b>certaines</b> des APIs nécessitant
-            une habilitation.
-          </p>
-          <p>
-            Toutes nos APIs sont visibles{' '}
-            <a href="rechercher-api">sur cette page</a>. Si une API vous
-            intéresse, pensez à vérifier dans la section <b>Accès</b> de la
-            fiche API quelles sont les conditions d'accès à la donnée.
-          </p>
-          <div className="layout-center">
-            <ButtonLink large href="/rechercher-api">
+            <ButtonLink large href="/rechercher-api" onClick={logClic}>
               Rechercher une API
             </ButtonLink>
           </div>
@@ -180,7 +172,11 @@ const Explanations: React.FC<IProps> = ({ subject, visitorType }) => {
             Connect :
           </p>
           <div className="layout-center">
-            <ButtonLink large href="https://franceconnect.gouv.fr/faq">
+            <ButtonLink
+              large
+              href="https://franceconnect.gouv.fr/faq"
+              onClick={logClic}
+            >
               Accèder à la page d’aide France Connect
             </ButtonLink>
           </div>
@@ -216,6 +212,7 @@ const Explanations: React.FC<IProps> = ({ subject, visitorType }) => {
           <div className="layout-center">
             <ButtonLink
               large
+              onClick={logClic}
               href="https://signup.api.gouv.fr/franceconnect?source=api_gouv_customer_path_entreprise"
             >
               Remplir une demande
@@ -235,7 +232,11 @@ const Explanations: React.FC<IProps> = ({ subject, visitorType }) => {
             ministère de l’intérieur :
           </p>
           <div className="layout-center">
-            <ButtonLink large href="https://immatriculation.ants.gouv.fr">
+            <ButtonLink
+              large
+              href="https://immatriculation.ants.gouv.fr"
+              onClick={logClic}
+            >
               Consulter le site de l’ANTS
             </ButtonLink>
           </div>
@@ -255,6 +256,7 @@ const Explanations: React.FC<IProps> = ({ subject, visitorType }) => {
           <div className="layout-center">
             <ButtonLink
               large
+              onClick={logClic}
               href="https://permisdeconduire.ants.gouv.fr/Vos-demarches/Le-permis-a-points/Solde-de-vos-points-via-une-identite-France-Connect"
             >
               Accèder au site télépoint
@@ -270,13 +272,14 @@ const Explanations: React.FC<IProps> = ({ subject, visitorType }) => {
             le catalogue api.gouv ? Vous êtes au bon endroit !
           </p>
           <p>
-            La demande d’ajout de nouvelle API se fait de manière autonome via
-            GitHub. Votre demande sera revue aussi vite que possible, et nous
-            vous aiderons à l'améliorer le cas échéant.
+            La demande d’ajout de nouvelle API se fait en autonomie via GitHub.
+            Votre demande sera traitée dès que possible, et nous vous aiderons à
+            l'améliorer le cas échéant
           </p>
           <div className="layout-center">
             <ButtonLink
               large
+              onClick={logClic}
               href="https://github.com/betagouv/api.gouv.fr/blob/master/CONTRIBUTING.md"
             >
               Ajouter une nouvelle API

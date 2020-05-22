@@ -3,6 +3,7 @@ import { VISITOR } from './index';
 import { SUBJECT } from './explanations';
 import { Questions, Explanations } from './explanations';
 import { MultiChoice } from '../../uiComponents';
+import { logParcoursClient } from '../../service/analytics';
 
 interface IProps {
   visitor: VISITOR;
@@ -21,6 +22,10 @@ const VisitorRouter: React.FC<IProps> = ({ visitor }) => {
   useEffect(() => {
     setSubject(null);
   }, [visitor]);
+
+  useEffect(() => {
+    logParcoursClient('3. Renseigne un sujet de question');
+  }, [subject]);
 
   return (
     <>
