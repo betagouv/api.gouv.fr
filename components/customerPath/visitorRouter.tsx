@@ -24,13 +24,15 @@ const VisitorRouter: React.FC<IProps> = ({ visitor }) => {
   }, [visitor]);
 
   useEffect(() => {
-    logParcoursClient('3. Renseigne un sujet de question');
+    if (subject !== null) {
+      logParcoursClient('3. Renseigne un sujet de question', SUBJECT[subject]);
+    }
   }, [subject]);
 
   return (
     <>
       <div className="contact-form-question">
-        <div className="question">Comment pouvons vous aider ? </div>
+        <div className="question">Comment pouvons-nous vous aider ? </div>
         <MultiChoice
           onClick={setSubject}
           multiChoiceOptions={options}

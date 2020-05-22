@@ -53,13 +53,13 @@ const logLPContact = () => {
   }
 };
 
-const logParcoursClient = step => {
+const logParcoursClient = (step, value = '*') => {
   if (typeof window !== 'undefined' && window._paq) {
     window._paq.push([
       'trackEvent',
       'Parcours client',
       step,
-      `page : ${window.location.pathname}`,
+      `valeur : ${value}`,
     ]);
   }
 };

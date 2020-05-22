@@ -8,19 +8,20 @@ import { ContactForm } from './index';
 
 export enum SUBJECT {
   CHERCHE_API,
-  CHERCHE_API_PARTICULIER,
-  FRANCECONNECT_PARTICULIER,
+  CHERCHE_API_PART,
+  FRANCECONNECT_PART,
   FRANCECONNECT_ENTREPRISE,
   NEW_API,
   CANT_FIND,
   CARTE_GRISES,
   TELEPOINT,
   CONTACT,
+  NONE,
 }
 
 const Questions = [
   {
-    value: SUBJECT.CHERCHE_API_PARTICULIER,
+    value: SUBJECT.CHERCHE_API_PART,
     label: 'Je cherche une API',
     public: [VISITOR.PARTICULIER],
   },
@@ -52,7 +53,7 @@ const Questions = [
     ],
   },
   {
-    value: SUBJECT.FRANCECONNECT_PARTICULIER,
+    value: SUBJECT.FRANCECONNECT_PART,
     label: 'Je veux me connecter à France Connect',
     public: [VISITOR.PARTICULIER],
   },
@@ -97,7 +98,7 @@ export const logClic = () => {
 
 const Explanations: React.FC<IProps> = ({ subject, visitorType }) => {
   switch (subject) {
-    case SUBJECT.CHERCHE_API_PARTICULIER:
+    case SUBJECT.CHERCHE_API_PART:
       return (
         <div className="subject-answer">
           <p>
@@ -156,7 +157,7 @@ const Explanations: React.FC<IProps> = ({ subject, visitorType }) => {
           </div>
         </div>
       );
-    case SUBJECT.FRANCECONNECT_PARTICULIER:
+    case SUBJECT.FRANCECONNECT_PART:
       return (
         <div className="subject-answer">
           <p>

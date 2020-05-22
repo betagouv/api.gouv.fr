@@ -11,6 +11,10 @@ a {
   color: #3a73c0;
   word-wrap: break-word;
 }
+button,
+a {
+  cursor: pointer;
+}
 
 #page-layout {
   display: flex;

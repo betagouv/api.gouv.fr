@@ -16,7 +16,7 @@ export const HEADER_PAGE = {
 const HEADER = [
   {
     href: '/rechercher-api',
-    txt: 'Découvrir les APIs du service public',
+    txt: 'Rechercher une API du service public',
     key: HEADER_PAGE.APIS,
   },
   {
@@ -98,8 +98,11 @@ const Header = ({ headerKey = 'home' }) => {
                   </Fragment>
                 ))}
                 <li className="external">
-                  <ButtonLink href="/parcours-client" onClick={logDemanderApi}>
-                    Besoin d’aide ?
+                  <ButtonLink
+                    href="/parcours-client?source=header"
+                    onClick={logDemanderApi}
+                  >
+                    Une question ?
                   </ButtonLink>
                 </li>
               </>

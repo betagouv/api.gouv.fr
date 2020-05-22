@@ -139,7 +139,7 @@ const About: React.FC = () => (
         </p>
         <p>
           Pour toute question ou précision, n'hésitez pas à{' '}
-          <a href="mailto:contact@api.gouv.fr">nous contacter.</a>
+          <a href="/parcours-client?source=apropos">nous contacter.</a>
         </p>
       </div>
     </div>

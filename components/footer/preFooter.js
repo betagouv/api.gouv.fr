@@ -15,10 +15,10 @@ const PreFooter = ({ background }) => (
       <div>
         <h3>Vous ne trouvez pas l’API dont vous avez besoin ?</h3>
         <ButtonLink
-          href={constants.links.mailto.REQUEST_API}
+          href="/parcours-client?source=preFooter"
           onClick={logDemanderApi}
         >
-          Demander une API
+          Contactez-nous
         </ButtonLink>
       </div>
       <div>
