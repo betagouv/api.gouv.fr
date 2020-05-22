@@ -22,6 +22,8 @@ export default {
     backgroundBlueGradient: 'linear-gradient(45deg, #003189, #005adf)',
     red: '#dc3545',
     green: '#17bd3d',
+    lightOrange: '#fff4d1',
+    darkOrange: '#3f3104',
     orange: '#ffc107',
   },
 };

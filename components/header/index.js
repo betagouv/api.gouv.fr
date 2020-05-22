@@ -16,7 +16,7 @@ export const HEADER_PAGE = {
 const HEADER = [
   {
     href: '/rechercher-api',
-    txt: 'Découvrir les APIs du service public',
+    txt: 'Rechercher une API du service public',
     key: HEADER_PAGE.APIS,
   },
   {
@@ -99,10 +99,10 @@ const Header = ({ headerKey = 'home' }) => {
                 ))}
                 <li className="external">
                   <ButtonLink
-                    href={constants.links.mailto.REQUEST_API}
+                    href="/parcours-client?source=header"
                     onClick={logDemanderApi}
                   >
-                    Demander une API
+                    Une question ?
                   </ButtonLink>
                 </li>
               </>

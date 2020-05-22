@@ -26,8 +26,6 @@ visits_2019: 1227
 last_update: 14/11/2019
 ---
 
-## Description de l'API
-
 L'API Offres d'emploi restitue en temps réel les offres d'emploi actives collectés par Pôle emploi ou que Pôle emploi a reçues de ses partenaires à la condition que ceux-ci aient consenti à leur mise à disposition dans l'API .
 
 Elle vous permet de développer des solutions personnalisées de recherche d'emploi pour votre site ou votre application.

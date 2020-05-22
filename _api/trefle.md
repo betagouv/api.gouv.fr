@@ -17,8 +17,6 @@ visits_2019: 80
 last_update: 19/11/2019
 ---
 
-## Description de l'API
-
 L’API Simulateur de financement restitue les financements possibles pour une formation choisie et un profil d’utilisateur déterminé ainsi que la rémunération pendant cette formation.
 
 L’API est accessible pour les demandeurs d’emploi et les salariés du secteur privé sur l’ensemble du territoire et permet une simulation de financement et de rémunération.

@@ -35,7 +35,7 @@ keywords:
   - rge
   - Géoportail
   - API Carto
-themes: 
+themes:
   - Géographie
 visits_2019: 2840
 last_update: 29/11/2018
@@ -52,36 +52,36 @@ Remarques :
 Les croisements de données métiers sont réalisés côté client (croisements de données = appels successifs aux API)
 Les traitements géométriques métiers (calcul de surface, filtrage des résultats, etc.) sont réalisés côté client à l'aide de bibliothèques de calcul géométrique
 
-# API Carto - module AOC
+### API Carto - module AOC
 
 L'API Carto - module AOC permet d'obtenir les AOC viticoles de l’INAO intersectant une géométrie GeoJSON.
 Les données sources sont les Délimitation Parcellaire des AOC Viticoles de l’INAO.
 
-## Appellations
+#### Appellations
 
 Récupération des zones d'AOC qui intersectent la géométrie concernée.
 
-## Conditions d'accès
+#### Conditions d'accès
 
 L'utilisation d'API Carto - module AOC est gratuite pour l'Etat et ses EPA, les collectivités, les EPCI à fiscalité propre et les SDIS ([décision n°2018/241](http://www.ign.fr/institut/sites/all/files/2018.241_tarification_geoservices_ign.pdf) de l'institut).
 Pour les autres utilisateurs, et dans un contexte d'usage grand public, l'utilisation est gratuite dans la limite de 2M requêtes par an (10 000 pour un usage professionnel).
 Les données AOC accessibles via API Carto - module AOC sont sous licence ouverte.
 
-# API Carto - module codes postaux
+### API Carto - module codes postaux
 
 L'API Carto - module codes postaux permet de récupérer les communes associées à un code postal donné.
 Voir https://github.com/etalab/codes-postaux#codes-postaux pour plus d’information sur les sources de données.
 
-## Codes postaux
+#### Codes postaux
 
 Récupération des communes associées à un code postal donné
 
-## Conditions d'accès
+#### Conditions d'accès
 
 L'utilisation d'API Carto - module codes postaux est ouverte.
 Les données accessibles via API Carto - module codes postaux sont sous licence ouverte.
 
-# API Carto - module cadastre
+### API Carto - module cadastre
 
 L'API Carto - module cadastre permet d'obtenir les les informations suivantes issues de la BD PARCELLAIRE :
 
@@ -90,23 +90,23 @@ L'API Carto - module cadastre permet d'obtenir les les informations suivantes is
 - Obtenir la géométrie d’une parcelle cadastrale
 - Obtenir le centroïde d’une parcelle ou d’une commune (localisants)
 
-## Communes
+#### Communes
 
 Récupération de la géométrie d'une commune.
 
-## Divisions
+#### Divisions
 
 Récupération d'informations sur les divisions parcellaires d'une commune.
 
-## Parcelles
+#### Parcelles
 
 Récupération d'informations sur les parcelles cadastrales d'une commune.
 
-## Localisants
+#### Localisants
 
 Récupération d'informations sur les parcelles dans les zones non vecteur (issues du PCI image).
 
-## Conditions d'utilisation
+#### Conditions d'utilisation
 
 Ce service repose sur l’appel à des services WFS de l’API Géoportail. Pour utiliser une clé Géoportail sur le serveur API Carto, il faut passer une clé IGN en paramètre sous le nom apikey.
 Pour obtenir une clé Geoportail, vous devez vous connecter au site : http://professionnels.ign.fr/. Lors de votre demande de clé Geoportail, vous devez commander les flux “Ressources WFS Géoportail - BD PARCELLAIRE®” ci-dessous:
@@ -124,16 +124,16 @@ L'utilisation d'API Carto - module cadastre est gratuite pour l'Etat et ses EPA,
 Pour les autres utilisateurs, et dans un contexte d'usage grand public, l'utilisation est gratuite dans la limite de 2M requêtes par an (10 000 pour un usage professionnel).
 Les droits et obligations liés à la réutilisation des ressources en ligne sous licence IGN sont détaillées [ici](http://professionnels.ign.fr/doc/CGU-ressourcesgeoportail.pdf)
 
-# API CARTO - module urbanisme du Géoportail de l'urbanisme (GPU)
+### API CARTO - module urbanisme du Géoportail de l'urbanisme (GPU)
 
 Le service d’interrogation du GPU permet d’obtenir les différentes informations d’urbanisme intersectant une géométrie (ponctuelle ou surfacique).
 Ces informations sont celles disponibles en consultation et en téléchargement sur le [Géoportail de l'urbanisme](https://geoportail-urbanisme.gouv.fr).
 
-## Communes
+#### Communes
 
 Récupération des informations sur une commune (est au règlement national d'urbanisme (RNU) ? est supprimée ?)
 
-## Documents d'urbanisme (PLU, POS, CC, PSMV)
+#### Documents d'urbanisme (PLU, POS, CC, PSMV)
 
 - Récupération de l'emprise d'un document
 - Récupération des zonages d’un document d’urbanisme
@@ -147,12 +147,12 @@ POS : plan d'occupation des sols ;
 CC : carte communale ;
 PSMV : plan de sauvegarde et de mise en valeur
 
-## Servitudes d'utilité publique (SUP)
+#### Servitudes d'utilité publique (SUP)
 
 - Récupération des actes des servitudes d’utilité publique
 - Récupération des assiettes surfaciques, liénaires ou ponctuelles de servitudes d’utilité publique
 
-## Conditions d'utilisation
+#### Conditions d'utilisation
 
 Les données servies par l'API urbanisme sont en licence ouverte.
 L'API urbanisme est en usage libre.

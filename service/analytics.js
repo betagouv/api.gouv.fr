@@ -53,4 +53,22 @@ const logLPContact = () => {
   }
 };
 
-export { logDemanderApi, logDemanderAcces, logLPContact, logLPCTA1, logLPCTA2 };
+const logParcoursClient = (step, value = '*') => {
+  if (typeof window !== 'undefined' && window._paq) {
+    window._paq.push([
+      'trackEvent',
+      'Parcours client',
+      step,
+      `valeur : ${value}`,
+    ]);
+  }
+};
+
+export {
+  logDemanderApi,
+  logDemanderAcces,
+  logLPContact,
+  logLPCTA1,
+  logLPCTA2,
+  logParcoursClient,
+};

@@ -7,8 +7,6 @@ import '../layouts/fonts.scss';
 
 import 'swagger-ui/dist/swagger-ui.css';
 
-import Chat from '../components/chat';
-
 import constants from '../constants';
 
 class MyApp extends App {
@@ -43,7 +41,6 @@ class MyApp extends App {
     return (
       <>
         <Component {...pageProps} />
-        <Chat />
       </>
     );
   }

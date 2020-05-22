@@ -14,7 +14,7 @@ keywords:
   - Entreprise
   - Etablissements
   - Sirene
-themes: 
+themes:
   - Entreprise
 logo: Logo_Insee.svg
 rate_limiting_resume: 30 appels / minute
@@ -33,7 +33,7 @@ La recherche peut être unitaire, multicritère, phonétique et porter sur les d
 
 Les services actuellement disponibles interrogent les unités légales (Siren), les établissements (Siret) et les liens de succession entre établissements. À venir : données pluriannuelles.
 
-## Licences
+### Licences
 
 La réutilisation des jeux de données mis à votre disposition à partir de la base Sirene est soumise à la licence [« Licence Ouverte / Open Licence version 2.0 »](https://www.etalab.gouv.fr/licence-ouverte-open-licence) conçue par Etalab, organisme chargé de coordonner l’action des services de l’État et de ses établissements publics pour faciliter la réutilisation la plus large possible de leurs informations publiques, via le portail interministériel [data.gouv.fr](https://www.data.gouv.fr/fr/datasets/base-sirene-des-entreprises-et-de-leurs-etablissements-siren-siret/)
 
@@ -45,11 +45,11 @@ En effet, selon l’[Article A123-96 du code de commerce](http://www.legifrance.
 
 "Toute personne physique peut demander soit directement lors de ses formalités de création ou de modification, soit par lettre adressée au directeur général de l’Institut national de la statistique et des études économiques, que les informations du répertoire la concernant ne puissent être utilisées par des tiers autres que les organismes habilités au titre de l’[article R. 123-224](https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000005634379&idArticle=LEGIARTI000006258837&dateTexte=&categorieLien=cid) ou les administrations, à des fins de prospection, notamment commerciale."
 
-## Droit de rectification des données du répertoire Sirene
+### Droit de rectification des données du répertoire Sirene
 
 [L'article A123-90 du code de commerce](https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000020165042&cidTexte=LEGITEXT000005634379&dateTexte=20151223) indique que "Le droit d'accès prévu par l'article 39 de la loi du 6 janvier 1978 s'exerce auprès du directeur régional de l'Institut national de la statistique et des études économiques."
 
-## Homologation RGS (Référentiel général de sécurité)
+### Homologation RGS (Référentiel général de sécurité)
 
 Le directeur général de l’Insee, après avoir recueilli l’avis des membres de la commission d’homologation de sécurité, atteste que le système "API Sirene" est protégé, conformément aux objectifs fixés par le maître d’ouvrage, pour répondre, de manière proportionnée, aux besoins de protection du système et des informations, face aux risques identifiés.
 

@@ -18,14 +18,14 @@ visits_2019: 1332
 last_update: 18/01/2017
 ---
 
-### Contenu des données
+L’API BOAMP permet de rechercher et de consulter les annonces du Bulletin Officiel des Annonces de Marchés Publics.
 
-Le BOAMP publie :
+Cette API est libre d’accès et permet de consulter les données suivantes :
 
-- des avis d’appel public à la concurrence (AAPC) nationaux et européens,
-- des avis de concession,
-- des avis d’attribution,
-- des contrats de partenariat public-privé,
-- des avis divers (par exemple les avis relatifs au choix des organismes de référence par employeur dans le cadre de la participation au financement de la protection sociale complémentaire de leurs personnels),
-- des marchés à procédure adaptée (MAPA) inférieurs à 90 000 € HT,
-- les avis de résultat de marchés lancés par l’État, l’armée, les collectivités territoriales et leurs établissements publics.
+- avis d’appel public à la concurrence (AAPC) nationaux et européens,
+- avis de concession,
+- avis d’attribution,
+- contrats de partenariat public-privé,
+- avis divers (par exemple les avis relatifs au choix des organismes de référence par employeur dans le cadre de la participation au financement de la protection sociale complémentaire de leurs personnels),
+- marchés à procédure adaptée (MAPA) inférieurs à 90 000 € HT,
+- avis de résultat de marchés lancés par l’État, l’armée, les collectivités territoriales et leurs établissements publics.

@@ -38,28 +38,28 @@ last_update: 29/11/2019
 
 L’API Nomenclature permet d’accéder à toutes les nomenclatures noyau gérées dans l’application Ingres du CISIRH, soit plus de 350 nomenclatures accessibles.
 
-## Conditions Générales d'Utilisation:
+### Conditions Générales d'Utilisation:
 
 Le CISIRH met à disposition cette API exploitable accessible uniquement par les ministères ou institutions ayant accès au Réseau Interministériel de l'Etat (RIE).
 Son utilisation par une application tierce ne saurait engager la responsabilité du CISIRH, par exemple, en termes de disponibilité.
 
-## Limitations actuelles:
+### Limitations actuelles:
 
 Pour le moment, en dehors de certaines nomenclatures RCC ou externes pour lesquelles nous avons eu des demandes particulières (corps, grades, hexaposte…) seuls le code, les libellés court et long et la période de validité sont restitués par l’API pour 99% des nomenclatures.
 
-## Evolutions possibles:
+### Evolutions possibles:
 
 En cas de besoin il est tout à fait possible de restituer l’ensemble des attributs gérés dans l'application Ingres pour chacune de ces nomenclatures. Cependant, au regard des développements nécessaires, nous préférons attendre qu’il y ait des besoins avérés.
 Nous vous proposons donc de nous faire part de vos besoins afin de les étudier et de faire évoluer l’API de façon à ce qu’elle réponde au mieux à vos attentes.
 
-## Contenu accessible via cette API:
+### Contenu accessible via cette API:
 
 L'ensemble des référentiels gérés dans l'application Ingres du Cisirh est accessible via cette API.
 Ces référentiels couvrent les domaines fonctionnels suivants:
 
-### Référentiels de classification centraux (RCC)
+#### Référentiels de classification centraux (RCC)
 
-#### Nomenclatures RCC:
+##### Nomenclatures RCC:
 
 - Catégories
 - Corps
@@ -72,14 +72,14 @@ Ces référentiels couvrent les domaines fonctionnels suivants:
 - Spécialités
 - ...
 
-#### Nomenclatures militaires:
+##### Nomenclatures militaires:
 
 - Grades militaires
 - Hiérarchie
 - Appellations
 - ...
 
-### Nomenclatures du noyau RH FPE:
+#### Nomenclatures du noyau RH FPE:
 
 - Ministères et institutions de la république
 - Modalités de service
@@ -89,7 +89,7 @@ Ces référentiels couvrent les domaines fonctionnels suivants:
 - Départements
 - ...
 
-### Nomenclatures Fichier GEST
+#### Nomenclatures Fichier GEST
 
 - Annexes 14/15
 - Codes BJ
@@ -97,13 +97,13 @@ Ces référentiels couvrent les domaines fonctionnels suivants:
 - PABA22
 - ...
 
-### Nomenclatures FIP
+#### Nomenclatures FIP
 
 - Code administration
 - Code affectation
 - ...
 
-### Nomenclatures externes
+#### Nomenclatures externes
 
 - ADAGE
 - Code NNE
@@ -118,41 +118,41 @@ Ces référentiels couvrent les domaines fonctionnels suivants:
 La liste exhaustive est trop longue pour être listée ici, vous pouvez y accéder via cet appel à l'API:
 https://api.cisirh.rie.gouv.fr/ingres/nomenclatures
 
-## Principe d'utilisation et exemples:
+### Principe d'utilisation et exemples:
 
-### Liste des référentiels gérés dans Ingres:
+#### Liste des référentiels gérés dans Ingres:
 
 - https://api.cisirh.rie.gouv.fr/ingres/nomenclatures
 
-### Extraction de contenu (quel que soit le référentiel) :
+#### Extraction de contenu (quel que soit le référentiel) :
 
 - https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/[nomenclature] => Extraction de tous les codes de la nomenclature désirée
 - https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/[nomenclature]/[code] => Extraction d’un seul code dans la nomenclature désirée
 
-### Référentiel des Catégories statutaires :
+#### Référentiel des Catégories statutaires :
 
 - https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/CATG_STATUTAIRE
 
-### Référentiel « Ministères & institutions de la république » :
+#### Référentiel « Ministères & institutions de la république » :
 
 - https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/MINISTERE
 - https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/MINISTERE/MI200
 - https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/MINISTERE/MI200/corps
 - https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/MINISTERE/MI200/Corps?categorie=1
 
-### Référentiel des Corps:
+#### Référentiel des Corps:
 
 - https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/CORPS
 - https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/CORPS/00089
 - https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/CORPS/00089/grades
 - https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/CORPS/?categorie=1
 
-### Référentiel des Grades:
+#### Référentiel des Grades:
 
 - https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/GRADE
 - https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/GRADE/00188
 
-### Référentiel des Grilles:
+#### Référentiel des Grilles:
 
 - https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/GRILLE_IND
 - https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/GRILLE_IND/00028

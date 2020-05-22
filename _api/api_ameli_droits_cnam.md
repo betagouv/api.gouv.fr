@@ -12,8 +12,6 @@ access_description: |
 
   <p>L’utilisation de l’API est soumise à une convention d’usage avec la Caisse Nationale d’Assurance Maladie. Les données accessibles dépendent également du cas d’usage.</p>
   <p>La Caisse Nationale se réserve le droit d’évaluer l’éligibilité des candidats au regard des cas d’usage indiqués.</p>
-
-  <p>Les demandes d'accès pour l'API Attestation de droits à l'Assurance Maladie utilisent signup.api.gouv.fr, un outil mis à disposition pour toutes les API cataloguées sur api.gouv.fr.</p>
 logo: cnam.jpg
 stat:
   lastXdays: 30
@@ -46,12 +44,8 @@ uptime: 99.998 # https://stats.uptimerobot.com/3wEv6hppvv
 last_update: 17/10/2019
 ---
 
-## API attestation de droits à l'Assurance Maladie
-
 Cette API présente les droits, d’un individu ou d’une famille (enfants rattachés), gérés par le régime général de l’Assurance Maladie.
 
 Elle permet ainsi de connaître pour chaque individu d’une famille, sa caisse gestionnaire et son niveau de couverture (droits de base, droits à une complémentaire santé solidaire, présence d'un médecin traitant). Les données accessibles dépendent du cas d’usage, ainsi les établissements de soins bénéficient également des motifs d’exonération du ticket modérateur et de l’identification du médecin traitant.
 
 **L’utilisation de l’API est soumise à une convention d’usage avec la Caisse Nationale d’Assurance Maladie.**
-
-D’autres cas d’usages pourront être étudiés ultérieurement.

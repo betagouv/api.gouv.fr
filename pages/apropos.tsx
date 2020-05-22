@@ -72,7 +72,7 @@ const About: React.FC = () => (
         </p>
         <p>
           Toutes nos APIs{' '}
-          <a href="/rechercher-api"> sont visibles sur cette page,</a>. Vous
+          <a href="/rechercher-api"> sont visibles sur cette page</a>. Vous
           pouvez les filtrer par thématique, ou bien utiliser la recherche pour
           trouver l'API qui vous convient.
         </p>
@@ -139,7 +139,7 @@ const About: React.FC = () => (
         </p>
         <p>
           Pour toute question ou précision, n'hésitez pas à{' '}
-          <a href="mailto:contact@api.gouv.fr">nous contacter.</a>
+          <a href="/parcours-client?source=apropos">nous contacter.</a>
         </p>
       </div>
     </div>

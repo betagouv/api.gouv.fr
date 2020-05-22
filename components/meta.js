@@ -18,7 +18,7 @@ const Meta = ({ title, description, noIndex = false }) => {
         title={title || SITE_NAME}
         description={description || SITE_DESCRIPTION}
         canonical={SITE_URL}
-        noIndex={noIndex}
+        noindex={noIndex}
         openGraph={{
           url: SITE_URL,
           locale: 'fr_FR',

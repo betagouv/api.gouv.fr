@@ -48,7 +48,7 @@ Les jeux de données sous licence ouverte sont naturellement synchronisés avec 
 
 La plate-forme s’enrichira progressivement à travers la publication régulière de nouveaux jeux de données, des mises à jour des jeux de données déjà publiés, d’actualités et d’évènements en lien avec le site institutionnel de communication du ministère.
 
-## Licence
+### Licence
 
 Le MENESR a fait le choix de la licence ouverte d’Etalab de réutilisations suivantes.
 

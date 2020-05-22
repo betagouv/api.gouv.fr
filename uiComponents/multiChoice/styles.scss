@@ -1,0 +1,18 @@
+@import '../../constants/colors.scss';
+
+.multi-choice-wrapper {
+  > div {
+    display: inline-block;
+    background-color: $lightBlue;
+    padding: 5px 10px;
+    border-radius: 6px;
+    margin: 5px 5px 0 0;
+    border: 2px solid transparent;
+    cursor: pointer;
+
+    &.selected,
+    &:hover {
+      border-color: $blue;
+    }
+  }
+}

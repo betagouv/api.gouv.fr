@@ -30,22 +30,22 @@ doc_tech_link: https://scanr-api.enseignementsup-recherche.gouv.fr/api/v2/api-do
 monitoring_link: https://scanr-api.enseignementsup-recherche.gouv.fr/api/services/counts
 ---
 
-## Description de l'API
+### Description de l'API
 
-### L'api scanR recense 4 types de données :
+#### L'api scanR recense 4 types de données :
 
 - 40 000 entités liées à la recherche et l’innovation
 - 490 000 auteurs de travaux de recherche
 - 87 000 financements
 - +2 000 000 productions : thèses de doctorat, publications et brevets
 
-### Pour chaque type de données (entités, auteurs, financements et productions), l'api scanR propose :
+#### Pour chaque type de données (entités, auteurs, financements et productions), l'api scanR propose :
 
 - un search, par exemple `POST /v2/publications/search`
 - une description détaillée de chaque objet, par exemple `GET /v2/publications/{id}`
 - une liste d'objets similaires, par exemple `POST /v2/publications/like`
 
-### Un outil d’exploration mais pas d’évaluation
+#### Un outil d’exploration mais pas d’évaluation
 
 scanR enrichit et structure toutes les données qu’il parvient à récolter, mais ne garantit pas :
 
