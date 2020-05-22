@@ -40,7 +40,9 @@ export default () => {
   }, []);
 
   useEffect(() => {
-    logParcoursClient('2. Renseigne un statut de visiteur');
+    if (!!statut) {
+      logParcoursClient('2. Renseigne un statut de visiteur');
+    }
   }, [statut]);
 
   return (

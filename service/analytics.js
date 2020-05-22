@@ -57,7 +57,7 @@ const logParcoursClient = step => {
   if (typeof window !== 'undefined' && window._paq) {
     window._paq.push([
       'trackEvent',
-      'LP',
+      'Parcours client',
       step,
       `page : ${window.location.pathname}`,
     ]);
