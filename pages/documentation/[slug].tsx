@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { SwaggerUIWrapper } from '../../components';
 
 import { getAPI, IApi, getAllAPIs } from '../../model';
 import Page from '../../layouts';
-import { ButtonLink } from '../../uiComponents';
+import { ButtonLink, SearchBar } from '../../uiComponents';
 
 import constants from '../../constants';
 import Link from 'next/link';
@@ -16,6 +16,24 @@ interface IProps {
 
 const Documentation: React.FC<IProps> = ({ api, allApis }) => {
   const { title, doc_tech_link, doc_tech_external, path } = api;
+  const [searchTerm, setSearchTerm] = useState('');
+  const [results, setResults] = useState(allApis);
+
+  useEffect(() => {
+    if (!searchTerm) {
+      setResults(allApis);
+    } else {
+      const searchTermLower = searchTerm.toLowerCase();
+      const newResults = allApis.reduce((matchingApis, api) => {
+        if (api.title.toLowerCase().indexOf(searchTermLower) > -1) {
+          //@ts-ignore
+          matchingApis.push(api);
+        }
+        return matchingApis;
+      }, []);
+      setResults(newResults);
+    }
+  }, [searchTerm, allApis]);
 
   return (
     <Page
@@ -27,23 +45,34 @@ const Documentation: React.FC<IProps> = ({ api, allApis }) => {
     >
       <div className="documentation-wrapper">
         <div className="documentation-left-column">
-          <div>
-            {allApis.map(api => (
-              <Link href={`/documentation/${api.slug}`} key={api.slug}>
-                <a>
-                  {api.title}
-                  {api.doc_tech_link && (
-                    <span className="swagger-label">swagger</span>
-                  )}
-                </a>
-              </Link>
-            ))}
+          <div className="search-wrapper layout-center">
+            <SearchBar
+              placeholder="Rechercher une API"
+              onSearch={setSearchTerm}
+            />
+          </div>
+          <div className="documentation-api-list">
+            {results.length === 0 ? (
+              <div>Aucun résultat n'a été trouvé.</div>
+            ) : (
+              results.map(api => (
+                <Link href={`/documentation/${api.slug}`} key={api.slug}>
+                  <a>
+                    {api.title}
+                    {api.doc_tech_link && (
+                      <span className="swagger-label">swagger</span>
+                    )}
+                  </a>
+                </Link>
+              ))
+            )}
           </div>
         </div>
         <div className="documentation-body">
           <div className="documentation-header">
-            Bienvenue sur la documentation technique de {title}. Pour accèder à
-            la présentation complète de l’API <a href={path}>cliquez ici</a>.
+            Bienvenue sur la documentation technique de <b>{title}</b>. Pour
+            accèder à la présentation complète de l’API{' '}
+            <a href={path}>cliquez ici</a>.
           </div>
 
           <div>
@@ -51,6 +80,7 @@ const Documentation: React.FC<IProps> = ({ api, allApis }) => {
               <SwaggerUIWrapper url={doc_tech_link} />
             ) : doc_tech_external ? (
               <>
+                <h1>{title}</h1>
                 <p>
                   <span role="img" aria-label="emoji triste">
                     😔
@@ -100,8 +130,14 @@ const Documentation: React.FC<IProps> = ({ api, allApis }) => {
           width: 300px;
           flex-shrink: 0;
           flex-grow: 0;
-          padding: 10px 0;
         }
+        .documentation-left-column div.search-wrapper {
+          height: 80px;
+          padding: 0 20px;
+          background-color: #0b2a63;
+          border-bottom: 2px solid #051e4a;
+        }
+        .documentation-api-list > div,
         .documentation-left-column a {
           padding: 10px 20px;
           display: block;
@@ -124,9 +160,9 @@ const Documentation: React.FC<IProps> = ({ api, allApis }) => {
           text-transform: uppercase;
         }
 
-        .documentation-left-column,
+        .documentation-api-list,
         .documentation-body {
-          height: calc(100vh - ${constants.layout.HEADER_HEIGHT}px - 20px);
+          height: calc(100vh - ${constants.layout.HEADER_HEIGHT}px - 80px);
           overflow: auto;
         }
         .documentation-body {
@@ -137,13 +173,10 @@ const Documentation: React.FC<IProps> = ({ api, allApis }) => {
           margin-top: 20px;
         }
 
-        #description {
-          margin-bottom: 70px;
-        }
-
-        .sticky-column {
-          //@ts-ignore
-          top: ${parseInt(constants.layout.HEADER_HEIGHT, 10) + 20}px;
+        @media only screen and (min-width: 1px) and (max-width: 768px) {
+          .documentation-left-column {
+            display: none;
+          }
         }
       `}</style>
     </Page>
