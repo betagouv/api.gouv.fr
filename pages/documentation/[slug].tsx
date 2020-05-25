@@ -47,6 +47,9 @@ const Documentation: React.FC<IProps> = ({ api, allApis }) => {
             ) : doc_tech_external ? (
               <>
                 <p>
+                  <span role="img" aria-label="emoji triste">
+                    😔
+                  </span>{' '}
                   Malheureusement, cette API ne possède pas de documentation au
                   format{' '}
                   <a
