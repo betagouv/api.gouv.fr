@@ -44,6 +44,7 @@
     "typescript": "^3.7.5"
   },
   "dependencies": {
+    "@zeit/next-source-maps": "0.0.3",
     "dotenv-webpack": "^1.7.0",
     "front-matter": "^3.0.2",
     "hoist-non-react-statics": "^3.3.1",
