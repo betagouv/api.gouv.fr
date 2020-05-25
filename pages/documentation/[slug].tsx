@@ -30,7 +30,12 @@ const Documentation: React.FC<IProps> = ({ api, allApis }) => {
           <div>
             {allApis.map(api => (
               <Link href={`/documentation/${api.slug}`} key={api.slug}>
-                <a>{api.title}</a>
+                <a>
+                  {api.title}
+                  {api.doc_tech_link && (
+                    <span className="swagger-label">swagger</span>
+                  )}
+                </a>
               </Link>
             ))}
           </div>
@@ -92,7 +97,7 @@ const Documentation: React.FC<IProps> = ({ api, allApis }) => {
         .documentation-left-column {
           background-color: #051e4a;
           color: #fff;
-          width: 270px;
+          width: 300px;
           flex-shrink: 0;
           flex-grow: 0;
           padding: 10px 0;
@@ -108,9 +113,20 @@ const Documentation: React.FC<IProps> = ({ api, allApis }) => {
           background-color: #0b2a63;
           text-decoration: underline;
         }
+        span.swagger-label {
+          background-color: ${constants.colors.orange};
+          color: #333;
+          padding: 1px 5px;
+          margin-left: 5px;
+          font-size: 0.7rem;
+          font-weight: bold;
+          border-radius: 4px;
+          text-transform: uppercase;
+        }
+
         .documentation-left-column,
         .documentation-body {
-          height: calc(100vh - ${constants.layout.HEADER_HEIGHT}px);
+          height: calc(100vh - ${constants.layout.HEADER_HEIGHT}px - 20px);
           overflow: auto;
         }
         .documentation-body {
@@ -154,12 +170,17 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   //@ts-ignore
   const slug = params.slug;
 
+  const allApis = await getAllAPIs();
+
   //@ts-ignore
   const api = await getAPI(slug);
 
-  const allApis = await getAllAPIs();
-
-  return { props: { api, allApis } };
+  return {
+    props: {
+      api,
+      allApis: allApis.sort((a, b) => (a.title > b.title ? 1 : -1)),
+    },
+  };
 };
 
 export default Documentation;
