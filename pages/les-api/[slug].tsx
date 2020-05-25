@@ -38,6 +38,7 @@ interface IProps {
 
 const API: React.FC<IProps> = ({ api, services = null }) => {
   const {
+    slug,
     title,
     tagline,
     logo,
@@ -166,6 +167,7 @@ const API: React.FC<IProps> = ({ api, services = null }) => {
             <TechnicalDocumentation
               link={doc_tech_link}
               external={doc_tech_external}
+              slug={slug}
             />
 
             <ApiRelatedServices services={services} />

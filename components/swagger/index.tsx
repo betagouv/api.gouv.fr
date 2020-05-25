@@ -30,9 +30,11 @@ const SwaggerUIWrapper: React.FC<IProps> = ({ url }) => {
           display: none;
         }
 
-        .swagger-section {
-          background-color: whitesmoke;
-          padding: 10px 20px;
+        .swagger-section,
+        .information-container.wrapper {
+          background-color: #fff !important;
+          padding: 0px;
+          margin: 0;
           overflow: auto;
         }
 
