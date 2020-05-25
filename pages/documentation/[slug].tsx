@@ -160,9 +160,12 @@ const Documentation: React.FC<IProps> = ({ api, allApis }) => {
           text-transform: uppercase;
         }
 
-        .documentation-api-list,
-        .documentation-body {
+        .documentation-api-list {
           height: calc(100vh - ${constants.layout.HEADER_HEIGHT}px - 80px);
+          overflow: auto;
+        }
+        .documentation-body {
+          height: calc(100vh - ${constants.layout.HEADER_HEIGHT}px - 20px);
           overflow: auto;
         }
         .documentation-body {
