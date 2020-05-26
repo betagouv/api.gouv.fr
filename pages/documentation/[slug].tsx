@@ -42,6 +42,7 @@ const Documentation: React.FC<IProps> = ({ api, allApis }) => {
       useFooter={false}
       noIndex={true}
       usePreFooter={false}
+      canonical={`https://api.gouv.fr/documentation/${api.slug}`}
     >
       <div className="documentation-wrapper">
         <div className="documentation-left-column">

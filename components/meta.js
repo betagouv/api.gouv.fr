@@ -4,7 +4,7 @@ import Head from 'next/head';
 import prune from 'underscore.string/prune';
 import { NextSeo } from 'next-seo';
 
-const Meta = ({ title, description, noIndex = false }) => {
+const Meta = ({ title, description, noIndex = false, canonical }) => {
   description = prune(description, 160, '…');
 
   const SITE_NAME = process.env.SITE_NAME || 'api.gouv.fr';
@@ -17,7 +17,7 @@ const Meta = ({ title, description, noIndex = false }) => {
       <NextSeo
         title={title || SITE_NAME}
         description={description || SITE_DESCRIPTION}
-        canonical={SITE_URL}
+        canonical={canonical}
         noindex={noIndex}
         openGraph={{
           url: SITE_URL,

@@ -124,6 +124,7 @@ const API: React.FC<IProps> = ({ api, services = null }) => {
       headerKey={HEADER_PAGE.APIS}
       title={title}
       description={`${title} est une des APIs du service public. ${tagline}`}
+      canonical={`https://api.gouv.fr/les-api/${slug}`}
     >
       <PageHeader title={title} logo={logo || DEFAULT_LOGO} tagline={tagline} />
 
