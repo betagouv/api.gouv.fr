@@ -57,7 +57,11 @@ const Documentation: React.FC<IProps> = ({ api, allApis }) => {
               <div>Aucun résultat n'a été trouvé.</div>
             ) : (
               results.map(api => (
-                <Link href={`/documentation/${api.slug}`} key={api.slug}>
+                <Link
+                  href="/documentation/[slug]"
+                  as={`/documentation/${api.slug}`}
+                  key={api.slug}
+                >
                   <a>
                     {api.title}
                     {api.doc_tech_link && (
