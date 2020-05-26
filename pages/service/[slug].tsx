@@ -17,6 +17,7 @@ const Service: React.FC<IProps> = ({
   title,
   description,
   link,
+  slug,
   apiList,
   body,
   screenshot,
@@ -26,6 +27,7 @@ const Service: React.FC<IProps> = ({
       headerKey={HEADER_PAGE.SERVICES}
       title={title}
       description={`${title} est un exemple d’utilisation d'API du service public. ${description}`}
+      canonical={`https://api.gouv.fr/service/${slug}`}
     >
       <section id="title">
         <h1>{title}</h1>

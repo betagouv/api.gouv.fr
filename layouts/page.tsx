@@ -10,6 +10,7 @@ interface IProps {
   useFooter?: boolean;
   preFooterBackground?: string;
   noIndex?: boolean;
+  canonical?: string;
 }
 
 const Page: React.FC<IProps> = ({
@@ -20,10 +21,16 @@ const Page: React.FC<IProps> = ({
   useFooter = true,
   noIndex = false,
   preFooterBackground,
+  canonical,
   children,
 }) => (
   <div id="page-layout">
-    <Meta title={title} description={description} noIndex={noIndex} />
+    <Meta
+      title={title}
+      description={description}
+      noIndex={noIndex}
+      canonical={canonical}
+    />
     <Header headerKey={headerKey || 'home'} />
     <main>{children}</main>
     {usePreFooter && <PreFooter background={preFooterBackground} />}

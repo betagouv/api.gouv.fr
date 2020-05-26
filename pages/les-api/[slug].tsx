@@ -38,6 +38,7 @@ interface IProps {
 
 const API: React.FC<IProps> = ({ api, services = null }) => {
   const {
+    slug,
     title,
     tagline,
     logo,
@@ -123,6 +124,7 @@ const API: React.FC<IProps> = ({ api, services = null }) => {
       headerKey={HEADER_PAGE.APIS}
       title={title}
       description={`${title} est une des APIs du service public. ${tagline}`}
+      canonical={`https://api.gouv.fr/les-api/${slug}`}
     >
       <PageHeader title={title} logo={logo || DEFAULT_LOGO} tagline={tagline} />
 
@@ -166,6 +168,7 @@ const API: React.FC<IProps> = ({ api, services = null }) => {
             <TechnicalDocumentation
               link={doc_tech_link}
               external={doc_tech_external}
+              slug={slug}
             />
 
             <ApiRelatedServices services={services} />

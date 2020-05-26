@@ -2,7 +2,7 @@ import React from 'react';
 
 import constants from '../../constants';
 import { ButtonLink } from '../../uiComponents/button';
-import { logDemanderApi } from '../../service/analytics';
+import { logCTA } from '../../service/analytics';
 
 const PreFooter = ({ background }) => (
   <section
@@ -16,7 +16,7 @@ const PreFooter = ({ background }) => (
         <p>Vous ne trouvez pas l’API dont vous avez besoin ?</p>
         <ButtonLink
           href="/parcours-client?source=preFooter"
-          onClick={logDemanderApi}
+          onClick={() => logCTA('CTA pre-footer')}
         >
           Nous contacter
         </ButtonLink>
