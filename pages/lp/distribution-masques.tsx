@@ -3,7 +3,7 @@ import React from 'react';
 import Page from '../../layouts/page';
 import { ButtonLink } from '../../uiComponents';
 import constants from '../../constants';
-import { logLPCTA1, logLPCTA2, logLPContact } from '../../service/analytics';
+import { logLPCTA } from '../../service/analytics';
 
 const Masks: React.FC = () => (
   <Page
@@ -17,7 +17,7 @@ const Masks: React.FC = () => (
         <h2>Simplifiez la distribution de masques dans votre commune</h2>
         <ButtonLink
           href="https://signup.api.gouv.fr/api-particulier"
-          onClick={logLPCTA1}
+          onClick={() => logLPCTA('Bouton_top')}
         >
           Je veux créer un service de distribution de masques
         </ButtonLink>
@@ -71,7 +71,7 @@ const Masks: React.FC = () => (
           <div className="layout-center">
             <ButtonLink
               href="https://signup.api.gouv.fr/api-particulier"
-              onClick={logLPCTA2}
+              onClick={() => logLPCTA('Bouton_middle')}
             >
               Je connecte ma ville à l’API Particulier
             </ButtonLink>
@@ -106,7 +106,7 @@ const Masks: React.FC = () => (
         <div className="layout-center">
           <ButtonLink
             href={constants.links.mailto.SUPPORT}
-            onClick={logLPContact}
+            onClick={() => logLPCTA('Bouton_contact')}
           >
             Comment pouvons-nous vous aider ?
           </ButtonLink>

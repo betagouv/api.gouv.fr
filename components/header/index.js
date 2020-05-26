@@ -4,7 +4,7 @@ import { throttle } from 'lodash';
 
 import { ButtonLink } from '../../uiComponents/button';
 import constants from '../../constants';
-import { logDemanderApi } from '../../service/analytics';
+import { logCTA } from '../../service/analytics';
 
 export const HEADER_PAGE = {
   APIS: 'apis',
@@ -100,7 +100,7 @@ const Header = ({ headerKey = 'home' }) => {
                 <li className="external">
                   <ButtonLink
                     href="/parcours-client?source=header"
-                    onClick={logDemanderApi}
+                    onClick={() => logCTA('CTA header')}
                   >
                     Une question ?
                   </ButtonLink>
