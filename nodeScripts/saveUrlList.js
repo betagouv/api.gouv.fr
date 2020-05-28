@@ -32,6 +32,7 @@ async function main() {
     '/contact',
     '/apropos',
     '/mentions-legales',
+    '/feuille-de-route',
     '/vie-privee',
     ...apis.map(api => api.path),
     ...services.map(service => service.path),
