@@ -15,6 +15,7 @@ external_site: https://transport.data.gouv.fr
 is_open: true
 contact_link: contact@transport.beta.gouv.fr
 doc_tech_link: https://transport.data.gouv.fr/api/openapi
+last_update: 01/05/2020
 ---
 
 [transport.data.gouv.fr](https://transport.data.gouv.fr) est une plateforme publique destinée à rassembler toutes les données de mobilité utiles aux développeurs et éditeurs d'application qui facilitent le calcul d'itinéraire, au bénéfice des voyageurs.

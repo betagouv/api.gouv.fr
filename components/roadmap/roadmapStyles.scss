@@ -1,0 +1,68 @@
+@import '../../constants/colors.scss';
+
+#roadmap-wrapper {
+  .roadmap-node {
+    width: 100%;
+    min-height: 50px;
+    display: inline-block;
+
+    border-left: 2px solid $blue;
+
+    &.ellipsis {
+      border-left: 2px dashed $blue;
+    }
+
+    &.month {
+      position: relative;
+      padding-left: 20px;
+      padding-top: 10px;
+      color: $blue;
+      font-weight: bold;
+      font-size: 1.1rem;
+
+      &:before {
+        left: -7px;
+        top: 20px;
+        position: absolute;
+        content: '';
+        background-color: $blue;
+        width: 12px;
+        height: 12px;
+        border-radius: 10px;
+      }
+    }
+
+    > .date {
+      display: inline-block;
+      padding: 10px;
+      border-radius: 6px;
+      border: 2px solid #ccc;
+      margin: 10px 40px;
+      position: relative;
+
+      > div:first-of-type {
+        font-weight: bold;
+      }
+      &:before {
+        left: -54px;
+        top: 13px;
+        position: absolute;
+        content: '';
+        border: 2px solid $blue;
+        background-color: #fff;
+        width: 18px;
+        height: 18px;
+        border-radius: 10px;
+      }
+      &:after {
+        left: -32px;
+        top: 22px;
+        position: absolute;
+        content: '';
+        background-color: #ccc;
+        width: 32px;
+        height: 2px;
+      }
+    }
+  }
+}

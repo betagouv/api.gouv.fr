@@ -5,7 +5,7 @@ interface IProps {
   url: string;
 }
 
-export const SwaggerUIWrapper: React.FC<IProps> = ({ url }) => {
+const SwaggerUIWrapper: React.FC<IProps> = ({ url }) => {
   useEffect(() => {
     const ui = SwaggerUIBundle({
       url,
