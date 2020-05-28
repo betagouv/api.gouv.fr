@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
-import { SwaggerUIWrapper } from '../../components';
+import SwaggerUIWrapper from '../../components/swagger';
 
 import { getAPI, IApi, getAllAPIs } from '../../model';
 import Page from '../../layouts';

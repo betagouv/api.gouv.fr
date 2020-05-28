@@ -1,6 +1,11 @@
 import React from 'react';
 
-import { RoadmapNode, RoadmapNodeType } from './index';
+import { RoadmapNode } from './index';
+
+export enum RoadmapNodeType {
+  ELLIPSIS,
+  DATE,
+}
 
 const roadmap = [
   { type: RoadmapNodeType.ELLIPSIS },

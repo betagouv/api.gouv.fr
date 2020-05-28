@@ -9,7 +9,8 @@
     "dev": "NODE_ENV=development next",
     "test": "jest",
     "start": "next start -p $PORT",
-    "build": "npm run sitemap && next build",
+    "analyze": "NODE_ENV=production ANALYZE=true next build",
+    "build": "NODE_ENV=production npm run sitemap && next build",
     "lint": "eslint '**/*.{ts,tsx}' --max-warnings 20"
   },
   "husky": {
@@ -45,7 +46,6 @@
     "typescript": "^3.7.5"
   },
   "dependencies": {
-    "@zeit/next-source-maps": "0.0.3",
     "@babel/runtime": "^7.9.6",
     "dotenv-webpack": "^1.7.0",
     "front-matter": "^3.0.2",

@@ -1,9 +1,5 @@
 import React from 'react';
-
-export enum RoadmapNodeType {
-  ELLIPSIS,
-  DATE,
-}
+import { RoadmapNodeType } from './index';
 
 interface IProps {
   type: RoadmapNodeType;
