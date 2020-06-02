@@ -71,7 +71,7 @@ const roadmap = [
   },
   {
     type: RoadmapNodeType.ADD_NEW_API,
-    what: <>API Nomenclatures</>,
+    what: <>API Données Locales</>,
   },
 ];
 
