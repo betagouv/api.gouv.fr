@@ -44,7 +44,24 @@ const Footer = () => {
         </div>
         <ul className="footer__links">
           <li>
-            <h2>api.gouv.fr</h2>
+            <h2>Le site</h2>
+          </li>
+          <li>
+            <a href="/feuille-de-route">La feuille de route des APIs</a>
+          </li>
+          <li>
+            <a href="/documentation">La documentation des APIs</a>
+          </li>
+          <li>
+            <a href="/mentions-legales">Les mentions Légales</a>
+          </li>
+          <li>
+            <a href="/vie-privee">Le suivi d'audience & de la vie privée</a>
+          </li>
+        </ul>
+        <ul className="footer__links">
+          <li>
+            <h2>L’équipe</h2>
           </li>
           <li>
             <a href="/contact">Nous contacter</a>
@@ -75,12 +92,6 @@ const Footer = () => {
             >
               Améliorer cette page
             </a>
-          </li>
-          <li>
-            <a href="/mentions-legales">Mentions Légales</a>
-          </li>
-          <li>
-            <a href="/vie-privee">Suivi d'audience & vie privée</a>
           </li>
         </ul>
       </div>
