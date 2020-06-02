@@ -17,7 +17,7 @@ const roadmap = [
     type: RoadmapNodeType.ADD_NEW_API,
     what: (
       <>
-        API <a href="/les-apis/api_menj">MENJ</a>
+        API <a href="/les-api/api_menj">MENJ</a>
       </>
     ),
   },
@@ -32,7 +32,7 @@ const roadmap = [
     type: RoadmapNodeType.ADD_NEW_API,
     what: (
       <>
-        API <a href="/les-apis/scanr">ScanR</a>
+        API <a href="/les-api/scanr">ScanR</a>
       </>
     ),
   },
@@ -48,7 +48,7 @@ const roadmap = [
     what: (
       <>
         API{' '}
-        <a href="/les-apis/api_catalogue_transport">
+        <a href="/les-api/api_catalogue_transport">
           Point d’Accès National aux données de transport
         </a>
       </>
