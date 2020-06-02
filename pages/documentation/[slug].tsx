@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import SwaggerUIWrapper from '../../components/swagger';
 
 import { getAPI, IApi, getAllAPIs } from '../../model';
 import Page from '../../layouts';
-import { ButtonLink, SearchBar } from '../../uiComponents';
+import { ButtonLink } from '../../uiComponents';
+import DocumentationLeftMenu from '../../components/documentation';
 
 import constants from '../../constants';
-import Link from 'next/link';
 
 interface IProps {
   api: IApi;
@@ -16,24 +16,6 @@ interface IProps {
 
 const Documentation: React.FC<IProps> = ({ api, allApis }) => {
   const { title, doc_tech_link, doc_tech_external, path } = api;
-  const [searchTerm, setSearchTerm] = useState('');
-  const [results, setResults] = useState(allApis);
-
-  useEffect(() => {
-    if (!searchTerm) {
-      setResults(allApis);
-    } else {
-      const searchTermLower = searchTerm.toLowerCase();
-      const newResults = allApis.reduce((matchingApis, api) => {
-        if (api.title.toLowerCase().indexOf(searchTermLower) > -1) {
-          //@ts-ignore
-          matchingApis.push(api);
-        }
-        return matchingApis;
-      }, []);
-      setResults(newResults);
-    }
-  }, [searchTerm, allApis]);
 
   return (
     <Page
@@ -42,37 +24,11 @@ const Documentation: React.FC<IProps> = ({ api, allApis }) => {
       useFooter={false}
       noIndex={true}
       usePreFooter={false}
+      useMenu={false}
       canonical={`https://api.gouv.fr/documentation/${api.slug}`}
     >
       <div className="documentation-wrapper">
-        <div className="documentation-left-column">
-          <div className="search-wrapper layout-center">
-            <SearchBar
-              placeholder="Rechercher une API"
-              onSearch={setSearchTerm}
-            />
-          </div>
-          <div className="documentation-api-list">
-            {results.length === 0 ? (
-              <div>Aucun résultat n'a été trouvé.</div>
-            ) : (
-              results.map(api => (
-                <Link
-                  href="/documentation/[slug]"
-                  as={`/documentation/${api.slug}`}
-                  key={api.slug}
-                >
-                  <a>
-                    {api.title}
-                    {api.doc_tech_link && (
-                      <span className="swagger-label">swagger</span>
-                    )}
-                  </a>
-                </Link>
-              ))
-            )}
-          </div>
-        </div>
+        <DocumentationLeftMenu allApis={allApis} />
         <div className="documentation-body">
           <div className="documentation-header">
             Bienvenue sur la documentation technique de <b>{title}</b>. Pour
@@ -129,62 +85,14 @@ const Documentation: React.FC<IProps> = ({ api, allApis }) => {
           display: flex;
           flex-direction: row;
         }
-        .documentation-left-column {
-          background-color: #051e4a;
-          color: #fff;
-          width: 300px;
-          flex-shrink: 0;
-          flex-grow: 0;
-        }
-        .documentation-left-column div.search-wrapper {
-          height: 80px;
-          padding: 0 20px;
-          background-color: #0b2a63;
-          border-bottom: 2px solid #051e4a;
-        }
-        .documentation-api-list > div,
-        .documentation-left-column a {
-          padding: 10px 20px;
-          display: block;
-          color: #eff6ff;
-          text-decoration: none;
-          font-weight: 400;
-        }
-        .documentation-left-column a:hover {
-          background-color: #0b2a63;
-          text-decoration: underline;
-        }
-        span.swagger-label {
-          background-color: ${constants.colors.orange};
-          color: #333;
-          padding: 1px 5px;
-          margin-left: 5px;
-          font-size: 0.7rem;
-          font-weight: bold;
-          border-radius: 4px;
-          text-transform: uppercase;
-        }
-
-        .documentation-api-list {
-          height: calc(100vh - ${constants.layout.HEADER_HEIGHT}px - 80px);
-          overflow: auto;
-        }
         .documentation-body {
-          height: calc(100vh - ${constants.layout.HEADER_HEIGHT}px - 20px);
+          height: calc(100vh - ${constants.layout.HEADER_HEIGHT}px);
           overflow: auto;
-        }
-        .documentation-body {
           flex-grow: 1;
           padding: 0 30px;
         }
         .documentation-header {
           margin-top: 20px;
-        }
-
-        @media only screen and (min-width: 1px) and (max-width: 768px) {
-          .documentation-left-column {
-            display: none;
-          }
         }
       `}</style>
     </Page>

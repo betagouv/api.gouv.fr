@@ -75,7 +75,7 @@ const Menu = ({ selectedItem, select }) => {
           align-items: center;
           padding: 15px;
           padding-left: 35px;
-          font-size: 1.1rem;
+          font-size: 1rem;
           line-height: 20px;
           color: black;
           cursor: pointer;

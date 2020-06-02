@@ -1,0 +1,51 @@
+@import '../../constants/layout.scss';
+@import '../../constants/colors.scss';
+
+#documentation-left-column {
+  background-color: #051e4a;
+  color: #fff;
+  width: 320px;
+  flex-shrink: 0;
+  flex-grow: 0;
+
+  div.search-wrapper {
+    height: 80px;
+    padding: 0 20px;
+    background-color: #0b2a63;
+    border-bottom: 2px solid #051e4a;
+  }
+
+  .documentation-api-list {
+    height: calc(100vh - 82px - #{$headerHeight + 'px'});
+    overflow: auto;
+  }
+
+  .documentation-api-list > div,
+  a {
+    padding: 10px 20px;
+    display: block;
+    color: #eff6ff;
+    text-decoration: none;
+    font-weight: 400;
+
+    &:hover {
+      background-color: #0b2a63;
+      text-decoration: underline;
+    }
+  }
+
+  span.swagger-label {
+    background-color: $orange;
+    color: #333;
+    padding: 1px 5px;
+    margin-left: 5px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    border-radius: 4px;
+    text-transform: uppercase;
+  }
+
+  @media only screen and (min-width: 1px) and (max-width: 768px) {
+    display: none;
+  }
+}

@@ -9,6 +9,7 @@ interface IProps {
   usePreFooter?: boolean;
   useFooter?: boolean;
   preFooterBackground?: string;
+  useMenu?: boolean;
   noIndex?: boolean;
   canonical?: string;
 }
@@ -19,6 +20,7 @@ const Page: React.FC<IProps> = ({
   headerKey,
   usePreFooter = true,
   useFooter = true,
+  useMenu = true,
   noIndex = false,
   preFooterBackground,
   canonical,
@@ -31,7 +33,7 @@ const Page: React.FC<IProps> = ({
       noIndex={noIndex}
       canonical={canonical}
     />
-    <Header headerKey={headerKey || 'home'} />
+    <Header headerKey={headerKey || 'home'} useMenu={useMenu} />
     <main>{children}</main>
     {usePreFooter && <PreFooter background={preFooterBackground} />}
     {useFooter && <Footer />}
