@@ -30,7 +30,7 @@ const Documentation: React.FC<IProps> = ({ allApis }) => {
             <a href="/apropos">api.gouv.fr</a>.
           </p>
           <p>
-            Cette espace s’adresse à tous ceux - développeurs.se, architectes,
+            Cette espace s’adresse à tous ceux - développeurs.ses, architectes,
             products owners, craftmans, magicien.nes du web...{' '}
             <span role="img" aria-label="émoji ninja">
               🧙‍♀️
