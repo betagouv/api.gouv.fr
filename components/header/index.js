@@ -27,7 +27,7 @@ const HEADER = [
   { href: '/apropos', txt: 'À propos', key: HEADER_PAGE.ABOUT },
 ];
 
-const Header = ({ headerKey = 'home' }) => {
+const Header = ({ headerKey = 'home', useMenu = true }) => {
   const header = useRef(null);
 
   useEffect(() => {
@@ -61,62 +61,75 @@ const Header = ({ headerKey = 'home' }) => {
           id="menu-btn"
           aria-label="ouverture-menu"
         />
-        <label className="hamburger-menu" htmlFor="menu-btn">
-          <span />
-          <span />
-          <span />
-        </label>
+        {useMenu && (
+          <label className="hamburger-menu" htmlFor="menu-btn">
+            <span />
+            <span />
+            <span />
+          </label>
+        )}
         <div className="nav__container">
           <Link href="/">
-            <a className="nav__logo-wrapper">
+            <a
+              className="nav__logo-wrapper"
+              alt="Retourner à l’accueil de api.gouv.fr"
+            >
               <img
                 className="nav__logo"
-                src="/images/logo-api.gouv.fr.svg"
-                alt="Accueil de api.gouv.fr"
+                src="/images/logo_RF.svg"
+                alt="Un site de la République Française"
+              />
+              <img
+                className="nav__logo"
+                src="/images/api.gouv.fr.svg"
+                alt="Logo api.gouv.fr"
               />
             </a>
           </Link>
-
-          <ul className="nav__links">
-            {headerKey !== HEADER_PAGE.FROM_SIGNUP ? (
-              <>
-                {HEADER.map(item => (
-                  <Fragment key={item.href}>
-                    {!item.hide && (
-                      <li
-                        id={item.id || ''}
-                        className={`${headerKey === item.key ? 'current' : ''}`}
-                      >
-                        <a
-                          className="dont-apply-link-style"
-                          href={`${item.href}`}
+          {useMenu && (
+            <ul className="nav__links">
+              {headerKey !== HEADER_PAGE.FROM_SIGNUP ? (
+                <>
+                  {HEADER.map(item => (
+                    <Fragment key={item.href}>
+                      {!item.hide && (
+                        <li
+                          id={item.id || ''}
+                          className={`${
+                            headerKey === item.key ? 'current' : ''
+                          }`}
                         >
-                          {item.txt}
-                        </a>
-                      </li>
-                    )}
-                  </Fragment>
-                ))}
-                <li className="external">
-                  <ButtonLink
-                    href="/parcours-client?source=header"
-                    onClick={() => logCTA('CTA header')}
+                          <a
+                            className="dont-apply-link-style"
+                            href={`${item.href}`}
+                          >
+                            {item.txt}
+                          </a>
+                        </li>
+                      )}
+                    </Fragment>
+                  ))}
+                  <li className="external">
+                    <ButtonLink
+                      href="/parcours-client?source=header"
+                      onClick={() => logCTA('CTA header')}
+                    >
+                      Une question ?
+                    </ButtonLink>
+                  </li>
+                </>
+              ) : (
+                <li>
+                  <a
+                    className="dont-apply-link-style"
+                    href={`${constants.links.SIGNUP}`}
                   >
-                    Une question ?
-                  </ButtonLink>
+                    Mes demandes
+                  </a>
                 </li>
-              </>
-            ) : (
-              <li>
-                <a
-                  className="dont-apply-link-style"
-                  href={`${constants.links.SIGNUP}`}
-                >
-                  Mes demandes
-                </a>
-              </li>
-            )}
-          </ul>
+              )}
+            </ul>
+          )}
         </div>
       </nav>
     </header>

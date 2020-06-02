@@ -44,12 +44,21 @@ header {
       a.nav__logo-wrapper {
         display: flex;
         align-items: center;
-        margin: 0 14px;
+        margin: 10px 20px;
+        padding: 0;
 
-        .nav__logo {
-          height: 40px;
+        .nav__logo:first-of-type {
+          height: 75px;
           padding: 0;
           box-sizing: content-box;
+        }
+        .nav__logo:last-of-type {
+          height: 28px;
+          padding: 0 0 0 20px;
+          box-sizing: content-box;
+          @media (max-width: 600px) {
+            height: 23px;
+          }
         }
       }
 
@@ -91,6 +100,7 @@ header {
             background-color: $blue;
             transition: width 200ms ease-in-out, opacity 200ms ease-in-out;
             opacity: 0;
+            border-radius: 4px 4px 0 0;
           }
           &.current:after {
             width: 58%;
@@ -148,8 +158,8 @@ header {
       width: #{$headerHeight + 'px'};
       height: #{$headerHeight + 'px'};
       position: absolute;
-      top: 0px;
-      right: 0px;
+      top: 20px;
+      right: 20px;
       cursor: pointer;
 
       &:focus {
