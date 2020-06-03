@@ -32,7 +32,7 @@ const roadmap = [
     type: RoadmapNodeType.ADD_NEW_API,
     what: (
       <>
-        API <a href="/les-api/scanr">ScanR</a>
+        API <a href="/les-api/scanR">ScanR</a>
       </>
     ),
   },
