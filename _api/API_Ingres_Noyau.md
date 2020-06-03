@@ -76,18 +76,7 @@ Ces référentiels couvrent les domaines fonctionnels suivants:
 * Spécialités
 * ...
 
-             
-       
-       
-                      
-                                   
-         
-          
-         
-               
-     
-
-#### Nomenclatures militaires:
+##### Nomenclatures militaires:
 
 * Grades militaires
 * Hiérarchie
@@ -102,14 +91,6 @@ Ces référentiels couvrent les domaines fonctionnels suivants:
 * Régions
 * Départements
 * ...
-
-                                               
-                       
-           
-      
-          
-               
-     
 
 #### Nomenclatures Fichier GEST
 
@@ -135,16 +116,6 @@ Ces référentiels couvrent les domaines fonctionnels suivants:
 * Centre de profit
 * Centre financier
 * ...
-
-       
-          
-           
-             
-                        
-                 
-                  
-                  
-     
 
 La liste exhaustive est trop longue pour être listée ici, vous pouvez y accéder via cet appel à l'API:
 https://api.cisirh.rie.gouv.fr/ingres/diffusions/HORSVERS/19.00.00/complete/ 
@@ -191,23 +162,3 @@ ou
 #### Récupération au format JSON d’une nomenclature pour une version, un format et un type de diffusion donnés :
 * https://inta.ingres.cisirh/API/diffusions/HORSVERS/19.00.00/complete/GRADE/json
                                                                                                                                      
-                                                                                                                                                          
-
-                             
-
-                              
-                                                                                                                                                        
-                                                                                                                                
-                                                                                                                                
-
-                              
-
-                              
-                                                                                                                                                        
-
-                               
-
-                                                                                                                                                      
-                                                                                                                            
-                                                                                                                                            
-                                                                                                                                                        
