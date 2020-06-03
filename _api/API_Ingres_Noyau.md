@@ -5,8 +5,8 @@ owner: Centre Interministériel des Systèmes d'Information relatifs aux Ressour
 owner_acronym: CISIRH
 is_open: false
 access_condition: OUVERT (utilisation restreinte au Réseau Interministériel de l'Etat (RIE))
-acces_link: https://api.cisirh.rie.gouv.fr/ingres/diffusions
-logo: logo_cisirh.png
+access_link: https://api.cisirh.rie.gouv.fr/ingres/diffusions
+logo: https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Logo_CISIRH.png/280px-Logo_CISIRH.png
 external_site: https://pissarho.cisirh.rie.gouv.fr/actualites/ingres/deploiement-de-deux-api-sur-lapplication-ingres
 stat:
   url: 
@@ -49,7 +49,7 @@ Son utilisation par une application tierce ne saurait engager la responsabilité
 Le format de restitution des données est celui défini par le noyau RH FPE. Il s'agit de fichiers XML et de leur équivalent au format Excel.
 Une conversion JSON du XML est également proposée, à titre expérimental. 
 Cette API permet de récupérer automatiquement les fichiers à l'identique de ce qu'ils sont produits et mis à disposition sur le portail PissaRHo (open RH FPE).
-Cette API ne permet pas la récupération unitaire d'un code est de ses attributs et peut par conséquent ne pas être adaptée à une API entre appliclations mais tout dépend du besoin.
+Cette API ne permet pas la récupération unitaire d'un code est de ses attributs et peut par conséquent ne pas être adaptée à une API entre applications mais tout dépend du besoin.
 Pour cet usage, une autre API ("API Ingres Nomenclatures") permet une restitution au format JSON avec des temps de réponse bien meilleurs.
 
 ### Evolutions possibles:
@@ -161,8 +161,8 @@ Si ce que vous recherchez est un contenu le plus "frais" possible, alors choisir
 
 - FORMAT NOYAU: ce format correspond à la structure XML des fichiers restitués. Chaque version noyau structurante (une par an) porte des évolutions de format, c'est à dire l'ajout, la suppression ou la modification d'attributs (donc de balises XML dans le fichier). Bien qu'il soit recommandé de toujours prendre la version la plus récente, vous pouvez choisir le format qui vous convient, par exemple: la version noyau 19.00.08 avec le format 18.00.00 plutôt que le 19.00.00.
 
-- TYPE DE DIFFUSION: deux choix possibles: "compplete" ou "differentielle" (sans accents!). La version complete restitue tous les codes dans leur dernière version qu'elle qu'elle soit. 
-Exemple de mode complet : le fichier des GRADES 19.00.08 complet pourra contenir aussi bien les codes grades modifiés en 19.00.08 que ceux qui n'ont pas été modifiés depuis la 19.00.01)
+- TYPE DE DIFFUSION: deux choix possibles: "complete" ou "differentielle" (sans accents!). La version complete restitue tous les codes dans leur dernière version (quelle qu'elle soit). 
+Exemple de mode complet : le fichier des GRADES 19.00.08 complet pourra contenir aussi bien les codes grades modifiés en 19.00.08 que ceux qui n'ont pas été modifiés depuis la 19.00.01.
 Exemple de mode différentiel : le fichier des GRADES 19.00.08 différentiel ne contiendra que les codes grades modifiés en 19.00.08.
 
 #### Liste des référentiels gérés dans Ingres:
