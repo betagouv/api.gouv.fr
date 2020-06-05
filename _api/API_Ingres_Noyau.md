@@ -1,5 +1,5 @@
 ---
-title: API Ingres "Noyau RH FPE"
+title: API Ingres Noyau
 tagline: Récupérez l'ensemble des référentiels utilisés par les SIRH de la Fonction Publique d'Etat au format "Noyau RH FPE"
 owner: Centre Interministériel des Systèmes d'Information relatifs aux Ressources Humaines 
 owner_acronym: CISIRH
