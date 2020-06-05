@@ -3,7 +3,6 @@ import App from 'next/app';
 
 import '../layouts/pageStyles.scss';
 import '../layouts/imports.scss';
-import '../layouts/fonts.scss';
 
 import 'swagger-ui-dist/swagger-ui.css';
 
