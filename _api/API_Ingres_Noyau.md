@@ -6,7 +6,7 @@ owner_acronym: CISIRH
 is_open: false
 access_condition: OUVERT (utilisation restreinte au Réseau Interministériel de l'Etat (RIE))
 access_link: https://api.cisirh.rie.gouv.fr/ingres/diffusions
-logo: https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Logo_CISIRH.png/280px-Logo_CISIRH.png
+logo: logo-cisirh.png
 external_site: https://pissarho.cisirh.rie.gouv.fr/actualites/ingres/deploiement-de-deux-api-sur-lapplication-ingres
 stat:
   url: 
@@ -29,7 +29,7 @@ keywords:
   - Référentiels de Classification Centrale
   - Nomenclatures
 
-contact_link: nicolas.augereau@finances.gouv.fr
+contact_link: api.cisirh@finances.gouv.fr
 doc_tech_external: http://pissarho.cisirh.rie.gouv.fr/sites/default/files/2019-10/INGRES-PIL-API%20Diffusions%20Ingres_%20%280_2%29_0.pptx
 themes:
   - Administration & législation
