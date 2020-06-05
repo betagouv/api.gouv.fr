@@ -6,6 +6,8 @@ import { ButtonLink } from '../../uiComponents/button';
 import constants from '../../constants';
 import { logCTA } from '../../service/analytics';
 
+import { apiLogo, republiqueFrLogo } from './logos';
+
 export const HEADER_PAGE = {
   APIS: 'apis',
   FROM_SIGNUP: 'requests',
@@ -74,16 +76,8 @@ const Header = ({ headerKey = 'home', useMenu = true }) => {
               className="nav__logo-wrapper"
               alt="Retourner à l’accueil de api.gouv.fr"
             >
-              <img
-                className="nav__logo"
-                src="/images/logo_RF.svg"
-                alt="Un site de la République Française"
-              />
-              <img
-                className="nav__logo"
-                src="/images/api.gouv.fr.svg"
-                alt="Logo api.gouv.fr"
-              />
+              <span className="nav__logo">{republiqueFrLogo}</span>
+              <span className="nav__logo">{apiLogo}</span>
             </a>
           </Link>
           {useMenu && (

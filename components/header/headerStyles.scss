@@ -48,16 +48,32 @@ header {
         padding: 0;
 
         .nav__logo:first-of-type {
-          height: 75px;
           padding: 0;
           box-sizing: content-box;
+          margin: 0;
+          > svg {
+            height: 55px;
+            margin: 0;
+            padding: 0;
+            display: block;
+
+            @media (max-width: 600px) {
+            }
+          }
         }
         .nav__logo:last-of-type {
-          height: 28px;
+          margin: 0;
           padding: 0 0 0 20px;
           box-sizing: content-box;
-          @media (max-width: 600px) {
-            height: 23px;
+
+          > svg {
+            height: 28px;
+            margin: 0;
+            padding: 0;
+
+            @media (max-width: 600px) {
+              height: 22px;
+            }
           }
         }
       }
