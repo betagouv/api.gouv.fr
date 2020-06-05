@@ -22,7 +22,7 @@ keywords:
   - EPCI
 rate_limiting_resume: 50 appels / seconde / IP
 rate_limiting_description: |
-  <p>L'API est disponible à hauteur de 10 appels par seconde et par adresse IP.</p>
+  <p>L'API est disponible à hauteur de 50 appels par seconde et par adresse IP.</p>
 themes:
   - Géographie
 stat:
