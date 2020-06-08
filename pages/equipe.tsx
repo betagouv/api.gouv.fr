@@ -8,26 +8,37 @@ const teamData = [
     name: 'Romain Tales',
     title: 'Chef du pôle API',
     linkedin: 'https://www.linkedin.com/in/romain-tales-5969737',
+    img: 'Romain.jpg',
   },
   {
     name: 'Patrick Amarelis',
     title: 'Référent administration, ministères & collectivités',
-    linkedin: 'https://www.linkedin.com/in/romain-tales-5969737',
+    linkedin: 'https://www.linkedin.com/in/patrick-amarelis-8853205/',
+    img: 'Patrick.jpg',
   },
   {
     name: 'Xavier Jouppe',
     title: 'Responsable produit - api.gouv.fr',
     linkedin: 'https://www.linkedin.com/in/xavier-jouppe-a9030579/',
+    img: 'Xavier.jpg',
   },
   {
     name: 'Stanislas Bernard',
     title: 'Responsable produit - API Particulier',
     linkedin: 'https://www.linkedin.com/in/stanislas-bernard-3b14b586/',
+    img: 'Stanislas.jpg',
   },
   {
     name: 'Vincent Mazalaigue',
     title: 'Responsable produit - API Entreprise',
     linkedin: 'https://www.linkedin.com/in/vmazalaigue/',
+    img: 'Vincent.jpg',
+  },
+  {
+    name: 'Amandine Audras',
+    title: 'Designeuse produit',
+    linkedin: 'https://www.linkedin.com/in/amandineaudras/',
+    img: 'Amandine.jpg',
   },
 ];
 
@@ -82,9 +93,9 @@ const Team: React.FC = () => (
       <h3>Nos forces vives</h3>
       <div className="default-grid">
         {teamData.map(teamate => (
-          <div className="medaillon">
+          <div className="medaillon" key={teamate.name}>
             <div>
-              <img src="/images/equipe/default_boy.png" alt="" />
+              <img src={`/images/equipe/${teamate.img}`} alt="" />
             </div>
             <h4>
               {teamate.name}{' '}
@@ -105,12 +116,12 @@ const Team: React.FC = () => (
     <style jsx>{`
       .medaillon {
         text-align: center;
+        margin: 25px 15px 10px;
       }
       .medaillon img {
         background-color: #eee;
-        border-radius: 30px;
-        width: 130px;
-        margin: 25px 20px 10px;
+        border-radius: 25px;
+        width: 120px;
       }
       .medaillon h4 {
         margin: 5px 0;
