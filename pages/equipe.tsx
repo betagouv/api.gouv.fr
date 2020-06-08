@@ -7,13 +7,13 @@ import constants from '../constants';
 const teamData = [
   {
     name: 'Romain Tales',
-    title: 'Chef du pôle API',
+    title: 'Chef de mission DATA',
     linkedin: 'https://www.linkedin.com/in/romain-tales-5969737',
     img: 'Romain.jpg',
   },
   {
     name: 'Patrick Amarelis',
-    title: 'Référent administration, ministères & collectivités',
+    title: 'Responsable administrations, ministères & collectivités',
     linkedin: 'https://www.linkedin.com/in/patrick-amarelis-8853205/',
     img: 'Patrick.jpg',
   },
@@ -68,9 +68,9 @@ const Team: React.FC = () => (
       <ul>
         <li>la multiplicité des sources de données et des interlocuteurs</li>
         <li>
-          la difficulté d’identifier la source de donnée adaptée à leur service
+          la difficulté d’identifier la bonne source de donnée, adaptée à leur
+          service
         </li>
-        <li>la réticence des fournisseurs d’API à ouvrir certaines données</li>
         <li>la difficulté d’obtenir l'accès à la donnée</li>
         <li>la difficulté de construire un service fiable avec la donnée</li>
       </ul>
@@ -84,17 +84,17 @@ const Team: React.FC = () => (
           <b>recenser</b> les apis existantes
         </li>
         <li>
-          <b>conseiller</b> et accompagner les constructeurs de services
+          <b>conseiller</b> les administrations qui construisent des services
           numériques
         </li>
         <li>
-          <b>faciliter</b> et numériser les procédures d'habilitation pour
-          accèder à la donnée
+          <b>faciliter</b> et dématérialiser l’accès aux données entre
+          administrations habilitées
         </li>
         <li>
           <b>rassurer</b> et établir une relation de confiance entre les
-          constructeurs de services informatiques et l'administration
-          responsable de la donnée
+          administrations qui construisent des services numériques et celles qui
+          mettent à disposition leurs données
         </li>
       </ul>
       <h3>Nos forces vives</h3>
