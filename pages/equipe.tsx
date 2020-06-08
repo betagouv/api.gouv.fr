@@ -2,6 +2,7 @@ import React from 'react';
 
 import Page from '../layouts/page';
 import { HEADER_PAGE } from '../components';
+import constants from '../constants';
 
 const teamData = [
   {
@@ -40,6 +41,12 @@ const teamData = [
     linkedin: 'https://www.linkedin.com/in/amandineaudras/',
     img: 'Amandine.jpg',
   },
+  {
+    name: 'Raphaël Dubigny',
+    title: 'Responsable produit - Signup',
+    linkedin: 'https://www.linkedin.com/in/rapha%C3%ABl-dubigny-a085034a/',
+    img: 'Raph.jpg',
+  },
 ];
 
 const Team: React.FC = () => (
@@ -50,7 +57,7 @@ const Team: React.FC = () => (
     canonical={`https://api.gouv.fr/apropos`}
   >
     <div className="text-wrapper text-style">
-      <h1 className="layout-center">L’équipe des APIs</h1>
+      <h1 className="layout-center">L’équipe des APIs </h1>
       <h2>Une équipe, une mission</h2>
       <p>
         Au sein des administrations, la donnée est une ressource dispersée,
@@ -93,30 +100,31 @@ const Team: React.FC = () => (
       <h3>Nos forces vives</h3>
       <div className="default-grid">
         {teamData.map(teamate => (
-          <div className="medaillon" key={teamate.name}>
+          <a
+            href={teamate.linkedin}
+            rel="noopener noreferrer"
+            target="_blank"
+            className="dont-apply-link-style medaillon"
+            key={teamate.name}
+          >
             <div>
               <img src={`/images/equipe/${teamate.img}`} alt="" />
             </div>
             <h4>
-              {teamate.name}{' '}
-              <a
-                className="linkedin dont-apply-link-style"
-                href={teamate.linkedin}
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                in
-              </a>
+              {teamate.name} <span className="linkedin">in</span>
             </h4>
             <div className="title">{teamate.title}</div>
-          </div>
+          </a>
         ))}
       </div>
     </div>
     <style jsx>{`
       .medaillon {
+        display: block;
         text-align: center;
         margin: 25px 15px 10px;
+        color: ${constants.colors.darkestGrey};
+        text-decoration: none;
       }
       .medaillon img {
         background-color: #eee;
@@ -133,12 +141,11 @@ const Team: React.FC = () => (
         margin-left: 5px;
         border-radius: 4px;
         background-color: #6c6c6c;
-        text-decoration: none;
         font-weight: bold;
         padding: 1px 4px;
         color: #fff;
       }
-      .medaillon .linkedin:hover {
+      .medaillon:hover .linkedin {
         background-color: #0e76a8;
       }
     `}</style>
