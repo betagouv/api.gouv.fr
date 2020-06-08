@@ -91,6 +91,8 @@ const Team: React.FC = () => (
               <a
                 className="linkedin dont-apply-link-style"
                 href={teamate.linkedin}
+                rel="noopener noreferrer"
+                target="_blank"
               >
                 in
               </a>
@@ -107,8 +109,8 @@ const Team: React.FC = () => (
       .medaillon img {
         background-color: #eee;
         border-radius: 30px;
-        width: 150px;
-        margin: 15px 20px 10px;
+        width: 130px;
+        margin: 25px 20px 10px;
       }
       .medaillon h4 {
         margin: 5px 0;
@@ -119,10 +121,10 @@ const Team: React.FC = () => (
       .medaillon .linkedin {
         margin-left: 5px;
         border-radius: 4px;
-        background-color: #ccc;
+        background-color: #6c6c6c;
         text-decoration: none;
         font-weight: bold;
-        padding: 2px 3px;
+        padding: 1px 4px;
         color: #fff;
       }
       .medaillon .linkedin:hover {
