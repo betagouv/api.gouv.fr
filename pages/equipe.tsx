@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Page from '../layouts/page';
-import { HEADER_PAGE } from '../components';
 import constants from '../constants';
 
 const teamData = [
@@ -47,14 +46,19 @@ const teamData = [
     linkedin: 'https://www.linkedin.com/in/rapha%C3%ABl-dubigny-a085034a/',
     img: 'Raph.jpg',
   },
+  {
+    name: 'Christophe Gaie',
+    title: 'Responsable de la plate-forme d’échange inter-administrations',
+    linkedin: 'https://www.linkedin.com/in/christophegaie/',
+    img: 'Christophe.jpg',
+  },
 ];
 
 const Team: React.FC = () => (
   <Page
-    headerKey={HEADER_PAGE.ABOUT}
     title="L'équipe"
     description="L'équipe derrière le site, à votre disposition pour construire les services numériques de demain"
-    canonical={`https://api.gouv.fr/apropos`}
+    canonical={`https://api.gouv.fr/equipe`}
   >
     <div className="text-wrapper text-style">
       <h1 className="layout-center">L’équipe des APIs </h1>
@@ -97,9 +101,9 @@ const Team: React.FC = () => (
           mettent à disposition leurs données
         </li>
       </ul>
-      <h3>Nos forces vives</h3>
+      <h3>La fine équipe</h3>
       <div className="default-grid">
-        {teamData.map(teamate => (
+        {teamData.map((teamate, index) => (
           <a
             href={teamate.linkedin}
             rel="noopener noreferrer"
@@ -107,8 +111,18 @@ const Team: React.FC = () => (
             className="dont-apply-link-style medaillon"
             key={teamate.name}
           >
-            <div>
+            <div className="img-wrapper">
               <img src={`/images/equipe/${teamate.img}`} alt="" />
+              <svg width="0" height="0">
+                <defs>
+                  <clipPath id="mask">
+                    <path
+                      d="M13 10C6.5 17 1 43 0.5 58.5C0.5 71.3333 4.6 99 21 107C41.5 117 49 105.5 63.5 107C78 108.5 83 115.5 96.5 115.5C104.5 115.5 113.607 101.571 116.5 90C119.5 78 119 40 110 22.5C101 5 87.3185 -0.550104 79 2.5C64 8 42.5 0 36 0C29.5 0 19.5 3 13 10Z"
+                      fill="white"
+                    />
+                  </clipPath>
+                </defs>
+              </svg>
             </div>
             <h4>
               {teamate.name} <span className="linkedin">in</span>
@@ -129,8 +143,19 @@ const Team: React.FC = () => (
       .medaillon img {
         background-color: #eee;
         border-radius: 25px;
-        width: 120px;
+        width: 100%;
+        display: block;
+        margin: auto;
+        clip-path: url(#mask);
       }
+
+      .medaillon .img-wrapper {
+        position: relative;
+        display: block;
+        width: 120px;
+        margin: auto;
+      }
+
       .medaillon h4 {
         margin: 5px 0;
       }
@@ -144,6 +169,10 @@ const Team: React.FC = () => (
         font-weight: bold;
         padding: 1px 4px;
         color: #fff;
+      }
+
+      .medaillon:hover h4 {
+        text-decoration: underline;
       }
       .medaillon:hover .linkedin {
         background-color: #0e76a8;
