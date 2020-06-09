@@ -14,5 +14,4 @@ export default {
   },
   ADD_API:
     'https://github.com/betagouv/api.gouv.fr/blob/master/CONTRIBUTING.md#ajouter-une-api',
-  SIGNUP: 'https://signup.api.gouv.fr',
 };

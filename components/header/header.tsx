@@ -3,10 +3,10 @@ import Link from 'next/link';
 import { throttle } from 'lodash';
 
 import { ButtonLink } from '../../uiComponents/button';
-import constants from '../../constants';
 import { logCTA } from '../../service/analytics';
-
 import { apiLogo, republiqueFrLogo } from './logos';
+
+const SIGNUP_URL = process.env.SIGNUP_URL || 'https://signup.api.gouv.fr';
 
 export const HEADER_PAGE = {
   APIS: 'apis',
@@ -107,10 +107,7 @@ const Header = ({ headerKey = 'home', useMenu = true }) => {
               </>
             ) : (
               <li>
-                <a
-                  className="dont-apply-link-style"
-                  href={`${constants.links.SIGNUP}`}
-                >
+                <a className="dont-apply-link-style" href={`${SIGNUP_URL}`}>
                   Mes demandes
                 </a>
               </li>
