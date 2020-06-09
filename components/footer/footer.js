@@ -47,16 +47,16 @@ const Footer = () => {
             <h2>Le site</h2>
           </li>
           <li>
-            <a href="/feuille-de-route">La feuille de route des APIs</a>
+            <a href="/feuille-de-route">Feuille de route des APIs</a>
           </li>
           <li>
-            <a href="/documentation">La documentation des APIs</a>
+            <a href="/documentation">Documentation des APIs</a>
           </li>
           <li>
-            <a href="/mentions-legales">Les mentions Légales</a>
+            <a href="/mentions-legales">Mentions Légales</a>
           </li>
           <li>
-            <a href="/vie-privee">Le suivi d'audience & de la vie privée</a>
+            <a href="/vie-privee">Audience & vie privée</a>
           </li>
         </ul>
         <ul className="footer__links">
@@ -64,25 +64,10 @@ const Footer = () => {
             <h2>L’équipe</h2>
           </li>
           <li>
+            <a href="/equipe">Qui sommes-nous ?</a>
+          </li>
+          <li>
             <a href="/contact">Nous contacter</a>
-          </li>
-          <li>
-            <a
-              href="https://beta.gouv.fr/"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Une réalisation de beta.gouv.fr
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://numerique.gouv.fr/"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Une mission de la DINUM
-            </a>
           </li>
           <li>
             <a
@@ -91,6 +76,38 @@ const Footer = () => {
               target="_blank"
             >
               Améliorer cette page
+            </a>
+          </li>
+        </ul>
+        <ul className="footer__links">
+          <li>
+            <h2>Les partenaires</h2>
+          </li>
+          <li>
+            <a
+              href="https://beta.gouv.fr/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              beta.gouv.fr
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.etalab.gouv.fr/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Etalab
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://numerique.gouv.fr/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              La DINUM
             </a>
           </li>
         </ul>
