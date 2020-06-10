@@ -41,7 +41,7 @@ const Header = ({ headerKey = 'home', useMenu = true }) => {
         />
 
         <div className="nav__container">
-          <Link href="/">
+          <Link href="/documentation">
             <a
               className="nav__logo-wrapper"
               title="Retourner à l’accueil de la documentation des APIs du service public"

@@ -49,7 +49,13 @@ const Documentation: React.FC<IProps> = ({ allApis }) => {
           <p>
             Attention, les APIs tombent dans deux grandes catégories. Les{' '}
             <b>APIs ouvertes</b> qui sont accessibles à tous. Et les{' '}
-            <b>APIs qui nécessitent une habilitations</b>.
+            <b>
+              APIs qui nécessitent une habilitation{' '}
+              <span role="img" aria-label="émoji cadenas">
+                🔒
+              </span>{' '}
+            </b>
+            .
           </p>
           <p>
             <span role="img" aria-label="émoji ninja">
