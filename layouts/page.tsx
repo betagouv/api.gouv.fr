@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Footer, PreFooter, Header, Meta } from '../components';
+import { Footer, PreFooter, Header, Meta, DocHeader } from '../components';
 
 interface IProps {
   title: string;
@@ -9,7 +9,7 @@ interface IProps {
   usePreFooter?: boolean;
   useFooter?: boolean;
   preFooterBackground?: string;
-  useMenu?: boolean;
+  useDocHeader?: boolean;
   noIndex?: boolean;
   canonical?: string;
 }
@@ -20,7 +20,7 @@ const Page: React.FC<IProps> = ({
   headerKey,
   usePreFooter = true,
   useFooter = true,
-  useMenu = true,
+  useDocHeader = false,
   noIndex = false,
   preFooterBackground,
   canonical,
@@ -33,7 +33,7 @@ const Page: React.FC<IProps> = ({
       noIndex={noIndex}
       canonical={canonical}
     />
-    <Header headerKey={headerKey || 'home'} useMenu={useMenu} />
+    {useDocHeader ? <DocHeader /> : <Header headerKey={headerKey || 'home'} />}
     <main>{children}</main>
     {usePreFooter && <PreFooter background={preFooterBackground} />}
     {useFooter && <Footer />}

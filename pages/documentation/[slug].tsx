@@ -8,6 +8,8 @@ import { ButtonLink } from '../../uiComponents';
 import DocumentationLeftMenu from '../../components/documentation';
 
 import constants from '../../constants';
+import { roundUptime, getUptimeState } from '../../utils';
+import { Access } from '../../components/api';
 
 interface IProps {
   api: IApi;
@@ -15,7 +17,18 @@ interface IProps {
 }
 
 const Documentation: React.FC<IProps> = ({ api, allApis }) => {
-  const { title, doc_tech_link, doc_tech_external, path } = api;
+  const {
+    title,
+    doc_tech_link,
+    doc_tech_external,
+    path,
+    access_link,
+    uptime,
+    is_open,
+    access_condition,
+    access_description,
+    clients,
+  } = api;
 
   return (
     <Page
@@ -24,58 +37,134 @@ const Documentation: React.FC<IProps> = ({ api, allApis }) => {
       useFooter={false}
       noIndex={true}
       usePreFooter={false}
-      useMenu={false}
+      useDocHeader={true}
       canonical={`https://api.gouv.fr/documentation/${api.slug}`}
     >
       <div className="documentation-wrapper">
         <DocumentationLeftMenu allApis={allApis} />
-        <div className="documentation-body">
+        <div className="documentation-content">
           <div className="documentation-header">
-            Bienvenue sur la documentation technique de <b>{title}</b>. Pour
-            accèder à la présentation complète de l’API{' '}
-            <a href={path}>cliquez ici</a>.
-          </div>
-
-          <div>
-            {doc_tech_link ? (
-              <SwaggerUIWrapper url={doc_tech_link} />
-            ) : doc_tech_external ? (
-              <>
-                <h1>{title}</h1>
-                <p>
-                  <span role="img" aria-label="emoji triste">
-                    😔
-                  </span>{' '}
-                  Malheureusement, cette API ne possède pas de documentation au
-                  format{' '}
-                  <a
-                    href="https://swagger.io/docs/specification/about/"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                  >
-                    Open API
-                  </a>
-                  .
-                </p>
-
-                <p>
-                  Vous pouvez néanmoins accèder à la documentation en suivant ce
-                  lien :
-                </p>
-                <ButtonLink
-                  href={doc_tech_external}
-                  rel="noopener"
-                  target="_blank"
-                  alt
+            <h1>{title}</h1>
+            {uptime && (
+              <div
+                className="availability btn-icon"
+                title={`Sur le dernier mois, cette API était active ${roundUptime(
+                  2
+                )(uptime)}% du temps`}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
                 >
-                  Accéder à la documentation
-                </ButtonLink>
-              </>
-            ) : (
-              <p>
-                La documentation de cette API n'est pas disponible publiquement.
-              </p>
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+                <span>{roundUptime(2)(uptime)}%</span>
+              </div>
             )}
+            <div className="separator" />
+            {access_link && (
+              <ButtonLink href={'/'}>
+                <div className="layout-center btn-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <rect
+                      x="3"
+                      y="11"
+                      width="18"
+                      fill="white"
+                      height="11"
+                      rx="2"
+                      ry="2"
+                    ></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                  </svg>
+                  Demander accès à l’API
+                </div>
+              </ButtonLink>
+            )}
+            <ButtonLink href="/" alt>
+              <div className="layout-center btn-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <circle cx="18" cy="5" r="3"></circle>
+                  <circle cx="6" cy="12" r="3"></circle>
+                  <circle cx="18" cy="19" r="3"></circle>
+                  <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                  <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                </svg>
+                Partager cette API avec mon équipe
+              </div>
+            </ButtonLink>
+          </div>
+          <div className="documentation-body">
+            <div>
+              Bienvenue sur la documentation technique de <b>{title}</b>. Cette
+              page présente les caractéristiques techniques de l’API. Pour plus
+              d’information sur les caractèristique fonctionnelles,{' '}
+              <a href={path}>accèdez à la fiche métier.</a>
+            </div>
+
+            <div>
+              {doc_tech_link ? (
+                <SwaggerUIWrapper url={doc_tech_link} />
+              ) : doc_tech_external ? (
+                <>
+                  <h1>{title}</h1>
+                  <p>
+                    <span role="img" aria-label="emoji triste">
+                      😔
+                    </span>{' '}
+                    Malheureusement, cette API ne possède pas de documentation
+                    au format{' '}
+                    <a
+                      href="https://swagger.io/docs/specification/about/"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      Open API
+                    </a>
+                    .
+                  </p>
+
+                  <p>
+                    Vous pouvez néanmoins accèder à la documentation en suivant
+                    ce lien :
+                  </p>
+                  <ButtonLink
+                    href={doc_tech_external}
+                    rel="noopener"
+                    target="_blank"
+                    alt
+                  >
+                    Accéder à la documentation
+                  </ButtonLink>
+                </>
+              ) : (
+                <p>
+                  La documentation de cette API n'est pas disponible
+                  publiquement.
+                </p>
+              )}
+            </div>
           </div>
         </div>
       </div>
@@ -85,14 +174,52 @@ const Documentation: React.FC<IProps> = ({ api, allApis }) => {
           display: flex;
           flex-direction: row;
         }
-        .documentation-body {
+        .documentation-content {
           height: calc(100vh - ${constants.layout.HEADER_HEIGHT}px);
           overflow: auto;
           flex-grow: 1;
-          padding: 0 30px;
         }
+
+        .documentation-body,
         .documentation-header {
-          margin-top: 20px;
+          padding: 10px 30px;
+        }
+
+        .documentation-header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border-bottom: 2px solid ${constants.colors.lightGrey};
+          background-color: #133675;
+          height: 60px;
+          color: #fff;
+        }
+
+        .documentation-header h1 {
+          color: white;
+          margin: 0;
+          padding: 0;
+          line-height: initial;
+          font-size: 1.3rem;
+        }
+
+        .availability {
+          background-color: ${getUptimeState(uptime)};
+          color: white;
+          padding: 5px 6px;
+          margin-left: 15px;
+          border-radius: 5px;
+          font-weight: bold;
+          font-size: 1.1rem;
+          display: flex;
+          align-items: center;
+        }
+        .separator {
+          flex-grow: 1;
+        }
+
+        .btn-icon > svg {
+          margin-right: 5px;
         }
       `}</style>
     </Page>
