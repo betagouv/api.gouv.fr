@@ -37,6 +37,7 @@ const Header = ({ headerKey = 'home', useMenu = true }) => {
       if (!header || !header.current) {
         return;
       }
+      //@ts-ignore
       const headerClasses = header.current.classList;
       const hasScrolledClass = headerClasses.contains('scrolled');
       if (
@@ -63,67 +64,58 @@ const Header = ({ headerKey = 'home', useMenu = true }) => {
           id="menu-btn"
           aria-label="ouverture-menu"
         />
-        {useMenu && (
-          <label className="hamburger-menu" htmlFor="menu-btn">
-            <span />
-            <span />
-            <span />
-          </label>
-        )}
+        <label className="hamburger-menu" htmlFor="menu-btn">
+          <span />
+          <span />
+          <span />
+        </label>
         <div className="nav__container">
           <Link href="/">
             <a
               className="nav__logo-wrapper"
-              alt="Retourner à l’accueil de api.gouv.fr"
+              title="Retourner à l’accueil de api.gouv.fr"
             >
               <span className="nav__logo">{republiqueFrLogo}</span>
               <span className="nav__logo">{apiLogo}</span>
             </a>
           </Link>
-          {useMenu && (
-            <ul className="nav__links">
-              {headerKey !== HEADER_PAGE.FROM_SIGNUP ? (
-                <>
-                  {HEADER.map(item => (
-                    <Fragment key={item.href}>
-                      {!item.hide && (
-                        <li
-                          id={item.id || ''}
-                          className={`${
-                            headerKey === item.key ? 'current' : ''
-                          }`}
-                        >
-                          <a
-                            className="dont-apply-link-style"
-                            href={`${item.href}`}
-                          >
-                            {item.txt}
-                          </a>
-                        </li>
-                      )}
-                    </Fragment>
-                  ))}
-                  <li className="external">
-                    <ButtonLink
-                      href="/parcours-client?source=header"
-                      onClick={() => logCTA('CTA header')}
+          <ul className="nav__links">
+            {headerKey !== HEADER_PAGE.FROM_SIGNUP ? (
+              <>
+                {HEADER.map(item => (
+                  <Fragment key={item.href}>
+                    <li
+                      className={`${headerKey === item.key ? 'current' : ''}`}
                     >
-                      Une question ?
-                    </ButtonLink>
-                  </li>
-                </>
-              ) : (
-                <li>
-                  <a
-                    className="dont-apply-link-style"
-                    href={`${constants.links.SIGNUP}`}
+                      <a
+                        className="dont-apply-link-style"
+                        href={`${item.href}`}
+                      >
+                        {item.txt}
+                      </a>
+                    </li>
+                  </Fragment>
+                ))}
+                <li className="external">
+                  <ButtonLink
+                    href="/parcours-client?source=header"
+                    onClick={() => logCTA('CTA header')}
                   >
-                    Mes demandes
-                  </a>
+                    Une question ?
+                  </ButtonLink>
                 </li>
-              )}
-            </ul>
-          )}
+              </>
+            ) : (
+              <li>
+                <a
+                  className="dont-apply-link-style"
+                  href={`${constants.links.SIGNUP}`}
+                >
+                  Mes demandes
+                </a>
+              </li>
+            )}
+          </ul>
         </div>
       </nav>
     </header>

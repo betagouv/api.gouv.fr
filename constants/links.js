@@ -10,6 +10,7 @@ export default {
     NOUVELLE_AQUITAINE:
       'mailto:contact@api.gouv.fr?subject=Dématerialiser%20des%20justificatifs',
     SUPPORT: 'mailto:contact@api.gouv.fr',
+    SHARE: 'mailto:exemple@equipe.fr',
   },
   ADD_API:
     'https://github.com/betagouv/api.gouv.fr/blob/master/CONTRIBUTING.md#ajouter-une-api',

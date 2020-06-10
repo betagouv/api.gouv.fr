@@ -33,6 +33,21 @@ header {
     height: 100%;
     z-index: 100;
 
+    .github-corner {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 0;
+      padding: 0;
+
+      svg {
+        fill: orange;
+      }
+      &:hover svg {
+        fill: rgb(255, 217, 0);
+      }
+    }
+
     .nav__container {
       display: flex;
       flex-grow: 1;
@@ -65,6 +80,7 @@ header {
           margin: 0;
           padding: 0 0 0 20px;
           box-sizing: content-box;
+          display: flex;
 
           > svg {
             height: 28px;

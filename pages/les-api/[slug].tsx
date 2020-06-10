@@ -24,7 +24,7 @@ import {
   Content,
   Thumbnails,
 } from '../../components/api';
-import { HEADER_PAGE } from '../../components/header';
+import { HEADER_PAGE } from '../../components';
 
 import { getWindowHash, isElementVisible } from '../../utils';
 import constants from '../../constants';
