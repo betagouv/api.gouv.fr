@@ -47,10 +47,18 @@ const DocumentationLeftMenu: React.FC<IProps> = ({ allApis }) => {
               <a>
                 {api.title}
                 {api.doc_tech_link && (
-                  <span className="swagger-label">OAS</span>
+                  <span
+                    title="Cette API propose une documentation au format Open API"
+                    className="swagger-label"
+                  >
+                    OAS
+                  </span>
                 )}
                 {!api.is_open && (
-                  <span className="is-open-label">
+                  <span
+                    title="Cette API nécessite une habilitation"
+                    className="is-open-label"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="16"

@@ -27,6 +27,8 @@ const Documentation: React.FC<IProps> = ({ api, allApis }) => {
     is_open,
   } = api;
 
+  const shareLink = `${constants.links.mailto.SHARE}?subject=Connaissez vous ${title} ?&body=https://api.gouv.fr/documentation/${slug}`;
+
   return (
     <Page
       title={`Documentation de ${title}`}
@@ -66,6 +68,9 @@ const Documentation: React.FC<IProps> = ({ api, allApis }) => {
             <a
               className="share-api"
               title="Partager cette API aux membres de mon équipe"
+              href={encodeURI(shareLink)}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
