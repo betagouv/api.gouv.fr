@@ -30,7 +30,7 @@ const Documentation: React.FC<IProps> = ({ allApis }) => {
           </p>
           <p>
             Cette espace s’adresse à tous ceux - développeurs.ses, architectes,
-            products owners, craftmans, magicien.nes du web...{' '}
+            products owners, craftman.es, magicien.nes du web...{' '}
             <span role="img" aria-label="émoji ninja">
               🧙‍♀️
             </span>{' '}
