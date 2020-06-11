@@ -1,4 +1,3 @@
-const Dotenv = require('dotenv-webpack');
 const withFonts = require('nextjs-fonts');
 
 module.exports = withFonts({
@@ -7,7 +6,6 @@ module.exports = withFonts({
       test: /\.md$/,
       use: 'raw-loader',
     });
-    config.plugins.push(new Dotenv({ silent: true }));
     return config;
   },
 });
