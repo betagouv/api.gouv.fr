@@ -6,15 +6,14 @@ import { ButtonLink } from '../../uiComponents/button';
 
 import { logDemanderAcces } from '../../service/analytics';
 
-const SIGNUP_URL = process.env.SIGNUP_URL;
+const SIGNUP_URL = process.env.SIGNUP_URL || 'https://signup.api.gouv.fr';
 
 const Access = ({ is_open, link, description, condition, clients }) => {
   const signup_url_parts =
-    link.match(/^https:\/\/signup.api.gouv.fr(.*)/) || [];
+    (link || '').match(/^https?:\/\/signup.api.gouv.fr(.*)/) || [];
   const signup_path =
     signup_url_parts.length === 2 ? signup_url_parts[1] : null;
-  const fixed_link =
-    SIGNUP_URL && signup_path ? `${SIGNUP_URL}${signup_path}` : link;
+  const fixed_link = signup_path ? `${SIGNUP_URL}${signup_path}` : link;
 
   return (
     <Section id="access" title="Conditions d’accès">

@@ -8,7 +8,7 @@
     "sitemap": "node nodeScripts/saveUrlList.js && sitemap < ./public/url-list.txt > ./public/sitemap.xml",
     "dev": "NODE_ENV=development next",
     "test": "jest",
-    "start": "next start",
+    "start": "next start -p $PORT",
     "analyze": "NODE_ENV=production ANALYZE=true next build",
     "build": "NODE_ENV=production npm run sitemap && next build",
     "lint": "eslint '**/*.{ts,tsx}' --max-warnings 20"

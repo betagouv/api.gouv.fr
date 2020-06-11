@@ -71,7 +71,7 @@ npm run build
 3. Lancer le serveur de production
 
 ```bash
-npm run start
+PORT=3000 npm start
 ```
 
 ### Développement
