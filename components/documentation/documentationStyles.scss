@@ -18,36 +18,42 @@
   .documentation-api-list {
     height: calc(100vh - 82px - #{$headerHeight + 'px'});
     overflow: auto;
-  }
 
-  .documentation-api-list > div,
-  a {
-    padding: 10px 20px;
-    display: block;
-    color: #eff6ff;
-    text-decoration: none;
-    font-weight: 400;
+    > div,
+    a {
+      padding: 10px 20px;
+      color: #eff6ff;
+      text-decoration: none;
+      font-weight: 400;
+      display: flex;
+      align-items: center;
 
-    &:hover {
-      background-color: #0b2a63;
-      text-decoration: underline;
+      &:hover {
+        background-color: #0b2a63;
+        text-decoration: underline;
+      }
+      div.api-title {
+        flex-grow: 1;
+
+        span.swagger-label {
+          background-color: $orange;
+          color: #333;
+          padding: 1px 4px;
+          margin: 0 5px;
+          font-size: 0.7rem;
+          font-weight: bold;
+          border-radius: 4px;
+          text-transform: uppercase;
+          flex-shrink: 0;
+        }
+      }
+      span.is-open-label {
+        flex-shrink: 0;
+        padding: 2px;
+        margin-right: 10px;
+        text-transform: uppercase;
+      }
     }
-  }
-
-  span.swagger-label {
-    background-color: $orange;
-    color: #333;
-    padding: 1px 5px;
-    margin-left: 5px;
-    font-size: 0.7rem;
-    font-weight: bold;
-    border-radius: 4px;
-    text-transform: uppercase;
-  }
-  span.is-open-label {
-    float: right;
-    padding: 2px;
-    text-transform: uppercase;
   }
 
   @media only screen and (min-width: 1px) and (max-width: 768px) {

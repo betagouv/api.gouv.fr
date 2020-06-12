@@ -133,7 +133,7 @@ const Documentation: React.FC<IProps> = ({ api, allApis }) => {
             <div>
               Bienvenue sur la documentation technique de <b>{title}</b>. Cette
               page présente les caractéristiques techniques de l’API. Pour plus
-              d’information sur les caractèristique fonctionnelles,{' '}
+              d’information sur les caractéristiques fonctionnelles,{' '}
               <a href={path}>accèdez à la fiche métier.</a>
             </div>
 

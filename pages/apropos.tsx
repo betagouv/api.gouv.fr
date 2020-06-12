@@ -15,7 +15,7 @@ const About: React.FC = () => (
       <p>
         Ce site référence les APIs du service publique, mises à la disposition
         des collectivités, des ministères et des entreprises pour construire des
-        services informatiques au services de tous.
+        services informatiques au service de tous.
       </p>
       <div>
         <h2>
@@ -51,9 +51,9 @@ const About: React.FC = () => (
           Afin d'aider toutes les organisations qui veulent{' '}
           <b>construire un service informatique</b>, api.gouv.fr{' '}
           <a href="/rechercher-api">
-            référence les API de toutes les administrations
+            référence les APIs de toutes les administrations
           </a>{' '}
-          qui rendent leur données disponibles.
+          qui rendent leurs données disponibles.
         </p>
       </div>
       <div>
@@ -69,7 +69,7 @@ const About: React.FC = () => (
         <p>
           {' '}
           Vous êtes en train de concevoir un service informatique ? Nous avons
-          surement l'API qui vous correspond.
+          surement l’API qui vous correspond.
         </p>
         <p>
           Toutes nos APIs{' '}
@@ -89,7 +89,7 @@ const About: React.FC = () => (
           </span>
         </h2>
         <p>
-          Une grande partie des données publique sont libres d'accès. C'est ce
+          Une grande partie des données publiques sont libres d'accès. C'est ce
           que l'on appelle{' '}
           <a
             target="blank"
@@ -101,7 +101,7 @@ const About: React.FC = () => (
           Tout le monde peut y accèder.
         </p>
         <p>
-          D'autres données, comme par exemple les données fiscales, sont
+          D’autres données, comme par exemple les données fiscales, sont
           sensibles et doivent être protégées.{' '}
           <b>Ces données ne sont pas accessibles à tous</b> et seuls les
           organisations habilitées sont autorisées à y accèder.
