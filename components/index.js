@@ -1,8 +1,8 @@
 import { Footer, PreFooter } from './footer';
 import ServiceCard from './serviceCard';
-import Header, { HEADER_PAGE } from './header';
+import Header, { HEADER_PAGE } from './header/header';
+import DocHeader from './header/docHeader';
 import Meta from './meta';
-import SwaggerUIWrapper from './swagger';
 import Error from './error';
 
 export {
@@ -13,5 +13,5 @@ export {
   HEADER_PAGE,
   ServiceCard,
   Error,
-  SwaggerUIWrapper,
+  DocHeader,
 };

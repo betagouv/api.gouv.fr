@@ -1,5 +1,5 @@
 ---
-title: API Ingres
+title: API Ingres Nomenclatures
 tagline: Récupérez l'ensemble des référentiels utilisés par les SIRH de la Fonction Publique d'Etat
 owner: Centre Interministériel des Systèmes d'Information relatifs aux Ressources Humaines
 owner_acronym: CISIRH

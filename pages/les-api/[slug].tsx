@@ -24,12 +24,10 @@ import {
   Content,
   Thumbnails,
 } from '../../components/api';
-import { HEADER_PAGE } from '../../components/header';
+import { HEADER_PAGE } from '../../components';
 
 import { getWindowHash, isElementVisible } from '../../utils';
 import constants from '../../constants';
-
-const DEFAULT_LOGO = process.env.DEFAULT_LOGO || 'logo-beta-gouv.svg';
 
 interface IProps {
   api: IApi;
@@ -126,7 +124,11 @@ const API: React.FC<IProps> = ({ api, services = null }) => {
       description={`${title} est une des APIs du service public. ${tagline}`}
       canonical={`https://api.gouv.fr/les-api/${slug}`}
     >
-      <PageHeader title={title} logo={logo || DEFAULT_LOGO} tagline={tagline} />
+      <PageHeader
+        title={title}
+        logo={logo || constants.logo}
+        tagline={tagline}
+      />
 
       <Thumbnails
         is_open={is_open}

@@ -3,8 +3,10 @@ import Link from 'next/link';
 import { throttle } from 'lodash';
 
 import { ButtonLink } from '../../uiComponents/button';
-import constants from '../../constants';
 import { logCTA } from '../../service/analytics';
+import { apiLogo, republiqueFrLogo } from './logos';
+
+const SIGNUP_URL = process.env.SIGNUP_URL || 'https://signup.api.gouv.fr';
 
 export const HEADER_PAGE = {
   APIS: 'apis',
@@ -27,7 +29,7 @@ const HEADER = [
   { href: '/apropos', txt: 'À propos', key: HEADER_PAGE.ABOUT },
 ];
 
-const Header = ({ headerKey = 'home' }) => {
+const Header = ({ headerKey = 'home', useMenu = true }) => {
   const header = useRef(null);
 
   useEffect(() => {
@@ -35,6 +37,7 @@ const Header = ({ headerKey = 'home' }) => {
       if (!header || !header.current) {
         return;
       }
+      //@ts-ignore
       const headerClasses = header.current.classList;
       const hasScrolledClass = headerClasses.contains('scrolled');
       if (
@@ -68,33 +71,29 @@ const Header = ({ headerKey = 'home' }) => {
         </label>
         <div className="nav__container">
           <Link href="/">
-            <a className="nav__logo-wrapper">
-              <img
-                className="nav__logo"
-                src="/images/logo-api.gouv.fr.svg"
-                alt="Accueil de api.gouv.fr"
-              />
+            <a
+              className="nav__logo-wrapper"
+              title="Retourner à l’accueil de api.gouv.fr"
+            >
+              <span className="nav__logo">{republiqueFrLogo}</span>
+              <span className="nav__logo">{apiLogo}</span>
             </a>
           </Link>
-
           <ul className="nav__links">
             {headerKey !== HEADER_PAGE.FROM_SIGNUP ? (
               <>
                 {HEADER.map(item => (
                   <Fragment key={item.href}>
-                    {!item.hide && (
-                      <li
-                        id={item.id || ''}
-                        className={`${headerKey === item.key ? 'current' : ''}`}
+                    <li
+                      className={`${headerKey === item.key ? 'current' : ''}`}
+                    >
+                      <a
+                        className="dont-apply-link-style"
+                        href={`${item.href}`}
                       >
-                        <a
-                          className="dont-apply-link-style"
-                          href={`${item.href}`}
-                        >
-                          {item.txt}
-                        </a>
-                      </li>
-                    )}
+                        {item.txt}
+                      </a>
+                    </li>
                   </Fragment>
                 ))}
                 <li className="external">
@@ -108,10 +107,7 @@ const Header = ({ headerKey = 'home' }) => {
               </>
             ) : (
               <li>
-                <a
-                  className="dont-apply-link-style"
-                  href={`${constants.links.SIGNUP}`}
-                >
+                <a className="dont-apply-link-style" href={`${SIGNUP_URL}`}>
                   Mes demandes
                 </a>
               </li>

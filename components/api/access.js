@@ -4,29 +4,36 @@ import PropTypes from 'prop-types';
 import Section from './section';
 import { ButtonLink } from '../../uiComponents/button';
 
-import constants from '../../constants';
 import { logDemanderAcces } from '../../service/analytics';
 
+const SIGNUP_URL = process.env.SIGNUP_URL || 'https://signup.api.gouv.fr';
+
 const Access = ({ is_open, link, description, condition, clients }) => {
+  const signup_url_parts =
+    (link || '').match(/^https?:\/\/signup.api.gouv.fr(.*)/) || [];
+  const signup_path =
+    signup_url_parts.length === 2 ? signup_url_parts[1] : null;
+  const fixed_link = signup_path ? `${SIGNUP_URL}${signup_path}` : link;
+
   return (
     <Section id="access" title="Conditions d’accès">
       {is_open ? (
         <>
           <p>L'API est ouverte à tous.</p>
           <p>
-            Pour accèder aux données, consultez la{' '}
+            Pour accéder aux données, consultez la{' '}
             <a href="#doc_tech">documentation </a>
             {link ? (
               <>
-                ou le <a href={link}>site internet</a>
+                ou le <a href={fixed_link}>site internet</a>
               </>
             ) : (
               ''
             )}
           </p>
         </>
-      ) : link ? (
-        <div className="get-access">
+      ) : fixed_link ? (
+        <div className="highlight-info">
           {description && (
             <div dangerouslySetInnerHTML={{ __html: description }} />
           )}
@@ -49,30 +56,13 @@ const Access = ({ is_open, link, description, condition, clients }) => {
           ) : (
             <p>{condition}</p>
           )}
-          <ButtonLink href={link} onClick={logDemanderAcces} large>
+          <ButtonLink href={fixed_link} onClick={logDemanderAcces} large>
             <i className="icon key"></i>Demandez l'accès
           </ButtonLink>
         </div>
       ) : (
         <p>Accès à l'API non documenté</p>
       )}
-      <style jsx>{`
-        .get-access {
-          border-left: 5px solid ${constants.colors.blue};
-          background-color: ${constants.colors.lightBlue};
-          color: ${constants.colors.blue};
-          padding: 1.5rem 2rem;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-end;
-        }
-
-        .get-access > div,
-        .get-access > p {
-          width: 100%;
-          margin-bottom: 10px;
-        }
-      `}</style>
     </Section>
   );
 };

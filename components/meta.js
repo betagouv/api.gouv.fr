@@ -7,7 +7,7 @@ import { NextSeo } from 'next-seo';
 const Meta = ({ title, description, noIndex = false, canonical }) => {
   description = prune(description, 160, '…');
 
-  const SITE_NAME = process.env.SITE_NAME || 'api.gouv.fr';
+  const SITE_NAME = 'api.gouv.fr';
   const SITE_URL = process.env.SITE_URL || 'https://api.gouv.fr';
   const SITE_DESCRIPTION =
     'Simplifiez le partage et la circulation des données administratives';
