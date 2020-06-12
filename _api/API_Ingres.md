@@ -4,8 +4,11 @@ tagline: Récupérez l'ensemble des référentiels utilisés par les SIRH de la 
 owner: Centre Interministériel des Systèmes d'Information relatifs aux Ressources Humaines
 owner_acronym: CISIRH
 is_open: false
-access_condition: OUVERT (utilisation restreinte au Réseau Interministériel de l'Etat (RIE))
+access_condition: OUVERT sous contrat
 access_link: https://api.cisirh.rie.gouv.fr/ingres/nomenclatures
+access_description: |
+  Le CISIRH met à disposition cette API exploitable accessible uniquement par les ministères ou institutions ayant accès au Réseau Interministériel de l'Etat (RIE).
+  Son utilisation par une application tierce ne saurait engager la responsabilité du CISIRH, par exemple, en termes de disponibilité.
 logo: logo-cisirh.png
 external_site: https://pissarho.cisirh.rie.gouv.fr/actualites/ingres/deploiement-de-deux-api-sur-lapplication-ingres
 stat:
@@ -37,11 +40,6 @@ last_update: 29/11/2019
 ---
 
 L’API Nomenclature permet d’accéder à toutes les nomenclatures noyau gérées dans l’application Ingres du CISIRH, soit plus de 350 nomenclatures accessibles.
-
-### Conditions Générales d'Utilisation:
-
-Le CISIRH met à disposition cette API exploitable accessible uniquement par les ministères ou institutions ayant accès au Réseau Interministériel de l'Etat (RIE).
-Son utilisation par une application tierce ne saurait engager la responsabilité du CISIRH, par exemple, en termes de disponibilité.
 
 ### Limitations actuelles:
 
@@ -116,45 +114,62 @@ Ces référentiels couvrent les domaines fonctionnels suivants:
 - ...
 
 La liste exhaustive est trop longue pour être listée ici, vous pouvez y accéder via cet appel à l'API:
+
+```
 https://api.cisirh.rie.gouv.fr/ingres/nomenclatures
+```
 
 ### Principe d'utilisation et exemples:
 
-#### Liste des référentiels gérés dans Ingres:
+Liste des référentiels gérés dans Ingres:
 
-- https://api.cisirh.rie.gouv.fr/ingres/nomenclatures
+```
+https://api.cisirh.rie.gouv.fr/ingres/nomenclatures
+```
 
-#### Extraction de contenu (quel que soit le référentiel) :
+Extraction de contenu (quel que soit le référentiel) :
 
-- https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/[nomenclature] => Extraction de tous les codes de la nomenclature désirée
-- https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/[nomenclature]/[code] => Extraction d’un seul code dans la nomenclature désirée
+```
+https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/[nomenclature] => Extraction de tous les codes de la nomenclature désirée
+https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/[nomenclature]/[code] => Extraction d’un seul code dans la nomenclature désirée
+```
 
-#### Référentiel des Catégories statutaires :
+Référentiel des Catégories statutaires :
 
-- https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/CATG_STATUTAIRE
+```
+https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/CATG_STATUTAIRE
+```
 
-#### Référentiel « Ministères & institutions de la république » :
+Référentiel « Ministères & institutions de la république » :
 
-- https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/MINISTERE
-- https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/MINISTERE/MI200
-- https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/MINISTERE/MI200/corps
-- https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/MINISTERE/MI200/Corps?categorie=1
+```
+https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/MINISTERE
+https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/MINISTERE/MI200
+https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/MINISTERE/MI200/corps
+https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/MINISTERE/MI200/Corps?categorie=1
+```
 
-#### Référentiel des Corps:
+Référentiel des Corps:
 
-- https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/CORPS
-- https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/CORPS/00089
-- https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/CORPS/00089/grades
-- https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/CORPS/?categorie=1
+```
+https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/CORPS
+https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/CORPS/00089
+https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/CORPS/00089/grades
+https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/CORPS/?categorie=1
+```
 
-#### Référentiel des Grades:
+Référentiel des Grades:
 
-- https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/GRADE
-- https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/GRADE/00188
+```
+https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/GRADE
+https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/GRADE/00188
+```
 
-#### Référentiel des Grilles:
+Référentiel des Grilles:
 
-- https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/GRILLE_IND
-- https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/GRILLE_IND/00028
-- https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/GRILLE_IND/00028/echelons
-- https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/GRILLE_IND/00028/echelons?rang=2
+```
+https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/GRILLE_IND
+https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/GRILLE_IND/00028
+https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/GRILLE_IND/00028/echelons
+https://api.cisirh.rie.gouv.fr/ingres/nomenclatures/GRILLE_IND/00028/echelons?rang=2
+```
