@@ -8,13 +8,21 @@ import { logDemanderAcces } from '../../service/analytics';
 
 const SIGNUP_URL = process.env.SIGNUP_URL || 'https://signup.api.gouv.fr';
 
-const Access = ({ is_open, link, description, condition, clients }) => {
+/**
+ * turns any link that match signup.api.gouv.fr/XYZ into $SIGNUP_URL/XYZ,
+ * Used in staging
+ */
+const formatSignupLink = (link = '') => {
   const signup_url_parts =
-    (link || '').match(/^https?:\/\/signup.api.gouv.fr(.*)/) || [];
-  const signup_path =
-    signup_url_parts.length === 2 ? signup_url_parts[1] : null;
-  const fixed_link = signup_path ? `${SIGNUP_URL}${signup_path}` : link;
+    link.match(/^https?:\/\/signup.api.gouv.fr(.*)/) || [];
+  if (signup_url_parts.length === 2) {
+    return `${SIGNUP_URL}${signup_url_parts[1]}`;
+  }
+  return link;
+};
 
+const Access = ({ is_open, link, description, condition, clients }) => {
+  const fixed_link = formatSignupLink(link);
   return (
     <Section id="access" title="Conditions d’accès">
       {is_open ? (
