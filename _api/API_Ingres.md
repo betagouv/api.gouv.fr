@@ -5,8 +5,8 @@ owner: Centre Interministériel des Systèmes d'Information relatifs aux Ressour
 owner_acronym: CISIRH
 is_open: false
 access_condition: OUVERT (utilisation restreinte au Réseau Interministériel de l'Etat (RIE))
-acces_link: https://api.cisirh.rie.gouv.fr/ingres/nomenclatures
-logo: logo_cisirh.jpg
+access_link: https://api.cisirh.rie.gouv.fr/ingres/nomenclatures
+logo: logo-cisirh.png
 external_site: https://pissarho.cisirh.rie.gouv.fr/actualites/ingres/deploiement-de-deux-api-sur-lapplication-ingres
 stat:
   url:
@@ -28,7 +28,7 @@ keywords:
   - RCC
   - Référentiels de Classification Centrale
   - Nomenclatures
-contact_link: nicolas.augereau@finances.gouv.fr
+contact_link: api.cisirh@finances.gouv.fr
 doc_tech_external: http://pissarho.cisirh.rie.gouv.fr/sites/default/files/2019-10/INGRES-PIL-API%20Nomenclatures%20Ingres_%20%280_7%29.pptx
 themes:
   - Administration & législation

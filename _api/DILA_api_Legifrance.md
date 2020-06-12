@@ -5,6 +5,7 @@ owner: Direction de l'information légale et administrative
 owner_acronym: DILA
 logo: DILA_logo_Simplifie_beta_v3.svg
 is_open: false
+access_link: https://developer.aife.economie.gouv.fr/
 access_description: API publique
 clients:
   - particuliers
