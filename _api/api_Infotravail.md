@@ -28,7 +28,7 @@ visits_2019: 953
 last_update: 26/09/2018
 ---
 
-## Description de l'API
+### Description de l'API
 
 L’API Infotravail recense les jeux de données suivants :
 

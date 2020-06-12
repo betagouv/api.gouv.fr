@@ -11,6 +11,10 @@ a {
   color: #3a73c0;
   word-wrap: break-word;
 }
+button,
+a {
+  cursor: pointer;
+}
 
 #page-layout {
   display: flex;
@@ -141,14 +145,14 @@ a:not(.dont-apply-link-style):hover {
   h1 {
     font-size: 2.5rem;
     line-height: 3.4rem;
-    margin: 30px 0 50px;
+    margin: 50px 0;
     color: $darkGrey;
   }
 
   h2 {
     font-size: 1.8rem;
     line-height: 2.2rem;
-    margin: 20px 0 20px;
+    margin: 40px 0 20px;
     padding-bottom: 10px;
     border-bottom: 1px solid #eee;
     color: $darkestGrey;
@@ -157,19 +161,19 @@ a:not(.dont-apply-link-style):hover {
   h3 {
     font-size: 1.3rem;
     line-height: 1.9rem;
-    margin: 12px 0 16px;
+    margin: 25px 0 16px;
   }
 
   h4 {
     font-size: 1.2rem;
     line-height: 1.8rem;
-    margin: 12px 0 16px;
+    margin: 20px 0 16px;
   }
 
   p {
     font-size: 1.1rem;
     line-height: 1.8rem;
-    margin: 5px 0 40px;
+    margin: 20px 0 25px;
 
     br {
       margin-bottom: 15px;
@@ -243,5 +247,78 @@ h4 {
     font-size: 1.1rem;
     line-height: 1.9rem;
     margin: 12px 0 16px;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+
+  > label {
+    line-height: 18px;
+    font-weight: 600;
+    color: $darkestGrey;
+    font-size: 1rem;
+  }
+
+  > input,
+  > textarea {
+    font-size: 1rem;
+    margin: 5px 0 10px;
+    width: calc(100% - 20px);
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    transition: border-color 300ms ease-in-out;
+    font-family: 'Source Sans Pro', sans-serif;
+
+    &:focus {
+      border-color: $blue;
+    }
+    &:invalid {
+      outline: none;
+    }
+  }
+  > textarea {
+    resize: none;
+    height: 130px;
+  }
+
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+.highlight-info {
+  border-left: 5px solid $blue;
+  background-color: $lightBlue;
+  color: $blue;
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  > div,
+  > p {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+.highlight-warning {
+  border-left: 5px solid $orange;
+  background-color: $lightOrange;
+  color: $darkOrange;
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  > div,
+  > p {
+    width: 100%;
+    margin-bottom: 10px;
   }
 }

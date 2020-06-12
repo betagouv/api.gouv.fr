@@ -17,6 +17,7 @@ const Service: React.FC<IProps> = ({
   title,
   description,
   link,
+  slug,
   apiList,
   body,
   screenshot,
@@ -26,6 +27,7 @@ const Service: React.FC<IProps> = ({
       headerKey={HEADER_PAGE.SERVICES}
       title={title}
       description={`${title} est un exemple d’utilisation d'API du service public. ${description}`}
+      canonical={`https://api.gouv.fr/service/${slug}`}
     >
       <section id="title">
         <h1>{title}</h1>
@@ -35,7 +37,9 @@ const Service: React.FC<IProps> = ({
       <div className="content-container content">
         <div className="left-column-grid">
           <div className="left-column">
-            <h3>{apiList.length > 1 ? 'Les API utilisées' : 'API utilisée'}</h3>
+            <h3>
+              {apiList.length > 1 ? 'Les APIs utilisées' : 'API utilisée'}
+            </h3>
             <>
               {apiList.map(api => (
                 <div key={api.slug}>
@@ -48,7 +52,7 @@ const Service: React.FC<IProps> = ({
             <div className="text-style">
               <ReactMarkdown source={body} />
             </div>
-            <div>
+            <div className="text-style">
               <h2>Accéder au service</h2>
               <p>Suivez le lien suivant pour découvrir le service :</p>
               <div className="layout-center">

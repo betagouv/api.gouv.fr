@@ -24,8 +24,6 @@ visits_2019: 450
 last_update: 03/10/2019
 ---
 
-## Description de l'API
-
 Brest métropole met à disposition des développeurs les données de l’offre théorique et en temps réel des transports collectifs (bus et tramways) du réseau Bibus.
 
 Les données temps réel contiennent les heures de passage aux arrêts et les positions des véhicules. Elles sont accessibles via des web services.

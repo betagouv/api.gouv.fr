@@ -20,9 +20,9 @@ keywords:
   - Départements
   - Régions
   - EPCI
-rate_limiting_resume: 10 appels / seconde / IP
+rate_limiting_resume: 50 appels / seconde / IP
 rate_limiting_description: |
-  <p>L'API est disponible à hauteur de 10 appels par seconde et par adresse IP.</p>
+  <p>L'API est disponible à hauteur de 50 appels par seconde et par adresse IP.</p>
 themes:
   - Géographie
 stat:
@@ -48,25 +48,15 @@ Grâce à elle vous pouvez notamment :
 
 Les différentes fonctionnalités arrivant progressivement, restez informés en suivant cette page ou [en nous contactant](mailto:geo@api.gouv.fr).
 
-## Informations complémentaires
-
-#### Couverture du territoire
+### Couverture du territoire
 
 France métropolitaine et [DROM](https://fr.wikipedia.org/wiki/D%C3%A9partement_et_r%C3%A9gion_d%27outre-mer).
 
-#### Coordonnées géographiques
+### Coordonnées géographiques
 
 Cette API utilise exclusivement des coordonnées géographiques [WGS-84](https://fr.wikipedia.org/wiki/WGS_84).
 Elle peut renvoyer des données au format JSON ou [GeoJSON](http://geojson.org).
 
-#### Qui peut utiliser cette API ?
-
-Tout le monde. Mais si vos besoins sont massifs, [contactez-nous](mailto:geo@api.gouv.fr) au préalable.
-
-#### Données source
+### Données source
 
 [Toutes les données utilisées](https://github.com/etalab/api-communes#données-sources) sont sous licences Open Data.
-
-#### Mail de contact
-
-geo@api.gouv.fr

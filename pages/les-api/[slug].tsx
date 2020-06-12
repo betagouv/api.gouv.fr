@@ -24,12 +24,10 @@ import {
   Content,
   Thumbnails,
 } from '../../components/api';
-import { HEADER_PAGE } from '../../components/header';
+import { HEADER_PAGE } from '../../components';
 
 import { getWindowHash, isElementVisible } from '../../utils';
 import constants from '../../constants';
-
-const DEFAULT_LOGO = process.env.DEFAULT_LOGO || 'logo-beta-gouv.svg';
 
 interface IProps {
   api: IApi;
@@ -38,6 +36,7 @@ interface IProps {
 
 const API: React.FC<IProps> = ({ api, services = null }) => {
   const {
+    slug,
     title,
     tagline,
     logo,
@@ -45,6 +44,7 @@ const API: React.FC<IProps> = ({ api, services = null }) => {
     uptime,
     last_update,
     contact_link,
+    external_site,
     doc_tech_link,
     doc_tech_external,
     access_link,
@@ -122,8 +122,13 @@ const API: React.FC<IProps> = ({ api, services = null }) => {
       headerKey={HEADER_PAGE.APIS}
       title={title}
       description={`${title} est une des APIs du service public. ${tagline}`}
+      canonical={`https://api.gouv.fr/les-api/${slug}`}
     >
-      <PageHeader title={title} logo={logo || DEFAULT_LOGO} tagline={tagline} />
+      <PageHeader
+        title={title}
+        logo={logo || constants.logo}
+        tagline={tagline}
+      />
 
       <Thumbnails
         is_open={is_open}
@@ -145,7 +150,7 @@ const API: React.FC<IProps> = ({ api, services = null }) => {
 
             <Access
               is_open={is_open}
-              link={access_link}
+              link={access_link || (is_open ? external_site : '')}
               description={access_description}
               condition={access_condition}
               clients={clients}
@@ -165,6 +170,7 @@ const API: React.FC<IProps> = ({ api, services = null }) => {
             <TechnicalDocumentation
               link={doc_tech_link}
               external={doc_tech_external}
+              slug={slug}
             />
 
             <ApiRelatedServices services={services} />

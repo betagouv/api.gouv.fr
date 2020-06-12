@@ -2,7 +2,7 @@ import links from './links';
 
 export default {
   links: links,
-  layout: { HEADER_HEIGHT: 60 },
+  layout: { HEADER_HEIGHT: 95 },
   colors: {
     confidential: '#10c6b0',
     reference: '#23b0b7',
@@ -22,6 +22,9 @@ export default {
     backgroundBlueGradient: 'linear-gradient(45deg, #003189, #005adf)',
     red: '#dc3545',
     green: '#17bd3d',
+    lightOrange: '#fff4d1',
+    darkOrange: '#3f3104',
     orange: '#ffc107',
   },
+  logo: 'logo-beta-gouv.svg',
 };

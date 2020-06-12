@@ -2,8 +2,11 @@
 @import '../components/home/apiTripletStyles.scss';
 @import '../components/home/explanationSectionStyles.scss';
 @import '../components/home/useCaseSectionStyles.scss';
+@import '../components/roadmap/roadmapStyles.scss';
 
 @import '../components/serviceCard/styles.scss';
+
+@import '../components/customerPath/customerPathStyles.scss';
 
 @import '../components/searchApis/filterHeaderStyles.scss';
 @import '../components/searchApis/apiCardStyles.scss';
@@ -14,10 +17,11 @@
 @import '../components/footer/footerStyles.scss';
 @import '../components/footer/preFooterStyles.scss';
 
-@import '../components/chat/chatStyles.scss';
+@import '../components/documentation/documentationStyles.scss';
 
 @import '../uiComponents/button/buttonStyles.scss';
 @import '../uiComponents/dropdown/styles.scss';
+@import '../uiComponents/multiChoice/styles.scss';
 @import '../uiComponents/searchBar/searchBarStyles.scss';
 @import '../uiComponents/toggle/styles.scss';
 @import '../uiComponents/typingCarousel/typingCarouselStyles.scss';

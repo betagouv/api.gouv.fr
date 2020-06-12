@@ -1,9 +1,9 @@
-const logDemanderApi = () => {
+const logCTA = ctaLabel => {
   if (typeof window !== 'undefined' && window._paq) {
     window._paq.push([
       'trackEvent',
       'CTA',
-      'Demander une API',
+      ctaLabel,
       `page : ${window.location.pathname}`,
     ]);
   }
@@ -20,37 +20,26 @@ const logDemanderAcces = () => {
   }
 };
 
-const logLPCTA1 = () => {
+const logLPCTA = ctaLabel => {
   if (typeof window !== 'undefined' && window._paq) {
     window._paq.push([
       'trackEvent',
       'LP',
-      'Bouton_top',
+      ctaLabel,
       `page : ${window.location.pathname}`,
     ]);
   }
 };
 
-const logLPCTA2 = () => {
+const logParcoursClient = (step, value = '*') => {
   if (typeof window !== 'undefined' && window._paq) {
     window._paq.push([
       'trackEvent',
-      'LP',
-      'Bouton_middle',
-      `page : ${window.location.pathname}`,
+      'Parcours client',
+      step,
+      `valeur : ${value}`,
     ]);
   }
 };
 
-const logLPContact = () => {
-  if (typeof window !== 'undefined' && window._paq) {
-    window._paq.push([
-      'trackEvent',
-      'LP',
-      'Bouton_contact',
-      `page : ${window.location.pathname}`,
-    ]);
-  }
-};
-
-export { logDemanderApi, logDemanderAcces, logLPContact, logLPCTA1, logLPCTA2 };
+export { logCTA, logDemanderAcces, logLPCTA, logParcoursClient };

@@ -32,9 +32,9 @@ visits_2019: 324
 last_update: 03/05/2018
 ---
 
-## Description de l'API
+### Description de l'API
 
-### Pourquoi ?
+#### Pourquoi ?
 
 L'Indicateur de Fréquence de Traitements phytopharmaceutiques (IFT) est un indicateur de suivi de la réduction des produits phytopharmaceutiques (pesticides) à l’échelle de l’exploitation agricole ou d’un groupe d’exploitations.
 
@@ -48,9 +48,9 @@ Elle vous permet de :
 
 Pour plus d'information sur l'IFT, vous pouvez consulter le site institutionnel du ministère à l'adresse : [http://agriculture.gouv.fr/indicateur-de-frequence-de-traitements-phytosanitaires-ift](http://agriculture.gouv.fr/indicateur-de-frequence-de-traitements-phytosanitaires-ift)
 
-### Aller à l'essentiel...
+#### Aller à l'essentiel...
 
-Dans la majorité des cas, les API vous permettent de requêter et de paginer les résultats sur les données de références :
+Dans la majorité des cas, les APIs vous permettent de requêter et de paginer les résultats sur les données de références :
 
 - Lister les cultures commençant par "ci" :
 
@@ -70,7 +70,7 @@ Dans la majorité des cas, les API vous permettent de requêter et de paginer le
     curl -X GET --header 'Accept: application/json' 'https://alim.agriculture.gouv.fr/ift-api/api/ift/traitement/certifie?campagneIdMetier=2017&numeroAmmIdMetier=2090125&cultureIdMetier=1055&typeTraitementIdMetier=T21&dose=6'
 ```
 
-### Se lancer !
+#### Se lancer !
 
 Le ministère en charge de l’agriculture met à votre disposition un environnement de pré-production pour tester vos développements. Il est accessible à l’adresse : [https://alim-pprd.agriculture.gouv.fr/ift-api/swagger-ui.html](https://alim-pprd.agriculture.gouv.fr/ift-api/swagger-ui.html)
 

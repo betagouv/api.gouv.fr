@@ -4,17 +4,23 @@ section#pre-footer > div {
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+  text-align: center;
 
   > div {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    > p {
+      font-weight: bold;
+      font-size: 1.4rem;
+      line-height: 2.1rem;
+    }
   }
   @media (max-width: 768px) {
+    flex-direction: column;
     > div {
-      flex-direction: column;
-
       > div {
         margin: 20px 0;
       }

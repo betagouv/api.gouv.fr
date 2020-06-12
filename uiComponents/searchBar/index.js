@@ -7,8 +7,8 @@ import constants from '../../constants';
 const SearchBar = ({
   onSearch,
   placeholder,
-  defaultValue,
-  label,
+  defaultValue = '',
+  label = false,
   debounceRate = 100,
 }) => {
   const [focus, setFocus] = useState(false);

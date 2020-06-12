@@ -1,0 +1,24 @@
+@import '../constants/colors.scss';
+
+.subject-answer {
+  border-radius: 8px;
+  padding: 30px;
+  margin: 50px 0;
+  background-color: #f3f3f3;
+  position: relative;
+
+  &:before {
+    top: -12px;
+    left: 27px;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 0px 7px;
+    position: absolute;
+    content: 'Explication';
+    font-weight: bold;
+  }
+}
+
+#contact-form {
+  margin-top: 20px;
+}

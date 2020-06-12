@@ -8,13 +8,14 @@ const About: React.FC = () => (
     headerKey={HEADER_PAGE.ABOUT}
     title="A propos"
     description="Qu’est ce qu’une API du service public ? Quelle est la mission de api.gouv.fr ? A qui s’adresse ce site ?"
+    canonical={`https://api.gouv.fr/apropos`}
   >
     <div className="text-wrapper text-style">
       <h1 className="layout-center">Api.gouv.fr, à quoi ça sert ?</h1>
       <p>
         Ce site référence les APIs du service publique, mises à la disposition
         des collectivités, des ministères et des entreprises pour construire des
-        services informatiques au services de tous.
+        services informatiques au service de tous.
       </p>
       <div>
         <h2>
@@ -50,9 +51,9 @@ const About: React.FC = () => (
           Afin d'aider toutes les organisations qui veulent{' '}
           <b>construire un service informatique</b>, api.gouv.fr{' '}
           <a href="/rechercher-api">
-            référence les API de toutes les administrations
+            référence les APIs de toutes les administrations
           </a>{' '}
-          qui rendent leur données disponibles.
+          qui rendent leurs données disponibles.
         </p>
       </div>
       <div>
@@ -68,11 +69,11 @@ const About: React.FC = () => (
         <p>
           {' '}
           Vous êtes en train de concevoir un service informatique ? Nous avons
-          surement l'API qui vous correspond.
+          surement l’API qui vous correspond.
         </p>
         <p>
           Toutes nos APIs{' '}
-          <a href="/rechercher-api"> sont visibles sur cette page,</a>. Vous
+          <a href="/rechercher-api"> sont visibles sur cette page</a>. Vous
           pouvez les filtrer par thématique, ou bien utiliser la recherche pour
           trouver l'API qui vous convient.
         </p>
@@ -88,7 +89,7 @@ const About: React.FC = () => (
           </span>
         </h2>
         <p>
-          Une grande partie des données publique sont libres d'accès. C'est ce
+          Une grande partie des données publiques sont libres d'accès. C'est ce
           que l'on appelle{' '}
           <a
             target="blank"
@@ -100,7 +101,7 @@ const About: React.FC = () => (
           Tout le monde peut y accèder.
         </p>
         <p>
-          D'autres données, comme par exemple les données fiscales, sont
+          D’autres données, comme par exemple les données fiscales, sont
           sensibles et doivent être protégées.{' '}
           <b>Ces données ne sont pas accessibles à tous</b> et seuls les
           organisations habilitées sont autorisées à y accèder.
@@ -139,7 +140,7 @@ const About: React.FC = () => (
         </p>
         <p>
           Pour toute question ou précision, n'hésitez pas à{' '}
-          <a href="mailto:contact@api.gouv.fr">nous contacter.</a>
+          <a href="/parcours-client?source=apropos">nous contacter.</a>
         </p>
       </div>
     </div>

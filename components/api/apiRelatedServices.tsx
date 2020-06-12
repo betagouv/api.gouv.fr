@@ -9,7 +9,7 @@ interface IProps {
 
 const ApiRelatedServices: React.FC<IProps> = ({ services = [] }) => {
   return (
-    <Section id="services" title="Services">
+    <Section id="services" title="Réalisations">
       {services.length > 0 ? (
         <div className="default-grid">
           {services.map(service => (
@@ -17,10 +17,7 @@ const ApiRelatedServices: React.FC<IProps> = ({ services = [] }) => {
           ))}
         </div>
       ) : (
-        <p>
-          La liste des services utilisant cette API ne sont pas disponibles
-          publiquement.
-        </p>
+        <p>Il n’y a pas à notre connaissance de réutilisations de cette API.</p>
       )}
     </Section>
   );

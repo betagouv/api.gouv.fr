@@ -35,6 +35,7 @@ export interface IApi extends IApiShort {
   owner_acronym: string;
   last_update: Date;
   contact_link: string;
+  external_site?: string;
   doc_tech_link: string;
   doc_tech_external: string;
   access_link: string;

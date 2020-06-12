@@ -9,7 +9,7 @@ interface IProps {
 
 const Support: React.FC<IProps> = ({ link }) => {
   return (
-    <Section id="contact" title="Support">
+    <Section id="contact" title="Contact & support">
       <>
         {link ? (
           <>

@@ -5,7 +5,7 @@ external_site: https://apicarto.ign.fr/
 owner: Institut national de l’information géographique et forestière
 owner_acronym: IGN
 is_open: true
-acces_condition: OUVERT
+access_condition: OUVERT
 category: Public
 logo: look4-geoportail.jpg
 contact_link: contact.geoservices@ign.fr

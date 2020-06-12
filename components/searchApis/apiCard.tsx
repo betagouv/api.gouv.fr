@@ -4,10 +4,8 @@ import Link from 'next/link';
 import { Unlock, Lock } from 'react-feather';
 
 import { getUptimeState, roundUptime } from '../../utils/uptime';
-
 import { textHighlighter, ISearchMatch } from './filtersLogic';
-
-const DEFAULT_LOGO = process.env.DEFAULT_LOGO || 'logo-beta-gouv.svg';
+import constants from './../../constants';
 
 interface IProps {
   title: string;
@@ -36,7 +34,7 @@ const ApiCard: React.FC<IProps> = ({
         <a className="api-card dont-apply-link-style">
           <div className="content">
             <img
-              src={`/images/api-logo/${logo || DEFAULT_LOGO}`}
+              src={`/images/api-logo/${logo || constants.logo}`}
               alt={logo ? `logo de ${title}` : 'logo générique api.gouv'}
             />
 

@@ -33,6 +33,21 @@ header {
     height: 100%;
     z-index: 100;
 
+    .github-corner {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 0;
+      padding: 0;
+
+      svg {
+        fill: orange;
+      }
+      &:hover svg {
+        fill: rgb(255, 217, 0);
+      }
+    }
+
     .nav__container {
       display: flex;
       flex-grow: 1;
@@ -44,12 +59,38 @@ header {
       a.nav__logo-wrapper {
         display: flex;
         align-items: center;
-        margin: 0 14px;
+        margin: 10px 20px;
+        padding: 0;
 
-        .nav__logo {
-          height: 40px;
+        .nav__logo:first-of-type {
           padding: 0;
           box-sizing: content-box;
+          margin: 0;
+          > svg {
+            height: 55px;
+            margin: 0;
+            padding: 0;
+            display: block;
+
+            @media (max-width: 600px) {
+            }
+          }
+        }
+        .nav__logo:last-of-type {
+          margin: 0;
+          padding: 0 0 0 20px;
+          box-sizing: content-box;
+          display: flex;
+
+          > svg {
+            height: 28px;
+            margin: 0;
+            padding: 0;
+
+            @media (max-width: 600px) {
+              height: 22px;
+            }
+          }
         }
       }
 
@@ -91,6 +132,7 @@ header {
             background-color: $blue;
             transition: width 200ms ease-in-out, opacity 200ms ease-in-out;
             opacity: 0;
+            border-radius: 4px 4px 0 0;
           }
           &.current:after {
             width: 58%;
@@ -111,10 +153,6 @@ header {
 
   @media (max-width: 1124px) {
     font-size: 18px;
-
-    .external {
-      display: none;
-    }
 
     .nav > .nav__container > .nav__links {
       opacity: 0;
@@ -152,8 +190,8 @@ header {
       width: #{$headerHeight + 'px'};
       height: #{$headerHeight + 'px'};
       position: absolute;
-      top: 0px;
-      right: 0px;
+      top: 20px;
+      right: 20px;
       cursor: pointer;
 
       &:focus {

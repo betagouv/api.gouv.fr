@@ -50,7 +50,7 @@ const SearchApis = ({ allApis, allThemes }) => {
     const newApiList = res
       .filter(filterAccess(isAccessOpen))
       .filter(filterTheme(theme))
-      .sort((a, b) => ((a.visits_2019 || 0) < b.visits_2019 ? 1 : -1));
+      .sort((a, b) => ((a.visits_2019 || 0) < (b.visits_2019 || 0) ? 1 : -1));
 
     const themeAndAccess = `${theme}${isAccessOpen ? '-only-access-open' : ''}`;
 
@@ -61,11 +61,25 @@ const SearchApis = ({ allApis, allThemes }) => {
     return () => {};
   }, [theme, isAccessOpen, searchTerms, allApis]);
 
+  const updateTheme = index => {
+    if (!!index) {
+      // no theme selected
+      setTheme(null);
+    }
+    const newTheme = allThemesOptions.reduce((selectedTheme, theme) => {
+      if (theme.value === index) {
+        return theme.label;
+      }
+      return selectedTheme;
+    }, null);
+    setTheme(newTheme);
+  };
+
   return (
     <>
       <FilterHeader
         allThemesOptions={allThemesOptions}
-        setTheme={setTheme}
+        setTheme={updateTheme}
         setIsAccessOpen={setIsAccessOpen}
         search={setSearchTerms}
         isAccessOpen={isAccessOpen}

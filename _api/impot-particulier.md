@@ -12,7 +12,7 @@ access_description: |
     <li>ayant déjà préalablement implémenté FranceConnect ;</li>
     <li>justifiant d'un fondement légal permettant le recueil d'informations fiscales rattachées à une démarche administrative.</li>
   </ul>
-  <p>Les demandes d'accès à l'API Impôt Particulier utilisent signup.api.gouv.fr, un outil mis à disposition pour toutes les API catalogués sur api.gouv.fr.</p>
+  <p>Les demandes d'accès à l'API Impôt Particulier utilisent signup.api.gouv.fr, un outil mis à disposition pour toutes les APIs catalogués sur api.gouv.fr.</p>
   <p>Lors de la contractualisation pour accéder à l'API, une convention précise les engagements de chacune des parties et décrit les échanges de données réalisés.</p>
 access_link: https://signup.api.gouv.fr/api-impot-particulier
 clients:
@@ -36,8 +36,6 @@ doc_tech_link: https://particulier.api.gouv.fr/swagger_api_impots_particulier.ya
 visits_2019: 1324
 last_update: 08/10/2019
 ---
-
-## Récupérez les informations fiscales nécessaires à votre téléservice directement auprès de la DGFiP
 
 L'API Impôt particulier simplifie les démarches des usagers et le processus de gestion de vos téléservices. Elle permet en effet l’échange d’informations fiscales entre la DGFiP et une administration ou collectivité dans le cadre d'un téléservice FranceConnecté.
 

@@ -9,11 +9,11 @@ const MENU_OPTIONS = [
   },
   {
     id: 'access',
-    label: 'Accès',
+    label: 'Conditions d’accès',
   },
   {
     id: 'contact',
-    label: 'Support',
+    label: 'Contact & support',
   },
   {
     id: 'monitoring',
@@ -33,7 +33,7 @@ const MENU_OPTIONS = [
   },
   {
     id: 'services',
-    label: 'Services',
+    label: 'Réalisations',
   },
 ];
 
@@ -61,32 +61,42 @@ const Menu = ({ selectedItem, select }) => {
       ))}
       <style jsx>{`
         .menu {
-          border-radius: 4px;
+          border-radius: 8px;
           max-width: 245px;
           display: flex;
           flex-direction: column;
           background-color: #fff;
           border: 2px solid ${constants.colors.lightGrey};
+          overflow: hidden;
         }
         .item {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          padding: 1em;
-          font-weight: bold;
-          font-size: 14px;
-          line-height: 18px;
+          padding: 15px;
+          padding-left: 35px;
+          font-size: 1rem;
+          line-height: 20px;
           color: black;
-          transition: background 100ms ease-in-out, border 100ms ease-in-out;
           cursor: pointer;
+          position: relative;
+          border: none;
         }
         .item:hover,
-        .item.selected:hover {
-          background-color: ${constants.colors.lightBlue};
+        .item:focus {
+          background-color: ${constants.colors.lightestBlue};
+        }
+        .item.selected:before {
+          content: '';
+          width: 8px;
+          height: 8px;
+          border-radius: 20px;
+          left: 15px;
+          position: absolute;
+          background-color: ${constants.colors.blue};
         }
         .item.selected {
-          border-left: 5px solid ${constants.colors.blue};
-          background-color: ${constants.colors.lightestBlue};
+          background-color: ${constants.colors.lightBlue};
         }
       `}</style>
     </div>

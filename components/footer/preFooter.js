@@ -2,7 +2,7 @@ import React from 'react';
 
 import constants from '../../constants';
 import { ButtonLink } from '../../uiComponents/button';
-import { logDemanderApi } from '../../service/analytics';
+import { logCTA } from '../../service/analytics';
 
 const PreFooter = ({ background }) => (
   <section
@@ -13,16 +13,16 @@ const PreFooter = ({ background }) => (
   >
     <div className="content-container links">
       <div>
-        <h3>Vous ne trouvez pas l’API dont vous avez besoin ?</h3>
+        <p>Vous ne trouvez pas l’API dont vous avez besoin ?</p>
         <ButtonLink
-          href={constants.links.mailto.REQUEST_API}
-          onClick={logDemanderApi}
+          href="/parcours-client?source=preFooter"
+          onClick={() => logCTA('CTA pre-footer')}
         >
-          Demander une API
+          Nous contacter
         </ButtonLink>
       </div>
       <div>
-        <h3>Vous voulez partager une API ?</h3>
+        <p>Vous voulez partager une API ?</p>
         <ButtonLink href={constants.links.ADD_API} alt>
           Partager votre API
         </ButtonLink>
