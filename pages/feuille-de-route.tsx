@@ -7,7 +7,7 @@ export default () => {
   return (
     <Page
       title="Feuille de route 2020"
-      description="Découvrez les API récemment ajouté et celles qui sont en cours d'intégration au catalogue des APIs"
+      description="Découvrez les APIs récemment ajouté et celles qui sont en cours d'intégration au catalogue des APIs"
     >
       <div className="text-wrapper text-style">
         <h1>
