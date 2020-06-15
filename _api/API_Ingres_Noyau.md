@@ -4,7 +4,7 @@ tagline: Récupérez l'ensemble des référentiels utilisés par les SIRH de la 
 owner: Centre Interministériel des Systèmes d'Information relatifs aux Ressources Humaines
 owner_acronym: CISIRH
 is_open: false
-access_link: https://api.cisirh.rie.gouv.fr/ingres/diffusions
+access_link: mailto:api.cisirh@finances.gouv.fr
 access_condition: OUVERT sous contrat
 access_description: |
   Le CISIRH met à disposition cette API exploitable accessible uniquement par les ministères ou institutions ayant accès au Réseau Interministériel de l'Etat (RIE).
@@ -132,7 +132,7 @@ Pour récupérer une nomenclature, il faut:
 
 - VERSION NOYAU: les fichiers sont publiés mensuellement de façon officielle pour une version noyau donnée. Par exemple, la versin "19.00.08" diffusée en
   Juin 2020 est la 8ème version publiée depuis la version structurante 19.00.00 publiée en Juillet 2019).
-  Si cette version n'est pas connue, l'API permet de les listes toutes: https://api.cisirh.rie.gouv.fr/ingres/diffusions
+  Si cette version n'est pas connue, l'API permet de les listes toutes: `https://api.cisirh.rie.gouv.fr/ingres/diffusions`.
   Le plus grand nombre correspond à la version la plus récente disponible.
   Si ce que vous recherchez est un contenu le plus "frais" possible, alors choisir la version "HORSVERS" qui correspond à des fichiers produits la veille au soir. Il y a toutefois un écart possible pour les nomenclatures RCC car certaines modifications incluses dans ce fichier pourraient ne pas être validées par la DGAFP.
 

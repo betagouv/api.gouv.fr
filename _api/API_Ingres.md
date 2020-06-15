@@ -5,7 +5,7 @@ owner: Centre Interministériel des Systèmes d'Information relatifs aux Ressour
 owner_acronym: CISIRH
 is_open: false
 access_condition: OUVERT sous contrat
-access_link: https://api.cisirh.rie.gouv.fr/ingres/nomenclatures
+access_link: mailto:api.cisirh@finances.gouv.fr
 access_description: |
   Le CISIRH met à disposition cette API exploitable accessible uniquement par les ministères ou institutions ayant accès au Réseau Interministériel de l'Etat (RIE).
   Son utilisation par une application tierce ne saurait engager la responsabilité du CISIRH, par exemple, en termes de disponibilité.
