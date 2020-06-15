@@ -59,19 +59,38 @@ const roadmap = [
   },
   {
     type: RoadmapNodeType.MONTH,
+    what: 'Juin',
+  },
+  {
+    type: RoadmapNodeType.ADD_NEW_API,
+    what: (
+      <>
+        API <a href="/les-api/jours-feries">Jours fériés</a>
+      </>
+    ),
+  },
+  {
+    type: RoadmapNodeType.ADD_NEW_API,
+    what: (
+      <>
+        API <a href="/les-api/API_Ingres_Noyau">API Ingres Noyau</a>
+      </>
+    ),
+  },
+  {
+    type: RoadmapNodeType.ELLIPSIS,
+  },
+  {
+    type: RoadmapNodeType.MONTH,
     what: 'À venir',
   },
   {
     type: RoadmapNodeType.ADD_NEW_API,
-    what: <>API jours fériés</>,
-  },
-  {
-    type: RoadmapNodeType.ADD_NEW_API,
-    what: <>API Ingres Noyau</>,
-  },
-  {
-    type: RoadmapNodeType.ADD_NEW_API,
     what: <>API Données Locales</>,
+  },
+  {
+    type: RoadmapNodeType.ADD_NEW_API,
+    what: <>API RNM</>,
   },
 ];
 
