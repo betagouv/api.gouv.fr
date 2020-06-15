@@ -6,7 +6,8 @@ import { ButtonLink } from '../../uiComponents/button';
 import { logCTA } from '../../service/analytics';
 import { apiLogo, republiqueFrLogo } from './logos';
 
-const SIGNUP_URL = process.env.SIGNUP_URL || 'https://signup.api.gouv.fr';
+const SIGNUP_URL =
+  process.env.NEXT_PUBLIC_SIGNUP_URL || 'https://signup.api.gouv.fr';
 
 export const HEADER_PAGE = {
   APIS: 'apis',
