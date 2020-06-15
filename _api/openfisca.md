@@ -25,7 +25,7 @@ themes:
   - Administration & législation
 logo: logo-openfisca.svg
 contact_link: contact@openfisca.fr
-doc_tech_external: https://openfisca.org/doc/openfisca-web-api/
+doc_tech_link: https://fr.openfisca.org/api/latest/spec
 visits_2019: 1982
 last_update: 15/01/2019
 ---
