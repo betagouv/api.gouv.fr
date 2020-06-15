@@ -6,7 +6,8 @@ import { ButtonLink } from '../../uiComponents/button';
 
 import { logDemanderAcces } from '../../service/analytics';
 
-const SIGNUP_URL = process.env.SIGNUP_URL || 'https://signup.api.gouv.fr';
+const SIGNUP_URL =
+  process.env.NEXT_PUBLIC_SIGNUP_URL || 'https://signup.api.gouv.fr';
 
 /**
  * turns any link that match signup.api.gouv.fr/XYZ into $SIGNUP_URL/XYZ,
@@ -72,7 +73,7 @@ const Access = ({ is_open, link, description, condition, clients }) => {
         <ApiOpen link={access_link} />
       ) : access_link ? (
         <ApiNotOpen
-          link={link}
+          link={access_link}
           description={description}
           condition={condition}
           clients={clients}
