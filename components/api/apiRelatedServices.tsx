@@ -17,7 +17,9 @@ const ApiRelatedServices: React.FC<IProps> = ({ services = [] }) => {
           ))}
         </div>
       ) : (
-        <p>Il n’y a pas à notre connaissance de réutilisations de cette API.</p>
+        <p>
+          Il n’y a pas à notre connaissance de réalisations utilisant cette API.
+        </p>
       )}
     </Section>
   );
