@@ -4,7 +4,7 @@ link: https://ecarto.banquedesterritoires.fr/#/
 description: Explorez le déploiement du numérique dans les écoles, collèges et lycées français.
 screenshot: ecran_ecarto.jpg
 api:
-  - API MENJ
+  - API Education Nationale
 ---
 
 Le projet eCarto est né d’un constat : l’absence d’état des lieux du numérique éducatif, partagé par tous, à l’échelle de chaque établissement scolaire et de chaque territoire.
