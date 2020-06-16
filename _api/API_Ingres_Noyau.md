@@ -48,7 +48,7 @@ Le format de restitution des données est celui défini par le noyau RH FPE. Il 
 Une conversion JSON du XML est également proposée, à titre expérimental.
 Cette API permet de récupérer automatiquement les fichiers à l'identique de ce qu'ils sont produits et mis à disposition sur le portail PissaRHo (open RH FPE).
 Cette API ne permet pas la récupération unitaire d'un code est de ses attributs et peut par conséquent ne pas être adaptée à une API entre applications mais tout dépend du besoin.
-Pour cet usage, une autre API ("API Ingres Nomenclatures") permet une restitution au format JSON avec des temps de réponse bien meilleurs.
+Pour cet usage, une autre API ([API Ingres Nomenclatures](/les-api/API_Ingres)) permet une restitution au format JSON avec des temps de réponse bien meilleurs.
 
 ### Evolutions possibles:
 
