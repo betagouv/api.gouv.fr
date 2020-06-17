@@ -1,4 +1,31 @@
-import { getService, getAllServices, getAllAPIs, getAPI } from './api';
+import {
+  getService,
+  getAllServices,
+  getAllAPIs,
+  getAPI,
+  getRoadmap,
+} from './loader';
+
+export enum RoadmapNodeType {
+  YEAR,
+  MONTH,
+  ELLIPSIS,
+  ADD_API = 'ADD_API',
+  DLNUF = 'DLNUF',
+  INFO = 'INFO',
+}
+
+export interface IRoadmapElement {
+  type: RoadmapNodeType;
+  what?: string | number;
+  path?: string;
+}
+
+export interface IRoadmap {
+  [year: number]: {
+    [month: number]: IRoadmapElement[];
+  };
+}
 
 export interface IService {
   slug: string;
@@ -52,4 +79,4 @@ export interface IApi extends IApiShort {
   keywords: string[];
 }
 
-export { getService, getAllServices, getAllAPIs, getAPI };
+export { getService, getAllServices, getAllAPIs, getAPI, getRoadmap };

@@ -1,7 +1,7 @@
 import { uniq, flatten } from 'lodash';
 
-import { readAllServicesOnDisk } from './readOnDisk';
-import { IService } from '.';
+import { readAllServicesOnDisk } from '../readOnDisk';
+import { IService } from '..';
 
 let allServices: IService[];
 

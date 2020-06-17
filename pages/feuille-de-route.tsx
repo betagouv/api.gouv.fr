@@ -1,9 +1,15 @@
 import React from 'react';
+import { GetStaticProps } from 'next';
 
 import Page from '../layouts/page';
 import { Roadmap } from '../components/roadmap';
+import { getRoadmap, IRoadmapElement } from '../model';
 
-export default () => {
+interface IProps {
+  roadmap: IRoadmapElement[];
+}
+
+const FeuilleDeRoute: React.FC<IProps> = ({ roadmap }) => {
   return (
     <Page
       title="Feuille de route 2020"
@@ -20,8 +26,20 @@ export default () => {
           Depuis 2016, nous référençons les APIs de toutes les administrations
           qui ouvrent leur données
         </p>
-        <Roadmap />
+        <Roadmap roadmap={roadmap} />
       </div>
     </Page>
   );
 };
+
+export const getStaticProps: GetStaticProps = async () => {
+  const roadmap = await getRoadmap();
+
+  return {
+    props: {
+      roadmap,
+    },
+  };
+};
+
+export default FeuilleDeRoute;
