@@ -1,5 +1,5 @@
 ---
-title: API Education Nationale
+title: API données ouvertes de l’Éducation Nationale
 tagline: 'Découvrez les jeux de données publiques ouverts et n’hésitez pas à nous faire connaître vos réutilisations de données et créations de nouveaux services !'
 external_site: https://data.education.gouv.fr/
 owner: Ministère de l'Éducation Nationale et de la Jeunesse
