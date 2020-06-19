@@ -19,16 +19,23 @@ keywords:
 themes:
   - Entreprise
 logo: logo-beta-gouv.svg
+rate_limiting_resume: 7 appels / seconde
+rate_limiting_description: |
+  <p>Actuellement, le nombre d’appels à l’API est limité à 7 appels par seconde</p>
+uptime: 100
+monitoring_link: https://status.entreprise.data.gouv.fr/
+monitoring_description: |
+  <p>Une supervision du service en temps réel est disponible à cette adresse.</p>
 contact_link: entreprise@data.gouv.fr
 doc_tech_external: https://entreprise.data.gouv.fr/api_doc/rna
 last_update: 16/06/2020
 ---
 
-L’API RNA permet d'interroger le répertoire des associations françaises.
+L’API Répertoire des Associations permet d'interroger le répertoire des associations françaises.
 
 ### A quoi sert cette API ?
 
-L’API Répertoire des Associations vous permet de :
+L’API vous permet de :
 
 - requêter les données d'une association grâce à son SIRET
 - requêter les données d'une association grâce à son code RNA
