@@ -1,6 +1,6 @@
 // used by node, therefore in plain js
-const formatServiceWithApis = require('./formatters/service');
-const formatApi = require('./formatters/api');
+const { formatServiceWithApis } = require('./formatters/service');
+const { formatApi } = require('./formatters/api');
 const fs = require('fs');
 
 const readAllApisOnDisk = async () => {
