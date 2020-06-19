@@ -1,4 +1,3 @@
-import frontmatter from 'front-matter';
 import { IRoadmap, IRoadmapElement, RoadmapNodeType } from '..';
 
 const monthAsWords = [
