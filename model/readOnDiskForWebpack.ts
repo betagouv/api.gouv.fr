@@ -1,5 +1,5 @@
-import { IService, IApi, IRoadmap, IRoadmapElement, RoadmapNodeType } from '.';
-import { formatServiceWithApis, formatApi } from './formatter';
+import { IService, IApi, IRoadmap, IRoadmapElement } from '.';
+import { formatServiceWithApis, formatApi, formatRoadmap } from './formatters';
 import frontmatter from 'front-matter';
 
 const parseMarkdown = (
@@ -68,56 +68,8 @@ export const getAllServices = async (): Promise<IService[]> => {
   return Object.values(data);
 };
 
-const monthLabels = [
-  'Janvier',
-  'Février',
-  'Mars',
-  'Avril',
-  'Mai',
-  'Juin',
-  'Juillet',
-  'Août',
-  'Septembre',
-  'Octobre',
-  'Novembre',
-  'Décembre',
-];
-
-const flatten = (roadmap: IRoadmap) => {
-  const flatRoadmap: IRoadmapElement[] = [];
-  Object.keys(roadmap).forEach((year: any) => {
-    let lastMonth = 0;
-    Object.keys(roadmap[year]).forEach((month: any) => {
-      const monthAsNumber = parseInt(month, 10);
-      if (monthAsNumber - lastMonth > 1) {
-        lastMonth = monthAsNumber;
-        flatRoadmap.push({ type: RoadmapNodeType.ELLIPSIS });
-      } else if (year === 'Next') {
-        flatRoadmap.push({ type: RoadmapNodeType.ELLIPSIS });
-        flatRoadmap.push({ type: RoadmapNodeType.MONTH, what: 'À venir' });
-        roadmap['Next']['Soon'].forEach((roadmapEvent: IRoadmapElement) => {
-          flatRoadmap.push(roadmapEvent);
-        });
-      }
-      if (isNaN(monthAsNumber)) {
-        flatRoadmap.push({ type: RoadmapNodeType.MONTH, what: month });
-      } else {
-        flatRoadmap.push({
-          type: RoadmapNodeType.MONTH,
-          what: monthLabels[month - 1],
-        });
-      }
-      roadmap[year][month].forEach((roadmapEvent: IRoadmapElement) => {
-        flatRoadmap.push(roadmapEvent);
-      });
-    });
-  });
-
-  return flatRoadmap;
-};
-
 export const getRoadmap = async (): Promise<IRoadmapElement[]> => {
   const roadmapFile = require('../_data/roadmap.md');
   const md = frontmatter(roadmapFile.default);
-  return flatten(md.attributes as IRoadmap);
+  return formatRoadmap(md.attributes as IRoadmap);
 };

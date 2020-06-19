@@ -35,14 +35,25 @@
     > .date {
       display: inline-block;
       padding: 10px;
+      max-width: 600px;
       border-radius: 6px;
       border: 2px solid #ccc;
-      margin: 10px 40px;
+      margin: 10px 0 10px 40px;
       position: relative;
 
-      > div:first-of-type {
-        font-weight: bold;
+      &.content {
+        padding: 20px;
+
+        > div.label {
+          font-weight: bold;
+          background-color: #ffdea0;
+          color: #5e3000;
+          padding: 2px 8px;
+          border-radius: 4px;
+          display: inline-block;
+        }
       }
+
       &:before {
         left: -54px;
         top: 13px;
@@ -64,5 +75,8 @@
         height: 2px;
       }
     }
+  }
+  @media only screen and (min-width: 600px) {
+    padding: 20px 30px;
   }
 }

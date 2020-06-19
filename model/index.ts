@@ -4,7 +4,7 @@ import {
   getAllAPIs,
   getAPI,
   getRoadmap,
-} from './loader';
+} from './readOnDiskForWebpack';
 
 export enum RoadmapNodeType {
   YEAR,
@@ -22,8 +22,8 @@ export interface IRoadmapElement {
 }
 
 export interface IRoadmap {
-  [year: number]: {
-    [month: number]: IRoadmapElement[];
+  [year: string]: {
+    [month: string]: IRoadmapElement[];
   };
 }
 

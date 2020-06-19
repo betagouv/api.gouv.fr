@@ -8,7 +8,7 @@ export interface IProps {
 }
 
 export default ({ roadmap }: IProps) => (
-  <div id="roadmap-wrapper" className="text-wrapper">
+  <div id="roadmap-wrapper">
     {roadmap.map((item, idx) => (
       <RoadmapNode
         key={idx}

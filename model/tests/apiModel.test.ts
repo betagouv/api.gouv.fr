@@ -1,6 +1,6 @@
 import { uniq, flatten } from 'lodash';
 
-import { readAllApisOnDisk } from '../readOnDisk';
+import { readAllApisOnDisk } from '../readOnDiskForNode';
 import { IApi } from '..';
 
 let allApis: IApi[];

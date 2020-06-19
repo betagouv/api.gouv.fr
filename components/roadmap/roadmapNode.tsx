@@ -1,5 +1,6 @@
 import React from 'react';
 import { RoadmapNodeType, IRoadmapElement } from '../../model';
+import ReactMarkdown from 'react-markdown';
 
 const RoadmapNode: React.FC<IRoadmapElement> = ({ type, what, path }) => {
   switch (type) {
@@ -11,16 +12,26 @@ const RoadmapNode: React.FC<IRoadmapElement> = ({ type, what, path }) => {
       return (
         <div className="roadmap-node">
           <div className="date">
-            Ajout de l’{path ? <a href={path}>API {what}</a> : `API ${what}`}
+            Aout au catalogue de l’
+            {path ? <a href={path}>API {what}</a> : `API ${what}`}
+          </div>
+        </div>
+      );
+    case RoadmapNodeType.INFO:
+      return (
+        <div className="roadmap-node">
+          <div className="date content">
+            <div className="label">Nouveauté</div>
+            <ReactMarkdown source={what as string} />
           </div>
         </div>
       );
     default:
       return (
         <div className="roadmap-node">
-          <div className="date">
-            <div className="label">{type} :</div>
-            <div dangerouslySetInnerHTML={{ __html: what as string }} />
+          <div className="date content">
+            <div className="label">{type}</div>
+            <ReactMarkdown source={what as string} />
           </div>
         </div>
       );
