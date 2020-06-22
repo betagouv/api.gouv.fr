@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { throttle } from 'lodash';
 
-import { apiDocLogo, republiqueFrLogo, githubLogo } from './logos';
+import { apiLogo, republiqueFrLogo, githubLogo } from './logos';
 
 const Header = ({ headerKey = 'home', useMenu = true }) => {
   const header = useRef(null);
@@ -46,8 +46,11 @@ const Header = ({ headerKey = 'home', useMenu = true }) => {
               className="nav__logo-wrapper"
               title="Retourner à l’accueil de la documentation des APIs du service public"
             >
-              <span className="nav__logo">{republiqueFrLogo}</span>
-              <span className="nav__logo">{apiDocLogo}</span>
+              <span className="nav__logo marianne">{republiqueFrLogo}</span>
+              <span className="nav__logo apigouv">
+                {apiLogo}
+                <span className="doc-subtitle">Documentation Technique</span>
+              </span>
             </a>
           </Link>
         </div>
