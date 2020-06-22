@@ -35,7 +35,7 @@
       path: https://www.insee.fr/fr/information/3544265
     - type: ADD_API
       what: Registre National du Commerce et des Sociétés
-      path: https://data.inpi.fr/swagger
+      path: https://data.inpi.fr/content/editorial/apis_entreprises_doc
     - type: ADD_API
       what: Sirene distribuée par entreprise.data.gouv.fr
       path: https://entreprise.data.gouv.fr/api_doc/sirene
