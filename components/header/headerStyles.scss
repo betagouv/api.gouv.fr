@@ -62,7 +62,7 @@ header {
         margin: 10px 20px;
         padding: 0;
 
-        .nav__logo:first-of-type {
+        .nav__logo.marianne {
           padding: 0;
           box-sizing: content-box;
           margin: 0;
@@ -76,11 +76,13 @@ header {
             }
           }
         }
-        .nav__logo:last-of-type {
+        .nav__logo.apigouv {
           margin: 0;
           padding: 0 0 0 20px;
           box-sizing: content-box;
           display: flex;
+          flex-direction: column;
+          justify-content: left;
 
           > svg {
             height: 28px;
@@ -91,6 +93,17 @@ header {
               height: 22px;
             }
           }
+
+          > .doc-subtitle {
+            font-weight: bold;
+            font-size: 0.9rem;
+            font-variant: small-caps;
+          }
+        }
+
+        &:hover {
+          color: #333;
+          text-decoration: none;
         }
       }
 

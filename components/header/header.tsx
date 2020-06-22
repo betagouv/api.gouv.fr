@@ -76,8 +76,8 @@ const Header = ({ headerKey = 'home', useMenu = true }) => {
               className="nav__logo-wrapper"
               title="Retourner à l’accueil de api.gouv.fr"
             >
-              <span className="nav__logo">{republiqueFrLogo}</span>
-              <span className="nav__logo">{apiLogo}</span>
+              <span className="nav__logo marianne">{republiqueFrLogo}</span>
+              <span className="nav__logo apigouv">{apiLogo}</span>
             </a>
           </Link>
           <ul className="nav__links">

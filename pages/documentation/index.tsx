@@ -25,11 +25,11 @@ const Documentation: React.FC<IProps> = ({ allApis }) => {
         <DocumentationLeftMenu allApis={allApis} />
         <div className="documentation-body text-style">
           <p>
-            Bienvenue sur <b>l’espace documentation</b> d’
-            <a href="/apropos">api.gouv.fr</a>
+            Bienvenue sur l’espace <b>documentation technique</b> du site
+            <a href="/apropos">api.gouv.fr</a>.
           </p>
           <p>
-            Cette espace s’adresse à tous ceux - développeurs.ses, architectes,
+            Cet espace s’adresse à tous ceux - développeurs.ses, architectes,
             products owners, craftman.es, magicien.nes du web...{' '}
             <span role="img" aria-label="émoji ninja">
               🧙‍♀️
@@ -47,7 +47,7 @@ const Documentation: React.FC<IProps> = ({ allApis }) => {
             <li>les agences gouvernementales</li>
           </ul>
           <p>
-            Attention, les APIs tombent dans deux grandes catégories. Les{' '}
+            Les APIs tombent dans deux grandes catégories. Les{' '}
             <b>APIs ouvertes</b> qui sont accessibles à tous. Et les{' '}
             <b>
               APIs qui nécessitent une habilitation{' '}
