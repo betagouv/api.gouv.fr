@@ -46,11 +46,16 @@
 
         > div.label {
           font-weight: bold;
-          background-color: #ffdea0;
+          background-color: #fffda0;
           color: #5e3000;
           padding: 2px 8px;
           border-radius: 4px;
           display: inline-block;
+
+          &.info {
+            background-color: #cbffa0;
+            color: #144707;
+          }
         }
       }
 

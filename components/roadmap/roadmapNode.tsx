@@ -12,7 +12,7 @@ const RoadmapNode: React.FC<IRoadmapElement> = ({ type, what, path }) => {
       return (
         <div className="roadmap-node">
           <div className="date">
-            Aout au catalogue de l’
+            Ajout au catalogue de l’
             {path ? <a href={path}>API {what}</a> : `API ${what}`}
           </div>
         </div>
@@ -21,7 +21,7 @@ const RoadmapNode: React.FC<IRoadmapElement> = ({ type, what, path }) => {
       return (
         <div className="roadmap-node">
           <div className="date content">
-            <div className="label">Nouveauté</div>
+            <div className="label info">Nouveauté</div>
             <ReactMarkdown source={what as string} />
           </div>
         </div>

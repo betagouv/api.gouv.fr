@@ -14,7 +14,7 @@
         - Revenu fiscal de référence, informations sur le conjoint, adresse
         - Informations sur les enfants, l’adresse et le quotient familial
 
-        Retrouvez ces données dans l’[API Particulier](/les-api/api-particulier)
+        Retrouvez ces données dans l’[API Impôt particulier](/les-api/impot-particulier) et l’[API Particulier](/les-api/api-particulier)
   5:
     - type: ADD_API
       what: Point d’Accès National aux données de transport
@@ -26,26 +26,27 @@
     - type: ADD_API
       what: Ingres Noyau
       path: /les-api/API_Ingres_Noyau
+    - type: ADD_API
+      what: Répertoire National des Associations
+      path: /les-api/api_rna
   7:
     - type: ADD_API
       what: Données Locales
     - type: ADD_API
-      what: Répertoire National des Associations
+      what: INPI
+    - type: ADD_API
+      what: Sirene par entreprise.data.gouv.fr
+  9:
     - type: ADD_API
       what: Répertoire National des Métiers
-    - type: ADD_API
-      what: INPI
-  8:
     - type: DLNUF
       what: |
         De nouvelles données sont mises à disposition des administrations dans le cadre du [« Dites le nous une fois »](https://www.numerique.gouv.fr/services/guichet-dites-le-nous-une-fois/) :
-        - Derniers salaires perçus
-        - Informations contenues dans les attestations relatives au chômage
-        - Informations contenues dans les attestations relatives au statut étudiant
-  9:
+        - informations contenues dans les attestations relatives au statut demandeur d'emploi
+        - informations contenues dans les attestations relatives au statut étudiant
     - type: DLNUF
       what: |
-        Dans le cadre du [« Dites le nous une fois »](https://www.numerique.gouv.fr/services/guichet-dites-le-nous-une-fois/), l’échange des données entre administrations devient automatique pour ces démarches :
+        Dans le cadre du [« Dites le nous une fois »](https://www.numerique.gouv.fr/services/guichet-dites-le-nous-une-fois/), l’échange des données entre administrations permettra le pré-remplissage de 6 démarches administratives:
         - Demande d’allocation logement en ligne
         - Simulation de droits sociaux
         - Demande de prime d’activité
@@ -60,10 +61,8 @@
         - API Déclaration auto-entrepreneur
         - API Déclaration CESU
         - API Déclaration PAJE
-  11:
+  12:
     - type: INFO
       what: |
-        Publication de la Doctrine Interministérielle des APIs, qui détaille les bonnes pratiques au sein de l’administration :
-        - d’exposition des APIs
-        - de consommation des APIs
+        Publication d'une doctrine relative à la circulation des données entre administrations
 ---
