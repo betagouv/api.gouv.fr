@@ -1,7 +1,7 @@
 const {
   readAllApisOnDisk,
   readAllServicesOnDisk,
-} = require('../model/readOnDisk');
+} = require('../model/readOnDiskForNode');
 
 /**
  * Save the list of url in a text file. For testing purposes and for sitemap generation

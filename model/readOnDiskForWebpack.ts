@@ -1,5 +1,6 @@
-import { IService, IApi } from '.';
-import { formatServiceWithApis, formatApi } from './readOnDisk';
+import { IService, IApi, IRoadmap, IRoadmapElement } from '.';
+import { formatServiceWithApis, formatApi, formatRoadmap } from './formatters';
+import frontmatter from 'front-matter';
 
 const parseMarkdown = (
   context: any,
@@ -47,4 +48,28 @@ const loadApis = async (): Promise<{ [key: string]: IApi }> => {
   return parseMarkdown(apiFolderContext, formatApi);
 };
 
-export { formatApi, formatServiceWithApis, loadApis, loadServices };
+export const getAPI = async (id: string): Promise<IApi> => {
+  const data = await loadApis();
+  return data[id];
+};
+
+export const getService = async (id: string): Promise<IService> => {
+  const data = await loadServices();
+  return data[id];
+};
+
+export const getAllAPIs = async (): Promise<IApi[]> => {
+  const data = await loadApis();
+  return Object.values(data);
+};
+
+export const getAllServices = async (): Promise<IService[]> => {
+  const data = await loadServices();
+  return Object.values(data);
+};
+
+export const getRoadmap = async (): Promise<IRoadmapElement[]> => {
+  const roadmapFile = require('../_data/roadmap.md');
+  const md = frontmatter(roadmapFile.default);
+  return formatRoadmap(md.attributes as IRoadmap);
+};

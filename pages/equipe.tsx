@@ -52,6 +52,12 @@ const teamData = [
     linkedin: 'https://www.linkedin.com/in/christophegaie/',
     img: 'Christophe.jpg',
   },
+  {
+    name: 'Maëlle Granon',
+    title: 'Support aux utilisateurs des APIs',
+    linkedin: 'https://www.linkedin.com/in/maellegranon/',
+    img: 'Maelle.jpg',
+  },
 ];
 
 const Team: React.FC = () => (

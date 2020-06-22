@@ -1,24 +1,39 @@
 import React from 'react';
-import { RoadmapNodeType } from './index';
+import { RoadmapNodeType, IRoadmapElement } from '../../model';
+import ReactMarkdown from 'react-markdown';
 
-interface IProps {
-  type: RoadmapNodeType;
-  what?: JSX.Element | string;
-}
-
-const RoadmapNode: React.FC<IProps> = ({ type, what }) => {
+const RoadmapNode: React.FC<IRoadmapElement> = ({ type, what, path }) => {
   switch (type) {
     case RoadmapNodeType.ELLIPSIS:
       return <div className="roadmap-node ellipsis"></div>;
     case RoadmapNodeType.MONTH:
       return <div className="roadmap-node month">{what}</div>;
+    case RoadmapNodeType.ADD_API:
+      return (
+        <div className="roadmap-node">
+          <div className="date">
+            Ajout au catalogue de l’
+            {path ? <a href={path}>API {what}</a> : `API ${what}`}
+          </div>
+        </div>
+      );
+    case RoadmapNodeType.INFO:
+      return (
+        <div className="roadmap-node">
+          <div className="date content">
+            <div className="label info">Nouveauté</div>
+            <ReactMarkdown source={what as string} />
+          </div>
+        </div>
+      );
     default:
       return (
-        <>
-          <div className="roadmap-node">
-            <div className="date">Ajout {what}</div>
+        <div className="roadmap-node">
+          <div className="date content">
+            <div className="label">{type}</div>
+            <ReactMarkdown source={what as string} />
           </div>
-        </>
+        </div>
       );
   }
 };
