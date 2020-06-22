@@ -25,7 +25,7 @@ const Documentation: React.FC<IProps> = ({ allApis }) => {
         <DocumentationLeftMenu allApis={allApis} />
         <div className="documentation-body text-style">
           <p>
-            Bienvenue sur l’espace <b>documentation technique</b> du site
+            Bienvenue sur l’espace <b>documentation technique</b> du site{' '}
             <a href="/apropos">api.gouv.fr</a>.
           </p>
           <p>
