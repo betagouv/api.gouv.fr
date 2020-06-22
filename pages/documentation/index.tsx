@@ -29,8 +29,8 @@ const Documentation: React.FC<IProps> = ({ allApis }) => {
             <a href="/apropos">api.gouv.fr</a>.
           </p>
           <p>
-            Cet espace s’adresse à tous ceux - développeurs.ses, architectes,
-            products owners, craftman.es, magicien.nes du web...{' '}
+            Cet espace s’adresse à tous ceux - développeurs·ses, architectes,
+            products owners, craftman·es, magicien·nes du web...{' '}
             <span role="img" aria-label="émoji ninja">
               🧙‍♀️
             </span>{' '}
