@@ -39,8 +39,6 @@
       what: Sirene distribuée par entreprise.data.gouv.fr
       path: https://entreprise.data.gouv.fr/api_doc/sirene
   9:
-    - type: ADD_API
-      what: Répertoire National des Métiers
     - type: DLNUF
       what: |
         De nouvelles données seront mises à disposition des administrations dans le cadre du [« Dites le nous une fois »](https://www.numerique.gouv.fr/services/guichet-dites-le-nous-une-fois/) :
@@ -56,6 +54,9 @@
         - Demande ou renouvellement de logement social
         - Recensement citoyen obligatoire
   10:
+    - type: ADD_API
+      what: Répertoire National des Métiers
+      path: https://rnm.artisanat.fr/api/
     - type: INFO
       what: |
         Intégration des [APIs de l’URSSAF](https://portailapi.urssaf.fr/fr/) :
