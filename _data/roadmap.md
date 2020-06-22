@@ -32,16 +32,19 @@
   7:
     - type: ADD_API
       what: Données Locales
+      path: https://www.insee.fr/fr/information/3544265
     - type: ADD_API
-      what: INPI
+      what: Registre National du Commerce et des Sociétés
+      path: https://data.inpi.fr/swagger
     - type: ADD_API
-      what: Sirene par entreprise.data.gouv.fr
+      what: Sirene distribuée par entreprise.data.gouv.fr
+      path: https://entreprise.data.gouv.fr/api_doc/sirene
   9:
     - type: ADD_API
       what: Répertoire National des Métiers
     - type: DLNUF
       what: |
-        De nouvelles données sont mises à disposition des administrations dans le cadre du [« Dites le nous une fois »](https://www.numerique.gouv.fr/services/guichet-dites-le-nous-une-fois/) :
+        De nouvelles données seront mises à disposition des administrations dans le cadre du [« Dites le nous une fois »](https://www.numerique.gouv.fr/services/guichet-dites-le-nous-une-fois/) :
         - informations contenues dans les attestations relatives au statut demandeur d'emploi
         - informations contenues dans les attestations relatives au statut étudiant
     - type: DLNUF
@@ -56,7 +59,7 @@
   10:
     - type: INFO
       what: |
-        Intégration des APIs de l’URSSAF :
+        Intégration des [APIs de l’URSSAF](https://portailapi.urssaf.fr/fr/) :
         - API Données ouvertes de l’URSSAF
         - API Déclaration auto-entrepreneur
         - API Déclaration CESU
