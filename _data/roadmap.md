@@ -22,7 +22,7 @@
   6:
     - type: ADD_API
       what: Jours fériés
-      path: /les-api/api_catalogue_transport
+      path: /les-api/jours-feries
     - type: ADD_API
       what: Ingres Noyau
       path: /les-api/API_Ingres_Noyau
