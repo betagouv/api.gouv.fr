@@ -2,23 +2,33 @@ import React, { useState } from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import ReactMarkdown from 'react-markdown';
 
-import { getAPI, getAllAPIs } from '../../model';
+import {
+  getAPI,
+  getAllAPIs,
+  IAccessCondition,
+  IAccessConditionWithVisitorType,
+} from '../../model';
 import Page from '../../layouts';
 
 import { HEADER_PAGE } from '../../components';
 
 import { MultiChoice, ButtonLink } from '../../uiComponents';
 
+interface IAccessConditionOption extends IAccessCondition {
+  label: string;
+  value: string;
+}
+
 interface IProps {
   title: string;
   slug: string;
-  accessCondition: { label: string; description: string; value: string }[];
+  accessConditionOptions: IAccessConditionOption[];
 }
 
 const AccessCondition: React.FC<IProps> = ({
   title,
   slug,
-  accessCondition,
+  accessConditionOptions,
 }) => {
   const [visitorType, setVisitorType] = useState(null);
 
@@ -41,12 +51,12 @@ const AccessCondition: React.FC<IProps> = ({
           Vérifions is vous êtes <b>élligibles</b>. Qui êtes-vous :
         </p>
         <MultiChoice
-          multiChoiceOptions={accessCondition}
+          multiChoiceOptions={accessConditionOptions}
           onClick={setVisitorType}
           selected={visitorType}
         />
         <div className="condition-details">
-          {accessCondition.map(condition => (
+          {accessConditionOptions.map(condition => (
             <>
               {condition.value === visitorType && (
                 <>
@@ -62,7 +72,6 @@ const AccessCondition: React.FC<IProps> = ({
           ))}
         </div>
       </div>
-
       <style jsx>{`
         .condition-details {
           margin: 40px 0;
@@ -96,22 +105,29 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   //@ts-ignore
   const api = await getAPI(slug);
+  const accessConditionOptions = api.access_page.reduce(
+    (
+      accumulator: IAccessConditionOption[],
+      condition: IAccessConditionWithVisitorType
+    ) => {
+      condition.who.forEach(type => {
+        accumulator.push({
+          label: `Un ${type}`,
+          value: type,
+          description: condition.description,
+          cta: condition.cta,
+        });
+      });
+      return accumulator;
+    },
+    []
+  );
 
   return {
     props: {
       title: api.title,
       slug: api.slug,
-      accessCondition: api.access_page.reduce((accumulator, condition) => {
-        condition.who.forEach(type => {
-          accumulator.push({
-            label: `Un ${type}`,
-            value: type,
-            description: condition.description,
-            cta: condition.cta,
-          });
-        });
-        return accumulator;
-      }, []),
+      accessConditionOptions,
     },
   };
 };

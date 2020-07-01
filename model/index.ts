@@ -50,6 +50,15 @@ export interface IApiShort {
   owner: string;
 }
 
+export interface IAccessCondition {
+  description: string;
+  cta: { label: string; path: string };
+}
+
+export interface IAccessConditionWithVisitorType extends IAccessCondition {
+  who: string[];
+}
+
 export interface IApi extends IApiShort {
   path: string;
   body: string;
@@ -68,7 +77,7 @@ export interface IApi extends IApiShort {
   access_link: string;
   access_description: string;
   access_condition: string;
-  access_page: { [key: string]: string };
+  access_page: IAccessConditionWithVisitorType[];
   monitoring_link: string;
   monitoring_description: string;
   rate_limiting_description: string;
