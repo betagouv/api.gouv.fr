@@ -68,6 +68,7 @@ export interface IApi extends IApiShort {
   access_link: string;
   access_description: string;
   access_condition: string;
+  access_page: { [key: string]: string };
   monitoring_link: string;
   monitoring_description: string;
   rate_limiting_description: string;
