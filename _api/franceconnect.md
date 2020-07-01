@@ -4,7 +4,7 @@ tagline: FranceConnect est un dispositif qui garantit l’identité d’un usage
 external_site: https://franceconnect.gouv.fr/partenaires
 is_open: false
 access_condition: OUVERT sous contrat
-access_link: /condition-acces/franceconnect
+access_link: /les-api/franceconnect/etes-vous-elligible
 access_page:
   - who:
       - particulier

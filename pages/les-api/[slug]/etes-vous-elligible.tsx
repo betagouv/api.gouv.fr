@@ -7,12 +7,12 @@ import {
   getAllAPIs,
   IAccessCondition,
   IAccessConditionWithVisitorType,
-} from '../../model';
-import Page from '../../layouts';
+} from '../../../model';
+import Page from '../../../layouts';
 
-import { HEADER_PAGE } from '../../components';
+import { HEADER_PAGE } from '../../../components';
 
-import { MultiChoice, ButtonLink } from '../../uiComponents';
+import { MultiChoice, ButtonLink } from '../../../uiComponents';
 
 interface IAccessConditionOption extends IAccessCondition {
   label: string;
@@ -37,7 +37,9 @@ const AccessCondition: React.FC<IProps> = ({
       headerKey={HEADER_PAGE.APIS}
       title={`Condition d’accès à ${title}`}
       description={`${title} est une des APIs du service public. Découvrez ses conditions d’accès.}`}
-      canonical={`https://api.gouv.fr/les-api/${slug}`}
+      canonical={`https://api.gouv.fr/les-api/${slug}/etes-vous-elligible`}
+      noIndex={true}
+      usePreFooter={false}
     >
       <div className="text-wrapper text-style">
         <h1>Demande d’accès à {title}</h1>
@@ -74,7 +76,7 @@ const AccessCondition: React.FC<IProps> = ({
       </div>
       <style jsx>{`
         .condition-details {
-          margin: 40px 0;
+          margin: 50px 0 150px;
         }
       `}</style>
     </Page>
