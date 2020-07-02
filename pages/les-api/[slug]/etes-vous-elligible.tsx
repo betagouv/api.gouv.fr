@@ -114,7 +114,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     ) => {
       condition.who.forEach(type => {
         accumulator.push({
-          label: `Un ${type}`,
+          label: type,
           value: type,
           description: condition.description,
           cta: condition.cta,

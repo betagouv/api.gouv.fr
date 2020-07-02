@@ -7,39 +7,43 @@ access_condition: OUVERT sous contrat
 access_link: /les-api/franceconnect/etes-vous-elligible
 access_page:
   - who:
-      - particulier
+      - Un particulier
     description: |
       Vous êtes un particulier et vous avez des questions ou vous rencontrez des difficultés à utiliser FranceConnect ?
 
-      Trouvez de l’aide sur la FAQ de FranceConnect ! Vous pourrez également contacter le support FranceConnect si vous ne trouvez pas la réponse à votre question.
+      Ce site internet **ne permet pas de se connecter** à France Connect.
+
+      Vous trouverez de l’aide sur la FAQ de FranceConnect. Vous pourrez également contacter le support FranceConnect si vous ne trouvez pas la réponse à votre question.
     cta:
       label: Consultez la FAQ usager de FranceConnect
       path: https://franceconnect.gouv.fr/faq
   - who:
-      - collectivité
-      - administration
+      - Une collectivité ou une administration
     description: |
+
+      **Critères d’éligibilité :**
+
       Toute administration qui le souhaite peut implementer le bouton FranceConnect pour permettre à ses utilisateurs de s'identifier sur ses services en ligne. Dans votre demande d'habilitation, il vous suffira donc de citer [l'arrêté du 8 novembre 2018 relatif à FranceConnect](https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000037611479).
 
-      Si vous êtes éditeur de logiciels et agissez pour le compte d'une administration ou d'une collectivité, vous pouvez remplir une demande vous même pour l'entité que vous représentez. Vous devrez simplement renseigner les informations de contact du responsable de traitement et du délégué à la protection des données de l'entité pour laquelle vous opérez.
+      Si vous êtes **éditeur de logiciels** et agissez pour le compte d'une administration ou d'une collectivité, vous pouvez remplir une demande vous même pour l'entité que vous représentez. Vous devrez simplement renseigner les informations de contact du responsable de traitement et du délégué à la protection des données de l'entité pour laquelle vous opérez.
 
       Vous souhaitez intégrer l'identification FranceConnect à votre service en ligne ?
     cta:
       label: Remplir une demande
       path: https://signup.api.gouv.fr/franceconnect
   - who:
-      - entreprise de droit privé
+      - Une entreprise de droit privé
     description: |
       Conformément à l'arrêté du 8 novembre 2018 relatif à FranceConnect, les entreprises ou associations peuvent intégrer FranceConnect dans les cas suivants :
 
       - Elles proposent des services en ligne liés à la démarche de changement d'adresse et uniquement pour ces services
       - Elles proposent des services en ligne dont l'usage nécessite, conformément à un texte règlementaire la vérification de l'identité de leurs utilisateurs.
 
-      En plus des organismes privés indiqués ci-dessus, un arrêté d’expérimentation relatif à FranceConnect permet à certaines entreprises ou associations de tester durant un an l’intégration de FranceConnect. Cette expérimentation, menée avec un nombre maximal de cent personnes morales, vise à déterminer les nouveaux secteurs d’activité qui trouveraient un bénéfice à utiliser FranceConnect afin d’améliorer les services rendus à leurs utilisateurs. Elle s’inscrit dans les conditions et avec les mêmes garanties que celles fixées par l’arrêté du 8 novembre 2018.
+      En plus des organismes privés indiqués ci-dessus, un arrêté d’expérimentation relatif à FranceConnect permet à certaines entreprises ou associations de tester durant un an l’intégration de FranceConnect. Cette expérimentation, menée avec un nombre maximal de cent personnes morales, vise à déterminer les nouveaux secteurs d’activité qui trouveraient un bénéfice à utiliser FranceConnect afin d’améliorer les services rendus à leurs utilisateurs. Elle s’inscrit dans les conditions et avec les mêmes garanties que celles fixées par [l'arrêté du 8 novembre 2018 relatif à FranceConnect](https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000037611479).
 
       Pour participer à cette expérimentation, les entreprises et associations participantes doivent répondre aux critères suivants :
 
-      Critères d’éligibilité :
+      **Critères d’éligibilité :**
 
       - Avoir un établissement en France
       - Exercer son activité depuis plus de 3 ans
@@ -51,7 +55,7 @@ access_page:
         - à la délivrance de certificats professionnels visés à l’article L. 6113-1 du code du travail ;
         - à la location de biens immobiliers et les véhicules.
 
-      Critères de sélection :
+      **Critères de sélection :**
 
       - Fournir tous les mois à l’équipe FranceConnect les données qui permettront de mesurer la valeur ajoutée de FranceConnect :
         - Volume de connexions par FranceConnect vs volume de connexions global
