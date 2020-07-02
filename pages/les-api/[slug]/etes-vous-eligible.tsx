@@ -50,7 +50,7 @@ const AccessCondition: React.FC<IProps> = ({
           L’accès aux données de {title} nécessite une habilitation.
         </p>
         <p>
-          Vérifions si vous êtes <b>éligibles</b>. Qui êtes-vous :
+          Vérifions si vous êtes <b>éligible</b>. Qui êtes-vous :
         </p>
         <MultiChoice
           multiChoiceOptions={accessConditionOptions}
