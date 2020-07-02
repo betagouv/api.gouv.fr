@@ -37,7 +37,7 @@ const AccessCondition: React.FC<IProps> = ({
       headerKey={HEADER_PAGE.APIS}
       title={`Condition d’accès à ${title}`}
       description={`${title} est une des APIs du service public. Découvrez ses conditions d’accès.}`}
-      canonical={`https://api.gouv.fr/les-api/${slug}/etes-vous-elligible`}
+      canonical={`https://api.gouv.fr/les-api/${slug}/etes-vous-eligible`}
       noIndex={true}
       usePreFooter={false}
     >
@@ -47,10 +47,10 @@ const AccessCondition: React.FC<IProps> = ({
           <span role="img" aria-label="émoji clé">
             🔑
           </span>{' '}
-          L’accès aux données de {title} est nécessite une habilitation.
+          L’accès aux données de {title} nécessite une habilitation.
         </p>
         <p>
-          Vérifions is vous êtes <b>élligibles</b>. Qui êtes-vous :
+          Vérifions si vous êtes <b>éligibles</b>. Qui êtes-vous :
         </p>
         <MultiChoice
           multiChoiceOptions={accessConditionOptions}

@@ -3,37 +3,64 @@ title: FranceConnect
 tagline: FranceConnect est un dispositif qui garantit l’identité d’un usager en se reposant sur des comptes certifiés existants.
 external_site: https://franceconnect.gouv.fr/partenaires
 is_open: false
-access_condition: OUVERT sous contrat
-access_link: /les-api/franceconnect/etes-vous-elligible
+access_description: |
+  Cette API nécessite une habilitation :
+access_link: /les-api/franceconnect/etes-vous-eligible
 access_page:
   - who:
       - Un particulier
     description: |
-      Vous êtes un particulier et vous avez des questions ou vous rencontrez des difficultés à utiliser FranceConnect ?
+      ### Désolé, vous n’êtes pas éligible 🚫
 
-      Ce site internet **ne permet pas de se connecter** à France Connect.
+      Ce site internet **ne permet pas de se connecter** à FranceConnect.
 
-      Vous trouverez de l’aide sur la FAQ de FranceConnect. Vous pourrez également contacter le support FranceConnect si vous ne trouvez pas la réponse à votre question.
+      Vous trouverez plus d’explications sur le [site de FranceConnect](https://franceconnect.gouv.fr/). En particulier, nous vous recommandons de consulter la FAQ :
     cta:
       label: Consultez la FAQ usager de FranceConnect
       path: https://franceconnect.gouv.fr/faq
   - who:
       - Une collectivité ou une administration
     description: |
+      ### Vous êtes éligible 👌
 
-      **Critères d’éligibilité :**
+      Toute administration qui le souhaite peut implementer le bouton FranceConnect pour permettre à ses utilisateurs de s'identifier sur ses services en ligne.
 
-      Toute administration qui le souhaite peut implementer le bouton FranceConnect pour permettre à ses utilisateurs de s'identifier sur ses services en ligne. Dans votre demande d'habilitation, il vous suffira donc de citer [l'arrêté du 8 novembre 2018 relatif à FranceConnect](https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000037611479).
+      Dans votre demande d'habilitation, il vous suffira donc de citer [l'arrêté du 8 novembre 2018 relatif à FranceConnect](https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000037611479).
 
-      Si vous êtes **éditeur de logiciels** et agissez pour le compte d'une administration ou d'une collectivité, vous pouvez remplir une demande vous même pour l'entité que vous représentez. Vous devrez simplement renseigner les informations de contact du responsable de traitement et du délégué à la protection des données de l'entité pour laquelle vous opérez.
+      💡 Si vous travaillez avec un éditeur, celui-ci peut remplir cette démarche à votre place !
 
-      Vous souhaitez intégrer l'identification FranceConnect à votre service en ligne ?
+      ** Pour remplir votre demande, vous aurez besoin de : **
+      - numéro SIRET
+      - le cadre juridique, en l’occurence [l'arrêté du 8 novembre 2018 relatif à FranceConnect](https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000037611479)
+      - description du service
+      - les coordonnées de l'équipe
+      - les coordonnées de votre délégué à la protection des données
     cta:
       label: Remplir une demande
       path: https://signup.api.gouv.fr/franceconnect
   - who:
+      - Un éditeur de logiciel
+    description: |
+      ### Vous êtes peut-être éligible 🧐
+
+      Si vous êtes **éditeur de logiciels** et agissez pour le compte d'une administration ou d'une collectivité, vous pouvez remplir une demande vous même pour l'entité que vous représentez.
+
+      Dans votre demande d'habilitation, il vous faudra citer [l'arrêté du 8 novembre 2018 relatif à FranceConnect](https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000037611479).
+
+      ** Pour remplir votre demande, vous aurez besoin de : **
+      - numéro SIRET
+      - le cadre juridique, en l’occurence [l'arrêté du 8 novembre 2018 relatif à FranceConnect](https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000037611479)
+      - description du service
+      - les coordonnées de l'équipe
+      - les coordonnées du délégué à la protection des données **de l'entité pour laquelle vous opérez**
+    cta:
+      label: Consultez la FAQ usager de FranceConnect
+      path: https://franceconnect.gouv.fr/faq
+  - who:
       - Une entreprise de droit privé
     description: |
+      ### Vous êtes peut-être éligible 🧐
+
       Conformément à l'arrêté du 8 novembre 2018 relatif à FranceConnect, les entreprises ou associations peuvent intégrer FranceConnect dans les cas suivants :
 
       - Elles proposent des services en ligne liés à la démarche de changement d'adresse et uniquement pour ces services
@@ -62,7 +89,7 @@ access_page:
         - Volume de créations de compte par FranceConnect vs volume de créations de comptes global
         - Croissance constatée du trafic du fait de l’intégration de FranceConnect,
         - Retours qualitatifs des utilisateurs.
-      - Respecter le cahier des charges accessible sur le site partenaire FranceConnect. Il comprend l’ensemble des prérequis techniques, ergonomiques, de sécurité et fonctionnels à respecter. Toute demande de mise en production du dispositif FranceConnect fait l’objet d’une vérification du parcours de connexion par l’équipe FranceConnect qui contrôle également le respect des exigences précisées dans le cahier des charges.
+      - [Respecter le cahier des charges accessible sur le site partenaire FranceConnect](https://partenaires.franceconnect.gouv.fr/fcp/fournisseur-service). Il comprend l’ensemble des prérequis techniques, ergonomiques, de sécurité et fonctionnels à respecter. Toute demande de mise en production du dispositif FranceConnect fait l’objet d’une vérification du parcours de connexion par l’équipe FranceConnect qui contrôle également le respect des exigences précisées dans le cahier des charges.
       - Promouvoir le service dans les conditions prévues dans les CGU FS ;
       - Conserver les données obtenues dans le cadre de FranceConnect uniquement le temps de la relation contractuelle avec leur utilisateur et selon les conditions et garanties fixées dans l’arrêté du 8 novembre 2018 ;
       - Maintenir la possibilité pour ses clients d’utiliser un autre moyen d’authentification que FranceConnect ;
@@ -77,10 +104,6 @@ access_page:
     cta:
       label: Remplir une demande
       path: https://signup.api.gouv.fr/franceconnect
-clients:
-  - Particuliers, pour contacter FranceConnect, <a href='mailto:support@franceconnect.gouv.fr'>cliquez ici</a>
-  - Entreprises, si vous avez vérifié votre éligibilité, vous pouvez demander à <a href='https://signup.api.gouv.fr/franceconnect'>intégrer le bouton FranceConnect</a>.
-  - Collectivités, vous souhaitez intégrer le bouton FranceConnect, <a href='https://signup.api.gouv.fr/franceconnect'>faites votre demande d'accès</a>
 partners:
   - DGFiP
   - Ameli
