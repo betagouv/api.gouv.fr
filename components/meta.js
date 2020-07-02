@@ -18,7 +18,6 @@ const Meta = ({ title, description, noIndex = false, canonical }) => {
         title={title || SITE_NAME}
         description={description || SITE_DESCRIPTION}
         canonical={canonical}
-        noindex={noIndex}
         openGraph={{
           url: SITE_URL,
           locale: 'fr_FR',
@@ -40,6 +39,14 @@ const Meta = ({ title, description, noIndex = false, canonical }) => {
           {title ? title + ' - ' : ''}
           {SITE_NAME}
         </title>
+
+        {/* custom no index as NextSEO noindex was broken */}
+        {noIndex && (
+          <>
+            <meta name="robots" content="noindex" />
+            <meta name="googlebot" content="noindex" />
+          </>
+        )}
 
         {/* Search Engine */}
         <meta name="description" content={description || SITE_DESCRIPTION} />

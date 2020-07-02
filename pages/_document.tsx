@@ -21,6 +21,34 @@ class MyDocument extends Document {
           />
 
           <link rel="icon" href="/favicon.ico" />
+          <link
+            rel="preload"
+            href="/fonts/open-sans-v17-latin-700.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/open-sans-v17-latin-regular.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/source-sans-pro-v13-latin-regular.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/source-sans-pro-v13-latin-700.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
 
           <style
             dangerouslySetInnerHTML={{

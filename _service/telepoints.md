@@ -7,4 +7,6 @@ api:
   - FranceConnect
 ---
 
-Grâce à FranceConnect, vous pouvez consulter immédiatement votre solde de points sur le portail de l'ANTS.
+[Télépoints](https://permisdeconduire.ants.gouv.fr/Vos-demarches/Le-permis-a-points/Solde-de-vos-points-Via-France-Connect) permet de consulter immédiatement votre solde de points de permis de conduire sur le [portail de l’ANTS](https://permisdeconduire.ants.gouv.fr).
+
+Ce service utilise l’API FranceConnect.
