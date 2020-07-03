@@ -31,6 +31,21 @@
       path: /les-api/api_rna
   7:
     - type: ADD_API
+      what: API Carto - module AOC
+      path: /les-api/api_carto_aoc
+    - type: ADD_API
+      what: API Carto - module Cadastre
+      path: /les-api/api_carto_cadastre
+    - type: ADD_API
+      what: API Carto - module Codes Postaux
+      path: /les-api/api_carto_codes_postaux
+    - type: ADD_API
+      what: API Carto - module Géoportail de l'Urbanisme (GPU)
+      path: /les-api/api_carto_gpu
+    - type: ADD_API
+      what: API Carto - module RPG
+      path: /les-api/api_carto_rpg
+    - type: ADD_API
       what: Données Locales
       path: https://www.insee.fr/fr/information/3544265
     - type: ADD_API
