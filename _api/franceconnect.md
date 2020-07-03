@@ -137,6 +137,17 @@ Si vous êtes un particulier, vous pouvez [contacter l’équipe de FranceConnec
 
 ### A quoi ca sert ?
 
-- identifier les utilisateurs d’un service numérique **sans création de compte**
-- accèder aux informations de l'identité pivot (...)
-- accèder aux informations complémentatires (...)
+- identifier les utilisateurs de votre service en ligne simplement et de façon sécurisée, sans création de compte supplémentaire, c'est-à-dire sans leur demander de gérer des identifiants dédies pour chaque service en ligne.
+- accéder aux 6 informations nécessaires pour identifier une personne unique : l'identité pivot FranceConnect : le nom de naissance, les prénoms, le sexe, la date de naissance, le lieu de naissance (ville et pays).
+- accéder à des informations supplémentaires, éventuellement détenues par les fournisseurs de l'identité pivot : l'adresse mail de la personne et son nom d'usage.
+
+### En savoir plus :
+
+Enfin, l'API Bouton FranceConnect vous permet de simplifier les démarches des usagers en permettant l’échange d’informations les concernant d’une administration à une autre, via d'autres API liées au dispositif FranceConnect.
+
+Voici une liste non exhaustive des données disponibles :
+
+- [API Impôt Particulier](/les-api/impot-particulier) (Revenu fiscal de référence et Adresse fiscale)
+- [API Attestation de droits maladie](/les-api/api_ameli_droits_cnam)
+- API SIV
+- [API Résultats aux examens](/les-api/arpent-resultats-api)
