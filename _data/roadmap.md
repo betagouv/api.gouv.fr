@@ -83,4 +83,8 @@
     - type: INFO
       what: |
         Publication d'une doctrine relative à la circulation des données entre administrations
+2021:
+  01:
+    - type: ADD_API
+      what: Indemnités Journalières distribuée par la CNAM
 ---
