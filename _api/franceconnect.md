@@ -1,6 +1,6 @@
 ---
-title: FranceConnect
-tagline: FranceConnect est un dispositif qui garantit l’identité d’un usager en se reposant sur des comptes certifiés existants.
+title: API Bouton FranceConnect
+tagline: Le bouton FranceConnect est un dispositif qui garantit l’identité d’un usager en se reposant sur des comptes certifiés existants.
 external_site: https://franceconnect.gouv.fr/partenaires
 is_open: false
 access_description: |
@@ -23,7 +23,7 @@ access_page:
     description: |
       ### Vous êtes éligible 👌
 
-      Toute administration qui le souhaite peut implementer le bouton FranceConnect pour permettre à ses utilisateurs de s'identifier sur ses services en ligne.
+      Toute administration qui le souhaite peut implémenter le **bouton FranceConnect** pour permettre à ses utilisateurs de s'identifier sur ses services en ligne.
 
       Dans votre demande d'habilitation, il vous suffira donc de citer [l'arrêté du 8 novembre 2018 relatif à FranceConnect](https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000037611479).
 
@@ -43,7 +43,7 @@ access_page:
     description: |
       ### Vous êtes peut-être éligible 🧐
 
-      Si vous êtes **éditeur de logiciels** et agissez pour le compte d'une administration ou d'une collectivité, vous pouvez remplir une demande vous même pour l'entité que vous représentez.
+      Si vous êtes **éditeur de logiciels** et agissez pour le compte d'une administration ou d'une collectivité, vous pouvez remplir une demande de **bouton FranceConnect** vous même pour l'entité que vous représentez.
 
       Dans votre demande d'habilitation, il vous faudra citer [l'arrêté du 8 novembre 2018 relatif à FranceConnect](https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000037611479).
 
@@ -127,9 +127,9 @@ uptime: 99.893 # https://uptimerobot.com/dashboard.php#778110642
 last_update: 10/12/2019
 ---
 
-### Qu'est-ce que l’API FranceConnect ?
+### Qu'est-ce que l’API Bouton FranceConnect ?
 
-L‘API FranceConnect est un dispositif qui permet à des administrations, des collectivités ou des entreprises d’ajouter un bouton FranceConnect sur son service en ligne.
+L‘API Bouton FranceConnect est un dispositif qui permet à des administrations, des collectivités ou des entreprises d’ajouter un bouton FranceConnect sur son service en ligne.
 
 Grâce à ce bouton les internautes peuvent s'identifier par l'intermédiaire d'un compte existant (impots.gouv.fr, ameli.fr...).
 

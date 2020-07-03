@@ -35,14 +35,14 @@ const AccessCondition: React.FC<IProps> = ({
   return (
     <Page
       headerKey={HEADER_PAGE.APIS}
-      title={`Condition d’accès à ${title}`}
+      title={`Demande d’accès ${title}`}
       description={`${title} est une des APIs du service public. Découvrez ses conditions d’accès.}`}
       canonical={`https://api.gouv.fr/les-api/${slug}/etes-vous-eligible`}
       noIndex={true}
       usePreFooter={false}
     >
       <div className="text-wrapper text-style">
-        <h1>Demande d’accès à {title}</h1>
+        <h1>Demande d’accès {title}</h1>
         <p>
           <span role="img" aria-label="émoji clé">
             🔑
