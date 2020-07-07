@@ -4,14 +4,40 @@ tagline: Pour accélérer vos démarches en lien avec l'assurance maladie, autom
 external_site: https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/assurance-maladie-digital/api-droits-fs-doc/master/documentation-open-api.yaml
 is_open: false
 access_condition: OUVERT sous contrat
-access_link: https://signup.api.gouv.fr/api-droits-cnam
+access_link: /les-api/api_ameli_droits_cnam/demande-acces
 access_description: |
-  <p>Cette API est actuellement réservée aux établissements de soins pour leur démarche de pré admission et aux organismes complémentaires en santé pour faciliter leur démarche d’adhésion.</p>
+  Cette API nécessite une habilitation :
+access_page:
+  - who:
+      - Un établissements de soins
+      - Un organisme complémentaire de santé
+    is_eligible: 0
+    description: |
+      Cette API est actuellement réservée aux établissements de soins pour leur démarche de pré admission et aux organismes complémentaires en santé pour faciliter leur démarche d’adhésion.
 
-  <p>Cette API fonctionne uniquement avec FranceConnect; le candidat à l’utilisation de cette API doit être préalablement "fournisseur de services" FranceConnect.</p>
+      Cette API fonctionne uniquement avec FranceConnect; vous devez remplir les critères d'eligbilité de FranceConnect.
 
-  <p>L’utilisation de l’API est soumise à une convention d’usage avec la Caisse Nationale d’Assurance Maladie. Les données accessibles dépendent également du cas d’usage.</p>
-  <p>La Caisse Nationale se réserve le droit d’évaluer l’éligibilité des candidats au regard des cas d’usage indiqués.</p>
+      L’utilisation de l’API est soumise à une convention d’usage avec la Caisse Nationale d’Assurance Maladie. Les données accessibles dépendent également du cas d’usage.
+
+      La Caisse Nationale se réserve le droit d’évaluer l’éligibilité des candidats au regard des cas d’usage indiqués.
+
+      ** Pour remplir votre demande, vous aurez besoin de : **
+      - votre numéro SIRET
+      - le cadre juridique
+      - la description du service justifiant une simplication pour les citoyens
+      - les coordonnées de l'équipe
+      - les coordonnées de votre délégué à la protection des données
+    cta:
+      label: Remplir une demande
+      path: https://signup.api.gouv.fr/api-droits-cnam
+  - who:
+      - Autre
+    is_eligible: -1
+    description: |
+      Seuls les établissements de soins et les organismes complémentaires en santé peuvent accèder à cette API.
+    cta:
+      label: Retourner à la page de recherche
+      path: /rechercher-api
 logo: cnam.jpg
 stat:
   lastXdays: 30
