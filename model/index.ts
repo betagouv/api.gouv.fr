@@ -50,6 +50,22 @@ export interface IApiShort {
   owner: string;
 }
 
+export enum ELIGIBLE {
+  YES = 1,
+  NO = -1,
+  MAYBE = 0,
+}
+
+export interface IAccessCondition {
+  description: string;
+  is_eligible: ELIGIBLE;
+  cta: { label: string; path: string };
+}
+
+export interface IAccessConditionWithVisitorType extends IAccessCondition {
+  who: string[];
+}
+
 export interface IApi extends IApiShort {
   path: string;
   body: string;
@@ -68,6 +84,7 @@ export interface IApi extends IApiShort {
   access_link: string;
   access_description: string;
   access_condition: string;
+  access_page: IAccessConditionWithVisitorType[];
   monitoring_link: string;
   monitoring_description: string;
   rate_limiting_description: string;

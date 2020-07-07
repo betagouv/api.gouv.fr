@@ -35,6 +35,8 @@ const FeuilleDeRoute: React.FC<IProps> = ({ roadmap }) => {
 export const getStaticProps: GetStaticProps = async () => {
   const roadmap = await getRoadmap();
 
+  console.log(roadmap);
+
   return {
     props: {
       roadmap,
