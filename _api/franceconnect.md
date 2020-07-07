@@ -1,11 +1,14 @@
 ---
-title: API Bouton FranceConnect
-tagline: Le bouton FranceConnect est un dispositif qui garantit l’identité d’un usager en se reposant sur des comptes certifiés existants.
+title: FranceConnect
+tagline: FranceConnect est un dispositif qui garantit l’identité d’un usager en se reposant sur des comptes certifiés existants.
 external_site: https://franceconnect.gouv.fr/partenaires
 is_open: false
-access_description: |
-  Cette API nécessite une habilitation :
+access_condition: OUVERT sous contrat
 access_link: https://franceconnect.gouv.fr/partenaires
+clients:
+  - Particuliers, pour contacter FranceConnect, <a href='mailto:support@franceconnect.gouv.fr'>cliquez ici</a>
+  - Entreprises, si vous avez vérifié votre éligibilité, vous pouvez demander à <a href='https://signup.api.gouv.fr/franceconnect'>intégrer le bouton FranceConnect</a>.
+  - Collectivités, vous souhaitez intégrer le bouton FranceConnect, <a href='https://signup.api.gouv.fr/franceconnect'>faites votre demande d'accès</a>
 partners:
   - DGFiP
   - Ameli
@@ -29,27 +32,48 @@ uptime: 99.893 # https://uptimerobot.com/dashboard.php#778110642
 last_update: 10/12/2019
 ---
 
-### Qu'est-ce que l’API Bouton FranceConnect ?
+### Qu'est-ce que FranceConnect ?
 
-L‘API Bouton FranceConnect est un dispositif qui permet à des administrations, des collectivités ou des entreprises d’ajouter un bouton FranceConnect sur son service en ligne.
+FranceConnect est un dispositif qui permet aux internautes de s'identifier sur un service en ligne par l'intermédiaire d'un compte existant (impots.gouv.fr, ameli.fr...).
 
-Grâce à ce bouton les internautes peuvent s'identifier par l'intermédiaire d'un compte existant (impots.gouv.fr, ameli.fr...).
+L'authentification est transparente pour une application utilisant FranceConnect (elle ne converse jamais directement avec le fournisseur d'identité, c'est FranceConnect qui s'en charge).
 
-Si vous êtes un particulier, vous pouvez [contacter l’équipe de FranceConnect.](mailto:support@franceconnect.gouv.fr)
+FranceConnect fournit au service en ligne l'identité vérifiée d'une personne physique, appelée l'identité pivot.
 
-### A quoi ca sert ?
+### A qui s'adresse FranceConnect ?
 
-- identifier les utilisateurs de votre service en ligne simplement et de façon sécurisée, sans création de compte supplémentaire, c'est-à-dire sans leur demander de gérer des identifiants dédies pour chaque service en ligne.
-- accéder aux 6 informations nécessaires pour identifier une personne unique : l'identité pivot FranceConnect : le nom de naissance, les prénoms, le sexe, la date de naissance, le lieu de naissance (ville et pays).
-- accéder à des informations supplémentaires, éventuellement détenues par les fournisseurs de l'identité pivot : l'adresse mail de la personne et son nom d'usage.
+FranceConnect cible les partenaires suivants :
 
-### En savoir plus :
+- Fournisseurs de services : Vous proposez des services en ligne aux usagers.
+- Fournisseurs d'identité : Vous garantissez l’identification et l’authentification d’un usager.
+- Fournisseurs de données : Vous transmettez des données aux fournisseurs de service suite au consentement de l'usager.
 
-Enfin, l'API Bouton FranceConnect vous permet de simplifier les démarches des usagers en permettant l’échange d’informations les concernant d’une administration à une autre, via d'autres API liées au dispositif FranceConnect.
+### Événement FranceConnect
 
-Voici une liste non exhaustive des données disponibles :
+[Retrouvez tous les prochains événements FranceConnect](https://partenaires.franceconnect.gouv.fr/evenements)
 
-- [API Impôt Particulier](/les-api/impot-particulier) (Revenu fiscal de référence et Adresse fiscale)
-- [API Attestation de droits maladie](/les-api/api_ameli_droits_cnam)
-- API SIV
-- [API Résultats aux examens](/les-api/arpent-resultats-api)
+### Sites de démonstration
+
+#### Tester l'identification avec FranceConnect du point de vue usager
+
+1. se rendre sur le site de test : [http://fournisseur-de-service.dev-franceconnect.fr/](http://fournisseur-de-service.dev-franceconnect.fr/)
+2. cliquer sur "se connecter" puis sur "s'identifier avec FranceConnect"
+3. choisir "identity-provider-example" comme fournisseur d'identité
+4. utiliser les identifiants suivants : 3_melaine \| 123 (d'autres identifiants de test sont disponibles [ici](https://github.com/france-connect/identity-provider-example/blob/master/database.csv), le mot de passe est toujours 123)
+5. une fois revenu sur le site, vous êtes connecté
+
+#### Tester l'échange de données avec FranceConnect du point de vue usager
+
+1. sur le site de test, cliquer sur le bouton "récuperer mes données via FranceConnect"
+2. dans la mire FranceConnect de consentement d'échange de données, cliquer sur "Accepter"
+3. vous devriez voir apparaître les données relatives à l'identifiant FranceConnect choisi (d'autres données sont disponibles [ici](https://github.com/france-connect/data-provider-example/blob/master/database.csv))
+
+#### Test du point de vue fournisseur de service
+
+L'interface qui est en ligne peut être installée sur votre poste de travail, ce qui vous permettra de voir :
+
+- les échanges entre FranceConnect et le FS
+- les échanges entre le FS et l'API de test Impôts Particulier
+- les échanges entre l'API de test Impôts Particulier et FranceConnect
+
+Le code et la procédure d'installation sont disponibles sur notre dépôt de code github : [https://github.com/france-connect/service-provider-example/](https://github.com/france-connect/service-provider-example/).
