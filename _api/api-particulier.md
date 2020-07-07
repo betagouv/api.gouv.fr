@@ -3,10 +3,53 @@ title: API Particulier
 tagline: Pour accélérer l’ouverture des données personnelles et leur réutilisation, automatisez vos demandes de pièces justificatives
 external_site: https://particulier.api.gouv.fr
 is_open: false
-access_condition: OUVERT sous contrat
-access_link: https://signup.api.gouv.fr/api-particulier
-access_description: |
-  <p>API Particulier est utilisable sans limitation d'usage par toute collectivité et ministère justifiant de la nécessité de recueillir une information personnelle pour une démarche administrative (justificatif de domicile, revenu fiscal de référence, etc).</p>
+access_link: https://api.gouv.fr/les-api/api-particulier/acces
+access_page:
+  - who:
+      - Un particulier ou une entreprise
+    description: |
+      ### Désolé, vous n’êtes pas éligible 🚫
+
+      Seules les administrations sont habilitées à utiliser API Particulier.
+    cta:
+      label: Retourner à la page de recherche
+      path: /rechercher-api
+  - who:
+      - Une collectivité ou une administration
+    description: |
+      ### Vous êtes éligible 👌
+
+      Conformément aux dispositions de [l'article L114-8](https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367412&dateTexte=&categorieLien=cid) du **code des relations entre le public et l'administration**, seules les administrations sont habilitées à échanger entre elles des informations ou données strictement nécessaires pour traiter une démarche.
+
+      Pour obtenir un agrément, vous devez **justifier d'une simplification pour les citoyens**, et vous engager à **n'accéder aux données personnelles qu'avec l'accord explicite** de l'usager.
+
+      ** Pour remplir votre demande, vous aurez besoin de : **
+      - numéro SIRET
+      - le cadre juridique, en l’occurence [L114-8](https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367412&dateTexte=&categorieLien=cid)
+      - description du service justifiant une simplication pour les citoyens
+      - les coordonnées de l'équipe
+      - les coordonnées de votre délégué à la protection des données
+    cta:
+      label: Remplir une demande
+      path: https://signup.api.gouv.fr/api-particulier
+  - who:
+      - Un éditeur de logiciel
+    description: |
+      ### Vous êtes peut-être éligible 🧐
+
+      Si vous êtes **éditeur de logiciels** et agissez pour le compte d'une administration ou d'une collectivité, vous pouvez remplir une demande d’accès à l’API Particulier vous-même pour l'entité que vous représentez.
+
+      Dans votre demande d'habilitation, il vous faudra citer [l'article L114-8](https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367412&dateTexte=&categorieLien=cid) du **code des relations entre le public et l'administration**.
+
+      ** Pour remplir votre demande, vous aurez besoin de : **
+      - numéro SIRET
+      - le cadre juridique, en l’occurence [L114-8](https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367412&dateTexte=&categorieLien=cid)
+      - description du service justifiant une simplication pour les citoyens
+      - les coordonnées de l'équipe
+      - les coordonnées du délégué à la protection des données **de l'entité pour laquelle vous opérez**
+    cta:
+      label: Remplir une demande
+      path: https://signup.api.gouv.fr/api-particulier
 stat:
   lastXdays: 30
   url: https://monitoring.particulier.api.gouv.fr/api/stats/
