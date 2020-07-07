@@ -50,8 +50,15 @@ export interface IApiShort {
   owner: string;
 }
 
+export enum ELIGIBLE {
+  YES = 1,
+  NO = -1,
+  MAYBE = 0,
+}
+
 export interface IAccessCondition {
   description: string;
+  is_eligible: ELIGIBLE;
   cta: { label: string; path: string };
 }
 

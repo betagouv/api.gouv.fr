@@ -3,32 +3,30 @@ title: API Particulier
 tagline: Pour accélérer l’ouverture des données personnelles et leur réutilisation, automatisez vos demandes de pièces justificatives
 external_site: https://particulier.api.gouv.fr
 is_open: false
-access_link: /les-api/api-particulier/acces
+access_link: /les-api/api-particulier/demande-acces
 access_description: |
   Cette API nécessite une habilitation :
 access_page:
   - who:
       - Un particulier ou une entreprise
+    is_eligible: -1
     description: |
-      ### Désolé, vous n’êtes pas éligible 🚫
-
       Seules les administrations sont habilitées à utiliser API Particulier.
     cta:
       label: Retourner à la page de recherche
       path: /rechercher-api
   - who:
       - Une collectivité ou une administration
+    is_eligible: 1
     description: |
-      ### Vous êtes éligible 👌
+      Conformément aux dispositions de [l'article L114-8](https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367412&dateTexte=&categorieLien=cid) du *code des relations entre le public et l'administration*, seules les administrations sont habilitées à échanger entre elles des informations ou données strictement nécessaires pour traiter une démarche.
 
-      Conformément aux dispositions de [l'article L114-8](https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367412&dateTexte=&categorieLien=cid) du **code des relations entre le public et l'administration**, seules les administrations sont habilitées à échanger entre elles des informations ou données strictement nécessaires pour traiter une démarche.
-
-      Pour obtenir un agrément, vous devez **justifier d'une simplification pour les citoyens**, et vous engager à **n'accéder aux données personnelles qu'avec l'accord explicite** de l'usager.
+      Pour obtenir un agrément, vous devez **justifier d'une simplification pour les citoyens**, et vous engager à n'accéder aux données personnelles qu'avec **l'accord explicite** de l'usager.
 
       ** Pour remplir votre demande, vous aurez besoin de : **
-      - numéro SIRET
+      - votre numéro SIRET
       - le cadre juridique, en l’occurence [L114-8](https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367412&dateTexte=&categorieLien=cid)
-      - description du service justifiant une simplication pour les citoyens
+      - la description du service justifiant une simplication pour les citoyens
       - les coordonnées de l'équipe
       - les coordonnées de votre délégué à la protection des données
     cta:
@@ -36,17 +34,16 @@ access_page:
       path: https://signup.api.gouv.fr/api-particulier
   - who:
       - Un éditeur de logiciel
+    is_eligible: 0
     description: |
-      ### Vous êtes peut-être éligible 🧐
+      Si vous êtes **éditeur de logiciels** et agissez pour le compte d'une administration ou d'une collectivité, vous pouvez remplir une demande d’accès à l’API Particulier vous-même pour l'entité que vous représentez, dans le cadre de [l'article L114-8](https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367412&dateTexte=&categorieLien=cid) du *code des relations entre le public et l'administration*.
 
-      Si vous êtes **éditeur de logiciels** et agissez pour le compte d'une administration ou d'une collectivité, vous pouvez remplir une demande d’accès à l’API Particulier vous-même pour l'entité que vous représentez.
+      Lors de votre demande vous devrez **justifier** dans quelle mesure l'entité pour laquelle vous opérez rentre dans ce cadre juridique.
 
-      Dans votre demande d'habilitation, il vous faudra citer [l'article L114-8](https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367412&dateTexte=&categorieLien=cid) du **code des relations entre le public et l'administration**.
-
-      ** Pour remplir votre demande, vous aurez besoin de : **
-      - numéro SIRET
+      **Pour remplir votre demande, vous aurez besoin de :**
+      - votre numéro SIRET
       - le cadre juridique, en l’occurence [L114-8](https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367412&dateTexte=&categorieLien=cid)
-      - description du service justifiant une simplication pour les citoyens
+      - la description du service justifiant une simplication pour les citoyens
       - les coordonnées de l'équipe
       - les coordonnées du délégué à la protection des données **de l'entité pour laquelle vous opérez**
     cta:

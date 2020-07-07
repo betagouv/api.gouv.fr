@@ -7,6 +7,7 @@ import {
   getAllAPIs,
   IAccessCondition,
   IAccessConditionWithVisitorType,
+  ELIGIBLE,
 } from '../../../model';
 import Page from '../../../layouts';
 
@@ -24,6 +25,38 @@ interface IProps {
   slug: string;
   accessConditionOptions: IAccessConditionOption[];
 }
+
+const IsEligible: React.FC<{ isEligible: ELIGIBLE }> = ({ isEligible }) => {
+  switch (isEligible) {
+    case ELIGIBLE.YES:
+      return (
+        <>
+          Vous êtes éligible{' '}
+          <span role="img" aria-label="émoji oui">
+            👌
+          </span>
+        </>
+      );
+    case ELIGIBLE.NO:
+      return (
+        <>
+          Désolé, vous n’êtes pas éligible{' '}
+          <span role="img" aria-label="émoji non">
+            🚫
+          </span>
+        </>
+      );
+    case ELIGIBLE.MAYBE:
+      return (
+        <>
+          Vous êtes peut-être éligible{' '}
+          <span role="img" aria-label="émoji peut-etre">
+            🧐
+          </span>
+        </>
+      );
+  }
+};
 
 const AccessCondition: React.FC<IProps> = ({
   title,
@@ -62,6 +95,9 @@ const AccessCondition: React.FC<IProps> = ({
             <>
               {condition.value === visitorType && (
                 <>
+                  <h3>
+                    <IsEligible isEligible={condition.is_eligible} />
+                  </h3>
                   <ReactMarkdown source={condition.description} />
                   <div className="layout-center">
                     <ButtonLink href={condition.cta.path} large>
@@ -112,12 +148,14 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       accumulator: IAccessConditionOption[],
       condition: IAccessConditionWithVisitorType
     ) => {
+      const { cta, description, is_eligible } = condition;
       condition.who.forEach(type => {
         accumulator.push({
           label: type,
           value: type,
-          description: condition.description,
-          cta: condition.cta,
+          description,
+          is_eligible,
+          cta,
         });
       });
       return accumulator;
