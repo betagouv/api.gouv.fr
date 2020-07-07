@@ -4,7 +4,7 @@ link: https://teleservices-ea.agriculture.gouv.fr/arpent-examen/apprenant
 description: Inscrivez-vous aux examens de l'enseignement agricole
 api:
   - Base Adresse Nationale
-  - API Bouton FranceConnect
+  - FranceConnect
 screenshot: arpent-examen.jpg
 ---
 
