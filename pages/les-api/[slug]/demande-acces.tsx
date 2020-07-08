@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import ReactMarkdown from 'react-markdown';
 
@@ -14,6 +14,7 @@ import Page from '../../../layouts';
 import { HEADER_PAGE } from '../../../components';
 
 import { MultiChoice, ButtonLink } from '../../../uiComponents';
+import Loader from '../../../uiComponents/loader';
 
 interface IAccessConditionOption extends IAccessCondition {
   label: string;
@@ -64,6 +65,14 @@ const AccessCondition: React.FC<IProps> = ({
   accessConditionOptions,
 }) => {
   const [visitorType, setVisitorType] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const updateVisitorType = (visitorType: any) => {
+    setIsLoading(true);
+    setVisitorType(visitorType);
+
+    window.setTimeout(() => setIsLoading(false), 500);
+  };
 
   return (
     <Page
@@ -87,27 +96,29 @@ const AccessCondition: React.FC<IProps> = ({
         </p>
         <MultiChoice
           multiChoiceOptions={accessConditionOptions}
-          onClick={setVisitorType}
+          onClick={updateVisitorType}
           selected={visitorType}
         />
         <div className="condition-details">
-          {accessConditionOptions.map(condition => (
-            <>
-              {condition.value === visitorType && (
-                <>
-                  <h3>
-                    <IsEligible isEligible={condition.is_eligible} />
-                  </h3>
-                  <ReactMarkdown source={condition.description} />
-                  <div className="layout-center">
-                    <ButtonLink href={condition.cta.path} large>
-                      {condition.cta.label}
-                    </ButtonLink>
-                  </div>
-                </>
-              )}
-            </>
-          ))}
+          {isLoading && <Loader />}
+          {!isLoading &&
+            accessConditionOptions.map(condition => (
+              <>
+                {condition.value === visitorType && (
+                  <>
+                    <h3>
+                      <IsEligible isEligible={condition.is_eligible} />
+                    </h3>
+                    <ReactMarkdown source={condition.description} />
+                    <div className="layout-center">
+                      <ButtonLink href={condition.cta.path} large>
+                        {condition.cta.label}
+                      </ButtonLink>
+                    </div>
+                  </>
+                )}
+              </>
+            ))}
         </div>
       </div>
       <style jsx>{`
