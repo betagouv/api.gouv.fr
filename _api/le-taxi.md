@@ -3,8 +3,35 @@ title: le.Taxi
 tagline: Un clic, un taxi
 external_site: https://le.taxi
 is_open: false
-access_condition: OUVERT sous contrat
-access_link: http://le.taxi/join.html
+access_link: /les-api/le-taxi/demande-acces
+access_description: |
+  Cette API nécessite une habilitation :
+access_page:
+  - who:
+      - Un opérateur de taxi (pour les chauffeurs)
+      - Un moteur de recherche de taxis (pour les clients)
+    is_eligible: 1
+    description: |
+      Vous pouvez remplir une demande d’accès à l’API Le.Taxi dans le cadre des articles [L. 3121-11-1](https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000029528684&cidTexte=LEGITEXT000023086525) et [R3121-24 à R3121-33](https://www.legifrance.gouv.fr/affichCode.do?idSectionTA=LEGISCTA000032278146&cidTexte=LEGITEXT000023086525) du Code des transports.
+
+      ** Pour remplir votre demande, vous aurez besoin de : **
+      - votre numéro SIRET
+      - le cadre juridique
+      - la description du service justifiant une simplication pour les citoyens
+      - les coordonnées de l'équipe
+      - les coordonnées de votre délégué à la protection des données
+    cta:
+      label: Remplir une demande
+      path: https://signup.api.gouv.fr/le-taxi
+  - who:
+      - Un particulier
+      - Autre
+    is_eligible: -1
+    description: |
+      Seuls les opérateurs de taxi ou éditeurs d’application peuvent demander un accès à l’API.
+    cta:
+      label: Retourner à la page de recherche
+      path: /rechercher-api
 clients:
   - collectivités
   - entreprises
