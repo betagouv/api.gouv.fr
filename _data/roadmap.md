@@ -72,6 +72,7 @@
     - type: ADD_API
       what: Répertoire National des Métiers
       path: https://rnm.artisanat.fr/api/
+  12:
     - type: INFO
       what: |
         Intégration des [APIs de l’URSSAF](https://portailapi.urssaf.fr/fr/) :
@@ -79,7 +80,6 @@
         - API Déclaration auto-entrepreneur
         - API Déclaration CESU
         - API Déclaration PAJE
-  12:
     - type: INFO
       what: |
         Publication d'une doctrine relative à la circulation des données entre administrations
