@@ -1,4 +1,23 @@
 import React from 'react';
+
+const SIGNUP_URL =
+  process.env.NEXT_PUBLIC_SIGNUP_URL || 'https://signup.api.gouv.fr';
+
+/**
+ * turns any link that match signup.api.gouv.fr/XYZ into $SIGNUP_URL/XYZ,
+ * Used in staging
+ */
+const formatSignupLink = link => {
+  if (link) {
+    const pattern = /^https?:\/\/signup.api.gouv.fr(.*)/;
+    const signup_url_parts = link.match(pattern) || [];
+    if (signup_url_parts.length === 2) {
+      return `${SIGNUP_URL}${signup_url_parts[1]}`;
+    }
+  }
+  return link;
+};
+
 interface IProps {
   href?: string;
   alt?: boolean;
@@ -88,7 +107,7 @@ const ButtonLink: React.FC<IProps> = ({
   if (href) {
     return (
       <LinkAsAButton
-        href={href}
+        href={formatSignupLink(href)}
         rel={rel}
         target={target}
         alt={alt}
