@@ -53,9 +53,6 @@ stat:
   lastXdays: 30
   url: https://monitoring.particulier.api.gouv.fr/api/stats/
   label: justificatifs papier évités
-clients:
-  - collectivités
-  - ministères
 partners:
   - DGFiP
   - CNAF
