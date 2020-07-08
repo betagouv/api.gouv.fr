@@ -23,8 +23,6 @@ const formatSignupLink = link => {
 const formatApi = (slug, data) => {
   const document = frontmatter(data);
 
-  console.log(document.attributes.access_link);
-
   return {
     //@ts-ignore
     ...document.attributes,
