@@ -7,7 +7,7 @@ const SIGNUP_URL =
  * turns any link that match signup.api.gouv.fr/XYZ into $SIGNUP_URL/XYZ,
  * Used in staging
  */
-const formatSignupLink = link => {
+const formatSignupLink = (link: string) => {
   if (link) {
     const pattern = /^https?:\/\/signup.api.gouv.fr(.*)/;
     const signup_url_parts = link.match(pattern) || [];
