@@ -6,24 +6,6 @@ import { ButtonLink } from '../../uiComponents/button';
 
 import { logDemanderAcces } from '../../service/analytics';
 
-const SIGNUP_URL =
-  process.env.NEXT_PUBLIC_SIGNUP_URL || 'https://signup.api.gouv.fr';
-
-/**
- * turns any link that match signup.api.gouv.fr/XYZ into $SIGNUP_URL/XYZ,
- * Used in staging
- */
-const formatSignupLink = link => {
-  if (link) {
-    const pattern = /^https?:\/\/signup.api.gouv.fr(.*)/;
-    const signup_url_parts = link.match(pattern) || [];
-    if (signup_url_parts.length === 2) {
-      return `${SIGNUP_URL}${signup_url_parts[1]}`;
-    }
-  }
-  return link;
-};
-
 const ApiOpen = ({ link }) => (
   <>
     <p>L'API est ouverte à tous.</p>
@@ -65,15 +47,13 @@ const ApiNotOpen = ({ link, description, condition, clients }) => (
 );
 
 const Access = ({ is_open, link, description, condition, clients }) => {
-  const access_link = formatSignupLink(link);
-
   return (
     <Section id="access" title="Conditions d’accès">
       {is_open ? (
-        <ApiOpen link={access_link} />
-      ) : access_link ? (
+        <ApiOpen link={link} />
+      ) : link ? (
         <ApiNotOpen
-          link={access_link}
+          link={link}
           description={description}
           condition={condition}
           clients={clients}
