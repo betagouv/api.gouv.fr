@@ -2,6 +2,8 @@ import React from 'react';
 
 import Page from '../layouts/page';
 import { HEADER_PAGE } from '../components';
+import TeamHelpWidget from '../components/teamHelpWidget';
+import constants from '../constants';
 
 const About: React.FC = () => (
   <Page
@@ -136,12 +138,13 @@ const About: React.FC = () => (
         </p>
         <p>
           Si vous avez, vous aussi, une belle histoire à partager, n'hésitez pas
-          à <a href="/contact">nous la faire parvenir.</a>
+          à <a href={constants.links.ADD_API}>nous la faire parvenir.</a>
         </p>
-        <p>
+        {/* <p>
           Pour toute question ou précision, n’hésitez pas à{' '}
           <a href="/parcours-client?source=apropos">nous contacter.</a>
-        </p>
+        </p> */}
+        <TeamHelpWidget />
       </div>
     </div>
     <style jsx>{`

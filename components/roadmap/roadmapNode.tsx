@@ -8,6 +8,8 @@ const RoadmapNode: React.FC<IRoadmapElement> = ({ type, what, path }) => {
       return <div className="roadmap-node ellipsis"></div>;
     case RoadmapNodeType.MONTH:
       return <div className="roadmap-node month">{what}</div>;
+    case RoadmapNodeType.YEAR:
+      return <div className="roadmap-node year">{what}</div>;
     case RoadmapNodeType.ADD_API:
       return (
         <div className="roadmap-node">
