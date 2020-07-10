@@ -10,6 +10,7 @@ export default {
     lightGrey: '#efefef',
     lightestGrey: '#fcfcfc',
     white: '#fff',
+    grey: '#888',
     darkestGrey: '#373c42',
     darkGrey: '#272c32',
     service: '#af2341',

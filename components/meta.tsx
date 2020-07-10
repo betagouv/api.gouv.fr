@@ -1,10 +1,21 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Head from 'next/head';
 import prune from 'underscore.string/prune';
 import { NextSeo } from 'next-seo';
 
-const Meta = ({ title, description, noIndex = false, canonical }) => {
+interface IProps {
+  title: string;
+  description: string;
+  noIndex?: boolean;
+  canonical: string;
+}
+
+const Meta: React.FC<IProps> = ({
+  title,
+  description,
+  noIndex = false,
+  canonical,
+}) => {
   description = prune(description, 160, '…');
 
   const SITE_NAME = 'api.gouv.fr';
@@ -61,16 +72,6 @@ const Meta = ({ title, description, noIndex = false, canonical }) => {
       </Head>
     </>
   );
-};
-
-Meta.propTypes = {
-  title: PropTypes.string,
-  description: PropTypes.string,
-};
-
-Meta.defaultProps = {
-  title: null,
-  description: null,
 };
 
 export default Meta;

@@ -2,10 +2,9 @@ import React from 'react';
 
 import constants from '../../../constants';
 
-const Thumbnail = ({ title, icon, children }) => (
+const Thumbnail = ({ title, children }) => (
   <div className="thumbnail-container">
     <div className="thumbnail-header">
-      <div className="thumbnail-icon">{icon}</div>
       <div>{title}</div>
     </div>
     <div className="thumbnail-content">{children}</div>

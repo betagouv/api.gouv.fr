@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Section from './section';
 
@@ -19,14 +18,6 @@ const Partners = ({ partners }) => {
       )}
     </Section>
   );
-};
-
-Partners.defaultProps = {
-  partners: null,
-};
-
-Partners.propTypes = {
-  partners: PropTypes.array,
 };
 
 export default Partners;
