@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Section from './section';
 import { ButtonLink } from '../../uiComponents/button';
@@ -32,9 +31,10 @@ const ApiNotOpen = ({ link, description, condition, clients }) => (
           suivantes :
         </p>
         <ul>
-          {clients.map(client => (
-            <li key={client} dangerouslySetInnerHTML={{ __html: client }} />
-          ))}
+          {clients &&
+            clients.map(client => (
+              <li key={client} dangerouslySetInnerHTML={{ __html: client }} />
+            ))}
         </ul>
       </div>
     ) : (
@@ -63,22 +63,6 @@ const Access = ({ is_open, link, description, condition, clients }) => {
       )}
     </Section>
   );
-};
-
-Access.defaultProps = {
-  is_open: false,
-  link: null,
-  description: null,
-  condition: null,
-  clients: [],
-};
-
-Access.propTypes = {
-  is_open: PropTypes.bool,
-  link: PropTypes.string,
-  description: PropTypes.string,
-  condition: PropTypes.string,
-  clients: PropTypes.array,
 };
 
 export default Access;

@@ -59,7 +59,6 @@ export enum ELIGIBLE {
 export interface IAccessCondition {
   description: string;
   is_eligible: ELIGIBLE;
-  cta: { label: string; path: string };
 }
 
 export interface IAccessConditionWithVisitorType extends IAccessCondition {
