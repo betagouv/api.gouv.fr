@@ -12,7 +12,8 @@
       border-left: 2px dashed $blue;
     }
 
-    &.month {
+    &.month,
+    &.year {
       position: relative;
       padding-left: 20px;
       padding-top: 10px;
@@ -29,6 +30,13 @@
         width: 12px;
         height: 12px;
         border-radius: 10px;
+      }
+    }
+    &.year {
+      font-size: 2rem;
+      padding-top: 20px;
+      &:before {
+        top: 30px;
       }
     }
 

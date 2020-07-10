@@ -2,38 +2,30 @@ import React from 'react';
 
 import Thumbnail from './thumbnail';
 
-import { Lock, Unlock, Activity, Calendar, User, Sliders } from 'react-feather';
-
 import { getUptimeState, roundUptime } from '../../../utils/uptime';
 
 const Thumbnails = ({ is_open, uptime, lastUpdate, owner, rate_limiting }) => {
   return (
     <div className="content-container thumbnails">
       {is_open ? (
-        <Thumbnail title="Accès" icon={<Unlock />}>
-          API ouvert à tous
-        </Thumbnail>
+        <Thumbnail title="Accès">API ouvert à tous</Thumbnail>
       ) : (
-        <Thumbnail title="Accès" icon={<Lock />}>
-          Sous habilitation
-        </Thumbnail>
+        <Thumbnail title="Accès">Sous habilitation</Thumbnail>
       )}
       {uptime && (
-        <Thumbnail title="Disponibilité" icon={<Activity />}>
+        <Thumbnail title="Disponibilité">
           <div className="badge uptime">
             <div className="uptime-stat" />
             {roundUptime(2)(uptime)}% actif / dernier mois
           </div>
         </Thumbnail>
       )}
-      <Thumbnail title="Activité" icon={<Calendar />}>
+      <Thumbnail title="Activité">
         Dernière modification le {lastUpdate}
       </Thumbnail>
-      <Thumbnail title="Producteur" icon={<User />}>
-        {owner}
-      </Thumbnail>
+      <Thumbnail title="Producteur">{owner}</Thumbnail>
       {rate_limiting && (
-        <Thumbnail title="Limite d’usage" icon={<Sliders />}>
+        <Thumbnail title="Limite d’usage">
           <div>
             {rate_limiting.split('/').map(rate => (
               <div className="rate" key={rate}>
