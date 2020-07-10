@@ -80,13 +80,13 @@ const AccessCondition: React.FC<IProps> = ({
       headerKey={HEADER_PAGE.APIS}
       title={`Demande d’accès ${title}`}
       description={`${title} est une des APIs du service public. Découvrez ses conditions d’accès.`}
-      canonical={`https://api.gouv.fr/les-api/${slug}/etes-vous-eligible`}
+      canonical={`https://api.gouv.fr/les-api/${slug}/demande-acces`}
       noIndex={true}
       usePreFooter={false}
     >
       <div className="content-container">
         <div className="breadcrumb">
-          <a href={`https://api.gouv.fr/les-api/${slug}`}>⇠ Fiche {title}</a>
+          <a href={`/les-api/${slug}`}>⇠ Fiche {title}</a>
         </div>
       </div>
 

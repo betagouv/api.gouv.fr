@@ -25,7 +25,7 @@ keywords: # utilisés pour la recherche
   - entreprises
 rate_limiting_resume: 5 appels / seconde / jeton
 rate_limiting_description: |
-  <p>L'API est disponible à hauteur de 5 appels par secondes et par jetons d'accès.</p>
+  L'API est disponible à hauteur de 5 appels par secondes et par jetons d'accès.
 contact_link: https://developer.webstat.banque-france.fr/contact
 doc_tech_link: https://developer.webstat.banque-france.fr/ibm_apim/swaggerjson/d2Vic3RhdC1iYW5xdWUtZGUtZnJhbmNlLWZyX3YxOjEuMC4wXzQ3MDE%2C
 themes:

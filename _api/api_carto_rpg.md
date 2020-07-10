@@ -43,7 +43,7 @@ visits_2019: 2840
 last_update: 19/05/2020
 rate_limiting_resume: 2M appels / an / jeton
 rate_limiting_description: |
-  <p>Pour les usages grand public, l'utilisation est gratuite dans la limite de 2M requêtes par an (10 000 pour un usage professionnel).</p>
+  Pour les usages grand public, l'utilisation est gratuite dans la limite de 2M requêtes par an (10 000 pour un usage professionnel).
 ---
 
 Le service d’interrogation du RPG permet d’obtenir des informations du registre parcellaire graphique intersectant une géométrie (ponctuelle ou surfacique).

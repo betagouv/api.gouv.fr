@@ -95,6 +95,19 @@ a:not(.dont-apply-link-style):hover {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  &.vertical-margin {
+    margin: 10px auto;
+  }
+}
+.layout-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  &.vertical-margin {
+    margin: 10px auto;
+  }
 }
 
 .content-container {
@@ -141,6 +154,25 @@ a:not(.dont-apply-link-style):hover {
   font-size: 1.1rem;
   line-height: 1.6rem;
   color: $darkestGrey;
+
+  table {
+    border-collapse: collapse;
+    text-align: center;
+
+    width: 100%;
+
+    tr td,
+    th {
+      padding: 5px;
+      border-right: 2px solid $lightGrey;
+      border-left: 2px solid $lightGrey;
+      border-bottom: 2px solid $lightGrey;
+    }
+
+    thead {
+      background-color: $lightGrey;
+    }
+  }
 
   h1 {
     font-size: 2.5rem;

@@ -57,10 +57,10 @@ keywords:
   - Signup
 rate_limiting_resume: 20 appels / seconde / jeton
 rate_limiting_description: |
-  <p>L'API est disponible à hauteur de 20 appels par secondes et par jetons d'accès.</p>
+  L'API est disponible à hauteur de 20 appels par secondes et par jetons d'accès.
 monitoring_link: https://status.particulier.api.gouv.fr
 monitoring_description: |
-  <p>La DINUM s’engage à ce que le Service soit accessible à 95% et la DINUM s’engage à améliorer progressivement ce rendement.</p>
+  La DINUM s’engage à ce que le Service soit accessible à 95% et la DINUM s’engage à améliorer progressivement ce rendement.
 contact_link: contact@particulier.api.gouv.fr
 doc_tech_link: https://particulier.api.gouv.fr/documentation-open-api.yaml
 themes:

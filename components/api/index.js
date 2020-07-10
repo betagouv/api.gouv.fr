@@ -1,6 +1,5 @@
-import Menu from './menu';
 import Access from './access';
-import Support from './support';
+import SupportAndTeam from './SupportAndTeam';
 import Monitoring from './monitoring';
 import RateLimiting from './rate-limiting';
 import Partners from './partners';
@@ -12,9 +11,8 @@ import PageHeader from './pageHeader';
 
 export {
   PageHeader,
-  Menu,
   Access,
-  Support,
+  SupportAndTeam,
   Monitoring,
   RateLimiting,
   Partners,

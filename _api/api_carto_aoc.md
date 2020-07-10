@@ -33,7 +33,7 @@ visits_2019: 2840
 last_update: 19/05/2020
 rate_limiting_resume: 2M appels / an / jeton
 rate_limiting_description: |
-  <p>Pour les usages grand public, l'utilisation est gratuite dans la limite de 2M requêtes par an (10 000 pour un usage professionnel).</p>
+  Pour les usages grand public, l'utilisation est gratuite dans la limite de 2M requêtes par an (10 000 pour un usage professionnel).
 ---
 
 L'API Carto - module AOC permet d'obtenir les AOC/IGP viticoles de l’INAO intersectant une géométrie GeoJSON.

@@ -1,6 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
-import { throttle } from 'lodash';
 
 import {
   getAPI,
@@ -13,20 +12,17 @@ import Page from '../../layouts';
 
 import {
   PageHeader,
-  Menu,
   Access,
-  Support,
-  Monitoring,
-  RateLimiting,
+  SupportAndTeam,
   Partners,
   TechnicalDocumentation,
   ApiRelatedServices,
   Content,
-  Thumbnails,
 } from '../../components/api';
+
+import ApiDetails from '../../components/api/apiDetails';
 import { HEADER_PAGE } from '../../components';
 
-import { getWindowHash, isElementVisible } from '../../utils';
 import constants from '../../constants';
 
 interface IProps {
@@ -41,6 +37,7 @@ const API: React.FC<IProps> = ({ api, services = null }) => {
     tagline,
     logo,
     owner,
+    owner_acronym,
     uptime,
     last_update,
     contact_link,
@@ -60,63 +57,6 @@ const API: React.FC<IProps> = ({ api, services = null }) => {
     partners,
   } = api;
 
-  const [menuItem, setMenuItem] = useState('api-description');
-
-  const contentContainer = useRef(null);
-
-  const getVisibleAnchor = () => {
-    if (!contentContainer || !contentContainer.current) {
-      return;
-    }
-    //@ts-ignore
-    const sectionCollection = contentContainer.current.children;
-
-    for (let i = 0; i < sectionCollection.length; i++) {
-      const elem = sectionCollection[i];
-      if (isElementVisible(elem, constants.layout.HEADER_HEIGHT)) {
-        return elem.children[0].id;
-      }
-    }
-  };
-
-  const setVisibleAnchor = (anchor: string, smooth = false) => {
-    setMenuItem(anchor);
-
-    const anchorElem = document.getElementById(anchor);
-
-    if (!anchorElem) {
-      return;
-    }
-    anchorElem.scrollIntoView({ behavior: smooth ? 'smooth' : 'auto' });
-  };
-
-  useEffect(() => {
-    const handleScroll = throttle(() => {
-      const currentVisibleAnchor = getVisibleAnchor();
-      if (currentVisibleAnchor !== getWindowHash()) {
-        setMenuItem(currentVisibleAnchor);
-        const anchor = currentVisibleAnchor ? `#${currentVisibleAnchor}` : '';
-        window.history.replaceState(undefined, '', anchor);
-      }
-      // approx 8 frames
-    }, 16 * 8);
-
-    // scroll if any anchor in url - only applies on refresh
-    const hash = getWindowHash();
-
-    if (hash) {
-      setVisibleAnchor(hash, true);
-    }
-
-    // add scrollListeners
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      // clean listeners
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
   return (
     <Page
       headerKey={HEADER_PAGE.APIS}
@@ -128,52 +68,38 @@ const API: React.FC<IProps> = ({ api, services = null }) => {
         title={title}
         logo={logo || constants.logo}
         tagline={tagline}
-      />
-
-      <Thumbnails
-        is_open={is_open}
-        uptime={uptime}
-        lastUpdate={last_update}
         owner={owner}
-        rate_limiting={rate_limiting_resume}
+        owner_acronym={owner_acronym}
       />
 
       <div id="description" className="content-container">
-        <div className="left-column-grid desktop-only">
-          <div className="left-column">
-            <div className="sticky-column">
-              <Menu selectedItem={menuItem} select={setVisibleAnchor} />
-            </div>
-          </div>
-          <div className="column text-style" ref={contentContainer}>
+        <div className="right-column-grid">
+          <div className="left-column text-style">
             <Content content={body} />
-
-            <Access
-              is_open={is_open}
-              link={access_link || (is_open ? external_site : '')}
-              description={access_description}
-              condition={access_condition}
-              clients={clients}
-            />
-
-            <Support link={contact_link} />
-
-            <Monitoring
-              description={monitoring_description}
-              link={monitoring_link}
-            />
-
-            <RateLimiting description={rate_limiting_description} />
-
             <Partners partners={partners} />
-
+            <ApiRelatedServices services={services} />
+          </div>
+          <div className="right-column info-column">
+            <Access is_open={is_open} slug={slug} />
+            <ApiDetails
+              monitoring={monitoring_description}
+              monitoring_link={monitoring_link}
+              rate_limiting={rate_limiting_description}
+              rate_limiting_resume={rate_limiting_resume}
+              uptime={uptime}
+            />
             <TechnicalDocumentation
-              link={doc_tech_link}
-              external={doc_tech_external}
+              external_doc_link={doc_tech_link}
+              swagger_link={doc_tech_external}
               slug={slug}
             />
 
-            <ApiRelatedServices services={services} />
+            <SupportAndTeam
+              logo={logo}
+              owner={owner}
+              owner_acronym={owner_acronym}
+              link={contact_link}
+            />
           </div>
         </div>
       </div>
@@ -182,9 +108,15 @@ const API: React.FC<IProps> = ({ api, services = null }) => {
           margin-bottom: 70px;
         }
 
-        .sticky-column {
-          //@ts-ignore
-          top: ${parseInt(constants.layout.HEADER_HEIGHT, 10) + 20}px;
+        .right-column-grid {
+          display: grid;
+          grid-template-columns: 67% 32%;
+          grid-gap: 40px;
+        }
+
+        .info-column {
+          border-left: 2px solid ${constants.colors.lightBlue};
+          padding: 0 0 0 40px;
         }
       `}</style>
     </Page>
