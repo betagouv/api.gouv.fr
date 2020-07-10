@@ -31,10 +31,15 @@ const NextSteps = ({ is_editeur = false }) => (
   </>
 );
 
-const IsFranceConnected = ({ fcLink, notFcLink }) => {
+interface IPropsFC {
+  fcLink: string;
+  notFcLink: string;
+}
+
+const IsFranceConnected: React.FC<IPropsFC> = ({ fcLink, notFcLink }) => {
   const [hasAlreadyFranceConnect, setHasFc] = useState<Boolean | null>(null);
   const [wantFranceConnect, setWantFc] = useState<Boolean | null>(null);
-  const [link, setLink] = useState(null);
+  const [link, setLink] = useState('');
 
   const yesNoOptions = [
     { label: 'Oui', value: true },
@@ -78,7 +83,7 @@ const IsFranceConnected = ({ fcLink, notFcLink }) => {
         </div>
       )}
 
-      {link && (
+      {!!link && (
         <div className="layout-center">
           <ButtonLink href={link} large>
             Remplir une demande
