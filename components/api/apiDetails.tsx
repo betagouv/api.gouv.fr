@@ -3,7 +3,6 @@ import { getUptimeState, roundUptime } from '../../utils';
 import SubSection from './subSection';
 import constants from '../../constants';
 import { ButtonLink } from '../../uiComponents';
-import { constant } from 'lodash';
 
 const speedometer = (
   <svg
