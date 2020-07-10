@@ -54,7 +54,7 @@ const Questions = [
   },
   {
     value: SUBJECT.FRANCECONNECT_PART,
-    label: 'Je veux me connecter à France Connect',
+    label: 'Je veux me connecter à FranceConnect',
     public: [VISITOR.PARTICULIER],
   },
   {
@@ -65,7 +65,7 @@ const Questions = [
   },
   {
     value: SUBJECT.FRANCECONNECT_ENTREPRISE,
-    label: 'Je veux France Connecter mon service',
+    label: 'Je veux FranceConnecter mon service',
     public: [VISITOR.ENTREPRISE, VISITOR.ASSO],
   },
   {
@@ -166,9 +166,7 @@ const Explanations: React.FC<IProps> = ({ subject, visitorType }) => {
           </p>
           <p>
             Vous trouverez plus d’explications sur{' '}
-            <a href="https://franceconnect.gouv.fr">
-              le site de France Connect
-            </a>
+            <a href="https://franceconnect.gouv.fr">le site de FranceConnect</a>
             . En particulier, nous vous recommandons de consulter la FAQ France
             Connect :
           </p>
@@ -178,7 +176,7 @@ const Explanations: React.FC<IProps> = ({ subject, visitorType }) => {
               href="https://franceconnect.gouv.fr/faq"
               onClick={logClic}
             >
-              Accèder à la page d’aide France Connect
+              Accèder à la page d’aide FranceConnect
             </ButtonLink>
           </div>
         </div>

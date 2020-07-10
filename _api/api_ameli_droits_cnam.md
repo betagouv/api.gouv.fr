@@ -17,7 +17,7 @@ stat:
   lastXdays: 30
   label: justificatifs papier évités
 clients:
-  - établissements de soins si éligibles à France Connect
+  - établissements de soins si éligibles à FranceConnect
   - organismes complémentaires en santé
 partners:
   - CNAM

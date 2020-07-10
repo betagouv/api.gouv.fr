@@ -14,62 +14,40 @@ access_page:
     is_eligible: -1
     description: |
       Vous n’êtes pas autorisé à accèder aux données de l’API Impôt Particulier.
-    cta:
-      label: Retourner à la page de recherche
-      path: /rechercher-api
+
+      <Button href="/rechercher-api">Retourner à la page de recherche</Button>
   - who:
       - Une collectivité
       - Une administration
       - Un ministère
     is_eligible: 1
     description: |
-      Conformément aux dispositions de __________, seules les administrations sont habilitées à échanger entre elles des informations ou données strictement nécessaires pour traiter une démarche.
+      Conformément aux dispositions de <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367412&dateTexte=&categorieLien=cid">l'article L114-8</External> du *code des relations entre le public et l'administration*, seules les administrations sont habilitées à échanger entre elles des informations ou données strictement nécessaires pour traiter une démarche.
 
       Pour obtenir un agrément, vous devez **justifier d'une simplification pour les citoyens**, et vous engager à n'accéder aux données personnelles qu'avec **l'accord explicite** de l'usager.
 
-      ** Pour remplir votre demande, vous aurez besoin de : **
-      - votre numéro SIRET
-      - le cadre juridique, en l’occurence __________
-      - la description du service justifiant une simplication pour les citoyens
-      - les coordonnées de l'équipe
-      - les coordonnées de votre délégué à la protection des données
-    cta:
-      label: Remplir une demande
-      path: https://signup.api.gouv.fr/api-impot-particulier
+      <NextSteps />
+      <IsFranceConnected fcLink="https://signup.api.gouv.fr/api-impot-particulier" notFcLink="https://signup.api.gouv.fr/api-impot-particulier"/>
   - who:
       - Un éditeur de logiciel
     is_eligible: 0
     description: |
-      Si vous êtes **éditeur de logiciels** et agissez pour le compte d'une administration ou d'une collectivité, vous pouvez remplir une demande d’accès à l’API Particulier vous-même pour l'entité que vous représentez, dans le cadre de ________
+      Si vous êtes **éditeur de logiciels** et agissez pour le compte d'une administration ou d'une collectivité, vous pouvez remplir une demande d’accès à l’API Particulier vous-même pour l'entité que vous représentez, dans le cadre de <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367412&dateTexte=&categorieLien=cid">l'article L114-8</External> du *code des relations entre le public et l'administration*.
 
       Lors de votre demande vous devrez **justifier** dans quelle mesure l'entité pour laquelle vous opérez rentre dans ce cadre juridique.
 
-      **Pour remplir votre demande, vous aurez besoin de :**
-      - votre numéro SIRET
-      - le cadre juridique, en l’occurence __________
-      - la description du service justifiant une simplication pour les citoyens
-      - les coordonnées de l'équipe
-      - les coordonnées du délégué à la protection des données **de l'entité pour laquelle vous opérez**
-    cta:
-      label: Remplir une demande
-      path: https://signup.api.gouv.fr/api-impot-particulier
+      <NextSteps is_editeur/>
+      <IsFranceConnected fcLink="https://signup.api.gouv.fr/api-impot-particulier" notFcLink="https://signup.api.gouv.fr/api-impot-particulier"/>
   - who:
       - Une entreprise
     is_eligible: 0
     description: |
-      Si vous êtes **éditeur de logiciels** et agissez pour le compte d'une administration ou d'une collectivité, vous pouvez remplir une demande d’accès à l’API Particulier vous-même pour l'entité que vous représentez, dans le cadre de ________
+      Seules les entreprises considérées comme une administration au sens de <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367308&dateTexte=&categorieLien=cid">l'article L100-3</External> du *code des relations entre le public et l'administration*.
 
-      Lors de votre demande vous devrez **justifier** dans quelle mesure l'entité pour laquelle vous opérez rentre dans ce cadre juridique.
+      Lors de votre demande vous devrez **justifier** dans quelle mesure l'entité pour laquelle vous opérez rentre dans ce cadre juridique. Si vous ne rentrez pas dans ces critères, **votre demande ne pourra pas être acceptée**.
 
-      **Pour remplir votre demande, vous aurez besoin de :**
-      - votre numéro SIRET
-      - le cadre juridique, en l’occurence __________
-      - la description du service justifiant une simplication pour les citoyens
-      - les coordonnées de l'équipe
-      - les coordonnées du délégué à la protection des données **de l'entité pour laquelle vous opérez**
-    cta:
-      label: Remplir une demande
-      path: https://signup.api.gouv.fr/api-impot-particulier
+      <NextSteps />
+      <Button href='https://signup.api.gouv.fr/api-impot-particulier'>Remplir une demande</Button>
 keywords:
   - Impots
   - Revenu Fiscal de Référence
