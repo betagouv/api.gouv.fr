@@ -9,7 +9,11 @@ interface IProps {
   slug: string;
 }
 
-const TechnicalDocumentation = ({ swagger_link, external_doc_link, slug }) => {
+const TechnicalDocumentation: React.FC<IProps> = ({
+  swagger_link,
+  external_doc_link,
+  slug,
+}) => {
   const doc_link = external_doc_link ? `/documentation/${slug}` : swagger_link;
   return (
     <SubSection title="Documentation technique">
