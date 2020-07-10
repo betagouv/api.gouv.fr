@@ -31,9 +31,10 @@ const ApiNotOpen = ({ link, description, condition, clients }) => (
           suivantes :
         </p>
         <ul>
-          {clients.map(client => (
-            <li key={client} dangerouslySetInnerHTML={{ __html: client }} />
-          ))}
+          {clients &&
+            clients.map(client => (
+              <li key={client} dangerouslySetInnerHTML={{ __html: client }} />
+            ))}
         </ul>
       </div>
     ) : (

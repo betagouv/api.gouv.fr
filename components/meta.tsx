@@ -1,13 +1,16 @@
 import React from 'react';
 import Head from 'next/head';
+
+//@ts-ignore
 import prune from 'underscore.string/prune';
+
 import { NextSeo } from 'next-seo';
 
 interface IProps {
   title: string;
-  description: string;
+  description?: string;
   noIndex?: boolean;
-  canonical: string;
+  canonical?: string;
 }
 
 const Meta: React.FC<IProps> = ({
