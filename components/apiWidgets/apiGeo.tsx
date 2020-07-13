@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 
-import Loader from '../../uiComponents/loader';
 import SearchBar from '../../uiComponents/searchBar';
-import { result } from 'lodash';
 import constants from '../../constants';
 
 const GeoWidget: React.FC<{}> = () => {
