@@ -30,8 +30,8 @@ const speedometer = (
       fill="#37AB00"
     />
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M4.43152 9.54101L5.34966 10.4987L6.50147 9.22745C6.68101 9.30004 6.87939 9.3344 7.08547 9.32074C7.81506 9.27243 8.3676 8.64145 8.31921 7.91187C8.30661 7.72158 8.25419 7.54337 8.17098 7.38479L11.6913 3.49921L7.6611 6.85331C7.44135 6.72592 7.18259 6.6601 6.91028 6.67815C6.18069 6.72645 5.62815 7.35743 5.67655 8.08701C5.68477 8.21175 5.71012 8.33145 5.75006 8.44371L4.43152 9.54101Z"
       fill="black"
     />
@@ -57,19 +57,49 @@ const ApiDetails: React.FC<IProps> = ({
   const [showMonitoringDesc, setShowMonitoringDesc] = useState(false);
 
   return (
-    <SubSection title="L’Api en détail">
+    <SubSection title="L’API en détail">
       <div className="badge uptime">
-        <div>
-          <div className="icon uptime-stat" />
-        </div>
-        <div>{roundUptime(2)(uptime)}% actif / dernier mois</div>
-        {monitoring && (
-          <button onClick={() => setShowMonitoringDesc(!showMonitoringDesc)}>
-            {showMonitoringDesc ? '-' : '+'}
-          </button>
+        {uptime ? (
+          <>
+            <div>
+              <div className="icon uptime-stat" />
+            </div>
+            <div>{roundUptime(2)(uptime)}% actif / dernier mois</div>
+            {monitoring && (
+              <button
+                onClick={() => setShowMonitoringDesc(!showMonitoringDesc)}
+              >
+                {showMonitoringDesc ? '-' : '+'}
+              </button>
+            )}
+          </>
+        ) : (
+          <>
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+            </div>
+            <div>L'activité sur le dernier mois n'est pas publique</div>
+            {(monitoring || monitoring_link) && (
+              <button
+                onClick={() => setShowMonitoringDesc(!showMonitoringDesc)}
+              >
+                {showMonitoringDesc ? '-' : '+'}
+              </button>
+            )}
+          </>
         )}
       </div>
-      {monitoring && showMonitoringDesc && (
+      {(monitoring || monitoring_link) && showMonitoringDesc && (
         <>
           <div className="details">
             <i>{monitoring}</i>

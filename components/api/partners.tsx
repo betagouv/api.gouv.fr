@@ -1,10 +1,14 @@
 import React from 'react';
 
-import Section from './section';
+import SubSection from './subSection';
 
-const Partners = ({ partners }) => {
+interface IProps {
+  partners: string[];
+}
+
+const Partners: React.FC<IProps> = ({ partners }) => {
   return (
-    <Section id="partenaires" title="Partenaires">
+    <SubSection title="Partenaires">
       {partners ? (
         <ul>
           {partners.map(partner => (
@@ -16,7 +20,7 @@ const Partners = ({ partners }) => {
       ) : (
         <p>Cette API ne recense pas ses partenariats publiquement.</p>
       )}
-    </Section>
+    </SubSection>
   );
 };
 

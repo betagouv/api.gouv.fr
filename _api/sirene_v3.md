@@ -19,8 +19,7 @@ themes:
 logo: Logo_Insee.svg
 rate_limiting_resume: 30 appels / minute
 rate_limiting_description: |
-  L'usage d'API Sirene est soumis à une limite de 30 interrogations par minute.<br/>
-  L'Insee se réserve le droit de changer cette limite en cas de nécessité.
+  L'usage d'API Sirene est soumis à une limite de 30 interrogations par minute. L'Insee se réserve le droit de changer cette limite en cas de nécessité.
 contact_link: https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/help.jag#contact
 doc_tech_link: https://api.insee.fr/catalogue/api-docs/carbon.super/Sirene/V3?envName=Production%20and%20Sandbox
 visits_2019: 3785

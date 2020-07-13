@@ -76,7 +76,6 @@ const API: React.FC<IProps> = ({ api, services = null }) => {
         <div className="right-column-grid">
           <div className="left-column text-style">
             <Content content={body} />
-            <Partners partners={partners} />
             <ApiRelatedServices services={services} />
           </div>
           <div className="right-column info-column">
@@ -100,6 +99,8 @@ const API: React.FC<IProps> = ({ api, services = null }) => {
               owner_acronym={owner_acronym}
               link={contact_link}
             />
+
+            <Partners partners={partners} />
           </div>
         </div>
       </div>
