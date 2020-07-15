@@ -212,10 +212,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       props: {
         title: api.title,
         slug: api.slug,
-        access_link,
+        access_link: access_link || null,
         access_description: access_description || null,
-        access_condition,
-        clients,
+        access_condition: access_condition || null,
+        clients: clients || [],
       },
     };
   }
