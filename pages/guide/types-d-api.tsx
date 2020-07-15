@@ -2,6 +2,7 @@ import React from 'react';
 
 import Page from '../../layouts';
 import GeoWidget from '../../components/apiWidgets/apiGeo';
+import ApiParticulierWidget from '../../components/apiWidgets/apiParticulier';
 
 const APITypes: React.FC<{}> = () => {
   return (
@@ -15,6 +16,7 @@ const APITypes: React.FC<{}> = () => {
         <h3>Quelle différence avec API Gouv et Data Gouv ?</h3>
         <h3>Un exemple bien concret pour mettre tout le monde d'accord</h3>
         <GeoWidget />
+        <ApiParticulierWidget />
       </div>
       <style jsx>{``}</style>
     </Page>

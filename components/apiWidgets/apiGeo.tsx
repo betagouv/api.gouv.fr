@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import SearchBar from '../../uiComponents/searchBar';
-import constants from '../../constants';
+import ApiWidgetWrapper from './apiWidgetWrapper';
 
 const GeoWidget: React.FC<{}> = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -35,12 +35,12 @@ const GeoWidget: React.FC<{}> = () => {
       });
   };
   return (
-    <div className="widget-wrapper layout-center">
-      <div className="widget-label">Un exemple d’API ouverte : l’API Geo</div>
+    <ApiWidgetWrapper title="Un exemple d’API ouverte : l’API Geo">
       <div>
         L’
-        <a href="/les-api/api-geo">API Geo</a> permet notamment d'effectuer une
-        recherche par nom des communes de France. Voila comment cela se passe :
+        <a href="/les-api/api-geo">API Geo</a> permet <b>à n'importe qui</b>{' '}
+        d'effectuer une recherche par nom des communes de France. Voila comment
+        cela se passe :
       </div>
       <ol>
         <li>Vous tapez le nom d’une commune</li>
@@ -58,40 +58,7 @@ const GeoWidget: React.FC<{}> = () => {
           isLoading={isLoading}
         />
       </div>
-      <style jsx>{`
-        .widget-wrapper {
-          background-color: ${constants.colors.lightBlue};
-          flex-direction: column;
-          padding: 50px;
-          border-radius: 10px;
-          position: relative;
-          margin: 40px auto;
-        }
-
-        .widget-label {
-          position: absolute;
-          margin: 0;
-          top: -15px;
-          font-weight: bold;
-          background-color: #fff;
-          border-bottom-left-radius: 10px;
-          border-bottom-right-radius: 10px;
-          padding: 3px 10px;
-        }
-
-        p {
-          text-align: center;
-        }
-
-        .interactive-component {
-          min-width: 60%;
-          background-color: #fff;
-          box-shadow: 0 20px 30px 0px rgba(0, 0, 0, 0.2);
-          padding: 20px 40px;
-          border-radius: 5px;
-        }
-      `}</style>
-    </div>
+    </ApiWidgetWrapper>
   );
 };
 

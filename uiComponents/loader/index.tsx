@@ -3,13 +3,15 @@ import constants from '../../constants';
 
 interface IProps {
   small?: boolean;
+  message?: string;
 }
 
-const Loader: React.FC<IProps> = ({ small = false }) => {
+const Loader: React.FC<IProps> = ({ small = false, message = '' }) => {
   const size = small ? 20 : 50;
   return (
     <>
       <div className="loader-container layout-center">
+        {!!message && <div className="message">{message}</div>}
         <div className="loader">
           <span></span>
           <span></span>
@@ -18,6 +20,7 @@ const Loader: React.FC<IProps> = ({ small = false }) => {
       <style jsx>{`
         .loader-container {
           width: 100%;
+          flex-direction: column;
         }
         .loader {
           margin: auto;
@@ -40,6 +43,11 @@ const Loader: React.FC<IProps> = ({ small = false }) => {
         .loader span:last-child {
           animation-delay: -0.4s;
           -webkit-animation-delay: -0.4s;
+        }
+
+        .loader-container > .message {
+          font-style: italic;
+          margin: 20px auto;
         }
         @keyframes loader {
           0% {
