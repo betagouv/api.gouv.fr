@@ -112,10 +112,8 @@ const API: React.FC<IProps> = ({ api, services = null }) => {
         }
 
         .info-column {
-          background-color: ${constants.colors.lightestBlue};
-          border: 2px solid ${constants.colors.lightBlue};
-          border-top: none;
-          padding: 0 20px;
+          border-left: 2px solid ${constants.colors.lightBlue};
+          padding: 0 0 0 40px;
         }
         @media only screen and (min-width: 1px) and (max-width: 900px) {
           .right-column-grid {
