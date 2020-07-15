@@ -2,15 +2,17 @@ import React, { PropsWithChildren } from 'react';
 
 interface IProps {
   title: string;
+  id?: string;
 }
 
 const SubSection: React.FC<PropsWithChildren<IProps>> = ({
+  id = '',
   title,
   children,
 }) => {
   return (
     <>
-      <div className="sub-section">
+      <div id={id} className="sub-section">
         <h2>{title}</h2>
         {children}
       </div>

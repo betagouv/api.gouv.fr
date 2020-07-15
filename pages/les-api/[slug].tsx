@@ -44,16 +44,12 @@ const API: React.FC<IProps> = ({ api, services = null }) => {
     // external_site,
     doc_tech_link,
     doc_tech_external,
-    // access_link,
-    // access_description,
-    // access_condition,
     monitoring_link,
     monitoring_description,
     rate_limiting_description,
     rate_limiting_resume,
     body,
     is_open,
-    // clients,
     partners,
   } = api;
 
@@ -111,13 +107,21 @@ const API: React.FC<IProps> = ({ api, services = null }) => {
 
         .right-column-grid {
           display: grid;
-          grid-template-columns: 67% 32%;
+          grid-template-columns: 65% 35%;
           grid-gap: 40px;
         }
 
         .info-column {
-          border-left: 2px solid ${constants.colors.lightBlue};
-          padding: 0 0 0 40px;
+          background-color: ${constants.colors.lightestBlue};
+          border: 2px solid ${constants.colors.lightBlue};
+          border-top: none;
+          padding: 0 20px;
+        }
+        @media only screen and (min-width: 1px) and (max-width: 900px) {
+          .right-column-grid {
+            display: flex;
+            flex-direction: column-reverse;
+          }
         }
       `}</style>
     </Page>

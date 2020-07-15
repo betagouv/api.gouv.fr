@@ -12,14 +12,14 @@ interface IProps {
 const ApiOpen: React.FC<IProps> = ({ slug }) => (
   <>
     <div>L'API est ouverte à tous.</div>
-    <p>Vous pouvez y accèder dès maintenant :</p>
+    <p>Vous pouvez y accéder dès maintenant :</p>
     <div className="layout-right vertical-margin">
       <ButtonLink
         href={`/documentation/${slug}`}
         onClick={logDemanderAcces}
         large
       >
-        Accèder à la documentation
+        Accéder à la documentation
       </ButtonLink>
     </div>
   </>
@@ -50,7 +50,7 @@ interface IAccessProps {
 
 const Access: React.FC<IAccessProps> = ({ is_open, slug }) => {
   return (
-    <SubSection title="Accèder aux données">
+    <SubSection title="Accéder aux données">
       {is_open ? <ApiOpen slug={slug} /> : <ApiNotOpen slug={slug} />}
     </SubSection>
   );
