@@ -3,6 +3,9 @@ title: API Entreprise
 tagline: Simplifier les démarches des entreprises en récupérant pour elles leurs documents administratifs
 external_site: https://entreprise.api.gouv.fr/
 is_open: false
+access_link: /les-api/api-entreprise/demande-acces
+access_description: |
+  Cette API nécessite une habilitation :
 access_page:
   - who:
       - Un particulier
@@ -47,11 +50,6 @@ stat:
   lastXdays: 30
   url: https://dashboard.entreprise.api.gouv.fr/api/watchdoge/stats/last_30_days_usage
   label: informations non redemandées aux entreprises
-clients:
-  - Collectivités
-  - Administrations
-  - Ministères
-  - Places de marchés
 partners:
   - DGFiP
   - ACOSS
