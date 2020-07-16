@@ -11,7 +11,7 @@ access_page:
       - Un particulier
     is_eligible: -1
     description: |
-      Seules les administrations sont habilitées à utiliser API Particulier.
+      Seules les administrations sont habilitées à utiliser API Entreprise.
 
       <Button href="/rechercher-api">Retourner à la page de recherche</Button>
   - who:
