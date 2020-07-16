@@ -11,23 +11,22 @@ access_page:
       - Un particulier
     is_eligible: -1
     description: |
-      Seules les administrations sont habilitées à utiliser API Entreprise.
+      Seules les administrations et certaines sociétés sont habilitées à utiliser API Entreprise.
 
       <Button href="/rechercher-api">Retourner à la page de recherche</Button>
   - who:
       - Une collectivité ou une administration
     is_eligible: 1
     description: |
-      Si vous êtesune collectivité ou une administration, vous pouvez remplir une demande d’accès à l’API Entreprise vous-même pour l'entité que vous représentez.
+      Si vous êtes une collectivité ou une administration, vous pouvez remplir une demande d’accès à l’API Entreprise vous-même pour l'entité que vous représentez.
 
-      Lors de votre demande vous devrez **renseigner un texte ou délibération/décision** qui légitime  l'entité pour laquelle vous opérez à recevoir ces données.
+      Lors de votre demande vous devrez **renseigner le cadre juridique (un texte ou délibération/décision)** qui légitime l'entité pour laquelle vous opérez à recevoir ces données.
 
       <NextSteps />
       <Button href="https://signup.api.gouv.fr/api-entreprise">Remplir une demande</Button>
   - who:
       - Une entreprise
     is_eligible: 0
-    is_editeur: true
     description: |
       Seule les **sociétés chargées d’une mission de service public** sont éligibles.
 
@@ -38,11 +37,10 @@ access_page:
   - who:
       - Un éditeur de logiciel
     is_eligible: 0
-    is_editeur: true
     description: |
-      Si vous êtes **éditeur de logiciels** et agissez pour le compte d'une administration ou d'une collectivité, vous pouvez remplir une demande d’accès à l’API Entreprise vous-même pour l'entité que vous représentez.
+      Si vous êtes **éditeur de logiciels** et agissez pour le compte d'une administration ou d'une collectivité, vous pouvez remplir vous même une demande d'accès à l'API entreprise pour l'entité que vous représentez.
 
-      Lors de votre demande vous devrez **renseigner un texte ou délibération/décision** qui légitime  l'entité pour laquelle vous opérez à recevoir ces données.
+      Lors de votre demande vous devrez **renseigner le cadre juridique (un texte ou délibération/décision)** qui légitime  l'entité pour laquelle vous opérez à recevoir ces données.
 
       <NextSteps is_editeur />
       <Button href="https://signup.api.gouv.fr/api-entreprise">Remplir une demande</Button>
