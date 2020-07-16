@@ -11,6 +11,7 @@
     - type: DLNUF
       what: |
         De nouvelles données sont mises à disposition des administrations dans le cadre du [« Dites le nous une fois »](https://www.numerique.gouv.fr/services/guichet-dites-le-nous-une-fois/) :
+
         - Revenu fiscal de référence, informations sur le conjoint, adresse
         - Informations sur les enfants, l’adresse et le quotient familial
 
@@ -57,11 +58,13 @@
     - type: DLNUF
       what: |
         De nouvelles données seront mises à disposition des administrations dans le cadre du [« Dites le nous une fois »](https://www.numerique.gouv.fr/services/guichet-dites-le-nous-une-fois/) :
+
         - informations contenues dans les attestations relatives au statut demandeur d'emploi
         - informations contenues dans les attestations relatives au statut étudiant
     - type: DLNUF
       what: |
         Dans le cadre du [« Dites le nous une fois »](https://www.numerique.gouv.fr/services/guichet-dites-le-nous-une-fois/), l’échange des données entre administrations permettra le pré-remplissage de 6 démarches administratives:
+
         - Demande d’allocation logement en ligne
         - Simulation de droits sociaux
         - Demande de prime d’activité
@@ -76,6 +79,7 @@
     - type: INFO
       what: |
         Intégration des [APIs de l’URSSAF](https://portailapi.urssaf.fr/fr/) :
+
         - API Données ouvertes de l’URSSAF
         - API Déclaration auto-entrepreneur
         - API Déclaration CESU
