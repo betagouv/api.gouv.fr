@@ -39,7 +39,13 @@ export default () => {
             </div>
             <div>
               Aidez-nous à améliorer cette page en{' '}
-              <a>remplissant ce rapide questionnaire.</a>
+              <a
+                href="https://betagouv.typeform.com/to/zSP38owa"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                remplissant ce rapide questionnaire.
+              </a>
             </div>
           </div>
         )}
