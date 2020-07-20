@@ -123,8 +123,8 @@ const Contact: React.FC = () => (
         </p>
         <p>
           Votre sujet concerne API.gouv.fr en général,{' '}
-          <a href="mailto:contact@api.gouv.fr?subject=Autre%20sujet">
-            Écrivez-nous
+          <a href="/parcours-client?source=contact">
+            Posez-nous votre question
           </a>
           .
         </p>

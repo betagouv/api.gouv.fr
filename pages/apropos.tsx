@@ -140,11 +140,7 @@ const About: React.FC = () => (
           Si vous avez, vous aussi, une belle histoire à partager, n'hésitez pas
           à <a href={constants.links.ADD_API}>nous la faire parvenir.</a>
         </p>
-        {/* <p>
-          Pour toute question ou précision, n’hésitez pas à{' '}
-          <a href="/parcours-client?source=apropos">nous contacter.</a>
-        </p> */}
-        <TeamHelpWidget />
+        <TeamHelpWidget source="apropos" />
       </div>
     </div>
     <style jsx>{`
