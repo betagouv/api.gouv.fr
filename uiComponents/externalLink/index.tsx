@@ -4,7 +4,8 @@ import constants from '../../constants';
 
 const ExternalLink: React.FC<PropsWithChildren<{ href: string }>> = props => (
   <a href={props.href} target="_blank" rel="noreferrer noopener">
-    {props.children}{' '}
+    {props.children}
+    &nbsp;
     <svg
       width="12"
       height="12"
