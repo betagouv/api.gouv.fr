@@ -42,4 +42,15 @@ const logParcoursClient = (step, value = '*') => {
   }
 };
 
-export { logCTA, logDemanderAcces, logLPCTA, logParcoursClient };
+const logFeedback = answer => {
+  if (typeof window !== 'undefined' && window._paq) {
+    window._paq.push([
+      'trackEvent',
+      'Feedback : page utile ?',
+      answer,
+      `page : ${window.location.pathname}`,
+    ]);
+  }
+};
+
+export { logCTA, logDemanderAcces, logLPCTA, logParcoursClient, logFeedback };
