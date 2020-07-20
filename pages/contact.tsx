@@ -122,7 +122,7 @@ const Contact: React.FC = () => (
           la page de description de l'api.
         </p>
         <p>
-          Votre sujet concerne API.gouv.fr en général,{' '}
+          Votre sujet concerne API.gouv.fr en général.{' '}
           <a href="/parcours-client?source=contact">
             Posez-nous votre question
           </a>
