@@ -3,6 +3,8 @@ import {
   getAllServices,
   getAllAPIs,
   getAPI,
+  getGuide,
+  getAllGuides,
   getRoadmap,
 } from './readOnDiskForWebpack';
 
@@ -25,6 +27,14 @@ export interface IRoadmap {
   [year: string]: {
     [month: string]: IRoadmapElement[];
   };
+}
+
+export interface IGuideElement {
+  title: string;
+  tags: string;
+  tagline: string;
+  body: string;
+  slug: string;
 }
 
 export interface IService {
@@ -95,4 +105,12 @@ export interface IApi extends IApiShort {
   keywords: string[];
 }
 
-export { getService, getAllServices, getAllAPIs, getAPI, getRoadmap };
+export {
+  getService,
+  getAllServices,
+  getAllAPIs,
+  getAPI,
+  getGuide,
+  getAllGuides,
+  getRoadmap,
+};
