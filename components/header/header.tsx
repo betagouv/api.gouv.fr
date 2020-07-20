@@ -1,6 +1,5 @@
-import React, { useEffect, useRef, Fragment } from 'react';
+import React, { Fragment } from 'react';
 import Link from 'next/link';
-import { throttle } from 'lodash';
 
 import { ButtonLink } from '../../uiComponents/button';
 import { logCTA } from '../../service/analytics';
@@ -30,34 +29,9 @@ const HEADER = [
   { href: '/apropos', txt: 'À propos', key: HEADER_PAGE.ABOUT },
 ];
 
-const Header = ({ headerKey = 'home', useMenu = true }) => {
-  const header = useRef(null);
-
-  useEffect(() => {
-    const handleScroll = throttle(() => {
-      if (!header || !header.current) {
-        return;
-      }
-      //@ts-ignore
-      const headerClasses = header.current.classList;
-      const hasScrolledClass = headerClasses.contains('scrolled');
-      if (
-        (window.scrollY !== 0 && !hasScrolledClass) ||
-        (window.scrollY === 0 && hasScrolledClass)
-      ) {
-        headerClasses.toggle('scrolled');
-      }
-    }, 100);
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
+const Header = ({ headerKey = 'home' }) => {
   return (
-    <header role="navigation" ref={header}>
+    <header role="navigation">
       <nav className="nav">
         <input
           className="menu-btn"
