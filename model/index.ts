@@ -35,6 +35,7 @@ export interface IGuideElement {
   tagline: string;
   body: string;
   slug: string;
+  noindex: boolean;
 }
 
 export interface IService {

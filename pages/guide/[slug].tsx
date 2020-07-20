@@ -12,13 +12,14 @@ interface IProps {
 }
 
 const API: React.FC<IProps> = ({ guide }) => {
-  const { title, slug, tagline, body } = guide;
+  const { title, slug, tagline, body, noindex = false } = guide;
   return (
     <Page
       headerKey={HEADER_PAGE.APIS}
       title={title}
       description={`${tagline}`}
       canonical={`https://api.gouv.fr/guide/${slug}`}
+      noIndex={noindex}
     >
       <div className="text-style text-wrapper">
         <h1>{title}</h1>
