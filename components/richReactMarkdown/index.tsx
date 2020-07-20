@@ -2,6 +2,7 @@ import React, { PropsWithChildren } from 'react';
 import Markdown from 'markdown-to-jsx';
 
 import { ButtonLink, ExternalLink } from '../../uiComponents';
+import FlatFileWidget from '../widget/flatFile';
 
 const CenteredCta: React.FC<PropsWithChildren<{ href: string }>> = props => (
   <div className="layout-center">
@@ -41,6 +42,7 @@ const RichReactMarkdown: React.FC<{ source: string }> = ({ source }) => (
         Button: CenteredCta,
         NextSteps: NextSteps,
         External: ExternalLink,
+        FlatFileWidget: FlatFileWidget,
       },
     }}
   />

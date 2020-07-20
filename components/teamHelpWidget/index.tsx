@@ -34,8 +34,7 @@ const TeamHelpWidget: React.FC<IProps> = ({
         max-width: 400px;
         border-radius: 10px;
         padding: 30px 20px;
-        margin: auto;
-        margin-top: 100px;
+        margin: 100px auto 70px;
         color: #fff;
         background-color: ${constants.colors.blue};
         position: relative;

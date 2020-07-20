@@ -6,6 +6,7 @@ import Page from '../../layouts';
 
 import { HEADER_PAGE } from '../../components';
 import RichReactMarkdown from '../../components/richReactMarkdown';
+import TeamHelpWidget from '../../components/teamHelpWidget';
 
 interface IProps {
   guide: IGuideElement;
@@ -19,12 +20,14 @@ const API: React.FC<IProps> = ({ guide }) => {
       title={title}
       description={`${tagline}`}
       canonical={`https://api.gouv.fr/guide/${slug}`}
+      usePreFooter={false}
       noIndex={noindex}
     >
       <div className="text-style text-wrapper">
         <h1>{title}</h1>
         <RichReactMarkdown source={body} />
       </div>
+      <TeamHelpWidget />
       <style jsx>{``}</style>
     </Page>
   );
