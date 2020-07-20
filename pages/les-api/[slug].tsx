@@ -28,6 +28,7 @@ import { HEADER_PAGE } from '../../components';
 
 import { getWindowHash, isElementVisible } from '../../utils';
 import constants from '../../constants';
+import Feedback from '../../components/feedback';
 
 interface IProps {
   api: IApi;
@@ -174,6 +175,7 @@ const API: React.FC<IProps> = ({ api, services = null }) => {
             />
 
             <ApiRelatedServices services={services} />
+            <Feedback />
           </div>
         </div>
       </div>

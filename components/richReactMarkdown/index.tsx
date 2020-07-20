@@ -17,15 +17,17 @@ const NextSteps = ({ is_editeur = false }) => (
       <b>Pour remplir votre demande, vous aurez besoin de : </b>
     </p>
     <ul>
-      <li>votre numéro SIRET</li>
-      <li>le cadre juridique, en l'occurence</li>
+      <li>de votre numéro SIRET</li>
+      <li>du cadre juridique</li>
       <li>
-        la description du service justifiant une simplication pour les citoyens
+        de la description du service justifiant une simplication pour les
+        citoyens
       </li>
-      <li>les coordonnées de l'équipe</li>
+      <li>des coordonnées de l'équipe</li>
       <li>
-        les coordonnées de votre délégué à la protection des données{' '}
-        {is_editeur && <b>de l’entité pour laquelle vous opérez</b>}
+        des coordonnées de votre délégué à la protection des données et
+        responsable de traitement
+        {is_editeur && <b> de l’entité pour laquelle vous opérez</b>}
       </li>
     </ul>
   </>
