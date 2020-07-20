@@ -3,10 +3,10 @@ import { StepSection } from './components';
 import { ButtonLink } from '../../../uiComponents/button';
 
 interface IPropsStep {
-  next: (a?: any) => void;
+  next: () => void;
 }
 export const Connect: React.FC<IPropsStep> = ({ next }) => {
-  const submit = e => {
+  const submit = (e: any) => {
     e.preventDefault();
     next();
   };
@@ -28,7 +28,7 @@ export const Connect: React.FC<IPropsStep> = ({ next }) => {
 };
 
 export const GetRFR: React.FC<IPropsStep> = ({ next }) => {
-  const submit = e => {
+  const submit = (e: any) => {
     e.preventDefault();
     next();
   };
@@ -55,7 +55,7 @@ export const GetRFR: React.FC<IPropsStep> = ({ next }) => {
   );
 };
 
-export const RecapRFR = ({ rfr = 0 }) => (
+export const RecapRFR = () => (
   <StepSection title="Mon revenu fiscal de référence">
     <p>
       Votre revenu fiscal de référence est{' '}
