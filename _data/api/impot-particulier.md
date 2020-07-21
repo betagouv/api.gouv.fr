@@ -27,7 +27,7 @@ access_page:
       Pour obtenir un agrément, vous devez **justifier d'une simplification pour les citoyens**, et vous engager à n'accéder aux données personnelles qu'avec **l'accord explicite** de l'usager.
 
       <NextSteps />
-      <IsFranceConnected fcLink="https://signup.api.gouv.fr/api-impot-particulier" notFcLink="https://signup.api.gouv.fr/api-impot-particulier"/>
+      <IsFranceConnected fcLink="https://signup-staging.api.gouv.fr/api-impot-particulier-fc-sandbox" notFcLink="https://signup-staging.api.gouv.fr/api-impot-particulier-sandbox"/>
   - who:
       - Un éditeur de logiciel
     is_eligible: 0
@@ -37,7 +37,7 @@ access_page:
       Lors de votre demande vous devrez **justifier** dans quelle mesure l'entité pour laquelle vous opérez rentre dans ce cadre juridique.
 
       <NextSteps is_editeur/>
-      <IsFranceConnected fcLink="https://signup.api.gouv.fr/api-impot-particulier" notFcLink="https://signup.api.gouv.fr/api-impot-particulier"/>
+      <IsFranceConnected fcLink="https://signup-staging.api.gouv.fr/api-impot-particulier-fc-sandbox" notFcLink="https://signup-staging.api.gouv.fr/api-impot-particulier-sandbox"/>
   - who:
       - Une entreprise
     is_eligible: 0
@@ -48,6 +48,16 @@ access_page:
 
       <NextSteps />
       <Button href='https://signup.api.gouv.fr/api-impot-particulier'>Remplir une demande</Button>
+  - who:
+      - Une banque
+    is_eligible: 0
+    description: |
+      Dans le cadre de la vérification de l’éligibilité au <External href="https://www.service-public.fr/particuliers/vosdroits/F2367">LEP</External> les banques peuvent être considérées comme une administration au sens de <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367308&dateTexte=&categorieLien=cid">l'article L100-3</External> du *code des relations entre le public et l'administration*.
+
+      Si vous entrez dans ce cadre, vous pouvez effectuer une demande d'accès à l’API Impôt Particulier.
+
+      <NextSteps />
+      <Button href='https://signup-staging.api.gouv.fr/api-impot-particulier-sandbox?scopes=%7B%22dgfip_eligibilite_lep%22%3A%20true%2C%22dgfip_annee_n_moins_1%22%3Atrue%2C%22dgfip_acces_etat_civil%22%3Atrue%7D#donnees'>Remplir une demande</Button>
 keywords:
   - Impots
   - Revenu Fiscal de Référence

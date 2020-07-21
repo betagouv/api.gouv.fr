@@ -86,7 +86,7 @@ const AccessCondition: React.FC<IProps> = ({
     >
       <div className="content-container">
         <div className="breadcrumb">
-          <a href={`https://api.gouv.fr/les-api/${slug}`}>⇠ Fiche {title}</a>
+          <a href={`/les-api/${slug}`}>⇠ Fiche {title}</a>
         </div>
       </div>
 
