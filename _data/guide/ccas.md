@@ -43,4 +43,12 @@ _Question : Différence entre SITIV et éditeur ?_
 
 ## Editeurs et intégrateurs
 
-Vous souhaitez apparaître dans cette liste ? Demandez-nous en écrivant à contact@particulier.api.gouv.fr.
+Si vous travaillez avec un des editeurs ci-dessous vous pouvez faire une demande simplifiée :
+
+
+| Editeur | Nom de la solution       | Date        | Lien vers la demande                              |
+| ------- | ------------------------ | ----------- | ------------------------------------------------- |
+| Up      | Millesime Action Sociale | Mi-Mai 2020 | <External href="">lien vers la demande</External> |
+
+
+Vous souhaitez apparaître dans cette liste ? Demandez-nous en écrivant à [contact@particulier.api.gouv.fr](mailto:contact@particulier.api.gouv.fr)
