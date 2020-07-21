@@ -10,12 +10,15 @@ const FcSellingPoints = () => (
   <div>
     <div>Ajouter un bouton FranceConnect sur votre service permet :</div>
     <ul>
-      <li>de simplifier le parcours des usagers</li>
-      <li>d’augmenter la sécurité de votre service et réduire la fraude</li>
       <li>
-        d’identifier de manière unique un citoyen et éliminer les
-        réconciliations d'identité
+        de simplifier le parcours des usagers qui peuvent utiliser le même
+        identifiant partout
       </li>
+      <li>
+        de sécuriser votre service car FranceConnect gère la réconciliation des
+        identités
+      </li>
+      <li>de réduire la fraude grace à l'identification unique des citoyens</li>
     </ul>
   </div>
 );

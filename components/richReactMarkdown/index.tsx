@@ -16,7 +16,7 @@ const CenteredCta: React.FC<PropsWithChildren<{ href: string }>> = props => (
 const NextSteps = ({ is_editeur = false }) => (
   <>
     <p>
-      <b>Pour remplir votre demande, vous aurez besoin de : </b>
+      <b>Pour remplir votre demande, vous aurez besoin : </b>
     </p>
     <ul>
       <li>de votre numéro SIRET</li>
