@@ -16,7 +16,7 @@ const FcSellingPoints = () => (
       </li>
       <li>
         de sécuriser votre service car FranceConnect gère la réconciliation des
-        identités
+        identités pour vous
       </li>
       <li>de réduire la fraude grace à l'identification unique des citoyens</li>
     </ul>
