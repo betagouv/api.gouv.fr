@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import constants from '../../constants';
 import { ButtonLink } from '../../uiComponents';
-import { logFeedback } from '../../service/analytics';
+import { logFeedback } from '../../utils/client/analytics';
 
 export default () => {
   const [hasAnswered, setHasAnswered] = useState(false);
