@@ -2,38 +2,45 @@
 title: CCAS
 tagline: CCAS -  Cas d'usage
 tags: cas usage, api particulier, CCAS
+introduction: |
+  Vous souhaitez dématérialiser l'instruction des dossiers dans un CCAS ? Vous êtes un CCAS vous-même, ou bien un éditeur de logiciel ?
+
+  Nous vous accompagnons avec à l'API Particulier qui permet d’accèder aux données de la CAF et de la DGFIP. 
+  
+  Grâce à l’API Particulier :
+
+  - Plus besoin de demander un avis fiscal ou un quotient familial aux citoyens
+  - Les informations sont certifiées par la CAF et la DGFIP, **pas de vérifications supplémentaire**.
+  - L'instruction des dossiers est rapide et dématérialisée. **Fini les pièces justuificatives** papier.
 ---
 
-## Introduction
+## Quelles données utilisez-vous dans vos démarches ?
 
-Vous êtes un CCAS et vous souhaitez dématérialiser l'instruction des dossiers ? Vous êtes un éditeur et vous envisagez de développer un logiciel pour les CCAS ?
+Vous utilisez les données de la CAF (composition familiale du foyer du demandeur) ? Voici les données accessibles directement avec notre API : 
 
-Nous vous proposons de vous accompagner grâce à l'API Particulier. Elle permet l'accès aux données fournies par la CAF et par la DGFIP en une seule requête. Grâce à son intégration vous avez l'assurance de :
-- La rapidité de l'obtention de l'information
-- La preuve de l'exactitude de l'information ou - La Preuve de son exactitude
-- La dématérialisation du processus 
+| Donnée            | Commentaire                                              |
+| ----------------- | -------------------------------------------------------- |
+| Allocataire       | L'état-civil du demandeur (nom prénom date de naissance) |
+| Enfant(s)         | Le/La/Les enfant(s) (nom, prenom, date de naissance)     |
+| Adresse           | L'adresse du foyer                                       |
+| Quotient Familial | Le quotient familial calculé par la CAF                  |
 
-Vous n'êtes pas encore totalement convaincus ? 
-Voici 3 notions supplémentaires pour réussir en toute simplicité l'adotption d'API Particulier.
+Vous utilisez les données de la DGFIP (pourvérifier les conditions d'éligibilité d'une demande) ? Voici les données accessibles directement avec notre API :
 
-En premier lieu, **il est nécessaire de choisir les données** qui serviront lors du traitement.  A titre indicatif, les plus utilisés pour les instructions de dossiers sont les suivantes : 
-##### Données issues de la CAF : pour obtenir la composition familiale du foyer du demandeur 
-- L'état-civil (nom prénom date de naissance), 
-- La structure familiale (nom, prenom, date de naissance, enfants et parents), 
-- L'adresse du foyer, 
-- Le quotient familial calculé par la CAF 
-##### Données issues de la DGFIP :  pour permettre de vérifier les conditions d'éligibilité de l'aide
-- Le statut d'imposition, 
-- Le montant de l'impôt, 
-- Le revenu fiscal de référence, 
-- Le nombre de parts fiscale  
+| Donnée            | Commentaire                                                                                  |
+| ----------------- | -------------------------------------------------------------------------------------------- |
+| Avis d'imposition | statut d’imposition, montant de l'impôt, revenu fiscal de référence, nombre de parts fiscale |
+| Adresse           | L'adresse fiscal du demandeur                                                                |
 
-Ensuite, **il est recommandé de conserver les informations pendant 2 années**, c'est à dire seulement le temps de l'instruction du dossier jusqu'à la clôture de la demande.
 
-Finalement, afin de se rassurer, l'utilisation de la données par les CCAS est légale. **Elle s'inscrit dans le cadre jurique suivant :**
-* Article L. 312-1 et Article R123-5 du code de l'action sociale et des familles, 
-* Article L114-8 et Article R. 114-9-3 du code des relations entre le public et l’administration.
-Circulaire SIAF du 22 mai 2014, [Code des relations entre le public et l'administration - Article R114-9-3 ](https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=83A5E43D6A6710F0F0FFE705AA476AA5.tplgfr26s_3?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000038029900&dateTexte=20190213&categorieLien=id#LEGIARTI000038029900)
+## Quel es le cadre légal pour formuler une demande ?
+
+L'utilisation de la données par les CCAS est légale. Vous pouvez consulter :
+
+* Article L. 312-1 et Article R123-5 du *Code de l'action sociale et des familles*
+* Article L114-8 et Article R. 114-9-3 du *Code des relations entre le public et l’administration*
+* <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=83A5E43D6A6710F0F0FFE705AA476AA5.tplgfr26s_3?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000038029900&dateTexte=20190213&categorieLien=id#LEGIARTI000038029900">Article R114-9-3</External> du *Code des relations entre le public et l'administration*
+
 
 ## Ils l'ont fait
 
