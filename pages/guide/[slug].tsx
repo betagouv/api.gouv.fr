@@ -21,6 +21,7 @@ const API: React.FC<IProps> = ({ guide }) => {
       description={`${tagline}`}
       canonical={`https://api.gouv.fr/guide/${slug}`}
       noIndex={noindex}
+      usePreFooter={false}
     >
       <div>
         <div className="hero">
