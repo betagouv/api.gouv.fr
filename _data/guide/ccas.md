@@ -2,6 +2,7 @@
 title: CCAS
 tagline: CCAS -  Cas d'usage
 tags: cas usage, api particulier, CCAS
+noindex:true
 introduction: |
   Vous souhaitez dématérialiser l'instruction des dossiers dans un CCAS ? Vous êtes un CCAS vous-même, ou bien un éditeur de logiciel ?
 
