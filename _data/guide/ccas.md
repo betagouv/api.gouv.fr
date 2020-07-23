@@ -33,25 +33,21 @@ Vous utilisez les données de la DGFIP (pourvérifier les conditions d'éligibil
 | Adresse           | L'adresse fiscal du demandeur                                                                |
 
 
-## Quel es le cadre légal pour formuler une demande ?
+## Quel est le cadre légal pour formuler une demande ?
 
 L'utilisation de la données par les CCAS est légale. Vous pouvez consulter :
 
-* Article L. 312-1 et Article R123-5 du *Code de l'action sociale et des familles*
-* Article L114-8 et Article R. 114-9-3 du *Code des relations entre le public et l’administration*
+* Article L.312-1 et Article R123-5 du *Code de l'action sociale et des familles*
+* <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000026799356&cidTexte=LEGITEXT000006074069&dateTexte=20121219">Article R114-9-3</External> du *Code de l'action sociale et des familles* 
+* Article L.114-8 et Article R. 114-9-3 du *Code des relations entre le public et l’administration *
 * <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=83A5E43D6A6710F0F0FFE705AA476AA5.tplgfr26s_3?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000038029900&dateTexte=20190213&categorieLien=id#LEGIARTI000038029900">Article R114-9-3</External> du *Code des relations entre le public et l'administration*
 
 
 ## Ils l'ont fait
 
-### Un CCAS (choisi par Stan pour son intérêts)
+## Un CCAS (choisi par Stan pour son intérêts)
 
-### Témoignage à la SITIV ?
 
-Mail de conatct technique de toutes les demandes qui ont "créesé le cas d'usage : svangheluwe@sitiv.fr
-[SITIV](https://www.sitiv.fr/)
-
-_Question : Différence entre SITIV et éditeur ?_
 
 ## Editeurs et intégrateurs
 
