@@ -13,7 +13,7 @@ interface IProps {
 }
 
 const API: React.FC<IProps> = ({ guide }) => {
-  const { title, slug, tagline, introduction, body, noindex = false } = guide;
+  const { title, slug, tagline, body, noindex = false } = guide;
   return (
     <Page
       headerKey={HEADER_PAGE.APIS}
@@ -23,25 +23,32 @@ const API: React.FC<IProps> = ({ guide }) => {
       noIndex={noindex}
     >
       <div>
-        <div className="text-wrapper">
-          <h1>{title}</h1>
-          {tagline && <h2>{tagline}</h2>}
-        </div>
-        {introduction && (
-          <div className="introduction">
-            <div className="text-style text-wrapper">
-              <RichReactMarkdown source={introduction} />
-            </div>
+        <div className="hero">
+          <div className="text-wrapper">
+            <h1>{title}</h1>
+            {tagline && <h2>{tagline}</h2>}
           </div>
-        )}
+        </div>
         <div className="text-style text-wrapper">
           <RichReactMarkdown source={body} />
         </div>
       </div>
       <style jsx>{`
-        .introduction {
-          background-color: ${constants.colors.lightBlue};
-          padding: 5px 0;
+        .hero {
+          padding: 1px 0;
+          background: ${constants.colors.backgroundBlueGradient};
+        }
+
+        .hero h2 {
+          font-size: 1.2rem;
+          color: #fff;
+          text-align: center;
+        }
+        .hero h1 {
+          margin-top: 0px;
+          text-align: center;
+          margin-bottom: 20px;
+          color: #fff;
         }
       `}</style>
     </Page>

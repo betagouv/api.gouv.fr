@@ -33,7 +33,6 @@ export interface IGuideElement {
   title: string;
   tags: string;
   tagline: string;
-  introduction: string;
   body: string;
   slug: string;
   noindex: boolean;
