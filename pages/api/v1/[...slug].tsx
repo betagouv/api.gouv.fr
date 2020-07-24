@@ -27,24 +27,45 @@ export default async function handler(
     query: { slug },
   } = req;
 
-  if (!slug.length || slug[0] !== 'apis') {
+  if (!slug.length || ['apis', 'proxy'].indexOf(slug[0]) === -1) {
     res.statusCode = 404;
     return res.send({ Error: 'Route does not exist' });
   }
 
-  await cors(req, res);
-  if (slug.length === 1) {
-    const allApis = await getAllAPIs();
-    const openApis = allApis
-      .filter((api: IApi) => api)
-      .map(extractApiAttributes);
+  if (slug[0] === 'proxy') {
+    const proxyUrl = slug[1];
+    try {
+      const response = await fetch(proxyUrl);
 
-    // Rest of the API logic
-    res.json(openApis);
-  } else {
-    const api = await getAPI(slug[1]);
+      const text = await response.text();
+      Object.values(response.headers).forEach(headerKey =>
+        // @ts-ignore
+        res.setHeader(headerKey, response.headers[headerKey])
+      );
+      res.send(text);
+    } catch (err) {
+      res.statusCode = 500;
+      console.log(err);
+      res.send({ Error: err });
+    }
+  }
 
-    // Rest of the API logic
-    res.json(extractApiAttributes(api));
+  if (slug[0] === 'apis') {
+    await cors(req, res);
+
+    if (slug.length === 1) {
+      const allApis = await getAllAPIs();
+      const openApis = allApis
+        .filter((api: IApi) => api)
+        .map(extractApiAttributes);
+
+      // Rest of the API logic
+      res.json(openApis);
+    } else {
+      const api = await getAPI(slug[1]);
+
+      // Rest of the API logic
+      res.json(extractApiAttributes(api));
+    }
   }
 }
