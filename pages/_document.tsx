@@ -183,6 +183,8 @@ class MyDocument extends Document {
           <Main />
           {process.env.NODE_ENV === 'production' && (
             <script
+              async
+              defer
               dangerouslySetInnerHTML={{
                 __html: `
             <!-- Piwik -->
