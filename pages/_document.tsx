@@ -183,12 +183,9 @@ class MyDocument extends Document {
         <body>
           <Main />
           {process.env.NODE_ENV === 'production' && (
-            <>
-              <script
-                defer
-                async
-                dangerouslySetInnerHTML={{
-                  __html: `
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
             <!-- Piwik -->
             var _paq = window._paq || [];
             _paq.push(['trackPageView']);
@@ -201,27 +198,28 @@ class MyDocument extends Document {
               g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
             })();
             `,
-                }}
-              />
+              }}
+            />
+          )}
+          <NextScript />
+
+          {/* last, we call sentry as we want to load it synchronously. It has to be executed BEFORE the other deferred scripts */}
+          {process.env.NODE_ENV === 'production' && (
+            <>
               <script
                 src="https://cdn.ravenjs.com/3.19.1/raven.min.js"
                 crossOrigin="anonymous"
               ></script>
               <script
-                defer
-                async
                 dangerouslySetInnerHTML={{
                   __html: `
-            <!-- Init Sentry -->
-            Raven.config(
-              ${constants.links.SENTRY.URL}
-            ).install();
-          `,
+                  <!-- Init Sentry -->
+                  Raven.config('${constants.links.SENTRY.URL}').install()
+                  `,
                 }}
               ></script>
             </>
           )}
-          <NextScript />
         </body>
       </html>
     );
