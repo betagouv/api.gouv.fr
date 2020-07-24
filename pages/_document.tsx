@@ -1,7 +1,6 @@
 import React from 'react';
 import Document, { Head, Main, NextScript } from 'next/document';
 import constants from '../constants';
-import { constant } from 'lodash';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: any) {
