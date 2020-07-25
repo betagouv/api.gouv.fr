@@ -45,7 +45,6 @@ export default async function handler(
       res.send(text);
     } catch (err) {
       res.statusCode = 500;
-      console.log(err);
       res.send({ Error: err });
     }
   }
