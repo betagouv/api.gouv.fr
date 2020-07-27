@@ -21,7 +21,7 @@ themes:
 external_site: https://inforoutes.loire-atlantique.fr/
 is_open: true
 contact_link: usages.numeriques@loire-atlantique.fr
-doc_tech_link: https://api.loire-atlantique.fr/listing/opendata
+doc_tech_link: https://data.loire-atlantique.fr/api/v2/swagger.yaml
 last_update: 20/07/2020
 ---
 
