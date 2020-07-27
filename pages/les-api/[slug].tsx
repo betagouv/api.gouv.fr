@@ -75,7 +75,11 @@ const API: React.FC<IProps> = ({ api, services = null }) => {
             <ApiRelatedServices services={services} />
           </div>
           <div className="right-column info-column">
-            <Access is_open={is_open} slug={slug} />
+            <Access
+              is_open={is_open}
+              slug={slug}
+              doc_external_link={doc_tech_external}
+            />
             <ApiDetails
               monitoring={monitoring_description}
               monitoring_link={monitoring_link}
@@ -84,8 +88,8 @@ const API: React.FC<IProps> = ({ api, services = null }) => {
               uptime={uptime}
             />
             <TechnicalDocumentation
-              external_doc_link={doc_tech_link}
-              swagger_link={doc_tech_external}
+              doc_link={doc_tech_link}
+              external_link={doc_tech_external}
               slug={slug}
             />
 

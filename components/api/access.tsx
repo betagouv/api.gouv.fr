@@ -7,19 +7,20 @@ import SubSection from './subSection';
 
 interface IProps {
   slug: string;
+  doc_external_link?: string;
 }
 
-const ApiOpen: React.FC<IProps> = ({ slug }) => (
+const ApiOpen: React.FC<IProps> = ({ slug, doc_external_link = '' }) => (
   <>
     <div>L'API est ouverte à tous.</div>
     <p>Vous pouvez y accéder dès maintenant :</p>
     <div className="layout-right vertical-margin">
       <ButtonLink
-        href={`/documentation/${slug}`}
+        href={doc_external_link ? doc_external_link : `/documentation/${slug}`}
         onClick={logDemanderAcces}
         large
       >
-        Accéder à la documentation
+        {doc_external_link ? ' Accéder au site de l’API' : 'Tester l’API'}
       </ButtonLink>
     </div>
   </>
@@ -46,12 +47,21 @@ const ApiNotOpen: React.FC<IProps> = ({ slug }) => (
 interface IAccessProps {
   is_open: Boolean;
   slug: string;
+  doc_external_link?: string;
 }
 
-const Access: React.FC<IAccessProps> = ({ is_open, slug }) => {
+const Access: React.FC<IAccessProps> = ({
+  is_open,
+  slug,
+  doc_external_link = '',
+}) => {
   return (
     <SubSection title="Accéder aux données">
-      {is_open ? <ApiOpen slug={slug} /> : <ApiNotOpen slug={slug} />}
+      {is_open ? (
+        <ApiOpen slug={slug} doc_external_link={doc_external_link} />
+      ) : (
+        <ApiNotOpen slug={slug} />
+      )}
     </SubSection>
   );
 };

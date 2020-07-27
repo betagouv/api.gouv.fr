@@ -53,7 +53,9 @@ const MonitoringDetail: React.FC<IPropsMonitoring> = ({
             <div>
               <div className="uptime-stat" />
             </div>
-            <div>{roundUptime(2)(uptime)}% actif / dernier mois</div>
+            <div>
+              Disponibilité : {roundUptime(2)(uptime)}% sur le dernier mois
+            </div>
           </>
         ) : (
           <>
@@ -115,7 +117,7 @@ const RateLimitingDetail: React.FC<IPropsRateLimiting> = ({
         <div>{Speedometer}</div>
         <div>
           {rate_limiting_resume
-            ? rate_limiting_resume
+            ? `Limite : ${rate_limiting_resume}`
             : 'Les limites d’utilisation de cette API ne sont pas communiquées'}
         </div>
         {rate_limiting && (

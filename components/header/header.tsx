@@ -75,6 +75,7 @@ const Header = ({ headerKey = 'home' }) => {
                   <ButtonLink
                     href="/parcours-client?source=header"
                     onClick={() => logCTA('CTA header')}
+                    alt
                   >
                     Une question ?
                   </ButtonLink>
