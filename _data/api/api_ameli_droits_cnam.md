@@ -3,7 +3,6 @@ title: API de droits à l'Assurance Maladie
 tagline: Pour accélérer vos démarches en lien avec l'assurance maladie, automatisez la récupération des droits à l’Assurance Maladie de vos clients
 external_site: https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/assurance-maladie-digital/api-droits-fs-doc/master/documentation-open-api.yaml
 is_open: false
-access_condition: OUVERT sous contrat
 access_link: /les-api/api_ameli_droits_cnam/demande-acces
 access_description: |
   Cette API nécessite une habilitation :
@@ -21,30 +20,20 @@ access_page:
 
       La Caisse Nationale se réserve le droit d’évaluer l’éligibilité des candidats au regard des cas d’usage indiqués.
 
-      ** Pour remplir votre demande, vous aurez besoin de : **
-      - votre numéro SIRET
-      - le cadre juridique
-      - la description du service justifiant une simplication pour les citoyens
-      - les coordonnées de l'équipe
-      - les coordonnées de votre délégué à la protection des données
-    cta:
-      label: Remplir une demande
-      path: https://signup.api.gouv.fr/api-droits-cnam
+      <NextSteps />
+      <Button href="https://signup.api.gouv.fr/api-droits-cnam">Remplir une demande</Button>
   - who:
       - Autre
     is_eligible: -1
     description: |
       Seuls les établissements de soins et les organismes complémentaires en santé peuvent accèder à cette API.
-    cta:
-      label: Retourner à la page de recherche
-      path: /rechercher-api
+
+
+      <Button href="/rechercher-api">Retourner à la page de recherche</Button>
 logo: cnam.jpg
 stat:
   lastXdays: 30
   label: justificatifs papier évités
-clients:
-  - établissements de soins si éligibles à France Connect
-  - organismes complémentaires en santé
 partners:
   - CNAM
 owner: Caisse Nationale d'Assurance Maladie
@@ -72,6 +61,30 @@ last_update: 17/10/2019
 
 Cette API présente les droits, d’un individu ou d’une famille (enfants rattachés), gérés par le régime général de l’Assurance Maladie.
 
-Elle permet ainsi de connaître pour chaque individu d’une famille, sa caisse gestionnaire et son niveau de couverture (droits de base, droits à une complémentaire santé solidaire, présence d'un médecin traitant). Les données accessibles dépendent du cas d’usage, ainsi les établissements de soins bénéficient également des motifs d’exonération du ticket modérateur et de l’identification du médecin traitant.
+### A quoi sert l’API de droits à l'Assurance Maladie&nbsp;?
 
-**L’utilisation de l’API est soumise à une convention d’usage avec la Caisse Nationale d’Assurance Maladie.**
+Elle permet de connaître pour un individu **identifié avec FranceConnect**&nbsp;:
+
+- sa caisse gestionnaire
+- son niveau de couverture
+
+Les données accessibles dépendent du cas d’usage, ainsi les établissements de soins bénéficient également&nbsp;:
+
+- des motifs d’exonération du ticket modérateur
+- de l’identification du médecin traitant.
+
+L’utilisation de l’API est soumise à une **convention d’usage** avec la Caisse Nationale d’Assurance Maladie.
+
+### Données
+
+Les données présentes dans l’API, pour chaque individu d’une famille&nbsp;:
+
+| Nom                  | Description                                                                                 |
+| -------------------- | ------------------------------------------------------------------------------------------- |
+| bénéficiaires        | Les bénéficiares de l'individu connecté via FranceConnect                                   |
+| caisse               | L'organisme de rattachement du bénéficiare (régime, ntre de gestion, adresse de la caisse)  |
+| niveau de couverture | Droits de base, droits à une complémentaire santé solidaire, présence d'un médecin traitant |
+| motifs d’exonération | Uniquement accessible aux établissements de soins                                           |
+| médecin traitant     | Uniquement accessible aux établissements de soins                                           |
+
+Cette API ne restitue que les droits des bénéficiaires **connus du régimes général et des régimes hebergés dans les SI du régime général ( CNMSS, CAMIEG, MNH, CAVIMAC...)**. Il ne sera donc pas possible de connaître les droits de bénéficaires de la MSA, MGEN et du RSI (ce dernier est dans l'attente de son intégration au régime général).
