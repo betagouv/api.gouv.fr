@@ -210,6 +210,10 @@ a:not(.dont-apply-link-style):hover {
   ul {
     list-style-type: circle;
     margin-left: 20px;
+
+    li > p {
+      margin: 0;
+    }
   }
 
   pre {
