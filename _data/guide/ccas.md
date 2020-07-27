@@ -7,13 +7,13 @@ noindex: true
 
 En utilisant notre brique API Particulier dans votre SI :
 
-- **Plus besoin de demander** un avis fiscal ou un quotient familial aux citoyens
-- **Pas de vérifications supplémentaire** : les informations sont certifiées
+- **Plus besoin de demander** d'avis fiscal ou de quotient familial aux citoyens
+- **Pas de vérifications supplémentaires** : les informations sont certifiées
 - Démarche 100% en ligne
 
 ## Vous utilisez les données de la CAF ou de la DGFIP ?
 
-Nous vous-mettons à disposition les données de CAF (composition familiale du foyer du demandeur) :
+Nous vous mettons à disposition les données de la CAF (composition familiale du foyer du demandeur) :
 
 | Donnée            | Commentaire                                              |
 | ----------------- | -------------------------------------------------------- |
@@ -31,7 +31,7 @@ Et les données de la DGFIP (pour vérifier les conditions d'éligibilité d'une
 
 ## Comment formuler une demande ?
 
-L'utilisation de la donnée par les CCAS est légale. Vous pouvez motiver votre demande avec les articles suivants :
+L'utilisation des données par les CCAS est encadrée légalement. Vous pouvez motiver votre demande à l'aide des articles suivants :
 
 * <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000026799356&cidTexte=LEGITEXT000006074069&dateTexte=20121219">Article L.312-1</External>  et <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000031106561&cidTexte=LEGITEXT000006074069&dateTexte=20150809">Article R123-5 </External> du _Code de l'action sociale et des familles_
 
@@ -40,10 +40,10 @@ L'utilisation de la donnée par les CCAS est légale. Vous pouvez motiver votre 
 **Pour remplir votre demande, vous aurez besoin de :**
 
 - de votre numéro SIRET
-- du cadre juridique
+- du cadre juridique associé à votre demande
 - de la description du service justifiant une simplication pour les citoyens
-- des coordonnées de l'équipe
-- des coordonnées de votre délégué à la protection des données et responsable de traitement
+- des coordonnées de l'équipe technique
+- des coordonnées de votre délégué à la protection des données et du responsable de traitement
 
 <Button href="https://signup.api.gouv.fr/api-particulier">Remplir une demande</Button>
 
