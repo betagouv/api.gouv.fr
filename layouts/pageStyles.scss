@@ -142,6 +142,29 @@ a:not(.dont-apply-link-style):hover {
   line-height: 1.6rem;
   color: $darkestGrey;
 
+  table {
+    border-collapse: collapse;
+    text-align: left;
+    color: #081d35;
+
+    width: 100%;
+
+    tr td,
+    th {
+      padding: 5px;
+      border-right: 1px solid #c9d3df;
+      border-left: 1px solid #c9d3df;
+      border-bottom: 1px solid #c9d3df;
+      padding: 5px 8px;
+    }
+
+    thead {
+      background-color: #f4f7fb;
+      border-bottom: 3px double #c9d3df;
+      border-top: 1px solid #c9d3df;
+    }
+  }
+
   h1 {
     font-size: 2.5rem;
     line-height: 3.4rem;
@@ -187,6 +210,10 @@ a:not(.dont-apply-link-style):hover {
   ul {
     list-style-type: circle;
     margin-left: 20px;
+
+    li > p {
+      margin: 0;
+    }
   }
 
   pre {

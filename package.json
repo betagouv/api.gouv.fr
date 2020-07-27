@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.9.0",
+    "@types/cors": "^2.8.6",
     "@types/jest": "^25.2.1",
     "@types/lodash": "^4.14.149",
     "@types/markdown-to-jsx": "^6.11.1",
@@ -48,6 +49,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.9.6",
+    "cors": "^2.8.5",
     "front-matter": "^3.0.2",
     "lodash": "^4.17.19",
     "markdown-to-jsx": "^6.11.4",

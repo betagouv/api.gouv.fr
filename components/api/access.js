@@ -3,7 +3,7 @@ import React from 'react';
 import Section from './section';
 import { ButtonLink } from '../../uiComponents/button';
 
-import { logDemanderAcces } from '../../service/analytics';
+import { logDemanderAcces } from '../../utils/client/analytics';
 
 const ApiOpen = ({ link }) => (
   <>

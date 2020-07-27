@@ -14,6 +14,8 @@ keywords:
   - temps réel
   - trafic
   - déplacement
+  - Loire Atlantique
+  - Nantes
 themes:
   - Trafic routier
 external_site: https://inforoutes.loire-atlantique.fr/
