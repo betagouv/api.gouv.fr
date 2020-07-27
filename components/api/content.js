@@ -1,23 +1,14 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import ReactMarkdown from 'react-markdown';
 
 import Section from './section';
+import RichReactMarkdown from '../richReactMarkdown';
 
 const Content = ({ content }) => {
   return (
     <Section id="api-description" title="Description">
-      <ReactMarkdown source={content} />
+      <RichReactMarkdown source={content} />
     </Section>
   );
-};
-
-Content.defaultProps = {
-  content: null,
-};
-
-Content.propTypes = {
-  content: PropTypes.string.isRequired,
 };
 
 export default Content;

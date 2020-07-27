@@ -139,7 +139,9 @@ const Documentation: React.FC<IProps> = ({ api, allApis }) => {
 
             <div>
               {doc_tech_link ? (
-                <SwaggerUIWrapper url={doc_tech_link} />
+                <SwaggerUIWrapper
+                  url={`/api/v1/proxy/${encodeURIComponent(doc_tech_link)}`}
+                />
               ) : doc_tech_external ? (
                 <>
                   <p>

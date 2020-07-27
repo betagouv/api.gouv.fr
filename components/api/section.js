@@ -1,6 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import Link from 'next/link';
 
 import globals from '../../constants';
 
@@ -47,12 +45,6 @@ const Section = ({ id, title, children }) => {
       `}</style>
     </section>
   );
-};
-
-Section.propTypes = {
-  id: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
 };
 
 export default Section;

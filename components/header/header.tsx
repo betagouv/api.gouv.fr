@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import Link from 'next/link';
 
 import { ButtonLink } from '../../uiComponents/button';
-import { logCTA } from '../../service/analytics';
+import { logCTA } from '../../utils/client/analytics';
 import { apiLogo, republiqueFrLogo } from './logos';
 
 const SIGNUP_URL =

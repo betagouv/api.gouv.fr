@@ -1,5 +1,8 @@
 export default {
   PIWIK: { URL: 'https://stats.data.gouv.fr/', SITE_ID: 22 },
+  SENTRY: {
+    URL: 'https://b8a9cfffbe8245ffb97203fcfb0d94a4@sentry.data.gouv.fr/53',
+  },
   mailto: {
     REQUEST_API:
       'mailto:contact@api.gouv.fr?subject=Demande%20d%27une%20nouvelle%20API',

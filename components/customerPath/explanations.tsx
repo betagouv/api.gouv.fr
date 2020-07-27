@@ -2,7 +2,7 @@ import React from 'react';
 
 import { ButtonLink } from '../../uiComponents';
 import { VISITOR } from './contactForm';
-import { logParcoursClient } from '../../service/analytics';
+import { logParcoursClient } from '../../utils/client/analytics';
 
 import { ContactForm } from './index';
 

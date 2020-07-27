@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Page from '../layouts/page';
 import { VISITOR, VisitorRouter } from '../components/customerPath';
 import { MultiChoice } from '../uiComponents';
-import { logParcoursClient } from '../service/analytics';
+import { logParcoursClient } from '../utils/client/analytics';
 
 export default () => {
   const [statut, setStatut] = useState<VISITOR | null>(null);

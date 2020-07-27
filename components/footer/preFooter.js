@@ -2,7 +2,7 @@ import React from 'react';
 
 import constants from '../../constants';
 import { ButtonLink } from '../../uiComponents/button';
-import { logCTA } from '../../service/analytics';
+import { logCTA } from '../../utils/client/analytics';
 
 const PreFooter = ({ background }) => (
   <section

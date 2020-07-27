@@ -3,6 +3,8 @@ import {
   getAllServices,
   getAllAPIs,
   getAPI,
+  getGuide,
+  getAllGuides,
   getRoadmap,
 } from './readOnDiskForWebpack';
 
@@ -25,6 +27,15 @@ export interface IRoadmap {
   [year: string]: {
     [month: string]: IRoadmapElement[];
   };
+}
+
+export interface IGuideElement {
+  title: string;
+  tags: string;
+  tagline: string;
+  body: string;
+  slug: string;
+  noindex: boolean;
 }
 
 export interface IService {
@@ -59,7 +70,6 @@ export enum ELIGIBLE {
 export interface IAccessCondition {
   description: string;
   is_eligible: ELIGIBLE;
-  cta: { label: string; path: string };
 }
 
 export interface IAccessConditionWithVisitorType extends IAccessCondition {
@@ -96,4 +106,12 @@ export interface IApi extends IApiShort {
   keywords: string[];
 }
 
-export { getService, getAllServices, getAllAPIs, getAPI, getRoadmap };
+export {
+  getService,
+  getAllServices,
+  getAllAPIs,
+  getAPI,
+  getGuide,
+  getAllGuides,
+  getRoadmap,
+};

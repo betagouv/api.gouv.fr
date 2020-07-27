@@ -12,43 +12,29 @@ access_page:
     is_eligible: -1
     description: |
       Seules les administrations sont habilitées à utiliser API Particulier.
-    cta:
-      label: Retourner à la page de recherche
-      path: /rechercher-api
+
+      <Button href="/rechercher-api">Retourner à la page de recherche</Button>
   - who:
       - Une collectivité ou une administration
     is_eligible: 1
     description: |
-      Conformément aux dispositions de [l'article L114-8](https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367412&dateTexte=&categorieLien=cid) du *code des relations entre le public et l'administration*, seules les administrations sont habilitées à échanger entre elles des informations ou données strictement nécessaires pour traiter une démarche.
+      Conformément aux dispositions de <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367412&dateTexte=&categorieLien=cid">l'article L114-8</External> du *code des relations entre le public et l'administration*, seules les administrations sont habilitées à échanger entre elles des informations ou données strictement nécessaires pour traiter une démarche.
 
-      Pour obtenir un agrément, vous devez **justifier d'une simplification pour les citoyens**, et vous engager à n'accéder aux données personnelles qu'avec **l'accord explicite** de l'usager.
+      Pour obtenir un agrément, vous devez **justifier d'une simplification pour les citoyens**, et vous engager à
+      n'accéder aux données personnelles qu'avec **l'accord explicite** de l'usager.
 
-      ** Pour remplir votre demande, vous aurez besoin de : **
-      - votre numéro SIRET
-      - le cadre juridique, en l’occurence [L114-8](https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367412&dateTexte=&categorieLien=cid)
-      - la description du service justifiant une simplication pour les citoyens
-      - les coordonnées de l'équipe
-      - les coordonnées de votre délégué à la protection des données
-    cta:
-      label: Remplir une demande
-      path: https://signup.api.gouv.fr/api-particulier
+      <NextSteps />
+      <Button href="https://signup.api.gouv.fr/api-particulier">Remplir une demande</Button>
   - who:
       - Un éditeur de logiciel
     is_eligible: 0
     description: |
-      Si vous êtes **éditeur de logiciels** et agissez pour le compte d'une administration ou d'une collectivité, vous pouvez remplir une demande d’accès à l’API Particulier vous-même pour l'entité que vous représentez, dans le cadre de [l'article L114-8](https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367412&dateTexte=&categorieLien=cid) du *code des relations entre le public et l'administration*.
+      Si vous êtes **éditeur de logiciels** et agissez pour le compte d'une administration ou d'une collectivité, vous pouvez remplir une demande d’accès à l’API Particulier vous-même pour l'entité que vous représentez, dans le cadre de <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367412&dateTexte=&categorieLien=cid">l'article L114-8</External> du *code des relations entre le public et l'administration*.
 
       Lors de votre demande vous devrez **justifier** dans quelle mesure l'entité pour laquelle vous opérez rentre dans ce cadre juridique.
 
-      **Pour remplir votre demande, vous aurez besoin de :**
-      - votre numéro SIRET
-      - le cadre juridique, en l’occurence [L114-8](https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367412&dateTexte=&categorieLien=cid)
-      - la description du service justifiant une simplication pour les citoyens
-      - les coordonnées de l'équipe
-      - les coordonnées du délégué à la protection des données **de l'entité pour laquelle vous opérez**
-    cta:
-      label: Remplir une demande
-      path: https://signup.api.gouv.fr/api-particulier
+      <NextSteps is_editeur />
+      <Button href="https://signup.api.gouv.fr/api-particulier">Remplir une demande</Button>
 stat:
   lastXdays: 30
   url: https://monitoring.particulier.api.gouv.fr/api/stats/
