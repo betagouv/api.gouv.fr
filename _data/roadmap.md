@@ -48,13 +48,23 @@
       path: /les-api/api_carto_rpg
     - type: ADD_API
       what: Données Locales
-      path: https://www.insee.fr/fr/information/3544265
+      path: /les-api/api_donnees_locales
+    - type: ADD_API
+      what: BDM
+      path: /les-api/api_bdm
+  8:
+    - type: ADD_API
+      what: Données Ouvertes Loire-Atlantique
+    - type: ADD_API
+      what: CartoBio produite par l'Agence BIO
+    - type: ADD_API
+      what: R2P produite par la DGFIP
+  9:
     - type: ADD_API
       what: Registre National du Commerce et des Sociétés
     - type: ADD_API
       what: Sirene distribuée par entreprise.data.gouv.fr
       path: https://entreprise.data.gouv.fr/api_doc/sirene
-  9:
     - type: DLNUF
       what: |
         De nouvelles données seront mises à disposition des administrations dans le cadre du [« Dites le nous une fois »](https://www.numerique.gouv.fr/services/guichet-dites-le-nous-une-fois/) :
