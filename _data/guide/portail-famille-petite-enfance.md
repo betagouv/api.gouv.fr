@@ -1,14 +1,11 @@
 ---
-title: [Portail famille](https://pad.incubateur.net/o6VvkPDdRX-BK37BgGVfNg?edit)
-tagline: Pass Famille
-tags: cas usage, api particulier, portail-famille, pass famille
-noindex: true
+tags : cas usage, api particulier, portail famille, petite enfance
 ---
-# [Portail famille](https://pad.incubateur.net/o6VvkPDdRX-BK37BgGVfNg?edit)- Pass Famille
+# [Portail famille](https://pad.incubateur.net/o6VvkPDdRX-BK37BgGVfNg?edit)- Tarification crèches, garderies : petite enfance
 
-## Vous êtes une mairie et vous souhaitez créer un portail famille ? Vous chercher la simplification des démarches de vos concitoyens ?
+## Vous êtes une mairie, vous souhaitez dématérialiser l'inscription à la crèche ? Votre objectif est de ne plus demander de justificatif aux jeunes ?
 
-En utilisant notre brique API Particulier dans votre SI : 
+En utilisant notre brique API Particulier dans votre SI :
 - **Plus besoin de demander** un avis fiscal ou un quotient familial aux citoyens
 - **Pas de vérifications supplémentaire** : les informations sont certifiées
 - Un seul portail : plusieurs démarches 
@@ -16,7 +13,7 @@ En utilisant notre brique API Particulier dans votre SI :
 
 ## Quelles données utilisez-vous dans vos démarches ?
 
-Le Pass Famille est un téléservice modulable et personnalisable. En effet, les données auxquelles l'accès est accordé dépendent de celles choisies par le fournisseur de service et de sa méthode de calcul en fonction de son besoin final.
+Différentes méthodes de calcul existent pour la tarification des services, ainsi, les données nécessaires dépendent des choix du service. 
 
 Voici les données de la CAF (composition familiale du foyer du demandeur) accessibles directement avec notre API : 
 
@@ -37,10 +34,10 @@ Voici les données de la DGFIP (pour vérifier les conditions d'éligibilité d'
 
 ## Comment formuler une demande ?
 
-L'utilisation des données dans le cadre d'un Pass Famille est encadrée légalement. Vous pouvez motiver votre demande à l'aide des articles suivants :
+L'utilisation des données dans le cadre des inscription à la crêche et en garderie est encadrée légalement. Vous pouvez motiver votre demande à l'aide des articles suivants :
 
-* Article L114-8 <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000033219997&cidTexte=LEGITEXT000031366350&dateTexte=20161009"> Article L114-8 </External> du *Code des relations entre le public et l'administration* 
-* Certaine délibération prise par la ville peuvent constituer le cadre légal
+* Article6-1<External href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees">La loi relative à la protection des données personnelles</External> * du RGPD.* 
+* Certaine délibération prise par la ville et/ou par la commune peuvent constituer le cadre légal
 
 **Pour remplir votre demande, vous aurez besoin de :**
 
@@ -55,7 +52,6 @@ L'utilisation des données dans le cadre d'un Pass Famille est encadrée légale
 
 ## Ils l'ont fait
 
-Témoignage :
-[Brest Métropole](https://signup.api.gouv.fr/api-particulier/1255#donnees) 
-[Commune de Nîme](https://signup.api.gouv.fr/api-particulier/129#organisation)
-[Commune de Metz](https://signup.api.gouv.fr/api-particulier/626#organisation)
+Témoignage : 
+[Communes d'Arles](https://signup.api.gouv.fr/api-particulier/703#donnees)
+[DEPARTEMENT DES HAUTS-DE-SEINE](https://signup.api.gouv.fr/api-particulier/930#donnees)
