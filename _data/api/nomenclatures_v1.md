@@ -1,9 +1,10 @@
 ---
-title: Nomenclatures
-tagline: API Nomenclatures donne accès aux métadonnées statistiques de la statistique publique
+title: API Nomenclatures
+tagline: API Nomenclatures donne accès aux métadonnées statistiques de la statistique publique de l'Insee
 external_site: https://api.insee.fr
 is_open: false
-access_condition: OUVERT sous contrat
+access_description: |
+  Cette API nécessite de se créer un compte pour pouvoir accéder aux données
 access_link: https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/item-info.jag?name=Nomenclatures&version=v1&provider=insee
 clients:
   - collectivités
