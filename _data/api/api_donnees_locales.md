@@ -4,14 +4,10 @@ tagline: Accéder aux données de l'Insee, localisées au niveau de la commune
 owner: Institut national de la statistique et des études économiques
 owner_acronym: Insee
 logo: Logo_Insee.svg
-is_open: true
-access_condition: OUVERT sous contrat
+is_open: false
+access_description: |
+  Cette API nécessite de se créer un compte pour pouvoir accéder aux données
 access_link: https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/sign-up.jag
-clients:
-  - particuliers # texte libre en minuscules
-  - entreprises # ajoutez ou supprimez des types d'entités
-  - collectivités
-  - ministères
 rate_limiting_resume: 30 appels / minute / IP
 rate_limiting_description: |
   <p>L'API est disponible à hauteur de 30 appels par minute et par adresse IP.</p>
@@ -30,7 +26,18 @@ doc_tech_link: https://api.insee.fr/catalogue/api-docs/carbon.super/DonneesLocal
 ---
 
 L’API ‘Données locales’ permet d’accéder aux données localisées à la commune, diffusées sur insee.fr dans la rubrique 'chiffres détaillés' (ou ‘chiffres clés’ pour les populations légales), sous forme de cubes prédéfinis.
-Les cubes prédéfinis sont ceux utilisés pour l’élaboration des tableaux et graphiques en ligne, correspondant aux sources suivantes : recensement de la population, état civil, répertoire des entreprises et des établissements, fichier localisé social et fiscal et offre d’hébergement touristique.
+
+### Données
+
+Les cubes prédéfinis sont ceux utilisés pour l’élaboration des tableaux et graphiques en ligne, correspondant aux sources suivantes :
+
+| Nom de la donnée                                 |
+| ------------------------------------------------ |
+| recensement de la population                     |
+| état civil                                       |
+| répertoire des entreprises et des établissements |
+| fichier localisé social et fiscal                |
+| offre d’hébergement touristique                  |
 
 Les statistiques sont disponibles pour tous les zonages géographiques allant de la commune à la France entière, c’est-à-dire pour les zonages administratifs (communes, arrondissements municipaux, arrondissements, intercommunalités/EPCI, départements, régions et France), ainsi que pour les zonages d’étude (zones d'emploi, aires urbaines, unités urbaines).
 

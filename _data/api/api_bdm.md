@@ -6,7 +6,7 @@ owner_acronym: Insee
 logo: Logo_Insee.svg
 is_open: false
 access_description: |
-  L’API nécessite de se créer un compte pour pouvoir appeler les APIs
+  Cette API nécessite de se créer un compte pour pouvoir accéder aux données
 access_link: https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/sign-up.jag
 rate_limiting_resume: 30 appels / minute / IP
 rate_limiting_description: |
