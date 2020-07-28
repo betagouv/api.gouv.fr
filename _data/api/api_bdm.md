@@ -22,7 +22,7 @@ keywords:
   - économie
   - indicateurs
 themes:
-  - Géographie
+  - Administration & législation
 contact_link: https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/help.jag#contact
 doc_tech_link: https://api.insee.fr/catalogue/api-docs/carbon.super/BDM/V1?envName=Production%20and%20Sandbox
 # doc_tech_external: https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/item-info.jag?name=BDM&version=V1&provider=insee
