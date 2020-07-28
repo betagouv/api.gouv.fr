@@ -144,20 +144,24 @@ a:not(.dont-apply-link-style):hover {
 
   table {
     border-collapse: collapse;
-    text-align: center;
+    text-align: left;
+    color: #081d35;
 
     width: 100%;
 
     tr td,
     th {
       padding: 5px;
-      border-right: 2px solid $lightGrey;
-      border-left: 2px solid $lightGrey;
-      border-bottom: 2px solid $lightGrey;
+      border-right: 1px solid #c9d3df;
+      border-left: 1px solid #c9d3df;
+      border-bottom: 1px solid #c9d3df;
+      padding: 5px 8px;
     }
 
     thead {
-      background-color: $lightGrey;
+      background-color: #f4f7fb;
+      border-bottom: 3px double #c9d3df;
+      border-top: 1px solid #c9d3df;
     }
   }
 
@@ -206,6 +210,10 @@ a:not(.dont-apply-link-style):hover {
   ul {
     list-style-type: circle;
     margin-left: 20px;
+
+    li > p {
+      margin: 0;
+    }
   }
 
   pre {
