@@ -1,6 +1,6 @@
 ---
 title: API de droits à l'Assurance Maladie
-tagline: Pour accélérer vos démarches en lien avec l'assurance maladie, automatisez la récupération des droits à l’Assurance Maladie de vos clients
+tagline: Accèdez aux droits d’un individu ou d’une famille (enfants rattachés), gérés par le régime général de l’Assurance Maladie
 external_site: https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/assurance-maladie-digital/api-droits-fs-doc/master/documentation-open-api.yaml
 is_open: false
 access_link: /les-api/api_ameli_droits_cnam/demande-acces
@@ -68,7 +68,7 @@ Elle permet de connaître pour un individu **identifié avec FranceConnect**&nbs
 - sa caisse gestionnaire
 - son niveau de couverture
 
-Les données accessibles dépendent du cas d’usage, ainsi les établissements de soins bénéficient également&nbsp;:
+Certaines données ne sont accessibles qu’aux établissements de soins&nbsp;:
 
 - des motifs d’exonération du ticket modérateur
 - de l’identification du médecin traitant.
@@ -79,12 +79,12 @@ L’utilisation de l’API est soumise à une **convention d’usage** avec la C
 
 Les données présentes dans l’API, pour chaque individu d’une famille&nbsp;:
 
-| Nom                  | Description                                                                                 |
-| -------------------- | ------------------------------------------------------------------------------------------- |
-| bénéficiaires        | Les bénéficiares de l'individu connecté via FranceConnect                                   |
-| caisse               | L'organisme de rattachement du bénéficiare (régime, ntre de gestion, adresse de la caisse)  |
-| niveau de couverture | Droits de base, droits à une complémentaire santé solidaire, présence d'un médecin traitant |
-| motifs d’exonération | Uniquement accessible aux établissements de soins                                           |
-| médecin traitant     | Uniquement accessible aux établissements de soins                                           |
+| Nom                  | Description                                                                                   |
+| -------------------- | --------------------------------------------------------------------------------------------- |
+| bénéficiaires        | Les bénéficiaires de l'individu connecté via FranceConnect                                    |
+| caisse               | L'organisme de rattachement du bénéficiaire (régime, centre de gestion, adresse de la caisse) |
+| niveau de couverture | Droits de base, droits à une complémentaire santé solidaire, présence d'un médecin traitant   |
+| motifs d’exonération | Uniquement accessible aux établissements de soins                                             |
+| médecin traitant     | Uniquement accessible aux établissements de soins                                             |
 
-Cette API ne restitue que les droits des bénéficiaires **connus du régimes général et des régimes hebergés dans les SI du régime général ( CNMSS, CAMIEG, MNH, CAVIMAC...)**. Il ne sera donc pas possible de connaître les droits de bénéficaires de la MSA, MGEN et du RSI (ce dernier est dans l'attente de son intégration au régime général).
+Cette API ne restitue que les droits des bénéficiaires **connus du régimes général et des régimes hebergés dans les Systèmes d’Informatin (SI) du régime général ( CNMSS, CAMIEG, MNH, CAVIMAC...)**. Il ne sera donc pas possible de connaître les droits de bénéficaires de la MSA, MGEN et du RSI (ce dernier est dans l'attente de son intégration au régime général).
