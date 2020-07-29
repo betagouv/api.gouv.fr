@@ -1,10 +1,11 @@
 ---
-title: [Portail famille](https://pad.incubateur.net/o6VvkPDdRX-BK37BgGVfNg?edit)
+title: Portail Famille
 tagline: Pass Famille
 tags: cas usage, api particulier, portail-famille, pass famille
 noindex: true
 ---
-# [Portail famille](https://pad.incubateur.net/o6VvkPDdRX-BK37BgGVfNg?edit)- Pass Famille
+ *Lien vers le PAD : [Portail famille](https://pad.incubateur.net/o6VvkPDdRX-BK37BgGVfNg?edit)- Pass Famille*
+
 
 ## Vous êtes une mairie et vous souhaitez créer un portail famille ? Vous chercher la simplification des démarches de vos concitoyens ?
 
