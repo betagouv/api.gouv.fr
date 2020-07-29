@@ -1,7 +1,11 @@
 ---
-tags : cas usage, api particulier, portail famille, petite enfance
+title: Portail Famille
+tagline: Petite enfance
+tags: cas usage, api particulier, portail-famille,  petite enfance
+noindex: true
 ---
-# [Portail famille](https://pad.incubateur.net/o6VvkPDdRX-BK37BgGVfNg?edit)- Tarification crèches, garderies : petite enfance
+
+*Lien vers le PAD : [Portail famille](https://pad.incubateur.net/o6VvkPDdRX-BK37BgGVfNg?edit)- Tarification crèches, garderies : petite enfance*
 
 ## Vous êtes une mairie, vous souhaitez dématérialiser l'inscription à la crèche ? Votre objectif est de ne plus demander de justificatif aux jeunes ?
 
