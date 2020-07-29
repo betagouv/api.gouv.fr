@@ -5,7 +5,7 @@ tags: cas usage, api particulier, portail-famille, tarification restauration sco
 noindex: true
 ---
 
-#  [Portail famille](https://pad.incubateur.net/o6VvkPDdRX-BK37BgGVfNg?edit)- Tarification de la restauration scolaire
+*Lien vers le PAD [Portail famille](https://pad.incubateur.net/o6VvkPDdRX-BK37BgGVfNg?edit)- Tarification de la restauration scolaire*
 
 ## Simplifier la transmission des informations pour la restauration scolaire est important pour vous ?
 
