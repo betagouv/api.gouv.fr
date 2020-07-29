@@ -50,4 +50,4 @@ L’API Répertoire National du Commerce et des Sociétés vous permet d’accè
 | actes                      | Rechercher et télécharger un acte au format PDF                        |
 | document d’immatriculation |                                                                        |
 | compte annuel              | Rechercher et télécharger le compte annuel de la société au format PDF |
-| IMR                        | Immatriculations, modifications, radiations                            |
+| IMR                        | Immatriculations, Modifications, Radiations                            |

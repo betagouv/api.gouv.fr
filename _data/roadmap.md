@@ -52,6 +52,9 @@
     - type: ADD_API
       what: BDM
       path: /les-api/api_bdm
+    - type: ADD_API
+      what: Répertoire National du Commerce et des Sociétés
+      path: /les-api/api_inpi
   8:
     - type: ADD_API
       what: Données Ouvertes Loire-Atlantique
