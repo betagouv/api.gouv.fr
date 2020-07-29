@@ -2,7 +2,7 @@ import React from 'react';
 
 import { ButtonLink } from '../../uiComponents/button';
 
-import { logDemanderAcces } from '../../service/analytics';
+import { logDemanderAcces } from '../../utils/client/analytics';
 import SubSection from './subSection';
 
 interface IAccessProps {
@@ -21,6 +21,7 @@ const ApiAccess: React.FC<IAccessProps> = ({
   let accessDescription = '';
   let accessHref = '';
   let accessLabel = <></>;
+  let ext = false; // external link ?
 
   switch (is_open) {
     case 1:
@@ -31,7 +32,13 @@ const ApiAccess: React.FC<IAccessProps> = ({
         ? doc_external_link
         : `/documentation/${slug}`;
       accessLabel = (
-        <>{doc_external_link ? ' Accéder au site de l’API' : 'Tester l’API'}</>
+        <>
+          {' '}
+          <span role="img" aria-label="émoji code">
+            👩‍💻
+          </span>{' '}
+          {doc_external_link ? ' Accéder au site de l’API' : 'Tester l’API'}
+        </>
       );
       break;
     case 0:
@@ -40,12 +47,13 @@ const ApiAccess: React.FC<IAccessProps> = ({
       accessHref = access_link;
       accessLabel = (
         <>
-          <span role="img" aria-label="émoji créer compte">
-            👩‍💻
+          <span role="img" aria-label="émoji compte">
+            👤
           </span>{' '}
-          Créer un compte
+          Se créer un compte
         </>
       );
+      ext = true;
       break;
     case -1:
     case false:
@@ -68,7 +76,13 @@ const ApiAccess: React.FC<IAccessProps> = ({
     <>
       <div>{accessDescription}</div>
       <div className="layout-right vertical-margin">
-        <ButtonLink href={accessHref} onClick={logDemanderAcces} large>
+        <ButtonLink
+          href={accessHref}
+          onClick={logDemanderAcces}
+          large
+          target={ext ? '_blank' : ''}
+          rel={ext ? 'noreferrer noopener' : ''}
+        >
           {accessLabel}
         </ButtonLink>
       </div>

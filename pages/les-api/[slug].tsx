@@ -24,6 +24,7 @@ import ApiDetails from '../../components/api/apiDetails';
 import { HEADER_PAGE } from '../../components';
 
 import constants from '../../constants';
+import Feedback from '../../components/feedback';
 
 interface IProps {
   api: IApi;
@@ -42,6 +43,7 @@ const API: React.FC<IProps> = ({ api, services = null }) => {
     // last_update,
     contact_link,
     // external_site,
+    access_link,
     doc_tech_link,
     doc_tech_external,
     monitoring_link,
@@ -72,6 +74,7 @@ const API: React.FC<IProps> = ({ api, services = null }) => {
         <div className="right-column-grid">
           <div className="left-column text-style">
             <Content content={body} />
+            <Feedback />
             <ApiRelatedServices services={services} />
           </div>
           <div className="right-column info-column">
@@ -79,6 +82,7 @@ const API: React.FC<IProps> = ({ api, services = null }) => {
               is_open={is_open}
               slug={slug}
               doc_external_link={doc_tech_external}
+              access_link={access_link}
             />
             <ApiDetails
               monitoring={monitoring_description}

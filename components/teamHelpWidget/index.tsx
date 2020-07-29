@@ -5,11 +5,13 @@ import constants from '../../constants';
 interface IProps {
   title?: string;
   btnLabel?: string;
+  source?: string;
 }
 
-const TeamHelpWidget = ({
+const TeamHelpWidget: React.FC<IProps> = ({
   title = 'Besoin d’assistance pour construire un service numérique ?',
   btnLabel = 'On vous vient en aide',
+  source = 'team-widget',
 }) => (
   <>
     <div className="team-help-widget">
@@ -19,7 +21,7 @@ const TeamHelpWidget = ({
         <img alt="" src="/images/equipe/Christophe.jpg" />
       </div>
       <p>{title}</p>
-      <ButtonLink href="parcours-client" alt>
+      <ButtonLink href={`/parcours-client?source=${source}`} alt>
         {btnLabel}
       </ButtonLink>
     </div>

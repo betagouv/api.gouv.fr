@@ -3,7 +3,7 @@ import React from 'react';
 import Page from '../../layouts/page';
 import { ButtonLink } from '../../uiComponents';
 import constants from '../../constants';
-import { logLPCTA } from '../../service/analytics';
+import { logLPCTA } from '../../utils/client/analytics';
 
 const Masks: React.FC = () => (
   <Page

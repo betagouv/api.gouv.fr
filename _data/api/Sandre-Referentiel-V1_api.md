@@ -25,7 +25,7 @@ keywords: # utilisé dans la recherche
   - Taxon
   - Appellation de taxons
 monitoring_description: |
-  <p>L'OIEau s’engage à ce que ce service soit accessible à 95% et l'OIEau s’engage à améliorer progressivement ce rendement.</p>
+  L'OIEau s’engage à ce que ce service soit accessible à 95% et l'OIEau s’engage à améliorer progressivement ce rendement.
 contact_link: sandre@sandre.eaufrance.fr
 doc_tech_external: https://api.sandre.eaufrance.fr/referentiels/v1/
 themes:

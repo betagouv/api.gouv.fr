@@ -38,6 +38,13 @@ const ShowMore = ({ onClick = (isOpen: boolean) => {}, isOpen = false }) => {
     </>
   );
 };
+const triggerOnEnterKey = (trigger: () => void) => (
+  event: React.KeyboardEvent
+) => {
+  if (!event.keyCode || (event && event.keyCode === 13)) {
+    trigger();
+  }
+};
 
 const MonitoringDetail: React.FC<IPropsMonitoring> = ({
   uptime,
@@ -45,9 +52,17 @@ const MonitoringDetail: React.FC<IPropsMonitoring> = ({
   monitoring_link = null,
 }) => {
   const [showMonitoringDesc, setShowMonitoringDesc] = useState(false);
+  const toggle = () => setShowMonitoringDesc(!showMonitoringDesc);
+  const toggleKey = triggerOnEnterKey(toggle);
   return (
     <>
-      <div className="badge uptime">
+      <div
+        className="badge uptime cursor-pointer"
+        onClick={toggle}
+        onKeyDown={toggleKey}
+        role="button"
+        tabIndex={0}
+      >
         {uptime ? (
           <>
             <div>
@@ -64,10 +79,7 @@ const MonitoringDetail: React.FC<IPropsMonitoring> = ({
           </>
         )}
         {(monitoring || monitoring_link) && (
-          <ShowMore
-            onClick={setShowMonitoringDesc}
-            isOpen={showMonitoringDesc}
-          />
+          <ShowMore isOpen={showMonitoringDesc} />
         )}
       </div>
       {(monitoring || monitoring_link) && showMonitoringDesc && (
@@ -111,18 +123,24 @@ const RateLimitingDetail: React.FC<IPropsRateLimiting> = ({
   rate_limiting_resume,
 }) => {
   const [showRateLimitDesc, setShowRateLimitDesc] = useState(false);
+  const toggle = () => setShowRateLimitDesc(!showRateLimitDesc);
+  const toggleKey = triggerOnEnterKey(toggle);
   return (
     <>
-      <div className="badge">
+      <div
+        className="badge  cursor-pointer"
+        onClick={toggle}
+        onKeyDown={toggleKey}
+        role="button"
+        tabIndex={0}
+      >
         <div>{Speedometer}</div>
         <div>
           {rate_limiting_resume
             ? `Limite : ${rate_limiting_resume}`
             : 'Les limites d’utilisation de cette API ne sont pas communiquées'}
         </div>
-        {rate_limiting && (
-          <ShowMore onClick={setShowRateLimitDesc} isOpen={showRateLimitDesc} />
-        )}
+        {rate_limiting && <ShowMore isOpen={showRateLimitDesc} />}
       </div>
       {rate_limiting && showRateLimitDesc && (
         <div className="details">

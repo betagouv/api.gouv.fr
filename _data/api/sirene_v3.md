@@ -1,6 +1,6 @@
 ---
-title: Sirene
-tagline: API Sirene donne accès aux informations concernant les entreprises et les établissements immatriculés au répertoire interadministratif Sirene
+title: API Sirene
+tagline: API Sirene donne accès aux informations concernant les entreprises et les établissements immatriculés au répertoire interadministratif Sirene de l'Insee
 external_site: https://api.insee.fr
 clients:
   - collectivités
@@ -8,8 +8,7 @@ clients:
 owner: Institut national de la statistique et des études économiques
 owner_acronym: INSEE
 is_open: 0
-access_description: Cette API est ouverte à tous.
-access_link: https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/item-info.jag?name=Sirene&version=V3&provider=insee
+access_link: https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/sign-up.jag
 keywords:
   - Entreprise
   - Etablissements
@@ -22,6 +21,7 @@ rate_limiting_description: |
   L'usage d'API Sirene est soumis à une limite de 30 interrogations par minute. L'Insee se réserve le droit de changer cette limite en cas de nécessité.
 contact_link: https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/help.jag#contact
 doc_tech_link: https://api.insee.fr/catalogue/api-docs/carbon.super/Sirene/V3?envName=Production%20and%20Sandbox
+doc_tech_external: https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/item-info.jag?name=Sirene&version=V3&provider=insee
 visits_2019: 3785
 last_update: 22/08/2019
 ---
