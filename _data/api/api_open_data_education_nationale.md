@@ -4,7 +4,7 @@ tagline: 'Découvrez les jeux de données publiques ouverts et n’hésitez pas 
 external_site: https://data.education.gouv.fr/
 owner: Ministère de l'Éducation Nationale et de la Jeunesse
 owner_acronym: MENJ
-is_open: true
+is_open: 1 # 1 means API is fully open
 category: Public
 logo: logo_menj.jpg
 rate_limiting_resume: 5000 appels / jour / IP

@@ -15,7 +15,7 @@ import { HEADER_PAGE } from '../../../components';
 
 import { MultiChoice, ButtonLink } from '../../../uiComponents';
 import Loader from '../../../uiComponents/loader';
-import { logDemanderAcces } from '../../../service/analytics';
+import { logDemanderAcces } from '../../../utils/client/analytics';
 
 interface IAccessConditionOption extends IAccessCondition {
   label: string;

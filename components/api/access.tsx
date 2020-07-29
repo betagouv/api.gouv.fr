@@ -4,9 +4,10 @@ import { ButtonLink } from '../../uiComponents/button';
 
 import { logDemanderAcces } from '../../utils/client/analytics';
 import SubSection from './subSection';
+import { IIsApiOpen } from '../../model';
 
 interface IAccessProps {
-  is_open: boolean | number;
+  is_open: IIsApiOpen;
   slug: string;
   doc_external_link?: string;
   access_link?: string;
@@ -25,7 +26,6 @@ const ApiAccess: React.FC<IAccessProps> = ({
 
   switch (is_open) {
     case 1:
-    case true:
       accessDescription =
         'L’API est ouverte à tous. Vous pouvez y accéder dès maintenant :';
       accessHref = doc_external_link
@@ -56,7 +56,6 @@ const ApiAccess: React.FC<IAccessProps> = ({
       ext = true;
       break;
     case -1:
-    case false:
       accessDescription = 'L’API nécessite une habilitation :';
       accessHref = `/les-api/${slug}/demande-acces`;
       accessLabel = (

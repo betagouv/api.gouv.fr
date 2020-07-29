@@ -1,7 +1,7 @@
 ---
 title: API Géo
 tagline: Interrogez les référentiels géographiques plus facilement
-is_open: true
+is_open: 1 # 1 means API is fully open
 external_site: https://geo.api.gouv.fr
 clients:
   - collectivités

@@ -7,7 +7,7 @@ clients:
   - ministères
 owner: Institut national de la statistique et des études économiques
 owner_acronym: INSEE
-is_open: 0
+is_open: 0 # 0 means API require an account
 access_link: https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/sign-up.jag
 keywords:
   - Entreprise

@@ -2,10 +2,8 @@
 title: API de droits à l'Assurance Maladie
 tagline: Accèdez aux droits d’un individu ou d’une famille (enfants rattachés), gérés par le régime général de l’Assurance Maladie
 external_site: https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/assurance-maladie-digital/api-droits-fs-doc/master/documentation-open-api.yaml
-is_open: false
+is_open: -1 # -1 means API not open
 access_link: /les-api/api_ameli_droits_cnam/demande-acces
-access_description: |
-  Cette API nécessite une habilitation :
 access_page:
   - who:
       - Un établissements de soins

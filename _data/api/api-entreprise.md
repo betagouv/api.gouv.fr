@@ -2,7 +2,7 @@
 title: API Entreprise
 tagline: Simplifier les démarches des entreprises en récupérant pour elles leurs documents administratifs
 external_site: https://entreprise.api.gouv.fr/
-is_open: false
+is_open: -1 # -1 means API not open
 access_link: /les-api/api-entreprise/demande-acces
 access_description: |
   Cette API nécessite une habilitation :

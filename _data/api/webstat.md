@@ -3,7 +3,7 @@ title: Webstat # nom commercial de l'API
 tagline: Accédez aux séries économiques de la Banque de France # une phrase maximum
 owner: Banque de France # producteur de l'API
 logo: webstat.jpg # FILENAME d'un logo de l'API
-is_open: false
+is_open: -1 # -1 means API not open
 access_condition: OUVERT sous contrat
 access_link: https://developer.webstat.banque-france.fr/user/register # URL d'une page de demande d'accès si l'API est à accès restreint
 clients: # types d'entités habilitées à utiliser l'API

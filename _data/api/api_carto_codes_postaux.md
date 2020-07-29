@@ -4,7 +4,7 @@ tagline: L'accès simplifié aux codes postaux
 external_site: https://apicarto.ign.fr
 owner: Institut national de l’information géographique et forestière
 owner_acronym: IGN
-is_open: true
+is_open: 1 # 1 means API is fully open
 access_condition: OUVERT
 category: Public
 logo: look4-geoportail.jpg

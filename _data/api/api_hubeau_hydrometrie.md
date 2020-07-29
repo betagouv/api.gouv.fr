@@ -1,7 +1,7 @@
 ---
 title: Hub'Eau - Hydrométrie
 tagline: Hydrométrie temps réel
-is_open: true
+is_open: 1 # 1 means API is fully open
 external_site: https://hubeau.eaufrance.fr/page/api-hydrometrie
 logo: 07-hydrometrie.png
 clients:

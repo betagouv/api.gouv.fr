@@ -2,10 +2,8 @@
 title: API Particulier
 tagline: Pour accélérer l’ouverture des données personnelles et leur réutilisation, automatisez vos demandes de pièces justificatives
 external_site: https://particulier.api.gouv.fr
-is_open: false
+is_open: -1 # -1 means API not open
 access_link: /les-api/api-particulier/demande-acces
-access_description: |
-  Cette API nécessite une habilitation :
 access_page:
   - who:
       - Un particulier ou une entreprise

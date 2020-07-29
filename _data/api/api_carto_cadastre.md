@@ -4,7 +4,7 @@ tagline: L'accès simplifié aux données de cadastre
 external_site: https://apicarto.ign.fr
 owner: Institut national de l’information géographique et forestière
 owner_acronym: IGN
-is_open: false
+is_open: -1 # -1 means API not open
 access_condition: OUVERT (sous contrat pour certaines données)
 access_link: http://professionnels.ign.fr/
 access_description: |

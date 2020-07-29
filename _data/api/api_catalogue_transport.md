@@ -12,7 +12,7 @@ keywords:
 themes:
   - Transport
 external_site: https://transport.data.gouv.fr
-is_open: true
+is_open: 1 # 1 means API is fully open
 contact_link: contact@transport.beta.gouv.fr
 doc_tech_link: https://transport.data.gouv.fr/api/openapi
 last_update: 01/05/2020

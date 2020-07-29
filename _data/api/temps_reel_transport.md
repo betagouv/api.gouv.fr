@@ -4,7 +4,7 @@ tagline: Mettre à disposition les données temps réel des transports en commun
 category: Public
 owner: Direction interministérielle du numérique
 owner_acronym: DINUM
-is_open: true
+is_open: 1 # 1 means API is fully open
 clients:
   - particuliers
   - entreprises

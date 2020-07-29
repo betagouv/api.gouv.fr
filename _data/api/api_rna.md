@@ -1,7 +1,7 @@
 ---
 title: Répertoire National des Associations
 tagline: Le registre public des associations
-is_open: true
+is_open: 1 # 1 means API is fully open
 clients:
   - citoyens
   - entreprises

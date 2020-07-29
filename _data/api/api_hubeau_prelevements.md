@@ -1,7 +1,7 @@
 ---
 title: Hub'Eau - Prélèvements en eau
 tagline: Prélèvements en eau
-is_open: true
+is_open: 1 # 1 means API is fully open
 external_site: https://hubeau.eaufrance.fr/page/api-prelevements-eau
 logo: 08-prelevements.jpg
 clients:
