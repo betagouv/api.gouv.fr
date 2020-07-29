@@ -186,7 +186,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths: apis
-      .filter(api => !api.is_open)
+      .filter(api => api.is_open === -1)
       .map(api => {
         return {
           params: {
