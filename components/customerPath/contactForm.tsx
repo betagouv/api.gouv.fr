@@ -2,7 +2,7 @@ import React, { FormEvent, useRef } from 'react';
 
 import constants from '../../constants';
 import { ButtonLink } from '../../uiComponents';
-import { logParcoursClient } from '../../service/analytics';
+import { logParcoursClient } from '../../utils/client/analytics';
 
 export enum VISITOR {
   ADMINISTRATION = 'Administration',

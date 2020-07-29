@@ -2,7 +2,7 @@ import links from './links';
 
 export default {
   links: links,
-  layout: { HEADER_HEIGHT: 95 },
+  layout: { HEADER_HEIGHT: 75 },
   colors: {
     confidential: '#10c6b0',
     reference: '#23b0b7',
@@ -10,6 +10,7 @@ export default {
     lightGrey: '#efefef',
     lightestGrey: '#fcfcfc',
     white: '#fff',
+    grey: '#888',
     darkestGrey: '#373c42',
     darkGrey: '#272c32',
     service: '#af2341',

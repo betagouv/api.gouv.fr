@@ -1,4 +1,42 @@
-import { getService, getAllServices, getAllAPIs, getAPI } from './api';
+import {
+  getService,
+  getAllServices,
+  getAllAPIs,
+  getAPI,
+  getGuide,
+  getAllGuides,
+  getRoadmap,
+} from './readOnDiskForWebpack';
+
+export enum RoadmapNodeType {
+  YEAR,
+  MONTH,
+  ELLIPSIS,
+  ADD_API = 'ADD_API',
+  DLNUF = 'DLNUF',
+  INFO = 'INFO',
+}
+
+export interface IRoadmapElement {
+  type: RoadmapNodeType;
+  what?: string | number;
+  path?: string;
+}
+
+export interface IRoadmap {
+  [year: string]: {
+    [month: string]: IRoadmapElement[];
+  };
+}
+
+export interface IGuideElement {
+  title: string;
+  tags: string;
+  tagline: string;
+  body: string;
+  slug: string;
+  noindex: boolean;
+}
 
 export interface IService {
   slug: string;
@@ -23,6 +61,21 @@ export interface IApiShort {
   owner: string;
 }
 
+export enum ELIGIBLE {
+  YES = 1,
+  NO = -1,
+  MAYBE = 0,
+}
+
+export interface IAccessCondition {
+  description: string;
+  is_eligible: ELIGIBLE;
+}
+
+export interface IAccessConditionWithVisitorType extends IAccessCondition {
+  who: string[];
+}
+
 export interface IApi extends IApiShort {
   path: string;
   body: string;
@@ -41,6 +94,7 @@ export interface IApi extends IApiShort {
   access_link: string;
   access_description: string;
   access_condition: string;
+  access_page: IAccessConditionWithVisitorType[];
   monitoring_link: string;
   monitoring_description: string;
   rate_limiting_description: string;
@@ -52,4 +106,12 @@ export interface IApi extends IApiShort {
   keywords: string[];
 }
 
-export { getService, getAllServices, getAllAPIs, getAPI };
+export {
+  getService,
+  getAllServices,
+  getAllAPIs,
+  getAPI,
+  getGuide,
+  getAllGuides,
+  getRoadmap,
+};

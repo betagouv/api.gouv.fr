@@ -1,9 +1,8 @@
-import React, { useEffect, useRef, Fragment } from 'react';
+import React, { Fragment } from 'react';
 import Link from 'next/link';
-import { throttle } from 'lodash';
 
 import { ButtonLink } from '../../uiComponents/button';
-import { logCTA } from '../../service/analytics';
+import { logCTA } from '../../utils/client/analytics';
 import { apiLogo, republiqueFrLogo } from './logos';
 
 const SIGNUP_URL =
@@ -30,34 +29,9 @@ const HEADER = [
   { href: '/apropos', txt: 'À propos', key: HEADER_PAGE.ABOUT },
 ];
 
-const Header = ({ headerKey = 'home', useMenu = true }) => {
-  const header = useRef(null);
-
-  useEffect(() => {
-    const handleScroll = throttle(() => {
-      if (!header || !header.current) {
-        return;
-      }
-      //@ts-ignore
-      const headerClasses = header.current.classList;
-      const hasScrolledClass = headerClasses.contains('scrolled');
-      if (
-        (window.scrollY !== 0 && !hasScrolledClass) ||
-        (window.scrollY === 0 && hasScrolledClass)
-      ) {
-        headerClasses.toggle('scrolled');
-      }
-    }, 100);
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
+const Header = ({ headerKey = 'home' }) => {
   return (
-    <header role="navigation" ref={header}>
+    <header role="navigation">
       <nav className="nav">
         <input
           className="menu-btn"
@@ -76,8 +50,8 @@ const Header = ({ headerKey = 'home', useMenu = true }) => {
               className="nav__logo-wrapper"
               title="Retourner à l’accueil de api.gouv.fr"
             >
-              <span className="nav__logo">{republiqueFrLogo}</span>
-              <span className="nav__logo">{apiLogo}</span>
+              <span className="nav__logo marianne">{republiqueFrLogo}</span>
+              <span className="nav__logo apigouv">{apiLogo}</span>
             </a>
           </Link>
           <ul className="nav__links">
