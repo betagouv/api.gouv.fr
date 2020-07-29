@@ -5,13 +5,13 @@ tags: cas usage, api particulier, portail-famille
 noindex: true
 ---
 
-# Cas usage API particulier - Portail famille 
-
 ## Vous êtes une collectivité, vous souhaitez développer un portail famille simplifiant les démarches pour vos concitoyens ? Vous cherchez à dématérialiser les calcul de tarification des activités gérées pas la ville ? 
 
 Ce que nous appellons ici Le Portail Famille est un téléservice qui diffère en fonction des décisions prises par l'organisme en charge de son développement.
 
 Voici quelques exemples d'activités qui ont été inclues dans des portails famille : 
+
+**Attention ici changer les liens (enlever ceux du PAD)
 
 - [Tarifications de la restauration scolaire](https://pad.incubateur.net/5n-u3K-4R1OP-0NiBs8JGg#)
 - [Tarification des activités périscolaires et municipales](https://pad.incubateur.net/cmySV79hRdSjj_wDKhWMzA?edit)
