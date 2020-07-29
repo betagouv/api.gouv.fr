@@ -1,4 +1,5 @@
 import React, { PropsWithChildren } from 'react';
+import constants from '../../constants';
 
 interface IProps {
   title: string;
@@ -18,7 +19,7 @@ const SubSection: React.FC<PropsWithChildren<IProps>> = ({
       </div>
 
       <style jsx>{`
-        div {
+        div.sub-section {
           margin: 40px 0;
           position: relative;
         }
@@ -27,6 +28,18 @@ const SubSection: React.FC<PropsWithChildren<IProps>> = ({
           font-size: 1.2rem;
           line-height: 1.8rem;
           margin-bottom: 5px;
+        }
+        @media only screen and (min-width: 1px) and (max-width: 900px) {
+          div.sub-section {
+            border: 2px solid ${constants.colors.lightBlue};
+            border-radius: 4px;
+            margin: 10px 0;
+            padding: 10px;
+          }
+
+          h2 {
+            margin-top: 0;
+          }
         }
       `}</style>
     </>

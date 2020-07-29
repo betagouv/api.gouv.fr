@@ -124,6 +124,10 @@ const API: React.FC<IProps> = ({ api, services = null }) => {
             display: flex;
             flex-direction: column-reverse;
           }
+          .info-column {
+            border: none;
+            padding: 0;
+          }
         }
       `}</style>
     </Page>

@@ -5,63 +5,91 @@ import { ButtonLink } from '../../uiComponents/button';
 import { logDemanderAcces } from '../../service/analytics';
 import SubSection from './subSection';
 
-interface IProps {
-  slug: string;
-  doc_external_link?: string;
-}
-
-const ApiOpen: React.FC<IProps> = ({ slug, doc_external_link = '' }) => (
-  <>
-    <div>L'API est ouverte à tous.</div>
-    <p>Vous pouvez y accéder dès maintenant :</p>
-    <div className="layout-right vertical-margin">
-      <ButtonLink
-        href={doc_external_link ? doc_external_link : `/documentation/${slug}`}
-        onClick={logDemanderAcces}
-        large
-      >
-        {doc_external_link ? ' Accéder au site de l’API' : 'Tester l’API'}
-      </ButtonLink>
-    </div>
-  </>
-);
-
-const ApiNotOpen: React.FC<IProps> = ({ slug }) => (
-  <div>
-    <div>L’API nécessite une habilitation :</div>
-    <div className="layout-right vertical-margin">
-      <ButtonLink
-        href={`/les-api/${slug}/demande-acces`}
-        onClick={logDemanderAcces}
-        large
-      >
-        <span role="img" aria-label="émoji clef">
-          🔑
-        </span>{' '}
-        Faire une demande d’accès
-      </ButtonLink>
-    </div>
-  </div>
-);
-
 interface IAccessProps {
-  is_open: Boolean;
+  is_open: boolean | number;
   slug: string;
   doc_external_link?: string;
+  access_link?: string;
 }
+
+const ApiAccess: React.FC<IAccessProps> = ({
+  is_open,
+  slug,
+  doc_external_link,
+  access_link = '',
+}) => {
+  let accessDescription = '';
+  let accessHref = '';
+  let accessLabel = <></>;
+
+  switch (is_open) {
+    case 1:
+    case true:
+      accessDescription =
+        'L’API est ouverte à tous. Vous pouvez y accéder dès maintenant :';
+      accessHref = doc_external_link
+        ? doc_external_link
+        : `/documentation/${slug}`;
+      accessLabel = (
+        <>{doc_external_link ? ' Accéder au site de l’API' : 'Tester l’API'}</>
+      );
+      break;
+    case 0:
+      accessDescription =
+        'L’API nécessite de se créer un compte avant de pouvoir accèder aux données :';
+      accessHref = access_link;
+      accessLabel = (
+        <>
+          <span role="img" aria-label="émoji créer compte">
+            👩‍💻
+          </span>{' '}
+          Créer un compte
+        </>
+      );
+      break;
+    case -1:
+    case false:
+      accessDescription = 'L’API nécessite une habilitation :';
+      accessHref = `/les-api/${slug}/demande-acces`;
+      accessLabel = (
+        <>
+          <span role="img" aria-label="émoji clef">
+            🔑
+          </span>{' '}
+          Faire une demande d’accès
+        </>
+      );
+      break;
+    default:
+      throw new Error('is_open should be 0, -1 or 1');
+  }
+
+  return (
+    <>
+      <div>{accessDescription}</div>
+      <div className="layout-right vertical-margin">
+        <ButtonLink href={accessHref} onClick={logDemanderAcces} large>
+          {accessLabel}
+        </ButtonLink>
+      </div>
+    </>
+  );
+};
 
 const Access: React.FC<IAccessProps> = ({
   is_open,
   slug,
   doc_external_link = '',
+  access_link = '',
 }) => {
   return (
     <SubSection title="Accéder aux données">
-      {is_open ? (
-        <ApiOpen slug={slug} doc_external_link={doc_external_link} />
-      ) : (
-        <ApiNotOpen slug={slug} />
-      )}
+      <ApiAccess
+        slug={slug}
+        is_open={is_open}
+        doc_external_link={doc_external_link}
+        access_link={access_link}
+      />
     </SubSection>
   );
 };

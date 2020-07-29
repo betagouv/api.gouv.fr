@@ -66,13 +66,14 @@ const SupportAndTeam: React.FC<IProps> = ({
         .team img {
           border-radius: 5px;
           width: auto;
-          height: 50px;
-          margin-right: 10px;
-          flex-shrink: 0;
+          max-height: 70px;
+          margin-right: 15px;
+          flex-shrink: 1;
         }
 
         .team span {
           flex-grow: 1;
+          min-width: 50%;
         }
       `}</style>
     </SubSection>

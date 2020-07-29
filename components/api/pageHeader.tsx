@@ -23,7 +23,7 @@ const PageHeader: React.FC<IProps> = ({
           ⇠ Toutes les APIs
         </a>
       </div>
-      <div className="content-container content">
+      <div className="content">
         <h1>{title}</h1>
         <i>Producteur : {owner_acronym ? owner_acronym : owner}</i>
         <h2 className="tagline">{tagline}</h2>
@@ -75,16 +75,12 @@ const PageHeader: React.FC<IProps> = ({
         color: #fff;
       }
 
-      @media only screen and (min-width: 1px) and (max-width: 600px) {
-        .title h1 {
-          word-wrap: break-word;
-          max-width: 100%;
-        }
-      }
-
       @media only screen and (min-width: 1px) and (max-width: 900px) {
-        .content-container {
-          padding-top: 35px;
+        .content {
+          padding: 0 0 10px;
+        }
+        .breadcrumb {
+          padding-top: 10px;
         }
       }
     `}</style>
