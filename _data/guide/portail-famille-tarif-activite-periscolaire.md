@@ -4,7 +4,7 @@ tagline: Activité périscolaires et municipales
 tags: cas usage, api particulier, portail-famille, tarification activités prériscolaire, activités municipales
 noindex: true
 ---
-# [Portail famille](https://pad.incubateur.net/o6VvkPDdRX-BK37BgGVfNg?edit)- Tarification des activités périscolaires et municipales
+*Lien vers le PAD : [Portail famille](https://pad.incubateur.net/o6VvkPDdRX-BK37BgGVfNg?edit)- Tarification des activités périscolaires et municipales*
 
 ## Vous êtes une commune, vous souhaitez dématérialiser l'inscription aux activités périscolaires ? Vous êtes une mairie et vous voulez simplifier l'adhésion aux activités municipales ?
 
