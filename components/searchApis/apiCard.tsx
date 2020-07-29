@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { getUptimeState, roundUptime } from '../../utils/uptime';
 import { textHighlighter, ISearchMatch } from './filtersLogic';
 import constants from './../../constants';
+import { IIsApiOpen } from '../../model';
 
 interface IProps {
   title: string;
@@ -11,7 +12,7 @@ interface IProps {
   tagline: string;
   uptime: number;
   logo: string;
-  is_open: boolean;
+  is_open: IIsApiOpen;
   owner: string;
   matches?: ISearchMatch;
 }
@@ -65,7 +66,7 @@ const ApiCard: React.FC<IProps> = ({
           <div className="card-extra card-footer">
             <div className="badges">
               <div className="badge contract">
-                {is_open ? (
+                {is_open !== -1 ? (
                   <>
                     <svg
                       width="20"

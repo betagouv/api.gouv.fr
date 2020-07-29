@@ -13,7 +13,7 @@ export const filterAccess = (noAccessRight: boolean) => {
   if (!noAccessRight) {
     return () => true;
   }
-  return (api: IApi) => api.is_open;
+  return (api: IApi) => api.is_open !== -1;
 };
 
 /**
