@@ -67,7 +67,7 @@ uptime: 99.992 # https://uptimerobot.com/dashboard#777746216 * https://uptimerob
 last_update: 10/12/2019
 ---
 
-API Particulier simplifie les démarches des usagers en permettant aux administrations d'accéder aux données Fiscales (DGFIP) et familiales (CAF) d'un citoyen.
+API Particulier facilite l'accès des administrations aux données fiscales (DGFIP) et familiales (CAF) d'un citoyen, pour simplifier les démarches administratives mises en oeuvre par les collectivités et les administrations.
 
 ### A quoi sert l’API Particulier ?
 

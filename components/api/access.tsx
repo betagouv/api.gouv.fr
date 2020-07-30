@@ -42,11 +42,11 @@ const ApiAccess: React.FC<IAccessProps> = ({
       break;
     case 0:
       accessDescription =
-        'Attention ! Cette API nécessite de se créer un compte afin d’accéder aux données :';
+        '⚠️ Attention ! Cette API nécessite de se créer un compte afin d’accéder aux données :';
       accessHref = access_link;
       accessLabel = (
         <>
-          <Emoji emoji="⚠️" label="attention" />
+          <Emoji emoji="↗️" label="attention" />
           Se créer un compte
         </>
       );
