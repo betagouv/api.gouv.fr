@@ -4,6 +4,7 @@ import { IApi } from '../../model';
 import { SearchBar } from '../../uiComponents';
 
 import Link from 'next/link';
+import lock from '../../uiComponents/icon/lock';
 
 interface IProps {
   allApis: IApi[];
@@ -46,41 +47,22 @@ const DocumentationLeftMenu: React.FC<IProps> = ({ allApis }) => {
             >
               <a>
                 <div className="api-title">
-                  {api.title}
-                  {api.doc_tech_link && (
+                  {api.title}{' '}
+                  {!api.doc_tech_link && (
                     <span
-                      title="Cette API propose une documentation au format Open API"
+                      title="Cette API ne propose pas de documentation au format Open API"
                       className="swagger-label"
                     >
-                      OAS
+                      Pas&nbsp;de&nbsp;swagger
                     </span>
                   )}
                 </div>
-                {!api.is_open && (
+                {api.is_open !== 1 && (
                   <span
                     title="Cette API nécessite une habilitation"
                     className="is-open-label"
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                    >
-                      <rect
-                        x="3"
-                        y="11"
-                        width="18"
-                        fill="white"
-                        height="11"
-                        rx="2"
-                        ry="2"
-                      ></rect>
-                      <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                    </svg>
+                    {lock}
                   </span>
                 )}
               </a>
