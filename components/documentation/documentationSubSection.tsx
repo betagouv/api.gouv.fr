@@ -60,7 +60,7 @@ export const Habilitation: React.FC<{ slug: string }> = ({ slug }) => (
     </div>
     <div className="layout-right">
       <ButtonLink href={`/les-api/${slug}/demande-acces`}>
-        <div className="layout-center btn-icon">Demander accès à l’API</div>
+        <div className="layout-center btn-icon">Demander l’accès à l’API</div>
       </ButtonLink>
     </div>
   </DocSection>
