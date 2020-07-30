@@ -5,6 +5,7 @@ import { ButtonLink } from '../../uiComponents/button';
 import { logDemanderAcces } from '../../utils/client/analytics';
 import SubSection from './subSection';
 import { IIsApiOpen } from '../../model';
+import Emoji from '../../uiComponents/emoji';
 
 interface IAccessProps {
   is_open: IIsApiOpen;
@@ -34,22 +35,18 @@ const ApiAccess: React.FC<IAccessProps> = ({
       accessLabel = (
         <>
           {' '}
-          <span role="img" aria-label="émoji code">
-            👩‍💻
-          </span>{' '}
+          <Emoji emoji="👩‍💻" label="code" />
           {doc_external_link ? ' Accéder au site de l’API' : 'Tester l’API'}
         </>
       );
       break;
     case 0:
       accessDescription =
-        'L’API nécessite de se créer un compte avant de pouvoir accèder aux données :';
+        'Attention ! Cette API nécessite de se créer un compte afin d’accéder aux données :';
       accessHref = access_link;
       accessLabel = (
         <>
-          <span role="img" aria-label="émoji compte">
-            👤
-          </span>{' '}
+          <Emoji emoji="⚠️" label="attention" />
           Se créer un compte
         </>
       );
@@ -60,9 +57,7 @@ const ApiAccess: React.FC<IAccessProps> = ({
       accessHref = `/les-api/${slug}/demande-acces`;
       accessLabel = (
         <>
-          <span role="img" aria-label="émoji clef">
-            🔑
-          </span>{' '}
+          <Emoji emoji="🔑" label="clef" />
           Faire une demande d’accès
         </>
       );

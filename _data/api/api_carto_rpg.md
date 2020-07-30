@@ -8,7 +8,7 @@ is_open: -1 # -1 means API not open
 access_condition: OUVERT (sous contrat pour certaines données)
 access_link: http://professionnels.ign.fr/
 access_description: |
-  <p>Vous devez demander une clé Géoportail pour accèder aux données. Lors de votre demande de clé, vous devez commander les flux “Ressources WFS Géoportail - BD PARCELLAIRE®” suivant l'année désirée:</p>
+  <p>Vous devez demander une clé Géoportail pour accéder aux données. Lors de votre demande de clé, vous devez commander les flux “Ressources WFS Géoportail - BD PARCELLAIRE®” suivant l'année désirée:</p>
   <ul><li>RPG 2010, RPG 2011, RPG 2012, RPG 2013</li>
   <li>RPG 2014:ilots_anonymes (à venir)</li>
   <li>RPG 2015:parcelles_graphiques</li>

@@ -1,6 +1,6 @@
 ---
 title: API Particulier
-tagline: Accèdez aux données fiscales (DGFIP) et familiales (CAF) pour simplifier des démarches administratives
+tagline: Accédez aux données fiscales (DGFIP) et familiales (CAF) pour simplifier des démarches administratives
 external_site: https://particulier.api.gouv.fr
 is_open: -1 # -1 means API not open
 access_link: /les-api/api-particulier/demande-acces
@@ -67,11 +67,11 @@ uptime: 99.992 # https://uptimerobot.com/dashboard#777746216 * https://uptimerob
 last_update: 10/12/2019
 ---
 
-API Particulier simplifie les démarches des usagers en permettant aux administrations d'accèder aux données Fiscales (DGFIP) et familiales (CAF) d'un citoyen.
+API Particulier simplifie les démarches des usagers en permettant aux administrations d'accéder aux données Fiscales (DGFIP) et familiales (CAF) d'un citoyen.
 
 ### A quoi sert l’API Particulier ?
 
-Permet aux administrations d'accèder à des informations **certifiées à la source** et ainsi :
+Permet aux administrations d'accéder à des informations **certifiées à la source** et ainsi :
 
 - de s’affranchir des pièces justificatives lors des démarches en ligne
 - de réduire le nombre d’erreurs de saisie

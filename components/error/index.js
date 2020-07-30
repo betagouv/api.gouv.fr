@@ -1,6 +1,7 @@
 import React from 'react';
 import { Meta } from '../';
 import { ButtonLink } from '../../uiComponents';
+import Emoji from '../../uiComponents/emoji';
 
 export default ({ msg, title }) => (
   <>
@@ -9,9 +10,7 @@ export default ({ msg, title }) => (
     <section id="errorContainer" className="ui text container">
       <div>
         <h1>
-          <span role="img" aria-label="emoji malade">
-            🤕
-          </span>
+          <Emoji emoji="🤕" label="Problème" />
         </h1>
         <h2>{msg}</h2>
         <h3>

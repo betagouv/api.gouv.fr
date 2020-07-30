@@ -38,7 +38,7 @@ L’API RNCS permet d'interroger les informations publiques sur les sociétés f
 
 ### A quoi sert cette API ?
 
-L’API Répertoire National du Commerce et des Sociétés vous permet d’accèder aux données des sociétés immatriculées à l’INPI grâce à leurs SIREN:
+L’API Répertoire National du Commerce et des Sociétés vous permet d’accéder aux données des sociétés immatriculées à l’INPI grâce à leurs SIREN:
 
 ### Données
 

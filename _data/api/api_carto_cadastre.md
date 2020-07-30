@@ -8,7 +8,7 @@ is_open: -1 # -1 means API not open
 access_condition: OUVERT (sous contrat pour certaines données)
 access_link: http://professionnels.ign.fr/
 access_description: |
-  <p>Vous devez demander une clé Géoportail pour accèder aux données. Lors de votre demande de clé, vous devez commander les flux “Ressources WFS Géoportail - BD PARCELLAIRE®” ci-dessous:</p>
+  <p>Vous devez demander une clé Géoportail pour accéder aux données. Lors de votre demande de clé, vous devez commander les flux “Ressources WFS Géoportail - BD PARCELLAIRE®” ci-dessous:</p>
   <ul><li>bdpv_COMMUNE</li>
   <li>bdpv_DIVCAD</li>
   <li>bdpv_LOCALISANT</li>

@@ -50,7 +50,7 @@ La lecture du DPE est facilitée par deux étiquettes à 7 classes de A à G (A 
 
 Le diagnostic de performance énergétique doit être établi par un professionnel indépendant satisfaisant à des critères de compétence et ayant souscrit une assurance.
 
-L’API donne accès à des données simplifiées. Vous pouvez accèder aux <External href="https://files.data.gouv.fr/ademe/dpe-france-entiere.zip">données complètes</External>, issues des bases de données. Leur utilisation est un peu plus complexe et réservée à un public averti.
+L’API donne accès à des données simplifiées. Vous pouvez accéder aux <External href="https://files.data.gouv.fr/ademe/dpe-france-entiere.zip">données complètes</External>, issues des bases de données. Leur utilisation est un peu plus complexe et réservée à un public averti.
 
 Les données sont mises à jour régulièrement et accessibles sur le <External href="https://data.ademe.fr/datasets/dpe-france">portail Open Data de l'ADEME</External>.
 

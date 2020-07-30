@@ -466,6 +466,7 @@ export default [
   'zut',
   // API specific
   'API',
+  'APIs',
   'données',
-  'ouvertes',
+  'donnée',
 ];
