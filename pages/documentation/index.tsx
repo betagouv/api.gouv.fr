@@ -3,7 +3,7 @@ import { GetStaticProps } from 'next';
 
 import { IApi, getAllAPIs } from '../../model';
 import Page from '../../layouts';
-import DocumentationLeftMenu from '../../components/documentation';
+import { DocumentationLeftMenu } from '../../components/documentation';
 
 import constants from '../../constants';
 
