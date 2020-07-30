@@ -61,7 +61,7 @@ const DocumentationLeftMenu: React.FC<IProps> = ({ allApis }) => {
                     </span>
                   )}
                 </div>
-                {api.is_open !== 1 && (
+                {api.is_open === -1 && (
                   <span
                     title="Cette API nécessite une habilitation"
                     className="is-open-label"
