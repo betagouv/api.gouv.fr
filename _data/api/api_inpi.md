@@ -1,10 +1,7 @@
 ---
 title: Répertoire National du Commerce et des Sociétés
 tagline: Le registre public des sociétés françaises immatriculées dans les greffes locales des tribunaux, centralisées à l'INPI.
-is_open: false
-access_condition: OUVERT sous contrat
-access_description: |
-  Les données de l’INPI ne sont pas accessible librement. Vous devez au préalable vous créer un compte auprès de l’INPI.
+is_open: 0
 access_link: https://data.inpi.fr/register
 clients:
   - citoyens
