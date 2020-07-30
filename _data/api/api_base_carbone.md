@@ -2,7 +2,7 @@
 title: API Base Carbone®
 tagline: Les facteurs d'émissions de GES, nécessaires à la réalisation d’un bilan d’émissions de gaz à effet de serre
 external_site: https://data.ademe.fr/datasets/base-carbone-donnees-v18-0
-is_open: true
+is_open: 1 # 1 means API is fully open
 owner: Agence de la transition écologique
 owner_acronym: ADEME
 logo: ademe.png

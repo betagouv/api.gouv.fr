@@ -40,4 +40,19 @@ test(`No theme is null or undefined`, async () => {
   expect(notUndef).toBe(true);
 });
 
+test(`Field is_open is -1, 0 or 1`, async () => {
+  let ok = true;
+
+  allApis.forEach(api => {
+    //@ts-ignore
+    if ([-1, 0, 1].indexOf(api.is_open) === -1) {
+      console.log(
+        `API ${api.slug} has incorrect value for is_open : ${api.is_open}`
+      );
+      ok = false;
+    }
+  });
+  expect(ok).toBe(true);
+});
+
 test('Every API has a theme', async () => {});

@@ -2,7 +2,7 @@
 title: OpenFisca
 tagline: Calculer l'impôt, les cotisations, les aides sociales…
 external_site: https://api.openfisca.fr
-is_open: true
+is_open: 1 # 1 means API is fully open
 clients:
   - citoyens
   - entreprises

@@ -52,6 +52,18 @@
     - type: ADD_API
       what: BDM
       path: /les-api/api_bdm
+    - type: ADD_API
+      what: Professionnels RGE
+      path: /les-api/api_professionnels_rge
+    - type: ADD_API
+      what: DPE Logements
+      path: /les-api/api_dpe_logements
+    - type: ADD_API
+      what: DPE Bâtiments Publics
+      path: /les-api/api_dpe_batiments_publics
+    - type: ADD_API
+      what: Base Carbone®
+      path: /les-api/api_base_carbone
   8:
     - type: ADD_API
       what: Données Ouvertes Loire-Atlantique

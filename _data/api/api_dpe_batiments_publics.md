@@ -2,7 +2,7 @@
 title: API DPE bâtiments publics
 tagline: Le recensement des diagnostics de performance énergétique (DPE) des bâtiments publics
 external_site: https://data.ademe.fr/datasets/dpe-batiments-publics
-is_open: true
+is_open: 1 # 1 means API is fully open
 owner: Agence de la transition écologique
 owner_acronym: ADEME
 logo: ademe.png

@@ -3,7 +3,7 @@ title: API Ingres Nomenclatures
 tagline: Récupérez l'ensemble des référentiels utilisés par les SIRH de la Fonction Publique d'Etat
 owner: Centre Interministériel des Systèmes d'Information relatifs aux Ressources Humaines
 owner_acronym: CISIRH
-is_open: false
+is_open: -1 # -1 means API not open
 access_condition: OUVERT sous contrat
 access_link: mailto:api.cisirh@finances.gouv.fr
 access_description: |

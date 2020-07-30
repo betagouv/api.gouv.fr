@@ -2,10 +2,8 @@
 title: le.Taxi
 tagline: Un clic, un taxi
 external_site: https://le.taxi
-is_open: false
+is_open: -1 # -1 means API not open
 access_link: /les-api/le-taxi/demande-acces
-access_description: |
-  Cette API nécessite une habilitation :
 access_page:
   - who:
       - Un opérateur de taxi (pour les chauffeurs)
