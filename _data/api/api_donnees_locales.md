@@ -4,15 +4,13 @@ tagline: Accéder aux données de l'Insee, localisées au niveau de la commune
 owner: Institut national de la statistique et des études économiques
 owner_acronym: Insee
 logo: Logo_Insee.svg
-is_open: false
-access_description: |
-  Cette API nécessite de se créer un compte pour pouvoir accéder aux données
+is_open: 0 # 0 means API require an account
 access_link: https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/sign-up.jag
 rate_limiting_resume: 30 appels / minute / IP
 rate_limiting_description: |
-  <p>L'API est disponible à hauteur de 30 appels par minute et par adresse IP.</p>
+  L'API est disponible à hauteur de 30 appels par minute et par adresse IP.
 monitoring_description: |
-  <p>L'Insee s'engage à une obligation de moyens pour maintenir la disponibilité du service 99,5 % du temps mensuel, apprécié au terme de chaque mois. </p>
+  L'Insee s'engage à une obligation de moyens pour maintenir la disponibilité du service 99,5 % du temps mensuel, apprécié au terme de chaque mois.
 keywords:
   - Insee
   - communes
@@ -21,8 +19,10 @@ keywords:
   - territoires
 themes:
   - Géographie
+  - Administration & législation
 contact_link: https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/help.jag#contact
 doc_tech_link: https://api.insee.fr/catalogue/api-docs/carbon.super/DonneesLocales/V0.1?envName=null
+doc_tech_external: https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/item-info.jag?name=DonneesLocales&version=V0.1&provider=insee
 ---
 
 L’API ‘Données locales’ permet d’accéder aux données localisées à la commune, diffusées sur insee.fr dans la rubrique 'chiffres détaillés' (ou ‘chiffres clés’ pour les populations légales), sous forme de cubes prédéfinis.

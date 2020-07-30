@@ -3,7 +3,7 @@ title: Offres d'emploi
 tagline: Accédez aux offres d'emploi disponibles sur pole-emploi.fr
 owner: Pôle emploi
 category: Public
-is_open: false
+is_open: -1 # -1 means API not open
 access_condition: OUVERT sous contrat
 access_link: https://www.emploi-store-dev.fr/portail-developpeur/detailapicatalogue/5ba49d55243a5f9d2c5064a2
 logo: logo_pole_emploi.jpg

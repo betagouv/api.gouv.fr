@@ -7,7 +7,7 @@ header {
   z-index: 1000;
   width: 100%;
   background: #fff;
-  box-shadow: 0 0 3px #ccc;
+  box-shadow: 0 0 5px -2px $blue;
   transition: box-shadow 300ms ease-in;
   height: #{$headerHeight + 'px'};
 

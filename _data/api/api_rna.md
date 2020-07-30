@@ -1,7 +1,7 @@
 ---
 title: Répertoire National des Associations
 tagline: Le registre public des associations
-is_open: true
+is_open: 1 # 1 means API is fully open
 clients:
   - citoyens
   - entreprises
@@ -21,7 +21,7 @@ themes:
 logo: logo-beta-gouv.svg
 rate_limiting_resume: 7 appels / seconde
 rate_limiting_description: |
-  <p>Actuellement, le nombre d’appels à l’API est limité à 7 appels par seconde</p>
+  Actuellement, le nombre d’appels à l’API est limité à 7 appels par seconde
 uptime: 100
 monitoring_link: https://status.entreprise.data.gouv.fr/
 monitoring_description: |

@@ -1,7 +1,7 @@
 ---
 title: Hub'Eau - Température des cours d'eau
 tagline: Température en continu dans les cours d'eau
-is_open: true
+is_open: 1 # 1 means API is fully open
 external_site: https://hubeau.eaufrance.fr/page/api-temperature-continu
 logo: 06-temperature_rivieres.png
 clients:

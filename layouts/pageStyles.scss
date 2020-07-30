@@ -95,6 +95,32 @@ a:not(.dont-apply-link-style):hover {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  &.vertical-margin {
+    margin: 10px auto;
+  }
+}
+.layout-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  &.vertical-margin {
+    margin: 10px auto;
+  }
+}
+.layout-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  &.vertical-margin {
+    margin: 10px auto;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .content-container {
