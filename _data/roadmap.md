@@ -53,6 +53,9 @@
       what: BDM
       path: /les-api/api_bdm
     - type: ADD_API
+      what: Répertoire National du Commerce et des Sociétés
+      path: /les-api/api_inpi
+    - type: ADD_API
       what: Professionnels RGE
       path: /les-api/api_professionnels_rge
     - type: ADD_API
