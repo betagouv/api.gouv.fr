@@ -26,8 +26,7 @@ access_page:
     description: |
       Seuls les établissements de soins et les organismes complémentaires en santé peuvent accèder à cette API.
 
-
-      <Button href="/rechercher-api">Retourner à la page de recherche</Button>
+      <Button href="/rechercher-api">Rechercher une autre API</Button>
 logo: cnam.jpg
 stat:
   lastXdays: 30

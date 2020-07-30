@@ -11,7 +11,6 @@ keywords:
   - DPE
   - diagnostics de performance énergétique
   - Professionnels
-  - SIRET
   - Adresse
   - ADEME
 rate_limiting_resume: 10 appels / seconde / IP

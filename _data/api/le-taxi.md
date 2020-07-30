@@ -21,7 +21,7 @@ access_page:
     description: |
       Seuls les opérateurs de taxi ou éditeurs d’application peuvent demander un accès à l’API.
 
-      <Button href="/rechercher-api">Retourner à la page de recherche</Button>
+      <Button href="/rechercher-api">Rechercher une autre API</Button>
 clients:
   - collectivités
   - entreprises

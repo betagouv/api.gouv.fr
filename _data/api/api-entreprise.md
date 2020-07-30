@@ -13,7 +13,7 @@ access_page:
     description: |
       Seules les administrations et certaines sociétés sont habilitées à utiliser API Entreprise.
 
-      <Button href="/rechercher-api">Retourner à la page de recherche</Button>
+      <Button href="/rechercher-api">Rechercher une autre API</Button>
   - who:
       - Une collectivité ou une administration
     is_eligible: 1
