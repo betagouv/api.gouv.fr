@@ -92,7 +92,7 @@ const API: React.FC<IProps> = ({ api, services = null }) => {
               uptime={uptime}
             />
             <TechnicalDocumentation
-              doc_link={doc_tech_link}
+              swagger_link={doc_tech_link}
               external_link={doc_tech_external}
               slug={slug}
             />

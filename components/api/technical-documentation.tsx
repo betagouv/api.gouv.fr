@@ -4,20 +4,20 @@ import { ButtonLink } from '../../uiComponents/button';
 import SubSection from './subSection';
 
 interface IProps {
-  doc_link?: string;
+  swagger_link?: string;
   external_link?: string;
   slug: string;
 }
 
 const TechnicalDocumentation: React.FC<IProps> = ({
-  doc_link,
+  swagger_link,
   external_link,
   slug,
 }) => {
-  const link = external_link ? external_link : `/documentation/${slug}`;
+  const link = swagger_link ? `/documentation/${slug}` : external_link;
   return (
     <SubSection title="Documentation technique">
-      {doc_link || external_link ? (
+      {link ? (
         <>
           <div>
             Vous êtes développeur ou architecte ? Partagez la documentation avec
