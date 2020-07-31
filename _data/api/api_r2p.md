@@ -92,6 +92,6 @@ L'API R2P propose 3 modes d'interrogation :
 | état civil dégradé et éléments d'adresse | les nom et prénom doivent alors être impérativement renseignés, de même que les éléments suivants : code pays, code département, et code commune de l'adresse. Les autres éléments d'état civil (date et lieu de naissance) et les autres éléments d'adresse (libellé voie, numéro de voirie et indice de répétition) peuvent être renseignés de manière facultative |
 | SPI                                      | identifiant fiscal ou "numéro SPI"                                                                                                                                                                                                                                                                                                                                   |
 
-L'API R2P ne permet de restituer qu'une personne (la possibilité de choisir entre plusieurs personnes ayant un état civil similaire ou approchant dans une liste n'est pas offerte).
+L'API R2P ne permet de restituer qu'une personne.
 
 Des messages d'erreur spécifiques sont restitués lorsque les éléments saisis peuvent correspondre à plusieurs personnes, lorsqu'aucune personne n'est trouvée, lorsque des éléments devant obligatoirement être saisis en entrée sont absents, ou lorsque le format des éléments saisis est erroné.
