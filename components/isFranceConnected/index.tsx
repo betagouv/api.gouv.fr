@@ -7,23 +7,6 @@ interface IPropsFC {
   notFcLink: string;
 }
 
-const FcSellingPoints = () => (
-  <div>
-    <div>Ajouter un bouton FranceConnect sur votre service permet :</div>
-    <ul>
-      <li>
-        de simplifier le parcours des usagers qui peuvent utiliser le même
-        identifiant partout
-      </li>
-      <li>
-        de sécuriser votre service car FranceConnect gère la réconciliation des
-        identités pour vous
-      </li>
-      <li>de réduire la fraude grace à l'identification unique des citoyens</li>
-    </ul>
-  </div>
-);
-
 const yesNoOptions = [
   { label: 'Oui', value: true },
   { label: 'Non', value: false },
