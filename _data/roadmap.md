@@ -69,6 +69,9 @@
       path: /les-api/api_base_carbone
   8:
     - type: ADD_API
+      what: Données ouvertes - data.gouv.fr
+      path: https://doc.data.gouv.fr/api/intro/
+    - type: ADD_API
       what: Données Ouvertes Loire-Atlantique
     - type: ADD_API
       what: CartoBio produite par l'Agence BIO
