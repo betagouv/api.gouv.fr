@@ -13,8 +13,9 @@ import Page from '../../../layouts';
 
 import { HEADER_PAGE } from '../../../components';
 
-import { MultiChoice } from '../../../uiComponents';
+import { MultiChoice, ButtonLink } from '../../../uiComponents';
 import Loader from '../../../uiComponents/loader';
+import { logDemanderAcces } from '../../../utils/client/analytics';
 
 interface IAccessConditionOption extends IAccessCondition {
   label: string;
@@ -25,6 +26,10 @@ interface IProps {
   title: string;
   slug: string;
   accessConditionOptions: IAccessConditionOption[];
+  access_link?: string;
+  access_description?: string;
+  access_condition?: string;
+  clients?: string[];
 }
 
 const IsEligible: React.FC<{ isEligible: ELIGIBLE }> = ({ isEligible }) => {
@@ -64,6 +69,10 @@ const AccessCondition: React.FC<IProps> = ({
   title,
   slug,
   accessConditionOptions,
+  access_link,
+  access_description,
+  access_condition,
+  clients,
 }) => {
   const [visitorType, setVisitorType] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -80,7 +89,7 @@ const AccessCondition: React.FC<IProps> = ({
       headerKey={HEADER_PAGE.APIS}
       title={`Demande d’accès ${title}`}
       description={`${title} est une des APIs du service public. Découvrez ses conditions d’accès.`}
-      canonical={`https://api.gouv.fr/les-api/${slug}/etes-vous-eligible`}
+      canonical={`https://api.gouv.fr/les-api/${slug}/demande-acces`}
       noIndex={true}
       usePreFooter={false}
     >
@@ -98,31 +107,67 @@ const AccessCondition: React.FC<IProps> = ({
           </span>{' '}
           L’accès aux données de {title} nécessite une habilitation.
         </p>
-        <p>
-          Vérifions si vous êtes <b>éligible</b>. Qui êtes-vous :
-        </p>
-        <MultiChoice
-          multiChoiceOptions={accessConditionOptions}
-          onClick={updateVisitorType}
-          selected={visitorType}
-        />
-        <div className="condition-details">
-          {isLoading && <Loader />}
-          {!isLoading &&
-            accessConditionOptions.map(condition => (
-              <React.Fragment key={condition.description}>
-                {condition.value === visitorType && (
-                  <>
-                    <h3>
-                      <IsEligible isEligible={condition.is_eligible} />
-                    </h3>
-                    <RichReactMarkdown source={condition.description} />
-                  </>
-                )}
-              </React.Fragment>
-            ))}
-        </div>
+        {accessConditionOptions ? (
+          <>
+            <p>
+              Vérifions si vous êtes <b>éligible</b>. Qui êtes-vous :
+            </p>
+            <MultiChoice
+              multiChoiceOptions={accessConditionOptions}
+              onClick={updateVisitorType}
+              selected={visitorType}
+            />
+            <div className="condition-details">
+              {isLoading ? (
+                <Loader />
+              ) : (
+                accessConditionOptions.map(condition => (
+                  <React.Fragment key={condition.description}>
+                    {condition.value === visitorType && (
+                      <>
+                        <h3>
+                          <IsEligible isEligible={condition.is_eligible} />
+                        </h3>
+                        <RichReactMarkdown source={condition.description} />
+                      </>
+                    )}
+                  </React.Fragment>
+                ))
+              )}
+            </div>
+          </>
+        ) : (
+          <div className="highlight-info">
+            {access_description && (
+              <div dangerouslySetInnerHTML={{ __html: access_description }} />
+            )}
+
+            {access_condition && access_condition === 'OUVERT sous contrat' ? (
+              <div>
+                <p>
+                  L’API nécessite une habilitation, son accès est restreint aux
+                  entités suivantes :
+                </p>
+                <ul>
+                  {clients &&
+                    clients.map(client => (
+                      <li
+                        key={client}
+                        dangerouslySetInnerHTML={{ __html: client }}
+                      />
+                    ))}
+                </ul>
+              </div>
+            ) : (
+              <p>{access_condition}</p>
+            )}
+            <ButtonLink href={access_link} onClick={logDemanderAcces} large>
+              <i className="icon key"></i>Demandez l'accès
+            </ButtonLink>
+          </div>
+        )}
       </div>
+
       <style jsx>{`
         .condition-details {
           margin: 50px 0 150px;
@@ -141,7 +186,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths: apis
-      .filter(api => !!api.access_page)
+      .filter(api => api.is_open === -1)
       .map(api => {
         return {
           params: {
@@ -159,6 +204,22 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   //@ts-ignore
   const api = await getAPI(slug);
+
+  if (!api.access_page) {
+    const { access_link, access_description, access_condition, clients } = api;
+
+    return {
+      props: {
+        title: api.title,
+        slug: api.slug,
+        access_link: access_link || null,
+        access_description: access_description || null,
+        access_condition: access_condition || null,
+        clients: clients || [],
+      },
+    };
+  }
+
   const accessConditionOptions = api.access_page.reduce(
     (
       accumulator: IAccessConditionOption[],

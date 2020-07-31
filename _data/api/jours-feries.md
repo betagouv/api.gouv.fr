@@ -4,7 +4,7 @@ tagline: Obtenir les dates des jours fériés en France
 category: Public
 owner: Direction interministérielle du numérique
 owner_acronym: DINUM
-is_open: true
+is_open: 1 # 1 means API is fully open
 keywords:
   - calendrier
   - code travail
@@ -24,14 +24,18 @@ dans le code du travail, pour différentes zones constituant la France.
 Retrouvez des informations complémentaires sur [service-public.fr](https://www.service-public.fr/particuliers/vosdroits/F2405).
 
 ### Outils complémentaires
+
 Vous pouvez utiliser des outils à votre disposititon pour d'autres besoins :
+
 - [La librairie Python](https://github.com/etalab/jours-feries-france) utilisée pour générer les exports de données ;
 - [Des exports de données](https://www.data.gouv.fr/fr/datasets/jours-feries-en-france/) aux formats CSV, JSON et ICS.
 
 ### Sources
+
 La liste des jours fériés est définie dans le code du travail.
 
 Certaines commémorations locales ou professionnelles sont également des jours fériés, parmi lesquelles :
+
 - Saint-Éloi (reconnu jour férié par certaines conventions collectives dans la métallurgie) ;
 - Sainte-Barbe (pour les salariés travaillant dans les mines) ;
 - Mi-carême dans certains DOM.

@@ -1,11 +1,9 @@
 ---
 title: API Particulier
-tagline: Pour accélérer l’ouverture des données personnelles et leur réutilisation, automatisez vos demandes de pièces justificatives
+tagline: Accédez aux données fiscales (DGFIP) et familiales (CAF) pour simplifier des démarches administratives
 external_site: https://particulier.api.gouv.fr
-is_open: false
+is_open: -1 # -1 means API not open
 access_link: /les-api/api-particulier/demande-acces
-access_description: |
-  Cette API nécessite une habilitation :
 access_page:
   - who:
       - Un particulier ou une entreprise
@@ -13,7 +11,7 @@ access_page:
     description: |
       Seules les administrations sont habilitées à utiliser API Particulier.
 
-      <Button href="/rechercher-api">Retourner à la page de recherche</Button>
+      <Button href="/rechercher-api">Rechercher une autre API</Button>
   - who:
       - Une collectivité ou une administration
     is_eligible: 1
@@ -53,10 +51,10 @@ keywords:
   - Signup
 rate_limiting_resume: 20 appels / seconde / jeton
 rate_limiting_description: |
-  <p>L'API est disponible à hauteur de 20 appels par secondes et par jetons d'accès.</p>
+  L'API est disponible à hauteur de 20 appels par secondes et par jetons d'accès.
 monitoring_link: https://status.particulier.api.gouv.fr
 monitoring_description: |
-  <p>La DINUM s’engage à ce que le Service soit accessible à 95% et la DINUM s’engage à améliorer progressivement ce rendement.</p>
+  La DINUM s’engage à ce que le Service soit accessible à 95% et la DINUM s’engage à améliorer progressivement ce rendement.
 contact_link: contact@particulier.api.gouv.fr
 doc_tech_link: https://particulier.api.gouv.fr/documentation-open-api.yaml
 themes:
@@ -66,41 +64,40 @@ uptime: 99.992 # https://uptimerobot.com/dashboard#777746216 * https://uptimerob
 last_update: 10/12/2019
 ---
 
-API Particulier simplifie les démarches des usagers en permettant l’échange d’informations les concernant d’une administration à une autre.
+API Particulier facilite l'accès des administrations aux données fiscales (DGFIP) et familiales (CAF) d'un citoyen, pour simplifier les démarches administratives mises en oeuvre par les collectivités et les administrations.
 
-Pour les administrations, des informations certifiées à la source :
+### A quoi sert l’API Particulier ?
 
-- Affranchissez-vous des pièces justificatives
-- Réduisez le nombre d’erreurs de saisie
-- Écartez le risque de fraude documentaire
+Permet aux administrations d'accéder à des informations **certifiées à la source** et ainsi :
 
-Pour l’usager, une démarche 100% dématérialisée :
+- de s’affranchir des pièces justificatives lors des démarches en ligne
+- de réduire le nombre d’erreurs de saisie
+- d'écarter le risque de fraude documentaire
+
+Du point de vue de l’usager, une démarche qui utilise API Particulier ressemble à ça :
 
 1. Je me connecte sur le site de ma commune pour réaliser une démarche.
 2. En lieu de justificatif de revenu, je saisis mon numéro fiscal et mon numéro d’avis d’imposition.
 3. Ma commune récupère immédiatement mon revenu fiscal de référence et je n’ai plus rien à faire !
 
-### Informations issues de la DGFiP
+### Données accessibles dans l'API
 
-- Déclarants du foyer fiscal - Le foyer fiscal se compose du contribuable lui-même, du conjoint ou partenaire de Pacs
-- Adresse connue au 1er janvier de l’année d’imposition (exemple au 1er janvier 2018 pour les revenus de 2017)
-- Nombre de parts
-- Revenu fiscal de référence
-- Nombre de personnes à charge
-- Situation familiale
-- Montant des impots
-- Revenu net avant correction
-- Revenu imposable
-- Revenu brut global
-- Date de mise en recouvrement de l’avis d’impôt
-- Date d'établissement
+| Nom                   | Description                                                                            | Origine des données |
+| --------------------- | -------------------------------------------------------------------------------------- | ------------------- |
+| RFR                   | Le revenu fiscal de référence (RFR) de l'année en court et le nombre de parts du foyer | DGFIP               |
+| Avis d’imposition     | Montant d'impot, revenu brut, net, imposable, date de recouvrement et d'établissement  | DGFIP               |
+| Déclarants            | les nom, prénoms, date de naissance des déclarants du foyer fiscal                     | DGFIP               |
+| Adresse fiscale       | l'adresse fiscale structurée ainsi que les coordonnées GPS                             | DGFIP               |
+| Quotient familial     | le quotient familial (QF) du mois précédent pour la famille                            | CAF                 |
+| Composition familiale | liste des parents et des enfants de la famille (avec nom, prénoms, date de naissance)  | CAF                 |
+| Adresse               | l'adresse structurée détenue par la CAF                                                | CAF                 |
 
-NB: seules les données des deux dernières années sont disponibles. Par exemple en 2019, il n'est pas possible d'obtenir de données sur l'année 2017.
+Pour plus d’informations techniques sur la structuration des données, vous pouvez <External href='/documentation/api-particulier'>consulter la documentation technique</External>
 
-### Informations issues de la CAF
+### Précisions sur les données fiscales (DFIP)
 
-- Liste des allocataires
-- Liste des enfants
-- Adresse au format de la poste
-- Valeur du quotient familial
-- Année et mois du quotient familial
+Seules les données des deux dernières années sont disponibles. Par exemple en 2019, il n'est pas possible d'obtenir de données sur l'année 2017.
+
+Les déclarants du foyer fiscal sont la(le) contribuable elle(lui)-même et le(la) conjoint(e) ou partenaire de Pacs.
+
+L’Adresse est celle connue au 1er janvier de l’année d’imposition (exemple au 1er janvier 2018 pour les revenus de 2017)

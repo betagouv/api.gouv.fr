@@ -4,11 +4,11 @@ tagline: L'accès simplifié aux données de cadastre
 external_site: https://apicarto.ign.fr
 owner: Institut national de l’information géographique et forestière
 owner_acronym: IGN
-is_open: false
+is_open: -1 # -1 means API not open
 access_condition: OUVERT (sous contrat pour certaines données)
 access_link: http://professionnels.ign.fr/
 access_description: |
-  <p>Vous devez demander une clé Géoportail pour accèder aux données. Lors de votre demande de clé, vous devez commander les flux “Ressources WFS Géoportail - BD PARCELLAIRE®” ci-dessous:</p>
+  <p>Vous devez demander une clé Géoportail pour accéder aux données. Lors de votre demande de clé, vous devez commander les flux “Ressources WFS Géoportail - BD PARCELLAIRE®” ci-dessous:</p>
   <ul><li>bdpv_COMMUNE</li>
   <li>bdpv_DIVCAD</li>
   <li>bdpv_LOCALISANT</li>
@@ -43,7 +43,7 @@ visits_2019: 2840
 last_update: 19/05/2020
 rate_limiting_resume: 2M appels / an / jeton
 rate_limiting_description: |
-  <p>Pour les usages grand public, l'utilisation est gratuite dans la limite de 2M requêtes par an (10 000 pour un usage professionnel).</p>
+  Pour les usages grand public, l'utilisation est gratuite dans la limite de 2M requêtes par an (10 000 pour un usage professionnel).
 ---
 
 L'API Carto - module cadastre permet d'obtenir les les informations suivantes issues de la BD PARCELLAIRE :

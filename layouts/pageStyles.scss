@@ -95,6 +95,32 @@ a:not(.dont-apply-link-style):hover {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  &.vertical-margin {
+    margin: 10px auto;
+  }
+}
+.layout-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  &.vertical-margin {
+    margin: 10px auto;
+  }
+}
+.layout-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  &.vertical-margin {
+    margin: 10px auto;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .content-container {
@@ -145,19 +171,23 @@ a:not(.dont-apply-link-style):hover {
   table {
     border-collapse: collapse;
     text-align: left;
+    color: #081d35;
 
     width: 100%;
 
     tr td,
     th {
-      padding: 5px 10px;
-      border-right: 2px solid $lightGrey;
-      border-left: 2px solid $lightGrey;
-      border-bottom: 2px solid $lightGrey;
+      padding: 5px;
+      border-right: 1px solid #c9d3df;
+      border-left: 1px solid #c9d3df;
+      border-bottom: 1px solid #c9d3df;
+      padding: 5px 8px;
     }
 
     thead {
-      background-color: $lightGrey;
+      background-color: #f4f7fb;
+      border-bottom: 3px double #c9d3df;
+      border-top: 1px solid #c9d3df;
     }
   }
 
@@ -206,6 +236,10 @@ a:not(.dont-apply-link-style):hover {
   ul {
     list-style-type: circle;
     margin-left: 20px;
+
+    li > p {
+      margin: 0;
+    }
   }
 
   pre {

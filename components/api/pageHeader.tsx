@@ -2,143 +2,85 @@ import React from 'react';
 
 import constants from '../../constants';
 
-interface ITitleProps {
-  title: string;
-  logo: string;
-}
-
-const Title: React.FC<ITitleProps> = ({ title, logo }) => (
-  <>
-    <div className="title">
-      <span className="layout-center">
-        <img
-          src={`/images/api-logo/${logo}`}
-          alt={title}
-          className="ui image"
-        />
-      </span>
-      <h1>{title}</h1>
-    </div>
-    <style jsx>{`
-      .title {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 1rem;
-        flex-shrink: 0;
-      }
-
-      .title span {
-        flex-shrink: 0;
-        border-radius: 100%;
-        width: 48px;
-        height: 48px;
-        background-color: #fff;
-        overflow: hidden;
-      }
-      .title span > img {
-        width: 100%;
-      }
-
-      .title h1 {
-        margin: 30px 0.5rem 15px;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 32px;
-        line-height: 43px;
-        text-align: center;
-        color: #fff;
-      }
-
-      @media only screen and (min-width: 1px) and (max-width: 600px) {
-        .title {
-          flex-shrink: 1;
-          max-width: 100%;
-          flex-direction: column;
-        }
-
-        .title h1 {
-          word-wrap: break-word;
-          max-width: 100%;
-        }
-
-        .title span {
-          flex-shrink: 0;
-        }
-      }
-    `}</style>
-  </>
-);
-
-interface ITaglineProps {
-  tagline: string;
-}
-
-const Tagline: React.FC<ITaglineProps> = ({ tagline }) => (
-  <>
-    <h2 className="tagline">{tagline}</h2>
-    <style jsx>{`
-      .tagline {
-        font-style: normal;
-        font-weight: bold;
-        font-size: 15px;
-        line-height: 20px;
-        text-align: center;
-        margin: 0 auto 15px;
-        color: #fff;
-      }
-
-      .inline {
-        padding: 0.5rem 0rem 0.5rem 1rem;
-        text-align: left;
-      }
-    `}</style>
-  </>
-);
-
 interface IProps {
   title: string;
   logo: string;
   tagline: string;
+  owner: string;
+  owner_acronym?: string;
 }
 
-const PageHeader: React.FC<IProps> = ({ title, logo, tagline }) => (
+const PageHeader: React.FC<IProps> = ({
+  title,
+  tagline,
+  owner,
+  owner_acronym,
+}) => (
   <section id="mission-statement">
-    <a href="/rechercher-api" className="back-button dont-apply-link-style">
-      ← Toutes les API
-    </a>
-    <div className="content-container content">
-      <Title title={title} logo={logo} />
-      <Tagline tagline={tagline} />
+    <div className="content-container">
+      <div className="breadcrumb">
+        <a href="/rechercher-api" className="dont-apply-link-style">
+          ⇠ Toutes les APIs
+        </a>
+      </div>
+      <div className="content">
+        <h1>{title}</h1>
+        <i>Producteur : {owner_acronym ? owner_acronym : owner}</i>
+        <h2 className="tagline">{tagline}</h2>
+      </div>
     </div>
 
     <style jsx>{`
       #mission-statement {
         background: ${constants.colors.backgroundBlueGradient};
         width: 100%;
-        position: relative;
+        color: #fff;
+        text-align: left;
       }
 
       .content {
+        margin: 0;
         padding: 5px 0 15px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        max-width: 700px;
       }
 
-      .back-button {
-        position: absolute;
-        top: 20px;
-        color: #fff;
-        left: 20px;
+      .breadcrumb {
+        padding-top: 25px;
       }
-      .back-button:hover {
+      .breadcrumb a {
+        margin-top: 25px;
+        color: #fff;
+      }
+      .breadcrumb:hover {
         text-decoration: underline;
       }
+
+      h1 {
+        margin: 10px 0 0;
+        font-style: normal;
+        font-weight: bold;
+        color: #fff;
+      }
+
+      h1 span {
+        font-weight: 400;
+      }
+
+      .tagline {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 17px;
+        line-height: 25px;
+        margin: 15px 0 10px;
+        color: #fff;
+      }
+
       @media only screen and (min-width: 1px) and (max-width: 900px) {
-        .content-container {
-          padding-top: 35px;
+        .content {
+          padding: 0 0 10px;
+        }
+        .breadcrumb {
+          padding-top: 10px;
         }
       }
     `}</style>

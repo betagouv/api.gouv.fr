@@ -3,7 +3,7 @@ import { VISITOR } from './index';
 import { SUBJECT } from './explanations';
 import { Questions, Explanations } from './explanations';
 import { MultiChoice } from '../../uiComponents';
-import { logParcoursClient } from '../../service/analytics';
+import { logParcoursClient } from '../../utils/client/analytics';
 
 interface IProps {
   visitor: VISITOR;

@@ -4,7 +4,7 @@ tagline: "Faciliter et fiabiliser votre calcul de l'Indicateur de Fréquence de 
 owner: Ministère de l'Agriculture et de l'Alimentation
 owner_acronym: MAA
 category: public
-is_open: true
+is_open: 1 # 1 means API is fully open
 access_link: https://alim.agriculture.gouv.fr/ift/espace-partenaire
 logo: maa.jpg
 external_site: https://alim.agriculture.gouv.fr/ift/espace-partenaire

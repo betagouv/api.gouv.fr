@@ -4,6 +4,7 @@ import Markdown from 'markdown-to-jsx';
 import IsFranceConnected from '../isFranceConnected';
 
 import { ButtonLink, ExternalLink } from '../../uiComponents';
+import Quote from '../../uiComponents/quote';
 
 const CenteredCta: React.FC<PropsWithChildren<{ href: string }>> = props => (
   <div className="layout-center">
@@ -44,6 +45,7 @@ const RichReactMarkdown: React.FC<{ source: string }> = ({ source }) => (
         NextSteps: NextSteps,
         External: ExternalLink,
         IsFranceConnected: IsFranceConnected,
+        Quote: Quote,
       },
     }}
   />

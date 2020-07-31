@@ -1,7 +1,7 @@
 ---
 title: API Géo
 tagline: Interrogez les référentiels géographiques plus facilement
-is_open: true
+is_open: 1 # 1 means API is fully open
 external_site: https://geo.api.gouv.fr
 clients:
   - collectivités
@@ -22,7 +22,7 @@ keywords:
   - EPCI
 rate_limiting_resume: 50 appels / seconde / IP
 rate_limiting_description: |
-  <p>L'API est disponible à hauteur de 50 appels par seconde et par adresse IP.</p>
+  L'API est disponible à hauteur de 50 appels par seconde et par adresse IP.
 themes:
   - Géographie
 stat:

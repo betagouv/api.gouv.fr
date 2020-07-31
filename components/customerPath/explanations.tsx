@@ -2,7 +2,7 @@ import React from 'react';
 
 import { ButtonLink } from '../../uiComponents';
 import { VISITOR } from './contactForm';
-import { logParcoursClient } from '../../service/analytics';
+import { logParcoursClient } from '../../utils/client/analytics';
 
 import { ContactForm } from './index';
 
@@ -176,7 +176,7 @@ const Explanations: React.FC<IProps> = ({ subject, visitorType }) => {
               href="https://franceconnect.gouv.fr/faq"
               onClick={logClic}
             >
-              Accèder à la page d’aide FranceConnect
+              Accéder à la page d’aide France Connect
             </ButtonLink>
           </div>
         </div>
@@ -258,7 +258,7 @@ const Explanations: React.FC<IProps> = ({ subject, visitorType }) => {
               onClick={logClic}
               href="https://permisdeconduire.ants.gouv.fr/Vos-demarches/Le-permis-a-points/Solde-de-vos-points-via-une-identite-France-Connect"
             >
-              Accèder au site télépoint
+              Accéder au site télépoint
             </ButtonLink>
           </div>
         </div>
