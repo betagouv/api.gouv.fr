@@ -29,7 +29,7 @@ doc_tech_external: https://doc.data.gouv.fr/api/intro/
 last_update: 31/07/2020
 ---
 
-Le site <External href="data.gouv.fr">Data.gouv.fr</External> est la plateforme de diffusion de données publiques de l'État français. Cette API permet d’accèder aux différents éléments affichés sur le site internet.
+Le site <External href="data.gouv.fr">data.gouv.fr</External> est la plateforme de diffusion de données publiques de l'État français. Cette API permet d’accèder aux différents éléments affichés sur le site internet.
 
 ### À quoi ça sert ?
 
