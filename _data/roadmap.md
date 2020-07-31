@@ -69,11 +69,12 @@
       path: /les-api/api_base_carbone
   8:
     - type: ADD_API
+      what: R2P - Référentiel des personnes physiques
+      path: /les-api/api_r2p
+    - type: ADD_API
       what: Données Ouvertes Loire-Atlantique
     - type: ADD_API
       what: CartoBio produite par l'Agence BIO
-    - type: ADD_API
-      what: R2P produite par la DGFIP
   9:
     - type: ADD_API
       what: Registre National du Commerce et des Sociétés
