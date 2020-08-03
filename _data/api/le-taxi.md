@@ -33,6 +33,7 @@ partners:
   - Tako
   - Taxiloc
   - Taxis Rennais
+  - Signup
 owner: Direction interministérielle du numérique & Direction générale des Infrastructures, des Transports et de la Mer
 owner_acronym: DINUM & DGITM
 keywords:
