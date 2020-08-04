@@ -9,26 +9,37 @@ access_link: /les-api/impot-particulier/demande-acces
 access_page:
   - who:
       - Un particulier
+      - Une entreprise
     is_eligible: -1
     description: |
-      Vous n’êtes pas autorisé à accéder aux données de l’API Impôt particulier.
+      Vous n’êtes pas autorisé à accéder aux données de l’API R2P - Recherche des personnes physiques.
 
       <Button href="/rechercher-api">Retourner à la page de recherche</Button>
   - who:
       - Une collectivité
       - Une administration
       - Un ministère
-      - Une entreprise
-      - Un éditeur de logiciel
     is_eligible: 0
     description: |
-      L'API R2P restituant des éléments sensibles (état civil, adresse, identifiant fiscal), elle est couverte par la règle du secret professionnel prévue par les dispositions de l’article L. 103 du Livre des Procédures Fiscales, car ceux-ci constituent des données nominatives et personnelles.
+      L'API R2P restituant des éléments sensibles (état civil, adresse, identifiant fiscal), elle est couverte par la règle du secret professionnel prévue par les dispositions de l’article <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367308&dateTexte=&categorieLien=cid">l'article L100-3</External> du Livre des Procédures Fiscales, car ceux-ci constituent des données nominatives et personnelles.
 
       Il ne peut être dérogé au secret professionnel que par une disposition législative spécifique. En conséquence, les informations restituées par l'API R2P ne peuvent être communiquées qu’aux personnes, organismes ou autorités bénéficiant d’une telle mesure et dans la limite fixée par la loi.
 
-      Pour obtenir un agrément, vous devez **justifier du cadre juridique** dans lequel s’inscrit votre demande, et vous engager à n'accéder aux données personnelles qu'avec **l'accord explicite** de l'usager.
+      Pour obtenir un agrément, vous devez **justifier du cadre juridique** dans lequel s’inscrit votre demande.
 
-      <NextSteps />
+      <NextSteps service_description="de la description du cas d’utilisation" />
+      <Button href="https://signup.api.gouv.fr/api-r2p-sandbox">Remplir une demande</Button>
+  - who:
+      - Un éditeur de logiciel
+    is_eligible: 0
+    description: |
+      L'API R2P restituant des éléments sensibles (état civil, adresse, identifiant fiscal), elle est couverte par la règle du secret professionnel prévue par les dispositions de l’article <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367308&dateTexte=&categorieLien=cid">l'article L100-3</External> du Livre des Procédures Fiscales, car ceux-ci constituent des données nominatives et personnelles.
+
+      Il ne peut être dérogé au secret professionnel que par une disposition législative spécifique. En conséquence, les informations restituées par l'API R2P ne peuvent être communiquées qu’aux personnes, organismes ou autorités bénéficiant d’une telle mesure et dans la limite fixée par la loi.
+
+      Pour obtenir un agrément, vous devez **justifier du cadre juridique** dans lequel s’inscrit votre demande.
+
+      <NextSteps service_description="de la description du cas d’utilisation" is_editeur={true}/>
       <Button href="https://signup.api.gouv.fr/api-r2p-sandbox">Remplir une demande</Button>
   - who:
       - Une banque
@@ -38,7 +49,9 @@ access_page:
 
       Si vous entrez dans ce cadre, vous pouvez effectuer une demande d'accès à l’API R2P.
 
-      <NextSteps />
+      En remplissant cette demande, vous allez au passage effectuer une demande à l'API Impôt Particulier, dont les données sont nécessaires à la vérification de l'éligibilité au LEP.
+
+      <NextSteps service_description="de la description du cas d’utilisation"/>
       <Button href="https://signup.api.gouv.fr/api-r2p-sandbox">Remplir une demande</Button>
 keywords:
   - Recherche
@@ -50,6 +63,7 @@ keywords:
   - SPI
   - fiscal
   - identifiant
+  - Signup
 rate_limiting_resume: 1000 appels/minute
 rate_limiting_description: |
   L’API Manager de la DGFiP délivre un quota de consultation pour chacun de ses partenaires pour chaque API utilisée. Concernant l'API R2P le quota par partenaire est fixé à 1 000 appels à la minute.

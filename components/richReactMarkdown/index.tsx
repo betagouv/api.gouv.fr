@@ -12,7 +12,7 @@ const CenteredCta: React.FC<PropsWithChildren<{ href: string }>> = props => (
   </div>
 );
 
-const NextSteps = ({ is_editeur = false }) => (
+const NextSteps = ({ service_description = null, is_editeur = false }) => (
   <>
     <p>
       <b>Pour remplir votre demande, vous aurez besoin de : </b>
@@ -21,8 +21,9 @@ const NextSteps = ({ is_editeur = false }) => (
       <li>de votre numéro SIRET</li>
       <li>du cadre juridique</li>
       <li>
-        de la description du service justifiant une simplication pour les
-        citoyens
+        {service_description ||
+          `de la description du service justifiant une simplication pour les
+        citoyens`}
       </li>
       <li>des coordonnées de l'équipe</li>
       <li>
