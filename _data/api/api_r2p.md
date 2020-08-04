@@ -52,9 +52,9 @@ keywords:
   - identifiant
 rate_limiting_resume: 1000 appels/minute
 rate_limiting_description: |
-  L’API Manager de la DGFiP délivre un quota de consultation pour chacun de ses partenaires pour chaque API utilisée. Concernant l'API R2P le quotta par partenaire est fixé à 1 000 appels à la minute.
+  L’API Manager de la DGFiP délivre un quota de consultation pour chacun de ses partenaires pour chaque API utilisée. Concernant l'API R2P le quota par partenaire est fixé à 1 000 appels à la minute.
 monitoring_description: |
-  <p>La DGFIP s’engage à ce que le service soit accessible à plus de 98,5% et à communiquer sur les coupures de service ponctuelles qui pourraient survenir.</p>
+  La DGFIP s’engage à ce que le service soit accessible à plus de 98,5% et à communiquer sur les coupures de service ponctuelles qui pourraient survenir.
 themes:
   - Particulier
 contact_link: bureau.capusagers-apimanagement@dgfip.finances.gouv.fr
