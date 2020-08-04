@@ -1,5 +1,5 @@
 ---
-title: API R2P - Référentiel des personnes physiques
+title: API R2P - Recherche des personnes physiques
 logo: logo-dgfip.jpg
 tagline: Récupérez les données connues par l’administration fiscale (DGFIP) sur une personne physique (état civil, adresse, identifiant fiscal)
 owner: Direction Générale des Finances Publiques
@@ -41,7 +41,7 @@ access_page:
       <NextSteps />
       <Button href="https://signup.api.gouv.fr/api-r2p-sandbox">Remplir une demande</Button>
 keywords:
-  - Référentiel
+  - Recherche
   - Personnes
   - physiques
   - Adresse
@@ -63,7 +63,7 @@ last_update: 31/07/2020
 
 L'API R2P permet aux administrations et aux acteurs privés qui sont éligibles d'obtenir les données personnelles d'un citoyen afin de les intégrer à leur Système d’Information (selon le cas d'usage : état civil complet, dernière adresse connue de l’administration fiscale (DGFIP) et identifiant fiscal ou SPI).
 
-### A quoi sert l’API R2P - Référentiel des personnes physiques
+### A quoi sert l’API R2P - Recherche des personnes physiques ?
 
 Exemples de cas d'utilisation :
 
@@ -86,12 +86,12 @@ Cette API fait appel aux différents référentiels nationaux de la DGFiP afin d
 
 L'API R2P propose 3 modes d'interrogation :
 
-| Mode d'intérrogation                     | Détail                                                                                                                                                                                                                                                                                                                                                               |
+| Mode d'interrogation                     | Détail                                                                                                                                                                                                                                                                                                                                                               |
 | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | état civil complet                       | nom, prénom, date et lieu de naissance                                                                                                                                                                                                                                                                                                                               |
 | état civil dégradé et éléments d'adresse | les nom et prénom doivent alors être impérativement renseignés, de même que les éléments suivants : code pays, code département, et code commune de l'adresse. Les autres éléments d'état civil (date et lieu de naissance) et les autres éléments d'adresse (libellé voie, numéro de voirie et indice de répétition) peuvent être renseignés de manière facultative |
 | SPI                                      | identifiant fiscal ou "numéro SPI"                                                                                                                                                                                                                                                                                                                                   |
 
-L'API R2P ne permet de restituer qu'une personne.
+L'API R2P ne restitue qu'une seule personne.
 
 Des messages d'erreur spécifiques sont restitués lorsque les éléments saisis peuvent correspondre à plusieurs personnes, lorsqu'aucune personne n'est trouvée, lorsque des éléments devant obligatoirement être saisis en entrée sont absents, ou lorsque le format des éléments saisis est erroné.
