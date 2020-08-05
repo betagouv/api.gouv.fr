@@ -70,13 +70,13 @@
   8:
     - type: ADD_API
       what: Données ouvertes - data.gouv.fr
-      path: https://doc.data.gouv.fr/api/intro/
+      path: /les-api/api_data_gouv
+    - type: ADD_API
+      what: R2P produite par la DGFIP
     - type: ADD_API
       what: Données Ouvertes Loire-Atlantique
     - type: ADD_API
       what: CartoBio produite par l'Agence BIO
-    - type: ADD_API
-      what: R2P produite par la DGFIP
   9:
     - type: ADD_API
       what: Registre National du Commerce et des Sociétés
