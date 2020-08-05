@@ -41,18 +41,15 @@ access_page:
 
       <NextSteps service_description="de la description du cas d’utilisation" is_editeur={true}/>
       <Button href="https://signup.api.gouv.fr/api-r2p-sandbox">Remplir une demande</Button>
-  - who:
-      - Une banque
-    is_eligible: 0
-    description: |
-      Dans le cadre de la vérification de l’éligibilité au <External href="https://www.service-public.fr/particuliers/vosdroits/F2367">LEP</External> les banques peuvent être considérées comme une administration au sens de <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367308&dateTexte=&categorieLien=cid">l'article L100-3</External> du *code des relations entre le public et l'administration*.
-
-      Si vous entrez dans ce cadre, vous pouvez effectuer une demande d'accès à l’API R2P.
-
-      En remplissant cette demande, vous allez au passage effectuer une demande à l'API Impôt Particulier, dont les données sont nécessaires à la vérification de l'éligibilité au LEP.
-
-      <NextSteps service_description="de la description du cas d’utilisation"/>
-      <Button href="https://signup.api.gouv.fr/api-r2p-sandbox">Remplir une demande</Button>
+  # - who:
+  #     - Une banque
+  #   is_eligible: 0
+  #   description: |
+  #     Dans le cadre de la vérification de l’éligibilité au <External href="https://www.service-public.fr/particuliers/vosdroits/F2367">LEP</External> les banques peuvent être considérées comme une administration au sens de <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367308&dateTexte=&categorieLien=cid">l'article L100-3</External> du *code des relations entre le public et l'administration*.
+  #     Si vous entrez dans ce cadre, vous pouvez effectuer une demande d'accès à l’API R2P.
+  #     En remplissant cette demande, vous allez au passage effectuer une demande à l'API Impôt Particulier, dont les données sont nécessaires à la vérification de l'éligibilité au LEP.
+  #     <NextSteps service_description="de la description du cas d’utilisation"/>
+  #     <Button href="https://signup.api.gouv.fr/api-r2p-sandbox">Remplir une demande</Button>
 keywords:
   - Recherche
   - Personnes
