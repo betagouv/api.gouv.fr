@@ -47,7 +47,6 @@ export interface ISearchMatch {
   owner: number[][];
   owner_acronym: number[][];
   keywords: number[][];
-  description: number[][];
 }
 
 /**
@@ -89,7 +88,6 @@ export const computeSearchResults = (needles: string[]) => {
             ...matches.keywords,
             ...finder(api.keywords.join(', ') || ''),
           ],
-          description: [...matches.description, ...finder(api.body)],
         };
       },
       {
@@ -98,7 +96,6 @@ export const computeSearchResults = (needles: string[]) => {
         owner: [],
         owner_acronym: [],
         keywords: [],
-        description: [],
       }
     );
     // field can be boosted here
@@ -107,8 +104,7 @@ export const computeSearchResults = (needles: string[]) => {
       matches.tagline.length * 0.1 +
       matches.owner.length * 0.1 +
       matches.keywords.length * 0.1 +
-      matches.owner_acronym.length * 0.1 +
-      matches.description.length * 0.1;
+      matches.owner_acronym.length * 0.1;
 
     // merge matches
     matches.title = matches.title.reduce(mergeMatchesPosition, []);
