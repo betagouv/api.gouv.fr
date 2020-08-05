@@ -29,7 +29,7 @@ doc_tech_external: https://doc.data.gouv.fr/api/reference/
 last_update: 31/07/2020
 ---
 
-Le site <External href="data.gouv.fr">data.gouv.fr</External> est le catalogue des données publiques de l'administration. La plateforme permet le dépôt et le référencement de données issues de ministères comme de collectivités locales. Le catalogue contient également des références vers d'autres catalogues d'administration ayant leur propre portail.
+Le site <External href="https://data.gouv.fr">data.gouv.fr</External> est le catalogue des données publiques de l'administration. La plateforme permet le dépôt et le référencement de données issues de ministères comme de collectivités locales. Le catalogue contient également des références vers d'autres catalogues d'administration ayant leur propre portail.
 
 L'API permet de consulter les métadonnées ainsi que d'avoir un lien vers les données. Elle permet également aux producteurs de données d'automatiser la gestion de leurs fiches.
 
@@ -45,10 +45,10 @@ Intéragissez avec le catalogue data.gouv.fr :
 
 La liste non-exhaustive des données accessibles via cette API
 
-| Nom             | Description                                                                                                                                                                       |
-| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| jeux de données | Créer, modifier ou lire la fiche d'une jeu de donnée sur <External href="data.gouv.fr">data.gouv.fr</External>. Ajouter, supprimer ou modifier les ressources d'un jeu de données |
-| organisations   | Créer, modifier, lire la fiche d'une organistion. Rattacher des jeux de données et des réutilisations.                                                                            |
-| réutilisations  | Référencer une réutilisation et la rattacher à un ou plusieurs jeux de données.                                                                                                   |
+| Nom             | Description                                                                                                                                                                               |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| jeux de données | Créer, modifier ou lire la fiche d'une jeu de donnée sur <External href="https://data.gouv.fr">data.gouv.fr</External>. Ajouter, supprimer ou modifier les ressources d'un jeu de données |
+| organisations   | Créer, modifier, lire la fiche d'une organistion. Rattacher des jeux de données et des réutilisations.                                                                                    |
+| réutilisations  | Référencer une réutilisation et la rattacher à un ou plusieurs jeux de données.                                                                                                           |
 
 Pour plus d’informations techniques sur la structuration des données, vous pouvez <External href='/documentation/api_data_gouv'>consulter la documentation technique</External>
