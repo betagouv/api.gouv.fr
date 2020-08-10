@@ -81,6 +81,7 @@ const API: React.FC<IProps> = ({ api, services = null }) => {
             <Access
               is_open={is_open}
               slug={slug}
+              doc_swagger_link={doc_tech_link}
               doc_external_link={doc_tech_external}
               access_link={access_link}
             />
@@ -92,7 +93,7 @@ const API: React.FC<IProps> = ({ api, services = null }) => {
               uptime={uptime}
             />
             <TechnicalDocumentation
-              doc_link={doc_tech_link}
+              swagger_link={doc_tech_link}
               external_link={doc_tech_external}
               slug={slug}
             />

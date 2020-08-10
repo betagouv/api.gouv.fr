@@ -111,7 +111,7 @@ const Documentation: React.FC<IProps> = ({ api, allApis }) => {
                     .
                   </p>
                   <p>
-                    Vous pouvez néanmoins accèder à la documentation en suivant
+                    Vous pouvez néanmoins accéder à la documentation en suivant
                     ce lien :
                   </p>
                   <ButtonLink
