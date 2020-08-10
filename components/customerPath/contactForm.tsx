@@ -8,7 +8,7 @@ export enum VISITOR {
   ADMINISTRATION = 'Administration',
   EDITOR = 'Editeur',
   PARTICULIER = 'Particulier',
-  COLLECTIVITE = 'Collecitvité',
+  COLLECTIVITE = 'Collectivité',
   ENTREPRISE = 'Entreprise',
   ASSO = 'Association',
 }
