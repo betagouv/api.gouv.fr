@@ -1,13 +1,13 @@
 ---
-title: Portail Famille
-tagline: Petite enfance
+title: Petite enfance
+tagline: Dématérialiser l'inscription aux services de petite enfance 
 tags: cas usage, api particulier, portail-famille,  petite enfance
 noindex: true
 ---
 
-*Lien vers le PAD : [Portail famille](https://pad.incubateur.net/o6VvkPDdRX-BK37BgGVfNg?edit)- Tarification crèches, garderies : petite enfance*
+*Lien vers le PAD : [Portail famille](/guide/portail-famille)- Tarification crèches, garderies : petite enfance*
 
-## Vous êtes une mairie, vous souhaitez dématérialiser l'inscription à la crèche ? Votre objectif est de ne plus demander de justificatif aux jeunes ?
+## Vous êtes une mairie, vous souhaitez dématérialiser l'inscription à la crèche ?
 
 En utilisant notre brique API Particulier dans votre SI :
 - **Plus besoin de demander** un avis fiscal ou un quotient familial aux citoyens
@@ -19,21 +19,13 @@ En utilisant notre brique API Particulier dans votre SI :
 
 Différentes méthodes de calcul existent pour la tarification des services, ainsi, les données nécessaires dépendent des choix du service. 
 
-Voici les données de la CAF (composition familiale du foyer du demandeur) accessibles directement avec notre API : 
-
+Voici les données de la CAF (composition familiale du foyer du demandeur) et de la DGFIP (pour vérifier les conditions d'éligibilité d'une demande) accessibles directement avec notre API, ce sont les données les plus utilisées pour ce services, mais la liste ci-dessous n'est pas exhaustive : 
+ 
 | Donnée            | Commentaire                                              |
 | ----------------- | -------------------------------------------------------- |
-| Allocataire       | L'état-civil du demandeur (nom prénom date de naissance) |
-| Enfant(s)         | Le/La/Les enfant(s) (nom, prenom, date de naissance)     |
-| Adresse           | L'adresse du foyer                                       |
+| Adresse           | L'adresse du foyer  et/ou'adresse fiscale du demandeur   |
 | Quotient Familial | Le quotient familial calculé par la CAF                  |
-
-Voici les données de la DGFIP (pour vérifier les conditions d'éligibilité d'une demande) accessibles directement avec notre API :
-
-| Donnée            | Commentaire                                                                                  |
-| ----------------- | -------------------------------------------------------------------------------------------- |
 | Avis d'imposition | statut d’imposition, montant de l'impôt, revenu fiscal de référence, nombre de parts fiscales |
-| Adresse           | L'adresse fiscale du demandeur                                                                |
 
 
 ## Comment formuler une demande ?
