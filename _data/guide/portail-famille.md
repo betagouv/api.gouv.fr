@@ -11,12 +11,10 @@ Ce que nous appellons ici Le Portail Famille est un téléservice qui diffère e
 
 Voici quelques exemples d'activités qui ont été inclues dans des portails famille : 
 
-**Attention ici changer les liens (enlever ceux du PAD)
-
-- [Tarifications de la restauration scolaire](https://pad.incubateur.net/5n-u3K-4R1OP-0NiBs8JGg#)
-- [Tarification des activités périscolaires et municipales](https://pad.incubateur.net/cmySV79hRdSjj_wDKhWMzA?edit)
-- [Dématérialisation des inscriptions à la crèche, à la garderie ...](https://pad.incubateur.net/vRnC-L2aRaCpkBiwc3hozA?edit)
-- [Pass Famille](https://pad.incubateur.net/EcNEmOFiQMmUQjzUo389bA#)
+- [Tarifications de la restauration scolaire](/guide/portail-famille-tarif-restauration-scolaire)
+- [Tarification des activités périscolaires et municipales](/guide/portail-famille-tarif-activite-periscolaire)
+- [Dématérialisation des inscriptions à la crèche, à la garderie ...](/guide/portail-famille-petite-enfance)
+- [Pass Famille](/guide/portail-famille-pass-famille)
 
 L'une des principales utilisations de l'API Particulier s'inscrit dans la création d'un Portail Famille par les Communautés de Communes, par les mairies ou encore par les caisses des écoles.
 
