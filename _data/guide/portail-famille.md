@@ -1,11 +1,9 @@
 ---
-title: Cas d'usage 
-tagline: Portail Famille 
+title: Vous souhaitez développer un portail famille simplifiant les démarches pour vos concitoyens.
+tagline:  Vous cherchez à dématérialiser les calcul de tarification des activités gérées pas la ville ?
 tags: cas usage, api particulier, portail-famille
 noindex: true
 ---
-
-## Vous êtes une collectivité, vous souhaitez développer un portail famille simplifiant les démarches pour vos concitoyens ? Vous cherchez à dématérialiser les calcul de tarification des activités gérées pas la ville ? 
 
 Ce que nous appellons ici Le Portail Famille est un téléservice qui diffère en fonction des décisions prises par l'organisme en charge de son développement.
 
