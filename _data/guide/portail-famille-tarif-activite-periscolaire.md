@@ -1,12 +1,10 @@
 ---
-title: Portail Famille
-tagline: Activité périscolaires et municipales
+title: Activité périscolaires et municipales
+tagline: Vous êtes une mairie et vous voulez simplifier l'adhésion aux activités municipales et aux activités périscolaires ?
 tags: cas usage, api particulier, portail-famille, tarification activités prériscolaire, activités municipales
 noindex: true
 ---
-*Lien vers le PAD : [Portail famille](https://pad.incubateur.net/o6VvkPDdRX-BK37BgGVfNg?edit)- Tarification des activités périscolaires et municipales*
-
-## Vous êtes une commune, vous souhaitez dématérialiser l'inscription aux activités périscolaires ? Vous êtes une mairie et vous voulez simplifier l'adhésion aux activités municipales ?
+ [Portail famille](/guide/portail-famille)- Tarification des activités périscolaires et municipales
 
 En utilisant notre brique API Particulier dans votre SI :
 - **Plus besoin de demander** un avis fiscal ou un quotient familial aux citoyens
@@ -18,22 +16,13 @@ En utilisant notre brique API Particulier dans votre SI :
 
 Différentes méthodes de calcul existent pour définir le tarif des différentes activités, ainsi, les données nécessaires dépendent des choix du service. 
 
-Voici les données de la CAF (composition familiale du foyer du demandeur) accessibles directement avec notre API : 
+Voici les données de la CAF (composition familiale du foyer du demandeur) et de la DGFIP (pour vérifier les conditions d'éligibilité d'une demande) accessibles directement avec notre API: 
 
 | Donnée            | Commentaire                                              |
 | ----------------- | -------------------------------------------------------- |
-| Allocataire       | L'état-civil du demandeur (nom prénom date de naissance) |
-| Enfant(s)         | Le/La/Les enfant(s) (nom, prenom, date de naissance)     |
-| Adresse           | L'adresse du foyer                                       |
+| Adresse           | L'adresse du foyer  et/ou'adresse fiscale du demandeur   |
 | Quotient Familial | Le quotient familial calculé par la CAF                  |
-
-Voici les données de la DGFIP (pour vérifier les conditions d'éligibilité d'une demande) accessibles directement avec notre API :
-
-| Donnée            | Commentaire                                                                                  |
-| ----------------- | -------------------------------------------------------------------------------------------- |
 | Avis d'imposition | statut d’imposition, montant de l'impôt, revenu fiscal de référence, nombre de parts fiscales |
-| Adresse           | L'adresse fiscale du demandeur                                                                |
-
 
 ## Comment formuler une demande ?
 
