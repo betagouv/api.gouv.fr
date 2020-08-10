@@ -69,7 +69,7 @@ monitoring_description: |
 themes:
   - Particulier
 contact_link: bureau.capusagers-apimanagement@dgfip.finances.gouv.fr
-doc_tech_link: https://api.gouv.fr/swaggers/api-r2p
+doc_tech_link: https://api.gouv.fr/swaggers/api-r2p.json
 last_update: 31/07/2020
 ---
 
