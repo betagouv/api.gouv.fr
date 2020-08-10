@@ -16,7 +16,7 @@ En utilisant notre brique API Particulier dans votre SI :
 
 Différentes méthodes de calcul existent pour définir le tarif des différentes activités, ainsi, les données nécessaires dépendent des choix du service. 
 
-Voici les données de la CAF (composition familiale du foyer du demandeur) et de la DGFIP (pour vérifier les conditions d'éligibilité d'une demande) accessibles directement avec notre API: 
+Voici les données de la CAF (composition familiale du foyer du demandeur) et de la DGFIP (pour vérifier les conditions d'éligibilité d'une demande) accessibles directement avec notre API, ce sont les données les plus utilisées pour ce services, mais la liste ci-dessous n'est pas exhaustive : 
 
 | Donnée            | Commentaire                                              |
 | ----------------- | -------------------------------------------------------- |
