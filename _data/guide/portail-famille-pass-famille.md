@@ -1,13 +1,13 @@
 ---
-title: Portail Famille
-tagline: Pass Famille
+title: Pass Famille
+tagline: Vous cherchez la simplification des démarches de vos concitoyens ? Créez un portail famille
 tags: cas usage, api particulier, portail-famille, pass famille
 noindex: true
 ---
- *Lien vers le PAD : [Portail famille](https://pad.incubateur.net/o6VvkPDdRX-BK37BgGVfNg?edit)- Pass Famille*
+ *Lien vers le PAD : [Portail famille](/guide/portail-famille)- Pass Famille*
 
 
-## Vous êtes une mairie et vous souhaitez créer un portail famille ? Vous chercher la simplification des démarches de vos concitoyens ?
+## Vous êtes une mairie et vous souhaitez créer un portail famille ? 
 
 En utilisant notre brique API Particulier dans votre SI : 
 - **Plus besoin de demander** un avis fiscal ou un quotient familial aux citoyens
