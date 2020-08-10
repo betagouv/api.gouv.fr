@@ -1,13 +1,12 @@
 ---
-title: Portail famille
-tagline: tarification restauration scolaire
+title: Tarification de la restauration scolaire
+tagline: 
+Simplifier la transmission des informations pour la restauration scolaire est important pour vous ? 
 tags: cas usage, api particulier, portail-famille, tarification restauration scolaire
 noindex: true
 ---
 
-*Lien vers le PAD [Portail famille](https://pad.incubateur.net/o6VvkPDdRX-BK37BgGVfNg?edit)- Tarification de la restauration scolaire*
-
-## Simplifier la transmission des informations pour la restauration scolaire est important pour vous ?
+[Portail famille](/guide/portail-famille)- Tarification de la restauration scolaire
 
 Nous vous accompagnons avec l'API Particulier dans cette tâche annuelle. 
 - Accèder facilement aux données de la CAF et de la DGFIP. 
@@ -17,22 +16,15 @@ Nous vous accompagnons avec l'API Particulier dans cette tâche annuelle.
 
 ## Quelles données utilisez-vous dans vos démarches ?
 
-Différentes méthodes de calcul existent pour définir le tarif de la restauration scolaire, ainsi, les données nécessaires dépendent des choix du service. 
-Voici les données de la CAF (composition familiale du foyer du demandeur) : 
+Différentes méthodes de calcul existent pour définir le tarif de la restauration scolaire, ainsi, les données nécessaires dépendent des choix du service.
+
+Voici les données de la CAF (composition familiale du foyer du demandeur) et les données de la DGFIP (pour vérifier les conditions d'éligibilité d'une demande), ce sont les données les plus utilisées pour ce services, mais la liste ci-dessous n'est pas exhaustive :
 
 | Donnée            | Commentaire                                              |
 | ----------------- | -------------------------------------------------------- |
-| Allocataire       | L'état-civil du demandeur (nom prénom date de naissance) |
-| Enfant(s)         | Le/La/Les enfant(s) (nom, prenom, date de naissance)     |
-| Adresse           | L'adresse du foyer                                       |
 | Quotient Familial | Le quotient familial calculé par la CAF                  |
-
-Et les données de la DGFIP (pour vérifier les conditions d'éligibilité d'une demande) :
-
-| Donnée            | Commentaire                                                                                  |
-| ----------------- | -------------------------------------------------------------------------------------------- |
 | Avis d'imposition | statut d’imposition, montant de l'impôt, revenu fiscal de référence, nombre de parts fiscales |
-| Adresse           | L'adresse fiscale du demandeur                                                                |
+
 
 ## Comment formuler une demande ?
 
