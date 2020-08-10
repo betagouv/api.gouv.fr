@@ -1,14 +1,11 @@
 ---
 title: Pass Famille
-tagline: Vous cherchez la simplification des démarches de vos concitoyens ? Créez un portail famille
+tagline: Vous cherchez la simplification des démarches de vos concitoyens ? Créez un pass famille
 tags: cas usage, api particulier, portail-famille, pass famille
 noindex: true
 ---
  *Lien vers le PAD : [Portail famille](/guide/portail-famille)- Pass Famille*
-
-
-## Vous êtes une mairie et vous souhaitez créer un portail famille ? 
-
+ 
 En utilisant notre brique API Particulier dans votre SI : 
 - **Plus besoin de demander** un avis fiscal ou un quotient familial aux citoyens
 - **Pas de vérifications supplémentaire** : les informations sont certifiées
