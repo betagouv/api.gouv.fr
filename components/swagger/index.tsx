@@ -38,6 +38,10 @@ const SwaggerUIWrapper: React.FC<IProps> = ({ url }) => {
           overflow: auto;
         }
 
+        .swagger-ui .info h2.title {
+          font-size: 1.9rem;
+        }
+
         .swagger-section .swagger-ui .wrapper section.models {
           background-color: #fff;
         }

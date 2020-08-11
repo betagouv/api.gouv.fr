@@ -4,6 +4,7 @@ import Page from '../layouts/page';
 import { HEADER_PAGE } from '../components';
 import TeamHelpWidget from '../components/teamHelpWidget';
 import constants from '../constants';
+import Emoji from '../uiComponents/emoji';
 
 const About: React.FC = () => (
   <Page
@@ -21,10 +22,7 @@ const About: React.FC = () => (
       </p>
       <div>
         <h2>
-          Mais qu’est-ce qu’une API ?{' '}
-          <span role="img" aria-label="émoji réfléchi">
-            🧐
-          </span>
+          Mais qu’est-ce qu’une API ? <Emoji emoji="🧐" label="réfléchi" />
         </h2>
         <p>
           Lorsqu'une collectivité, un ministère ou une entreprise construit un
@@ -63,10 +61,7 @@ const About: React.FC = () => (
           This is a hidden anchor
         </a>
         <h2>
-          Trouver la bonne API{' '}
-          <span role="img" aria-label="emoji detective">
-            🕵️‍
-          </span>
+          Trouver la bonne API <Emoji emoji="🕵️" label="detective" />
         </h2>
         <p>
           {' '}
@@ -85,10 +80,7 @@ const About: React.FC = () => (
           This is a hidden anchor
         </a>
         <h2>
-          Accèder à la donnée{' '}
-          <span role="img" aria-label="emoji clé">
-            🔑
-          </span>
+          Accéder à la donnée <Emoji emoji="🔑" label="clé" />
         </h2>
         <p>
           Une grande partie des données publiques sont libres d'accès. C'est ce
@@ -100,13 +92,13 @@ const About: React.FC = () => (
           >
             l’Open data.
           </a>{' '}
-          Tout le monde peut y accèder.
+          Tout le monde peut y accéder.
         </p>
         <p>
           D’autres données, comme par exemple les données fiscales, sont
           sensibles et doivent être protégées.{' '}
           <b>Ces données ne sont pas accessibles à tous</b> et seuls les
-          organisations habilitées sont autorisées à y accèder.
+          organisations habilitées sont autorisées à y accéder.
         </p>
         <p>
           Ce site référence des APIs ouvertes et des APIs avec habilitation. Les
@@ -122,10 +114,7 @@ const About: React.FC = () => (
           This is a hidden anchor
         </a>
         <h2>
-          Construire son service{' '}
-          <span role="img" aria-label="emoji construction">
-            🏗
-          </span>
+          Construire son service <Emoji emoji="🏗" label="construction" />
         </h2>
         <p>
           Une fois que vous avez déterminé de quelle API vous avez besoin et que

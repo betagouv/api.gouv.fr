@@ -1,7 +1,7 @@
 ---
 title: Hub'Eau - Etat piscicole des rivières
 tagline: Données sur les poissons de rivières
-is_open: true
+is_open: 1 # 1 means API is fully open
 external_site: https://hubeau.eaufrance.fr/page/documentation_poisson/
 logo: 01-poisson.jpg
 clients:

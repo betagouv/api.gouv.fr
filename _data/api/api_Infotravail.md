@@ -3,7 +3,7 @@ title: Infotravail
 tagline: Recense des jeux de données liés au marché du travail
 owner: Pôle emploi
 category: Public
-is_open: false
+is_open: -1 # -1 means API not open
 access_condition: OUVERT sous contrat
 access_link: https://www.emploi-store-dev.fr/portail-developpeur/detailapicatalogue/57909ba23b2b8d019ee6cc5e
 logo: logo_pole_emploi.jpg

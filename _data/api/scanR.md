@@ -3,7 +3,7 @@ title: scanR, moteur de la recherche et de l'innovation # nom commercial de l'AP
 tagline: Explorez le monde de la Recherche et de l'Innovation française avec scanR # une phrase maximum
 owner: Ministère de l'Enseignement Supérieur, de la Recherche et de l'Innovation # producteur de l'API
 owner_acronym: MESRI # acronyme du producteur
-is_open: true
+is_open: 1 # 1 means API is fully open
 logo: logo-scanr-blue.jpg # https://scanr.enseignementsup-recherche.gouv.fr/img/logo-scanr-blue.jpg - Nom du fichier de votre logo à placer dans le dossier /images/api-logo
 clients: # types d'entités habilitées à utiliser l'API
   - particuliers # texte libre en minuscules

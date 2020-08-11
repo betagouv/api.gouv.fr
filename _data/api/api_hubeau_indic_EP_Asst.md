@@ -1,7 +1,7 @@
 ---
 title: Hub'Eau - Indicateurs Eau potable et Assainissement
 tagline: Indicateurs des services d'eau et d'assainissement
-is_open: true
+is_open: 1 # 1 means API is fully open
 external_site: https://hubeau.eaufrance.fr/page/documentation-eau_potable-assainissement
 logo: 02-indicateurs_services.jpg
 clients:

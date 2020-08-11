@@ -2,7 +2,7 @@
 title: Données transports Brest métropole
 tagline: Données théoriques et temps-réel des transports publics de Brest métropole
 owner: Brest métropole
-is_open: false
+is_open: -1 # -1 means API not open
 logo: Logo_Brest_metropole.png
 clients:
   - particuliers

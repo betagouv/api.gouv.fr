@@ -4,7 +4,7 @@ tagline: L'API Sandre Référentiel version 1 donne accès à l'ensemble des jeu
 owner: Office International de l’Eau & Agence française pour la biodiversité # producteur de l'API
 owner_acronym: OIEau & AFB
 logo: logoSandre.png # URL d'un logo de l'API
-is_open: true
+is_open: 1 # 1 means API is fully open
 stat:
   url: # adresse à laquelle un nombre d'appels à l'API est publié, en content-type application/json
   label: # description d'un appel à l'API
@@ -25,7 +25,7 @@ keywords: # utilisé dans la recherche
   - Taxon
   - Appellation de taxons
 monitoring_description: |
-  <p>L'OIEau s’engage à ce que ce service soit accessible à 95% et l'OIEau s’engage à améliorer progressivement ce rendement.</p>
+  L'OIEau s’engage à ce que ce service soit accessible à 95% et l'OIEau s’engage à améliorer progressivement ce rendement.
 contact_link: sandre@sandre.eaufrance.fr
 doc_tech_external: https://api.sandre.eaufrance.fr/referentiels/v1/
 themes:

@@ -57,11 +57,17 @@ export interface IApiShort {
   title: string;
   path: string;
   tagline: string;
-  is_open: boolean;
+  is_open: IIsApiOpen;
   owner: string;
 }
 
 export enum ELIGIBLE {
+  YES = 1,
+  NO = -1,
+  MAYBE = 0,
+}
+
+export enum IIsApiOpen {
   YES = 1,
   NO = -1,
   MAYBE = 0,
@@ -99,7 +105,6 @@ export interface IApi extends IApiShort {
   monitoring_description: string;
   rate_limiting_description: string;
   rate_limiting_resume: string;
-  is_open: boolean;
   clients: string[];
   partners: string[];
   themes: string[];
