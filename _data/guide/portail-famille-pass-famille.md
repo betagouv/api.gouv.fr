@@ -14,14 +14,14 @@ En utilisant notre brique API Particulier dans votre SI :
 
 ## Quelles données utilisez-vous dans vos démarches ?
 
-Le Pass Famille est un téléservice modulable et personnalisable. En effet, les données auxquelles l'accès est accordé dépendent de celles choisies par le fournisseur de service et de sa méthode de calcul en fonction de son besoin final.
+Le Pass Famille est un téléservice modulable et personnalisable. En effet, les données sont exposées en fonction de la méthode de calcul du quotient familial.
 
 Voici les données de la CAF (composition familiale du foyer du demandeur) accessibles directement avec notre API : 
 
 | Donnée            | Commentaire                                              |
 | ----------------- | -------------------------------------------------------- |
 | Allocataire       | L'état-civil du demandeur (nom prénom date de naissance) |
-| Enfant(s)         | Le/La/Les enfant(s) (nom, prenom, date de naissance)     |
+| Enfant(s)         | Le/La/Les enfant(s) (nom, prénom, date de naissance)     |
 | Adresse           | L'adresse du foyer                                       |
 | Quotient Familial | Le quotient familial calculé par la CAF                  |
 
@@ -42,11 +42,11 @@ L'utilisation des données dans le cadre d'un Pass Famille est encadrée légale
 
 **Pour remplir votre demande, vous aurez besoin de :**
 
-- de votre numéro SIRET
-- du cadre juridique associé à votre demande
-- de la description du service justifiant une simplication pour les citoyens
-- des coordonnées de l'équipe technique
-- des coordonnées de votre délégué à la protection des données et du responsable de traitement
+- votre numéro SIRET
+- cadre juridique associé à votre demande
+- la description du service justifiant une simplication pour les citoyens
+- coordonnées de l'équipe technique
+- coordonnées de votre délégué à la protection des données et du responsable de traitement
 
 <Button href="https://signup.api.gouv.fr/api-particulier">Remplir une demande</Button>
 
