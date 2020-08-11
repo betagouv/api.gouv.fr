@@ -1,5 +1,5 @@
 ---
-title: Répertoire National du Commerce et des Sociétés
+title: Registre National du Commerce et des Sociétés
 tagline: Le registre public des sociétés françaises immatriculées dans les greffes locales des tribunaux, centralisées à l'INPI.
 is_open: 0
 access_link: https://data.inpi.fr/register
@@ -38,7 +38,7 @@ L’API RNCS permet d'interroger les informations publiques sur les sociétés f
 
 ### A quoi sert cette API ?
 
-L’API Répertoire National du Commerce et des Sociétés vous permet d’accéder aux données des sociétés immatriculées à l’INPI grâce à leurs SIREN:
+L’API Registre National du Commerce et des Sociétés vous permet d’accéder aux données des sociétés immatriculées à l’INPI grâce à leurs SIREN:
 
 ### Données
 
