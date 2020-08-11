@@ -23,7 +23,8 @@ access_page:
       Les structures publiques (EPCI, Agence de l’Eau, PNR, Agence Publique, …) qui souhaitent avoir accès aux données de l’API CartoBio pour des projets dans leur territoire (qualité de l’eau, alimentation, …) peuvent faire une demande.
 
       <NextSteps />
-      <Button href="https://signup.api.gouv.fr/api_cartobio_territoires">Remplir une demande</Button>
+      <Button href="mailto:cartobio@beta.gouv.fr?subject=Demande%20d%E2%80%99acc%C3%A8s%20%C3%A0%20l%27API%20CartoBio">Remplir une demande</Button>
+      # <Button href="https://signup.api.gouv.fr/api_cartobio_territoires">Remplir une demande</Button>
 logo: AgenceBio.svg
 external_site: https://cartobio.org/
 keywords:
