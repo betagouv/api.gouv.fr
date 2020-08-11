@@ -28,6 +28,8 @@ themes:
 contact_link: https://scanr.enseignementsup-recherche.gouv.fr/contact
 doc_tech_link: https://scanr-api.enseignementsup-recherche.gouv.fr/api/v2/api-docs
 monitoring_link: https://scanr-api.enseignementsup-recherche.gouv.fr/api/services/counts
+datagouv_uuid:
+  - 577cc85ac751df4e1b9901a0
 ---
 
 ### Description de l'API

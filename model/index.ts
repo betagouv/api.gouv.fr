@@ -109,6 +109,7 @@ export interface IApi extends IApiShort {
   partners: string[];
   themes: string[];
   keywords: string[];
+  datagouv_uuid: string[];
 }
 
 export {

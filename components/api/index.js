@@ -3,6 +3,7 @@ import SupportAndTeam from './supportAndTeam';
 import Partners from './partners';
 import TechnicalDocumentation from './technical-documentation';
 import ApiRelatedServices from './apiRelatedServices.tsx';
+import ApiOpenDataSources from './apiOpenDataSources.tsx';
 import Content from './content';
 import PageHeader from './pageHeader';
 
@@ -13,5 +14,6 @@ export {
   Partners,
   TechnicalDocumentation,
   ApiRelatedServices,
+  ApiOpenDataSources,
   Content,
 };

@@ -19,6 +19,8 @@ external_site: https://transport.data.gouv.fr
 monitoring_link: http://stats.transport.data.gouv.fr/
 contact_link: contact@transport.beta.gouv.fr
 doc_tech_link: https://tr.transport.data.gouv.fr/spec
+datagouv_uuid:
+  - 56373ad988ee38438a531576
 visits_2019: 1346
 last_update: 10/12/2019
 ---

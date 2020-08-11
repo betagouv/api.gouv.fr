@@ -28,6 +28,8 @@ monitoring_description: |
   <p>Une supervision du service en temps réel est disponible à cette adresse.</p>
 contact_link: entreprise@data.gouv.fr
 doc_tech_external: https://entreprise.data.gouv.fr/api_doc/rna
+datagouv_uuid:
+  - 58e53811c751df03df38f42d
 last_update: 16/06/2020
 ---
 

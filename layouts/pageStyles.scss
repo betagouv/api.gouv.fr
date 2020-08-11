@@ -54,6 +54,22 @@ a {
     }
   }
 
+  .two-column-grid {
+    display: grid;
+    grid-template-columns: 49% 49%;
+    grid-gap: 30px 2%;
+
+    @media only screen and (min-width: 550px) and (max-width: 920px) {
+      grid-template-columns: 48% 48%;
+      grid-gap: 30px 4%;
+    }
+
+    @media only screen and (min-width: 1px) and (max-width: 600px) {
+      grid-template-columns: 100%;
+      grid-gap: 30px 0%;
+    }
+  }
+
   .left-column-grid {
     display: grid;
     grid-template-columns: 25% 72%;

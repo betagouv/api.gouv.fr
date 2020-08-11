@@ -24,6 +24,11 @@ themes:
 contact_link: https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/help.jag#contact
 doc_tech_link: https://api.insee.fr/catalogue/api-docs/carbon.super/BDM/V1?envName=Production%20and%20Sandbox
 doc_tech_external: https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/item-info.jag?name=BDM&version=V1&provider=insee
+datagouv_uuid:
+  - 53699185a3a729239d203ca3
+  - 53699f97a3a729239d206178
+  - 53699132a3a729239d203bcd
+  - 53699dc9a3a729239d205d08
 ---
 
 L’API ‘BDM’ permet d’accéder aux indicateurs diffusés sur insee.fr dans la rubrique “indices et séries chronologiques”. Les données sont identiques à celles présentées sur le site web de l’Insee.
@@ -59,4 +64,4 @@ où [dataflow] est l'identifiant du regroupement interrogé.Pour des raisons de 
 
 Lorsque cette limite est atteinte, le webservice propose un découpage permettant de récupérer l’ensemble des séries en plusieurs requêtes.La partie [clé] permet d'indiquer pour chaque dimension (séparées par des ".") les modalités retenues (séparées par des "+").
 
-POur aller plus loin, consultez la documentation sur le <External href="https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/item-info.jag?name=BDM&version=V1&provider=insee#!/Regroupements_thematiques/get_data_dataflow">site de l’Insee</External>.
+Pour aller plus loin, consultez la documentation sur le <External href="https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/item-info.jag?name=BDM&version=V1&provider=insee#!/Regroupements_thematiques/get_data_dataflow">site de l’Insee</External>.
