@@ -35,11 +35,11 @@ L'utilisation des données dans le cadre de la tarification de la restauration s
 
 **Pour remplir votre demande, vous aurez besoin de :**
 
-- de votre numéro SIRET
-- du cadre juridique associé à votre demande
-- de la description du service justifiant une simplication pour les citoyens
-- des coordonnées de l'équipe technique
-- des coordonnées de votre délégué à la protection des données et du responsable de traitement
+- votre numéro SIRET
+- cadre juridique associé à votre demande
+- la description du service justifiant une simplication pour les citoyens
+- coordonnées de l'équipe technique
+- coordonnées de votre délégué à la protection des données et du responsable de traitement
 
 <Button href="https://signup.api.gouv.fr/api-particulier">Remplir une demande</Button>
 
