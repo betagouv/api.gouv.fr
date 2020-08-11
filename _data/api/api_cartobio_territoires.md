@@ -3,7 +3,7 @@ title: API CartoBio - Territoires
 tagline: Ouvrir les données des parcelles en agriculture biologique auprès des acteurs publics territoriaux.
 owner: Agence BIO
 category: public
-is_open: false
+is_open: -1
 access_link: /les-api/api_cartobio_territoires/demande-acces
 access_description: |
   Cette API nécessite une habilitation :
