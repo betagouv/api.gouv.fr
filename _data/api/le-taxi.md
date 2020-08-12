@@ -3,7 +3,6 @@ title: le.Taxi
 tagline: Un clic, un taxi
 external_site: https://le.taxi
 is_open: -1 # -1 means API not open
-access_link: /les-api/le-taxi/demande-acces
 access_page:
   - who:
       - Un opérateur de taxi (pour les chauffeurs)
@@ -22,10 +21,6 @@ access_page:
       Seuls les opérateurs de taxi ou éditeurs d’application peuvent demander un accès à l’API.
 
       <Button href="/rechercher-api">Rechercher une autre API</Button>
-clients:
-  - collectivités
-  - entreprises
-  - éditeurs d'applications
 logo: logo_le.taxi.svg
 partners:
   - Atlantis Taxi
@@ -33,10 +28,10 @@ partners:
   - Tako
   - Taxiloc
   - Taxis Rennais
-  - Signup
 owner: Direction interministérielle du numérique & Direction générale des Infrastructures, des Transports et de la Mer
 owner_acronym: DINUM & DGITM
 keywords:
+  - Signup
   - Transport
   - Taxi
 contact_link: https://le.taxi/join.html
