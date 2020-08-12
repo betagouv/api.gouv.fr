@@ -67,9 +67,7 @@ const urlChecker = new blc.SiteChecker(
       console.log(`${totalLinks} links checked.`);
       if (brokenLinks > 0) {
         console.log(`${brokenLinks} links are broken.`);
-        throw new Error(
-          `There are some broken links. This CANNOT go to production`
-        );
+        process.exit(1);
       } else {
         console.log(`OK it’s fine.`);
       }

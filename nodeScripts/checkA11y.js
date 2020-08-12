@@ -7,12 +7,12 @@ fs.readFile('./public/url-list.txt', (err, urls) => {
   if (err) throw err;
   exec(
     './node_modules/axe-cli/axe-cli ' +
-      // 'http://localhost:3000/les-api/franceconnect --exit',
+      // 'http://localhost:3000/les-api/franceconnect --exit --disable scrollable-region-focusable region',
       urls
         .toString()
         .split('\n')
         .join(' ') +
-      ' --exit',
+      ' --exit --disable scrollable-region-focusable region',
     (err, stdout, stderr) => {
       const end = new Date() - start;
 
