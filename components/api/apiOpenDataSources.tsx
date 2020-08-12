@@ -8,10 +8,6 @@ export interface IDataGouvDataset {
   uuid: string;
   title: string;
   organization: string;
-  logo: string;
-  countResources: number;
-  countReuse: number;
-  countBookmark: number;
 }
 
 /**
@@ -34,10 +30,6 @@ export const fetchDatagouvDatasets = async (
         title: data.title,
         uuid,
         organization: data.organization.name,
-        logo: data.organization.logo_thumbnail,
-        countResources: data.resources.length,
-        countReuse: data.metrics.reuses,
-        countBookmark: data.metrics.followers,
       };
     })
   );
@@ -64,7 +56,6 @@ const ApiOpenDataSources: React.FC<{ datasetsList: IDataGouvDataset[] }> = ({
             title={item.title}
             productor={item.organization}
             href={`https://data.gouv.fr/fr/datasets/${item.uuid}`}
-            logo={item.logo}
           />
         ))}
       </div>
