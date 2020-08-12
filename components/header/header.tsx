@@ -31,7 +31,7 @@ const HEADER = [
 
 const Header = ({ headerKey = 'home' }) => {
   return (
-    <header role="navigation">
+    <header>
       <nav className="nav">
         <input
           className="menu-btn"

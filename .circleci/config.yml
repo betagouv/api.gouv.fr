@@ -50,6 +50,6 @@ jobs:
             wget --retry-connrefused --waitretry=5 --read-timeout=10 --timeout=15 -t 50 http://localhost:3000/sitemap.xml
             :
       - run: |
-          npm run check-accessibility
-      - run: |
           npm run check-broken-links
+      - run: |
+          npm run check-accessibility

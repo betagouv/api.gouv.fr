@@ -20,7 +20,7 @@ const SignupApis: React.FC<IProps> = ({ signupApis }) => {
       title="Nouvelle demande d’habilitation"
     >
       <section className="content-container page-baseline">
-        <h2>Nouvelle demande d’habilitation</h2>
+        <h1>Effectuer une nouvelle demande d’habilitation</h1>
       </section>
 
       <Results apiList={signupApis} />

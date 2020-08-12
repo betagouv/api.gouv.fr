@@ -62,7 +62,7 @@ const urlChecker = new blc.SiteChecker(
     end: function() {
       const end = new Date() - start;
 
-      console.info('=======');
+      console.info('=== Broken links checker ===');
       console.info('Execution time: %dms', end);
       console.log(`${totalLinks} links checked.`);
       if (brokenLinks > 0) {
