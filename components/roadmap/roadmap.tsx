@@ -7,7 +7,7 @@ export interface IProps {
   roadmap: IRoadmapElement[];
 }
 
-export default ({ roadmap }: IProps) => (
+const Roadmap = ({ roadmap }: IProps) => (
   <div id="roadmap-wrapper">
     {roadmap.map((item, idx) => (
       <RoadmapNode
@@ -19,3 +19,4 @@ export default ({ roadmap }: IProps) => (
     ))}
   </div>
 );
+export default Roadmap;

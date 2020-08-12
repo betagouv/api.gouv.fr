@@ -3,7 +3,7 @@ import { Meta } from '../';
 import { ButtonLink } from '../../uiComponents';
 import Emoji from '../../uiComponents/emoji';
 
-export default ({ msg, title }) => (
+const Error = ({ msg, title }) => (
   <>
     <Meta title={title} description={msg} />
 
@@ -59,3 +59,5 @@ export default ({ msg, title }) => (
     </section>
   </>
 );
+
+export default Error;

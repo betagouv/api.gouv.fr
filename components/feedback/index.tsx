@@ -4,7 +4,7 @@ import constants from '../../constants';
 import { ButtonLink } from '../../uiComponents';
 import { logFeedback } from '../../utils/client/analytics';
 
-export default () => {
+const Feedback = () => {
   const [hasAnswered, setHasAnswered] = useState(false);
 
   const answer = (yesOrNo: Boolean) => {
@@ -81,3 +81,4 @@ export default () => {
     </>
   );
 };
+export default Feedback;
