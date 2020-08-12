@@ -12,7 +12,7 @@ fs.readFile('./public/url-list.txt', (err, urls) => {
         .toString()
         .split('\n')
         .join(' ') +
-      ' --exit --disable scrollable-region-focusable region',
+      ' --stdout --exit --disable scrollable-region-focusable --disable region',
     (err, stdout, stderr) => {
       const end = new Date() - start;
 
