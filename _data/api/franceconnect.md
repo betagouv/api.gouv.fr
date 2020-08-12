@@ -48,10 +48,6 @@ FranceConnect cible les partenaires suivants :
 - Fournisseurs d'identité : Vous garantissez l’identification et l’authentification d’un usager.
 - Fournisseurs de données : Vous transmettez des données aux fournisseurs de service suite au consentement de l'usager.
 
-### Événement FranceConnect
-
-[Retrouvez tous les prochains événements FranceConnect](https://partenaires.franceconnect.gouv.fr/evenements)
-
 ### Sites de démonstration
 
 #### Tester l'identification avec FranceConnect du point de vue usager

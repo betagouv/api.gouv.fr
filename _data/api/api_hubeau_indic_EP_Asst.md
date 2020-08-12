@@ -32,7 +32,7 @@ last_update: 12/06/2018
 
 ### Description fonctionnelle de l'API Indicateurs eau potable et assainissement
 
-[L'API Indicateurs eau potable et assainissement](https://hubeau.eaufrance.fr/page/documentation-api-indicateurs-services-eau-assainissement) de Hub'Eau permet de connaître les **indicateurs** réglementaires sur les services publics d'eau, d'assainissement et sur l'assainissement non collectif.
+[L'API Indicateurs eau potable et assainissement](https://hubeau.eaufrance.fr/page/api-indicateurs-services) de Hub'Eau permet de connaître les **indicateurs** réglementaires sur les services publics d'eau, d'assainissement et sur l'assainissement non collectif.
 En effet, dans le but d’évaluer les performances de chacun de ces services et afin de permettre les comparaisons d’une année sur l’autre et entre services similaires, le ministère chargé de l’écologie a piloté dès 2004 l’élaboration d’un référentiel commun en concertation avec les acteurs de l’eau.
 
 Une trentaine d’indicateurs sur des aspects économiques, techniques, sociaux et environnementaux ont ainsi été créés. Il s’agit d’indicateurs permettant de suivre les différentes composantes du service et qui, pris dans leur ensemble, offrent une vision globale de ses performances. Ces indicateurs constituent des outils de pilotage facilitant l’inscription des services dans une démarche de progrès.
@@ -70,14 +70,14 @@ Hub’Eau est le résultat de la collaboration de l’AFB et du BRGM dans le cad
 
 Les autres API disponibles à ce jour dans Hub'Eau sont :
 
-- [Etat piscicole](/api/api_hubeau_poissons.html) ;
-- [Piézométrie](/api/api_hubeau_piezometrie.html) ;
-- [Qualité physico-chimique des cours d'eau](/api/api_hubeau_qualite_rivieres.html) ;
-- [Qualité des nappes d'eau souterraine](/api/api_hubeau_qualite_nappes_eau_sout.html).
+- [Etat piscicole](/les-api/api_hubeau_poissons) ;
+- [Piézométrie](/les-api/api_hubeau_piezometrie) ;
+- [Qualité physico-chimique des cours d'eau](/les-api/api_hubeau_qualite_rivieres) ;
+- [Qualité des nappes d'eau souterraine](/les-api/api_hubeau_qualite_nappes_eau_sout).
 
 #### Un service en co-construction
 
-Pour des APIs toujours plus en phase avec les besoins utilisateurs, Hub'Eau inaugure en 2018 une [politique de bêta testing](https://hubeau.eaufrance.fr/page/apis-version-beta) en organisant une campagne de tests ouverte avant la mise la mise en production de chaque nouvelle API.
+Pour des APIs toujours plus en phase avec les besoins utilisateurs, Hub'Eau inaugure en 2018 une [politique de bêta testing](https://hubeau.eaufrance.fr/page/apis) en organisant une campagne de tests ouverte avant la mise la mise en production de chaque nouvelle API.
 D'une durée de 30 à 45 jours, ces campagnes ont pour objectif de recueillir un maximum de retour d’expérience des utilisateurs sur les points forts et les points faibles des API en construction.
 Pour être informé de la sortie des nouvelles API et les tester en avant-première, inscrivez-vous à la [newsletter](https://hubeau.eaufrance.fr/page/news-letter-hubeau) !
 

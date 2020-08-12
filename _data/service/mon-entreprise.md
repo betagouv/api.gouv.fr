@@ -14,6 +14,6 @@ Accédez aux simulateurs essentiels pour une entreprise, de l'indépendant à la
 
 Repose sur le nouveau langage de calcul [publicodes](https://publi.codes) qui permet notamment d'expliquer les algorithmes sur le Web.
 
-Il utilise l'[API Géo](https://api.gouv.fr/api/api-geo.html) pour faciliter la saisie du code INSEE de la commune à partir du nom de la commune.
+Il utilise l'[API Géo](https://api.gouv.fr/les-api/api-geo.html) pour faciliter la saisie du code INSEE de la commune à partir du nom de la commune.
 
-Il utilise l'[API Entreprise](https://api.gouv.fr/api/api-entreprise.html) pour charger le profil de l'entreprise et pré-remplir quelques données de simulation.
+Il utilise l'[API Entreprise](https://api.gouv.fr/les-api/api-entreprise.html) pour charger le profil de l'entreprise et pré-remplir quelques données de simulation.

@@ -59,7 +59,7 @@ stat:
   # Indique la temporalité de l'indicateur en nombre de jours
   lastXdays: 30
   # L'URL où vous mettez à disposition un chiffre
-  url: https://api.gouv.fr/api/stats/justificatifs
+  url: https://api.gouv.fr/les-api/stats/justificatifs
   # La description de votre statistique
   label: justificatifs papier évités
 ```
@@ -71,7 +71,7 @@ stat:
   # Indique la temporalité de l'indicateur en nombre de jours
   lastXdays: 30
   # L'URL où vous mettez à disposition un document JSON contenant des statistiques
-  url: https://api.gouv.fr/api/stats
+  url: https://api.gouv.fr/les-api/stats
   # La description de votre statistique
   label: justificatifs papier évités
   # La clé du document JSON que vous souhaitez utiliser

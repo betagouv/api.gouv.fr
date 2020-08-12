@@ -3,9 +3,12 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:12.9.1-browsers
+      - image: circleci/node:12.16.1-browsers
 
     working_directory: ~/api.gouv.fr
+
+    before_install:
+      - npx audit-ci -m
 
     steps:
       - checkout
@@ -16,10 +19,10 @@ jobs:
 
       - restore_cache:
           keys:
-            - v1-api.gouv.fr-{{ checksum "project.clj" }}
+            - v1-api.gouv.fr-{{ checksum "package.json" }}
 
       - save_cache:
-          key: v1-api.gouv.fr-{{ checksum "project.clj" }}
+          key: v1-api.gouv.fr-{{ checksum "package.json" }}
           paths:
             - node_modules
 
@@ -28,3 +31,25 @@ jobs:
 
       - run: |
           npm run test
+
+      # get server up and running in the background
+      - run:
+          command: echo $SITE_URL
+          environment:
+            SITE_URL: http://localhost:3000
+
+      - run:
+          command: npm run build && npm run start
+          background: true
+
+      # wait for the server to start responding. We expect Bad Request 400 once it starts listening.
+      # so override the shell and have the last command be the : { null } command to force exit code 0.
+      - run:
+          shell: /bin/sh
+          command: |
+            wget --retry-connrefused --waitretry=5 --read-timeout=10 --timeout=15 -t 50 http://localhost:3000/sitemap.xml
+            :
+      - run: |
+          npm run check-accessibility
+      - run: |
+          npm run check-broken-links

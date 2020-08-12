@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default (
+const Speedo = (
   <svg
     width="28"
     height="20"
@@ -33,3 +33,5 @@ export default (
     />
   </svg>
 );
+
+export default Speedo;

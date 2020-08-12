@@ -1,10 +1,10 @@
 ---
 title: API Chorus Pro
 tagline: Envoyer facilement vos factures électroniques à une entité publique française
-external_site: https://www.chorus-pro.gouv.fr/
+external_site: http://www.chorus-pro.gouv.fr/
 is_open: -1 # -1 means API not open
 access_condition: OUVERT sous contrat
-access_link: https://chorus-pro.gouv.fr/qualif/
+access_link: http://chorus-pro.gouv.fr/qualif/
 clients:
   - Editeurs
   - Entreprises
@@ -82,12 +82,12 @@ Dans le cadre d’un projet de raccordement, le portail de Qualification permet 
 - De suivre les flux émis par EDI ou API
   En complément de ces fonctionnalités, le portail de Qualification dispose d’une fonctionnalité de test des formats entrants et sortants.
 
-Il est accessible à cette [adresse](https://chorus-pro.gouv.fr/qualif/)
+Il est accessible à cette [adresse](http://chorus-pro.gouv.fr/qualif/)
 
 ### Site de Production
 
-Chorus Pro de production est accessible à cette [adresse](https://chorus-pro.gouv.fr/cpp/)
+Chorus Pro de production est accessible à cette [adresse](http://chorus-pro.gouv.fr/cpp/)
 
 ### Site de la communauté Chorus Pro
 
-La communauté Chorus Pro est accessible à cette [adresse](https://communaute-chorus-pro.finances.gouv.fr/)
+La communauté Chorus Pro est accessible à cette [adresse](http://communaute-chorus-pro.finances.gouv.fr/)
