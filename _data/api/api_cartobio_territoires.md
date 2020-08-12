@@ -37,6 +37,7 @@ keywords:
   - Signup
 contact_link: cartobio@beta.gouv.fr
 doc_tech_external: https://github.com/entrepreneur-interet-general/CartoBio-Presentation/blob/master/docs/api-territoires.md
+doc_tech_link: https://cartobio.org/api/v1/documentation/json
 partenaires:
   - Ministère de l’Agriculture et de l’Alimentation
   - Ministère de la Transition Écologique
