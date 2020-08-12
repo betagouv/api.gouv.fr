@@ -194,16 +194,16 @@ a:not(.dont-apply-link-style):hover {
     tr td,
     th {
       padding: 5px;
-      border-right: 1px solid #c9d3df;
-      border-left: 1px solid #c9d3df;
-      border-bottom: 1px solid #c9d3df;
+      border-right: 1px solid $greyBlue;
+      border-left: 1px solid $greyBlue;
+      border-bottom: 1px solid $greyBlue;
       padding: 5px 8px;
     }
 
     thead {
       background-color: #f4f7fb;
-      border-bottom: 3px double #c9d3df;
-      border-top: 1px solid #c9d3df;
+      border-bottom: 3px double $greyBlue;
+      border-top: 1px solid $greyBlue;
     }
   }
 

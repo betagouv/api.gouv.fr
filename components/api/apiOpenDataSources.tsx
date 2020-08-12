@@ -3,7 +3,6 @@ import React from 'react';
 import Section from './section';
 import { ExternalLink } from '../../uiComponents';
 import DatagouvWidget from '../widgets/datagouv';
-import Emoji from '../../uiComponents/emoji';
 
 export interface IDataGouvDataset {
   uuid: string;
@@ -66,31 +65,8 @@ const ApiOpenDataSources: React.FC<{ datasetsList: IDataGouvDataset[] }> = ({
             productor={item.organization}
             href={`https://data.gouv.fr/fr/datasets/${item.uuid}`}
             logo={item.logo}
-          >
-            <div>
-              <span title="Nombre de ressources">
-                <Emoji emoji="📦" label="resources" />
-                {item.countResources}
-              </span>
-              <span title="Nombre de réutilisations">
-                <Emoji emoji="🏗" label="réutilisations" />
-                {item.countReuse}
-              </span>
-              <span title="Nombre de favoris">
-                <Emoji emoji="⭐️" label="favoris" />
-                {item.countBookmark}
-              </span>
-            </div>
-          </DatagouvWidget>
+          />
         ))}
-
-        <div data-udata-dataset="56373ad988ee38438a531576"></div>
-        <script
-          data-udata="https://www.data.gouv.fr/"
-          src="https://static.data.gouv.fr/static/oembed.js"
-          async
-          defer
-        ></script>
       </div>
       <style jsx>{`
         div > span {

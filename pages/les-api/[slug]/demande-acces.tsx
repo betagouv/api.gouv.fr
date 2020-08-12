@@ -161,7 +161,11 @@ const AccessCondition: React.FC<IProps> = ({
             ) : (
               <p>{access_condition}</p>
             )}
-            <ButtonLink href={access_link} onClick={logDemanderAcces} large>
+            <ButtonLink
+              href={access_link}
+              onClick={logDemanderAcces}
+              size="large"
+            >
               <i className="icon key"></i>Demandez l'accès
             </ButtonLink>
           </div>

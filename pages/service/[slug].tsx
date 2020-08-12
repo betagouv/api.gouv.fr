@@ -60,7 +60,7 @@ const Service: React.FC<IProps> = ({
                   href={link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  large
+                  size="large"
                 >
                   Accédez au service{' '}
                   <span role="img" aria-label="émoji fusée">
