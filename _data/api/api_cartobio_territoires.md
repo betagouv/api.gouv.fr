@@ -1,6 +1,6 @@
 ---
 title: API CartoBio - Territoires
-tagline: Ouvrir les données des parcelles en agriculture biologique auprès des acteurs publics territoriaux.
+tagline: Un accès aux données des parcelles en agriculture biologique pour les acteurs publics territoriaux
 owner: Agence BIO
 category: public
 is_open: -1
@@ -17,7 +17,7 @@ access_page:
       <Button href="/rechercher-api">Retourner à la page de recherche</Button>
   - who:
       - une administration
-      - un organisme publique
+      - un organisme public
     is_eligible: 1
     description: |
       Les structures publiques (EPCI, Agence de l’Eau, PNR, Agence Publique, …) qui souhaitent avoir accès aux données de l’API CartoBio pour des projets dans leur territoire (qualité de l’eau, alimentation, …) peuvent faire une demande.
@@ -35,6 +35,7 @@ keywords:
   - Biologique
   - Agence Bio
   - Territoire
+  - Signup
 contact_link: cartobio@beta.gouv.fr
 doc_tech_external: https://github.com/entrepreneur-interet-general/CartoBio-Presentation/blob/master/docs/api-territoires.md
 partenaires:
@@ -54,19 +55,19 @@ CartoBio vise à ouvrir progressivement les données des parcelles conduites en 
 
 ### A quoi sert l’API CartoBio - Teritoires ?
 
-Elle permet aux Administrations **territoriales** et aux Organismes **Publiques** de récupérez les données des parcelles conduites en agriculture Biologique sur le territoire afin de :
+Elle permet aux Administrations **territoriales** et aux Organismes **Publics** de récupérer les données des parcelles conduites en agriculture Biologique sur le territoire afin de :
 
-- Avoir une meilleure connaissance de votre territoire
 - Adapter les politiques publiques locales sur les sujets de **l’eau** et de **l’alimentation**
   - Qualité de l’eau
   - Cibler les zones où renforcer le développement de l’agriculture biologique
   - Connaître le potentiel d’alimentation bio et locale
+- Avoir une meilleure connaissance de votre territoire
 
 ### Données de l’API :
 
 La récupération des parcelles bio et de leur assolement de l’année pour une zone géographique se fait par Code EPCI, code INSEE et/ou contour géographique en Shapefile ou GeoJSON.
 
-Donnée accessible :
+Voici les données accessibles :
 
 | Donnée                              | Description                     |
 | ----------------------------------- | ------------------------------- |
