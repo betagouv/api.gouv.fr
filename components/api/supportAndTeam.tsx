@@ -38,7 +38,7 @@ const SupportAndTeam: React.FC<IProps> = ({
                   <span role="img" aria-label="émoji mail">
                     💌
                   </span>{' '}
-                  Envoyer un mail à l’équipe
+                  Écrire un mail à l’équipe
                 </ButtonLink>
               </>
             ) : (
@@ -47,7 +47,7 @@ const SupportAndTeam: React.FC<IProps> = ({
                   <span role="img" aria-label="émoji formulaire">
                     📝
                   </span>{' '}
-                  Contacter l'équipe via le formulaire de contact
+                  Contacter l'équipe via formulaire
                 </ButtonLink>
               </>
             )}

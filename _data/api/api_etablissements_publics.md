@@ -20,6 +20,8 @@ contact_link: contact@beta.gouv.fr
 doc_tech_link: https://etablissements-publics.api.gouv.fr/v3/definitions.yaml
 themes:
   - Administration & législation
+datagouv_uuid:
+  - 53699fe4a3a729239d206227
 visits_2019: 2089
 last_update: 10/12/2019
 ---

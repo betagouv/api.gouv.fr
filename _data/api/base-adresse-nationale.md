@@ -33,6 +33,8 @@ themes:
 additional_css: api
 contact_link: adresse@data.gouv.fr
 doc_tech_external: https://adresse.data.gouv.fr/api
+datagouv_uuid:
+  - 5530fbacc751df5ff937dddb
 visits_2019: 6460
 uptime: 100 # https://uptimerobot.com/dashboard.php#778110635
 last_update: 10/12/2019

@@ -18,7 +18,7 @@ export const Connect: React.FC<IPropsStep> = ({ next }) => {
         <label htmlFor="password">Mot de passe</label>
         <input id="password" defaultValue="abcde" type="password" />
         <div className="layout-center">
-          <ButtonLink type="submit" large>
+          <ButtonLink type="submit" size="large">
             Se connecter
           </ButtonLink>
         </div>
@@ -46,7 +46,7 @@ export const GetRFR: React.FC<IPropsStep> = ({ next }) => {
           type="number"
         />
         <div className="layout-center">
-          <ButtonLink type="submit" large>
+          <ButtonLink type="submit" size="large">
             Récupérer mon RFR
           </ButtonLink>
         </div>

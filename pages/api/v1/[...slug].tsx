@@ -15,8 +15,26 @@ const cors = initMiddleware(
 );
 
 const extractApiAttributes = (api: IApi) => {
-  const { title, slug, is_open } = api;
-  return { title, slug, is_open };
+  const {
+    title,
+    tagline,
+    path,
+    slug,
+    is_open,
+    owner,
+    owner_acronym,
+    datagouv_uuid,
+  } = api;
+  return {
+    title,
+    tagline,
+    path,
+    slug,
+    is_open,
+    owner,
+    owner_acronym,
+    datagouv_uuid,
+  };
 };
 
 export default async function handler(

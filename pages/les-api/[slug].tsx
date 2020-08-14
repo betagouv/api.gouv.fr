@@ -18,6 +18,7 @@ import {
   TechnicalDocumentation,
   ApiRelatedServices,
   Content,
+  ApiOpenDataSources,
 } from '../../components/api';
 
 import ApiDetails from '../../components/api/apiDetails';
@@ -25,13 +26,15 @@ import { HEADER_PAGE } from '../../components';
 
 import constants from '../../constants';
 import Feedback from '../../components/feedback';
+import { fetchDatagouvDatasets } from '../../components/api/apiOpenDataSources';
 
 interface IProps {
   api: IApi;
   services: IService[];
+  datagouvDatasets: { uuid: string; title: string }[];
 }
 
-const API: React.FC<IProps> = ({ api, services = null }) => {
+const API: React.FC<IProps> = ({ api, services = null, datagouvDatasets }) => {
   const {
     slug,
     title,
@@ -40,9 +43,7 @@ const API: React.FC<IProps> = ({ api, services = null }) => {
     owner,
     owner_acronym,
     uptime,
-    // last_update,
     contact_link,
-    // external_site,
     access_link,
     doc_tech_link,
     doc_tech_external,
@@ -74,8 +75,11 @@ const API: React.FC<IProps> = ({ api, services = null }) => {
         <div className="right-column-grid">
           <div className="left-column text-style">
             <Content content={body} />
-            <Feedback />
+            {datagouvDatasets.length > 0 && (
+              <ApiOpenDataSources datasetsList={datagouvDatasets} />
+            )}
             <ApiRelatedServices services={services} />
+            <Feedback />
           </div>
           <div className="right-column info-column">
             <Access
@@ -162,13 +166,15 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   //@ts-ignore
   const api = await getAPI(slug);
 
-  const services = await getAllServices();
+  const datagouvDatasets = await fetchDatagouvDatasets(api.datagouv_uuid);
 
-  const apiServices = services.filter(service => {
+  const allServices = await getAllServices();
+
+  const services = allServices.filter(service => {
     return service.api.indexOf(api.title) > -1;
   });
 
-  return { props: { api, services: apiServices } };
+  return { props: { api, services, datagouvDatasets } };
 };
 
 export default API;

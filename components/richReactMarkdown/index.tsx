@@ -6,7 +6,7 @@ import Quote from '../../uiComponents/quote';
 
 const CenteredCta: React.FC<PropsWithChildren<{ href: string }>> = props => (
   <div className="layout-center">
-    <ButtonLink href={props.href} large>
+    <ButtonLink href={props.href} size="large">
       {props.children}
     </ButtonLink>
   </div>
