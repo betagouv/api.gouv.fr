@@ -1,16 +1,20 @@
 ---
-title: Pass Famille
-tagline: Vous cherchez la simplification des démarches de vos concitoyens ? Créez un pass famille
+title: Vous souhaitez simplifier les démarches de vos concitoyens ?
+tagline: Créez un pass famille : un seul portail, plusieurs démarches, plus de justificatifs papier.
 tags: cas usage, api particulier, portail-famille, pass famille
 noindex: true
 ---
- *Lien vers le PAD : [Portail famille](/guide/portail-famille)- Pass Famille*
  
-En utilisant notre brique API Particulier dans votre SI : 
-- **Plus besoin de demander** un avis fiscal ou un quotient familial aux citoyens
-- **Pas de vérifications supplémentaire** : les informations sont certifiées
-- Un seul portail : plusieurs démarches 
+ Le Pass Famille est un bouquet de service accessible en ligne qui permet de regrouper différentes activités gérées par la ville. 
+ *A voir comment cela fonctionne extactement du côté des villes*
+ 
+ Avec la **brique API Particulier** dans votre portail :
+
+- Mise à disposition des données de la CAF et de la DGFIP
+- **Plus besoin de demander les justificatifs** (avis fiscal ou quotient familial) aux citoyens
+- **Pas de vérifications supplémentaires** : les informations sont certifiées par la CAF et la DGFIP
 - Démarche 100% en ligne
+- Des dossiers plus rapide à traiter pour vos agents
 
 ## Quelles données utilisez-vous dans vos démarches ?
 
