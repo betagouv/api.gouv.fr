@@ -5,6 +5,8 @@ tags: cas usage, api particulier, portail-famille, tarification restauration sco
 noindex: true
 ---
 
+*Besoin de rapeller la démarche pour etre sur que les visiteurs s'identifient au cas d'usage*
+
 Nous vous accompagnons avec l'API Particulier dans cette tâche annuelle :
 
 - Accèder facilement aux données de la CAF et de la DGFIP. 
@@ -23,6 +25,7 @@ Voici les données de la CAF (composition familiale du foyer du demandeur) et le
 | Quotient Familial | Le quotient familial calculé par la CAF                  |
 | Avis d'imposition | statut d’imposition, montant de l'impôt, revenu fiscal de référence, nombre de parts fiscales |
 
+*Besoin d'expliquer un peu plus en quoi avoir ces données, modifie le quotidien des agents ou la démarche des usagers. A quel moment cela intervient*
 
 ## Comment formuler une demande ?
 
