@@ -1,24 +1,29 @@
 ---
-title: Vous souhaitez développer un portail famille simplifiant les démarches pour vos concitoyens.
-tagline:  Vous cherchez à dématérialiser les calcul de tarification des activités gérées pas la ville ?
+title: Simplifiez les démarches de vos concitoyens
+tagline:  Dématérialisez les calculs de tarification des activités gérées pas votre ville via votre portail famille.
 tags: cas usage, api particulier, portail-famille
 noindex: true
 ---
 
-Ce que nous appellons ici Le Portail Famille est un téléservice qui diffère en fonction des décisions prises par l'organisme en charge de son développement.
+Vous êtes une Communautés de Communes, une mairies ou encore une caisses des écoles et vous avez un portail famille ? (téléservice qui permet aux citoyens d'effectuer leurs démarches lignes). Nous vous proposons d'intégrer la brique API Particulier dans votre portail pour simplifier encore plus les démarches.
 
-Voici quelques exemples d'activités qui ont été inclues dans des portails famille : 
+## Avec la brique API Particulier dans votre portail :
+
+- Mise à disposition des données de la CAF et de la DGFIP
+- **Plus besoin de demander les justificatifs** (avis fiscal ou de quotient familial aux citoyens)
+- **Pas de vérifications supplémentaires** : les informations sont certifiées par la CAF et la DGFIP
+- Démarche 100% en ligne
+- Des dossiers plus rapide à traiter pour vos agents
+
+Voici quelques exemples d'utilisations de notre brique API Particulier : 
 
 - [Tarifications de la restauration scolaire](/guide/portail-famille-tarif-restauration-scolaire)
 - [Tarification des activités périscolaires et municipales](/guide/portail-famille-tarif-activite-periscolaire)
 - [Dématérialisation des inscriptions à la crèche, à la garderie ...](/guide/portail-famille-petite-enfance)
 - [Pass Famille](/guide/portail-famille-pass-famille)
 
-L'une des principales utilisations de l'API Particulier s'inscrit dans la création d'un Portail Famille par les Communautés de Communes, par les mairies ou encore par les caisses des écoles.
+Vous avez une idée d'activité que vous souhaitez dématérialiser ? Contactez nous.
 
-## En utilisant notre brique API Particulier dans votre SI :
+## Qui sommes-nous ?
 
-- Mise à disposition des données de la CAF et de la DGFIP
-- **Plus besoin de demander** d'avis fiscal ou de quotient familial aux citoyens
-- **Pas de vérifications supplémentaires** : les informations sont certifiées
-- Démarche 100% en ligne
+La DINUM accompagne les ministères dans leur transformation numérique, conseille le gouvernement et développe des services et ressources partagées comme le réseau interministériel de l’État, FranceConnect, data.gouv.fr ou api.gouv.fr.
