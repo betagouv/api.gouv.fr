@@ -1,7 +1,6 @@
 ---
 title: Tarification de la restauration scolaire
-tagline: 
-Simplifier la transmission des informations pour la restauration scolaire est important pour vous ? 
+tagline: Simplifier la transmission des informations pour la restauration scolaire est important pour vous ? 
 tags: cas usage, api particulier, portail-famille, tarification restauration scolaire
 noindex: true
 ---
