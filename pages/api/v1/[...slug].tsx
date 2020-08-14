@@ -14,6 +14,18 @@ const cors = initMiddleware(
   })
 );
 
+const openness = (is_open: 0 | 1 | -1) => {
+  switch (is_open) {
+    case 1:
+      return 'open';
+    case 0:
+      return 'semi_open';
+    case -1:
+    default:
+      return 'closed';
+  }
+};
+
 const extractApiAttributes = (api: IApi) => {
   const {
     title,
@@ -32,6 +44,7 @@ const extractApiAttributes = (api: IApi) => {
     path,
     slug,
     is_open,
+    openness: openness(is_open),
     owner,
     owner_acronym,
     logo: `/images/api-logo/${logo}`,
