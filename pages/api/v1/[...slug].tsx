@@ -23,6 +23,7 @@ const extractApiAttributes = (api: IApi) => {
     is_open,
     owner,
     owner_acronym,
+    logo,
     datagouv_uuid,
   } = api;
   return {
@@ -33,6 +34,7 @@ const extractApiAttributes = (api: IApi) => {
     is_open,
     owner,
     owner_acronym,
+    logo: `/images/api-logo/${logo}`,
     datagouv_uuid,
   };
 };
