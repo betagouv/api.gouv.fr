@@ -43,7 +43,6 @@ const extractApiAttributes = (api: IApi) => {
     tagline,
     path,
     slug,
-    is_open,
     openness: openness(is_open),
     owner,
     owner_acronym,
