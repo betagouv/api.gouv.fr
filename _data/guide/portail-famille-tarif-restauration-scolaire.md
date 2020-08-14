@@ -5,9 +5,8 @@ tags: cas usage, api particulier, portail-famille, tarification restauration sco
 noindex: true
 ---
 
-[Portail famille](/guide/portail-famille)- Tarification de la restauration scolaire
+Nous vous accompagnons avec l'API Particulier dans cette tâche annuelle :
 
-Nous vous accompagnons avec l'API Particulier dans cette tâche annuelle. 
 - Accèder facilement aux données de la CAF et de la DGFIP. 
 - **Plus besoin de demander** d'avis fiscal ou de quotient familial aux parents
 - **Pas de vérifications supplémentaires** : les informations sont certifiées
@@ -29,8 +28,8 @@ Voici les données de la CAF (composition familiale du foyer du demandeur) et le
 
 L'utilisation des données dans le cadre de la tarification de la restauration scolaire est encadrée légalement. Vous pouvez motiver votre demande à l'aide des articles suivants :
 
-* Article L.213 du *Code de l'éducation* <External href="https://www.legifrance.gouv.fr/affichCode.do;jsessionid=BADF41D6CFF34AAC5E88C9B3ADF9280C.tplgfr29s_1?idSectionTA=LEGISCTA000006182383&cidTexte=LEGITEXT000006071191&dateTexte=20190528">Article L.213</External> du *Code de l'éducation* 
-* Article R531-52 du *Code de l'Education* <External href=https://www.legifrance.gouv.fr/affichCode.do?idSectionTA=LEGISCTA000020743087&cidTexte=LEGITEXT000006071191> Article R531-52 </External> du *Code de l'éducation* 
+* Article <External href="https://www.legifrance.gouv.fr/affichCode.do;jsessionid=BADF41D6CFF34AAC5E88C9B3ADF9280C.tplgfr29s_1?idSectionTA=LEGISCTA000006182383&cidTexte=LEGITEXT000006071191&dateTexte=20190528">L.213</External> du *Code de l'éducation* 
+* Article <External href=https://www.legifrance.gouv.fr/affichCode.do?idSectionTA=LEGISCTA000020743087&cidTexte=LEGITEXT000006071191>R531-52</External> du *Code de l'éducation* 
 
 **Pour remplir votre demande, vous aurez besoin de :**
 
@@ -48,3 +47,10 @@ Témoignage :
 Exemple 1 : département de l'Essonne [sa demande DataPass](https://signup.api.gouv.fr/api-particulier/513#organisation)
 ou 
 DEPARTEMENT DES YVELINES [sa demande Datapass](https://signup.api.gouv.fr/api-particulier/1577#organisation)
+
+
+## Contenu lié
+
+[Portail famille](/guide/portail-famille)- Tarification de la restauration scolaire
+
+
