@@ -30,7 +30,7 @@ const DatagouvWidget: React.FC<IProps> = ({ href, title, productor }) => (
           rel="noopener noreferrer"
           alt
         >
-          Accèder au jeu de données&nbsp;
+          Accéder au jeu de données&nbsp;
           {external}
         </ButtonLink>
       </div>
