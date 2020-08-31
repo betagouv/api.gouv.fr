@@ -83,6 +83,16 @@ Du point de vue de l’usager, une démarche qui utilise API Particulier ressemb
 2. En lieu de justificatif de revenu, je saisis mon numéro fiscal et mon numéro d’avis d’imposition.
 3. Ma commune récupère immédiatement mon revenu fiscal de référence et je n’ai plus rien à faire !
 
+### Exemples d’application
+
+<Grid>
+  <RichLink title="Tarifications de la restauration scolaire" href="/guide/portail-famille-tarif-restauration-scolaire" />
+  <RichLink title="Tarification des activités périscolaires et municipales" href="/guide/portail-famille-tarif-activite-periscolaire" />
+  <RichLink title="Dématérialisation des inscriptions à la crèche, à la garderie ..." href="/guide/portail-famille-petite-enfance" />
+  <RichLink title="Pass Famille" href="/guide/portail-famille-pass-famille" />
+  <RichLink title="Dématerialisation des dossiers dans les CCAS" href="/guide/ccas" />
+</Grid>
+
 ### Données accessibles dans l'API
 
 | Nom                   | Description                                                                            | Origine des données |
@@ -97,7 +107,7 @@ Du point de vue de l’usager, une démarche qui utilise API Particulier ressemb
 
 Pour plus d’informations techniques sur la structuration des données, vous pouvez <External href='/documentation/api-particulier'>consulter la documentation technique</External>
 
-### Précisions sur les données fiscales (DFIP)
+### Précisions sur les données fiscales (DGFiP)
 
 Seules les données des deux dernières années sont disponibles. Par exemple en 2019, il n'est pas possible d'obtenir de données sur l'année 2017.
 

@@ -54,9 +54,21 @@ L'utilisation des données dans le cadre d'un Pass Famille est encadrée légale
 
 <Button href="https://signup.api.gouv.fr/api-particulier">Remplir une demande</Button>
 
-## Ils l'ont fait
+<!-- ## Ils l'ont fait
 
 Témoignage :
-[Brest Métropole](https://signup.api.gouv.fr/api-particulier/1255#donnees)
-[Commune de Nîme](https://signup.api.gouv.fr/api-particulier/129#organisation)
-[Commune de Metz](https://signup.api.gouv.fr/api-particulier/626#organisation)
+
+- Brest Metropole
+- Commune de Nîmes
+- Commune de Metz -->
+
+<br/>
+<br/>
+
+Retrouvez d’autres exemples d’utilisation de notre brique API Particulier :
+
+<Grid>
+  <RichLink title="Tarifications de la restauration scolaire" href="/guide/portail-famille-tarif-restauration-scolaire" />
+  <RichLink title="Tarification des activités périscolaires et municipales" href="/guide/portail-famille-tarif-activite-periscolaire" />
+  <RichLink title="Dématérialisation des inscriptions à la crèche, à la garderie ..." href="/guide/portail-famille-petite-enfance" />
+</Grid>

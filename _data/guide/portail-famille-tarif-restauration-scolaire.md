@@ -44,13 +44,22 @@ L'utilisation des données dans le cadre de la tarification de la restauration s
 
 <Button href="https://signup.api.gouv.fr/api-particulier">Remplir une demande</Button>
 
+<!--
 ## Ils l'ont fait
 
 Témoignage :
 Exemple 1 : département de l'Essonne [sa demande DataPass](https://signup.api.gouv.fr/api-particulier/513#organisation)
 ou
 DEPARTEMENT DES YVELINES [sa demande Datapass](https://signup.api.gouv.fr/api-particulier/1577#organisation)
+ -->
 
-## Contenu lié
+<br/>
+<br/>
 
-[Portail famille](/guide/portail-famille)- Tarification de la restauration scolaire
+Retrouvez d’autres exemples d’utilisation de notre brique API Particulier :
+
+<Grid>
+  <RichLink title="Tarification des activités périscolaires et municipales" href="/guide/portail-famille-tarif-activite-periscolaire" />
+  <RichLink title="Dématérialisation des inscriptions à la crèche, à la garderie ..." href="/guide/portail-famille-petite-enfance" />
+  <RichLink title="Pass Famille" href="/guide/portail-famille-pass-famille" />
+</Grid>
