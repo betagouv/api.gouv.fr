@@ -34,7 +34,7 @@ keywords:
   - Signup
   - Transport
   - Taxi
-contact_link: https://le.taxi/join.html
+contact_link: equipe@le.taxi
 doc_tech_link: https://api.taxi/swagger.json
 themes:
   - Transport
