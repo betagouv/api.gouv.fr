@@ -20,12 +20,22 @@ export const fetchDatagouvDatasets = async (
   if (!uuids || uuids.length === 0) {
     return [];
   }
+
   return await Promise.all(
     uuids.map(async uuid => {
       const response = await fetch(
         `https://www.data.gouv.fr/api/1/datasets/${uuid}`
       );
       const data = await response.json();
+      if (!response.ok) {
+        console.log(`----ERROR----`);
+        console.log(`Incorrect response for dataset : ${uuid}`);
+        console.log(`STATUS CODE : ${response.status}`);
+        console.log(`BODY : ${JSON.stringify(data)}`);
+
+        throw new Error(`Corrupted dataset uuid : ${uuid}`);
+      }
+
       return {
         title: data.title,
         uuid,
