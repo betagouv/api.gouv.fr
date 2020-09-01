@@ -16,7 +16,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "npm run lint",
-      "pre-push": "npm run test"
+      "pre-push": "npm run test && node nodeScripts/createThumbnail.js.js "
     }
   },
   "devDependencies": {
@@ -44,6 +44,7 @@
     "prettier": "^1.19.1",
     "raw-loader": "^4.0.0",
     "sass": "^1.26.3",
+    "sharp": "^0.26.0",
     "sitemap": "^6.1.0",
     "typescript": "^3.7.5"
   },
