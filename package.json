@@ -16,7 +16,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "npm run lint",
-      "pre-push": "npm run test && node nodeScripts/createThumbnail.js.js "
+      "pre-push": "npm run test && node nodeScripts/createThumbnail.js "
     }
   },
   "devDependencies": {
