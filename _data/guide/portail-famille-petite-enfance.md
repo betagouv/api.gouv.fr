@@ -2,7 +2,7 @@
 title: Services petite enfance
 tagline: Vous êtes une mairie, vous souhaitez dématérialiser l'inscription à la crèche ?
 tags: cas usage, api particulier, portail-famille,  petite enfance
-image: garderie_3.jpg
+image: garderie.jpg
 api:
   - API Particulier
 related_guides:
