@@ -2,6 +2,9 @@
 title: Dématérialiser l'instruction des dossiers dans un CCAS
 tagline: Vous êtes un CCAS ou un éditeur de logiciel ? Nous vous accompagnons avec l'API Particulier pour accéder facilement aux données de la CAF et de la DGFIP.
 tags: cas usage, api particulier, CCAS
+image: dossier.jpg
+api:
+  - API Particulier
 noindex: true
 ---
 

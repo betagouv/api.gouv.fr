@@ -1,19 +1,38 @@
 import React from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
 
-import { getGuide, getAllGuides, IGuideElement } from '../../model';
+import {
+  getGuide,
+  getAllGuides,
+  IGuideElement,
+  IGuideElementShort,
+} from '../../model';
 import Page from '../../layouts';
 
 import { HEADER_PAGE } from '../../components';
 import RichReactMarkdown from '../../components/richReactMarkdown';
 import constants from '../../constants';
+import { RichLink } from '../../uiComponents';
 
 interface IProps {
   guide: IGuideElement;
+  related_guides: IGuideElementShort[];
 }
 
-const API: React.FC<IProps> = ({ guide }) => {
-  const { title, slug, tagline, body, noindex = false } = guide;
+const computeRelatedGuides = async (guide: IGuideElement) => {
+  const related_guides = await Promise.all(
+    (guide.related_guides || []).map(
+      async (slug: string) => await getGuide(slug)
+    )
+  );
+  return related_guides.map(guide => {
+    const { title, slug, image = null } = guide;
+    return { title, slug, image };
+  });
+};
+
+const API: React.FC<IProps> = ({ guide, related_guides }) => {
+  const { title, slug, tagline, body, image, noindex = false } = guide;
   return (
     <Page
       headerKey={HEADER_PAGE.APIS}
@@ -33,11 +52,48 @@ const API: React.FC<IProps> = ({ guide }) => {
         <div className="text-style text-wrapper">
           <RichReactMarkdown source={body} />
         </div>
+        {related_guides.length > 0 && (
+          <div className="text-style text-wrapper">
+            <h2>Sur le même sujet</h2>
+            <div className="default-grid">
+              {related_guides.map(guide => (
+                <RichLink
+                  key={guide.slug}
+                  title={guide.title}
+                  image={
+                    guide.image
+                      ? `/images/guide/thumbnail_${guide.image}`
+                      : undefined
+                  }
+                  href={`/guide/${guide.slug}`}
+                />
+              ))}
+            </div>
+          </div>
+        )}
       </div>
       <style jsx>{`
         .hero {
           padding: 1px 0;
+          background: ${image ? `url(${`/images/guide/${image}`})` : '#fff'};
+          background-position: center;
+          background-size: cover;
+          position: relative;
+        }
+        .hero:after {
+          content: '';
           background: ${constants.colors.backgroundBlueGradient};
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: ${image ? `0.8` : '1'};
+          z-index: 0;
+        }
+        .hero .text-wrapper {
+          position: relative;
+          z-index: 1;
         }
 
         .hero h2 {
@@ -78,8 +134,14 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   //@ts-ignore
   const guide = await getGuide(slug);
+  const related_guides = await computeRelatedGuides(guide);
 
-  return { props: { guide } };
+  return {
+    props: {
+      guide,
+      related_guides,
+    },
+  };
 };
 
 export default API;

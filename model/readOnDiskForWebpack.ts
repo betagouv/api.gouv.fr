@@ -83,7 +83,7 @@ export const getRoadmap = async (): Promise<IRoadmapElement[]> => {
   return formatRoadmap(md.attributes as IRoadmap);
 };
 
-export const getGuide = async (slug: string): Promise<IGuideElement[]> => {
+export const getGuide = async (slug: string): Promise<IGuideElement> => {
   const file = require(`../_data/guide/${slug}.md`);
   return formatGuide(slug, file.default);
 };

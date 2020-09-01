@@ -2,6 +2,13 @@
 title: Services petite enfance
 tagline: Vous êtes une mairie, vous souhaitez dématérialiser l'inscription à la crèche ?
 tags: cas usage, api particulier, portail-famille,  petite enfance
+image: garderie_3.jpg
+api:
+  - API Particulier
+related_guides:
+  - portail-famille-pass-famille
+  - portail-famille-tarif-activite-periscolaire
+  - portail-famille-tarif-restauration-scolaire
 noindex: true
 ---
 
@@ -46,14 +53,3 @@ L'utilisation des données dans le cadre des inscription à la crêche et en gar
 Témoignage :
 [Communes d'Arles](https://signup.api.gouv.fr/api-particulier/703#donnees)
 [DEPARTEMENT DES HAUTS-DE-SEINE](https://signup.api.gouv.fr/api-particulier/930#donnees) -->
-
-<br/>
-<br/>
-
-Retrouvez d’autres exemples d’utilisation de notre brique API Particulier :
-
-<Grid>
-  <RichLink title="Tarifications de la restauration scolaire" href="/guide/portail-famille-tarif-restauration-scolaire" />
-  <RichLink title="Tarification des activités périscolaires et municipales" href="/guide/portail-famille-tarif-activite-periscolaire" />
-  <RichLink title="Pass Famille" href="/guide/portail-famille-pass-famille" />
-</Grid>

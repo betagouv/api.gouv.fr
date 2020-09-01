@@ -15,9 +15,9 @@ const illu = (
       svg {
         width: 100%;
         max-width: 60px;
-        margin: auto;
         display: block;
-        fill: ${constants.colors.lightBlue};
+        fill: ${constants.colors.blue};
+        opacity: 0.15;
       }
     `}</style>
   </>
@@ -26,13 +26,15 @@ const illu = (
 interface IProps {
   title: string;
   href: string;
-  illuSrc?: string;
+  image?: string;
 }
 
-const RichLink: React.FC<IProps> = ({ title, href, illuSrc }) => (
+const RichLink: React.FC<IProps> = ({ title, href, image }) => (
   <>
     <a className="rich-link-wrapper dont-apply-link-style" href={href}>
-      <div className="miniature">{illu}</div>
+      <div className="miniature layout-center">
+        {image ? <img src={image} alt="" /> : illu}
+      </div>
       <div className="title layout-center">
         <div>{title}</div>
       </div>
@@ -63,8 +65,15 @@ const RichLink: React.FC<IProps> = ({ title, href, illuSrc }) => (
       }
       .miniature {
         margin: 0;
-        padding: 10px 0;
+        padding: 0;
+        height: 100px;
         background-color: ${constants.colors.lightestBlue};
+      }
+      .miniature > img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
       }
     `}</style>
   </>

@@ -2,6 +2,13 @@
 title: Tarification de la restauration scolaire
 tagline: Simplifier la transmission des informations pour la restauration scolaire est important pour vous ?
 tags: cas usage, api particulier, portail-famille, tarification restauration scolaire
+image: cantine.jpg
+related_guides:
+  - portail-famille-petite-enfance
+  - portail-famille-pass-famille
+  - portail-famille-tarif-activite-periscolaire
+api:
+  - API Particulier
 noindex: true
 ---
 
@@ -52,14 +59,3 @@ Exemple 1 : département de l'Essonne [sa demande DataPass](https://signup.api.g
 ou
 DEPARTEMENT DES YVELINES [sa demande Datapass](https://signup.api.gouv.fr/api-particulier/1577#organisation)
  -->
-
-<br/>
-<br/>
-
-Retrouvez d’autres exemples d’utilisation de notre brique API Particulier :
-
-<Grid>
-  <RichLink title="Tarification des activités périscolaires et municipales" href="/guide/portail-famille-tarif-activite-periscolaire" />
-  <RichLink title="Dématérialisation des inscriptions à la crèche, à la garderie ..." href="/guide/portail-famille-petite-enfance" />
-  <RichLink title="Pass Famille" href="/guide/portail-famille-pass-famille" />
-</Grid>

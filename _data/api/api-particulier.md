@@ -65,33 +65,23 @@ themes:
 visits_2019: 8642
 uptime: 99.992 # https://uptimerobot.com/dashboard#777746216 * https://uptimerobot.com/dashboard#778826562 / 2
 last_update: 10/12/2019
+content_intro: |
+  API Particulier facilite l'accès des administrations aux données fiscales (DGFIP) et familiales (CAF) d'un citoyen, pour simplifier les démarches administratives mises en oeuvre par les collectivités et les administrations.
+
+  ### A quoi sert l’API Particulier ?
+
+  Permet aux administrations d'accéder à des informations **certifiées à la source** et ainsi :
+
+  - de s’affranchir des pièces justificatives lors des démarches en ligne
+  - de réduire le nombre d’erreurs de saisie
+  - d'écarter le risque de fraude documentaire
+
+  Du point de vue de l’usager, une démarche qui utilise API Particulier ressemble à ça :
+
+  1. Je me connecte sur le site de ma commune pour réaliser une démarche.
+  2. En lieu de justificatif de revenu, je saisis mon numéro fiscal et mon numéro d’avis d’imposition.
+  3. Ma commune récupère immédiatement mon revenu fiscal de référence et je n’ai plus rien à faire !
 ---
-
-API Particulier facilite l'accès des administrations aux données fiscales (DGFIP) et familiales (CAF) d'un citoyen, pour simplifier les démarches administratives mises en oeuvre par les collectivités et les administrations.
-
-### A quoi sert l’API Particulier ?
-
-Permet aux administrations d'accéder à des informations **certifiées à la source** et ainsi :
-
-- de s’affranchir des pièces justificatives lors des démarches en ligne
-- de réduire le nombre d’erreurs de saisie
-- d'écarter le risque de fraude documentaire
-
-Du point de vue de l’usager, une démarche qui utilise API Particulier ressemble à ça :
-
-1. Je me connecte sur le site de ma commune pour réaliser une démarche.
-2. En lieu de justificatif de revenu, je saisis mon numéro fiscal et mon numéro d’avis d’imposition.
-3. Ma commune récupère immédiatement mon revenu fiscal de référence et je n’ai plus rien à faire !
-
-### Exemples d’application
-
-<Grid>
-  <RichLink title="Tarifications de la restauration scolaire" href="/guide/portail-famille-tarif-restauration-scolaire" />
-  <RichLink title="Tarification des activités périscolaires et municipales" href="/guide/portail-famille-tarif-activite-periscolaire" />
-  <RichLink title="Dématérialisation des inscriptions à la crèche, à la garderie ..." href="/guide/portail-famille-petite-enfance" />
-  <RichLink title="Pass Famille" href="/guide/portail-famille-pass-famille" />
-  <RichLink title="Dématerialisation des dossiers dans les CCAS" href="/guide/ccas" />
-</Grid>
 
 ### Données accessibles dans l'API
 

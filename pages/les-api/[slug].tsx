@@ -7,6 +7,8 @@ import {
   IService,
   IApi,
   getAllAPIs,
+  getAllGuides,
+  IGuideElementShort,
 } from '../../model';
 import Page from '../../layouts';
 
@@ -17,8 +19,8 @@ import {
   Partners,
   TechnicalDocumentation,
   ApiRelatedServices,
-  Content,
   ApiOpenDataSources,
+  ApiDescription,
 } from '../../components/api';
 
 import ApiDetails from '../../components/api/apiDetails';
@@ -31,10 +33,16 @@ import { fetchDatagouvDatasets } from '../../components/api/apiOpenDataSources';
 interface IProps {
   api: IApi;
   services: IService[];
+  guides: IGuideElementShort[];
   datagouvDatasets: { uuid: string; title: string }[];
 }
 
-const API: React.FC<IProps> = ({ api, services = null, datagouvDatasets }) => {
+const API: React.FC<IProps> = ({
+  api,
+  services = null,
+  guides,
+  datagouvDatasets,
+}) => {
   const {
     slug,
     title,
@@ -54,6 +62,7 @@ const API: React.FC<IProps> = ({ api, services = null, datagouvDatasets }) => {
     body,
     is_open,
     partners,
+    content_intro,
   } = api;
 
   return (
@@ -74,11 +83,17 @@ const API: React.FC<IProps> = ({ api, services = null, datagouvDatasets }) => {
       <div id="description" className="content-container">
         <div className="right-column-grid">
           <div className="left-column text-style">
-            <Content content={body} />
+            <ApiDescription
+              guides={guides}
+              body={body}
+              content_intro={content_intro}
+            />
+
             {datagouvDatasets.length > 0 && (
               <ApiOpenDataSources datasetsList={datagouvDatasets} />
             )}
-            <ApiRelatedServices services={services} />
+
+            {guides.length === 0 && <ApiRelatedServices services={services} />}
             <Feedback />
           </div>
           <div className="right-column info-column">
@@ -169,12 +184,21 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const datagouvDatasets = await fetchDatagouvDatasets(api.datagouv_uuid);
 
   const allServices = await getAllServices();
-
   const services = allServices.filter(service => {
     return service.api.indexOf(api.title) > -1;
   });
 
-  return { props: { api, services, datagouvDatasets } };
+  const allGuides = await getAllGuides();
+  const guides = allGuides
+    .filter(guide => {
+      return guide.api && guide.api.indexOf(api.title) > -1;
+    })
+    .map(guide => {
+      const { title, slug, image = null } = guide;
+      return { title, slug, image };
+    });
+
+  return { props: { api, services, guides, datagouvDatasets } };
 };
 
 export default API;

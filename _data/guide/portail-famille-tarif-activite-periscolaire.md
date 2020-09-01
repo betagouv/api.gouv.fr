@@ -1,7 +1,14 @@
 ---
-title: Activité périscolaires et municipales
+title: Activités périscolaires et municipales
 tagline: Vous êtes une mairie et vous voulez simplifier l'adhésion aux activités municipales et aux activités périscolaires ?
 tags: cas usage, api particulier, portail-famille, tarification activités prériscolaire, activités municipales
+image: ecole.jpeg
+related_guides:
+  - portail-famille-petite-enfance
+  - portail-famille-pass-famille
+  - portail-famille-tarif-restauration-scolaire
+api:
+  - API Particulier
 noindex: true
 ---
 
@@ -48,14 +55,3 @@ Témoignage : [COMMUNE DE SCHILTIGHEIM](https://signup.api.gouv.fr/api-particuli
 [COMMUNAUTE COMMUNES DU PAYS DE LUXEUIL](https://datapass.api.gouv.fr/api-particulier/2082#donnees)
 [COMMUNE DE LINGOLSHEIM](https://datapass.api.gouv.fr/api-particulier/1881#donnees)
 [COMMUNE DE GARCHES](https://datapass.api.gouv.fr/api-particulier/854#donnees) -->
-
-<br/>
-<br/>
-
-Retrouvez d’autres exemples d’utilisation de notre brique API Particulier :
-
-<Grid>
-  <RichLink title="Tarifications de la restauration scolaire" href="/guide/portail-famille-tarif-restauration-scolaire" />
-  <RichLink title="Dématérialisation des inscriptions à la crèche, à la garderie ..." href="/guide/portail-famille-petite-enfance" />
-  <RichLink title="Pass Famille" href="/guide/portail-famille-pass-famille" />
-</Grid>

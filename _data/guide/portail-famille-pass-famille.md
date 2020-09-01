@@ -3,6 +3,13 @@ title: Vous souhaitez simplifier les démarches de vos concitoyens ?
 tagline: |
   Créez un pass famille : un seul portail, plusieurs démarches, plus de justificatifs papier.
 tags: cas usage, api particulier, portail-famille, pass famille
+api:
+  - API Particulier
+related_guides:
+  - portail-famille-petite-enfance
+  - portail-famille-tarif-activite-periscolaire
+  - portail-famille-tarif-restauration-scolaire
+image: famille.jpg
 noindex: true
 ---
 
@@ -61,14 +68,3 @@ Témoignage :
 - Brest Metropole
 - Commune de Nîmes
 - Commune de Metz -->
-
-<br/>
-<br/>
-
-Retrouvez d’autres exemples d’utilisation de notre brique API Particulier :
-
-<Grid>
-  <RichLink title="Tarifications de la restauration scolaire" href="/guide/portail-famille-tarif-restauration-scolaire" />
-  <RichLink title="Tarification des activités périscolaires et municipales" href="/guide/portail-famille-tarif-activite-periscolaire" />
-  <RichLink title="Dématérialisation des inscriptions à la crèche, à la garderie ..." href="/guide/portail-famille-petite-enfance" />
-</Grid>

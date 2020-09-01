@@ -2,6 +2,9 @@
 title: Simplifiez les démarches de vos concitoyens
 tagline: Dématérialisez les calculs de tarification des activités gérées pas votre ville via votre portail famille.
 tags: cas usage, api particulier, portail-famille
+api:
+  - API Particulier
+image: portail_famille.jpg
 noindex: true
 ---
 

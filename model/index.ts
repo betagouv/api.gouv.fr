@@ -29,13 +29,19 @@ export interface IRoadmap {
   };
 }
 
-export interface IGuideElement {
+export interface IGuideElementShort {
   title: string;
+  slug: string;
+  image: string;
+}
+
+export interface IGuideElement extends IGuideElementShort {
   tags: string;
   tagline: string;
   body: string;
-  slug: string;
+  api: string[];
   noindex: boolean;
+  related_guides?: string[];
 }
 
 export interface IService {
@@ -110,6 +116,7 @@ export interface IApi extends IApiShort {
   themes: string[];
   keywords: string[];
   datagouv_uuid: string[];
+  content_intro?: string;
 }
 
 export {
