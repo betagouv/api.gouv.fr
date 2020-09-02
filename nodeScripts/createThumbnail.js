@@ -1,7 +1,7 @@
 // used by node, therefore in plain js
 const fs = require('fs');
 const sharp = require('sharp');
-const folderPath = './public/images/guide';
+const folderPath = './public/images/guides';
 
 const readAllGuideImage = async () => {
   console.log(`*** Thumbnails check ***`);

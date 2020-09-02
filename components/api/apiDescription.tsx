@@ -22,10 +22,10 @@ const ApiDescription: React.FC<{
                 title={guide.title}
                 image={
                   guide.image
-                    ? `/images/guide/thumbnail_${guide.image}`
+                    ? `/images/guides/thumbnail_${guide.image}`
                     : undefined
                 }
-                href={`/guide/${guide.slug}`}
+                href={`/guides/${guide.slug}`}
               />
             ))}
           </div>

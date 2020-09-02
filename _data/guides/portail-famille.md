@@ -21,10 +21,10 @@ Avec la **brique API Particulier** dans votre portail :
 Voici quelques exemples d'utilisations de notre brique API Particulier :
 
 <Grid>
-  <RichLink title="Tarifications de la restauration scolaire" href="/guide/portail-famille-tarif-restauration-scolaire" />
-  <RichLink title="Tarification des activités périscolaires et municipales" href="/guide/portail-famille-tarif-activite-periscolaire" />
-  <RichLink title="Dématérialisation des inscriptions à la crèche, à la garderie ..." href="/guide/portail-famille-petite-enfance" />
-  <RichLink title="Pass Famille" href="/guide/portail-famille-pass-famille" />
+  <RichLink title="Tarifications de la restauration scolaire" href="/guides/portail-famille-tarif-restauration-scolaire" />
+  <RichLink title="Tarification des activités périscolaires et municipales" href="/guides/portail-famille-tarif-activite-periscolaire" />
+  <RichLink title="Dématérialisation des inscriptions à la crèche, à la garderie ..." href="/guides/portail-famille-petite-enfance" />
+  <RichLink title="Pass Famille" href="/guides/portail-famille-pass-famille" />
 </Grid>
 
 ## Qui sommes-nous ?

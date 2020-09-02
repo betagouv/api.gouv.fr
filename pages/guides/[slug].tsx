@@ -38,7 +38,7 @@ const API: React.FC<IProps> = ({ guide, related_guides }) => {
       headerKey={HEADER_PAGE.APIS}
       title={title}
       description={`${tagline}`}
-      canonical={`https://api.gouv.fr/guide/${slug}`}
+      canonical={`https://api.gouv.fr/guides/${slug}`}
       noIndex={noindex}
       usePreFooter={false}
     >
@@ -62,10 +62,10 @@ const API: React.FC<IProps> = ({ guide, related_guides }) => {
                   title={guide.title}
                   image={
                     guide.image
-                      ? `/images/guide/thumbnail_${guide.image}`
+                      ? `/images/guides/thumbnail_${guide.image}`
                       : undefined
                   }
-                  href={`/guide/${guide.slug}`}
+                  href={`/guides/${guide.slug}`}
                 />
               ))}
             </div>
@@ -75,7 +75,7 @@ const API: React.FC<IProps> = ({ guide, related_guides }) => {
       <style jsx>{`
         .hero {
           padding: 1px 0;
-          background: ${image ? `url(${`/images/guide/${image}`})` : '#fff'};
+          background: ${image ? `url(${`/images/guides/${image}`})` : '#fff'};
           background-position: center;
           background-size: cover;
           position: relative;
