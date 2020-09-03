@@ -3,6 +3,7 @@ import initMiddleware from '../../../utils/api/init-middleware';
 import { getAllAPIs, getAPI } from '../../../model';
 import { NextApiRequest, NextApiResponse } from 'next';
 import { IApi } from '../../../model';
+import constants from '../../../constants';
 
 // Initialize the cors middleware
 const cors = initMiddleware(
@@ -46,7 +47,7 @@ const extractApiAttributes = (api: IApi) => {
     openness: openness(is_open),
     owner,
     owner_acronym,
-    logo: `/images/api-logo/${logo}`,
+    logo: `/images/api-logo/${logo || constants.logo}`,
     datagouv_uuid,
   };
 };
