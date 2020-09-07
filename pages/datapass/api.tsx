@@ -4,7 +4,8 @@ import { GetStaticProps } from 'next';
 import { getAllAPIs, IApi } from '../../model';
 import Page from '../../layouts/page';
 import { HEADER_PAGE } from '../../components';
-import Results from '../../components/searchApis/results';
+import constants from '../../constants';
+import { ButtonLink, ExternalLink } from '../../uiComponents';
 
 interface IProps {
   signupApis: IApi[];
@@ -23,7 +24,82 @@ const SignupApis: React.FC<IProps> = ({ signupApis }) => {
         <h2>Nouvelle demande d’habilitation</h2>
       </section>
 
-      <Results apiList={signupApis} />
+      <section className="page-body-container">
+        <div className="content-container ">
+          {signupApis.map(api => (
+            <div className="api-card-datapass">
+              <div className="pic layout-center">
+                <img
+                  src={`/images/api-logo/${api.logo || constants.logo}`}
+                  alt={
+                    api.logo
+                      ? `logo de ${api.title}`
+                      : 'logo générique api.gouv'
+                  }
+                />
+              </div>
+              <div className="content">
+                <div>
+                  <b>{api.title}</b>
+                </div>
+
+                <div className="description">
+                  {api.tagline} (
+                  <ExternalLink
+                    href={`https://api.gouv.fr/les-api/${api.slug}`}
+                  >
+                    en savoir plus
+                  </ExternalLink>
+                  )
+                </div>
+              </div>
+              <div className="cta layout-center">
+                <ButtonLink href={api.access_link || 'ac'}>
+                  Remplir une demande
+                </ButtonLink>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <style jsx>{`
+        .api-card-datapass {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          margin: 15px 0;
+          padding: 15px 10px;
+          background: #fff;
+          text-decoration: none;
+          border: none;
+          border-radius: 0.28571429rem;
+          overflow: hidden;
+
+          text-decoration: none;
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+          transition: transform 200ms ease-in-out, box-shadow 200ms ease-in-out;
+          display: flex;
+        }
+        .api-card-datapass > .pic {
+          width: 30px;
+          margin: 0 20px;
+          height: auto;
+          flex-shrink: 0;
+        }
+        .api-card-datapass > .pic > img {
+          width: 100%;
+        }
+        .api-card-datapass > .content {
+          display: flex;
+          flex-direction: column;
+          flex-grow: 1;
+          margin-right: 20px;
+        }
+        .api-card-datapass > .cta {
+          flex-shrink: 0;
+        }
+      `}</style>
     </Page>
   );
 };

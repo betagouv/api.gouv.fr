@@ -4,7 +4,7 @@ tagline: Un accès aux données des parcelles en agriculture biologique pour les
 owner: Agence BIO
 category: public
 is_open: -1
-access_link: /les-api/api_cartobio_territoires/demande-acces
+access_link: mailto:cartobio@beta.gouv.fr?subject=Demande%20d%E2%80%99acc%C3%A8s%20%C3%A0%20l%27API%20CartoBio
 access_description: |
   Cette API nécessite une habilitation :
 access_page:
