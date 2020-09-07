@@ -1,5 +1,5 @@
 ---
-title: Répertoire National des Associations
+title: API Répertoire National des Associations
 tagline: Le registre public des associations
 is_open: 1 # 1 means API is fully open
 clients:
