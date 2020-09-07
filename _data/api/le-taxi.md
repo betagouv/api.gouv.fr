@@ -21,6 +21,7 @@ access_page:
       Seuls les opérateurs de taxi ou éditeurs d’application peuvent demander un accès à l’API.
 
       <Button href="/rechercher-api">Rechercher une autre API</Button>
+access_link: https://signup.api.gouv.fr/le-taxi #default access link
 logo: logo_le.taxi.svg
 partners:
   - Atlantis Taxi
