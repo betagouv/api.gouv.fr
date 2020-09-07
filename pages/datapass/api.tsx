@@ -99,6 +99,20 @@ const SignupApis: React.FC<IProps> = ({ signupApis }) => {
         .api-card-datapass > .cta {
           flex-shrink: 0;
         }
+
+        @media only screen and (min-width: 1px) and (max-width: 600px) {
+          .api-card-datapass {
+            flex-direction: column;
+          }
+
+          .api-card-datapass > .pic {
+            width: 40px;
+          }
+          .api-card-datapass > .content {
+            text-align: center;
+            margin: 15px 10px;
+          }
+        }
       `}</style>
     </Page>
   );
