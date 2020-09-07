@@ -13,6 +13,7 @@ import { HEADER_PAGE } from '../../components';
 import RichReactMarkdown from '../../components/richReactMarkdown';
 import constants from '../../constants';
 import { RichLink } from '../../uiComponents';
+import Share from '../../uiComponents/share';
 
 interface IProps {
   guide: IGuideElement;
@@ -50,6 +51,7 @@ const API: React.FC<IProps> = ({ guide, related_guides }) => {
           </div>
         </div>
         <div className="text-style text-wrapper">
+          <Share title={title} href={`https://api.gouv.fr/guides/${slug}`} />
           <RichReactMarkdown source={body} />
         </div>
         {related_guides.length > 0 && (
