@@ -2,8 +2,8 @@
 title: Simplifiez les démarches de vos concitoyens
 tagline: Dématérialisez les calculs de tarification des activités gérées pas votre ville via votre portail famille.
 tags: cas usage, api particulier, portail-famille
-api:
-  - API Particulier
+# api:
+#   - API Particulier
 image: portail_famille.jpg
 noindex: true
 ---
@@ -21,10 +21,10 @@ Avec la **brique API Particulier** dans votre portail :
 Voici quelques exemples d'utilisations de notre brique API Particulier :
 
 <Grid>
-  <RichLink title="Tarifications de la restauration scolaire" href="/guides/portail-famille-tarif-restauration-scolaire" />
-  <RichLink title="Tarification des activités périscolaires et municipales" href="/guides/portail-famille-tarif-activite-periscolaire" />
-  <RichLink title="Dématérialisation des inscriptions à la crèche, à la garderie ..." href="/guides/portail-famille-petite-enfance" />
-  <RichLink title="Pass Famille" href="/guides/portail-famille-pass-famille" />
+  <RichLink title="Tarifs de la restauration scolaire" href="/guides/portail-famille-tarif-restauration-scolaire" image="/images/guides/cantine.jpg"/>
+  <RichLink title="Tarifs des activités périscolaires et municipales" href="/guides/portail-famille-tarif-activite-periscolaire" image="/images/guides/ecole.jpeg"/>
+  <RichLink title="Dématérialisation des inscriptions à la crèche, à la garderie ..." href="/guides/portail-famille-petite-enfance" image="/images/guides/garderie.jpg"/>
+  <RichLink title="Pass Famille" href="/guides/portail-famille-pass-famille" image="/images/guides/famille.jpg"/>
 </Grid>
 
 ## Qui sommes-nous ?
