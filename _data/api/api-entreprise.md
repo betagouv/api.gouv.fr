@@ -76,7 +76,7 @@ rate_limiting_description: |
   Actuellement, le nombre d’appels aux API Entreprise est limité à 2000 requêtes tranche de 10 minutes par IP. Au delà, l’adresse IP est bannie de nos serveurs, et ces derniers ne répondent alors simplement pas. Si vous pensez être dans cette situation, vous pouvez nous contacter à support@entreprise.api.gouv.fr.
 monitoring_link: https://dashboard.entreprise.api.gouv.fr
 contact_link: support@entreprise.api.gouv.fr
-doc_tech_external: https://doc.entreprise.api.gouv.fr
+doc_tech_external: https://entreprise.api.gouv.fr/catalogue/
 themes:
   - Entreprise
 visits_2019: 12610
