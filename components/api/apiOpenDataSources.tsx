@@ -64,6 +64,7 @@ const ApiOpenDataSources: React.FC<{ datasetsList: IDataGouvDataset[] }> = ({
         {datasetsList.map(item => (
           <DatagouvWidget
             title={item.title}
+            key={item.title}
             productor={item.organization}
             href={`https://data.gouv.fr/fr/datasets/${item.uuid}`}
           />
