@@ -2,11 +2,7 @@
 title: Registre National du Commerce et des Sociétés
 tagline: Le registre public des sociétés françaises immatriculées dans les greffes locales des tribunaux, centralisées à l'INPI.
 is_open: 0
-access_link: https://data.inpi.fr/register
-clients:
-  - citoyens
-  - entreprises
-  - administrations
+account_link: https://data.inpi.fr/register
 partners:
   - beta.gouv.fr
   - DINUM

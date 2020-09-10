@@ -3,8 +3,15 @@ title: Trèfle # nom commercial de l'API
 tagline: Moteur de financement de formations # une phrase maximum
 owner: Pôle emploi # producteur de l'API
 is_open: -1 # -1 means API not open
-access_condition: OUVERT sous contrat
-access_link: https://www.emploi-store-dev.fr/portail-developpeur/detailapicatalogue/simulateur-de-financement-v1?id=5ca702c8243a5f418929f589
+access_page:
+  - who:
+      - Un demandeur d’emploi
+      - Un salariés du secteur privé
+      - Une entreprise
+      - Autre
+    is_eligible: 1
+    description: |
+      <Button href="https://www.emploi-store-dev.fr/portail-developpeur/detailapicatalogue/simulateur-de-financement-v1?id=5ca702c8243a5f418929f589">Faire une demande d'accès</Button>
 keywords: # utilisé dans la recherche
   - moteur de financement
   - formation

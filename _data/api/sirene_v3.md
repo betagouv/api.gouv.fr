@@ -2,13 +2,10 @@
 title: API Sirene
 tagline: API Sirene donne accès aux informations concernant les entreprises et les établissements immatriculés au répertoire interadministratif Sirene de l'Insee
 external_site: https://api.insee.fr
-clients:
-  - collectivités
-  - ministères
 owner: Institut national de la statistique et des études économiques
 owner_acronym: INSEE
 is_open: 0 # 0 means API require an account
-access_link: https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/sign-up.jag
+account_link: https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/sign-up.jag
 keywords:
   - Entreprise
   - Etablissements

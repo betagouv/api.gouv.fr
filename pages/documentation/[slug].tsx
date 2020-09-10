@@ -29,7 +29,7 @@ const Documentation: React.FC<IProps> = ({ api, allApis }) => {
     doc_tech_link,
     doc_tech_external,
     path,
-    access_link,
+    account_link,
     uptime,
     slug,
     is_open,
@@ -82,13 +82,12 @@ const Documentation: React.FC<IProps> = ({ api, allApis }) => {
             </div>
 
             <div className="sections">
-              {access_link && is_open === -1 && <Habilitation slug={slug} />}
-              {access_link && is_open === 0 && (
-                <AccountNeeded access_link={access_link} />
+              {is_open === -1 && <Habilitation slug={slug} />}
+              {account_link && is_open === 0 && (
+                <AccountNeeded account_link={account_link} />
               )}
-              {access_link && is_open !== 1 && doc_tech_external && (
-                <div className="separator" />
-              )}
+              {(is_open === -1 || (account_link && is_open)) &&
+                doc_tech_external && <div className="separator" />}
               {doc_tech_external && (
                 <ExternalDoc doc_link={doc_tech_external} />
               )}

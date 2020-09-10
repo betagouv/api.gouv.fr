@@ -54,7 +54,9 @@ const SignupApis: React.FC<IProps> = ({ signupApis }) => {
                 </div>
               </div>
               <div className="cta layout-center">
-                <ButtonLink href={api.access_link || 'ac'}>
+                <ButtonLink
+                  href={api.datapass_link || 'https://datapass.api.gouv.fr'}
+                >
                   Remplir une demande
                 </ButtonLink>
               </div>
@@ -123,7 +125,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: {
-      signupApis: allApis.filter(api => api.keywords.indexOf('Signup') > -1),
+      signupApis: allApis.filter(api => !!api.datapass_link),
     },
   };
 };
