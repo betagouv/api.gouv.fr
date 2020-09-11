@@ -1,6 +1,6 @@
 ---
 title: API Particulier
-tagline: Accédez aux données fiscales (DGFIP) et familiales (CAF) pour simplifier des démarches administratives
+tagline: Accédez aux données fiscales (DGFIP) et familiales (CAF) des particuliers pour simplifier des démarches administratives
 external_site: https://particulier.api.gouv.fr
 is_open: -1 # -1 means API not open
 datapass_link: https://signup.api.gouv.fr/api-particulier

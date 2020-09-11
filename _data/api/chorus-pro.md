@@ -44,7 +44,8 @@ themes:
   - Administration & législation
 logo: ChorusPro.jpg
 contact_link: api-choruspro.aife@finances.gouv.fr
-doc_tech_external: https://communaute.chorus-pro.gouv.fr/documentation/api/
+doc_tech_external: https://communaute.chorus-pro.gouv.fr/documentation/chorus-pro-api/?lang=en
+doc_tech_link: http://api.gouv.fr/swaggers/api-chorus-pro.json
 visits_2019: 40978
 last_update: 07/08/2017
 ---
