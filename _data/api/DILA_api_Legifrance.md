@@ -36,7 +36,7 @@ Afin de faciliter la réutilisation des données juridiques, la DILA met à disp
 
 Cette version de l'API est une version bêta. Elle permet de recueillir vos remarques et vos suggestions d’amélioration ; elle pourra donc évoluer pendant toute la durée du test.
 
-Les données juridiques disponibles via l'API sont celles de la version bêta du site Légifrance. Toutefois, le droit opposable issu du Journal officiel électronique ne sera valablement authentifié que sur le site https://www.legifrance.gouv.fr.
+Les données juridiques disponibles via l'API sont celles de la version bêta du site Légifrance. Toutefois, le droit opposable issu du Journal officiel électronique ne sera valablement authentifié que sur le [site legifrance](https://www.legifrance.gouv.fr).
 Principales fonctionnalités:
 
 - mise à disposition de l'ensemble des jeux de données de Légifrance

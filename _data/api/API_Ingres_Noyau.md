@@ -143,7 +143,7 @@ Pour récupérer une nomenclature, il faut:
 
 - VERSION NOYAU: les fichiers sont publiés mensuellement de façon officielle pour une version noyau donnée. Par exemple, la versin "19.00.08" diffusée en
   Juin 2020 est la 8ème version publiée depuis la version structurante 19.00.00 publiée en Juillet 2019).
-  Si cette version n'est pas connue, l'API permet de les listes toutes: `https://api.cisirh.rie.gouv.fr/ingres/diffusions`.
+  Si cette version n'est pas connue, l'API permet de les listes toutes sur la route **/diffusions**.
   Le plus grand nombre correspond à la version la plus récente disponible.
   Si ce que vous recherchez est un contenu le plus "frais" possible, alors choisir la version "HORSVERS" qui correspond à des fichiers produits la veille au soir. Il y a toutefois un écart possible pour les nomenclatures RCC car certaines modifications incluses dans ce fichier pourraient ne pas être validées par la DGAFP.
 
