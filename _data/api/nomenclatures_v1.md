@@ -3,7 +3,7 @@ title: API Nomenclatures
 tagline: API Nomenclatures donne accès aux métadonnées statistiques de la statistique publique de l'Insee
 external_site: https://api.insee.fr
 is_open: 0 # 0 means API require an account
-access_link: https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/sign-up.jag
+account_link: https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/sign-up.jag
 owner: Institut national de la statistique et des études économiques
 owner_acronym: INSEE
 keywords:

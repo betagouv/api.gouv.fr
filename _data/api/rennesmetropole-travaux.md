@@ -4,10 +4,6 @@ tagline: "Connaître à l'avance les perturbations dûes aux travaux sur Rennes 
 external_site: http://travaux.data.rennesmetropole.fr/
 is_open: 1 # 1 means API is fully open
 logo: rennesmetropole-travaux.jpg
-clients:
-  - particuliers
-  - entreprises
-  - collectivités
 owner: Rennes Métropole
 keywords:
   - Travaux

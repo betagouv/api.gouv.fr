@@ -4,14 +4,8 @@ tagline: Réutilisation des données juridiques disponibles sur le site Légifra
 owner: Direction de l'information légale et administrative
 owner_acronym: DILA
 logo: DILA_logo_Simplifie_beta_v3.svg
-is_open: -1 # -1 means API not open
-access_link: https://developer.aife.economie.gouv.fr/
-access_description: Cette API est accessible gratuitement, après inscription.
-clients:
-  - particuliers
-  - entreprises
-  - administrations
-partners:
+is_open: 0 # -1 means API not open
+account_link: https://developer.aife.economie.gouv.fr/component/apiportal/registration
 keywords:
   - Journal officiel
   - Codes
@@ -29,10 +23,12 @@ rate_limiting_resume: quota / jeton
 rate_limiting_description: |
   Les appels API sont limités par quotas par jetons d'accès.
 contact_link: retours-legifrance-modernise@dila.gouv.fr
-doc_tech_external: https://developer.aife.economie.gouv.fr
+doc_tech_link: https://api.gouv.fr/swaggers/api-legifrance.json
 themes:
   - Administration & législation
 visits_2019: 0
+datagouv_uuid:
+  - 53ae8af9a3a729709f56d50c
 last_update: 13/01/2020
 ---
 

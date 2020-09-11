@@ -3,11 +3,6 @@ title: Base Adresse Nationale
 tagline: "Un référentiel national ouvert : de l'adresse à la coordonnée géographique"
 external_site: https://adresse.data.gouv.fr
 is_open: 1 # 1 means API is fully open
-clients:
-  - particuliers
-  - entreprises
-  - collectivités
-  - ministères
 partners:
   - La poste
   - IGN

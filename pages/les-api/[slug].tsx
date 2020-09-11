@@ -52,7 +52,7 @@ const API: React.FC<IProps> = ({
     owner_acronym,
     uptime,
     contact_link,
-    access_link,
+    account_link,
     doc_tech_link,
     doc_tech_external,
     monitoring_link,
@@ -102,7 +102,7 @@ const API: React.FC<IProps> = ({
               slug={slug}
               doc_swagger_link={doc_tech_link}
               doc_external_link={doc_tech_external}
-              access_link={access_link}
+              account_link={account_link}
             />
             <ApiDetails
               monitoring={monitoring_description}

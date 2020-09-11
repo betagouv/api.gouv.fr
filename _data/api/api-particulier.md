@@ -1,9 +1,9 @@
 ---
 title: API Particulier
-tagline: Accédez aux données fiscales (DGFIP) et familiales (CAF) pour simplifier des démarches administratives
+tagline: Accédez aux données fiscales (DGFIP) et familiales (CAF) des particuliers pour simplifier des démarches administratives
 external_site: https://particulier.api.gouv.fr
 is_open: -1 # -1 means API not open
-access_link: https://signup.api.gouv.fr/api-particulier
+datapass_link: https://signup.api.gouv.fr/api-particulier
 access_page:
   - who:
       - Un particulier ou une entreprise
@@ -37,9 +37,6 @@ stat:
   lastXdays: 30
   url: https://monitoring.particulier.api.gouv.fr/api/stats/
   label: justificatifs papier évités
-clients:
-  - collectivités
-  - ministères
 partners:
   - DGFiP
   - CNAF
@@ -51,7 +48,6 @@ keywords:
   - Revenu Fiscal de Référence
   - Adresse
   - Justificatif de domicile
-  - Signup
 rate_limiting_resume: 20 appels / seconde / jeton
 rate_limiting_description: |
   L'API est disponible à hauteur de 20 appels par secondes et par jetons d'accès.

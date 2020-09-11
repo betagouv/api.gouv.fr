@@ -4,12 +4,6 @@ tagline: Données sur les poissons de rivières
 is_open: 1 # 1 means API is fully open
 external_site: https://hubeau.eaufrance.fr/page/documentation_poisson/
 logo: 01-poisson.jpg
-clients:
-  - particuliers
-  - entreprises
-  - bureaux d'études
-  - collectivités
-  - ministères
 partners:
   - AFB
   - BRGM
