@@ -50,7 +50,7 @@ const Share: React.FC<IProps> = ({ href, title = '' }) => (
       .container {
         display: flex;
         flex-direction: row;
-        justify-content: end;
+        justify-content: flex-end;
         align-items: center;
       }
       a {
