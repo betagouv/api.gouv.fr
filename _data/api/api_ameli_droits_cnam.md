@@ -42,10 +42,10 @@ keywords:
   - Médecin traitant
 rate_limiting_resume: Incluses dans la convention
 rate_limiting_description: |
-  <p>Les éventuelles limitations d’usage vis-à-vis d’un partenaire sont incluses dans la convention.</p>
+  Les éventuelles limitations d’usage vis-à-vis d’un partenaire sont incluses dans la convention.
 monitoring_link: https://stats.uptimerobot.com/3wEv6hppvv
 monitoring_description: |
-  <p>Une supervision du service en temps réel est disponible à cette adresse.</p>
+  Une supervision du service en temps réel est disponible à cette adresse.
 contact_link: partenaires-api-ameli.cnam@assurance-maladie.fr
 doc_tech_link: https://raw.githubusercontent.com/assurance-maladie-digital/api-droits-fs-doc/master/documentation-open-api.yaml
 themes:

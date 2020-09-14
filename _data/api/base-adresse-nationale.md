@@ -21,7 +21,7 @@ keywords:
   - Code postal
 rate_limiting_resume: 10 appels / seconde / IP
 rate_limiting_description: |
-  L'API unitaire est disponible à hauteur de 10 appels par seconde et par adresse IP.<br/>
+  L'API unitaire est disponible à hauteur de 10 appels par seconde et par adresse IP.
   Le géocodage de masse (CSV) est disponible à hauteur d'un appel simultané par adresse IP.
 themes:
   - Géographie

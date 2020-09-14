@@ -21,7 +21,7 @@ rate_limiting_description: |
 uptime: 100
 monitoring_link: https://status.entreprise.data.gouv.fr/
 monitoring_description: |
-  <p>Une supervision du service en temps réel est disponible à cette adresse.</p>
+  Une supervision du service en temps réel est disponible à cette adresse.
 contact_link: entreprise@data.gouv.fr
 doc_tech_external: https://entreprise.data.gouv.fr/api_doc/rna
 datagouv_uuid:
