@@ -73,11 +73,12 @@ rate_limiting_description: |
   Actuellement, le nombre d’appels aux API Entreprise est limité à 2000 requêtes tranche de 10 minutes par IP. Au delà, l’adresse IP est bannie de nos serveurs, et ces derniers ne répondent alors simplement pas. Si vous pensez être dans cette situation, vous pouvez nous contacter à support@entreprise.api.gouv.fr.
 monitoring_link: https://dashboard.entreprise.api.gouv.fr
 contact_link: support@entreprise.api.gouv.fr
+doc_tech_link: https://entreprise.api.gouv.fr/v2/open-api.yml
 doc_tech_external: https://entreprise.api.gouv.fr/catalogue/
 themes:
   - Entreprise
 visits_2019: 12610
-last_update: 10/12/2019
+last_update: 14/09/2020
 ---
 
 [L’API Entreprise](https://entreprise.api.gouv.fr/) est une plateforme d’échange opérée par la DINUM qui met à disposition des opérateurs publics et des administrations, des données et des documents administratifs de référence, relatifs aux entreprises et association, qui sont délivrés par les administrations et les organismes publics, à fin de simplifier les démarches administratives et la gestion des dossiers.
