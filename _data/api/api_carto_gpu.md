@@ -1,6 +1,6 @@
 ---
 title: API Carto - module Géoportail de l'Urbanisme (GPU)
-tagline: L'accès simplifié aux données de référence d’urbanimse
+tagline: L'accès simplifié aux données de référence d’urbanisme
 external_site: https://apicarto.ign.fr
 owner: Institut national de l’information géographique et forestière
 owner_acronym: IGN
