@@ -1,11 +1,11 @@
 ---
-title: API R2P - Recherche des personnes physiques
+title: API Recherche des personnes physiques (R2P)
 logo: logo-dgfip.jpg
 tagline: Récupérez les données connues par l’administration fiscale (DGFIP) sur une personne physique (état civil, adresse, identifiant fiscal)
 owner: Direction Générale des Finances Publiques
 owner_acronym: DGFIP
 is_open: -1
-access_link: /les-api/impot-particulier/demande-acces
+datapass_link: https://signup.api.gouv.fr/api-r2p-sandbox
 access_page:
   - who:
       - Un particulier
@@ -41,15 +41,18 @@ access_page:
 
       <NextSteps service_description="de la description du cas d’utilisation" is_editeur={true}/>
       <Button href="https://signup.api.gouv.fr/api-r2p-sandbox">Remplir une demande</Button>
-  # - who:
-  #     - Une banque
-  #   is_eligible: 0
-  #   description: |
-  #     Dans le cadre de la vérification de l’éligibilité au <External href="https://www.service-public.fr/particuliers/vosdroits/F2367">LEP</External> les banques peuvent être considérées comme une administration au sens de <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367308&dateTexte=&categorieLien=cid">l'article L100-3</External> du *code des relations entre le public et l'administration*.
-  #     Si vous entrez dans ce cadre, vous pouvez effectuer une demande d'accès à l’API R2P.
-  #     En remplissant cette demande, vous allez au passage effectuer une demande à l'API Impôt Particulier, dont les données sont nécessaires à la vérification de l'éligibilité au LEP.
-  #     <NextSteps service_description="de la description du cas d’utilisation"/>
-  #     <Button href="https://signup.api.gouv.fr/api-r2p-sandbox">Remplir une demande</Button>
+  - who:
+      - Une banque
+    is_eligible: 0
+    description: |
+      Dans le cadre de la vérification de l’éligibilité au <External href="https://www.service-public.fr/particuliers/vosdroits/F2367">LEP</External> les banques peuvent être considérées comme une administration au sens de <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367308&dateTexte=&categorieLien=cid">l'article L100-3</External> du *code des relations entre le public et l'administration*.
+
+      Si vous entrez dans ce cadre, vous pouvez effectuer une demande d'accès à l’API R2P.
+
+      En remplissant cette demande, vous allez aussi obtenir accè à l'API Impôt Particulier, dont les données sont nécessaires à la vérification de l'éligibilité au LEP.
+
+      <NextSteps service_description="de la description du cas d’utilisation"/>
+      <Button href="https://signup.api.gouv.fr/api-r2p-sandbox">Remplir une demande</Button>
 keywords:
   - Recherche
   - Personnes
@@ -60,7 +63,6 @@ keywords:
   - SPI
   - fiscal
   - identifiant
-  - Signup
 rate_limiting_resume: 1000 appels/minute
 rate_limiting_description: |
   L’API Manager de la DGFiP délivre un quota de consultation pour chacun de ses partenaires pour chaque API utilisée. Concernant l'API R2P le quota par partenaire est fixé à 1 000 appels à la minute.
