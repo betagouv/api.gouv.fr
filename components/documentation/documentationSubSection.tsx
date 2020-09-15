@@ -66,8 +66,8 @@ export const Habilitation: React.FC<{ slug: string }> = ({ slug }) => (
   </DocSection>
 );
 
-export const AccountNeeded: React.FC<{ access_link: string }> = ({
-  access_link,
+export const AccountNeeded: React.FC<{ account_link: string }> = ({
+  account_link,
 }) => (
   <DocSection
     label={
@@ -82,7 +82,7 @@ export const AccountNeeded: React.FC<{ access_link: string }> = ({
       données :
     </div>
     <div className="layout-right">
-      <ButtonLink href={access_link}>
+      <ButtonLink href={account_link}>
         <div className="layout-center btn-icon">Se créer un compte</div>
       </ButtonLink>
     </div>

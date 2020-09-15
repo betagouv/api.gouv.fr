@@ -5,30 +5,36 @@ tagline: Raccordez-vous directement à la DGFiP pour récupérer les éléments 
 owner: Direction Générale des Finances Publiques
 owner_acronym: DGFIP
 is_open: -1 # -1 means API not open
-access_condition: OUVERT sous contrat
-access_description: |
-  <p>L'API Impôt Particulier est utilisable par toute collectivité ou ministère :</p>
-  <ul>
-    <li>ayant déjà préalablement implémenté FranceConnect ;</li>
-    <li>justifiant d'un fondement légal permettant le recueil d'informations fiscales rattachées à une démarche administrative.</li>
-  </ul>
-  <p>Les demandes d'accès à l'API Impôt Particulier utilisent signup.api.gouv.fr, un outil mis à disposition pour toutes les APIs catalogués sur api.gouv.fr.</p>
-  <p>Lors de la contractualisation pour accéder à l'API, une convention précise les engagements de chacune des parties et décrit les échanges de données réalisés.</p>
-access_link: https://signup.api.gouv.fr/api-impot-particulier
-clients:
-  - collectivités
-  - ministères
+access_page:
+  - who:
+      - Un particulier ou une entreprise
+    is_eligible: -1
+    description: |
+      Seules les administrations sont habilitées à utiliser l’API Impôt Particulier.
+
+      <Button href="/rechercher-api">Rechercher une autre API</Button>
+  - who:
+      - Une collectivité ou une administration
+    is_eligible: 1
+    description: |
+      L'API Impôt Particulier est utilisable par toute collectivité ou ministère :
+
+        - ayant déjà préalablement implémenté FranceConnect
+        - justifiant d'un fondement légal permettant le recueil d'informations fiscales rattachées à une démarche administrative.
+
+      <NextSteps />
+      <Button href="https://signup.api.gouv.fr/api-impot-particulier">Remplir une demande</Button>
+datapass_link: https://signup.api.gouv.fr/api-impot-particulier
 keywords:
   - Impots
   - Revenu Fiscal de Référence
   - Adresse
   - Justificatif de domicile
-  - Signup
 rate_limiting_resume: illimité
 rate_limiting_description: |
   Votre volume d'utilisation de l'API Impôt Particulier n'est pas limité par défaut mais fait l'objet d'une déclaration lors de votre demande d'accès. En cas d'utilisation abusive, la DGFiP se réserve le droit de restreindre et/ou couper votre accès à tout moment.
 monitoring_description: |
-  <p>La DGFIP s’engage à ce que le service soit accessible à plus de 98,5% et à communiquer sur les coupures de service ponctuelles qui pourraient survenir.</p>
+  La DGFIP s’engage à ce que le service soit accessible à plus de 98,5% et à communiquer sur les coupures de service ponctuelles qui pourraient survenir.
 themes:
   - Particulier
 contact_link: impot.particulier@api.gouv.fr

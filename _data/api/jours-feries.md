@@ -14,6 +14,8 @@ themes:
   - Administration & législation
 contact_link: https://www.etalab.gouv.fr/contact
 doc_tech_link: https://calendrier.api.gouv.fr/jours-feries/openapi.yml
+datagouv_uuid:
+  - 5b3cc551c751df4822526c1c
 last_update: 18/05/2020
 ---
 

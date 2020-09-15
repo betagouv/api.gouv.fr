@@ -53,7 +53,7 @@
       what: BDM
       path: /les-api/api_bdm
     - type: ADD_API
-      what: Répertoire National du Commerce et des Sociétés
+      what: Registre National du Commerce et des Sociétés
       path: /les-api/api_inpi
     - type: ADD_API
       what: Professionnels RGE
@@ -68,16 +68,17 @@
       what: Base Carbone®
       path: /les-api/api_base_carbone
   8:
+      what: Données ouvertes - data.gouv.fr
+      path: /les-api/api_data_gouv
+    - type: ADD_API
+      what: CartoBio produite par l'Agence BIO
+      path: /les-api/api_cartobio_territoires
+  9:
     - type: ADD_API
       what: R2P - Référentiel des personnes physiques
       path: /les-api/api_r2p
     - type: ADD_API
       what: Données Ouvertes Loire-Atlantique
-    - type: ADD_API
-      what: CartoBio produite par l'Agence BIO
-  9:
-    - type: ADD_API
-      what: Registre National du Commerce et des Sociétés
     - type: ADD_API
       what: Sirene distribuée par entreprise.data.gouv.fr
       path: https://entreprise.data.gouv.fr/api_doc/sirene

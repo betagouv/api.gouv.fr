@@ -1,15 +1,20 @@
 import React, { PropsWithChildren } from 'react';
 import Markdown from 'markdown-to-jsx';
 
-import { ButtonLink, ExternalLink } from '../../uiComponents';
+import { ButtonLink, ExternalLink, RichLink } from '../../uiComponents';
 import Quote from '../../uiComponents/quote';
+import TeamHelpWidget from '../teamHelpWidget';
 
 const CenteredCta: React.FC<PropsWithChildren<{ href: string }>> = props => (
   <div className="layout-center">
-    <ButtonLink href={props.href} large>
+    <ButtonLink href={props.href} size="large">
       {props.children}
     </ButtonLink>
   </div>
+);
+
+const Grid: React.FC<PropsWithChildren<{}>> = props => (
+  <div className="default-grid">{props.children}</div>
 );
 
 const NextSteps = ({ service_description = null, is_editeur = false }) => (
@@ -44,6 +49,9 @@ const RichReactMarkdown: React.FC<{ source: string }> = ({ source }) => (
         NextSteps: NextSteps,
         External: ExternalLink,
         Quote: Quote,
+        RichLink: RichLink,
+        Grid: Grid,
+        ContactUs: TeamHelpWidget,
       },
     }}
   />

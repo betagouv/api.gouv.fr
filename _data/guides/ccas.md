@@ -2,6 +2,9 @@
 title: Dématérialiser l'instruction des dossiers dans un CCAS
 tagline: Vous êtes un CCAS ou un éditeur de logiciel ? Nous vous accompagnons avec l'API Particulier pour accéder facilement aux données de la CAF et de la DGFIP.
 tags: cas usage, api particulier, CCAS
+image: dossier.jpg
+api:
+  - API Particulier
 noindex: true
 ---
 
@@ -29,11 +32,11 @@ Et les données de la DGFIP (pour vérifier les conditions d'éligibilité d'une
 | Avis d'imposition | statut d’imposition, montant de l'impôt, revenu fiscal de référence, nombre de parts fiscales |
 | Adresse           | L'adresse fiscale du demandeur                                                                |
 
-## Ils l'ont fait
+<!-- ## Ils l'ont fait
 
 <Quote>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-</Quote>
+</Quote> -->
 
 ## Comment formuler une demande ?
 
@@ -45,7 +48,7 @@ L'utilisation des données par les CCAS est encadrée légalement. Vous pouvez m
 
 <NextSteps/>
 <br/>
-<Button href="https://signup.api.gouv.fr/api-particulier">Remplir une demande</Button>
+<Button href="https://datapass.api.gouv.fr/api-particulier?scopes=%7B%22dgfip_avis_imposition%22%3Atrue%2C%22dgfip_adresse%22%3Atrue%2C%22cnaf_quotient_familial%22%3Atrue%2C%22cnaf_allocataires%22%3Atrue%2C%22cnaf_enfants%22%3Atrue%2C%22cnaf_adresse%22%3Afalse%7D">Remplir une demande</Button>
 
 ## Editeurs et intégrateurs
 

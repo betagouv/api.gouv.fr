@@ -1,9 +1,9 @@
 ---
 title: API Particulier
-tagline: Accédez aux données fiscales (DGFIP) et familiales (CAF) pour simplifier des démarches administratives
+tagline: Accédez aux données fiscales (DGFIP) et familiales (CAF) des particuliers pour simplifier des démarches administratives
 external_site: https://particulier.api.gouv.fr
 is_open: -1 # -1 means API not open
-access_link: /les-api/api-particulier/demande-acces
+datapass_link: https://signup.api.gouv.fr/api-particulier
 access_page:
   - who:
       - Un particulier ou une entreprise
@@ -37,9 +37,6 @@ stat:
   lastXdays: 30
   url: https://monitoring.particulier.api.gouv.fr/api/stats/
   label: justificatifs papier évités
-clients:
-  - collectivités
-  - ministères
 partners:
   - DGFiP
   - CNAF
@@ -51,7 +48,6 @@ keywords:
   - Revenu Fiscal de Référence
   - Adresse
   - Justificatif de domicile
-  - Signup
 rate_limiting_resume: 20 appels / seconde / jeton
 rate_limiting_description: |
   L'API est disponible à hauteur de 20 appels par secondes et par jetons d'accès.
@@ -65,23 +61,23 @@ themes:
 visits_2019: 8642
 uptime: 99.992 # https://uptimerobot.com/dashboard#777746216 * https://uptimerobot.com/dashboard#778826562 / 2
 last_update: 10/12/2019
+content_intro: |
+  API Particulier facilite l'accès des administrations aux données fiscales (DGFIP) et familiales (CAF) d'un citoyen, pour simplifier les démarches administratives mises en oeuvre par les collectivités et les administrations.
+
+  ### A quoi sert l’API Particulier ?
+
+  Permet aux administrations d'accéder à des informations **certifiées à la source** et ainsi :
+
+  - de s’affranchir des pièces justificatives lors des démarches en ligne
+  - de réduire le nombre d’erreurs de saisie
+  - d'écarter le risque de fraude documentaire
+
+  Du point de vue de l’usager, une démarche qui utilise API Particulier ressemble à ça :
+
+  1. Je me connecte sur le site de ma commune pour réaliser une démarche.
+  2. En lieu de justificatif de revenu, je saisis mon numéro fiscal et mon numéro d’avis d’imposition.
+  3. Ma commune récupère immédiatement mon revenu fiscal de référence et je n’ai plus rien à faire !
 ---
-
-API Particulier facilite l'accès des administrations aux données fiscales (DGFIP) et familiales (CAF) d'un citoyen, pour simplifier les démarches administratives mises en oeuvre par les collectivités et les administrations.
-
-### A quoi sert l’API Particulier ?
-
-Permet aux administrations d'accéder à des informations **certifiées à la source** et ainsi :
-
-- de s’affranchir des pièces justificatives lors des démarches en ligne
-- de réduire le nombre d’erreurs de saisie
-- d'écarter le risque de fraude documentaire
-
-Du point de vue de l’usager, une démarche qui utilise API Particulier ressemble à ça :
-
-1. Je me connecte sur le site de ma commune pour réaliser une démarche.
-2. En lieu de justificatif de revenu, je saisis mon numéro fiscal et mon numéro d’avis d’imposition.
-3. Ma commune récupère immédiatement mon revenu fiscal de référence et je n’ai plus rien à faire !
 
 ### Données accessibles dans l'API
 
@@ -97,7 +93,7 @@ Du point de vue de l’usager, une démarche qui utilise API Particulier ressemb
 
 Pour plus d’informations techniques sur la structuration des données, vous pouvez <External href='/documentation/api-particulier'>consulter la documentation technique</External>
 
-### Précisions sur les données fiscales (DFIP)
+### Précisions sur les données fiscales (DGFiP)
 
 Seules les données des deux dernières années sont disponibles. Par exemple en 2019, il n'est pas possible d'obtenir de données sur l'année 2017.
 

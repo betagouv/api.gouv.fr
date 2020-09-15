@@ -83,13 +83,13 @@ export const getRoadmap = async (): Promise<IRoadmapElement[]> => {
   return formatRoadmap(md.attributes as IRoadmap);
 };
 
-export const getGuide = async (slug: string): Promise<IGuideElement[]> => {
-  const file = require(`../_data/guide/${slug}.md`);
+export const getGuide = async (slug: string): Promise<IGuideElement> => {
+  const file = require(`../_data/guides/${slug}.md`);
   return formatGuide(slug, file.default);
 };
 
 export const getAllGuides = async (): Promise<IGuideElement[]> => {
   //@ts-ignore
-  const guideFolderContext = require.context('../_data/guide', true, /\.md$/);
+  const guideFolderContext = require.context('../_data/guides', true, /\.md$/);
   return Object.values(parseMarkdown(guideFolderContext, formatGuide));
 };

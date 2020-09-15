@@ -9,11 +9,6 @@ stat:
   url: # adresse à laquelle un nombre d'appels à l'API est publié, en content-type application/json
   label: # description d'un appel à l'API
   lastXdays: # nombre de jours sur lequel les appels à l'API sont comptabilisés
-clients: # types d'entités habilitées à utiliser l'API
-  - particuliers # texte libre en minuscules
-  - entreprises # ajoutez ou supprimez des types d'entités
-  - collectivités
-  - ministères
 partners: # liste de co-producteurs de l'API
   - Producteurs du Système d'Information sur l'Eau (SIE) # texte libre
 keywords: # utilisé dans la recherche

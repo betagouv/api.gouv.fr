@@ -15,6 +15,8 @@ logo: logo-carre-Boamp.png
 contact_link: donnees-dila@dila.gouv.fr
 doc_tech_external: http://api.dila.fr
 doc_tech_link: http://api.dila.fr/opendata/v2/api-docs
+datagouv_uuid:
+  - 559390f9c751df0139a453ba
 visits_2019: 1332
 last_update: 18/01/2017
 ---

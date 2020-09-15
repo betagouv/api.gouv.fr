@@ -11,6 +11,7 @@ export default {
     lightestGrey: '#fcfcfc',
     white: '#fff',
     grey: '#888',
+    greyBlue: '#c9d3df',
     darkestGrey: '#373c42',
     darkGrey: '#272c32',
     service: '#af2341',

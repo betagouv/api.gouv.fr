@@ -2,10 +2,6 @@
 title: Répertoire National des Associations
 tagline: Le registre public des associations
 is_open: 1 # 1 means API is fully open
-clients:
-  - citoyens
-  - entreprises
-  - administrations
 partners:
   - beta.gouv.fr
   - DINUM
@@ -25,9 +21,11 @@ rate_limiting_description: |
 uptime: 100
 monitoring_link: https://status.entreprise.data.gouv.fr/
 monitoring_description: |
-  <p>Une supervision du service en temps réel est disponible à cette adresse.</p>
+  Une supervision du service en temps réel est disponible à cette adresse.
 contact_link: entreprise@data.gouv.fr
 doc_tech_external: https://entreprise.data.gouv.fr/api_doc/rna
+datagouv_uuid:
+  - 58e53811c751df03df38f42d
 last_update: 16/06/2020
 ---
 

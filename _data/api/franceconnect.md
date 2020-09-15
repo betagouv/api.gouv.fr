@@ -3,12 +3,33 @@ title: FranceConnect
 tagline: FranceConnect est un dispositif qui garantit l’identité d’un usager en se reposant sur des comptes certifiés existants.
 external_site: https://franceconnect.gouv.fr/partenaires
 is_open: -1 # -1 means API not open
-access_condition: OUVERT sous contrat
-access_link: https://franceconnect.gouv.fr/partenaires
-clients:
-  - Particuliers, pour contacter FranceConnect, <a href='mailto:support@franceconnect.gouv.fr'>cliquez ici</a>
-  - Entreprises, si vous avez vérifié votre éligibilité, vous pouvez demander à <a href='https://signup.api.gouv.fr/franceconnect'>intégrer le bouton FranceConnect</a>.
-  - Collectivités, vous souhaitez intégrer le bouton FranceConnect, <a href='https://signup.api.gouv.fr/franceconnect'>faites votre demande d'accès</a>
+datapass_link: https://franceconnect.gouv.fr/partenaires
+access_page:
+  - who:
+      - Un particulier
+    is_eligible: -1
+    description: |
+      Seules les administrations et les entreprises sont habilitées à utiliser l'API FranceConnect ou intégrer le bouton FranceConnect.
+
+      Si vous cherchez à contacter l'équipe FranceConnect, vous pouvez écrire à [support@franceconnect.gouv.fr](mailto:support@franceconnect.gouv.fr)
+
+      <Button href="/rechercher-api">Ou vous pouvez rechercher une autre API</Button>
+  - who:
+      - Une entreprise
+    is_eligible: 0
+    description: |
+      Si vous avez vérifié [votre éligibilité](https://franceconnect.gouv.fr/partenaires), vous pouvez demander à [intégrer le bouton FranceConnect](https://datapass.api.gouv.fr/franceconnect).
+
+      <NextSteps />
+      <Button href="https://franceconnect.gouv.fr/partenaires">Vérifier mon éligibilité et remplir une demande</Button>
+  - who:
+      - Une collectivité ou une administration
+    is_eligible: 1
+    description: |
+      Si vous souhaitez intégrer le bouton FranceConnect, [faites votre demande d’accès](https://datapass.api.gouv.fr/franceconnect).
+
+      <NextSteps />
+      <Button href="https://franceconnect.gouv.fr/partenaires">Remplir une demande</Button>
 partners:
   - DGFiP
   - Ameli
@@ -21,7 +42,6 @@ keywords:
   - Authentification
   - Identification
   - SSO
-  - Signup
 themes:
   - Particulier
 logo: logo-fc.jpg
