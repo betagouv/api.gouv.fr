@@ -47,7 +47,7 @@ themes:
 logo: logo-fc.jpg
 contact_link: support.partenaires@franceconnect.gouv.fr
 doc_tech_external: https://partenaires.franceconnect.gouv.fr/fcp/fournisseur-service
-visits_2019: 120883
+visits_2019: 5000
 uptime: 99.893 # https://uptimerobot.com/dashboard.php#778110642
 last_update: 10/12/2019
 ---

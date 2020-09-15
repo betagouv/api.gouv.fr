@@ -26,6 +26,7 @@ contact_link: entreprise@data.gouv.fr
 doc_tech_external: https://entreprise.data.gouv.fr/api_doc/rna
 datagouv_uuid:
   - 58e53811c751df03df38f42d
+visits_2019: 3000
 last_update: 16/06/2020
 ---
 
