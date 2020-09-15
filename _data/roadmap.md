@@ -68,6 +68,7 @@
       what: Base Carbone®
       path: /les-api/api_base_carbone
   8:
+    - type: ADD_API
       what: Données ouvertes - data.gouv.fr
       path: /les-api/api_data_gouv
     - type: ADD_API
