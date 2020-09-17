@@ -7,7 +7,7 @@ is_open: -1
 datapass_link: mailto:cartobio@beta.gouv.fr?subject=Demande%20d%E2%80%99acc%C3%A8s%20%C3%A0%20l%27API%20CartoBio
 access_page:
   - who:
-      - Un particulier ou une entreprise
+      - Un particulier, une association ou une entreprise
     is_eligible: -1
     description: |
       Seules les administrations et les organismes publics sont habilitées à utiliser l’API CartoBio Territoires.
@@ -15,6 +15,7 @@ access_page:
       <Button href="/rechercher-api">Retourner à la page de recherche</Button>
   - who:
       - une administration
+      - un organisme public
       - un organisme public
     is_eligible: 1
     description: |
