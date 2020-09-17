@@ -54,7 +54,7 @@
     "front-matter": "^3.0.2",
     "lodash": "^4.17.19",
     "markdown-to-jsx": "^6.11.4",
-    "next": "^9.5.2",
+    "next": "^9.5.3",
     "next-seo": "^4.4.0",
     "nextjs-fonts": "^0.22.0",
     "node-sass": "^4.14.1",
