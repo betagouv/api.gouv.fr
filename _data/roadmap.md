@@ -76,6 +76,12 @@
       path: /les-api/api_cartobio_territoires
   9:
     - type: ADD_API
+      what: Gallica Recherche de la BnF
+      path: /les-api/api_gallica_recherche
+    - type: ADD_API
+      what: Gallica Document de la BnF
+      path: /les-api/api_gallica_document
+    - type: ADD_API
       what: Recherche de Personnes Physiques (R2P) produite par la DGFiP
     - type: ADD_API
       what: Données ouvertes de l’URSSAF
@@ -85,9 +91,6 @@
       what: Répertoire National des Métiers
       path: https://rnm.artisanat.fr/api/
   10:
-    - type: ADD_API
-      what: Gallica produite par la BnF
-      path: http://api.bnf.fr/api-document-de-gallica
     - type: ADD_API
       what: Fichiers des Comptes Bancaires (FiCoBa) produite par le DGFiP
     - type: ADD_API
