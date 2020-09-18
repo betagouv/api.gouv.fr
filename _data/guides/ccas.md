@@ -46,16 +46,19 @@ L'utilisation des données par les CCAS est encadrée légalement. Vous pouvez m
 
 - Article <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000033219997&cidTexte=LEGITEXT000031366350&dateTexte=20161009">L.114-8</External> et <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=83A5E43D6A6710F0F0FFE705AA476AA5.tplgfr26s_3?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000038029900&dateTexte=20190213&categorieLien=id#LEGIARTI000038029900">R114-9-3 </External> du _Code des relations entre le public et l'administration_
 
+Si vous travaillez avec un des éditeurs ou intégrateurs, <a href='#editeurs'>consultez la section éditeurs.</a>
+
 <NextSteps/>
 <br/>
 <Button href="https://datapass.api.gouv.fr/api-particulier?scopes=%7B%22dgfip_avis_imposition%22%3Atrue%2C%22dgfip_adresse%22%3Atrue%2C%22cnaf_quotient_familial%22%3Atrue%2C%22cnaf_allocataires%22%3Atrue%2C%22cnaf_enfants%22%3Atrue%2C%22cnaf_adresse%22%3Afalse%7D">Remplir une demande</Button>
 
-## Editeurs et intégrateurs
+## Editeurs
 
-Si vous travaillez avec un des editeurs ci-dessous vous pouvez faire une demande simplifiée :
+Si vous travaillez avec l'un des éditeurs ou intégrateurs ci-dessous vous pouvez faire une demande simplifiée :
 
-| Editeur | Nom de la solution       | Date        | Lien vers la demande                              |
-| ------- | ------------------------ | ----------- | ------------------------------------------------- |
-| Up      | Millesime Action Sociale | Mi-Mai 2020 | <External href="">lien vers la demande</External> |
+| Editeur | Nom de la solution       | Date           | Lien vers la demande                                                                                                                                                                                                                                                                                      |
+| ------- | ------------------------ | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Up      | Millesime Action Sociale | Mi-Mai 2020    | <External href="https://datapass.api.gouv.fr/api-particulier?scopes=%7B%22dgfip_avis_imposition%22%3Atrue%2C%22dgfip_adresse%22%3Atrue%2C%22cnaf_quotient_familial%22%3Atrue%2C%22cnaf_allocataires%22%3Atrue%2C%22cnaf_enfants%22%3Atrue%2C%22cnaf_adresse%22%3Afalse%7D">Remplir une demande</External> |
+| Arpège  | Sonate Opus              | Septembre 2020 | <External href="">Remplir une demande</External>                                                                                                                                                                                                                                                          |
 
 Vous êtes un éditeur et vous souhaitez apparaître dans cette liste ? Écrivez-nous à [contact@particulier.api.gouv.fr](mailto:contact@particulier.api.gouv.fr)
