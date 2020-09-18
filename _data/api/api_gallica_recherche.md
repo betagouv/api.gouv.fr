@@ -20,7 +20,7 @@ themes:
 last_update: 17/09/2020
 ---
 
-L'API Recherche permet d'interroger le fonds de la bibliothèque numérique de la BnF, [Gallica](https://gallica.bnf.fr/). Les documents résultats d'une requête peuvent ensuite être exploités par le moyen de l'[API Document](/api_gallica_document).
+L'API Recherche permet d'interroger le fonds de la bibliothèque numérique de la BnF, [Gallica](https://gallica.bnf.fr/). Les documents résultats d'une requête peuvent ensuite être exploités par le moyen de l'[API Document](/les-api/api_gallica_document).
 
 ### A quoi sert-elle ?
 
@@ -38,7 +38,3 @@ Cette API se décline en deux services :
 ### Conditions d’utilisation
 
 L’API est gérée par la Bibliothèque nationale de France. Son accès est ouvert sans restriction, sauf en cas d'usage abusif.
-
-### A quoi sert-elle ?
-
-### Données de l’API :
