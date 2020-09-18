@@ -29,11 +29,11 @@ L’API Document permet de récupérer un certain nombre d’informations (méta
 - l'[API de recherche Gallica](/les-api/api_gallica_recherche)
 - un moteur de recherche tiers
 
-Cette API est utilisée par les systèmes d'information internes de la BnF mais aussi par des applications tierces (voir en particulier les exemples référencés sur <External href='api.bnf.fr'>api.bnf.fr</External> et <External href='http://gallicastudio.bnf.fr/'>Gallica Studio</External>).
+Cette API est utilisée par les systèmes d'information internes de la BnF mais aussi par des applications tierces (voir en particulier les exemples référencés sur <External href='http://api.bnf.fr'>api.bnf.fr</External> et <External href='http://gallicastudio.bnf.fr/'>Gallica Studio</External>).
 
 Ces applications réutilisent les collections numérisées de la BnF pour des objectifs divers, relevant en particulier de la recherche documentaire ou iconographique, et dans des contextes variés (ludique, académique, professionnel).
 
-### Données de l’API :
+### Données de l’API
 
 L’accès aux ressources décrivant le document ou constitutive du document (image, texte, etc.) se fait par l’appel à différents services :
 
@@ -47,7 +47,7 @@ L’accès aux ressources décrivant le document ou constitutive du document (im
 
 Le dénominateur commun d’utilisation de ces services est l'identifiant du document numérique. La BnF utilise le système d'identifiants pérennes ARK et ses identifiants débutent par la valeur `ark:/12148/`.
 
-### Conditions d'utilisation
+### Conditions d’utilisation
 
 L’API est gérée par la Bibliothèque nationale de France. Son accès est ouvert sans restriction, sauf en cas d'usage abusif.
 
