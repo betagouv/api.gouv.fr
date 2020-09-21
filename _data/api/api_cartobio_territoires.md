@@ -46,7 +46,9 @@ partenaires:
   - Les Organismes de Certification de l’Agriculture Biologique
 themes:
   - Environnement
-last_update: 27/07/2020
+  - Agriculture
+last_update: 21/09/2020
+rate_limiting_resume: illimité
 ---
 
 CartoBio vise à ouvrir progressivement les données des parcelles conduites en agriculture biologique en France, notamment auprès des acteurs publics territoriaux.
@@ -72,6 +74,7 @@ Voici les données accessibles :
 | Contour géographique de la parcelle | Sous forme Shapefile ou GeoJson |
 | Assolement de l’année               | Description des cultures        |
 | Millésime de la donnée              | Année                           |
+| Superficie                          | En hectares, par parcelle       |
 
 #### D'où vient la donnée ?
 
