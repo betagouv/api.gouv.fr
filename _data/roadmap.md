@@ -89,6 +89,9 @@
       what: Gallica produite par la BnF
       path: http://api.bnf.fr/api-document-de-gallica
     - type: ADD_API
+      what: FICOBA produite par la DGFiP
+      path: /les-api/api_comptes_bancaires_ficoba
+    - type: ADD_API
       what: Fichiers des Comptes Bancaires (FiCoBa) produite par le DGFiP
     - type: ADD_API
       what: Registre des Bénéficiaires Effectifs (RBE) produite par l'INPI
