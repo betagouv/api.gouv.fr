@@ -16,9 +16,7 @@ access_page:
 
       <Button href="/rechercher-api">Retourner à la page de recherche</Button>
   - who:
-      - Une collectivité
-      - Une administration
-      - Un ministère
+      - Une entité administrative
     is_eligible: 0
     description: |
       L'API R2P restituant des éléments sensibles (état civil, adresse, identifiant fiscal), elle est couverte par la règle du secret professionnel prévue par les dispositions de l’article <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367308&dateTexte=&categorieLien=cid">l'article L100-3</External> du Livre des Procédures Fiscales, car ceux-ci constituent des données nominatives et personnelles.
@@ -42,14 +40,14 @@ access_page:
       <NextSteps service_description="de la description du cas d’utilisation" is_editeur={true}/>
       <Button href="https://signup.api.gouv.fr/api-r2p-sandbox">Remplir une demande</Button>
   - who:
-      - Une banque
+      - Un établissement bancaire
     is_eligible: 0
     description: |
       Dans le cadre de la vérification de l’éligibilité au <External href="https://www.service-public.fr/particuliers/vosdroits/F2367">LEP</External> les banques peuvent être considérées comme une administration au sens de <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367308&dateTexte=&categorieLien=cid">l'article L100-3</External> du *code des relations entre le public et l'administration*.
 
       Si vous entrez dans ce cadre, vous pouvez effectuer une demande d'accès à l’API R2P.
 
-      En remplissant cette demande, vous allez aussi obtenir accè à l'API Impôt Particulier, dont les données sont nécessaires à la vérification de l'éligibilité au LEP.
+      **NB :** En remplissant cette demande, vous allez obtenir l’accès à l'API R2P. Afin d'accéder aux données il est également nécessaire d’avoir accès à <External href="/les-api/impot-particulier/demande-acces">l'API Impôt Particulier</External>, qui contient les données nécessaires à la vérification de l'éligibilité au LEP.
 
       <NextSteps service_description="de la description du cas d’utilisation"/>
       <Button href="https://signup.api.gouv.fr/api-r2p-sandbox">Remplir une demande</Button>
@@ -73,9 +71,10 @@ themes:
 contact_link: bureau.capusagers-apimanagement@dgfip.finances.gouv.fr
 doc_tech_link: https://api.gouv.fr/swaggers/api-r2p.json
 last_update: 31/07/2020
+visits_2019: 12000
 ---
 
-L'API R2P permet aux administrations et aux acteurs privés qui sont éligibles d'obtenir les données personnelles d'un citoyen afin de les intégrer à leur Système d’Information (selon le cas d'usage : état civil complet, dernière adresse connue de l’administration fiscale (DGFIP) et identifiant fiscal ou SPI).
+L'API R2P permet aux entités administratives (administration, ministère, organisme public, collectivité) et aux acteurs privés qui sont éligibles d'obtenir les données personnelles d'un citoyen afin de les intégrer à leur Système d’Information (selon le cas d'usage : état civil complet, dernière adresse connue de l’administration fiscale (DGFIP) et identifiant fiscal ou SPI).
 
 ### A quoi sert l’API R2P - Recherche des personnes physiques ?
 

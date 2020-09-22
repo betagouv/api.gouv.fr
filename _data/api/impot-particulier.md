@@ -14,14 +14,12 @@ access_page:
 
       <Button href="/rechercher-api">Retourner à la page de recherche</Button>
   - who:
-      - Une collectivité
-      - Une administration
-      - Un ministère
+      - Une entité administrative
     is_eligible: 1
     description: |
       Conformément aux dispositions de <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367412&dateTexte=&categorieLien=cid">l'article L114-8</External> du *code des relations entre le public et l'administration*, seules les administrations sont habilitées à échanger entre elles des informations ou données strictement nécessaires pour traiter une démarche.
 
-      Pour obtenir un agrément, vous devez **justifier d'une simplification pour les citoyens**, et vous engager à n'accéder aux données personnelles qu'avec **l'accord explicite** de l'usager.
+      Pour obtenir l’accès à l’API, vous devez notamment **justifier d'une simplification pour les citoyens** et vous engager à n'accéder qu’aux données strictement nécessaires à la démarche conformément au principe de proportionnalité.
 
       <NextSteps />
       <IsFranceConnected fcLink="https://signup-staging.api.gouv.fr/api-impot-particulier-fc-sandbox" notFcLink="https://signup-staging.api.gouv.fr/api-impot-particulier-sandbox"/>
@@ -36,22 +34,14 @@ access_page:
       <NextSteps is_editeur/>
       <IsFranceConnected fcLink="https://signup-staging.api.gouv.fr/api-impot-particulier-fc-sandbox" notFcLink="https://signup-staging.api.gouv.fr/api-impot-particulier-sandbox"/>
   - who:
-      - Une entreprise
-    is_eligible: 0
-    description: |
-      Seules les entreprises considérées comme une administration au sens de <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367308&dateTexte=&categorieLien=cid">l'article L100-3</External> du *code des relations entre le public et l'administration*.
-
-      Lors de votre demande vous devrez **justifier** dans quelle mesure l'entité pour laquelle vous opérez rentre dans ce cadre juridique. Si vous ne rentrez pas dans ces critères, **votre demande ne pourra pas être acceptée**.
-
-      <NextSteps />
-      <Button href='https://signup.api.gouv.fr/api-impot-particulier'>Remplir une demande</Button>
-  - who:
-      - Une banque
+      - Un établissement bancaire
     is_eligible: 0
     description: |
       Dans le cadre de la vérification de l’éligibilité au <External href="https://www.service-public.fr/particuliers/vosdroits/F2367">LEP</External> les banques peuvent être considérées comme une administration au sens de <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367308&dateTexte=&categorieLien=cid">l'article L100-3</External> du *code des relations entre le public et l'administration*.
 
       Si vous entrez dans ce cadre, vous pouvez effectuer une demande d'accès à l’API Impôt particulier.
+
+      **NB :** En remplissant cette demande, vous allez obtenir l’accès à l'API Impôt Particulier. Afin d'accéder aux données il est également nécessaire d’avoir accès à <External href="/les-api/api_r2p/demande-acces"> l'API R2P</External> afin d'obtenir l'identifiant fiscal (SPI).
 
       <NextSteps />
       <Button href='https://signup-staging.api.gouv.fr/api-impot-particulier-sandbox?scopes=%7B%22dgfip_eligibilite_lep%22%3A%20true%2C%22dgfip_annee_n_moins_1%22%3Atrue%2C%22dgfip_acces_etat_civil%22%3Atrue%7D#donnees'>Remplir une demande</Button>
@@ -74,15 +64,15 @@ doc_tech_link: /swaggers/api-impot-particulier.yaml
 last_update: 08/10/2019
 ---
 
-L'API Impôt particulier simplifie les démarches des usagers et le processus de gestion de vos téléservices. Elle permet l’échange d’informations fiscales entre la DGFiP et une administration, une collectivité ou une entreprise.
+L'API Impôt particulier simplifie les démarches des usagers et le processus de gestion de vos téléservices. Elle permet l’échange d’informations fiscales entre la DGFiP et une entité administrative (administration, ministère, organisme public, collectivité) ou une entreprise dans le cadre de leurs obligations légales et réglementaires pour des missions d’intérêts général.
 
 ### A quoi sert l’API Impôt particulier ?
 
 Pour l'usager : l'API Impôt particulier dématérialise les démarches à 100% :
 
-1. Je me connecte ou je me "FranceConnect" sur le site de ma commune pour réaliser une démarche.
+1. Je me connecte ou je me "FranceConnect" sur un site pour réaliser une démarche.
 2. **Soit** je me suis FranceConnecté et je consens à la transmission par la DGFiP, des seules données fiscales nécessaires, **soit** je renseigne mon identifiant fiscal
-3. Ma commune récupère immédiatement mes informations
+3. L'entité administrative qui opère le site récupère immédiatement mes informations
 4. Je n’ai rien d'autre à faire, ma démarche est terminée !
 
 Pour l’acteur qui la met en place :
