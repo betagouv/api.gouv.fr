@@ -76,6 +76,12 @@
       path: /les-api/api_cartobio_territoires
   9:
     - type: ADD_API
+      what: Gallica Recherche de la BnF
+      path: /les-api/api_gallica_recherche
+    - type: ADD_API
+      what: Gallica Document de la BnF
+      path: /les-api/api_gallica_document
+    - type: ADD_API
       what: Recherche de Personnes Physiques (R2P) produite par la DGFiP
     - type: ADD_API
       what: Données ouvertes de l’URSSAF
@@ -89,10 +95,8 @@
       what: Gallica produite par la BnF
       path: http://api.bnf.fr/api-document-de-gallica
     - type: ADD_API
-      what: FICOBA produite par la DGFiP
+      what: Fichiers des Comptes Bancaires (FICOBA) produite par le DGFiP
       path: /les-api/api_comptes_bancaires_ficoba
-    - type: ADD_API
-      what: Fichiers des Comptes Bancaires (FiCoBa) produite par le DGFiP
     - type: ADD_API
       what: Registre des Bénéficiaires Effectifs (RBE) produite par l'INPI
   11:
