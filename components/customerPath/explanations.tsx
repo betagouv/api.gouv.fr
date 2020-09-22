@@ -117,7 +117,7 @@ const Explanations: React.FC<IProps> = ({ subject, visitorType }) => {
             les APIs ouvertes à tous" pour n’afficher que les APIs ouvertes.
           </p>
           <div className="layout-center">
-            <ButtonLink large href="/rechercher-api" onClick={logClic}>
+            <ButtonLink size="large" href="/rechercher-api" onClick={logClic}>
               Rechercher une API
             </ButtonLink>
           </div>
@@ -151,7 +151,7 @@ const Explanations: React.FC<IProps> = ({ subject, visitorType }) => {
             fiche API quelles sont les conditions d'accès à la donnée.
           </p>
           <div className="layout-center">
-            <ButtonLink large href="/rechercher-api" onClick={logClic}>
+            <ButtonLink size="large" href="/rechercher-api" onClick={logClic}>
               Rechercher une API
             </ButtonLink>
           </div>
@@ -172,7 +172,7 @@ const Explanations: React.FC<IProps> = ({ subject, visitorType }) => {
           </p>
           <div className="layout-center">
             <ButtonLink
-              large
+              size="large"
               href="https://franceconnect.gouv.fr/faq"
               onClick={logClic}
             >
@@ -210,7 +210,7 @@ const Explanations: React.FC<IProps> = ({ subject, visitorType }) => {
           </p>
           <div className="layout-center">
             <ButtonLink
-              large
+              size="large"
               onClick={logClic}
               href="https://signup.api.gouv.fr/franceconnect?source=api_gouv_customer_path_entreprise"
             >
@@ -232,7 +232,7 @@ const Explanations: React.FC<IProps> = ({ subject, visitorType }) => {
           </p>
           <div className="layout-center">
             <ButtonLink
-              large
+              size="large"
               href="https://immatriculation.ants.gouv.fr"
               onClick={logClic}
             >
@@ -254,7 +254,7 @@ const Explanations: React.FC<IProps> = ({ subject, visitorType }) => {
           </p>
           <div className="layout-center">
             <ButtonLink
-              large
+              size="large"
               onClick={logClic}
               href="https://permisdeconduire.ants.gouv.fr/Vos-demarches/Le-permis-a-points/Solde-de-vos-points-via-une-identite-France-Connect"
             >
@@ -277,7 +277,7 @@ const Explanations: React.FC<IProps> = ({ subject, visitorType }) => {
           </p>
           <div className="layout-center">
             <ButtonLink
-              large
+              size="large"
               onClick={logClic}
               href="https://github.com/betagouv/api.gouv.fr/blob/master/CONTRIBUTING.md"
             >

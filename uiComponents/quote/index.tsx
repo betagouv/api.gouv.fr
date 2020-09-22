@@ -7,7 +7,7 @@ const Quote: React.FC<PropsWithChildren<{}>> = ({ children }) => {
       <div className="quote-wrapper">
         <div>
           <div className="medaillon">
-            <img src="/images/guide/harold.jpg" alt="" />
+            <img src="/images/guides/harold.jpg" alt="" />
           </div>
           <div>
             <div>Roscoe Soulabranche</div>

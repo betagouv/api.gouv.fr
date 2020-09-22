@@ -5,11 +5,6 @@ owner: Ministère de l'Enseignement Supérieur, de la Recherche et de l'Innovati
 owner_acronym: MESRI # acronyme du producteur
 is_open: 1 # 1 means API is fully open
 logo: logo-scanr-blue.jpg # https://scanr.enseignementsup-recherche.gouv.fr/img/logo-scanr-blue.jpg - Nom du fichier de votre logo à placer dans le dossier /images/api-logo
-clients: # types d'entités habilitées à utiliser l'API
-  - particuliers # texte libre en minuscules
-  - entreprises # ajoutez ou supprimez des types d'entités
-  - collectivités
-  - ministères
 partners:
 keywords: # utilisé dans la recherche
   - recherche
@@ -28,6 +23,8 @@ themes:
 contact_link: https://scanr.enseignementsup-recherche.gouv.fr/contact
 doc_tech_link: https://scanr-api.enseignementsup-recherche.gouv.fr/api/v2/api-docs
 monitoring_link: https://scanr-api.enseignementsup-recherche.gouv.fr/api/services/counts
+datagouv_uuid:
+  - 577cc85ac751df4e1b9901a0
 ---
 
 ### Description de l'API

@@ -55,22 +55,22 @@ access_page:
 
       <NextSteps />
       <Button href='https://signup-staging.api.gouv.fr/api-impot-particulier-sandbox?scopes=%7B%22dgfip_eligibilite_lep%22%3A%20true%2C%22dgfip_annee_n_moins_1%22%3Atrue%2C%22dgfip_acces_etat_civil%22%3Atrue%7D#donnees'>Remplir une demande</Button>
+datapass_link: https://signup.api.gouv.fr/api-impot-particulier
 keywords:
   - Impots
   - Revenu Fiscal de Référence
   - Adresse
   - Justificatif de domicile
-  - Signup
 rate_limiting_resume: illimité
 rate_limiting_description: |
   Votre volume d'utilisation de l'API Impôt Particulier n'est pas limité par défaut mais fait l'objet d'une déclaration lors de votre demande d'accès. En cas d'utilisation abusive, la DGFiP se réserve le droit de restreindre et/ou couper votre accès à tout moment.
 monitoring_description: |
-  <p>La DGFIP s’engage à ce que le service soit accessible à plus de 98,5% et à communiquer sur les coupures de service ponctuelles qui pourraient survenir.</p>
+  La DGFIP s’engage à ce que le service soit accessible à plus de 98,5% et à communiquer sur les coupures de service ponctuelles qui pourraient survenir.
 themes:
   - Particulier
 contact_link: impot.particulier@api.gouv.fr
-doc_tech_link: https://particulier.api.gouv.fr/swagger_api_impots_particulier.yaml
-visits_2019: 1324
+visits_2019: 13000
+doc_tech_link: /swaggers/api-impot-particulier.yaml
 last_update: 08/10/2019
 ---
 

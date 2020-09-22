@@ -1,5 +1,5 @@
 import React from 'react';
-import Document, { Head, Main, NextScript } from 'next/document';
+import Document, { Html, Head, Main, NextScript } from 'next/document';
 import constants from '../constants';
 
 class MyDocument extends Document {
@@ -10,15 +10,11 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <html lang="fr">
+      <Html lang="fr">
         <Head>
           {/* Standard Meta */}
           <meta charSet="utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
-          />
 
           <link rel="icon" href="/favicon.ico" />
           <link
@@ -220,7 +216,7 @@ class MyDocument extends Document {
             </>
           )}
         </body>
-      </html>
+      </Html>
     );
   }
 }

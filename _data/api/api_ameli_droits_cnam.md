@@ -3,7 +3,7 @@ title: API de droits à l'Assurance Maladie
 tagline: Accédez aux droits d’un individu ou d’une famille (enfants rattachés), gérés par le régime général de l’Assurance Maladie
 external_site: https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/assurance-maladie-digital/api-droits-fs-doc/master/documentation-open-api.yaml
 is_open: -1 # -1 means API not open
-access_link: /les-api/api_ameli_droits_cnam/demande-acces
+datapass_link: https://signup.api.gouv.fr/api-droits-cnam
 access_page:
   - who:
       - Un établissements de soins
@@ -40,13 +40,12 @@ keywords:
   - Prise en charge au titre du régime obligatoire
   - Exonération du ticket modérateur
   - Médecin traitant
-  - Signup
 rate_limiting_resume: Incluses dans la convention
 rate_limiting_description: |
-  <p>Les éventuelles limitations d’usage vis-à-vis d’un partenaire sont incluses dans la convention.</p>
+  Les éventuelles limitations d’usage vis-à-vis d’un partenaire sont incluses dans la convention.
 monitoring_link: https://stats.uptimerobot.com/3wEv6hppvv
 monitoring_description: |
-  <p>Une supervision du service en temps réel est disponible à cette adresse.</p>
+  Une supervision du service en temps réel est disponible à cette adresse.
 contact_link: partenaires-api-ameli.cnam@assurance-maladie.fr
 doc_tech_link: https://raw.githubusercontent.com/assurance-maladie-digital/api-droits-fs-doc/master/documentation-open-api.yaml
 themes:

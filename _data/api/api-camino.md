@@ -3,11 +3,6 @@ title: API Camino
 tagline: Ouvrir le cadastre minier pour mieux gérer les projets
 is_open: 1 # 1 means API is fully open
 external_site: https://api.camino.beta.gouv.fr
-clients:
-  - entreprises
-  - bureaux d'études
-  - administrations
-  - citoyens et leurs réprésentants
 partners:
   - Ministère de la Transition écologique et solidaire (MTES)
   - Ministère de l'Economie et des Finances (MEF)
@@ -35,6 +30,8 @@ stat:
   link: https://camino.beta.gouv.fr/statistiques
 contact_link: camino@beta.gouv.fr
 doc_tech_external: https://api.camino.beta.gouv.fr
+datagouv_uuid:
+  - 5dceb39c634f416d5593c858
 visits_2019: 41
 last_update: 10/12/2019
 ---

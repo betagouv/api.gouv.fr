@@ -14,7 +14,9 @@ owner_acronym: DILA
 logo: logo-carre-Boamp.png
 contact_link: donnees-dila@dila.gouv.fr
 doc_tech_external: http://api.dila.fr
-doc_tech_link: http://api.dila.fr/opendata/v2/api-docs
+doc_tech_link: /api/v1/proxy/http%3A%2F%2Fapi.dila.fr%2Fopendata%2Fv2%2Fapi-docs
+datagouv_uuid:
+  - 559390f9c751df0139a453ba
 visits_2019: 1332
 last_update: 18/01/2017
 ---

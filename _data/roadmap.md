@@ -53,7 +53,7 @@
       what: BDM
       path: /les-api/api_bdm
     - type: ADD_API
-      what: Répertoire National du Commerce et des Sociétés
+      what: Registre National du Commerce et des Sociétés
       path: /les-api/api_inpi
     - type: ADD_API
       what: Professionnels RGE
@@ -69,17 +69,36 @@
       path: /les-api/api_base_carbone
   8:
     - type: ADD_API
-      what: Données Ouvertes Loire-Atlantique
+      what: Données ouvertes - data.gouv.fr
+      path: /les-api/api_data_gouv
     - type: ADD_API
       what: CartoBio produite par l'Agence BIO
-    - type: ADD_API
-      what: R2P produite par la DGFIP
+      path: /les-api/api_cartobio_territoires
   9:
     - type: ADD_API
-      what: Registre National du Commerce et des Sociétés
+      what: Recherche de Personnes Physiques (R2P) produite par la DGFiP
     - type: ADD_API
-      what: Sirene distribuée par entreprise.data.gouv.fr
+      what: Données ouvertes de l’URSSAF
+    - type: ADD_API
+      what: Données ouvertes de la ville de Paris
+    - type: ADD_API
+      what: Répertoire National des Métiers
+      path: https://rnm.artisanat.fr/api/
+  10:
+    - type: ADD_API
+      what: Gallica produite par la BnF
+      path: http://api.bnf.fr/api-document-de-gallica
+    - type: ADD_API
+      what: Fichiers des Comptes Bancaires (FiCoBa) produite par le DGFiP
+    - type: ADD_API
+      what: Registre des Bénéficiaires Effectifs (RBE) produite par l'INPI
+  11:
+    - type: ADD_API
+      what: Sirene distribuée par Etalab
       path: https://entreprise.data.gouv.fr/api_doc/sirene
+    - type: ADD_API
+      what: Données Ouvertes Loire-Atlantique
+  12:
     - type: DLNUF
       what: |
         De nouvelles données seront mises à disposition des administrations dans le cadre du [« Dites le nous une fois »](https://www.numerique.gouv.fr/services/guichet-dites-le-nous-une-fois/) :
@@ -96,16 +115,10 @@
         - Aide au logement étudiant
         - Demande ou renouvellement de logement social
         - Recensement citoyen obligatoire
-  10:
-    - type: ADD_API
-      what: Répertoire National des Métiers
-      path: https://rnm.artisanat.fr/api/
-  12:
     - type: INFO
       what: |
         Intégration des [APIs de l’URSSAF](https://portailapi.urssaf.fr/fr/) :
 
-        - API Données ouvertes de l’URSSAF
         - API Déclaration auto-entrepreneur
         - API Déclaration CESU
         - API Déclaration PAJE

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MultiChoice, ButtonLink } from '../../uiComponents';
+import { MultiChoice, ButtonLink, ExternalLink } from '../../uiComponents';
 import Loader from '../../uiComponents/loader';
 
 interface IPropsFC {
@@ -40,16 +40,25 @@ const IsFranceConnected: React.FC<IPropsFC> = ({ fcLink, notFcLink }) => {
         />
       </div>
 
-      {!!link && (
+      {!!link && isLoading ? (
         <div className="layout-center">
-          {isLoading ? (
-            <Loader />
-          ) : (
-            <ButtonLink href={link} large>
+          <Loader />
+        </div>
+      ) : (
+        <>
+          <p>
+            En remplissant cette demande, vous allez obtenir l’accès à l'API
+            Impôt Particulier. Afin d'accéder aux données il est également
+            nécessaire de faire une demande d’accès{' '}
+            <ExternalLink href="/les-api/api-r2p">l'API R2P</ExternalLink> afin
+            d'obtenir l'identifiant fiscal.
+          </p>
+          <div className="layout-center">
+            <ButtonLink href={link} size="large">
               Remplir une demande
             </ButtonLink>
-          )}
-        </div>
+          </div>
+        </>
       )}
       <style jsx>{`
         .question {
