@@ -38,8 +38,8 @@ monitoring_description: |
 themes:
   - Particulier
 contact_link: impot.particulier@api.gouv.fr
-doc_tech_link: http://api.gouv.fr/swaggers/api-impot-particulier.yaml
-visits_2019: 1324
+visits_2019: 13000
+doc_tech_link: /swaggers/api-impot-particulier.yaml
 last_update: 08/10/2019
 ---
 

@@ -45,8 +45,8 @@ themes:
 logo: ChorusPro.jpg
 contact_link: api-choruspro.aife@finances.gouv.fr
 doc_tech_external: https://communaute.chorus-pro.gouv.fr/documentation/chorus-pro-api/?lang=en
-doc_tech_link: http://api.gouv.fr/swaggers/api-chorus-pro.json
-visits_2019: 40978
+visits_2019: 3000
+doc_tech_link: /swaggers/api-chorus-pro.json
 last_update: 07/08/2017
 ---
 

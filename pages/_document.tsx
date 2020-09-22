@@ -1,5 +1,5 @@
 import React from 'react';
-import Document, { Head, Main, NextScript } from 'next/document';
+import Document, { Html, Head, Main, NextScript } from 'next/document';
 import constants from '../constants';
 
 class MyDocument extends Document {
@@ -10,7 +10,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <html lang="fr">
+      <Html lang="fr">
         <Head>
           {/* Standard Meta */}
           <meta charSet="utf-8" />
@@ -216,7 +216,7 @@ class MyDocument extends Document {
             </>
           )}
         </body>
-      </html>
+      </Html>
     );
   }
 }

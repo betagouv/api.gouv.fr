@@ -37,6 +37,10 @@ const Documentation: React.FC<IProps> = ({ api, allApis }) => {
 
   const shareLink = `${constants.links.mailto.SHARE}?subject=Connaissez vous ${title} ?&body=https://api.gouv.fr/documentation/${slug}`;
 
+  const useSeparator =
+    (is_open === -1 || (!!account_link && is_open !== 1)) &&
+    !!doc_tech_external;
+
   return (
     <Page
       title={`Documentation de ${title}`}
@@ -86,8 +90,7 @@ const Documentation: React.FC<IProps> = ({ api, allApis }) => {
               {account_link && is_open === 0 && (
                 <AccountNeeded account_link={account_link} />
               )}
-              {(is_open === -1 || (account_link && is_open)) &&
-                doc_tech_external && <div className="separator" />}
+              {useSeparator && <div className="separator"></div>}
               {doc_tech_external && (
                 <ExternalDoc doc_link={doc_tech_external} />
               )}
@@ -95,9 +98,7 @@ const Documentation: React.FC<IProps> = ({ api, allApis }) => {
 
             <div>
               {doc_tech_link ? (
-                <SwaggerUIWrapper
-                  url={`/api/v1/proxy/${encodeURIComponent(doc_tech_link)}`}
-                />
+                <SwaggerUIWrapper url={doc_tech_link} />
               ) : doc_tech_external ? (
                 <>
                   <p>
