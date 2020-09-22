@@ -8,6 +8,7 @@ is_open: -1 # -1 means API not open
 access_page:
   - who:
       - Un particulier
+      - Une entreprise
     is_eligible: -1
     description: |
       Vous n’êtes pas autorisé à accèder aux données de l’API Impôt particulier.
