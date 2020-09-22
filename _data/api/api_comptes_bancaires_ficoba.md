@@ -70,7 +70,7 @@ themes:
   - Particulier
   - Entreprise
 contact_link: bureau.capusagers-apimanagement@dgfip.finances.gouv.fr
-doc_tech_link: https://api.gouv.fr/swaggers/api-ficoba.json
+doc_tech_link: /swaggers/api-ficoba.json
 last_update: 22/09/2020
 visits_2019: 11000
 ---
