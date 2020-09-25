@@ -42,7 +42,7 @@ const ApiWidgetWrapper: React.FC<PropsWithChildren<IProps>> = ({
         .widget-wrapper .interactive-component {
           width: 70%;
           background-color: #fff;
-          box-shadow: 0 20px 35px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
           padding: 20px 40px;
           border-radius: 5px;
         }

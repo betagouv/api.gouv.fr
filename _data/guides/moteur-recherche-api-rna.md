@@ -54,9 +54,9 @@ Ainsi dans notre démonstrateur, nous avons affiché dans l'interface une combin
 }
 ```
 
-Chaque association retournée par l’API est mise en page, (titre, adresse, id_association et objet) puis affichée dans la liste des résultats.
+Chaque association retournée par l’API est mise en page, (titre, adresse, id_association et objet) puis affichée dans la liste des résultats. Et voila, notre moteur de recherche est terminé !
 
-### Aller plus loin !
+### Aller plus loin 🚀
 
 Voila ! Vous savez désormais comment fonctionne un moteur de recherche avec [l’API Répertoire National des Associations](/les-api/api_rna).
 
