@@ -40,6 +40,17 @@ content_intro: |
   - requêter les données d'une association grâce à son code RNA
 ---
 
+### Les données disponibles dans l'API
+
+Les principales données accessibles sont :
+
+| Nom        | Description                                                                  |
+| ---------- | ---------------------------------------------------------------------------- |
+| Titre      | nom de l'association                                                         |
+| Objet      | description de l'association                                                 |
+| Adresse    | numero de voie, rue, ville et code postal                                    |
+| numéro RNA | identifant d'une association. Commence par un W et est composé de 9 chiffres |
+
 ### Que contient le RNA ?
 
 Le RNA répertorie l’ensemble des associations relevant de la loi du 1er juillet 1901 relative au contrat d’association, dont le siège est en France (métropole et outre-mer) à l’exclusion des départements de la Moselle (57), du Bas-Rhin (67) et du Haut-Rhin (68) qui relèvent d’un régime spécifique.
