@@ -32,6 +32,7 @@
       border: none;
       background: none;
       flex-grow: 1;
+      min-width: 0;
 
       &:focus {
         outline: none;
@@ -49,31 +50,6 @@
 
       &:hover {
         background-color: #eee;
-      }
-    }
-  }
-  .search-results-wrapper {
-    position: relative;
-
-    .search-results {
-      background-color: #fff;
-      position: absolute;
-      top: 0;
-      width: 100%;
-      border-bottom-left-radius: 10px;
-      border-bottom-right-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 20px 30px 0px rgba(0, 0, 0, 0.2);
-      z-index: 100;
-
-      > div {
-        padding: 10px;
-        border: 2px solid $lightGrey;
-        border-top: none;
-
-        &:hover {
-          background-color: $lightestBlue;
-        }
       }
     }
   }

@@ -54,7 +54,6 @@ const GeoWidget: React.FC<{}> = () => {
           placeholder="Tapez le nom de votre commune"
           label="Recherchez une commune française"
           debounceRate={200}
-          results={results}
           isLoading={isLoading}
         />
       </div>

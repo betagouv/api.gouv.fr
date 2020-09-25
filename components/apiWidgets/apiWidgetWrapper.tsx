@@ -74,6 +74,16 @@ const ApiWidgetWrapper: React.FC<PropsWithChildren<IProps>> = ({
           font-size: 0.9rem;
           line-height: 1.3rem;
         }
+
+        @media only screen and (min-width: 1px) and (max-width: 700px) {
+          .widget-wrapper .interactive-component {
+            width: calc(100% - 40px);
+            padding: 40px 20px 30px;
+          }
+          .widget-wrapper {
+            padding: 80px 20px 50px;
+          }
+        }
       `}</style>
     </div>
   );
