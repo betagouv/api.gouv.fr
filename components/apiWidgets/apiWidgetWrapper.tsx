@@ -42,9 +42,24 @@ const ApiWidgetWrapper: React.FC<PropsWithChildren<IProps>> = ({
         .widget-wrapper .interactive-component {
           width: 70%;
           background-color: #fff;
-          box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
-          padding: 20px 40px;
+          border: 1px solid ${constants.colors.darkBlue};
+          box-shadow: 0 20px 35px 0px rgba(0, 0, 0, 0.25);
+          padding: 40px 40px 30px;
           border-radius: 5px;
+          position: relative;
+        }
+        .widget-wrapper .interactive-component:before {
+          content: 'Démonstrateur';
+          position: absolute;
+          border-bottom-right-radius: 5px;
+          border-bottom-left-radius: 5px;
+          padding: 4px 4px;
+          font-size: 0.9rem;
+          line-height: 0.9rem;
+          background-color: ${constants.colors.darkBlue};
+          top: 0;
+          left: 20px;
+          color: #fff;
         }
         .widget-wrapper .interactive-component > .results {
           margin-top: 20px;
