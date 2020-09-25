@@ -24,7 +24,7 @@ L’API permet à un programme informatique de facilement interroger le réperto
 
 On peut notamment utiliser l'API pour créer un moteur de recherche des associations.
 
-Le moteur de recherche ci-dessous est un démonstrateur rudimentaire. Il permet de rechercher une association à partir de son nom mais il n'affiche que les <b>10 premiers résultats</b>.
+Le moteur de recherche ci-dessous est un simple démonstrateur. Il permet de rechercher une association à partir de son nom mais il n'affiche que les <b>10 premiers résultats</b>.
 
 Il est aussi possible de faire un moteur de recherche par n° SIRET ou par n° RNA.
 
