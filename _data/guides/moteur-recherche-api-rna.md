@@ -12,7 +12,7 @@ noindex: false
 
 L’API Répertoire des Associations permet d'interroger le répertoire des associations françaises. Ce répertoire est librement téléchargeable sur la plateforme ouverte des données publiques françaises, <External href='data.gouv.fr'>data.gouv.fr</External>:
 
-<Datagouv title='Répertoire National des Associations' productor='Ministère de l'Intérieur' href="https://www.data.gouv.fr/fr/datasets/repertoire-national-des-associations/">
+<Datagouv title='Répertoire National des Associations' productor='Ministère de l’Intérieur' href="https://www.data.gouv.fr/fr/datasets/repertoire-national-des-associations/">
 
 L’API permet à un programme informatique de facilement interroger le répertoire, sans avoir à le télécharger. Elle permet de :
 
@@ -53,6 +53,8 @@ Ainsi dans notre démonstrateur, nous avons affiché dans l'interface une combin
   (...)
 }
 ```
+
+Chaque association retournée par l’API est mise en page, (titre, adresse, id_association et objet) puis affichée dans la liste des résultats.
 
 ### Aller plus loin !
 
