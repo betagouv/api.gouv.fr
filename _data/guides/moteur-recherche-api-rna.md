@@ -1,6 +1,6 @@
 ---
 title: Créer un moteur de recherche des associations françaises
-tagline: Comment utiliser l’API Répertoire National des Associations pour créer un moteur de recherche qui trouve le numéro RNA d'une associations ?
+tagline: Comment utiliser l’API Répertoire National des Associations pour créer un moteur de recherche qui trouve le numéro RNA d'une association ?
 tags: cas usage, api RNA, répertoire, association
 api:
   - API Répertoire National des Associations
