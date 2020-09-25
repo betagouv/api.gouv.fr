@@ -22,6 +22,11 @@
     }
   }
 
+  img {
+    height: 190px;
+    width: 190px;
+  }
+
   @media (max-width: 1024px) {
     > div > div {
       flex-direction: column;
