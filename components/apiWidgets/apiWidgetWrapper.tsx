@@ -40,11 +40,24 @@ const ApiWidgetWrapper: React.FC<PropsWithChildren<IProps>> = ({
         }
 
         .widget-wrapper .interactive-component {
-          min-width: 60%;
+          width: 70%;
           background-color: #fff;
           box-shadow: 0 20px 35px 0px rgba(0, 0, 0, 0.25);
           padding: 20px 40px;
           border-radius: 5px;
+        }
+        .widget-wrapper .interactive-component > .results {
+          margin-top: 20px;
+          max-height: 300px;
+          overflow: auto;
+        }
+        .widget-wrapper .interactive-component > .results > div {
+          padding: 10px;
+          background-color: #f3f3f3;
+          border-radius: 4px;
+          margin-bottom: 5px;
+          font-size: 0.9rem;
+          line-height: 1.3rem;
         }
       `}</style>
     </div>
