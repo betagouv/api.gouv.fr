@@ -57,15 +57,6 @@ const SearchBar = ({
             )}
           </button>
         </div>
-        <div className="search-results-wrapper">
-          {focus && results.length > 0 && (
-            <div className="search-results">
-              {results.map(result => (
-                <div key={result}>{result}</div>
-              ))}
-            </div>
-          )}
-        </div>
       </div>
     </>
   );

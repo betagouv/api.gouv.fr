@@ -5,6 +5,9 @@ import IsFranceConnected from '../isFranceConnected';
 import { ButtonLink, ExternalLink, RichLink } from '../../uiComponents';
 import Quote from '../../uiComponents/quote';
 import TeamHelpWidget from '../teamHelpWidget';
+import ApiRnaWidget from '../apiWidgets/apiRna';
+import DatagouvWidget from '../widgets/datagouv';
+import FlatFileWidget from '../widgets/flatFile';
 
 const CenteredCta: React.FC<PropsWithChildren<{ href: string }>> = props => (
   <div className="layout-center">
@@ -54,6 +57,9 @@ const RichReactMarkdown: React.FC<{ source: string }> = ({ source }) => (
         RichLink: RichLink,
         Grid: Grid,
         ContactUs: TeamHelpWidget,
+        ApiRnaWidget: ApiRnaWidget,
+        Datagouv: DatagouvWidget,
+        FlatFile: FlatFileWidget,
       },
     }}
   />

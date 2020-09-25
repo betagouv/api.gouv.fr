@@ -16,7 +16,6 @@ access_page:
   - who:
       - une administration
       - un organisme public
-      - un organisme public
     is_eligible: 1
     description: |
       Les structures publiques (EPCI, Agence de l’Eau, PNR, Agence Publique, …) qui souhaitent avoir accès aux données de l’API CartoBio pour des projets dans leur territoire (qualité de l’eau, alimentation, …) peuvent faire une demande.

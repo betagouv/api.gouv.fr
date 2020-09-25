@@ -135,6 +135,12 @@ a:not(.dont-apply-link-style):hover {
   }
 }
 
+.layout-space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -259,8 +265,20 @@ a:not(.dont-apply-link-style):hover {
   }
 
   pre {
-    overflow: auto;
+    overflow-x: auto;
     color: #001a39;
+    white-space: pre-wrap;
+    font-family: monospace;
+  }
+
+  code {
+    display: block;
+    padding: 12px;
+    color: #93a1a1;
+    background: #073642;
+    border-left: 10px solid #586e75;
+    border-radius: 2px;
+    overflow: auto;
   }
 }
 
