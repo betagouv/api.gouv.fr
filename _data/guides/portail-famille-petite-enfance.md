@@ -13,7 +13,7 @@ related_guides:
 
 Les inscriptions à la crêche sont un service crucial que les collectivités sont amenées à rendre aux jeunes parents.
 
-Les démarches d'adhésion utilisent généralement l'adresse, le quotient familial de la Caisse d’Allocations Familiales (CAF) et l'avsi d'imposition.
+Les démarches d'adhésion utilisent généralement l'adresse, le quotient familial de la Caisse d’Allocations Familiales (CAF) et l'avis d'imposition.
 
 Avec la brique API Particulier vous avez la possibilité de diminuer les erreurs et les fraudes et faciliter le traitement des dossiers par vos équipes en accèdant **facilement aux données nécessaires** au calcul.
 

@@ -8,7 +8,7 @@ api:
 noindex: true
 ---
 
-Les Centres Communaux d'Action Social sont amené à instruire de nombreux dossiers d'obtention des aides sociales légales.
+Les Centres Communaux d'Action Social sont amenés à instruire de nombreux dossiers d'obtention des aides sociales légales.
 
 Ces dossiers utilisent généralement l'adresse, le quotient familial de la Caisse d’Allocations Familiales (CAF), la composition du foyer, l'avis d'imposition.
 
