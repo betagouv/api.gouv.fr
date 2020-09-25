@@ -76,13 +76,14 @@
       path: /les-api/api_cartobio_territoires
   9:
     - type: ADD_API
+      what: Recherche de Personnes Physiques (R2P)
+      path: /les-api/api_r2p
+    - type: ADD_API
       what: Gallica Recherche de la BnF
       path: /les-api/api_gallica_recherche
     - type: ADD_API
       what: Gallica Document de la BnF
       path: /les-api/api_gallica_document
-    - type: ADD_API
-      what: Recherche de Personnes Physiques (R2P) produite par la DGFiP
     - type: ADD_API
       what: Données ouvertes de l’URSSAF
     - type: ADD_API
