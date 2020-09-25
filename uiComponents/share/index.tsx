@@ -54,7 +54,7 @@ const Share: React.FC<IProps> = ({ href, title = '' }) => (
         align-items: center;
       }
       a {
-        background-color: ${constants.colors.blue};
+        background-color: ${constants.colors.grey};
         border-radius: 2px;
         display: flex;
         padding: 3px;
@@ -63,6 +63,10 @@ const Share: React.FC<IProps> = ({ href, title = '' }) => (
       }
       a:hover {
         transform: translateY(-3px);
+      }
+      a {
+        width: 15px;
+        height: 15px;
       }
     `}</style>
   </div>
