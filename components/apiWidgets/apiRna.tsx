@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import SearchBar from '../../uiComponents/searchBar';
+import { normalize } from '../../utils';
 import ApiWidgetResults from './apiWidgetResults';
 import ApiWidgetWrapper from './apiWidgetWrapper';
 
@@ -18,7 +19,7 @@ const ApiRnaWidget: React.FC<{}> = () => {
     setIsLoading(true);
     fetch(
       `https://entreprise.data.gouv.fr/api/rna/v1/full_text/${encodeURI(
-        searchTerm
+        normalize(searchTerm)
       )}`
     )
       .then(response => response.json())

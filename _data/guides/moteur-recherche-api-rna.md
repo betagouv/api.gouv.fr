@@ -8,13 +8,11 @@ image: code.jpg
 noindex: false
 ---
 
-### Qu'est ce que l’API Répertoire National des Associations ?
+### Qu'est ce que l’API Répertoire National des Associations (RNA) ?
 
-L’API Répertoire des Associations permet d'interroger le répertoire des associations françaises. Ce répertoire est librement téléchargeable sur la plateforme ouverte des données publiques françaises, <External href='data.gouv.fr'>data.gouv.fr</External>:
+Le répertoire national des associations françaises, contient les informations des associations dont le siège est en France à l’exception des départements de la Moselle (57), du Bas-Rhin (67) et du Haut-Rhin (68).
 
-<Datagouv title='Répertoire National des Associations' productor='Ministère de l’Intérieur' href="https://www.data.gouv.fr/fr/datasets/repertoire-national-des-associations/">
-
-L’API permet à un programme informatique de facilement interroger le répertoire, sans avoir à le télécharger. Elle permet de :
+L’API RNA permet à un programme informatique de facilement interroger le répertoire, sans avoir à le télécharger. Elle permet de :
 
 - rechercher les données d'une association grâce à son SIRET
 - rechercher les données d'une association grâce à son nom
@@ -63,3 +61,7 @@ Voila ! Vous savez désormais comment fonctionne un moteur de recherche avec [l�
 Pour aller plus loin et construire un moteur de recherche complet, ou utiliser cette API dans un service en ligne, consultez la [documentation](/documentation/api_rna) ou consultez la fiche API:
 <br/>
 <Button href="/les-api/api_rna">Voir la fiche API</Button>
+
+Enfin, sachez que le répertoire est librement téléchargeable sur la plateforme ouverte des données publiques françaises, <External href='data.gouv.fr'>data.gouv.fr</External>:
+
+<Datagouv title='Répertoire National des Associations' productor='Ministère de l’Intérieur' href="https://www.data.gouv.fr/fr/datasets/repertoire-national-des-associations/">
