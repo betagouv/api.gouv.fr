@@ -36,7 +36,7 @@ Que se passe-t-il vraiment ? Le moteur de recherche interroge l'API RNA grâce �
 
 **Astuce**: copiez-collez cette url dans votre navigateur, remplacez _MOT-CLEF-DE-RECHERCHE_ par le nom d'une association pour visualiser ce que renvoie l'API.
 
-Attention, c'est un peu aride. L'API RNA retourne près d'une quarantaine d'informations différentes sous format texte. Le texte est parfait pour communiquer entre deux ordinateurs, mais pour autres humains, un peu de mise en page est nécessaire.
+Attention, c'est un peu aride. L'API RNA retourne près d'une quarantaine d'informations différentes sous format texte. Le texte est parfait pour communiquer entre deux ordinateurs, mais pour les humains, un peu de mise en page est nécessaire.
 
 Ainsi dans notre démonstrateur, nous avons affiché dans l'interface une combinaison de quatre champs. Prenons en exemple <External href='https://entreprise.data.gouv.fr/api/rna/v1/full_text/restos%20du%20coeur'>les "Restos du coeur"</External> :
 
@@ -52,11 +52,11 @@ Ainsi dans notre démonstrateur, nous avons affiché dans l'interface une combin
 }
 ```
 
-Chaque association retournée par l’API est mise en page, (titre, adresse, id_association et objet) puis affichée dans la liste des résultats. Et voila, notre moteur de recherche est terminé !
+Chaque association retournée par l’API est mise en page, (titre, adresse, id_association et objet) puis affichée dans la liste des résultats. Et voilà, notre moteur de recherche est terminé !
 
 ### Aller plus loin 🚀
 
-Voila ! Vous savez désormais comment fonctionne un moteur de recherche avec [l’API Répertoire National des Associations](/les-api/api_rna).
+Vous savez désormais comment fonctionne un moteur de recherche avec [l’API Répertoire National des Associations](/les-api/api_rna).
 
 Pour aller plus loin et construire un moteur de recherche complet, ou utiliser cette API dans un service en ligne, consultez la [documentation](/documentation/api_rna) ou consultez la fiche API:
 <br/>
