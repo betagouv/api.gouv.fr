@@ -8,35 +8,30 @@ api:
 noindex: true
 ---
 
-En utilisant notre brique API Particulier dans votre SI :
+Les Centres Communaux d'Action Social sont amené à instruire de nombreux dossiers d'obtention des aides sociales légales.
 
-- **Plus besoin de demander** d'avis fiscal ou de quotient familial aux citoyens
-- **Pas de vérifications supplémentaires** : les informations sont certifiées
-- Démarche 100% en ligne
+Ces dossiers utilisent généralement l'adresse, le quotient familial de la Caisse d’Allocations Familiales (CAF), la composition du foyer, l'avis d'imposition.
+
+Avec la brique API Particulier vous avez la possibilité de diminuer les erreurs et les fraudes et faciliter le traitement des dossiers par vos équipes en accèdant **facilement aux données nécessaires** au calcul.
+
+En intégrant la brique API Particulier dans votre système d'information, ou votre site internet :
+
+- Vous accèdez facilement aux données de la CAF et de la DGFIP.
+- Vous n'avez **plus besoin de demander** d'avis fiscal ou de quotient familial aux parents
+- Vous n'avez **pas de vérifications supplémentaires** car les informations sont **certifiées**
+- La démarche peut-être faite 100% en ligne
 
 ## Vous utilisez les données de la CAF ou de la DGFIP ?
 
-Nous vous mettons à disposition les données de la CAF (composition familiale du foyer du demandeur) :
-
-| Donnée            | Commentaire                                              |
-| ----------------- | -------------------------------------------------------- |
-| Allocataire       | L'état-civil du demandeur (nom prénom date de naissance) |
-| Enfant(s)         | Le/La/Les enfant(s) (nom, prenom, date de naissance)     |
-| Adresse           | L'adresse du foyer                                       |
-| Quotient Familial | Le quotient familial calculé par la CAF                  |
-
-Et les données de la DGFIP (pour vérifier les conditions d'éligibilité d'une demande) :
+Voici les données de la CAF (composition familiale du foyer du demandeur) et de la DGFIP (pour vérifier les conditions d'éligibilité d'une demande) accessibles directement avec notre API, ce sont les données les plus utilisées pour ce services, mais la liste ci-dessous n'est pas exhaustive :
 
 | Donnée            | Commentaire                                                                                   |
 | ----------------- | --------------------------------------------------------------------------------------------- |
+| Allocataire       | L'état-civil du demandeur (nom prénom date de naissance)                                      |
+| Enfant(s)         | Le/La/Les enfant(s) (nom, prenom, date de naissance)                                          |
+| Quotient Familial | Le quotient familial calculé par la CAF                                                       |
 | Avis d'imposition | statut d’imposition, montant de l'impôt, revenu fiscal de référence, nombre de parts fiscales |
-| Adresse           | L'adresse fiscale du demandeur                                                                |
-
-<!-- ## Ils l'ont fait
-
-<Quote>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-</Quote> -->
+| Adresse           | L'adresse du foyer et/ou l'adresse fiscale du demandeur                                       |
 
 ## Comment formuler une demande ?
 
