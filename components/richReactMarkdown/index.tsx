@@ -14,6 +14,11 @@ const CenteredCta: React.FC<PropsWithChildren<{ href: string }>> = props => (
     <ButtonLink href={props.href} size="large">
       {props.children}
     </ButtonLink>
+    <style jsx>{`
+      .layout-center {
+        padding: 10px 0;
+      }
+    `}</style>
   </div>
 );
 

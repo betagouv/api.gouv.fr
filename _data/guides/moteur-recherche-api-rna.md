@@ -59,7 +59,7 @@ Chaque association retournée par l’API est mise en page, (titre, adresse, id_
 Vous savez désormais comment fonctionne un moteur de recherche avec [l’API Répertoire National des Associations](/les-api/api_rna).
 
 Pour aller plus loin et construire un moteur de recherche complet, ou utiliser cette API dans un service en ligne, consultez la [documentation](/documentation/api_rna) ou consultez la fiche API:
-<br/>
+
 <Button href="/les-api/api_rna">Voir la fiche API</Button>
 
 Enfin, sachez que le répertoire est librement téléchargeable sur la plateforme ouverte des données publiques françaises, <External href='https://data.gouv.fr'>data.gouv.fr</External>:
