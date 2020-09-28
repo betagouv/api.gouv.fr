@@ -52,7 +52,7 @@ const ApiRnaWidget: React.FC<{}> = () => {
     <ApiWidgetWrapper title="Interroger l’API Répertoire National des Associations">
       <div>
         L’
-        <a href="/les-api/api-rna">API RNA</a> permet <b>à n'importe qui</b>{' '}
+        <a href="/les-api/api_rna">API RNA</a> permet <b>à n'importe qui</b>{' '}
         d'effectuer une recherche sur les associations Françaises. Voila comment
         ca fonctionne :
       </div>

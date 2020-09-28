@@ -6,6 +6,7 @@ let totalLinks = 0;
 const start = new Date();
 
 const IGNORE = [
+  'https://www.eaufrance.fr/', // block robots site
   'https://www.linkedin.com/in/romain-tales-5969737', // block robots site
   'https://www.linkedin.com/in/stanislas-bernard-3b14b586/', // block robots site
   'https://www.linkedin.com/in/vmazalaigue/', // block robots site
@@ -37,7 +38,16 @@ const urlChecker = new blc.SiteChecker(
     link: function(result) {
       totalLinks++;
 
+      /* need to use `process.stdout.write` because console.log print a newline character */
+      /* \r clear the current line and then print the other characters making it looks like it refresh*/
+      process.stdout.write(`\r${totalLinks} links checked`);
+
       if (IGNORE.indexOf(result.url.original) > -1) {
+        return;
+      }
+
+      // legifrance too slow
+      if (result.url.original.indexOf('www.legifrance.gouv.fr') > -1) {
         return;
       }
 

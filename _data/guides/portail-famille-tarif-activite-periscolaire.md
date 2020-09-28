@@ -40,7 +40,7 @@ L'utilisation des données dans le cadre de la tarification de la restauration s
 
 Les articles suivants peuvent vous aider a justifier vos droits d'accès :
 
-- Article L114-8<External href="https://www.vie-publique.fr/eclairage/19591-protection-des-donnees-personnelles-essentiel-loi-cnil-du-20-juin-20189">La loi relative à la protection des données personnelles</External> _ a été promulguée le 20 juin 2018. Elle adapte la loi "Informatique et libertés" du 6 janvier 1978 au "paquet européen de protection des données"._
+- Article L114-8<External href="https://www.vie-publique.fr/eclairage/19591-protection-des-donnees-personnelles-essentiel-loi-cnil-du-20-juin-2018">La loi relative à la protection des données personnelles</External> _ a été promulguée le 20 juin 2018. Elle adapte la loi "Informatique et libertés" du 6 janvier 1978 au "paquet européen de protection des données"._
 - Certaines délibérations prises par la ville et/ou par la commune peuvent constituer le cadre légal
 
 **Pour remplir votre demande, vous aurez besoin de :**
