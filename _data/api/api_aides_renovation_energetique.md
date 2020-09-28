@@ -36,10 +36,8 @@ L'API Aides financières à la rénovation énergetique permet d'interroger la l
 | Descriptif               | de A à G                                                         |
 | Date de validité         | Début et fin de validité de l'aide                               |
 | Condition                | La condition utilisée par Simul'Aid€s                            |
-| Financeur                | Permet de rechercher un batiment                                 |
+| Financeur                | L'entité qui finance l'aide                                      |
 | Information géographique | code commune, code département et code région selon le financeur |
-
-Consultez également : le jeu de données proposant la moyenne des coûts de travaux , saisis par les ménages.
 
 ### À propos de Simul'Aid€s
 
