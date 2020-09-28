@@ -42,7 +42,7 @@ Le point d'accès à cette API (endpoint) est : https://api.sandre.eaufrance.fr/
 
 L'interface de cette API vous aide à construire et à exécuter votre requête sur ces référentiels. Ces interfaces sont inutiles si vous êtes capables de formuler votre requête selon les modèles expliqués dasn l'interface. Les URI d'appel de l'API sont toujours composées du endpoint suivi du nom ou code du référentiel à interroger. Les référentiels utilisables proviennent des mnémoniques de la [nomenclature SANDRE n°373](http://id.eaufrance.fr/nsa/373).
 
-Par exemple, l'adresse https://api.sandre.eaufrance.fr/referentiels/v1/appeltaxon vous permet d'extraire toute ou partie du référentiel SANDRE des appellations de taxon.
+Par exemple, l'adresse `https://api.sandre.eaufrance.fr/referentiels/v1/apt.json` vous permet d'extraire toute ou partie du référentiel SANDRE des appellations de taxon.
 
 Licences
 Cette API n'a pas de restriction d'accès. Licence Ouverte est soumise à la licence « Licence Ouverte / Open Licence version 2.0 » conçue par Etalab, organisme chargé de coordonner l’action des services de l’État et de ses établissements publics pour faciliter la réutilisation la plus large possible de leurs informations publiques, via le portail interministériel data.gouv.fr

@@ -3,7 +3,7 @@
   1:
     - type: ADD_API
       what: Menj
-      path: /les-api/api_menj
+      path: /les-api/api_open_data_education_nationale
   4:
     - type: ADD_API
       what: ScanR

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { apiLogo, republiqueFrLogo, githubLogo } from './logos';
 
 const DocHeader = () => (
-  <header role="navigation">
+  <header>
     <nav className="nav">
       <input
         className="menu-btn"

@@ -26,7 +26,7 @@ access_page:
 
       <Button href="/rechercher-api">Rechercher une autre API</Button>
 logo: logo-cisirh.png
-external_site: https://pissarho.cisirh.rie.gouv.fr/actualites/ingres/deploiement-de-deux-api-sur-lapplication-ingres
+external_site: https://www.economie.gouv.fr/cisirh/ingres
 stat:
   url:
   label: Appels
@@ -43,7 +43,8 @@ keywords:
   - Référentiels de Classification Centrale
   - Nomenclatures
 contact_link: api.cisirh@finances.gouv.fr
-doc_tech_external: http://pissarho.cisirh.rie.gouv.fr/sites/default/files/2019-10/INGRES-PIL-API%20Nomenclatures%20Ingres_%20%280_7%29.pptx
+doc_tech_external: https://www.economie.gouv.fr/cisirh/ingres
+#doc_tech_external: http://pissarho.cisirh.rie.gouv.fr/sites/default/files/2019-10/INGRES-PIL-API%20Nomenclatures%20Ingres_%20%280_7%29.pptx
 themes:
   - Administration & législation
 visits_2019: 127

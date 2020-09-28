@@ -31,6 +31,21 @@ a {
   section.page-baseline {
     margin: 30px auto;
     text-align: left;
+
+    h1 {
+      font-size: 1.5rem;
+      line-height: 2.1rem;
+      margin: 10px 0 16px;
+      color: $darkestGrey;
+
+      @media only screen and (min-width: 1px) and (max-width: 600px) {
+        font-size: 1.4rem;
+        line-height: 1.9rem;
+        margin: 12px 0 16px;
+
+        color: $darkestGrey;
+      }
+    }
   }
 
   section.page-body-container {

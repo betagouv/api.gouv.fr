@@ -62,6 +62,6 @@ Pour aller plus loin et construire un moteur de recherche complet, ou utiliser c
 <br/>
 <Button href="/les-api/api_rna">Voir la fiche API</Button>
 
-Enfin, sachez que le répertoire est librement téléchargeable sur la plateforme ouverte des données publiques françaises, <External href='data.gouv.fr'>data.gouv.fr</External>:
+Enfin, sachez que le répertoire est librement téléchargeable sur la plateforme ouverte des données publiques françaises, <External href='https://data.gouv.fr'>data.gouv.fr</External>:
 
 <Datagouv title='Répertoire National des Associations' productor='Ministère de l’Intérieur' href="https://www.data.gouv.fr/fr/datasets/repertoire-national-des-associations/">
