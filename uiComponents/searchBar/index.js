@@ -25,8 +25,8 @@ const SearchBar = ({
   return (
     <>
       <div id="search-wrapper">
-        {label && <label>{label}</label>}
-        <div className={`search-bar ${focus ? 'focus' : ''}`}>
+        {label && <label htmlFor="search-input">{label}</label>}
+        <div id="search-input" className={`search-bar ${focus ? 'focus' : ''}`}>
           <input
             placeholder={placeholder}
             onChange={onChange}
@@ -56,15 +56,6 @@ const SearchBar = ({
               </svg>
             )}
           </button>
-        </div>
-        <div className="search-results-wrapper">
-          {focus && results.length > 0 && (
-            <div className="search-results">
-              {results.map(result => (
-                <div key={result}>{result}</div>
-              ))}
-            </div>
-          )}
         </div>
       </div>
     </>

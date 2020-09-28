@@ -18,10 +18,10 @@ const Services: NextPage<Props> = ({ services }) => {
       description="Vous vous demandez comment utiliser une APIs du service public ? Inspirez-vous d’un cas pratique."
     >
       <section className="content-container page-baseline">
-        <h2>
+        <h1>
           Depuis 2016, nous accompagnons les acteurs publics à la réalisation de
           services numériques pour tous les français
-        </h2>
+        </h1>
       </section>
       <section id="realisations" className="page-body-container">
         <div className="content-container default-grid">

@@ -5,9 +5,6 @@ category: Public
 owner: Direction interministérielle du numérique
 owner_acronym: DINUM
 is_open: 1 # 1 means API is fully open
-clients:
-  - particuliers
-  - entreprises
 keywords:
   - temps réel
   - transport

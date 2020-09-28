@@ -35,8 +35,10 @@ const Page: React.FC<IProps> = ({
     />
     {useDocHeader ? <DocHeader /> : <Header headerKey={headerKey || 'home'} />}
     <main>{children}</main>
-    {usePreFooter && <PreFooter background={preFooterBackground} />}
-    {useFooter && <Footer />}
+    <footer id="footer">
+      {usePreFooter && <PreFooter background={preFooterBackground} />}
+      {useFooter && <Footer />}
+    </footer>
   </div>
 );
 

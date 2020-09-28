@@ -1,21 +1,14 @@
 ---
 title: API Carto - module Géoportail de l'Urbanisme (GPU)
-tagline: L'accès simplifié aux données de référence d’urbanimse
+tagline: L'accès simplifié aux données de référence d’urbanisme
 external_site: https://apicarto.ign.fr
 owner: Institut national de l’information géographique et forestière
 owner_acronym: IGN
 is_open: 1 # 1 means API is fully open
-access_condition: OUVERT
 category: Public
 logo: look4-geoportail.jpg
 contact_link: contact.geoservices@ign.fr
 doc_tech_link: https://apicarto.ign.fr/api/doc/gpu.yml
-clients:
-  - développeurs
-  - entreprises
-  - organismes publics
-  - collectivités territoriales
-  - ministères
 partners:
   - INAO
   - Ministère de la cohésion des territoires
@@ -37,7 +30,7 @@ last_update: 19/05/2020
 ### API CARTO - module urbanisme du Géoportail de l'urbanisme (GPU)
 
 Le service d’interrogation du GPU permet d’obtenir les différentes informations d’urbanisme intersectant une géométrie (ponctuelle ou surfacique).
-Ces informations sont celles disponibles en consultation et en téléchargement sur le [Géoportail de l'urbanisme](https://geoportail-urbanisme.gouv.fr).
+Ces informations sont celles disponibles en consultation et en téléchargement sur le [Géoportail de l'urbanisme](https://www.geoportail-urbanisme.gouv.fr/).
 
 #### Communes
 

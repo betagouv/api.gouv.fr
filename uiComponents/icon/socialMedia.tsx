@@ -3,8 +3,6 @@ import React from 'react';
 const linkedin = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="20"
-    height="20"
     viewBox="0 0 24 24"
     strokeWidth="2"
     stroke="white"
@@ -21,8 +19,6 @@ const linkedin = (
 const mail = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="20"
-    height="20"
     viewBox="0 0 24 24"
     strokeWidth="2"
     fill="none"
@@ -38,8 +34,6 @@ const mail = (
 const facebook = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="20"
-    height="20"
     viewBox="0 0 24 24"
     strokeWidth="2"
     fill="none"
@@ -54,8 +48,6 @@ const facebook = (
 const twitter = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="20"
-    height="20"
     fill="none"
     viewBox="0 0 24 24"
     stroke="white"

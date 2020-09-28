@@ -12,7 +12,7 @@ interface IAccessProps {
   slug: string;
   doc_external_link?: string;
   doc_swagger_link?: string;
-  access_link?: string;
+  account_link?: string;
 }
 
 const DESCRIPTIONS = {
@@ -34,7 +34,7 @@ const Access: React.FC<IAccessProps> = ({
   slug,
   doc_external_link = '',
   doc_swagger_link = '',
-  access_link = '',
+  account_link = '',
 }) => {
   let accessDescription = '';
   let accessHref = '';
@@ -63,7 +63,7 @@ const Access: React.FC<IAccessProps> = ({
       break;
     case 0:
       accessDescription = DESCRIPTIONS.account;
-      accessHref = access_link;
+      accessHref = account_link;
       accessLabel = (
         <AccessButton
           emoji="↗️"

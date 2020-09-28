@@ -4,9 +4,6 @@ tagline: Rassembler les données de toute l’offre de mobilité à travers la F
 category: Public
 owner: Direction interministérielle du numérique
 owner_acronym: DINUM
-clients:
-  - particuliers
-  - entreprises
 keywords:
   - transport
 themes:

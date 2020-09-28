@@ -13,7 +13,7 @@ interface IProps {
 }
 
 const Share: React.FC<IProps> = ({ href, title = '' }) => (
-  <div className="container">
+  <div className="container social-network-icons">
     <a
       href={`https://twitter.com/intent/tweet?url=${href}&text=${title}`}
       rel="noreferrer noopener"
@@ -46,23 +46,28 @@ const Share: React.FC<IProps> = ({ href, title = '' }) => (
     >
       {mail}
     </a>
-    <style jsx>{`
-      .container {
+    <style global jsx>{`
+      .social-network-icons.container {
         display: flex;
         flex-direction: row;
-        justify-content: end;
+        justify-content: flex-end;
         align-items: center;
       }
-      a {
-        background-color: ${constants.colors.blue};
+      .social-network-icons a {
+        background-color: ${constants.colors.grey};
         border-radius: 2px;
         display: flex;
         padding: 3px;
         margin: 1px;
         transition: transform 100ms ease-in-out;
       }
-      a:hover {
+      .social-network-icons a:hover {
         transform: translateY(-3px);
+      }
+      .social-network-icons a,
+      .social-network-icons a svg {
+        width: 15px;
+        height: 15px;
       }
     `}</style>
   </div>

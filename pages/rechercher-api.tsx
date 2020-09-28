@@ -22,9 +22,9 @@ const RechercherApi: React.FC<IProps> = ({ allApis, allThemes }) => {
       description="Vous faites partie d'un ministère ou d'une collectivité et vous cherchez une API du service public ? Vous êtes au bon endroit."
     >
       <section className="content-container page-baseline">
-        <h2>
+        <h1>
           Vous recherchez une API du service public ? Vous êtes au bon endroit !
-        </h2>
+        </h1>
       </section>
 
       <SearchApis allApis={allApis} allThemes={allThemes} />

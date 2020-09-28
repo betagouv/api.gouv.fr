@@ -1,18 +1,12 @@
 ---
-title: Infotravail
+title: API Infotravail
 tagline: Recense des jeux de données liés au marché du travail
 owner: Pôle emploi
 category: Public
-is_open: -1 # -1 means API not open
-access_condition: OUVERT sous contrat
-access_link: https://www.emploi-store-dev.fr/portail-developpeur/detailapicatalogue/57909ba23b2b8d019ee6cc5e
+is_open: 0 # -1 means API not open
+account_link: https://www.emploi-store-dev.fr/portail-developpeur/detailapicatalogue/57909ba23b2b8d019ee6cc5e
 logo: logo_pole_emploi.jpg
 external_site: https://www.emploi-store-dev.fr/portail-developpeur-cms/home/catalogue-des-api/documentation-des-api/api/api-infotravail-v1.html
-clients:
-  - particuliers
-  - entreprises
-  - startups
-  - collectivités territoriales
 partners:
   - Pôle emploi
 keywords:
@@ -22,30 +16,32 @@ keywords:
   - Statistiques
 contact_link: support@emploi-store-dev.fr
 doc_tech_external: https://www.emploi-store-dev.fr/portail-developpeur-cms/home/catalogue-des-api/documentation-des-api/api/api-infotravail-v1.html
+datagouv_uuid:
+  - 59315a2c88ee385fac21149f
+  - 593159a188ee385fade6010e
+  - 5931593b88ee38351ad532c6
+  - 593158d188ee385faa18c99b
+  - 5931587388ee385fac21149e
+  - 593156ff88ee38351b503df3
 themes:
   - Emploi
 visits_2019: 953
 last_update: 26/09/2018
 ---
 
-### Description de l'API
+L’API Infotravail permet d’accèder aux jeux de données du marché du travail
 
-L’API Infotravail recense les jeux de données suivants :
+### A quoi sert l'API Infotravail ?
 
-- **Informations sur le marché du travail** :
-  Données sur les recrutements, statistiques sur les offres et la demande d’emploi
+L'API permet à des particuliers, des entreprises & startups et des collectivités territoriales d’accèder aux données du marché du travail.
 
-- **Offres d’emploi Pôle emploi** :
-  Offres d'emploi anonymisées, déposées à Pôle emploi par des recruteurs
+### Données accessibles dans l'API
 
-- **Référentiel des agences Pôle emploi** :
-  Localisation, coordonnées (adresse, téléphone, mail), type d’agence (généraliste, cadre, spectacle), horaires d’ouverture
-
-- **Enquête Besoins en Main d’Œuvre (BMO)** :
-  Projets de recrutement, difficulté de recrutement et saisonnalité des recrutements par ROME et par secteur d’activité
-
-- **Répertoire Opérationnel des Métiers et des Emplois** :
-  Appellations, définition, accès à l’emploi, conditions d’exercice de l’activité, activités et compétences de base, activités et compétences spécifiques, environnements de travail, mobilité professionnelle
-
-- **Statistiques sur le marché du travail** :
-  Données statistiques sur la demande d’emploi
+| Nom                                                | Description                                                                                                                                                                                                  |
+| -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Informations sur le marché du travail              | Données sur les recrutements, statistiques sur les offres et la demande d’emploi                                                                                                                             |
+| Statistiques sur le marché du travail              | Données statistiques sur la demande d’emploi                                                                                                                                                                 |
+| Offres d’emploi                                    | Offres d'emploi anonymisées, déposées à Pôle emploi par des recruteurs                                                                                                                                       |
+| Référentiel des agences Pôle emploi                | Localisation, coordonnées (adresse, téléphone, mail), type d’agence (généraliste, cadre, spectacle), horaires d’ouverture                                                                                    |
+| Enquête Besoins en Main d’Œuvre (BMO)              | Projets de recrutement, difficulté de recrutement et saisonnalité des recrutements par ROME et par secteur d’activité                                                                                        |
+| Répertoire Opérationnel des Métiers et des Emplois | Appellations, définition, accès à l’emploi, conditions d’exercice de l’activité, activités et compétences de base, activités et compétences spécifiques, environnements de travail, mobilité professionnelle |

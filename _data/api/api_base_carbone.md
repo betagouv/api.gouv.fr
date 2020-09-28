@@ -1,7 +1,7 @@
 ---
 title: API Base Carbone®
 tagline: Les facteurs d'émissions de GES, nécessaires à la réalisation d’un bilan d’émissions de gaz à effet de serre
-external_site: https://data.ademe.fr/datasets/base-carbone-donnees-v18-0
+external_site: https://data.ademe.fr/datasets/base-carbone(r)
 is_open: 1 # 1 means API is fully open
 owner: Agence de la transition écologique
 owner_acronym: ADEME
@@ -17,7 +17,7 @@ rate_limiting_resume: 10 appels / seconde / IP
 themes:
   - Environnement
 contact_link: https://www.ademe.fr/content/contacter
-doc_tech_link: https://koumoul.com/s/data-fair/api/v1/datasets/base-carbone-donnees-v18-0/api-docs.json
+doc_tech_link: https://koumoul.com/s/data-fair/api/v1/datasets/base-carbone(r)/api-docs.json
 datagouv_uuid:
   - 5f5605e63ee74d0034395703
 last_update: 27/07/2020
@@ -48,7 +48,7 @@ Administrée par l'ADEME, sa gouvernance est multi acteurs : 14 membres la compo
 
 Retrouvez le descriptif complet de la Base dans <External href="https://www.bilans-ges.ademe.fr/fr/accueil/contenu/index/page/presentation/siGras/0">la rubrique « Base Carbone » du site Bilans GES</External>, ainsi que toute sa documentation explicitant périmètre et sources des données proposées pour s’assurer d’une utilisation robuste des données.
 
-Les données sont mises à jour régulièrement et accessibles sur le <External href="https://data.ademe.fr/datasets/base-carbone-donnees-v18-0">portail Open Data de l'ADEME</External>.
+Les données sont mises à jour régulièrement et accessibles sur le <External href="https://data.ademe.fr/datasets/base-carbone(r)">portail Open Data de l'ADEME</External>.
 
 ### À propos de l'Open Data a l’ADEME
 

@@ -4,12 +4,6 @@ tagline: Qualité physico-chimique des nappes d'eau souterraine
 is_open: 1 # 1 means API is fully open
 external_site: http://hubeau.eaufrance.fr/page/documentation-qualite-nappes-deau-souterraines
 logo: 05-qualite_nappes.jpg
-clients:
-  - particuliers
-  - entreprises
-  - bureaux d'études
-  - collectivités
-  - ministères
 partners:
   - AFB
   - BRGM
@@ -32,7 +26,7 @@ last_update: 11/06/2018
 
 ### Description fonctionnelle de l'API Qualité des nappes d'eau souterraine
 
-[L'API Qualité des nappes d'eau souterraine](http://hubeau.eaufrance.fr/page/api-qualite-nappes-deau-souterraines) de Hub'Eau permet d'accéder aux données sur la qualité physico-chimique des nappes d'eau souterraines françaises.
+[L'API Qualité des nappes d'eau souterraine](https://hubeau.eaufrance.fr/page/api-qualite-nappes) de Hub'Eau permet d'accéder aux données sur la qualité physico-chimique des nappes d'eau souterraines françaises.
 Ces données sont issues de la [banque nationale d'Accès aux Données sur les Eaux Souterraines ADES](http://ades.eaufrance.fr/).
 Au 29 novembre 2017, les données concernent 67 millions d'analyses réparties sur 74000 points d'eau.
 Les données sont exposées sous la forme d'une API REST, les formats supportés sont : JSON, GeoJSON et CSV.
@@ -76,14 +70,14 @@ Hub’Eau est le résultat de la collaboration de l’AFB et du BRGM dans le cad
 
 Les autres API disponibles à ce jour dans Hub'Eau sont :
 
-- [Etat piscicole](/api/api_hubeau_poissons.html) ;
-- [Indicateurs Eau potable et Assainissement](/api/api_hubeau_indic_EP_Asst.html) ;
-- [Piézométrie](/api/api_hubeau_piezometrie.html) ;
-- [Qualité physico-chimique des cours d'eau](/api/api_hubeau_qualite_rivieres.html).
+- [Etat piscicole](/les-api/api_hubeau_poissons) ;
+- [Indicateurs Eau potable et Assainissement](/les-api/api_hubeau_indic_EP_Asst) ;
+- [Piézométrie](/les-api/api_hubeau_piezometrie) ;
+- [Qualité physico-chimique des cours d'eau](/les-api/api_hubeau_qualite_rivieres).
 
 #### Un service en co-construction
 
-Pour des APIs toujours plus en phase avec les besoins utilisateurs, Hub'Eau inaugure en 2018 une [politique de bêta testing](https://hubeau.eaufrance.fr/page/apis-version-beta) en organisant une campagne de tests ouverte avant la mise la mise en production de chaque nouvelle API.
+Pour des APIs toujours plus en phase avec les besoins utilisateurs, Hub'Eau inaugure en 2018 une [politique de bêta testing](https://hubeau.eaufrance.fr/page/apis) en organisant une campagne de tests ouverte avant la mise la mise en production de chaque nouvelle API.
 D'une durée de 30 à 45 jours, ces campagnes ont pour objectif de recueillir un maximum de retour d’expérience des utilisateurs sur les points forts et les points faibles des API en construction.
 Pour être informé de la sortie des nouvelles API et les tester en avant-première, inscrivez-vous à la [newsletter](https://hubeau.eaufrance.fr/page/news-letter-hubeau) !
 

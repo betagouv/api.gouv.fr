@@ -5,7 +5,7 @@ owner: Institut national de la statistique et des études économiques
 owner_acronym: Insee
 logo: Logo_Insee.svg
 is_open: 0 # 0 means API require an account
-access_link: https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/sign-up.jag
+account_link: https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/sign-up.jag
 rate_limiting_resume: 30 appels / minute / IP
 rate_limiting_description: |
   L'API est disponible à hauteur de 30 appels par minute et par adresse IP.
@@ -22,7 +22,7 @@ keywords:
 themes:
   - Administration & législation
 contact_link: https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/help.jag#contact
-doc_tech_link: https://api.insee.fr/catalogue/api-docs/carbon.super/BDM/V1?envName=Production%20and%20Sandbox
+doc_tech_link: /api/v1/proxy/https%3A%2F%2Fapi.insee.fr%2Fcatalogue%2Fapi-docs%2Fcarbon.super%2FBDM%2FV1%3FenvName%3DProduction%2520and%2520Sandbox
 doc_tech_external: https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/item-info.jag?name=BDM&version=V1&provider=insee
 datagouv_uuid:
   - 53699185a3a729239d203ca3

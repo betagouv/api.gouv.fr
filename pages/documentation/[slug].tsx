@@ -29,13 +29,17 @@ const Documentation: React.FC<IProps> = ({ api, allApis }) => {
     doc_tech_link,
     doc_tech_external,
     path,
-    access_link,
+    account_link,
     uptime,
     slug,
     is_open,
   } = api;
 
   const shareLink = `${constants.links.mailto.SHARE}?subject=Connaissez vous ${title} ?&body=https://api.gouv.fr/documentation/${slug}`;
+
+  const useSeparator =
+    (is_open === -1 || (!!account_link && is_open !== 1)) &&
+    !!doc_tech_external;
 
   return (
     <Page
@@ -82,13 +86,11 @@ const Documentation: React.FC<IProps> = ({ api, allApis }) => {
             </div>
 
             <div className="sections">
-              {access_link && is_open === -1 && <Habilitation slug={slug} />}
-              {access_link && is_open === 0 && (
-                <AccountNeeded access_link={access_link} />
+              {is_open === -1 && <Habilitation slug={slug} />}
+              {account_link && is_open === 0 && (
+                <AccountNeeded account_link={account_link} />
               )}
-              {access_link && is_open !== 1 && doc_tech_external && (
-                <div className="separator" />
-              )}
+              {useSeparator && <div className="separator"></div>}
               {doc_tech_external && (
                 <ExternalDoc doc_link={doc_tech_external} />
               )}
@@ -96,9 +98,7 @@ const Documentation: React.FC<IProps> = ({ api, allApis }) => {
 
             <div>
               {doc_tech_link ? (
-                <SwaggerUIWrapper
-                  url={`/api/v1/proxy/${encodeURIComponent(doc_tech_link)}`}
-                />
+                <SwaggerUIWrapper url={doc_tech_link} />
               ) : doc_tech_external ? (
                 <>
                   <p>

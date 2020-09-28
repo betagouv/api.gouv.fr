@@ -5,12 +5,6 @@ is_open: 1 # 1 means API is fully open
 owner: Direction interministérielle du numérique
 owner_acronym: DINUM
 layout: api
-clients:
-  - particuliers
-  - entreprises
-  - bureaux d'études
-  - collectivités
-  - ministères
 keywords:
   - Annuaire
   - Établissements

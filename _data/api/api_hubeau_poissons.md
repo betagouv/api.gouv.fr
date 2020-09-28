@@ -4,12 +4,6 @@ tagline: Données sur les poissons de rivières
 is_open: 1 # 1 means API is fully open
 external_site: https://hubeau.eaufrance.fr/page/documentation_poisson/
 logo: 01-poisson.jpg
-clients:
-  - particuliers
-  - entreprises
-  - bureaux d'études
-  - collectivités
-  - ministères
 partners:
   - AFB
   - BRGM
@@ -59,20 +53,20 @@ Hub’Eau est le résultat de la collaboration de l’AFB et du BRGM dans le cad
 
 Les autres API disponibles à ce jour dans Hub'Eau sont :
 
-- [Indicateurs Eau potable et Assainissement](/api/api_hubeau_indic_EP_Asst.html) ;
-- [Piézométrie](/api/api_hubeau_piezometrie.html) ;
-- [Qualité physico-chimique des cours d'eau](/api/api_hubeau_qualite_rivieres.html) ;
-- [Qualité des nappes d'eau souterraine](/api/api_hubeau_qualite_nappes_eau_sout.html).
+- [Indicateurs Eau potable et Assainissement](/les-api/api_hubeau_indic_EP_Asst) ;
+- [Piézométrie](/les-api/api_hubeau_piezometrie) ;
+- [Qualité physico-chimique des cours d'eau](/les-api/api_hubeau_qualite_rivieres) ;
+- [Qualité des nappes d'eau souterraine](/les-api/api_hubeau_qualite_nappes_eau_sout).
 
 #### Un service en co-construction
 
-Pour des APIs toujours plus en phase avec les besoins utilisateurs, Hub'Eau inaugure en 2018 une [politique de bêta testing](https://hubeau.eaufrance.fr/page/apis-version-beta) en organisant une campagne de tests ouverte avant la mise la mise en production de chaque nouvelle API.
+Pour des APIs toujours plus en phase avec les besoins utilisateurs, Hub'Eau inaugure en 2018 une [politique de bêta testing](https://hubeau.eaufrance.fr/page/apis) en organisant une campagne de tests ouverte avant la mise la mise en production de chaque nouvelle API.
 D'une durée de 30 à 45 jours, ces campagnes ont pour objectif de recueillir un maximum de retour d’expérience des utilisateurs sur les points forts et les points faibles des API en construction.
 Pour être informé de la sortie des nouvelles API et les tester en avant-première, inscrivez-vous à la [newsletter](https://hubeau.eaufrance.fr/page/news-letter-hubeau) !
 
 ### Exemples de réutilisation
 
-- [Cartographie de la présence des espèces de poissons](http://hubeau.eaufrance.fr/sites/default/files/api/demo/poissons.html)
+- [Cartographie de la présence des espèces de poissons](https://hubeau.eaufrance.fr/sites/default/files/api/demo/poissons.html)
 - [Mortalité des saumons et des anguilles par les turbines hydroélectriques](https://public.tableau.com/views/Devalpomi/Devalpomi?:showVizHome=no), par l'association [Logrami - Loire Grands Migrateurs](http://www.logrami.fr/)
 - [Présence du Silure en France](https://public.tableau.com/views/HubEau/PrsenceduSilure?%3AshowVizHome=no), par l'association [Logrami - Loire Grands Migrateurs](http://www.logrami.fr/)
 - [Soumettez le votre sur la page GitHub des utilisateurs de Hub'Eau](https://github.com/BRGM/hubeau)

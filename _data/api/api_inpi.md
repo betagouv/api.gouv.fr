@@ -2,11 +2,7 @@
 title: API Registre National du Commerce et des Sociétés
 tagline: Le registre public des sociétés françaises immatriculées dans les greffes locales des tribunaux, centralisées à l'INPI.
 is_open: 0
-access_link: https://data.inpi.fr/register
-clients:
-  - citoyens
-  - entreprises
-  - administrations
+account_link: https://data.inpi.fr/register
 partners:
   - beta.gouv.fr
   - DINUM
@@ -30,7 +26,7 @@ themes:
   - Entreprise
 logo: inpi.png
 contact_link: https://www.inpi.fr/fr/contactez-nous
-doc_tech_link: https://data.inpi.fr/build/files/swagger-inpi-rncs.yaml
+doc_tech_link: /api/v1/proxy/https%3A%2F%2Fdata.inpi.fr%2Fbuild%2Ffiles%2Fswagger-inpi-rncs.yaml
 datagouv_uuid:
   - 59785a7888ee385cb8d806af
   - 5964c402c751df0671f823d0

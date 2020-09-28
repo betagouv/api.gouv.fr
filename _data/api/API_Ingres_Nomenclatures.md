@@ -4,22 +4,33 @@ tagline: Récupérez l'ensemble des référentiels utilisés par les SIRH de la 
 owner: Centre Interministériel des Systèmes d'Information relatifs aux Ressources Humaines
 owner_acronym: CISIRH
 is_open: -1 # -1 means API not open
-access_condition: OUVERT sous contrat
-access_link: mailto:api.cisirh@finances.gouv.fr
-access_description: |
-  Le CISIRH met à disposition cette API exploitable accessible uniquement par les ministères ou institutions ayant accès au Réseau Interministériel de l'Etat (RIE).
-  Son utilisation par une application tierce ne saurait engager la responsabilité du CISIRH, par exemple, en termes de disponibilité.
+access_page:
+  - who:
+      - Une application RH
+      - Une institution
+      - Une collectivité
+      - Un ministère
+    is_eligible: 0
+    description: |
+      Le CISIRH met à disposition cette API exploitable et accessible uniquement via le Réseau Interministériel de l'Etat (RIE).
+
+      Son utilisation par une application tierce ne saurait engager la responsabilité du CISIRH, par exemple, en termes de disponibilité.
+
+      <Button href="mailto:api.cisirh@finances.gouv.fr">Faire une demande d'accès</Button>
+  - who:
+      - Un particulier
+      - Autre
+    is_eligible: -1
+    description: |
+      Le CISIRH met à disposition cette API exploitable accessible **uniquement par les ministères ou institutions** ayant accès au Réseau Interministériel de l'Etat (RIE).
+
+      <Button href="/rechercher-api">Rechercher une autre API</Button>
 logo: logo-cisirh.png
-external_site: https://pissarho.cisirh.rie.gouv.fr/actualites/ingres/deploiement-de-deux-api-sur-lapplication-ingres
+external_site: https://www.economie.gouv.fr/cisirh/ingres
 stat:
   url:
   label: Appels
   lastXdays: 30
-clients:
-  - applications RH
-  - institutions
-  - collectivités
-  - ministères
 partners:
   - CISIRH -- BSRMRH > Application Ingres
   - CISIRH -- Département Innovation > Application El Greco
@@ -32,7 +43,8 @@ keywords:
   - Référentiels de Classification Centrale
   - Nomenclatures
 contact_link: api.cisirh@finances.gouv.fr
-doc_tech_external: http://pissarho.cisirh.rie.gouv.fr/sites/default/files/2019-10/INGRES-PIL-API%20Nomenclatures%20Ingres_%20%280_7%29.pptx
+doc_tech_external: https://www.economie.gouv.fr/cisirh/ingres
+#doc_tech_external: http://pissarho.cisirh.rie.gouv.fr/sites/default/files/2019-10/INGRES-PIL-API%20Nomenclatures%20Ingres_%20%280_7%29.pptx
 themes:
   - Administration & législation
 visits_2019: 127

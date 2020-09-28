@@ -52,7 +52,7 @@ const API: React.FC<IProps> = ({
     owner_acronym,
     uptime,
     contact_link,
-    access_link,
+    account_link,
     doc_tech_link,
     doc_tech_external,
     monitoring_link,
@@ -93,7 +93,9 @@ const API: React.FC<IProps> = ({
               <ApiOpenDataSources datasetsList={datagouvDatasets} />
             )}
 
-            {guides.length === 0 && <ApiRelatedServices services={services} />}
+            {guides.length === 0 && (services || []).length > 0 && (
+              <ApiRelatedServices services={services} />
+            )}
             <Feedback />
           </div>
           <div className="right-column info-column">
@@ -102,7 +104,7 @@ const API: React.FC<IProps> = ({
               slug={slug}
               doc_swagger_link={doc_tech_link}
               doc_external_link={doc_tech_external}
-              access_link={access_link}
+              account_link={account_link}
             />
             <ApiDetails
               monitoring={monitoring_description}
@@ -181,7 +183,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   //@ts-ignore
   const api = await getAPI(slug);
 
-  const datagouvDatasets = await fetchDatagouvDatasets(api.datagouv_uuid);
+  const datagouvDatasets = await fetchDatagouvDatasets(api.datagouv_uuid || []);
 
   const allServices = await getAllServices();
   const services = allServices.filter(service => {
