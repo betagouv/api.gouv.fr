@@ -24,7 +24,7 @@ interface IProps {
   rel?: string;
   target?: string;
   disabled?: boolean;
-  large?: boolean;
+  size?: 'small' | null | 'large';
   onClick?: (() => void) | undefined;
   type?: 'button' | 'submit' | 'reset';
 }
@@ -35,14 +35,14 @@ interface ILinkProps {
   rel?: string;
   target?: string;
   disabled?: boolean;
-  large?: boolean;
+  size?: 'small' | null | 'large';
   onClick?: (() => void) | undefined;
 }
 
 interface IButtonProps {
   alt?: boolean;
   disabled?: boolean;
-  large?: boolean;
+  size?: 'small' | null | 'large';
   onClick?: (() => void) | undefined;
   type: 'button' | 'submit' | 'reset' | undefined;
 }
@@ -54,7 +54,7 @@ const LinkAsAButton: React.FC<ILinkProps> = ({
   target,
   disabled,
   children,
-  large,
+  size,
   onClick = () => {},
 }) => (
   <a
@@ -64,7 +64,7 @@ const LinkAsAButton: React.FC<ILinkProps> = ({
     className={`dont-apply-link-style button-link ${alt ? 'alt' : 'default'} ${
       disabled ? 'disabled' : ''
     }
-  ${large ? 'large' : 'small'}
+  ${size}
   `}
     href={href}
   >
@@ -76,7 +76,7 @@ const ClassicButton: React.FC<IButtonProps> = ({
   type,
   onClick,
   alt,
-  large,
+  size,
   disabled,
   children,
 }) => (
@@ -86,7 +86,7 @@ const ClassicButton: React.FC<IButtonProps> = ({
     className={`dont-apply-link-style button-link ${alt ? 'alt' : 'default'} ${
       disabled ? 'disabled' : ''
     }
-  ${large ? 'large' : 'small'}
+  ${size}
   `}
   >
     <div className="content-wrapper">{children}</div>
@@ -100,7 +100,7 @@ const ButtonLink: React.FC<IProps> = ({
   target,
   disabled,
   children,
-  large,
+  size,
   type,
   onClick,
 }) => {
@@ -113,7 +113,7 @@ const ButtonLink: React.FC<IProps> = ({
         alt={alt}
         disabled={disabled}
         children={children}
-        large={large}
+        size={size}
         onClick={onClick}
       />
     );
@@ -126,7 +126,7 @@ const ButtonLink: React.FC<IProps> = ({
         alt={alt}
         disabled={disabled}
         children={children}
-        large={large}
+        size={size}
       />
     );
   }

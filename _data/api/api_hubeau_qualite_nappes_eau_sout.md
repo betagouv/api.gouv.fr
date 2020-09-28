@@ -4,12 +4,6 @@ tagline: Qualité physico-chimique des nappes d'eau souterraine
 is_open: 1 # 1 means API is fully open
 external_site: http://hubeau.eaufrance.fr/page/documentation-qualite-nappes-deau-souterraines
 logo: 05-qualite_nappes.jpg
-clients:
-  - particuliers
-  - entreprises
-  - bureaux d'études
-  - collectivités
-  - ministères
 partners:
   - AFB
   - BRGM

@@ -5,10 +5,6 @@ external_site: http://rva.data.rennes-metropole.fr/
 is_open: 0 # 1 means API is fully open
 access_link: https://api-rva.sig.rennesmetropole.fr/inscription.php
 logo: rennesmetropole-rva.png
-clients:
-  - particuliers
-  - entreprises
-  - collectivités
 owner: Rennes Métropole
 keywords:
   - Voie

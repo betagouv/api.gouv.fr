@@ -5,17 +5,10 @@ external_site: https://apicarto.ign.fr/
 owner: Institut national de l’information géographique et forestière
 owner_acronym: IGN
 is_open: 1 # 1 means API is fully open
-access_condition: OUVERT
 category: Public
 logo: look4-geoportail.jpg
 contact_link: contact.geoservices@ign.fr
 doc_tech_link: https://apicarto.ign.fr/api/doc/aoc.yml
-clients:
-  - développeurs
-  - entreprises
-  - organismes publics
-  - collectivités territoriales
-  - ministères
 partners:
   - INAO
   - Ministère de la cohésion des territoires

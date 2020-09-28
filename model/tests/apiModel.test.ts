@@ -55,4 +55,30 @@ test(`Field is_open is -1, 0 or 1`, async () => {
   expect(ok).toBe(true);
 });
 
-test('Every API has a theme', async () => {});
+test('Every closed API has an access page', async () => {
+  let ok = true;
+
+  allApis.forEach(api => {
+    //@ts-ignore
+    if (api.is_open === -1 && !api.access_page) {
+      console.log(`API ${api.slug} has no access_page and is not open`);
+      ok = false;
+    }
+  });
+  expect(ok).toBe(true);
+});
+
+test('Every API requiring an account has an account link', async () => {
+  let ok = true;
+
+  allApis.forEach(api => {
+    //@ts-ignore
+    if (api.is_open === 0 && !api.account_link) {
+      console.log(
+        `API ${api.slug} has no account_link and yet is requiring an  account`
+      );
+      ok = false;
+    }
+  });
+  expect(ok).toBe(true);
+});

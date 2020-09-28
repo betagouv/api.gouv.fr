@@ -3,6 +3,7 @@ import initMiddleware from '../../../utils/api/init-middleware';
 import { getAllAPIs, getAPI } from '../../../model';
 import { NextApiRequest, NextApiResponse } from 'next';
 import { IApi } from '../../../model';
+import constants from '../../../constants';
 
 // Initialize the cors middleware
 const cors = initMiddleware(
@@ -14,9 +15,41 @@ const cors = initMiddleware(
   })
 );
 
+const openness = (is_open: 0 | 1 | -1) => {
+  switch (is_open) {
+    case 1:
+      return 'open';
+    case 0:
+      return 'semi_open';
+    case -1:
+    default:
+      return 'closed';
+  }
+};
+
 const extractApiAttributes = (api: IApi) => {
-  const { title, slug, is_open } = api;
-  return { title, slug, is_open };
+  const {
+    title,
+    tagline,
+    path,
+    slug,
+    is_open,
+    owner,
+    owner_acronym,
+    logo,
+    datagouv_uuid,
+  } = api;
+  return {
+    title,
+    tagline,
+    path,
+    slug,
+    openness: openness(is_open),
+    owner,
+    owner_acronym,
+    logo: `/images/api-logo/${logo || constants.logo}`,
+    datagouv_uuid,
+  };
 };
 
 export default async function handler(

@@ -4,7 +4,6 @@ tagline: Interagissez avec le catalogue des données publiques
 owner: Direction Interministérielle du Numérique
 owner_acronym: DINUM
 is_open: 1 # 0 means API require an account
-access_link: https://www.data.gouv.fr/fr/login?next=%2Ffr%2Fadmin%2Fme%2F#apikey
 keywords:
   - open
   - data

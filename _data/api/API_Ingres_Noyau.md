@@ -4,22 +4,33 @@ tagline: Récupérez l'ensemble des référentiels utilisés par les SIRH de la 
 owner: Centre Interministériel des Systèmes d'Information relatifs aux Ressources Humaines
 owner_acronym: CISIRH
 is_open: -1 # -1 means API not open
-access_link: mailto:api.cisirh@finances.gouv.fr
-access_condition: OUVERT sous contrat
-access_description: |
-  Le CISIRH met à disposition cette API exploitable accessible uniquement par les ministères ou institutions ayant accès au Réseau Interministériel de l'Etat (RIE).
-  Son utilisation par une application tierce ne saurait engager la responsabilité du CISIRH, par exemple, en termes de disponibilité.
+access_page:
+  - who:
+      - Une application RH
+      - Une institution
+      - Une collectivité
+      - Un ministère
+    is_eligible: 0
+    description: |
+      Le CISIRH met à disposition cette API exploitable et accessible uniquement via le Réseau Interministériel de l'Etat (RIE).
+
+      Son utilisation par une application tierce ne saurait engager la responsabilité du CISIRH, par exemple, en termes de disponibilité.
+
+      <Button href="mailto:api.cisirh@finances.gouv.fr">Faire une demande d'accès</Button>
+  - who:
+      - Un particulier
+      - Autre
+    is_eligible: -1
+    description: |
+      Le CISIRH met à disposition cette API exploitable accessible **uniquement par les ministères ou institutions** ayant accès au Réseau Interministériel de l'Etat (RIE).
+
+      <Button href="/rechercher-api">Rechercher une autre API</Button>
 logo: logo-cisirh.png
 external_site: https://www.economie.gouv.fr/cisirh/ingres
 stat:
   url:
   label: Appels
   lastXdays: 30
-clients:
-  - applications RH
-  - institutions
-  - collectivités
-  - ministères
 partners:
   - CISIRH -- BSRMRH > Application Ingres
   - CISIRH -- Centre de compétences éditoriales > Simulateur de carrière
@@ -133,7 +144,7 @@ Pour récupérer une nomenclature, il faut:
 
 - VERSION NOYAU: les fichiers sont publiés mensuellement de façon officielle pour une version noyau donnée. Par exemple, la versin "19.00.08" diffusée en
   Juin 2020 est la 8ème version publiée depuis la version structurante 19.00.00 publiée en Juillet 2019).
-  Si cette version n'est pas connue, l'API permet de les listes toutes: `https://api.cisirh.rie.gouv.fr/ingres/diffusions`.
+  Si cette version n'est pas connue, l'API permet de les listes toutes sur la route **/diffusions**.
   Le plus grand nombre correspond à la version la plus récente disponible.
   Si ce que vous recherchez est un contenu le plus "frais" possible, alors choisir la version "HORSVERS" qui correspond à des fichiers produits la veille au soir. Il y a toutefois un écart possible pour les nomenclatures RCC car certaines modifications incluses dans ce fichier pourraient ne pas être validées par la DGAFP.
 

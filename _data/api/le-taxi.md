@@ -21,6 +21,7 @@ access_page:
       Seuls les opérateurs de taxi ou éditeurs d’application peuvent demander un accès à l’API.
 
       <Button href="/rechercher-api">Rechercher une autre API</Button>
+datapass_link: https://signup.api.gouv.fr/le-taxi #default access link
 logo: logo_le.taxi.svg
 partners:
   - Atlantis Taxi
@@ -31,10 +32,9 @@ partners:
 owner: Direction interministérielle du numérique & Direction générale des Infrastructures, des Transports et de la Mer
 owner_acronym: DINUM & DGITM
 keywords:
-  - Signup
   - Transport
   - Taxi
-contact_link: https://le.taxi/join.html
+contact_link: equipe@le.taxi
 doc_tech_link: https://api.taxi/swagger.json
 themes:
   - Transport

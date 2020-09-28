@@ -6,12 +6,6 @@ owner_acronym: MAA
 category: public
 is_open: 1 # 1 means API is fully open
 logo: maa.jpg
-clients:
-  - particuliers
-  - entreprises
-  - presse
-  - collectivités
-  - ministères
 keywords:
   - Résultats aux examens
   - Résultats

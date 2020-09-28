@@ -3,11 +3,6 @@ title: Base Adresse Nationale
 tagline: "Un référentiel national ouvert : de l'adresse à la coordonnée géographique"
 external_site: https://adresse.data.gouv.fr
 is_open: 1 # 1 means API is fully open
-clients:
-  - particuliers
-  - entreprises
-  - collectivités
-  - ministères
 partners:
   - La poste
   - IGN
@@ -26,13 +21,15 @@ keywords:
   - Code postal
 rate_limiting_resume: 10 appels / seconde / IP
 rate_limiting_description: |
-  L'API unitaire est disponible à hauteur de 10 appels par seconde et par adresse IP.<br/>
+  L'API unitaire est disponible à hauteur de 10 appels par seconde et par adresse IP.
   Le géocodage de masse (CSV) est disponible à hauteur d'un appel simultané par adresse IP.
 themes:
   - Géographie
 additional_css: api
 contact_link: adresse@data.gouv.fr
 doc_tech_external: https://adresse.data.gouv.fr/api
+datagouv_uuid:
+  - 5530fbacc751df5ff937dddb
 visits_2019: 6460
 uptime: 100 # https://uptimerobot.com/dashboard.php#778110635
 last_update: 10/12/2019

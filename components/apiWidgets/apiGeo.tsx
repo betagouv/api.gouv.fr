@@ -36,6 +36,7 @@ const GeoWidget: React.FC<{}> = () => {
   };
   return (
     <ApiWidgetWrapper title="Un exemple d’API ouverte : l’API Geo">
+      {console.log(results)}
       <div>
         L’
         <a href="/les-api/api-geo">API Geo</a> permet <b>à n'importe qui</b>{' '}
@@ -54,7 +55,6 @@ const GeoWidget: React.FC<{}> = () => {
           placeholder="Tapez le nom de votre commune"
           label="Recherchez une commune française"
           debounceRate={200}
-          results={results}
           isLoading={isLoading}
         />
       </div>

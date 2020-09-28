@@ -4,12 +4,6 @@ tagline: Piézométrie (niveau des nappes d'eau souterraine)
 is_open: 1 # 1 means API is fully open
 external_site: https://hubeau.eaufrance.fr/page/documentation_piezometrie
 logo: 03-piezo.jpg
-clients:
-  - particuliers
-  - entreprises
-  - bureaux d'études
-  - collectivités
-  - ministères
 partners:
   - OFB
   - BRGM

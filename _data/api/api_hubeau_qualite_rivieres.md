@@ -4,12 +4,6 @@ tagline: Qualité physico-chimique des cours d'eau
 is_open: 1 # 1 means API is fully open
 external_site: http://hubeau.eaufrance.fr/page/documentation_chimie_riviere
 logo: 04-qualite_rivieres.jpg
-clients:
-  - particuliers
-  - entreprises
-  - bureaux d'études
-  - collectivités
-  - ministères
 partners:
   - AFB
   - BRGM
