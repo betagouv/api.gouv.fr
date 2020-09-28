@@ -17,6 +17,7 @@ keywords:
   - Registre
   - Artisanat
   - CMA France
+  - SIREN
   - RNM
 themes:
   - Entreprise
@@ -31,13 +32,16 @@ L’API Répertoire National des Métiers permet d'interroger le répertoire des
 
 ### A quoi sert cette API ?
 
-L’API vous permet de requêter les données d'une entreprise artisanale grâce à son SIREN.
+Intégrer l’API Répertoire National des Métiers dans votre système d’information permet de récuperer les données d'une entreprise artisanale enregistré auprès des Chambres des métiers, grâce à son SIREN.
 
 ### Données accessibles dans l'API
 
-| Nom      | Description |
-| -------- | ----------- |
-| donnée A | détails...  |
-| donnée B | détails...  |
-
-### En savoir plus
+| Nom                    | Description                                      |
+| ---------------------- | ------------------------------------------------ |
+| SIREN                  | Le numero SIREN de l'entreprise                  |
+| Identifiant RNM        | ou ARNM                                          |
+| Nom                    | Sigle ou Dénomination sociale de l'entreprise    |
+| Adresse                | Adresse de l'entreprise, département et région   |
+| Date d'immatriculation | Date d'immatriculation au répertoire des métiers |
+| Forme juridique        |                                                  |
+| Autre                  | Nombre de salariés, informations du fondateur    |
