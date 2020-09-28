@@ -29,15 +29,17 @@ datagouv_uuid:
 visits_2019: 3000
 last_update: 16/06/2020
 content_intro: |
-  L’API Répertoire des Associations permet d'interroger le répertoire des associations françaises.
+  L’API Répertoire des Associations (RNA) permet d'interroger le répertoire des associations françaises.
 
   ### A quoi sert cette API ?
 
-  L’API vous permet de :
+  Ajouter l’API dans votre système d'information vous permet de :
 
   - requêter les données d'une association grâce à son SIRET
   - requêter les données d'une association grâce à son nom
   - requêter les données d'une association grâce à son code RNA
+
+  Si vous êtes une association et recherchez votre numéro RNA, [consultez la fiche explicative sur service-public.fr](https://www.service-public.fr/associations/vosdroits/F34726).
 ---
 
 ### Les données disponibles dans l'API
