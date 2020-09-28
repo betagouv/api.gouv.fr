@@ -22,7 +22,8 @@ keywords:
 themes:
   - Entreprise
 logo: CMA_France.png
-contact_link: entreprise@data.gouv.fr
+contact_link: contact@api-rnm.artisanat.fr
+rate_limiting_resume: 2000 appels / 10 minutes / IP
 doc_tech_link: https://api-rnm.artisanat.fr/v2/openapi.json
 doc_tech_external: https://api-rnm.artisanat.fr/
 last_update: 07/09/2020
