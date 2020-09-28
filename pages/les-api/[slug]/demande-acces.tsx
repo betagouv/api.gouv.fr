@@ -167,6 +167,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   //@ts-ignore
   const api = await getAPI(slug);
 
+  if (!api.access_page) {
+    throw Error('Should not happen');
+  }
+
   const accessConditionOptions = api.access_page.reduce(
     (
       accumulator: IAccessConditionOption[],
