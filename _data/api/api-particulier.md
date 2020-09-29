@@ -3,7 +3,7 @@ title: API Particulier
 tagline: Accédez aux données fiscales (DGFIP) et familiales (CAF) des particuliers pour simplifier des démarches administratives
 external_site: https://particulier.api.gouv.fr
 is_open: -1 # -1 means API not open
-datapass_link: https://signup.api.gouv.fr/api-particulier
+datapass_link: https://datapass.api.gouv.fr/api-particulier
 access_page:
   - who:
       - Un particulier ou une entreprise
@@ -22,7 +22,7 @@ access_page:
       n'accéder aux données personnelles qu'avec **l'accord explicite** de l'usager.
 
       <NextSteps />
-      <Button href="https://signup.api.gouv.fr/api-particulier">Remplir une demande</Button>
+      <Button href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</Button>
   - who:
       - Un éditeur de logiciel
     is_eligible: 0
@@ -32,7 +32,7 @@ access_page:
       Lors de votre demande vous devrez **justifier** dans quelle mesure l'entité pour laquelle vous opérez rentre dans ce cadre juridique.
 
       <NextSteps is_editeur />
-      <Button href="https://signup.api.gouv.fr/api-particulier">Remplir une demande</Button>
+      <Button href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</Button>
 stat:
   lastXdays: 30
   url: https://monitoring.particulier.api.gouv.fr/api/stats/

@@ -23,7 +23,7 @@ access_page:
       Pour obtenir l’accès à l’API, vous devez notamment **justifier d'une simplification pour les citoyens** et vous engager à n'accéder qu’aux données strictement nécessaires à la démarche conformément au principe de proportionnalité.
 
       <NextSteps />
-      <IsFranceConnected fcLink="https://signup-staging.api.gouv.fr/api-impot-particulier-fc-sandbox" notFcLink="https://signup-staging.api.gouv.fr/api-impot-particulier-sandbox"/>
+      <IsFranceConnected fcLink="https://datapass.api.gouv.fr/api-impot-particulier-fc-sandbox" notFcLink="https://datapass.api.gouv.fr/api-impot-particulier-sandbox"/>
   - who:
       - Un éditeur de logiciel
     is_eligible: 0
@@ -33,7 +33,7 @@ access_page:
       Lors de votre demande vous devrez **justifier** dans quelle mesure l'entité pour laquelle vous opérez rentre dans ce cadre juridique.
 
       <NextSteps is_editeur/>
-      <IsFranceConnected fcLink="https://signup-staging.api.gouv.fr/api-impot-particulier-fc-sandbox" notFcLink="https://signup-staging.api.gouv.fr/api-impot-particulier-sandbox"/>
+      <IsFranceConnected fcLink="https://datapass.api.gouv.fr/api-impot-particulier-fc-sandbox" notFcLink="https://datapass.api.gouv.fr/api-impot-particulier-sandbox"/>
   - who:
       - Un établissement bancaire
     is_eligible: 0
@@ -45,8 +45,8 @@ access_page:
       **NB :** En remplissant cette demande, vous allez obtenir l’accès à l'API Impôt Particulier. Afin d'accéder aux données il est également nécessaire d’avoir accès à <External href="/les-api/api_r2p/demande-acces"> l'API R2P</External> afin d'obtenir l'identifiant fiscal (SPI).
 
       <NextSteps />
-      <Button href='https://datapass-staging.api.gouv.fr/api-impot-particulier-sandbox?scopes=%7B%22dgfip_rfr%22%3Afalse%2C%22dgfip_nbpart%22%3Afalse%2C%22dgfip_aft%22%3Afalse%2C%22dgfip_locaux_th%22%3Afalse%2C%22dgfip_eligibilite_lep%22%3Atrue%2C%22dgfip_annee_n_moins_1%22%3Afalse%2C%22dgfip_annee_n_moins_2%22%3Atrue%2C%22dgfip_acces_spi%22%3Atrue%2C%22dgfip_acces_etat_civil%22%3Atrue%7D'>Remplir une demande</Button>
-datapass_link: https://signup.api.gouv.fr/api-impot-particulier
+      <Button href='https://datapass.api.gouv.fr/api-impot-particulier-sandbox?scopes=%7B%22dgfip_rfr%22%3Afalse%2C%22dgfip_nbpart%22%3Afalse%2C%22dgfip_aft%22%3Afalse%2C%22dgfip_locaux_th%22%3Afalse%2C%22dgfip_eligibilite_lep%22%3Atrue%2C%22dgfip_annee_n_moins_1%22%3Afalse%2C%22dgfip_annee_n_moins_2%22%3Atrue%2C%22dgfip_acces_spi%22%3Atrue%2C%22dgfip_acces_etat_civil%22%3Atrue%7D'>Remplir une demande</Button>
+datapass_link: https://datapass.api.gouv.fr/api-impot-particulier
 keywords:
   - Impots
   - Revenu Fiscal de Référence

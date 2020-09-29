@@ -53,4 +53,4 @@ Les articles suivants peuvent vous aider a justifier vos droits d'accès :
 - coordonnées de l'équipe technique
 - coordonnées de votre délégué à la protection des données et du responsable de traitement
 
-<Button href="https://signup.api.gouv.fr/api-particulier">Remplir une demande</Button>
+<Button href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</Button>
