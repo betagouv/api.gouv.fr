@@ -6,7 +6,7 @@ import { MultiChoice } from '../uiComponents';
 import { logParcoursClient } from '../utils/client/analytics';
 import Emoji from '../uiComponents/emoji';
 
-export default () => {
+const ParcoursClient = () => {
   const [statut, setStatut] = useState<VISITOR | null>(null);
 
   const options = [
@@ -81,3 +81,4 @@ export default () => {
     </Page>
   );
 };
+export default ParcoursClient;

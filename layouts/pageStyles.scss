@@ -31,6 +31,21 @@ a {
   section.page-baseline {
     margin: 30px auto;
     text-align: left;
+
+    h1 {
+      font-size: 1.5rem;
+      line-height: 2.1rem;
+      margin: 10px 0 16px;
+      color: $darkestGrey;
+
+      @media only screen and (min-width: 1px) and (max-width: 600px) {
+        font-size: 1.4rem;
+        line-height: 1.9rem;
+        margin: 12px 0 16px;
+
+        color: $darkestGrey;
+      }
+    }
   }
 
   section.page-body-container {
@@ -133,6 +148,12 @@ a:not(.dont-apply-link-style):hover {
   &.vertical-margin {
     margin: 10px auto;
   }
+}
+
+.layout-space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .cursor-pointer {
@@ -259,8 +280,20 @@ a:not(.dont-apply-link-style):hover {
   }
 
   pre {
-    overflow: auto;
+    overflow-x: auto;
     color: #001a39;
+    white-space: pre-wrap;
+    font-family: monospace;
+  }
+
+  code {
+    display: block;
+    padding: 12px;
+    color: #93a1a1;
+    background: #073642;
+    border-left: 10px solid #586e75;
+    border-radius: 2px;
+    overflow: auto;
   }
 }
 

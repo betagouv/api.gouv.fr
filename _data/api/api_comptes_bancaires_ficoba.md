@@ -24,7 +24,7 @@ access_page:
 
       Pour obtenir un agrément, vous devez **justifier du cadre juridique** dans lequel s’inscrit votre demande.
 
-      <NextSteps service_description="justifiant l'accès aux données" />
+      <NextSteps service_description="de la description du service justifiant l'accès aux données" />
       <Button href="https://signup.api.gouv.fr/api-r2p-sandbox">Remplir une demande</Button>
   - who:
       - Un éditeur de logiciel
@@ -36,7 +36,7 @@ access_page:
 
       Pour obtenir un agrément, vous devez **justifier du cadre juridique** dans lequel s’inscrit votre demande.
 
-      <NextSteps service_description="justifiant l'accès aux données" is_editeur={true}/>
+      <NextSteps service_description="de la description du service justifiant l'accès aux données" is_editeur={true}/>
       <Button href="https://signup.api.gouv.fr/api-r2p-sandbox">Remplir une demande</Button>
   - who:
       - Un établissement bancaire
@@ -46,7 +46,7 @@ access_page:
 
       Si vous entrez dans ce cadre, vous pouvez effectuer une demande d'accès à l’API FICOBA.
 
-      <NextSteps service_description="justifiant l'accès aux données" />
+      <NextSteps service_description="de la description du service justifiant l'accès aux données" />
       <Button href="https://signup.api.gouv.fr/api-r2p-sandbox">Remplir une demande</Button>
 keywords:
   - Fichier

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default (
+const Lock = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="16"
@@ -14,3 +14,4 @@ export default (
     <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
   </svg>
 );
+export default Lock;

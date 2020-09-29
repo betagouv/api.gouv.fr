@@ -30,7 +30,7 @@ const TechnicalDocumentation: React.FC<IProps> = ({
           </div>
         </>
       ) : (
-        <div>Cette API na pas de documentation publique.</div>
+        <div>Cette API n’a pas de documentation publique.</div>
       )}
     </SubSection>
   );

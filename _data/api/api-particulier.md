@@ -72,7 +72,7 @@ content_intro: |
   - de réduire le nombre d’erreurs de saisie
   - d'écarter le risque de fraude documentaire
 
-  Du point de vue de l’usager, une démarche qui utilise API Particulier ressemble à ça :
+  Du point de vue de l’usager, une démarche qui utilise API Particulier s'apparente à ça :
 
   1. Je me connecte sur le site de ma commune pour réaliser une démarche.
   2. En lieu de justificatif de revenu, je saisis mon numéro fiscal et mon numéro d’avis d’imposition.
@@ -83,8 +83,8 @@ content_intro: |
 
 | Nom                   | Description                                                                            | Origine des données |
 | --------------------- | -------------------------------------------------------------------------------------- | ------------------- |
-| RFR                   | Le revenu fiscal de référence (RFR) de l'année en court et le nombre de parts du foyer | DGFIP               |
-| Avis d’imposition     | Montant d'impot, revenu brut, net, imposable, date de recouvrement et d'établissement  | DGFIP               |
+| RFR                   | Le revenu fiscal de référence (RFR) de l'année en cours et le nombre de parts du foyer | DGFIP               |
+| Avis d’imposition     | Montant d'impôt, revenu brut, net, imposable, date de recouvrement et d'établissement  | DGFIP               |
 | Déclarants            | les nom, prénoms, date de naissance des déclarants du foyer fiscal                     | DGFIP               |
 | Adresse fiscale       | l'adresse fiscale structurée ainsi que les coordonnées GPS                             | DGFIP               |
 | Quotient familial     | le quotient familial (QF) du mois précédent pour la famille                            | CAF                 |
