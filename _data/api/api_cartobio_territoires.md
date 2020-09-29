@@ -53,7 +53,7 @@ rate_limiting_resume: illimité
 
 CartoBio vise à ouvrir progressivement les données des parcelles conduites en agriculture biologique en France, notamment auprès des acteurs publics territoriaux.
 
-### A quoi sert l’API CartoBio - Teritoires ?
+### À quoi sert l’API CartoBio - Territoires ?
 
 Elle permet aux Administrations **territoriales** et aux Organismes **Publics** de récupérer les données des parcelles conduites en agriculture Biologique sur le territoire afin de :
 
@@ -63,9 +63,9 @@ Elle permet aux Administrations **territoriales** et aux Organismes **Publics** 
   - Connaître le potentiel d’alimentation bio et locale
 - Avoir une meilleure connaissance de votre territoire
 
-### Données de l’API :
+### Données de l’API
 
-La récupération des parcelles bio et de leur assolement de l’année pour une zone géographique se fait par Code EPCI, code INSEE et/ou contour géographique en Shapefile ou GeoJSON.
+La récupération des parcelles bio et de leur assolement de l’année pour une zone géographique se fait par Code EPCI, code INSEE et/ou contour géographique en Shapefile ou GeoJSON. Les informations sont anonymisées.
 
 Voici les données accessibles :
 
@@ -78,4 +78,4 @@ Voici les données accessibles :
 
 #### D'où vient la donnée ?
 
-Les données exposées par l'API sont celles de la PAC 2017, 2018 et 2019 issue des RPG, complétées par les Organismes de Certification lors des contrôles terrain.
+Les données exposées par l'API sont basées sur les données géographiques des instructions d'aides PAC 2017, 2018 et 2019 — c'est-à-dire du RPG de niveau IV. Ces données sont complétées par les Organismes de Certification lors des contrôles terrain. Ces données représentent environt 80 à 85% de la surface bio connue.
