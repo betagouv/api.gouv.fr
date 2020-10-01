@@ -41,7 +41,6 @@ const PageHeader: React.FC<IProps> = ({
       .content {
         margin: 0;
         padding: 5px 0 15px;
-        max-width: 700px;
       }
 
       .breadcrumb {

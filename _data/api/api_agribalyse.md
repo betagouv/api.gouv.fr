@@ -1,5 +1,5 @@
 ---
-title: API Impacts environnementaux des produits agricoles et alimentaires - AGRIBALYSE®
+title: API Impacts environnementaux - AGRIBALYSE®
 tagline: Interrogez base de données des indicateurs d'impacts environnementaux des produits agricoles et alimentaires produits et/ou consommés en France
 external_site: https://data.ademe.fr/datasets/agribalyse-synthese
 is_open: 1 # 1 means API is fully open

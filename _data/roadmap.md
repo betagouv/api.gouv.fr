@@ -91,7 +91,7 @@
       what: API Aides financières à la rénovation énergetique (Simul’Aid€s)
       path: /les-api/api_aides_renovation_energetique
     - type: ADD_API
-      what: API Impacts environnementaux des produits agricoles et alimentaires - AGRIBALYSE®
+      what: API Impacts environnementaux - AGRIBALYSE®
       path: /les-api/api_agribalyse
   10:
     - type: ADD_API
