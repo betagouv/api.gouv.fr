@@ -6,7 +6,6 @@ image: cartobio-aac.jpg
 related_guides:
 api:
   - API CartoBio - Territoires
-noindex: true
 ---
 
 Un réseau d'animation de Bassin d'Alimentation de Captage a utilisé les données géographiques de CartoBio pour :
@@ -22,6 +21,10 @@ Un réseau d'animation de Bassin d'Alimentation de Captage a utilisé les donné
 - Parcelle conduite en agriculture biologique
 - Contour géographique des parcelles
 - Contour géographique des Bassins d'Alimentation de Captages(BAC)/Aires d'Alimentation de Captagne (AAC)
+
+<Button href="https://signup.api.gouv.fr/cartobio">Remplir une demande</Button> •
+<Button href="https://api.gouv.fr/les-api/api_cartobio_territoires">En savoir plus sur la démarche</Button> •
+<Button href="https://cartobio.org">Découvrir CartoBio</Button>
 
 ## Ils l'utilisent
 
