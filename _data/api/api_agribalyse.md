@@ -25,7 +25,7 @@ datagouv_uuid:
 last_update: 27/07/2020
 ---
 
-L'API Aides financières de l'ADEME permet d'interroger la base AGRIBALYSE® qui référence les indicateurs d'impacts environnementaux des produits agricoles produits en France et des produits alimentaires consommés en France.
+L'API Impacts environnementaux permet d'interroger la base AGRIBALYSE® qui référence les indicateurs d'impacts environnementaux des produits agricoles produits en France et des produits alimentaires consommés en France.
 
 ### A quoi sert cette API ?
 
