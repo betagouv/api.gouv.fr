@@ -12,7 +12,7 @@ access_page:
       Vous pouvez remplir une demande d’accès à l’API Le.Taxi dans le cadre des articles [L. 3121-11-1](https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000029528684&cidTexte=LEGITEXT000023086525) et [R3121-24 à R3121-33](https://www.legifrance.gouv.fr/affichCode.do?idSectionTA=LEGISCTA000032278146&cidTexte=LEGITEXT000023086525) du Code des transports.
 
       <NextSteps />
-      <Button href="https://signup.api.gouv.fr/le-taxi">Remplir une demande</Button>
+      <Button href="https://datapass.api.gouv.fr/le-taxi">Remplir une demande</Button>
   - who:
       - Un particulier
       - Autre
@@ -21,7 +21,7 @@ access_page:
       Seuls les opérateurs de taxi ou éditeurs d’application peuvent demander un accès à l’API.
 
       <Button href="/rechercher-api">Rechercher une autre API</Button>
-datapass_link: https://signup.api.gouv.fr/le-taxi #default access link
+datapass_link: https://datapass.api.gouv.fr/le-taxi #default access link
 logo: logo_le.taxi.svg
 partners:
   - Atlantis Taxi

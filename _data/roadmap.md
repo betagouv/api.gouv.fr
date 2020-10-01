@@ -85,13 +85,22 @@
       what: Gallica Document de la BnF
       path: /les-api/api_gallica_document
     - type: ADD_API
+      what: API Aide financieres de l’ADEME
+      path: /les-api/api_aides_financieres_ademe
+    - type: ADD_API
+      what: API Aides financières à la rénovation énergetique (Simul’Aid€s)
+      path: /les-api/api_aides_renovation_energetique
+    - type: ADD_API
+      what: API Impacts environnementaux des produits agricoles et alimentaires - AGRIBALYSE®
+      path: /les-api/api_agribalyse
+  10:
+    - type: ADD_API
       what: Données ouvertes de l’URSSAF
     - type: ADD_API
       what: Données ouvertes de la ville de Paris
     - type: ADD_API
       what: Répertoire National des Métiers
       path: https://rnm.artisanat.fr/api/
-  10:
     - type: ADD_API
       what: Fichiers des Comptes Bancaires (FiCoBa) produite par le DGFiP
     - type: ADD_API

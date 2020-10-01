@@ -48,15 +48,17 @@ const IsFranceConnected: React.FC<IPropsFC> = ({ fcLink, notFcLink }) => {
             </div>
           ) : (
             <>
-              <p>
-                En remplissant cette demande, vous allez obtenir l’accès à l'API
-                Impôt Particulier. Afin d'accéder aux données sans
-                FranceConnect, il est également nécessaire d’avoir accès à{' '}
-                <ExternalLink href="/les-api/api_r2p/demande-acces">
-                  l'API R2P
-                </ExternalLink>{' '}
-                afin d'obtenir l'identifiant fiscal (SPI).
-              </p>
+              {!hasAlreadyFranceConnect && (
+                <p>
+                  En remplissant cette demande, vous allez obtenir l’accès à
+                  l'API Impôt Particulier. Afin d'accéder aux données sans
+                  FranceConnect, il est également nécessaire d’avoir accès à{' '}
+                  <ExternalLink href="/les-api/api_r2p/demande-acces">
+                    l'API R2P
+                  </ExternalLink>{' '}
+                  afin d'obtenir l'identifiant fiscal (SPI).
+                </p>
+              )}
               <div className="layout-center">
                 <ButtonLink href={link} size="large">
                   Remplir une demande

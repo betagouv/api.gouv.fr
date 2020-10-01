@@ -3,7 +3,7 @@ title: API Entreprise
 tagline: Simplifier les démarches des entreprises en récupérant pour elles leurs documents administratifs
 external_site: https://entreprise.api.gouv.fr/
 is_open: -1 # -1 means API not open
-datapass_link: https://signup.api.gouv.fr/api-entreprise
+datapass_link: https://datapass.api.gouv.fr/api-entreprise
 access_page:
   - who:
       - Un particulier
@@ -21,7 +21,7 @@ access_page:
       Lors de votre demande vous devrez **renseigner le cadre juridique (un texte ou délibération/décision)** qui légitime l'entité pour laquelle vous opérez à recevoir ces données.
 
       <NextSteps />
-      <Button href="https://signup.api.gouv.fr/api-entreprise">Remplir une demande</Button>
+      <Button href="https://datapass.api.gouv.fr/api-entreprise">Remplir une demande</Button>
   - who:
       - Une entreprise
     is_eligible: 0
@@ -31,7 +31,7 @@ access_page:
       Lors de votre demande vous devrez **justifier** dans quelle mesure vous rentrez dans ce cadre juridique.
 
       <NextSteps />
-      <Button href="https://signup.api.gouv.fr/api-entreprise">Remplir une demande</Button>
+      <Button href="https://datapass.api.gouv.fr/api-entreprise">Remplir une demande</Button>
   - who:
       - Un éditeur de logiciel
     is_eligible: 0
@@ -41,7 +41,7 @@ access_page:
       Lors de votre demande vous devrez **renseigner le cadre juridique (un texte ou délibération/décision)** qui légitime  l'entité pour laquelle vous opérez à recevoir ces données.
 
       <NextSteps is_editeur />
-      <Button href="https://signup.api.gouv.fr/api-entreprise">Remplir une demande</Button>
+      <Button href="https://datapass.api.gouv.fr/api-entreprise">Remplir une demande</Button>
 stat:
   lastXdays: 30
   url: https://dashboard.entreprise.api.gouv.fr/api/watchdoge/stats/last_30_days_usage

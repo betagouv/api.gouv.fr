@@ -25,7 +25,7 @@ const SearchBar = ({
   return (
     <>
       <div id="search-wrapper">
-        {label && <label for="search-input">{label}</label>}
+        {label && <label htmlFor="search-input">{label}</label>}
         <div id="search-input" className={`search-bar ${focus ? 'focus' : ''}`}>
           <input
             placeholder={placeholder}

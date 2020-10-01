@@ -5,7 +5,7 @@ tagline: Récupérez les données connues par l’administration fiscale (DGFIP)
 owner: Direction Générale des Finances Publiques
 owner_acronym: DGFIP
 is_open: -1
-datapass_link: https://signup.api.gouv.fr/api-r2p-sandbox
+datapass_link: https://datapass.api.gouv.fr/api-r2p-sandbox
 access_page:
   - who:
       - Un particulier
@@ -26,7 +26,7 @@ access_page:
       Pour obtenir un agrément, vous devez **justifier du cadre juridique** dans lequel s’inscrit votre demande.
 
       <NextSteps service_description="de la description du cas d’utilisation" />
-      <Button href="https://signup.api.gouv.fr/api-r2p-sandbox">Remplir une demande</Button>
+      <Button href="https://datapass.api.gouv.fr/api-r2p-sandbox">Remplir une demande</Button>
   - who:
       - Un éditeur de logiciel
     is_eligible: 0
@@ -38,7 +38,7 @@ access_page:
       Pour obtenir un agrément, vous devez **justifier du cadre juridique** dans lequel s’inscrit votre demande.
 
       <NextSteps service_description="de la description du cas d’utilisation" is_editeur={true}/>
-      <Button href="https://signup.api.gouv.fr/api-r2p-sandbox">Remplir une demande</Button>
+      <Button href="https://datapass.api.gouv.fr/api-r2p-sandbox">Remplir une demande</Button>
   - who:
       - Un établissement bancaire
     is_eligible: 0
@@ -50,7 +50,7 @@ access_page:
       **NB :** En remplissant cette demande, vous allez obtenir l’accès à l'API R2P. Afin d'accéder aux données il est également nécessaire d’avoir accès à <External href="/les-api/impot-particulier/demande-acces">l'API Impôt Particulier</External>, qui contient les données nécessaires à la vérification de l'éligibilité au LEP.
 
       <NextSteps service_description="de la description du cas d’utilisation"/>
-      <Button href="https://signup.api.gouv.fr/api-r2p-sandbox">Remplir une demande</Button>
+      <Button href="https://datapass.api.gouv.fr/api-r2p-sandbox">Remplir une demande</Button>
 keywords:
   - Recherche
   - Personnes

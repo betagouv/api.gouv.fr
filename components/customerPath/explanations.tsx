@@ -212,7 +212,7 @@ const Explanations: React.FC<IProps> = ({ subject, visitorType }) => {
             <ButtonLink
               size="large"
               onClick={logClic}
-              href="https://signup.api.gouv.fr/franceconnect?source=api_gouv_customer_path_entreprise"
+              href="https://datapass.api.gouv.fr/franceconnect?source=api_gouv_customer_path_entreprise"
             >
               Remplir une demande
             </ButtonLink>
