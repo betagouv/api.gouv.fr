@@ -4,7 +4,7 @@ tagline: Un accès aux données des parcelles en agriculture biologique pour les
 owner: Agence BIO
 category: public
 is_open: -1
-datapass_link: mailto:cartobio@beta.gouv.fr?subject=Demande%20d%E2%80%99acc%C3%A8s%20%C3%A0%20l%27API%20CartoBio
+datapass_link: https://datapass.api.gouv.fr/cartobio
 access_page:
   - who:
       - Un particulier, une association ou une entreprise
@@ -21,7 +21,7 @@ access_page:
       Les structures publiques (EPCI, Agence de l’Eau, PNR, Agence Publique, …) qui souhaitent avoir accès aux données de l’API CartoBio pour des projets dans leur territoire (qualité de l’eau, alimentation, …) peuvent faire une demande.
 
       <NextSteps />
-      <Button href="mailto:cartobio@beta.gouv.fr?subject=Demande%20d%E2%80%99acc%C3%A8s%20%C3%A0%20l%27API%20CartoBio">Remplir une demande</Button>
+      <Button href="https://datapass.api.gouv.fr/cartobio">Remplir une demande</Button>
 logo: AgenceBio.svg
 external_site: https://cartobio.org/
 keywords:
