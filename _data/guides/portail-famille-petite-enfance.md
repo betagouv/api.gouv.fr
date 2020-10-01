@@ -19,10 +19,10 @@ Avec la brique API Particulier vous avez la possibilité de diminuer les erreurs
 
 En intégrant la brique API Particulier dans votre système d'information, ou votre site internet :
 
-- Vous accèdez facilement aux données de la CAF et de la DGFIP.
+- Vous accédez facilement aux données de la CAF et de la DGFIP
 - Vous n'avez **plus besoin de demander** d'avis fiscal ou de quotient familial aux parents
-- Vous n'avez **pas de vérifications supplémentaires** car les informations sont **certifiées**
-- La démarche peut-être faite 100% en ligne
+- Vous n'avez **pas de vérification supplémentaire** car les informations sont **certifiées**
+- La démarche peut être faite 100% en ligne
 
 ## Quelles données utilisez-vous dans vos démarches ?
 
@@ -38,19 +38,12 @@ Voici les données de la CAF (composition familiale du foyer du demandeur) et de
 
 ## Comment formuler une demande ?
 
-L'utilisation des données dans le cadre de la tarification de la restauration scolaire est encadrée légalement. Vous devez formuler une demande auprès de nos services et la motiver.
+L'utilisation des données est encadrée légalement. Vous devez formuler une demande auprès de nos services et la motiver.
 
-Les articles suivants peuvent vous aider a justifier vos droits d'accès :
+Les articles suivants peuvent vous aider à justifier vos droits d'accès :
 
 - Article 6-1 <External href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees">La loi relative à la protection des données personnelles</External> _ du RGPD._
 - Certaines délibérations prises par la ville et/ou par la commune peuvent constituer le cadre légal
 
-**Pour remplir votre demande, vous aurez besoin de :**
-
-- votre numéro SIRET
-- cadre juridique associé à votre demande
-- la description du service justifiant une simplication pour les citoyens
-- coordonnées de l'équipe technique
-- coordonnées de votre délégué à la protection des données et du responsable de traitement
-
+<NextSteps />
 <Button href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</Button>
