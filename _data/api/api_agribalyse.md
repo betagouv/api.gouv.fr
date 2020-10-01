@@ -49,7 +49,6 @@ Elle permet de connaitre, pour chaque aliment/produit :
 | Emballage              | materiau de l'emballage                                                                                                                              |
 | Impact Environnemental | impact carbone, impact couche d'ozone, impact sur la qualité de l'eau, impact sur les mineraux, coût energétique, eutrophisation, utilisation du sol |
 | Transport aérien       | Est ce que le produit est transporté par avion                                                                                                       |
-| Transport aérien       | Est ce que le produit est transporté par avion                                                                                                       |
 
 ### En savoir plus sur les données
 
