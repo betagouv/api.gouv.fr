@@ -1,6 +1,6 @@
 ---
-title: Activités périscolaires et municipales
-tagline: Vous êtes une mairie et vous voulez simplifier l'adhésion aux activités municipales et aux activités périscolaires ?
+title: Tarification des activités périscolaires et municipales
+tagline: Simplifiez l'adhésion aux activités municipales et périscolaires dans votre collectivité
 tags: cas usage, api particulier, portail-famille, tarification activités prériscolaire, activités municipales
 image: ecole.jpeg
 related_guides:
@@ -9,47 +9,45 @@ related_guides:
   - portail-famille-tarif-restauration-scolaire
 api:
   - API Particulier
-noindex: true
 ---
 
-En utilisant notre brique API Particulier dans votre SI :
+Chaque année, les collectivités doivent calculer les tarifs des activités périscolaires et de la [restauration scolaire](/guides/portail-famille-tarif-restauration-scolaire).
 
-- **Plus besoin de demander** un avis fiscal ou un quotient familial aux citoyens
-- **Pas de vérifications supplémentaire** : les informations sont certifiées
-- Un seul portail : plusieurs démarches
-- Démarche 100% en ligne
+En général, le calcul des tarifs utilise l'adresse, le quotient familial de la Caisse d’Allocations Familiales (CAF) et l'avis d'imposition fournis par les citoyens.
 
-## Quelles données utilisez-vous dans vos démarches ?
+Avec la brique API Particulier vous avez la possibilité de réduire les risques d'erreurs ainsi que les fraudes aux déclarations. Cela vous permet par ailleurs de faciliter le traitement des dossiers par vos équipes en accèdant **facilement aux données nécessaires** au calcul du tarif appliqué.
 
-Différentes méthodes de calcul existent pour définir le tarif des différentes activités, ainsi, les données nécessaires dépendent des choix du service.
+En intégrant la brique API Particulier dans votre système d'information ou votre site internet :
 
-Voici les données de la CAF (composition familiale du foyer du demandeur) et de la DGFIP (pour vérifier les conditions d'éligibilité d'une demande) accessibles directement avec notre API, ce sont les données les plus utilisées pour ce services, mais la liste ci-dessous n'est pas exhaustive :
+- Vous accédez facilement aux données de la CAF et de la DGFIP
+- Vous n'avez **plus besoin de demander** d'avis fiscal ou de quotient familial aux parents
+- Vous n'avez **pas de vérification supplémentaire** car les informations sont **certifiées**
+- La démarche peut être faite 100% en ligne
 
-| Donnée            | Commentaire                                                                                   |
-| ----------------- | --------------------------------------------------------------------------------------------- |
-| Adresse           | L'adresse du foyer et/ou l'adresse fiscale du demandeur                                       |
-| Quotient Familial | Le quotient familial calculé par la CAF                                                       |
-| Avis d'imposition | statut d’imposition, montant de l'impôt, revenu fiscal de référence, nombre de parts fiscales |
+## Quelles données utilisez-vous ?
 
-## Comment formuler une demande ?
+API Particulier met à disposition les données de la CAF (composition familiale du foyer du demandeur) et les données de la DGFIP (pour vérifier les conditions d'éligibilité d'une demande), voici la liste non exhaustive des données accessibles :
 
-L'utilisation des données dans le cadre d'une tarification des activités périscolaires et municipales est encadrée légalement. Vous pouvez motiver votre demande à l'aide des articles suivants :
+| Donnée            | Commentaire                                                                                      |
+| ----------------- | ------------------------------------------------------------------------------------------------ |
+| Adresse           | L'adresse fiscale du foyer et/ou du demandeur                                                    |
+| Quotient Familial | Le quotient familial calculé par la CAF                                                          |
+| Avis d'imposition | Le statut d’imposition, montant de l'impôt, revenu fiscal de référence, nombre de parts fiscales |
 
-- Article L114-8<External href="https://www.vie-publique.fr/eclairage/19591-protection-des-donnees-personnelles-essentiel-loi-cnil-du-20-juin-20189">La loi relative à la protection des données personnelles</External> _ a été promulguée le 20 juin 2018. Elle adapte la loi "Informatique et libertés" du 6 janvier 1978 au "paquet européen de protection des données"._
+## Comment accèder à la donnée ?
+
+L'utilisation des données est encadrée légalement. Vous devez formuler une demande auprès de nos services et la motiver.
+
+Les articles suivants peuvent vous aider à justifier vos droits d'accès aux données :
+
+- Article L114-8<External href="https://www.vie-publique.fr/eclairage/19591-protection-des-donnees-personnelles-essentiel-loi-cnil-du-20-juin-2018">La loi relative à la protection des données personnelles</External> _ a été promulguée le 20 juin 2018. Elle adapte la loi "Informatique et libertés" du 6 janvier 1978 au "paquet européen de protection des données"._
 - Certaines délibérations prises par la ville et/ou par la commune peuvent constituer le cadre légal
 
-**Pour remplir votre demande, vous aurez besoin de :**
-
-- votre numéro SIRET
-- cadre juridique associé à votre demande
-- la description du service justifiant une simplication pour les citoyens
-- coordonnées de l'équipe technique
-- coordonnées de votre délégué à la protection des données et du responsable de traitement
-
+<NextSteps />
 <Button href="https://datapass.api.gouv.fr/api-particulier?scopes=%7B%22dgfip_avis_imposition%22%3Atrue%2C%22dgfip_adresse%22%3Atrue%2C%22cnaf_quotient_familial%22%3Atrue%2C%22cnaf_allocataires%22%3Afalse%2C%22cnaf_enfants%22%3Afalse%2C%22cnaf_adresse%22%3Afalse%7D">Remplir une demande</Button>
 
 <!--
-## Ils l'ont fait
+## Ils l'ont fait !
 
 Témoignage : [COMMUNE DE SCHILTIGHEIM](https://signup.api.gouv.fr/api-particulier/460#description)
 [COMMUNAUTE COMMUNES DU PAYS DE LUXEUIL](https://datapass.api.gouv.fr/api-particulier/2082#donnees)

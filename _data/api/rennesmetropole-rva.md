@@ -3,14 +3,14 @@ title: API RVA Rennes Métropole
 tagline: 'Voies et adresses de Rennes Métropole'
 external_site: http://rva.data.rennes-metropole.fr/
 is_open: 0 # 1 means API is fully open
-account_link: http://rva.data.rennes-metropole.fr/inscription.php
+account_link: https://api-rva.sig.rennesmetropole.fr/inscription.php
 logo: rennesmetropole-rva.png
 owner: Rennes Métropole
 keywords:
   - Voie
   - Adresse
 contact_link: sigsupport@rennesmetropole.fr
-doc_tech_external: http://rva.data.rennes-metropole.fr/documentation.php
+doc_tech_external: https://api-rva.sig.rennesmetropole.fr/documentation.php
 themes:
   - Transport
   - Géographie
@@ -43,15 +43,5 @@ Ce service de données est fourni « comme tel ». En aucun cas Rennes Métropol
 
 #### Mise en cache des données
 
-La mise en cache des données fournies au travers de ce site / ce service est strictement interdit. Des fichiers sont disponibles au téléchargement pour un usage hors-ligne sur [cette page](http://www.data.rennes-metropole.fr/les-donnees/catalogue/?tx_icsopendatastore_pi1%5buid%5d=217).
+La mise en cache des données fournies au travers de ce site / ce service est strictement interdit.
 Un stockage immédiat, automatique, et temporaire de données en vue d’améliorer la performance de fonctionnement des applications utilisant les données fournies par ce site / ce service, pendant la seule durée de connexion de l’utilisateur final, est cependant autorisé.
-
-### Inscription
-
-Merci de lire les conditions d'utilisation avant de vous inscrire [en cliquant ici](http://rva.data.rennes-metropole.fr/inscription.php).
-
-### Aller plus loin
-
-Reportez-vous à la [documentation de l’API](http://rva.data.rennes-metropole.fr/documentation.php) ainsi qu’aux métadonnées disponibles.
-
-L’API ne vous suffit pas ? [Contactez-nous](mailto:sigsupport@rennesmetropole.fr?subject=%5BAPI%20RVA%5D%20Contact) pour envisager ensemble les évolutions nécessaires.

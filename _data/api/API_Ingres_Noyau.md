@@ -26,7 +26,7 @@ access_page:
 
       <Button href="/rechercher-api">Rechercher une autre API</Button>
 logo: logo-cisirh.png
-external_site: https://pissarho.cisirh.rie.gouv.fr/actualites/ingres/deploiement-de-deux-api-sur-lapplication-ingres
+external_site: https://www.economie.gouv.fr/cisirh/ingres
 stat:
   url:
   label: Appels
@@ -44,7 +44,8 @@ keywords:
   - Nomenclatures
 
 contact_link: api.cisirh@finances.gouv.fr
-doc_tech_external: http://pissarho.cisirh.rie.gouv.fr/sites/default/files/2019-10/INGRES-PIL-API%20Diffusions%20Ingres_%20%280_2%29_0.pptx
+doc_tech_external: https://www.economie.gouv.fr/cisirh/ingres
+#doc_tech_external: http://pissarho.cisirh.rie.gouv.fr/sites/default/files/2019-10/INGRES-PIL-API%20Diffusions%20Ingres_%20%280_2%29_0.pptx
 themes:
   - Administration & législation
 visits_2019: 0
@@ -59,7 +60,7 @@ Le format de restitution des données est celui défini par le noyau RH FPE. Il 
 Une conversion JSON du XML est également proposée, à titre expérimental.
 Cette API permet de récupérer automatiquement les fichiers à l'identique de ce qu'ils sont produits et mis à disposition sur le portail PissaRHo (open RH FPE).
 Cette API ne permet pas la récupération unitaire d'un code est de ses attributs et peut par conséquent ne pas être adaptée à une API entre applications mais tout dépend du besoin.
-Pour cet usage, une autre API ([API Ingres Nomenclatures](/les-api/API_Ingres)) permet une restitution au format JSON avec des temps de réponse bien meilleurs.
+Pour cet usage, une autre API ([API Ingres Nomenclatures](/les-api/API_Ingres_Nomenclatures)) permet une restitution au format JSON avec des temps de réponse bien meilleurs.
 
 ### Evolutions possibles:
 

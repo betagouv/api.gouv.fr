@@ -1,5 +1,5 @@
 ---
-title: Répertoire National des Associations
+title: API Répertoire National des Associations
 tagline: Le registre public des associations
 is_open: 1 # 1 means API is fully open
 partners:
@@ -28,16 +28,30 @@ datagouv_uuid:
   - 58e53811c751df03df38f42d
 visits_2019: 3000
 last_update: 16/06/2020
+content_intro: |
+  L’API Répertoire des Associations (RNA) permet d'interroger le répertoire des associations françaises.
+
+  ### A quoi sert cette API ?
+
+  Ajouter l’API dans votre système d'information vous permet de :
+
+  - requêter les données d'une association grâce à son SIRET
+  - requêter les données d'une association grâce à son nom
+  - requêter les données d'une association grâce à son code RNA
+
+  Si vous êtes une association et recherchez votre numéro RNA, [consultez la fiche explicative sur service-public.fr](https://www.service-public.fr/associations/vosdroits/F34726).
 ---
 
-L’API Répertoire des Associations permet d'interroger le répertoire des associations françaises.
+### Les données disponibles dans l'API
 
-### A quoi sert cette API ?
+Les principales données accessibles sont :
 
-L’API vous permet de :
-
-- requêter les données d'une association grâce à son SIRET
-- requêter les données d'une association grâce à son code RNA
+| Nom        | Description                                                                  |
+| ---------- | ---------------------------------------------------------------------------- |
+| Titre      | nom de l'association                                                         |
+| Objet      | description de l'association                                                 |
+| Adresse    | numero de voie, rue, ville et code postal                                    |
+| numéro RNA | identifant d'une association. Commence par un W et est composé de 9 chiffres |
 
 ### Que contient le RNA ?
 

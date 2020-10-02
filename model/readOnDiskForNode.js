@@ -1,5 +1,6 @@
 // used by node, therefore in plain js
 const { formatServiceWithApis } = require('./formatters/service');
+const { formatGuide } = require('./formatters/guide');
 const { formatApi } = require('./formatters/api');
 const fs = require('fs');
 
@@ -26,7 +27,19 @@ const readAllServicesOnDisk = async () => {
   }, {});
 };
 
+const readAllGuidesOnDisk = async () => {
+  const files = fs.readdirSync('./_data/guides', 'utf8');
+
+  return files.map(fileName => {
+    const file = fs.readFileSync(`./_data/guides/${fileName}`, 'utf8');
+
+    // Parse yaml metadata & markdownbody in document
+    return formatGuide(fileName.replace('.md', ''), file);
+  }, {});
+};
+
 module.exports = {
   readAllApisOnDisk,
   readAllServicesOnDisk,
+  readAllGuidesOnDisk,
 };

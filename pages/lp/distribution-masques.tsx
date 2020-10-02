@@ -16,7 +16,7 @@ const Masks: React.FC = () => (
         <h1>Gagnez du temps et protégez vos concitoyens</h1>
         <h2>Simplifiez la distribution de masques dans votre commune</h2>
         <ButtonLink
-          href="https://signup.api.gouv.fr/api-particulier"
+          href="https://datapass.api.gouv.fr/api-particulier"
           onClick={() => logLPCTA('Bouton_top')}
         >
           Je veux créer un service de distribution de masques
@@ -70,7 +70,7 @@ const Masks: React.FC = () => (
           </ul>
           <div className="layout-center">
             <ButtonLink
-              href="https://signup.api.gouv.fr/api-particulier"
+              href="https://datapass.api.gouv.fr/api-particulier"
               onClick={() => logLPCTA('Bouton_middle')}
             >
               Je connecte ma ville à l’API Particulier

@@ -54,7 +54,7 @@ const Questions = [
   },
   {
     value: SUBJECT.FRANCECONNECT_PART,
-    label: 'Je veux me connecter à France Connect',
+    label: 'Je veux me connecter à FranceConnect',
     public: [VISITOR.PARTICULIER],
   },
   {
@@ -65,7 +65,7 @@ const Questions = [
   },
   {
     value: SUBJECT.FRANCECONNECT_ENTREPRISE,
-    label: 'Je veux France Connecter mon service',
+    label: 'Je veux FranceConnecter mon service',
     public: [VISITOR.ENTREPRISE, VISITOR.ASSO],
   },
   {
@@ -166,9 +166,7 @@ const Explanations: React.FC<IProps> = ({ subject, visitorType }) => {
           </p>
           <p>
             Vous trouverez plus d’explications sur{' '}
-            <a href="https://franceconnect.gouv.fr">
-              le site de France Connect
-            </a>
+            <a href="https://franceconnect.gouv.fr">le site de FranceConnect</a>
             . En particulier, nous vous recommandons de consulter la FAQ France
             Connect :
           </p>
@@ -214,7 +212,7 @@ const Explanations: React.FC<IProps> = ({ subject, visitorType }) => {
             <ButtonLink
               size="large"
               onClick={logClic}
-              href="https://signup.api.gouv.fr/franceconnect?source=api_gouv_customer_path_entreprise"
+              href="https://datapass.api.gouv.fr/franceconnect?source=api_gouv_customer_path_entreprise"
             >
               Remplir une demande
             </ButtonLink>

@@ -112,7 +112,7 @@ const Team: React.FC = () => (
         {teamData.map((teamate, index) => (
           <a
             href={teamate.linkedin}
-            rel="noopener noreferrer"
+            rel="nofollow noopener noreferrer"
             target="_blank"
             className="dont-apply-link-style medaillon"
             key={teamate.name}

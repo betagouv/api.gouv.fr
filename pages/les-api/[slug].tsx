@@ -183,7 +183,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   //@ts-ignore
   const api = await getAPI(slug);
 
-  const datagouvDatasets = await fetchDatagouvDatasets(api.datagouv_uuid);
+  const datagouvDatasets = await fetchDatagouvDatasets(api.datagouv_uuid || []);
 
   const allServices = await getAllServices();
   const services = allServices.filter(service => {

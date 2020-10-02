@@ -3,7 +3,7 @@ title: API Particulier
 tagline: Accédez aux données fiscales (DGFIP) et familiales (CAF) des particuliers pour simplifier des démarches administratives
 external_site: https://particulier.api.gouv.fr
 is_open: -1 # -1 means API not open
-datapass_link: https://signup.api.gouv.fr/api-particulier
+datapass_link: https://datapass.api.gouv.fr/api-particulier
 access_page:
   - who:
       - Un particulier ou une entreprise
@@ -22,7 +22,7 @@ access_page:
       n'accéder aux données personnelles qu'avec **l'accord explicite** de l'usager.
 
       <NextSteps />
-      <Button href="https://signup.api.gouv.fr/api-particulier">Remplir une demande</Button>
+      <Button href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</Button>
   - who:
       - Un éditeur de logiciel
     is_eligible: 0
@@ -32,7 +32,7 @@ access_page:
       Lors de votre demande vous devrez **justifier** dans quelle mesure l'entité pour laquelle vous opérez rentre dans ce cadre juridique.
 
       <NextSteps is_editeur />
-      <Button href="https://signup.api.gouv.fr/api-particulier">Remplir une demande</Button>
+      <Button href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</Button>
 stat:
   lastXdays: 30
   url: https://monitoring.particulier.api.gouv.fr/api/stats/
@@ -72,7 +72,7 @@ content_intro: |
   - de réduire le nombre d’erreurs de saisie
   - d'écarter le risque de fraude documentaire
 
-  Du point de vue de l’usager, une démarche qui utilise API Particulier ressemble à ça :
+  Du point de vue de l’usager, une démarche qui utilise API Particulier s'apparente à ça :
 
   1. Je me connecte sur le site de ma commune pour réaliser une démarche.
   2. En lieu de justificatif de revenu, je saisis mon numéro fiscal et mon numéro d’avis d’imposition.
@@ -83,8 +83,8 @@ content_intro: |
 
 | Nom                   | Description                                                                            | Origine des données |
 | --------------------- | -------------------------------------------------------------------------------------- | ------------------- |
-| RFR                   | Le revenu fiscal de référence (RFR) de l'année en court et le nombre de parts du foyer | DGFIP               |
-| Avis d’imposition     | Montant d'impot, revenu brut, net, imposable, date de recouvrement et d'établissement  | DGFIP               |
+| RFR                   | Le revenu fiscal de référence (RFR) de l'année en cours et le nombre de parts du foyer | DGFIP               |
+| Avis d’imposition     | Montant d'impôt, revenu brut, net, imposable, date de recouvrement et d'établissement  | DGFIP               |
 | Déclarants            | les nom, prénoms, date de naissance des déclarants du foyer fiscal                     | DGFIP               |
 | Adresse fiscale       | l'adresse fiscale structurée ainsi que les coordonnées GPS                             | DGFIP               |
 | Quotient familial     | le quotient familial (QF) du mois précédent pour la famille                            | CAF                 |

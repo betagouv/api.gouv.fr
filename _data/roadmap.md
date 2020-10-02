@@ -3,7 +3,7 @@
   1:
     - type: ADD_API
       what: Menj
-      path: /les-api/api_menj
+      path: /les-api/api_open_data_education_nationale
   4:
     - type: ADD_API
       what: ScanR
@@ -76,13 +76,24 @@
       path: /les-api/api_cartobio_territoires
   9:
     - type: ADD_API
+      what: Recherche de Personnes Physiques (R2P)
+      path: /les-api/api_r2p
+    - type: ADD_API
       what: Gallica Recherche de la BnF
       path: /les-api/api_gallica_recherche
     - type: ADD_API
       what: Gallica Document de la BnF
       path: /les-api/api_gallica_document
     - type: ADD_API
-      what: Recherche de Personnes Physiques (R2P) produite par la DGFiP
+      what: API Aide financieres de l’ADEME
+      path: /les-api/api_aides_financieres_ademe
+    - type: ADD_API
+      what: API Aides financières à la rénovation énergetique (Simul’Aid€s)
+      path: /les-api/api_aides_renovation_energetique
+    - type: ADD_API
+      what: API Impacts environnementaux - AGRIBALYSE®
+      path: /les-api/api_agribalyse
+  10:
     - type: ADD_API
       what: Données ouvertes de l’URSSAF
     - type: ADD_API
@@ -90,7 +101,6 @@
     - type: ADD_API
       what: Répertoire National des Métiers
       path: https://rnm.artisanat.fr/api/
-  10:
     - type: ADD_API
       what: Fichiers des Comptes Bancaires (FiCoBa) produite par le DGFiP
     - type: ADD_API

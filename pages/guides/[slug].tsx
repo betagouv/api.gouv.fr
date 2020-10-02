@@ -14,6 +14,7 @@ import RichReactMarkdown from '../../components/richReactMarkdown';
 import constants from '../../constants';
 import { RichLink } from '../../uiComponents';
 import Share from '../../uiComponents/share';
+import Feedback from '../../components/feedback';
 
 interface IProps {
   guide: IGuideElement;
@@ -73,6 +74,9 @@ const API: React.FC<IProps> = ({ guide, related_guides }) => {
             </div>
           </div>
         )}
+        <div className="text-wrapper">
+          <Feedback />
+        </div>
       </div>
       <style jsx>{`
         .hero {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default (
+const Share = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -17,3 +17,4 @@ export default (
     <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" stroke="white"></line>
   </svg>
 );
+export default Share;
