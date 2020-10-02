@@ -15,7 +15,7 @@ Chaque année, les collectivités doivent calculer les tarifs des activités pé
 
 En général, le calcul des tarifs utilise l'adresse, le quotient familial de la Caisse d’Allocations Familiales (CAF) et l'avis d'imposition fournis par les citoyens.
 
-Avec la brique API Particulier vous avez la possibilité de réduire les erreurs de saisie et les fraudes éventuelles. L'API Particulier permet également de faciliter le traitement des dossiers par vos équipes en accèdant **facilement aux données nécessaires** au calcul de la tarfication applicable.
+Avec la brique API Particulier vous avez la possibilité de réduire les risques d'erreurs ainsi que les fraudes aux déclarations. Cela vous permet par ailleurs de faciliter le traitement des dossiers par vos équipes en accèdant **facilement aux données nécessaires** au calcul du tarif appliqué.
 
 En intégrant la brique API Particulier dans votre système d'information ou votre site internet :
 

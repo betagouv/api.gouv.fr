@@ -5,7 +5,6 @@ tags: cas usage, api particulier, CCAS
 image: dossier.jpg
 api:
   - API Particulier
-noindex: true
 ---
 
 Les Centres Communaux d'Action Social sont amenés à instruire de nombreux dossiers d'obtention des aides sociales légales.
