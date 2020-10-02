@@ -7,11 +7,15 @@ api:
   - API CartoBio - Territoires
 ---
 
-Un réseau d'animation de Bassin d'Alimentation de Captage peut utiliser les données géographiques de <External href='https://cartobio.org'>CartoBio</External> pour :
+Un réseau d'animation de Bassin d'Alimentation de Captage (comme <External href="https://www.lehavreseinemetropole.fr/amonservice/theme/cycle-de-leau">celui du Havre Seine Métropole</External> ou <External href="https://www.ladepeche.fr/2019/10/06/distribution-deau-199-communes-forment-le-reseau11,8461541.php"> du RéSeau 11</External>) peut utiliser les données géographiques de <External href='https://cartobio.org'>CartoBio</External> pour :
 
 - évaluer la progression des parcelles conduites en agriculture biologique sur son territoire
 - compléter un rapport remis à une Agence de l'Eau, avec textes et illustrations graphiques
 - prendre des décisions contextualisées à des portions adaptées de territoire
+
+<Centered>
+![Carto bio AAC](/images/guides/cartobio-aac.jpg)
+</Centered>
 
 ## Données accessibles
 
