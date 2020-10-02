@@ -15,9 +15,9 @@ Chaque année, les collectivités doivent calculer les tarifs de la restauration
 
 En général, le calcul des tarifs utilise le quotient familial de la Caisse d’Allocations Familiales (CAF) ou l'avis d'imposition fournis par les citoyens.
 
-Avec la brique API Particulier vous avez la possibilité de diminuer les erreurs et les fraudes et faciliter le traitement des dossiers par vos équipes en accèdant **facilement aux données nécessaires** au calcul.
+Avec la brique API Particulier vous avez la possibilité de réduire les risques d'erreurs ainsi que les tentatives de fraude. L'API Particulier permet également de faciliter le traitement des dossiers par vos équipes en accèdant **facilement aux données nécessaires** au calcul du tarif applicable.
 
-En intégrant la brique API Particulier dans votre système d'information, ou votre site internet :
+En intégrant la brique API Particulier dans votre système d'information ou votre site internet :
 
 - Vous accédez facilement aux données de la CAF et de la DGFIP
 - Vous n'avez **plus besoin de demander** d'avis fiscal ou de quotient familial aux parents
@@ -28,16 +28,16 @@ En intégrant la brique API Particulier dans votre système d'information, ou vo
 
 API Particulier met à disposition les données de la CAF (composition familiale du foyer du demandeur) et les données de la DGFIP (pour vérifier les conditions d'éligibilité d'une demande), voici la liste non exhaustive des données accessibles :
 
-| Donnée            | Commentaire                                                                                   |
-| ----------------- | --------------------------------------------------------------------------------------------- |
-| Quotient Familial | Le quotient familial calculé par la CAF                                                       |
-| Avis d'imposition | statut d’imposition, montant de l'impôt, revenu fiscal de référence, nombre de parts fiscales |
+| Donnée            | Commentaire                                                                                      |
+| ----------------- | ------------------------------------------------------------------------------------------------ |
+| Quotient Familial | Le quotient familial calculé par la CAF                                                          |
+| Avis d'imposition | Le statut d’imposition, montant de l'impôt, revenu fiscal de référence, nombre de parts fiscales |
 
 ## Comment accèder à la donnée ?
 
 L'utilisation des données est encadrée légalement. Vous devez formuler une demande auprès de nos services et la motiver.
 
-Les articles suivants peuvent vous aider à justifier vos droits d'accès :
+Les articles suivants peuvent vous aider à justifier vos droits d'accès aux données :
 
 - Article <External href="https://www.legifrance.gouv.fr/affichCode.do;jsessionid=BADF41D6CFF34AAC5E88C9B3ADF9280C.tplgfr29s_1?idSectionTA=LEGISCTA000006182383&cidTexte=LEGITEXT000006071191&dateTexte=20190528">L.213</External> du _Code de l'éducation_
 - Article <External href=https://www.legifrance.gouv.fr/affichCode.do?idSectionTA=LEGISCTA000020743087&cidTexte=LEGITEXT000006071191>R531-52</External> du _Code de l'éducation_
