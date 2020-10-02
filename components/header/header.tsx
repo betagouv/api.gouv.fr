@@ -5,8 +5,8 @@ import { ButtonLink } from '../../uiComponents/button';
 import { logCTA } from '../../utils/client/analytics';
 import { apiLogo, republiqueFrLogo } from './logos';
 
-const SIGNUP_URL =
-  process.env.NEXT_PUBLIC_SIGNUP_URL || 'https://signup.api.gouv.fr';
+const DATAPASS_URL =
+  process.env.NEXT_PUBLIC_DATAPASS_URL || 'https://datapass.api.gouv.fr';
 
 export const HEADER_PAGE = {
   APIS: 'apis',
@@ -83,7 +83,7 @@ const Header = ({ headerKey = 'home' }) => {
               </>
             ) : (
               <li>
-                <a className="dont-apply-link-style" href={`${SIGNUP_URL}`}>
+                <a className="dont-apply-link-style" href={`${DATAPASS_URL}`}>
                   Mes demandes
                 </a>
               </li>
