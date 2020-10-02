@@ -22,6 +22,10 @@ const CenteredCta: React.FC<PropsWithChildren<{ href: string }>> = props => (
   </div>
 );
 
+const Centered: React.FC<PropsWithChildren<{}>> = props => (
+  <div className="layout-center">{props.children}</div>
+);
+
 const Grid: React.FC<PropsWithChildren<{}>> = props => (
   <div className="default-grid">{props.children}</div>
 );
@@ -61,6 +65,7 @@ const RichReactMarkdown: React.FC<{ source: string }> = ({ source }) => (
         Quote: Quote,
         RichLink: RichLink,
         Grid: Grid,
+        Centered: Centered,
         ContactUs: TeamHelpWidget,
         ApiRnaWidget: ApiRnaWidget,
         Datagouv: DatagouvWidget,

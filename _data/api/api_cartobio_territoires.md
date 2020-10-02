@@ -45,24 +45,26 @@ partenaires:
   - Les Organismes de Certification de l’Agriculture Biologique
 themes:
   - Environnement
-last_update: 27/07/2020
+  - Agriculture
+last_update: 21/09/2020
+rate_limiting_resume: illimité
+content_intro: |
+  CartoBio vise à ouvrir progressivement les données des parcelles conduites en agriculture biologique en France, notamment auprès des acteurs publics territoriaux.
+
+  ### À quoi sert l’API CartoBio - Territoires ?
+
+  Elle permet aux Administrations **territoriales** et aux Organismes **Publics** de récupérer les données des parcelles conduites en agriculture Biologique sur le territoire afin de :
+
+  - Adapter les politiques publiques locales sur les sujets de **l’eau** et de **l’alimentation**
+    - Qualité de l’eau
+    - Cibler les zones où renforcer le développement de l’agriculture biologique
+    - Connaître le potentiel d’alimentation bio et locale
+  - Avoir une meilleure connaissance de votre territoire
 ---
 
-CartoBio vise à ouvrir progressivement les données des parcelles conduites en agriculture biologique en France, notamment auprès des acteurs publics territoriaux.
+### Données de l’API
 
-### A quoi sert l’API CartoBio - Teritoires ?
-
-Elle permet aux Administrations **territoriales** et aux Organismes **Publics** de récupérer les données des parcelles conduites en agriculture Biologique sur le territoire afin de :
-
-- Adapter les politiques publiques locales sur les sujets de **l’eau** et de **l’alimentation**
-  - Qualité de l’eau
-  - Cibler les zones où renforcer le développement de l’agriculture biologique
-  - Connaître le potentiel d’alimentation bio et locale
-- Avoir une meilleure connaissance de votre territoire
-
-### Données de l’API :
-
-La récupération des parcelles bio et de leur assolement de l’année pour une zone géographique se fait par Code EPCI, code INSEE et/ou contour géographique en Shapefile ou GeoJSON.
+La récupération des parcelles bio et de leur assolement de l’année pour une zone géographique se fait par Code EPCI, code INSEE et/ou contour géographique en Shapefile ou GeoJSON. Les informations sont anonymisées.
 
 Voici les données accessibles :
 
@@ -71,7 +73,8 @@ Voici les données accessibles :
 | Contour géographique de la parcelle | Sous forme Shapefile ou GeoJson |
 | Assolement de l’année               | Description des cultures        |
 | Millésime de la donnée              | Année                           |
+| Superficie                          | En hectares, par parcelle       |
 
 #### D'où vient la donnée ?
 
-Les données exposées par l'API sont celles de la PAC 2017, 2018 et 2019 issue des RPG, complétées par les Organismes de Certification lors des contrôles terrain.
+Les données exposées par l'API sont basées sur les données géographiques des instructions d'aides PAC 2017, 2018 et 2019 — c'est-à-dire du RPG de niveau IV. Ces données sont complétées par les Organismes de Certification lors des contrôles terrain. Ces données représentent environt 80 à 85% de la surface bio connue.
