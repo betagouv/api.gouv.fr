@@ -48,19 +48,19 @@ themes:
   - Agriculture
 last_update: 21/09/2020
 rate_limiting_resume: illimité
+content_intro: |
+  CartoBio vise à ouvrir progressivement les données des parcelles conduites en agriculture biologique en France, notamment auprès des acteurs publics territoriaux.
+
+  ### À quoi sert l’API CartoBio - Territoires ?
+
+  Elle permet aux Administrations **territoriales** et aux Organismes **Publics** de récupérer les données des parcelles conduites en agriculture Biologique sur le territoire afin de :
+
+  - Adapter les politiques publiques locales sur les sujets de **l’eau** et de **l’alimentation**
+    - Qualité de l’eau
+    - Cibler les zones où renforcer le développement de l’agriculture biologique
+    - Connaître le potentiel d’alimentation bio et locale
+  - Avoir une meilleure connaissance de votre territoire
 ---
-
-CartoBio vise à ouvrir progressivement les données des parcelles conduites en agriculture biologique en France, notamment auprès des acteurs publics territoriaux.
-
-### À quoi sert l’API CartoBio - Territoires ?
-
-Elle permet aux Administrations **territoriales** et aux Organismes **Publics** de récupérer les données des parcelles conduites en agriculture Biologique sur le territoire afin de :
-
-- Adapter les politiques publiques locales sur les sujets de **l’eau** et de **l’alimentation**
-  - Qualité de l’eau
-  - Cibler les zones où renforcer le développement de l’agriculture biologique
-  - Connaître le potentiel d’alimentation bio et locale
-- Avoir une meilleure connaissance de votre territoire
 
 ### Données de l’API
 
