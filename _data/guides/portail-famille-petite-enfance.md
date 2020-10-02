@@ -15,7 +15,7 @@ Les inscriptions en crèche constituent un service essentiel que les collectivit
 
 Les démarches d'adhésion utilisent généralement l'adresse, le quotient familial de la Caisse d’Allocations Familiales (CAF) ainsi que l'avis d'imposition.
 
-Avec la brique API Particulier vous avez la possibilité de réduire les risques d'erreurs aisni que les fraudes aux déclarations. Cela vous permet par ailleurs de faciliter le traitement des dossiers par vos équipes en accèdant **facilement aux données nécessaires** au calcul du tarif appliqué.
+Avec la brique API Particulier vous avez la possibilité de réduire les risques d'erreurs ainsi que les fraudes aux déclarations. Cela vous permet par ailleurs de faciliter le traitement des dossiers par vos équipes en accèdant **facilement aux données nécessaires** au calcul du tarif appliqué.
 
 En intégrant la brique API Particulier dans votre système d'information ou votre site internet :
 
