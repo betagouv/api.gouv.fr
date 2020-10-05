@@ -7,12 +7,24 @@ is_open: -1
 datapass_link: https://datapass.api.gouv.fr/cartobio
 access_page:
   - who:
-      - Un particulier, une association ou une entreprise
+      - Un particulier
     is_eligible: -1
     description: |
-      Seules les administrations et les organismes publics sont habilitées à utiliser l’API CartoBio Territoires.
+      Nous communiquons les données géographiques sous condition de projet d'installation en agriculture biologique (peu importe le label).
 
-      <Button href="/rechercher-api">Retourner à la page de recherche</Button>
+      <Button href="mailto:cartobio@beta.gouv.fr?subject=">Contactez-nous pour exposer votre projet</Button>
+  - who:
+      - Une association ou une entreprise
+    is_eligible: 1
+    description: |
+      Les organisations qui œuvrent au développement de l'agriculture biologique peuvent faire une demande de _données géographiques_.
+      
+      Si vous souhaitez uniquement connaitre la _répartition_ ou les _statistiques_ de l'agriculture bio dans votre commune/département/région, [l'Agence Bio publie des données annuellement](https://www.agencebio.org/vos-outils/les-chiffres-cles/).
+      
+      **Remarque** : Nous ne les distribuons pas les données pour de la prospection commerciale.
+
+      <NextSteps />
+      <Button href="https://datapass.api.gouv.fr/cartobio">Remplir une demande</Button>
   - who:
       - une administration
       - un organisme public
