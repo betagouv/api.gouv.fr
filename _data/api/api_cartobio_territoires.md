@@ -65,7 +65,7 @@ content_intro: |
 
   ### À quoi sert l’API CartoBio - Territoires ?
 
-  Elle permet aux Administrations **territoriales** et aux Organismes **Publics** de récupérer les données des parcelles conduites en agriculture Biologique sur le territoire afin de :
+  Elle permet aux Administrations **territoriales**, aux Organismes **Publics**, et aux acteurs **privés** de récupérer les données des parcelles conduites en agriculture Biologique sur le territoire afin de :
 
   - Adapter les politiques publiques locales sur les sujets de **l’eau** et de **l’alimentation**
     - Qualité de l’eau
