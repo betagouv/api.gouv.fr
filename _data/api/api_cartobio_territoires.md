@@ -12,7 +12,7 @@ access_page:
     description: |
       Nous communiquons les données géographiques sous condition de projet d'installation en agriculture biologique (peu importe le label).
 
-      <Button href="mailto:cartobio@beta.gouv.fr?subject=">Contactez-nous pour exposer votre projet</Button>
+      <Button href="mailto:cartobio@beta.gouv.fr?subject=J'ai%20une%20question%20%C3%A0%20propos%20des%20donn%C3%A9es%20de%20mon%20territoire">Contactez-nous pour exposer votre projet</Button>
   - who:
       - Une association ou une entreprise
     is_eligible: 1
