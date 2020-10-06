@@ -20,6 +20,11 @@ En intégrant la brique API Particulier dans votre système d'information, ou vo
 - Vous n'avez **pas de vérifications supplémentaires** car les informations sont **certifiées**
 - La démarche peut-être faite 100% en ligne
 
+<Quote logo="/images/guides/sitiv.png" link='https://www.sitiv.fr/Actualites/L-action-sociale-des-villes-du-SITIV-integre-le-dispositif-Dites-le-nous-une-fois' who='Le SITIV' title='membre du réseau Déclic'>
+le principe du "Dites-le nous une fois" (...) permet aux citoyens de ne pas avoir à donner leur consentement mais d'être simplement informés de l'utilisation de leurs pièces.
+C'est dans ce cadre que le SITIV intègre directement au logiciel métier les informations des usagers (...) Les saisies dans les dossiers usagers sont ainsi **facilitées et certifiées**.
+</Quote>
+
 ## Vous utilisez les données de la CAF ou de la DGFIP ?
 
 Voici les données de la CAF (composition familiale du foyer du demandeur) et de la DGFIP (pour vérifier les conditions d'éligibilité d'une demande) accessibles directement avec notre API, ce sont les données les plus utilisées pour ce services, mais la liste ci-dessous n'est pas exhaustive :
