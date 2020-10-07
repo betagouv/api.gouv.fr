@@ -1,6 +1,6 @@
 ---
 title: API Entreprise
-tagline: Simplifier les démarches des entreprises en récupérant pour elles leurs documents administratifs
+tagline: Accédez aux données et aux documents administratifs des entreprises, afin de simplifier leurs démarches
 external_site: https://entreprise.api.gouv.fr/
 is_open: -1 # -1 means API not open
 datapass_link: https://datapass.api.gouv.fr/api-entreprise
@@ -79,8 +79,51 @@ themes:
   - Entreprise
 visits_2019: 12610
 last_update: 14/09/2020
+content_intro: |
+  API Entreprise permet à une administration d'accéder aux données et aux documents administratifs des entreprises, afin de simplifier leurs démarches.
+
+  ### A quoi sert l’API Entreprise ?
+
+  L’API permet par exemple à une administration :
+
+  - de simplifier l'instruction de dossier de subventions d'aide aux entreprises dans le cadre du covid-19
+  - de faciliter la candidature d'une entreprise a un marché public
+  - de faciliter le dépot d'un dossier de candidature à une aide publique par une entreprise
 ---
 
-[L’API Entreprise](https://entreprise.api.gouv.fr/) est une plateforme d’échange opérée par la DINUM qui met à disposition des opérateurs publics et des administrations, des données et des documents administratifs de référence, relatifs aux entreprises et association, qui sont délivrés par les administrations et les organismes publics, à fin de simplifier les démarches administratives et la gestion des dossiers.
+### Données accessibles dans l'API
 
-Composante de l’État plateforme, l’accès à l’API Entreprise est modérée et régulée par la DINUM, qui attribue à chaque client des autorisations de récupération d’informations selon la nature des démarches à traiter (Marchés publics, aides publiques,…)
+L'API Entreprise permet d'accéder simplement aux données de multiples administrations :
+
+| Donnée                                                                                | Administration                            |
+| ------------------------------------------------------------------------------------- | ----------------------------------------- |
+| Les informations générales, géographiques et juridiques                               | INSEE                                     |
+| L'attestation fiscale                                                                 | DGFiP                                     |
+| Le chiffre d'affaire                                                                  | DGFiP                                     |
+| La déclarations de résultat (ou liasse fiscale)                                       | DGFiP                                     |
+| L'attestation de vigilance                                                            | ACOSS                                     |
+| Les cotisations congés payés & chômage intempéries                                    | CNETP                                     |
+| Les conventions collectives                                                           | Fabrique Numérique des Ministères Sociaux |
+| La carte professionnelle travaux publics                                              | FNTP                                      |
+| Les cotisations de sécurité sociale agricole                                          | MSA                                       |
+| La certification de qualification d'ingénierie                                        | OPQIBI                                    |
+| Les cotisations retraite bâtiment                                                     | PRO BTP                                   |
+| Le certificat de qualification bâtiment                                               | QUALIBAT                                  |
+| Les statuts, la liste des représentants ou encore les délibérations d'une association | Ministère intérieur                       |
+| L'attestation de conformité emploi des travailleurs handicapés                        | AGEFIPH                                   |
+| Les 3 derniers bilans annuels                                                         | Banque de france                          |
+| Les comptes annuels                                                                   | INPI                                      |
+| Les brevets, modèles et marques déposés                                               | INPI                                      |
+| Les actes et statuts des personnes morales et physiques                               | INPI                                      |
+| Extrait du Registre du Commerce et des Sociétés (RCS)                                 | INFOGREFFE                                |
+| La certification RGE (Reconnu garant de l'environnement)                              | ADEME                                     |
+
+**NB**: Certaines données sont accessibles en open data via leur propre APi et ne nécessitent pas de passer par API Entreprise. C'est notamment le cas de :
+
+- les [données de l'INPI](/les-api/api_inpi)
+- les [données de l'ADEME](/les-api/api_professionnels_rge)
+- les [données de l'INSEE](/les-api/sirene_v3) (à l'exception des entreprises <External href="">non-diffusibles</External>)
+
+### En savoir plus
+
+L’<External href="https://entreprise.api.gouv.fr/">API Entreprise</External> est une composante de l’État plateforme, l’accès à l’API Entreprise est modérée et régulée par la DINUM, qui attribue à chaque client des autorisations de récupération d’informations selon la nature des démarches à traiter (Marchés publics, aides publiques,…).
