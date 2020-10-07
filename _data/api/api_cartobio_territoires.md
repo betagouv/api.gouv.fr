@@ -8,7 +8,7 @@ datapass_link: https://datapass.api.gouv.fr/cartobio
 access_page:
   - who:
       - Un particulier
-    is_eligible: -1
+    is_eligible: 0
     description: |
       Nous communiquons les données géographiques sous condition de projet d'installation en agriculture biologique (peu importe le label).
 
@@ -18,9 +18,9 @@ access_page:
     is_eligible: 1
     description: |
       Les organisations qui œuvrent au développement de l'agriculture biologique peuvent faire une demande de _données géographiques_.
-      
+
       Si vous souhaitez uniquement connaitre la _répartition_ ou les _statistiques_ de l'agriculture bio dans votre commune/département/région, [l'Agence Bio publie des données annuellement](https://www.agencebio.org/vos-outils/les-chiffres-cles/).
-      
+
       **Remarque** : Nous ne les distribuons pas les données pour de la prospection commerciale.
 
       <NextSteps />

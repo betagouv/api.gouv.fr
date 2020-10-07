@@ -26,7 +26,8 @@ access_page:
     description: |
       Seuls les établissements de soins et les organismes complémentaires en santé peuvent accéder à cette API.
 
-      <Button href="/rechercher-api">Rechercher une autre API</Button>
+      Cela étant dit, si vous avez un projet précis :
+      <Button href="mailto:partenaires-api-ameli.cnam@assurance-maladie.fr">Contactez-nous pour exposer votre projet</Button>
 logo: cnam.jpg
 stat:
   lastXdays: 30
