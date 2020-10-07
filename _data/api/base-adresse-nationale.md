@@ -8,6 +8,7 @@ partners:
   - IGN
 owner: Direction interministérielle du numérique
 owner_acronym: DINUM
+logo: dinum.png
 stat:
   lastXdays: 7
   url: https://api-adresse.data.gouv.fr/analytics/stats.json

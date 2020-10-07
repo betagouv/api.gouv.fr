@@ -9,6 +9,7 @@ partners:
   - OpenStreetMap
 owner: Direction interministérielle du numérique
 owner_acronym: DINUM
+logo: dinum.png
 keywords:
   - Communes
   - Codes postaux

@@ -6,7 +6,9 @@ partners:
   - beta.gouv.fr
   - DINUM
   - Etalab
-owner: Etalab
+owner: Direction interministérielle du numérique
+owner_acronym:
+logo: dinum.png
 keywords:
   - Répertoire
   - open data
@@ -14,7 +16,6 @@ keywords:
   - RNA
 themes:
   - Entreprise
-logo: logo-beta-gouv.svg
 rate_limiting_resume: 7 appels / seconde
 rate_limiting_description: |
   Actuellement, le nombre d’appels à l’API est limité à 7 appels par seconde

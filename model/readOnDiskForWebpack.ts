@@ -1,9 +1,17 @@
-import { IService, IApi, IRoadmap, IRoadmapElement, IGuideElement } from '.';
+import {
+  IService,
+  IApi,
+  IRoadmap,
+  IRoadmapElement,
+  IGuideElement,
+  IProducerElement,
+} from '.';
 import {
   formatServiceWithApis,
   formatApi,
   formatRoadmap,
   formatGuide,
+  formatProducteur,
 } from './formatters';
 import frontmatter from 'front-matter';
 
@@ -92,4 +100,15 @@ export const getAllGuides = async (): Promise<IGuideElement[]> => {
   //@ts-ignore
   const guideFolderContext = require.context('../_data/guides', true, /\.md$/);
   return Object.values(parseMarkdown(guideFolderContext, formatGuide));
+};
+
+export const getProducer = async (slug: string): Promise<IProducerElement> => {
+  const file = require(`../_data/producteurs/${slug}.md`);
+  return formatProducteur(slug, file.default);
+};
+
+export const getAllProducers = async (): Promise<IProducerElement[]> => {
+  //@ts-ignore
+  const folderContext = require.context('../_data/producteurs', true, /\.md$/);
+  return Object.values(parseMarkdown(folderContext, formatProducteur));
 };

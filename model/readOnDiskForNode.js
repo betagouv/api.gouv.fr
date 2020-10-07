@@ -3,6 +3,7 @@ const { formatServiceWithApis } = require('./formatters/service');
 const { formatGuide } = require('./formatters/guide');
 const { formatApi } = require('./formatters/api');
 const fs = require('fs');
+const { formatProducteur } = require('./formatters');
 
 const readAllApisOnDisk = async () => {
   const files = fs.readdirSync('./_data/api', 'utf8');
@@ -38,8 +39,20 @@ const readAllGuidesOnDisk = async () => {
   }, {});
 };
 
+const readAllProducersOnDisk = async () => {
+  const files = fs.readdirSync('./_data/producteurs', 'utf8');
+
+  return files.map(fileName => {
+    const file = fs.readFileSync(`./_data/producteurs/${fileName}`, 'utf8');
+
+    // Parse yaml metadata & markdownbody in document
+    return formatProducteur(fileName.replace('.md', ''), file);
+  }, {});
+};
+
 module.exports = {
   readAllApisOnDisk,
   readAllServicesOnDisk,
   readAllGuidesOnDisk,
+  readAllProducersOnDisk,
 };

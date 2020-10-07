@@ -4,6 +4,7 @@ tagline: Obtenir les dates des jours fériés en France
 category: Public
 owner: Direction interministérielle du numérique
 owner_acronym: DINUM
+logo: dinum.png
 is_open: 1 # 1 means API is fully open
 keywords:
   - calendrier

@@ -63,7 +63,8 @@ partners:
   - Banque de france
   - ADEME
 owner: Direction interministérielle du numérique
-owner_acronym: DINUM
+owner_acronym:
+logo: dinum.png
 keywords:
   - Établissement
   - Entreprise
