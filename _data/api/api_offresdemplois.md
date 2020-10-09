@@ -1,11 +1,10 @@
 ---
 title: Offres d'emploi
 tagline: Accédez aux offres d'emploi disponibles sur pole-emploi.fr
-owner: Pôle emploi
+producer: pole-emploi
 category: Public
 is_open: 0 # -1 means API not open
 account_link: https://www.emploi-store-dev.fr/portail-developpeur/detailapicatalogue/5ba49d55243a5f9d2c5064a2
-logo: logo_pole_emploi.jpg
 external_site: https://www.emploi-store-dev.fr/portail-developpeur-cms/home/catalogue-des-api/documentation-des-api/api/api-offres-demploi-v2.html
 partners:
   - Pôle emploi

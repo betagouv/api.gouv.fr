@@ -6,9 +6,7 @@ partners:
   - beta.gouv.fr
   - DINUM
   - Etalab
-owner: Direction interministérielle du numérique
-owner_acronym:
-logo: dinum.png
+producer: dinum
 keywords:
   - Répertoire
   - open data

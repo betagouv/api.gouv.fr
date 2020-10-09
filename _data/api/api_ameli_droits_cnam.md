@@ -28,14 +28,12 @@ access_page:
 
       Cela étant dit, si vous avez un projet précis :
       <Button href="mailto:partenaires-api-ameli.cnam@assurance-maladie.fr">Contactez-nous pour exposer votre projet</Button>
-logo: cnam.jpg
 stat:
   lastXdays: 30
   label: justificatifs papier évités
 partners:
   - CNAM
-owner: Caisse Nationale d'Assurance Maladie
-owner_acronym: CNAM
+producer: cnam
 keywords:
   - Droits à assurance maladie
   - Prise en charge au titre du régime obligatoire

@@ -3,9 +3,7 @@ title: API Aides financières à la rénovation énergetique (Simul’Aid€s)
 tagline: Interrogez la liste des aides financières à la rénovation énergétique des bâtiments
 external_site: https://portals.koumoul.com/datasets/simulaides-dispositifs-2019-10?portalId=Zjis3jaRI
 is_open: 1 # 1 means API is fully open
-owner: Agence de la transition écologique
-owner_acronym: ADEME
-logo: ademe.png
+producer: ademe
 keywords:
   - region
   - departements

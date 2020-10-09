@@ -36,9 +36,7 @@ partners:
   - La Poste
   - MobileConnect & Moi
   - MSA
-owner: Direction interministérielle du numérique
-owner_acronym: DINUM
-logo: logo-fc.jpg
+producer: dinum
 keywords:
   - Authentification
   - Identification

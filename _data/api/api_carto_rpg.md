@@ -2,8 +2,7 @@
 title: API Carto - module RPG
 tagline: L'accès simplifié aux informations du registre parcellaire graphique
 external_site: https://apicarto.ign.fr
-owner: Institut national de l’information géographique et forestière
-owner_acronym: IGN
+producer: ign
 is_open: -1 # -1 means API not open
 access_page:
   - who:
@@ -27,7 +26,6 @@ access_page:
 
       <Button href="http://professionnels.ign.fr/">Faire une demande d'accès</Button>
 category: Public
-logo: look4-geoportail.jpg
 contact_link: contact.geoservices@ign.fr
 doc_tech_link: https://apicarto.ign.fr/api/doc/rpg.yml
 partners:

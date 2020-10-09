@@ -1,7 +1,7 @@
 ---
 title: API CartoBio - Territoires
 tagline: Un accès aux données des parcelles en agriculture biologique pour les acteurs publics territoriaux
-owner: Agence BIO
+producer: agence-bio
 category: public
 is_open: -1
 datapass_link: https://datapass.api.gouv.fr/cartobio
@@ -34,7 +34,6 @@ access_page:
 
       <NextSteps />
       <Button href="https://datapass.api.gouv.fr/cartobio">Remplir une demande</Button>
-logo: AgenceBio.svg
 external_site: https://cartobio.org/
 keywords:
   - CartoBio

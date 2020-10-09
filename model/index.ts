@@ -107,6 +107,7 @@ export interface IApi extends IApiShort {
   stat: number;
   owner: string;
   owner_acronym: string;
+  producer: string;
   last_update: Date;
   contact_link: string;
   external_site?: string;

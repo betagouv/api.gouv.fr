@@ -9,9 +9,7 @@ keywords:
   - Bulletin officiel
 themes:
   - Administration & législation
-owner: Direction de l'information légale et administrative
-owner_acronym: DILA
-logo: logo-carre-Boamp.png
+producer: dila
 contact_link: donnees-dila@dila.gouv.fr
 doc_tech_external: http://api.dila.fr
 doc_tech_link: /api/v1/proxy/http%3A%2F%2Fapi.dila.fr%2Fopendata%2Fv2%2Fapi-docs

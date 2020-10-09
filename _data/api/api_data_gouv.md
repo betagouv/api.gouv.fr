@@ -1,9 +1,7 @@
 ---
 title: API catalogue des données ouvertes - data.gouv.fr
 tagline: Interagissez avec le catalogue des données publiques
-owner: Direction Interministérielle du Numérique
-owner_acronym: DINUM
-logo: dinum.png
+producer: dinum
 is_open: 1 # 0 means API require an account
 keywords:
   - open

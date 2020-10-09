@@ -6,9 +6,7 @@ is_open: 1 # 1 means API is fully open
 partners:
   - La poste
   - IGN
-owner: Direction interministérielle du numérique
-owner_acronym: DINUM
-logo: dinum.png
+producer: dinum
 stat:
   lastXdays: 7
   url: https://api-adresse.data.gouv.fr/analytics/stats.json

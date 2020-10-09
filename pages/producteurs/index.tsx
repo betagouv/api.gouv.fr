@@ -12,32 +12,55 @@ interface Props {
 const Producteurs: NextPage<Props> = ({ producers }) => {
   return (
     <Page
-      title="Les exemples de services en ligne réalisés avec des APIs"
-      description="Vous vous demandez comment utiliser une APIs du service public ? Inspirez-vous d’un cas pratique."
+      title="Liste des producteurs d'APIs"
+      description="La liste de toutes les administrations qui propose une API disponible publiquement."
     >
       <section className="content-container page-baseline">
-        <h1>
-          Depuis 2016, nous accompagnons les acteurs publics à la réalisation de
-          services numériques pour tous les français
-        </h1>
+        <h1>{producers.length} entités administratives ouvrent leur données</h1>
       </section>
       <section id="realisations" className="page-body-container">
         <div className="content-container default-grid">
           {producers.map(producer => (
-            <div key={producer.slug}>{producer.name}</div>
+            <a
+              href={`/producteurs/${producer.slug}`}
+              key={producer.slug}
+              className="dont-apply-link-style"
+            >
+              <div className="layout-center">
+                <img
+                  src={`/images/api-logo/${producer.logo}`}
+                  alt={`logo de ${producer.name}`}
+                />
+              </div>
+              <span>{producer.name}</span>
+            </a>
           ))}
         </div>
       </section>
+      <style jsx>{`
+        a {
+          border-radius: 5px;
+          background-color: #fff;
+          text-align: center;
+          padding: 15px 10px;
+        }
+        a > div img {
+          width: auto;
+          max-height: 70px;
+          margin-right: 15px;
+          flex-shrink: 1;
+        }
+      `}</style>
     </Page>
   );
 };
 
 export const getStaticProps = async () => {
-  const services = await getAllProducers();
+  const producers = await getAllProducers();
 
   return {
     props: {
-      services,
+      producers,
     },
   };
 };

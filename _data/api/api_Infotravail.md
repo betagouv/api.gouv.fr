@@ -1,11 +1,10 @@
 ---
 title: API Infotravail
 tagline: Recense des jeux de données liés au marché du travail
-owner: Pôle emploi
+producer: pole-emploi
 category: Public
 is_open: 0 # -1 means API not open
 account_link: https://www.emploi-store-dev.fr/portail-developpeur/detailapicatalogue/57909ba23b2b8d019ee6cc5e
-logo: logo_pole_emploi.jpg
 external_site: https://www.emploi-store-dev.fr/portail-developpeur-cms/home/catalogue-des-api/documentation-des-api/api/api-infotravail-v1.html
 partners:
   - Pôle emploi

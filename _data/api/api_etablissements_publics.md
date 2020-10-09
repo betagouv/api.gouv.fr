@@ -2,8 +2,6 @@
 title: Annuaire des établissements publics de l'administration
 tagline: L’API qui référence les guichets publics locaux
 is_open: 1 # 1 means API is fully open
-owner: Direction interministérielle du numérique
-owner_acronym: DINUM
 logo: dinum.png
 layout: api
 keywords:
