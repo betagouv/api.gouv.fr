@@ -1,6 +1,6 @@
 ---
 title: API Entreprise
-tagline: Accédez aux données et aux documents administratifs des entreprises, afin de simplifier leurs démarches
+tagline: Accédez aux données et aux documents administratifs des entreprises et des associations, afin de simplifier leurs démarches
 external_site: https://entreprise.api.gouv.fr/
 is_open: -1 # -1 means API not open
 datapass_link: https://datapass.api.gouv.fr/api-entreprise
@@ -80,49 +80,76 @@ themes:
 visits_2019: 12610
 last_update: 14/09/2020
 content_intro: |
-  API Entreprise permet à une administration d'accéder aux données et aux documents administratifs des entreprises, afin de simplifier leurs démarches.
+  API Entreprise permet à une administration d'accéder aux données et aux documents administratifs des entreprises et des associations, afin de simplifier leurs démarches.
 
   ### A quoi sert l’API Entreprise ?
 
-  L’API permet par exemple à une administration :
+  L'API s'utilise principalement de deux manières :
 
-  - de simplifier l'instruction de dossier de subventions d'aide aux entreprises dans le cadre du covid-19
-  - de faciliter la candidature d'une entreprise a un marché public
-  - de faciliter le dépot d'un dossier de candidature à une aide publique par une entreprise
+  - le pré-remplissage de formulaire à destination des entreprises ou des associations
+  - la récupération d'une donnée ou d'un document en back office par un agent
+
+  L’API permet - entre autre - de :
+
+  - faciliter la candidature d'une entreprise a un marché public
+  - faciliter le dépôt d'un dossier de candidature à une aide publique par une entreprise
 ---
 
 ### Données accessibles dans l'API
 
-L'API Entreprise permet d'accéder simplement aux données de multiples administrations :
+L'API Entreprise permet d'accéder simplement aux données de multiples administrations.
+
+Les données générales :
 
 | Donnée                                                                                | Administration                            |
 | ------------------------------------------------------------------------------------- | ----------------------------------------- |
 | Les informations générales, géographiques et juridiques                               | INSEE                                     |
-| L'attestation fiscale                                                                 | DGFiP                                     |
-| Le chiffre d'affaire                                                                  | DGFiP                                     |
-| La déclarations de résultat (ou liasse fiscale)                                       | DGFiP                                     |
-| L'attestation de vigilance                                                            | ACOSS                                     |
-| Les cotisations congés payés & chômage intempéries                                    | CNETP                                     |
-| Les conventions collectives                                                           | Fabrique Numérique des Ministères Sociaux |
-| La carte professionnelle travaux publics                                              | FNTP                                      |
-| Les cotisations de sécurité sociale agricole                                          | MSA                                       |
-| La certification de qualification d'ingénierie                                        | OPQIBI                                    |
-| Les cotisations retraite bâtiment                                                     | PRO BTP                                   |
-| Le certificat de qualification bâtiment                                               | QUALIBAT                                  |
-| Les statuts, la liste des représentants ou encore les délibérations d'une association | Ministère intérieur                       |
-| L'attestation de conformité emploi des travailleurs handicapés                        | AGEFIPH                                   |
-| Les 3 derniers bilans annuels                                                         | Banque de france                          |
-| Les comptes annuels                                                                   | INPI                                      |
-| Les brevets, modèles et marques déposés                                               | INPI                                      |
-| Les actes et statuts des personnes morales et physiques                               | INPI                                      |
 | Extrait du Registre du Commerce et des Sociétés (RCS)                                 | INFOGREFFE                                |
-| La certification RGE (Reconnu garant de l'environnement)                              | ADEME                                     |
+| Les statuts, la liste des représentants ou encore les délibérations d'une association | Ministère intérieur                       |
+| Les actes et statuts des personnes morales et physiques                               | INPI                                      |
+| Les conventions collectives                                                           | Fabrique Numérique des Ministères Sociaux |
 
-**NB**: Certaines données sont accessibles en open data via leur propre APi et ne nécessitent pas de passer par API Entreprise. C'est notamment le cas de :
+Les données financières :
+
+| Donnée                                          | Administration   |
+| ----------------------------------------------- | ---------------- |
+| Le chiffre d'affaire                            | DGFiP            |
+| La déclarations de résultat (ou liasse fiscale) | DGFiP            |
+| Les 3 derniers bilans annuels                   | Banque de france |
+| Les comptes annuels                             | INPI             |
+
+Les attestations sociales et fiscales :
+
+| Donnée                                                         | Administration |
+| -------------------------------------------------------------- | -------------- |
+| L'attestation fiscale                                          | DGFiP          |
+| L'attestation de vigilance                                     | ACOSS          |
+| L'attestation de conformité emploi des travailleurs handicapés | AGEFIPH        |
+| Les cotisations de sécurité sociale agricole                   | MSA            |
+| Les cotisations retraite bâtiment                              | PRO BTP        |
+| La carte professionnelle travaux publics                       | FNTP           |
+| Les cotisations congés payés & chômage intempéries             | CNETP          |
+
+Les certifications professionnelles :
+
+| Donnée                                                   | Administration |
+| -------------------------------------------------------- | -------------- |
+| La certification de qualification d'ingénierie           | OPQIBI         |
+| Le certificat de qualification bâtiment                  | QUALIBAT       |
+| La certification RGE (Reconnu garant de l'environnement) | ADEME          |
+
+La propriété intellectuelle :
+
+| Donnée                                  | Administration |
+| --------------------------------------- | -------------- |
+| Les brevets, modèles et marques déposés | INPI           |
+
+**NB**: Certaines données sont accessibles en open data (sans demande d'accès à l'API) via leur propre API et ne nécessitent pas de passer par API Entreprise. C'est notamment le cas de :
 
 - les [données de l'INPI](/les-api/api_inpi)
 - les [données de l'ADEME](/les-api/api_professionnels_rge)
-- les [données de l'INSEE](/les-api/sirene_v3) (à l'exception des entreprises <External href="">non-diffusibles</External>)
+- les [données du RNA](/les-api/api_rna)
+- les [données de l'INSEE](/les-api/sirene_v3) (à l'exception des entreprises <External href="https://www.insee.fr/fr/information/4127417#:~:text=Qu'est%2Dce%20qu',96%20du%20code%20de%20commerce.">non-diffusibles</External>)
 
 ### En savoir plus
 
