@@ -16,6 +16,7 @@ export enum SUBJECT {
   CARTE_GRISES,
   TELEPOINT,
   CONTACT,
+  DS,
   NONE,
 }
 
@@ -60,8 +61,13 @@ const Questions = [
   {
     value: SUBJECT.CARTE_GRISES,
     label:
-      'Je cherche une API des plaques d’immatriculation ou des cartes grises',
+      'Je cherche une API des plaques d’immatriculation, du SIV ou des cartes grises',
     public: [VISITOR.ENTREPRISE],
+  },
+  {
+    value: SUBJECT.DS,
+    label: 'Je cherche démarches simplifiées',
+    public: [VISITOR.PARTICULIER],
   },
   {
     value: SUBJECT.FRANCECONNECT_ENTREPRISE,
@@ -237,6 +243,49 @@ const Explanations: React.FC<IProps> = ({ subject, visitorType }) => {
               onClick={logClic}
             >
               Consulter le site de l’ANTS
+            </ButtonLink>
+          </div>
+        </div>
+      );
+    case SUBJECT.DS:
+      return (
+        <div className="subject-answer">
+          <p>
+            Ce site ne permet pas de faire une démarche sur{' '}
+            <a href="https://demarches-simplifiees.fr">
+              démarches-simplifiées.
+            </a>
+          </p>
+          <p>Cliquez sur les liens ci-dessous pour :</p>
+          <ul>
+            <li>
+              <a href="https://doc.demarches-simplifiees.fr/listes-des-demarches/demarches-relatives-aux-medailles-dhonneur">
+                Faire une demande de médaille d'honneur
+              </a>
+            </li>
+            <li>
+              <a href="https://doc.demarches-simplifiees.fr/listes-des-demarches/demarches-relatives-aux-titres-de-sejour-pour-les-etrangers">
+                Faire une demande de titre de séjour
+              </a>
+            </li>
+            <li>
+              <a href="https://doc.demarches-simplifiees.fr/listes-des-demarches/demarches-relatives-au-permis-de-conduire">
+                Faire une demande de numéro NEPH
+              </a>
+            </li>
+            <li>
+              <a href="https://doc.demarches-simplifiees.fr/listes-des-demarches/demarches-relative-a-linscription-au-service-de-restauration">
+                Faire une demande d'inscription scolaire
+              </a>
+            </li>
+          </ul>
+          <div className="layout-center">
+            <ButtonLink
+              size="large"
+              href="https://demarches-simplifiees.fr"
+              onClick={logClic}
+            >
+              Consultez le site démarches-simplifiées
             </ButtonLink>
           </div>
         </div>
