@@ -42,8 +42,17 @@ const Producteurs: NextPage<Props> = ({ producers }) => {
           border-radius: 5px;
           background-color: #fff;
           text-align: center;
-          padding: 15px 10px;
+          padding: 25px 30px;
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+          transition: transform 200ms ease-in-out, box-shadow 200ms ease-in-out;
+          display: flex;
+          flex-direction: column;
         }
+        a:hover {
+          transform: translateY(-8px);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
         a > div img {
           width: auto;
           max-height: 70px;

@@ -3,13 +3,12 @@ title: Hub'Eau - Qualité des nappes d'eau souterraine
 tagline: Qualité physico-chimique des nappes d'eau souterraine
 is_open: 1 # 1 means API is fully open
 external_site: http://hubeau.eaufrance.fr/page/documentation-qualite-nappes-deau-souterraines
-logo: 05-qualite_nappes.jpg
 partners:
   - AFB
-  - BRGM
   - ADES
-owner: Agence française pour la biodiversité & Bureau de Recherches Géologiques et Minières
-owner_acronym: AFB & BRGM
+  - Office français de la biodiversité (OFB)
+  - Bureau de Recherches Géologiques et Minières (BRGM)
+producer: agence-bio
 keywords:
   - Qualité physico-chimique
   - Nappe d'eau

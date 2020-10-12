@@ -28,9 +28,7 @@ partners:
   - Tako
   - Taxiloc
   - Taxis Rennais
-owner: Direction interministérielle du numérique & Direction générale des Infrastructures, des Transports et de la Mer
-owner_acronym: DINUM & DGITM
-logo: dinum.png
+producer: dinum
 keywords:
   - Transport
   - Taxi

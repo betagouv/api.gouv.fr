@@ -96,17 +96,25 @@ const API: React.FC<IProps> = ({ apis = [], producer }) => {
       description={`Découvrez la liste des APIs produites par ${producer.name} dont certaines sont accessibles via api.gouv.fr`}
     >
       <PageHeader title={producer.name} logo={producer.logo} />
-      <div id="description" className="content-container">
-        <div className="default-grid">
-          {apis.map(api => (
-            <ApiCard key={api.title} {...api} />
-          ))}
+      <div id="description">
+        <div className="content-container">
+          <p>
+            <b>{apis.length} APIs disponibles :</b>
+          </p>
+
+          <div className="default-grid">
+            {apis.map(api => (
+              <ApiCard key={api.title} {...api} />
+            ))}
+          </div>
         </div>
       </div>
       <style jsx>{`
         #description {
-          margin-bottom: 70px;
-          margin-top: 50px;
+          background-color: ${constants.colors.lightGrey};
+          display: block;
+          padding-bottom: 40px;
+          padding-top: 30px;
         }
 
         .right-column-grid {

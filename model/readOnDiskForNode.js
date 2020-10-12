@@ -1,17 +1,20 @@
 // used by node, therefore in plain js
 const { formatServiceWithApis } = require('./formatters/service');
 const { formatGuide } = require('./formatters/guide');
-const { formatApi } = require('./formatters/api');
+const { formatApiWithOwner } = require('./formatters/api');
+const { formatProducteur } = require('./formatters/producteur');
 const fs = require('fs');
-const { formatProducteur } = require('./formatters');
 
 const readAllApisOnDisk = async () => {
   const files = fs.readdirSync('./_data/api', 'utf8');
+  const allProducers = await readAllProducersOnDisk();
+  const formatter = formatApiWithOwner(allProducers);
+
   return files.map(fileName => {
     const file = fs.readFileSync(`./_data/api/${fileName}`, 'utf8');
 
     // Parse yaml metadata & markdownbody in document
-    return formatApi(fileName.replace('.md', ''), file);
+    return formatter(fileName.replace('.md', ''), file);
   }, {});
 };
 

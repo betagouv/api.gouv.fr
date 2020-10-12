@@ -8,7 +8,7 @@ import {
 } from '.';
 import {
   formatServiceWithApis,
-  formatApi,
+  formatApiWithOwner,
   formatRoadmap,
   formatGuide,
   formatProducteur,
@@ -62,7 +62,11 @@ const loadServices = async (): Promise<{ [key: string]: IService }> => {
 const loadApis = async (): Promise<{ [key: string]: IApi }> => {
   //@ts-ignore
   const apiFolderContext = require.context('../_data/api', true, /\.md$/);
-  return parseMarkdown(apiFolderContext, formatApi);
+
+  const producers = await getAllProducers();
+  const formatter = formatApiWithOwner(Object.values(producers));
+
+  return parseMarkdown(apiFolderContext, formatter);
 };
 
 export const getAPI = async (id: string): Promise<IApi> => {

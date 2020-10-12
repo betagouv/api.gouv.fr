@@ -8,6 +8,7 @@ const formatProducteur = (slug, data) => {
     //@ts-ignore
     ...document.attributes,
     body: document.body,
+    path: `/producteurs/${slug}`,
     slug,
   };
 };

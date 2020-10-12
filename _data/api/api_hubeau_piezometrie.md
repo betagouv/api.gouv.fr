@@ -3,13 +3,12 @@ title: Hub'Eau - Piézométrie
 tagline: Piézométrie (niveau des nappes d'eau souterraine)
 is_open: 1 # 1 means API is fully open
 external_site: https://hubeau.eaufrance.fr/page/documentation_piezometrie
-logo: 03-piezo.jpg
 partners:
-  - OFB
-  - BRGM
+  - AFB
   - ADES
-owner: Office français de la biodiversité & Bureau de Recherches Géologiques et Minières
-owner_acronym: OFB & BRGM
+  - Office français de la biodiversité (OFB)
+  - Bureau de Recherches Géologiques et Minières (BRGM)
+producer: agence-bio
 keywords:
   - Piézométrie
   - Aquifère
