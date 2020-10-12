@@ -5,6 +5,7 @@ is_open: 1 # 1 means API is fully open
 partners:
   - beta.gouv.fr
   - DINUM
+  - Ministère de l’Interieur
   - Etalab
 owner: Etalab
 keywords:

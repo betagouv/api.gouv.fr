@@ -6,8 +6,11 @@ import { ButtonLink, ExternalLink, RichLink } from '../../uiComponents';
 import Quote from '../../uiComponents/quote';
 import TeamHelpWidget from '../teamHelpWidget';
 import ApiRnaWidget from '../apiWidgets/apiRna';
+import ApiSireneWidget from '../apiWidgets/apiSirene';
 import DatagouvWidget from '../widgets/datagouv';
 import FlatFileWidget from '../widgets/flatFile';
+import ApiCard from '../searchApis/apiCard';
+import { getAPI } from '../../model';
 
 const CenteredCta: React.FC<PropsWithChildren<{ href: string }>> = props => (
   <div className="layout-center">
@@ -68,8 +71,9 @@ const RichReactMarkdown: React.FC<{ source: string }> = ({ source }) => (
         Centered: Centered,
         ContactUs: TeamHelpWidget,
         ApiRnaWidget: ApiRnaWidget,
-        Datagouv: DatagouvWidget,
         FlatFile: FlatFileWidget,
+        ApiSireneWidget: ApiSireneWidget,
+        Datagouv: DatagouvWidget,
       },
     }}
   />

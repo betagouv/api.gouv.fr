@@ -5,7 +5,7 @@ import { normalize } from '../../utils';
 import ApiWidgetResults from './apiWidgetResults';
 import ApiWidgetWrapper from './apiWidgetWrapper';
 
-const ApiRnaWidget: React.FC<{}> = () => {
+const ApiSireneWidget: React.FC<{ title: string }> = ({ title }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [results, setResults] = useState<any[] | null>(null);
 
@@ -18,7 +18,7 @@ const ApiRnaWidget: React.FC<{}> = () => {
 
     setIsLoading(true);
     fetch(
-      `https://entreprise.data.gouv.fr/api/rna/v1/full_text/${encodeURI(
+      `https://entreprise.data.gouv.fr/api/sirene/v1/full_text/${encodeURI(
         normalize(searchTerm)
       )}`
     )
@@ -26,18 +26,19 @@ const ApiRnaWidget: React.FC<{}> = () => {
       .then(data =>
         window.setTimeout(() => {
           setResults(
-            (data.association || []).map((res: any) => (
+            (data.etablissement || []).map((res: any) => (
               <>
                 <div>
-                  <b>{res.titre}</b>
+                  <b>{res.l1_normalisee}</b>
                 </div>
                 <div className="layout-space-between">
-                  <i>
-                    {res.adresse_code_postal} {res.adresse_libelle_commune}
-                  </i>
-                  <i>n°RNA : {res.id_association}</i>
+                  <i>{res.l4_normalisee}</i>
+                  <i>{res.l6_normalisee}</i>
                 </div>
-                <div>{res.objet || ''}</div>
+                <br />
+                <div>N° SIRET : {res.siret}</div>
+                <br />
+                <div>{res.libelle_activite_principale}</div>
               </>
             ))
           );
@@ -49,18 +50,18 @@ const ApiRnaWidget: React.FC<{}> = () => {
       });
   };
   return (
-    <ApiWidgetWrapper title="Interroger l’API Répertoire National des Associations">
+    <ApiWidgetWrapper title={title || 'Interroger l’API Sirene'}>
       <div>
         L’
-        <a href="/les-api/api_rna">API RNA</a> permet <b>à n'importe qui</b>{' '}
-        d'effectuer une recherche sur les associations Françaises. Voila comment
-        ca fonctionne :
+        <a href="/les-api/sirene_v3">API Sirene</a> permet{' '}
+        <b>à n'importe qui</b> d'effectuer une recherche sur les entreprises
+        Françaises. Voila comment ca fonctionne :
       </div>
       <ol>
-        <li>Vous tapez le nom d’une association</li>
-        <li>Votre ordinateur envoi ce nom à l’API RNA</li>
+        <li>Vous tapez le nom d’une entreprise</li>
+        <li>Votre ordinateur envoie ce nom à l’API Sirene</li>
         <li>
-          L’API RNA répond avec la liste des associations qui correspondent
+          L’API Sirene répond avec la liste des entreprises qui correspondent
         </li>
         <li>
           Votre ordinateur affiche les résultats (pas plus de 10, ceci est juste
@@ -71,8 +72,8 @@ const ApiRnaWidget: React.FC<{}> = () => {
         <div className="layout-center">
           <SearchBar
             onSearch={search}
-            placeholder="Tapez le nom d’une association"
-            label="Recherchez une association française"
+            placeholder="Tapez le nom d’une entreprise"
+            label="Recherchez une entreprise française"
             debounceRate={200}
             isLoading={isLoading}
           />
@@ -83,4 +84,4 @@ const ApiRnaWidget: React.FC<{}> = () => {
   );
 };
 
-export default ApiRnaWidget;
+export default ApiSireneWidget;
