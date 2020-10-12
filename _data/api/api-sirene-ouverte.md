@@ -44,7 +44,15 @@ content_intro: |
 
 ### Données accessibles dans l'API
 
-L'API Sirene ouverte permet d'accéder simplement aux données de multiples administrations.
+**Attention,** l’API étant totalement ouverte d'accès, elle comporte des limitations. Ainsi ne sont pas accessibles dans l'API :
+
+- les prédécesseurs et successeurs d'un établissement
+- les entreprises non-diffusibles (en savoir plus)
+- les entreprises qui se sont vues refuser leurs immatriculation au RCS
+
+Pour savoir comment obtenir ces données, consultez [notre fiche explicative.](/guides/quelle-api-sirene)
+
+Pour les établissements et entreprises accessibles, l'API permet d'obtenir :
 
 | Donnée            | Description                                                                     |
 | ----------------- | ------------------------------------------------------------------------------- |
@@ -56,13 +64,3 @@ L'API Sirene ouverte permet d'accéder simplement aux données de multiples admi
 | siege social      | Est-ce que cet établissement est le siège social de l'entreprise                |
 | forme juridique   | la forme juridique de l'établissement (SARL, SAS, entreprise individuelle etc.) |
 | tranche effectifs | la fourchette des effectifs de l'établissement                                  |
-
-### En savoir plus
-
-L’API étant totalement ouverte d'accès, elle comporte des limitations. Ainsi ne sont pas accessibles dans l'API :
-
-- les prédécesseurs et successeurs d'un établissement
-- les entreprises non-diffusibles (en savoir plus)
-- les entreprises qui se sont vues refuser leurs immatriculation au RCS
-
-Pour accéder à toutes les données, consultez [notre fiche explicative.](/guides/quelle-api-sirene)
