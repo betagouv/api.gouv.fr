@@ -39,7 +39,7 @@ content_intro: |
 
   - Récupérer les informations d’une entreprise
   - Faire de l'auto remplissage de formulaire (par exemple, auto remplissage de SIRET)
-  - Créer un moteur de recherched des entreprises
+  - Créer un moteur de recherche des entreprises
 ---
 
 ### Données accessibles dans l'API
@@ -62,7 +62,7 @@ L'API Sirene ouverte permet d'accéder simplement aux données de multiples admi
 L’API étant totalement ouverte d'accès, elle comporte des limitations. Ainsi ne sont pas accessibles dans l'API :
 
 - les prédécesseurs et successeurs d'un établissement
-- les entreprise non-diffusibles (en savoir plus)
+- les entreprises non-diffusibles (en savoir plus)
 - les entreprises qui se sont vues refuser leurs immatriculation au RCS
 
 Pour accéder à toutes les données, consultez [notre fiche explicative.](/guides/quelle-api-sirene)

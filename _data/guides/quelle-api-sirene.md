@@ -70,9 +70,9 @@ Les trois APIs donnent accès aux informations concernant les entreprises et les
 
 En revanche certaines données ne sont pas présentes dans toutes les APIs :
 
-- le fait qu'un établissement peut avoir un ou plusieurs prédécesseurs et successeurs
-- le fait q'une entreprise est non diffusibles (en savoir plus)
-- le fait qu'une entreprise s'est vu refuser son immatriculation au RCS
+- les prédécesseurs et successeurs d'un établissement
+- les entreprises non-diffusibles (en savoir plus)
+- les entreprises qui se sont vues refuser leurs immatriculation au RCS
 - la géolocalisation d'une entreprise
 
 Le tableau ci-dessous fait une synthèse de ces différence pour vous aider a choisir :
@@ -84,7 +84,7 @@ Le tableau ci-dessous fait une synthèse de ces différence pour vous aider a ch
 | Recherche des prédecesseurs/successeurs | ❌ Non             | ✅ Oui                | ✅ Oui         |
 | geolocalisation                         | ✅ Oui             | ❌ Non                | ✅ Oui         |
 
-Vous avez fait votre choix ? Lancez vous :
+Vous avez fait votre choix ? Lancez-vous :
 
 - l'[API Sirene ouverte](/les-api/api-sirene-ouverte)
 - l'[API Sirene de l'INSEE](/les-api/sirene_v3)
