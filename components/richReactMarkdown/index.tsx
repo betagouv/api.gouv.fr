@@ -9,8 +9,6 @@ import ApiRnaWidget from '../apiWidgets/apiRna';
 import ApiSireneWidget from '../apiWidgets/apiSirene';
 import DatagouvWidget from '../widgets/datagouv';
 import FlatFileWidget from '../widgets/flatFile';
-import ApiCard from '../searchApis/apiCard';
-import { getAPI } from '../../model';
 
 const CenteredCta: React.FC<PropsWithChildren<{ href: string }>> = props => (
   <div className="layout-center">
