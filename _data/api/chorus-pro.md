@@ -33,8 +33,7 @@ access_page:
 partners:
   - AIFE
   - DGFiP
-owner: Agence pour l'informatique financière de l'État
-owner_acronym: AIFE
+producer: aife
 keywords:
   - Factures
   - Dématérialisation
@@ -42,7 +41,6 @@ keywords:
   - Portail professionel
 themes:
   - Administration & législation
-logo: ChorusPro.jpg
 contact_link: api-choruspro.aife@finances.gouv.fr
 doc_tech_external: https://communaute.chorus-pro.gouv.fr/documentation/chorus-pro-api/?lang=en
 visits_2019: 3000

@@ -1,12 +1,10 @@
 ---
 title: API Look4 Géoportail
 tagline: la recherche géographique multithématique du Géoportail - adresses, lieux, cadastre, points routiers, etc
-owner: Institut national de l’information géographique et forestière
-owner_acronym: IGN
 is_open: 1 # -1 means API not open
 category: Public
 layout: api
-logo: look4-geoportail.jpg
+producer: ign
 doc_tech_external: https://ignf.github.io/look4/latest/jsdoc/
 keywords:
   - cadastre

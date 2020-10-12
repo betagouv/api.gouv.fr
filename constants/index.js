@@ -28,5 +28,5 @@ export default {
     darkOrange: '#3f3104',
     orange: '#ffc107',
   },
-  logo: 'logo-beta-gouv.svg',
+  logo: 'dinum.png',
 };

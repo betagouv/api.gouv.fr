@@ -110,6 +110,9 @@ const Footer = () => {
               La DINUM
             </a>
           </li>
+          <li>
+            <a href="/producteurs">Les producteurs d’API</a>
+          </li>
         </ul>
       </div>
     </div>

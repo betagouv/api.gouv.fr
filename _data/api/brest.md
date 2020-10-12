@@ -1,10 +1,9 @@
 ---
 title: Données transports Brest métropole
 tagline: Données théoriques et temps-réel des transports publics de Brest métropole
-owner: Brest métropole
+producer: brest
 is_open: 0 # -1 means API not open
 account_link: https://geo.pays-de-brest.fr/zapp/Pages/Demande-compte.aspx
-logo: Logo_Brest_metropole.png
 partners:
   - Bibus-RATP Dev
 keywords:

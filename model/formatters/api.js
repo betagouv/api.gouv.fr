@@ -1,8 +1,19 @@
 // used by node, therefore in plain js
 const frontmatter = require('front-matter');
 
-const formatApi = (slug, data) => {
+const formatApiWithOwner = producers => (slug, data) => {
   const document = frontmatter(data);
+
+  //@ts-ignore
+  const producer = producers.find(
+    producer => producer.slug === document.attributes.producer
+  );
+
+  if (!producer.name) {
+    throw new Error(
+      `No matching producer for : ${document.attributes.producer} - in API : ${slug}`
+    );
+  }
 
   return {
     //@ts-ignore
@@ -11,8 +22,12 @@ const formatApi = (slug, data) => {
     slug,
     description: document.attributes.tagline,
     path: `/les-api/${slug}`,
+    owner: producer.name,
+    owner_acronym: producer.acronym || null,
+    owner_slug: producer.slug,
+    logo: producer.logo,
   };
 };
 module.exports = {
-  formatApi,
+  formatApiWithOwner,
 };

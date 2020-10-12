@@ -3,13 +3,12 @@ title: Hub'Eau - Température des cours d'eau
 tagline: Température en continu dans les cours d'eau
 is_open: 1 # 1 means API is fully open
 external_site: https://hubeau.eaufrance.fr/page/api-temperature-continu
-logo: 06-temperature_rivieres.png
 partners:
   - AFB
-  - BRGM
-  - Naïades
-owner: Agence française pour la biodiversité & Bureau de Recherches Géologiques et Minières
-owner_acronym: AFB & BRGM
+  - ADES
+  - Office français de la biodiversité (OFB)
+  - Bureau de Recherches Géologiques et Minières (BRGM)
+producer: agence-bio
 keywords:
   - Température
   - Capteur

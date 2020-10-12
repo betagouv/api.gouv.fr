@@ -1,8 +1,7 @@
 ---
 title: API Ingres Nomenclatures
 tagline: Récupérez l'ensemble des référentiels utilisés par les SIRH de la Fonction Publique d'Etat
-owner: Centre Interministériel des Systèmes d'Information relatifs aux Ressources Humaines
-owner_acronym: CISIRH
+producer: cisirh
 is_open: -1 # -1 means API not open
 access_page:
   - who:
@@ -25,7 +24,6 @@ access_page:
       Le CISIRH met à disposition cette API exploitable accessible **uniquement par les ministères ou institutions** ayant accès au Réseau Interministériel de l'Etat (RIE).
 
       <Button href="/rechercher-api">Rechercher une autre API</Button>
-logo: logo-cisirh.png
 external_site: https://www.economie.gouv.fr/cisirh/ingres
 stat:
   url:

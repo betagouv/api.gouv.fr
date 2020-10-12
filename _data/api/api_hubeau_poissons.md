@@ -3,12 +3,10 @@ title: Hub'Eau - Etat piscicole des rivières
 tagline: Données sur les poissons de rivières
 is_open: 1 # 1 means API is fully open
 external_site: https://hubeau.eaufrance.fr/page/documentation_poisson/
-logo: 01-poisson.jpg
 partners:
   - AFB
-  - BRGM
-owner: Agence française pour la biodiversité & Bureau de Recherches Géologiques et Minières
-owner_acronym: AFB & BRGM
+  - Bureau de Recherches Géologiques et Minières (BRGM)
+producer: agence-bio
 keywords:
   - Poissons
   - Pêche électrique

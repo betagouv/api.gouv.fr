@@ -2,8 +2,7 @@
 title: Le Point d’Accès National aux données de transport
 tagline: Rassembler les données de toute l’offre de mobilité à travers la France
 category: Public
-owner: Direction interministérielle du numérique
-owner_acronym: DINUM
+producer: dinum
 keywords:
   - transport
 themes:

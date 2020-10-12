@@ -2,8 +2,7 @@
 title: Données temps réel pour les transports en commun
 tagline: Mettre à disposition les données temps réel des transports en commun
 category: Public
-owner: Direction interministérielle du numérique
-owner_acronym: DINUM
+producer: dinum
 is_open: 1 # 1 means API is fully open
 keywords:
   - temps réel

@@ -62,8 +62,7 @@ partners:
   - AGEFIPH
   - Banque de france
   - ADEME
-owner: Direction interministérielle du numérique
-owner_acronym: DINUM
+producer: dinum
 keywords:
   - Établissement
   - Entreprise
