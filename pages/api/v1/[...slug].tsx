@@ -90,6 +90,7 @@ export default async function handler(
         res.json(demarches);
       }
 
+      //@ts-ignore
       if (!demarches[api]) {
         res.statusCode = 404;
         res.send({ Error: 'No demarche was found for this api' });
@@ -97,14 +98,17 @@ export default async function handler(
       const demarche = slug[2];
 
       if (!demarche) {
+        //@ts-ignore
         res.json(demarches[api]);
       }
+      //@ts-ignore
       if (!demarches[api][demarche]) {
         res.statusCode = 404;
         res.send({ Error: 'This demarche was not found for this api' });
       }
 
       res.writeHead(302, {
+        //@ts-ignore
         Location: demarches[api][demarche].path,
       });
       res.end();
