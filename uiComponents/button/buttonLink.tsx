@@ -1,11 +1,30 @@
 import React from 'react';
+
+const DATAPASS_URL =
+  process.env.NEXT_PUBLIC_DATAPASS_URL || 'https://datapass.api.gouv.fr';
+
+/**
+ * turns any link that match datapass.api.gouv.fr/XYZ into $DATAPASS_URL/XYZ,
+ * Used in staging
+ */
+const formatDataPassLink = (link: string) => {
+  if (link) {
+    const pattern = /^https?:\/\/(signup|datapass).api.gouv.fr(.*)/;
+    const datapass_url_parts = link.match(pattern) || [];
+    if (datapass_url_parts.length === 3) {
+      return `${DATAPASS_URL}${datapass_url_parts[2]}`;
+    }
+  }
+  return link;
+};
+
 interface IProps {
   href?: string;
   alt?: boolean;
   rel?: string;
   target?: string;
   disabled?: boolean;
-  large?: boolean;
+  size?: 'small' | null | 'large';
   onClick?: (() => void) | undefined;
   type?: 'button' | 'submit' | 'reset';
 }
@@ -16,14 +35,14 @@ interface ILinkProps {
   rel?: string;
   target?: string;
   disabled?: boolean;
-  large?: boolean;
+  size?: 'small' | null | 'large';
   onClick?: (() => void) | undefined;
 }
 
 interface IButtonProps {
   alt?: boolean;
   disabled?: boolean;
-  large?: boolean;
+  size?: 'small' | null | 'large';
   onClick?: (() => void) | undefined;
   type: 'button' | 'submit' | 'reset' | undefined;
 }
@@ -35,7 +54,7 @@ const LinkAsAButton: React.FC<ILinkProps> = ({
   target,
   disabled,
   children,
-  large,
+  size,
   onClick = () => {},
 }) => (
   <a
@@ -45,7 +64,7 @@ const LinkAsAButton: React.FC<ILinkProps> = ({
     className={`dont-apply-link-style button-link ${alt ? 'alt' : 'default'} ${
       disabled ? 'disabled' : ''
     }
-  ${large ? 'large' : 'small'}
+  ${size}
   `}
     href={href}
   >
@@ -57,7 +76,7 @@ const ClassicButton: React.FC<IButtonProps> = ({
   type,
   onClick,
   alt,
-  large,
+  size,
   disabled,
   children,
 }) => (
@@ -67,7 +86,7 @@ const ClassicButton: React.FC<IButtonProps> = ({
     className={`dont-apply-link-style button-link ${alt ? 'alt' : 'default'} ${
       disabled ? 'disabled' : ''
     }
-  ${large ? 'large' : 'small'}
+  ${size}
   `}
   >
     <div className="content-wrapper">{children}</div>
@@ -81,20 +100,20 @@ const ButtonLink: React.FC<IProps> = ({
   target,
   disabled,
   children,
-  large,
+  size,
   type,
   onClick,
 }) => {
   if (href) {
     return (
       <LinkAsAButton
-        href={href}
+        href={formatDataPassLink(href)}
         rel={rel}
         target={target}
         alt={alt}
         disabled={disabled}
         children={children}
-        large={large}
+        size={size}
         onClick={onClick}
       />
     );
@@ -107,7 +126,7 @@ const ButtonLink: React.FC<IProps> = ({
         alt={alt}
         disabled={disabled}
         children={children}
-        large={large}
+        size={size}
       />
     );
   }

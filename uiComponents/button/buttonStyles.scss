@@ -9,13 +9,13 @@ button.button-link {
   padding: 0;
   margin: 0;
   cursor: pointer;
+  text-align: center;
 
   > .content-wrapper {
     font-size: 1rem;
     padding: 8px 15px;
     background-color: $blue;
     border: 1px solid $blue;
-
     color: #fff;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 4px;
@@ -35,6 +35,11 @@ button.button-link {
     color: $smartData;
     background-color: #fff;
     border: 1px solid $smartData;
+  }
+
+  &.small > .content-wrapper {
+    padding: 6px 12px;
+    font-size: 0.9rem;
   }
 
   &.large > .content-wrapper {

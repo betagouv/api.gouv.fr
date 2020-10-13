@@ -1,6 +1,5 @@
 import React from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
-import ReactMarkdown from 'react-markdown';
 
 import { getService, IService, getAllServices } from '../../model';
 
@@ -10,6 +9,7 @@ import Page from '../../layouts/page';
 import APICard from '../../components/searchApis/apiCard';
 import { ButtonLink } from '../../uiComponents';
 import { HEADER_PAGE } from '../../components';
+import RichReactMarkdown from '../../components/richReactMarkdown';
 
 interface IProps extends IService {}
 
@@ -50,7 +50,7 @@ const Service: React.FC<IProps> = ({
           </div>
           <div className="column">
             <div className="text-style">
-              <ReactMarkdown source={body} />
+              <RichReactMarkdown source={body} />
             </div>
             <div className="text-style">
               <h2>Accéder au service</h2>
@@ -60,7 +60,7 @@ const Service: React.FC<IProps> = ({
                   href={link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  large
+                  size="large"
                 >
                   Accédez au service{' '}
                   <span role="img" aria-label="émoji fusée">

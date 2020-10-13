@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer id="footer">
+    <div id="bottom-footer">
       <div className="container">
         <div className="footer__logo">
           <Link href="/">
@@ -110,9 +110,12 @@ const Footer = () => {
               La DINUM
             </a>
           </li>
+          <li>
+            <a href="/producteurs">Les producteurs d’API</a>
+          </li>
         </ul>
       </div>
-    </footer>
+    </div>
   );
 };
 

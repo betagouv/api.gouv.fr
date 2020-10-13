@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
-import ReactMarkdown from 'react-markdown';
+import RichReactMarkdown from '../../../components/richReactMarkdown';
 
 import {
   getAPI,
@@ -13,7 +13,8 @@ import Page from '../../../layouts';
 
 import { HEADER_PAGE } from '../../../components';
 
-import { MultiChoice, ButtonLink } from '../../../uiComponents';
+import { MultiChoice } from '../../../uiComponents';
+import Loader from '../../../uiComponents/loader';
 
 interface IAccessConditionOption extends IAccessCondition {
   label: string;
@@ -37,21 +38,22 @@ const IsEligible: React.FC<{ isEligible: ELIGIBLE }> = ({ isEligible }) => {
           </span>
         </>
       );
-    case ELIGIBLE.NO:
-      return (
-        <>
-          Désolé, vous n’êtes pas éligible{' '}
-          <span role="img" aria-label="émoji non">
-            🚫
-          </span>
-        </>
-      );
     case ELIGIBLE.MAYBE:
       return (
         <>
           Vous êtes peut-être éligible{' '}
           <span role="img" aria-label="émoji peut-etre">
             🧐
+          </span>
+        </>
+      );
+    default:
+    case ELIGIBLE.NO:
+      return (
+        <>
+          Désolé, vous n’êtes pas éligible{' '}
+          <span role="img" aria-label="émoji non">
+            🚫
           </span>
         </>
       );
@@ -64,16 +66,30 @@ const AccessCondition: React.FC<IProps> = ({
   accessConditionOptions,
 }) => {
   const [visitorType, setVisitorType] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const updateVisitorType = (visitorType: any) => {
+    setIsLoading(true);
+    setVisitorType(visitorType);
+
+    window.setTimeout(() => setIsLoading(false), 500);
+  };
 
   return (
     <Page
       headerKey={HEADER_PAGE.APIS}
       title={`Demande d’accès ${title}`}
       description={`${title} est une des APIs du service public. Découvrez ses conditions d’accès.`}
-      canonical={`https://api.gouv.fr/les-api/${slug}/etes-vous-eligible`}
+      canonical={`https://api.gouv.fr/les-api/${slug}/demande-acces`}
       noIndex={true}
       usePreFooter={false}
     >
+      <div className="content-container">
+        <div className="breadcrumb">
+          <a href={`/les-api/${slug}`}>⇠ Fiche {title}</a>
+        </div>
+      </div>
+
       <div className="text-wrapper text-style">
         <h1>Demande d’accès {title}</h1>
         <p>
@@ -82,37 +98,44 @@ const AccessCondition: React.FC<IProps> = ({
           </span>{' '}
           L’accès aux données de {title} nécessite une habilitation.
         </p>
-        <p>
-          Vérifions si vous êtes <b>éligible</b>. Qui êtes-vous :
-        </p>
-        <MultiChoice
-          multiChoiceOptions={accessConditionOptions}
-          onClick={setVisitorType}
-          selected={visitorType}
-        />
-        <div className="condition-details">
-          {accessConditionOptions.map(condition => (
-            <>
-              {condition.value === visitorType && (
-                <>
-                  <h3>
-                    <IsEligible isEligible={condition.is_eligible} />
-                  </h3>
-                  <ReactMarkdown source={condition.description} />
-                  <div className="layout-center">
-                    <ButtonLink href={condition.cta.path} large>
-                      {condition.cta.label}
-                    </ButtonLink>
-                  </div>
-                </>
+        {accessConditionOptions && (
+          <>
+            <p>
+              Vérifions si vous êtes <b>éligible</b>. Qui êtes-vous :
+            </p>
+            <MultiChoice
+              multiChoiceOptions={accessConditionOptions}
+              onClick={updateVisitorType}
+              selected={visitorType}
+            />
+            <div className="condition-details">
+              {isLoading ? (
+                <Loader />
+              ) : (
+                accessConditionOptions.map(condition => (
+                  <React.Fragment key={condition.description}>
+                    {condition.value === visitorType && (
+                      <>
+                        <h3>
+                          <IsEligible isEligible={condition.is_eligible} />
+                        </h3>
+                        <RichReactMarkdown source={condition.description} />
+                      </>
+                    )}
+                  </React.Fragment>
+                ))
               )}
-            </>
-          ))}
-        </div>
+            </div>
+          </>
+        )}
       </div>
+
       <style jsx>{`
         .condition-details {
           margin: 50px 0 150px;
+        }
+        .breadcrumb {
+          margin-top: 25px;
         }
       `}</style>
     </Page>
@@ -143,19 +166,23 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   //@ts-ignore
   const api = await getAPI(slug);
+
+  if (!api.access_page) {
+    throw Error('Should not happen');
+  }
+
   const accessConditionOptions = api.access_page.reduce(
     (
       accumulator: IAccessConditionOption[],
       condition: IAccessConditionWithVisitorType
     ) => {
-      const { cta, description, is_eligible } = condition;
+      const { description, is_eligible } = condition;
       condition.who.forEach(type => {
         accumulator.push({
           label: type,
           value: type,
           description,
           is_eligible,
-          cta,
         });
       });
       return accumulator;

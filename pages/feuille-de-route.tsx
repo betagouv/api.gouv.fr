@@ -4,6 +4,7 @@ import { GetStaticProps } from 'next';
 import Page from '../layouts/page';
 import { Roadmap } from '../components/roadmap';
 import { getRoadmap, IRoadmapElement } from '../model';
+import Emoji from '../uiComponents/emoji';
 
 interface IProps {
   roadmap: IRoadmapElement[];
@@ -12,15 +13,12 @@ interface IProps {
 const FeuilleDeRoute: React.FC<IProps> = ({ roadmap }) => {
   return (
     <Page
-      title="Feuille de route 2020"
+      title="Feuille de route"
       description="Découvrez les APIs récemment ajouté et celles qui sont en cours d'intégration au catalogue des APIs"
     >
       <div className="text-wrapper text-style">
         <h1>
-          La feuille de route des APIs en 2020{' '}
-          <span role="img" aria-label="emoji travaux">
-            🏗
-          </span>
+          La feuille de route des APIs <Emoji emoji="🏗" label="travaux" />
         </h1>
         <p>
           Depuis 2016, nous référençons les APIs de toutes les administrations
@@ -34,8 +32,6 @@ const FeuilleDeRoute: React.FC<IProps> = ({ roadmap }) => {
 
 export const getStaticProps: GetStaticProps = async () => {
   const roadmap = await getRoadmap();
-
-  console.log(roadmap);
 
   return {
     props: {

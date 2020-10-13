@@ -1,5 +1,5 @@
 import React from 'react';
-import Document, { Head, Main, NextScript } from 'next/document';
+import Document, { Html, Head, Main, NextScript } from 'next/document';
 import constants from '../constants';
 
 class MyDocument extends Document {
@@ -10,15 +10,11 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <html lang="fr">
+      <Html lang="fr">
         <Head>
           {/* Standard Meta */}
           <meta charSet="utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
-          />
 
           <link rel="icon" href="/favicon.ico" />
           <link
@@ -56,7 +52,7 @@ class MyDocument extends Document {
             html {
               height: 100%;
             }
-            
+
             body {
               height: 100%;
               margin: 0;
@@ -183,8 +179,6 @@ class MyDocument extends Document {
           <Main />
           {process.env.NODE_ENV === 'production' && (
             <script
-              defer
-              async
               dangerouslySetInnerHTML={{
                 __html: `
             <!-- Piwik -->
@@ -198,13 +192,31 @@ class MyDocument extends Document {
               var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
               g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
             })();
-          `,
+            `,
               }}
             />
           )}
           <NextScript />
+
+          {/* last, we call sentry as we want to load it synchronously. It has to be executed BEFORE the other deferred scripts */}
+          {process.env.NODE_ENV === 'production' && (
+            <>
+              <script
+                src="https://cdn.ravenjs.com/3.19.1/raven.min.js"
+                crossOrigin="anonymous"
+              ></script>
+              <script
+                dangerouslySetInnerHTML={{
+                  __html: `
+                  <!-- Init Sentry -->
+                  Raven.config('${constants.links.SENTRY.URL}').install()
+                  `,
+                }}
+              ></script>
+            </>
+          )}
         </body>
-      </html>
+      </Html>
     );
   }
 }

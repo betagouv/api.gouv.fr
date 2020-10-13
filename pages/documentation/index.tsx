@@ -3,7 +3,7 @@ import { GetStaticProps } from 'next';
 
 import { IApi, getAllAPIs } from '../../model';
 import Page from '../../layouts';
-import DocumentationLeftMenu from '../../components/documentation';
+import { DocumentationLeftMenu } from '../../components/documentation';
 
 import constants from '../../constants';
 
@@ -50,12 +50,12 @@ const Documentation: React.FC<IProps> = ({ allApis }) => {
             Les APIs tombent dans deux grandes catégories. Les{' '}
             <b>APIs ouvertes</b> qui sont accessibles à tous. Et les{' '}
             <b>
-              APIs qui nécessitent une habilitation{' '}
+              APIs qui nécessitent une habilitation
               <span role="img" aria-label="émoji cadenas">
                 🔒
-              </span>{' '}
+              </span>
+              .
             </b>
-            .
           </p>
           <p>
             <span role="img" aria-label="émoji ninja">
@@ -65,7 +65,7 @@ const Documentation: React.FC<IProps> = ({ allApis }) => {
             découvrez nos APIs.
             <span role="img" aria-label="émoji ninja">
               👈
-            </span>{' '}
+            </span>
           </p>
         </div>
       </div>

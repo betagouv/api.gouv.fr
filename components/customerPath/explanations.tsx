@@ -2,7 +2,7 @@ import React from 'react';
 
 import { ButtonLink } from '../../uiComponents';
 import { VISITOR } from './contactForm';
-import { logParcoursClient } from '../../service/analytics';
+import { logParcoursClient } from '../../utils/client/analytics';
 
 import { ContactForm } from './index';
 
@@ -16,6 +16,7 @@ export enum SUBJECT {
   CARTE_GRISES,
   TELEPOINT,
   CONTACT,
+  DS,
   NONE,
 }
 
@@ -54,18 +55,23 @@ const Questions = [
   },
   {
     value: SUBJECT.FRANCECONNECT_PART,
-    label: 'Je veux me connecter à France Connect',
+    label: 'Je veux me connecter à FranceConnect',
     public: [VISITOR.PARTICULIER],
   },
   {
     value: SUBJECT.CARTE_GRISES,
     label:
-      'Je cherche une API des plaques d’immatriculation ou des cartes grises',
+      'Je cherche une API des plaques d’immatriculation, du SIV ou des cartes grises',
     public: [VISITOR.ENTREPRISE],
   },
   {
+    value: SUBJECT.DS,
+    label: 'Je cherche démarches simplifiées',
+    public: [VISITOR.PARTICULIER],
+  },
+  {
     value: SUBJECT.FRANCECONNECT_ENTREPRISE,
-    label: 'Je veux France Connecter mon service',
+    label: 'Je veux FranceConnecter mon service',
     public: [VISITOR.ENTREPRISE, VISITOR.ASSO],
   },
   {
@@ -117,7 +123,7 @@ const Explanations: React.FC<IProps> = ({ subject, visitorType }) => {
             les APIs ouvertes à tous" pour n’afficher que les APIs ouvertes.
           </p>
           <div className="layout-center">
-            <ButtonLink large href="/rechercher-api" onClick={logClic}>
+            <ButtonLink size="large" href="/rechercher-api" onClick={logClic}>
               Rechercher une API
             </ButtonLink>
           </div>
@@ -151,7 +157,7 @@ const Explanations: React.FC<IProps> = ({ subject, visitorType }) => {
             fiche API quelles sont les conditions d'accès à la donnée.
           </p>
           <div className="layout-center">
-            <ButtonLink large href="/rechercher-api" onClick={logClic}>
+            <ButtonLink size="large" href="/rechercher-api" onClick={logClic}>
               Rechercher une API
             </ButtonLink>
           </div>
@@ -166,19 +172,17 @@ const Explanations: React.FC<IProps> = ({ subject, visitorType }) => {
           </p>
           <p>
             Vous trouverez plus d’explications sur{' '}
-            <a href="https://franceconnect.gouv.fr">
-              le site de France Connect
-            </a>
+            <a href="https://franceconnect.gouv.fr">le site de FranceConnect</a>
             . En particulier, nous vous recommandons de consulter la FAQ France
             Connect :
           </p>
           <div className="layout-center">
             <ButtonLink
-              large
+              size="large"
               href="https://franceconnect.gouv.fr/faq"
               onClick={logClic}
             >
-              Accèder à la page d’aide France Connect
+              Accéder à la page d’aide France Connect
             </ButtonLink>
           </div>
         </div>
@@ -212,9 +216,9 @@ const Explanations: React.FC<IProps> = ({ subject, visitorType }) => {
           </p>
           <div className="layout-center">
             <ButtonLink
-              large
+              size="large"
               onClick={logClic}
-              href="https://signup.api.gouv.fr/franceconnect?source=api_gouv_customer_path_entreprise"
+              href="https://datapass.api.gouv.fr/franceconnect?source=api_gouv_customer_path_entreprise"
             >
               Remplir une demande
             </ButtonLink>
@@ -234,11 +238,54 @@ const Explanations: React.FC<IProps> = ({ subject, visitorType }) => {
           </p>
           <div className="layout-center">
             <ButtonLink
-              large
+              size="large"
               href="https://immatriculation.ants.gouv.fr"
               onClick={logClic}
             >
               Consulter le site de l’ANTS
+            </ButtonLink>
+          </div>
+        </div>
+      );
+    case SUBJECT.DS:
+      return (
+        <div className="subject-answer">
+          <p>
+            Ce site ne permet pas de faire une démarche sur{' '}
+            <a href="https://demarches-simplifiees.fr">
+              démarches-simplifiées.
+            </a>
+          </p>
+          <p>Cliquez sur les liens ci-dessous pour :</p>
+          <ul>
+            <li>
+              <a href="https://doc.demarches-simplifiees.fr/listes-des-demarches/demarches-relatives-aux-medailles-dhonneur">
+                Faire une demande de médaille d'honneur
+              </a>
+            </li>
+            <li>
+              <a href="https://doc.demarches-simplifiees.fr/listes-des-demarches/demarches-relatives-aux-titres-de-sejour-pour-les-etrangers">
+                Faire une demande de titre de séjour
+              </a>
+            </li>
+            <li>
+              <a href="https://doc.demarches-simplifiees.fr/listes-des-demarches/demarches-relatives-au-permis-de-conduire">
+                Faire une demande de numéro NEPH
+              </a>
+            </li>
+            <li>
+              <a href="https://doc.demarches-simplifiees.fr/listes-des-demarches/demarches-relative-a-linscription-au-service-de-restauration">
+                Faire une demande d'inscription scolaire
+              </a>
+            </li>
+          </ul>
+          <div className="layout-center">
+            <ButtonLink
+              size="large"
+              href="https://demarches-simplifiees.fr"
+              onClick={logClic}
+            >
+              Consultez le site démarches-simplifiées
             </ButtonLink>
           </div>
         </div>
@@ -256,11 +303,11 @@ const Explanations: React.FC<IProps> = ({ subject, visitorType }) => {
           </p>
           <div className="layout-center">
             <ButtonLink
-              large
+              size="large"
               onClick={logClic}
               href="https://permisdeconduire.ants.gouv.fr/Vos-demarches/Le-permis-a-points/Solde-de-vos-points-via-une-identite-France-Connect"
             >
-              Accèder au site télépoint
+              Accéder au site télépoint
             </ButtonLink>
           </div>
         </div>
@@ -279,7 +326,7 @@ const Explanations: React.FC<IProps> = ({ subject, visitorType }) => {
           </p>
           <div className="layout-center">
             <ButtonLink
-              large
+              size="large"
               onClick={logClic}
               href="https://github.com/betagouv/api.gouv.fr/blob/master/CONTRIBUTING.md"
             >

@@ -3,9 +3,10 @@ import React, { useState, useEffect } from 'react';
 import Page from '../layouts/page';
 import { VISITOR, VisitorRouter } from '../components/customerPath';
 import { MultiChoice } from '../uiComponents';
-import { logParcoursClient } from '../service/analytics';
+import { logParcoursClient } from '../utils/client/analytics';
+import Emoji from '../uiComponents/emoji';
 
-export default () => {
+const ParcoursClient = () => {
   const [statut, setStatut] = useState<VISITOR | null>(null);
 
   const options = [
@@ -55,10 +56,8 @@ export default () => {
       <div className="text-wrapper text-style">
         <h1>
           Bonjour&nbsp;
-          <span role="img" aria-label="emoji hello">
-            👋
-          </span>
-          , comment pouvons-nous vous aider&nbsp;?
+          <Emoji emoji="👋" label="Geste de la main" />, comment pouvons-nous
+          vous aider&nbsp;?
         </h1>
         <p>Pour commencer, nous aimerions faire connaissance :</p>
         <div className="contact-form-question">
@@ -82,3 +81,4 @@ export default () => {
     </Page>
   );
 };
+export default ParcoursClient;

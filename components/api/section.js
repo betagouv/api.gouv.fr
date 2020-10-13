@@ -1,6 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import Link from 'next/link';
 
 import globals from '../../constants';
 
@@ -12,7 +10,12 @@ const Section = ({ id, title, children }) => {
         the top of the page.
       </a>
       <h2 className="ui dividing header">
-        <a href={`#${id}`} aria-hidden="true" className="header-anchor">
+        <a
+          href={`#${id}`}
+          aria-hidden="true"
+          tabIndex="-1"
+          className="header-anchor"
+        >
           #
         </a>
         {title}
@@ -47,12 +50,6 @@ const Section = ({ id, title, children }) => {
       `}</style>
     </section>
   );
-};
-
-Section.propTypes = {
-  id: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
 };
 
 export default Section;

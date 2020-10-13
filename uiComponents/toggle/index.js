@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Toggle = ({ id, onChange, label, isToggled }) => {
+const Toggle = ({ id, onChange, label, isToggled = false }) => {
   const onClick = () => {
     onChange(!isToggled);
   };

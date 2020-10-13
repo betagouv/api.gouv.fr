@@ -1,6 +1,7 @@
 import { isEmpty } from 'lodash';
 import { normalizeAndfindAll } from '../../utils';
 import { IApi } from '../../model';
+import stopwords from './stopwords';
 
 export const filterTheme = (selectedTheme: string | null) => {
   if (!selectedTheme) {
@@ -13,7 +14,7 @@ export const filterAccess = (noAccessRight: boolean) => {
   if (!noAccessRight) {
     return () => true;
   }
-  return (api: IApi) => api.is_open;
+  return (api: IApi) => api.is_open !== -1;
 };
 
 /**
@@ -53,14 +54,24 @@ export interface ISearchMatch {
  * @param {*} searchTerms
  */
 export const computeSearchResults = (needles: string[]) => {
-  if (isEmpty(needles)) {
+  // exclude stopwords
+  let relevantNeedles = needles.filter(
+    needle => stopwords.indexOf(needle) === -1
+  );
+
+  if (isEmpty(relevantNeedles)) {
+    // if no relevant needles, lets look for the needles
+    relevantNeedles = needles;
+  }
+
+  if (isEmpty(relevantNeedles)) {
     // if no needles to find, then every api is a relevant result
     return (api: IApi) => {
       return { ...api, score: 1 };
     };
   }
 
-  const finders = needles.map(normalizeAndfindAll);
+  const finders = relevantNeedles.map(normalizeAndfindAll);
 
   return (api: IApi) => {
     const matches = finders.reduce(
@@ -79,7 +90,13 @@ export const computeSearchResults = (needles: string[]) => {
           ],
         };
       },
-      { title: [], tagline: [], owner: [], owner_acronym: [], keywords: [] }
+      {
+        title: [],
+        tagline: [],
+        owner: [],
+        owner_acronym: [],
+        keywords: [],
+      }
     );
     // field can be boosted here
     const score =

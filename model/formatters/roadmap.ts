@@ -21,6 +21,12 @@ const monthNode = (month: any): IRoadmapElement => {
     what: month,
   };
 };
+const yearNode = (year: any): IRoadmapElement => {
+  return {
+    type: RoadmapNodeType.YEAR,
+    what: year,
+  };
+};
 const ellispsisNode = (): IRoadmapElement => {
   return {
     type: RoadmapNodeType.ELLIPSIS,
@@ -32,10 +38,7 @@ export const formatRoadmap = (roadmap: IRoadmap) => {
   Object.keys(roadmap).forEach((year: string) => {
     let lastMonth = 0;
 
-    if (year === 'Next') {
-      // Future : add ellipse + "A venir" label
-      flatRoadmap.push(ellispsisNode());
-    }
+    flatRoadmap.push(yearNode(year));
 
     Object.keys(roadmap[year]).forEach((month: string) => {
       const monthAsNumber = parseInt(month, 10);

@@ -10,6 +10,8 @@ export default {
     lightGrey: '#efefef',
     lightestGrey: '#fcfcfc',
     white: '#fff',
+    grey: '#888',
+    greyBlue: '#c9d3df',
     darkestGrey: '#373c42',
     darkGrey: '#272c32',
     service: '#af2341',
@@ -26,5 +28,5 @@ export default {
     darkOrange: '#3f3104',
     orange: '#ffc107',
   },
-  logo: 'logo-beta-gouv.svg',
+  logo: 'dinum.png',
 };

@@ -4,11 +4,19 @@ import SwaggerUIWrapper from '../../components/swagger';
 
 import { getAPI, IApi, getAllAPIs } from '../../model';
 import Page from '../../layouts';
-import { ButtonLink } from '../../uiComponents';
-import DocumentationLeftMenu from '../../components/documentation';
+import { ButtonLink, ExternalLink } from '../../uiComponents';
+import {
+  DocumentationLeftMenu,
+  Habilitation,
+  AccountNeeded,
+  ExternalDoc,
+} from '../../components/documentation';
 
 import constants from '../../constants';
 import { roundUptime, getUptimeState } from '../../utils';
+import share from '../../uiComponents/icon/share';
+import cardiogram from '../../uiComponents/icon/cardiogram';
+import Emoji from '../../uiComponents/emoji';
 
 interface IProps {
   api: IApi;
@@ -21,13 +29,17 @@ const Documentation: React.FC<IProps> = ({ api, allApis }) => {
     doc_tech_link,
     doc_tech_external,
     path,
-    access_link,
+    account_link,
     uptime,
     slug,
     is_open,
   } = api;
 
   const shareLink = `${constants.links.mailto.SHARE}?subject=Connaissez vous ${title} ?&body=https://api.gouv.fr/documentation/${slug}`;
+
+  const useSeparator =
+    (is_open === -1 || (!!account_link && is_open !== 1)) &&
+    !!doc_tech_external;
 
   return (
     <Page
@@ -51,17 +63,7 @@ const Documentation: React.FC<IProps> = ({ api, allApis }) => {
                   2
                 )(uptime)}% du temps`}
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                </svg>
+                {cardiogram}
                 <span>{roundUptime(2)(uptime)}%</span>
               </div>
             )}
@@ -72,69 +74,26 @@ const Documentation: React.FC<IProps> = ({ api, allApis }) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="white"
-                stroke="none"
-                strokeWidth="2"
-              >
-                <circle cx="18" cy="5" r="3"></circle>
-                <circle cx="6" cy="12" r="3"></circle>
-                <circle cx="18" cy="19" r="3"></circle>
-                <line
-                  x1="8.59"
-                  y1="13.51"
-                  x2="15.42"
-                  y2="17.49"
-                  stroke="white"
-                ></line>
-                <line
-                  x1="15.41"
-                  y1="6.51"
-                  x2="8.59"
-                  y2="10.49"
-                  stroke="white"
-                ></line>
-              </svg>
+              {share}
             </a>
-            <div className="separator" />
-            {access_link && !is_open && (
-              <ButtonLink href={`/les-api/${slug}#access`}>
-                <div className="layout-center btn-icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
-                    <rect
-                      x="3"
-                      y="11"
-                      width="18"
-                      fill="white"
-                      height="11"
-                      rx="2"
-                      ry="2"
-                    ></rect>
-                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                  </svg>
-                  Demander accès à l’API
-                </div>
-              </ButtonLink>
-            )}
           </div>
           <div className="documentation-body">
             <div>
               Bienvenue sur la documentation technique de <b>{title}</b>. Cette
               page présente les caractéristiques techniques de l’API. Pour plus
               d’information sur les caractéristiques fonctionnelles,{' '}
-              <a href={path}>accèdez à la fiche métier.</a>
+              <a href={path}>accédez à la fiche métier.</a>
+            </div>
+
+            <div className="sections">
+              {is_open === -1 && <Habilitation slug={slug} />}
+              {account_link && is_open === 0 && (
+                <AccountNeeded account_link={account_link} />
+              )}
+              {useSeparator && <div className="separator"></div>}
+              {doc_tech_external && (
+                <ExternalDoc doc_link={doc_tech_external} />
+              )}
             </div>
 
             <div>
@@ -143,23 +102,16 @@ const Documentation: React.FC<IProps> = ({ api, allApis }) => {
               ) : doc_tech_external ? (
                 <>
                   <p>
-                    <span role="img" aria-label="emoji triste">
-                      😔
-                    </span>{' '}
+                    <Emoji emoji="😔" label="triste" />
                     Malheureusement, cette API ne possède pas de documentation
                     au format{' '}
-                    <a
-                      href="https://swagger.io/docs/specification/about/"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                    >
+                    <ExternalLink href="https://swagger.io/docs/specification/about/">
                       Open API
-                    </a>
+                    </ExternalLink>
                     .
                   </p>
-
                   <p>
-                    Vous pouvez néanmoins accèder à la documentation en suivant
+                    Vous pouvez néanmoins accéder à la documentation en suivant
                     ce lien :
                   </p>
                   <ButtonLink
@@ -192,6 +144,12 @@ const Documentation: React.FC<IProps> = ({ api, allApis }) => {
           overflow: auto;
           flex-grow: 1;
         }
+        .documentation-content .sections {
+          display: flex;
+        }
+        .documentation-content .sections .separator {
+          width: 20px;
+        }
 
         .documentation-body,
         .documentation-header {
@@ -201,7 +159,7 @@ const Documentation: React.FC<IProps> = ({ api, allApis }) => {
         .documentation-header {
           display: flex;
           align-items: center;
-          justify-content: space-between;
+          justify-content: start;
           border-bottom: 2px solid ${constants.colors.lightGrey};
           background-color: #133675;
           height: 60px;
@@ -227,9 +185,6 @@ const Documentation: React.FC<IProps> = ({ api, allApis }) => {
           font-size: 1.1rem;
           display: flex;
           align-items: center;
-        }
-        .separator {
-          flex-grow: 1;
         }
 
         .btn-icon > svg {
