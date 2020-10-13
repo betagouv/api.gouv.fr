@@ -4,6 +4,7 @@ import { getAllAPIs, getAPI } from '../../../model';
 import { NextApiRequest, NextApiResponse } from 'next';
 import { IApi } from '../../../model';
 import constants from '../../../constants';
+import demarches from '../../../_data/demarches.json';
 
 // Initialize the cors middleware
 const cors = initMiddleware(
@@ -60,7 +61,7 @@ export default async function handler(
     query: { slug },
   } = req;
 
-  if (!slug.length || ['apis', 'proxy'].indexOf(slug[0]) === -1) {
+  if (!slug.length || ['apis', 'proxy', 'demarches'].indexOf(slug[0]) === -1) {
     res.statusCode = 404;
     return res.send({ Error: 'Route does not exist' });
   }
@@ -76,6 +77,37 @@ export default async function handler(
         res.setHeader(headerKey, response.headers[headerKey])
       );
       res.send(text);
+    } catch (err) {
+      res.statusCode = 500;
+      res.send({ Error: err });
+    }
+  }
+
+  if (slug[0] === 'demarches') {
+    const api = slug[1];
+    try {
+      if (!api) {
+        res.json(demarches);
+      }
+
+      if (!demarches[api]) {
+        res.statusCode = 404;
+        res.send({ Error: 'No demarche was found for this api' });
+      }
+      const demarche = slug[2];
+
+      if (!demarche) {
+        res.json(demarches[api]);
+      }
+      if (!demarches[api][demarche]) {
+        res.statusCode = 404;
+        res.send({ Error: 'This demarche was not found for this api' });
+      }
+
+      res.writeHead(302, {
+        Location: demarches[api][demarche].path,
+      });
+      res.end();
     } catch (err) {
       res.statusCode = 500;
       res.send({ Error: err });

@@ -1,0 +1,16 @@
+{
+  "api-particulier": {
+    "ccas": {
+      "path": "https://datapass.api.gouv.fr/api-particulier?scopes=%7B%22dgfip_avis_imposition%22%3Atrue%2C%22dgfip_adresse%22%3Atrue%2C%22cnaf_quotient_familial%22%3Atrue%2C%22cnaf_allocataires%22%3Atrue%2C%22cnaf_enfants%22%3Atrue%2C%22cnaf_adresse%22%3Afalse%7D",
+      "label": "Dématérialisation de l'instruction des dossiers dans un CCAS"
+    },
+    "ccas-arpege": {
+      "path": "https://datapass.api.gouv.fr/api-particulier?intitule=R%C3%A9cup%C3%A9ration%20du%20Quotient%20Familial%20et%20des%20Imp%C3%B4ts%20pour%20les%20aides%20sociales%20facultatives%20et%20les%20services%20%C3%A0%20la%20personne%20du%20CCAS&description=Le%20CCAS%20de%20notre%20commune%20module%20le%20montant%20des%20aides%20octroy%C3%A9es%20aux%20usagers%20en%20difficult%C3%A9%20en%20fonction%20du%20QF.%0ALe%20prix%20des%20services%20%C3%A0%20la%20personne%20pour%20les%20a%C3%AEn%C3%A9s%20et%20personnes%20en%20situation%20de%20handicap%20est%20calcul%C3%A9%20en%20fonction%20de%20l%E2%80%99imp%C3%B4t%20sur%20le%20revenu.%20%0ADans%20un%20esprit%20de%20simplification%20et%20de%20s%C3%A9curit%C3%A9%2C%20nous%20souhaitons%20ne%20pas%20demander%20aux%20familles%20les%20informations%20de%20calcul%20mais%20plut%C3%B4t%20nous%20baser%20sur%20les%20donn%C3%A9es%20propos%C3%A9es%20par%20API%20Particulier.%0ANous%20utilisons%20le%20logiciel%20Sonate%20%C3%A9dit%C3%A9%20par%20la%20Soci%C3%A9t%C3%A9%20Arp%C3%A8ge.&data_recipients=agents%20instructeurs%20des%20demandes%20d'aides%2C%20agents%20instructeurs%20des%20demandes%20d'inscriptions%20aux%20services%20%C3%A0%20la%20personne%2C%20...&data_retention_period=12&fondement_juridique_title=Pr%C3%A9ciser%20ici%20les%20d%C3%A9lib%C3%A9rations%20du%20conseil%20d'administration%20qui%20d%C3%A9taillent%20les%20modalit%C3%A9s%20de%20calcul%20du%20montant%20des%20aides%20et%2Fou%20du%20prix%20de%20services.%20%0ALorsque%20le%20calcul%20du%20montant%20des%20aides%20est%20%C3%A0%20la%20libre%20appr%C3%A9ciation%20du%20travailleur%20social%20ou%20de%20la%20commission%20d%E2%80%99attribution%2C%20pr%C3%A9ciser%20sur%20quels%20%C3%A9l%C3%A9ments%20se%20basent%20la%20d%C3%A9cision.&fondement_juridique_url=Joindre%20les%20d%C3%A9lib%C3%A9rations%20ou%20proc%C3%A9dures%20internes%20concern%C3%A9es.&scopes=%7B%22dgfip_avis_imposition%22%3Atrue%2C%22dgfip_adresse%22%3Afalse%2C%22cnaf_quotient_familial%22%3Atrue%2C%22cnaf_allocataires%22%3Afalse%2C%22cnaf_enfants%22%3Afalse%2C%22cnaf_adresse%22%3Afalse%7D",
+      "label": "Dématérialisation de l'instruction des dossiers dans un CCAS avec l’editeur Arpège"
+    },
+    "ccas-up": {
+      "path": "https://datapass.api.gouv.fr/api-particulier?scopes=%7B%22dgfip_avis_imposition%22%3Atrue%2C%22dgfip_adresse%22%3Atrue%2C%22cnaf_quotient_familial%22%3Atrue%2C%22cnaf_allocataires%22%3Atrue%2C%22cnaf_enfants%22%3Atrue%2C%22cnaf_adresse%22%3Afalse%7D",
+      "label": "Dématérialisation de l'instruction des dossiers dans un CCAS avec l’editeur Up"
+    }
+  }
+}
