@@ -72,7 +72,7 @@ En revanche certaines données ne sont pas présentes dans toutes les APIs :
 
 - les prédécesseurs et successeurs d'un établissement
 - les entreprises non-diffusibles (en savoir plus)
-- les entreprises qui se sont vues refuser leurs immatriculation au RCS
+- les entreprises enregistrées auprès de l'INSEE mais dont le Greffe a refusé l’immatriculation
 - la géolocalisation d'une entreprise
 
 Le tableau ci-dessous fait une synthèse de ces différence pour vous aider a choisir :
@@ -80,7 +80,7 @@ Le tableau ci-dessous fait une synthèse de ces différence pour vous aider a ch
 | API                                     | API Sirene ouverte | API Sirene de l'INSEE | API Entreprise |
 | --------------------------------------- | ------------------ | --------------------- | -------------- |
 | Non-diffusibles                         | ❌ Non             | ✅ Oui                | ✅ Oui         |
-| Refus d'immatriculation au RCS          | ❌ Non             | ✅ Oui                | ❌ Non         |
+| Refus d'immatriculation par le Greffe   | ❌ Non             | ✅ Oui                | ❌ Non         |
 | Recherche des prédecesseurs/successeurs | ❌ Non             | ✅ Oui                | ✅ Oui         |
 | geolocalisation                         | ✅ Oui             | ❌ Non                | ✅ Oui         |
 
