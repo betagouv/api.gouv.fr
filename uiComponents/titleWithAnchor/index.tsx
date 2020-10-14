@@ -51,7 +51,7 @@ const HiddenAnchor: React.FC<{ id: string }> = ({ id }) => (
   </>
 );
 
-const H2WithAnchor: H3WithAnchor.FC<PropsWithChildren<{}>> = ({ children }) => {
+const H2WithAnchor: React.FC<PropsWithChildren<{}>> = ({ children }) => {
   const id = turnStringToId((children as string) || uuid());
 
   return (

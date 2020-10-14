@@ -3,7 +3,7 @@ import { RichLink } from '../../uiComponents';
 import RichReactMarkdown from '../../components/richReactMarkdown';
 import Section from '../../components/api/section';
 import { IGuideElementShort } from '../../model';
-import { H3WithAnchor } from '../../uiComponents/titleForMarkdown';
+import { H3WithAnchor } from '../../uiComponents/titleWithAnchor';
 
 const ApiDescription: React.FC<{
   content_intro?: string;

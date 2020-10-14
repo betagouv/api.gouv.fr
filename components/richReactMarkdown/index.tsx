@@ -8,10 +8,7 @@ import TeamHelpWidget from '../teamHelpWidget';
 import ApiRnaWidget from '../apiWidgets/apiRna';
 import DatagouvWidget from '../widgets/datagouv';
 import FlatFileWidget from '../widgets/flatFile';
-import {
-  H2WithAnchor,
-  H3WithAnchor,
-} from '../../uiComponents/titleForMarkdown';
+import { H2WithAnchor, H3WithAnchor } from '../../uiComponents/titleWithAnchor';
 
 const CenteredCta: React.FC<PropsWithChildren<{ href: string }>> = props => (
   <div className="layout-center">

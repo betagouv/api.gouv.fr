@@ -94,27 +94,27 @@ const Privacy: NextPage = () => (
           CNIL
         </abbr>{' '}
         :
-        <ul>
-          <li>
-            <a
-              href="https://www.cnil.fr/fr/cookies-traceurs-que-dit-la-loi"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              - Cookies et traceurs : que dit la loi ?
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.cnil.fr/fr/cookies-les-outils-pour-les-maitriser"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              - Cookies : les outils pour les maîtriser
-            </a>
-          </li>
-        </ul>
       </p>
+      <ul>
+        <li>
+          <a
+            href="https://www.cnil.fr/fr/cookies-traceurs-que-dit-la-loi"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Cookies et traceurs : que dit la loi ?
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.cnil.fr/fr/cookies-les-outils-pour-les-maitriser"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Cookies : les outils pour les maîtriser
+          </a>
+        </li>
+      </ul>
     </div>
     <style jsx>{`
       .matomo-optout {
