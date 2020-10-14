@@ -3,6 +3,7 @@ import { RichLink } from '../../uiComponents';
 import RichReactMarkdown from '../../components/richReactMarkdown';
 import Section from '../../components/api/section';
 import { IGuideElementShort } from '../../model';
+import { H3WithAnchor } from '../../uiComponents/titleWithAnchor';
 
 const ApiDescription: React.FC<{
   content_intro?: string;
@@ -14,7 +15,7 @@ const ApiDescription: React.FC<{
       {content_intro && <RichReactMarkdown source={content_intro} />}
       {guides.length > 0 && (
         <>
-          <h3>Exemples d’application</h3>
+          <H3WithAnchor>Exemples d’application</H3WithAnchor>
           <div className="default-grid api-examples">
             {guides.map(guide => (
               <RichLink
