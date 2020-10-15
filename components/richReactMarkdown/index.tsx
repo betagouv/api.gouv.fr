@@ -6,6 +6,7 @@ import { ButtonLink, ExternalLink, RichLink } from '../../uiComponents';
 import Quote from '../../uiComponents/quote';
 import TeamHelpWidget from '../teamHelpWidget';
 import ApiRnaWidget from '../apiWidgets/apiRna';
+import ApiSireneWidget from '../apiWidgets/apiSirene';
 import DatagouvWidget from '../widgets/datagouv';
 import FlatFileWidget from '../widgets/flatFile';
 import { H2WithAnchor, H3WithAnchor } from '../../uiComponents/titleWithAnchor';
@@ -71,8 +72,9 @@ const RichReactMarkdown: React.FC<{ source: string; addAnchor?: boolean }> = ({
         Centered: Centered,
         ContactUs: TeamHelpWidget,
         ApiRnaWidget: ApiRnaWidget,
-        Datagouv: DatagouvWidget,
         FlatFile: FlatFileWidget,
+        ApiSireneWidget: ApiSireneWidget,
+        Datagouv: DatagouvWidget,
         h2: H2WithAnchor,
         h3: H3WithAnchor,
       },

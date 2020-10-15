@@ -95,6 +95,9 @@
       path: /les-api/api_agribalyse
   10:
     - type: ADD_API
+      what: Sirene données ouvertes
+      path: /les-api/api-sirene-donnees-ouvertes
+    - type: ADD_API
       what: Données ouvertes de l’URSSAF
     - type: ADD_API
       what: Données ouvertes de la ville de Paris
@@ -106,9 +109,13 @@
     - type: ADD_API
       what: Registre des Bénéficiaires Effectifs (RBE) produite par l'INPI
   11:
-    - type: ADD_API
-      what: Sirene distribuée par Etalab
-      path: https://entreprise.data.gouv.fr/api_doc/sirene
+    - type: INFO
+      what: |
+        Intégration tiers déclaratant des [APIs de l’URSSAF](https://portailapi.urssaf.fr/fr/) :
+
+        - API Déclaration auto-entrepreneur
+        - API Déclaration CESU
+        - API Déclaration PAJE
     - type: ADD_API
       what: Données Ouvertes Loire-Atlantique
   12:
@@ -128,13 +135,6 @@
         - Aide au logement étudiant
         - Demande ou renouvellement de logement social
         - Recensement citoyen obligatoire
-    - type: INFO
-      what: |
-        Intégration des [APIs de l’URSSAF](https://portailapi.urssaf.fr/fr/) :
-
-        - API Déclaration auto-entrepreneur
-        - API Déclaration CESU
-        - API Déclaration PAJE
     - type: INFO
       what: |
         Publication d'une doctrine relative à la circulation des données entre administrations

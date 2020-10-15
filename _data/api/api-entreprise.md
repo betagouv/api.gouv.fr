@@ -148,7 +148,7 @@ La propriété intellectuelle :
 - les [données de l'INPI](/les-api/api_inpi)
 - les [données de l'ADEME](/les-api/api_professionnels_rge)
 - les [données du RNA](/les-api/api_rna)
-- les [données de l'INSEE](/les-api/sirene_v3) (à l'exception des entreprises <External href="https://www.insee.fr/fr/information/4127417#:~:text=Qu'est%2Dce%20qu',96%20du%20code%20de%20commerce.">non-diffusibles</External>)
+- les [données de l'INSEE](/guides/quelle-api-sirene) (à l'exception des entreprises <External href="https://www.insee.fr/fr/information/4127417#:~:text=Qu'est%2Dce%20qu',96%20du%20code%20de%20commerce.">non-diffusibles</External>)
 
 ### En savoir plus
 

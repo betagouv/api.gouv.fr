@@ -1,6 +1,6 @@
 ---
 title: API Sirene
-tagline: API Sirene donne accès aux informations concernant les entreprises et les établissements immatriculés au répertoire interadministratif Sirene de l'Insee
+tagline: Accéder aux informations concernant les entreprises et les établissements immatriculés au répertoire interadministratif Sirene de l'Insee
 external_site: https://api.insee.fr
 producer: insee
 is_open: 0 # 0 means API require an account
@@ -21,9 +21,26 @@ datagouv_uuid:
   - 5b7ffc618b4c4169d30727e0
 visits_2019: 3785
 last_update: 22/08/2019
+content_intro: |
+  API Sirene donne accès aux informations concernant les entreprises et les établissements immatriculés au répertoire interadministratif Sirene depuis sa création en 1973, y compris les unités fermées.
 ---
 
-API Sirene donne accès aux informations concernant les entreprises et les établissements immatriculés au répertoire interadministratif Sirene depuis sa création en 1973, y compris les unités fermées.
+### Données accessibles dans l'API
+
+L'API Sirene permet d'accéder simplement aux données de multiples administrations.
+
+| Donnée            | Description                                                                     |
+| ----------------- | ------------------------------------------------------------------------------- |
+| dénomination      | le nom de l'entreprise                                                          |
+| SIREN             | le numero unique de l'entreprise                                                |
+| SIRET             | le numero unique de l'établissement                                             |
+| NAF               | le code NAF ou code APE, un code d'activité suivant la nomenclaure de l'INSEE   |
+| date              | la date de création et de cloture (si applicable)                               |
+| siege social      | Est-ce que cet établissement est le siège social de l'entreprise                |
+| forme juridique   | la forme juridique de l'établissement (SARL, SAS, entreprise individuelle etc.) |
+| tranche effectifs | la fourchette des effectifs de l'établissement                                  |
+
+### A propos des fonctionnalités de recherche de l’API
 
 La recherche peut être unitaire, multicritère, phonétique et porter sur les données courantes et historisées.
 
