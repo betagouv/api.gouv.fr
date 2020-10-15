@@ -49,7 +49,7 @@ Le moyen privilégié pour obtenir les données a la demande, ce sont les APIs. 
 
 - l'[API Sirene données ouvertes](/les-api/api-sirene-donnees-ouvertes)
 - l'[API Sirene de l'INSEE](/les-api/sirene_v3)
-- l'[API Entreprise](les-api/api-entreprise)
+- l'[API Entreprise](/les-api/api-entreprise)
 
 ## Comment choisir quelle API utiliser ?
 
@@ -89,4 +89,4 @@ Vous avez fait votre choix ? Lancez-vous :
 
 - l'[API Sirene données ouvertes](/les-api/api-sirene-donnees-ouvertes)
 - l'[API Sirene de l'INSEE](/les-api/sirene_v3)
-- l'[API Entreprise](les-api/api-entreprise)
+- l'[API Entreprise](/les-api/api-entreprise)

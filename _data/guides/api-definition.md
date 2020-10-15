@@ -29,12 +29,12 @@ L'administration regorge d'APIs. Elles permettent d'échanger des données entre
 
 ### Des APIs ouvertes : en accès libre
 
-La majorité des APIs visibles sur la page [rechercher une api](les-api/rechercher-api) sont des APIs libres d'accès. On parle aussi d'API en opendata, ce qui veut dire que les données sont ouvertes et publiques. Elles peuvent vous permettre d'accèder à des données comme :
+La majorité des APIs visibles sur la page [rechercher une api](/les-api/rechercher-api) sont des APIs libres d'accès. On parle aussi d'API en opendata, ce qui veut dire que les données sont ouvertes et publiques. Elles peuvent vous permettre d'accèder à des données comme :
 
-- l'ensemble des [adresses du territoire français](les-api/base-adresse-nationale)
+- l'ensemble des [adresses du territoire français](/les-api/base-adresse-nationale)
 - les Diagnostic de Performance Energetique des logements particuliers (DPE)
-- la [base documentaire Gallica](les-api/api_gallica_document), de la Bibliothèque Nationale de France
-- la [liste des jours fériés en France](les-api/jours-ferie)
+- la [base documentaire Gallica](/les-api/api_gallica_document), de la Bibliothèque Nationale de France
+- la [liste des jours fériés en France](/les-api/jours-ferie)
 
 ... Et encore [bien d'autres](/les-api/rechercher-api).
 
