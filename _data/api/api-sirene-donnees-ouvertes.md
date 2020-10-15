@@ -1,8 +1,7 @@
 ---
 title: API Sirene données ouvertes
 tagline: Accéder librement aux informations des entreprises et des établissements de la base Sirene
-owner: Direction Interministérielle du Numérique
-owner_acronym: DINUM
+producer: dinum
 is_open: 1 # 0 means API require an account
 partners:
   - beta.gouv.fr
