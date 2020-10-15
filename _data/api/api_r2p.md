@@ -1,9 +1,7 @@
 ---
 title: API Recherche des personnes physiques (R2P)
-logo: logo-dgfip.jpg
 tagline: Récupérez les données connues par l’administration fiscale (DGFIP) sur une personne physique (état civil, adresse, identifiant fiscal)
-owner: Direction Générale des Finances Publiques
-owner_acronym: DGFIP
+producer: dgfip
 is_open: -1
 datapass_link: https://datapass.api.gouv.fr/api-r2p-sandbox
 access_page:

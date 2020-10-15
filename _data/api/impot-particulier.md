@@ -1,9 +1,7 @@
 ---
 title: API Impôt particulier
-logo: logo-dgfip.jpg
 tagline: Raccordez-vous directement à la DGFiP pour récupérer les éléments fiscaux nécessaires à vos téléservices, éliminez le traitement et le stockage des pièces justificatives
-owner: Direction Générale des Finances Publiques
-owner_acronym: DGFIP
+producer: dgfip
 is_open: -1 # -1 means API not open
 access_page:
   - who:
@@ -46,7 +44,7 @@ access_page:
 
       <NextSteps />
       <Button href='https://datapass.api.gouv.fr/api-impot-particulier-sandbox?scopes=%7B%22dgfip_rfr%22%3Afalse%2C%22dgfip_nbpart%22%3Afalse%2C%22dgfip_aft%22%3Afalse%2C%22dgfip_locaux_th%22%3Afalse%2C%22dgfip_eligibilite_lep%22%3Atrue%2C%22dgfip_annee_n_moins_1%22%3Afalse%2C%22dgfip_annee_n_moins_2%22%3Atrue%2C%22dgfip_acces_spi%22%3Atrue%2C%22dgfip_acces_etat_civil%22%3Atrue%7D'>Remplir une demande</Button>
-datapass_link: https://datapass.api.gouv.fr/api-impot-particulier
+datapass_link: https://datapass.api.gouv.fr/api-impot-particulier-sandbox
 keywords:
   - Impots
   - Revenu Fiscal de Référence

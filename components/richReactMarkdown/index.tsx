@@ -9,6 +9,7 @@ import ApiRnaWidget from '../apiWidgets/apiRna';
 import ApiSireneWidget from '../apiWidgets/apiSirene';
 import DatagouvWidget from '../widgets/datagouv';
 import FlatFileWidget from '../widgets/flatFile';
+import { H2WithAnchor, H3WithAnchor } from '../../uiComponents/titleWithAnchor';
 
 const CenteredCta: React.FC<PropsWithChildren<{ href: string }>> = props => (
   <div className="layout-center">
@@ -54,7 +55,9 @@ const NextSteps = ({ service_description = null, is_editeur = false }) => (
   </>
 );
 
-const RichReactMarkdown: React.FC<{ source: string }> = ({ source }) => (
+const RichReactMarkdown: React.FC<{ source: string; addAnchor?: boolean }> = ({
+  source,
+}) => (
   <Markdown
     children={source}
     options={{
@@ -72,6 +75,8 @@ const RichReactMarkdown: React.FC<{ source: string }> = ({ source }) => (
         FlatFile: FlatFileWidget,
         ApiSireneWidget: ApiSireneWidget,
         Datagouv: DatagouvWidget,
+        h2: H2WithAnchor,
+        h3: H3WithAnchor,
       },
     }}
   />

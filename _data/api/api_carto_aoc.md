@@ -2,11 +2,9 @@
 title: API Carto - module AOC
 tagline: L'accès simplifié aux données de zonages AOC de l'INAO
 external_site: https://apicarto.ign.fr/
-owner: Institut national de l’information géographique et forestière
-owner_acronym: IGN
+producer: ign
 is_open: 1 # 1 means API is fully open
 category: Public
-logo: look4-geoportail.jpg
 contact_link: contact.geoservices@ign.fr
 doc_tech_link: https://apicarto.ign.fr/api/doc/aoc.yml
 partners:

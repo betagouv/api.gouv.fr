@@ -36,15 +36,13 @@ partners:
   - La Poste
   - MobileConnect & Moi
   - MSA
-owner: Direction interministérielle du numérique
-owner_acronym: DINUM
+producer: dinum
 keywords:
   - Authentification
   - Identification
   - SSO
 themes:
   - Particulier
-logo: logo-fc.jpg
 contact_link: support.partenaires@franceconnect.gouv.fr
 doc_tech_external: https://partenaires.franceconnect.gouv.fr/fcp/fournisseur-service
 visits_2019: 5000

@@ -22,15 +22,13 @@ access_page:
 
       <Button href="/rechercher-api">Rechercher une autre API</Button>
 datapass_link: https://datapass.api.gouv.fr/le-taxi #default access link
-logo: logo_le.taxi.svg
 partners:
   - Atlantis Taxi
   - G7
   - Tako
   - Taxiloc
   - Taxis Rennais
-owner: Direction interministérielle du numérique & Direction générale des Infrastructures, des Transports et de la Mer
-owner_acronym: DINUM & DGITM
+producer: dinum
 keywords:
   - Transport
   - Taxi

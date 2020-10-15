@@ -29,12 +29,6 @@ const teamData = [
     img: 'Stanislas.jpg',
   },
   {
-    name: 'Vincent Mazalaigue',
-    title: 'API Entreprise',
-    linkedin: 'https://www.linkedin.com/in/vmazalaigue/',
-    img: 'Vincent.jpg',
-  },
-  {
     name: 'Amandine Audras',
     title: 'Designeuse produit',
     linkedin: 'https://www.linkedin.com/in/amandineaudras/',
@@ -53,10 +47,10 @@ const teamData = [
     img: 'Christophe.jpg',
   },
   {
-    name: 'Maëlle Granon',
-    title: 'Support aux utilisateurs des APIs',
-    linkedin: 'https://www.linkedin.com/in/maellegranon/',
-    img: 'Maelle.jpg',
+    name: 'Victor Gross',
+    title: 'Développement des offres API',
+    linkedin: 'https://fr.linkedin.com/in/victorgross',
+    img: 'Victor.jpg',
   },
 ];
 

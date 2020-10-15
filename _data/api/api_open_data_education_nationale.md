@@ -2,11 +2,9 @@
 title: API données ouvertes de l’Éducation Nationale
 tagline: 'Découvrez les jeux de données publiques ouverts et n’hésitez pas à nous faire connaître vos réutilisations de données et créations de nouveaux services !'
 external_site: https://data.education.gouv.fr/
-owner: Ministère de l'Éducation Nationale et de la Jeunesse
-owner_acronym: MENJ
+producer: menj
 is_open: 1 # 1 means API is fully open
 category: Public
-logo: logo_menj.jpg
 rate_limiting_resume: 5000 appels / jour / IP
 rate_limiting_description: |
   Le nombre d'appels API pour un utilisateur anonyme est limité à 5000 appels par adresse IP et par jour.

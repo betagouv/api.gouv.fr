@@ -40,8 +40,7 @@ stat:
 partners:
   - DGFiP
   - CNAF
-owner: Direction interministérielle du numérique
-owner_acronym: DINUM
+producer: dinum
 keywords:
   - Impots
   - Quotient Familial

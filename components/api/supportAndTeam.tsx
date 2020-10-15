@@ -8,6 +8,7 @@ interface IProps {
   owner: string;
   owner_acronym?: string;
   link?: string;
+  owner_slug: string;
 }
 
 const SupportAndTeam: React.FC<IProps> = ({
@@ -15,15 +16,18 @@ const SupportAndTeam: React.FC<IProps> = ({
   link,
   owner,
   owner_acronym,
+  owner_slug,
 }) => {
   return (
     <SubSection title="L’équipe">
       <div>Cette API est produite par :</div>
       <div className="team">
-        <img src={`/images/api-logo/${logo || 'logo-beta-gouv.svg'}`} alt="" />
+        <img src={`/images/api-logo/${logo || 'dinum.png'}`} alt="" />
         <span>
-          {owner}
-          {owner_acronym && ` (${owner_acronym})`}
+          <a href={`/producteurs/${owner_slug}`}>
+            {owner}
+            {owner_acronym && ` (${owner_acronym})`}
+          </a>
         </span>
       </div>
       <>
