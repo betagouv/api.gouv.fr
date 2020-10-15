@@ -71,7 +71,7 @@ Les trois APIs donnent accès aux informations concernant les entreprises et les
 En revanche certaines données ne sont pas présentes dans toutes les APIs :
 
 - les prédécesseurs et successeurs d'un établissement
-- les entreprises non-diffusibles (en savoir plus)
+- les entreprises non-diffusibles ([en savoir plus](https://www.insee.fr/fr/information/4127417))
 - les entreprises enregistrées auprès de l'INSEE mais dont le Greffe a refusé l’immatriculation
 - la géolocalisation d'une entreprise
 
@@ -79,7 +79,8 @@ Le tableau ci-dessous fait une synthèse de ces différence pour vous aider a ch
 
 | API                                     | API Sirene données ouvertes | API Sirene de l'INSEE | API Entreprise |
 | --------------------------------------- | --------------------------- | --------------------- | -------------- |
-| Non-diffusibles                         | ❌ Non                      | ✅ Oui                | ✅ Oui         |
+| Etablissements diffusibles              | ✅ Oui                      | ✅ Oui                | ✅ Oui         |
+| Etablissements non-diffusibles          | ❌ Non                      | ✅ Oui                | ✅ Oui         |
 | Refus d'immatriculation par le Greffe   | ❌ Non                      | ✅ Oui                | ❌ Non         |
 | Recherche des prédecesseurs/successeurs | ❌ Non                      | ✅ Oui                | ❌ Non         |
 | geolocalisation                         | ✅ Oui                      | ❌ Non                | ❌ Non         |

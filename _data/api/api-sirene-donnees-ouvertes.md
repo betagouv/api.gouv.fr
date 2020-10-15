@@ -46,7 +46,7 @@ content_intro: |
 **Attention,** l’API étant totalement ouverte d'accès, elle comporte des limitations. Ainsi ne sont pas accessibles dans l'API :
 
 - les prédécesseurs et successeurs d'un établissement
-- les entreprises non-diffusibles (en savoir plus)
+- les entreprises non-diffusibles ([en savoir plus](https://www.insee.fr/fr/information/4127417))
 - les entreprises qui se sont vues refuser leurs immatriculation au RCS
 
 Pour savoir comment obtenir ces données, consultez [notre fiche explicative.](/guides/quelle-api-sirene)
