@@ -5,7 +5,7 @@ tags: cas usage, api sirene,ETALAB, api entreprise, KBIS, INSEE, open data
 image: code.jpg
 api:
   - API Sirene
-  - API Sirene ouverte
+  - API Sirene données ouvertes
 ---
 
 ### Qu'est-ce que le répertoire Sirene ?
@@ -27,7 +27,7 @@ Elle contient, pour chacun de ces établissement :
 | forme juridique   | la forme juridique de l'établissement (SARL, SAS, entreprise individuelle etc.) |
 | tranche effectifs | la fourchette des effectifs de l'établissement                                  |
 
-**NB**: Une entreprise peut possèder un ou plusieurs établissement. Un de ces établissement est appelé le siège social.
+**NB**: Une entreprise a forcément un établissement, son siège social, et peut ensuite posséder zéro ou plusieurs établissements secondaires.
 
 **NB 2**: la liste des code NAF/code APE est [téléchargeable librement sur le site de l’INSEE](https://www.insee.fr/fr/information/2406147)
 
@@ -47,7 +47,7 @@ La base Sirene est publiée sur <External href='https://data.gouv.fr'>data.gouv.
 
 Le moyen privilégié pour obtenir les données a la demande, ce sont les APIs. Au sein du service public, 3 APIs permettent d'interroger la base Sirene :
 
-- l'[API Sirene ouverte](/les-api/api-sirene-ouverte)
+- l'[API Sirene données ouvertes](/les-api/api-sirene-donnees-ouvertes)
 - l'[API Sirene de l'INSEE](/les-api/sirene_v3)
 - l'[API Entreprise](les-api/api-entreprise)
 
@@ -59,10 +59,10 @@ Ensuite chaque API se différencie par ses limites d'utilisation et les traiteme
 
 ### Première différence : les limitations d'usage et d'appel
 
-| API            | API Sirene ouverte                                                             | API Sirene de l'INSEE                                                                                                         | API Entreprise                                                                   |
-| -------------- | ------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| Limite d’usage | Totalement ouverte ([accéder à la documentation](/les-api/api-sirene-ouverte)) | Nécessite un compte ([se créer un compte](https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/sign-up.jag)) | Sous habilitation ([voir les conditions](/les-api/api-entreprise/demande-acces)) |
-| Limite d’appel | 7 appels par secondes                                                          | 30 appels par minute                                                                                                          | 2000 appels par 10 minutes                                                       |
+| API            | API Sirene données ouvertes                                                             | API Sirene de l'INSEE                                                                                                         | API Entreprise                                                                   |
+| -------------- | --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| Limite d’usage | Totalement ouverte ([accéder à la documentation](/les-api/api-sirene-donnees-ouvertes)) | Nécessite un compte ([se créer un compte](https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/sign-up.jag)) | Sous habilitation ([voir les conditions](/les-api/api-entreprise/demande-acces)) |
+| Limite d’appel | 7 appels par secondes                                                                   | 30 appels par minute                                                                                                          | 2000 appels par 10 minutes                                                       |
 
 ### Seconde différence : les données disponibles
 
@@ -77,15 +77,15 @@ En revanche certaines données ne sont pas présentes dans toutes les APIs :
 
 Le tableau ci-dessous fait une synthèse de ces différence pour vous aider a choisir :
 
-| API                                     | API Sirene ouverte | API Sirene de l'INSEE | API Entreprise |
-| --------------------------------------- | ------------------ | --------------------- | -------------- |
-| Non-diffusibles                         | ❌ Non             | ✅ Oui                | ✅ Oui         |
-| Refus d'immatriculation par le Greffe   | ❌ Non             | ✅ Oui                | ❌ Non         |
-| Recherche des prédecesseurs/successeurs | ❌ Non             | ✅ Oui                | ✅ Oui         |
-| geolocalisation                         | ✅ Oui             | ❌ Non                | ✅ Oui         |
+| API                                     | API Sirene données ouvertes | API Sirene de l'INSEE | API Entreprise |
+| --------------------------------------- | --------------------------- | --------------------- | -------------- |
+| Non-diffusibles                         | ❌ Non                      | ✅ Oui                | ✅ Oui         |
+| Refus d'immatriculation par le Greffe   | ❌ Non                      | ✅ Oui                | ❌ Non         |
+| Recherche des prédecesseurs/successeurs | ❌ Non                      | ✅ Oui                | ❌ Non         |
+| geolocalisation                         | ✅ Oui                      | ❌ Non                | ❌ Non         |
 
 Vous avez fait votre choix ? Lancez-vous :
 
-- l'[API Sirene ouverte](/les-api/api-sirene-ouverte)
+- l'[API Sirene données ouvertes](/les-api/api-sirene-donnees-ouvertes)
 - l'[API Sirene de l'INSEE](/les-api/sirene_v3)
 - l'[API Entreprise](les-api/api-entreprise)

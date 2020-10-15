@@ -1,5 +1,5 @@
 ---
-title: API Sirene ouverte
+title: API Sirene données ouvertes
 tagline: Accéder librement aux informations des entreprises et des établissements de la base Sirene
 owner: Direction Interministérielle du Numérique
 owner_acronym: DINUM
@@ -29,11 +29,11 @@ datagouv_uuid:
 visits_2019: 10000
 last_update: 11/10/2020
 content_intro: |
-  L’API Sirene ouverte permet à tout le monde d'accéder aux données de la base Sirene de l'INSEE, sans aucune limite d'accès.
+  L’API Sirene données ouvertes permet à tout le monde d'accéder aux données de la base Sirene de l'INSEE, sans aucune limite d'accès.
 
   La base Sirene ou répertoire Sirene est tenue par l'INSEE (Institut National de la Statistique et des Études Économiques) et contient les informations des entreprises enregistrées en France, ainsi que toutes les associations disposant d’un code SIRET.
 
-  ### A quoi sert l’API Sirene ouverte ?
+  ### A quoi sert l’API Sirene données ouvertes ?
 
   L'API s'utilise principalement de deux manières :
 

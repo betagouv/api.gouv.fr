@@ -95,8 +95,8 @@
       path: /les-api/api_agribalyse
   10:
     - type: ADD_API
-      what: Sirene ouverte
-      path: /les-api/api-sirene-ouverte
+      what: Sirene données ouvertes
+      path: /les-api/api-sirene-donnees-ouvertes
     - type: ADD_API
       what: Données ouvertes de l’URSSAF
     - type: ADD_API
