@@ -143,6 +143,8 @@ La propriété intellectuelle :
 | --------------------------------------- | -------------- |
 | Les brevets, modèles et marques déposés | INPI           |
 
+**NB**: Pour en savoir plus, n'hésitez pas à consulter le <External href='https://entreprise.api.gouv.fr/catalogue/'>catalogue des données disponibles dans l’API Entreprise</External>
+
 **NB**: Certaines données sont accessibles en open data (sans demande d'accès à l'API) via leur propre API et ne nécessitent pas de passer par API Entreprise. C'est notamment le cas de :
 
 - les [données de l'INPI](/les-api/api_inpi)
