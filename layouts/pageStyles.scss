@@ -205,6 +205,10 @@ a:not(.dont-apply-link-style):hover {
   line-height: 1.6rem;
   color: $darkestGrey;
 
+  img {
+    width: 100%;
+  }
+
   table {
     border-collapse: collapse;
     text-align: left;
