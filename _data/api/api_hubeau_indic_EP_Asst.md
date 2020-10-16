@@ -7,7 +7,7 @@ partners:
   - AFB
   - Observatoire national des services d'eau et d'assainissement
   - Bureau de Recherches Géologiques et Minières (BRGM)
-producer: agence-bio
+producer: eau-france
 keywords:
   - Indicateurs
   - Performance

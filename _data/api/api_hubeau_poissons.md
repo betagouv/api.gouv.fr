@@ -6,7 +6,7 @@ external_site: https://hubeau.eaufrance.fr/page/documentation_poisson/
 partners:
   - AFB
   - Bureau de Recherches Géologiques et Minières (BRGM)
-producer: agence-bio
+producer: eau-france
 keywords:
   - Poissons
   - Pêche électrique

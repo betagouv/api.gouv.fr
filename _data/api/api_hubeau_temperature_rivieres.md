@@ -8,7 +8,7 @@ partners:
   - ADES
   - Office français de la biodiversité (OFB)
   - Bureau de Recherches Géologiques et Minières (BRGM)
-producer: agence-bio
+producer: eau-france
 keywords:
   - Température
   - Capteur

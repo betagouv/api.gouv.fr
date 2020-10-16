@@ -1,7 +1,7 @@
 ---
 title: API Référentiel SANDRE Version 1 # nom commercial de l'API
 tagline: L'API Sandre Référentiel version 1 donne accès à l'ensemble des jeux de données de référence diffusé par le Service d'Administration Nationale des Données et Référentiels sur l'Eau (SANDRE) # une phrase maximum
-producer: agence-bio
+producer: eau-france
 is_open: 1 # 1 means API is fully open
 stat:
   url: # adresse à laquelle un nombre d'appels à l'API est publié, en content-type application/json

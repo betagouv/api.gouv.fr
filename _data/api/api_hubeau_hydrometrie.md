@@ -7,7 +7,7 @@ partners:
   - AFB
   - Service central d'hydrométéorologie et d'appui à la prévision des inondations (SCHAPI)
   - Bureau de Recherches Géologiques et Minières (BRGM)
-producer: agence-bio
+producer: eau-france
 keywords:
   - Hydrométrie
   - Référentiel hydrométrique
