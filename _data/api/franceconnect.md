@@ -1,6 +1,6 @@
 ---
-title: API FranceConnect et les API FranceConnectées
-tagline: Identifier les utilisateurs de votre site internet et accéder à certaines données d'état civil certifiées. Accéder à des données supplémentaires via les API FranceConnectées
+title: FranceConnect et les API FranceConnectées
+tagline: Identifier les utilisateurs de votre site internet et accéder à certaines données d'identité certifiées. Accéder à des données supplémentaires via les API FranceConnectées
 external_site: https://franceconnect.gouv.fr/partenaires
 is_open: -1 # -1 means API not open
 datapass_link: https://franceconnect.gouv.fr/partenaires
@@ -63,12 +63,12 @@ L‘API FranceConnect permet à des administrations, des collectivités ou des e
 
 Utiliser l'API FranceConnect pour identifier les utilisateurs de votre site permet également d'accéder à des données d'état civil. C'est ce qu'on appelle **l'identité pivot**.
 
-| Nom       | Description               |
-| --------- | ------------------------- |
-| Nom       | nom de naissance          |
-| Prénoms   |                           |
-| Sexe      | Homme / Femme             |
-| Naissance | date et lieu de naissance |
+| Nom       | Description                      |
+| --------- | -------------------------------- |
+| Nom       | nom de naissance                 |
+| Prénoms   | tous les prénoms de l’état civil |
+| Naissance | date  et lieu (ville/pays)       |
+| Sexe      | Homme / Femme                    |
 
 En plus de cette identité pivot, selon votre cas d'usage, vous pouvez aussi avoir accès aux informations complémentaires :
 
@@ -80,7 +80,7 @@ En plus de cette identité pivot, selon votre cas d'usage, vous pouvez aussi avo
 ### Comment ça marche ?
 
 _Schéma de fonctionnement de FranceConnect :_
-![Fonctionnement de FranceConnect](https://franceconnect.gouv.fr/images/how-it-works.svg)
+![Fonctionnement de FranceConnect](/images/divers/franceConnect.png)
 
 - Identifier vos utilisateurs simplement et de façon sécurisée, sans leur demander de compléter des formulaires et de créer et gérer des identifiant/mot de passe dédiés à votre service en ligne.
 - Recueillir tout ou partie des données mises à disposition par FranceConnect :
