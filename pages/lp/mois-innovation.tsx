@@ -19,7 +19,7 @@ usePreFooter={false}>
       href="https://framaforms.org/quelles-donnees-publiques-revez-vous-davoir-appel-a-idees-1602761927"
       onClick={() => logLPCTA('Bouton_top')}
     >
-      Je soumets mon idée de projet et ma demande de donnée publique
+      J'envoie mon idée de projet
     </ButtonLink>
   </div>
   <div>
@@ -63,7 +63,7 @@ usePreFooter={false}>
           href="https://framaforms.org/quelles-donnees-publiques-revez-vous-davoir-appel-a-idees-1602761927"
           onClick={() => logLPCTA('Bouton_middle')}
         >
-          Je soumets mon idée de projet et ma demande de données
+          Je soumets mon idée de projet
         </ButtonLink>
       </div>
     </div>
