@@ -5,7 +5,7 @@ import { ButtonLink } from '../../uiComponents';
 import constants from '../../constants';
 import { logLPCTA } from '../../utils/client/analytics';
 
-const Masks: React.FC = () => (
+const MoisInno: React.FC = () => (
 <Page
 title="A quelles données publiques rêvez d'avoir accès ?"
 description="Participer à l'appel à idée de l'équipe API dans le cadre du mois de l'innovation publique"
@@ -165,4 +165,4 @@ usePreFooter={false}>
 `}</style>
   </Page>);
 
-export default Masks;
+export default MoisInno;
