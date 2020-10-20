@@ -94,7 +94,7 @@ usePreFooter={false}>
     </h3>
     <div className="layout-center">
       <ButtonLink
-        href={constants.links.mailto.SUPPORT}
+        href="mailto:contact@api.gouv.fr?subject=Mois+de+l%E2%80%99innovation+%3A+question+sur+l%E2%80%99appel+%C3%A0+id%C3%A9es"
         onClick={() => logLPCTA('Bouton_contact')}
       >
         Comment pouvons-nous vous aider ?
