@@ -9,7 +9,7 @@ const Masks: React.FC = () => (
 <Page
 title="A quelles données publiques rêvez d'avoir accès ?"
 description="Participer à l'appel à idée de l'équipe API dans le cadre du mois de l'innovation publique"
-usePreFooter={false}
+usePreFooter={false}>
 
 <div className="hero-section text-wrapper text-style">
   <div>
@@ -163,3 +163,6 @@ usePreFooter={false}
     margin-bottom: 40px;
   }
 `}</style>
+  </Page>);
+
+export default Masks;
