@@ -13,7 +13,7 @@ const MoisInno: React.FC = () => (
   >
     <div className="hero-section text-wrapper text-style">
       <div>
-        <h1>A quelles données publiques rêvez d'avoir accès ?</h1>
+        <h1>A quelles données publiques rêvez vous d'avoir accès ?</h1>
         <h2>
           Dans le cadre du mois de l'innovation publique, participez à notre
           appel à idées
@@ -32,19 +32,22 @@ const MoisInno: React.FC = () => (
     <div className="question-section section">
       <div className="text-wrapper text-style">
         <p>
-          Administration, collectivité, entreprise privée, association, citoyen,
+          Administrations, collectivités, entreprises, associations, citoyens,
           cet appel à idées vous concerne ! La mission de l'équipe API est de
           faciliter la circulation des données afin de :
         </p>
         <ul>
-          <li>permettre la création de nouveaux usages et services</li>
+          <li>permettre la création de nouveaux services</li>
           <li>
             simplifier des services existants et dématérialiser des démarches
           </li>
+          <li>
+          faciliter le développement de nouveaux usages
+          </li>
         </ul>
         <p>
-          Dans le cadre de cette mission nous souhaitons écouter vos{' '}
-          <b>demandes d'accès à des données publiques</b> et les{' '}
+          Dans le cadre de cette mission nous souhaitons recueillir{' '}
+          <b>vos demandes d'accès à des données publiques</b> et les{' '}
           <b>services que vous souhaitez construire</b> grâce à ces données.
         </p>
       </div>
@@ -55,8 +58,7 @@ const MoisInno: React.FC = () => (
           Comment nous allons valoriser vos contributions
         </h3>
         <div>
-          Vos contributions sont récoltées grâce à un formulaire FramaForm Open
-          Source. Nous souhaitons grâce à elles :
+          Vos contributions sont récoltées à travers un formulaire FramaForm. Nous souhaitons :
           <ul>
             <li>
               Mieux comprendre les données qui vous intéressent et l'usage que
