@@ -41,9 +41,7 @@ const MoisInno: React.FC = () => (
           <li>
             simplifier des services existants et dématérialiser des démarches
           </li>
-          <li>
-            faciliter le développement de nouveaux usages
-          </li>
+          <li>faciliter le développement de nouveaux usages</li>
         </ul>
         <p>
           Dans le cadre de cette mission nous souhaitons recueillir{' '}
@@ -58,7 +56,10 @@ const MoisInno: React.FC = () => (
           Comment nous allons valoriser vos contributions
         </h3>
         <div>
-          Vos contributions sont récoltées à travers un formulaire FramaForm. Nous souhaitons :
+          <p>
+            Vos contributions sont récoltées à travers un formulaire FramaForm.
+            Nous souhaitons :
+          </p>
           <ul>
             <li>
               Mieux comprendre les données qui vous intéressent et l'usage que
