@@ -95,8 +95,8 @@ content_intro: |
 | Quotient familial         | Le quotient familial (QF) du mois précédent pour la famille                            | CAF                                                                               |
 | Composition familiale     | Liste des parents et des enfants de la famille (avec nom, prénoms, date de naissance)  | CAF                                                                               |
 | Adresse                   | L'adresse structurée détenue par la CAF                                                | CAF                                                                               |
-| statut demandeur d'emploi | Si applicable, les informations de statut demandeur d‘emploi d‘un individu             | Pôle-Emploi                                                                       |
-| statut étudiant           | Si applicable, les informations de statut étudiant d‘un individu                       | Ministère de l'enseignement supérieur, de la recherche et de l'innovation (MESRI) |
+| Statut demandeur d'emploi | Si applicable, les informations de statut demandeur d‘emploi d‘un individu             | Pôle-Emploi                                                                       |
+| Statut étudiant           | Si applicable, les informations de statut étudiant d‘un individu                       | Ministère de l'enseignement supérieur, de la recherche et de l'innovation (MESRI) |
 
 Pour plus d’informations techniques sur la structuration des données, vous pouvez <External href='/documentation/api-particulier'>consulter la documentation technique</External>
 
