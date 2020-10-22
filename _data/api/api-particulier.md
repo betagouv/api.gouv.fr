@@ -1,6 +1,6 @@
 ---
 title: API Particulier
-tagline: Accédez aux données fiscales (DGFIP) et familiales (CAF) des particuliers pour simplifier des démarches administratives
+tagline: Accédez aux données fiscales (DGFIP), familiales (CAF), au statut pôle-emploi et au statut étudiant des particuliers pour simplifier des démarches administratives
 external_site: https://particulier.api.gouv.fr
 is_open: -1 # -1 means API not open
 datapass_link: https://datapass.api.gouv.fr/api-particulier
@@ -40,10 +40,16 @@ stat:
 partners:
   - DGFiP
   - CNAF
+  - Pôle-Emploi
+  - Ministère de l'enseignement supérieur, de la recherche et de l'innovation (MESRI)
 producer: dinum
 keywords:
   - Impots
   - Quotient Familial
+  - statut
+  - étudiant
+  - demandeur
+  - emploi
   - Revenu Fiscal de Référence
   - Adresse
   - Justificatif de domicile
@@ -61,7 +67,7 @@ visits_2019: 8642
 uptime: 99.992 # https://uptimerobot.com/dashboard#777746216 * https://uptimerobot.com/dashboard#778826562 / 2
 last_update: 10/12/2019
 content_intro: |
-  API Particulier facilite l'accès des administrations aux données fiscales (DGFIP) et familiales (CAF) d'un citoyen, pour simplifier les démarches administratives mises en oeuvre par les collectivités et les administrations.
+  API Particulier facilite l'accès des administrations aux données fiscales (DGFIP), familiales (CAF), au statut pôle-emploi et au statut étudiant d'un citoyen, pour simplifier les démarches administratives mises en oeuvre par les collectivités et les administrations.
 
   ### A quoi sert l’API Particulier ?
 
@@ -80,15 +86,17 @@ content_intro: |
 
 ### Données accessibles dans l'API
 
-| Nom                   | Description                                                                            | Origine des données |
-| --------------------- | -------------------------------------------------------------------------------------- | ------------------- |
-| RFR                   | Le revenu fiscal de référence (RFR) de l'année en cours et le nombre de parts du foyer | DGFIP               |
-| Avis d’imposition     | Montant d'impôt, revenu brut, net, imposable, date de recouvrement et d'établissement  | DGFIP               |
-| Déclarants            | les nom, prénoms, date de naissance des déclarants du foyer fiscal                     | DGFIP               |
-| Adresse fiscale       | l'adresse fiscale structurée ainsi que les coordonnées GPS                             | DGFIP               |
-| Quotient familial     | le quotient familial (QF) du mois précédent pour la famille                            | CAF                 |
-| Composition familiale | liste des parents et des enfants de la famille (avec nom, prénoms, date de naissance)  | CAF                 |
-| Adresse               | l'adresse structurée détenue par la CAF                                                | CAF                 |
+| Nom                       | Description                                                                            | Origine des données                                                               |
+| ------------------------- | -------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| RFR                       | Le revenu fiscal de référence (RFR) de l'année en cours et le nombre de parts du foyer | DGFIP                                                                             |
+| Avis d’imposition         | Montant d'impôt, revenu brut, net, imposable, date de recouvrement et d'établissement  | DGFIP                                                                             |
+| Déclarants                | Les nom, prénoms, date de naissance des déclarants du foyer fiscal                     | DGFIP                                                                             |
+| Adresse fiscale           | L'adresse fiscale structurée ainsi que les coordonnées GPS                             | DGFIP                                                                             |
+| Quotient familial         | Le quotient familial (QF) du mois précédent pour la famille                            | CAF                                                                               |
+| Composition familiale     | Liste des parents et des enfants de la famille (avec nom, prénoms, date de naissance)  | CAF                                                                               |
+| Adresse                   | L'adresse structurée détenue par la CAF                                                | CAF                                                                               |
+| statut demandeur d'emploi | Si applicable, les informations de statut demandeur d‘emploi d‘un individu             | Pôle-Emploi                                                                       |
+| statut étudiant           | Si applicable, les informations de statut étudiant d‘un individu                       | Ministère de l'enseignement supérieur, de la recherche et de l'innovation (MESRI) |
 
 Pour plus d’informations techniques sur la structuration des données, vous pouvez <External href='/documentation/api-particulier'>consulter la documentation technique</External>
 
