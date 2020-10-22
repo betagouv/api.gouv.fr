@@ -98,17 +98,18 @@
       what: Sirene données ouvertes
       path: /les-api/api-sirene-donnees-ouvertes
     - type: ADD_API
+      what: Registre des Bénéficiaires Effectifs (RBE) produite par l'INPI
+      path: /les-api/api-rbe
+    - type: ADD_API
+      what: Fichiers des Comptes Bancaires (FiCoBa) produite par le DGFiP
+  11:
+    - type: ADD_API
       what: Données ouvertes de l’URSSAF
     - type: ADD_API
       what: Données ouvertes de la ville de Paris
     - type: ADD_API
       what: Répertoire National des Métiers
       path: https://rnm.artisanat.fr/api/
-    - type: ADD_API
-      what: Fichiers des Comptes Bancaires (FiCoBa) produite par le DGFiP
-    - type: ADD_API
-      what: Registre des Bénéficiaires Effectifs (RBE) produite par l'INPI
-  11:
     - type: INFO
       what: |
         Intégration tiers déclaratant des [APIs de l’URSSAF](https://portailapi.urssaf.fr/fr/) :
