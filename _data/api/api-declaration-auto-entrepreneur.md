@@ -4,8 +4,19 @@ tagline: Connectez-vous directement à l’Urssaf pour déclarer les chiffres d�
 external_site: https://open.urssaf.fr/explore/?sort=modified
 producer: urssaf
 is_open: -1 # 1 means API is fully open
+access_page:
+  - who:
+      - Un particulier
+      - Une collectivité
+      - Une administration
+      - Une entreprise
+    is_eligible: 0
+    description: |
+      Pour accéder à cette API gratuite, vous devez vous <External href="https://portailapi.urssaf.fr/connexion">créer un compte</External> puis en faire la demande via le formulaire de demande de souscription et signer la licence d’utilisation.
+
+      <Button href="https://portailapi.urssaf.fr/fr/">Se créer un compte sur le portail Urssaf et remplir une demande</Button>
 contact_link: contact.tiercedeclaration@urssaf.fr
-doc_tech_link: https://portailapi.urssaf.fr/index.php?option=com_apiportal&view=definition&managerId=1&menuId=181&format=raw&stateReturn=L2ZyLz9JdGVtaWQ9MTgxJmFwaUlkPWNiNTUwNDk4LWMyOGItNGJiMS05MGUwLTliYjlkMjdlMTI0NCZhcGlOYW1lPUFQSSUyMFRpZXJjZSUyMERlY2xhcmF0aW9uJTIwYXV0by1lbnRyZXByZW5ldXImYXBpVmVyc2lvbj0xLjIuMCZhcGl0YWI9dGVzdHMmbWFuYWdlcklkPTEmbWVudUlkPTE4MSZvcHRpb249Y29tX2FwaXBvcnRhbCZyZW5kZXJUb29sPTImdHlwZT1yZXN0JnVzYWdlPWFwaSZ2aWV3PWFwaXRlc3Rlcg==&path=%2Fdiscovery%2Fswagger%2Fapi%2Fid%2Fcb550498-c28b-4bb1-90e0-9bb9d27e1244%3FswaggerVersion%3D2.0%26filename%3DAPI%2520Tierce%2520Declaration%2520auto-entrepreneur.json%26extensions%3Dfalse
+doc_tech_link: /api/v1/proxy/https%3A%2F%2Fportailapi.urssaf.fr%2Findex.php%3Foption%3Dcom_apiportal%26view%3Ddefinition%26managerId%3D1%26menuId%3D181%26format%3Draw%26stateReturn%3DL2ZyLz9JdGVtaWQ9MTgxJmFwaUlkPWNiNTUwNDk4LWMyOGItNGJiMS05MGUwLTliYjlkMjdlMTI0NCZhcGlOYW1lPUFQSSUyMFRpZXJjZSUyMERlY2xhcmF0aW9uJTIwYXV0by1lbnRyZXByZW5ldXImYXBpVmVyc2lvbj0xLjIuMCZhcGl0YWI9dGVzdHMmbWFuYWdlcklkPTEmbWVudUlkPTE4MSZvcHRpb249Y29tX2FwaXBvcnRhbCZyZW5kZXJUb29sPTImdHlwZT1yZXN0JnVzYWdlPWFwaSZ2aWV3PWFwaXRlc3Rlcg%3D%3D%26path%3D%252Fdiscovery%252Fswagger%252Fapi%252Fid%252Fcb550498-c28b-4bb1-90e0-9bb9d27e1244%253FswaggerVersion%253D2.0%2526filename%253DAPI%252520Tierce%252520Declaration%252520auto-entrepreneur.json%2526extensions%253Dfalse
 doc_tech_external: https://portailapi.urssaf.fr/images/Documentation/ACOSS-Documentation-API-TDAEV1_v12.pdf
 keywords:
   - Urssaf
@@ -26,7 +37,7 @@ L’API Tierce Déclaration auto-entrepreneur permet, pour le compte d'un auto-e
 
 L’API Tierce Déclaration auto-entrepreneur permet en outre la consultation, l’ajout et la suppression de mandats Sepa avec l’Urssaf.
 
-Du point de vue de l'usager, l'API TD Pajemploi permet au tiers déclarant de :
+Du point de vue de l'usager, l'API permet au tiers déclarant de :
 
 - Notifier l’Urssaf d’une autorisation de déclaration d’un auto-entrepreneur en son nom (mandat)
 - Déclencher les démarches de déclarations et de paiements auprès de l’Urssaf, directement depuis son site Internet ou l’application mobile
