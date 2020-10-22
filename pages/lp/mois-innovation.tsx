@@ -42,7 +42,7 @@ const MoisInno: React.FC = () => (
             simplifier des services existants et dématérialiser des démarches
           </li>
           <li>
-          faciliter le développement de nouveaux usages
+            faciliter le développement de nouveaux usages
           </li>
         </ul>
         <p>
