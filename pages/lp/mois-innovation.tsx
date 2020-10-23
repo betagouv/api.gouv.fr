@@ -48,10 +48,12 @@ const MoisInno: React.FC = () => (
           <b>vos demandes d'accès à des données publiques</b> et les{' '}
           <b>services que vous souhaitez construire</b> grâce à ces données.
         </p>
-        <p> 
-          Par données publiques nous entendons les documents administratifs produits ou reçus 
-          dans le cadre d'une mission de service public par l'Etat, les collectivités territoriales 
-          ainsi que par les autres personnes de droit public ou de droit privé chargées d'une telle mission.
+        <p>
+          Par données publiques nous entendons les documents administratifs
+          produits ou reçus dans le cadre d'une mission de service public par
+          l'Etat, les collectivités territoriales ainsi que par les autres
+          personnes de droit public ou de droit privé chargées d'une telle
+          mission.
         </p>
       </div>
     </div>
