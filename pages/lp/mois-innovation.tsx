@@ -49,7 +49,7 @@ const MoisInno: React.FC = () => (
           <b>services que vous souhaitez construire</b> grâce à ces données.
         </p>
         <p>
-          Par données publiques nous entendons les documents administratifs
+          Par données publiques nous entendons <ExternalLink href=‘https://www.cada.fr/particulier/le-document-est-il-administratif’>les documents administratifs</ExternalLink>
           produits ou reçus dans le cadre d'une mission de service public par
           l'Etat, les collectivités territoriales ainsi que par les autres
           personnes de droit public ou de droit privé chargées d'une telle
