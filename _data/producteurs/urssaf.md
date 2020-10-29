@@ -1,4 +1,4 @@
 ---
-name: Urssaf (Acoss)
+name: Acoss
 logo: urssaf.png
 ---

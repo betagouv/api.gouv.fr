@@ -1,6 +1,6 @@
 ---
 title: API Tierce Déclaration auto-entrepreneur
-tagline: Connectez-vous directement à l’Urssaf pour déclarer les chiffres d’affaires pour le compte d’un auto-entrepreneur en tant que tiers déclarant
+tagline: Connectez-vous directement à l’Urssaf pour déclarer les chiffres d’affaires pour le compte d’un auto-entrepreneur en tant que tiers-déclarant
 external_site: https://open.urssaf.fr/explore/?sort=modified
 producer: urssaf
 is_open: -1 # 1 means API is fully open
@@ -14,10 +14,10 @@ access_page:
     description: |
       Pour accéder à cette API gratuite, vous devez vous <External href="https://portailapi.urssaf.fr/connexion">créer un compte</External> puis en faire la demande via le formulaire de demande de souscription et signer la licence d’utilisation.
 
-      <Button href="https://portailapi.urssaf.fr/fr/">Se créer un compte sur le portail Urssaf et remplir une demande</Button>
+      <Button href="https://portailapi.urssaf.fr/fr/component/apiportal/registration">Se créer un compte sur le portail Urssaf et remplir une demande</Button>
 contact_link: contact.tiercedeclaration@urssaf.fr
 doc_tech_link: /api/v1/proxy/https%3A%2F%2Fportailapi.urssaf.fr%2Findex.php%3Foption%3Dcom_apiportal%26view%3Ddefinition%26managerId%3D1%26menuId%3D181%26format%3Draw%26stateReturn%3DL2ZyLz9JdGVtaWQ9MTgxJmFwaUlkPWNiNTUwNDk4LWMyOGItNGJiMS05MGUwLTliYjlkMjdlMTI0NCZhcGlOYW1lPUFQSSUyMFRpZXJjZSUyMERlY2xhcmF0aW9uJTIwYXV0by1lbnRyZXByZW5ldXImYXBpVmVyc2lvbj0xLjIuMCZhcGl0YWI9dGVzdHMmbWFuYWdlcklkPTEmbWVudUlkPTE4MSZvcHRpb249Y29tX2FwaXBvcnRhbCZyZW5kZXJUb29sPTImdHlwZT1yZXN0JnVzYWdlPWFwaSZ2aWV3PWFwaXRlc3Rlcg%3D%3D%26path%3D%252Fdiscovery%252Fswagger%252Fapi%252Fid%252Fcb550498-c28b-4bb1-90e0-9bb9d27e1244%253FswaggerVersion%253D2.0%2526filename%253DAPI%252520Tierce%252520Declaration%252520auto-entrepreneur.json%2526extensions%253Dfalse
-doc_tech_external: https://portailapi.urssaf.fr/images/Documentation/ACOSS-Documentation-API-TDAEV1_v12.pdf
+doc_tech_external: https://portailapi.urssaf.fr/fr/?option=com_apiportal&view=apitester&usage=api&apiName=API%20Tierce%20Declaration%20auto-entrepreneur&sn=API%20Tierce%20Declaration%20auto-entrepreneur&Itemid=181&apitab=tests&tab=&apiId=cb550498-c28b-4bb1-90e0-9bb9d27e1244&menuId=181&apiVersion=1.2.0&managerId=1&renderTool=2&type=rest
 keywords:
   - Urssaf
   - Auto
@@ -29,7 +29,7 @@ themes:
 last_update: 16/10/2020
 ---
 
-L’API Tierce Déclaration auto-entrepreneur facilite l’accès aux éditeurs de logiciels, aux plateformes collaboratives et de services en ligne, aux données et aux démarches relatives à l’Urssaf pour le compte d’un auto-entrepreneur.
+L’API Tierce Déclaration auto-entrepreneur facilite l’accès aux éditeurs de logiciels, aux plateformes collaboratives et de services en ligne, aux données et aux démarches relatives à l’Urssaf pour le compte d’un auto-entrepreneur en qualité de tiers-déclarant.
 
 ### A quoi sert l’API Tierce Déclaration auto-entrepreneur ?
 
@@ -65,7 +65,7 @@ Un tiers déclarant est une personne physique ou morale qui assure, à titre pro
 
 L’API Tierce Déclaration auto-entrepreneur est une API REST gratuite avec un accès restreint qui utilise la cinématique d’authentification Oauth2 Client Credentials.
 
-Pour accéder à cette API gratuite, il faut en faire la demande via le formulaire de demande de souscription ou via email et signer la licence d’utilisation.
+Pour accéder à cette API gratuite, il faut en faire la demande [via le formulaire de demande de souscription](https://portailapi.urssaf.fr/fr/component/apiportal/registration) ou [via email](mailto:contact.tiercedeclaration@urssaf.fr) et signer la licence d’utilisation.
 
 Une fois le dossier validé, un accès API bac à sable puis un accès API production sont fournis.
 

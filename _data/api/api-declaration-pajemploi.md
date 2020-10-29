@@ -1,6 +1,6 @@
 ---
 title: API Tierce Déclaration Pajemploi
-tagline: Connectez-vous directement à l’Urssaf pour accéder aux services de Pajemploi pour le compte d’un particulier employeur
+tagline: Connectez-vous directement à l’Urssaf pour accéder aux services de Pajemploi pour le compte d’un particulier employeur en tant que tiers-déclarant
 external_site: https://open.urssaf.fr/explore/?sort=modified
 producer: urssaf
 is_open: -1 # 1 means API is fully open
@@ -14,10 +14,10 @@ access_page:
     description: |
       Pour accéder à cette API gratuite, vous devez vous <External href="https://portailapi.urssaf.fr/connexion">créer un compte</External> puis en faire la demande via le formulaire de demande de souscription et signer la licence d’utilisation.
 
-      <Button href="https://portailapi.urssaf.fr/fr/">Se créer un compte sur le portail Urssaf et remplir une demande</Button>
+      <Button href="https://portailapi.urssaf.fr/fr/component/apiportal/registration">Se créer un compte sur le portail Urssaf et remplir une demande</Button>
 contact_link: contact.tiercedeclaration@urssaf.fr
 doc_tech_link: /api/v1/proxy/https%3A%2F%2Fportailapi.urssaf.fr%2Findex.php%3Foption%3Dcom_apiportal%26view%3Ddefinition%26managerId%3D1%26menuId%3D181%26format%3Draw%26stateReturn%3DL2ZyLz9JdGVtaWQ9MTgxJmFwaUlkPTRlODRlMTdjLTk2NTQtNDBkMy1hYWRjLWY3MTdmYWM1ZGVlNSZhcGlOYW1lPUFQSSUyMFRpZXJjZSUyMERlY2xhcmF0aW9uJTIwUEFKRSZhcGlWZXJzaW9uPTEuMC4wJmFwaXRhYj10ZXN0cyZtYW5hZ2VySWQ9MSZtZW51SWQ9MTgxJm9wdGlvbj1jb21fYXBpcG9ydGFsJnJlbmRlclRvb2w9MiZ0eXBlPXJlc3QmdXNhZ2U9YXBpJnZpZXc9YXBpdGVzdGVy%26path%3D%252Fdiscovery%252Fswagger%252Fapi%252Fid%252F4e84e17c-9654-40d3-aadc-f717fac5dee5%253FswaggerVersion%253D2.0%2526filename%253DAPI%252520Tierce%252520Declaration%252520PAJE.json%2526extensions%253Dfalse
-doc_tech_external: https://portailapi.urssaf.fr/images/Documentation/ACOSS-Documentation-API-PAJEV1_v12.pdf
+doc_tech_external: https://portailapi.urssaf.fr/fr/?option=com_apiportal&view=apitester&usage=api&apiName=API%20Tierce%20Declaration%20PAJE&sn=API%20Tierce%20Declaration%20PAJE&Itemid=181&apitab=tests&tab=&apiId=4e84e17c-9654-40d3-aadc-f717fac5dee5&menuId=181&apiVersion=1.0.0&managerId=1&renderTool=2&type=rest
 keywords:
   - Urssaf
   - Particulier
@@ -30,11 +30,11 @@ themes:
 last_update: 16/10/2020
 ---
 
-L’API Tierce Déclaration Pajemploi facilite l’accès aux éditeurs de logiciels, aux plateformes collaboratives et de services en ligne, aux données et aux démarches relatives à Pajemploi pour le compte d’un particulier employeur.
+L’API Tierce Déclaration Pajemploi facilite l’accès aux éditeurs de logiciels, aux plateformes collaboratives et de services en ligne, aux données et aux démarches relatives à Pajemploi pour le compte d’un particulier employeur en qualité de tiers-déclarant.
 
 ### A quoi sert l’API Tierce Déclaration Pajemploi ?
 
-L'API Tierce Déclaration Pajemploi permet, pour le compte d'un particulier employeur, d'obtenir les montants des cotisations et des contributions sociales pour une activité relevant du régime Pajemploi, de déclarer le salaire versé à une assistante maternelle agrée ou une garde d’enfants à domicile auprès des organismes de recouvrement concernés et de procéder à la retenue à la source prévue à l'article 204A du code général des impôts.
+L'API Tierce Déclaration Pajemploi permet, pour le compte d'un particulier employeur et en qualité de tiers-déclarant, d'obtenir les montants des cotisations et des contributions sociales pour une activité relevant de Pajemploi, de déclarer le salaire versé à un·e assistant·e maternel·le agré·e ou une garde d’enfants à domicile auprès des organismes de recouvrement concernés et de procéder à la retenue à la source prévue à l'article 204A du code général des impôts
 
 Du point de vue de l'usager, l'API TD Pajemploi permet au tiers déclarant de :
 
@@ -65,7 +65,7 @@ Un particulier employeur est une personne physique qui emploie un ou plusieurs s
 
 L’API Tierce Déclaration Pajemploi est une API REST gratuite avec un accès restreint qui utilise la cinématique d’authentification Oauth2 Client Credentials.
 
-Pour accéder à cette API gratuite, il faut en faire la demande via le formulaire de demande de souscription ou via email et signer la licence d’utilisation.
+Pour accéder à cette API gratuite, il faut en faire la demande [via le formulaire de demande de souscription](https://portailapi.urssaf.fr/fr/component/apiportal/registration) ou [via email](mailto:contact.tiercedeclaration@urssaf.fr) et signer la licence d’utilisation.
 
 Une fois le dossier validé, un accès API bac à sable puis un accès API production sont fournis.
 
