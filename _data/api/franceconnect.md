@@ -98,11 +98,11 @@ Certaines API fonctionnent avec FranceConnect et permettent de récupérer tout 
 | Revenu fiscal de référence | Les revenus déclarés auprès de l'administration fiscale                                       | [API Impôt particulier](/les-api/impot-particulier) |
 | Adresse fiscale            | L'adresse déclarée auprès de l'administration fiscale                                         | [API Impôt particulier](/les-api/impot-particulier) |
 | Nombre de parts fiscales   |                                                                                               | [API Impôt particulier](/les-api/impot-particulier) |
-| bénéficiaires              | Les bénéficiaires de l'individu connecté via FranceConnect                                    | [API de droits](/les-api/api_ameli_droits_cnam)     |
-| caisse                     | L'organisme de rattachement du bénéficiaire (régime, centre de gestion, adresse de la caisse) | [API de droits](/les-api/api_ameli_droits_cnam)     |
-| niveau de couverture       | Droits de base, droits à une complémentaire santé solidaire, présence d'un médecin traitant   | [API de droits](/les-api/api_ameli_droits_cnam)     |
-| motifs d’exonération       | Uniquement accessible aux établissements de soins                                             | [API de droits](/les-api/api_ameli_droits_cnam)     |
-| médecin traitant           | Uniquement accessible aux établissements de soins                                             | [API de droits](/les-api/api_ameli_droits_cnam)     |
+| bénéficiaires              | Les bénéficiaires de l'individu connecté via FranceConnect                                    | [API de droits Assurance Maladie](/les-api/api_ameli_droits_cnam)     |
+| caisse                     | L'organisme de rattachement du bénéficiaire (régime, centre de gestion, adresse de la caisse) | [API de droits Assurance Maladie](/les-api/api_ameli_droits_cnam)     |
+| niveau de couverture       | Droits de base, droits à une complémentaire santé solidaire, présence d'un médecin traitant   | [API de droits Assurance Maladie](/les-api/api_ameli_droits_cnam)     |
+| motifs d’exonération       | Uniquement accessible aux établissements de soins                                             | [API de droits Assurance Maladie](/les-api/api_ameli_droits_cnam)     |
+| médecin traitant           | Uniquement accessible aux établissements de soins                                             | [API de droits Assurance Maladie](/les-api/api_ameli_droits_cnam)     |
 
 ### Comment ça marche ?
 

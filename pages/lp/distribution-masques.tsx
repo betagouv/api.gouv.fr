@@ -10,6 +10,7 @@ const Masks: React.FC = () => (
     title="Gagnez du temps et protégez vos concitoyens"
     description="Comment faciliter la distribution de masques pendant la crise du Covid-19"
     usePreFooter={false}
+    noIndex={true}
   >
     <div className="hero-section text-wrapper text-style">
       <div>

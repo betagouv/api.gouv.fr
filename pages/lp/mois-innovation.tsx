@@ -10,6 +10,7 @@ const MoisInno: React.FC = () => (
     title="A quelles données publiques rêvez d'avoir accès ?"
     description="Participer à l'appel à idée de l'équipe API dans le cadre du mois de l'innovation publique"
     usePreFooter={false}
+    noIndex={true}
   >
     <div className="hero-section text-wrapper text-style">
       <div>
