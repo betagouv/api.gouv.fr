@@ -47,6 +47,13 @@ const teamData = [
     img: 'Christophe.jpg',
   },
   {
+    name: 'Loïc Delmaire',
+    title: 'API Entreprise',
+    linkedin:
+      'https://www.linkedin.com/in/%F0%9F%90%A4-lo%C3%AFc-delmaire-%F0%9F%90%A4-46813649/',
+    img: 'Loic.jpg',
+  },
+  {
     name: 'Victor Gross',
     title: 'Développement des offres API',
     linkedin: 'https://fr.linkedin.com/in/victorgross',
