@@ -17,6 +17,12 @@ const teamData = [
     img: 'Patrick.jpg',
   },
   {
+    name: 'Alexandre de Pablo',
+    title: 'API Entreprise',
+    linkedin: 'https://www.linkedin.com/in/alexandre-de-pablo-4b9a49a6/',
+    img: 'Alexandre.jpg',
+  },
+  {
     name: 'Xavier Jouppe',
     title: 'Api.gouv.fr',
     linkedin: 'https://www.linkedin.com/in/xavier-jouppe-a9030579/',
