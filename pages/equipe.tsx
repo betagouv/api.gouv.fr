@@ -17,7 +17,7 @@ const teamData = [
     img: 'Patrick.jpg',
   },
   {
-    name: 'Alexandre de Pablo',
+    name: 'Alexandre De Pablo',
     title: 'API Entreprise',
     linkedin: 'https://www.linkedin.com/in/alexandre-de-pablo-4b9a49a6/',
     img: 'Alexandre.jpg',
