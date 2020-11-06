@@ -1,6 +1,6 @@
 ---
 title: API Professionnels BIO
-tagline: Accéder à la liste des producteurs et commercants engagés en bio et notifiés auprès de l’Agence Bio
+tagline: Accéder à la liste des producteurs, transformateurs et commercants engagés en bio et notifiés auprès de l’Agence Bio
 producer: agence-bio
 category: public
 is_open: 1
@@ -14,7 +14,6 @@ keywords:
   - Agence Bio
   - Territoire
 contact_link: dsi@agencebio.org
-doc_tech_external: https://github.com/entrepreneur-interet-general/CartoBio-Presentation/blob/master/docs/api-territoires.md
 doc_tech_link: https://cartobio.org/api/v1/documentation/json
 partenaires:
   - Ministère de l’Agriculture et de l’Alimentation
@@ -32,18 +31,34 @@ rate_limiting_resume: 50 appels / seconde / IP
 content_intro: |
   Accéder à la liste des opérateurs économiques engagés en bio et notifiés auprès de l’Agence Bio avec les principales informations publiques qui leur sont rattachées (identification de l’établissement, activité, produits certifiés, lien vers le certificat bio)
 
-  ### À quoi sert l’API CartoBio - Territoires ?
+  ### À quoi sert l’API Professionnels BIO ?
 
   L’API peut être utilisée de deux manières :
 
   - rechercher une liste d’opérateurs bio selon des critères géographique et d’activité,
   - rechercher un opérateur de manière unitaire en fonction de leur identifiant SIRET, n° BIO ou de leur raison sociale.
-
-  Chaque recherche retourne des informations détaillées sur les opérateurs : adresses, activités, produits certifiés, organisme certificateur, lien vers le certificat
 ---
 
-#### Données disponibles
+### Données de l’API
+
+Chaque recherche retourne des informations détaillées sur les opérateurs : adresses, activités, produits certifiés, organisme certificateur, lien vers le certificat
+
+Voici les données accessibles :
+
+| Donnée                              | Description                     |
+| ----------------------------------- | ------------------------------- |
+| Numero bio | Identifiant fonctionnel de l'opérateur BIO utilisé également dans d'autres outils de l'administration publique |
+| NumeroPacage | numero de déclaration à la PAC de l'opérateur (9 caractères) |
+| Siret | SIRET renseigné par l'opérateur (14 caractères) |
+| Informations générales | dénomination, code NAF, gérant |
+| Catégorie de l'opérateur | Vente directe, Grossiste, Grande et moyenne surfce, magasin spécialisé, Artisant/Commerçant, Restaurant |
+| Adresse(s) | Liste des adresses de l'opérateur (minimum le siège social) |
+| Production(s) | Liste des productions certifiées bio de l'opérateur (plusieurs possibles) |
+| Activité(s) | Liste des activités BIO de l'opérateur (plusieurs activités possibles) |
+| Certificat(s) | Liste des informations relatives à la certification de l'opérateur  |
+| Site | Site officiel de l'opérateur (hors réseaux sociaux)  |
+
 
 #### D'où vient la donnée ?
 
-Ici ce serait intéressant d'évoquer
+Ici il serait interessant de développer la collecte des informations par l'agence BIO, auprès des organismes certificateurs
