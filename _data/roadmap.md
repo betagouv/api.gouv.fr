@@ -97,12 +97,14 @@
     - type: ADD_API
       what: Sirene données ouvertes
       path: /les-api/api-sirene-donnees-ouvertes
+  11:
+    - type: ADD_API
+      what: Fichiers des Comptes Bancaires (FiCoBa) produite par le DGFiP
     - type: ADD_API
       what: Registre des Bénéficiaires Effectifs (RBE) produite par l'INPI
       path: /les-api/api-rbe
     - type: ADD_API
       what: Fichiers des Comptes Bancaires (FiCoBa) produite par le DGFiP
-  11:
     - type: ADD_API
       what: Données ouvertes de l’URSSAF
     - type: ADD_API
@@ -110,13 +112,14 @@
     - type: ADD_API
       what: Répertoire National des Métiers
       path: https://rnm.artisanat.fr/api/
-    - type: INFO
-      what: |
-        Intégration tiers déclaratant des [APIs de l’URSSAF](https://portailapi.urssaf.fr/fr/) :
-
-        - API Déclaration auto-entrepreneur
-        - API Déclaration CESU
-        - API Déclaration PAJE
+    - type: ADD_API
+      what: Registre des Bénéficiaires Effectifs (RBE) produite par l'INPI
+    - type: ADD_API
+      what: Déclaration auto-entrepreneur
+    - type: ADD_API
+      what: Déclaration PAJE
+    - type: ADD_API
+      what: Déclaration CESU
     - type: ADD_API
       what: Données Ouvertes Loire-Atlantique
   12:
@@ -143,4 +146,6 @@
   01:
     - type: ADD_API
       what: Indemnités Journalières distribuée par la CNAM
+    - type: ADD_API
+      what: Professionnels BIO par l'agence BIO
 ---
