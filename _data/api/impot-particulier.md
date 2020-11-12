@@ -57,7 +57,7 @@ monitoring_description: |
   La DGFIP s’engage à ce que le service soit accessible à plus de 98,5% et à communiquer sur les coupures de service ponctuelles qui pourraient survenir.
 themes:
   - Particulier
-contact_link: impot.particulier@api.gouv.fr
+contact_link: bureau.capusagers-apimanagement@dgfip.finances.gouv.fr
 visits_2019: 13000
 doc_tech_link: /swaggers/api-impot-particulier.yaml
 last_update: 08/10/2019

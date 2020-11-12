@@ -1,26 +1,29 @@
 import React from 'react';
 
 import Page from '../../layouts/page';
-import { ButtonLink } from '../../uiComponents';
+import { ButtonLink, ExternalLink } from '../../uiComponents';
 import constants from '../../constants';
 import { logLPCTA } from '../../utils/client/analytics';
 
-const Masks: React.FC = () => (
+const MoisInno: React.FC = () => (
   <Page
-    title="Gagnez du temps et protégez vos concitoyens"
-    description="Comment faciliter la distribution de masques pendant la crise du Covid-19"
+    title="A quelles données publiques rêvez d'avoir accès ?"
+    description="Participer à l'appel à idée de l'équipe API dans le cadre du mois de l'innovation publique"
     usePreFooter={false}
     noIndex={true}
   >
     <div className="hero-section text-wrapper text-style">
       <div>
-        <h1>Gagnez du temps et protégez vos concitoyens</h1>
-        <h2>Simplifiez la distribution de masques dans votre commune</h2>
+        <h1>A quelles données publiques rêvez vous d'avoir accès ?</h1>
+        <h2>
+          Dans le cadre du mois de l'innovation publique, participez à notre
+          appel à idées
+        </h2>
         <ButtonLink
-          href="https://datapass.api.gouv.fr/api-particulier"
+          href="https://framaforms.org/quelles-donnees-publiques-revez-vous-davoir-appel-a-idees-1602761927"
           onClick={() => logLPCTA('Bouton_top')}
         >
-          Je veux créer un service de distribution de masques
+          J'envoie mon idée de projet
         </ButtonLink>
       </div>
       <div>
@@ -30,51 +33,64 @@ const Masks: React.FC = () => (
     <div className="question-section section">
       <div className="text-wrapper text-style">
         <p>
-          En connectant le portail de votre ville à l’API Particulier, il suffit
-          à vos concitoyens de donner leur numéro fiscal et leur numéro
-          d'allocataire pour que votre équipe puisse accéder à :
+          Administrations, collectivités, entreprises, associations, citoyens,
+          cet appel à idées vous concerne ! La mission de l'équipe API est de
+          faciliter la circulation des données afin de :
         </p>
         <ul>
+          <li>permettre la création de nouveaux services</li>
           <li>
-            l'adresse connue par l'administration fiscale au 1er janvier et le
-            nombre de personnes à charge
+            simplifier des services existants et dématérialiser des démarches
           </li>
-          <li>
-            l'adresse ainsi que la composition du foyer familial (adulte et
-            enfant) pour les allocataires CAF
-          </li>
+          <li>faciliter le développement de nouveaux usages</li>
         </ul>
         <p>
-          Avec ces informations, déterminez le{' '}
-          <b>nombre de masques à distribuer pour chaque foyer</b>, ainsi que la
-          taille des masques, adulte ou enfant, en fonction de la date de
-          naissance.
+          Dans le cadre de cette mission nous souhaitons recueillir{' '}
+          <b>vos demandes d'accès à des données publiques</b> et les{' '}
+          <b>services que vous souhaitez construire</b> grâce à ces données.
         </p>
         <p>
-          Organisez la campagne de distribution grâce aux adresses recueillies.
-          La distribution de masques dans les foyers français est un{' '}
-          <b>impératif de santé publique</b>.
+          Par données publiques nous entendons{' '}
+          <ExternalLink href="https://www.cada.fr/particulier/le-document-est-il-administratif">
+            les documents administratifs
+          </ExternalLink>
+          produits ou reçus dans le cadre d'une mission de service public par
+          l'Etat, les collectivités territoriales ainsi que par les autres
+          personnes de droit public ou de droit privé chargées d'une telle
+          mission.
         </p>
       </div>
     </div>
     <div className="section">
       <div className="text-wrapper text-style">
         <h3 className="text-center">
-          Comment mettre en place ce service dans ma ville ?
+          Comment nous allons valoriser vos contributions
         </h3>
         <div>
-          Vous êtes prêt à connecter votre ville ? Voici les étapes à suivre :
+          <p>
+            Vos contributions sont récoltées à travers un formulaire FramaForm.
+            Nous souhaitons :
+          </p>
           <ul>
-            <li>Demandez votre accès à l’API particulier</li>
-            <li>Connectez votre portail citoyen</li>
-            <li>Organisez la distribution de masques</li>
+            <li>
+              Mieux comprendre les données qui vous intéressent et l'usage que
+              vous souhaitez en avoir
+            </li>
+            <li>
+              Produire une synthèse courant décembre présentant les grandes
+              tendances qui ressortent de cet appel à idée
+            </li>
+            <li>
+              Contacter les différents fournisseurs de donnés afin d'envisager
+              la mise à disposition de ces dernières
+            </li>
           </ul>
           <div className="layout-center">
             <ButtonLink
-              href="https://datapass.api.gouv.fr/api-particulier"
+              href="https://framaforms.org/quelles-donnees-publiques-revez-vous-davoir-appel-a-idees-1602761927"
               onClick={() => logLPCTA('Bouton_middle')}
             >
-              Je connecte ma ville à l’API Particulier
+              Je soumets mon idée de projet
             </ButtonLink>
           </div>
         </div>
@@ -91,10 +107,9 @@ const Masks: React.FC = () => (
           data.gouv.fr ou api.gouv.fr.
         </p>
         <p>
-          Dans le cadre de la crise sanitaire relative au COVID-19, la DINUM se
-          mobilise afin de mettre à disposition des territoires ses outils et
-          son expertise et faciliter ainsi la mise en œuvre de démarches en
-          ligne à destination des usagers.
+          Dans le cadre du mois de l'innovation publique, la DINUM se mobilise
+          afin de récolter vos idées de projets et les données publiques
+          auxquelles vous rêveriez d'accéder afin de les réaliser.
         </p>
       </div>
     </div>
@@ -106,7 +121,7 @@ const Masks: React.FC = () => (
         </h3>
         <div className="layout-center">
           <ButtonLink
-            href={constants.links.mailto.SUPPORT}
+            href="mailto:contact@api.gouv.fr?subject=Mois+de+l%E2%80%99innovation+%3A+question+sur+l%E2%80%99appel+%C3%A0+id%C3%A9es"
             onClick={() => logLPCTA('Bouton_contact')}
           >
             Comment pouvons-nous vous aider ?
@@ -123,7 +138,6 @@ const Masks: React.FC = () => (
         margin-bottom: 50px;
         margin-top: 20px;
       }
-
       .hero-section > div:first-of-type {
         display: flex;
         flex-direction: column;
@@ -131,12 +145,10 @@ const Masks: React.FC = () => (
         align-items: flex-start;
         text-align: left;
       }
-
       .hero-section > div:last-of-type {
         width: 600px;
         margin-left: 20px;
       }
-
       .hero-section > div:last-of-type > img {
         width: 100%;
       }
@@ -149,7 +161,6 @@ const Masks: React.FC = () => (
           display: none;
         }
       }
-
       h2 {
         font-size: 1.2rem;
       }
@@ -171,7 +182,6 @@ const Masks: React.FC = () => (
       .qui-sommes-nous {
         background-color: ${constants.colors.lightestGrey};
       }
-
       .section {
         padding: 10px 0;
       }
@@ -183,4 +193,4 @@ const Masks: React.FC = () => (
   </Page>
 );
 
-export default Masks;
+export default MoisInno;
