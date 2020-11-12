@@ -2,7 +2,7 @@
 title: API données ouvertes de l’Urssaf
 tagline: "Accédez au catalogue Open.Urssaf : les jeux de données open data de la branche recouvrement de l'Urssaf"
 external_site: https://open.urssaf.fr/explore/?sort=modified
-producer: urssaf
+producer: acoss
 is_open: 1 # 1 means API is fully open
 contact_link: https://open.urssaf.fr/pages/contact/
 doc_tech_link: https://open.urssaf.fr/api/v2/swagger.yaml
@@ -11,6 +11,7 @@ keywords:
   - Urssaf
   - recouvrement
   - open data
+  - acoss
 themes:
   - Entreprise
 last_update: 16/10/2020
