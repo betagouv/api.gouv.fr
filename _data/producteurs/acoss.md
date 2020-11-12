@@ -1,4 +1,4 @@
 ---
 name: Acoss
-logo: urssaf.png
+logo: urssaf.svg
 ---
