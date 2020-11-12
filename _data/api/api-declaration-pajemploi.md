@@ -45,6 +45,8 @@ last_update: 16/10/2020
 
 L’API Tierce Déclaration Pajemploi facilite l’accès aux éditeurs de logiciels, aux plateformes collaboratives et de services en ligne, aux données et aux démarches relatives à Pajemploi pour le compte d’un particulier employeur en qualité de tiers-déclarant.
 
+![API Pajemploi](/images/api-logo/api-pajemploi.png)
+
 ### A quoi sert l’API Tierce Déclaration Pajemploi ?
 
 L'API Tierce Déclaration Pajemploi permet, pour le compte d'un particulier employeur et en qualité de tiers-déclarant, d'obtenir les montants des cotisations et des contributions sociales pour une activité relevant de Pajemploi, de déclarer le salaire versé à un·e assistant·e maternel·le agré·e ou une garde d’enfants à domicile auprès des organismes de recouvrement concernés et de procéder à la retenue à la source prévue à l'article 204A du code général des impôts

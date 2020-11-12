@@ -44,6 +44,8 @@ last_update: 16/10/2020
 
 L’API Tierce Déclaration auto-entrepreneur facilite l’accès aux éditeurs de logiciels, aux plateformes collaboratives et de services en ligne, aux données et aux démarches relatives à l’Urssaf pour le compte d’un auto-entrepreneur en qualité de tiers-déclarant.
 
+![API Auto-entrepreneur](/images/api-logo/api-auto-entrepreneur.png)
+
 ### A quoi sert l’API Tierce Déclaration auto-entrepreneur ?
 
 L’API Tierce Déclaration auto-entrepreneur permet, pour le compte d'un auto-entrepreneur, d’accéder aux services de déclaration, d’obtention des montants des cotisations et contributions sociales des organismes de recouvrement concernés et d’ordonner le paiement desdites cotisations et contributions.

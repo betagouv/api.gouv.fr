@@ -45,6 +45,7 @@ last_update: 16/10/2020
 
 L’API Tierce Déclaration Cesu facilite l’accès aux éditeurs de logiciels, aux plateformes collaboratives et de services en ligne, aux données et aux démarches relatives au Cesu pour le compte d’un particulier employeur en qualité de tiers-déclarant.
 
+![API Cesu](/images/api-logo/api-cesu.png)
 
 ### A quoi sert l’API Tierce Déclaration Cesu ?
 
