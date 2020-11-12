@@ -101,6 +101,9 @@
     - type: ADD_API
       what: Fichiers des Comptes Bancaires (FiCoBa) produite par le DGFiP
     - type: ADD_API
+      what: Registre des Bénéficiaires Effectifs (RBE) produite par l'INPI
+      path: /les-api/api-rbe
+    - type: ADD_API
       what: Données ouvertes de l’URSSAF
     - type: ADD_API
       what: Données ouvertes de la ville de Paris
