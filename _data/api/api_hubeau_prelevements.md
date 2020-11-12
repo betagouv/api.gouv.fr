@@ -3,13 +3,12 @@ title: Hub'Eau - Prélèvements en eau
 tagline: Prélèvements en eau
 is_open: 1 # 1 means API is fully open
 external_site: https://hubeau.eaufrance.fr/page/api-prelevements-eau
-logo: 08-prelevements.jpg
 partners:
   - AFB
-  - BRGM
-  - BNPE
-owner: Agence française pour la biodiversité & Bureau de Recherches Géologiques et Minières
-owner_acronym: AFB & BRGM
+  - ADES
+  - Office français de la biodiversité (OFB)
+  - Bureau de Recherches Géologiques et Minières (BRGM)
+producer: eau-france
 keywords:
   - Prélèvements en eau
   - Ressource en eau

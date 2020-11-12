@@ -91,21 +91,33 @@
       what: API Aides financières à la rénovation énergetique (Simul’Aid€s)
       path: /les-api/api_aides_renovation_energetique
     - type: ADD_API
+      what: API Impacts environnementaux - AGRIBALYSE®
+      path: /les-api/api_agribalyse
+  10:
+    - type: ADD_API
+      what: Sirene données ouvertes
+      path: /les-api/api-sirene-donnees-ouvertes
+  11:
+    - type: ADD_API
+      what: Fichiers des Comptes Bancaires (FiCoBa) produite par le DGFiP
+    - type: ADD_API
+      what: Registre des Bénéficiaires Effectifs (RBE) produite par l'INPI
+      path: /les-api/api-rbe
+    - type: ADD_API
       what: Données ouvertes de l’URSSAF
     - type: ADD_API
       what: Données ouvertes de la ville de Paris
     - type: ADD_API
       what: Répertoire National des Métiers
       path: https://rnm.artisanat.fr/api/
-  10:
-    - type: ADD_API
-      what: Fichiers des Comptes Bancaires (FiCoBa) produite par le DGFiP
     - type: ADD_API
       what: Registre des Bénéficiaires Effectifs (RBE) produite par l'INPI
-  11:
     - type: ADD_API
-      what: Sirene distribuée par Etalab
-      path: https://entreprise.data.gouv.fr/api_doc/sirene
+      what: Déclaration auto-entrepreneur
+    - type: ADD_API
+      what: Déclaration PAJE
+    - type: ADD_API
+      what: Déclaration CESU
     - type: ADD_API
       what: Données Ouvertes Loire-Atlantique
   12:
@@ -127,16 +139,11 @@
         - Recensement citoyen obligatoire
     - type: INFO
       what: |
-        Intégration des [APIs de l’URSSAF](https://portailapi.urssaf.fr/fr/) :
-
-        - API Déclaration auto-entrepreneur
-        - API Déclaration CESU
-        - API Déclaration PAJE
-    - type: INFO
-      what: |
         Publication d'une doctrine relative à la circulation des données entre administrations
 2021:
   01:
     - type: ADD_API
       what: Indemnités Journalières distribuée par la CNAM
+    - type: ADD_API
+      what: Professionnels BIO par l'agence BIO
 ---

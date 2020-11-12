@@ -1,18 +1,18 @@
 import React from 'react';
 
-const SIGNUP_URL =
-  process.env.NEXT_PUBLIC_SIGNUP_URL || 'https://signup.api.gouv.fr';
+const DATAPASS_URL =
+  process.env.NEXT_PUBLIC_DATAPASS_URL || 'https://datapass.api.gouv.fr';
 
 /**
- * turns any link that match signup.api.gouv.fr/XYZ into $SIGNUP_URL/XYZ,
+ * turns any link that match datapass.api.gouv.fr/XYZ into $DATAPASS_URL/XYZ,
  * Used in staging
  */
-const formatSignupLink = (link: string) => {
+const formatDataPassLink = (link: string) => {
   if (link) {
-    const pattern = /^https?:\/\/signup.api.gouv.fr(.*)/;
-    const signup_url_parts = link.match(pattern) || [];
-    if (signup_url_parts.length === 2) {
-      return `${SIGNUP_URL}${signup_url_parts[1]}`;
+    const pattern = /^https?:\/\/(signup|datapass).api.gouv.fr(.*)/;
+    const datapass_url_parts = link.match(pattern) || [];
+    if (datapass_url_parts.length === 3) {
+      return `${DATAPASS_URL}${datapass_url_parts[2]}`;
     }
   }
   return link;
@@ -107,7 +107,7 @@ const ButtonLink: React.FC<IProps> = ({
   if (href) {
     return (
       <LinkAsAButton
-        href={formatSignupLink(href)}
+        href={formatDataPassLink(href)}
         rel={rel}
         target={target}
         alt={alt}

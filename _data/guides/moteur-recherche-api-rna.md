@@ -8,7 +8,7 @@ image: code.jpg
 noindex: false
 ---
 
-### Qu'est ce que l’API Répertoire National des Associations (RNA) ?
+## Qu'est ce que l’API Répertoire National des Associations (RNA) ?
 
 Le répertoire national des associations françaises, contient les informations des associations dont le siège est en France à l’exception des départements de la Moselle (57), du Bas-Rhin (67) et du Haut-Rhin (68).
 
@@ -18,7 +18,7 @@ L’API RNA permet à un programme informatique de facilement interroger le rép
 - rechercher les données d'une association grâce à son nom
 - rechercher les données d'une association grâce à son code RNA
 
-### Cas pratique : rechercher une association par son nom
+## Cas pratique : rechercher une association par son nom
 
 On peut notamment utiliser l'API pour créer un moteur de recherche des associations.
 
@@ -28,7 +28,7 @@ Il est aussi possible de faire un moteur de recherche par n° SIRET ou par n° R
 
 <ApiRnaWidget />
 
-### Comment ça marche ?
+## Comment ça marche ?
 
 Que se passe-t-il vraiment ? Le moteur de recherche interroge l'API RNA grâce à l'url suivante :
 
@@ -54,7 +54,7 @@ Ainsi dans notre démonstrateur, nous avons affiché dans l'interface une combin
 
 Chaque association retournée par l’API est mise en page, (titre, adresse, id_association et objet) puis affichée dans la liste des résultats. Et voilà, notre moteur de recherche est terminé !
 
-### Aller plus loin 🚀
+## Aller plus loin 🚀
 
 Vous savez désormais comment fonctionne un moteur de recherche avec [l’API Répertoire National des Associations](/les-api/api_rna).
 

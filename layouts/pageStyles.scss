@@ -205,6 +205,10 @@ a:not(.dont-apply-link-style):hover {
   line-height: 1.6rem;
   color: $darkestGrey;
 
+  img {
+    width: 100%;
+  }
+
   table {
     border-collapse: collapse;
     text-align: left;
@@ -367,7 +371,7 @@ form {
   > textarea {
     font-size: 1rem;
     margin: 5px 0 10px;
-    width: calc(100% - 20px);
+    width: auto;
     border: 2px solid #ccc;
     border-radius: 4px;
     padding: 10px;

@@ -1,9 +1,7 @@
 ---
 title: API BDM
 tagline: Accéder aux indices et séries chronologiques de l’Insee
-owner: Institut national de la statistique et des études économiques
-owner_acronym: Insee
-logo: Logo_Insee.svg
+producer: insee
 is_open: 0 # 0 means API require an account
 account_link: https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/sign-up.jag
 rate_limiting_resume: 30 appels / minute / IP

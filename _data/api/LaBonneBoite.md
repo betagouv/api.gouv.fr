@@ -1,10 +1,9 @@
 ---
 title: API La Bonne Boite
 tagline: Récupérez la liste des entreprises classées par potentiel d'embauche
-owner: Pôle Emploi
+producer: pole-emploi
 is_open: 0 # -1 means API not open
 account_link: https://www.emploi-store-dev.fr/portail-developpeur/detailapicatalogue/57909ba23b2b8d019ee6cc5f
-logo: logo_pole_emploi.jpg
 external_site: https://www.emploi-store-dev.fr/portail-developpeur-cms/home/catalogue-des-api/documentation-des-api/api/api-la-bonne-boite-v1.html
 stat:
   url: https://www.emploi-store-dev.fr/portail-developpeur-cms/stats

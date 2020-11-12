@@ -17,6 +17,12 @@ const teamData = [
     img: 'Patrick.jpg',
   },
   {
+    name: 'Alexandre De Pablo',
+    title: 'API Entreprise',
+    linkedin: 'https://www.linkedin.com/in/alexandre-de-pablo-4b9a49a6/',
+    img: 'Alexandre.jpg',
+  },
+  {
     name: 'Xavier Jouppe',
     title: 'Api.gouv.fr',
     linkedin: 'https://www.linkedin.com/in/xavier-jouppe-a9030579/',
@@ -27,12 +33,6 @@ const teamData = [
     title: 'API Particulier',
     linkedin: 'https://www.linkedin.com/in/stanislas-bernard-3b14b586/',
     img: 'Stanislas.jpg',
-  },
-  {
-    name: 'Vincent Mazalaigue',
-    title: 'API Entreprise',
-    linkedin: 'https://www.linkedin.com/in/vmazalaigue/',
-    img: 'Vincent.jpg',
   },
   {
     name: 'Amandine Audras',
@@ -53,10 +53,23 @@ const teamData = [
     img: 'Christophe.jpg',
   },
   {
-    name: 'Maëlle Granon',
-    title: 'Support aux utilisateurs des APIs',
-    linkedin: 'https://www.linkedin.com/in/maellegranon/',
-    img: 'Maelle.jpg',
+    name: 'Loïc Delmaire',
+    title: 'API Entreprise',
+    linkedin:
+      'https://www.linkedin.com/in/%F0%9F%90%A4-lo%C3%AFc-delmaire-%F0%9F%90%A4-46813649/',
+    img: 'Loic.jpg',
+  },
+  {
+    name: 'Victor Gross',
+    title: 'Développement des offres API',
+    linkedin: 'https://fr.linkedin.com/in/victorgross',
+    img: 'Victor.jpg',
+  },
+  {
+    name: 'Alexis Leclerc',
+    title: 'API Entreprise',
+    linkedin: 'https://www.linkedin.com/in/leclerca/',
+    img: 'Alexis.jpg',
   },
 ];
 

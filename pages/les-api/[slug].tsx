@@ -50,6 +50,7 @@ const API: React.FC<IProps> = ({
     logo,
     owner,
     owner_acronym,
+    owner_slug,
     uptime,
     contact_link,
     account_link,
@@ -78,6 +79,7 @@ const API: React.FC<IProps> = ({
         tagline={tagline}
         owner={owner}
         owner_acronym={owner_acronym}
+        owner_slug={owner_slug}
       />
 
       <div id="description" className="content-container">
@@ -123,6 +125,7 @@ const API: React.FC<IProps> = ({
               logo={logo}
               owner={owner}
               owner_acronym={owner_acronym}
+              owner_slug={owner_slug}
               link={contact_link}
             />
 

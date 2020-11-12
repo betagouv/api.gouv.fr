@@ -1,9 +1,9 @@
 ---
 title: API Entreprise
-tagline: Simplifier les démarches des entreprises en récupérant pour elles leurs documents administratifs
+tagline: Accédez aux données et aux documents administratifs des entreprises et des associations, afin de simplifier leurs démarches
 external_site: https://entreprise.api.gouv.fr/
 is_open: -1 # -1 means API not open
-datapass_link: https://signup.api.gouv.fr/api-entreprise
+datapass_link: https://datapass.api.gouv.fr/api-entreprise
 access_page:
   - who:
       - Un particulier
@@ -21,7 +21,7 @@ access_page:
       Lors de votre demande vous devrez **renseigner le cadre juridique (un texte ou délibération/décision)** qui légitime l'entité pour laquelle vous opérez à recevoir ces données.
 
       <NextSteps />
-      <Button href="https://signup.api.gouv.fr/api-entreprise">Remplir une demande</Button>
+      <Button href="https://datapass.api.gouv.fr/api-entreprise">Remplir une demande</Button>
   - who:
       - Une entreprise
     is_eligible: 0
@@ -31,7 +31,7 @@ access_page:
       Lors de votre demande vous devrez **justifier** dans quelle mesure vous rentrez dans ce cadre juridique.
 
       <NextSteps />
-      <Button href="https://signup.api.gouv.fr/api-entreprise">Remplir une demande</Button>
+      <Button href="https://datapass.api.gouv.fr/api-entreprise">Remplir une demande</Button>
   - who:
       - Un éditeur de logiciel
     is_eligible: 0
@@ -41,7 +41,7 @@ access_page:
       Lors de votre demande vous devrez **renseigner le cadre juridique (un texte ou délibération/décision)** qui légitime  l'entité pour laquelle vous opérez à recevoir ces données.
 
       <NextSteps is_editeur />
-      <Button href="https://signup.api.gouv.fr/api-entreprise">Remplir une demande</Button>
+      <Button href="https://datapass.api.gouv.fr/api-entreprise">Remplir une demande</Button>
 stat:
   lastXdays: 30
   url: https://dashboard.entreprise.api.gouv.fr/api/watchdoge/stats/last_30_days_usage
@@ -62,8 +62,7 @@ partners:
   - AGEFIPH
   - Banque de france
   - ADEME
-owner: Direction interministérielle du numérique
-owner_acronym: DINUM
+producer: dinum
 keywords:
   - Établissement
   - Entreprise
@@ -79,8 +78,80 @@ themes:
   - Entreprise
 visits_2019: 12610
 last_update: 14/09/2020
+content_intro: |
+  API Entreprise permet à une administration d'accéder aux données et aux documents administratifs des entreprises et des associations, afin de simplifier leurs démarches.
+
+  ### A quoi sert l’API Entreprise ?
+
+  L'API s'utilise principalement de deux manières :
+
+  - le pré-remplissage de formulaire à destination des entreprises ou des associations
+  - la récupération d'une donnée ou d'un document en back office par un agent
+
+  L’API permet - entre autre - de :
+
+  - faciliter la candidature d'une entreprise a un marché public
+  - faciliter le dépôt d'un dossier de candidature à une aide publique par une entreprise
 ---
 
-[L’API Entreprise](https://entreprise.api.gouv.fr/) est une plateforme d’échange opérée par la DINUM qui met à disposition des opérateurs publics et des administrations, des données et des documents administratifs de référence, relatifs aux entreprises et association, qui sont délivrés par les administrations et les organismes publics, à fin de simplifier les démarches administratives et la gestion des dossiers.
+### Données accessibles dans l'API
 
-Composante de l’État plateforme, l’accès à l’API Entreprise est modérée et régulée par la DINUM, qui attribue à chaque client des autorisations de récupération d’informations selon la nature des démarches à traiter (Marchés publics, aides publiques,…)
+L'API Entreprise permet d'accéder simplement aux données de multiples administrations.
+
+Les données générales :
+
+| Donnée                                                                                | Administration                            |
+| ------------------------------------------------------------------------------------- | ----------------------------------------- |
+| Les informations générales, géographiques et juridiques                               | INSEE                                     |
+| Extrait du Registre du Commerce et des Sociétés (RCS)                                 | INFOGREFFE                                |
+| Les statuts, la liste des représentants ou encore les délibérations d'une association | Ministère intérieur                       |
+| Les actes et statuts des personnes morales et physiques                               | INPI                                      |
+| Les conventions collectives                                                           | Fabrique Numérique des Ministères Sociaux |
+
+Les données financières :
+
+| Donnée                                          | Administration   |
+| ----------------------------------------------- | ---------------- |
+| Le chiffre d'affaire                            | DGFiP            |
+| La déclarations de résultat (ou liasse fiscale) | DGFiP            |
+| Les 3 derniers bilans annuels                   | Banque de france |
+| Les comptes annuels                             | INPI             |
+
+Les attestations sociales et fiscales :
+
+| Donnée                                                         | Administration |
+| -------------------------------------------------------------- | -------------- |
+| L'attestation fiscale                                          | DGFiP          |
+| L'attestation de vigilance                                     | ACOSS          |
+| L'attestation de conformité emploi des travailleurs handicapés | AGEFIPH        |
+| Les cotisations de sécurité sociale agricole                   | MSA            |
+| Les cotisations retraite bâtiment                              | PRO BTP        |
+| La carte professionnelle travaux publics                       | FNTP           |
+| Les cotisations congés payés & chômage intempéries             | CNETP          |
+
+Les certifications professionnelles :
+
+| Donnée                                                   | Administration |
+| -------------------------------------------------------- | -------------- |
+| La certification de qualification d'ingénierie           | OPQIBI         |
+| Le certificat de qualification bâtiment                  | QUALIBAT       |
+| La certification RGE (Reconnu garant de l'environnement) | ADEME          |
+
+La propriété intellectuelle :
+
+| Donnée                                  | Administration |
+| --------------------------------------- | -------------- |
+| Les brevets, modèles et marques déposés | INPI           |
+
+**NB**: Pour en savoir plus, n'hésitez pas à consulter le <External href='https://entreprise.api.gouv.fr/catalogue/'>catalogue des données disponibles dans l’API Entreprise</External>
+
+**NB**: Certaines données sont accessibles en open data (sans demande d'accès à l'API) via leur propre API et ne nécessitent pas de passer par API Entreprise. C'est notamment le cas de :
+
+- les [données de l'INPI](/les-api/api_inpi)
+- les [données de l'ADEME](/les-api/api_professionnels_rge)
+- les [données du RNA](/les-api/api_rna)
+- les [données de l'INSEE](/guides/quelle-api-sirene) (à l'exception des entreprises <External href="https://www.insee.fr/fr/information/4127417">non-diffusibles</External>)
+
+### En savoir plus
+
+L’<External href="https://entreprise.api.gouv.fr/">API Entreprise</External> est une composante de l’État plateforme, l’accès à l’API Entreprise est modérée et régulée par la DINUM, qui attribue à chaque client des autorisations de récupération d’informations selon la nature des démarches à traiter (Marchés publics, aides publiques,…).

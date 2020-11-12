@@ -3,9 +3,7 @@ title: API Professionnels RGE
 tagline: Le recensement des professionnels RGE (Reconnu Garant de l'Environnement)
 external_site: https://data.ademe.fr/datasets/rge-
 is_open: 1 # 1 means API is fully open
-owner: Agence de la transition écologique
-owner_acronym: ADEME
-logo: ademe.png
+producer: ademe
 keywords:
   - Performance energétique
   - Professionnels

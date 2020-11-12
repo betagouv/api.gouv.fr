@@ -3,12 +3,11 @@ title: Hub'Eau - Hydrométrie
 tagline: Hydrométrie temps réel
 is_open: 1 # 1 means API is fully open
 external_site: https://hubeau.eaufrance.fr/page/api-hydrometrie
-logo: 07-hydrometrie.png
 partners:
-  - SCHAPI
-  - BRGM
-owner: Service central d'hydrométéorologie et d'appui à la prévision des inondations & Bureau de Recherches Géologiques et Minières
-owner_acronym: SCHAPI & BRGM
+  - AFB
+  - Service central d'hydrométéorologie et d'appui à la prévision des inondations (SCHAPI)
+  - Bureau de Recherches Géologiques et Minières (BRGM)
+producer: eau-france
 keywords:
   - Hydrométrie
   - Référentiel hydrométrique

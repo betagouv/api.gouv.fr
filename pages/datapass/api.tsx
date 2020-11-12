@@ -123,9 +123,16 @@ const SignupApis: React.FC<IProps> = ({ signupApis }) => {
 export const getStaticProps: GetStaticProps = async () => {
   const allApis = await getAllAPIs();
 
+  const impot = {
+    ...allApis.find(api => api.slug === 'impot-particulier'),
+    title: 'API Impôt particulier via FranceConnect',
+    datapass_link:
+      'https://datapass.api.gouv.fr/api-impot-particulier-fc-sandbox',
+  };
+
   return {
     props: {
-      signupApis: allApis.filter(api => !!api.datapass_link),
+      signupApis: [...allApis.filter(api => !!api.datapass_link), impot],
     },
   };
 };

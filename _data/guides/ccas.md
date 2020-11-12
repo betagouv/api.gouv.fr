@@ -1,18 +1,17 @@
 ---
 title: Dématérialiser l'instruction des dossiers dans un CCAS
-tagline: Vous êtes un CCAS ou un éditeur de logiciel ? Nous vous accompagnons avec l'API Particulier pour accéder facilement aux données de la CAF et de la DGFIP.
+tagline: Vous êtes un CCAS ou un éditeur de logiciel ? Accédez facilement aux données de la CAF et de la DGFIP grâce à l'API Particulier et notre  accompagnement pas à pas.
 tags: cas usage, api particulier, CCAS
 image: dossier.jpg
 api:
   - API Particulier
-noindex: true
 ---
 
 Les Centres Communaux d'Action Social sont amenés à instruire de nombreux dossiers d'obtention des aides sociales légales.
 
 Ces dossiers utilisent généralement l'adresse, le quotient familial de la Caisse d’Allocations Familiales (CAF), la composition du foyer, l'avis d'imposition.
 
-Avec la brique API Particulier vous avez la possibilité de diminuer les erreurs et les fraudes et faciliter le traitement des dossiers par vos équipes en accèdant **facilement aux données nécessaires** au calcul.
+Avec la brique API Particulier vous avez la possibilité de diminuer les erreurs et les fraudes et faciliter le traitement des dossiers par vos équipes en **accèdant facilement aux données** nécessaires au calcul.
 
 En intégrant la brique API Particulier dans votre système d'information, ou votre site internet :
 
@@ -21,9 +20,14 @@ En intégrant la brique API Particulier dans votre système d'information, ou vo
 - Vous n'avez **pas de vérifications supplémentaires** car les informations sont **certifiées**
 - La démarche peut-être faite 100% en ligne
 
-## Vous utilisez les données de la CAF ou de la DGFIP ?
+<Quote logo="/images/guides/sitiv.png" link='https://www.sitiv.fr/Actualites/L-action-sociale-des-villes-du-SITIV-integre-le-dispositif-Dites-le-nous-une-fois' who='Le SITIV' title='membre du réseau Déclic'>
+le principe du "Dites-le nous une fois" (...) permet aux citoyens de ne pas avoir à donner leur consentement mais d'être simplement informés de l'utilisation de leurs pièces.
+C'est dans ce cadre que le SITIV intègre directement au logiciel métier les informations des usagers (...) Les saisies dans les dossiers usagers sont ainsi **facilitées et certifiées**.
+</Quote>
 
-Voici les données de la CAF (composition familiale du foyer du demandeur) et de la DGFIP (pour vérifier les conditions d'éligibilité d'une demande) accessibles directement avec notre API, ce sont les données les plus utilisées pour ce services, mais la liste ci-dessous n'est pas exhaustive :
+## Les données disponibles
+
+Voici les données de la CAF (composition familiale du foyer du demandeur) et de la DGFIP (pour vérifier les conditions d'éligibilité d'une demande) accessibles directement avec l'API, ce sont les données les plus utilisées pour ce service, mais la liste ci-dessous n'est pas exhaustive :
 
 | Donnée            | Commentaire                                                                                   |
 | ----------------- | --------------------------------------------------------------------------------------------- |
@@ -33,9 +37,9 @@ Voici les données de la CAF (composition familiale du foyer du demandeur) et de
 | Avis d'imposition | statut d’imposition, montant de l'impôt, revenu fiscal de référence, nombre de parts fiscales |
 | Adresse           | L'adresse du foyer et/ou l'adresse fiscale du demandeur                                       |
 
-## Comment formuler une demande ?
+## Comment accéder à la donnée
 
-L'utilisation des données par les CCAS est encadrée légalement. Vous pouvez motiver votre demande à l'aide des articles suivants :
+L'utilisation des données par les CCAS est encadrée légalement, et demande donc de formuler une demande. Vous pouvez motiver votre demande à l'aide des articles suivants :
 
 - Article <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000026799356&cidTexte=LEGITEXT000006074069&dateTexte=20121219">L.312-1</External> et <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000031106561&cidTexte=LEGITEXT000006074069&dateTexte=20150809"> R123-5 </External> du _Code de l'action sociale et des familles_
 

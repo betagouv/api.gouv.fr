@@ -4,7 +4,7 @@ link: https://mon-entreprise.fr
 description: L'assistant officiel du créateur d'entreprise
 screenshot: mon-entreprise.jpg
 api:
-  - API Géo
+  - API Découpage Administratif - (API Geo)
   - API Entreprise
 ---
 

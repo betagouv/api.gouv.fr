@@ -6,8 +6,10 @@ import { ButtonLink, ExternalLink, RichLink } from '../../uiComponents';
 import Quote from '../../uiComponents/quote';
 import TeamHelpWidget from '../teamHelpWidget';
 import ApiRnaWidget from '../apiWidgets/apiRna';
+import ApiSireneWidget from '../apiWidgets/apiSirene';
 import DatagouvWidget from '../widgets/datagouv';
 import FlatFileWidget from '../widgets/flatFile';
+import { H2WithAnchor, H3WithAnchor } from '../../uiComponents/titleWithAnchor';
 
 const CenteredCta: React.FC<PropsWithChildren<{ href: string }>> = props => (
   <div className="layout-center">
@@ -20,6 +22,10 @@ const CenteredCta: React.FC<PropsWithChildren<{ href: string }>> = props => (
       }
     `}</style>
   </div>
+);
+
+const Centered: React.FC<PropsWithChildren<{}>> = props => (
+  <div className="layout-center">{props.children}</div>
 );
 
 const Grid: React.FC<PropsWithChildren<{}>> = props => (
@@ -49,7 +55,9 @@ const NextSteps = ({ service_description = null, is_editeur = false }) => (
   </>
 );
 
-const RichReactMarkdown: React.FC<{ source: string }> = ({ source }) => (
+const RichReactMarkdown: React.FC<{ source: string; addAnchor?: boolean }> = ({
+  source,
+}) => (
   <Markdown
     children={source}
     options={{
@@ -61,10 +69,14 @@ const RichReactMarkdown: React.FC<{ source: string }> = ({ source }) => (
         Quote: Quote,
         RichLink: RichLink,
         Grid: Grid,
+        Centered: Centered,
         ContactUs: TeamHelpWidget,
         ApiRnaWidget: ApiRnaWidget,
-        Datagouv: DatagouvWidget,
         FlatFile: FlatFileWidget,
+        ApiSireneWidget: ApiSireneWidget,
+        Datagouv: DatagouvWidget,
+        h2: H2WithAnchor,
+        h3: H3WithAnchor,
       },
     }}
   />

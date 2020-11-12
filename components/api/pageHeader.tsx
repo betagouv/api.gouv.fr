@@ -8,6 +8,7 @@ interface IProps {
   tagline: string;
   owner: string;
   owner_acronym?: string;
+  owner_slug: string;
 }
 
 const PageHeader: React.FC<IProps> = ({
@@ -15,6 +16,7 @@ const PageHeader: React.FC<IProps> = ({
   tagline,
   owner,
   owner_acronym,
+  owner_slug,
 }) => (
   <section id="mission-statement">
     <div className="content-container">
@@ -25,7 +27,15 @@ const PageHeader: React.FC<IProps> = ({
       </div>
       <div className="content">
         <h1>{title}</h1>
-        <i>Producteur : {owner_acronym ? owner_acronym : owner}</i>
+        <i>
+          Producteur :{' '}
+          <a
+            className="dont-apply-link-style"
+            href={`/producteurs/${owner_slug}`}
+          >
+            {owner_acronym ? owner_acronym : owner}
+          </a>
+        </i>
         <h2 className="tagline">{tagline}</h2>
       </div>
     </div>
@@ -41,7 +51,10 @@ const PageHeader: React.FC<IProps> = ({
       .content {
         margin: 0;
         padding: 5px 0 15px;
-        max-width: 700px;
+      }
+
+      .content > i > a {
+        color: #fff;
       }
 
       .breadcrumb {

@@ -3,7 +3,7 @@ title: API de droits à l'Assurance Maladie
 tagline: Accédez aux droits d’un individu ou d’une famille (enfants rattachés), gérés par le régime général de l’Assurance Maladie
 external_site: https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/assurance-maladie-digital/api-droits-fs-doc/master/documentation-open-api.yaml
 is_open: -1 # -1 means API not open
-datapass_link: https://signup.api.gouv.fr/api-droits-cnam
+datapass_link: https://datapass.api.gouv.fr/api-droits-cnam
 access_page:
   - who:
       - Un établissements de soins
@@ -19,22 +19,21 @@ access_page:
       La Caisse Nationale se réserve le droit d’évaluer l’éligibilité des candidats au regard des cas d’usage indiqués.
 
       <NextSteps />
-      <Button href="https://signup.api.gouv.fr/api-droits-cnam">Remplir une demande</Button>
+      <Button href="https://datapass.api.gouv.fr/api-droits-cnam">Remplir une demande</Button>
   - who:
       - Autre
     is_eligible: -1
     description: |
       Seuls les établissements de soins et les organismes complémentaires en santé peuvent accéder à cette API.
 
-      <Button href="/rechercher-api">Rechercher une autre API</Button>
-logo: cnam.jpg
+      Cela étant dit, si vous avez un projet précis :
+      <Button href="mailto:partenaires-api-ameli.cnam@assurance-maladie.fr">Contactez-nous pour exposer votre projet</Button>
 stat:
   lastXdays: 30
   label: justificatifs papier évités
 partners:
   - CNAM
-owner: Caisse Nationale d'Assurance Maladie
-owner_acronym: CNAM
+producer: cnam
 keywords:
   - Droits à assurance maladie
   - Prise en charge au titre du régime obligatoire

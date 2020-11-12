@@ -6,7 +6,7 @@ screenshot: mes-aides-org.jpg
 api:
   - OpenFisca
   - Annuaire des établissements publics de l'administration
-  - API Géo
+  - API Découpage Administratif - (API Geo)
 ---
 
 Dans le maquis des aides sociales, c'est à l'usager de déterminer le bon guichet pour connaître ses droits.

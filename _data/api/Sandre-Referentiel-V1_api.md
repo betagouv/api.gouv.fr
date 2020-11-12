@@ -1,9 +1,7 @@
 ---
 title: API Référentiel SANDRE Version 1 # nom commercial de l'API
 tagline: L'API Sandre Référentiel version 1 donne accès à l'ensemble des jeux de données de référence diffusé par le Service d'Administration Nationale des Données et Référentiels sur l'Eau (SANDRE) # une phrase maximum
-owner: Office International de l’Eau & Agence française pour la biodiversité # producteur de l'API
-owner_acronym: OIEau & AFB
-logo: logoSandre.png # URL d'un logo de l'API
+producer: eau-france
 is_open: 1 # 1 means API is fully open
 stat:
   url: # adresse à laquelle un nombre d'appels à l'API est publié, en content-type application/json
@@ -11,6 +9,7 @@ stat:
   lastXdays: # nombre de jours sur lequel les appels à l'API sont comptabilisés
 partners: # liste de co-producteurs de l'API
   - Producteurs du Système d'Information sur l'Eau (SIE) # texte libre
+  - Office International de l’Eau (OIEau)
 keywords: # utilisé dans la recherche
   - Eau
   - Hydrométrie

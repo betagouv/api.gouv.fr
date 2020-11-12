@@ -58,13 +58,13 @@ const ApiRnaWidget: React.FC<{}> = () => {
       </div>
       <ol>
         <li>Vous tapez le nom d’une association</li>
-        <li>Nous envoyons ce nom à l’API RNA</li>
+        <li>Votre ordinateur envoi ce nom à l’API RNA</li>
         <li>
-          L’API RNA nous renvoie la liste des associations qui correspondent
+          L’API RNA répond avec la liste des associations qui correspondent
         </li>
         <li>
-          Nous affichons les résultats (pas plus de 10, ceci est juste un
-          démonstrateur)
+          Votre ordinateur affiche les résultats (pas plus de 10, ceci est juste
+          un démonstrateur)
         </li>
       </ol>
       <div className="interactive-component">
