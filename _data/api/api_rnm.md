@@ -9,8 +9,7 @@ clients:
 partners:
   - DINUM
   - Etalab
-owner: Chambres des Métiers et de l'Artisanat
-owner_acronym: CMA France
+producer: cma-france
 keywords:
   - Répertoire
   - Métiers
@@ -21,11 +20,10 @@ keywords:
   - RNM
 themes:
   - Entreprise
-logo: CMA_France.png
 contact_link: contact@api-rnm.artisanat.fr
 rate_limiting_resume: 2000 appels / 10 minutes / IP
 doc_tech_link: https://api-rnm.artisanat.fr/v2/openapi.json
-doc_tech_external: https://api-rnm.artisanat.fr/
+doc_tech_external: https://api-rnm.artisanat.fr/v2/
 last_update: 07/09/2020
 ---
 
@@ -33,14 +31,17 @@ L’API Répertoire National des Métiers permet d'interroger le répertoire des
 
 ### A quoi sert cette API ?
 
-Intégrer l’API Répertoire National des Métiers dans votre système d’information permet de récuperer les données d'une entreprise artisanale enregistré auprès des Chambres des métiers, grâce à son SIREN.
+Intégrer l’API Répertoire National des Métiers dans votre système d’information permet de récuperer les données d'une entreprise artisanale enregistré auprès des Chambres des métiers, grâce à son SIREN :
+
+- Générer un extrait pdf pour une entreprise en fournissant le SIREN
+- Renvoyer un fichier json des données de l'entreprise en fournissant le SIREN
+- Renvoyer la fiche de l'entreprise en fournissant le SIREN (format html)
 
 ### Données accessibles dans l'API
 
 | Nom                    | Description                                      |
 | ---------------------- | ------------------------------------------------ |
 | SIREN                  | Le numero SIREN de l'entreprise                  |
-| Identifiant RNM        | ou ARNM                                          |
 | Nom                    | Sigle ou Dénomination sociale de l'entreprise    |
 | Adresse                | Adresse de l'entreprise, département et région   |
 | Date d'immatriculation | Date d'immatriculation au répertoire des métiers |
