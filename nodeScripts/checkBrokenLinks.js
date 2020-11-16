@@ -1,5 +1,4 @@
 const blc = require('broken-link-checker');
-const link = require('linkinator');
 
 let brokenLinks = 0;
 let totalLinks = 0;

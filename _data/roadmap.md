@@ -106,21 +106,19 @@
     - type: ADD_API
       what: Données ouvertes de l’URSSAF
     - type: ADD_API
-      what: Données ouvertes de la ville de Paris
-    - type: ADD_API
       what: Répertoire National des Métiers
       path: https://rnm.artisanat.fr/api/
-    - type: ADD_API
-      what: Registre des Bénéficiaires Effectifs (RBE) produite par l'INPI
     - type: ADD_API
       what: Déclaration auto-entrepreneur
     - type: ADD_API
       what: Déclaration PAJE
     - type: ADD_API
       what: Déclaration CESU
-    - type: ADD_API
-      what: Données Ouvertes Loire-Atlantique
   12:
+    - type: ADD_API
+      what: Gallica IIIF par la BNF
+    - type: ADD_API
+      what: Data.bnf.fr par la BNF
     - type: DLNUF
       what: |
         De nouvelles données seront mises à disposition des administrations dans le cadre du [« Dites le nous une fois »](https://www.numerique.gouv.fr/services/guichet-dites-le-nous-une-fois/) :
@@ -143,7 +141,19 @@
 2021:
   01:
     - type: ADD_API
+      what: Données Ouvertes Loire-Atlantique
+    - type: ADD_API
       what: Indemnités Journalières distribuée par la CNAM
     - type: ADD_API
       what: Professionnels BIO par l'agence BIO
+  02:
+    - type: ADD_API
+      what: DSNJ par le ministère des Armées
+    - type: ADD_API
+      what: Pro Santé Connect par l'ANS
+  03:
+    - type: ADD_API
+      what: Données ouvertes de la ville de Paris
+    - type: ADD_API
+      what: Données ouvertes de la ville de Grenoble
 ---
