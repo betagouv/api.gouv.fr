@@ -2,7 +2,7 @@
 
 section#use-cases {
   > .use-case {
-    padding: 100px 0 30px;
+    padding: 70px 0 60px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -61,6 +61,10 @@ section#use-cases {
       }
       .img-wrapper {
         margin: 15px 0 0;
+        width:100%;
+      }
+      iframe {
+        width:100%;
       }
     }
   }
