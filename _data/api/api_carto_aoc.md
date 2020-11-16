@@ -30,7 +30,7 @@ rate_limiting_description: |
 L'API Carto - module AOC permet d'obtenir les AOC/IGP viticoles de l’INAO intersectant une géométrie GeoJSON.
 Les données sources sont les délimitations parcellaire des AOC Viticoles de l’INAO.
 
-L'utilisation d'API Carto - module AOC est gratuite pour l'Etat et ses EPA, les collectivités, les EPCI à fiscalité propre et les SDIS ([décision n°2018/241](http://www.ign.fr/institut/sites/all/files/2018.241_tarification_geoservices_ign.pdf) de l'institut).
+L'utilisation d'API Carto - module AOC est gratuite pour l'Etat et ses EPA, les collectivités, les EPCI à fiscalité propre et les SDIS décision n°2018/241 de l'institut).
 
 Les données AOC accessibles via API Carto - module AOC sont sous licence ouverte.
 

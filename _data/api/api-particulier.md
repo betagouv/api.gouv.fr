@@ -50,6 +50,7 @@ keywords:
   - étudiant
   - demandeur
   - emploi
+  - ccas
   - Revenu Fiscal de Référence
   - Adresse
   - Justificatif de domicile
