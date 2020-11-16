@@ -33,6 +33,7 @@ doc_tech_link: /api/v1/proxy/https%3A%2F%2Fportailapi.urssaf.fr%2Findex.php%3Fop
 doc_tech_external: https://portailapi.urssaf.fr/fr/?option=com_apiportal&view=apitester&usage=api&a%20piName=API%20Tierce%20Declaration%20CESU&sn=API%20Tierce%20Declaration%%2020CESU&Itemid=181&apitab=tests&tab=&apiId=05f9521f-25ac-4e48-8f93-447a66bf4aa0&menuId=181&apiVersion=1.0.0&managerId=1&renderTool=2&type=rest
 keywords:
   - Urssaf
+  - Acoss
   - Particulier
   - Employeur
   - CESU
@@ -45,7 +46,7 @@ last_update: 16/10/2020
 
 L’API Tierce Déclaration Cesu facilite l’accès aux éditeurs de logiciels, aux plateformes collaboratives et de services en ligne, aux données et aux démarches relatives au Cesu pour le compte d’un particulier employeur en qualité de tiers-déclarant.
 
-![API Cesu](/images/api-logo/api-cesu.png)
+<img src="/images/divers/api-cesu.svg" alt="API Cesu" style="max-width:300px" />
 
 ### A quoi sert l’API Tierce Déclaration Cesu ?
 

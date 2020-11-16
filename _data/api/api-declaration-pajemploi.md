@@ -33,6 +33,7 @@ doc_tech_link: /api/v1/proxy/https%3A%2F%2Fportailapi.urssaf.fr%2Findex.php%3Fop
 doc_tech_external: https://portailapi.urssaf.fr/fr/?option=com_apiportal&view=apitester&usage=api&apiName=API%20Tierce%20Declaration%20PAJE&sn=API%20Tierce%20Declaration%20PAJE&Itemid=181&apitab=tests&tab=&apiId=4e84e17c-9654-40d3-aadc-f717fac5dee5&menuId=181&apiVersion=1.0.0&managerId=1&renderTool=2&type=rest
 keywords:
   - Urssaf
+  - Acoss
   - Particulier
   - Employeur
   - CESU
@@ -45,7 +46,7 @@ last_update: 16/10/2020
 
 L’API Tierce Déclaration Pajemploi facilite l’accès aux éditeurs de logiciels, aux plateformes collaboratives et de services en ligne, aux données et aux démarches relatives à Pajemploi pour le compte d’un particulier employeur en qualité de tiers-déclarant.
 
-![API Pajemploi](/images/api-logo/api-pajemploi.png)
+<img src="/images/divers/api-pajemploi.svg" alt="API Pajemploi" style="max-width:300px" />
 
 ### A quoi sert l’API Tierce Déclaration Pajemploi ?
 
