@@ -64,8 +64,8 @@ Liste des fonctionnalités à titre d’exemple (liste non exhaustive) :
 
 | Donnée       | Lien vers le jeu de données                                                                                                                                                                       |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Comptes      | Déterminer si un compte auto-entrepreneur est éligible à la tierce déclaration ainsi que de connaître sa périodicité déclarative.                                                                 |
-| Mandats      | Notifier l'Urssaf de l'enregistrement ou de l’annulation d'un mandat de tiers déclarant obtenu par la plateforme pour cet individu.                                                               |
+| Comptes      | Déterminer si un compte auto-entrepreneur est éligible à la tierce déclaration ainsi que connaître sa périodicité déclarative.                                                                 |
+| Mandats      | Notifier l'Urssaf de l'enregistrement ou de l’annulation d'un mandat de tierce déclaration obtenu par la plateforme pour cet individu.                                                               |
 | Estimer      | Effectuer une estimation des cotisations sociales dues à l'URSSAF pour un auto-entrepreneur en fonction de chiffres d’affaires passés en paramètre.                                               |
 | Declarer     | Effectuer la déclaration de chiffres d’affaires pour le compte de l’auto-entrepreneur identifié par son NIR ou son SIRET, et retourne les montants des cotisations sociales dues pour la période. |
 | Payer        | Initialiser un télépaiement SEPA par l'Urssaf sur l'IBAN référencé en paramètre.                                                                                                                  |

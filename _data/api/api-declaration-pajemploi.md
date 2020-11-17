@@ -52,7 +52,7 @@ L’API Tierce Déclaration Pajemploi facilite l’accès aux éditeurs de logic
 
 L'API Tierce Déclaration Pajemploi permet, pour le compte d'un particulier employeur et en qualité de tiers-déclarant, d'obtenir les montants des cotisations et des contributions sociales pour une activité relevant de Pajemploi, de déclarer le salaire versé à un·e assistant·e maternel·le agré·e ou une garde d’enfants à domicile auprès des organismes de recouvrement concernés et de procéder à la retenue à la source prévue à l'article 204A du code général des impôts
 
-Du point de vue de l'usager, l'API TD Pajemploi permet au tiers déclarant de :
+Du point de vue de l'usager, l'API Tierce Déclaration Pajemploi permet au tiers déclarant de :
 
 - Notifier l’Urssaf d’une autorisation de déclaration d’un particulier employeur en son nom (mandat)
 - Déclarer une activité auprès de Pajemploi pour le compte d’un particulier employeur
@@ -69,7 +69,7 @@ Liste des fonctionnalités à titre d’exemple (liste non exhaustive) :
 | Predeclarer | Pré-déclarer une activité Pajemploi pour le compte d’un particulier employeur.                                                               |
 | Declarer    | Déclarer une activité Pajemploi pour le compte d’un particulier employeur.                                                                   |
 | Associer    | Associer un salarié à un particulier employeur. Si le salarié n’existe pas, ce dernier est alors créé.                                       |
-| Mandats     | Notifier l'Urssaf de l'enregistrement ou l’annulation d'un mandat de tiers déclarant obtenu par la plateforme pour un particulier employeur. |
+| Mandats     | Notifier l'Urssaf de l'enregistrement ou l’annulation d'un mandat de tierce déclaration obtenu par la plateforme pour un particulier employeur. |
 
 ### En savoir plus
 <!--

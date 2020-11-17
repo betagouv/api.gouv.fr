@@ -65,7 +65,7 @@ Liste des fonctionnalités à titre d’exemple (liste non exhaustive) :
 | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | Employeurs | Inscrire un particulier au dispositif Cesu en tant qu’employeur ou de vérifier l’état de l’inscription d’un particulier employeur.           |
 | Salariés   | Vérifier si un particulier existe en tant que salarié auprès du Cesu.                                                                        |
-| Mandats    | Notifier l'Urssaf de l'enregistrement ou l’annulation d'un mandat de tiers déclarant obtenu par la plateforme pour un particulier employeur. |
+| Mandats    | Notifier l'Urssaf de l'enregistrement ou l’annulation d'un mandat de tierce déclaration obtenu par la plateforme pour un particulier employeur. |
 | Estimer    | Simuler le montant de cotisations sociales pour une activité Cesu.                                                                           |
 | Declarer   | Déclarer une activité auprès du Cesu pour le compte d’un particulier employeur.                                                              |
 
