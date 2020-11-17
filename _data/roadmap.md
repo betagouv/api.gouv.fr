@@ -85,13 +85,13 @@
       what: Gallica Document de la BnF
       path: /les-api/api_gallica_document
     - type: ADD_API
-      what: API Aide financieres de l’ADEME
+      what: Aide financieres de l’ADEME
       path: /les-api/api_aides_financieres_ademe
     - type: ADD_API
-      what: API Aides financières à la rénovation énergetique (Simul’Aid€s)
+      what: Aides financières à la rénovation énergetique (Simul’Aid€s)
       path: /les-api/api_aides_renovation_energetique
     - type: ADD_API
-      what: API Impacts environnementaux - AGRIBALYSE®
+      what: Impacts environnementaux - AGRIBALYSE®
       path: /les-api/api_agribalyse
   10:
     - type: ADD_API
@@ -119,6 +119,8 @@
       what: Gallica IIIF par la BNF
     - type: ADD_API
       what: Data.bnf.fr par la BNF
+    - type: ADD_API
+      what: AgentConnect par la DINUM
     - type: DLNUF
       what: |
         De nouvelles données seront mises à disposition des administrations dans le cadre du [« Dites le nous une fois »](https://www.numerique.gouv.fr/services/guichet-dites-le-nous-une-fois/) :
@@ -156,4 +158,7 @@
       what: Données ouvertes de la ville de Paris
     - type: ADD_API
       what: Données ouvertes de la ville de Grenoble
+  05:
+    - type: ADD_API
+      what: Bulletin Officiel des Annonces Civiles et Commerciales (BODACC)
 ---
