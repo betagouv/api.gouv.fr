@@ -107,13 +107,16 @@
       what: Données ouvertes de l’URSSAF
     - type: ADD_API
       what: Répertoire National des Métiers
-      path: https://rnm.artisanat.fr/api/
+      path: /les-api/api_rnm
     - type: ADD_API
       what: Déclaration auto-entrepreneur
+      path: /les-api/api-declaration-auto-entrepreneur
     - type: ADD_API
       what: Déclaration PAJE
+      path: /les-api/api-declaration-pajemploi
     - type: ADD_API
       what: Déclaration CESU
+      path: /les-api/api-declaration-cesu
   12:
     - type: ADD_API
       what: Gallica IIIF par la BNF
