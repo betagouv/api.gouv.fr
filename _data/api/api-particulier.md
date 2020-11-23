@@ -50,6 +50,7 @@ keywords:
   - étudiant
   - demandeur
   - emploi
+  - ccas
   - Revenu Fiscal de Référence
   - Adresse
   - Justificatif de domicile
@@ -107,3 +108,9 @@ Seules les données des deux dernières années sont disponibles. Par exemple en
 Les déclarants du foyer fiscal sont la(le) contribuable elle(lui)-même et le(la) conjoint(e) ou partenaire de Pacs.
 
 L’Adresse est celle connue au 1er janvier de l’année d’imposition (exemple au 1er janvier 2018 pour les revenus de 2017)
+
+### Précisions sur les données Statut étudiant (MESRI)
+
+Sont disponibles les données des étudiants inscrits dans un établisement sous tutelle du ministère de l'enseignement supérieur, et sur le champ des étudiants bacheliers en 2020 ou déjà inscrits dans l'enseignement supérieur en 2018-2019 ou 2019-2020.
+
+La couverture des établissements du champ des étudiants sera progressivement complétée d'ici la rentrée 2022.

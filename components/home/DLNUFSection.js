@@ -17,20 +17,21 @@ const DLNUFSection = () => (
           Les APIs <b>jouent un rôle essentiel</b> pour permettre ces échanges
           de données.
         </div>
-        <a href="https://www.numerique.gouv.fr/services/guichet-dites-le-nous-une-fois/">
+        <a
+          target="_blank"
+          rel="noreferrer noopener"
+          href="https://www.dailymotion.com/video/x7x5gkj"
+        >
           ⇢ En savoir plus
         </a>
       </div>
       <div className="img-wrapper">
-        <iframe
+        <a
           title="Vidéo Dites le nous une fois"
-          frameborder="0"
-          width="640"
-          height="360"
-          src="https://www.dailymotion.com/embed/video/x7x5gkj"
-          allowfullscreen
-          allow="autoplay; fullscreen"
-        ></iframe>
+          href="https://www.dailymotion.com/video/x7x5gkj"
+        >
+          <img src="/images/home/dailymotion.jpg" alt=""></img>
+        </a>
       </div>
     </div>
   </section>
