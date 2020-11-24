@@ -118,6 +118,9 @@
     - type: ADD_API
       what: Déclaration CESU
       path: /les-api/api-declaration-cesu
+    - type: ADD_API
+      what: Données Ouvertes Loire-Atlantique
+      path: /les-api/api-loire-atlantique-donnee-ouvertes
   12:
     - type: ADD_API
       what: Gallica IIIF par la BNF
@@ -146,8 +149,6 @@
         Publication d'une doctrine relative à la circulation des données entre administrations
 2021:
   01:
-    - type: ADD_API
-      what: Données Ouvertes Loire-Atlantique
     - type: ADD_API
       what: Indemnités Journalières distribuée par la CNAM
     - type: ADD_API
