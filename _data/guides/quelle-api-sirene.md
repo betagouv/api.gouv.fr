@@ -64,7 +64,7 @@ Ensuite chaque API se différencie par ses limites d'utilisation et les traiteme
 | Limite d’usage | Totalement ouverte ([accéder à la documentation](/les-api/api-sirene-donnees-ouvertes)) | Nécessite un compte ([se créer un compte](https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/sign-up.jag)) | Sous habilitation ([voir les conditions](/les-api/api-entreprise/demande-acces)) |
 | Limite d’appel | 7 appels par secondes                                                                   | 30 appels par minute                                                                                                          | 2000 appels par 10 minutes                                                       |
 
-### Seconde différence : les données disponibles
+### Deuxième différence : les données disponibles
 
 Les trois APIs donnent accès aux informations concernant les entreprises et les établissements immatriculés à la base Sirene depuis sa création en 1973, y compris les unités fermées.
 
@@ -84,6 +84,17 @@ Le tableau ci-dessous fait une synthèse de ces différence pour vous aider a ch
 | Refus d'immatriculation par le Greffe   | ❌ Non                      | ✅ Oui                | ❌ Non         |
 | Recherche des prédecesseurs/successeurs | ❌ Non                      | ✅ Oui                | ❌ Non         |
 | geolocalisation                         | ✅ Oui                      | ❌ Non                | ❌ Non         |
+
+### Troisième différence : l’éligibilité
+
+Les trois APIs ne visent pas les mêmes publics. Pensez à vérifier votre éligibilité :
+
+| API                                                               | API Sirene données ouvertes | API Sirene de l'INSEE | API Entreprise |
+| ----------------------------------------------------------------- | --------------------------- | --------------------- | -------------- |
+| Particulier                                                       | ✅ Oui                      | ✅ Oui                | ❌ Non         |
+| Entreprise ou association                                         | ✅ Oui                      | ✅ Oui                | ❌ Non         |
+| Entreprise ou association chargée d’une mission de service public | ✅ Oui                      | ✅ Oui                | ✅ Oui         |
+| Administration (collectivité, ministère)                          | ✅ Oui                      | ✅ Oui                | ✅ Oui         |
 
 Vous avez fait votre choix ? Lancez-vous :
 

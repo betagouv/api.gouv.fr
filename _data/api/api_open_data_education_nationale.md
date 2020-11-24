@@ -34,24 +34,23 @@ last_update: 05/12/2019
 
 L’API données ouvertes de <External href='https://data.education.gouv.fr/'>l’Éducation Nationale</External> est une API ouverte à tous, qui permet d’accéder à l’ensemble du catalogue de jeux de données publiés sur le portail Open data.
 
-## A quoi sert l’API données ouvertes de l’Éducation Nationale
+### A quoi sert l’API données ouvertes de l’Éducation Nationale
 
 L’API met à disposition l’ensemble des jeux de données publics (non restreints) du catalogue de jeux de données du portail.
 
-Cette API est en accès libre. Elle permet à n'importe qui de :
+Cette API est en accès libre. Elle permet à tout le monde de :
 
 - Réutiliser les jeux de données publics du portail données ouvertes de l’Éducation Nationale
 - Bénéficier des données mises à jour directement via l’API qui « appelle » les données du catalogue
 
-## Données disponibles
+### Données disponibles
 
 Parmi les principaux jeux de données accessibles via cette API, on peut citer :
 
-| Donnée                                                                      | Lien vers le jeu de données                                                                                                                                     |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Annuaire de l'éducation          | <External href='https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/api/'>En savoir plus</External> |
-| Adresse et géolocalisation des établissements d'enseignement                              | <External href='https://data.education.gouv.fr/explore/dataset/fr-en-adresse-et-geolocalisation-etablissements-premier-et-second-degre/api/'>En savoir plus</External>                             |
-| Calendrier scolaire | <External href='https://data.education.gouv.fr/explore/dataset/fr-en-calendrier-scolaire/api/'>En savoir plus</External>        |
-| Taille des collèges et lycées | <External href='https://data.education.gouv.fr/explore/dataset/fr-en-taille-colleges-lycees/api/'>En savoir plus</External>        |
-| Diplômes du secondaire et des formations intermédiaires | <External href='https://data.education.gouv.fr/explore/dataset/fr-en-diplomes-etablissements-secondaire/api/'>En savoir plus</External>        |
-
+| Donnée                                                       | Lien vers le jeu de données                                                                                                                                            |
+| ------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Annuaire de l'éducation                                      | <External href='https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/api/'>En savoir plus</External>                                                |
+| Adresse et géolocalisation des établissements d'enseignement | <External href='https://data.education.gouv.fr/explore/dataset/fr-en-adresse-et-geolocalisation-etablissements-premier-et-second-degre/api/'>En savoir plus</External> |
+| Calendrier scolaire                                          | <External href='https://data.education.gouv.fr/explore/dataset/fr-en-calendrier-scolaire/api/'>En savoir plus</External>                                               |
+| Taille des collèges et lycées                                | <External href='https://data.education.gouv.fr/explore/dataset/fr-en-taille-colleges-lycees/api/'>En savoir plus</External>                                            |
+| Diplômes du secondaire et des formations intermédiaires      | <External href='https://data.education.gouv.fr/explore/dataset/fr-en-diplomes-etablissements-secondaire/api/'>En savoir plus</External>                                |
