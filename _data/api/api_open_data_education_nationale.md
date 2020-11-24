@@ -16,6 +16,10 @@ keywords:
   - éducation
   - examens
   - élèves
+  - diplome
+  - college
+  - lycee
+  - annuaire
   - politique éducative
   - organisation
   - finances
@@ -28,41 +32,26 @@ visits_2019: 37
 last_update: 05/12/2019
 ---
 
-Dans le contexte du vaste mouvement d’ouverture et de partage des données publiques tant au niveau interministériel, qu’au niveau des collectivités territoriales, avec une circulation facilitée des données entre tous les acteurs (administrations centrales, services de l’État en régions, collectivités territoriales, secteur privé, etc.), le ministère amplifie cette démarche volontariste pour ouvrir et partager de nouvelles données publiques sur l’enseignement scolaire, en lien étroit avec celle déjà ouverte de l’enseignement supérieur et de la recherche.
+L’API données ouvertes de <External href='https://data.education.gouv.fr/'>l’Éducation Nationale</External> est une API ouverte à tous, qui permet d’accéder à l’ensemble du catalogue de jeux de données publiés sur le portail Open data.
 
-L’objectif est de permettre à tous, citoyens, partenaires, acteurs publics et privés dans un souci de transparence et d’incitation à l’innovation :
+## A quoi sert l’API données ouvertes de l’Éducation Nationale
 
-- de connaître, de repérer aisément, de comprendre, d’enrichir des données relatives à l’enseignement scolaire,
-- d’imaginer et de proposer des services utiles dans le domaine de l’éducation.
+L’API met à disposition l’ensemble des jeux de données publics (non restreints) du catalogue de jeux de données du portail.
 
-Le ministère publie ainsi de nouveaux jeux de données de référence mettant en avant les critères essentiels suivants:
+Cette API est en accès libre. Elle permet à n'importe qui de :
 
-- Qualité, pérennité, historisation,
-- Facilité d’exploration et de réutilisation grâce aux exports librement exploitables,
-- Performance de l’outil qui offre des fonctionnalités avancées (API)
-- Valorisation des données par des notes d’accompagnement et des exemples d’usage.
+- Réutiliser les jeux de données publics du portail données ouvertes de l’Éducation Nationale
+- Bénéficier des données mises à jour directement via l’API qui « appelle » les données du catalogue
 
-Les jeux de données sous licence ouverte sont naturellement synchronisés avec la plate-forme interministérielle data.gouv.fr animée par la mission Etalab.
+## Données disponibles
 
-La plate-forme s’enrichira progressivement à travers la publication régulière de nouveaux jeux de données, des mises à jour des jeux de données déjà publiés, d’actualités et d’évènements en lien avec le site institutionnel de communication du ministère.
+Parmi les principaux jeux de données accessibles via cette API, on peut citer :
 
-### Licence
+| Donnée                                                                      | Lien vers le jeu de données                                                                                                                                     |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Annuaire de l'éducation          | <External href='https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/api/'>En savoir plus</External> |
+| Adresse et géolocalisation des établissements d'enseignement                              | <External href='https://data.education.gouv.fr/explore/dataset/fr-en-adresse-et-geolocalisation-etablissements-premier-et-second-degre/api/'>En savoir plus</External>                             |
+| Calendrier scolaire | <External href='https://data.education.gouv.fr/explore/dataset/fr-en-calendrier-scolaire/api/'>En savoir plus</External>        |
+| Taille des collèges et lycées | <External href='https://data.education.gouv.fr/explore/dataset/fr-en-taille-colleges-lycees/api/'>En savoir plus</External>        |
+| Diplômes du secondaire et des formations intermédiaires | <External href='https://data.education.gouv.fr/explore/dataset/fr-en-diplomes-etablissements-secondaire/api/'>En savoir plus</External>        |
 
-Le MENESR a fait le choix de la licence ouverte d’Etalab de réutilisations suivantes.
-
-Avec la Licence Ouverte, et sous réserve de mentionner la paternité des données (leur source - a minima le nom du « Producteur », et la date de dernière mise à jour), vous êtes libre de :
-
-- reproduire, copier, publier et transmettre les données ;
-- les diffuser et redistribuer ;
-- les adapter, modifier, extraire et transformer ;
-- les exploiter à titre commercial, par exemple en les combinant avec d’autres informations, ou en l’incluant dans votre propre produit ou application.
-- Vous pouvez consulter, télécharger et réutiliser gratuitement les données proposées sur ce portail et, ce, sans limite de temps ni d’espace, sous réserve du respect de la licence d’utilisation Licence ouverte/Open licence.
-
-Réutiliser veut dire :
-
-- Reproduire, copier, publier, transmettre et/ou diffuser
-- Adapter ou modifier la donnée
-- Exploiter à titre commercial
-- Réutiliser à condition de :
-
-Mentionner sa source et date de dernière mise à jour ou simplement en indiquant le(s) lien(s) hypertexte(s) renvoyant vers la donnée (où figure la mention de sa paternité).

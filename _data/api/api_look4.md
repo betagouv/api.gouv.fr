@@ -49,7 +49,7 @@ Look4 est disponible pour test sur la clé “beta” de l’IGN : `https://wxs.
 
 ### Les conditions d'utilisation de Look4 et de ses ressources
 
-L'utilisation de Look4 est gratuite pour l'Etat et ses EPA, les collectivités, les EPCI à fiscalité propre et les SDIS ([décision n°2018/241](http://www.ign.fr/institut/sites/all/files/2018.241_tarification_geoservices_ign.pdf) de l'institut).
+L'utilisation de Look4 est gratuite pour l'Etat et ses EPA, les collectivités, les EPCI à fiscalité propre et les SDIS décision n°2018/241 de l'institut).
 Pour les autres utilisateurs, et dans un contexte d'usage grand public, l'utilisation gratuite de Look4 est possible dans la limite de 2M transactions par an (10 000 pour un usage professionnel, une transaction équivalent à 32 appels à Look4.
 
 Les ressources disponibles via Look4 ont différentes licences (IGN, opendata, etc).

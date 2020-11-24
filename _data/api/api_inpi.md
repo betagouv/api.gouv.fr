@@ -1,5 +1,5 @@
 ---
-title: Registre National du Commerce et des Sociétés
+title: API Registre National du Commerce et des Sociétés
 tagline: Le registre public des sociétés françaises immatriculées dans les greffes locales des tribunaux, centralisées à l'INPI.
 is_open: 0
 account_link: https://data.inpi.fr/register
