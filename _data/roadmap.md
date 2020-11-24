@@ -105,6 +105,7 @@
       path: /les-api/api-rbe
     - type: ADD_API
       what: Données ouvertes de l’URSSAF
+      path: /les-api/api-open-data-urssaf
     - type: ADD_API
       what: Répertoire National des Métiers
       path: /les-api/api_rnm
