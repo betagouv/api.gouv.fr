@@ -1,18 +1,10 @@
 ---
 title: API Indicateur de Fréquences de Traitements phytopharmaceutiques
 tagline: "Faciliter et fiabiliser votre calcul de l'Indicateur de Fréquence de Traitements (IFT) : anonyme & gratuit !"
-owner: Ministère de l'Agriculture et de l'Alimentation
-owner_acronym: MAA
+producer: maa
 category: public
-is_open: true
-access_link: https://alim.agriculture.gouv.fr/ift/espace-partenaire
-logo: maa.jpg
+is_open: 1 # 1 means API is fully open
 external_site: https://alim.agriculture.gouv.fr/ift/espace-partenaire
-clients:
-  - éditeurs
-  - chercheurs
-  - institus agricoles
-  - statisticiens
 keywords:
   - IFT
   - Indicateur de Fréquences de Traitements
@@ -26,6 +18,8 @@ keywords:
   - Ferme Dephy
 contact_link: calculette-ift.dgpaat@agriculture.gouv.fr
 doc_tech_link: https://alim.agriculture.gouv.fr/ift-api/v2/api-docs?group=ift
+datagouv_uuid:
+  - 56373ad988ee38438a531576
 themes:
   - Environnement
 visits_2019: 324

@@ -2,17 +2,13 @@
 title: Le Point d’Accès National aux données de transport
 tagline: Rassembler les données de toute l’offre de mobilité à travers la France
 category: Public
-owner: Direction interministérielle du numérique
-owner_acronym: DINUM
-clients:
-  - particuliers
-  - entreprises
+producer: dinum
 keywords:
   - transport
 themes:
   - Transport
 external_site: https://transport.data.gouv.fr
-is_open: true
+is_open: 1 # 1 means API is fully open
 contact_link: contact@transport.beta.gouv.fr
 doc_tech_link: https://transport.data.gouv.fr/api/openapi
 last_update: 01/05/2020

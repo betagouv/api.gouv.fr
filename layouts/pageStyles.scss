@@ -31,6 +31,21 @@ a {
   section.page-baseline {
     margin: 30px auto;
     text-align: left;
+
+    h1 {
+      font-size: 1.5rem;
+      line-height: 2.1rem;
+      margin: 10px 0 16px;
+      color: $darkestGrey;
+
+      @media only screen and (min-width: 1px) and (max-width: 600px) {
+        font-size: 1.4rem;
+        line-height: 1.9rem;
+        margin: 12px 0 16px;
+
+        color: $darkestGrey;
+      }
+    }
   }
 
   section.page-body-container {
@@ -42,6 +57,22 @@ a {
     display: grid;
     grid-template-columns: 31% 31% 31%;
     grid-gap: 30px 3%;
+
+    @media only screen and (min-width: 550px) and (max-width: 920px) {
+      grid-template-columns: 48% 48%;
+      grid-gap: 30px 4%;
+    }
+
+    @media only screen and (min-width: 1px) and (max-width: 600px) {
+      grid-template-columns: 100%;
+      grid-gap: 30px 0%;
+    }
+  }
+
+  .two-column-grid {
+    display: grid;
+    grid-template-columns: 49% 49%;
+    grid-gap: 30px 2%;
 
     @media only screen and (min-width: 550px) and (max-width: 920px) {
       grid-template-columns: 48% 48%;
@@ -95,6 +126,38 @@ a:not(.dont-apply-link-style):hover {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  &.vertical-margin {
+    margin: 10px auto;
+  }
+}
+.layout-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  &.vertical-margin {
+    margin: 10px auto;
+  }
+}
+.layout-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  &.vertical-margin {
+    margin: 10px auto;
+  }
+}
+
+.layout-space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .content-container {
@@ -142,6 +205,10 @@ a:not(.dont-apply-link-style):hover {
   line-height: 1.6rem;
   color: $darkestGrey;
 
+  img {
+    width: 100%;
+  }
+
   table {
     border-collapse: collapse;
     text-align: left;
@@ -152,16 +219,16 @@ a:not(.dont-apply-link-style):hover {
     tr td,
     th {
       padding: 5px;
-      border-right: 1px solid #c9d3df;
-      border-left: 1px solid #c9d3df;
-      border-bottom: 1px solid #c9d3df;
+      border-right: 1px solid $greyBlue;
+      border-left: 1px solid $greyBlue;
+      border-bottom: 1px solid $greyBlue;
       padding: 5px 8px;
     }
 
     thead {
       background-color: #f4f7fb;
-      border-bottom: 3px double #c9d3df;
-      border-top: 1px solid #c9d3df;
+      border-bottom: 3px double $greyBlue;
+      border-top: 1px solid $greyBlue;
     }
   }
 
@@ -217,8 +284,20 @@ a:not(.dont-apply-link-style):hover {
   }
 
   pre {
-    overflow: auto;
+    overflow-x: auto;
     color: #001a39;
+    white-space: pre-wrap;
+    font-family: monospace;
+  }
+
+  code {
+    display: block;
+    padding: 12px;
+    color: #93a1a1;
+    background: #073642;
+    border-left: 10px solid #586e75;
+    border-radius: 2px;
+    overflow: auto;
   }
 }
 
@@ -292,7 +371,7 @@ form {
   > textarea {
     font-size: 1rem;
     margin: 5px 0 10px;
-    width: calc(100% - 20px);
+    width: auto;
     border: 2px solid #ccc;
     border-radius: 4px;
     padding: 10px;

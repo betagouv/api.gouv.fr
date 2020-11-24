@@ -1,18 +1,12 @@
 ---
-title: Base Adresse Nationale
-tagline: "Un référentiel national ouvert : de l'adresse à la coordonnée géographique"
+title: API Adresse (Base Adresse Nationale)
+tagline: Interrogez la base de données de l’intégralité des adresses du territoire français
 external_site: https://adresse.data.gouv.fr
-is_open: true
-clients:
-  - particuliers
-  - entreprises
-  - collectivités
-  - ministères
+is_open: 1 # 1 means API is fully open
 partners:
   - La poste
   - IGN
-owner: Direction interministérielle du numérique
-owner_acronym: DINUM
+producer: dinum
 stat:
   lastXdays: 7
   url: https://api-adresse.data.gouv.fr/analytics/stats.json
@@ -26,23 +20,46 @@ keywords:
   - Code postal
 rate_limiting_resume: 10 appels / seconde / IP
 rate_limiting_description: |
-  <p>L'API unitaire est disponible à hauteur de 10 appels par seconde et par adresse IP.</p>
-  <p>Le géocodage de masse (CSV) est disponible à hauteur d'un appel simultané par adresse IP.</p>
+  L'API unitaire est disponible à hauteur de 10 appels par seconde et par adresse IP.
+  Le géocodage de masse (CSV) est disponible à hauteur d'un appel simultané par adresse IP.
 themes:
   - Géographie
 additional_css: api
 contact_link: adresse@data.gouv.fr
 doc_tech_external: https://adresse.data.gouv.fr/api
+content_intro: |
+  L' API Adresse fait partie de la boîte-à-outils API Géo. Elle permet d'interroger facilement la Base Adresse Nationale.
+
+  ### A quoi sert l'API Adresse ?
+
+  En intégrant l'API dans votre système d'information, vous pouvez facilement rechercher une adresse et :
+
+  - faire de l'autocomplétion et de la vérification d'adresse
+  - géolocaliser une adresse sur une carte
+  - faire une recherche géographique inversée (trouver la rue la plus proche de coordonnées géographiques)
+datagouv_uuid:
+  - 5530fbacc751df5ff937dddb
 visits_2019: 6460
 uptime: 100 # https://uptimerobot.com/dashboard.php#778110635
 last_update: 10/12/2019
 ---
 
-Pour que les services d'urgence arrivent au bon endroit, pour vous permettre de réaliser une analyse cartographique en quelques clics ou encore pour que les opérateurs publics et privés coordonnent mieux leurs chantiers, ce référentiel, véritable enjeu de souveraineté pour la France, est la première alliance entre l'État et la société civile.
+### Données disponibles
 
-La Base Adresse Nationale est une base de données qui a pour but de référencer l'intégralité des adresses du territoire français.
+| Nom              | Description                                                        |
+| ---------------- | ------------------------------------------------------------------ |
+| type             | type de résultat trouvé : rue, numéro de plaque, lieu-dit, commune |
+| numéro de plaque | numéro avec indice de répétition éventuel (bis, ter, A, B)         |
+| nom              | numéro éventuel et nom de voie ou lieu dit                         |
+| code postal      | code postal                                                        |
+| code de ville    | code INSEE de la commune                                           |
+| commune          | nom de la commune                                                  |
+| arrondissement   | nom de l’arrondissement (Paris/Lyon/Marseille)                     |
+| context          | n° de département, nom de département et de région                 |
 
-Elle est constituée par la collaboration entre:
+### En savoir plus
+
+La base <External href='https://adresse.data.gouv.fr'>Adresse Nationale</External> est constituée par la collaboration entre:
 
 - des acteurs nationaux tels que l'[IGN](http://ign.fr/) et [La Poste](http://legroupe.laposte.fr/),
 - des acteurs locaux tels que les collectivités, les communes, les SDIS,

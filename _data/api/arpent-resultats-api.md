@@ -1,17 +1,9 @@
 ---
 title: API Résultats aux examens
 tagline: Accéder aux calendriers de délibération et aux résultats des examens de l'enseignement agricole.
-owner: Ministère de l'agriculture et de l'alimentation
-owner_acronym: MAA
+producer: maa
 category: public
-is_open: true
-logo: maa.jpg
-clients:
-  - particuliers
-  - entreprises
-  - presse
-  - collectivités
-  - ministères
+is_open: 1 # 1 means API is fully open
 keywords:
   - Résultats aux examens
   - Résultats

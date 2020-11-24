@@ -8,7 +8,7 @@ export enum VISITOR {
   ADMINISTRATION = 'Administration',
   EDITOR = 'Editeur',
   PARTICULIER = 'Particulier',
-  COLLECTIVITE = 'Collecitvité',
+  COLLECTIVITE = 'Collectivité',
   ENTREPRISE = 'Entreprise',
   ASSO = 'Association',
 }
@@ -51,7 +51,7 @@ const ContactForm: React.FC<IProps> = ({ visitorType, label }) => {
         required
       />
       <div className="submit layout-center">
-        <ButtonLink type="submit" large onClick={logClic}>
+        <ButtonLink type="submit" size="large" onClick={logClic}>
           Envoyer
         </ButtonLink>
       </div>

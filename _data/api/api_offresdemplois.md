@@ -1,18 +1,11 @@
 ---
 title: Offres d'emploi
 tagline: Accédez aux offres d'emploi disponibles sur pole-emploi.fr
-owner: Pôle emploi
+producer: pole-emploi
 category: Public
-is_open: false
-access_condition: OUVERT sous contrat
-access_link: https://www.emploi-store-dev.fr/portail-developpeur/detailapicatalogue/5ba49d55243a5f9d2c5064a2
-logo: logo_pole_emploi.jpg
+is_open: 0 # -1 means API not open
+account_link: https://www.emploi-store-dev.fr/portail-developpeur/detailapicatalogue/5ba49d55243a5f9d2c5064a2
 external_site: https://www.emploi-store-dev.fr/portail-developpeur-cms/home/catalogue-des-api/documentation-des-api/api/api-offres-demploi-v2.html
-clients:
-  - particuliers
-  - entreprises
-  - startups
-  - collectivités territoriales
 partners:
   - Pôle emploi
 keywords:
@@ -26,9 +19,9 @@ visits_2019: 1227
 last_update: 14/11/2019
 ---
 
-L'API Offres d'emploi restitue en temps réel les offres d'emploi actives collectés par Pôle emploi ou que Pôle emploi a reçues de ses partenaires à la condition que ceux-ci aient consenti à leur mise à disposition dans l'API .
+L'API Offres d'emploi restitue en temps réel les offres d'emploi actives collectés par Pôle emploi ou que Pôle emploi a reçues de ses partenaires à la condition que ceux-ci aient consenti à leur mise à disposition dans l'API.
 
-Elle vous permet de développer des solutions personnalisées de recherche d'emploi pour votre site ou votre application.
+L'API s'adresse aux particuliers, entreprises & startups et collectivités territoriales et permet de développer des solutions personnalisées de recherche d'emploi pour un site ou une application.
 
 Trois ressources sont exposées pour :
 

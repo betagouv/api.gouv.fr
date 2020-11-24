@@ -1,25 +1,19 @@
-import Menu from './menu';
 import Access from './access';
-import Support from './support';
-import Monitoring from './monitoring';
-import RateLimiting from './rate-limiting';
+import SupportAndTeam from './supportAndTeam';
 import Partners from './partners';
 import TechnicalDocumentation from './technical-documentation';
 import ApiRelatedServices from './apiRelatedServices.tsx';
-import Content from './content';
-import Thumbnails from './thumbnails';
+import ApiOpenDataSources from './apiOpenDataSources.tsx';
 import PageHeader from './pageHeader';
+import ApiDescription from './apiDescription';
 
 export {
   PageHeader,
-  Menu,
   Access,
-  Support,
-  Monitoring,
-  RateLimiting,
+  SupportAndTeam,
   Partners,
   TechnicalDocumentation,
   ApiRelatedServices,
-  Content,
-  Thumbnails,
+  ApiOpenDataSources,
+  ApiDescription,
 };

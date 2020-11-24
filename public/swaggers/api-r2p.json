@@ -1,0 +1,614 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Recherche des personnes physiques dans le référentiel de la DGFiP",
+    "version": "v1",
+    "title": "API_R2P"
+  },
+  "basePath": "/r2p/v1",
+  "tags": [
+    {
+      "name": "Recherche de personne physique par critères",
+      "description": " "
+    },
+    {
+      "name": "Recherche de personne physique par identifiant",
+      "description": " "
+    },
+    {
+      "name": "Recherche du SPI par état civil",
+      "description": " "
+    }
+  ],
+  "paths": {
+    "/personne": {
+      "get": {
+        "tags": [
+          "Recherche de personne physique par critères"
+        ],
+        "summary": "Recherche de personne physique par critères",
+        "description": "Un filtre en entrée est obligatoire, ainsi que le nom et le prénom.",
+        "operationId": "RechercheParCriteres",
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "type": "string",
+            "in": "header",
+            "required": true,
+            "description": "Jeton d'authentification. Header Authorization standard, utilisant un schéma Bearer. Exemple: \"Bearer {token}\""
+          },
+          {
+            "name": "X-Correlation-ID",
+            "type": "string",
+            "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
+            "in": "header",
+            "required": true,
+            "description": "Identifiant de corrélation de la requête (format UUID)",
+            "x-example": "123e4567-e89b-12d3-a456-426655440000"
+          },
+          {
+            "name": "nom",
+            "in": "query",
+            "description": "Nom de naissance de la personne recherchée, 100 car. Max. ",
+            "required": true,
+            "type": "string",
+            "x-example": "DUPONT"
+          },
+          {
+            "name": "prenom",
+            "in": "query",
+            "description": "Prénom de naissance  de la personne recherchée, 20 car. Max. par prénom",
+            "required": true,
+            "type": "string",
+            "x-example": "JEANNE"
+          },
+          {
+            "name": "sexe",
+            "in": "query",
+            "description": "Valeur possible : 1 = masculin ou 2 = féminin. Format : 1 caractère numérique",
+            "required": false,
+            "type": "string",
+            "maxLength": 2,
+            "minLength": 1,
+            "x-example": "2"
+          },
+          {
+            "name": "naisDate",
+            "in": "query",
+            "description": "Date de naissance, trois formats différents acceptés : AAAA, MM/AAAA, ou JJ/MM/AAAA",
+            "required": false,
+            "type": "string",
+            "x-example": "22/08/1978"
+          },
+          {
+            "name": "naisCodePays",
+            "in": "query",
+            "description": "Code du pays sur 5 caractères numériques (cf nomenclature INSEE)",
+            "required": false,
+            "type": "string",
+            "x-example": "99100"
+          },
+          {
+            "name": "naisCodeDept",
+            "in": "query",
+            "description": "Code du département à la date de naissance ou TOM. Format : 3 caractères alphanumériques : 001, 040, 976",
+            "required": false,
+            "type": "string",
+            "x-example": "75"
+          },
+          {
+            "name": "naisCodeCommune",
+            "in": "query",
+            "description": "Code commune, 3 caractères numériques (DOM), 2 caractères numériques (TOM) (cf nomenclature INSEE)",
+            "required": false,
+            "type": "string",
+            "x-example": "115"
+          },
+          {
+            "name": "adrCodePays",
+            "in": "query",
+            "description": "Code du pays sur 5 caractères numériques (cf nomenclature INSEE)",
+            "required": false,
+            "type": "string",
+            "x-example": "99100"
+          },
+          {
+            "name": "adrCodeDept",
+            "in": "query",
+            "description": "Cette valeur correspond au numéro de l’ensemble des départements de métropole et d’outre-mer, soit de 01 à 95 et de 971 à 976.",
+            "required": false,
+            "type": "string",
+            "x-example": "16"
+          },
+          {
+            "name": "adrCodeTom",
+            "in": "query",
+            "description": "Code TOM",
+            "required": false,
+            "type": "string",
+            "x-example": "975"
+          },
+          {
+            "name": "adrCodeCommune",
+            "in": "query",
+            "description": "Code commune, 3 caractères numériques. Cette zone ne peut être valorisée que si un département Métropole ou DOM est précisé. Ce code commune correspond au 3 derniers caractères du code INSEE de la commune.",
+            "required": false,
+            "type": "string",
+            "x-example": "015"
+          },
+          {
+            "name": "adrLibelleTypeVoie",
+            "in": "query",
+            "description": "4 caractères alphanumériques",
+            "required": false,
+            "type": "string",
+            "x-example": "RUE"
+          },
+          {
+            "name": "adrLibelleVoie",
+            "in": "query",
+            "description": "26 caractères alphanumériques. Cette zone ne peut être valorisée que si que si un département Métropole ou DOM et une commune sont précisés.",
+            "required": false,
+            "type": "string",
+            "x-example": "DU GAL DE GAULLE"
+          },
+          {
+            "name": "adrNumVoie",
+            "in": "query",
+            "description": "Numéro de l'adresse",
+            "required": false,
+            "type": "string",
+            "x-example": "35"
+          },
+          {
+            "name": "adrIndiceRepetition",
+            "in": "query",
+            "description": "Indice de répétition de l'adresse (B = bis, T = ter, Q = quater)",
+            "required": false,
+            "type": "string",
+            "x-example": "B"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Personne correspondant à la recherche",
+            "schema": {
+              "$ref": "#/definitions/PersonneReponseEnveloppe"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Trop de réponse ou dossier non communicable"
+          },
+          "404": {
+            "description": "Personne non trouvée"
+          }
+        },
+        "deprecated": false,
+        "x-auth-type": "Application & Application User",
+        "x-throttling-tier": "Unlimited",
+        "x-scope": "api_r2p_recherche_personne_physique"
+      }
+    },
+    "/personne/spi": {
+      "get": {
+        "tags": [
+          "Recherche du SPI par état civil"
+        ],
+        "summary": "Recherche du SPI par état civil",
+        "operationId": "RechercheParEtatCivil",
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "type": "string",
+            "in": "header",
+            "required": true,
+            "description": "Jeton d'authentification. Header Authorization standard, utilisant un schéma Bearer. Exemple: \"Bearer {token}\""
+          },
+          {
+            "name": "X-Correlation-ID",
+            "type": "string",
+            "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
+            "in": "header",
+            "required": true,
+            "description": "Identifiant de corrélation de la requête (format UUID)",
+            "x-example": "123e4567-e89b-12d3-a456-426655440000"
+          },
+          {
+            "name": "nom",
+            "in": "query",
+            "description": "Nom de naissance de la personne recherchée, 100 car. Max. ",
+            "required": true,
+            "type": "string",
+            "x-example": "DUPONT"
+          },
+          {
+            "name": "prenom",
+            "in": "query",
+            "description": "Prénom de naissance  de la personne recherchée, 20 car. Max. par prénom",
+            "required": true,
+            "type": "string",
+            "x-example": "JEANNE"
+          },
+          {
+            "name": "sexe",
+            "in": "query",
+            "description": "Valeur possible : 1 = masculin ou 2 = féminin. Format : 1 caractère numérique",
+            "required": false,
+            "type": "string",
+            "maxLength": 2,
+            "minLength": 1,
+            "x-example": "2"
+          },
+          {
+            "name": "naisDate",
+            "in": "query",
+            "description": "Date de naissance, trois formats différents acceptés : AAAA, MM/AAAA, ou JJ/MM/AAAA",
+            "required": false,
+            "type": "string",
+            "x-example": "22/08/1978"
+          },
+          {
+            "name": "naisCodePays",
+            "in": "query",
+            "description": "Code du pays sur 5 caractères numériques (cf nomenclature INSEE)",
+            "required": false,
+            "type": "string",
+            "x-example": "99100"
+          },
+          {
+            "name": "naisCodeDept",
+            "in": "query",
+            "description": "Code du département à la date de naissance ou TOM. Format : 3 caractères alphanumériques : 001, 040, 976",
+            "required": false,
+            "type": "string",
+            "x-example": "75"
+          },
+          {
+            "name": "naisCodeCommune",
+            "in": "query",
+            "description": "Code commune, 3 caractères numériques (DOM), 2 caractères numériques (TOM) (cf nomenclature INSEE)",
+            "required": false,
+            "type": "string",
+            "x-example": "115"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "SPI correspondant à la personne recherchée",
+            "schema": {
+              "$ref": "#/definitions/IdentifiantEnveloppe"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Trop de réponse ou dossier non communicable"
+          },
+          "404": {
+            "description": "Personne non trouvée"
+          }
+        },
+        "deprecated": false,
+        "x-auth-type": "Application & Application User",
+        "x-throttling-tier": "Unlimited",
+        "x-scope": "api_r2p_resolution_spi"
+      }
+    },
+    "/personne/{spi}": {
+      "get": {
+        "tags": [
+          "Recherche de personne physique par identifiant"
+        ],
+        "summary": "Recherche de personne physique par identifiant SPI",
+        "operationId": "RechercheParSPI",
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "type": "string",
+            "in": "header",
+            "required": true,
+            "description": "Jeton d'authentification. Header Authorization standard, utilisant un schéma Bearer. Exemple: \"Bearer {token}\""
+          },
+          {
+            "name": "X-Correlation-ID",
+            "type": "string",
+            "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
+            "in": "header",
+            "required": true,
+            "description": "Identifiant de corrélation de la requête (format UUID)",
+            "x-example": "123e4567-e89b-12d3-a456-426655440000"
+          },
+          {
+            "name": "spi",
+            "in": "path",
+            "description": "Identifiant SPI sur 13 caractères (chiffres uniquement)",
+            "required": true,
+            "type": "string",
+            "x-example": "1899582886173"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Personne correspondant à la recherche",
+            "schema": {
+              "$ref": "#/definitions/PersonneReponseEnveloppe"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Trop de réponse ou dossier non communicable"
+          },
+          "404": {
+            "description": "Personne non trouvée"
+          }
+        },
+        "deprecated": false,
+        "x-auth-type": "Application & Application User",
+        "x-throttling-tier": "Unlimited",
+        "x-scope": "api_r2p_recherche_personne_physique"
+      }
+    }
+  },
+  "definitions": {
+    "AdresseReponse": {
+      "type": "object",
+      "properties": {
+        "cdPays": {
+          "type": "string",
+          "example": 99100,
+          "description": "Code INSEE du pays de l'adresse"
+        },
+        "lbPays": {
+          "type": "string",
+          "example": "FRANCE",
+          "description": "Libellé du pays de l'adresse"
+        },
+        "cdDepartement": {
+          "type": "string",
+          "example": 16,
+          "description": "Code INSEE du département de l'adresse"
+        },
+        "lbDepartement": {
+          "type": "string",
+          "example": "CHARENTE",
+          "description": "Libellé du département de l'adresse"
+        },
+        "cdTOM": {
+          "type": "string",
+          "example": 975,
+          "description": "Code INSEE du TOM de l'adresse"
+        },
+        "lbTOM": {
+          "type": "string",
+          "example": "ST-PIERRE-ET-MIQUELON",
+          "description": "Libellé du TOM de l'adresse"
+        },
+        "cdCommune": {
+          "type": "string",
+          "example": "015",
+          "description": "Code INSEE de la commune de l'adresse"
+        },
+        "lbCommune": {
+          "type": "string",
+          "example": "ANGOULEME",
+          "description": "Libellé de la commune de l'adresse"
+        },
+        "cdVoie": {
+          "type": "string",
+          "example": 2564,
+          "description": "Code de la de la voie de l'adresse"
+        },
+        "lbVoie": {
+          "type": "string",
+          "example": "RTE DU GAL DE GAULLE",
+          "description": "Libellé de la voie de l'adresse"
+        },
+        "numeroVoie": {
+          "type": "string",
+          "example": 35,
+          "description": "Numéro de la voie de l'adresse"
+        },
+        "indiceDeRepetition": {
+          "type": "string",
+          "example": "B",
+          "description": "Indice de répétion de l'adresse (B = bis, T = ter, Q = quater)"
+        }
+      },
+      "title": "AdresseReponse",
+      "description": "Informations d'adresse de la personne"
+    },
+    "EtatCivilReponse": {
+      "type": "object",
+      "properties": {
+        "cdSexe": {
+          "type": "string",
+          "example": 2,
+          "description": "Code du sexe de la personne : 1 masculin, 2 féminin"
+        },
+        "lbNomNaissance": {
+          "type": "string",
+          "example": "MARTIN",
+          "description": "Nom de naissance"
+        },
+        "lbPrenomNaissance": {
+          "type": "string",
+          "example": "JEANNE MARIE",
+          "description": "Prénom de naissance"
+        },
+        "lbNomUsage": {
+          "type": "string",
+          "example": "DUPONT",
+          "description": "Nom d'usage"
+        },
+        "lbPrenomUsage": {
+          "type": "string",
+          "example": "JEANNE",
+          "description": "Prénom d'usage"
+        },
+        "anneeNaissance": {
+          "type": "string",
+          "example": 1978,
+          "description": "Année de naissance au format AAAA"
+        },
+        "moisNaissance": {
+          "type": "string",
+          "example": "08",
+          "description": "Mois de naissance au format MM"
+        },
+        "jourNaissance": {
+          "type": "string",
+          "example": 22,
+          "description": "Jour de naissance au format JJ"
+        },
+        "cdPaysNaissance": {
+          "type": "string",
+          "example": 99100,
+          "description": "Code INSEE du pays de naissance"
+        },
+        "cdDeptNaissance": {
+          "type": "string",
+          "example": 75,
+          "description": "Code INSEE du département de naissance"
+        },
+        "cdTOMNaissance": {
+          "type": "string",
+          "example": 975,
+          "description": "Code INSEE du TOM de naissance"
+        },
+        "cdCommuneNaissance": {
+          "type": "string",
+          "example": 115,
+          "description": "Code INSEE de la commune de naissance"
+        }
+      },
+      "title": "EtatCivilReponse",
+      "description": "État civil de la personne"
+    },
+    "IdentifiantEnveloppe": {
+      "type": "object",
+      "properties": {
+        "identifiant": {
+          "description": "Informations d'identification de la personne",
+          "$ref": "#/definitions/IdentifiantReponse"
+        }
+      },
+      "title": "IdentifiantEnveloppe",
+      "description": "Objet encapsulant la réponse"
+    },
+    "IdentifiantReponse": {
+      "type": "object",
+      "properties": {
+        "spi": {
+          "type": "string",
+          "example": 1899582886173,
+          "description": "L'identifiant SPI de la personne sur 13 caractères numériques"
+        }
+      },
+      "title": "IdentifiantReponse",
+      "description": "Informations d'identification de la personne"
+    },
+    "PersonneReponse": {
+      "type": "object",
+      "properties": {
+        "identifiant": {
+          "description": "Informations d'identification de la personne",
+          "$ref": "#/definitions/IdentifiantReponse"
+        },
+        "etatCivil": {
+          "description": "État civil de la personne",
+          "$ref": "#/definitions/EtatCivilReponse"
+        },
+        "adresse": {
+          "description": "Adresse de la personne",
+          "$ref": "#/definitions/AdresseReponse"
+        }
+      },
+      "title": "PersonneReponse",
+      "description": "Correspond aux informations d'une personne physique"
+    },
+    "PersonneReponseEnveloppe": {
+      "type": "object",
+      "properties": {
+        "personnePhysique": {
+          "description": "Correspond aux informations d'une personne physique",
+          "$ref": "#/definitions/PersonneReponse"
+        }
+      },
+      "title": "PersonneReponseEnveloppe",
+      "description": "Objet encapsulant la réponse"
+    }
+  },
+  "schemes": [
+    "https"
+  ],
+  "security": [
+    {
+      "Authorization": []
+    }
+  ],
+  "securityDefinitions": {
+    "Authorization": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "Authorization",
+      "description": "Header Authorization standard, utilisant un schéma Bearer. Exemple: \"Bearer {token}\""
+    },
+    "default": {
+      "type": "oauth2",
+      "authorizationUrl": "https://IP-GATEWAY/authorize",
+      "flow": "implicit",
+      "scopes": {}
+    }
+  },
+  "parameters": {
+    "paramAuthorization": {
+      "name": "Authorization",
+      "type": "string",
+      "in": "header",
+      "required": true,
+      "description": "Jeton d'authentification. Header Authorization standard, utilisant un schéma Bearer. Exemple: \"Bearer {token}\""
+    },
+    "paramXCorrelationID": {
+      "name": "X-Correlation-ID",
+      "type": "string",
+      "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
+      "in": "header",
+      "required": true,
+      "description": "Identifiant de corrélation de la requête (format UUID)",
+      "x-example": "123e4567-e89b-12d3-a456-426655440000"
+    }
+  },
+  "x-wso2-security": {
+    "apim": {
+      "x-wso2-scopes": [
+        {
+          "name": "Résolution du SPI",
+          "description": "Scope permettant d'interroger l'API R2P et de récupérer le SPI d'un individu à partir de son état civil",
+          "key": "api_r2p_resolution_spi",
+          "roles": "Application/R2pResolutionSpi"
+        },
+        {
+          "name": "Recherche de Personnes Physiques",
+          "description": "Scope permettant d'interroger l'API R2P et de récupérer les informations sur les personnes physiques",
+          "key": "api_r2p_recherche_personne_physique",
+          "roles": "Application/R2pRecherchePersonnePhysique"
+        }
+      ]
+    }
+  }
+}

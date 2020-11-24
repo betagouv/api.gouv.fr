@@ -1,22 +1,36 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 import constants from '../../constants';
 import { ButtonLink } from '../../uiComponents';
-import { logFeedback } from '../../utils/client/analytics';
+import Emoji from '../../uiComponents/emoji';
+import { logFeedback, logFeedbackDetails } from '../../utils/client/analytics';
 
-export default () => {
-  const [hasAnswered, setHasAnswered] = useState(false);
+const Feedback = () => {
+  const [hasAnswered, setHasAnswered] = useState<-1 | 0 | 1>(-1);
+  const [hasAnsweredDetails, setHasAnsweredDetails] = useState(false);
+  const refDetails = useRef(null);
 
   const answer = (yesOrNo: Boolean) => {
-    setHasAnswered(true);
+    setHasAnswered(yesOrNo ? 1 : 0);
     // send to matomo
     logFeedback(yesOrNo ? 'Oui' : 'Non');
+  };
+
+  const answerDetails = () => {
+    if (!refDetails || !refDetails.current) {
+      return;
+    }
+    //@ts-ignore
+    const details = refDetails.current.value;
+    setHasAnsweredDetails(true);
+    // send to matomo
+    logFeedbackDetails(details);
   };
 
   return (
     <>
       <div id="feedback-widget">
-        {!hasAnswered ? (
+        {hasAnswered === -1 ? (
           <>
             <span role="img" aria-label="émoji hello">
               👋
@@ -37,16 +51,26 @@ export default () => {
             <div>
               <b>Merci pour votre réponse !</b>
             </div>
-            <div>
-              Aidez-nous à améliorer cette page en{' '}
-              <a
-                href="https://betagouv.typeform.com/to/zSP38owa"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                remplissant ce rapide questionnaire.
-              </a>
-            </div>
+            {hasAnswered === 0 && !hasAnsweredDetails && (
+              <form id="contact-form" onSubmit={answerDetails}>
+                <label htmlFor="question">
+                  Pouvez-vous nous en dire plus sur ce qui vous a posé problème
+                  ?
+                </label>
+                <textarea
+                  id="description"
+                  placeholder="Détaillez ici votre réponse"
+                  ref={refDetails}
+                  required
+                />
+                <div className="submit layout-center">
+                  <ButtonLink type="submit" size="large">
+                    Envoyer
+                  </ButtonLink>
+                </div>
+              </form>
+            )}
+            {hasAnsweredDetails && <Emoji emoji="🙂" label="merci" />}
           </div>
         )}
       </div>
@@ -81,3 +105,4 @@ export default () => {
     </>
   );
 };
+export default Feedback;

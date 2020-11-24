@@ -1,6 +1,8 @@
 const {
   readAllApisOnDisk,
   readAllServicesOnDisk,
+  readAllGuidesOnDisk,
+  readAllProducersOnDisk,
 } = require('../model/readOnDiskForNode');
 
 /**
@@ -24,6 +26,8 @@ function writeUrlListOnDisk(urlList) {
 async function main() {
   const apis = await readAllApisOnDisk();
   const services = await readAllServicesOnDisk();
+  const producers = await readAllProducersOnDisk();
+  const guides = await readAllGuidesOnDisk();
 
   const urlList = [
     '/',
@@ -38,6 +42,13 @@ async function main() {
     '/vie-privee',
     ...apis.map(api => api.path),
     ...services.map(service => service.path),
+    ...producers.map(producer => producer.path),
+    ...guides.reduce((paths, guide) => {
+      if (!guide.noindex) {
+        paths.push(guide.path);
+      }
+      return paths;
+    }, []),
   ].map(url => `${process.env.SITE_URL || 'https://api.gouv.fr'}${url}`);
   writeUrlListOnDisk(urlList);
 }

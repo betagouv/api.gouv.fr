@@ -3,7 +3,7 @@ title: La Bonne Boîte
 link: http://labonneboite.pole-emploi.fr
 description: Trouvez les entreprises qui vont recruter près de chez vous
 api:
- - Base Adresse Nationale
+  - API Adresse (Base Adresse Nationale)
 screenshot: ecran_labonneboite.jpg
 ---
 

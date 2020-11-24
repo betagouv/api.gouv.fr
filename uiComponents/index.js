@@ -1,6 +1,7 @@
 import TypingCarousel from './typingCarousel';
 import { ButtonLink } from './button';
 import ExternalLink from './externalLink';
+import RichLink from './richLink';
 import Toggle from './toggle';
 import SearchBar from './searchBar';
 import Dropdown from './dropdown';
@@ -14,4 +15,5 @@ export {
   Dropdown,
   SearchBar,
   MultiChoice,
+  RichLink,
 };

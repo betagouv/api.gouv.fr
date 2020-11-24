@@ -1,9 +1,17 @@
-import { IService, IApi, IRoadmap, IRoadmapElement, IGuideElement } from '.';
+import {
+  IService,
+  IApi,
+  IRoadmap,
+  IRoadmapElement,
+  IGuideElement,
+  IProducerElement,
+} from '.';
 import {
   formatServiceWithApis,
-  formatApi,
+  formatApiWithOwner,
   formatRoadmap,
   formatGuide,
+  formatProducteur,
 } from './formatters';
 import frontmatter from 'front-matter';
 
@@ -54,7 +62,11 @@ const loadServices = async (): Promise<{ [key: string]: IService }> => {
 const loadApis = async (): Promise<{ [key: string]: IApi }> => {
   //@ts-ignore
   const apiFolderContext = require.context('../_data/api', true, /\.md$/);
-  return parseMarkdown(apiFolderContext, formatApi);
+
+  const producers = await getAllProducers();
+  const formatter = formatApiWithOwner(Object.values(producers));
+
+  return parseMarkdown(apiFolderContext, formatter);
 };
 
 export const getAPI = async (id: string): Promise<IApi> => {
@@ -83,13 +95,24 @@ export const getRoadmap = async (): Promise<IRoadmapElement[]> => {
   return formatRoadmap(md.attributes as IRoadmap);
 };
 
-export const getGuide = async (slug: string): Promise<IGuideElement[]> => {
-  const file = require(`../_data/guide/${slug}.md`);
+export const getGuide = async (slug: string): Promise<IGuideElement> => {
+  const file = require(`../_data/guides/${slug}.md`);
   return formatGuide(slug, file.default);
 };
 
 export const getAllGuides = async (): Promise<IGuideElement[]> => {
   //@ts-ignore
-  const guideFolderContext = require.context('../_data/guide', true, /\.md$/);
+  const guideFolderContext = require.context('../_data/guides', true, /\.md$/);
   return Object.values(parseMarkdown(guideFolderContext, formatGuide));
+};
+
+export const getProducer = async (slug: string): Promise<IProducerElement> => {
+  const file = require(`../_data/producteurs/${slug}.md`);
+  return formatProducteur(slug, file.default);
+};
+
+export const getAllProducers = async (): Promise<IProducerElement[]> => {
+  //@ts-ignore
+  const folderContext = require.context('../_data/producteurs', true, /\.md$/);
+  return Object.values(parseMarkdown(folderContext, formatProducteur));
 };

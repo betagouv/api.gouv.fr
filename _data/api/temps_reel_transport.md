@@ -2,12 +2,8 @@
 title: Données temps réel pour les transports en commun
 tagline: Mettre à disposition les données temps réel des transports en commun
 category: Public
-owner: Direction interministérielle du numérique
-owner_acronym: DINUM
-is_open: true
-clients:
-  - particuliers
-  - entreprises
+producer: dinum
+is_open: 1 # 1 means API is fully open
 keywords:
   - temps réel
   - transport
@@ -19,11 +15,13 @@ external_site: https://transport.data.gouv.fr
 monitoring_link: http://stats.transport.data.gouv.fr/
 contact_link: contact@transport.beta.gouv.fr
 doc_tech_link: https://tr.transport.data.gouv.fr/spec
+datagouv_uuid:
+  - 5f186dca05ac2c31888a2262
 visits_2019: 1346
 last_update: 10/12/2019
 ---
 
-[L‘Api transport](http://tr.transport.data.gouv.fr/) met à disposition les données temps réel des transports en commun.
+L‘Api transport met à disposition les données temps réel des transports en commun.
 
 L'api charge des données théoriques de transport en commun (au format GTFS) ainsi que des données temps réel (au format GTFS-RT) et expose ces données consolidées au format GTFS-RT ainsi que SIRI-LITE.
 

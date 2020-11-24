@@ -8,6 +8,7 @@ const formatGuide = (slug, data) => {
     //@ts-ignore
     ...document.attributes,
     body: document.body,
+    path: `/guides/${slug}`,
     slug,
   };
 };

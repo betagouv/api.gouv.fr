@@ -2,20 +2,11 @@
 title: API Carto - module Codes Postaux
 tagline: L'accès simplifié aux codes postaux
 external_site: https://apicarto.ign.fr
-owner: Institut national de l’information géographique et forestière
-owner_acronym: IGN
-is_open: true
-access_condition: OUVERT
+producer: ign
+is_open: 1 # 1 means API is fully open
 category: Public
-logo: look4-geoportail.jpg
 contact_link: contact.geoservices@ign.fr
 doc_tech_link: https://apicarto.ign.fr/api/doc/codes-postaux.yml
-clients:
-  - développeurs
-  - entreprises
-  - organismes publics
-  - collectivités territoriales
-  - ministères
 partners:
   - INAO
   - Ministère de la cohésion des territoires

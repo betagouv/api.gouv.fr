@@ -1,21 +1,14 @@
 ---
 title: Hub'Eau - Piézométrie
 tagline: Piézométrie (niveau des nappes d'eau souterraine)
-is_open: true
+is_open: 1 # 1 means API is fully open
 external_site: https://hubeau.eaufrance.fr/page/documentation_piezometrie
-logo: 03-piezo.jpg
-clients:
-  - particuliers
-  - entreprises
-  - bureaux d'études
-  - collectivités
-  - ministères
 partners:
-  - OFB
-  - BRGM
+  - AFB
   - ADES
-owner: Office français de la biodiversité & Bureau de Recherches Géologiques et Minières
-owner_acronym: OFB & BRGM
+  - Office français de la biodiversité (OFB)
+  - Bureau de Recherches Géologiques et Minières (BRGM)
+producer: eau-france
 keywords:
   - Piézométrie
   - Aquifère
@@ -45,7 +38,7 @@ Les mises à jour de la banque ADES sont intégrées quotidiennement à l'API.
 
 Testez le [démonstrateur de l'API Piézométrie](https://hubeau.eaufrance.fr/sites/default/files/api/demo/piezo/piezo.htm) et récupérez le [code Javascript](https://github.com/BRGM/hubeau/tree/master/demonstrateurs/piezo) qui l'a généré pour construire vous même vos applications basées sur Hub'Eau.
 
-**NOUVEAU : l'opération chroniques_tr permet d'interroger en quasi temps-réel les piézomètres qui télé-transmettent leurs données brutes horaires**. Découvrez le [tableau des quelques 1400 Piézomètres Temps Réel](https://hubeau.eaufrance.fr/page/piezos_tr) et [un exemple de visualiseur des données Temps Réel](https://hubeau.eaufrance.fr/sites/default/files/api/demo/piezo/_demo_tr/).
+**NOUVEAU : l'opération chroniques_tr permet d'interroger en quasi temps-réel les piézomètres qui télé-transmettent leurs données brutes horaires**. Découvrez le [tableau des quelques 1400 Piézomètres Temps Réel](https://hubeau.eaufrance.fr/sites/default/files/api/demo/piezo/stations_piezo_tr.html) et [un exemple de visualiseur des données Temps Réel](https://hubeau.eaufrance.fr/sites/default/files/api/demo/piezo/_demo_tr/).
 
 Les données sont exposées sous la forme d'une API REST, les formats supportés sont : JSON, GeoJSON et CSV.
 
@@ -72,17 +65,17 @@ Hub’Eau est le résultat de la collaboration de l’OFB et du BRGM dans le cad
 
 Les autres API disponibles à ce jour dans Hub'Eau sont :
 
-- [Etat piscicole](/api/api_hubeau_poissons.html) ;
-- [Indicateurs Eau potable et Assainissement](/api/api_hubeau_indic_EP_Asst.html) ;
-- [Qualité physico-chimique des cours d'eau](/api/api_hubeau_qualite_rivieres.html) ;
-- [Qualité des nappes d'eau souterraine](/api/api_hubeau_qualite_nappes_eau_sout.html) ;
-- [Température des cours d'eau](/api/api_hubeau_temperature_rivieres.html) ;
-- [Hydrométrie](/api/api_hubeau_hydrometrie.html) ;
-- [Prélèvements en eau (beta)](/api/api_hubeau_prelevements.html).
+- [Etat piscicole](/les-api/api_hubeau_poissons) ;
+- [Indicateurs Eau potable et Assainissement](/les-api/api_hubeau_indic_EP_Asst) ;
+- [Qualité physico-chimique des cours d'eau](/les-api/api_hubeau_qualite_rivieres) ;
+- [Qualité des nappes d'eau souterraine](/les-api/api_hubeau_qualite_nappes_eau_sout) ;
+- [Température des cours d'eau](/les-api/api_hubeau_temperature_rivieres) ;
+- [Hydrométrie](/les-api/api_hubeau_hydrometrie) ;
+- [Prélèvements en eau (beta)](/les-api/api_hubeau_prelevements).
 
 #### Un service en co-construction
 
-Pour des APIs toujours plus en phase avec les besoins utilisateurs, Hub'Eau a inauguré en 2018 une [politique de bêta testing](https://hubeau.eaufrance.fr/page/apis-version-beta) en organisant une campagne de tests ouverte avant la mise la mise en production de chaque nouvelle API.
+Pour des APIs toujours plus en phase avec les besoins utilisateurs, Hub'Eau a inauguré en 2018 une [politique de bêta testing](https://hubeau.eaufrance.fr/page/apis) en organisant une campagne de tests ouverte avant la mise la mise en production de chaque nouvelle API.
 D'une durée de 30 à 45 jours, ces campagnes ont pour objectif de recueillir un maximum de retour d’expérience des utilisateurs sur les points forts et les points faibles des API en construction.
 Pour être informé de la sortie des nouvelles API et les tester en avant-première, inscrivez-vous à la [newsletter](https://hubeau.eaufrance.fr/page/news-letter-hubeau) !
 

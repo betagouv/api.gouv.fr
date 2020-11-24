@@ -15,7 +15,7 @@ const ApiTripletSection = ({ apiList }) => {
         </div>
       </div>
       <div className="layout-center">
-        <ButtonLink href="rechercher-api" large alt>
+        <ButtonLink href="rechercher-api" size="large" alt>
           Voir toutes les APIs ☞
         </ButtonLink>
       </div>

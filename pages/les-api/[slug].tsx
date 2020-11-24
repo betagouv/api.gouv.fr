@@ -1,6 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
-import { throttle } from 'lodash';
 
 import {
   getAPI,
@@ -8,115 +7,64 @@ import {
   IService,
   IApi,
   getAllAPIs,
+  getAllGuides,
+  IGuideElementShort,
 } from '../../model';
 import Page from '../../layouts';
 
 import {
   PageHeader,
-  Menu,
   Access,
-  Support,
-  Monitoring,
-  RateLimiting,
+  SupportAndTeam,
   Partners,
   TechnicalDocumentation,
   ApiRelatedServices,
-  Content,
-  Thumbnails,
+  ApiOpenDataSources,
+  ApiDescription,
 } from '../../components/api';
+
+import ApiDetails from '../../components/api/apiDetails';
 import { HEADER_PAGE } from '../../components';
 
-import { getWindowHash, isElementVisible } from '../../utils';
 import constants from '../../constants';
 import Feedback from '../../components/feedback';
+import { fetchDatagouvDatasets } from '../../components/api/apiOpenDataSources';
 
 interface IProps {
   api: IApi;
   services: IService[];
+  guides: IGuideElementShort[];
+  datagouvDatasets: { uuid: string; title: string }[];
 }
 
-const API: React.FC<IProps> = ({ api, services = null }) => {
+const API: React.FC<IProps> = ({
+  api,
+  services = null,
+  guides,
+  datagouvDatasets,
+}) => {
   const {
     slug,
     title,
     tagline,
     logo,
     owner,
+    owner_acronym,
+    owner_slug,
     uptime,
-    last_update,
     contact_link,
-    external_site,
+    account_link,
     doc_tech_link,
     doc_tech_external,
-    access_link,
-    access_description,
-    access_condition,
     monitoring_link,
     monitoring_description,
     rate_limiting_description,
     rate_limiting_resume,
     body,
     is_open,
-    clients,
     partners,
+    content_intro,
   } = api;
-
-  const [menuItem, setMenuItem] = useState('api-description');
-
-  const contentContainer = useRef(null);
-
-  const getVisibleAnchor = () => {
-    if (!contentContainer || !contentContainer.current) {
-      return;
-    }
-    //@ts-ignore
-    const sectionCollection = contentContainer.current.children;
-
-    for (let i = 0; i < sectionCollection.length; i++) {
-      const elem = sectionCollection[i];
-      if (isElementVisible(elem, constants.layout.HEADER_HEIGHT)) {
-        return elem.children[0].id;
-      }
-    }
-  };
-
-  const setVisibleAnchor = (anchor: string, smooth = false) => {
-    setMenuItem(anchor);
-
-    const anchorElem = document.getElementById(anchor);
-
-    if (!anchorElem) {
-      return;
-    }
-    anchorElem.scrollIntoView({ behavior: smooth ? 'smooth' : 'auto' });
-  };
-
-  useEffect(() => {
-    const handleScroll = throttle(() => {
-      const currentVisibleAnchor = getVisibleAnchor();
-      if (currentVisibleAnchor !== getWindowHash()) {
-        setMenuItem(currentVisibleAnchor);
-        const anchor = currentVisibleAnchor ? `#${currentVisibleAnchor}` : '';
-        window.history.replaceState(undefined, '', anchor);
-      }
-      // approx 8 frames
-    }, 16 * 8);
-
-    // scroll if any anchor in url - only applies on refresh
-    const hash = getWindowHash();
-
-    if (hash) {
-      setVisibleAnchor(hash, true);
-    }
-
-    // add scrollListeners
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      // clean listeners
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   return (
     <Page
@@ -129,53 +77,59 @@ const API: React.FC<IProps> = ({ api, services = null }) => {
         title={title}
         logo={logo || constants.logo}
         tagline={tagline}
-      />
-
-      <Thumbnails
-        is_open={is_open}
-        uptime={uptime}
-        lastUpdate={last_update}
         owner={owner}
-        rate_limiting={rate_limiting_resume}
+        owner_acronym={owner_acronym}
+        owner_slug={owner_slug}
       />
 
       <div id="description" className="content-container">
-        <div className="left-column-grid desktop-only">
-          <div className="left-column">
-            <div className="sticky-column">
-              <Menu selectedItem={menuItem} select={setVisibleAnchor} />
-            </div>
-          </div>
-          <div className="column text-style" ref={contentContainer}>
-            <Content content={body} />
+        <div className="right-column-grid">
+          <div className="left-column text-style">
+            <ApiDescription
+              guides={guides}
+              body={body}
+              content_intro={content_intro}
+            />
 
+            {datagouvDatasets.length > 0 && (
+              <ApiOpenDataSources datasetsList={datagouvDatasets} />
+            )}
+
+            {guides.length === 0 && (services || []).length > 0 && (
+              <ApiRelatedServices services={services} />
+            )}
+            <Feedback />
+          </div>
+          <div className="right-column info-column">
             <Access
               is_open={is_open}
-              link={access_link || (is_open ? external_site : '')}
-              description={access_description}
-              condition={access_condition}
-              clients={clients}
+              slug={slug}
+              doc_swagger_link={doc_tech_link}
+              doc_external_link={doc_tech_external}
+              account_link={account_link}
             />
-
-            <Support link={contact_link} />
-
-            <Monitoring
-              description={monitoring_description}
-              link={monitoring_link}
+            <ApiDetails
+              monitoring={monitoring_description}
+              monitoring_link={monitoring_link}
+              rate_limiting={rate_limiting_description}
+              rate_limiting_resume={rate_limiting_resume}
+              uptime={uptime}
             />
-
-            <RateLimiting description={rate_limiting_description} />
-
-            <Partners partners={partners} />
-
             <TechnicalDocumentation
-              link={doc_tech_link}
-              external={doc_tech_external}
+              swagger_link={doc_tech_link}
+              external_link={doc_tech_external}
               slug={slug}
             />
 
-            <ApiRelatedServices services={services} />
-            <Feedback />
+            <SupportAndTeam
+              logo={logo}
+              owner={owner}
+              owner_acronym={owner_acronym}
+              owner_slug={owner_slug}
+              link={contact_link}
+            />
+
+            <Partners partners={partners} />
           </div>
         </div>
       </div>
@@ -184,9 +138,25 @@ const API: React.FC<IProps> = ({ api, services = null }) => {
           margin-bottom: 70px;
         }
 
-        .sticky-column {
-          //@ts-ignore
-          top: ${parseInt(constants.layout.HEADER_HEIGHT, 10) + 20}px;
+        .right-column-grid {
+          display: grid;
+          grid-template-columns: 65% 35%;
+          grid-gap: 40px;
+        }
+
+        .info-column {
+          border-left: 2px solid ${constants.colors.lightBlue};
+          padding: 0 0 0 40px;
+        }
+        @media only screen and (min-width: 1px) and (max-width: 900px) {
+          .right-column-grid {
+            display: flex;
+            flex-direction: column-reverse;
+          }
+          .info-column {
+            border: none;
+            padding: 0;
+          }
         }
       `}</style>
     </Page>
@@ -216,13 +186,24 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   //@ts-ignore
   const api = await getAPI(slug);
 
-  const services = await getAllServices();
+  const datagouvDatasets = await fetchDatagouvDatasets(api.datagouv_uuid || []);
 
-  const apiServices = services.filter(service => {
+  const allServices = await getAllServices();
+  const services = allServices.filter(service => {
     return service.api.indexOf(api.title) > -1;
   });
 
-  return { props: { api, services: apiServices } };
+  const allGuides = await getAllGuides();
+  const guides = allGuides
+    .filter(guide => {
+      return guide.api && guide.api.indexOf(api.title) > -1;
+    })
+    .map(guide => {
+      const { title, slug, image = null } = guide;
+      return { title, slug, image };
+    });
+
+  return { props: { api, services, guides, datagouvDatasets } };
 };
 
 export default API;

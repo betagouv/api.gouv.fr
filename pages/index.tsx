@@ -10,6 +10,7 @@ import {
   ApiTripletSection,
   ExplanationSection,
   Baseline,
+  DLNUFSection,
 } from '../components/home';
 
 interface IProps {
@@ -29,6 +30,7 @@ const Home: React.FC<IProps> = ({ apis }) => (
       <h2>Ils ont créé de nouveaux services innovants avec des APIs&nbsp;:</h2>
     </div>
     <UseCaseSection />
+    <DLNUFSection />
 
     <style jsx>{`
       h2 {

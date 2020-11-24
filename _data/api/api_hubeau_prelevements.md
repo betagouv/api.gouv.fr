@@ -1,21 +1,14 @@
 ---
 title: Hub'Eau - Prélèvements en eau
 tagline: Prélèvements en eau
-is_open: true
+is_open: 1 # 1 means API is fully open
 external_site: https://hubeau.eaufrance.fr/page/api-prelevements-eau
-logo: 08-prelevements.jpg
-clients:
-  - particuliers
-  - entreprises
-  - bureaux d'études
-  - collectivités
-  - ministères
 partners:
   - AFB
-  - BRGM
-  - BNPE
-owner: Agence française pour la biodiversité & Bureau de Recherches Géologiques et Minières
-owner_acronym: AFB & BRGM
+  - ADES
+  - Office français de la biodiversité (OFB)
+  - Bureau de Recherches Géologiques et Minières (BRGM)
+producer: eau-france
 keywords:
   - Prélèvements en eau
   - Ressource en eau
@@ -30,7 +23,7 @@ last_update: 24/07/2019
 
 ### Description fonctionnelle de l'API Prélèvements en eau
 
-[L'API Prélèvements en eau](https://hubeau.eaufrance.fr/page/api-prelevements) fournit des informations sur les volumes annuels directement prélevés sur la ressource en eau, déclinés par localisation et catégorie d’usage de l’eau. Ces informations sont issues de la gestion des redevances par les agences et offices de l’eau.
+[L'API Prélèvements en eau](https://hubeau.eaufrance.fr/page/api-prelevements-eau) fournit des informations sur les volumes annuels directement prélevés sur la ressource en eau, déclinés par localisation et catégorie d’usage de l’eau. Ces informations sont issues de la gestion des redevances par les agences et offices de l’eau.
 Source des données : [Banque Nationale des Prélèvements quantitatifs en Eau (BNPE)](https://bnpe.eaufrance.fr/).
 Les données sont exposées sous la forme d'une API REST, les formats supportés sont : JSON, GeoJSON et CSV.
 **L'API est actuellement en version beta.** Les données et fonctionnalités de l'API peuvent évoluer à tout moment.
@@ -57,17 +50,17 @@ Hub’Eau est le résultat de la collaboration de l’AFB et du BRGM dans le cad
 
 Les autres API disponibles à ce jour dans Hub'Eau sont :
 
-- [Etat piscicole](/api/api_hubeau_poissons.html) ;
-- [Indicateurs Eau potable et Assainissement](/api/api_hubeau_indic_EP_Asst.html) ;
-- [Piézométrie](/api/api_hubeau_piezometrie.html) ;
-- [Qualité physico-chimique des cours d'eau](/api/api_hubeau_qualite_rivieres.html) ;
-- [Qualité des nappes d'eau souterraine](/api/api_hubeau_qualite_nappes_eau_sout.html) ;
-- [Température des cours d'eau](/api/api_hubeau_temperature_rivieres.html) ;
-- [Hydrométrie](/api/api_hubeau_hydrometrie.html).
+- [Etat piscicole](/les-api/api_hubeau_poissons) ;
+- [Indicateurs Eau potable et Assainissement](/les-api/api_hubeau_indic_EP_Asst) ;
+- [Piézométrie](/les-api/api_hubeau_piezometrie) ;
+- [Qualité physico-chimique des cours d'eau](/les-api/api_hubeau_qualite_rivieres) ;
+- [Qualité des nappes d'eau souterraine](/les-api/api_hubeau_qualite_nappes_eau_sout) ;
+- [Température des cours d'eau](/les-api/api_hubeau_temperature_rivieres) ;
+- [Hydrométrie](/les-api/api_hubeau_hydrometrie).
 
 #### Un service en co-construction
 
-Pour des APIs toujours plus en phase avec les besoins utilisateurs, Hub'Eau a inauguré en 2018 une [politique de bêta testing](https://hubeau.eaufrance.fr/page/apis-version-beta) en organisant une campagne de tests ouverte avant la mise la mise en production de chaque nouvelle API.
+Pour des APIs toujours plus en phase avec les besoins utilisateurs, Hub'Eau a inauguré en 2018 une [politique de bêta testing](https://hubeau.eaufrance.fr/page/apis) en organisant une campagne de tests ouverte avant la mise la mise en production de chaque nouvelle API.
 D'une durée de 30 à 45 jours, ces campagnes ont pour objectif de recueillir un maximum de retour d’expérience des utilisateurs sur les points forts et les points faibles des API en construction.
 Pour être informé de la sortie des nouvelles API et les tester en avant-première, inscrivez-vous à la [newsletter](https://hubeau.eaufrance.fr/page/news-letter-hubeau) !
 

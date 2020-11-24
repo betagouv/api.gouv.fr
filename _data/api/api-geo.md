@@ -1,19 +1,13 @@
 ---
-title: API Géo
+title: API Découpage Administratif - (API Geo)
 tagline: Interrogez les référentiels géographiques plus facilement
-is_open: true
+is_open: 1 # 1 means API is fully open
 external_site: https://geo.api.gouv.fr
-clients:
-  - collectivités
-  - ministères
-  - entreprises
-  - particuliers
 partners:
   - Etalab
   - INSEE
   - OpenStreetMap
-owner: Direction interministérielle du numérique
-owner_acronym: DINUM
+producer: dinum
 keywords:
   - Communes
   - Codes postaux
@@ -22,7 +16,7 @@ keywords:
   - EPCI
 rate_limiting_resume: 50 appels / seconde / IP
 rate_limiting_description: |
-  <p>L'API est disponible à hauteur de 50 appels par seconde et par adresse IP.</p>
+  L'API est disponible à hauteur de 50 appels par seconde et par adresse IP.
 themes:
   - Géographie
 stat:
@@ -31,22 +25,31 @@ stat:
   label: recherches effectuées
   path:
     - last7DaysQueries
+content_intro: |
+  L' **API Découpage Administratif** fait partie de la boîte-à-outils API Géo. Elle permet d'interroger facilement les référentiels géographique nationaux.
+
+  ### A quoi sert l'API Découpage Administratif ?
+
+  En intégrant l'API dans votre système d'information, vous pouvez notamment :
+
+  - rechercher une communes par nom, code postal ou coordonnées géographiques
+  - rechercher un département par son nom
+  - rechercher une région par son nom
 contact_link: geo@api.gouv.fr
 doc_tech_link: https://geo.api.gouv.fr/definition.yml
+doc_tech_external: https://geo.api.gouv.fr/decoupage-administratif
 uptime: 100 # https://uptimerobot.com/dashboard#777757460
 visits_2019: 26602
 last_update: 17/01/2020
 ---
 
-L' **API Géo** est une boîte-à-outils **facile à prendre en main** pour rendre vos applications et bases de données plus intelligentes, en terme de positionnement et de connaissance des territoires.
+### Données disponibles
 
-Grâce à elle vous pouvez notamment :
-
-- Rechercher des communes par nom, code postal ou coordonnées géographiques
-- Connaître les groupements auxquels appartient une commune, ainsi que leurs compétences _(bientôt)_
-- Savoir si une parcelle appartient à certains zonages (appellations d'origine, quartiers prioritaires…) _(bientôt)_
-
-Les différentes fonctionnalités arrivant progressivement, restez informés en suivant cette page ou [en nous contactant](mailto:geo@api.gouv.fr).
+| Nom         | Description                                                                                                            |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Commune     | Le nom, la population, le code INSEE, le code postal, la géolocalisation (latitude, longitude) et le contour (GeoJSON) |
+| Département | Le nom, le code INSEE du département, et la région de rattachement                                                     |
+| Région      | La liste des régions et leur code INSEE                                                                                |
 
 ### Couverture du territoire
 

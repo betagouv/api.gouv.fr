@@ -2,10 +2,7 @@
 title: le.Taxi
 tagline: Un clic, un taxi
 external_site: https://le.taxi
-is_open: false
-access_link: /les-api/le-taxi/demande-acces
-access_description: |
-  Cette API nécessite une habilitation :
+is_open: -1 # -1 means API not open
 access_page:
   - who:
       - Un opérateur de taxi (pour les chauffeurs)
@@ -15,7 +12,7 @@ access_page:
       Vous pouvez remplir une demande d’accès à l’API Le.Taxi dans le cadre des articles [L. 3121-11-1](https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000029528684&cidTexte=LEGITEXT000023086525) et [R3121-24 à R3121-33](https://www.legifrance.gouv.fr/affichCode.do?idSectionTA=LEGISCTA000032278146&cidTexte=LEGITEXT000023086525) du Code des transports.
 
       <NextSteps />
-      <Button href="https://signup.api.gouv.fr/le-taxi">Remplir une demande</Button>
+      <Button href="https://datapass.api.gouv.fr/le-taxi">Remplir une demande</Button>
   - who:
       - Un particulier
       - Autre
@@ -23,24 +20,19 @@ access_page:
     description: |
       Seuls les opérateurs de taxi ou éditeurs d’application peuvent demander un accès à l’API.
 
-      <Button href="/rechercher-api">Retourner à la page de recherche</Button>
-clients:
-  - collectivités
-  - entreprises
-  - éditeurs d'applications
-logo: logo_le.taxi.svg
+      <Button href="/rechercher-api">Rechercher une autre API</Button>
+datapass_link: https://datapass.api.gouv.fr/le-taxi #default access link
 partners:
   - Atlantis Taxi
   - G7
   - Tako
   - Taxiloc
   - Taxis Rennais
-owner: Direction interministérielle du numérique & Direction générale des Infrastructures, des Transports et de la Mer
-owner_acronym: DINUM & DGITM
+producer: dinum
 keywords:
   - Transport
   - Taxi
-contact_link: https://le.taxi/join.html
+contact_link: equipe@le.taxi
 doc_tech_link: https://api.taxi/swagger.json
 themes:
   - Transport

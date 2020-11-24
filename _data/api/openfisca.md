@@ -2,17 +2,12 @@
 title: OpenFisca
 tagline: Calculer l'impôt, les cotisations, les aides sociales…
 external_site: https://api.openfisca.fr
-is_open: true
-clients:
-  - citoyens
-  - entreprises
-  - administrations
+is_open: 1 # 1 means API is fully open
 partners:
   - beta.gouv.fr
   - Etalab
   - Institut des Politiques Publiques
-owner: Direction interministérielle du numérique
-owner_acronym: DINUM
+producer: dinum
 keywords:
   - Impôts
   - Fiscalité
@@ -23,7 +18,6 @@ keywords:
   - Simulateur
 themes:
   - Administration & législation
-logo: logo-openfisca.svg
 contact_link: contact@openfisca.fr
 doc_tech_link: https://fr.openfisca.org/api/latest/spec
 visits_2019: 1982
