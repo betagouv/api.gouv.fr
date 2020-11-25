@@ -22,6 +22,7 @@ const formatServiceWithApis = apis => (slug, data) => {
       owner: match.owner,
       is_open: match.is_open,
       logo: match.logo || null, // for serialization
+      noindex: match.noindex || false,
     };
   });
 

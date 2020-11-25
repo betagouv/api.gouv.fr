@@ -41,7 +41,12 @@ async function main() {
     '/equipe',
     '/vie-privee',
     ...apis.map(api => api.path),
-    ...services.map(service => service.path),
+    ...services.reduce((paths, service) => {
+      if (!service.noindex) {
+        paths.push(service.path);
+      }
+      return paths;
+    }),
     ...producers.map(producer => producer.path),
     ...guides.reduce((paths, guide) => {
       if (!guide.noindex) {
