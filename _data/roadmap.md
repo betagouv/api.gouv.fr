@@ -126,6 +126,7 @@
       what: Gallica IIIF par la BNF
     - type: ADD_API
       what: Data.bnf.fr par la BNF
+      path: /les-api/api-data-bnf-fr
     - type: ADD_API
       what: AgentConnect par la DINUM
     - type: DLNUF
