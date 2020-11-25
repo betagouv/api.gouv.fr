@@ -11,7 +11,7 @@ La BNF met à disposition du public une [API SPARQL](/les-api/api-data-bnf-fr) q
 
 Pour commencer, rendez vous sur <External href="https://data.bnf.fr/sparql/">l'interface web de l'API SPARQL</External>.
 
-## Cas pratique : lister toutes les éditions d‘un livre,
+## Cas pratique : lister toutes les éditions d‘un livre
 
 Dans l'espace de requête, copiez-collez la requête suivante pour lister toutes les éditions du Médecin malgré lui de Molière. Puis cliquez sur le bouton triangulaire pour éxécuter la requête :
 
@@ -110,4 +110,4 @@ Ex : ark:/12148/cb140094767
 Les informations portées par un ARK suffixé par #about concernent les entités elles-mêmes, les choses du monde réel.
 Les informations portées par un ARK non suffixé concernent les notices, les descriptions des entités.
 
-Attention : les URI du triplestore sont préfixées http://, et non https://
+Attention : les URI du triplestore sont préfixées `http://`, et non `https://`
