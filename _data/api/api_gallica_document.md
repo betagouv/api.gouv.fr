@@ -1,6 +1,6 @@
 ---
 title: API Gallica Document
-tagline: Un accès aux documents numériques de la Bibliothèque nationale de France
+tagline: Accéder aux documents numériques de la Bibliothèque nationale de France
 producer: bnf
 category: public
 is_open: 1
