@@ -46,7 +46,7 @@ async function main() {
         paths.push(service.path);
       }
       return paths;
-    }),
+    }, []),
     ...producers.map(producer => producer.path),
     ...guides.reduce((paths, guide) => {
       if (!guide.noindex) {
