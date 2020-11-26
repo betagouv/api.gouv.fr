@@ -124,6 +124,7 @@
   12:
     - type: ADD_API
       what: Gallica IIIF par la BNF
+      path: /les-api/api_gallica_IIIF
     - type: ADD_API
       what: Data.bnf.fr par la BNF
     - type: ADD_API
