@@ -12,7 +12,7 @@ keywords:
   - sparql
   - BNF
 contact_link: data@bnf.fr
-doc_tech_external: https://data.bnf.fr/fr/opendata
+doc_tech_external: https://data.bnf.fr/sparql/
 themes:
   - Culture
 last_update: 25/11/2020
