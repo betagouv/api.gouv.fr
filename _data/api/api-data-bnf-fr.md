@@ -1,6 +1,6 @@
 ---
-title: API catalogue des données de la bnf - data.bnf.fr
-tagline: Accéder aux données de la BNF
+title: API portail des données de la BnF - data.bnf.fr
+tagline: Accéder aux données de data.bnf.fr, le portail des données BnF
 producer: bnf
 category: public
 is_open: 1

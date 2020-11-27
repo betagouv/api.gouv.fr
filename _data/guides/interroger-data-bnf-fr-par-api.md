@@ -4,7 +4,7 @@ tagline: Vous souhaitez lister toutes les éditions du Médecin malgré lui de M
 tags: sparql, spectacle, livre, edition
 image: code.jpg
 api:
-  - API catalogue des données de la bnf - data.bnf.fr
+  - API portail des données de la BnF - data.bnf.fr
 ---
 
 La BNF met à disposition du public une [API SPARQL](/les-api/api-data-bnf-fr) qui permet d'interroger directement les ressources de <External href="https://data.bnf.fr/">data.bnf.fr</External>.
@@ -13,7 +13,7 @@ Pour commencer, rendez vous sur <External href="https://data.bnf.fr/sparql/">l'i
 
 ## Cas pratique : lister toutes les éditions d‘un livre
 
-Dans l'espace de requête, copiez-collez la requête suivante pour lister toutes les éditions du Médecin malgré lui de Molière. Puis cliquez sur le bouton triangulaire pour éxécuter la requête :
+Dans l'espace de requête, copiez-collez la requête suivante pour lister toutes les éditions du Médecin malgré lui de Molière. Puis cliquez sur le bouton triangulaire pour exécuter la requête :
 
 ```sql
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
@@ -42,7 +42,7 @@ L'API renvoie toutes les editions connues, avec le lien vers la version numériq
 
 ## Un autre exemple : la liste de tous les spectacles représentés dans une ville
 
-De nouveau, copiez-collez la requête et cliquez sur le bouton pour éxécuter la requête :
+De nouveau, copiez-collez la requête et cliquez sur le bouton pour exécuter la requête :
 
 ```sql
 PREFIX schemaorg: <http://schema.org/>
