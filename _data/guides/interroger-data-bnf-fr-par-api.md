@@ -7,7 +7,7 @@ api:
   - API portail des données de la BnF - data.bnf.fr
 ---
 
-La BNF met à disposition du public une [API SPARQL](/les-api/api-data-bnf-fr) qui permet d'interroger directement les ressources de <External href="https://data.bnf.fr/">data.bnf.fr</External>.
+La BnF met à disposition du public une [API SPARQL](/les-api/api-data-bnf-fr) qui permet d'interroger directement les ressources de <External href="https://data.bnf.fr/">data.bnf.fr</External>.
 
 Pour commencer, rendez vous sur <External href="https://data.bnf.fr/sparql/">l'interface web de l'API SPARQL</External>.
 
