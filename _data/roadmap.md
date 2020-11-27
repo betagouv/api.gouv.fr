@@ -123,10 +123,10 @@
       path: /les-api/api-loire-atlantique-donnee-ouvertes
   12:
     - type: ADD_API
-      what: Gallica IIIF par la BNF
+      what: Gallica IIIF par la BnF
       path: /les-api/api_gallica_IIIF
     - type: ADD_API
-      what: Data.bnf.fr par la BNF
+      what: Data.bnf.fr par la BnF
       path: /les-api/api-data-bnf-fr
     - type: ADD_API
       what: AgentConnect par la DINUM
