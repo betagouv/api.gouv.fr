@@ -95,9 +95,6 @@ const API: React.FC<IProps> = ({
               <ApiOpenDataSources datasetsList={datagouvDatasets} />
             )}
 
-            {guides.length === 0 && (services || []).length > 0 && (
-              <ApiRelatedServices services={services} />
-            )}
             <Feedback />
           </div>
           <div className="right-column info-column">

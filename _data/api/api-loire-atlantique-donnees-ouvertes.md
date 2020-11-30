@@ -48,7 +48,7 @@ L’API met à disposition l’ensemble des jeux de données publics (non restre
 
 Cette API est en accès libre. Elle permet à tout le monde de :
 
-- Réutiliser les jeux de données publics du portail données ouvertes Loire-Atlantique
+- Réutiliser les jeux de données publics du portail de données ouvertes du Département de Loire-Atlantique
 - Bénéficier des données mises à jour directement via l’API qui « appelle » les données du catalogue
 
 ## Données disponibles
