@@ -18,7 +18,6 @@ import {
   SupportAndTeam,
   Partners,
   TechnicalDocumentation,
-  ApiRelatedServices,
   ApiOpenDataSources,
   ApiDescription,
 } from '../../components/api';
