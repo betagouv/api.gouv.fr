@@ -44,4 +44,4 @@ Les articles suivants peuvent vous aider à justifier vos droits d'accès aux do
 - Certaines délibérations prises par la ville et/ou par la commune peuvent constituer le cadre légal
 
 <NextSteps />
-<Button href="https://datapass.api.gouv.fr/api-particulier?demarche=tarif-activite-scolaire">Remplir une demande</Button>
+<Button href="https://datapass.api.gouv.fr/api-particulier?demarche=tarif-activite-periscolaire">Remplir une demande</Button>
