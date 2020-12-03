@@ -197,7 +197,6 @@ class MyDocument extends Document {
             />
           )}
           <NextScript />
-
           {/* last, we call sentry as we want to load it synchronously. It has to be executed BEFORE the other deferred scripts */}
           {process.env.NODE_ENV === 'production' && (
             <>

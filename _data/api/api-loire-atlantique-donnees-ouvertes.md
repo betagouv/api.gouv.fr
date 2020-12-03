@@ -1,6 +1,6 @@
 ---
 title: API données ouvertes de Loire-Atlantique
-tagline: Découvrez les jeux de données publiques ouverts du Département de Loire Atlantique
+tagline: Découvrez les jeux de données publiques ouverts du Département de Loire-Atlantique
 category: Public
 producer: loire-atlantique
 is_open: 1
@@ -14,7 +14,8 @@ keywords:
   - temps réel
   - trafic
   - déplacement
-  - Loire Atlantique
+  - Loire
+  - Atlantique
   - Nantes
   - open
   - data
@@ -35,8 +36,6 @@ last_update: 20/11/2020
 Le Département de Loire-Atlantique s’est engagé dans l’ouverture de ses données publiques dès 2011 pour développer la transparence, la connaissance et l’innovation sur le territoire départemental.
 
 Au total, ce sont 260 jeux de données qui ont été produits par le Département de Loire-Atlantique depuis la création de la plateforme. Il s’est associé à Nantes Métropole et à la Région des Pays de la Loire pour se doter d’une plateforme commune d’ouverture des données publiques. Les trois collectivités permettent ainsi d’accéder à une large offre de données ouvertes à partir d’un même portail.
-
-Il s’est associé à Nantes Métropole et à la Région des Pays de la Loire pour se doter d’une plateforme commune d’ouverture des données publiques. Les trois collectivités permettent ainsi d’accéder à une large offre de données ouvertes à partir d’un même portail.
 
 Que vous vous connectiez sur : <External href='https://data.loire-atlantique.fr/'>data.loire-atlantique.fr</External>, <External href='https://data.nantesmetropole.fr/'>data.nantesmetropole.fr</External> ou <External href='https://data.paysdelaloire.fr/'>data.paysdelaloire.fr</External>, vous allez bénéficier de toutes les données et de toutes les fonctionnalités de cette plateforme mutualisée.
 

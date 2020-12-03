@@ -104,7 +104,7 @@
       what: Registre des Bénéficiaires Effectifs (RBE) produite par l'INPI
       path: /les-api/api-rbe
     - type: ADD_API
-      what: Données ouvertes de l’URSSAF
+      what: Données ouvertes de l’Urssaf
       path: /les-api/api-open-data-urssaf
     - type: ADD_API
       what: Répertoire National des Métiers

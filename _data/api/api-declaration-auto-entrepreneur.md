@@ -62,16 +62,17 @@ Du point de vue de l'usager, l'API permet au tiers déclarant de :
 
 Liste des fonctionnalités à titre d’exemple (liste non exhaustive) :
 
-| Donnée       | Lien vers le jeu de données                                                                                                                                                                       |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Comptes      | Déterminer si un compte auto-entrepreneur est éligible à la tierce déclaration ainsi que connaître sa périodicité déclarative.                                                                 |
+| Donnée       | Lien vers le jeu de données                                                                                                                                                                          |
+| ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Comptes      | Déterminer si un compte auto-entrepreneur est éligible à la tierce déclaration ainsi que connaître sa périodicité déclarative.                                                                       |
 | Mandats      | Notifier l'Urssaf de l'enregistrement ou de l’annulation d'un mandat de tierce déclaration obtenu par la plateforme pour cet individu.                                                               |
-| Estimer      | Effectuer une estimation des cotisations sociales dues à l'URSSAF pour un auto-entrepreneur en fonction de chiffres d’affaires passés en paramètre.                                               |
-| Declarer     | Effectuer la déclaration de chiffres d’affaires pour le compte de l’auto-entrepreneur identifié par son NIR ou son SIRET, et retourne les montants des cotisations sociales dues pour la période. |
-| Payer        | Initialiser un télépaiement SEPA par l'Urssaf sur l'IBAN référencé en paramètre.                                                                                                                  |
-| SEPA Mandats | Lister les mandats SEPA connus et d'enregistrer ou révoquer un mandat SEPA pour un auto-entrepreneur.                                                                                             |
+| Estimer      | Effectuer une estimation des cotisations sociales dues à l'Urssaf pour un auto-entrepreneur en fonction de chiffres d’affaires passés en paramètre.                                                  |
+| Declarer     | Effectuer la déclaration de chiffres d’affaires pour le compte de l’auto-entrepreneur identifié par son NIR ou son SIRET, avec en retour les montants des cotisations sociales dues pour la période. |
+| Payer        | Initialiser un télépaiement SEPA pour l'Urssaf sur l'IBAN référencé en paramètre.                                                                                                                    |
+| SEPA Mandats | Lister les mandats SEPA connus et enregistrer ou révoquer un mandat SEPA pour un auto-entrepreneur.                                                                                                  |
 
 ### En savoir plus
+
 <!--
 #### Qu'est ce qu'un tiers déclarant ?
 
