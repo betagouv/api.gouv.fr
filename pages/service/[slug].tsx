@@ -39,9 +39,7 @@ const Service: React.FC<IProps> = ({
       <div className="content-container content">
         <div className="left-column-grid">
           <div className="left-column">
-            <h3>
-              {apiList.length > 1 ? 'Les APIs utilisées' : 'API utilisée'}
-            </h3>
+            <h3>{apiList.length > 1 ? 'Les API utilisées' : 'API utilisée'}</h3>
             <>
               {apiList.map(api => (
                 <div key={api.slug}>

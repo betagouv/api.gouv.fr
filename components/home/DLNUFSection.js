@@ -3,7 +3,7 @@ import React from 'react';
 const DLNUFSection = () => (
   <section id="use-cases" className="content-container">
     <br />
-    <h2 className="layout-center">Les APIs et le Dites-le-nous-une-fois</h2>
+    <h2 className="layout-center">Les API et le Dites-le-nous-une-fois</h2>
     <div className="use-case">
       <div className="content-wrapper">
         <div>
@@ -14,8 +14,8 @@ const DLNUFSection = () => (
           le partage automatique de données.
           <br />
           <br />
-          Les APIs <b>jouent un rôle essentiel</b> pour permettre ces échanges
-          de données.
+          Les API <b>jouent un rôle essentiel</b> pour permettre ces échanges de
+          données.
         </div>
         <a
           target="_blank"
