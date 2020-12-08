@@ -60,6 +60,14 @@ En intégrant la brique API Particulier dans votre système d'information, ou vo
 En 2014, nos usagers posaient une demi-journée pour effectuer leurs démarches en mairie. Aujourd'hui, ils les effectuent en ligne en 5 minutes.
 </Quote>
 
+## L'avantage pour les agents de la communes
+
+Les informations sont certifiées par le fournisseur de données, il n'y a plus de validation de document à la main à effectuer ni d'archivage de documents papier.
+
+La circulation de données directement entre les systèmes d'information permet d'éviter les saisies manuelles, les erreurs ou fautes de frappes.
+
+Les agents gagnent du temps pour accompagner les usagers en difficulté.
+
 <Quote logo="/images/guides/boulbi.svg" who='Ville de Boulogne-Billancourt' title='Services de la mairie'>
 En 1,5 mois grâce au système de Quotient Familial Dématerialisé, nous avons pu traiter les dossiers d'autant de famille qu'en 4 mois avec le système précedent.
 </Quote>
@@ -68,25 +76,7 @@ En 1,5 mois grâce au système de Quotient Familial Dématerialisé, nous avons 
 Maintenant que le traitement est automatisé, nous avons enfin le temps d'accompagner les usagers en difficulté, de leur expliquer plus largement les prestations auxquelles ils peuvent avoir accès.
 </Quote>
 
-## L'avantage pour les agents de la communes
-
-Les informations sont certifiées par le fournisseur de données, il n'y a plus de validation de document à la main à effectuer ni d'archivage de documents papier.
-
-La circulation de données directement entre les systèmes d'information permet d'éviter les saisies manuelles, les erreurs ou fautes de frappes.
-
-<Quote logo="/images/guides/sitiv.png" link='https://www.sitiv.fr/Actualites/L-action-sociale-des-villes-du-SITIV-integre-le-dispositif-Dites-le-nous-une-fois' who='Le SITIV' title='membre du réseau Déclic'>
-le principe du "Dites-le nous une fois" (...) permet aux citoyens de ne pas avoir à donner leur consentement mais d'être simplement informés de l'utilisation de leurs pièces.
-C'est dans ce cadre que le SITIV intègre directement au logiciel métier les informations des usagers (...) Les saisies dans les dossiers usagers sont ainsi **facilitées et certifiées**.
-</Quote>
-
-Les agents gagnent du temps pour accompagner les usagers en difficulté.
-
-<Quote logo="/images/guides/sitiv.png" link='https://www.sitiv.fr/Actualites/L-action-sociale-des-villes-du-SITIV-integre-le-dispositif-Dites-le-nous-une-fois' who='Le SITIV' title='membre du réseau Déclic'>
-le principe du "Dites-le nous une fois" (...) permet aux citoyens de ne pas avoir à donner leur consentement mais d'être simplement informés de l'utilisation de leurs pièces.
-C'est dans ce cadre que le SITIV intègre directement au logiciel métier les informations des usagers (...) Les saisies dans les dossiers usagers sont ainsi **facilitées et certifiées**.
-</Quote>
-
-<External href="https://www.dailymotion.com/video/x7xsjgz">Voir le témoignage de Clamart</External> dans le cadre du webinaire sur la simplficiation des démarches des citoyens grâce aux API (à partir de la 9eme minute).
+**Pour en savoir plus :**&nbsp;<External href="https://www.dailymotion.com/video/x7xsjgz"> voir le témoignage de la ville de Clamart</External> dans le cadre du webinaire sur la simplificiation des démarches des citoyens grâce aux API (à partir de la 9eme minute).
 
 ## Editeurs
 
