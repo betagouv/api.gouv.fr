@@ -54,8 +54,13 @@ const Quote: React.FC<PropsWithChildren<IProps>> = ({
 
         .quote-wrapper > div:first-of-type {
           text-align: center;
+          justify-content: center;
+          align-items: center;
+          display: flex;
+          flex-direction: column;
           font-size: 0.9rem;
           line-height: 1.2rem;
+          margin-bottom: 10px;
         }
 
         .quote-wrapper > div:first-of-type > .medaillon {
