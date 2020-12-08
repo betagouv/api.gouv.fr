@@ -38,7 +38,7 @@ visits_2019: 4500
 last_update: 10/12/2020
 ---
 
-Agentconnect permet aux agents de la fonction publique d’Etat de se connecter aux applicatifs métiers web depuis un compte existant. Son objectif premier est de simplifier le quotidien des agents de l’Etat.
+AgentConnect permet aux agents de la fonction publique d’Etat de se connecter aux applicatifs métiers web depuis un compte existant. Son objectif premier est de simplifier le quotidien des agents de l’Etat.
 
 AgentConnect est à destination des administrations centrales, aux services déconcentrés et aux opérateurs de l’Etat.
 
