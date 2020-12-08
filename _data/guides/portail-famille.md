@@ -2,6 +2,7 @@
 title: Calculer le Quotient Familial dans un Portail Famille
 tagline: Vous êtes une commune ou un éditeur de logiciel ? Calculez facilement le Quotient Familial grâce aux données de la CAF et de la DGFiP accessibles travers l'API Particulier.
 tags: cas usage, api particulier, portail famille, quotient familial dématérialisé
+noindex: true
 image: portail_famille.jpg
 # api:
 #   - API Particulier
@@ -19,7 +20,7 @@ En intégrant la brique API Particulier dans votre portail famille : les famille
 
 Vous profitez ainsi de données certifiées et évitez toute erreur de saisie.
 
-Ce système présente des avantages importants <a href='#editeurs'>pour les familles</a> et <a href='#editeurs'>pour les agents</a>.
+Ce système présente des avantages importants <a href="#l'avantage-pour-les-familles">pour les familles</a> et <a href="#l'avantage-pour-les-agents-de-la-communes">pour les agents</a>.
 
 ## Les données disponibles
 
@@ -43,6 +44,10 @@ Pour remplir votre demande, vous aurez besoin :
 - des coordonnées de l'équipe
 - des coordonnées de votre délégué à la protection des données et responsable de traitement
 
+<NextSteps/>
+<br/>
+<Button href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</Button>
+
 Si vous travaillez avec un des éditeurs ou intégrateurs, <a href='#editeurs'>consultez la section éditeurs.</a>
 
 ## L'avantage pour les familles
@@ -51,15 +56,15 @@ La démarche est réalisable 100% en ligne, il n'y a plus de déplacement néces
 
 En intégrant la brique API Particulier dans votre système d'information, ou votre site internet :
 
-<Quote logo="/images/guides/sitiv.png" who='Ville de Clamart' title='Simon-Pierre Chalvidan, directeur général adjoint des services'>
+<Quote logo="/images/guides/clamart.svg" who='Ville de Clamart' title='Simon-Pierre Chalvidan, directeur général adjoint des services'>
 En 2014, nos usagers posaient une demi-journée pour effectuer leurs démarches en mairie. Aujourd'hui, ils les effectuent en ligne en 5 minutes.
 </Quote>
 
-<Quote logo="/images/guides/sitiv.png" who='Ville de Boulogne-Billancourt' title='Services de la mairie'>
+<Quote logo="/images/guides/boulbi.svg" who='Ville de Boulogne-Billancourt' title='Services de la mairie'>
 En 1,5 mois grâce au système de Quotient Familial Dématerialisé, nous avons pu traiter les dossiers d'autant de famille qu'en 4 mois avec le système précedent.
 </Quote>
 
-<Quote logo="/images/guides/sitiv.png" who='Ville de Clamart' title='Aurélie Coutant, directrice de la relation usagers'>
+<Quote logo="/images/guides/clamart.svg" who='Ville de Clamart' title='Aurélie Coutant, directrice de la relation usagers'>
 Maintenant que le traitement est automatisé, nous avons enfin le temps d'accompagner les usagers en difficulté, de leur expliquer plus largement les prestations auxquelles ils peuvent avoir accès.
 </Quote>
 
@@ -82,10 +87,6 @@ C'est dans ce cadre que le SITIV intègre directement au logiciel métier les in
 </Quote>
 
 <External href="https://www.dailymotion.com/video/x7xsjgz">Voir le témoignage de Clamart</External> dans le cadre du webinaire sur la simplficiation des démarches des citoyens grâce aux API (à partir de la 9eme minute).
-
-<NextSteps/>
-<br/>
-<Button href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</Button>
 
 ## Editeurs
 
