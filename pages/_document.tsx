@@ -177,6 +177,17 @@ class MyDocument extends Document {
 
         <body>
           <Main />
+          <script
+            src="https://betagouv.github.io/glossaire/dist/main.js"
+            async
+            defer
+          />
+          <div
+            id="glossaire-betalab-params"
+            style={{ display: 'none' }}
+            data-exclude-sigles="API,PRO,BTP"
+            data-dynamic-repaint="true"
+          />
           {process.env.NODE_ENV === 'production' && (
             <script
               dangerouslySetInnerHTML={{
