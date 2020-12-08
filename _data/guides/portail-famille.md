@@ -44,7 +44,6 @@ Pour remplir votre demande, vous aurez besoin :
 - des coordonnées de l'équipe
 - des coordonnées de votre délégué à la protection des données et responsable de traitement
 
-<NextSteps/>
 <br/>
 <Button href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</Button>
 
@@ -52,9 +51,9 @@ Si vous travaillez avec un des éditeurs ou intégrateurs, <a href='#editeurs'>c
 
 ## L'avantage pour les familles
 
-La démarche est réalisable 100% en ligne, il n'y a plus de déplacement nécessaire en mairie si de temps d'attente
+La démarche est réalisable 100% en ligne, il n'y a plus de déplacement nécessaire en mairie si de temps d'attente.
 
-En intégrant la brique API Particulier dans votre système d'information, ou votre site internet :
+La donnée est certifiée par le fournisseur de données, cela évite toute éventuelle fraude de document ou de déclaration.
 
 <Quote logo="/images/guides/clamart.svg" who='Ville de Clamart' title='Simon-Pierre Chalvidan, directeur général adjoint des services'>
 En 2014, nos usagers posaient une demi-journée pour effectuer leurs démarches en mairie. Aujourd'hui, ils les effectuent en ligne en 5 minutes.
@@ -66,11 +65,11 @@ Les informations sont certifiées par le fournisseur de données, il n'y a plus 
 
 La circulation de données directement entre les systèmes d'information permet d'éviter les saisies manuelles, les erreurs ou fautes de frappes.
 
-Les agents gagnent du temps pour accompagner les usagers en difficulté.
-
 <Quote logo="/images/guides/boulbi.svg" who='Ville de Boulogne-Billancourt' title='Services de la mairie'>
 En 1,5 mois grâce au système de Quotient Familial Dématerialisé, nous avons pu traiter les dossiers d'autant de famille qu'en 4 mois avec le système précedent.
 </Quote>
+
+Les agents gagnent du temps pour accompagner les usagers en difficulté.
 
 <Quote logo="/images/guides/clamart.svg" who='Ville de Clamart' title='Aurélie Coutant, directrice de la relation usagers'>
 Maintenant que le traitement est automatisé, nous avons enfin le temps d'accompagner les usagers en difficulté, de leur expliquer plus largement les prestations auxquelles ils peuvent avoir accès.
@@ -80,7 +79,7 @@ Maintenant que le traitement est automatisé, nous avons enfin le temps d'accomp
 
 ## Editeurs
 
-Si vous travaillez avec l'un des éditeurs ou intégrateurs ci-dessous vous pouvez faire une demande simplifiée :
+Si vous travaillez avec l'un des éditeurs ou intégrateurs ci-dessous vous pouvez faire une demande pré-remplie :
 
 | Editeur     | Nom de la solution | Date | Lien vers la demande                                                                         |
 | ----------- | ------------------ | ---- | -------------------------------------------------------------------------------------------- |
