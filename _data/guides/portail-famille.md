@@ -2,9 +2,9 @@
 title: Calculer le Quotient Familial dans un Portail Famille
 tagline: Vous êtes une commune ou un éditeur de logiciel ? Calculez facilement le Quotient Familial grâce aux données de la CAF et de la DGFiP accessibles travers l'API Particulier.
 tags: cas usage, api particulier, portail famille, quotient familial dématérialisé
-image: dossier.jpg
-api:
-  - API Particulier
+image: portail_famille.jpg
+# api:
+#   - API Particulier
 ---
 
 De plus en plus de communes mettent à disposition des habitants un Portail Famille permettant d'accéder à des services en ligne pour gérer les activités de l'ensemble de la famille : la crèche, l'halte-garderie, les centres de loisirs, la restauration scolaire, les goûter, les études, le conservatoire, l'atelier beaux-arts et autres.
@@ -91,11 +91,11 @@ C'est dans ce cadre que le SITIV intègre directement au logiciel métier les in
 
 Si vous travaillez avec l'un des éditeurs ou intégrateurs ci-dessous vous pouvez faire une demande simplifiée :
 
-| Editeur | Nom de la solution       | Date           | Lien vers la demande                                                                                              |
-| ------- | ------------------------ | -------------- | ----------------------------------------------------------------------------------------------------------------- |
-| Agora Plus     |  |     | <External href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</External>     |
-| Ciril Group  | |  | <External href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</External> |
-| JVS     | Parascol |     | <External href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</External>     |
-| Arpège     |  |     | <External href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</External>     |
+| Editeur     | Nom de la solution | Date | Lien vers la demande                                                                         |
+| ----------- | ------------------ | ---- | -------------------------------------------------------------------------------------------- |
+| Agora Plus  |                    |      | <External href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</External> |
+| Ciril Group |                    |      | <External href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</External> |
+| JVS         | Parascol           |      | <External href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</External> |
+| Arpège      |                    |      | <External href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</External> |
 
 Vous êtes un éditeur et vous souhaitez apparaître dans cette liste ? Écrivez-nous à [contact@particulier.api.gouv.fr](mailto:contact@particulier.api.gouv.fr)
