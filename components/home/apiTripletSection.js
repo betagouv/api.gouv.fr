@@ -7,7 +7,7 @@ const ApiTripletSection = ({ apiList }) => {
   return (
     <section id="api-triplet">
       <div className="content-container">
-        <h3>Découvrez des APIs du service public&nbsp;:</h3>
+        <h3>Découvrez des API du service public&nbsp;:</h3>
         <div className="default-grid">
           {apiList.map(api => (
             <ApiCard key={api.title} {...api} />
@@ -16,7 +16,7 @@ const ApiTripletSection = ({ apiList }) => {
       </div>
       <div className="layout-center">
         <ButtonLink href="rechercher-api" size="large" alt>
-          Voir toutes les APIs ☞
+          Voir toutes les API ☞
         </ButtonLink>
       </div>
     </section>

@@ -10,6 +10,7 @@ import {
   ApiTripletSection,
   ExplanationSection,
   Baseline,
+  DLNUFSection,
 } from '../components/home';
 
 interface IProps {
@@ -20,15 +21,16 @@ const Home: React.FC<IProps> = ({ apis }) => (
   <Page
     title="Api.gouv.fr"
     canonical={`https://api.gouv.fr`}
-    description="Simplifiez le partage et la circulation des données administratives grace à api.gouv, le site qui référence toutes les APIs du service public."
+    description="Simplifiez le partage et la circulation des données administratives grace à api.gouv, le site qui référence toutes les API du service public."
   >
     <Baseline />
     <ExplanationSection />
     <ApiTripletSection apiList={apis} />
     <div className="content-container layout-center">
-      <h2>Ils ont créé de nouveaux services innovants avec des APIs&nbsp;:</h2>
+      <h2>Ils ont créé de nouveaux services innovants avec des API&nbsp;:</h2>
     </div>
     <UseCaseSection />
+    <DLNUFSection />
 
     <style jsx>{`
       h2 {

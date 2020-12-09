@@ -3,6 +3,7 @@ title: demarches-simplifiees.fr
 link: https://www.demarches-simplifiees.fr
 description: Dématérialiser et simplifier les démarches administratives
 screenshot: demarches-simplifiees.fr.jpg
+noindex: true
 api:
   - API Entreprise
   - FranceConnect et les API FranceConnectées

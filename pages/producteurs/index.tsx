@@ -12,7 +12,7 @@ interface Props {
 const Producteurs: NextPage<Props> = ({ producers }) => {
   return (
     <Page
-      title="Liste des producteurs d'APIs"
+      title="Liste des producteurs d'API"
       description="La liste de toutes les administrations qui propose une API disponible publiquement."
     >
       <section className="content-container page-baseline">

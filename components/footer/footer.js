@@ -47,10 +47,10 @@ const Footer = () => {
             <h2>Le site</h2>
           </li>
           <li>
-            <a href="/feuille-de-route">Feuille de route des APIs</a>
+            <a href="/feuille-de-route">Feuille de route des API</a>
           </li>
           <li>
-            <a href="/documentation">Documentation des APIs</a>
+            <a href="/documentation">Documentation des API</a>
           </li>
           <li>
             <a href="/mentions-legales">Mentions Légales</a>

@@ -80,7 +80,7 @@ const Team: React.FC = () => (
     canonical={`https://api.gouv.fr/equipe`}
   >
     <div className="text-wrapper text-style">
-      <h1 className="layout-center">L’équipe des APIs </h1>
+      <h1 className="layout-center">L’équipe des API </h1>
       <h2>Une équipe, une mission</h2>
       <p>
         Au sein des administrations, la donnée est une ressource dispersée,
@@ -120,6 +120,12 @@ const Team: React.FC = () => (
           mettent à disposition leurs données
         </li>
       </ul>
+      <h3>Où nous trouver ?</h3>
+      <p>
+        Les bureaux de l'équipe se trouvent au sein de la Direction
+        Interministérielle du Numérique (DINUM), au 20 avenue de Ségur à Paris
+        (75007).
+      </p>
       <h3>La fine équipe</h3>
       <div className="default-grid">
         {teamData.map((teamate, index) => (

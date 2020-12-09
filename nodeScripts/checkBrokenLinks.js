@@ -1,5 +1,4 @@
 const blc = require('broken-link-checker');
-const link = require('linkinator');
 
 let brokenLinks = 0;
 let totalLinks = 0;
@@ -26,6 +25,11 @@ const IGNORE = [
   'https://www.service-public.fr/partenaires/comarquage/documentation', // same
   'http://webstat.banque-france.fr/fr/', // 15s load
   'https://doc.transport.data.gouv.fr/producteurs/operateurs-de-transport-regulier-de-personnes/temps-reel-des-transports-en-commun', //204 no content but page load
+  'https://www.inpi.fr/sites/default/files/inpi_doc_tech_rbe_api_fevrier_2020_v1.4.pdf',
+  'https://www.inpi.fr/sites/default/files/inpi_doc_tech_rbe_xml_api_sept_2020_v1.0.pdf',
+  'https://www.inpi.fr/sites/default/files/inpi_doc_tech_rbe_api_fevrier_2020_v1.4.pdf',
+  'https://geo.pays-de-brest.fr/donnees/Documents/Public/DocWebServicesTransport.pdf',
+  'https://geo.pays-de-brest.fr/zapp/Pages/Demande-compte.aspx',
 ];
 
 const urlChecker = new blc.SiteChecker(

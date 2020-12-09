@@ -44,12 +44,4 @@ Les articles suivants peuvent vous aider à justifier vos droits d'accès aux do
 - Certaines délibérations prises par la ville et/ou par la commune peuvent constituer le cadre légal
 
 <NextSteps />
-<Button href="https://datapass.api.gouv.fr/api-particulier?scopes=%7B%22dgfip_avis_imposition%22%3Atrue%2C%22dgfip_adresse%22%3Atrue%2C%22cnaf_quotient_familial%22%3Atrue%2C%22cnaf_allocataires%22%3Afalse%2C%22cnaf_enfants%22%3Afalse%2C%22cnaf_adresse%22%3Afalse%7D">Remplir une demande</Button>
-
-<!--
-## Ils l'ont fait !
-
-Témoignage : [COMMUNE DE SCHILTIGHEIM](https://signup.api.gouv.fr/api-particulier/460#description)
-[COMMUNAUTE COMMUNES DU PAYS DE LUXEUIL](https://datapass.api.gouv.fr/api-particulier/2082#donnees)
-[COMMUNE DE LINGOLSHEIM](https://datapass.api.gouv.fr/api-particulier/1881#donnees)
-[COMMUNE DE GARCHES](https://datapass.api.gouv.fr/api-particulier/854#donnees) -->
+<Button href="https://datapass.api.gouv.fr/api-particulier?demarche=tarif-activite-periscolaire">Remplir une demande</Button>

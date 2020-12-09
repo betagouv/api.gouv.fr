@@ -43,4 +43,4 @@ Les articles suivants peuvent vous aider à justifier vos droits d'accès aux do
 - Article <External href=https://www.legifrance.gouv.fr/affichCode.do?idSectionTA=LEGISCTA000020743087&cidTexte=LEGITEXT000006071191>R531-52</External> du _Code de l'éducation_
 
 <NextSteps />
-<Button href="https://datapass.api.gouv.fr/api-particulier?scopes=%7B%22dgfip_avis_imposition%22%3Atrue%2C%22dgfip_adresse%22%3Afalse%2C%22cnaf_quotient_familial%22%3Atrue%2C%22cnaf_allocataires%22%3Afalse%2C%22cnaf_enfants%22%3Afalse%2C%22cnaf_adresse%22%3Afalse%7D#description">Remplir une demande</Button>
+<Button href="https://datapass.api.gouv.fr/api-particulier?demarche=tarif-restauration-scolaire">Remplir une demande</Button>
