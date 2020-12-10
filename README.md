@@ -14,9 +14,7 @@ aux API et à leurs producteurs.
 
 Les fournisseurs, de leur côté, ont avec ce catalogue un moyen simple de faire connaître leurs API.
 
-### Fournisseur d'API ? [Ajoutez votre API](https://github.com/betagouv/api.gouv.fr/blob/master/CONTRIBUTING.md#ajouter-une-api) !
-
-### Réutilisateur d'API ? [Ajoutez votre service](https://github.com/betagouv/api.gouv.fr/blob/master/CONTRIBUTING.md#ajouter-un-service) !
+### Fournisseur d'API ? [Ajoutez votre API](https://api.gouv.fr/nouvelle-api) !
 
 ## Installation locale
 
