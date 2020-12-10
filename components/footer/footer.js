@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import constants from '../../constants';
 
 const Footer = () => {
   return (
@@ -47,10 +48,10 @@ const Footer = () => {
             <h2>Le site</h2>
           </li>
           <li>
-            <a href="/feuille-de-route">Feuille de route des APIs</a>
+            <a href="/feuille-de-route">Feuille de route des API</a>
           </li>
           <li>
-            <a href="/documentation">Documentation des APIs</a>
+            <a href="/documentation">Documentation des API</a>
           </li>
           <li>
             <a href="/mentions-legales">Mentions Légales</a>
@@ -70,13 +71,7 @@ const Footer = () => {
             <a href="/contact">Nous contacter</a>
           </li>
           <li>
-            <a
-              href="https://github.com/betagouv/api.gouv.fr/blob/master/CONTRIBUTING.md"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Améliorer cette page
-            </a>
+            <a href={constants.links.ADD_API}>Ajouter une nouvelle API</a>
           </li>
         </ul>
         <ul className="footer__links">
@@ -109,6 +104,9 @@ const Footer = () => {
             >
               La DINUM
             </a>
+          </li>
+          <li>
+            <a href="/producteurs">Les producteurs d’API</a>
           </li>
         </ul>
       </div>

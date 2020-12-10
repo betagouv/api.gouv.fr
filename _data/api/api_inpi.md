@@ -1,5 +1,5 @@
 ---
-title: Registre National du Commerce et des Sociétés
+title: API Registre National du Commerce et des Sociétés
 tagline: Le registre public des sociétés françaises immatriculées dans les greffes locales des tribunaux, centralisées à l'INPI.
 is_open: 0
 account_link: https://data.inpi.fr/register
@@ -7,8 +7,7 @@ partners:
   - beta.gouv.fr
   - DINUM
   - Etalab
-owner: Institut national de la propriété industrielle
-owner_acronym: INPI
+producer: inpi
 keywords:
   - Répertoire
   - open data
@@ -24,7 +23,6 @@ keywords:
   - immatriculation
 themes:
   - Entreprise
-logo: inpi.png
 contact_link: https://www.inpi.fr/fr/contactez-nous
 doc_tech_link: /api/v1/proxy/https%3A%2F%2Fdata.inpi.fr%2Fbuild%2Ffiles%2Fswagger-inpi-rncs.yaml
 datagouv_uuid:

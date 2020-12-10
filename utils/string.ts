@@ -62,3 +62,9 @@ export const normalize = (str: string) => {
     return str;
   }
 };
+
+export const uuid = (size = 7) => {
+  return Math.random()
+    .toString(36)
+    .substring(size);
+};

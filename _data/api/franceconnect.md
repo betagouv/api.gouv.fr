@@ -1,6 +1,6 @@
 ---
-title: FranceConnect
-tagline: FranceConnect est un dispositif qui garantit l’identité d’un usager en se reposant sur des comptes certifiés existants.
+title: FranceConnect et les API FranceConnectées
+tagline: Identifier les utilisateurs de votre site internet et accéder à certaines données d'identité certifiées. Accéder à des données supplémentaires via les API FranceConnectées
 external_site: https://franceconnect.gouv.fr/partenaires
 is_open: -1 # -1 means API not open
 datapass_link: https://franceconnect.gouv.fr/partenaires
@@ -36,15 +36,13 @@ partners:
   - La Poste
   - MobileConnect & Moi
   - MSA
-owner: Direction interministérielle du numérique
-owner_acronym: DINUM
+producer: dinum
 keywords:
   - Authentification
   - Identification
   - SSO
 themes:
   - Particulier
-logo: logo-fc.jpg
 contact_link: support.partenaires@franceconnect.gouv.fr
 doc_tech_external: https://partenaires.franceconnect.gouv.fr/fcp/fournisseur-service
 visits_2019: 5000
@@ -52,44 +50,63 @@ uptime: 99.893 # https://uptimerobot.com/dashboard.php#778110642
 last_update: 10/12/2019
 ---
 
-### Qu'est-ce que FranceConnect ?
+L‘API FranceConnect permet à des administrations, des collectivités ou des entreprises d’ajouter un bouton FranceConnect, pour recueillir des données d’identité fiables et ainsi identifier les utilisateurs de leur service en ligne (en vue d’une entrée en relation ou connexion).
 
-FranceConnect est un dispositif qui permet aux internautes de s'identifier sur un service en ligne par l'intermédiaire d'un compte existant (impots.gouv.fr, ameli.fr...).
+### A quoi ca sert ?
 
-L'authentification est transparente pour une application utilisant FranceConnect (elle ne converse jamais directement avec le fournisseur d'identité, c'est FranceConnect qui s'en charge).
+- Intégrer le fédérateur d’identité FranceConnect, afin de recueillir des données d’identité vérifiées de vos utilisateurs en vue :
+  - D’une entrée en relation 100% dématérialisée et 100% sécurisée
+  - D’une connexion sans identifiant et mot de passe dédié à votre service
+- Accéder à des données supplémentaires grâce aux [API “FranceConnectées” DGFIP, CNAM, SIV...](#api-franceconnectees)
 
-FranceConnect fournit au service en ligne l'identité vérifiée d'une personne physique, appelée l'identité pivot.
+### Les données disponibles via l'API
 
-### A qui s'adresse FranceConnect ?
+Utiliser l'API FranceConnect pour identifier les utilisateurs de votre site permet également d'accéder à des données d'état civil. C'est ce qu'on appelle **l'identité pivot**.
 
-FranceConnect cible les partenaires suivants :
+| Nom       | Description                      |
+| --------- | -------------------------------- |
+| Nom       | nom de naissance                 |
+| Prénoms   | tous les prénoms de l’état civil |
+| Naissance | date  et lieu (ville/pays)       |
+| Sexe      | Homme / Femme                    |
 
-- Fournisseurs de services : Vous proposez des services en ligne aux usagers.
-- Fournisseurs d'identité : Vous garantissez l’identification et l’authentification d’un usager.
-- Fournisseurs de données : Vous transmettez des données aux fournisseurs de service suite au consentement de l'usager.
+En plus de cette identité pivot, selon votre cas d'usage, vous pouvez aussi avoir accès aux informations complémentaires :
 
-### Sites de démonstration
+| Nom          | Description                                                                                                                      |
+| ------------ | -------------------------------------------------------------------------------------------------------------------------------- |
+| adresse mail | l'adresse de courrier électronique qui est enregistrée auprès du fournisseur d'identité choisi par l'usager lors de sa connexion |
+| Nom d'usage  |                                                                                                                                  |
 
-#### Tester l'identification avec FranceConnect du point de vue usager
+### Comment ça marche ?
 
-1. se rendre sur le site de test : [http://fournisseur-de-service.dev-franceconnect.fr/](http://fournisseur-de-service.dev-franceconnect.fr/)
-2. cliquer sur "se connecter" puis sur "s'identifier avec FranceConnect"
-3. choisir "identity-provider-example" comme fournisseur d'identité
-4. utiliser les identifiants suivants : 3_melaine \| 123 (d'autres identifiants de test sont disponibles [ici](https://github.com/france-connect/identity-provider-example/blob/master/database.csv), le mot de passe est toujours 123)
-5. une fois revenu sur le site, vous êtes connecté
+_Schéma de fonctionnement de FranceConnect :_
+![Fonctionnement de FranceConnect](/images/divers/franceConnect.png)
 
-#### Tester l'échange de données avec FranceConnect du point de vue usager
+- Identifier vos utilisateurs simplement et de façon sécurisée, sans leur demander de compléter des formulaires et de créer et gérer des identifiant/mot de passe dédiés à votre service en ligne.
+- Recueillir tout ou partie des données mises à disposition par FranceConnect :
+  - Les données d’identité : le nom de naissance, les prénoms, le sexe, la date de naissance, le lieu de naissance (ville et pays). Le nom marital s’il existe et est connu du fournisseur d’identité sélectionné par l’utilisateur.
+  - La donnée de contact @mail vérifiée par le fournisseur d’identité.
 
-1. sur le site de test, cliquer sur le bouton "récuperer mes données via FranceConnect"
-2. dans la mire FranceConnect de consentement d'échange de données, cliquer sur "Accepter"
-3. vous devriez voir apparaître les données relatives à l'identifiant FranceConnect choisi (d'autres données sont disponibles [ici](https://github.com/france-connect/data-provider-example/blob/master/database.csv))
+**NB:** Pour en savoir plus, vous pouvez consulter la <External href="https://partenaires.franceconnect.gouv.fr/documentation">documentation partenaires</External>.
 
-#### Test du point de vue fournisseur de service
+### API FranceConnectées
 
-L'interface qui est en ligne peut être installée sur votre poste de travail, ce qui vous permettra de voir :
+Certaines API fonctionnent avec FranceConnect et permettent de récupérer tout ou partie des informations suivantes directement à partir des données d’identité recueillies via FranceConnect :
 
-- les échanges entre FranceConnect et le FS
-- les échanges entre le FS et l'API de test Impôts Particulier
-- les échanges entre l'API de test Impôts Particulier et FranceConnect
+| Nom                        | Description                                                                                   | API                                                               |
+| -------------------------- | --------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| Revenu fiscal de référence | Les revenus déclarés auprès de l'administration fiscale                                       | [API Impôt particulier](/les-api/impot-particulier)               |
+| Adresse fiscale            | L'adresse déclarée auprès de l'administration fiscale                                         | [API Impôt particulier](/les-api/impot-particulier)               |
+| Nombre de parts fiscales   |                                                                                               | [API Impôt particulier](/les-api/impot-particulier)               |
+| bénéficiaires              | Les bénéficiaires de l'individu connecté via FranceConnect                                    | [API de droits Assurance Maladie](/les-api/api_ameli_droits_cnam) |
+| caisse                     | L'organisme de rattachement du bénéficiaire (régime, centre de gestion, adresse de la caisse) | [API de droits Assurance Maladie](/les-api/api_ameli_droits_cnam) |
+| niveau de couverture       | Droits de base, droits à une complémentaire santé solidaire, présence d'un médecin traitant   | [API de droits Assurance Maladie](/les-api/api_ameli_droits_cnam) |
+| motifs d’exonération       | Uniquement accessible aux établissements de soins                                             | [API de droits Assurance Maladie](/les-api/api_ameli_droits_cnam) |
+| médecin traitant           | Uniquement accessible aux établissements de soins                                             | [API de droits Assurance Maladie](/les-api/api_ameli_droits_cnam) |
 
-Le code et la procédure d'installation sont disponibles sur notre dépôt de code github : [https://github.com/france-connect/service-provider-example/](https://github.com/france-connect/service-provider-example/).
+### Comment ça marche ?
+
+Ces API sont complémentaires à FranceConnect et ne sont accessibles que dans le cadre de l’utilisation de FranceConnect par le citoyen, elles sont appelées API FranceConnectées. Elles ne sont accessibles qu’à certaines organisations.
+
+_Schéma de fonctionnement des API FranceConnectées :_
+![Fonctionnement des API FranceConnectées](https://franceconnect.gouv.fr/images/how-it-works-data.svg)

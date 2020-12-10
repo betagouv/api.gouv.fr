@@ -5,8 +5,9 @@ is_open: 1 # 1 means API is fully open
 partners:
   - beta.gouv.fr
   - DINUM
+  - Ministère de l’Interieur
   - Etalab
-owner: Etalab
+producer: dinum
 keywords:
   - Répertoire
   - open data
@@ -14,7 +15,6 @@ keywords:
   - RNA
 themes:
   - Entreprise
-logo: logo-beta-gouv.svg
 rate_limiting_resume: 7 appels / seconde
 rate_limiting_description: |
   Actuellement, le nombre d’appels à l’API est limité à 7 appels par seconde
@@ -39,7 +39,7 @@ content_intro: |
   - requêter les données d'une association grâce à son nom
   - requêter les données d'une association grâce à son code RNA
 
-  Si vous êtes une association et recherchez votre numéro RNA, [consultez la fiche explicative sur service-public.fr](https://www.service-public.fr/associations/vosdroits/F34726).
+  Si vous êtes une association et recherchez votre numéro RNA, vous pouvez consulter le [moteur de recherche des associations du journal officiel](https://www.journal-officiel.gouv.fr/associations/recherche/), ou [la fiche explicative sur service-public.fr](https://www.service-public.fr/associations/vosdroits/F34726).
 ---
 
 ### Les données disponibles dans l'API

@@ -2,8 +2,7 @@
 title: API Carto - module Cadastre
 tagline: L'accès simplifié aux données de cadastre
 external_site: https://apicarto.ign.fr
-owner: Institut national de l’information géographique et forestière
-owner_acronym: IGN
+producer: ign
 is_open: -1 # -1 means API not open
 access_page:
   - who:
@@ -25,7 +24,6 @@ access_page:
 
       <Button href="http://professionnels.ign.fr/">Faire une demande d'accès</Button>
 category: Public
-logo: look4-geoportail.jpg
 contact_link: contact.geoservices@ign.fr
 doc_tech_link: https://apicarto.ign.fr/api/doc/cadastre.yml
 partners:
@@ -63,7 +61,7 @@ Les dates de mise à jour de la BD PARCELLAIRE sont accessibles sur le <External
 - https://wxs.ign.fr/metadata/geoportail/v/wms?service=WMS&request=GetCapabilities
 - https://wxs.ign.fr/metadata/geoportail/wfs?service=WFS&request=GetCapabilities
 
-L'utilisation d'API Carto - module cadastre est gratuite pour l'Etat et ses EPA, les collectivités, les EPCI à fiscalité propre et les SDIS ([décision n°2018/241](http://www.ign.fr/institut/sites/all/files/2018.241_tarification_geoservices_ign.pdf) de l'institut).
+L'utilisation d'API Carto - module cadastre est gratuite pour l'Etat et ses EPA, les collectivités, les EPCI à fiscalité propre et les SDIS décision n°2018/241 de l'institut).
 
 Les droits et obligations liés à la réutilisation des ressources en ligne sous licence IGN sont détaillées [ici](http://professionnels.ign.fr/doc/CGU-ressourcesgeoportail.pdf)
 

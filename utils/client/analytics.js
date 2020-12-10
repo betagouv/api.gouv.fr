@@ -53,4 +53,22 @@ const logFeedback = answer => {
   }
 };
 
-export { logCTA, logDemanderAcces, logLPCTA, logParcoursClient, logFeedback };
+const logFeedbackDetails = answer => {
+  if (typeof window !== 'undefined' && window._paq) {
+    window._paq.push([
+      'trackEvent',
+      'Feedback : page utile ? - details',
+      answer,
+      `page : ${window.location.pathname}`,
+    ]);
+  }
+};
+
+export {
+  logCTA,
+  logDemanderAcces,
+  logLPCTA,
+  logParcoursClient,
+  logFeedback,
+  logFeedbackDetails,
+};

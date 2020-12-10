@@ -18,7 +18,6 @@ import {
   SupportAndTeam,
   Partners,
   TechnicalDocumentation,
-  ApiRelatedServices,
   ApiOpenDataSources,
   ApiDescription,
 } from '../../components/api';
@@ -50,6 +49,7 @@ const API: React.FC<IProps> = ({
     logo,
     owner,
     owner_acronym,
+    owner_slug,
     uptime,
     contact_link,
     account_link,
@@ -78,6 +78,7 @@ const API: React.FC<IProps> = ({
         tagline={tagline}
         owner={owner}
         owner_acronym={owner_acronym}
+        owner_slug={owner_slug}
       />
 
       <div id="description" className="content-container">
@@ -93,9 +94,6 @@ const API: React.FC<IProps> = ({
               <ApiOpenDataSources datasetsList={datagouvDatasets} />
             )}
 
-            {guides.length === 0 && (services || []).length > 0 && (
-              <ApiRelatedServices services={services} />
-            )}
             <Feedback />
           </div>
           <div className="right-column info-column">
@@ -123,6 +121,7 @@ const API: React.FC<IProps> = ({
               logo={logo}
               owner={owner}
               owner_acronym={owner_acronym}
+              owner_slug={owner_slug}
               link={contact_link}
             />
 

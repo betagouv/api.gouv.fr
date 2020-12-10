@@ -21,6 +21,7 @@ const Service: React.FC<IProps> = ({
   apiList,
   body,
   screenshot,
+  noindex,
 }) => {
   return (
     <Page
@@ -28,6 +29,7 @@ const Service: React.FC<IProps> = ({
       title={title}
       description={`${title} est un exemple d’utilisation d'API du service public. ${description}`}
       canonical={`https://api.gouv.fr/service/${slug}`}
+      noIndex={noindex}
     >
       <section id="title">
         <h1>{title}</h1>
@@ -37,9 +39,7 @@ const Service: React.FC<IProps> = ({
       <div className="content-container content">
         <div className="left-column-grid">
           <div className="left-column">
-            <h3>
-              {apiList.length > 1 ? 'Les APIs utilisées' : 'API utilisée'}
-            </h3>
+            <h3>{apiList.length > 1 ? 'Les API utilisées' : 'API utilisée'}</h3>
             <>
               {apiList.map(api => (
                 <div key={api.slug}>

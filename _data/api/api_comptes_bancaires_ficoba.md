@@ -1,9 +1,7 @@
 ---
 title: API Fichier des Comptes Bancaires et Assimilés (FICOBA)
-logo: logo-dgfip.jpg
 tagline: Accédez aux coordonnées bancaires d'un usager connues de l’administration fiscale (DGFIP) et transmises par les établissements bancaires
-owner: Direction Générale des Finances Publiques
-owner_acronym: DGFIP
+producer: dgfip
 is_open: -1
 datapass_link: https://signup.api.gouv.fr/api-ficoba-sandbox
 access_page:

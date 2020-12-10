@@ -5,6 +5,8 @@ import {
   getAPI,
   getGuide,
   getAllGuides,
+  getProducer,
+  getAllProducers,
   getRoadmap,
 } from './readOnDiskForWebpack';
 
@@ -44,6 +46,13 @@ export interface IGuideElement extends IGuideElementShort {
   related_guides?: string[];
 }
 
+export interface IProducerElement {
+  name: string;
+  acronym: string;
+  logo: string;
+  slug: string;
+}
+
 export interface IService {
   slug: string;
   path: string;
@@ -54,6 +63,7 @@ export interface IService {
   apiList: IApiShort[];
   body: string;
   screenshot: string;
+  noindex: boolean;
 }
 
 export interface IApiShort {
@@ -98,6 +108,8 @@ export interface IApi extends IApiShort {
   stat: number;
   owner: string;
   owner_acronym: string;
+  owner_slug: string;
+  producer: string;
   last_update: Date;
   contact_link: string;
   external_site?: string;
@@ -125,4 +137,6 @@ export {
   getGuide,
   getAllGuides,
   getRoadmap,
+  getProducer,
+  getAllProducers,
 };

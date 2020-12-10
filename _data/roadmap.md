@@ -85,34 +85,50 @@
       what: Gallica Document de la BnF
       path: /les-api/api_gallica_document
     - type: ADD_API
-      what: API Aide financieres de l’ADEME
+      what: Aide financieres de l’ADEME
       path: /les-api/api_aides_financieres_ademe
     - type: ADD_API
-      what: API Aides financières à la rénovation énergetique (Simul’Aid€s)
+      what: Aides financières à la rénovation énergetique (Simul’Aid€s)
       path: /les-api/api_aides_renovation_energetique
     - type: ADD_API
-      what: Données ouvertes de l’URSSAF
-    - type: ADD_API
-      what: Données ouvertes de la ville de Paris
-    - type: ADD_API
-      what: Répertoire National des Métiers
-      path: https://rnm.artisanat.fr/api/
+      what: Impacts environnementaux - AGRIBALYSE®
+      path: /les-api/api_agribalyse
   10:
     - type: ADD_API
-      what: Gallica produite par la BnF
-      path: http://api.bnf.fr/api-document-de-gallica
-    - type: ADD_API
-      what: Fichiers des Comptes Bancaires (FICOBA) produite par le DGFiP
-      path: /les-api/api_comptes_bancaires_ficoba
-    - type: ADD_API
-      what: Registre des Bénéficiaires Effectifs (RBE) produite par l'INPI
+      what: Sirene données ouvertes
+      path: /les-api/api-sirene-donnees-ouvertes
   11:
     - type: ADD_API
-      what: Sirene distribuée par Etalab
-      path: https://entreprise.data.gouv.fr/api_doc/sirene
+      what: Registre des Bénéficiaires Effectifs (RBE) produite par l'INPI
+      path: /les-api/api-rbe
+    - type: ADD_API
+      what: Données ouvertes de l’Urssaf
+      path: /les-api/api-open-data-urssaf
+    - type: ADD_API
+      what: Répertoire National des Métiers
+      path: /les-api/api_rnm
+    - type: ADD_API
+      what: Déclaration auto-entrepreneur
+      path: /les-api/api-declaration-auto-entrepreneur
+    - type: ADD_API
+      what: Déclaration PAJE
+      path: /les-api/api-declaration-pajemploi
+    - type: ADD_API
+      what: Déclaration CESU
+      path: /les-api/api-declaration-cesu
     - type: ADD_API
       what: Données Ouvertes Loire-Atlantique
+      path: /les-api/api-loire-atlantique-donnee-ouvertes
   12:
+    - type: ADD_API
+      what: Gallica IIIF par la BnF
+      path: /les-api/api_gallica_IIIF
+    - type: ADD_API
+      what: Data.bnf.fr par la BnF
+      path: /les-api/api-data-bnf-fr
+    - type: ADD_API
+      what: Fichiers des Comptes Bancaires (FiCoBa) produite par le DGFiP
+      path: /les-api/api_comptes_bancaires_ficoba
     - type: DLNUF
       what: |
         De nouvelles données seront mises à disposition des administrations dans le cadre du [« Dites le nous une fois »](https://www.numerique.gouv.fr/services/guichet-dites-le-nous-une-fois/) :
@@ -131,16 +147,26 @@
         - Recensement citoyen obligatoire
     - type: INFO
       what: |
-        Intégration des [APIs de l’URSSAF](https://portailapi.urssaf.fr/fr/) :
-
-        - API Déclaration auto-entrepreneur
-        - API Déclaration CESU
-        - API Déclaration PAJE
-    - type: INFO
-      what: |
         Publication d'une doctrine relative à la circulation des données entre administrations
 2021:
   01:
     - type: ADD_API
       what: Indemnités Journalières distribuée par la CNAM
+    - type: ADD_API
+      what: Professionnels BIO par l'agence BIO
+  02:
+    - type: ADD_API
+      what: DSNJ par le ministère des Armées
+    - type: ADD_API
+      what: Pro Santé Connect par l'ANS
+    - type: ADD_API
+      what: AgentConnect par la DINUM
+  03:
+    - type: ADD_API
+      what: Données ouvertes de la ville de Paris
+    - type: ADD_API
+      what: Données ouvertes de la ville de Grenoble
+  05:
+    - type: ADD_API
+      what: Bulletin Officiel des Annonces Civiles et Commerciales (BODACC)
 ---

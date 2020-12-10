@@ -1,11 +1,9 @@
 ---
 title: API Gallica Document
-tagline: Un accès aux documents numériques de la Bibliothèque nationale de France
-owner: Bibliothèque nationale de France
-owner_acronym: BnF
+tagline: Accéder aux documents numériques de la Bibliothèque nationale de France
+producer: bnf
 category: public
 is_open: 1
-logo: bnf.png
 external_site: http://api.bnf.fr/api-document-de-gallica
 keywords:
   - Bibliothèque

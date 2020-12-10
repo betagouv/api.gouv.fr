@@ -2,17 +2,15 @@
 title: API Nomenclatures
 tagline: API Nomenclatures donne accès aux métadonnées statistiques de la statistique publique de l'Insee
 external_site: https://api.insee.fr
+producer: insee
 is_open: 0 # 0 means API require an account
 account_link: https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/sign-up.jag
-owner: Institut national de la statistique et des études économiques
-owner_acronym: INSEE
 keywords:
   - Nomenclatures
   - Métadonnées
   - Statistiques
 themes:
   - Administration & législation
-logo: Logo_Insee.svg
 rate_limiting_resume: 30 appels / minute
 rate_limiting_description: |
   L'usage d'API Sirene est soumis à une limite de 30 interrogations par minute.

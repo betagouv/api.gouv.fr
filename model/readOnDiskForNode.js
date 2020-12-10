@@ -1,16 +1,20 @@
 // used by node, therefore in plain js
 const { formatServiceWithApis } = require('./formatters/service');
 const { formatGuide } = require('./formatters/guide');
-const { formatApi } = require('./formatters/api');
+const { formatApiWithOwner } = require('./formatters/api');
+const { formatProducteur } = require('./formatters/producteur');
 const fs = require('fs');
 
 const readAllApisOnDisk = async () => {
   const files = fs.readdirSync('./_data/api', 'utf8');
+  const allProducers = await readAllProducersOnDisk();
+  const formatter = formatApiWithOwner(allProducers);
+
   return files.map(fileName => {
     const file = fs.readFileSync(`./_data/api/${fileName}`, 'utf8');
 
     // Parse yaml metadata & markdownbody in document
-    return formatApi(fileName.replace('.md', ''), file);
+    return formatter(fileName.replace('.md', ''), file);
   }, {});
 };
 
@@ -38,8 +42,20 @@ const readAllGuidesOnDisk = async () => {
   }, {});
 };
 
+const readAllProducersOnDisk = async () => {
+  const files = fs.readdirSync('./_data/producteurs', 'utf8');
+
+  return files.map(fileName => {
+    const file = fs.readFileSync(`./_data/producteurs/${fileName}`, 'utf8');
+
+    // Parse yaml metadata & markdownbody in document
+    return formatProducteur(fileName.replace('.md', ''), file);
+  }, {});
+};
+
 module.exports = {
   readAllApisOnDisk,
   readAllServicesOnDisk,
   readAllGuidesOnDisk,
+  readAllProducersOnDisk,
 };
