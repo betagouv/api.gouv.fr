@@ -56,7 +56,7 @@ La démarche est réalisable 100% en ligne, il n'y a plus de déplacement néces
 La donnée est certifiée par le fournisseur de données, cela évite toute éventuelle fraude de document ou de déclaration.
 
 <Quote logo="/images/guides/clamart.svg" who='Ville de Clamart' title='Simon-Pierre Chalvidan, directeur général adjoint des services'>
-En 2014, nos usagers posaient une demi-journée pour effectuer leurs démarches en mairie. Aujourd'hui, ils les effectuent en ligne en 5 minutes.
+En 2014, nos usagers prenaient une demi-journée de congés pour effectuer leurs démarches en mairie. Aujourd'hui, ils les effectuent en ligne en 5 minutes.
 </Quote>
 
 ## L'avantage pour les agents de la communes
@@ -72,7 +72,7 @@ En 1,5 mois grâce au système de Quotient Familial Dématerialisé, nous avons 
 Les agents gagnent du temps pour accompagner les usagers en difficulté.
 
 <Quote logo="/images/guides/clamart.svg" who='Ville de Clamart' title='Aurélie Coutant, directrice de la relation usagers'>
-Maintenant que le traitement est automatisé, nous avons enfin le temps d'accompagner les usagers en difficulté, de leur expliquer plus largement les prestations auxquelles ils peuvent avoir accès.
+Maintenant que le traitement est automatisé, nous avons enfin le temps de mieux accompagner les usagers en difficulté, de leur expliquer plus largement les prestations auxquelles ils peuvent avoir accès.
 </Quote>
 
 **Pour en savoir plus :**&nbsp;<External href="https://www.dailymotion.com/video/x7xsjgz"> voir le témoignage de la ville de Clamart</External> dans le cadre du webinaire sur la simplificiation des démarches des citoyens grâce aux API (à partir de la 9eme minute).
