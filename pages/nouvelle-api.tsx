@@ -21,6 +21,10 @@ const NewAPI: React.FC<{}> = () => {
 
   const submit = () => {
     const body = `
+    Nous avons généré les données de la fiche en fonction des informations que vous avez renseigner.%0d%0a
+    Merci de nous envoyer ce mail. Nous reprendrons contact au plus vite avec vous pour la mise en ligne.%0d%0a
+    %0d%0a
+    --- %0d%0a
     title: ${title}%0d%0a
     tagline: %0d%0a
     producer: ${producer}%0d%0a
@@ -110,7 +114,7 @@ const NewAPI: React.FC<{}> = () => {
             <textarea
               id="description"
               onChange={e => setDescription(e.target.value)}
-              placeholder="Description&#10;Lorem ipsum sic&#10;...&#10;A quoi sert l'API ?&#10;Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+              placeholder="Description&#10;L’API entreprise permet aux administrations d'accèder aux données entreprises...&#10;...&#10;A quoi sert l'API ?&#10;L’API Entreprise permet le pré-remplissage de formulaire à destination des entreprises ou des associations..."
             ></textarea>
             <p>
               Listez les données rendues disponibles par cette l'API (nom -
@@ -152,7 +156,7 @@ const NewAPI: React.FC<{}> = () => {
               id="producer"
               onChange={e => setProducer(e.target.value)}
               type="text"
-              placeholder="ex: La Direction Interministérielle du NUMérique"
+              placeholder="ex: La Direction Générale des Finances Publiques"
             ></input>
             <h3>Conditions d'accès</h3>
             <div className="layout-left">
