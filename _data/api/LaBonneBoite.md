@@ -34,4 +34,4 @@ La Bonne Boite cible les entreprises ayant des perspectives d'embauche élevées
 
 L'API s'adresse aux particuliers, entreprises, startups, collectivités et ministères et permet de développer des solutions personnalisées de recherche d'emploi pour un site ou une application.
 
-Vous découvrirez des formats de fichiers supplémentaires, des outils de visualisation et d'autres API liées à l'emploi sur (https://www.emploi-store-dev.fr/)[https://www.emploi-store-dev.fr/]
+Vous découvrirez des formats de fichiers supplémentaires, des outils de visualisation et d'autres API liées à l'emploi sur [l’Emploi Store Dev](https://www.emploi-store-dev.fr/)
