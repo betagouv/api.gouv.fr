@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import constants from '../../constants';
 
 const Footer = () => {
   return (
@@ -70,13 +71,7 @@ const Footer = () => {
             <a href="/contact">Nous contacter</a>
           </li>
           <li>
-            <a
-              href="https://github.com/betagouv/api.gouv.fr/blob/master/CONTRIBUTING.md"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Améliorer cette page
-            </a>
+            <a href={constants.links.ADD_API}>Ajouter une nouvelle API</a>
           </li>
         </ul>
         <ul className="footer__links">
