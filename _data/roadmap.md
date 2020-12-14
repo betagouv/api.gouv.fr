@@ -129,7 +129,8 @@
       what: Data.bnf.fr par la BnF
       path: /les-api/api-data-bnf-fr
     - type: ADD_API
-      what: AgentConnect par la DINUM
+      what: La Bonne Alternance
+      path: /les-api/api-la-bonne-alternance
     - type: DLNUF
       what: |
         De nouvelles données seront mises à disposition des administrations dans le cadre du [« Dites le nous une fois »](https://www.numerique.gouv.fr/services/guichet-dites-le-nous-une-fois/) :
@@ -161,6 +162,8 @@
     - type: ADD_API
       what: Pro Santé Connect par l'ANS
   03:
+    - type: ADD_API
+      what: AgentConnect par la DINUM
     - type: ADD_API
       what: Données ouvertes de la ville de Paris
     - type: ADD_API
