@@ -9,7 +9,7 @@ api:
 
 Voici à quoi ressemble le widget La Bonne Alternance. Il permet d'afficher directement sur votre site les formations et les entreprises qui proposent un apprentissage en interrogeant les données de <External href="/les-api/api-la-bonne-alternance">l'API La Bonne Alternance</External>
 
-<iframe style="height: 640px; width: 360px;max-width: 100%;margin: auto;display: block;" src="https://labonnealternance.apprentissage.beta.gouv.fr?radius=60&romes=F1702,F1705,F1701&scope=all&lat=47&lon=2.2&caller=ID_service_appelant_labonnealternance&return_uri=/&return_logo_url=https://api.gouv.fr/images/api-logo/dinum.png" />
+<iframe style="height: 660px; width: 360px;max-width: 100%;margin: auto;display: block;" src="https://labonnealternance.apprentissage.beta.gouv.fr?radius=60&romes=F1702,F1705,F1701&scope=all&lat=47&lon=2.2&caller=ID_service_appelant_labonnealternance&return_uri=/&return_logo_url=https://api.gouv.fr/images/api-logo/dinum.png" />
 
 ## Comment intégrer le widget ?
 
@@ -28,7 +28,7 @@ Vous devez ensuite **paramétrer le widget** en ajoutant les paramètres à la f
 Voici un exemple d'Iframe paramétrée :
 
 ```
-<iframe style="height: 640px; width: 360px;max-width: 100%;margin: auto;display: block;" src="https://labonnealternance.apprentissage.beta.gouv.fr?radius=60&romes=F1702,F1705,F1701&scope=all&lat=47&lon=2.2&caller=ID_service_appelant_labonnealternance&return_uri=/&return_logo_url=https://api.gouv.fr/images/api-logo/dinum.png" />
+<iframe style="height: 660px; width: 360px;max-width: 100%;margin: auto;display: block;" src="https://labonnealternance.apprentissage.beta.gouv.fr?radius=60&romes=F1702,F1705,F1701&scope=all&lat=47&lon=2.2&caller=ID_service_appelant_labonnealternance&return_uri=/&return_logo_url=https://api.gouv.fr/images/api-logo/dinum.png" />
 ```
 
 Vous pouvez utilisez l’outil suivant pour tester les différentes versions possibles du widget :

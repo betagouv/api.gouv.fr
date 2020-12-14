@@ -21,7 +21,7 @@ last_update: 14/12/2020
 content_intro: |
   Les API La bonne Alternance permettent d’exposer les deux composantes de l'apprentissage : la **formation** et l'**emploi**. Ce service permet d’exposer également les entreprises susceptibles de recruter sur l'ensemble du périmètre Alternance. Le site <External href="https://labonnealternance.pole-emploi.fr/">La Bonne Alternance</External> donne un aperçu visuel de ces données.
 
-  ### A quoi servent les API La Bonne Alternance ?
+  ### A quoi sert l'API La Bonne Alternance ?
 
   Les API La Bonne Alternance servent à offrir une information complète et centralisée aux publics en recherche d’une formation en apprentissage et/ou d’un contrat en alternance.
 
@@ -38,7 +38,7 @@ content_intro: |
   - un métier ou ensemble de métiers définis
 ---
 
-### Données accessibles dans les API
+### Données accessibles dans l'API
 
 | Nom                                                | Description                                                                                                                                                                                                                     |
 | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -58,7 +58,7 @@ Nos API normalisent les données sources pour restituer en un même format, soit
 
 ### Autre format de données disponible
 
-Les données récupérables par les API La Bonne Alternance peuvent aussi être affichées sous forme de widget, ce qui permet la prise en charge complète de l’affichage des données pour l’utilisateur. Ce widget s’intègre aux sites déjà existants, il est disponible en plusieurs tailles et <External href="/guides/widget-la-bonne-alternance">intégrable en marque blanche</External>.
+Les données récupérables par l'API La Bonne Alternance peuvent aussi être affichées sous forme de widget, ce qui permet la prise en charge complète de l’affichage des données pour l’utilisateur. Ce widget s’intègre aux sites déjà existants, il est disponible en plusieurs tailles et <External href="/guides/widget-la-bonne-alternance">intégrable en marque blanche</External>.
 
 ### L'équipe
 
