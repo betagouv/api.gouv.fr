@@ -15,7 +15,7 @@ const TechnicalDocumentation: React.FC<IProps> = ({
   external_link,
   slug,
 }) => {
-  const link = swagger_link ? `/documentation/${slug}` : external_link;
+  const link = external_link ? external_link : `/documentation/${slug}`;
   return (
     <SubSection title="Documentation technique">
       {external_link || swagger_link ? (
