@@ -108,19 +108,19 @@ const Explanations: React.FC<IProps> = ({ subject, visitorType }) => {
       return (
         <div className="subject-answer">
           <p>
-            Ce site internet référence les APIs des administrations qui rendent
+            Ce site internet référence les API des administrations qui rendent
             leur données disponibles.
           </p>
           <p>
             En tant que particulier, vous êtes libre d’utiliser les{' '}
-            <b>APIs ouvertes à tous</b>. Les APIs nécessitant une habilitation
+            <b>API ouvertes à tous</b>. Les API nécessitant une habilitation
             sont réservées aux organisations éligibles (acteurs publics et dans
             certains cas, entreprises).
           </p>
           <p>
-            Toutes nos APIs sont visibles{' '}
+            Toutes nos API sont visibles{' '}
             <a href="rechercher-api">sur cette page</a>. Cliquez sur "Uniquement
-            les APIs ouvertes à tous" pour n’afficher que les APIs ouvertes.
+            les API ouvertes à tous" pour n’afficher que les API ouvertes.
           </p>
           <div className="layout-center">
             <ButtonLink size="large" href="/rechercher-api" onClick={logClic}>
@@ -146,12 +146,12 @@ const Explanations: React.FC<IProps> = ({ subject, visitorType }) => {
       return (
         <div className="subject-answer">
           <p>
-            En tant qu'{word}, vous êtes libre d’utiliser <b>toutes</b> les APIs
-            ouvertes à tous et <b>certaines</b> des APIs nécessitant une
+            En tant qu'{word}, vous êtes libre d’utiliser <b>toutes</b> les API
+            ouvertes à tous et <b>certaines</b> des API nécessitant une
             habilitation.
           </p>
           <p>
-            Toutes nos APIs sont visibles{' '}
+            Toutes nos API sont visibles{' '}
             <a href="rechercher-api">sur cette page</a>. Si une API vous
             intéresse, pensez à vérifier dans la section <b>Accès</b> de la
             fiche API quelles sont les conditions d'accès à la donnée.

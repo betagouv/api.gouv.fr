@@ -14,14 +14,14 @@ const FeuilleDeRoute: React.FC<IProps> = ({ roadmap }) => {
   return (
     <Page
       title="Feuille de route"
-      description="Découvrez les APIs récemment ajouté et celles qui sont en cours d'intégration au catalogue des APIs"
+      description="Découvrez les API récemment ajouté et celles qui sont en cours d'intégration au catalogue des API"
     >
       <div className="text-wrapper text-style">
         <h1>
-          La feuille de route des APIs <Emoji emoji="🏗" label="travaux" />
+          La feuille de route des API <Emoji emoji="🏗" label="travaux" />
         </h1>
         <p>
-          Depuis 2016, nous référençons les APIs de toutes les administrations
+          Depuis 2016, nous référençons les API de toutes les administrations
           qui ouvrent leur données
         </p>
         <Roadmap roadmap={roadmap} />

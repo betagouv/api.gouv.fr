@@ -22,7 +22,7 @@ const PageHeader: React.FC<IProps> = ({
     <div className="content-container">
       <div className="breadcrumb">
         <a href="/rechercher-api" className="dont-apply-link-style">
-          ⇠ Toutes les APIs
+          ⇠ Toutes les API
         </a>
       </div>
       <div className="content">

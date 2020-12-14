@@ -33,7 +33,7 @@ const computeRelatedGuides = async (guide: IGuideElement) => {
   });
 };
 
-const API: React.FC<IProps> = ({ guide, related_guides }) => {
+const Guide: React.FC<IProps> = ({ guide, related_guides }) => {
   const { title, slug, tagline, body, image, noindex = false } = guide;
   return (
     <Page
@@ -150,4 +150,4 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   };
 };
 
-export default API;
+export default Guide;

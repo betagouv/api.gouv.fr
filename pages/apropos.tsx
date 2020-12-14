@@ -16,7 +16,7 @@ const About: React.FC = () => (
     <div className="text-wrapper text-style">
       <h1 className="layout-center">Api.gouv.fr, à quoi ça sert ?</h1>
       <p>
-        Ce site référence les APIs du service public, mises à la disposition des
+        Ce site référence les API du service public, mises à la disposition des
         collectivités, des ministères et des entreprises pour construire des
         services informatiques au service de tous.
       </p>
@@ -51,7 +51,7 @@ const About: React.FC = () => (
           Afin d'aider toutes les organisations qui veulent{' '}
           <b>construire un service informatique</b>, api.gouv.fr{' '}
           <a href="/rechercher-api">
-            référence les APIs de toutes les administrations
+            référence les API de toutes les administrations
           </a>{' '}
           qui rendent leurs données disponibles.
         </p>
@@ -69,7 +69,7 @@ const About: React.FC = () => (
           surement l’API qui vous correspond.
         </p>
         <p>
-          Toutes nos APIs{' '}
+          Toutes nos API{' '}
           <a href="/rechercher-api"> sont visibles sur cette page</a>. Vous
           pouvez les filtrer par thématique, ou bien utiliser la recherche pour
           trouver l'API qui vous convient.
@@ -101,8 +101,8 @@ const About: React.FC = () => (
           organisations habilitées sont autorisées à y accéder.
         </p>
         <p>
-          Ce site référence des APIs ouvertes et des APIs avec habilitation. Les
-          fiches des APIs qui nécessitent une habilitation listent les critères
+          Ce site référence des API ouvertes et des API avec habilitation. Les
+          fiches des API qui nécessitent une habilitation listent les critères
           d'éligibilité.
         </p>
         <p>

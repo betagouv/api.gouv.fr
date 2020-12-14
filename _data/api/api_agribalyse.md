@@ -54,7 +54,7 @@ Ces données ont vocation à contribuer à la transition environnementale des sy
 
 Ces données scientifiques nécessitent d'être adaptées en fonction de leur contexte et des utilisateurs. Il est nécessaire de prendre connaissance du ["Guide d'utilisateur"](https://ecolab.gitbook.io/documentation-agribalyse/conditions-dusage-des-donnees) pour éviter les contre-sens ou des usages inadaptés.
 
-Plus largement une large [documentation](https://ecolab.gitbook.io/documentation-agribalyse/) est disponible et garantie la transparence des travaux. Ces travaux innovants sont évolutifs et des améliorations et mises à jour auront lieu les prochaines années. Toutes les informations et contacts : [www.agribalyse.fr](www.agribalyse.fr)
+Plus largement une large [documentation](https://ecolab.gitbook.io/documentation-agribalyse/) est disponible et garantie la transparence des travaux. Ces travaux innovants sont évolutifs et des améliorations et mises à jour auront lieu les prochaines années. Toutes les informations et contacts : [www.agribalyse.fr](https://www.agribalyse.fr)
 
 ### Aller plus loin et télécharger les données brutes
 

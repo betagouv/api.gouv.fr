@@ -44,7 +44,7 @@ Pour plus d'information sur l'IFT, vous pouvez consulter le site institutionnel 
 
 #### Aller à l'essentiel...
 
-Dans la majorité des cas, les APIs vous permettent de requêter et de paginer les résultats sur les données de références :
+Dans la majorité des cas, les API vous permettent de requêter et de paginer les résultats sur les données de références :
 
 - Lister les cultures commençant par "ci" :
 

@@ -4,17 +4,6 @@ import constants from '../../constants';
 
 const USE_CASES = [
   {
-    title: 'La ville de Nantes',
-    content:
-      'La Ville de Nantes a mis à disposition de ses usagers un bouquet de e-services qui permettront aux familles nantaises de faire leur inscription administrative, de réserver les places en accueil de loisirs et séjours, ainsi que de régler leurs factures en ligne. Elle collecte les quotients familiaux et avis d’imposition afin de permettre le calcul de la tarification applicable à chaque famille.',
-    // apis: ['API entreprise'],
-    picture: '/images/home/nantes.jpg',
-    button: {
-      txt: 'Aidez-moi à simplifier un service administratif',
-      linkTo: constants.links.mailto.VILLE_DE_NANTES,
-    },
-  },
-  {
     title: 'Les transports scolaires de la région Nouvelle-Aquitaine',
     content:
       'La région Nouvelle-Aquitaine propose une dégressivité du tarif des transports scolaires en fonction du revenu fiscal est nécessaire pour vous permettre de bénéficier éventuellement de la dégressivité du tarif. Un service en ligne permet aux familles de s’inscrire et de payer en ligne l’abonnement. Les familles n’ont pas produire de pièce justificative à l’appui de leur démarche.',
@@ -43,11 +32,11 @@ const UseCaseSection = () => (
     {USE_CASES.map(useCase => (
       <div className="use-case" key={useCase.title}>
         <div className="content-wrapper">
-          <h2>{useCase.title}</h2>
+          <h3>{useCase.title}</h3>
           <div>{useCase.content}</div>
           {useCase.apis && (
             <div className="apis">
-              <b>APIs utilisées&nbsp;:</b> {useCase.apis.join(', ')}
+              <b>API utilisées&nbsp;:</b> {useCase.apis.join(', ')}
             </div>
           )}
           {useCase.button && (

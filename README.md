@@ -1,6 +1,6 @@
 # api.gouv.fr
 
-**api.gouv.fr** catalogue les APIs offertes par les administrations centrales, les
+**api.gouv.fr** catalogue les API offertes par les administrations centrales, les
 collectivités territoriales, les établissements publics… Chaque API est
 associée à une courte description fonctionnelle, une documentation technique,
 les modalités d'accès, d'éventuelles ressources supplémentaires et surtout des
@@ -14,9 +14,7 @@ aux API et à leurs producteurs.
 
 Les fournisseurs, de leur côté, ont avec ce catalogue un moyen simple de faire connaître leurs API.
 
-### Fournisseur d'API ? [Ajoutez votre API](https://github.com/betagouv/api.gouv.fr/blob/master/CONTRIBUTING.md#ajouter-une-api) !
-
-### Réutilisateur d'API ? [Ajoutez votre service](https://github.com/betagouv/api.gouv.fr/blob/master/CONTRIBUTING.md#ajouter-un-service) !
+### Fournisseur d'API ? [Ajoutez votre API](https://api.gouv.fr/nouvelle-api) !
 
 ## Installation locale
 

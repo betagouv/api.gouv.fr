@@ -92,14 +92,14 @@ const PageHeader: React.FC<{ title: string; logo: string }> = ({
 const API: React.FC<IProps> = ({ apis = [], producer }) => {
   return (
     <Page
-      title={`Les APIs produites par ${producer.name}`}
-      description={`Découvrez la liste des APIs produites par ${producer.name} dont certaines sont accessibles via api.gouv.fr`}
+      title={`Les API produites par ${producer.name}`}
+      description={`Découvrez la liste des API produites par ${producer.name} dont certaines sont accessibles via api.gouv.fr`}
     >
       <PageHeader title={producer.name} logo={producer.logo} />
       <div id="description">
         <div className="content-container">
           <p>
-            <b>{apis.length} APIs disponibles :</b>
+            <b>{apis.length} API disponibles :</b>
           </p>
 
           <div className="default-grid">

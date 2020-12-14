@@ -63,6 +63,7 @@ export interface IService {
   apiList: IApiShort[];
   body: string;
   screenshot: string;
+  noindex: boolean;
 }
 
 export interface IApiShort {

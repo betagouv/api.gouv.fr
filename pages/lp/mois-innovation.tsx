@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Page from '../../layouts/page';
-import { ButtonLink } from '../../uiComponents';
+import { ButtonLink, ExternalLink } from '../../uiComponents';
 import constants from '../../constants';
 import { logLPCTA } from '../../utils/client/analytics';
 
@@ -10,6 +10,7 @@ const MoisInno: React.FC = () => (
     title="A quelles données publiques rêvez d'avoir accès ?"
     description="Participer à l'appel à idée de l'équipe API dans le cadre du mois de l'innovation publique"
     usePreFooter={false}
+    noIndex={true}
   >
     <div className="hero-section text-wrapper text-style">
       <div>
@@ -47,6 +48,16 @@ const MoisInno: React.FC = () => (
           Dans le cadre de cette mission nous souhaitons recueillir{' '}
           <b>vos demandes d'accès à des données publiques</b> et les{' '}
           <b>services que vous souhaitez construire</b> grâce à ces données.
+        </p>
+        <p>
+          Par données publiques nous entendons{' '}
+          <ExternalLink href="https://www.cada.fr/particulier/le-document-est-il-administratif">
+            les documents administratifs
+          </ExternalLink>
+          produits ou reçus dans le cadre d'une mission de service public par
+          l'Etat, les collectivités territoriales ainsi que par les autres
+          personnes de droit public ou de droit privé chargées d'une telle
+          mission.
         </p>
       </div>
     </div>
