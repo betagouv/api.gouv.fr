@@ -106,7 +106,7 @@ const StackedBarChart = ({ allApis }) => {
   };
 
   const addLegend = svg => {
-    let legend = svg.append('g').attr('transform', 'translate(10, 20)'); // Représente le point précis en haut à gauche du premier carré de couleur
+    let legend = svg.append('g').attr('transform', 'translate(5, 15)'); // Représente le point précis en haut à gauche du premier carré de couleur
 
     // Pour chaque couleur, on ajoute un carré toujours positionné au même endroit sur l'axe X et décalé en fonction de la
     // taille du carré et de l'indice de la couleur traitée sur l'axe Y
@@ -153,7 +153,7 @@ const StackedBarChart = ({ allApis }) => {
         .select(d3Container.current)
         .append('svg')
         .attr('width', containerWidth)
-        .attr('height', height + 40)
+        .attr('height', height + 80)
         .append('g')
         .attr('transform', 'translate(35, 10)');
 
@@ -165,13 +165,13 @@ const StackedBarChart = ({ allApis }) => {
 
       const y = d3
         .scaleLinear()
-        .domain([0, d3.max(series[0], d => d[1])])
+        .domain([0, d3.max(series[0], d => d[1]) + 35])
         .range([height, 0]);
 
       const xAxis = d3
         .axisBottom(x)
         .tickValues(
-          x.domain().filter(d => d % Math.round(data.length / 4) === 1)
+          x.domain().filter(d => d % Math.round(data.length / 3) === 1)
         )
         .tickFormat((d, i) => data[i * 3].label);
 
@@ -312,6 +312,12 @@ const StackedBarChart = ({ allApis }) => {
           border: 1px solid #666;
           border-radius: 2px;
           pointer-events: none;
+        }
+
+        @media only screen and (min-width: 1px) and (max-width: 700px) {
+          div.tooltip {
+            display: none !important;
+          }
         }
       `}</style>
     </>
