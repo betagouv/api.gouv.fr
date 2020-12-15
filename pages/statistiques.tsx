@@ -14,7 +14,7 @@ const Stats: React.FC<IProps> = ({ allApis }) => {
   return (
     <Page
       title="Statistiques"
-      description="Découvrez les statistiques des APIs du service public"
+      description="Découvrez les chiffres clés du catalogue des APIs du service public"
       usePreFooter={false}
       noIndex={true}
     >
@@ -24,8 +24,8 @@ const Stats: React.FC<IProps> = ({ allApis }) => {
         </h1>
         <h2>Évolution des API au catalogue api.gouv.fr.</h2>
         <p>
-          Cliquez sur une colonne graphique pour découvrir le détail des APIs
-          ajoutée(s), mois par mois :
+          Cliquez sur une colonne pour découvrir le détail des APIs ajoutée(s),
+          mois par mois :
         </p>
         <StackedChart allApis={allApis} />
       </div>
