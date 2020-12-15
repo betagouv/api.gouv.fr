@@ -206,6 +206,9 @@ const StackedBarChart = ({ allApis }) => {
         .data(d => d)
         .enter()
         .append('rect')
+        .attr('class', function(d) {
+          return `month-${d.data.month}`;
+        })
         .attr('x', d => x(d.data.month))
         .attr('width', x.bandwidth())
         .attr('y', d => y(d[1]))
@@ -213,6 +216,12 @@ const StackedBarChart = ({ allApis }) => {
         .attr('cursor', 'pointer')
         .on('click', function(event, d) {
           setSelectedMonth(d.data.month);
+        })
+        .on('mouseover', function(event, d) {
+          d3.selectAll(`.month-${d.data.month}`).attr('opacity', 0.6);
+        })
+        .on('mouseleave', function(event, d) {
+          d3.selectAll(`.month-${d.data.month}`).attr('opacity', 1);
         })
         .on('mousemove', function(event, d) {
           if (!tooltip) return;
