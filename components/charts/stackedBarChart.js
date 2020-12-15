@@ -233,7 +233,7 @@ const StackedBarChart = ({ allApis }) => {
           if (!tooltip) return;
           tooltip
             .html(getTooltip(d.data))
-            .style('left', event.pageX + 'px')
+            .style('left', event.pageX + 10 + 'px')
             .style('top', event.pageY + 20 + 'px');
         })
         .on('mouseout', function(d) {
@@ -280,7 +280,7 @@ const StackedBarChart = ({ allApis }) => {
               ))}
             </ul>
           ) : (
-            <i>Aucunne API ajoutée ce mois-ci</i>
+            <i>Aucune API ajoutée ce mois-ci</i>
           )}
         </div>
       )}
