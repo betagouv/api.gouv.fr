@@ -59,7 +59,7 @@ keywords:
   - SIRET
   - fiscal
   - identifiant
-rate_limiting_resume: 1000 appels/minute
+rate_limiting_resume: 200 appels/minute
 rate_limiting_description: |
   L’API Manager de la DGFiP délivre un quota de consultation pour chacun de ses partenaires pour chaque API utilisée. Concernant l'API R2P le quota par partenaire est fixé à 1 000 appels à la minute.
 monitoring_description: |
@@ -101,7 +101,7 @@ L'API permet de rechercher un compte bancaire, de plusieurs manières:
 
 Cette API fait appel au référentiel national FICOBA géré par la DGFiP afin de rechercher et de restituer des éléments relatifs à un compte bancaire associés aux éléments du ou des titulaires : état civil, dénomination, l'adresse d'un usager ou d'une personne morale.
 
-En fonction du besoin métier l’API permet de restituer, pour une personne physique **ou** une personne morale :
+En fonction du besoin métier, l'API permet de restituer pour un compte bancaire les données associés à ce compte :
 
 | Nom de la donnée                | Commentaire                                                                                                            |
 | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
