@@ -99,8 +99,6 @@
       path: /les-api/api-sirene-donnees-ouvertes
   11:
     - type: ADD_API
-      what: Fichiers des Comptes Bancaires (FiCoBa) produite par le DGFiP
-    - type: ADD_API
       what: Registre des Bénéficiaires Effectifs (RBE) produite par l'INPI
       path: /les-api/api-rbe
     - type: ADD_API
@@ -129,7 +127,8 @@
       what: Data.bnf.fr par la BnF
       path: /les-api/api-data-bnf-fr
     - type: ADD_API
-      what: AgentConnect par la DINUM
+      what: Fichiers des Comptes Bancaires (FiCoBa) produite par le DGFiP
+      path: /les-api/api_comptes_bancaires_ficoba
     - type: DLNUF
       what: |
         De nouvelles données seront mises à disposition des administrations dans le cadre du [« Dites le nous une fois »](https://www.numerique.gouv.fr/services/guichet-dites-le-nous-une-fois/) :
@@ -160,6 +159,8 @@
       what: DSNJ par le ministère des Armées
     - type: ADD_API
       what: Pro Santé Connect par l'ANS
+    - type: ADD_API
+      what: AgentConnect par la DINUM
   03:
     - type: ADD_API
       what: Données ouvertes de la ville de Paris
