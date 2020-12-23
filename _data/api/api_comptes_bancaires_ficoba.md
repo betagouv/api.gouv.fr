@@ -101,7 +101,7 @@ L'API permet de rechercher un compte bancaire, de plusieurs manières:
 
 Cette API fait appel au référentiel national FICOBA géré par la DGFiP afin de rechercher et de restituer des éléments relatifs à un compte bancaire associés aux éléments du ou des titulaires : état civil, dénomination, l'adresse d'un usager ou d'une personne morale.
 
-En fonction du besoin métier, l'API permet de restituer pour un compte bancaire les données associés à ce compte :
+En fonction du besoin métier, l'API permet de restituer pour un compte bancaire les données associées à ce compte :
 
 | Nom de la donnée                | Commentaire                                                                                                            |
 | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
@@ -109,4 +109,4 @@ En fonction du besoin métier, l'API permet de restituer pour un compte bancaire
 | l’adresse                       | l'adresse connue de la DGFiP, transmise par l’établissement bancaire                                                   |
 | la désignation du compte        | le numéro (RIB), la nature, le type et la caractéristique du compte                                                    |
 | l’établissement bancaire        | la désignation et l'adresse de l'établissement qui gère le compte                                                      |
-| date                            | la date d’ouverture du compte et la date de cloture le cas échéant                                                     |
+| date                            | la date d’ouverture du compte et la date de clôture le cas échéant                                                     |
