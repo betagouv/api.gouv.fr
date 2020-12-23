@@ -23,7 +23,7 @@ access_page:
       Pour obtenir un agrément, vous devez **justifier du cadre juridique** dans lequel s’inscrit votre demande.
 
       <NextSteps service_description="de la description du service justifiant l'accès aux données" />
-      <Button href="https://datapass-staging.api.gouv.fr/api-ficoba-sandbox">Remplir une demande</Button>
+      <Button href="https://datapass.api.gouv.fr/api-ficoba-sandbox">Remplir une demande</Button>
   - who:
       - Un éditeur de logiciel
     is_eligible: 0
@@ -35,7 +35,7 @@ access_page:
       Pour obtenir un agrément, vous devez **justifier du cadre juridique** dans lequel s’inscrit votre demande.
 
       <NextSteps service_description="de la description du service justifiant l'accès aux données" is_editeur={true}/>
-      <Button href="https://datapass-staging.api.gouv.fr/api-ficoba-sandbox">Remplir une demande</Button>
+      <Button href="https://datapass.api.gouv.fr/api-ficoba-sandbox">Remplir une demande</Button>
   - who:
       - Un établissement bancaire
     is_eligible: 0
@@ -45,7 +45,7 @@ access_page:
       Si vous entrez dans ce cadre, vous pouvez effectuer une demande d'accès à l’API FICOBA.
 
       <NextSteps service_description="de la description du service justifiant l'accès aux données" />
-      <Button href="https://datapass-staging.api.gouv.fr/api-ficoba-sandbox">Remplir une demande</Button>
+      <Button href="https://datapass.api.gouv.fr/api-ficoba-sandbox">Remplir une demande</Button>
 keywords:
   - Fichier
   - Compte
