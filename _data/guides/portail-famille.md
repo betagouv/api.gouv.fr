@@ -65,6 +65,10 @@ Les informations sont certifiées par le fournisseur de données, il n'y a plus 
 
 La circulation de données directement entre les systèmes d'information permet d'éviter les saisies manuelles, les erreurs ou fautes de frappes.
 
+<Quote logo="/images/guides/boulbi.svg" who='Ville de Boulogne-Billancourt' title='Services de la mairie'>
+Pour la première année en 2020, au lieu de se déplacer en mairie, près de 75% des familles boulonnaises ont opté pour la mise à jour par voie électronique de leur quotient familial. Cette mesure simplificatrice, en limitant l’utilisation du papier, est également une avancée pour la préservation de notre environnement
+</Quote>
+
 Les agents gagnent du temps pour accompagner les usagers en difficulté.
 
 <Quote logo="/images/guides/clamart.svg" who='Ville de Clamart' title='Aurélie Coutant, directrice de la relation usagers'>
