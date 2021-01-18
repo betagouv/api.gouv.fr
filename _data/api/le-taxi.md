@@ -29,7 +29,7 @@ access_page:
 
       <Button href="mailto:equipe@le.taxi">Nous écrire</Button>
   - who:
-      - Un chauffeur de taxis indépendant
+      - Un chauffeur de taxi indépendant
     is_eligible: -1
     description: |
       Pour accéder à l’API, vous devez utiliser une application ou un logiciel connecté.
