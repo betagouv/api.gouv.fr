@@ -56,7 +56,7 @@ La démarche est réalisable 100% en ligne, il n'y a plus de déplacement néces
 La donnée est certifiée par le fournisseur de données, cela évite toute éventuelle fraude de document ou de déclaration.
 
 <Quote logo="/images/guides/clamart.svg" who='Ville de Clamart' title='Simon-Pierre Chalvidan, directeur général adjoint des services'>
-En 2014, nos usagers posaient une demi-journée pour effectuer leurs démarches en mairie. Aujourd'hui, ils les effectuent en ligne en 5 minutes.
+En 2014, nos usagers prenaient une demi-journée de congés pour effectuer leurs démarches en mairie. Aujourd'hui, ils les effectuent en ligne en 5 minutes.
 </Quote>
 
 ## L'avantage pour les agents de la communes
@@ -66,13 +66,13 @@ Les informations sont certifiées par le fournisseur de données, il n'y a plus 
 La circulation de données directement entre les systèmes d'information permet d'éviter les saisies manuelles, les erreurs ou fautes de frappes.
 
 <Quote logo="/images/guides/boulbi.svg" who='Ville de Boulogne-Billancourt' title='Services de la mairie'>
-En 1,5 mois grâce au système de Quotient Familial Dématerialisé, nous avons pu traiter les dossiers d'autant de famille qu'en 4 mois avec le système précedent.
+Pour la première année en 2020, au lieu de se déplacer en mairie, près de 75% des familles boulonnaises ont opté pour la mise à jour par voie électronique de leur quotient familial. Cette mesure simplificatrice, en limitant l’utilisation du papier, est également une avancée pour la préservation de notre environnement
 </Quote>
 
 Les agents gagnent du temps pour accompagner les usagers en difficulté.
 
 <Quote logo="/images/guides/clamart.svg" who='Ville de Clamart' title='Aurélie Coutant, directrice de la relation usagers'>
-Maintenant que le traitement est automatisé, nous avons enfin le temps d'accompagner les usagers en difficulté, de leur expliquer plus largement les prestations auxquelles ils peuvent avoir accès.
+Maintenant que le traitement est automatisé, nous avons enfin le temps de mieux accompagner les usagers en difficulté, de leur expliquer plus largement les prestations auxquelles ils peuvent avoir accès.
 </Quote>
 
 **Pour en savoir plus :**&nbsp;<External href="https://www.dailymotion.com/video/x7xsjgz"> voir le témoignage de la ville de Clamart</External> dans le cadre du webinaire sur la simplificiation des démarches des citoyens grâce aux API (à partir de la 9eme minute).
@@ -83,9 +83,10 @@ Si vous travaillez avec l'un des éditeurs ou intégrateurs ci-dessous vous pouv
 
 | Editeur     | Nom de la solution | Date | Lien vers la demande                                                                         |
 | ----------- | ------------------ | ---- | -------------------------------------------------------------------------------------------- |
-| Agora Plus  |                    |      | <External href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</External> |
-| Ciril Group |                    |      | <External href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</External> |
-| JVS         | Parascol           |      | <External href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</External> |
-| Arpège      |                    |      | <External href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</External> |
+| Agora Plus  | Agor@Famille Premium | 2017 | <External href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</External> |
+| Ciril Group | Portail famille Civil Enfance | Juin 2021     | <External href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</External> |
+| JVS         | Parascol |      | <External href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</External> |
+| Arpège      |  Espace Citoyens Premium |      | <External href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</External> |
+| NFI Nord France Informatique      |    | janvier 2021     | <External href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</External> |
 
 Vous êtes un éditeur et vous souhaitez apparaître dans cette liste ? Écrivez-nous à [contact@particulier.api.gouv.fr](mailto:contact@particulier.api.gouv.fr)
