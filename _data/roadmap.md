@@ -99,8 +99,6 @@
       path: /les-api/api-sirene-donnees-ouvertes
   11:
     - type: ADD_API
-      what: Fichiers des Comptes Bancaires (FiCoBa) produite par le DGFiP
-    - type: ADD_API
       what: Registre des Bénéficiaires Effectifs (RBE) produite par l'INPI
       path: /les-api/api-rbe
     - type: ADD_API
@@ -129,8 +127,8 @@
       what: Data.bnf.fr par la BnF
       path: /les-api/api-data-bnf-fr
     - type: ADD_API
-      what: La Bonne Alternance
-      path: /les-api/api-la-bonne-alternance
+      what: Fichiers des Comptes Bancaires (FiCoBa) produite par le DGFiP
+      path: /les-api/api_comptes_bancaires_ficoba
     - type: DLNUF
       what: |
         De nouvelles données seront mises à disposition des administrations dans le cadre du [« Dites le nous une fois »](https://www.numerique.gouv.fr/services/guichet-dites-le-nous-une-fois/) :
@@ -151,24 +149,30 @@
       what: |
         Publication d'une doctrine relative à la circulation des données entre administrations
 2021:
-  01:
+  2:
     - type: ADD_API
-      what: Indemnités Journalières distribuée par la CNAM
+      what: La Bonne Alternance
+      path: /les-api/api-la-bonne-alternance
+  3:
     - type: ADD_API
       what: Professionnels BIO par l'agence BIO
-  02:
     - type: ADD_API
       what: DSNJ par le ministère des Armées
     - type: ADD_API
       what: Pro Santé Connect par l'ANS
-  03:
+    - type: ADD_API
+      what: AgentConnect par la DINUM
+  4:
     - type: ADD_API
       what: AgentConnect par la DINUM
     - type: ADD_API
       what: Données ouvertes de la ville de Paris
     - type: ADD_API
       what: Données ouvertes de la ville de Grenoble
-  05:
+  5:
     - type: ADD_API
       what: Bulletin Officiel des Annonces Civiles et Commerciales (BODACC)
+  9:
+    - type: ADD_API
+      what: Indemnités Journalières distribuée par la CNAM
 ---

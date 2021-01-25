@@ -110,7 +110,7 @@ export interface IApi extends IApiShort {
   owner_acronym: string;
   owner_slug: string;
   producer: string;
-  last_update: Date;
+  last_update: string;
   contact_link: string;
   external_site?: string;
   doc_tech_link: string;

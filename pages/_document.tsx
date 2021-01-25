@@ -222,7 +222,7 @@ class MyDocument extends Document {
           <div
             id="glossaire-betalab-params"
             style={{ display: 'none' }}
-            data-exclude-sigles="API,PRO,BTP"
+            data-exclude-sigles="API,PRO,BTP,LEP,FI,SPI"
             data-dynamic-repaint="true"
           />
         </body>

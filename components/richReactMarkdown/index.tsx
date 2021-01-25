@@ -32,7 +32,10 @@ const Grid: React.FC<PropsWithChildren<{}>> = props => (
   <div className="default-grid">{props.children}</div>
 );
 
-const NextSteps = ({ service_description = null, is_editeur = false }) => (
+const NextSteps = ({
+  is_editeur = false,
+  service_description = `de la description du service justifiant une simplication pour les citoyens`,
+}) => (
   <>
     <p>
       <b>Pour remplir votre demande, vous aurez besoin : </b>
@@ -40,11 +43,7 @@ const NextSteps = ({ service_description = null, is_editeur = false }) => (
     <ul>
       <li>de votre numéro SIRET</li>
       <li>du cadre juridique</li>
-      <li>
-        {service_description ||
-          `de la description du service justifiant une simplication pour les
-        citoyens`}
-      </li>
+      <li>{service_description}</li>
       <li>des coordonnées de l'équipe</li>
       <li>
         des coordonnées de votre délégué à la protection des données et

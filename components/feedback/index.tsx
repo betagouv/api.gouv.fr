@@ -24,7 +24,7 @@ const Feedback = () => {
     const details = refDetails.current.value;
     setHasAnsweredDetails(true);
     // send to matomo
-    logFeedbackDetails(details);
+    logFeedbackDetails(`${window.location.pathname} - ${details}`);
   };
 
   return (

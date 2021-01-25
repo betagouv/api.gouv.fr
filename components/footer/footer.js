@@ -51,6 +51,9 @@ const Footer = () => {
             <a href="/feuille-de-route">Feuille de route des API</a>
           </li>
           <li>
+            <a href="/statistiques">Chiffres clés</a>
+          </li>
+          <li>
             <a href="/documentation">Documentation des API</a>
           </li>
           <li>
