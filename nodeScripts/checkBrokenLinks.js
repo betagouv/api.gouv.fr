@@ -30,6 +30,7 @@ const IGNORE = [
   'https://www.inpi.fr/sites/default/files/inpi_doc_tech_rbe_api_fevrier_2020_v1.4.pdf',
   'https://geo.pays-de-brest.fr/donnees/Documents/Public/DocWebServicesTransport.pdf',
   'https://geo.pays-de-brest.fr/zapp/Pages/Demande-compte.aspx',
+  'https://www.ademe.fr/content/contacter', // weird
 ];
 
 const urlChecker = new blc.SiteChecker(

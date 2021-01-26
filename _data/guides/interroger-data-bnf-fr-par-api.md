@@ -87,13 +87,13 @@ Les vocabulaires et ontologies suivantes sont utilisées :
 | marcrel           | <External href="http://id.loc.gov/vocabulary/relators/">En savoir plus</External>                       |
 | geo               | <External href="http://www.w3.org/2003/01/geo/wgs84_pos#">En savoir plus</External>                     |
 | geonames          | <External href="http://www.geonames.org/ontology#">En savoir plus</External>                            |
-| bio               | <External href="http://vocab.org/bio/0.1/">En savoir plus</External>                                    |
+| bio               | <External href="https://vocab.org/bio/">En savoir plus</External>                                       |
 | bibo              | <External href="http://purl.org/ontology/bibo/">En savoir plus</External>                               |
 | ign               | <External href="http://data.ign.fr/ontology/topo.owl#">En savoir plus</External>                        |
-| insee             | <External href="http://rdf.insee.fr/geo/">En savoir plus</External>                                     |
+| insee             | <External href="http://rdf.insee.fr/geo/index.html">En savoir plus</External>                           |
 | bnf-onto          | <External href="http://data.bnf.fr/ontology/bnf-onto/">En savoir plus</External>                        |
 | bnfroles          | <External href="http://data.bnf.fr/vocabulary/roles/">En savoir plus</External>                         |
-| isni              | <External href="http://isni.org/ontology#">En savoir plus</External>                                    |
+| isni              | <External href="http://isni.org">En savoir plus</External>                                              |
 
 Les ressources sont identifiées par des URI construites à partir des ARK utilisés par les applications de la BnF :
 
