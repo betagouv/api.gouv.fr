@@ -149,24 +149,30 @@
       what: |
         Publication d'une doctrine relative à la circulation des données entre administrations
 2021:
-  01:
+  1:
     - type: ADD_API
-      what: Indemnités Journalières distribuée par la CNAM
+      what: La Bonne Alternance
+      path: /les-api/api-la-bonne-alternance
+  3:
     - type: ADD_API
       what: Professionnels BIO par l'agence BIO
-  02:
     - type: ADD_API
       what: DSNJ par le ministère des Armées
     - type: ADD_API
       what: Pro Santé Connect par l'ANS
     - type: ADD_API
       what: AgentConnect par la DINUM
-  03:
+  4:
+    - type: ADD_API
+      what: AgentConnect par la DINUM
     - type: ADD_API
       what: Données ouvertes de la ville de Paris
     - type: ADD_API
       what: Données ouvertes de la ville de Grenoble
-  05:
+  5:
     - type: ADD_API
       what: Bulletin Officiel des Annonces Civiles et Commerciales (BODACC)
+  9:
+    - type: ADD_API
+      what: Indemnités Journalières distribuée par la CNAM
 ---

@@ -302,6 +302,16 @@ a:not(.dont-apply-link-style):hover {
     border-radius: 2px;
     overflow: auto;
   }
+
+  tr code {
+    display: initial;
+    padding: 2px 5px;
+    color: #93a1a1;
+    background: #073642;
+    border-left: 5px solid #586e75;
+    border-radius: 2px;
+    overflow: auto;
+  }
 }
 
 h1 {
