@@ -19,11 +19,11 @@ themes:
   - Emploi
 last_update: 14/12/2020
 content_intro: |
-  L’API La bonne Alternance permettent d’exposer les deux composantes de l'apprentissage : la **formation** et l'**emploi**. Ce service permet d’exposer également les entreprises susceptibles de recruter sur l'ensemble du périmètre Alternance. Le site <External href="https://labonnealternance.pole-emploi.fr/">La Bonne Alternance</External> donne un aperçu visuel de ces données.
+  L’API La Bonne Alternance permet d’exposer les deux composantes de l'apprentissage : la **formation** et l'**emploi**. Ce service permet d’exposer également les entreprises susceptibles de recruter sur l'ensemble du périmètre Alternance. Le site <External href="https://labonnealternance.pole-emploi.fr?utm_medium=mweb&utm_source=apigouvfr&utm_campaign=pagelba_apigouvfr">La Bonne Alternance</External> donne un aperçu visuel de ces données.
 
   ### A quoi sert l'API La Bonne Alternance ?
 
-  L’API La Bonne Alternance servent à offrir une information complète et centralisée aux publics en recherche d’une formation en apprentissage et/ou d’un contrat en alternance.
+  L’API La Bonne Alternance sert à offrir une information complète et centralisée aux publics en recherche d’une formation en apprentissage et/ou d’un contrat en alternance.
 
   En tant qu’opérateur public ou privé traitant des questions d’orientation, de formation ou d’emploi en général, et d’alternance (apprentissage, professionnalisation) en particulier, il est possible de récupérer indépendamment ou simultanément les données :
 
@@ -40,12 +40,12 @@ content_intro: |
 
 ### Données accessibles dans l'API
 
-| Nom                                                | Description                                                                                                                                                                                                                     |
-| -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Formations en apprentissage                        | Les données sont alimentées en flux par le Réseau Carif-Oref et consolidées dans un catalogue produit par la Mission Nationale Apprentissage (<External href="https://mna-admin-prod.netlify.app/">API catalogue</External>)    |
-| Offres d’emploi en apprentissage                   | Les données sont collectées par l’API Offres d’emploi de Pôle emploi, qui agrège également des offres déposées par des partenaires de Pôle emploi.                                                                              |
-| Entreprises susceptibles de recruter en alternance | Les données proviennent d’un algorithme prédictif qui analyse 6 années de recrutements en alternance                                                                                                                            |
-| Entreprises à fort potentiel de recrutement        | Les données proviennent d’un algorithme prédictif qui analyse les recrutements en CDI et CDD de plus de 30 jours des 6 années passées (<External href="https://api.gouv.fr/les-api/LaBonneBoite">API La Bonne Boite</External>) |
+| Nom                                                | Description                                                                                                                                                                                                                            |
+| -------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Formations en apprentissage                        | Les données sont alimentées en flux par le Réseau Carif-Oref et consolidées dans un catalogue produit par la Mission Nationale Apprentissage (<External href="https://catalogue.apprentissage.beta.gouv.fr/">API catalogue</External>) |
+| Offres d’emploi en apprentissage                   | Les données sont collectées par l’API Offres d’emploi de Pôle emploi, qui agrège également des offres déposées par des partenaires de Pôle emploi.                                                                                     |
+| Entreprises susceptibles de recruter en alternance | Les données proviennent d’un algorithme prédictif qui analyse 6 années de recrutements en alternance                                                                                                                                   |
+| Entreprises à fort potentiel de recrutement        | Les données proviennent d’un algorithme prédictif qui analyse les recrutements en CDI et CDD de plus de 30 jours des 6 années passées (<External href="https://api.gouv.fr/les-api/LaBonneBoite">API La Bonne Boite</External>)        |
 
 ### Descriptif et données de chaque API
 
@@ -68,4 +68,4 @@ La réutilisation de ces données engage la responsabilité du réutilisateur.
 
 L'API est produite par la <External href="https://beta.gouv.fr/startups/apprentissage.html">Mission Nationale Apprentissage</External>, qui opère au sein de la DINUM
 
-Pour en savoir plus, consultez le <External href="https://mission-apprentissage.gitbook.io/general/">présentation de l'équipe</External>.
+Pour en savoir plus, consultez la <External href="https://mission-apprentissage.gitbook.io/general/">présentation de l'équipe</External>.
