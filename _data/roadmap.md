@@ -118,7 +118,7 @@
       path: /les-api/api-declaration-cesu
     - type: ADD_API
       what: Données Ouvertes Loire-Atlantique
-      path: /les-api/api-loire-atlantique-donnee-ouvertes
+      path: /les-api/api-loire-atlantique-donnees-ouvertes
   12:
     - type: ADD_API
       what: Gallica IIIF par la BnF
