@@ -29,7 +29,7 @@ access_page:
 
       <Button href="/rechercher-api">Revenir à la recherche</Button>
 contact_link: contact.tiercedeclaration@urssaf.fr
-doc_tech_link: /api/v1/proxy/https%3A%2F%2Fportailapi.urssaf.fr%2Findex.php%3Foption%3Dcom_apiportal%26view%3Ddefinition%26managerId%3D1%26menuId%3D181%26format%3Draw%26stateReturn%3DL2ZyLz9JdGVtaWQ9MTgxJmFwaUlkPTRlODRlMTdjLTk2NTQtNDBkMy1hYWRjLWY3MTdmYWM1ZGVlNSZhcGlOYW1lPUFQSSUyMFRpZXJjZSUyMERlY2xhcmF0aW9uJTIwUEFKRSZhcGlWZXJzaW9uPTEuMC4wJmFwaXRhYj10ZXN0cyZtYW5hZ2VySWQ9MSZtZW51SWQ9MTgxJm9wdGlvbj1jb21fYXBpcG9ydGFsJnJlbmRlclRvb2w9MiZ0eXBlPXJlc3QmdXNhZ2U9YXBpJnZpZXc9YXBpdGVzdGVy%26path%3D%252Fdiscovery%252Fswagger%252Fapi%252Fid%252F4e84e17c-9654-40d3-aadc-f717fac5dee5%253FswaggerVersion%253D2.0%2526filename%253DAPI%252520Tierce%252520Declaration%252520PAJE.json%2526extensions%253Dfalse
+doc_tech_link: /swaggers/api-pajemploi.json
 doc_tech_external: https://portailapi.urssaf.fr/fr/?option=com_apiportal&view=apitester&usage=api&apiName=API%20Tierce%20Declaration%20PAJE&sn=API%20Tierce%20Declaration%20PAJE&Itemid=181&apitab=tests&tab=&apiId=4e84e17c-9654-40d3-aadc-f717fac5dee5&menuId=181&apiVersion=1.0.0&managerId=1&renderTool=2&type=rest
 keywords:
   - Urssaf
@@ -61,17 +61,18 @@ Du point de vue de l'usager, l'API Tierce Déclaration Pajemploi permet au tiers
 
 Liste des fonctionnalités à titre d’exemple (liste non exhaustive) :
 
-| Donnée      | Lien vers le jeu de données                                                                                                                  |
-| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| Employeurs  | Vérifier l’état de l’inscription d’un particulier employeur auprès de Pajemploi.                                                             |
-| Salariés    | Vérifier l’état de l’inscription d’un salarié particulier auprès de Pajemploi                                                                |
-| Estimer     | Simuler le montant de cotisations sociales pour une activité Pajemploi.                                                                      |
-| Predeclarer | Pré-déclarer une activité Pajemploi pour le compte d’un particulier employeur.                                                               |
-| Declarer    | Déclarer une activité Pajemploi pour le compte d’un particulier employeur.                                                                   |
-| Associer    | Associer un salarié à un particulier employeur. Si le salarié n’existe pas, ce dernier est alors créé.                                       |
+| Donnée      | Lien vers le jeu de données                                                                                                                     |
+| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| Employeurs  | Vérifier l’état de l’inscription d’un particulier employeur auprès de Pajemploi.                                                                |
+| Salariés    | Vérifier l’état de l’inscription d’un salarié particulier auprès de Pajemploi                                                                   |
+| Estimer     | Simuler le montant de cotisations sociales pour une activité Pajemploi.                                                                         |
+| Predeclarer | Pré-déclarer une activité Pajemploi pour le compte d’un particulier employeur.                                                                  |
+| Declarer    | Déclarer une activité Pajemploi pour le compte d’un particulier employeur.                                                                      |
+| Associer    | Associer un salarié à un particulier employeur. Si le salarié n’existe pas, ce dernier est alors créé.                                          |
 | Mandats     | Notifier l'Urssaf de l'enregistrement ou l’annulation d'un mandat de tierce déclaration obtenu par la plateforme pour un particulier employeur. |
 
 ### En savoir plus
+
 <!--
 #### Qu'est ce qu'un particulier employeur ?
 
