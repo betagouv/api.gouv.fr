@@ -149,7 +149,7 @@
       what: |
         Publication d'une doctrine relative à la circulation des données entre administrations
 2021:
-  2:
+  1:
     - type: ADD_API
       what: La Bonne Alternance
       path: /les-api/api-la-bonne-alternance

@@ -14,7 +14,7 @@ keywords:
   - emploi
   - offre
 contact_link: labonnealternance@apprentissage.beta.gouv.fr
-doc_tech_link: https://labonnealternance.apprentissage.beta.gouv.fr/api-docs/
+doc_tech_link: https://labonnealternance.apprentissage.beta.gouv.fr/api-docs/swagger.json
 themes:
   - Emploi
 last_update: 14/12/2020
@@ -59,6 +59,10 @@ Nos API normalisent les données sources pour restituer en un même format, soit
 ### Autre format de données disponible
 
 Les données récupérables par l'API La Bonne Alternance peuvent aussi être affichées sous forme de widget, ce qui permet la prise en charge complète de l’affichage des données pour l’utilisateur. Ce widget s’intègre aux sites déjà existants, il est disponible en plusieurs tailles et <External href="/guides/widget-la-bonne-alternance">intégrable en marque blanche</External>.
+
+### Réutilisation
+
+La réutilisation de ces données engage la responsabilité du réutilisateur.
 
 ### L'équipe
 
