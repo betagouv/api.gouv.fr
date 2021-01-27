@@ -74,6 +74,9 @@ const Footer = () => {
             <a href="/contact">Nous contacter</a>
           </li>
           <li>
+            <a href="https://beta.gouv.fr/recrutement/">Nous rejoindre</a>
+          </li>
+          <li>
             <a href={constants.links.ADD_API}>Ajouter une nouvelle API</a>
           </li>
         </ul>
