@@ -88,6 +88,6 @@ Si vous travaillez avec l'un des éditeurs ou intégrateurs ci-dessous vous pouv
 | JVS                          | Parascol                      |              | <External href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</External>                                    |
 | Arpège                       | Espace Citoyens Premium       |              | <External href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</External>                                    |
 | NFI Nord France Informatique |                               | janvier 2021 | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=nfi-grc">Remplir une demande</External>                   |
-| Publik                       | Entr'ouvert                   | Janvier 2021 | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=entrouvert-publik">Remplir une demande</External>         |
+| Entr'ouvert                  | Publik                        | Janvier 2021 | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=entrouvert-publik">Remplir une demande</External>         |
 
 Vous êtes un éditeur et vous souhaitez apparaître dans cette liste ? Écrivez-nous à [contact@particulier.api.gouv.fr](mailto:contact@particulier.api.gouv.fr)
