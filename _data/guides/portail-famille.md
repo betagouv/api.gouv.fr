@@ -4,8 +4,8 @@ tagline: Vous êtes une commune ou un éditeur de logiciel ? Calculez facilement
 tags: cas usage, api particulier, portail famille, quotient familial dématérialisé
 noindex: true
 image: portail_famille.jpg
-# api:
-#   - API Particulier
+api:
+  - API Particulier
 ---
 
 De plus en plus de communes mettent à disposition des habitants un Portail Famille permettant d'accéder à des services en ligne pour gérer les activités de l'ensemble de la famille : la crèche, l'halte-garderie, les centres de loisirs, la restauration scolaire, les goûter, les études, le conservatoire, l'atelier beaux-arts et autres.
