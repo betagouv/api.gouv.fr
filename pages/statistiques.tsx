@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { GetStaticProps } from 'next';
 
 import Page from '../layouts/page';
