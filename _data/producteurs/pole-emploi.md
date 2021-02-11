@@ -1,7 +1,7 @@
 ---
 name: Pole Emploi
 acronym:
-type: agence
+type: Agence centrale
 site:
 logo: logo_pole_emploi.jpg
 ---

@@ -25,6 +25,7 @@ const formatApiWithOwner = producers => (slug, data) => {
     owner: producer.name,
     owner_acronym: producer.acronym || null,
     owner_slug: producer.slug,
+    owner_type: producer.type || null,
     logo: producer.logo,
   };
 };

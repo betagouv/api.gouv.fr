@@ -61,6 +61,7 @@ themes:
   - Environnement
   - Agriculture
 last_update: 18/01/2021
+created_at: 01/07/2021
 rate_limiting_resume: illimité
 content_intro: |
   CartoBio vise à ouvrir progressivement les données des parcelles conduites en agriculture biologique en France, notamment auprès des acteurs publics territoriaux.

@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { GetStaticProps } from 'next';
 
 import Page from '../layouts/page';
 import { getAllAPIs, IApi } from '../model';
 import Emoji from '../uiComponents/emoji';
-import StackedChart from '../components/charts/stackedBarChart';
+import ChartAPIIsOpen from '../components/charts/chartAPIIsOpen';
+import ChartAPIByProducers from '../components/charts/chartAPIByProducers';
 
 interface IProps {
   allApis: IApi[];
@@ -23,11 +24,10 @@ const Stats: React.FC<IProps> = ({ allApis }) => {
           Statistiques <Emoji emoji="🧮" label="mathématiques" />
         </h1>
         <h2>Évolution des API au catalogue api.gouv.fr.</h2>
-        <p>
-          Cliquez sur une colonne pour découvrir le détail des APIs ajoutée(s),
-          mois par mois :
-        </p>
-        <StackedChart allApis={allApis} />
+        <p>Répartition des API en accès libre et en accès restreint :</p>
+        <ChartAPIIsOpen allApis={allApis} />
+        <p>Répartition des API par type de producteur de donnée :</p>
+        <ChartAPIByProducers allApis={allApis} />
       </div>
     </Page>
   );

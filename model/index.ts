@@ -51,6 +51,7 @@ export interface IProducerElement {
   acronym: string;
   logo: string;
   slug: string;
+  type?: string;
 }
 
 export interface IService {
@@ -109,6 +110,7 @@ export interface IApi extends IApiShort {
   owner: string;
   owner_acronym: string;
   owner_slug: string;
+  owner_type: string;
   producer: string;
   last_update: string;
   contact_link: string;
