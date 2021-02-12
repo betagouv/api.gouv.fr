@@ -16,12 +16,14 @@ const getLabels = (allApis: IApi[]) => {
 };
 
 const colors = [
+  '#FFEDB6',
   '#F8D67C',
   '#F8B195',
   '#F67280',
   '#C06C84',
   '#6C5B7B',
   '#355C7D',
+  '#4a3d55',
 ];
 
 const generateData = (allApis: IApi[], keys: string[]) => {

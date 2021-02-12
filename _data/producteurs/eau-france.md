@@ -1,6 +1,6 @@
 ---
-name: Eau France
+name: Office Français pour la Biodiversité
 logo: eau-france.png
-type: Agence Environnementale
+type: Etablissement publique
 site: https://eaufrance.fr
 ---

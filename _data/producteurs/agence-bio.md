@@ -1,5 +1,5 @@
 ---
 name: Agence BIO
 logo: AgenceBio.svg
-type: Agence Environnementale
+type: Groupement d'intérêt publique
 ---

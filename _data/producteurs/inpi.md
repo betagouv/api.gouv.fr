@@ -1,6 +1,6 @@
 ---
 name: Institut national de la propriété industrielle
 acronym: INPI
-type: Agence centrale
+type: Etablissement publique
 logo: inpi.png
 ---

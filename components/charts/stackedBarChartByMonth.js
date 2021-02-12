@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import * as d3 from 'd3';
+import { uuid } from '../../utils';
 
 const StackedBarChart = ({ data, labels, colors }) => {
   const d3Container = useRef(null);
@@ -9,6 +10,7 @@ const StackedBarChart = ({ data, labels, colors }) => {
   const keys = Object.keys(labels);
   const legendCellSize = 20;
   let tooltip = null;
+  const chartUuid = uuid();
 
   const stack = d3
     .stack()
@@ -130,7 +132,7 @@ const StackedBarChart = ({ data, labels, colors }) => {
         .enter()
         .append('rect')
         .attr('class', function(d) {
-          return `month-${d.data.month}`;
+          return `month-${d.data.month}-${chartUuid}`;
         })
         .attr('x', d => x(d.data.month))
         .attr('width', x.bandwidth())
@@ -138,10 +140,16 @@ const StackedBarChart = ({ data, labels, colors }) => {
         .attr('height', d => height - y(d[1] - d[0]))
         .attr('cursor', 'help')
         .on('mouseover', function(event, d) {
-          d3.selectAll(`.month-${d.data.month}`).attr('opacity', 0.6);
+          d3.selectAll(`.month-${d.data.month}-${chartUuid}`).attr(
+            'opacity',
+            0.6
+          );
         })
         .on('mouseleave', function(event, d) {
-          d3.selectAll(`.month-${d.data.month}`).attr('opacity', 1);
+          d3.selectAll(`.month-${d.data.month}-${chartUuid}`).attr(
+            'opacity',
+            1
+          );
         })
         .on('mousemove', function(event, d) {
           if (!tooltip) return;
