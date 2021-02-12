@@ -1,6 +1,6 @@
 ---
 title: API Service National
-tagline: Vérifiez si un individu est en règle vis à vis de son obligations de Service National et peut s’inscrire à un examen
+tagline: Vérifiez si un candidat est en règle vis-à-vis de ses obligations de Service National et peut s’inscrire au concours ou à l’examen dont vous êtes en charge.
 access_page:
   - who:
       - Un particulier
@@ -11,8 +11,7 @@ access_page:
 
       <Button href="/rechercher-api">Rechercher une autre API</Button>
   - who:
-      - Un lycée
-      - Une auto-école
+      - Un service chargé de l'inscription à un examen ou un concours soumis au controle de l'autorité publique
     is_eligible: 1
     description: |
       Conformément aux dispositions de <External href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000021960309/">Article L114-6</External> du *code du service national*, les personnes de moins de 25 ans assujettie à l'obligation de participer à la journée défense et citoyenneté doivent être en règle pour être autorisé à s'inscrire aux examens et concours soumis au contrôle de l'autorité publique.
@@ -42,7 +41,16 @@ L'API Service National facilite la constitution des dossiers d'inscription aux e
 
 ### À quoi sert l’API Service National ?
 
-Elle permet à une administration ou à une entreprise privée habilité, de s'assurer qu'un individu a bien complété son obligation de Service National, dans le cadre d'une inscription à un examen, du permis de conduire ou d'un concours.
+Elle permet aux administrations d'accéder à des informations certifiées à la source et ainsi :
+
+- de s’affranchir des pièces justificatives lors des démarches en ligne ou physiques
+- de réduire le nombre d’erreurs de saisie
+- d'écarter le risque de fraude documentaire
+
+Du point de vue de l’usager, une démarche qui utilise l’API Service national s'apparente à ça :
+
+1. Je me connecte sur un site ou je me déplace en vue d'une inscription à un examen ou un concours.
+2. Le service chargé de la constitution de mon dossier récupère ma situation au regard des obligations de service national. Si je suis en règle, je n’ai plus rien à faire !
 
 ### Données
 
@@ -62,6 +70,8 @@ Au sein du ministère des Armées, c'est la Direction du Service National et de 
 
 ### Qu’est ce que le Service National ?
 
-Tout jeune Français dès 16 ans doit se faire recenser pour être convoqué à la journée défense et citoyenneté (JDC). À l'issue de la JDC, il reçoit une attestation du Service National lui permettant notamment de s'inscrire aux examens et concours de l'État (permis de conduire, baccalauréat, ...).
+Le service national universel comprend les obligations suivantes : le recensement, la journée défense et citoyenneté (et l'appel sous les drapeaux, suspendu).
 
-Pour en savoir plus, [consultez cette page](https://www.service-public.fr/particuliers/vosdroits/N24).
+Tout jeune Français doit se faire recenser dès l’âge de 16 ans, ce qui lui permet notamment d’être convoqué à la journée défense et citoyenneté (JDC) avant l’âge de 18 ans.
+
+Le document remis à chacune de ces étapes permet de justifier d’une situation régulière, et ainsi de s’inscrire aux examens et concours soumis au contrôle de l’autorité publique.
