@@ -19,7 +19,7 @@ const openClosedLabels = {
   close: ' en accès restreint',
 };
 
-const colors = ['#e0f3db', '#7bccc4', '#2b8cbe'];
+const colors = ['#F8D67C', '#A72257', '#2b8cbe'];
 
 const generateData = (allApis: IApi[]) => {
   const origin = new Date(ORIGIN);
