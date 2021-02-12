@@ -2,6 +2,6 @@
 name: Institut national de la statistique et des études économiques
 acronym: Insee
 logo: Logo_Insee.svg
-type: Etablissement publique
+type: Etablissement public
 site:
 ---

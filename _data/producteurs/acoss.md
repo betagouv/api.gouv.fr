@@ -1,5 +1,5 @@
 ---
 name: Acoss
 logo: urssaf.svg
-type: Etablissement publique
+type: Etablissement public
 ---

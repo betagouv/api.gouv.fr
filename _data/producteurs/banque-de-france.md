@@ -1,5 +1,5 @@
 ---
 name: Banque de France
 logo: webstat.jpg
-type: Etablissement publique
+type: Etablissement public
 ---
