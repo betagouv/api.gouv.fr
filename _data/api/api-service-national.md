@@ -33,7 +33,7 @@ keywords:
 themes:
   - Particulier
 contact_link: dsn.contact-demarche.fct@intradef.gouv.fr
-doc_tech_link: https://presaje.sga.defense.gouv.fr/api/doc
+doc_tech_link: /swaggers/api-service-national.yaml
 last_update: 01/02/2020
 ---
 
