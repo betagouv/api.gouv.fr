@@ -11,15 +11,15 @@ access_page:
 
       <Button href="/rechercher-api">Rechercher une autre API</Button>
   - who:
-      - Un service chargé de l'inscription à un examen ou un concours soumis au controle de l'autorité publique
+      - Un service chargé de l'inscription à un examen ou un concours soumis au contrôle de l'autorité publique
     is_eligible: 1
     description: |
-      Conformément aux dispositions de <External href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000021960309/">Article L114-6</External> du *code du service national*, les personnes de moins de 25 ans assujettie à l'obligation de participer à la journée défense et citoyenneté doivent être en règle pour être autorisé à s'inscrire aux examens et concours soumis au contrôle de l'autorité publique.
+      Conformément aux dispositions de <External href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000021960309/">l’article L114-6</External> du *code du service national*, les personnes de moins de 25 ans assujetties à l'obligation de participer à la journée défense et citoyenneté doivent être en règle pour être autorisées à s'inscrire aux examens et concours soumis au contrôle de l'autorité publique.
 
       Dans le cadre de cette vérification, vous pouvez faire une demande d'accès à l'API :
 
       <NextSteps />
-      <Button href="https://datapass-staging.api.gouv.fr/api-dsnj?demarche=inscription-examens">Remplir une demande</Button>
+      <Button href="https://datapass-staging.api.gouv.fr/api-service-national?demarche=inscription-examens">Remplir une demande</Button>
 is_open: -1
 producer: ministere-armees
 keywords:
@@ -75,3 +75,5 @@ Le service national universel comprend les obligations suivantes : le recensemen
 Tout jeune Français doit se faire recenser dès l’âge de 16 ans, ce qui lui permet notamment d’être convoqué à la journée défense et citoyenneté (JDC) avant l’âge de 18 ans.
 
 Le document remis à chacune de ces étapes permet de justifier d’une situation régulière, et ainsi de s’inscrire aux examens et concours soumis au contrôle de l’autorité publique.
+
+Cliquez ici pour consulter le [tableau récapitulatif des justificatifs exigibles](/resources/justificatifs_exigibles_service_national.pdf).
