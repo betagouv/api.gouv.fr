@@ -155,6 +155,9 @@
       path: /les-api/api-la-bonne-alternance
   3:
     - type: ADD_API
+      what: API Organismes de Formation
+      path: /les-api/api-organismes-formation
+    - type: ADD_API
       what: Professionnels BIO par l'agence BIO
     - type: ADD_API
       what: DSNJ par le ministère des Armées
