@@ -71,6 +71,12 @@ const teamData = [
     linkedin: 'https://www.linkedin.com/in/leclerca/',
     img: 'Alexis.jpg',
   },
+  {
+    name: 'Cyril Kato',
+    title: 'API Entreprise',
+    linkedin: 'https://www.linkedin.com/in/cyrilllllll',
+    img: 'Cyril.jpg',
+  },
 ];
 
 const Team: React.FC = () => (
