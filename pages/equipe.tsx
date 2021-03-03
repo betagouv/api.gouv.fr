@@ -77,6 +77,12 @@ const teamData = [
     linkedin: 'https://www.linkedin.com/in/cyrilllllll',
     img: 'Cyril.jpg',
   },
+  {
+    name: 'Dorine Lambinet',
+    title: 'Designeuse produit',
+    linkedin: 'https://www.linkedin.com/in/cyrilllllll',
+    img: 'Dorine.jpg',
+  },
 ];
 
 const Team: React.FC = () => (
