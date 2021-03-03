@@ -51,6 +51,9 @@ const Footer = () => {
             <a href="/feuille-de-route">Feuille de route des API</a>
           </li>
           <li>
+            <a href={constants.links.ADD_API}>Ajouter une nouvelle API</a>
+          </li>
+          <li>
             <a href="/statistiques">Chiffres clés</a>
           </li>
           <li>
@@ -81,9 +84,6 @@ const Footer = () => {
             >
               Nous rejoindre
             </a>
-          </li>
-          <li>
-            <a href={constants.links.ADD_API}>Ajouter une nouvelle API</a>
           </li>
         </ul>
         <ul className="footer__links">
