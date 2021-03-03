@@ -15,7 +15,7 @@ const Footer = () => {
           </Link>
           <ul className="footer__social">
             <li>
-              <a href="https://twitter.com/BetaGouv" title="Twitter">
+              <a href="https://twitter.com/apigouv" title="Twitter">
                 <img
                   src="/images/social/twitter.svg"
                   alt="Twitter"
