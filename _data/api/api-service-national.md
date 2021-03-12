@@ -11,12 +11,22 @@ access_page:
 
       <Button href="/rechercher-api">Rechercher une autre API</Button>
   - who:
-      - Un service chargé de l'inscription à un examen ou un concours soumis au contrôle de l'autorité publique
+      - Un service chargé de l'inscription à un examen ou un concours
     is_eligible: 1
     description: |
       Conformément aux dispositions de <External href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000021960309/">l’article L114-6</External> du *code du service national*, les personnes de moins de 25 ans assujetties à l'obligation de participer à la journée défense et citoyenneté doivent être en règle pour être autorisées à s'inscrire aux examens et concours soumis au contrôle de l'autorité publique.
 
-      Dans le cadre de cette vérification, vous pouvez faire une demande d'accès à l'API :
+      Par conséquent, dans le cadre de cette vérification, si vous êtes un service chargé de l'inscription à un examen ou un concours soumis au contrôle de l'autorité publique, pouvez faire une demande d'accès à l'API :
+
+      <NextSteps />
+      <Button href="https://datapass-staging.api.gouv.fr/api-service-national?demarche=inscription-examens">Remplir une demande</Button>
+  - who:
+      - Un service de ressources humaines ou de recrutement
+    is_eligible: 1
+    description: |
+      Conformément aux dispositions de <External href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000021960309/">l’article L114-6</External> du *code du service national*, les personnes de moins de 25 ans assujetties à l'obligation de participer à la journée défense et citoyenneté doivent être en règle pour être autorisées à s'inscrire aux examens et concours soumis au contrôle de l'autorité publique.
+
+      Par conséquent, les services de ressources humaines ou de recrutement chargés, en application de dispositions statutaires, de vérifier la situation des personnes de moins de 25 ans au regard des obligations de service national, sont autorisés à faire une demande d'accès à l'API :
 
       <NextSteps />
       <Button href="https://datapass-staging.api.gouv.fr/api-service-national?demarche=inscription-examens">Remplir une demande</Button>
