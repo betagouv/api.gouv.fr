@@ -37,7 +37,7 @@ doc_tech_link: /swaggers/api-service-national.yaml
 last_update: 01/02/2020
 ---
 
-L'API Service National facilite la constitution des dossiers d'inscription aux examens et concours soumis au contrôle de l'autorité publique.
+L’API Service National facilite la constitution des dossiers d’accès à un statut exigeant d’être en règle avec les obligations de service national.
 
 ### À quoi sert l’API Service National ?
 
