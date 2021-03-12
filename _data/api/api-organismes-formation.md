@@ -32,29 +32,35 @@ dataset_uuid:
 
 Récupérez la liste publique des organismes de formation, centralisées et publiées par la délégation générale à l’emploi et à la formation professionnelle (DGEFP) et le Ministère du Travail.
 
+La liste des organismes rendue publique concerne les organismes déclarés dans les conditions fixées par [l'article L.6351-7-1 du Code du Travail](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000021343604/), et à jour de leur obligation de transmettre le bilan pédagogique et financier mentionné à l'article L. 6352-11.
+
+Elle comporte les renseignements relatifs à la raison sociale de l'organisme, à ses effectifs, à la description des actions de formation dispensées et au nombre de salariés et de personnes formées.
+
 ### À quoi sert cette API ?
 
 Grâce à cette API vous pouvez :
 
-- vérifier si une entreprise est un organisme de formation
-- obtenir les informations clés d'un organisme de formation (Siren, adresse, spécialisation)
+- Vérifier qu’un organisme de formation est bien à jour de ses obligations légales
+- Obtenir les informations clés d'un organisme de formation (Siren, adresse, spécialisation)
 
 ### Données disponibles
 
 Pour chaque organisme de formation, retrouvez :
 
-| Nom                | Description                                                                |
-| ------------------ | -------------------------------------------------------------------------- |
-| nom                | Nom de l'organisme de formation                                            |
-| siren              | Siren de l'organisme de formation                                          |
-| numeroDa           | Numéro de déclaration d'activité                                           |
-| cfa                | L'organisme de formation est-il un CFA (Centre de Formation d'Apprentis) ? |
-| adresse            | Voie, Code Postal, Ville, Pays de l'organisme de formation                 |
-| codeSpecialite     | Code spécialité                                                            |
-| libelleSpecialite  | Libellé de la spécialité                                                   |
-| nbStagiaires       | Nombre de stagiaires                                                       |
-| nbHeuresStagiaires | Nombre d'heures stagiaires                                                 |
+| Nom               | Description                                                                |
+| ----------------- | -------------------------------------------------------------------------- |
+| nom               | Nom de l'organisme de formation                                            |
+| siren             | Siren de l'organisme de formation                                          |
+| numeroDa          | Numéro de déclaration d'activité                                           |
+| cfa               | L'organisme de formation est-il un CFA (Centre de Formation d'Apprentis) ? |
+| adresse           | Voie, Code Postal, Ville, Pays de l'organisme de formation                 |
+| codeSpecialite    | Code spécialité                                                            |
+| libelleSpecialite | Libellé de la spécialité                                                   |
 
-### Cadre juridique
+### D'où viennent les données
 
-La liste des organismes de formation déclarés auprès du Préfet de Région territorialement compétent et à jour de leur obligation de transmission du Bilan Pédagogique et Financier est rendue publique conformément à [l'article L.6351-7-1 du Code du Travail](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000021343604/).
+Les informations publiées proviennent des déclarations effectuées par les organismes de formation :
+
+- Pour les nouveaux organismes de formation, il s’agit de la déclaration d’activité des organismes de formation.
+
+- Pour les organismes déclarés et soumis à la transmission d’un bilan pédagogique et financier, elles proviennent de ce document.
