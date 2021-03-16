@@ -24,7 +24,7 @@ access_page:
       - Un service de ressources humaines ou de recrutement
     is_eligible: 1
     description: |
-      Conformément aux dispositions de <External href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000021960309/">l’article L114-6</External> du *code du service national*, les personnes de moins de 25 ans assujetties à l'obligation de participer à la journée défense et citoyenneté doivent être en règle pour être autorisées à s'inscrire aux examens et concours soumis au contrôle de l'autorité publique.
+      Conformément aux dispositions de <External href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000024042593">l’article L111-3</External> du code du service national, nul ne peut être investi de fonctions publiques s'il ne justifie avoir satisfait aux obligations imposées par ce code.
 
       Par conséquent, les services de ressources humaines ou de recrutement chargés, en application de dispositions statutaires, de vérifier la situation des personnes de moins de 25 ans au regard des obligations de service national, sont autorisés à faire une demande d'accès à l'API :
 
@@ -47,7 +47,10 @@ doc_tech_link: /swaggers/api-service-national.yaml
 last_update: 01/02/2020
 ---
 
-L’API Service National facilite la constitution des dossiers d’accès à un statut exigeant d’être en règle avec les obligations de service national.
+L’API Service National facilite :
+
+- La constitution des dossiers d’inscription aux examens et concours soumis au contrôle de l’autorité publique ;
+- La constitution des dossiers d’accès à un statut exigeant d’être en règle avec les obligations de service national.
 
 ### À quoi sert l’API Service National ?
 
