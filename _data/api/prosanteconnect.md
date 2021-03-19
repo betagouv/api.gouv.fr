@@ -1,17 +1,17 @@
 ---
-title: FranceConnect et les API FranceConnectées
-tagline: Identifier les utilisateurs de votre site internet et accéder à certaines données d'identité certifiées. Accéder à des données supplémentaires via les API FranceConnectées
-external_site: https://franceconnect.gouv.fr/partenaires
+title: API Pro Santé Connect
+tagline: Permettre l'authentification des professionnels de la santé
+external_site: https://esante.gouv.fr/
 is_open: -1 # -1 means API not open
-datapass_link: https://franceconnect.gouv.fr/partenaires
+datapass_link: https://esante.gouv.fr/
 access_page:
   - who:
       - Un particulier
     is_eligible: -1
     description: |
-      Seules les administrations et les entreprises sont habilitées à utiliser l'API FranceConnect ou intégrer le bouton FranceConnect.
+      Seules les administrations et les entreprises sont habilitées à utiliser l'API Pro Santé Connect ou intégrer le bouton Pro Santé Connect.
 
-      Si vous cherchez à contacter l'équipe FranceConnect, vous pouvez écrire à [support@franceconnect.gouv.fr](mailto:support@franceconnect.gouv.fr)
+      Si vous cherchez à contacter l'équipe Pro Santé Connect, vous pouvez [contacter l'Agence Numérique en Santé](https://esante.gouv.fr/assistance)
 
       <Button href="/rechercher-api">Ou vous pouvez rechercher une autre API</Button>
   - who:
@@ -54,10 +54,7 @@ L‘API FranceConnect permet à des administrations, des collectivités ou des e
 
 ### A quoi ca sert ?
 
-- Intégrer le fédérateur d’identité FranceConnect, afin de recueillir des données d’identité vérifiées de vos utilisateurs en vue :
-  - D’une entrée en relation 100% dématérialisée et 100% sécurisée
-  - D’une connexion sans identifiant et mot de passe dédié à votre service
-- Accéder à des données supplémentaires grâce aux [API “FranceConnectées” DGFIP, CNAM, SIV...](#api-franceconnectees)
+PRO Santé Connect est un fournisseur d’identité (FI) au standard OpenID. Il accepte comme « credential » d’authentification la carte CPS et une e-carte CPS qui est une application téléphone. L’assertion d’authentification OpenIDConnect « remonte » au fournisseur de service (FS) demandeur de l’authentification les traits d’identités classiques plus l’identité sectorielle (profession, savoir-faire, situation d’exercice, …) afin que celui-ci puisse, au-delà de la simple authentification, gérer tout ou partie de son contrôle d’accès . Ces éléments sont fournis par [notre annuaire](https://annuaire.sante.fr) et incorporé dans le jeton OpenIdConnect.
 
 ### Les données disponibles via l'API
 
