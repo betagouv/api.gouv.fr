@@ -44,13 +44,13 @@ keywords:
 themes:
   - Particulier
 contact_link: support.partenaires@franceconnect.gouv.fr
-doc_tech_external: https://partenaires.franceconnect.gouv.fr/fcp/fournisseur-service
+doc_tech_external: https://integrateurs-cps.asipsante.fr/pages/prosanteconnect/documentation-fs
 visits_2019: 5000
 uptime: 99.893 # https://uptimerobot.com/dashboard.php#778110642
 last_update: 10/12/2019
 ---
 
-L‘API FranceConnect permet à des administrations, des collectivités ou des entreprises d’ajouter un bouton FranceConnect, pour recueillir des données d’identité fiables et ainsi identifier les utilisateurs de leur service en ligne (en vue d’une entrée en relation ou connexion).
+L‘API Pro Santé connect permet à des administrations, des éditeurs de logiciels ou des entreprises d’ajouter un bouton Pro Santé Connect, pour recueillir des données d’identité fiables et ainsi identifier les utilisateurs de leur service en ligne (en vue d’une entrée en relation ou connexion).
 
 ### A quoi ca sert ?
 
@@ -59,7 +59,7 @@ PRO Santé Connect est un fournisseur d’identité (FI) au standard OpenID. Il 
 
 ### Comment ça marche ?
 
-**l'identité pivot**.
+**L'identité pivot**.
 
 | Type       | Données                      |
 | --------- | -------------------------------- |
