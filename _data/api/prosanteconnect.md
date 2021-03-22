@@ -19,6 +19,8 @@ access_page:
     is_eligible: 0
     description: |
       Seuls les éditeurs de logiciels proposant une solution web adressée aux professionnels de santé peuvent demander à se raccorder à PRO Santé Connect.
+      <NextSteps />
+      <Button href="https://franceconnect.gouv.fr/partenaires">Remplir une demande</Button>
   - who:
       - Une collectivité ou une administration
     is_eligible: 1
@@ -31,9 +33,8 @@ access_page:
       Tout éditeur proposant une solution web adressée aux professionnels de santé et qui souhaite pouvoir authentifier des professionnels de santé peut demander à se raccorder à PRO Santé Connect. 
 
       <NextSteps />
-      <Button href="https://franceconnect.gouv.fr/partenaires">Remplir une demande</Button>
+      <Button href="mailto:prosanteconnect.editeurs@esante.gouv.fr">Remplir une demande</Button>
 partners:
-  - ANS
   - Ministère des Solidarités et de la Santé (MSS)
 producer: ANS
 keywords:
@@ -47,9 +48,7 @@ themes:
   - Santé
 contact_link: prosanteconnect.editeurs@esante.gouv.fr
 doc_tech_external: https://integrateurs-cps.asipsante.fr/pages/prosanteconnect/documentation-fs
-visits_2019: 5000
-uptime: 99.893 # https://uptimerobot.com/dashboard.php#778110642
-last_update: 22/03/2020
+last_update: 22/03/2021
 ---
 
 L‘API Pro Santé connect permet à des administrations, des éditeurs de logiciels ou des entreprises d’ajouter un bouton Pro Santé Connect, pour recueillir des données d’identité fiables et ainsi identifier les utilisateurs de leur service en ligne (en vue d’une entrée en relation ou connexion).
