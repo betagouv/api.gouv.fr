@@ -9,7 +9,7 @@ access_page:
       - Un particulier
     is_eligible: -1
     description: |
-      Seules les administrations et les entreprises sont habilitées à utiliser l'API Pro Santé Connect ou intégrer le bouton Pro Santé Connect.
+      Seules les administrations et les éditeurs de logiciels sont habilitées à utiliser l'API Pro Santé Connect ou intégrer le bouton Pro Santé Connect.
 
       Si vous cherchez à contacter l'équipe Pro Santé Connect, vous pouvez [contacter l'Agence Numérique en Santé](https://esante.gouv.fr/assistance)
 
@@ -18,36 +18,38 @@ access_page:
       - Une entreprise
     is_eligible: 0
     description: |
-      Si vous avez vérifié [votre éligibilité](https://franceconnect.gouv.fr/partenaires), vous pouvez demander à [intégrer le bouton FranceConnect](https://datapass.api.gouv.fr/franceconnect).
-
-      <NextSteps />
-      <Button href="https://franceconnect.gouv.fr/partenaires">Vérifier mon éligibilité et remplir une demande</Button>
+      Seuls les éditeurs de logiciels proposant une solution web adressée aux professionnels de santé peuvent demander à se raccorder à PRO Santé Connect.
   - who:
       - Une collectivité ou une administration
     is_eligible: 1
     description: |
-      Si vous souhaitez intégrer le bouton FranceConnect, [faites votre demande d’accès](https://datapass.api.gouv.fr/franceconnect).
+      Vous pouvez réaliser une demande d'accès à l'API. 
+      
+  - Un éditeur de logiciels
+    is_eligible: 0
+    description: |
+      Tout éditeur proposant une solution web adressée aux professionnels de santé et qui souhaite pouvoir authentifier des professionnels de santé peut demander à se raccorder à PRO Santé Connect. 
 
       <NextSteps />
       <Button href="https://franceconnect.gouv.fr/partenaires">Remplir une demande</Button>
 partners:
-  - DGFiP
-  - Ameli
-  - La Poste
-  - MobileConnect & Moi
-  - MSA
-producer: dinum
+  - ANS
+  - Ministère des Solidarités et de la Santé (MSS)
+producer: ANS
 keywords:
   - Authentification
   - Identification
   - SSO
+  - Santé
+  - Professionnels
+  - Editeurs
 themes:
-  - Particulier
-contact_link: support.partenaires@franceconnect.gouv.fr
+  - Santé
+contact_link: prosanteconnect.editeurs@esante.gouv.fr
 doc_tech_external: https://integrateurs-cps.asipsante.fr/pages/prosanteconnect/documentation-fs
 visits_2019: 5000
 uptime: 99.893 # https://uptimerobot.com/dashboard.php#778110642
-last_update: 10/12/2019
+last_update: 22/03/2020
 ---
 
 L‘API Pro Santé connect permet à des administrations, des éditeurs de logiciels ou des entreprises d’ajouter un bouton Pro Santé Connect, pour recueillir des données d’identité fiables et ainsi identifier les utilisateurs de leur service en ligne (en vue d’une entrée en relation ou connexion).
