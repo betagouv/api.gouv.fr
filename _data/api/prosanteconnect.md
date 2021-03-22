@@ -36,7 +36,7 @@ access_page:
       <Button href="mailto:prosanteconnect.editeurs@esante.gouv.fr">Remplir une demande</Button>
 partners:
   - Ministère des Solidarités et de la Santé (MSS)
-producer: ANS
+producer: ans
 keywords:
   - Authentification
   - Identification
