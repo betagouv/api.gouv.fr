@@ -65,7 +65,7 @@ PRO Santé Connect est un fournisseur d’identité (FI) au standard OpenID. Il 
 
 | Type       | Données                      |
 | --------- | -------------------------------- |
-| Données d'identification       | nom, prénom, idNat (adeli ou RPPS) |
+| Données d'identification       | nom, prénom, idNat (Adeli ou RPPS) |
 | Données sectorielles   | type d'activité (salarié ou libéral) et lieu d'activité. |
 
 
