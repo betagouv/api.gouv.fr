@@ -9,14 +9,14 @@ api:
 
 Voici à quoi ressemble le widget La Bonne Alternance. Il permet d'afficher directement sur votre site les formations et les entreprises qui proposent un apprentissage en interrogeant les données de <External href="/les-api/api-la-bonne-alternance">l'API La Bonne Alternance</External>
 
-<iframe style="height: 700px; width: 380px;max-width: 100%;margin: auto;display: block;" src="https://labonnealternance.apprentissage.beta.gouv.fr?radius=60&romes=F1702,F1705,F1701&scope=all&lat=47&lon=2.2&caller=ID_service_appelant_labonnealternance&return_uri=/&return_logo_url=https://api.gouv.fr/images/api-logo/dinum.png" />
+<iframe style="height: 700px; width: 380px;max-width: 100%;margin: auto;display: block;" src="https://labonnealternance.apprentissage.beta.gouv.fr/recherche-apprentissage?radius=60&romes=F1702,F1705,F1701&scope=all&lat=47&lon=2.2&caller=ID_service_appelant_labonnealternance&return_uri=/&return_logo_url=https://api.gouv.fr/images/api-logo/dinum.png" />
 
 ## Comment intégrer le widget ?
 
-Vous devez intégrer le widget dans une Iframe :
+Vous devez intégrer le widget avec le périmètre désiré dans une Iframe. Ex :
 
 ```
-<iframe src="https://labonnealternance.apprentissage.beta.gouv.fr" />
+<iframe src="https://labonnealternance.apprentissage.beta.gouv.fr/${perimètre}" />
 ```
 
 Vous devez ensuite **paramétrer le widget** en ajoutant les paramètres à la fin de l'url, dans l'Iframe. Voici un exemple de paramètres :
@@ -28,12 +28,23 @@ Vous devez ensuite **paramétrer le widget** en ajoutant les paramètres à la f
 Voici un exemple d'Iframe paramétrée :
 
 ```
-<iframe style="height: 660px; width: 360px;max-width: 100%;margin: auto;display: block;" src="https://labonnealternance.apprentissage.beta.gouv.fr?radius=60&romes=F1702,F1705,F1701&scope=all&lat=47&lon=2.2&caller=ID_service_appelant_labonnealternance&return_uri=/&return_logo_url=https://api.gouv.fr/images/api-logo/dinum.png" />
+<iframe style="height: 660px; width: 360px;max-width: 100%;margin: auto;display: block;" src="https://labonnealternance.apprentissage.beta.gouv.fr/recherche-apprentissage?radius=60&romes=F1702,F1705,F1701&scope=all&lat=47&lon=2.2&caller=ID_service_appelant_labonnealternance&return_uri=/&return_logo_url=https://api.gouv.fr/images/api-logo/dinum.png" />
 ```
 
 Vous pouvez utilisez l’outil suivant pour tester les différentes versions possibles du widget :
 
 <Button href="https://labonnealternance.apprentissage.beta.gouv.fr/test-widget">Tester le widget</Button>
+
+## Explication des périmètres
+
+Le choix d'un périmètre (path) est obligatoire. En l'absence vous serez redirigé vers la homepage du site.
+
+| Périmètre / Path         | Description                                                                                                                                                                                                                      |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `/recherche-apprentissage`          | La recherche portera sur les formations ET les opportunités d'emploi.                                                                              |
+| `/recherche-emploi`           | La recherche portera sur les opportunités d'emploi seulement.                                                                               |
+| `/recherche-apprentissage-formation`             | La recherche portera sur les formations uniquement.                                                   |
+
 
 ## Explication des paramètres
 
@@ -41,7 +52,6 @@ Vous pouvez utilisez l’outil suivant pour tester les différentes versions pos
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `radius`          | Optionnel. Valeur numérique.<br/> Valeurs autorisées : `10 | 30 | 60 | 100` <br/> Le rayon de recherche autour du lieu en km. Valeur par défaut 30.                                                                              |
 | `romes`           | Optionnel. Une liste de codes romes séparés par des virgules.<br/> Ex : `A1021 | F1065,F1066,F1067`<br/> Maximum 3 romes. Valeur par défaut `null`                                                                               |
-| `scope`           | Optionnel. Valeurs autorisées `all | training`<br/> Valeur par défaut `all`<br/> Si absent ou la valeur est all la recherche portera sur les formations et les offres. Si training la recherche portera sur formations seulement |
 | `lat`             | Optionnel. Coordonnée géographique en degrés décimaux (float)<br/> Valeur par défaut `null`<br/> La partie lattitude des coordonnées gps.                                                                                        |
 | `lon`             | Optionnel. Coordonnée géographique en degrés décimaux (float)<br/> Valeur par défaut `null`<br/> La partie longitude des coordonnées gps.                                                                                        |
 | `caller`          | **Obligatoire**. L'identification du site appelant<br/> A fixer lors de la mise en place avec l’équipe de Labonnealternance.                                                                                                     |
