@@ -155,6 +155,9 @@
       path: /les-api/api-la-bonne-alternance
   3:
     - type: ADD_API
+      what: Métadonnées de l'INSEE
+      path: /les-api/api-metadonnees-insee
+    - type: ADD_API
       what: Service National par le ministère des Armées
   4:
     - type: ADD_API
