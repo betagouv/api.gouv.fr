@@ -18,6 +18,11 @@ module.exports = withFonts({
         destination: '/datapass/api',
         permanent: true,
       },
+      {
+        source: '/les-api/nomenclatures_v1',
+        destination: '/les-api/api-metadonnees-insee',
+        permanent: true,
+      },
     ];
   },
   webpack(config, options) {
