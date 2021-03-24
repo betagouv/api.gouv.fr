@@ -30,7 +30,8 @@ access_page:
       
       <NextSteps />
       <Button href="mailto:prosanteconnect.editeurs@esante.gouv.fr">Remplir une demande</Button>
-  - Un éditeur de logiciels
+  - who: 
+      - Un éditeur de logiciels
     is_eligible: 0
     description: |
       Tout éditeur français proposant une solution web adressée aux professionnels de santé et qui souhaite pouvoir authentifier des professionnels de santé peut demander à se raccorder à Pro Santé Connect. 
