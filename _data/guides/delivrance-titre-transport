@@ -1,0 +1,102 @@
+---
+title: Calculer le Quotient Familial dans un Portail Famille
+tagline: Vous êtes une commune ou un éditeur de logiciel ? Calculez facilement le Quotient Familial grâce aux données de la CAF et de la DGFiP accessibles travers l'API Particulier.
+tags: cas usage, api particulier, portail famille, quotient familial dématérialisé
+noindex: true
+image: portail_famille.jpg
+api:
+  - API Particulier
+---
+
+Chaque année, les collectivités disposant de la compétence transport et leurs opérateurs doivent délivrer des titres de transport aux usagers, à un tarif adapté à leur situation.
+
+En général, le calcul de ces tarifs prend en compte : 
+
+- le niveau de ressources de la personne, souvent évalué à travers le revenu fiscal de référence ou le quotient familial
+- si la personne est demandeur d’emploi
+- si la personne est étudiante
+- si la personne est allocataire du RSA (API à venir)
+
+Avec la brique API Particulier vous avez la possibilité de récupérer automatiquement des informations certifiées sur le demandeur.
+
+Cette récupération automatique permet de récupérer une donnée certifiée, limitant les risques d'erreurs ainsi que les fraudes aux déclarations. Cela vous permet par ailleurs de faire gagner un temps précieux aux agents en évitant des validations manuelles de pièces jointes et donc de faciliter le traitement des dossiers par vos équipes en **accédant automatiquement aux données nécessaires** au calcul du tarif appliqué.
+
+En intégrant la brique API Particulier dans votre système d'information ou votre site internet :
+
+- Vous accédez facilement aux données de la CAF, de la DGFIP, de Pôle Emploi et du Ministère de l’Enseignement Supérieur ;
+- Vous n'avez **plus besoin de demander** de justificatifs : avis fiscal, quotient familial, carte étudiant ou attestation Pôle Emploi ;
+- Vous n'avez **pas de vérification supplémentaire** car les informations sont **certifiées** ;
+- La démarche peut être faite **100% en ligne**.
+
+## Quelles données utilisez-vous ?
+
+API Particulier met à disposition des données de la CAF (composition familiale du foyer du demandeur), DGFIP (avis d’imposition), de Pôle Emploi (statut demandeur d’emploi), du Ministère de l’Enseignement Supérieur (statut étudiant), dont voici une liste non exhaustive :
+
+| Donnée            | Commentaire                                                                                   |
+| ----------------- | --------------------------------------------------------------------------------------------- |
+| Adresse           | L'adresse du foyer (CAF) et/ou l'adresse fiscale (DGFiP) du demandeur                         |
+| Quotient Familial | Le quotient familial calculé par la CAF                                                       |
+| Avis d'imposition | Le statut d’imposition, montant de l'impôt, revenu fiscal de référence, nombre de parts fiscales |
+| Composition familiale| L'adresse du foyer et/ou l'adresse fiscale du demandeur                                       |
+
+## Comment accéder à la donnée
+
+Pour remplir votre demande, vous aurez besoin :
+
+- de votre numéro de SIRET
+- de la descripition du service justifiant une simplification pour les citoyens
+- du cadre juridique, notamment d'une délibération
+- des coordonnées de l'équipe
+- des coordonnées de votre délégué à la protection des données et responsable de traitement
+
+<br/>
+<Button href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</Button>
+
+Si vous travaillez avec un des éditeurs ou intégrateurs, <a href='#editeurs'>consultez la section éditeurs.</a>
+
+## L'avantage pour les familles
+
+La démarche est réalisable 100% en ligne, il n'y a plus de déplacement nécessaire en mairie si de temps d'attente.
+
+La donnée est certifiée par le fournisseur de données, cela évite toute éventuelle fraude de document ou de déclaration.
+
+<Quote logo="/images/guides/clamart.svg" who='Ville de Clamart' title='Simon-Pierre Chalvidan, directeur général adjoint des services'>
+En 2014, nos usagers prenaient une demi-journée de congés pour effectuer leurs démarches en mairie. Aujourd'hui, ils les effectuent en ligne en 5 minutes.
+</Quote>
+
+## L'avantage pour les agents de la communes
+
+Les informations sont certifiées par le fournisseur de données, il n'y a plus de validation de document à la main à effectuer ni d'archivage de documents papier.
+
+La circulation de données directement entre les systèmes d'information permet d'éviter les saisies manuelles, les erreurs ou fautes de frappes.
+
+<Quote logo="/images/guides/boulbi.svg" who='Ville de Boulogne-Billancourt' title='Services de la mairie'>
+Pour la première année en 2020, au lieu de se déplacer en mairie, près de 75% des familles boulonnaises ont opté pour la mise à jour par voie électronique de leur quotient familial. Cette mesure simplificatrice, en limitant l’utilisation du papier, est également une avancée pour la préservation de notre environnement
+</Quote>
+
+Les agents gagnent du temps pour accompagner les usagers en difficulté.
+
+<Quote logo="/images/guides/clamart.svg" who='Ville de Clamart' title='Aurélie Coutant, directrice de la relation usagers'>
+Maintenant que le traitement est automatisé, nous avons enfin le temps de mieux accompagner les usagers en difficulté, de leur expliquer plus largement les prestations auxquelles ils peuvent avoir accès.
+</Quote>
+
+**Pour en savoir plus :**&nbsp;<External href="https://www.dailymotion.com/video/x7xsjgz"> voir le témoignage de la ville de Clamart</External> dans le cadre du webinaire sur la simplificiation des démarches des citoyens grâce aux API (à partir de la 9eme minute).
+
+## Editeurs
+
+Si vous travaillez avec l'un des éditeurs ou intégrateurs ci-dessous vous pouvez faire une demande pré-remplie :
+
+| Editeur                      | Nom de la solution            | Date         | Lien vers la demande                                                                                                                |
+| ---------------------------- | ----------------------------- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
+| Agora Plus                   | Agor@Famille Premium          | 2017         | <External href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</External>                                        |
+| Ciril Group                  | Portail famille Civil Enfance | Juin 2021    | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=civil-enfance-ciril-group">Remplir une demande</External>     |
+| JVS                          | Parascol                      |              | <External href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</External>                                        |
+| Arpège                       | Espace Citoyens Premium       |              | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=arpege-concerto">Remplir une demande</External>               |
+| NFI Nord France Informatique |                               | Janvier 2021 | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=nfi-grc">Remplir une demande</External>                       |
+| Entr'ouvert                  | Publik                        | Janvier 2021 | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=entrouvert-publik">Remplir une demande</External>             |
+| Mushroom                     | CityFamily                    | Juin 2021    | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=city-family-mushroom-software">Remplir une demande</External> |
+| Berger Levrault              | BL Enfance                    | Mars 2021    | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=bl-enfance-berger-levrault">Remplir une demande</External>    |
+| TeamNet              | Axel Portail Famille                    | Juin 2021    | <External href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</External>    |
+
+
+Vous êtes un éditeur et vous souhaitez apparaître dans cette liste ? Écrivez-nous à [contact@particulier.api.gouv.fr](mailto:contact@particulier.api.gouv.fr)
