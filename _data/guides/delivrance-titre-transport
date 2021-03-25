@@ -1,7 +1,7 @@
 ---
-title: Calculer le Quotient Familial dans un Portail Famille
-tagline: Vous êtes une commune ou un éditeur de logiciel ? Calculez facilement le Quotient Familial grâce aux données de la CAF et de la DGFiP accessibles travers l'API Particulier.
-tags: cas usage, api particulier, portail famille, quotient familial dématérialisé
+title: Délivrance de titres de transport
+tagline: Vous êtes une collectivité, un opérateur ou un éditeur de logiciel ? Appliquez facilement un tarif de vos titres de transport adapté à la situation de vos usagers, en utilisant les données de l'API Particulier.
+tags: cas usage, api particulier, transport
 noindex: true
 image: portail_famille.jpg
 api:
