@@ -10,7 +10,7 @@ access_page:
     is_eligible: -1
     description: |
       Seules les administrations et certaines sociétés sont habilitées à publier leurs annonces sur l' API Engagement.
-      En revanche, il vous est possible de consulter les annonces sur [JeVeuxAider.gouv.fr](https://www.jeveuxaider.gouv.fr/) ou [ le portail Service Civique](https://www.service-civique.gouv.fr/jeunes-volontaires/?gclsrc=aw.ds)
+      En revanche, il vous est possible de consulter les annonces sur [JeVeuxAider.gouv.fr](https://www.jeveuxaider.gouv.fr/) ou [le portail Service Civique](https://www.service-civique.gouv.fr/jeunes-volontaires/?gclsrc=aw.ds)
 
       <Button href="/rechercher-api">Rechercher une autre API</Button>
       
@@ -110,31 +110,30 @@ Les champs optionnels
 | organizationUrl                                 | L'url de l'organisation qui cherche un bénévole   |
 | organizationId.                                 | ID unique de l'organisation qui la distingue des autres organisations de votre flux   |
 | organizationFullAddress                         | L'adresse complete de l'organisation |
-| applicationUrl.                                 | L'url vers votre annonce             |
-| applicationUrl.                                 | L'url vers votre annonce             |
-| applicationUrl.                                 | L'url vers votre annonce             |
-| applicationUrl.                                 | L'url vers votre annonce             |
-| applicationUrl.                                 | L'url vers votre annonce             |
-| applicationUrl.                                 | L'url vers votre annonce             |
-| applicationUrl.                                 | L'url vers votre annonce             |
-| applicationUrl.                                 | L'url vers votre annonce             |
-| applicationUrl.                                 | L'url vers votre annonce             |
-| applicationUrl.                                 | L'url vers votre annonce             |
-| applicationUrl.                                 | L'url vers votre annonce             |
-| applicationUrl.                                 | L'url vers votre annonce             |
-| applicationUrl.                                 | L'url vers votre annonce             |
+| organizationType                                | Association type ( 1901, 1905, ou autre)           |
+| organizationDescription                         | Description de l'organisation        |
+| postedAt                                        | Date a laquelle la mission a été postée      |
+| startAt                                         | Date de début de la mission          |
+| endAt                                           | Date de fin de la mission            |
+| adresse                                         | Adresse de la mission.               |
+| postalCode                                      | Code postale de la mission           |
+| departmentName                                  | Nom du département de la mission     |
+| departmentCode                                  | Code du département (ex : 84)        |
+| reducedMobilityAccessible                       | Is accessible to mobility reduced people   |
+| openToMinors                                    | Is available for 16+ years old       |
+| city                                            | Ville de la mission                  |
+| region                                          | Région de la mission                 |
+| region                                          | Pays de la mission. Valeur par défaut : France     |
+| region                                          | Longitude et latitude de la mission  |
+| country                                         | L'url vers votre annonce             |
+| location                                        | L'url vers votre annonce             |
+| places                                          | Nombre de places restantes non attribuées : Valeur par défaut  :1   |
+| domain                                          | Domaine de la mission.               |
+| activity                                        | l'activité faite lors de la mission  |
+| remote                                          | Si la mission est en présentiel, a distance ou flexible ( no, possible, full ) |
 
-
-
-**NB**: Pour en savoir plus, n'hésitez pas à consulter le <External href='https://entreprise.api.gouv.fr/catalogue/'>catalogue des données disponibles dans l’API Entreprise</External>
-
-**NB**: Certaines données sont accessibles en open data (sans demande d'accès à l'API) via leur propre API et ne nécessitent pas de passer par API Entreprise. C'est notamment le cas de :
-
-- les [données de l'INPI](/les-api/api_inpi)
-- les [données de l'ADEME](/les-api/api_professionnels_rge)
-- les [données du RNA](/les-api/api_rna)
-- les [données de l'INSEE](/guides/quelle-api-sirene) (à l'exception des entreprises <External href="https://www.insee.fr/fr/information/4127417">non-diffusibles</External>)
 
 ### En savoir plus
 
-L’<External href="https://entreprise.api.gouv.fr/">API Entreprise</External> est une composante de l’État plateforme, l’accès à l’API Entreprise est modérée et régulée par la DINUM, qui attribue à chaque client des autorisations de récupération d’informations selon la nature des démarches à traiter (Marchés publics, aides publiques,…).
+Pour obtenir plus d'informations sur l'API Engagement, [contactez léquipe](mailto:contact@api-engagement.beta.gouv.fr) 
+#J'ai préféré le mail générique que le mail personnnel (qui est présent sur la page de l'API du côté de la Startup Engagement). 
