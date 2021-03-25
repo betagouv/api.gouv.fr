@@ -57,76 +57,74 @@ keywords:
 #rate_limiting_description: 
 #monitoring_link: 
 contact_link: support@entreprise.api.gouv.fr
-doc_tech_link: /api/v1/proxy/https%3A%2F%2Fentreprise.api.gouv.fr%2Fv2%2Fopen-api.yml
-doc_tech_external: https://entreprise.api.gouv.fr/catalogue/
+doc_tech_link: https://doc.api-engagement.beta.gouv.fr/
+doc_tech_external: https://doc.api-engagement.beta.gouv.fr/
 themes:
-  - Entreprise
-visits_2019: 12610
-last_update: 14/09/2020
+  - Emploi
+visits_2019: 4000
+last_update: 25/03/2021
 content_intro: |
-  API Entreprise permet à une administration d'accéder aux données et aux documents administratifs des entreprises et des associations, afin de simplifier leurs démarches.
 
-  ### A quoi sert l’API Entreprise ?
+L'API Engagement permet aux organisations de publier et diffuser des annonces de bénévolat et de volontariat.
 
-  L'API s'utilise principalement de deux manières :
+  ### A quoi sert l’API Engagement ?
 
-  - le pré-remplissage de formulaire à destination des entreprises ou des associations
-  - la récupération d'une donnée ou d'un document en back office par un agent
+L’API Engagement facilite la diffusion des missions de bénévolat et de volontariat partout en France. C’est un service public numérique gratuit qui permet aux plateformes d’engagement publiques et privées de mettre en commun leurs missions. L'API permet ainsi d'augmenter la visibilité des annonces et le taux d’occupation des places offertes aux potentiels bénévoles et volontaires.
+  
+Concrètement, chaque plateforme peut intégrer l’API pour diffuser ses missions vers les autres plateformes partenaires d'une part, et récupérer les missions disponibles sur les autres plateformes selon des critères spécifiques comme la localisation, le domaine d’action, etc. Le tableau de bord de l’API permet à chaque partenaire de configurer les flux de missions entrant/sortant et de mesurer la contribution de chaque plateforme en missions et en trafic.
 
-  L’API permet - entre autre - de :
-
-  - faciliter la candidature d'une entreprise a un marché public
-  - faciliter le dépôt d'un dossier de candidature à une aide publique par une entreprise
 ---
 
-### Données accessibles dans l'API
+  ### Données accessibles dans l'API
 
-L'API Entreprise permet d'accéder simplement aux données de multiples administrations.
+L'API Engagement permet de publier les données suivantes pour chaque annonces
 
-Les données générales :
+Les champs requis :
 
-| Donnée                                                                                | Administration                            |
-| ------------------------------------------------------------------------------------- | ----------------------------------------- |
-| Les informations générales, géographiques et juridiques                               | INSEE                                     |
-| Extrait du Registre du Commerce et des Sociétés (RCS)                                 | INFOGREFFE                                |
-| Les statuts, la liste des représentants ou encore les délibérations d'une association | Ministère intérieur                       |
-| Les actes et statuts des personnes morales et physiques                               | INPI                                      |
-| Les conventions collectives                                                           | Fabrique Numérique des Ministères Sociaux |
-
-Les données financières :
-
-| Donnée                                          | Administration   |
+| Champ                                           | Description      |
 | ----------------------------------------------- | ---------------- |
-| Le chiffre d'affaire                            | DGFiP            |
-| La déclarations de résultat (ou liasse fiscale) | DGFiP            |
-| Les 3 derniers bilans annuels                   | Banque de france |
-| Les comptes annuels                             | INPI             |
+| title                                           | Titre de votre mission            |
+| description                                     | La description de votre mission   |
+| clientId                                        | L'identifiant interne de votre mission |
+| applicationUrl                                  | L'url vers votre annonce             |
 
-Les attestations sociales et fiscales :
+Les champs générés par l'API :
 
-| Donnée                                                         | Administration |
-| -------------------------------------------------------------- | -------------- |
-| L'attestation fiscale                                          | DGFiP          |
-| L'attestation de vigilance                                     | ACOSS          |
-| L'attestation de conformité emploi des travailleurs handicapés | AGEFIPH        |
-| Les cotisations de sécurité sociale agricole                   | MSA            |
-| Les cotisations retraite bâtiment                              | PRO BTP        |
-| La carte professionnelle travaux publics                       | FNTP           |
-| Les cotisations congés payés & chômage intempéries             | CNETP          |
+L'api génère automatiquement les champs suivant : 
 
-Les certifications professionnelles :
+- publisherId : 
+- publisherName
+- publisherLogo
+- publisherUrl : 
+- statusCode ( ACCEPTED OR REFUSED ) 
+- statusComment : Un commentaire sur le pourquoi la mission a été refusée
+- createdAt : La date de creation de la mission
+- updatedAt : La date de la dernière mise a jour de la mission
 
-| Donnée                                                   | Administration |
-| -------------------------------------------------------- | -------------- |
-| La certification de qualification d'ingénierie           | OPQIBI         |
-| Le certificat de qualification bâtiment                  | QUALIBAT       |
-| La certification RGE (Reconnu garant de l'environnement) | ADEME          |
 
-La propriété intellectuelle :
 
-| Donnée                                  | Administration |
-| --------------------------------------- | -------------- |
-| Les brevets, modèles et marques déposés | INPI           |
+Les champs optionnels 
+
+| Champ                                           | Description      |
+| ----------------------------------------------- | ---------------- |
+| organizationUrl                                 | L'url de l'organisation qui cherche un bénévole   |
+| organizationId.                                 | ID unique de l'organisation qui la distingue des autres organisations de votre flux   |
+| organizationFullAddress                         | L'adresse complete de l'organisation |
+| applicationUrl.                                 | L'url vers votre annonce             |
+| applicationUrl.                                 | L'url vers votre annonce             |
+| applicationUrl.                                 | L'url vers votre annonce             |
+| applicationUrl.                                 | L'url vers votre annonce             |
+| applicationUrl.                                 | L'url vers votre annonce             |
+| applicationUrl.                                 | L'url vers votre annonce             |
+| applicationUrl.                                 | L'url vers votre annonce             |
+| applicationUrl.                                 | L'url vers votre annonce             |
+| applicationUrl.                                 | L'url vers votre annonce             |
+| applicationUrl.                                 | L'url vers votre annonce             |
+| applicationUrl.                                 | L'url vers votre annonce             |
+| applicationUrl.                                 | L'url vers votre annonce             |
+| applicationUrl.                                 | L'url vers votre annonce             |
+
+
 
 **NB**: Pour en savoir plus, n'hésitez pas à consulter le <External href='https://entreprise.api.gouv.fr/catalogue/'>catalogue des données disponibles dans l’API Entreprise</External>
 
