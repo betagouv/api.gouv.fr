@@ -42,8 +42,8 @@ access_page:
        <Button href="https://doc.api-engagement.beta.gouv.fr/getting-started/create-your-account">Demander un accès</Button>
 
 partners:
-# - ANCT producteur à créer
-  - 
+  - DINUM
+
 #producer: ANCT
 keywords:
   - Engagement
@@ -56,16 +56,14 @@ keywords:
 #rate_limiting_resume: 
 #rate_limiting_description: 
 #monitoring_link: 
-contact_link: support@entreprise.api.gouv.fr
+contact_link: contact@api-engagement.beta.gouv.fr
 doc_tech_link: https://doc.api-engagement.beta.gouv.fr/
 doc_tech_external: https://doc.api-engagement.beta.gouv.fr/
 themes:
   - Emploi
 visits_2019: 4000
 last_update: 25/03/2021
-content_intro: |
-
-L'API Engagement permet aux organisations de publier et diffuser des annonces de bénévolat et de volontariat.
+content_intro: L'API Engagement permet aux organisations de publier et diffuser des annonces de bénévolat et de volontariat.
 
   ### A quoi sert l’API Engagement ?
 
@@ -77,7 +75,7 @@ Concrètement, chaque plateforme peut intégrer l’API pour diffuser ses missio
 
   ### Données accessibles dans l'API
 
-L'API Engagement permet de publier les données suivantes pour chaque annonces
+L'API Engagement permet de publier les données suivantes pour chaque annonce :
 
 Les champs requis :
 
@@ -108,7 +106,7 @@ Les champs optionnels
 | Champ                                           | Description      |
 | ----------------------------------------------- | ---------------- |
 | organizationUrl                                 | L'url de l'organisation qui cherche un bénévole   |
-| organizationId.                                 | ID unique de l'organisation qui la distingue des autres organisations de votre flux   |
+| organizationId                                  | ID unique de l'organisation qui la distingue des autres organisations de votre flux   |
 | organizationFullAddress                         | L'adresse complete de l'organisation |
 | organizationType                                | Association type ( 1901, 1905, ou autre)           |
 | organizationDescription                         | Description de l'organisation        |
@@ -136,4 +134,3 @@ Les champs optionnels
 ### En savoir plus
 
 Pour obtenir plus d'informations sur l'API Engagement, [contactez léquipe](mailto:contact@api-engagement.beta.gouv.fr) 
-#J'ai préféré le mail générique que le mail personnnel (qui est présent sur la page de l'API du côté de la Startup Engagement). 
