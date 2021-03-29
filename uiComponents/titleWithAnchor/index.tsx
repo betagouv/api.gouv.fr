@@ -2,14 +2,9 @@ import React, { PropsWithChildren } from 'react';
 import { normalize, uuid } from '../../utils';
 import constants from '../../constants';
 
-const turnStringToId = (str: string) =>
-  normalize(
-    str
-      .toString()
-      .toLowerCase()
-      .split(' ')
-      .join('-')
-  );
+const turnStringToId = (str: string) => {
+  return normalize(str.toString().toLowerCase().split(' ').join('-'));
+};
 
 const Anchor: React.FC<{ id: string }> = ({ id }) => (
   <>
