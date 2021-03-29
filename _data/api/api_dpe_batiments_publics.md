@@ -60,7 +60,7 @@ Aussi, tous les ERP de catégorie 1 à 4, occupés par des organismes publics ou
 
 Le DPE affiché contient les mêmes informations que le DPE réalisé pour la vente, la location ou la construction d’un bâtiment. Ces informations s’adressent au public, aux occupants et également au gestionnaire du bâtiment. C’est la consommation réelle d’énergie qui est indiquée, et non une consommation conventionnelle calculée. Il existe plusieurs étiquettes énergie et climat, pour tenir compte de la diversité des usages et modes d’occupation des bâtiments publics.
 
-Les données sont mises à jour régulièrement et accessibles sur le <External href="https://data.ademe.fr/datasets/dpe-batiments-publics">portail Open Data de l'ADEME</External>.
+Les données sont mises à jour régulièrement et accessibles sur le <External href="https://data.ademe.fr/datasets/dpe-tertiaire">portail Open Data de l'ADEME</External>.
 
 ### À propos de l'Open Data a l’ADEME
 

@@ -54,7 +54,7 @@
       path: /les-api/api_bdm
     - type: ADD_API
       what: Registre National du Commerce et des Sociétés
-      path: /les-api/api_inpi
+      path: /les-api/api-rncs
     - type: ADD_API
       what: Professionnels RGE
       path: /les-api/api_professionnels_rge
