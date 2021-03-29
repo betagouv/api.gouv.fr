@@ -21,7 +21,7 @@ themes:
 last_update: 11/03/2020
 ---
 
-L’API info-financière permet d'accèder au stockage centralisé des informations réglementées des sociétés cotées en bourse, transmises par l’Autorité des marchés financiers (AMF). Cet accès est encadré par la directive européenne « transparence » (OAM).
+L’API info-financière permet d'accéder au stockage centralisé des informations réglementées des sociétés cotées en bourse, émanant des émetteurs et transmises par l’Autorité des marchés financiers (AMF). Cet accès est encadré par la directive européenne « transparence » (OAM).
 
 ## A quoi sert l’API info-financière ?
 
