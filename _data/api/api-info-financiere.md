@@ -27,27 +27,28 @@ L’API info-financière permet d'accéder au stockage centralisé des informati
 
 Cette API est en accès libre. Elle permet à toute personne de :
 
-- Accéder à la liste des documents d'une entreprise côtée en bourse, centralisée par l'AMF
-- Télécharger et consulter un de ces documents
+- Accéder à la liste des documents archivés émis par une entreprise côtée en bourse, et transmis par l'AMF ;
+- Télécharger et consulter un de ces documents.
 
 ## Données disponibles
 
-Parmi les principaux documents accessibles via cette API, on peut citer :
+Parmi les principaux documents accessibles dans le format d’origine et selon la langue définie par l'émetteur via cette API, on peut citer notamment :
 
-- Choix de l’autorité compétente pour le contrôle de l’information réglementée
-- Communiqués au titre de l’obligation d’information permanente
-- Communiqués de mise à disposition de documents
-- Communiqués en période d’offre publique d’acquisition
-- Déclarations d’intention en cas de rumeurs
-- Honoraires des contrôleurs légaux des comptes
-- Information financière trimestrielle
-- Information relative au nombre total de droits de vote et d’actions composant le capital
-- Information sur contrat de liquidité
-- Rachat d’actions / Contrat de liquidité
-- Rapport des sommes versées aux gouvernements
-- Rapport financier annuel
-- Rapport financier semestriel
-- Rapport sur gouvernement d’entreprise et contrôle interne
+- Choix de l’autorité compétente pour le contrôle de l’information réglementée ;
+- Communiqués au titre de l’obligation d’information permanente ;
+- Communiqués de mise à disposition de documents ;
+- Communiqués en période d’offre publique d’acquisition ;
+- Déclarations d’intention en cas de rumeurs ;
+- Honoraires des contrôleurs légaux des comptes ;
+- Information financière trimestrielle ;
+- Information relative au nombre total de droits de vote et d’actions composant le capital ;
+- Information sur contrat de liquidité ;
+- Rachat d’actions / Contrat de liquidité ;
+- Rapport des sommes versées aux gouvernements ;
+- Rapport financier annuel ;
+- Rapport financier semestriel ;
+- Rapport sur gouvernement d’entreprise et contrôle interne ;
+- ...
 
 ## En savoir plus
 
