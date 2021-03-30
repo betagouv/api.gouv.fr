@@ -64,4 +64,4 @@ Un bénéficiaire effectif est une personne physique exerçant un contrôle sur 
 
 ### Qui doit publier sa déclaration de bénéficiaires effectifs ?
 
-Toutes les personnes morales, immatriculées au [Registre du commerce et des sociétés (RCS)](/les-api/api_inpi) doivent déclarer leurs bénéficiaires effectifs.
+Toutes les personnes morales, immatriculées au [Registre du commerce et des sociétés (RCS)](/les-api/api-rncs) doivent déclarer leurs bénéficiaires effectifs.

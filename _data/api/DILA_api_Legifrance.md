@@ -34,7 +34,7 @@ Afin de faciliter la réutilisation des données juridiques, la DILA met à disp
 
 Cette version de l'API est une version bêta. Elle permet de recueillir vos remarques et vos suggestions d’amélioration ; elle pourra donc évoluer pendant toute la durée du test.
 
-Les données juridiques disponibles via l'API sont celles de la version bêta du site Légifrance. Toutefois, le droit opposable issu du Journal officiel électronique ne sera valablement authentifié que sur le [site legifrance](https://www.legifrance.gouv.fr).
+Les données juridiques disponibles via l'API sont celles du site Légifrance. 
 Principales fonctionnalités:
 
 - mise à disposition de l'ensemble des jeux de données de Légifrance
@@ -43,3 +43,17 @@ Principales fonctionnalités:
 - format JSON
 - recherche avec mots-clés, filtres et critères
 - suggestions de résultats pertinents à partir de mots-clés
+
+### Accéder aux données
+
+L'utilisation de ces données est soumise :
+- à la licence ouverte 2.0 ;
+- aux conditions générales d'utilisation de PISTE;
+- aux conditions générales d'utilisation de l'API Légifrance ;
+- à des quotas détaillés sur le portail PISTE.
+
+Une documentation technique sur chaque méthode de l'API est disponible sur le portail PISTE (Swagger).
+De la documentation complémentaire est mise à disposition concernant :
+- les tris et filtres disponibles dans les différents fonds  ;
+- des exemples pratiques d'utilisation.
+

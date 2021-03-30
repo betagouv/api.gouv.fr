@@ -24,6 +24,18 @@ const Footer = () => {
               </a>
             </li>
             <li>
+              <a
+                href="https://www.linkedin.com/company/api-gouv-fr/"
+                title="Linkedin"
+              >
+                <img
+                  src="/images/social/linkedin.svg"
+                  alt="Twitter"
+                  className="icon icon-linkedin"
+                />
+              </a>
+            </li>
+            <li>
               <a href="https://github.com/betagouv/api.gouv.fr" title="Github">
                 <img
                   src="/images/social/github.svg"

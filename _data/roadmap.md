@@ -54,7 +54,7 @@
       path: /les-api/api_bdm
     - type: ADD_API
       what: Registre National du Commerce et des Sociétés
-      path: /les-api/api_inpi
+      path: /les-api/api-rncs
     - type: ADD_API
       what: Professionnels RGE
       path: /les-api/api_professionnels_rge
@@ -155,24 +155,52 @@
       path: /les-api/api-la-bonne-alternance
   3:
     - type: ADD_API
-      what: Professionnels BIO par l'agence BIO
+      what: Métadonnées de l'INSEE
+      path: /les-api/api-metadonnees-insee
     - type: ADD_API
-      what: DSNJ par le ministère des Armées
+      what: Engagement
+      path: /les-api/api-engagement
+  4:
+    - type: ADD_API
+      what: Service National par le ministère des Armées
+    - type: ADD_API
+      what: Professionnels BIO par l'agence BIO
     - type: ADD_API
       what: Pro Santé Connect par l'ANS
     - type: ADD_API
-      what: AgentConnect par la DINUM
-  4:
+      what: Infos Financières par la DILA
     - type: ADD_API
-      what: AgentConnect par la DINUM
-    - type: ADD_API
-      what: Données ouvertes de la ville de Paris
-    - type: ADD_API
-      what: Données ouvertes de la ville de Grenoble
+      what: CVEC par le CNOUS
   5:
     - type: ADD_API
+      what: Statut Étudiant
+    - type: ADD_API
       what: Bulletin Officiel des Annonces Civiles et Commerciales (BODACC)
+    - type: ADD_API
+      what: Liste des organismes de formation par la DGEFP
+    - type: ADD_API
+      what: Accès Libre
+  6:
+    - type: ADD_API
+      what: AgentConnect par la DINUM
+    - type: ADD_API
+      what: Référentiel Partagé des Professionnels de Santé
+    - type: ADD_API
+      what: Hermés par la DGFiP
+    - type: ADD_API
+      what: AgentConnect par la DINUM
+  7:
+    - type: ADD_API
+      what: Attestation Codes Sécurité par l'ACOSS
+    - type: ADD_API
+      what: Déclaration préalable à l'embauche par l'ACOSS
   9:
     - type: ADD_API
       what: Indemnités Journalières distribuée par la CNAM
+    - type: ADD_API
+      what: Bulletin Officiel des Annonces Civiles et Commerciales par la DILA
+    - type: ADD_API
+      what: Bulletin des Annonces Légales Obligatoires par la DILA
+    - type: ADD_API
+      what: Journal Officiel par la DILA
 ---

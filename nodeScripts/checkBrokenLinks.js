@@ -31,6 +31,7 @@ const IGNORE = [
   'https://geo.pays-de-brest.fr/donnees/Documents/Public/DocWebServicesTransport.pdf',
   'https://geo.pays-de-brest.fr/zapp/Pages/Demande-compte.aspx',
   'https://www.ademe.fr/content/contacter', // weird
+  'https://www.insee.fr/fr/statistiques/3530678'
 ];
 
 const urlChecker = new blc.SiteChecker(
