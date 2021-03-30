@@ -114,3 +114,7 @@ L’Adresse est celle connue au 1er janvier de l’année d’imposition (exempl
 Sont disponibles les données des étudiants inscrits dans un établisement sous tutelle du ministère de l'enseignement supérieur, et sur le champ des étudiants bacheliers en 2020 ou déjà inscrits dans l'enseignement supérieur en 2018-2019 ou 2019-2020.
 
 La couverture des établissements du champ des étudiants sera progressivement complétée d'ici la rentrée 2022.
+
+### Conditions générales d'utilisation 
+
+Les conditions générales d'utilisation sont disponibles à [cette adresse](http://api.gouv.fr/resources/CGU%20API%20Particulier.pdf).
