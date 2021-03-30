@@ -158,14 +158,15 @@
       what: Métadonnées de l'INSEE
       path: /les-api/api-metadonnees-insee
     - type: ADD_API
-      what: Service National par le ministère des Armées
+      what: Engagement
+      path: /les-api/api-engagement
   4:
+    - type: ADD_API
+      what: Service National par le ministère des Armées
     - type: ADD_API
       what: Professionnels BIO par l'agence BIO
     - type: ADD_API
       what: Pro Santé Connect par l'ANS
-    - type: ADD_API
-      what: Engagement
     - type: ADD_API
       what: Infos Financières par la DILA
     - type: ADD_API
