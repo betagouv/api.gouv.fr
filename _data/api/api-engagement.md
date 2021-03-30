@@ -122,4 +122,4 @@ Les champs optionnels
 
 ### En savoir plus
 
-Pour obtenir plus d'informations sur l'API Engagement, [contactez léquipe](mailto:contact@api-engagement.beta.gouv.fr)
+Pour obtenir plus d'informations sur l'API Engagement, [contactez l’équipe](mailto:contact@api-engagement.beta.gouv.fr)
