@@ -61,12 +61,12 @@ monitoring_link: https://status.particulier.api.gouv.fr
 monitoring_description: |
   La DINUM s’engage à ce que le Service soit accessible à 95% et la DINUM s’engage à améliorer progressivement ce rendement.
 contact_link: contact@particulier.api.gouv.fr
-doc_tech_link: https://particulier.api.gouv.fr/open-api.json
+doc_tech_link: https://particulier.api.gouv.fr/open-api.yml
 themes:
   - Particulier
 visits_2019: 8642
 uptime: 99.992 # https://uptimerobot.com/dashboard#777746216 * https://uptimerobot.com/dashboard#778826562 / 2
-last_update: 10/12/2019
+last_update: 31/03/2021
 content_intro: |
   API Particulier facilite l'accès des administrations aux données fiscales (DGFIP), familiales (CAF), au statut pôle-emploi et au statut étudiant d'un citoyen, pour simplifier les démarches administratives mises en oeuvre par les collectivités et les administrations.
 
