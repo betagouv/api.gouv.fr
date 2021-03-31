@@ -95,11 +95,46 @@ const API: React.FC<IProps> = ({ apis = [], producer }) => {
       title={`Les API produites par ${producer.name}`}
       description={`Découvrez la liste des API produites par ${producer.name} dont certaines sont accessibles via api.gouv.fr`}
     >
-      <PageHeader title={producer.name} logo={producer.logo} />
+      <PageHeader
+        title={producer.name}
+        logo={producer.logo || constants.logo}
+      />
+      <div className="content-container">
+        <h2>Qu'est ce que {producer.nameWithPronoun || producer.name} ?</h2>
+        <p>{producer.short}</p>
+        <h2>
+          Quelle est la mission de {producer.nameWithPronoun || producer.name} ?
+        </h2>
+        <p>{producer.description}</p>
+        {producer.data && (
+          <>
+            <h2>
+              Quelle données sont détenues par{' '}
+              {producer.nameWithPronoun || producer.name} ?
+            </h2>
+            <p>{producer.data}</p>
+          </>
+        )}
+      </div>
       <div id="description">
         <div className="content-container">
+          <h2>
+            Quelle(s) sont les API publique(s) de{' '}
+            {producer.nameWithPronoun || producer.name} ?
+          </h2>
           <p>
-            <b>{apis.length} API disponibles :</b>
+            Actuellement {producer.nameWithPronoun || producer.name} publie et
+            maintient <b>{apis.length} API :</b>
+          </p>
+
+          <div className="default-grid">
+            {apis.map(api => (
+              <ApiCard key={api.title} {...api} />
+            ))}
+          </div>
+          <p>
+            {producer.nameWithPronoun || producer.name} est partenaire de{' '}
+            <b>{apis.length} API :</b>
           </p>
 
           <div className="default-grid">

@@ -48,10 +48,14 @@ export interface IGuideElement extends IGuideElementShort {
 
 export interface IProducerElement {
   name: string;
+  nameWithPronoun?: string;
   acronym: string;
   logo: string;
   slug: string;
   type?: string;
+  short?: string;
+  description?: string;
+  data: string;
 }
 
 export interface IService {
