@@ -2,7 +2,6 @@
 title: Délivrance de titres de transport
 tagline: Vous êtes une collectivité, un opérateur ou un éditeur de logiciel ? Appliquez facilement un tarif de vos titres de transport adapté à la situation de vos usagers, en utilisant les données de l'API Particulier.
 tags: cas usage, api particulier, transport
-noindex: false
 image: transport.jpg
 api:
   - API Particulier
