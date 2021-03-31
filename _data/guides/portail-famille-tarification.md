@@ -6,12 +6,11 @@ image: ecole.jpeg
 related_guides:
   - portail-famille-petite-enfance
   - portail-famille-pass-famille
-  - portail-famille-tarif-restauration-scolaire
 api:
   - API Particulier
 ---
 
-Chaque année, les collectivités doivent calculer les tarifs des activités périscolaires et de la [restauration scolaire](/guides/portail-famille-tarif-restauration-scolaire).
+Chaque année, les collectivités doivent calculer les tarifs des activités périscolaires et de la [restauration scolaire](/guides/portail-famille-tarification).
 
 En général, le calcul des tarifs utilise l'adresse, le quotient familial de la Caisse d’Allocations Familiales (CAF) et l'avis d'imposition fournis par les citoyens.
 

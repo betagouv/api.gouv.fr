@@ -7,8 +7,7 @@ api:
   - API Particulier
 related_guides:
   - portail-famille-pass-famille
-  - portail-famille-tarif-activite-periscolaire
-  - portail-famille-tarif-restauration-scolaire
+  - portail-famille-tarification
 ---
 
 Les inscriptions en crèche constituent un service essentiel que les collectivités sont amenées à rendre aux jeunes parents.
