@@ -2,7 +2,6 @@
 title: Calculer le Quotient Familial dans un Portail Famille
 tagline: Vous êtes une commune ou un éditeur de logiciel ? Calculez facilement le Quotient Familial grâce aux données de la CAF et de la DGFiP accessibles travers l'API Particulier.
 tags: cas usage, api particulier, portail famille, quotient familial dématérialisé
-noindex: true
 image: portail_famille.jpg
 api:
   - API Particulier
@@ -91,7 +90,6 @@ Si vous travaillez avec l'un des éditeurs ou intégrateurs ci-dessous vous pouv
 | Entr'ouvert                  | Publik                        | Janvier 2021 | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=entrouvert-publik">Remplir une demande</External>             |
 | Mushroom                     | CityFamily                    | Juin 2021    | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=city-family-mushroom-software">Remplir une demande</External> |
 | Berger Levrault              | BL Enfance                    | Mars 2021    | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=bl-enfance-berger-levrault">Remplir une demande</External>    |
-| TeamNet              | Axel Portail Famille                    | Juin 2021    | <External href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</External>    |
-
+| TeamNet                      | Axel Portail Famille          | Juin 2021    | <External href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</External>                                        |
 
 Vous êtes un éditeur et vous souhaitez apparaître dans cette liste ? Écrivez-nous à [contact@particulier.api.gouv.fr](mailto:contact@particulier.api.gouv.fr)
