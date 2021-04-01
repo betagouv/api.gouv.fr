@@ -1,0 +1,112 @@
+---
+title: API SI Amiante
+tagline: Failitez les métiers du diagnostic de l'amiante en connectant votre solution au système d'information national SI-Amiante.
+external_site: https://solidarites-sante.gouv.fr/sante-et-environnement/batiments/SI-amiante
+is_open: -1 # -1 means API not open
+access_page:
+  - who:
+      - Un particulier
+    is_eligible: -1
+    description: |
+      Seules les administrations et certains éditeurs de logiciels peuvent utiliser cette API.
+
+      <Button href="/rechercher-api">Rechercher une autre API</Button>
+  - who:
+      - Une collectivité ou une administration
+    is_eligible: 1
+    description: |
+      Si vous êtes une préfeceture ou une administration, vous pouvez utiliser cette API pour récupérer les rapports d'actvités et rapports d'alerte des diagnostiqueurs et des laboratoires accrédités.
+
+      <NextSteps />
+      <Button href="mailto:si-amiante@sante.gouv.fr">Demander un accès</Button>
+  - who:
+      - Une entreprise
+    is_eligible: 0
+    description: |
+      Seuls les éditeurs de logiciels destinés aux diagnostiqueurs d'amiante et laboratoire accrédités peuvent utiliser l'API SI-Amiante.  
+
+      <NextSteps />
+      <Button href="mailto:si-amiante@sante.gouv.fr">Demander un accès</Button>
+  - who:
+      - Un éditeur de logiciel
+    is_eligible: 1
+    description: |
+      Les éditeurs de logiciels qui s'adressent aux diagnostiqueurs d'amiante et aux laboratoires certifiés peuvent utiliser l'API SI-Amiante.  
+
+      <NextSteps is_editeur />
+      <Button href="mailto:si-amiante@sante.gouv.fr">Demander un accès</Button>
+
+partners:
+ # - 
+producer: MSS
+keywords:
+  - Amiante
+  - Diagnostic
+contact_link: si-amiante@sante.gouv.fr
+#doc_tech_external: 
+themes:
+  - Santé
+content_intro: |
+  Par l'intermédiaire des éditeurs de logiciels, l'API SI-Amiante permet aux diagnostiqueurs d'amiante et laboratoires de transmettre aux autorités compétenntes leurs rapports annuels et rapports d'alerte. 
+
+  ### A quoi sert l’API SI-Amiante ?
+  
+  Le SI-Amiante est une plateforme développée par la Direction générale de la Santé, permettant à des organismes concourant à la mise en œuvre du code de la santé publique en matière d’amiante - diagnostiqueurs certifiés et laboratoires accrédités – de transmettre aux services de l’État par voie électronique des rapports annuels d’activité et des rapports d’alerte.
+visits_2019: 2000
+last_update: 01/04/2021
+---
+
+### Données accessibles dans l'API
+
+L'API Engagement permet de publier les données suivantes pour chaque annonce :
+
+Les champs requis :
+
+| Champ          | Description                            |
+| -------------- | -------------------------------------- |
+| title          | Titre de votre mission                 |
+| description    | La description de votre mission        |
+| clientId       | L'identifiant interne de votre mission |
+| applicationUrl | L'url vers votre annonce               |
+
+Les champs générés par l'API :
+
+L'api génère automatiquement les champs suivant :
+
+- publisherId :
+- publisherName
+- publisherLogo
+- publisherUrl :
+- statusCode ( ACCEPTED OR REFUSED )
+- statusComment : Un commentaire sur le pourquoi la mission a été refusée
+- createdAt : La date de creation de la mission
+- updatedAt : La date de la dernière mise a jour de la mission
+
+Les champs optionnels
+
+| Champ                     | Description                                                                         |
+| ------------------------- | ----------------------------------------------------------------------------------- |
+| organizationUrl           | L'url de l'organisation qui cherche un bénévole                                     |
+| organizationId            | ID unique de l'organisation qui la distingue des autres organisations de votre flux |
+| organizationFullAddress   | L'adresse complete de l'organisation                                                |
+| organizationType          | Association type ( 1901, 1905, ou autre)                                            |
+| organizationDescription   | Description de l'organisation                                                       |
+| postedAt                  | Date a laquelle la mission a été postée                                             |
+| startAt                   | Date de début de la mission                                                         |
+| endAt                     | Date de fin de la mission                                                           |
+| adresse                   | Adresse de la mission.                                                              |
+| postalCode                | Code postale de la mission                                                          |
+| departmentName            | Nom du département de la mission                                                    |
+| departmentCode            | Code du département (ex : 84)                                                       |
+| reducedMobilityAccessible | Is accessible to mobility reduced people                                            |
+| openToMinors              | Is available for 16+ years old                                                      |
+| city                      | Ville de la mission                                                                 |
+| region                    | Région de la mission                                                                |
+| region                    | Pays de la mission. Valeur par défaut : France                                      |
+| region                    | Longitude et latitude de la mission                                                 |
+| country                   | L'url vers votre annonce                                                            |
+| location                  | L'url vers votre annonce                                                            |
+| places                    | Nombre de places restantes non attribuées : Valeur par défaut :1                    |
+| domain                    | Domaine de la mission.                                                              |
+| activity                  | l'activité faite lors de la mission                                                 |
+| remote                    | Si la mission est en présentiel, a distance ou flexible ( no, possible, full )      |
