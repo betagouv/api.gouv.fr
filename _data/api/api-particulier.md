@@ -40,7 +40,7 @@ stat:
 partners:
   - DGFiP
   - CNAF
-  - Pôle-Emploi
+  - Pôle emploi
   - Ministère de l'enseignement supérieur, de la recherche et de l'innovation (MESRI)
 producer: dinum
 keywords:
@@ -96,7 +96,7 @@ content_intro: |
 | Quotient familial         | Le quotient familial (QF) du mois précédent pour la famille                            | CAF                                                                               |
 | Composition familiale     | Liste des parents et des enfants de la famille (avec nom, prénoms, date de naissance)  | CAF                                                                               |
 | Adresse                   | L'adresse structurée détenue par la CAF                                                | CAF                                                                               |
-| Statut demandeur d'emploi | Si applicable, les informations de statut demandeur d‘emploi d‘un individu             | Pôle-Emploi                                                                       |
+| Statut demandeur d'emploi | Si applicable, les informations de statut demandeur d‘emploi d‘un individu             | Pôle emploi                                                                       |
 | Statut étudiant           | Si applicable, les informations de statut étudiant d‘un individu                       | Ministère de l'enseignement supérieur, de la recherche et de l'innovation (MESRI) |
 
 Pour plus d’informations techniques sur la structuration des données, vous pouvez <External href='/documentation/api-particulier'>consulter la documentation technique</External>
@@ -115,6 +115,6 @@ Sont disponibles les données des étudiants inscrits dans un établisement sous
 
 La couverture des établissements du champ des étudiants sera progressivement complétée d'ici la rentrée 2022.
 
-### Conditions générales d'utilisation 
+### Conditions générales d'utilisation
 
 Les conditions générales d'utilisation sont disponibles à [cette adresse](http://api.gouv.fr/resources/CGU%20API%20Particulier.pdf).

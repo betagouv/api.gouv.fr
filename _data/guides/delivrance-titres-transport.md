@@ -22,14 +22,14 @@ Cette récupération automatique permet de récupérer une donnée certifiée, l
 
 En intégrant la brique API Particulier dans votre système d'information ou votre site internet :
 
-- Vous accédez facilement aux données de la CAF, de la DGFIP, de Pôle Emploi et du Ministère de l’Enseignement Supérieur ;
-- Vous n'avez **plus besoin de demander** de justificatifs : avis fiscal, quotient familial, carte étudiant ou attestation Pôle Emploi ;
+- Vous accédez facilement aux données de la CAF, de la DGFIP, de Pôle emploi et du Ministère de l’Enseignement Supérieur ;
+- Vous n'avez **plus besoin de demander** de justificatifs : avis fiscal, quotient familial, carte étudiant ou attestation Pôle emploi ;
 - Vous n'avez **pas de vérification supplémentaire** car les informations sont **certifiées** ;
 - La démarche peut être faite **100% en ligne**.
 
 ## Quelles données utilisez-vous ?
 
-API Particulier met à disposition des données de la CAF (composition familiale du foyer du demandeur), DGFIP (avis d’imposition), de Pôle Emploi (statut demandeur d’emploi), du Ministère de l’Enseignement Supérieur (statut étudiant), dont voici une liste non exhaustive :
+API Particulier met à disposition des données de la CAF (composition familiale du foyer du demandeur), DGFIP (avis d’imposition), de Pôle emploi (statut demandeur d’emploi), du Ministère de l’Enseignement Supérieur (statut étudiant), dont voici une liste non exhaustive :
 
 | Donnée                    | Commentaire                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------- |
