@@ -162,6 +162,9 @@
       path: /les-api/api-engagement
   4:
     - type: ADD_API
+      what: Tracabilité des déchets dangereux - Trackdéchets
+      path: /les-api/api-trackdechets
+    - type: ADD_API
       what: Service National par le ministère des Armées
     - type: ADD_API
       what: Professionnels BIO par l'agence BIO
