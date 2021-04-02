@@ -49,6 +49,7 @@ content_intro: |
 
   Le SI-Amiante est une plateforme développée par la Direction générale de la Santé, permettant à des organismes concourant à la mise en œuvre du code de la santé publique en matière d’amiante - diagnostiqueurs certifiés et laboratoires accrédités – de transmettre aux services de l’État par voie électronique des rapports annuels d’activité et des rapports d’alerte.
 visits_2019: 2000
+doc_tech_external: https://www.foo.bar
 last_update: 01/04/2021
 ---
 
