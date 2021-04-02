@@ -162,6 +162,9 @@
       path: /les-api/api-engagement
   4:
     - type: ADD_API
+      what: SI-Amiante
+      path: /les-api/api-si-amiante
+    - type: ADD_API
       what: Service National par le ministère des Armées
     - type: ADD_API
       what: Professionnels BIO par l'agence BIO
