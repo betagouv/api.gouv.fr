@@ -23,6 +23,7 @@ access_page:
     is_eligible: 0
     description: |
       Certaines entreprises peuvent utiliser l'API :
+
       - les producteur de déchets,
       - les professionnel de la gestion de déchets (collecteurs, installations de tri-transit-regroupement, installation de traitement)
       - les transporteurs de déchets.
@@ -53,6 +54,7 @@ content_intro: |
   ### A quoi sert l’API Trackdéchets ?
 
   Grâce a l'API de Trackdéchets, les différents acteurs de la chaîne de traçabilité des déchets dangereux peuvent :
+
   - créer, compléter, modifier, signer et suivre des bordereaux de suivi de déchets (BSD) conformément au cycle de vie réglementaire
   - rechercher des Bordereaux de Suivi de Déchets (BSD) sur lesquels ils ont des droits
   - rechercher et afficher un PDF CERFA du Bordereaux de Suivi de Déchets (BSD)
