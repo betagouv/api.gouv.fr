@@ -12,6 +12,8 @@ import Page from '../../layouts';
 
 import constants from '../../constants';
 import ApiCard from '../../components/searchApis/apiCard';
+import Markdown from 'markdown-to-jsx';
+import Emoji from '../../uiComponents/emoji';
 
 interface IProps {
   apis?: IApi[];
@@ -89,7 +91,8 @@ const PageHeader: React.FC<{ title: string; logo: string }> = ({
   </section>
 );
 
-const API: React.FC<IProps> = ({ apis = [], producer }) => {
+const ProducerPage: React.FC<IProps> = ({ apis = [], producer }) => {
+  const producerWithPronounSafe = producer.nameWithPronoun || producer.name;
   return (
     <Page
       title={`Les API produites par ${producer.name}`}
@@ -99,32 +102,61 @@ const API: React.FC<IProps> = ({ apis = [], producer }) => {
         title={producer.name}
         logo={producer.logo || constants.logo}
       />
-      <div className="content-container">
-        <h2>Qu'est ce que {producer.nameWithPronoun || producer.name} ?</h2>
-        <p>{producer.short}</p>
-        <h2>
-          Quelle est la mission de {producer.nameWithPronoun || producer.name} ?
-        </h2>
-        <p>{producer.description}</p>
-        {producer.data && (
-          <>
-            <h2>
-              Quelle données sont détenues par{' '}
-              {producer.nameWithPronoun || producer.name} ?
-            </h2>
-            <p>{producer.data}</p>
-          </>
-        )}
+      <div id="description" className="content-container">
+        <div className="right-column-grid">
+          <div className="left-column text-style">
+            <h2>Qu'est ce que {producerWithPronounSafe} ?</h2>
+            <p>{producer.short}</p>
+            <h2>Quelle est la mission de {producerWithPronounSafe} ?</h2>
+            <p>{producer.description}</p>
+            {producer.data && (
+              <>
+                <h2>
+                  Quelles données sont détenues par {producerWithPronounSafe} ?
+                </h2>
+                <p>
+                  Dans le cadre de sa mission {producerWithPronounSafe} a
+                  notamment la charge des données suivantes :
+                </p>
+                <Markdown>{producer.data}</Markdown>
+              </>
+            )}
+            <br />
+          </div>
+          <div className="right-column info-column">
+            <div>
+              <h3>Contacter {producerWithPronounSafe}</h3>
+              {producer.annuaire && (
+                <div>
+                  <Emoji emoji="📖" label="annuaire" />
+                  Consulter{' '}
+                  <a href={producer.annuaire}>
+                    la page de {producerWithPronounSafe}
+                  </a>{' '}
+                  sur l'annuaire de l’administration.
+                </div>
+              )}
+              {producer.contact && producer.annuaire && <br />}
+              {producer.contact && (
+                <div>
+                  <Emoji emoji="📝" label="formulaire" />
+                  Ecrire à l'équipe via le{' '}
+                  <a href={producer.contact}>formulaire de contact</a>{' '}
+                </div>
+              )}
+              <div></div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div id="description">
-        <div className="content-container">
+      <div id="api-list">
+        <div className="content-container text-style">
           <h2>
-            Quelle(s) sont les API publique(s) de{' '}
-            {producer.nameWithPronoun || producer.name} ?
+            Quelle(s) sont les API publique(s) de {producerWithPronounSafe} ?
           </h2>
           <p>
-            Actuellement {producer.nameWithPronoun || producer.name} publie et
-            maintient <b>{apis.length} API :</b>
+            Actuellement {producerWithPronounSafe} publie et maintient{' '}
+            <b>{apis.length} API :</b>
           </p>
 
           <div className="default-grid">
@@ -133,7 +165,7 @@ const API: React.FC<IProps> = ({ apis = [], producer }) => {
             ))}
           </div>
           <p>
-            {producer.nameWithPronoun || producer.name} est partenaire de{' '}
+            {producerWithPronounSafe} est partenaire de{' '}
             <b>{apis.length} API :</b>
           </p>
 
@@ -145,7 +177,7 @@ const API: React.FC<IProps> = ({ apis = [], producer }) => {
         </div>
       </div>
       <style jsx>{`
-        #description {
+        #api-list {
           background-color: ${constants.colors.lightGrey};
           display: block;
           padding-bottom: 40px;
@@ -160,7 +192,7 @@ const API: React.FC<IProps> = ({ apis = [], producer }) => {
 
         .info-column {
           border-left: 2px solid ${constants.colors.lightBlue};
-          padding: 0 0 0 40px;
+          padding: 30px 0 0 40px;
         }
         @media only screen and (min-width: 1px) and (max-width: 900px) {
           .right-column-grid {
@@ -206,4 +238,4 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return { props: { producer, apis } };
 };
 
-export default API;
+export default ProducerPage;

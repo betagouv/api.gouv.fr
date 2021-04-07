@@ -15,8 +15,6 @@ description: |
 
   - Une mission économique : apporter une contribution positive aux activités économiques, en facilitant l’accomplissement des démarches des entrepreneurs et des employeurs, en leur permettant ainsi de se consacrer à leurs activités et en garantissant le respect des règles sociales indispensable à une concurrence équitable.
 data: |
-  Dans le cadre de sa mission l'Accos a notamment la charge des données suivantes :
-
   | Donnée                   | Description                                                                                      |
   | ------------------------ | ------------------------------------------------------------------------------------------------ |
   | Auto-entrepreneurs       | Création d'une auto-entreprise                                                                   |
@@ -24,4 +22,6 @@ data: |
   | Attestation de vigilance | Atteste qu'une micro-entreprise est en conformité vis a vis de ses cotisations sociales          |
   | Procédures collectives   | redressements judiciaires, liquidations judiciaires, sauvegardes, au niveau de la France entière |
   | Effectifs des salariés   | Les effectifs des entreprises du secteur privé                                                   |
+contact: https://open.urssaf.fr/pages/contact/
+annuaire: https://lannuaire.service-public.fr/gouvernement/etablissement-public_165739
 ---

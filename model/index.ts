@@ -56,6 +56,8 @@ export interface IProducerElement {
   short?: string;
   description?: string;
   data: string;
+  annuaire: string;
+  contact: string;
 }
 
 export interface IService {
