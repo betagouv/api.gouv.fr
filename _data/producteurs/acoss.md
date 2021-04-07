@@ -3,7 +3,7 @@ name: Acoss
 nameWithPronoun: l’Acoss
 logo: urssaf.svg
 type: Etablissement public
-short: L’Acccos est l'organisme chargé de gérer la trésorerie de chacune des branches du système de Sécurité sociale français et de superviser la branche « recouvrement » avec notamment le réseau des Urssaf.
+short: L’Acoss est l'organisme chargé de gérer la trésorerie de chacune des branches du système de Sécurité sociale français et de superviser la branche « recouvrement » avec notamment le réseau des Urssaf.
 description: |
   L’Acoss est la caisse nationale des Urssaf. Les URSSAF sont les Unions de Recouvrement des cotisations de Sécurité Sociale et d’Allocations Familiales. Ce sont des organismes privés chargés d'une mission de service public, relevant de la branche « recouvrement » du régime général de la sécurité sociale.
 

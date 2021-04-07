@@ -47,8 +47,8 @@ stat:
   url: https://dashboard.entreprise.api.gouv.fr/api/watchdoge/stats/last_30_days_usage
   label: informations non redemandées aux entreprises
 partners:
+  - acoss
   - DGFiP
-  - ACOSS
   - CNETP
   - INSEE
   - INFOGREFFE

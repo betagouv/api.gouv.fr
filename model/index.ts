@@ -127,7 +127,7 @@ export interface IApi extends IApiShort {
   monitoring_description: string;
   rate_limiting_description: string;
   rate_limiting_resume: string;
-  partners: string[];
+  partners: { slug?: string; name: string }[];
   themes: string[];
   keywords: string[];
   datagouv_uuid?: string[];
