@@ -107,71 +107,65 @@ const ProducerPage: React.FC<IProps> = ({
         title={producer.name}
         logo={producer.logo || constants.logo}
       />
-      {producer.short ||
-        producer.description ||
-        (producer.data && (
-          <div id="description" className="content-container">
-            <div className="right-column-grid">
-              <div className="left-column text-style">
-                {producer.short && (
-                  <>
-                    <h2>Qu'est ce que {producerWithPronounSafe} ?</h2>
-                    <p>{producer.short}</p>
-                  </>
-                )}
-                {producer.description && (
-                  <>
-                    <h2>
-                      Quelle est la mission de {producerWithPronounSafe} ?
-                    </h2>
-                    <Markdown>{producer.description}</Markdown>
-                  </>
-                )}
-                {producer.data && (
-                  <>
-                    <h2>
-                      Quelles données sont détenues par{' '}
-                      {producerWithPronounSafe} ?
-                    </h2>
-                    <p>
-                      Dans le cadre de sa mission {producerWithPronounSafe} a
-                      notamment la charge des données suivantes :
-                    </p>
-                    <Markdown>{producer.data}</Markdown>
-                  </>
-                )}
-                <br />
-              </div>
-              <div className="right-column info-column">
-                {producer.contact && producer.annuaire && (
-                  <div>
-                    <h3>Contacter {producerWithPronounSafe}</h3>
-                    {producer.annuaire && (
-                      <div>
-                        <Emoji emoji="📖" label="annuaire" />
-                        Consulter{' '}
-                        <a href={producer.annuaire}>
-                          la page de {producerWithPronounSafe}
-                        </a>{' '}
-                        sur l'annuaire de l’administration.
-                      </div>
-                    )}
-                    {producer.contact && producer.annuaire && <br />}
-                    {producer.contact && (
-                      <div>
-                        <Emoji emoji="📝" label="formulaire" />
-                        Ecrire à l'équipe via le{' '}
-                        <a href={producer.contact}>
-                          formulaire de contact
-                        </a>{' '}
-                      </div>
-                    )}
-                  </div>
-                )}
-              </div>
+      {(producer.short || producer.description || producer.data) && (
+        <div id="description" className="content-container">
+          <div className="right-column-grid">
+            <div className="left-column text-style">
+              {producer.short && (
+                <>
+                  <h2>Qu'est ce que {producerWithPronounSafe} ?</h2>
+                  <p>{producer.short}</p>
+                </>
+              )}
+              {producer.description && (
+                <>
+                  <h2>Quelle est la mission de {producerWithPronounSafe} ?</h2>
+                  <Markdown>{producer.description}</Markdown>
+                </>
+              )}
+              {producer.data && (
+                <>
+                  <h2>
+                    Quelles données sont détenues par {producerWithPronounSafe}{' '}
+                    ?
+                  </h2>
+                  <p>
+                    Dans le cadre de sa mission {producerWithPronounSafe} a
+                    notamment la charge des données suivantes :
+                  </p>
+                  <Markdown>{producer.data}</Markdown>
+                </>
+              )}
+              <br />
+            </div>
+            <div className="right-column info-column">
+              {producer.contact && producer.annuaire && (
+                <div>
+                  <h3>Contacter {producerWithPronounSafe}</h3>
+                  {producer.annuaire && (
+                    <div>
+                      <Emoji emoji="📖" label="annuaire" />
+                      Consulter{' '}
+                      <a href={producer.annuaire}>
+                        la page de {producerWithPronounSafe}
+                      </a>{' '}
+                      sur l'annuaire de l’administration.
+                    </div>
+                  )}
+                  {producer.contact && producer.annuaire && <br />}
+                  {producer.contact && (
+                    <div>
+                      <Emoji emoji="📝" label="formulaire" />
+                      Ecrire à l'équipe via le{' '}
+                      <a href={producer.contact}>formulaire de contact</a>{' '}
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           </div>
-        ))}
+        </div>
+      )}
       <div id="api-list">
         <div className="content-container text-style">
           <h2>
