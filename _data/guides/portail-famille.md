@@ -62,7 +62,7 @@ En 2014, nos usagers prenaient une demi-journée de congés pour effectuer leurs
 
 Les informations sont certifiées par le fournisseur de données, il n'y a plus de validation de document à la main à effectuer ni d'archivage de documents papier.
 
-La circulation de données directement entre les systèmes d'information permet d'éviter les saisies manuelles, les erreurs ou fautes de frappes.
+La circulation de données directement entre les systèmes d'information permet d'éviter les saisies manuelles, les erreurs ou fautes de frappes. Il n'y a plus besoin de se connecter à CAF Pro manuellement.
 
 <Quote logo="/images/guides/boulbi.svg" who='Ville de Boulogne-Billancourt' title='Services de la mairie'>
 Pour la première année en 2020, au lieu de se déplacer en mairie, près de 75% des familles boulonnaises ont opté pour la mise à jour par voie électronique de leur quotient familial. Cette mesure simplificatrice, en limitant l’utilisation du papier, est également une avancée pour la préservation de notre environnement
