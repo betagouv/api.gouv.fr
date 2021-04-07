@@ -3,17 +3,21 @@ import React from 'react';
 import SubSection from './subSection';
 
 interface IProps {
-  partners: string[];
+  partners: { slug?: string; name: string }[];
 }
 
 const Partners: React.FC<IProps> = ({ partners }) => {
   return (
     <SubSection title="Partenaires">
-      {partners ? (
+      {partners && partners.length > 0 ? (
         <ul>
           {partners.map(partner => (
-            <li key={partner} className="item">
-              {partner}
+            <li key={partner.name} className="item">
+              {partner.slug ? (
+                <a href={`/producteurs/${partner.slug}`}>{partner.name}</a>
+              ) : (
+                <>{partner.name}</>
+              )}
             </li>
           ))}
         </ul>
