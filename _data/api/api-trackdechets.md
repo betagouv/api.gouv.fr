@@ -55,7 +55,6 @@ uptime: 100
 monitoring_link: https://status.trackdechets.beta.gouv.fr/
 monitoring_description: |
   Une supervision du service en temps réel est disponible à cette adresse.
-contact_link: entreprise@data.gouv.fr
 content_intro: |
   Trackdéchets vise à simplifier et fiabiliser la traçabilité des déchets dangereux en facilitant la recherche et la gestion des Bordereaux de Suivi de Déchets (BSD).
 
@@ -75,11 +74,11 @@ last_update: 02/04/2021
 
 Parmi les principales données, ont peut citer :
 
-| Champ         | Description                                                                                                                                   |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| forms         | Retourne la liste des BSDs où figure une entreprise donnée, sous conditions d’avoir les droits d’accès                                        |
-| companyInfos  | Informations publiques d’une entrerprise donnée (récépissé transporteur, liste des agréments d’un éco-organisme, informations de contact, etc.|
-| ecoOrganismes | Retourne la liste des éco-organismes agréés pour la collecte de certains types de déchets.                                                    |
+| Champ         | Description                                                                                                                                    |
+| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| forms         | Retourne la liste des BSDs où figure une entreprise donnée, sous conditions d’avoir les droits d’accès                                         |
+| companyInfos  | Informations publiques d’une entrerprise donnée (récépissé transporteur, liste des agréments d’un éco-organisme, informations de contact, etc. |
+| ecoOrganismes | Retourne la liste des éco-organismes agréés pour la collecte de certains types de déchets.                                                     |
 
 Vous pouvez consulter la [liste complète](https://developers.trackdechets.beta.gouv.fr/docs/api-reference)).
 
