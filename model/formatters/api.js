@@ -15,9 +15,19 @@ const formatApiWithOwner = producers => (slug, data) => {
     );
   }
 
+  const partners = (document.attributes.partners || []).map(partner => {
+    const partnerAsProducer = producers.find(
+      producer => producer.slug === partner
+    );
+    if (partnerAsProducer) {
+      return { name: partnerAsProducer.name, slug: partnerAsProducer.slug };
+    }
+    return { name: partner };
+  });
   return {
     //@ts-ignore
     ...document.attributes,
+    partners,
     body: document.body,
     slug,
     description: document.attributes.tagline,
@@ -25,6 +35,7 @@ const formatApiWithOwner = producers => (slug, data) => {
     owner: producer.name,
     owner_acronym: producer.acronym || null,
     owner_slug: producer.slug,
+    owner_type: producer.type || null,
     logo: producer.logo,
   };
 };

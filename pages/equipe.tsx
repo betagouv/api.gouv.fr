@@ -11,10 +11,10 @@ const teamData = [
     img: 'Romain.jpg',
   },
   {
-    name: 'Patrick Amarelis',
-    title: 'Relations administrations, ministères & collectivités',
-    linkedin: 'https://www.linkedin.com/in/patrick-amarelis-8853205/',
-    img: 'Patrick.jpg',
+    name: 'Etienne Pichot Damon',
+    title: 'Relations avec les administrations',
+    linkedin: 'https://www.linkedin.com/in/etiennepichotdamon/',
+    img: 'Etienne.jpg',
   },
   {
     name: 'Alexandre De Pablo',
@@ -70,6 +70,18 @@ const teamData = [
     title: 'API Entreprise',
     linkedin: 'https://www.linkedin.com/in/leclerca/',
     img: 'Alexis.jpg',
+  },
+  {
+    name: 'Cyril Kato',
+    title: 'API Entreprise',
+    linkedin: 'https://www.linkedin.com/in/cyrilllllll',
+    img: 'Cyril.jpg',
+  },
+  {
+    name: 'Dorine Lambinet',
+    title: 'Designeuse produit',
+    linkedin: 'https://www.linkedin.com/in/cyrilllllll',
+    img: 'Dorine.jpg',
   },
 ];
 

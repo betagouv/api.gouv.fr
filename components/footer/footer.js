@@ -15,11 +15,23 @@ const Footer = () => {
           </Link>
           <ul className="footer__social">
             <li>
-              <a href="https://twitter.com/BetaGouv" title="Twitter">
+              <a href="https://twitter.com/apigouv" title="Twitter">
                 <img
                   src="/images/social/twitter.svg"
                   alt="Twitter"
                   className="icon icon-twitter"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/company/api-gouv-fr/"
+                title="Linkedin"
+              >
+                <img
+                  src="/images/social/linkedin.svg"
+                  alt="Twitter"
+                  className="icon icon-linkedin"
                 />
               </a>
             </li>
@@ -49,6 +61,9 @@ const Footer = () => {
           </li>
           <li>
             <a href="/feuille-de-route">Feuille de route des API</a>
+          </li>
+          <li>
+            <a href={constants.links.ADD_API}>Ajouter une nouvelle API</a>
           </li>
           <li>
             <a href="/statistiques">Chiffres clés</a>
@@ -81,9 +96,6 @@ const Footer = () => {
             >
               Nous rejoindre
             </a>
-          </li>
-          <li>
-            <a href={constants.links.ADD_API}>Ajouter une nouvelle API</a>
           </li>
         </ul>
         <ul className="footer__links">

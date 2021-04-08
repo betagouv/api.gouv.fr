@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { TypingCarousel, ButtonLink } from '../../uiComponents';
+import MagnifyingGlass from '../../uiComponents/icon/magnifyingGlass';
 
 const Baseline = () => (
   <section
@@ -22,7 +23,10 @@ const Baseline = () => (
       services innovants.
     </h2>
     <ButtonLink href="/rechercher-api" size="large">
-      Rechercher une API
+      <span className="layout-center">
+        <MagnifyingGlass color="#fff" />
+        &nbsp; Rechercher une API
+      </span>
     </ButtonLink>
   </section>
 );

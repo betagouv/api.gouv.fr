@@ -27,7 +27,7 @@ themes:
 stat:
   link: https://camino.beta.gouv.fr/statistiques
 contact_link: camino@beta.gouv.fr
-doc_tech_external: https://api.camino.beta.gouv.fr
+doc_tech_external: https://docs.camino.beta.gouv.fr/
 datagouv_uuid:
   - 5dceb39c634f416d5593c858
 visits_2019: 41
