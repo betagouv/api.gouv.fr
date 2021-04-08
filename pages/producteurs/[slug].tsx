@@ -179,6 +179,7 @@ const ProducerPage: React.FC<IProps> = ({
                           portail open-data de {producerWithPronounSafe}
                         </a>{' '}
                       </div>
+                      <br />
                     </>
                   )}
                   {producer.siteAPI && (
