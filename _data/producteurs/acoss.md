@@ -24,4 +24,5 @@ data: |
   | Effectifs des salariés   | Les effectifs des entreprises du secteur privé                                                   |
 contact: https://open.urssaf.fr/pages/contact/
 annuaire: https://lannuaire.service-public.fr/gouvernement/etablissement-public_165739
+site: https://open.urssaf.fr/pages/home/
 ---

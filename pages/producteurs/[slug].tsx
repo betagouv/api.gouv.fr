@@ -139,26 +139,43 @@ const ProducerPage: React.FC<IProps> = ({
               <br />
             </div>
             <div className="right-column info-column">
-              {producer.contact && producer.annuaire && (
+              {(producer.contact || producer.annuaire || producer.site) && (
                 <div>
                   <h3>Contacter {producerWithPronounSafe}</h3>
                   {producer.annuaire && (
-                    <div>
-                      <Emoji emoji="📖" label="annuaire" />
-                      Consulter{' '}
-                      <a href={producer.annuaire}>
-                        la page de {producerWithPronounSafe}
-                      </a>{' '}
-                      sur l'annuaire de l’administration.
-                    </div>
+                    <>
+                      <div>
+                        <Emoji emoji="📖" label="annuaire" />
+                        Consulter{' '}
+                        <a href={producer.annuaire}>
+                          la page de {producerWithPronounSafe}
+                        </a>{' '}
+                        sur l'annuaire de l’administration.
+                      </div>
+                      <br />
+                    </>
                   )}
-                  {producer.contact && producer.annuaire && <br />}
                   {producer.contact && (
-                    <div>
-                      <Emoji emoji="📝" label="formulaire" />
-                      Ecrire à l'équipe via le{' '}
-                      <a href={producer.contact}>formulaire de contact</a>{' '}
-                    </div>
+                    <>
+                      <div>
+                        <Emoji emoji="📝" label="formulaire" />
+                        Ecrire à l'équipe via le{' '}
+                        <a href={producer.contact}>
+                          formulaire de contact
+                        </a>{' '}
+                      </div>
+                      <br />
+                    </>
+                  )}
+                  {producer.site && (
+                    <>
+                      <div>
+                        <Emoji emoji="🖥" label="ordinateur" />
+                        Consulter le <a href={producer.site}>
+                          site internet
+                        </a>{' '}
+                      </div>
+                    </>
                   )}
                 </div>
               )}
