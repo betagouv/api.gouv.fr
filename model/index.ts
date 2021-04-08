@@ -56,7 +56,8 @@ export interface IProducerElement {
   short?: string;
   description?: string;
   data: string;
-  site?: string;
+  siteAPI?: string;
+  siteOpenData?: string;
   annuaire?: string;
   contact?: string;
 }

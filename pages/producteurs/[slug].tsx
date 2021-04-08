@@ -139,7 +139,10 @@ const ProducerPage: React.FC<IProps> = ({
               <br />
             </div>
             <div className="right-column info-column">
-              {(producer.contact || producer.annuaire || producer.site) && (
+              {(producer.contact ||
+                producer.annuaire ||
+                producer.siteAPI ||
+                producer.siteOpenData) && (
                 <div>
                   <h3>Contacter {producerWithPronounSafe}</h3>
                   {producer.annuaire && (
@@ -167,12 +170,24 @@ const ProducerPage: React.FC<IProps> = ({
                       <br />
                     </>
                   )}
-                  {producer.site && (
+                  {producer.siteOpenData && (
                     <>
                       <div>
-                        <Emoji emoji="🖥" label="ordinateur" />
-                        Consulter le <a href={producer.site}>
-                          site internet
+                        <Emoji emoji="🧑‍💻" label="ordinateur" />
+                        Consulter le{' '}
+                        <a href={producer.siteOpenData}>
+                          portail open-data de {producerWithPronounSafe}
+                        </a>{' '}
+                      </div>
+                    </>
+                  )}
+                  {producer.siteAPI && (
+                    <>
+                      <div>
+                        <Emoji emoji="⚙️" label="rouage" />
+                        Consulter le{' '}
+                        <a href={producer.siteAPI}>
+                          portail API de {producerWithPronounSafe}
                         </a>{' '}
                       </div>
                     </>
