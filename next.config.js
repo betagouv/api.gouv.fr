@@ -18,6 +18,16 @@ module.exports = withFonts({
         destination: '/datapass/api',
         permanent: true,
       },
+      {
+        source: '/les-api/nomenclatures_v1',
+        destination: '/les-api/api-metadonnees-insee',
+        permanent: true,
+      },
+      {
+        source: '/producteurs/acoss',
+        destination: '/producteurs/urssaf-caisse-nationale',
+        permanent: true,
+      },
     ];
   },
   webpack(config, options) {

@@ -2,7 +2,6 @@
 title: Calculer le Quotient Familial dans un Portail Famille
 tagline: Vous êtes une commune ou un éditeur de logiciel ? Calculez facilement le Quotient Familial grâce aux données de la CAF et de la DGFiP accessibles travers l'API Particulier.
 tags: cas usage, api particulier, portail famille, quotient familial dématérialisé
-noindex: true
 image: portail_famille.jpg
 api:
   - API Particulier
@@ -63,7 +62,7 @@ En 2014, nos usagers prenaient une demi-journée de congés pour effectuer leurs
 
 Les informations sont certifiées par le fournisseur de données, il n'y a plus de validation de document à la main à effectuer ni d'archivage de documents papier.
 
-La circulation de données directement entre les systèmes d'information permet d'éviter les saisies manuelles, les erreurs ou fautes de frappes.
+La circulation de données directement entre les systèmes d'information permet d'éviter les saisies manuelles, les erreurs ou fautes de frappes. Il n'y a plus besoin de se connecter à CAF Pro manuellement.
 
 <Quote logo="/images/guides/boulbi.svg" who='Ville de Boulogne-Billancourt' title='Services de la mairie'>
 Pour la première année en 2020, au lieu de se déplacer en mairie, près de 75% des familles boulonnaises ont opté pour la mise à jour par voie électronique de leur quotient familial. Cette mesure simplificatrice, en limitant l’utilisation du papier, est également une avancée pour la préservation de notre environnement
@@ -81,13 +80,16 @@ Maintenant que le traitement est automatisé, nous avons enfin le temps de mieux
 
 Si vous travaillez avec l'un des éditeurs ou intégrateurs ci-dessous vous pouvez faire une demande pré-remplie :
 
-| Editeur                      | Nom de la solution            | Date         | Lien vers la demande                                                                                                            |
-| ---------------------------- | ----------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------- |
-| Agora Plus                   | Agor@Famille Premium          | 2017         | <External href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</External>                                    |
-| Ciril Group                  | Portail famille Civil Enfance | juin 2021    | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=civil-enfance-ciril-group">Remplir une demande</External> |
-| JVS                          | Parascol                      |              | <External href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</External>                                    |
-| Arpège                       | Espace Citoyens Premium       |              | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=arpege-concerto">Remplir une demande</External>                                    |
-| NFI Nord France Informatique |                               | janvier 2021 | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=nfi-grc">Remplir une demande</External>                   |
-| Entr'ouvert                  | Publik                        | janvier 2021 | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=entrouvert-publik">Remplir une demande</External>         |
+| Editeur                      | Nom de la solution            | Date         | Lien vers la demande                                                                                                                |
+| ---------------------------- | ----------------------------- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
+| Agora Plus                   | Agor@Famille Premium          | 2017         | <External href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</External>                                        |
+| Ciril Group                  | Portail famille Civil Enfance | Juin 2021    | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=civil-enfance-ciril-group">Remplir une demande</External>     |
+| JVS                          | Parascol                      |              | <External href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</External>                                        |
+| Arpège                       | Espace Citoyens Premium       |              | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=arpege-concerto">Remplir une demande</External>               |
+| NFI Nord France Informatique |                               | Janvier 2021 | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=nfi-grc">Remplir une demande</External>                       |
+| Entr'ouvert                  | Publik                        | Janvier 2021 | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=entrouvert-publik">Remplir une demande</External>             |
+| Mushroom                     | CityFamily                    | Juin 2021    | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=city-family-mushroom-software">Remplir une demande</External> |
+| Berger Levrault              | BL Enfance                    | Mars 2021    | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=bl-enfance-berger-levrault">Remplir une demande</External>    |
+| TeamNet                      | Axel Portail Famille          | Juin 2021    | <External href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</External>                                        |
 
 Vous êtes un éditeur et vous souhaitez apparaître dans cette liste ? Écrivez-nous à [contact@particulier.api.gouv.fr](mailto:contact@particulier.api.gouv.fr)

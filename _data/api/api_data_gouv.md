@@ -24,6 +24,8 @@ themes:
 contact_link: support@data.gouv.fr
 doc_tech_link: https://www.data.gouv.fr/api/1/swagger.json
 doc_tech_external: https://doc.data.gouv.fr/api/reference/
+datagouv_uuid:
+  - 5d13a8b6634f41070a43dff3
 last_update: 31/07/2020
 ---
 

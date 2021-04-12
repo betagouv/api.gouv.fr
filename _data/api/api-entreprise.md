@@ -47,8 +47,8 @@ stat:
   url: https://dashboard.entreprise.api.gouv.fr/api/watchdoge/stats/last_30_days_usage
   label: informations non redemandées aux entreprises
 partners:
+  - urssaf-caisse-nationale
   - DGFiP
-  - ACOSS
   - CNETP
   - INSEE
   - INFOGREFFE
@@ -119,15 +119,15 @@ Les données financières :
 
 Les attestations sociales et fiscales :
 
-| Donnée                                                         | Administration |
-| -------------------------------------------------------------- | -------------- |
-| L'attestation fiscale                                          | DGFiP          |
-| L'attestation de vigilance                                     | ACOSS          |
-| L'attestation de conformité emploi des travailleurs handicapés | AGEFIPH        |
-| Les cotisations de sécurité sociale agricole                   | MSA            |
-| Les cotisations retraite bâtiment                              | PRO BTP        |
-| La carte professionnelle travaux publics                       | FNTP           |
-| Les cotisations congés payés & chômage intempéries             | CNETP          |
+| Donnée                                                         | Administration          |
+| -------------------------------------------------------------- | ----------------------- |
+| L'attestation fiscale                                          | DGFiP                   |
+| L'attestation de vigilance                                     | Urssaf Caisse Nationale |
+| L'attestation de conformité emploi des travailleurs handicapés | AGEFIPH                 |
+| Les cotisations de sécurité sociale agricole                   | MSA                     |
+| Les cotisations retraite bâtiment                              | PRO BTP                 |
+| La carte professionnelle travaux publics                       | FNTP                    |
+| Les cotisations congés payés & chômage intempéries             | CNETP                   |
 
 Les certifications professionnelles :
 
@@ -147,7 +147,7 @@ La propriété intellectuelle :
 
 **NB**: Certaines données sont accessibles en open data (sans demande d'accès à l'API) via leur propre API et ne nécessitent pas de passer par API Entreprise. C'est notamment le cas de :
 
-- les [données de l'INPI](/les-api/api_inpi)
+- les [données de l'INPI](/les-api/api-rncs)
 - les [données de l'ADEME](/les-api/api_professionnels_rge)
 - les [données du RNA](/les-api/api_rna)
 - les [données de l'INSEE](/guides/quelle-api-sirene) (à l'exception des entreprises <External href="https://www.insee.fr/fr/information/4127417">non-diffusibles</External>)
