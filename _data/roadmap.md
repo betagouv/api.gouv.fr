@@ -194,9 +194,9 @@
       what: AgentConnect par la DINUM
   7:
     - type: ADD_API
-      what: Attestation Codes Sécurité par l'ACOSS
+      what: Attestation Codes Sécurité par l'Urssaf Caisse Nationale
     - type: ADD_API
-      what: Déclaration préalable à l'embauche par l'ACOSS
+      what: Déclaration préalable à l'embauche par l'Urssaf Caisse Nationale
   9:
     - type: ADD_API
       what: Indemnités Journalières distribuée par la CNAM
