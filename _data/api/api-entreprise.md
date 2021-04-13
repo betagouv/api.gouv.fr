@@ -47,29 +47,115 @@ stat:
   url: https://dashboard.entreprise.api.gouv.fr/api/watchdoge/stats/last_30_days_usage
   label: informations non redemandées aux entreprises
 partners:
-  - urssaf-caisse-nationale
-  - DGFiP
+  - ADEME
+  - Agefiph
+  - Agence BIO
+  - Banque de france
+  - CMA France
   - CNETP
-  - INSEE
-  - INFOGREFFE
+  - DGFiP
+  - Douanes
+  - Fabrique numérique des ministères sociaux
   - FNTP
+  - Infogreffe
+  - INPI
+  - INSEE
+  - Ministère intérieur
   - MSA
   - OPQIBI
-  - PRO BTP
-  - QUALIBAT
-  - Ministère intérieur
-  - INPI
-  - AGEFIPH
-  - Banque de france
-  - ADEME
+  - ProBTP
+  - Qualibat
+  - urssaf-caisse-nationale
+
 producer: dinum
 keywords:
   - Établissement
   - Entreprise
+  - Association
+  - Administration
   - Certification
+  - Certificat
+  - Attestation
+  - Vigileance
+  - Fiscal
+  - Social
+  - RCS
+  - Actes
+  - Conventions
+  - Entreprise artisanale
+  - Effectifs
+  - EORI
+  - Chiffre d'affaires
+  - Bilans
+  - Déclarations
+  - Liasses
+  - Conformité
+  - Travailleur handicapé
+  - Handicapé
+  - Cotisations
+  - Retraite
+  - Congés payés
+  - Chômage intempérie
+  - Carte professionnelle
+  - BIO
+  - Biologique
+  - RGE
+  - Qualification
+  - Bâtiment
+  - Ingénierie
+  - Brevet
+  - Marque
+  - Marché
+  - Fraude
+  - Aides
+  - Juridique
+  - Géographique
+  - Registre
+  - Répertoire
+  - Sirene
+  - Siret
+  - Siren
+  - RNA
+  - Redressement judiciaire
+  - Adresse
+  - Mandataire
+  - Statut
+  - Délibération
+  - Document
+  - PDF
+  - JSON
+  - Capital social
+  - Associé
+  - Identifiant
+  - Métier
+  - Activité
+  - Dates
+  - Chambre des métiers
+  - TPE
+  - Covid-19
+  - Coronavirus
+  - Aide Covid
+  - Immatriculation
+  - Immatriculé
+  - Numéro
+  - Numéro EORI
+  - Comptes
+  - Greffe
+  - Obligation fiscale
+  - Obligation sociale
+  - Contributions
+  - Agricol
+  - Agriculture
+  - Travaux
+  - Travaux publics
+  - Eligible
+  - Eligibilité
+  - Organismes certificateurs
+  - Compétences
+  - Rénovation énergétique
 rate_limiting_resume: 2000 appels / 10 minutes / IP
 rate_limiting_description: |
-  Actuellement, le nombre d’appels aux API Entreprise est limité à 2000 requêtes tranche de 10 minutes par IP. Au delà, l’adresse IP est bannie de nos serveurs, et ces derniers ne répondent alors simplement pas. Si vous pensez être dans cette situation, vous pouvez nous contacter à support@entreprise.api.gouv.fr.
+Pour en savoir plus sur les conditions de volumétrie, veuillez consulter la documentation API Entreprise : https://entreprise.api.gouv.fr/doc/#respecter-la-volumétrie
 monitoring_link: https://dashboard.entreprise.api.gouv.fr
 contact_link: support@entreprise.api.gouv.fr
 doc_tech_link: /api/v1/proxy/https%3A%2F%2Fentreprise.api.gouv.fr%2Fv2%2Fopen-api.yml
@@ -85,57 +171,71 @@ content_intro: |
 
   L'API s'utilise principalement de deux manières :
 
-  - le pré-remplissage de formulaire à destination des entreprises ou des associations
-  - la récupération d'une donnée ou d'un document en back office par un agent
+  - le pré-remplissage de formulaire à destination des entreprises ou des associations ;
+  - la récupération d'une donnée ou d'un document en back office par un agent habilité.
 
   L’API permet - entre autre - de :
 
-  - faciliter la candidature d'une entreprise a un marché public
-  - faciliter le dépôt d'un dossier de candidature à une aide publique par une entreprise
+  - faciliter la candidature aux <External href='https://entreprise.api.gouv.fr/use_cases/marches_publics/'>marchés publics</External> et leur instruction ;
+  - faciliter le dépôt et l'instruction des <External href='https://entreprise.api.gouv.fr/use_cases/aides_publiques/'>aides et subventions publiques</External> ; 
+  - <External href='https://entreprise.api.gouv.fr/use_cases/preremplissage/'>préremplir des formulaires</External> et de les personnaliser ;
+  - simplifier la détection de la <External href='https://entreprise.api.gouv.fr/use_cases/detection_fraude/'>fraude fiscale et sociale des entreprises</External>.
+  - vérifier l'éligibilité des demandes des TPE et associations à l'aide complémentaire dans le cadre de la <External href='https://entreprise.api.gouv.fr/use_cases/covid_19/'>crise sanitaire du Covid-19</External>.
+
 ---
 
 ### Données accessibles dans l'API
 
-L'API Entreprise permet d'accéder simplement aux données de multiples administrations.
+L'API Entreprise permet d'accéder simplement, avec une seule clé d'accès sécurisée, à de nombreuses données issues d'administrations différentes. L'interfaçage se fait uniquement avec le hub API Entreprise, dans des standards à jour des contraintes industrielles. API Entreprise agrège et vous restitue les connaissances techniques et métiers de chacune de ces données.
+
 
 Les données générales :
 
-| Donnée                                                                                | Administration                            |
+| Donnée                                                                                | Administration                            | 
 | ------------------------------------------------------------------------------------- | ----------------------------------------- |
-| Les informations générales, géographiques et juridiques                               | INSEE                                     |
-| Extrait du Registre du Commerce et des Sociétés (RCS)                                 | INFOGREFFE                                |
-| Les statuts, la liste des représentants ou encore les délibérations d'une association | Ministère intérieur                       |
+| Les données de référence d'une entité                                                 | INSEE                                     |
+| Les données de référence d'un établissement                                           | INSEE                                     |
+| Un extrait des données du Registre du Commerce et des Sociétés (RCS)                  | INFOGREFFE                                |
+| Les informations déclaratives d'une association                                       | Ministère intérieur                       |
+| Divers documents d'une associaiton                                                    | Ministère intérieur                       |
 | Les actes et statuts des personnes morales et physiques                               | INPI                                      |
 | Les conventions collectives                                                           | Fabrique Numérique des Ministères Sociaux |
+| Les données de référence d'une entreprise artisanale                                  | CMA France                                |
+| Les effectifs d'une entreprise                                                        | ACOSS                                     |
+| L'immatriculation EORI                                                                | Douanes                                   |
+
 
 Les données financières :
 
-| Donnée                                          | Administration   |
-| ----------------------------------------------- | ---------------- |
-| Le chiffre d'affaire                            | DGFiP            |
-| La déclarations de résultat (ou liasse fiscale) | DGFiP            |
-| Les 3 derniers bilans annuels                   | Banque de france |
-| Les comptes annuels                             | INPI             |
+| Donnée                                            | Administration   |
+| ------------------------------------------------- | ---------------- |
+| Les chiffre d'affaires                            | DGFiP            |
+| Les bilans annuels                                | INPI.            |
+| Les 3 derniers bilans annuels                     | Banque de france |
+| La déclarations de résultat (ou liasses fiscales) | DGFiP            |
 
 Les attestations sociales et fiscales :
 
 | Donnée                                                         | Administration          |
 | -------------------------------------------------------------- | ----------------------- |
 | L'attestation fiscale                                          | DGFiP                   |
-| L'attestation de vigilance                                     | Urssaf Caisse Nationale |
-| L'attestation de conformité emploi des travailleurs handicapés | AGEFIPH                 |
-| Les cotisations de sécurité sociale agricole                   | MSA                     |
-| Les cotisations retraite bâtiment                              | PRO BTP                 |
-| La carte professionnelle travaux publics                       | FNTP                    |
-| Les cotisations congés payés & chômage intempéries             | CNETP                   |
+| L'attestation de vigilance                                     | ACOSS                   |
+| Conformité emploi des travailleurs handicapés                  | AGEFIPH                 |
+| Conformité contisations de sécurité sociale agricole           | MSA                     |
+| Conformité cotisations retraite bâtiment et attestation        | PRO BTP                 |
+| Carte professionnelle travaux publics                          | FNTP                    |
+| L'attestation de cotisations congés payés & chômage intempéries| CNETP                   |
 
 Les certifications professionnelles :
 
 | Donnée                                                   | Administration |
 | -------------------------------------------------------- | -------------- |
-| La certification de qualification d'ingénierie           | OPQIBI         |
-| Le certificat de qualification bâtiment                  | QUALIBAT       |
-| La certification RGE (Reconnu garant de l'environnement) | ADEME          |
+| Certifications biologiques en cours                      | Agence BIO     |
+| Le certificat RGE (Reconnu garant de l'environnement)    | ADEME          |
+| Le certificat de qualification bâtiment Qualibat         | QUALIBAT       |
+| Le certificat de qualification d'ingénierie OPQIBI       | OPQIBI         |
+
+
 
 La propriété intellectuelle :
 
@@ -143,7 +243,7 @@ La propriété intellectuelle :
 | --------------------------------------- | -------------- |
 | Les brevets, modèles et marques déposés | INPI           |
 
-**NB**: Pour en savoir plus, n'hésitez pas à consulter le <External href='https://entreprise.api.gouv.fr/catalogue/'>catalogue des données disponibles dans l’API Entreprise</External>
+**NB**: Pour avoir la liste à jour des données disponibles, n'hésitez pas à consulter le <External href='https://entreprise.api.gouv.fr/catalogue/'>catalogue des données dans l’API Entreprise</External>
 
 **NB**: Certaines données sont accessibles en open data (sans demande d'accès à l'API) via leur propre API et ne nécessitent pas de passer par API Entreprise. C'est notamment le cas de :
 
