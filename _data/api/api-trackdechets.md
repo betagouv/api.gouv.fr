@@ -50,7 +50,7 @@ themes:
   - Environnement
 rate_limiting_resume: 1000 appels / minute
 rate_limiting_description: |
-  Pour des raisons de sécurité, le nombre de requêtes par adresse IP est limitée à 1000 par minute. Passé cette limite, les requêtes aboutiront avec un status 429 (Too Many Requests)[Plus d'informations](https://developers.trackdechets.beta.gouv.fr/docs/introduction#limitations)
+  Pour des raisons de sécurité, le nombre de requêtes par adresse IP est limitée à 1000 par minute. Passé cette limite, les requêtes aboutiront avec un status 429 (Too Many Requests).
 uptime: 100
 monitoring_link: https://status.trackdechets.beta.gouv.fr/
 monitoring_description: |

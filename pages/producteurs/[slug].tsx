@@ -139,26 +139,59 @@ const ProducerPage: React.FC<IProps> = ({
               <br />
             </div>
             <div className="right-column info-column">
-              {producer.contact && producer.annuaire && (
+              {(producer.contact ||
+                producer.annuaire ||
+                producer.siteAPI ||
+                producer.siteOpenData) && (
                 <div>
                   <h3>Contacter {producerWithPronounSafe}</h3>
                   {producer.annuaire && (
-                    <div>
-                      <Emoji emoji="📖" label="annuaire" />
-                      Consulter{' '}
-                      <a href={producer.annuaire}>
-                        la page de {producerWithPronounSafe}
-                      </a>{' '}
-                      sur l'annuaire de l’administration.
-                    </div>
+                    <>
+                      <div>
+                        <Emoji emoji="📖" label="annuaire" />
+                        Consulter{' '}
+                        <a href={producer.annuaire}>
+                          la page de {producerWithPronounSafe}
+                        </a>{' '}
+                        sur l'annuaire de l’administration.
+                      </div>
+                      <br />
+                    </>
                   )}
-                  {producer.contact && producer.annuaire && <br />}
                   {producer.contact && (
-                    <div>
-                      <Emoji emoji="📝" label="formulaire" />
-                      Ecrire à l'équipe via le{' '}
-                      <a href={producer.contact}>formulaire de contact</a>{' '}
-                    </div>
+                    <>
+                      <div>
+                        <Emoji emoji="📝" label="formulaire" />
+                        Ecrire à l'équipe via le{' '}
+                        <a href={producer.contact}>
+                          formulaire de contact
+                        </a>{' '}
+                      </div>
+                      <br />
+                    </>
+                  )}
+                  {producer.siteOpenData && (
+                    <>
+                      <div>
+                        <Emoji emoji="🧑‍💻" label="ordinateur" />
+                        Consulter le{' '}
+                        <a href={producer.siteOpenData}>
+                          portail open-data de {producerWithPronounSafe}
+                        </a>{' '}
+                      </div>
+                      <br />
+                    </>
+                  )}
+                  {producer.siteAPI && (
+                    <>
+                      <div>
+                        <Emoji emoji="⚙️" label="rouage" />
+                        Consulter le{' '}
+                        <a href={producer.siteAPI}>
+                          portail API de {producerWithPronounSafe}
+                        </a>{' '}
+                      </div>
+                    </>
                   )}
                 </div>
               )}

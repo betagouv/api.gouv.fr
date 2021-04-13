@@ -2,7 +2,7 @@
 title: API Tierce Déclaration auto-entrepreneur
 tagline: Connectez-vous directement à l’Urssaf pour déclarer les chiffres d’affaires pour le compte d’un auto-entrepreneur en tant que tiers-déclarant
 external_site: https://open.urssaf.fr/explore/?sort=modified
-producer: acoss
+producer: urssaf-caisse-nationale
 is_open: -1 # 1 means API is fully open
 access_page:
   - who:

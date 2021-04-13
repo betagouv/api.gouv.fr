@@ -1,11 +1,11 @@
 ---
-name: ACOSS
-nameWithPronoun: l’ACOSS
+name: Urssaf Caisse Nationale
+nameWithPronoun: l’Urssaf Caisse Nationale
 logo: urssaf.svg
 type: Etablissement public
-short: L’ACOSS est l'organisme chargé de gérer la trésorerie de chacune des branches du système de Sécurité sociale français et de superviser la branche « recouvrement » avec notamment le réseau des URSSAF.
+short: L’Urssaf Caisse Nationale est l'organisme chargé de gérer la trésorerie de chacune des branches du système de Sécurité sociale français et de superviser la branche « recouvrement » avec notamment le réseau des URSSAF.
 description: |
-  L’ACOSS est la caisse nationale des URSSAF. Les URSSAF sont les Unions de Recouvrement des cotisations de Sécurité Sociale et d’Allocations Familiales. Ce sont des organismes privés chargés d'une mission de service public, relevant de la branche « recouvrement » du régime général de la sécurité sociale.
+  L’Urssaf Caisse Nationale est la caisse nationale des URSSAF. Les URSSAF sont les Unions de Recouvrement des cotisations de Sécurité Sociale et d’Allocations Familiales. Ce sont des organismes privés chargés d'une mission de service public, relevant de la branche « recouvrement » du régime général de la sécurité sociale.
 
   La mission confiées aux URSSAF est de permettre à chacun de bénéficier d’une protection sociale, en cotisant selon ses moyens et en recevant selon ses besoins.
 
@@ -24,4 +24,6 @@ data: |
   | Effectifs des salariés   | Les effectifs des entreprises du secteur privé                                                   |
 contact: https://open.urssaf.fr/pages/contact/
 annuaire: https://lannuaire.service-public.fr/gouvernement/etablissement-public_165739
+siteOpenData: https://open.urssaf.fr/pages/home/
+siteAPI: https://portailapi.urssaf.fr/fr/
 ---
