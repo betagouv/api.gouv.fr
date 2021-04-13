@@ -166,6 +166,7 @@
       path: /les-api/api-trackdechets
     - type: ADD_API
       what: Service National par le ministère des Armées
+      path: /les-api/api-service-national
     - type: ADD_API
       what: Professionnels BIO par l'agence BIO
     - type: ADD_API
