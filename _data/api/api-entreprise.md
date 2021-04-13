@@ -65,8 +65,7 @@ partners:
   - OPQIBI
   - ProBTP
   - Qualibat
-  - urssaf-caisse-nationale
-
+  - urssaf
 producer: dinum
 keywords:
   - Établissement
@@ -155,7 +154,7 @@ keywords:
   - Rénovation énergétique
 rate_limiting_resume: 2000 appels / 10 minutes / IP
 rate_limiting_description: |
-Pour en savoir plus sur les conditions de volumétrie, veuillez consulter la documentation API Entreprise : https://entreprise.api.gouv.fr/doc/#respecter-la-volumétrie
+    Pour en savoir plus sur les conditions de volumétrie, veuillez consulter la documentation API Entreprise : https://entreprise.api.gouv.fr/doc/#respecter-la-volumétrie
 monitoring_link: https://dashboard.entreprise.api.gouv.fr
 contact_link: support@entreprise.api.gouv.fr
 doc_tech_link: /api/v1/proxy/https%3A%2F%2Fentreprise.api.gouv.fr%2Fv2%2Fopen-api.yml
@@ -181,7 +180,6 @@ content_intro: |
   - <External href='https://entreprise.api.gouv.fr/use_cases/preremplissage/'>préremplir des formulaires</External> et de les personnaliser ;
   - simplifier la détection de la <External href='https://entreprise.api.gouv.fr/use_cases/detection_fraude/'>fraude fiscale et sociale des entreprises</External>.
   - vérifier l'éligibilité des demandes des TPE et associations à l'aide complémentaire dans le cadre de la <External href='https://entreprise.api.gouv.fr/use_cases/covid_19/'>crise sanitaire du Covid-19</External>.
-
 ---
 
 ### Données accessibles dans l'API
