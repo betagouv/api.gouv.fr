@@ -47,7 +47,7 @@ stat:
   url: https://dashboard.entreprise.api.gouv.fr/api/watchdoge/stats/last_30_days_usage
   label: informations non redemandées aux entreprises
 partners:
-  - urssaf-caisse-nationale
+  - urssaf
   - DGFiP
   - CNETP
   - INSEE
@@ -119,15 +119,15 @@ Les données financières :
 
 Les attestations sociales et fiscales :
 
-| Donnée                                                         | Administration          |
-| -------------------------------------------------------------- | ----------------------- |
-| L'attestation fiscale                                          | DGFiP                   |
-| L'attestation de vigilance                                     | Urssaf Caisse Nationale |
-| L'attestation de conformité emploi des travailleurs handicapés | AGEFIPH                 |
-| Les cotisations de sécurité sociale agricole                   | MSA                     |
-| Les cotisations retraite bâtiment                              | PRO BTP                 |
-| La carte professionnelle travaux publics                       | FNTP                    |
-| Les cotisations congés payés & chômage intempéries             | CNETP                   |
+| Donnée                                                         | Administration |
+| -------------------------------------------------------------- | -------------- |
+| L'attestation fiscale                                          | DGFiP          |
+| L'attestation de vigilance                                     | Urssaf         |
+| L'attestation de conformité emploi des travailleurs handicapés | AGEFIPH        |
+| Les cotisations de sécurité sociale agricole                   | MSA            |
+| Les cotisations retraite bâtiment                              | PRO BTP        |
+| La carte professionnelle travaux publics                       | FNTP           |
+| Les cotisations congés payés & chômage intempéries             | CNETP          |
 
 Les certifications professionnelles :
 

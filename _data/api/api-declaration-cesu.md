@@ -2,7 +2,7 @@
 title: API Tierce Déclaration Cesu
 tagline: Connectez-vous directement à l’Urssaf pour accéder aux services du Cesu pour le compte d’un particulier employeur en tant que tiers-déclarant
 external_site: https://open.urssaf.fr/explore/?sort=modified
-producer: urssaf-caisse-nationale
+producer: urssaf
 is_open: -1 # 1 means API is fully open
 access_page:
   - who:

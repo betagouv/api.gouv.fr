@@ -25,7 +25,7 @@ module.exports = withFonts({
       },
       {
         source: '/producteurs/acoss',
-        destination: '/producteurs/urssaf-caisse-nationale',
+        destination: '/producteurs/urssaf',
         permanent: true,
       },
     ];
