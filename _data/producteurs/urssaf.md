@@ -1,5 +1,5 @@
 ---
-name: Urssafs
+name: Urssaf
 nameWithPronoun: l’Urssaf
 logo: urssaf.jpg
 type: Etablissement public
