@@ -217,7 +217,7 @@ Les attestations sociales et fiscales :
 | Donnée                                                         | Administration          |
 | -------------------------------------------------------------- | ----------------------- |
 | L'attestation fiscale                                          | DGFiP                   |
-| L'attestation de vigilance                                     | ACOSS                   |
+| L'attestation de vigilance                                     | URSSAF                   |
 | Conformité emploi des travailleurs handicapés                  | AGEFIPH                 |
 | Conformité contisations de sécurité sociale agricole           | MSA                     |
 | Conformité cotisations retraite bâtiment et attestation        | PRO BTP                 |

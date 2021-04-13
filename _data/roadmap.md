@@ -166,6 +166,7 @@
       path: /les-api/api-trackdechets
     - type: ADD_API
       what: Service National par le ministère des Armées
+      path: /les-api/api-service-national
     - type: ADD_API
       what: Professionnels BIO par l'agence BIO
     - type: ADD_API
@@ -194,9 +195,9 @@
       what: AgentConnect par la DINUM
   7:
     - type: ADD_API
-      what: Attestation Codes Sécurité par l'Urssaf Caisse Nationale
+      what: Attestation Codes Sécurité par l'Urssaf
     - type: ADD_API
-      what: Déclaration préalable à l'embauche par l'Urssaf Caisse Nationale
+      what: Déclaration préalable à l'embauche par l'Urssaf
   9:
     - type: ADD_API
       what: Indemnités Journalières distribuée par la CNAM
