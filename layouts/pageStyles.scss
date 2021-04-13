@@ -213,9 +213,7 @@ a:not(.dont-apply-link-style):hover {
     border-collapse: collapse;
     text-align: left;
     color: #081d35;
-    table-layout: auto;
     width: 100%;
-    table-layout: fixed;
 
     tr td,
     th {
@@ -224,8 +222,6 @@ a:not(.dont-apply-link-style):hover {
       border-left: 1px solid $greyBlue;
       border-bottom: 1px solid $greyBlue;
       padding: 5px 8px;
-      word-wrap: break-word; /* IE 5.5-7 */
-      white-space: pre-wrap;
     }
 
     thead {
