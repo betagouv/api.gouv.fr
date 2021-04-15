@@ -5,7 +5,7 @@ external_site: https://labonnealternance.pole-emploi.fr/
 producer: dinum
 is_open: 1 # -1 means API not open
 partners:
-  - Pôle-Emploi
+  - Pôle emploi
 keywords:
   - apprentissage
   - widget

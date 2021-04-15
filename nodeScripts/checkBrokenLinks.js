@@ -6,15 +6,6 @@ const start = new Date();
 
 const IGNORE = [
   'https://www.eaufrance.fr/', // block robots site
-  'https://www.linkedin.com/in/romain-tales-5969737', // block robots site
-  'https://www.linkedin.com/in/stanislas-bernard-3b14b586/', // block robots site
-  'https://www.linkedin.com/in/vmazalaigue/', // block robots site
-  'https://www.linkedin.com/in/rapha%C3%ABl-dubigny-a085034a/', // block robots site
-  'https://www.linkedin.com/in/maellegranon/', // block robots site
-  'https://www.linkedin.com/in/xavier-jouppe-a9030579/', // block robots site
-  'https://www.linkedin.com/in/patrick-amarelis-8853205/', // block robots site
-  'https://www.linkedin.com/in/amandineaudras/', // block robots site
-  'https://www.linkedin.com/in/christophegaie/', // block robots site
   'http://chorus-pro.gouv.fr/qualif/', // shitty site
   'http://chorus-pro.gouv.fr/cpp/', // shitty site
   'https://www.inpi.fr/fr/contactez-nous', // weird site
@@ -31,7 +22,7 @@ const IGNORE = [
   'https://geo.pays-de-brest.fr/donnees/Documents/Public/DocWebServicesTransport.pdf',
   'https://geo.pays-de-brest.fr/zapp/Pages/Demande-compte.aspx',
   'https://www.ademe.fr/content/contacter', // weird
-  'https://www.insee.fr/fr/statistiques/3530678'
+  'https://www.insee.fr/fr/statistiques/3530678',
 ];
 
 const urlChecker = new blc.SiteChecker(
@@ -41,7 +32,7 @@ const urlChecker = new blc.SiteChecker(
       'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
   },
   {
-    link: function(result) {
+    link: function (result) {
       totalLinks++;
 
       /* need to use `process.stdout.write` because console.log print a newline character */
@@ -54,6 +45,11 @@ const urlChecker = new blc.SiteChecker(
 
       // legifrance too slow
       if (result.url.original.indexOf('www.legifrance.gouv.fr') > -1) {
+        return;
+      }
+
+      // linkedin pain in the ***
+      if (result.url.original.indexOf('www.linkedin.com') > -1) {
         return;
       }
 
@@ -75,7 +71,7 @@ const urlChecker = new blc.SiteChecker(
         console.log(warning);
       }
     },
-    end: function() {
+    end: function () {
       const end = new Date() - start;
 
       console.info('=== Broken links checker ===');

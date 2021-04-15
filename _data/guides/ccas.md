@@ -1,5 +1,5 @@
 ---
-title: Dématérialiser l'instruction des dossiers dans un CCAS
+title: Simplifier l'instruction des dossiers dans un CCAS
 tagline: Vous êtes un CCAS ou un éditeur de logiciel ? Accédez facilement aux données de la CAF et de la DGFIP grâce à l'API Particulier et notre  accompagnement pas à pas.
 tags: cas usage, api particulier, CCAS
 image: dossier.jpg
@@ -7,11 +7,10 @@ api:
   - API Particulier
 ---
 
-Les Centres Communaux d'Action Social sont amenés à instruire de nombreux dossiers d'obtention des aides sociales légales.
+Les Centres Communaux d'Action Sociale sont amenés à instruire de nombreux dossiers d'obtention d'aide sociale : aide sociale légale, aide alimentaire, chèque énergie, aide au bus, etc..
 
-Ces dossiers utilisent généralement l'adresse, le quotient familial de la Caisse d’Allocations Familiales (CAF), la composition du foyer, l'avis d'imposition.
-
-Avec la brique API Particulier vous avez la possibilité de diminuer les erreurs et les fraudes et faciliter le traitement des dossiers par vos équipes en **accèdant facilement aux données** nécessaires au calcul.
+Ces dossiers utilisent généralement les données d’état-civil, l'adresse, le quotient familial de la Caisse d’Allocations Familiales (CAF), la composition du foyer, l'avis d'imposition.
+Avec la brique API Particulier vous avez la possibilité de diminuer les erreurs, réduire le risque de fraude et faciliter le traitement des dossiers par vos équipes en **accédant facilement aux données** nécessaires au calcul. 
 
 En intégrant la brique API Particulier dans votre système d'information, ou votre site internet :
 

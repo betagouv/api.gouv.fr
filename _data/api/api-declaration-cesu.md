@@ -2,7 +2,7 @@
 title: API Tierce Déclaration Cesu
 tagline: Connectez-vous directement à l’Urssaf pour accéder aux services du Cesu pour le compte d’un particulier employeur en tant que tiers-déclarant
 external_site: https://open.urssaf.fr/explore/?sort=modified
-producer: acoss
+producer: urssaf
 is_open: -1 # 1 means API is fully open
 access_page:
   - who:
@@ -61,15 +61,16 @@ Du point de vue de l'usager, l'API Tierce Déclaration Cesu permet au tiers déc
 
 Liste des fonctionnalités à titre d’exemple (liste non exhaustive) :
 
-| Donnée     | Lien vers le jeu de données                                                                                                                  |
-| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| Employeurs | Inscrire un particulier au dispositif Cesu en tant qu’employeur ou de vérifier l’état de l’inscription d’un particulier employeur.           |
-| Salariés   | Vérifier si un particulier existe en tant que salarié auprès du Cesu.                                                                        |
+| Donnée     | Lien vers le jeu de données                                                                                                                     |
+| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| Employeurs | Inscrire un particulier au dispositif Cesu en tant qu’employeur ou de vérifier l’état de l’inscription d’un particulier employeur.              |
+| Salariés   | Vérifier si un particulier existe en tant que salarié auprès du Cesu.                                                                           |
 | Mandats    | Notifier l'Urssaf de l'enregistrement ou l’annulation d'un mandat de tierce déclaration obtenu par la plateforme pour un particulier employeur. |
-| Estimer    | Simuler le montant de cotisations sociales pour une activité Cesu.                                                                           |
-| Declarer   | Déclarer une activité auprès du Cesu pour le compte d’un particulier employeur.                                                              |
+| Estimer    | Simuler le montant de cotisations sociales pour une activité Cesu.                                                                              |
+| Declarer   | Déclarer une activité auprès du Cesu pour le compte d’un particulier employeur.                                                                 |
 
 ### En savoir plus
+
 <!--
 #### Qu'est ce qu'un particulier employeur ?
 

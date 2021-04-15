@@ -6,8 +6,7 @@ api:
   - API Particulier
 related_guides:
   - portail-famille-petite-enfance
-  - portail-famille-tarif-activite-periscolaire
-  - portail-famille-tarif-restauration-scolaire
+  - portail-famille-tarification
 image: famille.jpg
 ---
 

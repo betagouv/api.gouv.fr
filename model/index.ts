@@ -48,10 +48,18 @@ export interface IGuideElement extends IGuideElementShort {
 
 export interface IProducerElement {
   name: string;
+  nameWithPronoun?: string;
   acronym: string;
   logo: string;
   slug: string;
   type?: string;
+  short?: string;
+  description?: string;
+  data: string;
+  siteAPI?: string;
+  siteOpenData?: string;
+  annuaire?: string;
+  contact?: string;
 }
 
 export interface IService {
@@ -121,7 +129,7 @@ export interface IApi extends IApiShort {
   monitoring_description: string;
   rate_limiting_description: string;
   rate_limiting_resume: string;
-  partners: string[];
+  partners: { slug?: string; name: string }[];
   themes: string[];
   keywords: string[];
   datagouv_uuid?: string[];

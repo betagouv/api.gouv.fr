@@ -214,17 +214,6 @@ class MyDocument extends Document {
               ></script>
             </>
           )}
-          <script
-            src="https://betagouv.github.io/glossaire/dist/main.js"
-            async
-            defer
-          />
-          <div
-            id="glossaire-betalab-params"
-            style={{ display: 'none' }}
-            data-exclude-sigles="API,PRO,BTP,LEP,FI,SPI"
-            data-dynamic-repaint="true"
-          />
         </body>
       </Html>
     );
