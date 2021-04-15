@@ -41,7 +41,7 @@ partners:
   - DGFiP
   - CNAF
   - Pôle emploi
-  - Ministère de l'enseignement supérieur, de la recherche et de l'innovation (MESRI)
+  - mesri
 producer: dinum
 keywords:
   - Impots
