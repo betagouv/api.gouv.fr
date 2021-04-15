@@ -18,5 +18,4 @@ data: |
 contact: mailto:dataesr@recherche.gouv.fr
 annuaire: https://lannuaire.service-public.fr/gouvernement/administration-centrale-ou-ministere_583066
 siteOpenData: https://data.enseignementsup-recherche.gouv.fr/pages/home/
-siteAPI: https://data.enseignementsup-recherche.gouv.fr/api/v2/console
 ---
