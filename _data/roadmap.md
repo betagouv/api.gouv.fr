@@ -168,11 +168,12 @@
       what: Service National par le ministère des Armées
       path: /les-api/api-service-national
     - type: ADD_API
+      what: Infos Financières par la DILA
+      path: /les-api/api-info-financiere
+    - type: ADD_API
       what: Professionnels BIO par l'agence BIO
     - type: ADD_API
       what: Pro Santé Connect par l'ANS
-    - type: ADD_API
-      what: Infos Financières par la DILA
     - type: ADD_API
       what: CVEC par le CNOUS
   5:
