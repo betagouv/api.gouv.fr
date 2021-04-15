@@ -119,7 +119,7 @@ const ProducerPage: React.FC<IProps> = ({
               )}
               {producer.description && (
                 <>
-                  <h2>Quelle est la mission de {producerWithPronounSafe} ?</h2>
+                  <h2>Quelle est sa mission de service public ?</h2>
                   <Markdown>{producer.description}</Markdown>
                 </>
               )}
@@ -151,9 +151,8 @@ const ProducerPage: React.FC<IProps> = ({
                         <Emoji emoji="📖" label="annuaire" />
                         Consulter{' '}
                         <a href={producer.annuaire}>
-                          la page de {producerWithPronounSafe}
-                        </a>{' '}
-                        sur l'annuaire de l’administration.
+                          sa page sur l'annuaire de l’administration.
+                        </a>
                       </div>
                       <br />
                     </>
@@ -174,9 +173,9 @@ const ProducerPage: React.FC<IProps> = ({
                     <>
                       <div>
                         <Emoji emoji="🧑‍💻" label="ordinateur" />
-                        Consulter le{' '}
+                        Consulter son{' '}
                         <a href={producer.siteOpenData}>
-                          portail open-data de {producerWithPronounSafe}
+                          portail open-data
                         </a>{' '}
                       </div>
                       <br />
@@ -186,9 +185,8 @@ const ProducerPage: React.FC<IProps> = ({
                     <>
                       <div>
                         <Emoji emoji="⚙️" label="rouage" />
-                        Consulter le{' '}
-                        <a href={producer.siteAPI}>
-                          portail API de {producerWithPronounSafe}
+                        Consulter son <a href={producer.siteAPI}>
+                          portail API
                         </a>{' '}
                       </div>
                     </>
@@ -201,9 +199,7 @@ const ProducerPage: React.FC<IProps> = ({
       )}
       <div id="api-list">
         <div className="content-container text-style">
-          <h2>
-            Quelle(s) sont les API publique(s) de {producerWithPronounSafe} ?
-          </h2>
+          <h2>Quelle(s) sont ses API publique(s) ?</h2>
           {apis && apis.length > 0 && (
             <>
               <p>
