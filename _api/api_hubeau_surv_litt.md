@@ -67,17 +67,6 @@ Service pérenne de la toile [Eau France](https://www.eaufrance.fr), [Hub'Eau](h
 Fondé sur une infrastructure et des méthodes adaptées au traitement et au stockage de données massives, les APIs Hub'Eau garantissent les meilleures performances de disponibilité (20 téra-octets de données fournies en 455 millions d'appels pour l'année 2020).
 Hub’Eau est le résultat de la collaboration de l’OFB et du BRGM dans le cadre du pôle de recherche et d'innovation en interopérabilité des systèmes d'information distribués sur l'eau : [INSIDE](http://www.pole-inside.fr/fr).
 
-Les autres API disponibles à ce jour dans Hub'Eau sont :
-
-- [Etat piscicole](/api/api_hubeau_poissons.html) ;
-- [Indicateurs Eau potable et Assainissement](/api/api_hubeau_indic_EP_Asst.html) ;
-- [Piézométrie](/api/api_hubeau_piezometrie.html) ;
-- [Qualité physico-chimique des cours d'eau](/api/api_hubeau_qualite_rivieres.html) ;
-- [Qualité des nappes d'eau souterraine](/api/api_hubeau_qualite_nappes_eau_sout.html) ;
-- [Température des cours d'eau](/api/api_hubeau_temperature_rivieres.html) ;
-- [Hydrométrie](/api/api_hubeau_hydrometrie.html) ;
-- [Prélèvements en eau (beta)](/api/api_hubeau_prelevements.html).
-
 #### Un service en co-construction
 
 Pour des APIs toujours plus en phase avec les besoins utilisateurs, Hub'Eau a inauguré en 2018 une politique de bêta testing en organisant une campagne de tests ouverte avant la mise la mise en production de chaque nouvelle API.
