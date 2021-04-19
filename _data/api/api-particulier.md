@@ -38,7 +38,7 @@ stat:
   url: https://monitoring.particulier.api.gouv.fr/api/stats/
   label: justificatifs papier évités
 partners:
-  - DGFiP
+  - dgfip
   - CNAF
   - Pôle emploi
   - mesri

@@ -53,7 +53,7 @@ partners:
   - Banque de france
   - CMA France
   - CNETP
-  - DGFiP
+  - dgfip
   - Douanes
   - Fabrique numérique des ministères sociaux
   - FNTP
@@ -154,7 +154,7 @@ keywords:
   - Rénovation énergétique
 rate_limiting_resume: 2000 appels / 10 minutes / IP
 rate_limiting_description: |
-    Pour en savoir plus sur les conditions de volumétrie, veuillez consulter la documentation API Entreprise : https://entreprise.api.gouv.fr/doc/#respecter-la-volumétrie
+  Pour en savoir plus sur les conditions de volumétrie, veuillez consulter la documentation API Entreprise : https://entreprise.api.gouv.fr/doc/#respecter-la-volumétrie
 monitoring_link: https://dashboard.entreprise.api.gouv.fr
 contact_link: support@entreprise.api.gouv.fr
 doc_tech_link: /api/v1/proxy/https%3A%2F%2Fentreprise.api.gouv.fr%2Fv2%2Fopen-api.yml
@@ -176,7 +176,7 @@ content_intro: |
   L’API permet - entre autre - de :
 
   - faciliter la candidature aux <External href='https://entreprise.api.gouv.fr/use_cases/marches_publics/'>marchés publics</External> et leur instruction ;
-  - faciliter le dépôt et l'instruction des <External href='https://entreprise.api.gouv.fr/use_cases/aides_publiques/'>aides et subventions publiques</External> ; 
+  - faciliter le dépôt et l'instruction des <External href='https://entreprise.api.gouv.fr/use_cases/aides_publiques/'>aides et subventions publiques</External> ;
   - <External href='https://entreprise.api.gouv.fr/use_cases/preremplissage/'>préremplir des formulaires</External> et de les personnaliser ;
   - simplifier la détection de la <External href='https://entreprise.api.gouv.fr/use_cases/detection_fraude/'>fraude fiscale et sociale des entreprises</External>.
   - vérifier l'éligibilité des demandes des TPE et associations à l'aide complémentaire dans le cadre de la <External href='https://entreprise.api.gouv.fr/use_cases/covid_19/'>crise sanitaire du Covid-19</External>.
@@ -186,22 +186,20 @@ content_intro: |
 
 L'API Entreprise permet d'accéder simplement, avec une seule clé d'accès sécurisée, à de nombreuses données issues d'administrations différentes. L'interfaçage se fait uniquement avec le hub API Entreprise, dans des standards à jour des contraintes industrielles. API Entreprise agrège et vous restitue les connaissances techniques et métiers de chacune de ces données.
 
-
 Les données générales :
 
-| Donnée                                                                                | Administration                            | 
-| ------------------------------------------------------------------------------------- | ----------------------------------------- |
-| Les données de référence d'une entité                                                 | INSEE                                     |
-| Les données de référence d'un établissement                                           | INSEE                                     |
-| Un extrait des données du Registre du Commerce et des Sociétés (RCS)                  | INFOGREFFE                                |
-| Les informations déclaratives d'une association                                       | Ministère intérieur                       |
-| Divers documents d'une associaiton                                                    | Ministère intérieur                       |
-| Les actes et statuts des personnes morales et physiques                               | INPI                                      |
-| Les conventions collectives                                                           | Fabrique Numérique des Ministères Sociaux |
-| Les données de référence d'une entreprise artisanale                                  | CMA France                                |
-| Les effectifs d'une entreprise                                                        | ACOSS                                     |
-| L'immatriculation EORI                                                                | Douanes                                   |
-
+| Donnée                                                               | Administration                            |
+| -------------------------------------------------------------------- | ----------------------------------------- |
+| Les données de référence d'une entité                                | INSEE                                     |
+| Les données de référence d'un établissement                          | INSEE                                     |
+| Un extrait des données du Registre du Commerce et des Sociétés (RCS) | INFOGREFFE                                |
+| Les informations déclaratives d'une association                      | Ministère intérieur                       |
+| Divers documents d'une associaiton                                   | Ministère intérieur                       |
+| Les actes et statuts des personnes morales et physiques              | INPI                                      |
+| Les conventions collectives                                          | Fabrique Numérique des Ministères Sociaux |
+| Les données de référence d'une entreprise artisanale                 | CMA France                                |
+| Les effectifs d'une entreprise                                       | ACOSS                                     |
+| L'immatriculation EORI                                               | Douanes                                   |
 
 Les données financières :
 
@@ -214,26 +212,24 @@ Les données financières :
 
 Les attestations sociales et fiscales :
 
-| Donnée                                                         | Administration          |
-| -------------------------------------------------------------- | ----------------------- |
-| L'attestation fiscale                                          | DGFiP                   |
-| L'attestation de vigilance                                     | URSSAF                   |
-| Conformité emploi des travailleurs handicapés                  | AGEFIPH                 |
-| Conformité contisations de sécurité sociale agricole           | MSA                     |
-| Conformité cotisations retraite bâtiment et attestation        | PRO BTP                 |
-| Carte professionnelle travaux publics                          | FNTP                    |
-| L'attestation de cotisations congés payés & chômage intempéries| CNETP                   |
+| Donnée                                                          | Administration |
+| --------------------------------------------------------------- | -------------- |
+| L'attestation fiscale                                           | DGFiP          |
+| L'attestation de vigilance                                      | URSSAF         |
+| Conformité emploi des travailleurs handicapés                   | AGEFIPH        |
+| Conformité contisations de sécurité sociale agricole            | MSA            |
+| Conformité cotisations retraite bâtiment et attestation         | PRO BTP        |
+| Carte professionnelle travaux publics                           | FNTP           |
+| L'attestation de cotisations congés payés & chômage intempéries | CNETP          |
 
 Les certifications professionnelles :
 
-| Donnée                                                   | Administration |
-| -------------------------------------------------------- | -------------- |
-| Certifications biologiques en cours                      | Agence BIO     |
-| Le certificat RGE (Reconnu garant de l'environnement)    | ADEME          |
-| Le certificat de qualification bâtiment Qualibat         | QUALIBAT       |
-| Le certificat de qualification d'ingénierie OPQIBI       | OPQIBI         |
-
-
+| Donnée                                                | Administration |
+| ----------------------------------------------------- | -------------- |
+| Certifications biologiques en cours                   | Agence BIO     |
+| Le certificat RGE (Reconnu garant de l'environnement) | ADEME          |
+| Le certificat de qualification bâtiment Qualibat      | QUALIBAT       |
+| Le certificat de qualification d'ingénierie OPQIBI    | OPQIBI         |
 
 La propriété intellectuelle :
 
