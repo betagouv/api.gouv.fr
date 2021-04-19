@@ -18,6 +18,7 @@ themes:
   - Environnement
 contact_link: https://www.ademe.fr/content/contacter
 doc_tech_link: https://koumoul.com/s/data-fair/api/v1/datasets/agribalyse-synthese/api-docs.json
+doc_tech_external: https://data.ademe.fr/datasets/agribalyse-synthese
 datagouv_uuid:
   - 5f71f6b9f23df7fcd508af57
 last_update: 27/07/2020

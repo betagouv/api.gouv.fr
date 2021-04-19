@@ -18,6 +18,7 @@ themes:
   - Environnement
 contact_link: https://www.ademe.fr/content/contacter
 doc_tech_link: https://koumoul.com/s/data-fair/api/v1/datasets/dpe-tertiaire/api-docs.json
+doc_tech_external: https://data.ademe.fr/datasets/dpe-tertiaire
 datagouv_uuid:
   - 6061abe367b3cc046a5a7e13
 last_update: 27/07/2020

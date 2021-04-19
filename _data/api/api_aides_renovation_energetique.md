@@ -19,6 +19,7 @@ themes:
   - Environnement
 contact_link: https://www.ademe.fr/content/contacter
 doc_tech_link: https://koumoul.com/s/data-fair/api/v1/datasets/simul'aideuros-dispositifs/api-docs.json
+doc_tech_external: https://data.ademe.fr/datasets/simul'aideuros-dispositifs
 datagouv_uuid:
   - 5fcf368c7b470cf97746c4c1
 last_update: 27/07/2020
