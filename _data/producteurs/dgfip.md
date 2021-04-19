@@ -1,9 +1,10 @@
 ---
 name: Direction Générale des Finances Publiques
+nameWithPronoun: la DGFiP
 acronym: DGFiP
 logo: logo-dgfip.jpg
 type: Ministère
-short: La DGFiP  est le résultat de la fusion entre la DGI et la DGCP. Elle gère la gestion des finances publiques Française.
+short: La Direction Générale des Finances Publiques (DGFiP)  est le résultat de la fusion entre la DGI et la DGCP. Elle gère la gestion des finances publiques Française.
 description: |
   Créée en 2008, la DGFiP a reçu de l'Etat une double mission :
 
