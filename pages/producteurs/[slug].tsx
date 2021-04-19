@@ -199,7 +199,7 @@ const ProducerPage: React.FC<IProps> = ({
       )}
       <div id="api-list">
         <div className="content-container text-style">
-          <h2>Quelle(s) sont ses API publique(s) ?</h2>
+          <h2>Quelle(s) sont ses API référencées au catalogue ?</h2>
           {apis && apis.length > 0 && (
             <>
               <p>
