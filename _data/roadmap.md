@@ -171,6 +171,9 @@
       what: Infos Financières par la DILA
       path: /les-api/api-info-financiere
     - type: ADD_API
+      what: Hub’Eau - Surveillance du littoral
+      path: /les-api/api_hubeau_surv_litt
+    - type: ADD_API
       what: Professionnels BIO par l'agence BIO
     - type: ADD_API
       what: Pro Santé Connect par l'ANS
