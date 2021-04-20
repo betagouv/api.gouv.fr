@@ -1,9 +1,9 @@
 ---
 title: Hub'Eau - Surveillance du littoral
 tagline: Surveillance du littoral
-contract: OUVERT
+is_open: 1
 external_site: https://hubeau.eaufrance.fr/page/api-surveillance-littoral
-logo: Contaminants chimiques marins_transp.png
+producer: eau-france
 clients:
   - particuliers
   - entreprises
@@ -14,8 +14,6 @@ partners:
   - OFB
   - BRGM
   - IFREMER
-owner: Office français de la biodiversité & Bureau de Recherches Géologiques et Minières
-owner_acronym: OFB & BRGM
 keywords:
   - Milieu marin
   - Littoral
@@ -27,14 +25,8 @@ keywords:
   - Masse d'eau littorale
 themes: 
   - Environnement
-score:
-  detail:
-    access:
-      is_open: true
-    contact:
-      link: newshubeau@brgm.fr
-    doc_tech:
-      link: https://hubeau.eaufrance.fr/api/vbeta/surveillance_littoral/api-docs
+contact_link: newshubeau@brgm.fr
+doc_tech_link: https://hubeau.eaufrance.fr/api/vbeta/surveillance_littoral/api-docs
 last_update: 16/04/2021
 ---
 
