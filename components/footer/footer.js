@@ -30,7 +30,7 @@ const Footer = () => {
               >
                 <img
                   src="/images/social/linkedin.svg"
-                  alt="Twitter"
+                  alt="Linkedin"
                   className="icon icon-linkedin"
                 />
               </a>
