@@ -34,7 +34,7 @@ const Grid: React.FC<PropsWithChildren<{}>> = props => (
 
 const NextSteps = ({
   is_editeur = false,
-  service_description = `de la description du service justifiant une simplication pour les citoyens`,
+  service_description = `de la description du service justifiant une simplification pour les citoyens`,
 }) => (
   <>
     <p>
