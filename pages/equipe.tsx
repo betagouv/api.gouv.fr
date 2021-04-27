@@ -11,6 +11,12 @@ const teamData = [
     img: 'Romain.jpg',
   },
   {
+    name: 'Vincent Mazalaigue',
+    title: 'Chargé de mission DLNUF',
+    linkedin: 'https://www.linkedin.com/in/vmazalaigue/',
+    img: 'Vincent.jpg',
+  },
+  {
     name: 'Etienne Pichot Damon',
     title: 'Relations avec les administrations',
     linkedin: 'https://www.linkedin.com/in/etiennepichotdamon/',
@@ -74,7 +80,7 @@ const teamData = [
   {
     name: 'Dorine Lambinet',
     title: 'Designeuse produit',
-    linkedin: 'https://www.linkedin.com/in/cyrilllllll',
+    linkedin: 'https://www.linkedin.com/in/dorine-lambinet-99534b117/',
     img: 'Dorine.jpg',
   },
 ];
