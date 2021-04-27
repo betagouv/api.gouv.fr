@@ -47,12 +47,6 @@ const teamData = [
     img: 'Raph.jpg',
   },
   {
-    name: 'Christophe Gaie',
-    title: 'Plate-forme d’échange inter-administrations',
-    linkedin: 'https://www.linkedin.com/in/christophegaie/',
-    img: 'Christophe.jpg',
-  },
-  {
     name: 'Loïc Delmaire',
     title: 'API Entreprise',
     linkedin:
