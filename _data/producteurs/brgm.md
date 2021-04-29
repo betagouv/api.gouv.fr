@@ -1,9 +1,9 @@
 ---
-name: Eau de France
-nameWithPronoun: Eau de France
-logo: eau-france.png
+name: Bureau de recherches géologiques et minières
+acronym: BRGM
+nameWithPronoun: le BRGM
+logo: brgm.png
 type: Etablissement public
-site: https://eaufrance.fr
 short: Foobar.
 description: |
   foobar

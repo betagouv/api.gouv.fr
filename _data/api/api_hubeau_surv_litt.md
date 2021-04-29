@@ -3,7 +3,7 @@ title: Hub'Eau - Surveillance du littoral
 tagline: Surveillance du littoral
 is_open: 1
 external_site: https://hubeau.eaufrance.fr/page/api-surveillance-littoral
-producer: eau-france
+producer: hub-eau
 clients:
   - particuliers
   - entreprises
@@ -11,9 +11,10 @@ clients:
   - collectivités
   - ministères
 partners:
-  - OFB
-  - BRGM
-  - IFREMER
+  - eau-france
+  - ofb
+  - brgm
+  - ifremer
 keywords:
   - Milieu marin
   - Littoral
@@ -23,7 +24,7 @@ keywords:
   - Quadrige
   - Ifremer
   - Masse d'eau littorale
-themes: 
+themes:
   - Environnement
 contact_link: newshubeau@brgm.fr
 doc_tech_link: https://hubeau.eaufrance.fr/api/vbeta/surveillance_littoral/api-docs
@@ -32,18 +33,18 @@ last_update: 16/04/2021
 
 ### Description fonctionnelle de l'API Surveillance du littoral
 
-[L'API "Surveillance du Littoral"](https://hubeau.eaufrance.fr/page/api-surveillance-littoral) diffuse les données de surveillance du littoral gérées et valorisées par [l'Institut français de recherche pour l'exploitation de la mer (IFREMER)](https://wwz.ifremer.fr) à travers le [système d'information QUADRIGE](http://quadrige.eaufrance.fr).  
+[L'API "Surveillance du Littoral"](https://hubeau.eaufrance.fr/page/api-surveillance-littoral) diffuse les données de surveillance du littoral gérées et valorisées par [l'Institut français de recherche pour l'exploitation de la mer (IFREMER)](https://wwz.ifremer.fr) à travers le [système d'information QUADRIGE](http://quadrige.eaufrance.fr).
 
-QUADRIGE regroupe de nombreuses thématiques : Phytoplancton et hydrologie, suivi environnemental de centrale nucléaire, Microbiologie, Benthos, ...). Chacune de ces thématiques fera l'objet d'un endpoint (opération) de l'API Surveillance du Littoral. A titre de test, c'est la thématique **Contaminants chimiques et écotoxicologie** qui a été choisie pour initier la diffusion des données de QUADRIGE via Hub'Eau.  
+QUADRIGE regroupe de nombreuses thématiques : Phytoplancton et hydrologie, suivi environnemental de centrale nucléaire, Microbiologie, Benthos, ...). Chacune de ces thématiques fera l'objet d'un endpoint (opération) de l'API Surveillance du Littoral. A titre de test, c'est la thématique **Contaminants chimiques et écotoxicologie** qui a été choisie pour initier la diffusion des données de QUADRIGE via Hub'Eau.
 
 **L'API est actuellement en version beta.** Une des limitations principales de cette version beta est l'absence des données permettant l'interprétation des analyses des contaminants chimiques (Aluminium, CaCO3, Carbone organique, ...). Pendant cette période de test, nous vous invitons à faire remonter toute demande de correction ou tout besoin non satisfait sur le [forum de contribution Github](http://github.com/BRGM/hubeau/issues).
-  
-2 opérations sont actuellement disponibles :  
+
+2 opérations sont actuellement disponibles :
 
 - **lieux_surv** : permet de récupérer tous les lieux de surveillance (sites) du littoral.
 - **contaminants_chimiques** : permet de récupérer les analyses de la thématique Contaminants chimiques et écotoxicologie.
 
-NB : Les analyses des différentes thématiques de QUADRIGE seront progressivement disponibles et feront l'objet de nouveaux endpoints. A noter que le endpoint lieux_surv fournit l'ensemble des lieux de surveillance, y compris ceux n'ayant pas de mesures sur la thématique Contaminants chimiques et écotoxicologie, pour être complet quand les autres thématiques seront disponibles. Pour interroger seulement les lieux de surveillance avec des données de contaminants chimiques, ajoutez le paramètre donnees_cc=true à votre requête. 
+NB : Les analyses des différentes thématiques de QUADRIGE seront progressivement disponibles et feront l'objet de nouveaux endpoints. A noter que le endpoint lieux_surv fournit l'ensemble des lieux de surveillance, y compris ceux n'ayant pas de mesures sur la thématique Contaminants chimiques et écotoxicologie, pour être complet quand les autres thématiques seront disponibles. Pour interroger seulement les lieux de surveillance avec des données de contaminants chimiques, ajoutez le paramètre donnees_cc=true à votre requête.
 
 Les données sont exposées sous la forme d'une API REST, les formats supportés sont : JSON, GeoJSON et CSV.
 
@@ -69,4 +70,3 @@ Faites-nous part de vos observations sur la [page de contribution GitHub](https:
 ### Exemples de réutilisation
 
 - [Soumettez le votre sur la page GitHub des utilisateurs de Hub'Eau](https://github.com/BRGM/hubeau)
-

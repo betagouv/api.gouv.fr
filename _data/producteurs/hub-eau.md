@@ -1,9 +1,8 @@
 ---
-name: Eau de France
-nameWithPronoun: Eau de France
-logo: eau-france.png
+name: Hub’eau
+nameWithPronoun: Hub’eau
+logo: hub-eau.png
 type: Etablissement public
-site: https://eaufrance.fr
 short: Foobar.
 description: |
   foobar

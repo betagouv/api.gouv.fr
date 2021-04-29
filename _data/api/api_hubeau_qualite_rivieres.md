@@ -4,11 +4,10 @@ tagline: Qualité physico-chimique des cours d'eau
 is_open: 1 # 1 means API is fully open
 external_site: http://hubeau.eaufrance.fr/page/documentation_chimie_riviere
 partners:
-  - AFB
-  - ADES
-  - Office français de la biodiversité (OFB)
-  - Bureau de Recherches Géologiques et Minières (BRGM)
-producer: eau-france
+  - eau-france
+  - ofb
+  - brgm
+producer: hub-eau
 keywords:
   - Qualité physico-chimique
   - Cours d'eau

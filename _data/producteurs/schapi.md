@@ -1,9 +1,9 @@
 ---
-name: Eau de France
-nameWithPronoun: Eau de France
-logo: eau-france.png
+name: Service central d’hydrométéorologie et d’appui à la prévision des inondations
+acronym: SCHAPI
+nameWithPronoun: SCHAPI
+logo: schapi.png
 type: Etablissement public
-site: https://eaufrance.fr
 short: Foobar.
 description: |
   foobar
