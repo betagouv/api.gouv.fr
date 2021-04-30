@@ -175,6 +175,7 @@
       path: /les-api/api_hubeau_surv_litt
     - type: ADD_API
       what: Professionnels BIO par l'agence BIO
+      path: /les-api/api-professionnels-bio
     - type: ADD_API
       what: Pro Santé Connect par l'ANS
     - type: ADD_API
