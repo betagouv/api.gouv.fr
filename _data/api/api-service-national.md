@@ -19,7 +19,7 @@ access_page:
       Par conséquent, dans le cadre de cette vérification, si vous êtes un service chargé de l'inscription à un examen ou un concours soumis au contrôle de l'autorité publique, pouvez faire une demande d'accès à l'API :
 
       <NextSteps />
-      <Button href="https://datapass-staging.api.gouv.fr/api-service-national?demarche=inscription-examens">Remplir une demande</Button>
+      <Button href="https://datapass.api.gouv.fr/api-service-national?demarche=inscription-examens">Remplir une demande</Button>
   - who:
       - Un service de ressources humaines ou de recrutement
     is_eligible: 1
@@ -29,7 +29,7 @@ access_page:
       Par conséquent, les services de ressources humaines ou de recrutement chargés, en application de dispositions statutaires, de vérifier la situation des personnes de moins de 25 ans au regard des obligations de service national, sont autorisés à faire une demande d'accès à l'API :
 
       <NextSteps />
-      <Button href="https://datapass-staging.api.gouv.fr/api-service-national?demarche=inscription-examens">Remplir une demande</Button>
+      <Button href="https://datapass.api.gouv.fr/api-service-national?demarche=inscription-examens">Remplir une demande</Button>
 is_open: -1
 producer: ministere-armees
 keywords:
