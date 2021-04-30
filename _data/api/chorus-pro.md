@@ -114,4 +114,4 @@ PISTE est accessible à cette [adresse](https://developer.aife.economie.gouv.fr/
 
 ### Site de la communauté Chorus Pro
 
-La communauté Chorus Pro est accessible à cette [adresse](http://communaute-chorus-pro.finances.gouv.fr/)
+La communauté Chorus Pro est accessible à cette [adresse](https://lab.chorus-pro.gouv.fr/)

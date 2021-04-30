@@ -5,7 +5,6 @@ tags: cas usage, api RNA, répertoire, association
 api:
   - API Répertoire National des Associations
 image: code.jpg
-noindex: false
 ---
 
 ## Qu'est ce que l’API Répertoire National des Associations (RNA) ?

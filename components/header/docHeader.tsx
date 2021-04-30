@@ -17,7 +17,7 @@ const DocHeader = () => (
         <Link href="/documentation">
           <a
             className="nav__logo-wrapper"
-            title="Retourner à l’accueil de la documentation des APIs du service public"
+            title="Retourner à l’accueil de la documentation des API du service public"
           >
             <span className="nav__logo marianne">{republiqueFrLogo}</span>
             <span className="nav__logo apigouv">

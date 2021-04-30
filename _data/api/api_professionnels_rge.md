@@ -1,7 +1,7 @@
 ---
 title: API Professionnels RGE
 tagline: Le recensement des professionnels RGE (Reconnu Garant de l'Environnement)
-external_site: https://data.ademe.fr/datasets/rge-
+external_site: https://data.ademe.fr/datasets/liste-des-entreprises-rge
 is_open: 1 # 1 means API is fully open
 producer: ademe
 keywords:
@@ -14,9 +14,10 @@ rate_limiting_resume: 10 appels / seconde / IP
 themes:
   - Environnement
 contact_link: https://www.ademe.fr/content/contacter
-doc_tech_link: https://koumoul.com/s/data-fair/api/v1/datasets/rge-2/api-docs.json
+doc_tech_link: https://koumoul.com/s/data-fair/api/v1/datasets/liste-des-entreprises-rge/api-docs.json
+doc_tech_external: https://data.ademe.fr/datasets/liste-des-entreprises-rge
 datagouv_uuid:
-  - 5ee72aff55549715b717d42a
+  - 600966dac71dd5e4f7bcbf5c
 last_update: 27/07/2020
 ---
 
@@ -46,4 +47,4 @@ Pour plus d'informations sur les entreprises RGE, vous pouvez vous rendre sur le
 
 Cette API est en Open Data. Elle permet de consulter des données ouvertes, <External href="https://www.etalab.gouv.fr/licence-ouverte-open-licence">sous licence Etalab</External>.
 
-Les données sont mises à jour régulièrement et accessibles sur le <External href="https://data.ademe.fr/datasets/rge-2">portail Open Data de l'ADEME</External>.
+Les données sont mises à jour régulièrement et accessibles sur le <External href="https://data.ademe.fr/datasets/liste-des-entreprises-rge">portail Open Data de l'ADEME</External>.

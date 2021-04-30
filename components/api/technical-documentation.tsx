@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { ButtonLink } from '../../uiComponents/button';
+import Emoji from '../../uiComponents/emoji';
 import SubSection from './subSection';
 
 interface IProps {
@@ -14,19 +15,30 @@ const TechnicalDocumentation: React.FC<IProps> = ({
   external_link,
   slug,
 }) => {
-  const link = swagger_link ? `/documentation/${slug}` : external_link;
+  const link = external_link ? external_link : `/documentation/${slug}`;
   return (
     <SubSection title="Documentation technique">
-      {link ? (
+      {external_link || swagger_link ? (
         <>
           <div>
             Vous êtes développeur ou architecte ? Partagez la documentation avec
             votre équipe :
           </div>
           <div className="layout-right vertical-margin">
-            <ButtonLink href={link} alt>
-              Accéder à la documentation
-            </ButtonLink>
+            {swagger_link && (
+              <ButtonLink href={`/documentation/${slug}`}>
+                <Emoji emoji="👩‍💻" label="code" />
+                Tester l’API
+              </ButtonLink>
+            )}
+          </div>
+          <div className="layout-right vertical-margin">
+            {link && (
+              <ButtonLink href={link} alt>
+                <Emoji emoji="📚" label="documentation" />
+                Accéder à la documentation
+              </ButtonLink>
+            )}
           </div>
         </>
       ) : (

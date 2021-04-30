@@ -24,8 +24,6 @@ contact_link: contact@emploi-store-dev.fr
 doc_tech_external: https://www.emploi-store-dev.fr/portail-developpeur-cms/home/catalogue-des-api/documentation-des-api/api/api-la-bonne-boite-v1.html
 themes:
   - Emploi
-datagouv_uuid:
-  - 59315d6988ee385fab9c51ef
 visits_2019: 2397
 last_update: 26/09/2018
 ---
@@ -34,4 +32,4 @@ La Bonne Boite cible les entreprises ayant des perspectives d'embauche élevées
 
 L'API s'adresse aux particuliers, entreprises, startups, collectivités et ministères et permet de développer des solutions personnalisées de recherche d'emploi pour un site ou une application.
 
-Vous découvrirez des formats de fichiers supplémentaires, des outils de visualisation et d'autres API liées à l'emploi sur (https://www.emploi-store-dev.fr/)[https://www.emploi-store-dev.fr/]
+Vous découvrirez des formats de fichiers supplémentaires, des outils de visualisation et d'autres API liées à l'emploi sur [l’Emploi Store Dev](https://www.emploi-store-dev.fr/)

@@ -15,6 +15,5 @@ export default {
     SUPPORT: 'mailto:contact@api.gouv.fr',
     SHARE: 'mailto:exemple@equipe.fr',
   },
-  ADD_API:
-    'https://github.com/betagouv/api.gouv.fr/blob/master/CONTRIBUTING.md#ajouter-une-api',
+  ADD_API: '/nouvelle-api',
 };

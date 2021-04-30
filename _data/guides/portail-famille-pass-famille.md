@@ -6,8 +6,7 @@ api:
   - API Particulier
 related_guides:
   - portail-famille-petite-enfance
-  - portail-famille-tarif-activite-periscolaire
-  - portail-famille-tarif-restauration-scolaire
+  - portail-famille-tarification
 image: famille.jpg
 ---
 
@@ -46,7 +45,7 @@ Les articles suivants peuvent vous aider à justifier vos droits d'accès :
 - Certaine délibération prise par la ville peuvent constituer le cadre légal
 
 <NextSteps />
-<Button href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</Button>
+<Button href="https://datapass.api.gouv.fr/api-particulier?demarche=pass-famille">Remplir une demande</Button>
 
 <!-- ## Ils l'ont fait
 

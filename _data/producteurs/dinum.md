@@ -2,6 +2,6 @@
 name: Direction Interministérielle du Numérique
 acronym: DINUM
 logo: dinum.png
-type: agence
+type: Ministère
 site: https://numerique.gouv.fr
 ---

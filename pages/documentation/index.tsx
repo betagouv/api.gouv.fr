@@ -14,8 +14,8 @@ interface IProps {
 const Documentation: React.FC<IProps> = ({ allApis }) => {
   return (
     <Page
-      title={`Espace documentation des APIs`}
-      description={`Découvrez toutes les documentations techniques des APIs du service public.`}
+      title={`Espace documentation des API`}
+      description={`Découvrez toutes les documentations techniques des API du service public.`}
       useFooter={false}
       usePreFooter={false}
       useDocHeader={true}
@@ -34,7 +34,7 @@ const Documentation: React.FC<IProps> = ({ allApis }) => {
             <span role="img" aria-label="émoji ninja">
               🧙‍♀️
             </span>{' '}
-            - qui s’intéressent aux APIs du service public.
+            - qui s’intéressent aux API du service public.
           </p>
           <p>
             Celles-ci sont développées et maintenues dans le cadre de la
@@ -47,10 +47,10 @@ const Documentation: React.FC<IProps> = ({ allApis }) => {
             <li>les agences gouvernementales</li>
           </ul>
           <p>
-            Les APIs tombent dans deux grandes catégories. Les{' '}
-            <b>APIs ouvertes</b> qui sont accessibles à tous. Et les{' '}
+            Les API tombent dans deux grandes catégories. Les{' '}
+            <b>API ouvertes</b> qui sont accessibles à tous. Et les{' '}
             <b>
-              APIs qui nécessitent une habilitation
+              API qui nécessitent une habilitation
               <span role="img" aria-label="émoji cadenas">
                 🔒
               </span>
@@ -62,7 +62,7 @@ const Documentation: React.FC<IProps> = ({ allApis }) => {
               👈
             </span>{' '}
             À vous de jouer : utilisez le champ de recherche à votre gauche et
-            découvrez nos APIs.
+            découvrez nos API.
             <span role="img" aria-label="émoji ninja">
               👈
             </span>

@@ -38,10 +38,10 @@ stat:
   url: https://monitoring.particulier.api.gouv.fr/api/stats/
   label: justificatifs papier évités
 partners:
-  - DGFiP
+  - dgfip
   - CNAF
-  - Pôle-Emploi
-  - Ministère de l'enseignement supérieur, de la recherche et de l'innovation (MESRI)
+  - Pôle emploi
+  - mesri
 producer: dinum
 keywords:
   - Impots
@@ -50,6 +50,7 @@ keywords:
   - étudiant
   - demandeur
   - emploi
+  - ccas
   - Revenu Fiscal de Référence
   - Adresse
   - Justificatif de domicile
@@ -60,12 +61,12 @@ monitoring_link: https://status.particulier.api.gouv.fr
 monitoring_description: |
   La DINUM s’engage à ce que le Service soit accessible à 95% et la DINUM s’engage à améliorer progressivement ce rendement.
 contact_link: contact@particulier.api.gouv.fr
-doc_tech_link: https://particulier.api.gouv.fr/open-api.json
+doc_tech_link: https://particulier.api.gouv.fr/open-api.yml
 themes:
   - Particulier
 visits_2019: 8642
 uptime: 99.992 # https://uptimerobot.com/dashboard#777746216 * https://uptimerobot.com/dashboard#778826562 / 2
-last_update: 10/12/2019
+last_update: 31/03/2021
 content_intro: |
   API Particulier facilite l'accès des administrations aux données fiscales (DGFIP), familiales (CAF), au statut pôle-emploi et au statut étudiant d'un citoyen, pour simplifier les démarches administratives mises en oeuvre par les collectivités et les administrations.
 
@@ -95,7 +96,7 @@ content_intro: |
 | Quotient familial         | Le quotient familial (QF) du mois précédent pour la famille                            | CAF                                                                               |
 | Composition familiale     | Liste des parents et des enfants de la famille (avec nom, prénoms, date de naissance)  | CAF                                                                               |
 | Adresse                   | L'adresse structurée détenue par la CAF                                                | CAF                                                                               |
-| Statut demandeur d'emploi | Si applicable, les informations de statut demandeur d‘emploi d‘un individu             | Pôle-Emploi                                                                       |
+| Statut demandeur d'emploi | Si applicable, les informations de statut demandeur d‘emploi d‘un individu             | Pôle emploi                                                                       |
 | Statut étudiant           | Si applicable, les informations de statut étudiant d‘un individu                       | Ministère de l'enseignement supérieur, de la recherche et de l'innovation (MESRI) |
 
 Pour plus d’informations techniques sur la structuration des données, vous pouvez <External href='/documentation/api-particulier'>consulter la documentation technique</External>
@@ -107,3 +108,13 @@ Seules les données des deux dernières années sont disponibles. Par exemple en
 Les déclarants du foyer fiscal sont la(le) contribuable elle(lui)-même et le(la) conjoint(e) ou partenaire de Pacs.
 
 L’Adresse est celle connue au 1er janvier de l’année d’imposition (exemple au 1er janvier 2018 pour les revenus de 2017)
+
+### Précisions sur les données Statut étudiant (MESRI)
+
+Sont disponibles les données des étudiants inscrits dans un établisement sous tutelle du ministère de l'enseignement supérieur, et sur le champ des étudiants bacheliers en 2020 ou déjà inscrits dans l'enseignement supérieur en 2018-2019 ou 2019-2020.
+
+La couverture des établissements du champ des étudiants sera progressivement complétée d'ici la rentrée 2022.
+
+### Conditions générales d'utilisation
+
+Les conditions générales d'utilisation sont disponibles à [cette adresse](http://api.gouv.fr/resources/CGU%20API%20Particulier.pdf).

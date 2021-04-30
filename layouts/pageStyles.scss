@@ -213,7 +213,6 @@ a:not(.dont-apply-link-style):hover {
     border-collapse: collapse;
     text-align: left;
     color: #081d35;
-
     width: 100%;
 
     tr td,
@@ -296,6 +295,16 @@ a:not(.dont-apply-link-style):hover {
     color: #93a1a1;
     background: #073642;
     border-left: 10px solid #586e75;
+    border-radius: 2px;
+    overflow: auto;
+  }
+
+  tr code {
+    display: initial;
+    padding: 2px 5px;
+    color: #93a1a1;
+    background: #073642;
+    border-left: 5px solid #586e75;
     border-radius: 2px;
     overflow: auto;
   }

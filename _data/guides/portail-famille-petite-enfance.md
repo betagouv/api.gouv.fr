@@ -7,8 +7,7 @@ api:
   - API Particulier
 related_guides:
   - portail-famille-pass-famille
-  - portail-famille-tarif-activite-periscolaire
-  - portail-famille-tarif-restauration-scolaire
+  - portail-famille-tarification
 ---
 
 Les inscriptions en crèche constituent un service essentiel que les collectivités sont amenées à rendre aux jeunes parents.
@@ -46,4 +45,4 @@ Les articles suivants peuvent vous aider à justifier vos droits d'accès aux do
 - Certaines délibérations prises par la ville et/ou par la commune peuvent constituer le cadre légal
 
 <NextSteps />
-<Button href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</Button>
+<Button href="https://datapass.api.gouv.fr/api-particulier?demarche=petite-enfance">Remplir une demande</Button>

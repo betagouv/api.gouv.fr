@@ -11,10 +11,16 @@ const teamData = [
     img: 'Romain.jpg',
   },
   {
-    name: 'Patrick Amarelis',
-    title: 'Relations administrations, ministères & collectivités',
-    linkedin: 'https://www.linkedin.com/in/patrick-amarelis-8853205/',
-    img: 'Patrick.jpg',
+    name: 'Vincent Mazalaigue',
+    title: 'Chargé de mission DLNUF',
+    linkedin: 'https://www.linkedin.com/in/vmazalaigue/',
+    img: 'Vincent.jpg',
+  },
+  {
+    name: 'Etienne Pichot Damon',
+    title: 'Relations avec les administrations',
+    linkedin: 'https://www.linkedin.com/in/etiennepichotdamon/',
+    img: 'Etienne.jpg',
   },
   {
     name: 'Alexandre De Pablo',
@@ -47,12 +53,6 @@ const teamData = [
     img: 'Raph.jpg',
   },
   {
-    name: 'Christophe Gaie',
-    title: 'Plate-forme d’échange inter-administrations',
-    linkedin: 'https://www.linkedin.com/in/christophegaie/',
-    img: 'Christophe.jpg',
-  },
-  {
     name: 'Loïc Delmaire',
     title: 'API Entreprise',
     linkedin:
@@ -71,6 +71,18 @@ const teamData = [
     linkedin: 'https://www.linkedin.com/in/leclerca/',
     img: 'Alexis.jpg',
   },
+  {
+    name: 'Cyril Kato',
+    title: 'API Entreprise',
+    linkedin: 'https://www.linkedin.com/in/cyrilllllll',
+    img: 'Cyril.jpg',
+  },
+  {
+    name: 'Dorine Lambinet',
+    title: 'Designeuse produit',
+    linkedin: 'https://www.linkedin.com/in/dorine-lambinet-99534b117/',
+    img: 'Dorine.jpg',
+  },
 ];
 
 const Team: React.FC = () => (
@@ -80,7 +92,7 @@ const Team: React.FC = () => (
     canonical={`https://api.gouv.fr/equipe`}
   >
     <div className="text-wrapper text-style">
-      <h1 className="layout-center">L’équipe des APIs </h1>
+      <h1 className="layout-center">L’équipe des API </h1>
       <h2>Une équipe, une mission</h2>
       <p>
         Au sein des administrations, la donnée est une ressource dispersée,
@@ -120,6 +132,12 @@ const Team: React.FC = () => (
           mettent à disposition leurs données
         </li>
       </ul>
+      <h3>Où nous trouver ?</h3>
+      <p>
+        Les bureaux de l'équipe se trouvent au sein de la Direction
+        Interministérielle du Numérique (DINUM), au 20 avenue de Ségur à Paris
+        (75007).
+      </p>
       <h3>La fine équipe</h3>
       <div className="default-grid">
         {teamData.map((teamate, index) => (

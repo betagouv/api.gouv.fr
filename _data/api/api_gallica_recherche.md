@@ -1,6 +1,6 @@
 ---
 title: API Gallica Recherche
-tagline: Un accès aux documents numériques de la Bibliothèque nationale de France
+tagline: Rechercher dans les documents numériques de la Bibliothèque nationale de France
 producer: bnf
 category: public
 is_open: 1
@@ -36,3 +36,7 @@ Cette API se décline en deux services :
 ### Conditions d’utilisation
 
 L’API est gérée par la Bibliothèque nationale de France. Son accès est ouvert sans restriction, sauf en cas d'usage abusif.
+
+Les conditions de réutilisation des documents numériques de Gallica sont [décrites ici](https://gallica.bnf.fr/edit/conditions-dutilisation-des-contenus-de-gallica).
+
+Les métadonnées descriptives des documents numériques de Gallica sont placées [sous la licence ouverte de l’Etat](https://www.bnf.fr/fr/conditions-de-reutilisations-des-donnees-de-la-bnf)

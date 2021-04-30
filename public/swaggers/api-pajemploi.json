@@ -1,0 +1,1722 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "L'API Tierce Déclaration Pajemploi permet, pour le compte d'un particulier employeur, d'obtenir les montants des cotisations et des contributions sociales pour une activité relevant du régime Pajemploi, de déclarer le salaire versé à une assistante maternelle agrée ou une garde d’enfants à domicile auprès des organismes de recouvrement concernés et de procéder à la retenue à la source prévue à l'article 204A du code général des impôts.",
+    "version": "1.0.0",
+    "title": "API Tierce Declaration PAJE",
+    "x-summary": "L'API Tierce Déclaration Pajemploi permet, pour le compte d'un particulier employeur, d'obtenir les montants des cotisations et des contributions sociales pour une activité relevant du régime Pajemploi, de déclarer le salaire versé à une assistante maternelle agrée ou une garde d’enfants à domicile auprès des organismes de recouvrement concernés et de procéder à la retenue à la source prévue à l'article 204A du code général des impôts."
+  },
+  "host": "api.urssaf.fr",
+  "basePath": "/tiersdecl/v1/paje",
+  "schemes": ["https"],
+  "security": [
+    {
+      "OAuth (External)Implicit": ["tiersdecl.paje"]
+    },
+    {
+      "OAuth (External)AccessCode": ["tiersdecl.paje"]
+    }
+  ],
+  "paths": {
+    "/employeurs/{numeroPajeEmployeur}/enfants/verifier": {
+      "post": {
+        "summary": "API PAJE022 - Vérification des enfants ouvrant droit d'un particulier employeur Pajemploi",
+        "description": "Ce service permet, à partir d'une liste des enfants fournie en paramètre d'entrée, de vérifier l'existence dans le SI Pajemploi des enfants ouvrant droit d'un particulier employeur.",
+        "operationId": "verificationEnfantsPe",
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "numeroPajeEmployeur",
+            "in": "path",
+            "description": "Numéro Pajemploi de l'employeur (Pseudo-siret). Chaîne alphanumérique sur 14 caractères.",
+            "required": true,
+            "type": "string",
+            "maxLength": 14,
+            "minLength": 14
+          },
+          {
+            "name": "dtNaissanceEmployeur",
+            "in": "query",
+            "description": "Date de naissance de l'employeur recherché (format : yyyy-MM-dd).",
+            "required": true,
+            "type": "string",
+            "format": "date"
+          },
+          {
+            "in": "body",
+            "name": "inputEnfantPe",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/InputVerificationEnfantPe"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Les enfants de l'employeur ont été vérifiés",
+            "schema": {
+              "$ref": "#/definitions/OutputVerificationEnfantPe"
+            }
+          },
+          "400": {
+            "description": "Requête incorrecte ou erreur fonctionnelle",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Erreur"
+              }
+            }
+          },
+          "401": {
+            "description": "Token d'authentification absent ou invalide"
+          },
+          "500": {
+            "description": "Erreur technique",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Erreur"
+              }
+            }
+          },
+          "403": {
+            "description": "Authentification refusée"
+          },
+          "503": {
+            "description": "Utilisation de l’API interdite. Exemple : Le site est en maintenance."
+          }
+        }
+      }
+    },
+    "/mandats": {
+      "post": {
+        "summary": "API PAJE030 - Enregistrement de mandat",
+        "description": "Cette Api Internet permet de notifier le SI Pajemploi sur l’enregistrement d’un mandat de tierce déclaration obtenu par la plateforme pour un particulier employeur.",
+        "operationId": "enregistrerMandatPaje",
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "numeroPaje",
+            "in": "query",
+            "description": "Numéro PAJE, numéro interne au PAJE identifiant l'employeur",
+            "required": true,
+            "type": "string",
+            "maxLength": 14,
+            "minLength": 14
+          },
+          {
+            "name": "dateNaissance",
+            "in": "query",
+            "description": "Date de naissance de l'employeur. Format : '2019-01-30'",
+            "required": true,
+            "type": "string",
+            "format": "date"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Mandat ajouté"
+          },
+          "400": {
+            "description": "Compte inconnu, requête incorrecte ou erreur fonctionnelle",
+            "schema": {
+              "$ref": "#/definitions/Erreur"
+            }
+          },
+          "401": {
+            "description": "Token d'authentification absent ou invalide"
+          },
+          "500": {
+            "description": "Erreur technique",
+            "schema": {
+              "$ref": "#/definitions/Erreur"
+            }
+          },
+          "403": {
+            "description": "Authentification refusée"
+          }
+        }
+      },
+      "delete": {
+        "summary": "API PAJE031 - Annulation de mandat",
+        "description": "Cette Api Internet permet de notifier le SI Pajemploi sur l'annulation d’un mandat de tierce déclaration obtenu par la plateforme pour un particulier employeur.",
+        "operationId": "annulerMandatPaje",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "numeroPaje",
+            "in": "query",
+            "description": "Numéro PAJE, numéro interne au PAJE identifiant l'employeur",
+            "required": true,
+            "type": "string",
+            "maxLength": 14,
+            "minLength": 14
+          },
+          {
+            "name": "dateNaissance",
+            "in": "query",
+            "description": "Date de naissance de l'employeur. Format : '2019-01-30'",
+            "required": true,
+            "type": "string",
+            "format": "date"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Mandat annulé"
+          },
+          "400": {
+            "description": "Compte inconnu, requête incorrecte ou erreur fonctionnelle",
+            "schema": {
+              "$ref": "#/definitions/Erreur"
+            }
+          },
+          "401": {
+            "description": "Token d'authentification absent ou invalide"
+          },
+          "500": {
+            "description": "Erreur technique",
+            "schema": {
+              "$ref": "#/definitions/Erreur"
+            }
+          },
+          "403": {
+            "description": "Authentification refusée"
+          }
+        }
+      }
+    },
+    "/employeurs/{numeroPajeEmployeur}/ged/predeclarer": {
+      "post": {
+        "summary": "API PAJE046 - Pré-déclarer, via un tiers, le salaire pour une garde à domicile",
+        "description": "Ce service permet de pré-déclarer le salaire versé à un salarié particulier par un particulier employeur sur une période et pour une activité de garde à domicile.",
+        "operationId": "predeclarerSalaireGed",
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "numeroPajeEmployeur",
+            "in": "path",
+            "description": "Numéro Pajemploi de l'employeur (Pseudo-siret). Chaîne alphanumérique sur 14 caractères.",
+            "required": true,
+            "type": "string",
+            "maxLength": 14,
+            "minLength": 14
+          },
+          {
+            "name": "dtNaissanceEmployeur",
+            "in": "query",
+            "description": "Date de naissance de l'employeur recherché (format : yyyy-MM-dd).",
+            "required": true,
+            "type": "string",
+            "format": "date"
+          },
+          {
+            "in": "body",
+            "name": "inputDeclarationGed",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/InputDeclarationGed"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Pré-déclaration effectuée.",
+            "schema": {
+              "$ref": "#/definitions/OutputPreDeclaration"
+            }
+          },
+          "400": {
+            "description": "requête incorrecte ou erreur fonctionnelle",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Erreur"
+              }
+            }
+          },
+          "401": {
+            "description": "Token d'authentification absent ou invalide"
+          },
+          "500": {
+            "description": "Erreur technique",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Erreur"
+              }
+            }
+          },
+          "403": {
+            "description": "Authentification refusée"
+          },
+          "503": {
+            "description": "Utilisation de l’API interdite. Exemple : Le site est en maintenance."
+          }
+        }
+      }
+    },
+    "/ama/estimer": {
+      "post": {
+        "summary": "API PAJE040 - Estimer les montants des cotisations pour une activité d'assistante maternelle",
+        "description": "Ce service permet de fournir les montants des cotisations pour un mode de garde de type assistante maternelle sans être lié à un contexte de compte Pajemploi.",
+        "operationId": "estimerCotisationsAma",
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "inputEstimationAma",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/InputEstimationAma"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Calcul du montant estimé de cotisations sociales effectué",
+            "schema": {
+              "$ref": "#/definitions/OutputEstimation"
+            }
+          },
+          "400": {
+            "description": "requête incorrecte ou erreur fonctionnelle",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Erreur"
+              }
+            }
+          },
+          "401": {
+            "description": "Token d'authentification absent ou invalide"
+          },
+          "500": {
+            "description": "Erreur technique",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Erreur"
+              }
+            }
+          },
+          "403": {
+            "description": "Authentification refusée"
+          },
+          "503": {
+            "description": "Utilisation de l’API interdite. Exemple : Le site est en maintenance."
+          }
+        }
+      }
+    },
+    "/employeurs/{numeroPajeEmployeur}/salarie/associer": {
+      "post": {
+        "summary": "API PAJE023 - Associer un salarié à un particulier employeur",
+        "description": "Ce service permet d'associer un salarié à un particulier employeur. Si le salarié est inconnu dans le SI Pajemploi et que les informations salariés ont été fournies en entrées alors le salarié est créé et associé à l'employeur.",
+        "operationId": "associerSalarie",
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "numeroPajeEmployeur",
+            "in": "path",
+            "description": "Numéro Pajemploi de l'employeur (Pseudo-siret). Chaîne alphanumérique sur 14 caractères.",
+            "required": true,
+            "type": "string",
+            "maxLength": 14,
+            "minLength": 14
+          },
+          {
+            "name": "dtNaissanceEmployeur",
+            "in": "query",
+            "description": "Date de naissance de l'employeur recherché (format : yyyy-MM-dd).",
+            "required": true,
+            "type": "string",
+            "format": "date"
+          },
+          {
+            "name": "numeroPajeSalarie",
+            "in": "query",
+            "description": "Numéro Pajemploi (numéro interne identifiant le salarié). Ce champ alphanumérique sur 14 caractères est obligatoire en l'absence de NIR et de données administratives du salarié (nom de naissance, prénom, date de naissance, ville de naissance, pays de naissance).",
+            "required": false,
+            "type": "string",
+            "maxLength": 14,
+            "minLength": 14
+          },
+          {
+            "name": "nirSalarie",
+            "in": "query",
+            "description": "Numéro de sécurité sociale du salarié. Ce champ, sur 15 caractères, est obligatoire en l'absence du numéro Pajemploi et de données administratives du salarié (nom de naissance, prénom, date de naissance, ville de naissance, pays de naissance).",
+            "required": false,
+            "type": "string",
+            "maxLength": 15,
+            "minLength": 15
+          },
+          {
+            "name": "dtNaissanceSalarie",
+            "in": "query",
+            "description": "Date de naissance du salarié. Ce champ est obligatoire. Format : 'yyyy-MM-dd'",
+            "required": true,
+            "type": "string",
+            "format": "date"
+          },
+          {
+            "in": "body",
+            "name": "inputCreationSalarie",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/InputCreationSalarie"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Association effectuée.",
+            "schema": {
+              "$ref": "#/definitions/OutputAssociationEmployeurSalarie"
+            }
+          },
+          "400": {
+            "description": "requête incorrecte ou erreur fonctionnelle",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Erreur"
+              }
+            }
+          },
+          "401": {
+            "description": "Token d'authentification absent ou invalide"
+          },
+          "500": {
+            "description": "Erreur technique",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Erreur"
+              }
+            }
+          },
+          "403": {
+            "description": "Authentification refusée"
+          },
+          "503": {
+            "description": "Utilisation de l’API interdite. Exemple : Le site est en maintenance."
+          }
+        }
+      }
+    },
+    "/employeurs/{numeroPajeEmployeur}/ama/predeclarer": {
+      "post": {
+        "summary": "API PAJE045 - Pré-déclarer, via un tiers, le salaire d'une assistante maternelle",
+        "description": "Ce service permet de pré-déclarer le salaire versé à un salarié particulier par un particulier employeur sur une période et pour une activité d'assistante maternelle.",
+        "operationId": "predeclarerSalaireAma",
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "numeroPajeEmployeur",
+            "in": "path",
+            "description": "Numéro Pajemploi de l'employeur (Pseudo-siret). Chaîne alphanumérique sur 14 caractères.",
+            "required": true,
+            "type": "string",
+            "maxLength": 14,
+            "minLength": 14
+          },
+          {
+            "name": "dtNaissanceEmployeur",
+            "in": "query",
+            "description": "Date de naissance de l'employeur recherché (format : yyyy-MM-dd).",
+            "required": true,
+            "type": "string",
+            "format": "date"
+          },
+          {
+            "in": "body",
+            "name": "inputDeclarationAma",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/InputDeclarationAma"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Pré-déclaration effectuée.",
+            "schema": {
+              "$ref": "#/definitions/OutputPreDeclaration"
+            }
+          },
+          "400": {
+            "description": "requête incorrecte ou erreur fonctionnelle",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Erreur"
+              }
+            }
+          },
+          "401": {
+            "description": "Token d'authentification absent ou invalide"
+          },
+          "500": {
+            "description": "Erreur technique",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Erreur"
+              }
+            }
+          },
+          "403": {
+            "description": "Authentification refusée"
+          },
+          "503": {
+            "description": "Utilisation de l’API interdite. Exemple : Le site est en maintenance."
+          }
+        }
+      }
+    },
+    "/ged/estimer": {
+      "post": {
+        "summary": "API PAJE041 - Estimer les montants des cotisations pour une activité de garde d'enfant à domicile",
+        "description": "Ce service permet de fournir les montants des cotisations pour un mode de garde de garde d'enfant à domicile  sans être lié à un contexte de compte Pajemploi.",
+        "operationId": "estimerCotisationsGed",
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "inputEstimationGed",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/InputEstimationGed"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Calcul du montant estimé de cotisations sociales effectué",
+            "schema": {
+              "$ref": "#/definitions/OutputEstimation"
+            }
+          },
+          "400": {
+            "description": "requête incorrecte ou erreur fonctionnelle",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Erreur"
+              }
+            }
+          },
+          "401": {
+            "description": "Token d'authentification absent ou invalide"
+          },
+          "500": {
+            "description": "Erreur technique",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Erreur"
+              }
+            }
+          },
+          "403": {
+            "description": "Authentification refusée"
+          },
+          "503": {
+            "description": "Utilisation de l’API interdite. Exemple : Le site est en maintenance."
+          }
+        }
+      }
+    },
+    "/salaries/verifier": {
+      "post": {
+        "summary": "API PAJE021 - Vérifier un compte Pajemploi pour un salarié particulier",
+        "description": "Ce service permet de rechercher dans le référentiel salarié du SI Pajemploi si l'individu identifié par les données en entrée existe. Si l'individu a été identifié, son numéro Pajemploi, ses modes de gardes sont renseignés en sortie.",
+        "operationId": "verificationSpPaje",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "numeroPajeSalarie",
+            "in": "query",
+            "description": "Numéro Pajemploi (numéro interne identifiant le salarié). Ce champ alphanumérique sur 14 caractères est obligatoire en l'absence de NIR et de données administratives du salarié (nom de naissance, prénom, date de naissance, ville de naissance, pays de naissance).",
+            "required": false,
+            "type": "string",
+            "maxLength": 14,
+            "minLength": 14
+          },
+          {
+            "name": "nirSalarie",
+            "in": "query",
+            "description": "Numéro de sécurité sociale du salarié. Ce champ, sur 15 caractères, est obligatoire en l'absence du numéro Pajemploi et de données administratives du salarié (nom de naissance, prénom, date de naissance, ville de naissance, pays de naissance).",
+            "required": false,
+            "type": "string",
+            "maxLength": 15,
+            "minLength": 15
+          },
+          {
+            "name": "dtNaissanceSalarie",
+            "in": "query",
+            "description": "Date de naissance du salarié. Ce champ est obligatoire en l'absence du numéro Pajemploi et de NIR. Format : 'yyyy-MM-dd'",
+            "required": false,
+            "type": "string",
+            "format": "date"
+          },
+          {
+            "in": "body",
+            "name": "inputIdentificationSalarie",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/InputIdentificationSalarie"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Compte Pajemploi SP vérifié",
+            "schema": {
+              "$ref": "#/definitions/OutputVerificationSp"
+            }
+          },
+          "400": {
+            "description": "Requête incorrecte ou erreur fonctionnelle",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Erreur"
+              }
+            }
+          },
+          "401": {
+            "description": "Token d'authentification absent ou invalide"
+          },
+          "500": {
+            "description": "Erreur technique",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Erreur"
+              }
+            }
+          },
+          "403": {
+            "description": "Authentification refusée"
+          },
+          "503": {
+            "description": "Utilisation de l’API interdite. Exemple : Le site est en maintenance."
+          }
+        }
+      }
+    },
+    "/employeurs/{numeroPajeEmployeur}/verifier": {
+      "get": {
+        "summary": "API PAJE020 - Vérifier un compte Pajemploi pour un particulier employeur",
+        "description": "Ce service permet de vérifier que le particulier employeur identifié par son numéro Pajemploi et sa date de naissance possède bien un compte Pajemploi valide (l'employeur doit avoir un compte internet actif et des coordonnées bancaires valides).",
+        "operationId": "verificationPePaje",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "numeroPajeEmployeur",
+            "in": "path",
+            "description": "Numéro Pajemploi de l'employeur (Pseudo-siret). Chaîne alphanumérique sur 14 caractères.",
+            "required": true,
+            "type": "string",
+            "maxLength": 14,
+            "minLength": 14
+          },
+          {
+            "name": "dtNaissanceEmployeur",
+            "in": "query",
+            "description": "Date de naissance de l'employeur recherché (format : yyyy-MM-dd).",
+            "required": true,
+            "type": "string",
+            "format": "date"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Compte PAJE PE vérifié",
+            "schema": {
+              "$ref": "#/definitions/OutputVerificationPe"
+            }
+          },
+          "400": {
+            "description": "Requête incorrecte ou erreur fonctionnelle",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Erreur"
+              }
+            }
+          },
+          "401": {
+            "description": "Token d'authentification absent ou invalide"
+          },
+          "500": {
+            "description": "Erreur technique",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Erreur"
+              }
+            }
+          },
+          "403": {
+            "description": "Authentification refusée"
+          },
+          "503": {
+            "description": "Utilisation de l’API interdite. Exemple : Le site est en maintenance."
+          }
+        }
+      }
+    },
+    "/employeurs/{numeroPajeEmployeur}/ged/declarer": {
+      "post": {
+        "summary": "API PAJE051 - Déclarer, via un tiers, le salaire d'une garde à domicile",
+        "description": "Ce service permet de déclarer le salaire versé à un salarié particulier par un particulier employeur sur une période et pour une activité de garde à domicile.",
+        "operationId": "declarerSalaireGed",
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "numeroPajeEmployeur",
+            "in": "path",
+            "description": "Numéro Pajemploi de l'employeur (Pseudo-siret). Chaîne alphanumérique sur 14 caractères.",
+            "required": true,
+            "type": "string",
+            "maxLength": 14,
+            "minLength": 14
+          },
+          {
+            "name": "dtNaissanceEmployeur",
+            "in": "query",
+            "description": "Date de naissance de l'employeur recherché (format : yyyy-MM-dd).",
+            "required": true,
+            "type": "string",
+            "format": "date"
+          },
+          {
+            "in": "body",
+            "name": "inputDeclarationGed",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/InputDeclarationGed"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Déclaration effectuée.",
+            "schema": {
+              "$ref": "#/definitions/OutputDeclaration"
+            }
+          },
+          "400": {
+            "description": "requête incorrecte ou erreur fonctionnelle",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Erreur"
+              }
+            }
+          },
+          "401": {
+            "description": "Token d'authentification absent ou invalide"
+          },
+          "500": {
+            "description": "Erreur technique",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Erreur"
+              }
+            }
+          },
+          "403": {
+            "description": "Authentification refusée"
+          },
+          "503": {
+            "description": "Utilisation de l’API interdite. Exemple : Le site est en maintenance."
+          }
+        }
+      }
+    },
+    "/employeurs/{numeroPajeEmployeur}/ama/declarer": {
+      "post": {
+        "summary": "API PAJE050 - Déclarer, via un tiers, le salaire d'une assistante maternelle",
+        "description": "Ce service permet de déclarer le salaire versé à un salarié particulier par un particulier employeur sur une période et pour une activité d'assistante maternelle.",
+        "operationId": "declarerSalaireAma",
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "numeroPajeEmployeur",
+            "in": "path",
+            "description": "Numéro Pajemploi de l'employeur (Pseudo-siret). Chaîne alphanumérique sur 14 caractères.",
+            "required": true,
+            "type": "string",
+            "maxLength": 14,
+            "minLength": 14
+          },
+          {
+            "name": "dtNaissanceEmployeur",
+            "in": "query",
+            "description": "Date de naissance de l'employeur recherché (format : yyyy-MM-dd).",
+            "required": true,
+            "type": "string",
+            "format": "date"
+          },
+          {
+            "in": "body",
+            "name": "inputDeclarationAma",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/InputDeclarationAma"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Déclaration effectuée.",
+            "schema": {
+              "$ref": "#/definitions/OutputDeclaration"
+            }
+          },
+          "400": {
+            "description": "requête incorrecte ou erreur fonctionnelle",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Erreur"
+              }
+            }
+          },
+          "401": {
+            "description": "Token d'authentification absent ou invalide"
+          },
+          "500": {
+            "description": "Erreur technique",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Erreur"
+              }
+            }
+          },
+          "403": {
+            "description": "Authentification refusée"
+          },
+          "503": {
+            "description": "Utilisation de l’API interdite. Exemple : Le site est en maintenance."
+          }
+        }
+      }
+    }
+  },
+  "securityDefinitions": {
+    "OAuth (External)AccessCode": {
+      "description": "OAuth (External)",
+      "type": "oauth2",
+      "authorizationUrl": "https://provider.urssaf.recouv/recouv-oidc-provider/oauth/authorize",
+      "tokenUrl": "https://provider.urssaf.recouv/recouv-oidc-provider/oauth/token",
+      "flow": "accessCode",
+      "scopes": {
+        "tiersdecl.paje": ""
+      },
+      "x-axway": {
+        "clientSecretName": "client_secret",
+        "authorizationHeaderPrefix": "",
+        "accessTokenLocationQueryString": "Bearer",
+        "clientIdName": "client_id",
+        "tokenName": "access_code",
+        "scopesMatching": "Any",
+        "accessTokenLocation": "HEADER",
+        "typeDisplayName": "OAuth 2.0"
+      }
+    },
+    "OAuth (External)Implicit": {
+      "description": "OAuth (External)",
+      "type": "oauth2",
+      "authorizationUrl": "https://provider.urssaf.recouv/recouv-oidc-provider/oauth/authorize",
+      "flow": "implicit",
+      "scopes": {
+        "tiersdecl.paje": ""
+      },
+      "x-axway": {
+        "accessTokenLocationQueryString": "Bearer",
+        "tokenName": "access_token",
+        "scopesMatching": "Any",
+        "accessTokenLocation": "HEADER",
+        "typeDisplayName": "OAuth 2.0",
+        "authorizationHeaderPrefix": ""
+      }
+    }
+  },
+  "definitions": {
+    "InputEstimationGed": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/InputEstimation"
+        },
+        {
+          "type": "object",
+          "required": [
+            "cdModeCalcul",
+            "complementActiviteOk",
+            "indcEnfantPlusJeuneAgarder",
+            "nbHeures"
+          ],
+          "properties": {
+            "cdModeCalcul": {
+              "type": "string",
+              "description": "Pour les DOM GED , il a pour valeur R ou F ou S; <br/>R : pour le mode réél; <br/>F : pour le mode forfait; <br/>S : pour le mode spécifique. <br/>Pour les non-DOM et par défaut, il a pour valeur R.",
+              "title": "Mode de calcul",
+              "minLength": 1,
+              "maxLength": 1
+            },
+            "nbHeures": {
+              "type": "integer",
+              "format": "int32",
+              "description": "Nombre d'heures travaillées < 1000. Utilisé pour les GED.",
+              "title": "Nombre d'heures travaillées",
+              "minimum": 1,
+              "maximum": 1000
+            },
+            "nbHrSupMajA25": {
+              "type": "integer",
+              "format": "int32",
+              "description": "Nombre d'heures supplémentaires majorées à 25%. Renseigné que si nbHeures>0. Utilisé pour les GED.",
+              "title": "Nombre d'heures supplémentaires majorées à 25%",
+              "minimum": 0,
+              "maximum": 35
+            },
+            "nbHrSupMajA50": {
+              "type": "integer",
+              "format": "int32",
+              "description": "Nombre d'heures supplémentaires majorées à 50%.  Renseigné que si nbHeuresSup1>0. Utilisé pour les GED.",
+              "title": "Nombre d'heures supplémentaires majorées à 50%",
+              "minimum": 0,
+              "maximum": 40
+            },
+            "indcEnfantPlusJeuneAgarder": {
+              "type": "string",
+              "description": "1 : enfant de 0 à 3 ans sans complément d’activité, 2 : enfant de 3 à 6 ans, 3 : enfant de plus 6 ans",
+              "title": "Age de l'enfant le plus jeune à garder",
+              "minLength": 1,
+              "maxLength": 1
+            },
+            "complementActiviteOk": {
+              "type": "boolean",
+              "example": true,
+              "description": "Indicateur indiquant que l'employeur perçoit un complément d'activité ou non.",
+              "title": "Indicateur de complément d'activité"
+            }
+          }
+        }
+      ]
+    },
+    "InputDeclarationAma": {
+      "type": "object",
+      "required": ["nbJoursActivite"],
+      "properties": {
+        "inputSp": {
+          "$ref": "#/definitions/InputSp"
+        },
+        "inputDeclEnfant": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/InputEnfant"
+          }
+        },
+        "inputDeclCommun": {
+          "$ref": "#/definitions/InputDeclCommun"
+        },
+        "nbJoursActivite": {
+          "type": "integer",
+          "format": "uint8",
+          "description": "Nombre de jours d'activité. Champ sur 2 caractères supérieur à 0 et inférieur ou égal à 31.",
+          "title": "Nombre de jours d'activité",
+          "minimum": 1,
+          "maximum": 99
+        },
+        "nbHeuresMajorees": {
+          "type": "integer",
+          "format": "uint8",
+          "description": "Nombre d'heures majorées.",
+          "title": "Nombre d'heures majorées",
+          "minimum": 0,
+          "maximum": 999
+        },
+        "nbHeuresComplementaires": {
+          "type": "integer",
+          "format": "uint8",
+          "description": "Nombre de jours d'activité.",
+          "title": "Nombre de jours d'activité.",
+          "minimum": 0,
+          "maximum": 999
+        },
+        "mntIndemnitesEntretien": {
+          "type": "number",
+          "format": "double",
+          "description": "Montant des indemnités d'entretien.",
+          "title": "Montant indemnités d'entretien",
+          "minimum": 0,
+          "maximum": 9999.99,
+          "multipleOf": 0.01
+        },
+        "mntIndemnitesRepas": {
+          "type": "number",
+          "format": "double",
+          "description": "Montant des indemnités repas.",
+          "title": "Montant indemnités repas",
+          "maximum": 9999.99,
+          "multipleOf": 0.01
+        },
+        "mntIndemnitesRupture": {
+          "type": "number",
+          "format": "double",
+          "description": "Montant des indemnités de rupture.",
+          "title": "Montant indemnités de rupture",
+          "maximum": 9999.99,
+          "multipleOf": 0.01
+        }
+      }
+    },
+    "EstimationCotiCommun": {
+      "type": "object",
+      "properties": {
+        "mntCotiPriseEnChargeOdpf": {
+          "type": "number",
+          "format": "double",
+          "description": "Montant des cotisations prises en charges par les ODPF (Caf/MSA). Note : Pour un employeur CMG et une activité de type AMA, ce montant sera toujours supérieur à 0."
+        },
+        "mntCotiEmplAcharge": {
+          "type": "number",
+          "format": "double",
+          "description": "Montant des cotisations restants à la charge de l'employeur. Note : Pour un employeur CMG et une activité de type AMA, ce montant sera toujours égal à 0."
+        },
+        "mntExoEmployeur": {
+          "type": "number",
+          "format": "double",
+          "description": "Montant de la déduction forfaitaire de cotisations correspondant à des exonérations pour l'employeur. Note : Pour un employeur CMG et une activité de type AMA, ce montant sera toujours égal à 0."
+        }
+      }
+    },
+    "InputDeclCommun": {
+      "type": "object",
+      "required": [
+        "dtDebutPeriode",
+        "dtFinPeriode",
+        "dtPaiementSalaire",
+        "mntSalaireNetMensuel",
+        "nbHeures"
+      ],
+      "properties": {
+        "dtDebutPeriode": {
+          "type": "string",
+          "format": "date",
+          "example": "2020-01-01",
+          "description": "Date de début de la période de la prestation. Ce champ est obligatoire. (format : yyyy-MM-dd).",
+          "title": "Date de début"
+        },
+        "dtFinPeriode": {
+          "type": "string",
+          "format": "date",
+          "example": "2020-01-01",
+          "description": "Date de fin de la période de prestation. Ce champ est obligatoire. (format : yyyy-MM-dd).",
+          "title": "Date de fin"
+        },
+        "dtPaiementSalaire": {
+          "type": "string",
+          "format": "date",
+          "example": "2020-01-01",
+          "description": "Date de paiement de la prestation. Ce champ est obligatoire. (format : yyyy-MM-dd).",
+          "title": "Date de paiement"
+        },
+        "nbHeures": {
+          "type": "integer",
+          "format": "int32",
+          "description": "Nombre d'heures (y compris les heures d'absence pour congés payés et les heures spécifiques le cas échéant). Champ obligatoire. Valeur entière positive < 1000.",
+          "title": "Nombre d'heures",
+          "minimum": 1,
+          "maximum": 999
+        },
+        "nbJoursCongesPayes": {
+          "type": "number",
+          "format": "double",
+          "description": "Nombre de jours de congés payés. Champ décimal par tranche de demi-journée.",
+          "title": "Nombre de jours de congés payés",
+          "minimum": 0,
+          "maximum": 99,
+          "multipleOf": 0.5
+        },
+        "mntSalaireHoraireNet": {
+          "type": "number",
+          "format": "double",
+          "description": "Salaire horaire net d'une heure normale en Euro.",
+          "title": "Salaire horaire net",
+          "maximum": 9999.99,
+          "multipleOf": 0.01
+        },
+        "nbHeuresSpecifiques": {
+          "type": "integer",
+          "format": "int32",
+          "description": "Nombre d'heures spécifiques",
+          "title": "Nombre d'heures spécifiques",
+          "minimum": 0,
+          "maximum": 1000
+        },
+        "mntAcompteSalarie": {
+          "type": "number",
+          "format": "double",
+          "description": "Montant d'un acompte versé au salarié.",
+          "title": "Montant acompte",
+          "maximum": 9999.99,
+          "multipleOf": 0.01
+        },
+        "mntSalaireNetMensuel": {
+          "type": "number",
+          "format": "double",
+          "description": "Salaire net mensuel à payer en euros. Ce champ doit être supérieur à 0.",
+          "title": "Salaire net mensuel",
+          "maximum": 9999.99,
+          "multipleOf": 0.01
+        },
+        "mntIndemnitesKilometriques": {
+          "type": "number",
+          "format": "double",
+          "description": "Montant des indemnités kilométriques.",
+          "title": "Montant indemnités kilométriques",
+          "maximum": 9999.99,
+          "multipleOf": 0.01
+        }
+      }
+    },
+    "OutputVerificationEnfantPe": {
+      "type": "object",
+      "properties": {
+        "verificationEnfantPe": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/VerificationEnfantPe"
+          }
+        }
+      }
+    },
+    "Erreur": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "example": "ER_API_020_NB_0000",
+          "title": "Code d'erreur"
+        },
+        "message": {
+          "type": "string",
+          "example": "L'inscription au site internet n'est pas effective",
+          "title": "Message d'erreur"
+        },
+        "description": {
+          "type": "string",
+          "example": "Le compte employeur n'est pas actif dans le SI Pajemploi.",
+          "title": "Description de l'erreur"
+        }
+      }
+    },
+    "InputAdresse": {
+      "type": "object",
+      "required": ["codeCommune", "codePostal"],
+      "properties": {
+        "numVoie": {
+          "type": "integer",
+          "format": "int32",
+          "description": "Numéro dans la voie. Champ numérique sur 4 digits.",
+          "title": "Numéro dans la voie",
+          "minimum": 1,
+          "maximum": 9999
+        },
+        "lettreVoie": {
+          "type": "string",
+          "description": "Lettre associée au numéro dans la voie. Champ alphabétique, non accentué et en majuscule sur 1 caractères maximum.",
+          "title": "Lettre associée au numéro dans la voie",
+          "minLength": 1,
+          "maxLength": 1,
+          "pattern": "[A-Z'\\-\\s]*"
+        },
+        "typeVoie": {
+          "type": "string",
+          "description": "Type de voie. Champ alphabétique, non accentué et en majuscule sur 3 caractères maximum.",
+          "title": "Type de voie",
+          "minLength": 1,
+          "maxLength": 3,
+          "pattern": "[A-Z'\\-\\s]*"
+        },
+        "libelleVoie": {
+          "type": "string",
+          "title": "Libellé voie",
+          "maxLength": 21
+        },
+        "complementLocalisation": {
+          "type": "string",
+          "description": "Complément de localisation. Champ alphabétique, non accentué et en majuscule sur 32 caractères maximum.",
+          "title": "Complément localisation",
+          "maxLength": 32,
+          "pattern": "[A-Z'\\-\\s]*"
+        },
+        "lieuDit": {
+          "type": "string",
+          "description": "Lieu Dit. Champ alphabétique, non accentué et en majuscule sur 32 caractères maximum.",
+          "title": "Lieu Dit",
+          "maxLength": 32,
+          "pattern": "[A-Z'\\-\\s]*"
+        },
+        "codeCommune": {
+          "type": "string",
+          "description": "Numéro INSEE identifiant la commune. Par exemple, le code 94022 identifie la commune de CHOISY LE ROI.",
+          "title": "Code Commune INSEE",
+          "minLength": 5,
+          "maxLength": 5
+        },
+        "codePostal": {
+          "type": "string",
+          "description": "Code postal de la commune. Champ numérique sur 5 digits.",
+          "title": "Code postal",
+          "minLength": 5,
+          "maxLength": 5
+        }
+      }
+    },
+    "OutputPreDeclaration": {
+      "type": "object",
+      "properties": {
+        "declaration": {
+          "$ref": "#/definitions/DeclarationCommun"
+        },
+        "verificationEnfantPe": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/VerificationEnfantPe"
+          }
+        },
+        "erreursNonBloquantes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Erreur"
+          }
+        }
+      }
+    },
+    "OutputEstimation": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/EstimationCotiCommun"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "erreursNonBloquantes": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Erreur"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "OutputVerificationPe": {
+      "type": "object",
+      "properties": {
+        "employeurAutoriseOk": {
+          "type": "boolean",
+          "description": "Indicateur PE inscrit et validé au site PAJEMPLOI. Toutes les informations empoyeurs nécessaires  à la déclaration sont présentes (coordonnées bancaires valides)."
+        },
+        "etatCompteEnLigne": {
+          "type": "string",
+          "example": "Actif",
+          "description": "Indicateur du particulier employeur possédant un compte en ligne  pouvant avoir les valeurs suivantes : <br/>- Actif,<br/>- Absent,<br/>- Inactif,<br/>- Coordonnées bancaires invalides.<br/>"
+        }
+      }
+    },
+    "InputEstimationAma": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/InputEstimation"
+        },
+        {
+          "type": "object",
+          "required": ["nbEnfantsGardes", "nbJoursActivite"],
+          "properties": {
+            "nbEnfantsGardes": {
+              "type": "integer",
+              "format": "int8",
+              "description": "Nombre d'enfants gardés.",
+              "title": "Nombre d'enfants",
+              "minimum": 1,
+              "maximum": 5
+            },
+            "nbJoursActivite": {
+              "type": "integer",
+              "format": "uint8",
+              "description": "Nombre de jours d'activité.",
+              "title": "Nombre de jours d'activité",
+              "minimum": 1,
+              "maximum": 31
+            },
+            "nbJoursCongesPayes": {
+              "type": "number",
+              "format": "double",
+              "description": "Nombre de jours de congés payés.",
+              "title": "Nombre de jours de congés payés",
+              "minimum": 0,
+              "maximum": 99,
+              "multipleOf": 0.5
+            },
+            "nbHeuresMajorees": {
+              "type": "integer",
+              "format": "uint8",
+              "description": "Nombre d'heures majorées.",
+              "title": "Nombre d'heures majorées",
+              "minimum": 0,
+              "maximum": 999
+            },
+            "nbHeuresComplementaires": {
+              "type": "integer",
+              "format": "uint8",
+              "description": "Nombre de jours d'activité.",
+              "title": "Nombre de jours d'activité.",
+              "minimum": 0,
+              "maximum": 999
+            }
+          }
+        }
+      ]
+    },
+    "InputDeclarationGed": {
+      "type": "object",
+      "required": ["cdModeCalcul"],
+      "properties": {
+        "inputSp": {
+          "$ref": "#/definitions/InputSp"
+        },
+        "inputDeclEnfant": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/InputEnfant"
+          }
+        },
+        "inputDeclCommun": {
+          "$ref": "#/definitions/InputDeclCommun"
+        },
+        "nbHrSupMajA25": {
+          "type": "integer",
+          "format": "int32",
+          "description": "Nombre d'heures supplémentaires majorées à 25%. Renseigné que si nbHeures>0. Utilisé pour les GED.",
+          "title": "Nombre d'heures supplémentaires majorées à 25%",
+          "minimum": 0,
+          "maximum": 35
+        },
+        "nbHrSupMajA50": {
+          "type": "integer",
+          "format": "int32",
+          "description": "Nombre d'heures supplémentaires majorées à 50%.  Renseigné que si nbHeuresSup1>0. Utilisé pour les GED.",
+          "title": "Nombre d'heures supplémentaires majorées à 50%",
+          "minimum": 0,
+          "maximum": 40
+        },
+        "cdModeCalcul": {
+          "type": "string",
+          "description": "Pour les DOM GED , il a pour valeur R ou F ou S; <br/>R : pour le mode réél; <br/>F : pour le mode forfait; <br/>S : pour le mode spécifique. <br/>Pour les non-DOM et par défaut, il a pour valeur R.",
+          "title": "Mode de calcul",
+          "minLength": 1,
+          "maxLength": 1
+        },
+        "mntFraisTransport": {
+          "type": "number",
+          "format": "double",
+          "description": "Montant des frais de transport.",
+          "title": "Montant des frais de transport",
+          "maximum": 9999.99,
+          "multipleOf": 0.01
+        },
+        "mntIndemnitesLicenciement": {
+          "type": "number",
+          "format": "double",
+          "description": "Montant des indemnités de licenciement.",
+          "title": "Montant indemnités de licenciement",
+          "maximum": 9999.99,
+          "multipleOf": 0.01
+        }
+      }
+    },
+    "InputVerificationEnfantPe": {
+      "type": "object",
+      "required": ["inputEnfantPe"],
+      "properties": {
+        "inputEnfantPe": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/InputEnfant"
+          }
+        }
+      }
+    },
+    "DeclarationCommun": {
+      "type": "object",
+      "properties": {
+        "mntAverserParPaje": {
+          "type": "number",
+          "description": "Montant à verser à l'employeur par le centre national Pajemploi."
+        },
+        "mntCotisations": {
+          "type": "number",
+          "description": "Montant total des cotisations."
+        },
+        "mntCotiPriseEnChargeOdpf": {
+          "type": "number",
+          "description": "Montant des cotisations prises en charges par les ODPF (Caf/MSA). Note : Pour un employeur CMG et une activité de type AMA, ce montant sera toujours supérieur à 0."
+        },
+        "mntCotiEmplAcharge": {
+          "type": "number",
+          "description": "Montant des cotisations restants à la charge de l'employeur. Note : Pour un employeur CMG et une activité de type AMA, ce montant sera toujours égal à 0."
+        },
+        "mntSalaireNetImposable": {
+          "type": "number",
+          "description": "Montant du salaire net imposable."
+        },
+        "txPas": {
+          "type": "number",
+          "description": "Taux de prélèvement du salarié appliquer pour le prélèvement à la source."
+        },
+        "mntImpotPas": {
+          "type": "number",
+          "description": "Montant de l'impôt prélevé."
+        },
+        "mntSalaireNetApayerApresPas": {
+          "type": "number",
+          "description": "Montant du salaire net à payer après prélèvement à la source."
+        },
+        "mntEmplCmgRemuneration": {
+          "type": "number",
+          "description": "Montant du CMG rémunération."
+        },
+        "mntApreleverParPaje": {
+          "type": "number",
+          "description": "Montant à prélever à l'employeur par le centre national Pajemploi."
+        },
+        "dtPrelevementPrevisionnelle": {
+          "type": "string",
+          "format": "date",
+          "description": "Date de prélèvement prévisionnelle."
+        },
+        "mntEmplAverserSalarie": {
+          "type": "number",
+          "description": "Montant que l'employeur doit verser au salarié."
+        },
+        "dtVersementPrevisionnelle": {
+          "type": "string",
+          "format": "date",
+          "description": "Date de versement prévisionnelle."
+        }
+      }
+    },
+    "OutputAssociationEmployeurSalarie": {
+      "type": "object",
+      "properties": {
+        "salarieCreeOk": {
+          "type": "boolean",
+          "description": "Retourne 'vrai', si le salarié a été créé dans le SI Pajemploi"
+        },
+        "salarieAssocieOk": {
+          "type": "boolean",
+          "description": "Retourne 'vrai', si le salarié a été associé à l'employeur dans le SI Pajemploi."
+        },
+        "salarieDejaAssocieOK": {
+          "type": "boolean",
+          "description": "Retourne 'vrai', si le salarié et l'employeur ont déjà une association active dans le SI Pajemploi."
+        },
+        "outputVerificationSp": {
+          "$ref": "#/definitions/OutputVerificationSp"
+        },
+        "erreursNonBloquantes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Erreur"
+          }
+        }
+      }
+    },
+    "OutputDeclaration": {
+      "type": "object",
+      "properties": {
+        "referenceDocumentaire": {
+          "type": "string",
+          "description": "Référence du volet social."
+        },
+        "declaration": {
+          "$ref": "#/definitions/DeclarationCommun"
+        },
+        "verificationEnfantPe": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/VerificationEnfantPe"
+          }
+        },
+        "erreursNonBloquantes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Erreur"
+          }
+        }
+      }
+    },
+    "InputCreationSalarie": {
+      "type": "object",
+      "properties": {
+        "nirSalarie": {
+          "type": "string",
+          "description": "Numéro de sécurité sociale du salarié. Ce champ, sur 15 caractères.",
+          "minLength": 15,
+          "maxLength": 15
+        },
+        "dtNaissanceSalarie": {
+          "type": "string",
+          "format": "date",
+          "example": "1980-01-30",
+          "description": "Date de naissance du salarié. (format : yyyy-MM-dd).",
+          "title": "Date de naissance"
+        },
+        "typeActiviteSalarie": {
+          "type": "string",
+          "description": "Type d'activité du salarié. Ce champ sur 1 caractère est obligatoire.Valeur possible :- A, pour une activité de type assistante maternelle- G, pour une activité de type garde d'enfants à domicile",
+          "minLength": 1,
+          "maxLength": 1
+        },
+        "dtDebutAgrement": {
+          "type": "string",
+          "format": "date",
+          "example": "1980-01-30",
+          "description": "Date de debut d'agrément en cours de validité. (format : yyyy-MM-dd).",
+          "title": "Date de naissance"
+        },
+        "inputAdresseSalarie": {
+          "$ref": "#/definitions/InputAdresse"
+        },
+        "inputIdentificationSalarie": {
+          "$ref": "#/definitions/InputIdentificationSalarie"
+        }
+      }
+    },
+    "OutputVerificationSp": {
+      "type": "object",
+      "properties": {
+        "numeroPajeSalarie": {
+          "type": "string",
+          "description": "Numéro Pajemploi"
+        },
+        "indcAma": {
+          "type": "boolean",
+          "example": true,
+          "description": "Indique si le salarié peut effectuer une activité d'assistante maternelle."
+        },
+        "indcGed": {
+          "type": "boolean",
+          "example": true,
+          "description": "Indique si le salarié peut effectuer une activité garde d'enfant à domicile."
+        },
+        "etatCompteEnLigne": {
+          "type": "string",
+          "example": "Actif",
+          "description": "Indicateur du salarié particulier possédant un compte en ligne pouvant avoir les valeurs suivantes : <br/>- Actif,<br/>- Absent,<br/>- Inactif."
+        }
+      }
+    },
+    "InputSp": {
+      "type": "object",
+      "properties": {
+        "numeroPajeSalarie": {
+          "type": "string",
+          "description": "Numéro Pajemploi (numéro interne du SI Pajemploi identifiant le salarié). Ce champ alphanumérique sur 14 caractères est obligatoire en l'absence de NIR et de données administratives du salarié.",
+          "title": "Numéro Pajemploi du salarié",
+          "minLength": 14,
+          "maxLength": 14
+        },
+        "nirSalarie": {
+          "type": "string",
+          "description": "Numéro de sécurité sociale du salarié. Ce champ, sur 15 caractères, est obligatoire en l'absence de numéro Pajemploi et de données administratives du salarié.",
+          "minLength": 15,
+          "maxLength": 15
+        },
+        "dtNaissanceSalarie": {
+          "type": "string",
+          "format": "date",
+          "example": "1980-01-30",
+          "description": "Date de naissance du salarié. (format : yyyy-MM-dd).",
+          "title": "Date de naissance"
+        }
+      }
+    },
+    "InputEnfant": {
+      "type": "object",
+      "required": ["dtNaissanceEnfant", "nomEnfant", "prenomEnfant"],
+      "properties": {
+        "nomEnfant": {
+          "type": "string",
+          "example": "L'HOMME",
+          "description": "Nom de l'enfant. Champ alphabétique, non accentué et en majuscule sur 30 caractères maximum.",
+          "title": "Nom",
+          "maxLength": 30,
+          "pattern": "[A-Z'\\-\\s]*"
+        },
+        "prenomEnfant": {
+          "type": "string",
+          "example": "JEAN-MICHEL",
+          "description": "Prénom de l'enfant. Champ alphabétique, non accentué et en majuscule sur 30 caractères maximum.",
+          "title": "Prénom",
+          "maxLength": 30,
+          "pattern": "[A-Z'\\-\\s]*"
+        },
+        "dtNaissanceEnfant": {
+          "type": "string",
+          "format": "date",
+          "example": "2015-01-12",
+          "description": "Date de naissance de l'enfant (format : yyyy-MM-dd).",
+          "title": "Date de naissance"
+        }
+      }
+    },
+    "InputEstimation": {
+      "type": "object",
+      "required": ["mntSalaireNetMensuel"],
+      "properties": {
+        "cdPostalSalarie": {
+          "type": "string",
+          "description": "Code postal du salarié.",
+          "title": "Code postal salarié",
+          "minLength": 5,
+          "maxLength": 5,
+          "default": "75000"
+        },
+        "cdPostalEmployeur": {
+          "type": "string",
+          "description": "Code postal de l'employeur.",
+          "title": "Code postal employeur",
+          "minLength": 5,
+          "maxLength": 5,
+          "default": "75000"
+        },
+        "mntSalaireNetMensuel": {
+          "type": "number",
+          "format": "double",
+          "description": "Salaire net mensuel déclaré.",
+          "title": "Salaire net mensuel déclaré.",
+          "maximum": 9999.99,
+          "multipleOf": 0.01
+        }
+      }
+    },
+    "InputIdentificationSalarie": {
+      "type": "object",
+      "properties": {
+        "cdCivilite": {
+          "type": "string",
+          "description": "<u>Codes civilité</u> :<br>1 - M.<br>2 - Mme",
+          "title": "Code civilité",
+          "minLength": 1,
+          "maxLength": 1
+        },
+        "nomNaissance": {
+          "type": "string",
+          "description": "Nom de naissance du salarié. Champ alphabétique, non accentué et en majuscule sur 30 caractères maximum.",
+          "title": "Nom de naissance",
+          "maxLength": 30,
+          "pattern": "[A-Z'\\-\\s]*"
+        },
+        "nomUsage": {
+          "type": "string",
+          "description": "Nom d'usage du salarié. Champ alphabétique, non accentué et en majuscule sur 30 caractères maximum.",
+          "title": "Nom d'usage",
+          "maxLength": 30,
+          "pattern": "[A-Z'\\-\\s]*"
+        },
+        "prenom": {
+          "type": "string",
+          "description": "Prénom du salarié. Champ alphabétique, non accentué et en majuscule sur 30 caractères maximum.",
+          "title": "Prénom",
+          "maxLength": 30,
+          "pattern": "[A-Z'\\-\\s]*"
+        },
+        "dtNaissanceSalarie": {
+          "type": "string",
+          "format": "date",
+          "example": "1980-01-30",
+          "description": "Date de naissance du salarié. (format : yyyy-MM-dd).",
+          "title": "Date de naissance"
+        },
+        "codePaysNaissance": {
+          "type": "string",
+          "description": "Code INSEE du pays de naissance (ex. FRANCE = 100). Champ alphabétique sur 3 caractères maximum.",
+          "title": "Code INSEE du pays de naissance",
+          "maxLength": 3
+        },
+        "departementNaissance": {
+          "type": "string",
+          "description": "Département de naissance du salarié. Ce champ sur 3 caractères maximum (ex: 972 ou 07) est obligatoire si le salarié est né en France.",
+          "title": "Département de naissance",
+          "maxLength": 3
+        },
+        "villeNaissance": {
+          "type": "string",
+          "description": "Ville de naissance du salarié.",
+          "title": "Ville de naissance",
+          "maxLength": 30,
+          "pattern": "[a-zA-ZáÁàÀâÂäÄéÉèÈëËêÊìÌíÍïÏîÎñÑòÒóÓôÔöÖùÙúÚüÜûÛçÇýÝÿŸŒœÆæ'\\-\\s]*"
+        }
+      }
+    },
+    "VerificationEnfantPe": {
+      "type": "object",
+      "properties": {
+        "reponseStatutEnfant": {
+          "type": "integer",
+          "format": "int32",
+          "example": 1,
+          "description": "0: Enfant ouvrant droit non trouvé ou non ouvrant droit <br/> 1 : OK, enfant ouvrant droit trouvé <br/> 2 : OK, enfant ouvrant droit trouvé par une recherche partielle"
+        },
+        "inputEnfantPe": {
+          "$ref": "#/definitions/InputEnfant"
+        }
+      }
+    }
+  },
+  "x-axway": {
+    "serviceType": "rest",
+    "image": "/api/portal/v1.3/discovery/swagger/apis/aacf23f7-fecf-4227-880a-aa315d573d58/image",
+    "basePaths": [
+      "https://api.urssaf.fr",
+      "https://api.urssaf.fr",
+      "https://api.urssaf.fr",
+      "https://api.urssaf.fr",
+      "https://api.urssaf.fr"
+    ],
+    "expired": false,
+    "retirementDate": 0,
+    "corsEnabled": true,
+    "deprecated": false,
+    "availableSDK": {
+      "ios-swift": "/discovery/sdk/aacf23f7-fecf-4227-880a-aa315d573d58/ios-swift",
+      "titanium": "/discovery/sdk/aacf23f7-fecf-4227-880a-aa315d573d58/titanium",
+      "android": "/discovery/sdk/aacf23f7-fecf-4227-880a-aa315d573d58/android",
+      "nodejs": "/discovery/sdk/aacf23f7-fecf-4227-880a-aa315d573d58/nodejs"
+    },
+    "apiResourceType": "swagger20",
+    "id": "aacf23f7-fecf-4227-880a-aa315d573d58",
+    "state": "published"
+  }
+}

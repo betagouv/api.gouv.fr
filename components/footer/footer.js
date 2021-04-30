@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import constants from '../../constants';
 
 const Footer = () => {
   return (
@@ -14,11 +15,23 @@ const Footer = () => {
           </Link>
           <ul className="footer__social">
             <li>
-              <a href="https://twitter.com/BetaGouv" title="Twitter">
+              <a href="https://twitter.com/apigouv" title="Twitter">
                 <img
                   src="/images/social/twitter.svg"
                   alt="Twitter"
                   className="icon icon-twitter"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/company/api-gouv-fr/"
+                title="Linkedin"
+              >
+                <img
+                  src="/images/social/linkedin.svg"
+                  alt="Linkedin"
+                  className="icon icon-linkedin"
                 />
               </a>
             </li>
@@ -47,10 +60,16 @@ const Footer = () => {
             <h2>Le site</h2>
           </li>
           <li>
-            <a href="/feuille-de-route">Feuille de route des APIs</a>
+            <a href="/feuille-de-route">Feuille de route des API</a>
           </li>
           <li>
-            <a href="/documentation">Documentation des APIs</a>
+            <a href={constants.links.ADD_API}>Ajouter une nouvelle API</a>
+          </li>
+          <li>
+            <a href="/statistiques">Chiffres clés</a>
+          </li>
+          <li>
+            <a href="/documentation">Documentation des API</a>
           </li>
           <li>
             <a href="/mentions-legales">Mentions Légales</a>
@@ -71,11 +90,11 @@ const Footer = () => {
           </li>
           <li>
             <a
-              href="https://github.com/betagouv/api.gouv.fr/blob/master/CONTRIBUTING.md"
+              href="https://beta.gouv.fr/recrutement/"
               rel="noopener noreferrer"
               target="_blank"
             >
-              Améliorer cette page
+              Nous rejoindre
             </a>
           </li>
         </ul>

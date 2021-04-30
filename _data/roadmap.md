@@ -54,7 +54,7 @@
       path: /les-api/api_bdm
     - type: ADD_API
       what: Registre National du Commerce et des Sociétés
-      path: /les-api/api_inpi
+      path: /les-api/api-rncs
     - type: ADD_API
       what: Professionnels RGE
       path: /les-api/api_professionnels_rge
@@ -85,40 +85,50 @@
       what: Gallica Document de la BnF
       path: /les-api/api_gallica_document
     - type: ADD_API
-      what: API Aide financieres de l’ADEME
+      what: Aide financieres de l’ADEME
       path: /les-api/api_aides_financieres_ademe
     - type: ADD_API
-      what: API Aides financières à la rénovation énergetique (Simul’Aid€s)
+      what: Aides financières à la rénovation énergetique (Simul’Aid€s)
       path: /les-api/api_aides_renovation_energetique
     - type: ADD_API
-      what: API Impacts environnementaux - AGRIBALYSE®
+      what: Impacts environnementaux - AGRIBALYSE®
       path: /les-api/api_agribalyse
   10:
     - type: ADD_API
       what: Sirene données ouvertes
       path: /les-api/api-sirene-donnees-ouvertes
-    - type: ADD_API
-      what: Données ouvertes de l’URSSAF
-    - type: ADD_API
-      what: Données ouvertes de la ville de Paris
-    - type: ADD_API
-      what: Répertoire National des Métiers
-      path: https://rnm.artisanat.fr/api/
-    - type: ADD_API
-      what: Fichiers des Comptes Bancaires (FiCoBa) produite par le DGFiP
+  11:
     - type: ADD_API
       what: Registre des Bénéficiaires Effectifs (RBE) produite par l'INPI
-  11:
-    - type: INFO
-      what: |
-        Intégration tiers déclaratant des [APIs de l’URSSAF](https://portailapi.urssaf.fr/fr/) :
-
-        - API Déclaration auto-entrepreneur
-        - API Déclaration CESU
-        - API Déclaration PAJE
+      path: /les-api/api-rbe
+    - type: ADD_API
+      what: Données ouvertes de l’Urssaf
+      path: /les-api/api-open-data-urssaf
+    - type: ADD_API
+      what: Répertoire National des Métiers
+      path: /les-api/api_rnm
+    - type: ADD_API
+      what: Déclaration auto-entrepreneur
+      path: /les-api/api-declaration-auto-entrepreneur
+    - type: ADD_API
+      what: Déclaration PAJE
+      path: /les-api/api-declaration-pajemploi
+    - type: ADD_API
+      what: Déclaration CESU
+      path: /les-api/api-declaration-cesu
     - type: ADD_API
       what: Données Ouvertes Loire-Atlantique
+      path: /les-api/api-loire-atlantique-donnees-ouvertes
   12:
+    - type: ADD_API
+      what: Gallica IIIF par la BnF
+      path: /les-api/api_gallica_IIIF
+    - type: ADD_API
+      what: Data.bnf.fr par la BnF
+      path: /les-api/api-data-bnf-fr
+    - type: ADD_API
+      what: Fichiers des Comptes Bancaires (FiCoBa) produite par le DGFiP
+      path: /les-api/api_comptes_bancaires_ficoba
     - type: DLNUF
       what: |
         De nouvelles données seront mises à disposition des administrations dans le cadre du [« Dites le nous une fois »](https://www.numerique.gouv.fr/services/guichet-dites-le-nous-une-fois/) :
@@ -139,7 +149,66 @@
       what: |
         Publication d'une doctrine relative à la circulation des données entre administrations
 2021:
-  01:
+  1:
+    - type: ADD_API
+      what: La Bonne Alternance
+      path: /les-api/api-la-bonne-alternance
+  3:
+    - type: ADD_API
+      what: Métadonnées de l'INSEE
+      path: /les-api/api-metadonnees-insee
+    - type: ADD_API
+      what: Engagement
+      path: /les-api/api-engagement
+  4:
+    - type: ADD_API
+      what: Tracabilité des déchets dangereux - Trackdéchets
+      path: /les-api/api-trackdechets
+    - type: ADD_API
+      what: Service National par le ministère des Armées
+      path: /les-api/api-service-national
+    - type: ADD_API
+      what: Infos Financières par la DILA
+      path: /les-api/api-info-financiere
+    - type: ADD_API
+      what: Hub’Eau - Surveillance du littoral
+      path: /les-api/api_hubeau_surv_litt
+    - type: ADD_API
+      what: Professionnels BIO par l'agence BIO
+    - type: ADD_API
+      what: Pro Santé Connect par l'ANS
+    - type: ADD_API
+      what: CVEC par le CNOUS
+  5:
+    - type: ADD_API
+      what: Statut Étudiant
+    - type: ADD_API
+      what: Bulletin Officiel des Annonces Civiles et Commerciales (BODACC)
+    - type: ADD_API
+      what: Liste des organismes de formation par la DGEFP
+    - type: ADD_API
+      what: Accès Libre
+  6:
+    - type: ADD_API
+      what: AgentConnect par la DINUM
+    - type: ADD_API
+      what: Référentiel Partagé des Professionnels de Santé
+    - type: ADD_API
+      what: Hermés par la DGFiP
+    - type: ADD_API
+      what: AgentConnect par la DINUM
+  7:
+    - type: ADD_API
+      what: Attestation Codes Sécurité par l'Urssaf
+    - type: ADD_API
+      what: Déclaration préalable à l'embauche par l'Urssaf
+  9:
     - type: ADD_API
       what: Indemnités Journalières distribuée par la CNAM
+    - type: ADD_API
+      what: Bulletin Officiel des Annonces Civiles et Commerciales par la DILA
+    - type: ADD_API
+      what: Bulletin des Annonces Légales Obligatoires par la DILA
+    - type: ADD_API
+      what: Journal Officiel par la DILA
 ---

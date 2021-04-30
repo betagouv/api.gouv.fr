@@ -1,12 +1,13 @@
 ---
-title: API DPE bâtiments publics
-tagline: Le recensement des diagnostics de performance énergétique (DPE) des bâtiments publics
-external_site: https://data.ademe.fr/datasets/dpe-batiments-publics
+title: API DPE bâtiments tertiaires
+tagline: Le recensement des diagnostics de performance énergétique (DPE) des bâtiments teriaires
+external_site: https://data.ademe.fr/datasets/dpe-tertiaire
 is_open: 1 # 1 means API is fully open
 producer: ademe
 keywords:
   - Performance energétique
   - Batiments publics
+  - tertiaire
   - diagnostics de performance énergétique
   - DPE
   - Professionnels
@@ -16,19 +17,20 @@ rate_limiting_resume: 10 appels / seconde / IP
 themes:
   - Environnement
 contact_link: https://www.ademe.fr/content/contacter
-doc_tech_link: https://koumoul.com/s/data-fair/api/v1/datasets/dpe-batiments-publics/api-docs.json
+doc_tech_link: https://koumoul.com/s/data-fair/api/v1/datasets/dpe-tertiaire/api-docs.json
+doc_tech_external: https://data.ademe.fr/datasets/dpe-tertiaire
 datagouv_uuid:
-  - 5e45343c8b4c415ddfdb180c
+  - 6061abe367b3cc046a5a7e13
 last_update: 27/07/2020
 ---
 
-Depuis le 2 janvier 2008, le diagnostic de performance énergétique de certains bâtiments publics doit être affiché dans le hall d’accueil du bâtiment.
+Depuis le 2 janvier 2008, le diagnostic de performance énergétique de certains bâtiments doit être affiché dans le hall d’accueil du bâtiment.
 
 Cette obligation s’applique aux bâtiments de plus de 500 m², occupés par l’Etat, une collectivité territoriale ou un établissement public (propriétaire ou non du bâtiment), et accueillant un établissement recevant du public (ERP) de catégorie 1 à 4. Le DPE est établi aux frais de la personne publique qui occupe le bâtiment.
 
 ### À quoi sert l’API DPE bâtiments publics ?
 
-Cette API donne accès au recensement des diagnostics de performance énergétique (DPE) des bâtiments publics de la France entière.
+Cette API donne accès au recensement des diagnostics de performance énergétique (DPE) des bâtiments tertiaires de la France entière.
 
 ### Données
 
@@ -59,7 +61,7 @@ Aussi, tous les ERP de catégorie 1 à 4, occupés par des organismes publics ou
 
 Le DPE affiché contient les mêmes informations que le DPE réalisé pour la vente, la location ou la construction d’un bâtiment. Ces informations s’adressent au public, aux occupants et également au gestionnaire du bâtiment. C’est la consommation réelle d’énergie qui est indiquée, et non une consommation conventionnelle calculée. Il existe plusieurs étiquettes énergie et climat, pour tenir compte de la diversité des usages et modes d’occupation des bâtiments publics.
 
-Les données sont mises à jour régulièrement et accessibles sur le <External href="https://data.ademe.fr/datasets/dpe-batiments-publics">portail Open Data de l'ADEME</External>.
+Les données sont mises à jour régulièrement et accessibles sur le <External href="https://data.ademe.fr/datasets/dpe-tertiaire">portail Open Data de l'ADEME</External>.
 
 ### À propos de l'Open Data a l’ADEME
 

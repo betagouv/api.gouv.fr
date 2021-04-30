@@ -7,17 +7,20 @@ is_open: -1
 datapass_link: https://datapass.api.gouv.fr/cartobio
 access_page:
   - who:
-      - Un particulier
+      - un particulier
     is_eligible: 0
     description: |
-      Nous communiquons les données géographiques sous condition de projet d'installation en agriculture biologique (peu importe le label).
+      Nous communiquons les données géographiques sous condition de future installation en agriculture biologique (peu importe le label), ou parce que vous étudiez les données géographiques en lien avec le développement de l'agriculture biologique.
 
-      <Button href="mailto:cartobio@beta.gouv.fr?subject=J'ai%20une%20question%20%C3%A0%20propos%20des%20donn%C3%A9es%20de%20mon%20territoire">Contactez-nous pour exposer votre projet</Button>
+      <Button href="mailto:cartobio-donnees@beta.gouv.fr?subject=Demande%20de%20donn%C3%A9es%20pour%20mon%20territoire">Contactez-nous pour exposer votre projet</Button>
   - who:
-      - Une association ou une entreprise
+      - une association
+      - une coopérative
+      - un·e apiculteur·ice
+      - une entreprise
     is_eligible: 1
     description: |
-      Les organisations qui œuvrent au développement de l'agriculture biologique peuvent faire une demande de _données géographiques_.
+      Les organisations qui œuvrent au développement de l'agriculture biologique et/ou de la biodiversité peuvent faire une demande de _données géographiques_.
 
       Si vous souhaitez uniquement connaitre la _répartition_ ou les _statistiques_ de l'agriculture bio dans votre commune/département/région, [l'Agence Bio publie des données annuellement](https://www.agencebio.org/vos-outils/les-chiffres-cles/).
 
@@ -30,7 +33,7 @@ access_page:
       - un organisme public
     is_eligible: 1
     description: |
-      Les structures publiques (EPCI, Agence de l’Eau, PNR, Agence Publique, …) qui souhaitent avoir accès aux données de l’API CartoBio pour des projets dans leur territoire (qualité de l’eau, alimentation, …) peuvent faire une demande.
+      Les structures publiques (université, EPCI, Agence de l’Eau, PNR, Agence Publique, …) qui souhaitent avoir accès aux données de l’API CartoBio pour des projets dans leur territoire (qualité de l’eau, alimentation, …) peuvent faire une demande.
 
       <NextSteps />
       <Button href="https://datapass.api.gouv.fr/cartobio">Remplir une demande</Button>
@@ -44,7 +47,7 @@ keywords:
   - Agence Bio
   - Territoire
 contact_link: cartobio@beta.gouv.fr
-doc_tech_external: https://github.com/entrepreneur-interet-general/CartoBio-Presentation/blob/master/docs/api-territoires.md
+#doc_tech_external: https://github.com/entrepreneur-interet-general/CartoBio-Presentation/blob/master/docs/api-territoires.md
 doc_tech_link: https://cartobio.org/api/v1/documentation/json
 partenaires:
   - Ministère de l’Agriculture et de l’Alimentation
@@ -57,7 +60,8 @@ partenaires:
 themes:
   - Environnement
   - Agriculture
-last_update: 21/09/2020
+last_update: 18/01/2021
+created_at: 01/07/2021
 rate_limiting_resume: illimité
 content_intro: |
   CartoBio vise à ouvrir progressivement les données des parcelles conduites en agriculture biologique en France, notamment auprès des acteurs publics territoriaux.
