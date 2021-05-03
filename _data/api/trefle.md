@@ -20,5 +20,3 @@ L’API Simulateur de financement restitue les financements possibles pour une f
 L’API est accessible pour les demandeurs d’emploi et les salariés du secteur privé sur l’ensemble du territoire et permet une simulation de financement et de rémunération.
 
 Cette API est produite et mise en production par le service La Bonne Formation.
-
-Le code source est opensource est disponible ici : https://git.beta.pole-emploi.fr/open-source/trefle
