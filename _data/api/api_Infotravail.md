@@ -4,8 +4,8 @@ tagline: Recense des jeux de données liés au marché du travail
 producer: pole-emploi
 category: Public
 is_open: 0 # -1 means API not open
-account_link: https://www.emploi-store-dev.fr/portail-developpeur/detailapicatalogue/57909ba23b2b8d019ee6cc5e
-external_site: https://www.emploi-store-dev.fr/portail-developpeur-cms/home/catalogue-des-api/documentation-des-api/api/api-infotravail-v1.html
+account_link: https://pole-emploi.io/inscription
+external_site: https://pole-emploi.io/data/api
 partners:
   - Pôle emploi
 keywords:
@@ -13,8 +13,8 @@ keywords:
   - Emploi
   - Marché du travail
   - Statistiques
-contact_link: support@emploi-store-dev.fr
-doc_tech_external: https://www.emploi-store-dev.fr/portail-developpeur-cms/home/catalogue-des-api/documentation-des-api/api/api-infotravail-v1.html
+contact_link: support@pole-emploi.io
+doc_tech_external: https://pole-emploi.io/data/api/infotravail
 datagouv_uuid:
   - 59315a2c88ee385fac21149f
   - 593159a188ee385fade6010e
