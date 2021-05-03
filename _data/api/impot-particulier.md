@@ -3,6 +3,7 @@ title: API Impôt particulier
 tagline: Raccordez-vous directement à la DGFiP pour récupérer les éléments fiscaux nécessaires à vos téléservices, éliminez le traitement et le stockage des pièces justificatives
 producer: dgfip
 is_open: -1 # -1 means API not open
+is_france_connected: 1 # undefined | 1 | 2. 2 means can be used with FC, 2 means has to be used with FC
 access_page:
   - who:
       - Un particulier

@@ -137,6 +137,7 @@ export interface IApi extends IApiShort {
   access_page?: IAccessConditionWithVisitorType[]; // only for API with a detailed access page
   datapass_link?: string; // only for API using datapass
   account_link?: string; // only for API requiring an account
+  is_france_connected: undefined | 1 | 2;
 }
 
 export {
