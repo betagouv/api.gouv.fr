@@ -3,15 +3,12 @@ name: Hub’eau
 nameWithPronoun: Hub’eau
 logo: hub-eau.png
 type: Etablissement public
-short: Foobar.
+short: Simplifier l'accès aux données sur l'eau.
 description: |
-  foobar
-data: |
-  | Donnée             | Description                    |
-  | ------------------ | ------------------------------ |
-  | foo | bar |
-contact: https://foo.bar
-annuaire: https://foo.bar
-siteOpenData: https://foo.bar
-siteAPI: https://foo.bar
+  Hub'Eau met à disposition des API qui permettent l’accès aux données du Système d'Information sur l'Eau (SIE) dans des formats propices à la réutilisation (CSV, JSON, GeoJSON).
+
+contact: https://assistance.brgm.fr/formulaire/posez-votre-question?tools=HubEau
+#annuaire: 
+siteOpenData: https://quadrige.eaufrance.fr/Acces-aux-donnees
+siteAPI: https://hubeau.eaufrance.fr/page/apis 
 ---
