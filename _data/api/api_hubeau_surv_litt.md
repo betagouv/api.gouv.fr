@@ -14,7 +14,6 @@ partners:
   - eau-france
   - ofb
   - brgm
-  - ifremer
 keywords:
   - Milieu marin
   - Littoral
