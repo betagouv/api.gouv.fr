@@ -18,5 +18,4 @@ data: |
 contact: https://contact.ecologique-solidaire.gouv.fr/
 annuaire: https://lannuaire.service-public.fr/gouvernement/service-a-competence-nationale_179157
 siteOpenData: https://www.data.gouv.fr/fr/organizations/service-central-dhydrometeorologie-et-dappui-a-la-prevision-des-inondations/
-siteAPI: https://www.vigicrues.gouv.fr/
 ---
