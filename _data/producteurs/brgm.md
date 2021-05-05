@@ -1,5 +1,5 @@
 ---
-name: Bureau de recherches géologiques et minières
+name: Bureau de Recherches Géologiques et Minières
 acronym: BRGM
 nameWithPronoun: le BRGM
 logo: brgm.png
@@ -12,7 +12,5 @@ data: |
   | ------------------ | ------------------------------ |
   | foo | bar |
 contact: https://foo.bar
-annuaire: https://foo.bar
-siteOpenData: https://foo.bar
-siteAPI: https://foo.bar
+annuaire: https://lannuaire.service-public.fr/gouvernement/etablissement-public_171387
 ---
