@@ -1,5 +1,5 @@
 ---
-name: Service central d’hydrométéorologie et d’appui à la prévision des inondations
+name: Service Central d’Hydrométéorologie et d’Appui à la Prévision des Inondations
 acronym: SCHAPI
 nameWithPronoun: SCHAPI
 logo: schapi.png
