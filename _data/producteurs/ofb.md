@@ -1,8 +1,8 @@
 ---
-name: Service Central d’Hydrométéorologie et d’Appui à la Prévision des Inondations
-acronym: OVB
+name: Office Français de la Biodiversité
+acronym: OFB
 nameWithPronoun: l’OFB
-logo: ofb.png
+logo: ofb.jpg
 type: Etablissement public
 short: L’OFB est le service national de protection de la Biodiversité.
 description: |
