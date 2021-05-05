@@ -3,6 +3,7 @@ title: API de droits à l'Assurance Maladie
 tagline: Accédez aux droits d’un individu ou d’une famille (enfants rattachés), gérés par le régime général de l’Assurance Maladie
 external_site: https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/assurance-maladie-digital/api-droits-fs-doc/master/documentation-open-api.yaml
 is_open: -1 # -1 means API not open
+is_france_connected: 2 # undefined | 1 | 2. 2 means can be used with FC, 2 means has to be used with FC
 datapass_link: https://datapass.api.gouv.fr/api-droits-cnam
 access_page:
   - who:

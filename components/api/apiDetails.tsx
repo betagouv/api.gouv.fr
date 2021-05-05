@@ -17,7 +17,14 @@ interface IPropsMonitoring {
   monitoring_link?: string;
 }
 
-interface IPropsDetails extends IPropsRateLimiting, IPropsMonitoring {}
+interface IPropsIsFranceConnected {
+  is_france_connected?: 1 | 2;
+}
+
+interface IPropsDetails
+  extends IPropsRateLimiting,
+    IPropsMonitoring,
+    IPropsIsFranceConnected {}
 
 const ShowMore = ({ onClick = (isOpen: boolean) => {}, isOpen = false }) => {
   return (
@@ -153,12 +160,56 @@ const RateLimitingDetail: React.FC<IPropsRateLimiting> = ({
   );
 };
 
+const IsFranceConnectedDetail: React.FC<IPropsIsFranceConnected> = ({
+  is_france_connected,
+}) => {
+  const [show, setShow] = useState(false);
+  const toggle = () => setShow(!show);
+  const toggleKey = triggerOnEnterKey(toggle);
+  return (
+    <>
+      <div
+        className="badge  cursor-pointer"
+        onClick={toggle}
+        onKeyDown={toggleKey}
+        role="button"
+        tabIndex={0}
+      >
+        <div>
+          <img src="/images/divers/franceConnectLogo.png" alt="fc-logo" />
+        </div>
+        <div>
+          FranceConnect :
+          {is_france_connected === 2 ? ' obligatoire' : ' compatible'}
+        </div>
+        <ShowMore isOpen={show} />
+      </div>
+      {show && (
+        <div className="details">
+          {is_france_connected === 2 ? (
+            <>
+              Cette API fonctionne <b>obligatoirement</b> avec FranceConnect
+              pour identifier les citoyen.
+            </>
+          ) : (
+            <>
+              Cette API fonctionne soit avec FranceConnect, soit sans
+              FranceConnect.
+            </>
+          )}
+        </div>
+      )}
+    </>
+  );
+};
+
 const ApiDetails: React.FC<IPropsDetails> = ({
   uptime,
   monitoring,
   monitoring_link,
   rate_limiting,
   rate_limiting_resume,
+  is_france_connected = undefined,
 }) => {
   return (
     <SubSection id="api-details-lateral-section" title="L’API en détail">
@@ -171,6 +222,9 @@ const ApiDetails: React.FC<IPropsDetails> = ({
         rate_limiting={rate_limiting}
         rate_limiting_resume={rate_limiting_resume}
       />
+      {(is_france_connected === 1 || is_france_connected === 2) && (
+        <IsFranceConnectedDetail is_france_connected={is_france_connected} />
+      )}
       <style global jsx>{`
         #api-details-lateral-section > .badge {
           display: inline-flex;

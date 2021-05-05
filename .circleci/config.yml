@@ -42,6 +42,9 @@ jobs:
           command: npm run build && npm run start
           background: true
 
+      - run: |
+          npm run check-no-datapass-staging
+
       # wait for the server to start responding. We expect Bad Request 400 once it starts listening.
       # so override the shell and have the last command be the : { null } command to force exit code 0.
       - run:
@@ -51,5 +54,6 @@ jobs:
             :
       - run: |
           npm run check-broken-links
+
       - run: |
           npm run check-accessibility
