@@ -4,10 +4,10 @@ tagline: Indicateurs des services d'eau et d'assainissement
 is_open: 1 # 1 means API is fully open
 external_site: https://hubeau.eaufrance.fr/page/documentation-eau_potable-assainissement
 partners:
-  - AFB
-  - Observatoire national des services d'eau et d'assainissement
-  - Bureau de Recherches Géologiques et Minières (BRGM)
-producer: eau-france
+  - eau-france
+  - ofb
+  - brgm
+producer: hub-eau
 keywords:
   - Indicateurs
   - Performance

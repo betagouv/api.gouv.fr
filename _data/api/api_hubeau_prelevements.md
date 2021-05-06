@@ -4,11 +4,10 @@ tagline: Prélèvements en eau
 is_open: 1 # 1 means API is fully open
 external_site: https://hubeau.eaufrance.fr/page/api-prelevements-eau
 partners:
-  - AFB
-  - ADES
-  - Office français de la biodiversité (OFB)
-  - Bureau de Recherches Géologiques et Minières (BRGM)
-producer: eau-france
+  - eau-france
+  - ofb
+  - brgm
+producer: hub-eau
 keywords:
   - Prélèvements en eau
   - Ressource en eau

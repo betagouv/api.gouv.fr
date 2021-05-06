@@ -4,9 +4,10 @@ tagline: Données sur les poissons de rivières
 is_open: 1 # 1 means API is fully open
 external_site: https://hubeau.eaufrance.fr/page/documentation_poisson/
 partners:
-  - AFB
-  - Bureau de Recherches Géologiques et Minières (BRGM)
-producer: eau-france
+  - eau-france
+  - ofb
+  - brgm
+producer: hub-eau
 keywords:
   - Poissons
   - Pêche électrique
