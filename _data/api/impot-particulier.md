@@ -61,24 +61,24 @@ themes:
 contact_link: dtnum.donnees.demande-acces@dgfip.finances.gouv.fr
 visits_2019: 13000
 doc_tech_link: /swaggers/api-impot-particulier.yaml
+content_intro: |
+  L'API Impôt particulier simplifie les démarches des usagers et le processus de gestion de vos téléservices. Elle permet l’échange d’informations fiscales entre la DGFiP et une entité administrative (administration, ministère, organisme public, collectivité) ou une entreprise dans le cadre de leurs obligations légales et réglementaires pour des missions d’intérêts général.
+
+  ### A quoi sert l’API Impôt particulier ?
+
+  Pour l'usager : l'API Impôt particulier dématérialise les démarches à 100% :
+
+  1. Je me connecte ou je me "FranceConnect" sur un site pour réaliser une démarche.
+  2. **Soit** je me suis FranceConnecté et je consens à la transmission par la DGFiP, des seules données fiscales nécessaires, **soit** je renseigne mon identifiant fiscal
+  3. L'entité administrative qui opère le site récupère immédiatement mes informations
+  4. Je n’ai rien d'autre à faire, ma démarche est terminée !
+
+  Pour l’acteur qui la met en place :
+
+  - Réduction des coûts de traitement back-office : pas besoin de pièces justificatives complémentaires
+  - Fin du risque de fraude documentaire et des erreurs de saisie : transmission immédiate par la DGFiP de données fiables et fraîches
 last_update: 08/10/2019
 ---
-
-L'API Impôt particulier simplifie les démarches des usagers et le processus de gestion de vos téléservices. Elle permet l’échange d’informations fiscales entre la DGFiP et une entité administrative (administration, ministère, organisme public, collectivité) ou une entreprise dans le cadre de leurs obligations légales et réglementaires pour des missions d’intérêts général.
-
-### A quoi sert l’API Impôt particulier ?
-
-Pour l'usager : l'API Impôt particulier dématérialise les démarches à 100% :
-
-1. Je me connecte ou je me "FranceConnect" sur un site pour réaliser une démarche.
-2. **Soit** je me suis FranceConnecté et je consens à la transmission par la DGFiP, des seules données fiscales nécessaires, **soit** je renseigne mon identifiant fiscal
-3. L'entité administrative qui opère le site récupère immédiatement mes informations
-4. Je n’ai rien d'autre à faire, ma démarche est terminée !
-
-Pour l’acteur qui la met en place :
-
-- Réduction des coûts de traitement back-office : pas besoin de pièces justificatives complémentaires
-- Fin du risque de fraude documentaire et des erreurs de saisie : transmission immédiate par la DGFiP de données fiables et fraîches
 
 ### Les données disponibles dans l'API
 
