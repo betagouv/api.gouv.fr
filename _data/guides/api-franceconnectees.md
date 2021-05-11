@@ -20,16 +20,13 @@ Les API FranceConnectées simplifient le parcours d'un citoyen à ses démarches
 
 Le parcours classique d'un citoyen dans une démarche :
 
-1️⃣ → Authentification
-
-2️⃣ → Saisie d'une clé d'appel (par exemple _le numéro fiscal_)
-
+1️⃣ → Authentification <br/>
+2️⃣ → Saisie d'une clé d'appel (par exemple _le numéro fiscal_) <br/>
 🤖 → Récupération de données par API
 
 Le parcours grâce aux API FranceConnectées :
 
-1️⃣ → FranceConnection
-
+1️⃣ → FranceConnection <br/>
 🤖 → Récupération de données grâce aux API FranceConnectées
 
 Les API FranceConnectées permettent ainsi :

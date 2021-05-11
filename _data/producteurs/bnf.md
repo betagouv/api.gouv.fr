@@ -10,13 +10,10 @@ description: |
 
   L'ensemble des collections de la BnF représente environ 40 millions de documents imprimés et spécialisés.
 data: |
-  | Donnée                   | Description                                                                                      |
-  | ------------------------ | ------------------------------------------------------------------------------------------------ |
-  | Auto-entrepreneurs       | Création d'une auto-entreprise                                                                   |
-  | Particuliers employeurs  | Cesu, Pajemploi                                                                                  |
-  | Attestation de vigilance | Atteste qu'une micro-entreprise est en conformité vis a vis de ses cotisations sociales          |
-  | Procédures collectives   | redressements judiciaires, liquidations judiciaires, sauvegardes, au niveau de la France entière |
-  | Effectifs des salariés   | Les effectifs des entreprises du secteur privé                                                   |
+  | Donnée      | Description |
+  | ----------- | ----------- |
+  | Gallica     |             |
+  | data.bnf.fr |             |
 contact: https://www.bnf.fr/fr/contacter-la-bnf
 annuaire: https://lannuaire.service-public.fr/gouvernement/etablissement-public_168702
 siteOpenData: https://data.bnf.fr/
