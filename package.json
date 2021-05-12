@@ -11,6 +11,7 @@
     "start": "next start -p $PORT",
     "build": "NODE_ENV=production npm run sitemap && next build",
     "lint": "eslint '**/*.{ts,tsx}' --max-warnings 20",
+    "create-thumbnail": "node nodeScripts/createThumbnail.js",
     "check-accessibility": "node ./nodeScripts/checkA11y.js",
     "check-broken-links": "node ./nodeScripts/checkBrokenLinks.js",
     "check-no-datapass-staging": "node ./nodeScripts/checkNoDatapassStaging.js"

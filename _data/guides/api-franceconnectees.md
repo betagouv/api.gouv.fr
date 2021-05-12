@@ -2,7 +2,7 @@
 title: Les API FranceConnectées
 tagline: 'Tout savoir sur les API FranceConnectées : comment ça marche, quel intérêt, les API FranceConnectées disponibles et à venir'
 tags:
-image: portail_famille.jpg
+image: meta.png
 api:
   - API Impôt particulier
   - API de droits à l'Assurance Maladie
