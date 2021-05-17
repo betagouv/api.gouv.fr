@@ -215,6 +215,12 @@ a:not(.dont-apply-link-style):hover {
     color: #081d35;
     width: 100%;
 
+    @media only screen and (min-width: 1px) and (max-width: 600px) {
+      max-width: 100%;
+      overflow: auto;
+      display: block;
+    }
+
     tr td,
     th {
       padding: 5px;

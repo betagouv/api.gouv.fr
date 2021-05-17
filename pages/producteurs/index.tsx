@@ -55,8 +55,10 @@ const Producteurs: NextPage<Props> = ({ producers }) => {
 
         a > div img {
           width: auto;
-          max-height: 70px;
+          max-height: 100px;
+          max-width: 100%;
           margin-right: 15px;
+          margin-bottom: 15px;
           flex-shrink: 1;
         }
       `}</style>
