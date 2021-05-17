@@ -12,7 +12,7 @@ description: |
 data: |
   | Donnée      | Description                                                                                                       |
   | ----------- | ----------------------------------------------------------------------------------------------------------------- |
-  | data.bnf.fr | Les données de références sur tous les auteurs, les œuvres et les thèmes publiés en France et recensés par la BnF |
+  | data.bnf.fr | Les données de référence sur tous les auteurs, les œuvres et les thèmes publiés en France et recensés par la BnF |
   | Gallica     | Les collections patrimoniales numérisées de la BnF, accessibles via une application web et par API                |
 contact: https://www.bnf.fr/fr/contacter-la-bnf
 annuaire: https://lannuaire.service-public.fr/gouvernement/etablissement-public_168702
