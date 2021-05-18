@@ -54,6 +54,7 @@ keywords:
   - idNat
 themes:
   - Santé
+uptime: 100
 contact_link: prosanteconnect.editeurs@esante.gouv.fr
 doc_tech_external: https://integrateurs-cps.asipsante.fr/pages/prosanteconnect/documentation-fs
 last_update: 22/03/2021
@@ -63,7 +64,7 @@ L‘API Pro Santé Connect permet à des administrations, des éditeurs de logic
 
 ### À quoi sert cette API ?
 
-Pro Santé Connect est un fournisseur d’identité (FI) au standard OpenID. Il accepte comme « credential » d’authentification la carte CPS et une e-carte CPS qui est une application téléphone.
+Pro Santé Connect est un fournisseur d’identité (FI) au standard OpenID. Il accepte comme « credential » d’authentification la carte CPS et une e-carte CPS qui est une application ordiphone.
 
 L’assertion d’authentification OpenIDConnect « remonte » au fournisseur de service (FS) demandeur de l’authentification les traits d’identités classiques plus l’identité sectorielle (profession, savoir-faire, situation d’exercice, …) afin que celui-ci puisse, au-delà de la simple authentification, gérer tout ou partie de son contrôle d’accès .
 
@@ -72,10 +73,8 @@ Ces éléments sont fournis par [notre annuaire](https://annuaire.sante.fr) et i
 
 ### Données disponibles dans l'API
 
-**L'identité pivot**.
 
 | Type                       | Données                                                  |
 | -------------------------- | -------------------------------------------------------- |
-| identifiant unique (idNat) | Adeli ou RPPS                                            |
-| état civil                 | nom et prénom                                            |
+| Identifiant national       | Adeli ou RPPS                                            |
 | Données sectorielles       | type d'activité (salarié ou libéral) et lieu d'activité. |
