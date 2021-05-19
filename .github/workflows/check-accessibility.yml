@@ -32,8 +32,6 @@ jobs:
     # wait for the server to start responding. We expect Bad Request 400 once it starts listening.
     # so override the shell and have the last command be the : { null } command to force exit code 0.
     - run: wget --retry-connrefused --waitretry=5 --read-timeout=10 --timeout=15 -t 50 http://localhost:3000/sitemap.xml
-    
-    - run: |
-        npm run check-broken-links
+
     - run: |
         npm run check-accessibility
