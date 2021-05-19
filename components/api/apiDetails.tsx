@@ -45,13 +45,12 @@ const ShowMore = ({ onClick = (isOpen: boolean) => {}, isOpen = false }) => {
     </>
   );
 };
-const triggerOnEnterKey = (trigger: () => void) => (
-  event: React.KeyboardEvent
-) => {
-  if (!event.keyCode || (event && event.keyCode === 13)) {
-    trigger();
-  }
-};
+const triggerOnEnterKey =
+  (trigger: () => void) => (event: React.KeyboardEvent) => {
+    if (!event.keyCode || (event && event.keyCode === 13)) {
+      trigger();
+    }
+  };
 
 const MonitoringDetail: React.FC<IPropsMonitoring> = ({
   uptime,
