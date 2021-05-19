@@ -5,7 +5,7 @@ name: Accessibilité
 
 on:
   schedule:    
-  - cron: "0 0 * * *"
+  - cron: "4 12 * * *"
 
 jobs:
   build:
