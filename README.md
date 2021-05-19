@@ -1,8 +1,11 @@
 # api.gouv.fr
 
 ![Build](https://github.com/betagouv/api.gouv.fr/actions/workflows/build-successful.yml/badge.svg)
-
-![Qualité du code](https://github.com/betagouv/api.gouv.fr/actions/workflows/static-checks.yml/badge.svg)
+![Code accessible](https://github.com/betagouv/api.gouv.fr/actions/workflows/check-accessibility.yml/badge.svg)
+![Pas de lien cassé](https://github.com/betagouv/api.gouv.fr/actions/workflows/check-accessibility.yml/badge.svg)
+![Pas de lien vers datapass-staging](https://github.com/betagouv/api.gouv.fr/actions/workflows/no-datapass-staging.yml/badge.svg)
+![Code mis en forme](https://github.com/betagouv/api.gouv.fr/actions/workflows/linting.yml/badge.svg)
+![Code testé](https://github.com/betagouv/api.gouv.fr/actions/workflows/tests.yml/badge.svg)
 
 **api.gouv.fr** catalogue les API offertes par les administrations centrales, les
 collectivités territoriales, les établissements publics… Chaque API est
