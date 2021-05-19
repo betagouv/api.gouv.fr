@@ -1,6 +1,7 @@
 # api.gouv.fr
 
 ![Build](https://github.com/betagouv/api.gouv.fr/actions/workflows/build-successful.yml/badge.svg)
+
 ![Qualité du code](https://github.com/betagouv/api.gouv.fr/actions/workflows/static-checks.yml/badge.svg)
 
 **api.gouv.fr** catalogue les API offertes par les administrations centrales, les
