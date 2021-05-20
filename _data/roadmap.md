@@ -173,13 +173,14 @@
     - type: ADD_API
       what: Hub’Eau - Surveillance du littoral
       path: /les-api/api_hubeau_surv_litt
+  5:
+    - type: ADD_API
+      what: Pro Santé Connect par l'ANS
+      path: /les-api/api-pro-sante-connect
     - type: ADD_API
       what: Professionnels BIO par l'agence BIO
     - type: ADD_API
-      what: Pro Santé Connect par l'ANS
-    - type: ADD_API
       what: CVEC par le CNOUS
-  5:
     - type: ADD_API
       what: Statut Étudiant
     - type: ADD_API
