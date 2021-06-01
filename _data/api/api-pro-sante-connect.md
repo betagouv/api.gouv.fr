@@ -64,17 +64,16 @@ L‘API Pro Santé Connect permet à des administrations, des éditeurs de logic
 
 ### À quoi sert cette API ?
 
-Pro Santé Connect est un fournisseur d’identité (FI) au standard OpenID. Il accepte comme « credential » d’authentification la carte CPS et une e-carte CPS qui est une application ordiphone.
+Pro Santé Connect est un Fédérateur de Fournisseurs d’identité (FFI) au standard OpenID. Il accepte comme « credential » d’authentification la carte CPS et l'application mobile e-CPS.
 
-L’assertion d’authentification OpenIDConnect « remonte » au fournisseur de service (FS) demandeur de l’authentification les traits d’identités classiques plus l’identité sectorielle (profession, savoir-faire, situation d’exercice, …) afin que celui-ci puisse, au-delà de la simple authentification, gérer tout ou partie de son contrôle d’accès .
+L’assertion d’authentification OpenID Connect « remonte » au Fournisseur de Service (FS) demandeur de l’authentification les traits d’identités classiques plus l’identité sectorielle (profession, savoir-faire, situation d’exercice, …) afin que celui-ci puisse, au-delà de la simple authentification, gérer tout ou partie de son contrôle d’accès.
 
-Ces éléments sont fournis par [notre annuaire](https://annuaire.sante.fr) et incorporé dans le jeton OpenIdConnect.
-|
+Ces éléments sont fournis par [notre annuaire](https://annuaire.sante.fr) et incorporé dans le jeton OpenID Connect.
 
 ### Données disponibles dans l'API
 
 
 | Type                       | Données                                                  |
 | -------------------------- | -------------------------------------------------------- |
-| Identifiant national       | Adeli ou RPPS                                            |
+| Identifiant national       | ARPPS (ou ADELI)                                         |
 | Données sectorielles       | type d'activité (salarié ou libéral) et lieu d'activité. |
