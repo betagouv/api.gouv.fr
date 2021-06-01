@@ -69,12 +69,11 @@ Pro Santé Connect est un fournisseur d’identité (FI) au standard OpenID. Il 
 L’assertion d’authentification OpenIDConnect « remonte » au fournisseur de service (FS) demandeur de l’authentification les traits d’identités classiques plus l’identité sectorielle (profession, savoir-faire, situation d’exercice, …) afin que celui-ci puisse, au-delà de la simple authentification, gérer tout ou partie de son contrôle d’accès .
 
 Ces éléments sont fournis par [notre annuaire](https://annuaire.sante.fr) et incorporé dans le jeton OpenIdConnect.
-|
 
 ### Données disponibles dans l'API
 
 
 | Type                       | Données                                                  |
 | -------------------------- | -------------------------------------------------------- |
-| Identifiant national       | Adeli ou RPPS                                            |
+| Identifiant national       | ARPPS (ou ADELI)                                         |
 | Données sectorielles       | type d'activité (salarié ou libéral) et lieu d'activité. |
