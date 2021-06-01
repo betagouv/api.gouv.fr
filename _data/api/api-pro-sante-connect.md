@@ -68,12 +68,12 @@ Pro Santé Connect est un Fédérateur de Fournisseurs d’identité (FFI) au st
 
 L’assertion d’authentification OpenID Connect « remonte » au Fournisseur de Service (FS) demandeur de l’authentification les traits d’identités classiques plus l’identité sectorielle (profession, savoir-faire, situation d’exercice, …) afin que celui-ci puisse, au-delà de la simple authentification, gérer tout ou partie de son contrôle d’accès.
 
-Ces éléments sont fournis par [notre annuaire](https://annuaire.sante.fr) et incorporé dans le jeton OpenID Connect.
+Ces éléments sont fournis par [notre annuaire](https://annuaire.sante.fr) et incorporés dans le jeton OpenID Connect.
 
 ### Données disponibles dans l'API
 
 
 | Type                       | Données                                                  |
 | -------------------------- | -------------------------------------------------------- |
-| Identifiant national       | ARPPS (ou ADELI)                                         |
+| Identifiant national       | RPPS (ou ADELI)                                          |
 | Données sectorielles       | type d'activité (salarié ou libéral) et lieu d'activité. |
