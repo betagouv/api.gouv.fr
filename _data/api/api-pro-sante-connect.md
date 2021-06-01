@@ -75,5 +75,5 @@ Ces éléments sont fournis par [notre annuaire](https://annuaire.sante.fr) et i
 
 | Type                       | Données                                                  |
 | -------------------------- | -------------------------------------------------------- |
-| Identifiant national       | ARPPS (ou ADELI)                                         |
+| Identifiant national       | RPPS (ou ADELI)                                          |
 | Données sectorielles       | type d'activité (salarié ou libéral) et lieu d'activité. |
