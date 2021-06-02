@@ -20,12 +20,13 @@ keywords:
 themes:
   - Santé
 contact_link: data.orphanet@inserm.fr
+doc_tech_link: https://api.orphacode.org/openapi.json
 doc_tech_external: https://api.orphacode.org
 content_intro: |
   L'API Maladies Rares (ORPHAcode) liste les maladies rares, en y associant une définition, des synonymes et une classification.
-  
+
   ### A quoi sert l'API ?
-  
+
   Orphanet, base de connaissances des maladies rares, met à disposition un "pack nomenclature" annuel afin de permettre d'implémenter les ORPHAcodes dans les systèmes d'informations et les applications dédiées aux maladies rares.
 visits_2019: 2000
 last_update: 02/06/2021
@@ -33,15 +34,14 @@ last_update: 02/06/2021
 
 ### Données disponibles
 
-- Maladie 
+- Maladie
 - Définition
 - Synonymes
 - Classification
 - Mapping (classification internationale et OMIM)
 - Statut (actif ou obsolète)
-- Typologie 
+- Typologie
 - Codage recommandé
-
 
 ### En savoir plus
 
