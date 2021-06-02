@@ -3,7 +3,7 @@ title: API Maladies Rares (ORPHAcode)
 tagline: Interrogez la base de connaissance des maladies rares.
 external_site: http://www.rd-code.eu/introduction/
 is_open: 1 # 1 means API is fully open
-producer: INSERM
+producer: inserm
 keywords:
   - maladies
   - épidemie
