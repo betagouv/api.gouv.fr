@@ -165,9 +165,6 @@
       what: Tracabilité des déchets dangereux - Trackdéchets
       path: /les-api/api-trackdechets
     - type: ADD_API
-      what: SI-Amiante
-      path: /les-api/api-si-amiante
-    - type: ADD_API
       what: Service National par le ministère des Armées
       path: /les-api/api-service-national
     - type: ADD_API
@@ -193,6 +190,9 @@
     - type: ADD_API
       what: Accès Libre
   6:
+    - type: ADD_API
+      what: SI-Amiante
+      path: /les-api/api-si-amiante
     - type: ADD_API
       what: AgentConnect par la DINUM
     - type: ADD_API
