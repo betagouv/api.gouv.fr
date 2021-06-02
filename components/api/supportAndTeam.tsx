@@ -71,6 +71,7 @@ const SupportAndTeam: React.FC<IProps> = ({
           border-radius: 5px;
           width: auto;
           max-height: 70px;
+          max-width: 30%;
           margin-right: 15px;
           flex-shrink: 1;
         }

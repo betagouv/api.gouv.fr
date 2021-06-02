@@ -3,6 +3,7 @@ title: API de droits à l'Assurance Maladie
 tagline: Accédez aux droits d’un individu ou d’une famille (enfants rattachés), gérés par le régime général de l’Assurance Maladie
 external_site: https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/assurance-maladie-digital/api-droits-fs-doc/master/documentation-open-api.yaml
 is_open: -1 # -1 means API not open
+is_france_connected: 2 # undefined | 1 | 2. 2 means can be used with FC, 2 means has to be used with FC
 datapass_link: https://datapass.api.gouv.fr/api-droits-cnam
 access_page:
   - who:
@@ -39,6 +40,22 @@ keywords:
   - Prise en charge au titre du régime obligatoire
   - Exonération du ticket modérateur
   - Médecin traitant
+content_intro: |
+  Cette API présente les droits, d’un individu ou d’une famille (enfants rattachés), gérés par le régime général de l’Assurance Maladie.
+
+  ### A quoi sert l’API de droits à l'Assurance Maladie&nbsp;?
+
+  Elle permet de connaître pour un individu **identifié avec FranceConnect**&nbsp;:
+
+  - sa caisse gestionnaire
+  - son niveau de couverture
+
+  Certaines données ne sont accessibles qu’aux établissements de soins&nbsp;:
+
+  - des motifs d’exonération du ticket modérateur
+  - de l’identification du médecin traitant.
+
+  L’utilisation de l’API est soumise à une **convention d’usage** avec la Caisse Nationale d’Assurance Maladie.
 rate_limiting_resume: Incluses dans la convention
 rate_limiting_description: |
   Les éventuelles limitations d’usage vis-à-vis d’un partenaire sont incluses dans la convention.
@@ -53,22 +70,6 @@ visits_2019: 576
 uptime: 99.998 # https://stats.uptimerobot.com/3wEv6hppvv
 last_update: 17/10/2019
 ---
-
-Cette API présente les droits, d’un individu ou d’une famille (enfants rattachés), gérés par le régime général de l’Assurance Maladie.
-
-### A quoi sert l’API de droits à l'Assurance Maladie&nbsp;?
-
-Elle permet de connaître pour un individu **identifié avec FranceConnect**&nbsp;:
-
-- sa caisse gestionnaire
-- son niveau de couverture
-
-Certaines données ne sont accessibles qu’aux établissements de soins&nbsp;:
-
-- des motifs d’exonération du ticket modérateur
-- de l’identification du médecin traitant.
-
-L’utilisation de l’API est soumise à une **convention d’usage** avec la Caisse Nationale d’Assurance Maladie.
 
 ### Données
 

@@ -1,6 +1,12 @@
 @import '../../constants/colors.scss';
 
 #roadmap-wrapper {
+  .roadmap-show-all {
+    font-size: 1rem;
+    text-decoration: underline;
+    cursor: pointer;
+    color: $blue;
+  }
   .roadmap-node {
     width: 100%;
     min-height: 50px;
@@ -10,6 +16,7 @@
 
     &.ellipsis {
       border-left: 2px dashed $blue;
+      padding-left: 20px;
     }
 
     &.month,

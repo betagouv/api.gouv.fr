@@ -23,6 +23,11 @@ module.exports = withFonts({
         destination: '/les-api/api-metadonnees-insee',
         permanent: true,
       },
+      {
+        source: '/producteurs/acoss',
+        destination: '/producteurs/urssaf',
+        permanent: true,
+      },
     ];
   },
   webpack(config, options) {

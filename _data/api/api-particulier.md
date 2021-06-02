@@ -38,10 +38,10 @@ stat:
   url: https://monitoring.particulier.api.gouv.fr/api/stats/
   label: justificatifs papier évités
 partners:
-  - DGFiP
+  - dgfip
   - CNAF
   - Pôle emploi
-  - Ministère de l'enseignement supérieur, de la recherche et de l'innovation (MESRI)
+  - mesri
 producer: dinum
 keywords:
   - Impots
@@ -114,6 +114,21 @@ L’Adresse est celle connue au 1er janvier de l’année d’imposition (exempl
 Sont disponibles les données des étudiants inscrits dans un établisement sous tutelle du ministère de l'enseignement supérieur, et sur le champ des étudiants bacheliers en 2020 ou déjà inscrits dans l'enseignement supérieur en 2018-2019 ou 2019-2020.
 
 La couverture des établissements du champ des étudiants sera progressivement complétée d'ici la rentrée 2022.
+
+### Précisions sur les données Statut demandeur d'emploi (Pôle Emploi)
+
+Sont disponibles les données des demandeurs d’emploi inscrits ou ayant été inscrits à Pôle emploi depuis 2010, date d’inscription et de cessation d’inscription le cas échéant.
+
+Les catégories de situation des demandeurs d’emploi sont les 5 proposées par Pôle emploi: A, B, C, D et E. La répartition permet d'établir une classification selon la disponibilité du demandeur d'emploi.
+
+- A : Personne sans emploi, tenue d'accomplir des actes positifs de recherche d'emploi, à la recherche d'un emploi quel que soit le type de contrat (CDI,CDD, à temps plein, à temps partiel, temporaire ou saisonnier)
+- B : Personne ayant exercé une activité réduite de 78 heures maximum par mois, tenue d'accomplir des actes positifs de recherche d'emploi
+- C : Personne ayant exercé une activité réduite de plus de 78 heures par mois, tenue d'accomplir des actes positifs de recherche d'emploi
+- D : Personne sans emploi, qui n'est pas immédiatement disponible, et qui n'est pas tenue d'accomplir des actes positifs de recherche d'emploi (demandeur d'emploi en formation, en maladie, etc.)
+- E : Personne pourvue d'un emploi, et qui n'est pas tenue d'accomplir des actes positifs de recherche d'emploi
+
+L’Adresse est celle déclarée par le demandeur lors de son inscription ou suite à une déclaration de changement d’adresse.
+L’API devrait inclure d’ici fin 2021 des données relatives à l’indemnisation des demandeurs d’emploi.
 
 ### Conditions générales d'utilisation
 

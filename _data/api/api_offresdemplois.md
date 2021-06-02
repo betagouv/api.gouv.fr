@@ -4,15 +4,15 @@ tagline: Accédez aux offres d'emploi disponibles sur pole-emploi.fr
 producer: pole-emploi
 category: Public
 is_open: 0 # -1 means API not open
-account_link: https://www.emploi-store-dev.fr/portail-developpeur/detailapicatalogue/5ba49d55243a5f9d2c5064a2
-external_site: https://www.emploi-store-dev.fr/portail-developpeur-cms/home/catalogue-des-api/documentation-des-api/api/api-offres-demploi-v2.html
+account_link: https://pole-emploi.io/inscription
+external_site: https://pole-emploi.io/data/api
 partners:
   - Pôle emploi
 keywords:
   - Offres
   - Emploi
-contact_link: support@emploi-store-dev.fr
-doc_tech_external: https://www.emploi-store-dev.fr/portail-developpeur-cms/home/catalogue-des-api/documentation-des-api/api/api-offres-demploi-v2.html
+contact_link: support@pole-emploi.io
+doc_tech_external: https://pole-emploi.io/data/api/offres-emploi
 themes:
   - Emploi
 visits_2019: 1227

@@ -16,6 +16,7 @@ themes:
   - Environnement
 contact_link: https://www.ademe.fr/content/contacter
 doc_tech_link: https://koumoul.com/s/data-fair/api/v1/datasets/base-carbone(r)/api-docs.json
+doc_tech_external: https://data.ademe.fr/datasets/base-carbone(r)
 datagouv_uuid:
   - 5f5605e63ee74d0034395703
 last_update: 27/07/2020

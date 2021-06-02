@@ -12,9 +12,12 @@ import Page from '../../layouts';
 
 import constants from '../../constants';
 import ApiCard from '../../components/searchApis/apiCard';
+import Markdown from 'markdown-to-jsx';
+import Emoji from '../../uiComponents/emoji';
 
 interface IProps {
   apis?: IApi[];
+  partnerApis?: IApi[];
   producer: IProducerElement;
 }
 
@@ -89,28 +92,146 @@ const PageHeader: React.FC<{ title: string; logo: string }> = ({
   </section>
 );
 
-const API: React.FC<IProps> = ({ apis = [], producer }) => {
+const ProducerPage: React.FC<IProps> = ({
+  partnerApis = [],
+  apis = [],
+  producer,
+}) => {
+  const producerWithPronounSafe = producer.nameWithPronoun || producer.name;
   return (
     <Page
       title={`Les API produites par ${producer.name}`}
       description={`Découvrez la liste des API produites par ${producer.name} dont certaines sont accessibles via api.gouv.fr`}
     >
-      <PageHeader title={producer.name} logo={producer.logo} />
-      <div id="description">
-        <div className="content-container">
-          <p>
-            <b>{apis.length} API disponibles :</b>
-          </p>
-
-          <div className="default-grid">
-            {apis.map(api => (
-              <ApiCard key={api.title} {...api} />
-            ))}
+      <PageHeader
+        title={producer.name}
+        logo={producer.logo || constants.logo}
+      />
+      {(producer.short || producer.description || producer.data) && (
+        <div id="description" className="content-container">
+          <div className="right-column-grid">
+            <div className="left-column text-style">
+              {producer.short && (
+                <>
+                  <h2>Qu'est ce que {producerWithPronounSafe} ?</h2>
+                  <p>{producer.short}</p>
+                </>
+              )}
+              {producer.description && (
+                <>
+                  <h2>Quelle est sa mission de service public ?</h2>
+                  <Markdown>{producer.description}</Markdown>
+                </>
+              )}
+              {producer.data && (
+                <>
+                  <h2>
+                    Quelles données sont détenues par {producerWithPronounSafe}{' '}
+                    ?
+                  </h2>
+                  <p>
+                    Dans le cadre de sa mission {producerWithPronounSafe} a
+                    notamment la charge des données suivantes :
+                  </p>
+                  <Markdown>{producer.data}</Markdown>
+                </>
+              )}
+              <br />
+            </div>
+            <div className="right-column info-column">
+              {(producer.contact ||
+                producer.annuaire ||
+                producer.siteAPI ||
+                producer.siteOpenData) && (
+                <div>
+                  <h3>Contacter {producerWithPronounSafe}</h3>
+                  {producer.annuaire && (
+                    <>
+                      <div>
+                        <Emoji emoji="📖" label="annuaire" />
+                        Consulter{' '}
+                        <a href={producer.annuaire}>
+                          sa page sur l'annuaire de l’administration.
+                        </a>
+                      </div>
+                      <br />
+                    </>
+                  )}
+                  {producer.contact && (
+                    <>
+                      <div>
+                        <Emoji emoji="📝" label="formulaire" />
+                        Ecrire à l'équipe via le{' '}
+                        <a href={producer.contact}>
+                          formulaire de contact
+                        </a>{' '}
+                      </div>
+                      <br />
+                    </>
+                  )}
+                  {producer.siteOpenData && (
+                    <>
+                      <div>
+                        <Emoji emoji="🧑‍💻" label="ordinateur" />
+                        Consulter son{' '}
+                        <a href={producer.siteOpenData}>
+                          portail open-data
+                        </a>{' '}
+                      </div>
+                      <br />
+                    </>
+                  )}
+                  {producer.siteAPI && (
+                    <>
+                      <div>
+                        <Emoji emoji="⚙️" label="rouage" />
+                        Consulter son <a href={producer.siteAPI}>
+                          portail API
+                        </a>{' '}
+                      </div>
+                    </>
+                  )}
+                </div>
+              )}
+            </div>
           </div>
+        </div>
+      )}
+      <div id="api-list">
+        <div className="content-container text-style">
+          <h2>Quelle(s) sont ses API référencées au catalogue ?</h2>
+          {apis && apis.length > 0 && (
+            <>
+              <p>
+                Actuellement {producerWithPronounSafe} publie et maintient{' '}
+                <b>{apis.length} API :</b>
+              </p>
+
+              <div className="default-grid">
+                {apis.map(api => (
+                  <ApiCard key={api.title} {...api} />
+                ))}
+              </div>
+            </>
+          )}
+          {partnerApis && partnerApis.length > 0 && (
+            <>
+              <p>
+                {producerWithPronounSafe} est partenaire de{' '}
+                <b>{partnerApis.length} API :</b>
+              </p>
+
+              <div className="default-grid">
+                {partnerApis.map(api => (
+                  <ApiCard key={api.title} {...api} />
+                ))}
+              </div>
+            </>
+          )}
         </div>
       </div>
       <style jsx>{`
-        #description {
+        #api-list {
           background-color: ${constants.colors.lightGrey};
           display: block;
           padding-bottom: 40px;
@@ -125,7 +246,7 @@ const API: React.FC<IProps> = ({ apis = [], producer }) => {
 
         .info-column {
           border-left: 2px solid ${constants.colors.lightBlue};
-          padding: 0 0 0 40px;
+          padding: 30px 0 0 40px;
         }
         @media only screen and (min-width: 1px) and (max-width: 900px) {
           .right-column-grid {
@@ -168,7 +289,14 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const allApis = await getAllAPIs();
 
   const apis = allApis.filter(api => api.producer === producer.slug);
-  return { props: { producer, apis } };
+
+  const partnerApis = allApis.filter(
+    api =>
+      (api.partners || []).map(partner => partner.slug).indexOf(producer.slug) >
+      -1
+  );
+
+  return { props: { producer, apis, partnerApis } };
 };
 
-export default API;
+export default ProducerPage;

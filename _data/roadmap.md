@@ -169,15 +169,21 @@
       path: /les-api/api-si-amiante
     - type: ADD_API
       what: Service National par le ministère des Armées
+      path: /les-api/api-service-national
+    - type: ADD_API
+      what: Infos Financières par la DILA
+      path: /les-api/api-info-financiere
+    - type: ADD_API
+      what: Hub’Eau - Surveillance du littoral
+      path: /les-api/api_hubeau_surv_litt
+  5:
+    - type: ADD_API
+      what: Pro Santé Connect par l'ANS
+      path: /les-api/api-pro-sante-connect
     - type: ADD_API
       what: Professionnels BIO par l'agence BIO
     - type: ADD_API
-      what: Pro Santé Connect par l'ANS
-    - type: ADD_API
-      what: Infos Financières par la DILA
-    - type: ADD_API
       what: CVEC par le CNOUS
-  5:
     - type: ADD_API
       what: Statut Étudiant
     - type: ADD_API
@@ -197,9 +203,9 @@
       what: AgentConnect par la DINUM
   7:
     - type: ADD_API
-      what: Attestation Codes Sécurité par l'ACOSS
+      what: Attestation Codes Sécurité par l'Urssaf
     - type: ADD_API
-      what: Déclaration préalable à l'embauche par l'ACOSS
+      what: Déclaration préalable à l'embauche par l'Urssaf
   9:
     - type: ADD_API
       what: Indemnités Journalières distribuée par la CNAM

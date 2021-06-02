@@ -2,7 +2,7 @@
 title: API données ouvertes de l’Urssaf
 tagline: 'Accédez au catalogue Open.Urssaf : les jeux de données open data de la branche recouvrement'
 external_site: https://open.urssaf.fr/explore/?sort=modified
-producer: acoss
+producer: urssaf
 is_open: 1 # 1 means API is fully open
 contact_link: https://open.urssaf.fr/pages/contact/
 doc_tech_link: https://open.urssaf.fr/api/v2/swagger.yaml
@@ -17,7 +17,7 @@ themes:
 last_update: 16/10/2020
 ---
 
-L’API données ouvertes (open data) du Portail <External href='https://open.urssaf.fr'>Open.Urssaf</External> est une API ouverte à tous, qui permet d’accéder à l’ensemble du catalogue de jeux de données publiés sur le portail Open.Urssaf et administré par <External href="https://www.acoss.fr/home/lacoss-et-les-urssaf/qui-sommes-nous.html">l’ACOSS</External>.
+L’API données ouvertes (open data) du Portail <External href='https://open.urssaf.fr'>Open.Urssaf</External> est une API ouverte à tous, qui permet d’accéder à l’ensemble du catalogue de jeux de données publiés sur le portail Open.Urssaf et administré par <External href="https://www.urssaf.org/home/lacoss-et-les-urssaf/qui-sommes-nous.html">l’Urssaf (ex-Acoss)</External>.
 
 ## A quoi sert l’API données ouvertes (open data) d’Open Urssaf ?
 

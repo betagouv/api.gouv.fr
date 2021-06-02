@@ -48,6 +48,13 @@ contact_link: tech@trackdechets.beta.gouv.fr
 doc_tech_external: https://developers.trackdechets.beta.gouv.fr/
 themes:
   - Environnement
+rate_limiting_resume: 1000 appels / minute
+rate_limiting_description: |
+  Pour des raisons de sécurité, le nombre de requêtes par adresse IP est limitée à 1000 par minute. Passé cette limite, les requêtes aboutiront avec un status 429 (Too Many Requests).
+uptime: 100
+monitoring_link: https://status.trackdechets.beta.gouv.fr/
+monitoring_description: |
+  Une supervision du service en temps réel est disponible à cette adresse.
 content_intro: |
   Trackdéchets vise à simplifier et fiabiliser la traçabilité des déchets dangereux en facilitant la recherche et la gestion des Bordereaux de Suivi de Déchets (BSD).
 
@@ -67,15 +74,11 @@ last_update: 02/04/2021
 
 Parmi les principales données, ont peut citer :
 
-| Champ         | Description                                                                                                                      |
-| ------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| appendixForms | Renvoie des BSD candidats à un regroupement dans une annexe 2                                                                    |
-| siret         | Siret d'un des établissements dont je suis membre                                                                                |
-| companyInfos  | informations publiques (extraits de SIRENE et de la base des installations classées pour la protection de l'environnement (ICPE) |
-| ecoOrganismes | Renvoie la liste des éco-organismes                                                                                              |
-| wasteCode     | Code déchet pour affiner la recherche                                                                                            |
-| forms         | Renvoie les BSDs de l'établissement sélectionné                                                                                  |
-| stats         | Renvoie des statistiques sur le volume de déchets entrant et sortant                                                             |
+| Champ         | Description                                                                                                                                    |
+| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| forms         | Retourne la liste des BSDs où figure une entreprise donnée, sous conditions d’avoir les droits d’accès                                         |
+| companyInfos  | Informations publiques d’une entrerprise donnée (récépissé transporteur, liste des agréments d’un éco-organisme, informations de contact, etc. |
+| ecoOrganismes | Retourne la liste des éco-organismes agréés pour la collecte de certains types de déchets.                                                     |
 
 Vous pouvez consulter la [liste complète](https://developers.trackdechets.beta.gouv.fr/docs/api-reference)).
 

@@ -37,7 +37,7 @@ const urlChecker = new blc.SiteChecker(
 
       /* need to use `process.stdout.write` because console.log print a newline character */
       /* \r clear the current line and then print the other characters making it looks like it refresh*/
-      process.stdout.write(`\r${totalLinks} links checked`);
+      // process.stdout.write(`\r${totalLinks} links checked`);
 
       if (IGNORE.indexOf(result.url.original) > -1) {
         return;

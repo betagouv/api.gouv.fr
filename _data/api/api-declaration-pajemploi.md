@@ -2,7 +2,7 @@
 title: API Tierce Déclaration Pajemploi
 tagline: Connectez-vous directement à l’Urssaf pour accéder aux services de Pajemploi pour le compte d’un particulier employeur en tant que tiers-déclarant
 external_site: https://open.urssaf.fr/explore/?sort=modified
-producer: acoss
+producer: urssaf
 is_open: -1 # 1 means API is fully open
 access_page:
   - who:
@@ -30,7 +30,7 @@ access_page:
       <Button href="/rechercher-api">Revenir à la recherche</Button>
 contact_link: contact.tiercedeclaration@urssaf.fr
 doc_tech_link: /swaggers/api-pajemploi.json
-doc_tech_external: https://portailapi.urssaf.fr/fr/?option=com_apiportal&view=apitester&usage=api&apiName=API%20Tierce%20Declaration%20PAJE&sn=API%20Tierce%20Declaration%20PAJE&Itemid=181&apitab=tests&tab=&apiId=4e84e17c-9654-40d3-aadc-f717fac5dee5&menuId=181&apiVersion=1.0.0&managerId=1&renderTool=2&type=rest
+doc_tech_external: https://portailapi.urssaf.fr/fr/
 keywords:
   - Urssaf
   - Acoss

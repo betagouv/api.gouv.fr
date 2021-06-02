@@ -1,0 +1,139 @@
+openapi: 3.0.0
+info:
+  title: Dites-le nous une fois
+  description: API qui permet de vérifier que les administrés sont en règle vis à vis de la JDC.
+  version: 1.0.0
+servers:
+  - url: 'https://presaje.sga.defense.gouv.fr/api'
+paths:
+  /dln1f:
+    post:
+      security:
+        - BearerAuth: []
+      summary: "Point d'entrée du service Dites-le nous une fois"
+      description: "Afin de pouvoir utiliser le service vous devez préalablement effectuer une demande sur api.gouv.fr pour   obtenir une clé d'API délivrée par la DSNJ."
+      requestBody:
+        required: true
+        content:
+          application/json; charset=utf-8:
+            schema:
+              $ref: '#/components/schemas/Identites'
+      responses:
+        '200':
+          description: Résultats
+          content:
+            application/json; chasert=utf-8:
+              schema:
+                $ref: '#/components/schemas/ResultIdentites'
+        '400':
+          description: La requête est mal formée
+          content:
+            application/json; charset=utf-8:
+              schema:
+                $ref: '#/components/schemas/ArrayOfError'
+        '403':
+          description: "Accès non autorisé. Votre clé d'api n'est problablement pas valide ou vous n'avez pas fourni de clé."
+          content:
+            application/json; charset=utf-8:
+              schema:
+                $ref: '#/components/schemas/ArrayOfError'
+        '500':
+          description: Erreur technique inattendue
+          content:
+            application/json; charset=utf-8:
+              schema:
+                $ref: '#/components/schemas/ArrayOfError'
+
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      description: Le jeton vous est transmis par mail lors de l'inscription au service.
+  schemas:
+    ResultIdentites:
+      type: object
+      description: Retour du web service
+      properties:
+        return_code:
+          type: string
+          format: string
+          description: Code retour général.<br>Valeurs possibles<ul><li>ERREUR_TECHNIQUE Erreur empêchant de traiter la demande Le traitement s’est correctement déroulé</li><li>OK</li></ul>
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/ResultIdentite'
+          description: Liste des identités pivot
+    ResultIdentite:
+      description: Retour du web service pour un administré
+      type: object
+      properties:
+        code:
+          type: string
+          format: string
+          description: Code de retour pour un administré. <br>Valeurs possibles<ul><li>OK</li><li>NON_TROUVE</li><li>ERREUR_FORMAT</li></ul>
+        en_regle:
+          type: string
+          format: string
+          description: Indique si l'administré est en règle vis-à-vis de la JDC. <br>Valeurs possibles<ul><li>Pas en règle</li><li>En règle</li><li>Indéterminé</li><li>Non concerné</li></ul>
+        identite_pivot:
+          $ref: '#/components/schemas/Identite'
+        complement:
+          type: string
+          format: string
+          description: Commentaire sur la situation de ladministré vis-à-vis de la JDC.
+    Identites:
+      type: object
+      properties:
+        identites_pivot:
+          type: array
+          items:
+            $ref: '#/components/schemas/Identite'
+          description: Liste des identités pivot
+    Identite:
+      type: object
+      description: Données qui permettent d’identifier l'administré
+      required:
+        - given_name
+        - family_name
+        - birthdate
+        - gender
+        - birthcountry
+      properties:
+        given_name:
+          type: string
+          description: Prénom de l'administré (obligatoire)
+        family_name:
+          type: string
+          description: Nom de famille de l'administré  (obligatoire)
+        birthdate:
+          type: string
+          description: Date de naissance de l'administré au format AAAA-MM-JJ  (obligatoire)
+        gender:
+          type: string
+          enum: [male, female]
+          description: Genre de l'administré.
+        birthplace:
+          type: string
+          description: Code Insee du lieu de naissance ou null si commune étrangère
+        birthcountry:
+          type: string
+          description: Code Insee du pays de naissance  (obligatoire)
+    ArrayOfError:
+      type: array
+      items:
+        $ref: '#/components/schemas/Error'
+    Error:
+      type: object
+      required:
+        - return_code
+        - error_msg
+      properties:
+        return_code:
+          type: string
+          format: string
+          description: Code d'erreur
+        error_msg:
+          type: string
+          format: string
+          description: Message explicitant l'erreur survenue
