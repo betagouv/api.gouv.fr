@@ -177,6 +177,10 @@
     - type: ADD_API
       what: Pro Santé Connect par l'ANS
       path: /les-api/api-pro-sante-connect
+  6:
+    - type: ADD_API
+      what: Maladies Rares (ORPHAcode)
+      path: /les-api/api-orphacode
     - type: ADD_API
       what: Professionnels BIO par l'agence BIO
     - type: ADD_API
@@ -189,15 +193,12 @@
       what: Liste des organismes de formation par la DGEFP
     - type: ADD_API
       what: Accès Libre
-  6:
     - type: ADD_API
       what: AgentConnect par la DINUM
     - type: ADD_API
       what: Référentiel Partagé des Professionnels de Santé
     - type: ADD_API
       what: Hermés par la DGFiP
-    - type: ADD_API
-      what: AgentConnect par la DINUM
   7:
     - type: ADD_API
       what: Attestation Codes Sécurité par l'Urssaf
