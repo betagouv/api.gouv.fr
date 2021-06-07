@@ -62,7 +62,11 @@ Les autres API disponibles à ce jour dans Hub'Eau sont :
 - [Etat piscicole](/les-api/api_hubeau_poissons) ;
 - [Indicateurs Eau potable et Assainissement](/les-api/api_hubeau_indic_EP_Asst) ;
 - [Piézométrie](/les-api/api_hubeau_piezometrie) ;
-- [Qualité des nappes d'eau souterraine](/les-api/api_hubeau_qualite_nappes_eau_sout).
+- [Qualité physico-chimique des cours d'eau](/les-api/api_hubeau_qualite_rivieres) ;
+- [Qualité des nappes d'eau souterraine](/les-api/api_hubeau_qualite_nappes_eau_sout) ;
+- [Température des cours d'eau](/les-api/api_hubeau_temperature_rivieres) ;
+- [Prélèvements en eau](/les-api/api_hubeau_prelevements) ;  
+- [Hydrométrie](/les-api/api_hubeau_hydrometrie).  
 
 #### Un service en co-construction
 
