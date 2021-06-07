@@ -2,9 +2,9 @@
 title: Hub'Eau - Qualité des cours d'eau
 tagline: Qualité physico-chimique des cours d'eau
 is_open: 1 # 1 means API is fully open
-external_site: http://hubeau.eaufrance.fr/page/documentation_chimie_riviere
+external_site: https://hubeau.eaufrance.fr/page/api-qualite-cours-deau
 partners:
-  - eau-france
+  - eaufrance
   - ofb
   - brgm
 producer: hub-eau
@@ -24,9 +24,9 @@ last_update: 18/06/2018
 
 ### Description fonctionnelle de l'API Qualité des cours d'eau
 
-[L'API Chimie des cours d'eau](http://hubeau.eaufrance.fr/page/api-qualite-cours-deau) de Hub'Eau permet d'accéder aux données sur la qualité physico-chimique des fleuves, rivières et plans d'eau.
+[L'API Qualité des cours d'eau](http://hubeau.eaufrance.fr/page/api-qualite-cours-deau) de Hub'Eau permet d'accéder aux données sur la qualité physico-chimique des fleuves, rivières et plans d'eau.
 Depuis la fin février 2018, l'ensemble des données sur la France entière (y compris les DROM) est disponible, en provenance de [Naïades](http://naiades.eaufrance.fr/).
-Plus de 125 millions d'analyses réparties sur 18 000 stations sont disponibles.
+Plus de 175 millions d'analyses réparties sur 20 000 stations sont disponibles.
 Les données sont exposées sous la forme d'une API REST, les formats supportés sont : JSON, GeoJSON et CSV.
 
 Un ensemble de 4 méthodes permet de rechercher l'ensemble des informations liées à la qualité physico-chimiques des eaux superficielles continentales (cours d'eau et plans d'eau) :
@@ -36,20 +36,13 @@ Un ensemble de 4 méthodes permet de rechercher l'ensemble des informations lié
 - **condition_environnementale_pc** : permet de rechercher les conditions environnementales (température de l'air, présence de feuilles, mousses, irisations, etc) lors des opérations de prélèvements physico-chimiques ;
 - **analyse_pc** : permet de rechercher les analyses physico-chimiques effectuées sur les échantillons confectionnés lors des opérations de prélèvement sur les différentes stations. Ces analyses concernent différents paramètres physico-chimiques comme la conductivité, les nitrates, les substances pesticides, les métaux lourds...
 
-Les données sont issues de la [base de données Naïades](http://www.naiades.eaufrance.fr/). Elles sont mises à jour au même rythme que la base Naïades, à savoir tous les ans. La dernière mise à jour des données a eu lieu le 23 février 2018.
-
-Quelques statistiques sur les données :
-
-- 18 088 stations ont fait l'objet d'au moins une opération de prélèvement.
-- 1 120 560 opérations de prélèvement sont répertoriées entre 1960 et 2017.
-- Ces opérations de prélèvement ont donné lieu à 125 746 527 analyses concernant 1792 paramètres physico-chimiques différents.
-- Le paramètre le plus mesuré est la Température de l'eau (code 1301) avec 1 190 072 analyses.
-- L'année comportant le plus de mesures est l'année 2015 où ont eu lieu 59 298 opérations de prélèvement ayant conduit à 13 109 401 analyses.
-- La station la plus suivie est le "Rhône à Arles 2 au Pont de Trinquetaille", de code 06131550, avec 423 481 analyses.
+Les données sont issues de la [base de données Naïades](http://www.naiades.eaufrance.fr/). Elles sont synchronisées avec la base Naïades après de gros épisodes d'alimentation. Entre deux étapes d'alimentation, des écarts sont donc possibles entre Naïades et l’API Hub'Eau. Au cours de l'année 2021, il est prévu la mise en place d'un mécanisme de synchronisation continue des données, ce qui supprimera tout écart entre les données Naïades et Hub'Eau.
 
 Dernières évolutions de l'API Qualité des cours d'eau de Hub'Eau:
 
-- 26/02/2018 : passage à la v1 : changement de la structure de l'API avec mise à disposition des données sur la France entière (la v0 ne proposait que les bassins Adour-Garonne et Loire-Bretagne) et ajout d'informations comme les conditions environnementales des prélèvements
+- 08/01/2019 : fermeture de l'API en v0
+- 22/05/2018 : v1.1.0 - ajout d'une limitation sur la profondeur d'accès aux résultats pour ne pas faire tomber le serveur, ajout du header "link" pour le format CSV, correction code retour pour le format CSV gérant les codes 200 et 206
+- 26/02/2018 : passage à la v1 - changement de la structure de l'API avec mise à disposition des données sur la France entière (la v0 ne proposait que les bassins Adour-Garonne et Loire-Bretagne) et ajout d'informations comme les conditions environnementales des prélèvements
 - 29/11/2017 : ajout de l'attribut api_version (string) dans la réponse : version de l'API
 - 04/05/2017 : mise à jour de l'adresse de l'API api.hubeau.fr vers [hubeau.eaufrance.fr/](http://hubeau.eaufrance.fr/)
 - 25/10/2016 : ajout des données qualité des rivières de l'agence de l'eau Loire Bretagne
@@ -73,8 +66,8 @@ Les autres API disponibles à ce jour dans Hub'Eau sont :
 
 #### Un service en co-construction
 
-Pour des API toujours plus en phase avec les besoins utilisateurs, Hub'Eau inaugure en 2018 une [politique de bêta testing](https://hubeau.eaufrance.fr/page/apis) en organisant une campagne de tests ouverte avant la mise la mise en production de chaque nouvelle API.
-D'une durée de 30 à 45 jours, ces campagnes ont pour objectif de recueillir un maximum de retour d’expérience des utilisateurs sur les points forts et les points faibles des API en construction.
+Pour des API toujours plus en phase avec les besoins utilisateurs, Hub'Eau a inauguré en 2018 une [politique de bêta testing](https://hubeau.eaufrance.fr/page/apis) en organisant une campagne de tests ouverte avant la mise la mise en production de chaque nouvelle API.
+D'une durée de quelques mois, ces campagnes ont pour objectif de recueillir un maximum de retour d’expérience des utilisateurs sur les points forts et les points faibles des API en construction.
 Pour être informé de la sortie des nouvelles API et les tester en avant-première, inscrivez-vous à la [newsletter](https://hubeau.eaufrance.fr/page/news-letter-hubeau) !
 
 ### Exemples de réutilisation
@@ -82,10 +75,6 @@ Pour être informé de la sortie des nouvelles API et les tester en avant-premi�
 - [Soumettez le votre sur la page GitHub des utilisateurs de Hub'Eau](https://github.com/BRGM/hubeau)
 
 ### Glossaire
-
-#### AFB
-
-L'[OFB (Office Français de la Biodiversité)](https://ofb.gouv.fr/) a été créée le 1er janvier 2017. Elle regroupe l'Agence des aires marines protégées, l'Atelier technique des espaces naturels, l'Office national de l'eau et des milieux aquatiques et les Parcs nationaux de France. L'AFB , établissement public du ministère en charge de l'environnement, exerce des missions d’appui à la mise en œuvre des politiques publiques dans les domaines de la connaissance, la préservation, la gestion et la restauration de la biodiversité et des milieux terrestres, aquatiques et marins. Elle vient en appui aux acteurs publics mais travaille également en partenariat étroit avec les acteurs socio-économiques. Elle a aussi vocation à aller à la rencontre du public pour mobiliser les citoyens en faveur de la biodiversité. En matière d’espaces protégés, elle gère notamment les parcs naturels marins et le sanctuaire de mammifères marins Agoa aux Antilles. Elle est opératrice et animatrice de sites Natura 2000 en mer. Les parcs nationaux sont rattachés à l’Agence, des synergies fortes sont mises en place avec eux.
 
 #### Agence de l'Eau
 
@@ -98,6 +87,10 @@ Le [BRGM (Bureau de Recherches Géologiques et Minières)](http://www.brgm.fr/),
 #### Naïades
 
 [Naïades](http://www.naiades.eaufrance.fr/) est l'interface nationale pour l'accès aux données des rivières et des lacs. Elle permet aux utilisateurs d'accéder aux données collectées par les agences de l'eau, les offices de l'eau et l'AFB sur les paramètres physiques, les concentrations de substances chimiques, les inventaires d'espèces et l'hydromorphologie en un point unique dans des formats standardisés.
+
+#### OFB
+
+L'[OFB (Office Français de la Biodiversité)](https://ofb.gouv.fr/) est un établissement public dédié à la sauvegarde de la biodiversité. Une de ses priorités est de répondre de manière urgente aux enjeux de préservation du vivant. Créé au 1er janvier 2020 par la loi n°2019-773 du 24 juillet 2019, l’Office français de la biodiversité regroupe les agents de l’Agence française pour la biodiversité (AFB) et de l’Office national de la chasse et de la faune sauvage (ONCFS). Unir ces deux établissements dans la lutte pour la protection de la nature, permet de rassembler des expertises, sur les milieux aquatiques, terrestres et marins et faire front commun contre les menaces qui pèsent sur la biodiversité en France. Regrouper ces deux entités, dont les agents sont implantés sur l’ensemble de l’hexagone et les Outre-mer, c’est aussi assurer un ancrage solide dans les territoires pour agir à l’échelle locale.
 
 #### SANDRE
 
