@@ -326,7 +326,7 @@ const Explanations: React.FC<IProps> = ({ subject, visitorType }) => {
             vaccination contre la covid-19.
           </p>
           <p>
-            Le service que vous recherchez est proposé pa l'assurance santé et
+            Le service que vous recherchez est proposé par l'assurance santé et
             il est accessible à tous&nbsp;:
           </p>
           <div className="layout-center">
