@@ -15,8 +15,18 @@ class MyDocument extends Document {
           {/* Standard Meta */}
           <meta charSet="utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png" />
+          <link rel="icon" href="favicons/favicon.svg" type="image/svg+xml" />
+          <link
+            rel="shortcut icon"
+            href="favicons/favicon.ico"
+            type="image/x-icon"
+          />
+          <link
+            rel="manifest"
+            href="favicons/manifest.webmanifest"
+            crossOrigin="use-credentials"
+          />
 
           <style
             dangerouslySetInnerHTML={{
