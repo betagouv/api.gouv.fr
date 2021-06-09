@@ -5,8 +5,6 @@ import { IApi, getAllAPIs } from '../../model';
 import Page from '../../layouts';
 import { DocumentationLeftMenu } from '../../components/documentation';
 
-import constants from '../../constants';
-
 interface IProps {
   allApis: IApi[];
 }

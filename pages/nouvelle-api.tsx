@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Page from '../layouts/page';
-import { ButtonLink, ExternalLink } from '../uiComponents';
+import { ButtonLink } from '../uiComponents';
 import Emoji from '../uiComponents/emoji';
 
 const NewAPI = () => (

@@ -5,16 +5,16 @@
   "repository": "git@github.com:betagouv/api.gouv.fr.git",
   "license": "AGPL-3.0-or-later",
   "scripts": {
-    "sitemap": "node nodeScripts/saveUrlList.js && sitemap < ./public/url-list.txt > ./public/sitemap.xml",
+    "sitemap": "node node-scripts/saveUrlList.js && sitemap < ./public/url-list.txt > ./public/sitemap.xml",
     "dev": "NODE_ENV=development next",
     "test": "jest",
     "start": "next start -p $PORT",
     "build": "NODE_ENV=production npm run sitemap && next build",
     "lint": "eslint '**/*.{ts,tsx}' --max-warnings 20",
-    "create-thumbnail": "node nodeScripts/createThumbnail.js",
-    "check-accessibility": "node ./nodeScripts/checkA11y.js",
-    "check-broken-links": "node ./nodeScripts/checkBrokenLinks.js",
-    "check-no-datapass-staging": "node ./nodeScripts/checkNoDatapassStaging.js"
+    "create-thumbnail": "node node-scripts/createThumbnail.js",
+    "check-accessibility": "node ./node-scripts/checkA11y.js",
+    "check-broken-links": "node ./node-scripts/checkBrokenLinks.js",
+    "check-no-datapass-staging": "node ./node-scripts/checkNoDatapassStaging.js"
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.13.0",
