@@ -1,9 +1,7 @@
 import React, { Fragment } from 'react';
-import Link from 'next/link';
 
-import { ButtonLink } from '../../uiComponents/button';
 import { logCTA } from '../../utils/client/analytics';
-import { apiLogo, republiqueFrLogo } from './logos';
+import { apiLogo } from './logos';
 
 const DATAPASS_URL =
   process.env.NEXT_PUBLIC_DATAPASS_URL || 'https://datapass.api.gouv.fr';
@@ -31,66 +29,109 @@ const HEADER = [
 
 const Header = ({ headerKey = 'home' }) => {
   return (
-    <header>
-      <nav className="nav">
-        <input
-          className="menu-btn"
-          type="checkbox"
-          id="menu-btn"
-          aria-label="ouverture-menu"
-        />
-        <label className="hamburger-menu" htmlFor="menu-btn">
-          <span />
-          <span />
-          <span />
-        </label>
-        <div className="nav__container">
-          <Link href="/">
-            <a
-              className="nav__logo-wrapper"
-              title="Retourner à l’accueil de api.gouv.fr"
-            >
-              <span className="nav__logo marianne">{republiqueFrLogo}</span>
-              <span className="nav__logo apigouv">{apiLogo}</span>
-            </a>
-          </Link>
-          <ul className="nav__links">
-            {headerKey !== HEADER_PAGE.FROM_SIGNUP ? (
-              <>
-                {HEADER.map(item => (
-                  <Fragment key={item.href}>
-                    <li
-                      className={`${headerKey === item.key ? 'current' : ''}`}
-                    >
-                      <a
-                        className="dont-apply-link-style"
-                        href={`${item.href}`}
-                      >
-                        {item.txt}
-                      </a>
-                    </li>
-                  </Fragment>
-                ))}
-                <li className="external">
-                  <ButtonLink
-                    href="/parcours-client?source=header"
-                    onClick={() => logCTA('CTA header')}
-                    alt
+    <header role="banner" className="fr-header">
+      <div className="fr-header__body">
+        <div className="fr-container">
+          <div className="fr-header__body-row">
+            <div className="fr-header__brand fr-enlarge-link">
+              <div className="fr-header__brand-top">
+                <div className="fr-header__logo">
+                  <p className="fr-logo">
+                    République
+                    <br />
+                    Française
+                  </p>
+                </div>
+                <div className="fr-header__navbar">
+                  <button
+                    className="fr-btn--menu fr-btn"
+                    data-fr-opened="false"
+                    aria-controls="modal-833"
+                    aria-haspopup="menu"
+                    title="Menu"
                   >
-                    Une question ?
-                  </ButtonLink>
-                </li>
-              </>
-            ) : (
-              <li>
-                <a className="dont-apply-link-style" href={`${DATAPASS_URL}`}>
-                  Mes demandes
+                    Menu
+                  </button>
+                </div>
+              </div>
+              <div className="fr-header__service">
+                <a
+                  className="api-logo"
+                  href="/"
+                  title="Accueil - api.gouv.fr - République Française"
+                >
+                  {apiLogo}
                 </a>
-              </li>
-            )}
-          </ul>
+              </div>
+            </div>
+            <div className="fr-header__tools">
+              <div className="fr-header__tools-links">
+                <ul className="fr-links-group">
+                  <li className="external">
+                    <a
+                      className="fr-link fr-fi-question-fill"
+                      href="/parcours-client?source=header"
+                      onClick={() => logCTA('CTA header')}
+                    >
+                      Une question ?
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
-      </nav>
+      </div>
+      <div
+        className="fr-header__menu fr-modal"
+        id="modal-833"
+        aria-labelledby="button-834"
+      >
+        <div className="fr-container">
+          <button className="fr-link--close fr-link" aria-controls="modal-833">
+            Fermer
+          </button>
+          <div className="fr-header__menu-links"></div>
+          <nav
+            className="fr-nav"
+            id="navigation-832"
+            role="navigation"
+            aria-label="Menu principal"
+          >
+            <ul className="fr-nav__list">
+              {headerKey !== HEADER_PAGE.FROM_SIGNUP ? (
+                <>
+                  {HEADER.map(item => (
+                    <Fragment key={item.href}>
+                      <li
+                        className={`fr-nav__item ${
+                          headerKey === item.key ? 'current' : ''
+                        }`}
+                      >
+                        <a className="fr-nav__link" href={`${item.href}`}>
+                          {item.txt}
+                        </a>
+                      </li>
+                    </Fragment>
+                  ))}
+                </>
+              ) : (
+                <li className="fr-nav__item">
+                  <a className="fr-nav__link" href={`${DATAPASS_URL}`}>
+                    Mes demandes
+                  </a>
+                </li>
+              )}
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <style jsx>{`
+        a.api-logo {
+          display: block;
+          width: 160px;
+        }
+      `}</style>
     </header>
   );
 };

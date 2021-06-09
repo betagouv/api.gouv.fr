@@ -18,9 +18,9 @@ const NewAPI = () => (
         <p>
           Ce formulaire{' '}
           <b>ne crée pas automatiquement une fiche API dans le catalogue</b>. Il
-          vous sert à prendre contact avec{' '}
-          <ExternalLink href="/equipe">notre équipe</ExternalLink> et à nous
-          transmettre tous les éléments nécessaires pour créer une fiche API.
+          vous sert à prendre contact avec <a href="/equipe">notre équipe</a> et
+          à nous transmettre tous les éléments nécessaires pour créer une fiche
+          API.
         </p>
         <p>
           Pour référencer son API sur api.gouv, il faut préalablement avoir

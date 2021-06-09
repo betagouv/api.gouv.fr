@@ -11,7 +11,7 @@ const PreFooter = ({ background }) => (
       backgroundColor: background || constants.colors.lightestGrey,
     }}
   >
-    <div className="content-container links">
+    <div className="fr-container links">
       <div>
         <p>Vous ne trouvez pas l’API dont vous avez besoin ?</p>
         <ButtonLink

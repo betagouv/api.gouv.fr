@@ -1,19 +1,9 @@
 @import '../constants/colors.scss';
-@import '../constants/layout.scss';
 
 body,
 html {
   margin: 0;
   padding: 0;
-}
-
-a {
-  color: #3a73c0;
-  word-wrap: break-word;
-}
-button,
-a {
-  cursor: pointer;
 }
 
 #page-layout {
@@ -25,7 +15,6 @@ a {
 
   > main {
     flex-grow: 1;
-    margin-top: #{$headerHeight + 'px'};
   }
 
   section.page-baseline {
@@ -108,18 +97,8 @@ a {
   }
 }
 
-a {
-  text-decoration: underline;
-  background-color: #0058ff00;
-  border-radius: 4px;
-  transition: background-color 120ms ease-in-out;
-  padding: 2px;
-  color: $blue;
-}
-a:not(.dont-apply-link-style):hover {
-  background-color: #0058ff14;
-  text-decoration: underline;
-  color: $vividBlue;
+a.dont-apply-link-style {
+  box-shadow: none;
 }
 
 .layout-center {
@@ -160,26 +139,6 @@ a:not(.dont-apply-link-style):hover {
   cursor: pointer;
 }
 
-.content-container {
-  margin-left: auto;
-  margin-right: auto;
-
-  @media only screen and (min-width: 1124px) {
-    width: 1100px;
-  }
-
-  @media only screen and (min-width: 768px) and (max-width: 1124px) {
-    width: calc(100% - 100px);
-  }
-
-  @media only screen and (min-width: 550px) and (max-width: 768px) {
-    width: calc(100% - 80px);
-  }
-
-  @media only screen and (min-width: 1px) and (max-width: 600px) {
-    width: calc(100% - 50px);
-  }
-}
 .text-wrapper {
   margin: 60px auto;
 
@@ -280,8 +239,8 @@ a:not(.dont-apply-link-style):hover {
   }
 
   ul {
-    list-style-type: circle;
-    margin-left: 20px;
+    list-style-type: none;
+    // margin-left: 20px;
 
     li > p {
       margin: 0;

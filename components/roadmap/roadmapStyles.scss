@@ -75,7 +75,7 @@
       }
 
       &:before {
-        left: -54px;
+        left: -52px;
         top: 13px;
         position: absolute;
         content: '';
@@ -86,12 +86,12 @@
         border-radius: 10px;
       }
       &:after {
-        left: -32px;
+        left: -34px;
         top: 22px;
         position: absolute;
         content: '';
         background-color: #ccc;
-        width: 32px;
+        width: 34px;
         height: 2px;
       }
     }

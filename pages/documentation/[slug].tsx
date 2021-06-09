@@ -68,7 +68,7 @@ const Documentation: React.FC<IProps> = ({ api, allApis }) => {
               </div>
             )}
             <a
-              className="share-api"
+              className="share-api dont-apply-link-style"
               title="Partager cette API aux membres de mon équipe"
               href={encodeURI(shareLink)}
               target="_blank"
@@ -140,9 +140,14 @@ const Documentation: React.FC<IProps> = ({ api, allApis }) => {
           flex-direction: row;
         }
         .documentation-content {
-          height: calc(100vh - ${constants.layout.HEADER_HEIGHT}px);
+          height: calc(100vh - 116px);
           overflow: auto;
           flex-grow: 1;
+        }
+        @media only screen and (min-width: 1px) and (max-width: 993px) {
+          .documentation-content {
+            height: calc(100vh - 172px);
+          }
         }
         .documentation-content .sections {
           display: flex;

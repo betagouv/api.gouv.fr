@@ -77,7 +77,7 @@ const API: React.FC<IProps> = ({ api, guides, datagouvDatasets }) => {
         owner_slug={owner_slug}
       />
 
-      <div id="description" className="content-container">
+      <div id="description" className="fr-container">
         <div className="right-column-grid">
           <div className="left-column text-style">
             <ApiDescription

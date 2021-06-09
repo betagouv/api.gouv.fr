@@ -26,7 +26,7 @@ const PageHeader: React.FC<{ title: string; logo: string }> = ({
   logo,
 }) => (
   <section id="mission-statement">
-    <div className="content-container">
+    <div className="fr-container">
       <div className="breadcrumb">
         <a href="/producteurs" className="dont-apply-link-style">
           ⇠ Tous les producteurs d'API
@@ -108,7 +108,7 @@ const ProducerPage: React.FC<IProps> = ({
         logo={producer.logo || constants.logo}
       />
       {(producer.short || producer.description || producer.data) && (
-        <div id="description" className="content-container">
+        <div id="description" className="fr-container">
           <div className="right-column-grid">
             <div className="left-column text-style">
               {producer.short && (
@@ -198,7 +198,7 @@ const ProducerPage: React.FC<IProps> = ({
         </div>
       )}
       <div id="api-list">
-        <div className="content-container text-style">
+        <div className="fr-container text-style">
           <h2>Quelle(s) sont ses API référencées au catalogue ?</h2>
           {apis && apis.length > 0 && (
             <>

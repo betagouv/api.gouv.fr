@@ -214,6 +214,9 @@ const Team: React.FC = () => (
       .medaillon:hover .linkedin {
         background-color: #0e76a8;
       }
+      .medaillon:after {
+        display: none;
+      }
     `}</style>
   </Page>
 );

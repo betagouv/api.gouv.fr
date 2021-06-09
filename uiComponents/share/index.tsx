@@ -19,6 +19,7 @@ const Share: React.FC<IProps> = ({ href, title = '' }) => (
       rel="noreferrer noopener"
       target="_blank"
       className="dont-apply-link-style"
+      title="Partager sur twitter"
     >
       {twitter}
     </a>
@@ -27,6 +28,7 @@ const Share: React.FC<IProps> = ({ href, title = '' }) => (
       rel="noreferrer noopener"
       target="_blank"
       className="dont-apply-link-style"
+      title="Partager sur Facebook"
     >
       {facebook}
     </a>
@@ -35,6 +37,7 @@ const Share: React.FC<IProps> = ({ href, title = '' }) => (
       rel="noreferrer noopener"
       target="_blank"
       className="dont-apply-link-style"
+      title="Partager sur Linkedin"
     >
       {linkedin}
     </a>
@@ -43,6 +46,7 @@ const Share: React.FC<IProps> = ({ href, title = '' }) => (
       rel="noreferrer noopener"
       target="_blank"
       className="dont-apply-link-style"
+      title="Partager par e-mail"
     >
       {mail}
     </a>
@@ -54,7 +58,7 @@ const Share: React.FC<IProps> = ({ href, title = '' }) => (
         align-items: center;
       }
       .social-network-icons a {
-        background-color: ${constants.colors.grey};
+        background-color: none;
         border-radius: 2px;
         display: flex;
         padding: 3px;
@@ -66,8 +70,13 @@ const Share: React.FC<IProps> = ({ href, title = '' }) => (
       }
       .social-network-icons a,
       .social-network-icons a svg {
-        width: 15px;
-        height: 15px;
+        stroke: ${constants.colors.blue};
+        width: 25px;
+        height: 25px;
+      }
+
+      .social-network-icons a:after {
+        display: none;
       }
     `}</style>
   </div>

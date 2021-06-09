@@ -76,10 +76,15 @@ const Documentation: React.FC<IProps> = ({ allApis }) => {
           flex-direction: row;
         }
         .documentation-body {
-          height: calc(100vh - ${constants.layout.HEADER_HEIGHT}px - 20px);
+          height: calc(100vh - 116px);
           overflow: auto;
           flex-grow: 1;
           padding: 0 30px;
+        }
+        @media only screen and (min-width: 1px) and (max-width: 993px) {
+          .documentation-content {
+            height: calc(100vh - 172px);
+          }
         }
       `}</style>
     </Page>

@@ -1,6 +1,8 @@
 import React from 'react';
 import App from 'next/app';
 
+import '@gouvfr/dsfr/dist/css/dsfr.min.css';
+
 import '../layouts/pageStyles.scss';
 import '../layouts/imports.scss';
 
@@ -39,6 +41,12 @@ class MyApp extends App {
 
     return (
       <>
+        <script type="module" src="js/dsfr.module.min.js"></script>
+        <script
+          type="text/javascript"
+          noModule
+          src="js/dsfr.nomodule.min.js"
+        ></script>
         <Component {...pageProps} />
       </>
     );

@@ -10,7 +10,7 @@ export const FilterHeader = ({
   allThemesOptions,
   searchFromQueryString,
 }) => (
-  <section id="search-api-filters" className="content-container ">
+  <section id="search-api-filters" className="fr-container ">
     <Dropdown
       label="Thématique"
       onChange={setTheme}

@@ -17,14 +17,14 @@ const Services: NextPage<Props> = ({ services }) => {
       title="Les exemples de services en ligne réalisés avec des API"
       description="Vous vous demandez comment utiliser une API du service public ? Inspirez-vous d’un cas pratique."
     >
-      <section className="content-container page-baseline">
+      <section className="fr-container page-baseline">
         <h1>
           Depuis 2016, nous accompagnons les acteurs publics à la réalisation de
           services numériques pour tous les français
         </h1>
       </section>
       <section id="realisations" className="page-body-container">
-        <div className="content-container default-grid">
+        <div className="fr-container default-grid">
           {services.map(service => (
             <ServiceCard key={service.slug} {...service} />
           ))}

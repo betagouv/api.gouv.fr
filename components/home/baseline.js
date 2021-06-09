@@ -6,7 +6,7 @@ import MagnifyingGlass from '../../uiComponents/icon/magnifyingGlass';
 const Baseline = () => (
   <section
     id="homepage-mission-statement"
-    className="content-container layout-center"
+    className="fr-container layout-center"
   >
     <h1>
       <TypingCarousel
