@@ -1,0 +1,42 @@
+/*
+ * DSFR v1.0.0-rc1.0 | restricted use
+ */
+@charset "UTF-8";
+
+/* ------------------------------------ *\
+  IE11
+\* ------------------------------------ */
+
+@media all and (-ms-high-contrast: none) and (min-width: 62em),
+       (-ms-high-contrast: active) and (min-width: 62em) {
+  .fr-nav--align-right {
+    transform: translateX(-100%);
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /**
+  * Correctif de l'alignement des menus sur la droite
+  *//**
+  * Correctif radio
+  */
+
+  .fr-fieldset--inline .fr-radio-group:last-child input[type="radio" i] + label[style*='background-image:'],
+  .fr-fieldset--inline .fr-radio-group:last-child input[type="radio" i] + label[class^="fr-ifi-"],
+  .fr-fieldset--inline .fr-radio-group:last-child input[type="radio" i] + label[class*=" fr-ifi-"] {
+    margin-bottom: 0.5rem !important;
+  }/**
+  * Correctif de la hauteur de la navigation latérale
+  */
+
+  .fr-sidenav {
+    height: auto;
+  }/**
+  * Correctif
+  */
+
+  .fr-skiplinks.focus-within {
+    position: relative;
+    transform: translateY(0);
+  }
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import App from 'next/app';
 
-import '@gouvfr/dsfr/dist/css/dsfr.min.css';
+import '../public/css/dsfr.min.css';
 
 import '../layouts/pageStyles.scss';
 import '../layouts/imports.scss';

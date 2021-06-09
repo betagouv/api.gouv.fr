@@ -1,6 +1,4 @@
-const withFonts = require('nextjs-fonts');
-
-module.exports = withFonts({
+module.exports = {
   async redirects() {
     return [
       {
@@ -37,4 +35,4 @@ module.exports = withFonts({
     });
     return config;
   },
-});
+};
