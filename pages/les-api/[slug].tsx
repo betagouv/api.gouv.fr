@@ -133,7 +133,7 @@ const API: React.FC<IProps> = ({ api, guides, datagouvDatasets }) => {
 
         .right-column-grid {
           display: grid;
-          grid-template-columns: 65% 35%;
+          grid-template-columns: 65% 31%;
           grid-gap: 40px;
         }
 

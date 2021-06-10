@@ -240,7 +240,7 @@ const ProducerPage: React.FC<IProps> = ({
 
         .right-column-grid {
           display: grid;
-          grid-template-columns: 65% 35%;
+          grid-template-columns: 65% 31%;
           grid-gap: 40px;
         }
 
