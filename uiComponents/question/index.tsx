@@ -32,7 +32,7 @@ export const Question: React.FC<{}> = () => (
         display: inline-block;
         color: #fff;
         text-decoration: none;
-        box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 4px 13px rgb(0 0 0 / 60%);
         transition: margin 100ms ease-in-out, box-shadow 100ms ease-in-out;
         margin-bottom: 0;
       }
