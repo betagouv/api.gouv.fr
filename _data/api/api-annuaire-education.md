@@ -1,5 +1,5 @@
 ---
-title: API annuaire de l’Education Nationale
+title: Annuaire de l’Education Nationale
 tagline: Accédez aux données de l’annuaire des établissements de l'Education Nationale
 is_open: 1 # 1 means API is fully open
 external_site: https://data.education.gouv.fr/pages/accueil/
