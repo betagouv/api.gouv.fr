@@ -16,7 +16,7 @@ liens vers les services qui l'utilisent.
 
 ## Public visé
 
-api.gouv.fr s'adresse avant tout aux créateurs de services, les consommateurs
+**api.gouv.fr** s'adresse avant tout aux créateurs de services, les consommateurs
 d'API. Pour cela, nous facilitons la découverte, la compréhension et l'accès
 aux API et à leurs producteurs.
 
