@@ -8,7 +8,7 @@
 [![Code testé](https://github.com/betagouv/api.gouv.fr/actions/workflows/tests.yml/badge.svg)](https://github.com/betagouv/api.gouv.fr/actions/workflows/tests.yml)
 [![Maintainability](https://api.codeclimate.com/v1/badges/71623eda1dc52631faad/maintainability)](https://codeclimate.com/github/betagouv/api.gouv.fr/maintainability)
 
-**api.gouv.fr** catalogue les API offertes par les administrations centrales, les
+**api.gouv.fr** catalogue les API produites par les administrations centrales, les
 collectivités territoriales, les établissements publics… Chaque API est
 associée à une courte description fonctionnelle, une documentation technique,
 les modalités d'accès, d'éventuelles ressources supplémentaires et surtout des
