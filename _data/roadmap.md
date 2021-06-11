@@ -182,6 +182,9 @@
       what: Maladies Rares (ORPHAcode)
       path: /les-api/api-orphacode
     - type: ADD_API
+      what: annuaire de l'Education Nationale
+      path: /les-api/api-annuaire-education
+    - type: ADD_API
       what: Professionnels BIO par l'agence BIO
     - type: ADD_API
       what: CVEC par le CNOUS
