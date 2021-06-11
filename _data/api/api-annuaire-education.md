@@ -23,10 +23,12 @@ themes:
   - Education
 content_intro: |
   L’API annuaire de l’Education Nationale donne accès aux caractéristiques et aux informations de contact des établissements de l'Éducation nationale.
-  ### A quoi sert l'API annuaire de l’Education Nationale ?
-L'annuaire contient les données de plus de 66000 établissements scolaires, qu'ils soient publics ou privés : écoles, collèges, lycées, établissements régionaux d'enseignement adapté (EREA), services administratifs, ou bien d'information et orientation.
 
-L'API permet de rechercher des établissements sur un territoire, d'obtenir une sélection par type d'établissement, et d'accéder à leurs coordonnées de contact. 
+  ### A quoi sert l'API annuaire de l’Education Nationale ?
+  
+  L'annuaire contient les données de plus de 66000 établissements scolaires, qu'ils soient publics ou privés : écoles, collèges, lycées, établissements régionaux d'enseignement adapté (EREA), services administratifs, ou bien d'information et orientation.
+
+  L'API permet de rechercher des établissements sur un territoire, d'obtenir une sélection par type d'établissement, et d'accéder à leurs coordonnées de contact. 
 contact_link: https://data.education.gouv.fr/pages/contactez-nous/
 doc_tech_link: /swaggers/ods/api-annuaire-education.json
 visits_2019: 10602
