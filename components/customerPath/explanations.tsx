@@ -10,6 +10,7 @@ export enum SUBJECT {
   CHERCHE_API,
   CHERCHE_API_PART,
   FRANCECONNECT_PART,
+  FRANCECONNECT_PROBLM_PART,
   FRANCECONNECT_ENTREPRISE,
   NEW_API,
   CANT_FIND,
@@ -53,6 +54,11 @@ const Questions = [
       VISITOR.EDITOR,
       VISITOR.ASSO,
     ],
+  },
+  {
+    value: SUBJECT.FRANCECONNECT_PROBLM_PART,
+    label: 'J’ai un problème avec FranceConnect',
+    public: [VISITOR.PARTICULIER],
   },
   {
     value: SUBJECT.FRANCECONNECT_PART,
@@ -165,6 +171,25 @@ const Explanations: React.FC<IProps> = ({ subject, visitorType }) => {
           <div className="layout-center">
             <ButtonLink size="large" href="/rechercher-api" onClick={logClic}>
               Rechercher une API
+            </ButtonLink>
+          </div>
+        </div>
+      );
+    case SUBJECT.FRANCECONNECT_PROBLM_PART:
+      return (
+        <div className="subject-answer">
+          <p>
+            Si vous rencontrez un problème avec FranceConnect, nous vous
+            recommandons de contacter directement l’équipe via la FAQ de
+            FranceConnect :
+          </p>
+          <div className="layout-center">
+            <ButtonLink
+              size="large"
+              href="https://franceconnect.gouv.fr/faq"
+              onClick={logClic}
+            >
+              Accéder à la page d’aide France Connect
             </ButtonLink>
           </div>
         </div>
