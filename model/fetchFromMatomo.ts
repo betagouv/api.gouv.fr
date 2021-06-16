@@ -1,3 +1,4 @@
+import { IApi } from '.';
 import { getAllAPIs } from './readOnDiskForWebpack';
 
 export interface IMatomoStat {
@@ -18,18 +19,30 @@ export interface IMatomoResponseItem {
   }[];
 }
 
-export const getMatomoStats = async () => {
-  const allApis = await getAllAPIs();
-  const matomoStats = await (
-    await fetch(
-      'https://stats.data.gouv.fr/index.php?&expanded=1&filter_limit=50&format=JSON&idSite=22&method=Events.getName&module=API&period=year&date=2021-04-27'
-    )
-  ).json();
+const getDateRange = () => {
+  const now = new Date();
 
+  const day = now.getDay();
+  const month = now.getMonth();
+  const year = now.getFullYear();
+  return `${year - 1}-${month}-${day},${year}-${month}-${day}`;
+};
+
+const extractStats = (
+  matomoEvents: IMatomoResponseItem[],
+  pagesStats: { [key: string]: number },
+  rootPath: string,
+  allApis?: IApi[]
+) => {
   const stats = {} as { [key: string]: IMatomoStat };
-  matomoStats.forEach((elem: IMatomoResponseItem) => {
-    if (elem.label.indexOf('page : /les-api/') > -1) {
-      const key = elem.label.replace('page : /les-api/', '');
+  matomoEvents.forEach((elem: IMatomoResponseItem) => {
+    const label = `page : ${rootPath}`;
+    if (elem.label.indexOf(label) > -1) {
+      const key = elem.label.replace(label, '');
+      const visits = pagesStats['/' + key];
+      const path = `${rootPath}${key}`;
+      const title =
+        ((allApis || []).find(api => api.slug === key) || {}).title || path;
 
       const yes =
         (elem.subtable.find(d => d.label === 'Oui') || {}).nb_events || 0;
@@ -39,9 +52,9 @@ export const getMatomoStats = async () => {
       if (yes > 0 && no > 0) {
         const approval = Math.round((yes / (no + yes)) * 100);
         stats[key] = {
-          title: (allApis.find(api => api.slug === key) || {}).title || key,
-          path: `/les-api/${key}`,
-          visits: elem.nb_visits,
+          title,
+          path,
+          visits,
           yes,
           no,
           approval,
@@ -50,4 +63,47 @@ export const getMatomoStats = async () => {
     }
   });
   return Object.values(stats);
+};
+
+export const getMatomoStats = async () => {
+  try {
+    const allApis = await getAllAPIs();
+
+    const [matomoEventsResponse, matomoPagesResponse] = await Promise.all([
+      fetch(
+        `https://stats.data.gouv.fr/index.php?&expanded=1&format=JSON&idSite=22&filter_limit=999&method=Events.getName&module=API&&period=range&date=${getDateRange()}`
+      ),
+      fetch(
+        `https://stats.data.gouv.fr/index.php?&expanded=1&format=JSON&idSite=22&filter_limit=999&method=Actions.getPageUrls&module=API&period=range&date=${getDateRange()}`
+      ),
+    ]);
+
+    const matomoPages = await matomoPagesResponse.json();
+    const matomoEvents = await matomoEventsResponse.json();
+
+    const pagesStats = matomoPages
+      .filter(
+        (elem: IMatomoResponseItem) =>
+          ['guides', 'les-api'].indexOf(elem.label) > -1
+      )
+      .reduce((acc: IMatomoResponseItem[], elem: IMatomoResponseItem) => {
+        return [...acc, ...elem.subtable];
+      }, [])
+      .reduce((acc: { [key: string]: number }, elem: IMatomoResponseItem) => {
+        acc[elem.label] = elem.nb_visits;
+        return acc;
+      }, {});
+
+    return {
+      api: extractStats(matomoEvents, pagesStats, '/les-api/', allApis).sort(
+        (a, b) => (a.visits < b.visits ? 1 : -1)
+      ),
+      guide: extractStats(matomoEvents, pagesStats, '/guides/'),
+    };
+  } catch (e) {
+    return {
+      api: null,
+      guide: null,
+    };
+  }
 };

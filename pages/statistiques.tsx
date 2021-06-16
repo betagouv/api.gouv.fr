@@ -33,7 +33,7 @@ const Stats: React.FC<IProps> = ({ allApis }) => {
         <H2WithAnchor>Retours utilisateurs</H2WithAnchor>
         <p>
           Réponses des visiteurs à la question "Est-ce que cette page vous a été
-          utile ?" :
+          utile ?", sur les douze derniers mois :
         </p>
         <MatomoStatsTable />
       </div>
