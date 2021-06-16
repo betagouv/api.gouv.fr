@@ -8,26 +8,26 @@ api:
   - API de droits à l'Assurance Maladie
 ---
 
-FranceConnect permet au citoyen de s'authentifier à de nombreux services de l'administration. Ce dispositif permet de n'avoir qu'un compte à retenir pour tous les services de l'administration (<External href="https://franceconnect.gouv.fr/partenaires">en savoir plus sur FranceConnect</External>).
+FranceConnect permet au citoyen de s'authentifier à de nombreux services de l'administration. Ce dispositif permet d'utiliser un compte existant sur impots.fr ou ameli.fr par exemple, afin d'accéder à tous les services de l'administration (<External href="https://franceconnect.gouv.fr/partenaires">en savoir plus sur FranceConnect</External>).
 
-Les API FranceConnectées sont des API qui permettent de transmettre - en plus des données d'identité transmises par FranceConnect - d'autres données d'administrations au moment de la FranceConnection du citoyen à sa démarche.
+Les API FranceConnectées sont des API qui permettent de transmettre - en plus des données d'identité transmises par FranceConnect - d'autres données personnelles du citoyen lorsqu'il utilise FranceConnect dans sa démarche.
 
 Une API FranceConnecté s'utilise obligatoirement avec FranceConnect. C'est-à-dire que dans votre service numérique, l'utilisateur devra se FranceConnecter pour obtenir les données de l'API.
 
 ## En quoi ça change tout ?
 
-Les API FranceConnectées simplifient le parcours d'un citoyen à ses démarches, car elles évitent la saisie par le citoyen d'une clé d'appel aux API (par exemple : le _numéro fiscal_ sert de clef d'appel pour les API fiscales). C'est l'identité pivot de FranceConnect qui fait office de clé d'appel.
+Les API FranceConnectées simplifient le parcours d'un citoyen à ses démarches, car elles lui évitent la saisie de données personnelles utilisées comme clé d'appel aux API (par exemple : le _numéro fiscal_ sert de clé d'appel pour les API fiscales et doit être saisi par l'utilisateur si la démarche n'utilise pas d'API FranceConnectée). C'est l'identité pivot fournie par FranceConnect qui fait office de clé d'appel pour une API FranceConnectée, le citoyen n'a donc rien à saisir.
 
 Le parcours classique d'un citoyen dans une démarche :
 
-- 👤 Authentification
-- 🔍 Recherche de la clef d'appel dans ses documents personnels (par exemple _le numéro fiscal_)
+- 👤 Connexion par son compte associé à la démarche
+- 🔍 Recherche de la clé d'appel dans ses documents personnels (par exemple _le numéro fiscal_)
 - 🗝 Saisie de la clé d'appel
 - 👩‍💻 Récupération de données par API
 
 Le parcours grâce aux API FranceConnectées :
 
-- 🇫🇷 FranceConnection
+- 🇫🇷 Connexion par FranceConnect
 - ✅ Récupération de données grâce aux API FranceConnectées
 
 Les API FranceConnectées simplifient :
@@ -36,7 +36,7 @@ Les API FranceConnectées simplifient :
 | ------------------------------------------- | --------------------------------------------------------------- |
 | Des démarches simplifiées et accélérées     | Les délais de traitement sont instantannés                      |
 | Plus aucune pièces justificatives à fournir | Plus de pièces justificatives à traiter et à stocker            |
-| Plus d'erreur de frappe possible            | Plus de fraude possible car la donnée est certifiée à la source |
+| Plus d'erreur de saisie possible            | Plus de fraude possible car la donnée est certifiée à la source |
 
 ### Un cas pratique : la demande d'Aide Juridictionnelle
 
