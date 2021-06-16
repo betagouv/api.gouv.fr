@@ -192,11 +192,11 @@
       what: Statut Étudiant
     - type: ADD_API
       what: Bulletin Officiel des Annonces Civiles et Commerciales par la DILA - version bêta
-    - type: ADD API
+    - type: ADD_API
       what: Bulletin des annonces légales obligatoires par la DILA - version bêta
-    - type: ADD API
+    - type: ADD_API
       what: Bulletin officiel des annonces des marchés publics par la DILA - version bêta
-    - type: ADD API
+    - type: ADD_API
       what: API Associations par la DILA - version bêta
     - type: ADD_API
       what: Liste des organismes de formation par la DGEFP
