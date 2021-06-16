@@ -197,7 +197,7 @@
     - type: ADD_API
       what: Bulletin officiel des annonces des marchés publics par la DILA - version bêta
     - type: ADD_API
-      what: API Associations par la DILA - version bêta
+      what: Associations par la DILA - version bêta
     - type: ADD_API
       what: Liste des organismes de formation par la DGEFP
     - type: ADD_API
@@ -222,8 +222,8 @@
       what: Bulletin des Annonces Légales Obligatoires par la DILA
     - type: ADD_API
       what: Journal Officiel par la DILA
-    - type: ADD API
+    - type: ADD_API
       what: Bulletin officiel des annonces des marchés publics par la DILA - version bêta
-    - type: ADD API
-      what: API Associations par la DILA - version bêta
+    - type: ADD_API
+      what: Associations par la DILA - version bêta
 ---
