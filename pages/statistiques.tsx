@@ -6,6 +6,7 @@ import { getAllAPIs, IApi } from '../model';
 import Emoji from '../uiComponents/emoji';
 import ChartAPIIsOpen from '../components/charts/chartAPIIsOpen';
 import ChartAPIByProducers from '../components/charts/chartAPIByProducers';
+import MatomoStatsTable from '../components/matomoStats';
 
 interface IProps {
   allApis: IApi[];
@@ -28,6 +29,12 @@ const Stats: React.FC<IProps> = ({ allApis }) => {
         <ChartAPIIsOpen allApis={allApis} />
         <p>Répartition des API par type de producteur de donnée :</p>
         <ChartAPIByProducers allApis={allApis} />
+        <h2>Retours utilisateurs</h2>
+        <p>
+          Réponses des visiteurs à la question "Est-ce que cette page vous a été
+          utile ?" :
+        </p>
+        <MatomoStatsTable />
       </div>
     </Page>
   );
