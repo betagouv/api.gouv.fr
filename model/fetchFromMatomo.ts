@@ -9,6 +9,15 @@ export interface IMatomoStat {
   approval: number;
 }
 
+export interface IMatomoResponseItem {
+  label: string;
+  nb_visits: number;
+  subtable: {
+    label: string;
+    nb_events: number;
+  }[];
+}
+
 export const getMatomoStats = async () => {
   const allApis = await getAllAPIs();
   const matomoStats = await (
@@ -17,8 +26,8 @@ export const getMatomoStats = async () => {
     )
   ).json();
 
-  const stats = {} as IMatomoStat[];
-  matomoStats.forEach(elem => {
+  const stats = {} as { [key: string]: IMatomoStat };
+  matomoStats.forEach((elem: IMatomoResponseItem) => {
     if (elem.label.indexOf('page : /les-api/') > -1) {
       const key = elem.label.replace('page : /les-api/', '');
 
@@ -30,7 +39,7 @@ export const getMatomoStats = async () => {
       if (yes > 0 && no > 0) {
         const approval = Math.round((yes / (no + yes)) * 100);
         stats[key] = {
-          title: (allApis.find(api => api.slug === key) || {}).title,
+          title: (allApis.find(api => api.slug === key) || {}).title || key,
           path: `/les-api/${key}`,
           visits: elem.nb_visits,
           yes,
