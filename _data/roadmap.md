@@ -191,13 +191,13 @@
     - type: ADD_API
       what: Statut Étudiant
     - type: ADD_API
-      what: Bulletin Officiel des Annonces Civiles et Commerciales par la DILA - version bêta
+      what: Bulletin Officiel des Annonces Civiles et Commerciales par la DILA 
     - type: ADD_API
-      what: Bulletin des annonces légales obligatoires par la DILA - version bêta
+      what: Bulletin des annonces légales obligatoires par la DILA 
     - type: ADD_API
-      what: Bulletin officiel des annonces des marchés publics par la DILA - version bêta
+      what: Bulletin officiel des annonces des marchés publics par la DILA
     - type: ADD_API
-      what: Associations par la DILA - version bêta
+      what: Associations par la DILA 
     - type: ADD_API
       what: Liste des organismes de formation par la DGEFP
     - type: ADD_API
@@ -215,15 +215,4 @@
       what: Déclaration préalable à l'embauche par l'Urssaf
     - type: ADD_API
       what: Indemnités Journalières distribuée par la CNAM
-  9:
-    - type: ADD_API
-      what: Bulletin Officiel des Annonces Civiles et Commerciales par la DILA
-    - type: ADD_API
-      what: Bulletin des Annonces Légales Obligatoires par la DILA
-    - type: ADD_API
-      what: Journal Officiel par la DILA
-    - type: ADD_API
-      what: Bulletin officiel des annonces des marchés publics par la DILA - version bêta
-    - type: ADD_API
-      what: Associations par la DILA - version bêta
 ---
