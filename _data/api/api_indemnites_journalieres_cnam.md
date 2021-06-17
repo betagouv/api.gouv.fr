@@ -1,7 +1,7 @@
 ---
 title: API Indemnités Journalières de la CNAM
 tagline: Accédez au montant des indemnités journalières de l'Assurance Maladie payé à un assuré sur une période.
-external_site: https://api.swaggerhub.com/apis/meeoen/apij/1.0-apim
+external_site: https://app.swaggerhub.com/apis/meeoen/apij/1.0-apim
 is_open: -1 # -1 means API not open
 is_france_connected: 2 # undefined | 1 | 2. 2 means can be used with FC, 2 means has to be used with FC
 datapass_link: 
@@ -66,7 +66,7 @@ rate_limiting_description: |
 monitoring_description: |
   Une supervision du service en temps réel est disponible à cette adresse.
 contact_link: partenaires-api-cnam@assurance-maladie.fr	
-doc_tech_link: https://app.swaggerhub.com/apis/meeoen/apij/1.0-apim
+doc_tech_link: https://api.swaggerhub.com/apis/meeoen/apij/1.0-apim
 themes:
   - Particulier
 visits_2019: 3000
