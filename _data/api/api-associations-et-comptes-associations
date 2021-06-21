@@ -1,5 +1,5 @@
 ---
-title: API Associations et comptes associations
+title: API Annonces officielles et comptes annuels des associations
 tagline: Rechercher et consulter les comptes annuels des associations
 external_site: http://api.dila.fr
 is_open: 1 # 1 means API is fully open
@@ -22,9 +22,9 @@ visits_2019: 1200
 last_update: 21/06/2021
 ---
 
-## A quoi sert l’API Associations et comptes associations ?
+## A quoi sert l’API Annonces officielles et comptes annuels des associations ?
 
-Afin de faciliter la réutilisation des données Associations et Comptes associations, la direction de l’information légale et administrative (DILA) met à disposition une API accessible gratuitement.
+Afin de faciliter la réutilisation des données, la direction de l’information légale et administrative (DILA) met à disposition une API accessible gratuitement.
 Cette version de l’API est une version bêta. Elle permet de recueillir vos remarques et vos suggestions d’amélioration ; elle pourra donc évoluer pendant toute la durée du test.
 
 Les principales fonctionnalités :
@@ -56,7 +56,7 @@ Le jeu de données Comptes associations publie les comptes annuels des associati
 
 ## Accéder aux données
 
-L’API Association et Comptes associations est utilisable gratuitement. L’utilisation de ces données est soumise :
+L’API Annonces officielles et comptes annuels des associations est utilisable gratuitement. L’utilisation de ces données est soumise :
 
 - à la [licence ouverte 2.0](https://www.etalab.gouv.fr/wp-content/uploads/2017/04/ETALAB-Licence-Ouverte-v2.0.pdf),
 - aux conditions générales d’utilisation de l’API.
