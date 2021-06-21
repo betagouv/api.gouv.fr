@@ -185,19 +185,20 @@
       what: annuaire de l'Education Nationale
       path: /les-api/api-annuaire-education
     - type: ADD_API
+      what: Annonces officielles et comptes annuels des associations
+      path: /les-api/api-annonces-comptes-annuels-associations
+    - type: ADD_API
       what: Professionnels BIO par l'agence BIO
     - type: ADD_API
       what: CVEC par le CNOUS
     - type: ADD_API
       what: Statut Étudiant
     - type: ADD_API
-      what: Bulletin Officiel des Annonces Civiles et Commerciales par la DILA 
+      what: Bulletin Officiel des Annonces Civiles et Commerciales par la DILA
     - type: ADD_API
-      what: Bulletin des annonces légales obligatoires par la DILA 
+      what: Bulletin des annonces légales obligatoires par la DILA
     - type: ADD_API
       what: Bulletin officiel des annonces des marchés publics par la DILA
-    - type: ADD_API
-      what: Associations par la DILA 
     - type: ADD_API
       what: Liste des organismes de formation par la DGEFP
     - type: ADD_API
