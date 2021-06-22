@@ -1,4 +1,3 @@
-@import '../../constants/layout.scss';
 @import '../../constants/colors.scss';
 
 #documentation-left-column {
@@ -16,11 +15,17 @@
   }
 
   .documentation-api-list {
-    height: calc(100vh - 82px - #{$headerHeight + 'px'});
+    height: calc(100vh - 200px);
+
+    @media only screen and (min-width: 1px) and (max-width: 993px) {
+      height: calc(100vh - 254px);
+    }
+
     overflow: auto;
 
     > div,
     a {
+      box-shadow: none;
       padding: 10px 20px;
       color: #eff6ff;
       text-decoration: none;

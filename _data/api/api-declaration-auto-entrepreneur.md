@@ -29,8 +29,8 @@ access_page:
 
       <Button href="/rechercher-api">Revenir à la recherche</Button>
 contact_link: contact.tiercedeclaration@urssaf.fr
-doc_tech_link: /api/v1/proxy/https%3A%2F%2Fportailapi.urssaf.fr%2Findex.php%3Foption%3Dcom_apiportal%26view%3Ddefinition%26managerId%3D1%26menuId%3D181%26format%3Draw%26stateReturn%3DL2ZyLz9JdGVtaWQ9MTgxJmFwaUlkPWNiNTUwNDk4LWMyOGItNGJiMS05MGUwLTliYjlkMjdlMTI0NCZhcGlOYW1lPUFQSSUyMFRpZXJjZSUyMERlY2xhcmF0aW9uJTIwYXV0by1lbnRyZXByZW5ldXImYXBpVmVyc2lvbj0xLjIuMCZhcGl0YWI9dGVzdHMmbWFuYWdlcklkPTEmbWVudUlkPTE4MSZvcHRpb249Y29tX2FwaXBvcnRhbCZyZW5kZXJUb29sPTImdHlwZT1yZXN0JnVzYWdlPWFwaSZ2aWV3PWFwaXRlc3Rlcg%3D%3D%26path%3D%252Fdiscovery%252Fswagger%252Fapi%252Fid%252Fcb550498-c28b-4bb1-90e0-9bb9d27e1244%253FswaggerVersion%253D2.0%2526filename%253DAPI%252520Tierce%252520Declaration%252520auto-entrepreneur.json%2526extensions%253Dfalse
-doc_tech_external: https://portailapi.urssaf.fr/fr/?option=com_apiportal&view=apitester&usage=api&apiName=API%20Tierce%20Declaration%20auto-entrepreneur&sn=API%20Tierce%20Declaration%20auto-entrepreneur&Itemid=181&apitab=tests&tab=&apiId=cb550498-c28b-4bb1-90e0-9bb9d27e1244&menuId=181&apiVersion=1.2.0&managerId=1&renderTool=2&type=rest
+doc_tech_link: /api/v1/proxy/https%3A%2F%2Fportailapi.urssaf.fr%2Findex.php%3Foption%3Dcom_apiportal%26view%3Ddefinition%26managerId%3D1%26menuId%3D181%26format%3Draw%26stateReturn%3DL2ZyLz9JdGVtaWQ9MTgxJmFwaUlkPTI0NzBkZGI1LTIyODYtNGZkNi1hNWI2LTVmNTAwOTM3ZmU5ZCZhcGlOYW1lPUFQSSUyMFRpZXJjZSUyMERlY2xhcmF0aW9uJTIwYXV0by1lbnRyZXByZW5ldXImYXBpVmVyc2lvbj0xLjIuMiZhcGl0YWI9dGVzdHMmbWFuYWdlcklkPTEmbWVudUlkPTE4MSZvcHRpb249Y29tX2FwaXBvcnRhbCZyZW5kZXJUb29sPTImdHlwZT1yZXN0JnVzYWdlPWFwaSZ2aWV3PWFwaXRlc3Rlcg%3D%3D%26path%3D%252Fdiscovery%252Fswagger%252Fapi%252Fid%252F2470ddb5-2286-4fd6-a5b6-5f500937fe9d%253FswaggerVersion%253D2.0%2526filename%253DAPI%252520Tierce%252520Declaration%252520auto-entrepreneur.json%2526extensions%253Dfalse
+doc_tech_external: https://portailapi.urssaf.fr/fr/
 keywords:
   - Urssaf
   - Acoss

@@ -1,0 +1,4 @@
+/*
+ * DSFR v1.0.0-rc1.0 | restricted use
+ */
+.fr-skiplinks{--is-list:false;position:absolute;padding:1rem 0;transform:translateY(-100%)}.fr-skiplinks:focus-within{position:relative;transform:translateY(0)}.fr-skiplinks__list{display:flex;flex-direction:column;margin:0 -1rem -1.5rem}.fr-skiplinks__list>li{margin:0 1rem 1.5rem}.fr-skiplinks__list>li:before{content:none}.fr-skiplinks__list>li .fr-link{font-size:1rem;line-height:1.5rem;min-height:2rem;padding:.25rem .75rem;border-radius:1rem;max-width:none;max-height:none;margin-left:-.75rem;margin-right:-.75rem}.fr-skiplinks__list>li .fr-link:before{content:none}.fr-skiplinks__list:focus-within{position:relative;transform:translateY(0)}.fr-skiplinks{background-color:var(--g200)}@media (min-width:48em){.fr-skiplinks__list>li{margin:0 1rem}.fr-skiplinks__list{flex-direction:row;flex-wrap:wrap;margin:0 -1rem}}

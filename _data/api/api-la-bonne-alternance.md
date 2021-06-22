@@ -66,6 +66,6 @@ La réutilisation de ces données engage la responsabilité du réutilisateur.
 
 ### L'équipe
 
-L'API est produite par la <External href="https://beta.gouv.fr/startups/apprentissage.html">Mission Nationale Apprentissage</External>, qui opère au sein de la DINUM
+L'API est produite par la DINUM en partenariat avec pole-emploi.
 
 Pour en savoir plus, consultez la <External href="https://mission-apprentissage.gitbook.io/general/">présentation de l'équipe</External>.

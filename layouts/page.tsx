@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Footer, PreFooter, Header, Meta, DocHeader } from '../components';
+import { Question } from '../uiComponents/question';
 
 interface IProps {
   title: string;
@@ -35,6 +36,7 @@ const Page: React.FC<IProps> = ({
     />
     {useDocHeader ? <DocHeader /> : <Header headerKey={headerKey || 'home'} />}
     <main>{children}</main>
+    <Question />
     <footer id="footer">
       {usePreFooter && <PreFooter background={preFooterBackground} />}
       {useFooter && <Footer />}

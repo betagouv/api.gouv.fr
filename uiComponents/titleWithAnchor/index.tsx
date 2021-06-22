@@ -23,6 +23,7 @@ const Anchor: React.FC<{ id: string }> = ({ id }) => (
         margin-left: -0.87em;
         padding-right: 0.23em;
         text-decoration: none;
+        color: ${constants.colors.blue};
       }
     `}</style>
   </>
@@ -39,7 +40,7 @@ const HiddenAnchor: React.FC<{ id: string }> = ({ id }) => (
       a.hidden-anchor {
         display: block;
         position: absolute;
-        top: -${constants.layout.HEADER_HEIGHT + 15}px;
+        top: 0;
         visibility: hidden;
       }
     `}</style>

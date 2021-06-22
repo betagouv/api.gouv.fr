@@ -173,43 +173,48 @@
     - type: ADD_API
       what: Hub’Eau - Surveillance du littoral
       path: /les-api/api_hubeau_surv_litt
-    - type: ADD_API
-      what: Professionnels BIO par l'agence BIO
-      path: /les-api/api-professionnels-bio
+  5:
     - type: ADD_API
       what: Pro Santé Connect par l'ANS
+      path: /les-api/api-pro-sante-connect
+  6:
+    - type: ADD_API
+      what: Maladies Rares (ORPHAcode)
+      path: /les-api/api-orphacode
+    - type: ADD_API
+      what: annuaire de l'Education Nationale
+      path: /les-api/api-annuaire-education
+    - type: ADD_API
+      what: Annonces officielles et comptes annuels des associations
+      path: /les-api/api-annonces-comptes-annuels-associations
+    - type: ADD_API
+      what: Professionnels BIO
+      path: /les-api/api-professionnels-bio
     - type: ADD_API
       what: CVEC par le CNOUS
-  5:
     - type: ADD_API
       what: Statut Étudiant
     - type: ADD_API
-      what: Bulletin Officiel des Annonces Civiles et Commerciales (BODACC)
+      what: Bulletin Officiel des Annonces Civiles et Commerciales par la DILA
+    - type: ADD_API
+      what: Bulletin des annonces légales obligatoires par la DILA
+    - type: ADD_API
+      what: Bulletin officiel des annonces des marchés publics par la DILA
     - type: ADD_API
       what: Liste des organismes de formation par la DGEFP
     - type: ADD_API
       what: Accès Libre
-  6:
     - type: ADD_API
       what: AgentConnect par la DINUM
     - type: ADD_API
       what: Référentiel Partagé des Professionnels de Santé
     - type: ADD_API
       what: Hermés par la DGFiP
-    - type: ADD_API
-      what: AgentConnect par la DINUM
   7:
     - type: ADD_API
       what: Attestation Codes Sécurité par l'Urssaf
     - type: ADD_API
       what: Déclaration préalable à l'embauche par l'Urssaf
-  9:
     - type: ADD_API
       what: Indemnités Journalières distribuée par la CNAM
-    - type: ADD_API
-      what: Bulletin Officiel des Annonces Civiles et Commerciales par la DILA
-    - type: ADD_API
-      what: Bulletin des Annonces Légales Obligatoires par la DILA
-    - type: ADD_API
-      what: Journal Officiel par la DILA
 ---

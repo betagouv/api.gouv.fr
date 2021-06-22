@@ -41,7 +41,7 @@ L'API Résultats aux examens exposant des **données à caractère personnel**, 
 
 ### Aller à l'essentiel...
 
-Nous avons choisi d'exposer toutes les ressources utilisées par le service [ARPENT(résultats)](https://ensagri.agriculture.gouv.fr/arpent-resultats/). La [documentation technique](https://ensagri.agriculture.gouv.fr/arpent-resultats-api/swagger-ui.html#/) peut donc paraître assez riche.
+Nous avons choisi d'exposer toutes les ressources utilisées par le service [ARPENT(résultats)](https://teleservices-ea.agriculture.gouv.fr/arpent-resultats/). La [documentation technique](https://teleservices-ea.agriculture.gouv.fr/arpent-resultats-api/swagger-ui.html#/) peut donc paraître assez riche.
 _A noter : certaines ressources relevent d'une authentification renforcée. Les modalités d'accès seront fournies ultérieurement._
 
 Pour aller à l'essentiel, voici celles qui exposent le plus simplement les calendriers et résultats aux examens :

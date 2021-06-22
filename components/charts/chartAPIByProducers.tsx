@@ -15,7 +15,15 @@ const getLabels = (allApis: IApi[]) => {
   return labels;
 };
 
-const colors = ['#DD6A3D', '#69B5B7', '#A72257', '#F09B7A', '#6C5B7B'];
+const colors = [
+  '#DD6A3D',
+  '#69B5B7',
+  '#A72257',
+  '#F09B7A',
+  '#6C5B7B',
+  '#ffce00',
+  '#00a7ff',
+];
 
 const generateData = (allApis: IApi[], keys: string[]) => {
   const origin = new Date(ORIGIN);

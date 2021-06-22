@@ -30,7 +30,7 @@ access_page:
       <Button href="/rechercher-api">Revenir à la recherche</Button>
 contact_link: contact.tiercedeclaration@urssaf.fr
 doc_tech_link: /api/v1/proxy/https%3A%2F%2Fportailapi.urssaf.fr%2Findex.php%3Foption%3Dcom_apiportal%26view%3Ddefinition%26managerId%3D1%26menuId%3D181%26format%3Draw%26stateReturn%3DL2ZyLz9JdGVtaWQ9MTgxJmFwaUlkPTA1Zjk1MjFmLTI1YWMtNGU0OC04ZjkzLTQ0N2E2NmJmNGFhMCZhcGlOYW1lPUFQSSUyMFRpZXJjZSUyMERlY2xhcmF0aW9uJTIwQ0VTVSZhcGlWZXJzaW9uPTEuMC4wJmFwaXRhYj10ZXN0cyZtYW5hZ2VySWQ9MSZtZW51SWQ9MTgxJm9wdGlvbj1jb21fYXBpcG9ydGFsJnJlbmRlclRvb2w9MiZ0eXBlPXJlc3QmdXNhZ2U9YXBpJnZpZXc9YXBpdGVzdGVy%26path%3D%252Fdiscovery%252Fswagger%252Fapi%252Fid%252F05f9521f-25ac-4e48-8f93-447a66bf4aa0%253FswaggerVersion%253D2.0%2526filename%253DAPI%252520Tierce%252520Declaration%252520CESU.json%2526extensions%253Dfalse
-doc_tech_external: https://portailapi.urssaf.fr/fr/?option=com_apiportal&view=apitester&usage=api&a%20piName=API%20Tierce%20Declaration%20CESU&sn=API%20Tierce%20Declaration%%2020CESU&Itemid=181&apitab=tests&tab=&apiId=05f9521f-25ac-4e48-8f93-447a66bf4aa0&menuId=181&apiVersion=1.0.0&managerId=1&renderTool=2&type=rest
+doc_tech_external: https://portailapi.urssaf.fr/fr/
 keywords:
   - Urssaf
   - Acoss

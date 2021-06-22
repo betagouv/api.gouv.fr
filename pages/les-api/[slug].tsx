@@ -36,12 +36,7 @@ interface IProps {
   datagouvDatasets: { uuid: string; title: string }[];
 }
 
-const API: React.FC<IProps> = ({
-  api,
-  services = null,
-  guides,
-  datagouvDatasets,
-}) => {
+const API: React.FC<IProps> = ({ api, guides, datagouvDatasets }) => {
   const {
     slug,
     title,
@@ -63,6 +58,7 @@ const API: React.FC<IProps> = ({
     is_open,
     partners,
     content_intro,
+    is_france_connected,
   } = api;
 
   return (
@@ -81,7 +77,7 @@ const API: React.FC<IProps> = ({
         owner_slug={owner_slug}
       />
 
-      <div id="description" className="content-container">
+      <div id="description" className="fr-container">
         <div className="right-column-grid">
           <div className="left-column text-style">
             <ApiDescription
@@ -110,6 +106,7 @@ const API: React.FC<IProps> = ({
               rate_limiting={rate_limiting_description}
               rate_limiting_resume={rate_limiting_resume}
               uptime={uptime}
+              is_france_connected={is_france_connected}
             />
             <TechnicalDocumentation
               swagger_link={doc_tech_link}
@@ -136,7 +133,7 @@ const API: React.FC<IProps> = ({
 
         .right-column-grid {
           display: grid;
-          grid-template-columns: 65% 35%;
+          grid-template-columns: 65% 31%;
           grid-gap: 40px;
         }
 
