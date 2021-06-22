@@ -28,7 +28,7 @@ visits_2019: 1200
 last_update: 22/06/2021
 ---
 
-## A quoi sert l’API Bulletin des Annonces Légales Obligatoires ?
+### A quoi sert l’API Bulletin des Annonces Légales Obligatoires ?
 
 Afin de faciliter la réutilisation des données du Bulletin des Annonces Légales Obligatoires (BALO), la direction de l’information légale et administrative (DILA) met à disposition une API accessible gratuitement.
 Cette version de l’API est une version bêta. Elle permet de recueillir vos remarques et vos suggestions d’amélioration ; elle pourra donc évoluer pendant toute la durée du test.
@@ -42,7 +42,7 @@ Les principales fonctionnalités :
 - format CSV, JSON, EXCEL,
 - recherche avec mots-clés, filtres et critères.
 
-## Données disponibles
+### Données disponibles
 
 Depuis en 1907, le BALO recense l’ensemble des informations relatives aux sociétés faisant appel public à l’épargne, et aux établissements bancaires et financiers, telles que :
 
@@ -50,7 +50,7 @@ Depuis en 1907, le BALO recense l’ensemble des informations relatives aux soci
 - les avis de convocations aux assemblées générales, 
 - les comptes annuels.
 
-## Accéder aux données
+### Accéder aux données
 
 L’API Bulletin des Annonces Légales Obligatoires est utilisable gratuitement. L’utilisation de ces données est soumise :
 
@@ -61,6 +61,6 @@ La description du modèle de données se trouve [ici](https://journal-officiel-d
 
 Pour plus de précisions sur l'utilisation de l'API et pour faciliter l'accès et la réutilisation des données ouvertes, [consulter cette rubrique](https://academy.opendatasoft.com/).
 
-## En savoir plus
+### En savoir plus
 
 La mise à disposition par la DILA de jeux de données pouvant contenir des données personnelles n’affranchit pas le réutilisateur du respect de la loi Informatique et Libertés, conformément au document [AVERTISSEMENT](https://echanges.dila.gouv.fr/OPENDATA/AVERTISSEMENT-Donnees_a_caractere_personnel.pdf).
