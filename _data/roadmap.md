@@ -188,6 +188,9 @@
       what: Annonces officielles et comptes annuels des associations
       path: /les-api/api-annonces-comptes-annuels-associations
     - type: ADD_API
+      what: Bulletin des Annonces Légales Obligatoires par la DILA
+      path: /les-api/api-bulletin-annonces-legales-obligatoires
+    - type: ADD_API
       what: Professionnels BIO par l'agence BIO
     - type: ADD_API
       what: CVEC par le CNOUS
@@ -195,8 +198,6 @@
       what: Statut Étudiant
     - type: ADD_API
       what: Bulletin Officiel des Annonces Civiles et Commerciales par la DILA
-    - type: ADD_API
-      what: Bulletin des annonces légales obligatoires par la DILA
     - type: ADD_API
       what: Bulletin officiel des annonces des marchés publics par la DILA
     - type: ADD_API
