@@ -41,16 +41,16 @@ Les principales fonctionnalités :
 
 Le jeu de données ASSOCIATIONS - Journal officiel associations et fondations d'entreprise (JOAFE) - publie :
 
-1. les déclarations de création, modification ou dissolution :
+**1. Les déclarations de création, modification ou dissolution :**
 
-⋅⋅* des associations régies par la loi de 1901 depuis l’origine ;
-⋅⋅* des associations syndicales de propriétaires depuis 2004 ;
-⋅⋅* des fondations d’entreprise depuis 1991 ;
-⋅⋅* des fonds de dotation depuis 2009 ;
-⋅⋅* des fondations partenariales depuis 2018 ;
-⋅⋅* des fonds de pérennité depuis 2020 ;
+- des associations régies par la loi de 1901 depuis l’origine ;
+- des associations syndicales de propriétaires depuis 2004 ;
+- des fondations d’entreprise depuis 1991 ;
+- des fonds de dotation depuis 2009 ;
+- des fondations partenariales depuis 2018 ;
+- des fonds de pérennité depuis 2020 ;
 
-2. les extraits de décisions de justice afférentes au domaine associatif.
+**2. les extraits de décisions de justice afférentes au domaine associatif.**
 
 Le jeu de données Comptes associations publie les comptes annuels des associations, fondations d’entreprise fondations partenariales, associations professionnelles nationales de militaires, les fonds de dotation. Les associations et fondations bénéficiant de dons et/ou subventions supérieurs à 153 000 €, les associations professionnelles de militaires bénéficiant de cotisation et subventions supérieurs à 230 000 € et tous les fonds de dotation doivent publier leurs comptes annuels.
 
