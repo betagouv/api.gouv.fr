@@ -1,5 +1,5 @@
 ---
-title: API Bulletin des annonces légales obligatoires (BALO)
+title: API Bulletin des Annonces Légales Obligatoires (BALO)
 tagline: Accédez aux avis à caractère obligatoire des sociétés faisant appel public à l’épargne et des établissements bancaires ou de crédit.
 external_site: http://api.dila.fr
 is_open: 1 # 1 means API is fully open
@@ -27,9 +27,9 @@ visits_2019: 1200
 last_update: 22/06/2021
 ---
 
-## A quoi sert l’API Bulletin des annonces légales obligatoires ?
+## A quoi sert l’API Bulletin des Annonces Légales Obligatoires ?
 
-Afin de faciliter la réutilisation des données du Bulletin des annonces légales obligatoires (BALO), la direction de l’information légale et administrative (DILA) met à disposition une API accessible gratuitement.
+Afin de faciliter la réutilisation des données du Bulletin des Annonces Légales Obligatoires (BALO), la direction de l’information légale et administrative (DILA) met à disposition une API accessible gratuitement.
 Cette version de l’API est une version bêta. Elle permet de recueillir vos remarques et vos suggestions d’amélioration ; elle pourra donc évoluer pendant toute la durée du test.
 
 Les principales fonctionnalités :
@@ -51,7 +51,7 @@ Depuis en 1907, le BALO recense l’ensemble des informations relatives aux soci
 
 ## Accéder aux données
 
-L’API Bulletin des annonces légales obligatoires est utilisable gratuitement. L’utilisation de ces données est soumise :
+L’API Bulletin des Annonces Légales Obligatoires est utilisable gratuitement. L’utilisation de ces données est soumise :
 
 - à la [licence ouverte 2.0](https://www.etalab.gouv.fr/wp-content/uploads/2017/04/ETALAB-Licence-Ouverte-v2.0.pdf),
 - aux conditions générales d’utilisation de l’API.
