@@ -23,7 +23,7 @@ visits_2019: 1200
 last_update: 21/06/2021
 ---
 
-## A quoi sert l’API Annonces officielles et comptes annuels des associations ?
+### A quoi sert l’API Annonces officielles et comptes annuels des associations ?
 
 Afin de faciliter la réutilisation des données, la direction de l’information légale et administrative (DILA) met à disposition une API accessible gratuitement.
 Cette version de l’API est une version bêta. Elle permet de recueillir vos remarques et vos suggestions d’amélioration ; elle pourra donc évoluer pendant toute la durée du test.
@@ -37,7 +37,7 @@ Les principales fonctionnalités :
 - format CSV, JSON, EXCEL,
 - recherche avec mots-clés, filtres et critères.
 
-## Données disponibles
+### Données disponibles
 
 Le jeu de données ASSOCIATIONS - Journal officiel associations et fondations d'entreprise (JOAFE) - publie :
 
@@ -54,7 +54,7 @@ Le jeu de données ASSOCIATIONS - Journal officiel associations et fondations d'
 
 Le jeu de données Comptes associations publie les comptes annuels des associations, fondations d’entreprise fondations partenariales, associations professionnelles nationales de militaires, les fonds de dotation. Les associations et fondations bénéficiant de dons et/ou subventions supérieurs à 153 000 €, les associations professionnelles de militaires bénéficiant de cotisation et subventions supérieurs à 230 000 € et tous les fonds de dotation doivent publier leurs comptes annuels.
 
-## Accéder aux données
+### Accéder aux données
 
 L’API Annonces officielles et comptes annuels des associations est utilisable gratuitement. L’utilisation de ces données est soumise :
 
@@ -65,6 +65,6 @@ La description du modèle de données se trouve [ici](https://journal-officiel-d
 
 Pour plus de précisions sur l'utilisation de l'API et pour faciliter l'accès et la réutilisation des données ouvertes, [consulter cette rubrique](https://academy.opendatasoft.com/).
 
-## En savoir plus
+### En savoir plus
 
 La mise à disposition par la DILA de jeux de données pouvant contenir des données personnelles n’affranchit pas le réutilisateur du respect de la loi Informatique et Libertés, conformément au document [AVERTISSEMENT](https://echanges.dila.gouv.fr/OPENDATA/AVERTISSEMENT-Donnees_a_caractere_personnel.pdf).
