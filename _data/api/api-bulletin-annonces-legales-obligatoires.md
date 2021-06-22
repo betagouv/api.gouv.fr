@@ -1,6 +1,6 @@
 ---
 title: API Bulletin des Annonces Légales Obligatoires (BALO)
-tagline: Accédez aux avis à caractère obligatoire des sociétés faisant appel public à l’épargne et des établissements bancaires ou de crédit.
+tagline: Accédez aux annonces légales des établissements bancaires et des sociétés qui émettent des actions.
 external_site: http://api.dila.fr
 is_open: 1 # 1 means API is fully open
 keywords:
@@ -9,6 +9,7 @@ keywords:
   - bancaire
   - crédit
   - avis
+  - actions
   - epargne
   - assemblée
   - convocation
