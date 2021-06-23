@@ -1,6 +1,6 @@
 ---
 title: API La Bonne Alternance
-tagline: Accédez aux données liées aux formations en alternance, aux offres d’emploi en alternance et aux entreprises susceptibles de recruter en alternance.
+tagline: Accédez aux données liées aux formations en apprentissage, aux offres d’emploi en alternance et aux entreprises susceptibles de recruter en alternance.
 external_site: https://labonnealternance.pole-emploi.fr/
 producer: dinum
 is_open: 1 # -1 means API not open
@@ -27,7 +27,7 @@ content_intro: |
 
   En tant qu’opérateur public ou privé traitant des questions d’orientation, de formation ou d’emploi en général, et d’alternance (apprentissage, professionnalisation) en particulier, il est possible de récupérer indépendamment ou simultanément les données :
 
-  - formations en alternance
+  - formations en apprentissage
   - offres d’emploi en alternance
   - entreprises présentant un fort potentiel de recrutement en alternance
 
@@ -42,7 +42,7 @@ content_intro: |
 
 | Nom                                                | Description                                                                                                                                                                                                                            |
 | -------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Formations en alternance                        | Les données sont alimentées en flux par le Réseau Carif-Oref et consolidées dans un catalogue produit par la Mission Nationale Apprentissage (<External href="https://catalogue.apprentissage.beta.gouv.fr/">API catalogue</External>) |
+| Formations en apprentissage                        | Les données sont alimentées en flux par le Réseau Carif-Oref et consolidées dans un catalogue produit par la Mission Nationale Apprentissage (<External href="https://catalogue.apprentissage.beta.gouv.fr/">API catalogue</External>) |
 | Offres d’emploi en alternance                   | Les données sont collectées par l’API Offres d’emploi de Pôle emploi, qui agrège également des offres déposées par des partenaires de Pôle emploi.                                                                                     |
 | Entreprises susceptibles de recruter en alternance | Les données proviennent d’un algorithme prédictif qui analyse 6 années de recrutements en alternance                                                                                                                                   |
 | Entreprises à fort potentiel de recrutement        | Les données proviennent d’un algorithme prédictif qui analyse les recrutements en CDI et CDD de plus de 30 jours des 6 années passées (<External href="https://api.gouv.fr/les-api/LaBonneBoite">API La Bonne Boite</External>)        |
@@ -51,10 +51,10 @@ content_intro: |
 
 Nos API normalisent les données sources pour restituer en un même format, soit :
 
-1. les formations en alternance pour un métier, un ensemble de métiers, un domaine professionnel, un ensemble de domaines professionnels autour d'un point géographique
-2. les formations en alternance dans un département, une région ou dans la France entière pour un métier, un ensemble de métiers, un domaine professionnel ou un ensemble de domaines professionnels
+1. les formations en apprentissage pour un métier, un ensemble de métiers, un domaine professionnel, un ensemble de domaines professionnels autour d'un point géographique
+2. les formations en apprentissage dans un département, une région ou dans la France entière pour un métier, un ensemble de métiers, un domaine professionnel ou un ensemble de domaines professionnels
 3. les entreprises recrutant ou susceptibles de recruter en alternance référencées par les APIs de Pôle emploi, pour un métier ou un ensemble de métiers, autour d'un point géographique
-4. les formations en alternance et les entreprises recrutant ou susceptibles de recruter en alternance référencées par les APIs de Pôle emploi, pour un métier ou un ensemble de métiers, autour d'un point géographique.
+4. les formations en apprentissage et les entreprises recrutant ou susceptibles de recruter en alternance référencées par les APIs de Pôle emploi, pour un métier ou un ensemble de métiers, autour d'un point géographique.
 
 ### Autre format de données disponible
 
