@@ -27,8 +27,8 @@ themes:
 
 ### Description fonctionnelle de l'API Hydrobiologie
 
-[L'API Hydrobiologie](https://hubeau.eaufrance.fr/page/api-hydrobiologie) de Hub'Eau diffuse les données de peuplement des cours d'eau bancarisées par le [portail NAIADES](http://www.naiades.eaufrance.fr/).  
-Les données hydrobiologiques concernent :  
+[L'API Hydrobiologie](https://hubeau.eaufrance.fr/page/api-hydrobiologie) de Hub'Eau diffuse les données de peuplement des cours d'eau bancarisées par le [portail NAIADES](http://www.naiades.eaufrance.fr/).
+Les données hydrobiologiques concernent :
 
 - les Macroinvertébrés aquatiques : 1,6 million de taxons répertoriés, 175 000 indices biologiques
 - les Diatomées benthiques : 675 000 taxons, 50 000 indices
@@ -66,8 +66,8 @@ Les autres API disponibles à ce jour dans Hub'Eau sont :
 - [Qualité physico-chimique des cours d'eau](/les-api/api_hubeau_qualite_rivieres) ;
 - [Qualité des nappes d'eau souterraine](/les-api/api_hubeau_qualite_nappes_eau_sout) ;
 - [Température des cours d'eau](/les-api/api_hubeau_temperature_rivieres) ;
-- [Prélèvements en eau](/les-api/api_hubeau_prelevements) ;  
-- [Hydrométrie](/les-api/api_hubeau_hydrometrie).  
+- [Prélèvements en eau](/les-api/api_hubeau_prelevements) ;
+- [Hydrométrie](/les-api/api_hubeau_hydrometrie).
 
 #### Un service en co-construction
 

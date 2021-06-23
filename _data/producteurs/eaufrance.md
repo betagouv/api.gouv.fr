@@ -1,15 +1,15 @@
 ---
-name: Eau France
-nameWithPronoun: Eau France
+name: Eaufrance
+nameWithPronoun: Eaufrance
 logo: eau-france.png
 type: Etablissement public
 site: https://eaufrance.fr
 short: Le service public d’information sur l’eau et les milieux aquatiques.
 description: |
   Eau France a pour but de faciliter l’accès à l’information publique dans le domaine de l’eau en France.
-  
+
   Plusieurs types de publications sont diffusées par Eau France :
-  
+
   - Des [données](https://www.eaufrance.fr/les-donnees-des-sites-eaufrance) à consulter ou à télécharger sur les différents sites spécialisés.
   - Des publications, dont des synthèses de données et le bulletin mensuel de situation hydrologique national.
   - Des chiffres-clés sur l'eau.

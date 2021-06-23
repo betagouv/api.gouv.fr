@@ -191,6 +191,9 @@
       what: Bulletin des Annonces Légales Obligatoires par la DILA
       path: /les-api/api-bulletin-annonces-legales-obligatoires
     - type: ADD_API
+      what: Hub'Eau - Hydrobiologie
+      path: /les-api/api_hubeau_hydrobiologie
+    - type: ADD_API
       what: Professionnels BIO par l'agence BIO
     - type: ADD_API
       what: CVEC par le CNOUS

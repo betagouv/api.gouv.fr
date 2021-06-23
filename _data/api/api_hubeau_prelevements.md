@@ -4,7 +4,7 @@ tagline: Prélèvements en eau
 is_open: 1 # 1 means API is fully open
 external_site: https://hubeau.eaufrance.fr/page/api-prelevements-eau
 partners:
-  - eau-france
+  - eaufrance
   - ofb
   - brgm
 producer: hub-eau

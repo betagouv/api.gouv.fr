@@ -26,6 +26,11 @@ module.exports = {
         destination: '/producteurs/urssaf',
         permanent: true,
       },
+      {
+        source: '/producteurs/eau-france',
+        destination: '/producteurs/eaufrance',
+        permanent: true,
+      },
     ];
   },
   webpack(config, options) {
