@@ -33,7 +33,7 @@ const PageHeader: React.FC<{ title: string; logo: string; acronym: string }> =
         <div className="content">
           <img src={`/images/api-logo/${logo}`} alt={`logo de ${title}`} />
           <h1>
-            {title} {acronym ? `${{ acronym }}` : ''}
+            {title} {acronym ? `(${acronym})` : ''}
           </h1>
         </div>
       </div>
