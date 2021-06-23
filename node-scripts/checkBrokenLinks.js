@@ -53,7 +53,7 @@ const urlChecker = new blc.SiteChecker(
         return;
       }
 
-      if (result.broken) {
+      if (result.broken && result.brokenReason !== 'HTTP_308') {
         console.log(`===[BROKEN LINK=${result.brokenReason}] 💔===`);
         console.log(`LINK: ${result.url.original}`);
         console.log(`PAGE: ${result.base.original}`);

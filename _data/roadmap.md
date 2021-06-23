@@ -186,10 +186,10 @@
       path: /les-api/api-annuaire-education
     - type: ADD_API
       what: Annonces officielles et comptes annuels des associations
-      path: /les-api/api-annonces-comptes-annuels-associations
+      path: /les-api/api-annonces-comptes-annuels-associations-joafe
     - type: ADD_API
       what: Bulletin des Annonces Légales Obligatoires par la DILA
-      path: /les-api/api-bulletin-annonces-legales-obligatoires
+      path: /les-api/api-bulletin-annonces-legales-obligatoires-balo
     - type: ADD_API
       what: Hub'Eau - Hydrobiologie
       path: /les-api/api_hubeau_hydrobiologie
