@@ -28,7 +28,9 @@ Les fournisseurs, de leur côté, ont avec ce catalogue un moyen simple de faire
 
 ### Prérequis
 
-- [Node.js](https://nodejs.org/en/) >= 12
+[Node.js](https://nodejs.org/en/) >= 12
+
+### Script d’installation
 
 Cette application utilise [Next.js](https://github.com/zeit/next.js).
 
