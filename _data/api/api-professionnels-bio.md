@@ -15,14 +15,14 @@ keywords:
   - Territoire
 contact_link: dsi@agencebio.org
 doc_tech_link: https://back.agencebio.org/api/gouv_api_swagger.json
-partenaires:
-  - Ministère de l’Agriculture et de l’Alimentation
-  - Ministère de la Transition Écologique
-  - Institut National de l’Origine et de la Qualité (INAO)
-  - Organisme Français de la Biodiversité
-  - Etalab
-  - Beta.gouv
-  - Les Organismes de Certification de l’Agriculture Biologique
+partners:
+  - #Ministère de l’Agriculture et de l’Alimentation
+  - #Ministère de la Transition Écologique
+  - #Institut National de l’Origine et de la Qualité (INAO)
+  - #Organisme Français de la Biodiversité
+  - #Etalab
+  - #Beta.gouv
+  - #Les Organismes de Certification de l’Agriculture Biologique
 themes:
   - Environnement
   - Agriculture
@@ -54,9 +54,9 @@ Voici les données accessibles :
 | Adresse(s)               | Liste des adresses de l'opérateur (minimum le siège social)                                                    |
 | Production(s)            | Liste des productions certifiées bio de l'opérateur (plusieurs possibles)                                      |
 | Activité(s)              | Liste des activités BIO de l'opérateur (plusieurs activités possibles)                                         |
-| Certificat(s)            | Liste des informations relatives à la certification de l'opérateur                                             |
-| Site                     | Site officiel de l'opérateur (hors réseaux sociaux)                                                            |
+| Certificat(s)            | Lien vers les certificats en ligne de l’opérateur                                                              |
+| Site                     | Site officiel de l'opérateur et liens vers les pages des réseaux sociaux                                       |
 
 #### D'où vient la donnée ?
 
-Ici il serait interessant de développer la collecte des informations par l'agence BIO, auprès des organismes certificateurs
+Les données mises à disposition sont directement issues des organismes agréés pour la certification des opérateurs. Elles sont mises à jour lors des contrôles.
