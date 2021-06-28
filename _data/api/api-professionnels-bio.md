@@ -13,16 +13,10 @@ keywords:
   - Biologique
   - Agence Bio
   - Territoire
+  - Annuaire
 contact_link: dsi@agencebio.org
-doc_tech_link: https://back.agencebio.org/api/gouv_api_swagger.json
-partners:
-  - #Ministère de l’Agriculture et de l’Alimentation
-  - #Ministère de la Transition Écologique
-  - #Institut National de l’Origine et de la Qualité (INAO)
-  - #Organisme Français de la Biodiversité
-  - #Etalab
-  - #Beta.gouv
-  - #Les Organismes de Certification de l’Agriculture Biologique
+doc_tech_link: https://opendata.agencebio.org/api/gouv_api_swagger.json
+#partners:
 themes:
   - Environnement
   - Agriculture
