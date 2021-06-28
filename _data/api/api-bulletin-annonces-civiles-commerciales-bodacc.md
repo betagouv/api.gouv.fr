@@ -1,6 +1,6 @@
 ---
 title: API Bulletin officiel des annonces civiles et commerciales (BODACC)
-tagline: Accédez aux annonces légales des établissements bancaires et des sociétés qui émettent des actions.
+tagline: Consultez les actes enregistrés au registre du commerce et des sociétés.
 external_site: http://api.dila.fr
 is_open: 1 # 1 means API is fully open
 keywords:
