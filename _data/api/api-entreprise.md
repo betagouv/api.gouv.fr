@@ -18,7 +18,7 @@ access_page:
     description: |
       Si vous êtes une collectivité ou une administration, vous pouvez remplir une demande d’accès à l’API Entreprise vous-même pour l'entité que vous représentez.
 
-      Lors de votre demande vous devrez **renseigner le cadre juridique (un texte ou délibération/décision)** qui légitime l'entité pour laquelle vous opérez à recevoir ces données.
+      Lors de votre demande vous devrez **renseigner le cadre juridique** qui légitime l'entité pour laquelle vous opérez à recevoir ces données.
 
       <NextSteps />
       <Button href="https://datapass.api.gouv.fr/api-entreprise">Remplir une demande</Button>
