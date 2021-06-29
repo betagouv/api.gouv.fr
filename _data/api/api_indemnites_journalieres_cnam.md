@@ -25,9 +25,6 @@ access_page:
 
       Cela étant dit, si vous avez un projet précis :
       <Button href="mailto:partenaires-api-cnam@assurance-maladie.fr">Contactez-nous pour exposer votre projet</Button>
-stat:
-  lastXdays: 30
-  label: justificatifs papier évités
 partners:
   - CNAM
 producer: cnam
