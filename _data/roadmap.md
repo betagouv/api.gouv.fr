@@ -197,7 +197,8 @@
       what: Bulletin Officiel des Annonces Civiles et Commerciales
       path: /les-api/api-bulletin-annonces-civiles-commerciales-bodacc
     - type: ADD_API
-      what: Professionnels BIO par l'agence BIO
+      what: Professionnels BIO
+      path: /les-api/api-professionnels-bio
     - type: ADD_API
       what: CVEC par le CNOUS
     - type: ADD_API
