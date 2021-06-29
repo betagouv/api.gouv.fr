@@ -188,19 +188,20 @@
       what: Annonces officielles et comptes annuels des associations
       path: /les-api/api-annonces-comptes-annuels-associations-joafe
     - type: ADD_API
-      what: Bulletin des Annonces Légales Obligatoires par la DILA
+      what: Bulletin des Annonces Légales Obligatoires
       path: /les-api/api-bulletin-annonces-legales-obligatoires-balo
     - type: ADD_API
       what: Hub'Eau - Hydrobiologie
       path: /les-api/api_hubeau_hydrobiologie
+    - type: ADD_API
+      what: Bulletin Officiel des Annonces Civiles et Commerciales
+      path: /les-api/api-bulletin-annonces-civiles-commerciales-bodacc
     - type: ADD_API
       what: Professionnels BIO par l'agence BIO
     - type: ADD_API
       what: CVEC par le CNOUS
     - type: ADD_API
       what: Statut Étudiant
-    - type: ADD_API
-      what: Bulletin Officiel des Annonces Civiles et Commerciales par la DILA
     - type: ADD_API
       what: Bulletin officiel des annonces des marchés publics par la DILA
     - type: ADD_API
