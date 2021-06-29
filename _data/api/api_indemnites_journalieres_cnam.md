@@ -5,7 +5,7 @@ external_site: https://app.swaggerhub.com/apis/meeoen/apij/1.0-apim
 is_open: -1 # -1 means API not open
 is_france_connected: 2 # undefined | 1 | 2. 2 means can be used with FC, 2 means has to be used with FC
 datapass_link: 
-access_page: #DataPass en création
+access_page: https://datapass.api.gouv.fr/api-indemnites-journalieres-cnam
   - who:
       - Une assurance
       - Un organisme de prévoyance santé
@@ -16,7 +16,7 @@ access_page: #DataPass en création
       Cette API est accessible uniquement aux complémentaires santé et assurances partenaires de France Connect. 
 
       <NextSteps />
-      <Button href="https://datapass.api.gouv.fr/api-droits-cnam">Remplir une demande</Button>
+      <Button href="https://datapass.api.gouv.fr/api-indemnites-journalieres-cnam">Remplir une demande</Button>
   - who:
       - Autre
     is_eligible: -1
