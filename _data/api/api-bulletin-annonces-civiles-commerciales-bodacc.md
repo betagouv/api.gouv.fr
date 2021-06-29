@@ -1,6 +1,6 @@
 ---
 title: API Bulletin officiel des annonces civiles et commerciales (BODACC)
-tagline: Consultez les actes enregistrés au registre du commerce et des sociétés.
+tagline: Consultez les actes enregistrés au registre du commerce et des sociétés et publiées au bulletin officiel.
 external_site: http://api.dila.fr
 is_open: 1 # 1 means API is fully open
 keywords:
