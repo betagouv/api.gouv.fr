@@ -4,8 +4,8 @@ tagline: Accédez au montant des indemnités journalières de l'Assurance Maladi
 external_site: https://app.swaggerhub.com/apis/meeoen/apij/1.0-apim
 is_open: -1 # -1 means API not open
 is_france_connected: 2 # undefined | 1 | 2. 2 means can be used with FC, 2 means has to be used with FC
-datapass_link: 
-access_page: https://datapass.api.gouv.fr/api-indemnites-journalieres-cnam
+datapass_link: https://datapass.api.gouv.fr/api-indemnites-journalieres-cnam
+access_page: 
   - who:
       - Une assurance
       - Un organisme de prévoyance santé
