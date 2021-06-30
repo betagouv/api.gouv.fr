@@ -200,6 +200,9 @@
       what: Professionnels BIO
       path: /les-api/api-professionnels-bio
     - type: ADD_API
+      what: Indemnités Journalières distribuée par la CNAM
+      path: /les-api/api-indemnites-journalieres-cnam
+    - type: ADD_API
       what: CVEC par le CNOUS
     - type: ADD_API
       what: Statut Étudiant
@@ -220,6 +223,4 @@
       what: Attestation Codes Sécurité par l'Urssaf
     - type: ADD_API
       what: Déclaration préalable à l'embauche par l'Urssaf
-    - type: ADD_API
-      what: Indemnités Journalières distribuée par la CNAM
 ---
