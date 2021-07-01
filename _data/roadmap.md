@@ -201,7 +201,7 @@
       path: /les-api/api-professionnels-bio
     - type: ADD_API
       what: Bulletin officiel des annonces des marchés publics par la DILA
-      path: /les-api/api-bulletin-annonces-marches-publics
+      path: /les-api/api-bulletin-annonces-marches-publics-boamp
     - type: ADD_API
       what: API Indemnités journalières par la CNAM
       path: /les-api/api_indemnites_journalieres_cnam
@@ -210,8 +210,6 @@
       what: Attestation Codes Sécurité par l'Urssaf
     - type: ADD_API
       what: Déclaration préalable à l'embauche par l'Urssaf
-    - type: ADD_API
-      what: Indemnités Journalières distribuée par la CNAM
   8:
     - type: ADD_API
       what: CVEC par le CNOUS
