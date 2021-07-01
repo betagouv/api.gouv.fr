@@ -31,6 +31,11 @@ module.exports = {
         destination: '/producteurs/eaufrance',
         permanent: true,
       },
+      {
+        source: '/les-api/api_indemnites_journalieres_cnam',
+        destination: '/les-api/api-indemnites-journalieres-cnam',
+        permanent: true,
+      },
     ];
   },
   webpack(config, options) {

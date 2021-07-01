@@ -20,6 +20,7 @@ doc_tech_link: https://opendata.agencebio.org/api/gouv_api_swagger.json
 themes:
   - Environnement
   - Agriculture
+  - Entreprise
 last_update: 21/09/2020
 rate_limiting_resume: 50 appels / seconde / IP
 content_intro: |
