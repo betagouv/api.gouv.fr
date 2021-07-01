@@ -7,9 +7,9 @@ keywords:
   - Marchés publics
   - Annonces
   - Bulletin officiel
-  - Entreprise
 themes:
   - Administration & législation
+  - Entreprise
 producer: dila
 contact_link: donnees-dila@dila.gouv.fr
 doc_tech_external: http://api.dila.fr
