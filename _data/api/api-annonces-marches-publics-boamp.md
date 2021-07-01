@@ -7,6 +7,7 @@ keywords:
   - Marchés publics
   - Annonces
   - Bulletin officiel
+  - Entreprise
 themes:
   - Administration & législation
 producer: dila
