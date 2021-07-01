@@ -200,27 +200,32 @@
       what: Professionnels BIO
       path: /les-api/api-professionnels-bio
     - type: ADD_API
-      what: Indemnités Journalières distribuée par la CNAM
-      path: /les-api/api-indemnites-journalieres-cnam
+      what: Bulletin officiel des annonces des marchés publics par la DILA
+      path: /les-api/api-bulletin-annonces-marches-publics-boamp
     - type: ADD_API
       what: CVEC par le CNOUS
     - type: ADD_API
-      what: Statut Étudiant
-    - type: ADD_API
-      what: Bulletin officiel des annonces des marchés publics par la DILA
-    - type: ADD_API
-      what: Liste des organismes de formation par la DGEFP
-    - type: ADD_API
-      what: Accès Libre
-    - type: ADD_API
-      what: AgentConnect par la DINUM
-    - type: ADD_API
-      what: Référentiel Partagé des Professionnels de Santé
-    - type: ADD_API
-      what: Hermés par la DGFiP
+      what: API Indemnités journalières par la CNAM
+      path: /les-api/api_indemnites_journalieres_cnam
   7:
     - type: ADD_API
       what: Attestation Codes Sécurité par l'Urssaf
     - type: ADD_API
       what: Déclaration préalable à l'embauche par l'Urssaf
+  8:
+    - type: ADD_API
+      what: CVEC par le CNOUS
+  9:
+    - type: ADD_API
+      what: AgentConnect par la DINUM
+    - type: ADD_API
+      what: Hermés par la DGFiP
+    - type: ADD_API
+      what: Liste des organismes de formation par la DGEFP
+    - type: ADD_API
+      what: Accès Libre
+    - type: ADD_API
+      what: Référentiel Partagé des Professionnels de Santé
+    - type: ADD_API
+      what: Statut Étudiant
 ---
