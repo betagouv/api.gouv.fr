@@ -12,7 +12,7 @@ themes:
   - Entreprise
 producer: dila
 contact_link: donnees-dila@dila.gouv.fr
-doc_tech_external: http://api.dila.fr
+doc_tech_external: https://boamp-datadila.opendatasoft.com/explore/dataset/boamp/api/
 doc_tech_link: https://boamp-datadila.opendatasoft.com/api/v2/swagger.json
 datagouv_uuid:
   - 559390f9c751df0139a453ba
