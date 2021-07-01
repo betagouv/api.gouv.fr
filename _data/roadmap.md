@@ -201,12 +201,12 @@
       path: /les-api/api-professionnels-bio
     - type: ADD_API
       what: Bulletin officiel des annonces des marchés publics par la DILA
-      path: /les-api/api-bulletin-annonces-marches-publics-boamp
-    - type: ADD_API
-      what: CVEC par le CNOUS
+      path: /les-api/api-annonces-marches-publics-boamp
     - type: ADD_API
       what: API Indemnités journalières par la CNAM
       path: /les-api/api_indemnites_journalieres_cnam
+    - type: ADD_API
+      what: CVEC par le CNOUS
   7:
     - type: ADD_API
       what: Attestation Codes Sécurité par l'Urssaf
