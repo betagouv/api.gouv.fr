@@ -21,6 +21,8 @@ last_update: 18/01/2017
 
 L’API BOAMP permet de rechercher et de consulter les annonces du Bulletin Officiel des Annonces de Marchés Publics.
 
+**Important: cette API et la version 1 de l'API BOAMP, elle ne sera plus active à compter du 11 octobre 2021. [La version 2 est accessible ici](https://api.gouv.fr/les-api/api-annonces-marches-publics-boamp)**
+
 Cette API est libre d’accès et permet de consulter les données suivantes :
 
 - avis d’appel public à la concurrence (AAPC) nationaux et européens,

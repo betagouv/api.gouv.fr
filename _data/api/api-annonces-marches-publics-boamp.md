@@ -34,6 +34,8 @@ Les principales fonctionnalités :
 - format CSV, JSON, EXCEL,
 - recherche avec mots-clés, filtres et critères.
 
+**Important: cette API et la version 2 de l'API BOAMP. [La version 1 reste accessible ici jusqu'au 11 octobre 2021](https://api.gouv.fr/les-api/boamp).**
+
 ### Données disponibles
 
 Le BOAMP diffuse :
