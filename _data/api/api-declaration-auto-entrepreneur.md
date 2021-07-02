@@ -4,7 +4,7 @@ tagline: Connectez-vous directement à l’Urssaf pour déclarer les chiffres d�
 external_site: https://open.urssaf.fr/explore/?sort=modified
 producer: urssaf
 is_open: -1 # 1 means API is fully open
-access_page:
+access_page: https://datapass.api.gouv.fr/api-declaration-auto-entrepreneur
   - who:
       - Un editeur d’application mobile
       - Un editeur de services web
@@ -12,14 +12,13 @@ access_page:
     description: |
       Si vous êtes éditeur appli mobile / éditeur de service web et agissez ou comptez agir pour le compte de vos clients en qualité de tiers déclarant, vous pouvez remplir une demande d’accès à l’API vous-même pour l'entité que vous représentez, au sens des articles L.133-11, <External href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037877089">R133-43 et R133-44</External> du Code de Sécurité sociale.
 
-      Pour remplir votre demande, vous aurez besoin de :
+      Pour remplir votre demande, vous aurez uniquement besoin de :
 
-      - Créer un compte sur le portail Urssaf
-      - Un document d'identification
-      - Attestation fiscale
-      - Attestation sociale
+      - Créer un compte api.gouv pour accéder au formulaire DataPass ;
+      - Attestation fiscale ;
+      - Attestation sociale.
 
-      <Button href="https://portailapi.urssaf.fr/fr/component/apiportal/registration">Remplir une demande</Button>
+      <Button href="https://datapass.api.gouv.fr/api-declaration-auto-entrepreneur">Remplir une demande</Button>
   - who:
       - Un editeur de logiciel de paie
       - Autres activités
