@@ -4,8 +4,8 @@ tagline: Connectez-vous directement à l’Urssaf pour déclarer les chiffres d�
 external_site: https://open.urssaf.fr/explore/?sort=modified
 producer: urssaf
 is_open: -1 # 1 means API is fully open
-access_page:
 datapass_link: https://datapass.api.gouv.fr/api-declaration-auto-entrepreneur
+access_page:
   - who:
       - Un editeur d’application mobile
       - Un editeur de services web
