@@ -66,14 +66,17 @@ _Schéma de fonctionnement des API FranceConnectées :_
 
 #### 📅 3e trimestre 2021
 
-- API Statut Etudiant : _est-ce qu'un particulier est actuellement étudiant (et les dates associées) ?_
-- API Statut Boursier : _est-ce qu'un particulier est actuellement boursier_
+- API Statut Etudiant : _est-ce qu'un particulier est actuellement étudiant, et les dates d'étude associées ?_
+- API Statut Boursier : _est-ce qu'un particulier est actuellement boursier ?_
 
 #### 📅 4e trimestre 2021
 
-- API Statut Demandeur d'emploi : _est-ce qu'un particulier est actuellement demandeur d’emploi ?_
+- API Indemnités Pôle emploi : _quel montant des indemnités Pôle emploi est perçu par un citoyen ?_
+- API Statut complémentaire santé solidaire (ex-CMU) : _est-ce qu'un particulier reçoit la complémentaire santé solidaire ?_
+
+#### 📅 2022
 - API Quotient Familial CNAF : _quel est le montant du quotient familial d'un particulier ?_
-- API Secu : _quelles sont les dernières ressources percues par un particulier ?_
+- API Statut Demandeur d'emploi : _est-ce qu'un particulier est actuellement demandeur d’emploi ?_
 
 ## Comment accéder aux API FranceConnectées ?
 
