@@ -10,6 +10,7 @@ export enum SUBJECT {
   CHERCHE_API,
   CHERCHE_API_PART,
   FRANCECONNECT_PART,
+  FRANCECONNECT_PROBLM_PART,
   FRANCECONNECT_ENTREPRISE,
   NEW_API,
   CANT_FIND,
@@ -17,6 +18,7 @@ export enum SUBJECT {
   TELEPOINT,
   CONTACT,
   DS,
+  VACCINATION,
   NONE,
 }
 
@@ -54,6 +56,11 @@ const Questions = [
     ],
   },
   {
+    value: SUBJECT.FRANCECONNECT_PROBLM_PART,
+    label: 'J’ai un problème avec FranceConnect',
+    public: [VISITOR.PARTICULIER],
+  },
+  {
     value: SUBJECT.FRANCECONNECT_PART,
     label: 'Je veux me connecter à FranceConnect',
     public: [VISITOR.PARTICULIER],
@@ -77,6 +84,11 @@ const Questions = [
   {
     value: SUBJECT.TELEPOINT,
     label: 'Je cherche mon solde de points de permis de conduire',
+    public: [VISITOR.PARTICULIER],
+  },
+  {
+    value: SUBJECT.VACCINATION,
+    label: 'Je cherche à obtenir une attestation de vaccination',
     public: [VISITOR.PARTICULIER],
   },
   {
@@ -159,6 +171,25 @@ const Explanations: React.FC<IProps> = ({ subject, visitorType }) => {
           <div className="layout-center">
             <ButtonLink size="large" href="/rechercher-api" onClick={logClic}>
               Rechercher une API
+            </ButtonLink>
+          </div>
+        </div>
+      );
+    case SUBJECT.FRANCECONNECT_PROBLM_PART:
+      return (
+        <div className="subject-answer">
+          <p>
+            Si vous rencontrez un problème avec FranceConnect, nous vous
+            recommandons de contacter directement l’équipe via la FAQ de
+            FranceConnect :
+          </p>
+          <div className="layout-center">
+            <ButtonLink
+              size="large"
+              href="https://franceconnect.gouv.fr/faq"
+              onClick={logClic}
+            >
+              Accéder à la page d’aide France Connect
             </ButtonLink>
           </div>
         </div>
@@ -308,6 +339,28 @@ const Explanations: React.FC<IProps> = ({ subject, visitorType }) => {
               href="https://permisdeconduire.ants.gouv.fr/Vos-demarches/Le-permis-a-points/Solde-de-vos-points-via-une-identite-France-Connect"
             >
               Accéder au site télépoint
+            </ButtonLink>
+          </div>
+        </div>
+      );
+    case SUBJECT.VACCINATION:
+      return (
+        <div className="subject-answer">
+          <p>
+            Ce site internet <b>ne permet pas</b> d’obtenir une attestation de
+            vaccination contre la covid-19.
+          </p>
+          <p>
+            Le service que vous recherchez est proposé par l'assurance santé et
+            il est accessible à tous&nbsp;:
+          </p>
+          <div className="layout-center">
+            <ButtonLink
+              size="large"
+              onClick={logClic}
+              href="https://attestation-vaccin.ameli.fr/"
+            >
+              Accéder au site attestation-vaccination
             </ButtonLink>
           </div>
         </div>

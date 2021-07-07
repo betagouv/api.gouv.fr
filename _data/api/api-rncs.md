@@ -45,3 +45,9 @@ L’API Registre National du Commerce et des Sociétés vous permet d’accéder
 | document d’immatriculation |                                                                        |
 | compte annuel              | Rechercher et télécharger le compte annuel de la société au format PDF |
 | IMR                        | Immatriculations, Modifications, Radiations                            |
+
+### À propos de la version ouverte de cette API, développée par Etalab
+
+Une version totalement libre d’accès de cette API a été créée par Etalab, mais n'a pas dépassé le stade de la version beta. Elle n'est aujourd’hui plus maintenue, et son code est [accessible sur github](https://github.com/etalab/rncs_worker_api_entreprise).
+
+Vous êtes libre de ré-utiliser ce code pour vos projets.

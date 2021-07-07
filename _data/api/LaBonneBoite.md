@@ -3,12 +3,8 @@ title: API La Bonne Boite
 tagline: Récupérez la liste des entreprises classées par potentiel d'embauche
 producer: pole-emploi
 is_open: 0 # -1 means API not open
-account_link: https://www.emploi-store-dev.fr/portail-developpeur/detailapicatalogue/57909ba23b2b8d019ee6cc5f
-external_site: https://www.emploi-store-dev.fr/portail-developpeur-cms/home/catalogue-des-api/documentation-des-api/api/api-la-bonne-boite-v1.html
-stat:
-  url: https://www.emploi-store-dev.fr/portail-developpeur-cms/stats
-  label: Appels
-  lastXdays: 30
+account_link: https://pole-emploi.io/inscription
+external_site: https://pole-emploi.io/data/api
 partners:
   - Pôle emploi
   - La Bonne Boite
@@ -20,8 +16,8 @@ keywords:
   - Embauche
   - Entreprise
   - Recrutement
-contact_link: contact@emploi-store-dev.fr
-doc_tech_external: https://www.emploi-store-dev.fr/portail-developpeur-cms/home/catalogue-des-api/documentation-des-api/api/api-la-bonne-boite-v1.html
+contact_link: support@pole-emploi.io
+doc_tech_external: https://pole-emploi.io/data/api/bonne-boite
 themes:
   - Emploi
 visits_2019: 2397
@@ -32,4 +28,4 @@ La Bonne Boite cible les entreprises ayant des perspectives d'embauche élevées
 
 L'API s'adresse aux particuliers, entreprises, startups, collectivités et ministères et permet de développer des solutions personnalisées de recherche d'emploi pour un site ou une application.
 
-Vous découvrirez des formats de fichiers supplémentaires, des outils de visualisation et d'autres API liées à l'emploi sur [l’Emploi Store Dev](https://www.emploi-store-dev.fr/)
+Vous découvrirez des formats de fichiers supplémentaires, des outils de visualisation et d'autres API liées à l'emploi sur [pole-emploi.io](https://pole-emploi.io/data/api)

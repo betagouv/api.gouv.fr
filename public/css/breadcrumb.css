@@ -1,0 +1,134 @@
+/*
+ * DSFR v1.0.0-rc1.0 | restricted use
+ */
+@charset "UTF-8";
+
+/* ------------------------------------ *\
+  BREADCRUMB
+\* ------------------------------------ */
+
+/**
+un padding de 4px et une marge négative en compensation sont mis en place afin d'éviter de couper le focus.
+ */
+
+.fr-breadcrumb {
+  margin: 1rem 0 2rem;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  position: relative;
+  /**
+   * margin-bottom de 2v pour créer cet espace entre chaque ligne
+   */
+}
+
+.fr-breadcrumb__button {
+  box-shadow: 0 1px 0 0 currentColor;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+}
+
+.fr-breadcrumb__button[aria-expanded="true" i] {
+  display: none;
+}
+
+.fr-breadcrumb .fr-collapse {
+  margin-left: -4px;
+  margin-right: -4px;
+  padding-left: 4px;
+  padding-right: 4px;
+  transform: translateY(-4px);
+}
+
+.fr-breadcrumb__list {
+  --is-list: false;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  transform: translateY(4px);
+}
+
+.fr-breadcrumb__link {
+  position: relative;
+  display: inline-flex;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  margin-bottom: 0.5rem;
+  /**
+     * flèche séparatrice en font-icon
+     */
+}
+
+.fr-breadcrumb__link:not([aria-current]) {
+  margin-right: 1.5rem;
+}
+
+.fr-breadcrumb__link:not([aria-current])::after {
+  font-family: icons !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+}
+
+.fr-breadcrumb__link:not([aria-current])::after {
+  font-size: 1rem;
+  content: "";
+}
+
+.fr-breadcrumb__link:not([aria-current])::after {
+  position: absolute;
+  top: 0.125rem;
+  right: -1.25rem;
+  pointer-events: none;
+}
+
+.fr-breadcrumb__link[aria-current] {
+  --is-link: false;
+  pointer-events: none;
+  cursor: default;
+}
+
+.fr-breadcrumb {
+  color: var(--g600);
+}
+
+.fr-breadcrumb__button {
+  background-color: var(--t-plain);
+}
+
+.fr-breadcrumb__link[aria-current] {
+  color: var(--g800);
+}
+
+@media (min-width: 48em) {
+  .fr-breadcrumb {
+    margin-bottom: 2.5rem;
+  }
+
+  .fr-breadcrumb__button {
+    display: none;
+  }
+
+  .fr-breadcrumb .fr-collapse {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    transform: none;
+    visibility: visible;
+    overflow: visible;
+    max-height: initial;
+  }
+
+  .fr-breadcrumb .fr-collapse::before {
+    display: none;
+  }
+
+  .fr-breadcrumb__list {
+    transform: none;
+  }
+}

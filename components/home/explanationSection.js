@@ -17,7 +17,7 @@ const explanations = [
 
 const ExplanationSection = () => (
   <div id="explanation-section">
-    <div className="content-container">
+    <div className="fr-container">
       <h2>Comment ça marche&nbsp;?</h2>
       <div>
         {explanations.map(explanation => (

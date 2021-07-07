@@ -1,6 +1,4 @@
-const withFonts = require('nextjs-fonts');
-
-module.exports = withFonts({
+module.exports = {
   async redirects() {
     return [
       {
@@ -25,7 +23,17 @@ module.exports = withFonts({
       },
       {
         source: '/producteurs/acoss',
-        destination: '/producteurs/urssaf-caisse-nationale',
+        destination: '/producteurs/urssaf',
+        permanent: true,
+      },
+      {
+        source: '/producteurs/eau-france',
+        destination: '/producteurs/eaufrance',
+        permanent: true,
+      },
+      {
+        source: '/les-api/api_indemnites_journalieres_cnam',
+        destination: '/les-api/api-indemnites-journalieres-cnam',
         permanent: true,
       },
     ];
@@ -37,4 +45,4 @@ module.exports = withFonts({
     });
     return config;
   },
-});
+};

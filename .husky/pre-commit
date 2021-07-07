@@ -1,4 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npm run lint && node nodeScripts/createThumbnail.js
+npm run lint && node node-scripts/createThumbnail.js

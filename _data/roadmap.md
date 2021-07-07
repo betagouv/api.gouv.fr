@@ -169,44 +169,64 @@
       path: /les-api/api-organismes-formation
     - type: ADD_API
       what: Service National par le ministère des Armées
-    - type: ADD_API
-      what: Professionnels BIO par l'agence BIO
-    - type: ADD_API
-      what: Pro Santé Connect par l'ANS
+      path: /les-api/api-service-national
     - type: ADD_API
       what: Infos Financières par la DILA
+      path: /les-api/api-info-financiere
     - type: ADD_API
-      what: CVEC par le CNOUS
+      what: Hub’Eau - Surveillance du littoral
+      path: /les-api/api_hubeau_surv_litt
   5:
     - type: ADD_API
-      what: Statut Étudiant
+      what: Pro Santé Connect par l'ANS
+      path: /les-api/api-pro-sante-connect
+  6:
     - type: ADD_API
-      what: Bulletin Officiel des Annonces Civiles et Commerciales (BODACC)
+      what: Maladies Rares (ORPHAcode)
+      path: /les-api/api-orphacode
+    - type: ADD_API
+      what: annuaire de l'Education Nationale
+      path: /les-api/api-annuaire-education
+    - type: ADD_API
+      what: Annonces officielles et comptes annuels des associations
+      path: /les-api/api-annonces-comptes-annuels-associations-joafe
+    - type: ADD_API
+      what: Bulletin des Annonces Légales Obligatoires
+      path: /les-api/api-bulletin-annonces-legales-obligatoires-balo
+    - type: ADD_API
+      what: Hub'Eau - Hydrobiologie
+      path: /les-api/api_hubeau_hydrobiologie
+    - type: ADD_API
+      what: Bulletin Officiel des Annonces Civiles et Commerciales
+      path: /les-api/api-bulletin-annonces-civiles-commerciales-bodacc
+    - type: ADD_API
+      what: Professionnels BIO
+      path: /les-api/api-professionnels-bio
+    - type: ADD_API
+      what: Bulletin officiel des annonces des marchés publics par la DILA
+      path: /les-api/api-bulletin-annonces-marches-publics-boamp
+    - type: ADD_API
+      what: API Indemnités journalières par la CNAM
+      path: /les-api/api_indemnites_journalieres_cnam
+  7:
+    - type: ADD_API
+      what: Attestation Codes Sécurité par l'Urssaf
+    - type: ADD_API
+      what: Déclaration préalable à l'embauche par l'Urssaf
+  8:
+    - type: ADD_API
+      what: CVEC par le CNOUS
+  9:
+    - type: ADD_API
+      what: AgentConnect par la DINUM
+    - type: ADD_API
+      what: Hermés par la DGFiP
     - type: ADD_API
       what: Liste des organismes de formation par la DGEFP
     - type: ADD_API
       what: Accès Libre
-  6:
-    - type: ADD_API
-      what: AgentConnect par la DINUM
     - type: ADD_API
       what: Référentiel Partagé des Professionnels de Santé
     - type: ADD_API
-      what: Hermés par la DGFiP
-    - type: ADD_API
-      what: AgentConnect par la DINUM
-  7:
-    - type: ADD_API
-      what: Attestation Codes Sécurité par l'Urssaf Caisse Nationale
-    - type: ADD_API
-      what: Déclaration préalable à l'embauche par l'Urssaf Caisse Nationale
-  9:
-    - type: ADD_API
-      what: Indemnités Journalières distribuée par la CNAM
-    - type: ADD_API
-      what: Bulletin Officiel des Annonces Civiles et Commerciales par la DILA
-    - type: ADD_API
-      what: Bulletin des Annonces Légales Obligatoires par la DILA
-    - type: ADD_API
-      what: Journal Officiel par la DILA
+      what: Statut Étudiant
 ---

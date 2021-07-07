@@ -1,7 +1,7 @@
 import React from 'react';
 
 const DLNUFSection = () => (
-  <section id="use-cases" className="content-container">
+  <section id="use-cases" className="fr-container">
     <br />
     <h2 className="layout-center">Les API et le Dites-le-nous-une-fois</h2>
     <div className="use-case">

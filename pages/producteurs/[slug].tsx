@@ -21,76 +21,76 @@ interface IProps {
   producer: IProducerElement;
 }
 
-const PageHeader: React.FC<{ title: string; logo: string }> = ({
-  title,
-  logo,
-}) => (
-  <section id="mission-statement">
-    <div className="content-container">
-      <div className="breadcrumb">
-        <a href="/producteurs" className="dont-apply-link-style">
-          ⇠ Tous les producteurs d'API
-        </a>
+const PageHeader: React.FC<{ title: string; logo: string; acronym: string }> =
+  ({ title, logo, acronym }) => (
+    <section id="mission-statement">
+      <div className="fr-container">
+        <div className="breadcrumb">
+          <a href="/producteurs" className="dont-apply-link-style">
+            ⇠ Tous les producteurs d'API
+          </a>
+        </div>
+        <div className="content">
+          <img src={`/images/api-logo/${logo}`} alt={`logo de ${title}`} />
+          <h1>
+            {title} {acronym ? `(${acronym})` : ''}
+          </h1>
+        </div>
       </div>
-      <div className="content">
-        <img src={`/images/api-logo/${logo}`} alt={`logo de ${title}`} />
-        <h1>{title}</h1>
-      </div>
-    </div>
 
-    <style jsx>{`
-      #mission-statement {
-        background: ${constants.colors.backgroundBlueGradient};
-        width: 100%;
-        color: #fff;
-        text-align: left;
-      }
+      <style jsx>{`
+        #mission-statement {
+          background: ${constants.colors.backgroundBlueGradient};
+          width: 100%;
+          color: #fff;
+          text-align: left;
+        }
 
-      .content {
-        margin: 0;
-        padding: 25px 0;
-        display: flex;
-        align-items: center;
-      }
-
-      .breadcrumb {
-        padding-top: 25px;
-      }
-      .breadcrumb a {
-        margin-top: 25px;
-        color: #fff;
-      }
-      .breadcrumb:hover {
-        text-decoration: underline;
-      }
-
-      h1 {
-        margin: 0;
-        margin-left: 15px;
-        font-style: normal;
-        font-weight: bold;
-        color: #fff;
-      }
-
-      img {
-        border-radius: 100px;
-        width: 60px;
-        height: 60px;
-        object-fit: contain;
-        background-color: #fff;
-      }
-
-      @media only screen and (min-width: 1px) and (max-width: 900px) {
         .content {
-          padding: 0 0 10px;
+          margin: 0;
+          padding: 25px 0;
+          display: flex;
+          align-items: center;
         }
+
         .breadcrumb {
-          padding-top: 10px;
+          padding-top: 25px;
         }
-      }
-    `}</style>
-  </section>
-);
+        .breadcrumb a {
+          margin-top: 25px;
+          color: #fff;
+        }
+        .breadcrumb:hover {
+          text-decoration: underline;
+        }
+
+        h1 {
+          margin: 0;
+          margin-left: 15px;
+          font-style: normal;
+          font-weight: bold;
+          color: #fff;
+        }
+
+        img {
+          border-radius: 100px;
+          width: 60px;
+          height: 60px;
+          object-fit: contain;
+          background-color: #fff;
+        }
+
+        @media only screen and (min-width: 1px) and (max-width: 900px) {
+          .content {
+            padding: 0 0 10px;
+          }
+          .breadcrumb {
+            padding-top: 10px;
+          }
+        }
+      `}</style>
+    </section>
+  );
 
 const ProducerPage: React.FC<IProps> = ({
   partnerApis = [],
@@ -106,9 +106,10 @@ const ProducerPage: React.FC<IProps> = ({
       <PageHeader
         title={producer.name}
         logo={producer.logo || constants.logo}
+        acronym={producer.acronym}
       />
       {(producer.short || producer.description || producer.data) && (
-        <div id="description" className="content-container">
+        <div id="description" className="fr-container">
           <div className="right-column-grid">
             <div className="left-column text-style">
               {producer.short && (
@@ -119,7 +120,7 @@ const ProducerPage: React.FC<IProps> = ({
               )}
               {producer.description && (
                 <>
-                  <h2>Quelle est la mission de {producerWithPronounSafe} ?</h2>
+                  <h2>Quelle est sa mission de service public ?</h2>
                   <Markdown>{producer.description}</Markdown>
                 </>
               )}
@@ -151,9 +152,8 @@ const ProducerPage: React.FC<IProps> = ({
                         <Emoji emoji="📖" label="annuaire" />
                         Consulter{' '}
                         <a href={producer.annuaire}>
-                          la page de {producerWithPronounSafe}
-                        </a>{' '}
-                        sur l'annuaire de l’administration.
+                          sa page sur l'annuaire de l’administration.
+                        </a>
                       </div>
                       <br />
                     </>
@@ -174,9 +174,9 @@ const ProducerPage: React.FC<IProps> = ({
                     <>
                       <div>
                         <Emoji emoji="🧑‍💻" label="ordinateur" />
-                        Consulter le{' '}
+                        Consulter son{' '}
                         <a href={producer.siteOpenData}>
-                          portail open-data de {producerWithPronounSafe}
+                          portail open-data
                         </a>{' '}
                       </div>
                       <br />
@@ -186,9 +186,8 @@ const ProducerPage: React.FC<IProps> = ({
                     <>
                       <div>
                         <Emoji emoji="⚙️" label="rouage" />
-                        Consulter le{' '}
-                        <a href={producer.siteAPI}>
-                          portail API de {producerWithPronounSafe}
+                        Consulter son <a href={producer.siteAPI}>
+                          portail API
                         </a>{' '}
                       </div>
                     </>
@@ -200,10 +199,8 @@ const ProducerPage: React.FC<IProps> = ({
         </div>
       )}
       <div id="api-list">
-        <div className="content-container text-style">
-          <h2>
-            Quelle(s) sont les API publique(s) de {producerWithPronounSafe} ?
-          </h2>
+        <div className="fr-container text-style">
+          <h2>Quelle(s) sont ses API référencées au catalogue ?</h2>
           {apis && apis.length > 0 && (
             <>
               <p>
@@ -244,7 +241,7 @@ const ProducerPage: React.FC<IProps> = ({
 
         .right-column-grid {
           display: grid;
-          grid-template-columns: 65% 35%;
+          grid-template-columns: 65% 31%;
           grid-gap: 40px;
         }
 

@@ -39,6 +39,12 @@ class MyApp extends App {
 
     return (
       <>
+        <script type="module" src="/js/dsfr.module.min.js"></script>
+        <script
+          type="text/javascript"
+          noModule
+          src="/js/dsfr.nomodule.min.js"
+        ></script>
         <Component {...pageProps} />
       </>
     );

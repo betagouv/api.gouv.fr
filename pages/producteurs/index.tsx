@@ -15,11 +15,11 @@ const Producteurs: NextPage<Props> = ({ producers }) => {
       title="Liste des producteurs d'API"
       description="La liste de toutes les administrations qui propose une API disponible publiquement."
     >
-      <section className="content-container page-baseline">
+      <section className="fr-container page-baseline">
         <h1>{producers.length} entités administratives ouvrent leur données</h1>
       </section>
       <section id="realisations" className="page-body-container">
-        <div className="content-container default-grid">
+        <div className="fr-container default-grid">
           {producers.map(producer => (
             <a
               href={`/producteurs/${producer.slug}`}
@@ -55,8 +55,10 @@ const Producteurs: NextPage<Props> = ({ producers }) => {
 
         a > div img {
           width: auto;
-          max-height: 70px;
+          max-height: 100px;
+          max-width: 100%;
           margin-right: 15px;
+          margin-bottom: 15px;
           flex-shrink: 1;
         }
       `}</style>
