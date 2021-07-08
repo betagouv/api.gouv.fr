@@ -165,9 +165,6 @@
       what: Tracabilité des déchets dangereux - Trackdéchets
       path: /les-api/api-trackdechets
     - type: ADD_API
-      what: API Organismes de Formation
-      path: /les-api/api-organismes-formation
-    - type: ADD_API
       what: Service National par le ministère des Armées
       path: /les-api/api-service-national
     - type: ADD_API
@@ -213,6 +210,9 @@
       what: Attestation Codes Sécurité par l'Urssaf
     - type: ADD_API
       what: Déclaration préalable à l'embauche par l'Urssaf
+    - type: ADD_API
+      what: Liste des organismes de formation par la DGEFP
+      path: /les-api/api-organismes-formation
   8:
     - type: ADD_API
       what: CVEC par le CNOUS
@@ -221,8 +221,6 @@
       what: AgentConnect par la DINUM
     - type: ADD_API
       what: Hermés par la DGFiP
-    - type: ADD_API
-      what: Liste des organismes de formation par la DGEFP
     - type: ADD_API
       what: Accès Libre
     - type: ADD_API

@@ -16,16 +16,11 @@ keywords:
   - opco
   - opca
   - dgefp
-rate_limiting_resume:
-rate_limiting_description:
-monitoring_link:
-monitoring_description:
-contact_link: david-alexandre.voisenet@externes.emploi.gouv.fr
-doc_tech_link: https://referentielof.emploi.gouv.fr/referentiel_of/swaggerApi
-doc_tech_external:
-last_update: 01/03/2020
-visits_2019:
-partner:
+contact_link: misi.dgefp@emploi.gouv.fr
+doc_tech_link: /
+doc_tech_external: /
+last_update: 07/07/2021
+visits_2019: 1000
 dataset_uuid:
   - 582c8978c751df788ec0bb7e
 ---
