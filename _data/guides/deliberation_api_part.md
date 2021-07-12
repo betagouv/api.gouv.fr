@@ -4,7 +4,6 @@ tagline: "Vous êtes une collectivité territoriale et cherchez à être habilit
 tags: déliberation, api particulier, habilitation juridique
 image: dossier.jpg
 api:
-  - API Particulier
 ---
 
 ## Pourquoi ce guide
@@ -17,7 +16,8 @@ La base juridique d'accès aux données est le code des relations entre le publi
 
 ## Les données à caractères personnel qui peuvent être enregistrées
 
-1. Pour la gestion de l'accès aux téléservices, en fonction du niveau d'identification requis par lesdits téléservices :
+Pour la gestion de l'accès aux téléservices, en fonction du niveau d'identification requis par lesdits téléservices :
+
 ― l'identifiant de connexion choisi par l'usager ;
 ― le mot de passe choisi par l'usager ;
 ― le numéro de téléphone portable de l'usager, s'il choisit ce mode d'accès ;
@@ -25,8 +25,8 @@ La base juridique d'accès aux données est le code des relations entre le publi
 ― le certificat électronique de l'usager, s'il choisit ce mode d'accès ;
 ― le cas échéant, les clés de fédération ou « alias » générés par le système permettant à l'usager d'établir des liens avec ses différents comptes.
 
-2. Pour l'accomplissement des démarches administratives :
-― les informations et données à caractère personnel strictement nécessaires à l'accomplissement des démarches administratives mentionnées à l'article suivant : [https://www.legifrance.gouv.fr/loda/id/JORFTEXT000027697207/](https://www.legifrance.gouv.fr/loda/id/JORFTEXT000027697207/)
+Pour l'accomplissement des démarches administratives :
+― les informations et données à caractère personnel strictement nécessaires à l'accomplissement des démarches administratives mentionnées à <a href="https://www.legifrance.gouv.fr/loda/id/JORFTEXT000027697207/">l'article listant les téléservices habilités</a>.
 
 Par ailleurs, pour certaine démarche, un texte réglementaire peut lister précisément les informations qui peuvent être demandées aux usagers.
 
