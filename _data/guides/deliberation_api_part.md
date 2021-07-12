@@ -18,15 +18,15 @@ La base juridique d'accès aux données est le code des relations entre le publi
 
 Pour la gestion de l'accès aux téléservices, en fonction du niveau d'identification requis par lesdits téléservices :
 
-― l'identifiant de connexion choisi par l'usager ;
-― le mot de passe choisi par l'usager ;
-― le numéro de téléphone portable de l'usager, s'il choisit ce mode d'accès ;
-― les informations contenues dans la « carte de vie quotidienne » de l'usager ;
-― le certificat électronique de l'usager, s'il choisit ce mode d'accès ;
-― le cas échéant, les clés de fédération ou « alias » générés par le système permettant à l'usager d'établir des liens avec ses différents comptes.
+- l'identifiant de connexion choisi par l'usager ;
+- le mot de passe choisi par l'usager ;
+- le numéro de téléphone portable de l'usager, s'il choisit ce mode d'accès ;
+- les informations contenues dans la « carte de vie quotidienne » de l'usager ;
+- le certificat électronique de l'usager, s'il choisit ce mode d'accès ;
+- le cas échéant, les clés de fédération ou « alias » générés par le système permettant à l'usager d'établir des liens avec ses différents comptes.
 
 Pour l'accomplissement des démarches administratives :
-― les informations et données à caractère personnel strictement nécessaires à l'accomplissement des démarches administratives mentionnées à <a href="https://www.legifrance.gouv.fr/loda/id/JORFTEXT000027697207/">l'article listant les téléservices habilités</a>.
+- les informations et données à caractère personnel strictement nécessaires à l'accomplissement des démarches administratives mentionnées à <a href="https://www.legifrance.gouv.fr/loda/id/JORFTEXT000027697207/">l'article listant les téléservices habilités</a>.
 
 Par ailleurs, pour certaine démarche, un texte réglementaire peut lister précisément les informations qui peuvent être demandées aux usagers.
 
