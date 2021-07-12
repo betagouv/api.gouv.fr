@@ -1,6 +1,6 @@
 ---
-title: Guide : qu'est ce qu'une bonne délibération pour accéder à API Particulier ?
-tagline: Vous êtes une collectivité territoriale et cherchez à être habilité à API Particulier ? Ce guide vous explique pas à pas ce qu'il faut renseigner comme cadre juridique pour être habilité.
+title: "Guide : qu'est ce qu'une bonne délibération pour accéder à API Particulier ?"
+tagline: "Vous êtes une collectivité territoriale et cherchez à être habilité à API Particulier ? Ce guide vous explique pas à pas ce qu'il faut renseigner comme cadre juridique pour être habilité."
 tags: déliberation, api particulier, habilitation juridique
 image: dossier.jpg
 api:
