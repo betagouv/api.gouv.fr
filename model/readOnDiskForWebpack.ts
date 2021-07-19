@@ -29,11 +29,17 @@ const parseMarkdown = (
       index: number
     ) => {
       // Create slug from filename
+      const isMarkdownExtension = key.indexOf('.md') > -1;
+      if (!isMarkdownExtension) {
+        throw new Error(`${key} file does not use a markdown extension (.md)`);
+      }
+
       const slug = key
         .replace(/^.*[\\/]/, '')
         .split('.')
         .slice(0, -1)
         .join('.');
+
       const value = values[index];
 
       // Parse yaml metadata & markdownbody in document
