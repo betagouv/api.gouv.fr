@@ -3,8 +3,8 @@ title: API Pro Santé Connect
 tagline: Authentifier les professionnels de la santé à partir du Répertoire Partagé des Professionnels de Santé (RPPS)
 external_site: https://esante.gouv.fr/
 is_open: -1 # -1 means API not open
-#datapass_link:
-access_page: https://datapass.api.gouv.fr/api-pro-sante-connect
+datapass_link: https://datapass.api.gouv.fr/api-pro-sante-connect
+access_page: 
   - who:
       - Un particulier
     is_eligible: -1
