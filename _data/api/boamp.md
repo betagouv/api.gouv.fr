@@ -16,12 +16,11 @@ doc_tech_link: /api/v1/proxy/http%3A%2F%2Fapi.dila.fr%2Fopendata%2Fv2%2Fapi-docs
 datagouv_uuid:
   - 559390f9c751df0139a453ba
 visits_2019: 1332
-last_update: 18/01/2017
+last_update: 27/07/2021
 ---
+**Important: cette API est la version 1 de l'API BOAMP, elle ne sera prochainement plus active. [La version 2 est accessible ici](https://api.gouv.fr/les-api/api-annonces-marches-publics-boamp)**
 
 L’API BOAMP permet de rechercher et de consulter les annonces du Bulletin Officiel des Annonces de Marchés Publics.
-
-**Important: cette API et la version 1 de l'API BOAMP, elle ne sera plus active à compter du 11 octobre 2021. [La version 2 est accessible ici](https://api.gouv.fr/les-api/api-annonces-marches-publics-boamp)**
 
 Cette API est libre d’accès et permet de consulter les données suivantes :
 

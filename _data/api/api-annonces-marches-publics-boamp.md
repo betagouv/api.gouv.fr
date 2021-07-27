@@ -22,6 +22,8 @@ last_update: 30/06/2021
 
 ### A quoi sert l’API Bulletin officiel des annonces des marchés publics (BOAMP) ?
 
+**Important: cette API est la version 2 de l'API BOAMP. [La version 1 reste accessible ici mais sera prochainement désactivée](https://api.gouv.fr/les-api/boamp).**
+
 Afin de faciliter la réutilisation des données du Bulletin officiel des annonces des marchés publics (BOAMP), la direction de l’information légale et administrative (DILA) met à disposition une API accessible gratuitement.
 Cette version de l’API est une version bêta. Elle permet de recueillir vos remarques et vos suggestions d’amélioration ; elle pourra donc évoluer pendant toute la durée du test.
 
@@ -33,9 +35,6 @@ Les principales fonctionnalités :
 - nombreuses possibilités de filtrage,
 - format CSV, JSON, EXCEL,
 - recherche avec mots-clés, filtres et critères.
-
-**Important: cette API et la version 2 de l'API BOAMP. [La version 1 reste accessible ici jusqu'au 11 octobre 2021](https://api.gouv.fr/les-api/boamp).**
-
 ### Données disponibles
 
 Le BOAMP diffuse :
