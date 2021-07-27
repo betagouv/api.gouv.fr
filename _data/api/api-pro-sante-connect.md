@@ -3,8 +3,8 @@ title: API Pro Santé Connect
 tagline: Authentifier les professionnels de la santé à partir du Répertoire Partagé des Professionnels de Santé (RPPS)
 external_site: https://esante.gouv.fr/
 is_open: -1 # -1 means API not open
-#datapass_link:
-access_page:
+datapass_link: https://datapass.api.gouv.fr/api-pro-sante-connect
+access_page: 
   - who:
       - Un particulier
     is_eligible: -1
@@ -21,7 +21,7 @@ access_page:
       Seuls les éditeurs de logiciels français proposant une solution web adressée aux professionnels de santé peuvent demander à se raccorder à Pro Santé Connect.
 
       <NextSteps />
-      <Button href="mailto:prosanteconnect.editeurs@esante.gouv.fr">Remplir une demande</Button>
+      <Button href="https://datapass.api.gouv.fr/api-pro-sante-connect">Remplir une demande</Button>
   - who:
       - Une collectivité ou une administration
     is_eligible: 1
@@ -29,7 +29,7 @@ access_page:
       Vous pouvez réaliser une demande d'accès à l'API.
 
       <NextSteps />
-      <Button href="mailto:prosanteconnect.editeurs@esante.gouv.fr">Remplir une demande</Button>
+      <Button href="https://datapass.api.gouv.fr/api-pro-sante-connect">Remplir une demande</Button>
   - who:
       - Un éditeur de logiciels
     is_eligible: 0
@@ -37,7 +37,7 @@ access_page:
       Tout éditeur français proposant une solution web adressée aux professionnels de santé et qui souhaite pouvoir authentifier des professionnels de santé peut demander à se raccorder à Pro Santé Connect.
 
       <NextSteps />
-      <Button href="mailto:prosanteconnect.editeurs@esante.gouv.fr">Remplir une demande</Button>
+      <Button href="https://datapass.api.gouv.fr/api-pro-sante-connect">Remplir une demande</Button>
 partners:
   - Ministère des Solidarités et de la Santé (MSS)
 producer: ans
@@ -71,7 +71,6 @@ L’assertion d’authentification OpenID Connect « remonte » au Fournisseur d
 Ces éléments sont fournis par [notre annuaire](https://annuaire.sante.fr) et incorporés dans le jeton OpenID Connect.
 
 ### Données disponibles dans l'API
-
 
 | Type                       | Données                                                  |
 | -------------------------- | -------------------------------------------------------- |

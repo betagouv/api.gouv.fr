@@ -44,7 +44,6 @@ Le BOAMP diffuse :
 - il est précisé à l’article 33 du décret n° 2016-360 du 25 mars 2016 relatif aux marchés publics qu’une diffusion est obligatoire au BOAMP pour tous les marchés dont le montant est supérieur aux seuils européens ;
 - en dessous de ces seuils, une publication reste obligatoire au BOAMP ou dans un journal habilité à recevoir des annonces légales. Pour les marchés à procédure adaptée (MAPA) inférieurs à 90 000 € HT, l’acheteur public a le choix des supports qu’il utilisera pour assurer la publicité de ses marchés.
 
-
 ### Accéder aux données
 
 L’API BOAMP est utilisable gratuitement. L’utilisation de ces données est soumise :
