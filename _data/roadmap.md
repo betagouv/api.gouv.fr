@@ -207,12 +207,18 @@
       path: /les-api/api_indemnites_journalieres_cnam
   7:
     - type: ADD_API
-      what: Attestation Codes Sécurité par l'Urssaf
+      what: Identifiants et Référentiels pour l'enseignement supérieur et la recherche (IdRef) par l'ABES
+      path: /les-api/api-idref
     - type: ADD_API
-      what: Déclaration préalable à l'embauche par l'Urssaf
+      what: Système Universitaire de Documentation (Sudoc)
+      path: /les-api/api-sudoc
   8:
     - type: ADD_API
       what: CVEC par le CNOUS
+    - type: ADD_API
+      what: Attestation Codes Sécurité par l'Urssaf
+    - type: ADD_API
+      what: Déclaration préalable à l'embauche par l'Urssaf
   9:
     - type: ADD_API
       what: AgentConnect par la DINUM
