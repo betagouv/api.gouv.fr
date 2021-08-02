@@ -214,6 +214,18 @@
       path: /les-api/api-sudoc
   8:
     - type: ADD_API
+      what: Référentiel des agences par Pôle emploi
+      path: /les-api/api-agences-pole-emploi
+    - type: ADD_API
+      what: Anotéa par Pôle emploi
+      path: /les-api/api-anotea
+    - type: ADD_API
+      what: Eligibilité aux aides à l'emploi (Clara) par Pôle emploi
+      path: /les-api/api-clara
+    - type: ADD_API
+      what: Répertoire Opérationnel des Métiers et des Emplois par Pôle emploi
+      path: /les-api/api-rome
+    - type: ADD_API
       what: CVEC par le CNOUS
     - type: ADD_API
       what: Attestation Codes Sécurité par l'Urssaf
