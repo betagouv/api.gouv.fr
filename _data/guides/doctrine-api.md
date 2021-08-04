@@ -5,43 +5,25 @@ tags:
 image: meta.png
 ---
 
-# Contexte
+## Pourquoi une doctrine pour les API ?
 
-Les données sont au coeur du fonctionnement des administrations et sont maintenant considérées comme un élément stratégique. Les données ne sont plus seulement utilisées par les métiers en charge de leur production mais intéressent de nombreuses administrations dans le cadre de la mise en oeuvre de leurs missions de service public.
-Les récentes annonces du Premier ministre dans le cadre du dernier Comité Interministériel pour la Transformation Publique (CITP) s'inscrivent pleinement dans cette ambition. Les données doivent circuler rapidement et facilement entre les producteurs et les réutilisateurs.
+Les données sont au coeur du fonctionnement des administrations et sont maintenant considérées comme un élément stratégique. Elles doivent circuler rapidement et facilement entre les producteurs et les réutilisateurs, pour faciliter la mise en oeuvre des politiques publiques.
 
-Toutefois, force est de constater qu'il persiste encore un grand nombre de freins liés à l'hétérogénéité des pratiques ministérielles en matière d'échange de données.
+Cette page présente une **stratégie interministérielle en matière de circulation des données par API** et a fait l'objet de groupes de travail avec des administrations pilotes.
 
-Cette page présente une stratégie interministérielle en matière de circulation des données par API et a fait l'objet de groupes de travail avec certaines administrations pilotes :
-
-- Secrétariat Général des ministères économiques et fianciers,
-- Direction du Numérique des ministères sociaux,
-- Direction du Numérique du ministère de l'Intérieur,
-- Direction du Numérique du ministère de la Justice,
-- Direction Interministérielle du Numérique.
-
-Le but de la stratégie est de s’abstraire des implémentations concrètes des API, en dressant des principes fonctionnels immuables, quelles que soient les tendances opérationnelles du moment.
+Le but de la stratégie est de s’abstraire des implémentations concrètes des API, en dressant **des principes fonctionnels immuables, quelles que soient les tendances opérationnelles du moment.**
 
 
-# 6 enjeux stratégiques
+## 6 enjeux stratégiques
 
 **Les 6 enjeux stratégiques présentés ci-dessous devront veiller à satisfaire constamment un besoin client, que ce soit des administrations, ou des citoyens dont le quotidien sera amélioré à travers l'utilisation des API.**
 
- * **[🔭Découvrabilité](#🔭decouvrabilite)**
-    * [Catalogue de données et services disponibles](#catalogue-de-donnees-et-services-disponibles) 
- * **[🔑 Accès à la donnée](#🔑acces-a-la-donnee)**
-    * [Gestion des habilitations d’accès aux API à accès restreint](#gestion-des-habilitations-d’acces-aux-api-a-acces-restreint)
-    * [Bac à sable d'expérimentation public](#bac-a-sable-d'experimentation-public) 
- * **[👷🏻‍♂️Exploitation des données](#👷🏻%E2%80%8D♂%EF%B8%8Fexploitation-des-donnees)**
-    * [Utilisation des standards technologiques du moment pour faciliter l’interopérabilité](#utilisation-des-standards-technologiques-du-moment-pour-faciliter-l’interoperabilite)
-    * [Stabilité du modèle des interfaces](#stabilite-du-modele-des-interfaces) 
- * **[👌 Qualité de service](#👌-qualite-de-service)**
-    * [Engagements sur le temps de réponse et la tenue en charge](#engagements-sur-le-temps-de-reponse-et-la-tenue-en-charge)
-    * [Transparence sur la disponibilité de l’API](#transparence-sur-la-disponibilite-de-l’api)
-    * [Suivi des consommations des données et services](#suivi-des-consommations-des-donnees-et-services)
- * **[💶 Modèle économique](#💶-modele-economique)**
-    * [Gratuité de la donnée, et de l’exposition](#gratuite-de-la-donnee,-et-de-l’exposition)
-
+ * [🔭Découvrabilité](#🔭decouvrabilite)
+ * [🔑 Accès à la donnée](#🔑acces-a-la-donnee)
+ * [👷🏻‍♂️Exploitation des données](#👷🏻%E2%80%8D♂%EF%B8%8Fexploitation-des-donnees)
+ * [👌 Qualité de service](#👌-qualite-de-service)
+ * [🩺 Curation de la donnée](#🩺-curation-de-la-donnee)
+ * [💶 Modèle économique](#💶-modele-economique)
 
 ## 🔭Découvrabilité
 ### Catalogue de données et services disponibles 
@@ -58,8 +40,26 @@ Exemples:
 #### Principe 2 
 A chaque API exposée correspond une documentation fonctionnelle présentant la sémantique des données, leur cycle de vie, leur qualité ainsi que leur source.
 
+<details>
+   <summary>Ressources utiles</summary>
+
+[📘 Guide pratique - référencement sur api.gouv.fr](/guides/diffusion-api-guide-pratique#quels-sont-les-prerequis-pour-qu'une-api-puisse-etre-referencee-?)
+
+[📙 Guide Etalab - documenter les données](https://guides.etalab.gouv.fr/qualite/documenter-les-donnees)
+
+</details>
+
 #### Principe 3
 A chaque API exposée correspond une documentation technique présentant les modalités d’interrogation et de récupération de la donnée.
+
+<details>
+   <summary>Ressources utiles</summary>
+
+[📘 Guide pratique : Open API Specification et swaggers](/guides/diffusion-api-guide-pratique#open-api,-documentation-et-swaggers)
+
+[💡 Exemple : documentation technique de l'API Géo](https://api.gouv.fr/documentation/api-geo)
+
+</details>
 
 ## 🔑Accès à la donnée
 ### Gestion des habilitations d’accès aux API à accès restreint 
@@ -67,15 +67,29 @@ A chaque API exposée correspond une documentation technique présentant les mod
 #### Principe 4 
 L’accès aux API à accès restreint se fait par demande du consommateur.
 
+<details>
+   <summary>Ressources utiles</summary>
+
+[📘 Guide pratique : Gestion de l'accès à votre API](/guides/diffusion-api-guide-pratique#🔑-gestion-de-l'acces-a-votre-api)
+
+[🔎 DataPass : Délivrer des « Pass » pour accéder à la « Data » produite par l'État.](https://beta.gouv.fr/startups/datapass.html)
+
+</details>
+
 #### Principe 5
 Le processus de demande d'accès et l’éligibilité des consommateurs sont explicités dans la documentation fonctionnelle de l’API.
 
-#### Principe 6
-Le processus de demande se fait de manière la plus simple possible pour le consommateur.
+<details>
+   <summary>Exemple pour l'API Particulier</summary>
 
-Exemple : sur les fiches api.gouv.fr des API à accès restreint, une page d’information guide le consommateur jusqu’à sa demande d’accès à l’API, en vérifiant son éligibilité.
+> Sur les fiches api.gouv.fr des API à accès restreint, une page d’information guide le consommateur jusqu’à sa demande d’accès à l’API, en vérifiant son éligibilité.
 
 > <img src="/images/guides/doctrine_eligibilite.png" alt= "eligibilite" style="width:600px"/> 
+
+</details>
+
+#### Principe 6
+Le processus de demande se fait de manière la plus simple possible pour le consommateur.
 
 ### Bac à sable d'expérimentation public
 
@@ -93,7 +107,7 @@ Tant pour les API ouvertes que celles à accès restreint, le bac à sable est a
 #### Principe 9
 Les données et services sont exposés selon des standards techniques communément partagés et adoptés.
 
-> 💡 *Ce point sera amplement détaillé lors des discussions opérationnelles. En 2021, le standard connu et pratiqué est le standard REST Json.*
+> 💡 *En 2021, le standard connu et pratiqué est le standard REST Json.*
 
 ### Stabilité du modèle des interfaces
 
@@ -132,8 +146,14 @@ L’état de l’API représente sa capacité à être appelée dans les conditi
 #### Principe 18 
 L’état de l’API est rendu accessible aux consommateurs.
 
-[Exemple pour l'API Particulier](https://status.particulier.api.gouv.fr/)
-<img src="/images/guides/doctrine_dispo_api.png" alt= "disponibilité" style="width:700px"/> 
+<details>
+   <summary>Exemple pour l'API Particulier</summary>
+   
+> <img src="/images/guides/doctrine_dispo_api.png" alt= "disponibilité" style="width:700px"/> 
+
+> [Voir la page complète](https://status.particulier.api.gouv.fr/)
+
+</details>
 
 #### Principe 19 
 L’état de l’API est consultable en temps réel, et pour des dates passées.
@@ -145,6 +165,13 @@ Les consommations de données et services sont enregistrées pour être ensuite 
 
 #### Principe 21 
 Les consommateurs ont accès à une restitution en temps réel ou ponctuelle de ces statistiques de consommation des données.
+
+## 🩺 Curation de la donnée
+
+### Mise en place d’une boucle de retour sur la qualité des données
+
+#### Principe 22 
+Les consommateurs disposent d’un moyen technique ou organisationnel de faire des retours sur la qualité des données et services exposés
 
 ## 💶 Modèle économique
 
@@ -158,9 +185,3 @@ Les données ainsi que les API mises à disposition gratuitement devront répond
 
 #### Principe 25 
 Les API mises à disposition avec un haut niveau de qualité, pourront faire l'objet d'une redevance, mais cette dernière devra être motivée par un traitement technique différencié avec l'offre gratuite permettant d'objectiver le niveau de qualité supplémentaire proposé aux consommateurs.
-
-# Conclusion
-
-L'ambition portée par le Gouvernement en matière de circulation des données doit se traduire par la co-construction d'une stratégie interministérielle en la matière. La démultiplication des dispositifs en matière d'exposition et de circulation de donnée complexifie le travail des fournisseurs de services et rend difficile l'appropriation de bonnes pratiques par les fournisseurs de données.
-
-Dès lors que les principes fondamentaux de la stratégie d'échange de données de l'Etat par API seront partagés par l'ensemble des ministères, la DINUM engagera une deuxième phase de travail permettant d'orchestrer la déclinaison opérationnelle de cette stratégie, en s'appuyant sur les bonnes pratiques ministérielles, les outils mutualisés ainsi que les bonnes volontés de l'ensemble des ministère souhaitant co-construire cette merveilleuse politique publique.

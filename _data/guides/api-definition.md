@@ -36,7 +36,7 @@ La majorité des API visibles sur la page [rechercher une api](/les-api/recherch
 - la [base documentaire Gallica](/les-api/api_gallica_document), de la Bibliothèque Nationale de France
 - la [liste des jours fériés en France](/les-api/jours-ferie)
 
-... Et encore [bien d'autres](/les-api/rechercher-api).
+... Et encore [bien d'autres](/rechercher-api).
 
 ### Des API en accès restreint
 
@@ -47,4 +47,4 @@ D'autres API sont en accès restreint. Cela veut dire que seules les entitées �
 
 ### On est prêt pour les détails !
 
-A partir d’ici, ca devient un peu plus technique et vous en savez déjà bien assez pour [découvrir la liste des API disponibles dans le service public](/les-api/rechercher-api)
+A partir d’ici, ca devient un peu plus technique et vous en savez déjà bien assez pour [découvrir la liste des API disponibles dans le service public](/rechercher-api)
