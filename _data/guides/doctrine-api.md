@@ -7,11 +7,9 @@ image: meta.png
 
 ## Pourquoi une doctrine pour les API ?
 
-Les données sont au coeur du fonctionnement des administrations et sont maintenant considérées comme un élément stratégique. Elles doivent circuler rapidement et facilement entre les producteurs et les réutilisateurs, pour faciliter la mise en oeuvre des politiques publiques.
+Les données sont au coeur du fonctionnement des administrations et sont maintenant considérées comme un élément stratégique. Elles doivent circuler rapidement et facilement entre les producteurs et les réutilisateurs, pour faciliter la mise en oeuvre des politiques publiques. 
 
-Cette page présente une **stratégie interministérielle en matière de circulation des données par API** et a fait l'objet de groupes de travail avec des administrations pilotes.
-
-Le but de la stratégie est de s’abstraire des implémentations concrètes des API, en dressant **des principes fonctionnels immuables, quelles que soient les tendances opérationnelles du moment.**
+Les API permettent cette circulation des données, et cette page présente la doctrine qu'un ensemble d'administrations ont proposée. Elle dresse **des principes fonctionnels immuables, quelles que soient les tendances opérationnelles du moment.**
 
 
 ## 6 enjeux stratégiques
@@ -34,7 +32,7 @@ Les données et services publiquement accessibles sont **visibles sur un catalog
 Exemples:
 
 - [api.gouv.fr](http://api.gouv.fr/) vise à référencer toutes les API publiques de l’Etat
-- [api.impots.gouv.fr](http://api.impots.gouv.fr/) vise à référencer toute la verticale métier des finances publiques
+- [API Impôt Particulier](https://api.gouv.fr/les-api/impot-particulier) vise à référencer toute la verticale métier des finances publiques
 - Documentation fonctionnelle et technique
 
 #### Principe 2 
