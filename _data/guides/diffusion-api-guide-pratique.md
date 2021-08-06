@@ -89,6 +89,8 @@ L'outil d'habilitation [DataPass](https://beta.gouv.fr/startups/datapass.html) e
 
 ### Quelles sont les étapes pour référencer son API sur api.gouv.fr ?
 
+Si les conditions ci-dessus sont réunies, voici les différentes étapes pour la publier sur [api.gouv.fr](http://api.gouv.fr) : 
+
 [x] Compléter le formulaire pour demander le référencement d'une API ;
 
 <Button href="/nouvelle-api">Référencer une nouvelle API</Button> 
