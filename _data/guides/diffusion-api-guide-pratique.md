@@ -5,7 +5,9 @@ tags:
 image: meta.png
 ---
 
-Ce guide a pour objectif de détailler les critères permettant à une API d'être référencée sur api.gouv.fr. Il décline de manière opérationnelle la [doctrine des API de l'administration](/guides/doctrine-api).
+Ce guide a pour objectif de détailler les critères permettant à une API d'être référencée sur api.gouv.fr. Il décline de manière opérationnelle la doctrine des API de l'administration.
+
+<Button href="/guides/doctrine-api">Voir la doctrine</Button> 
 
 # Table des matières
 
@@ -67,7 +69,7 @@ Les API peuvent alimenter plusieurs services et de très nombreux utilisateurs f
 
 De même, ces statistiques de disponibilité et les limites (en nombre d'appels) doivent être communiquées dans la documentation de l'API. 
 
-Pour aller plus loin, retrouvez **les différents principes de la doctrine des api dans l'administration.**
+Pour aller plus loin, retrouvez [**les différents principes de la doctrine des api dans l'administration.**](/guides/doctrine-api)
 
 ### Délais de réponse aux demandes d'accès
 
@@ -89,9 +91,9 @@ L'outil d'habilitation [DataPass](https://beta.gouv.fr/startups/datapass.html) e
 
 ### Quelles sont les étapes pour référencer son API sur api.gouv.fr ?
 
-Si les conditions ci-dessus sont réunies, voici les différentes étapes pour la publier sur [api.gouv.fr](http://api.gouv.fr) : 
+[x] Compléter le formulaire pour demander le référencement d'une API ;
 
-[x] Compléter le formulaire suivant : [https://api.gouv.fr/nouvelle-api](https://api.gouv.fr/nouvelle-api) ;
+<Button href="/nouvelle-api">Référencer une nouvelle API</Button> 
  
 [x] Un échange avec l'équipe API peut être proposé par la suite, pour affiner la documentation ou pour préciser le projet ;
 
