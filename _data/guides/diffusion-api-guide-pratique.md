@@ -5,9 +5,7 @@ tags:
 image: meta.png
 ---
 
-Ce guide a pour objectif de détailler les critères permettant à une API d'être référencée sur api.gouv.fr. Il décline de manière opérationnelle la doctrine des API de l'administration.
-
-<Button href="/guides/doctrine-api">Voir la doctrine</Button> 
+Ce guide a pour objectif de détailler les critères permettant à une API d'être référencée sur api.gouv.fr. Il décline de manière opérationnelle la [doctrine des API de l'administration](/guides/doctrine-api).
 
 # Table des matières
 
