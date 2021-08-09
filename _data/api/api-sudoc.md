@@ -23,7 +23,7 @@ keywords:
   - ISBN
   - Bibliothèque
 contact_link: sudoc@abes.fr
-doc_tech_link: https://www.sudoc.fr/openapi.yaml
+doc_tech_link: https://raw.githubusercontent.com/abes-esr/openapi/master/sudoc.yaml
 themes:
   - Education
   - Culture
