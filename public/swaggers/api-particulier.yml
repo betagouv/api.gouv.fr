@@ -1,0 +1,927 @@
+openapi: 3.0.0
+info:
+  title: API Particulier
+  description: >
+    ## Bienvenue sur la documentation interactive d'API Particulier.
+
+
+    Pour utiliser API Particulier en production (particulier.api.gouv.fr), vous
+    devez obtenir un token de production. Pour ce faire, veuillez remplir une
+    [demande d'autorisation](http://signup.api.gouv.fr).
+
+
+    Pour faire un appel à API Particulier vous devez disposer de deux
+    informations : un token d'API et les informations d'identification d'un
+    particulier.
+
+
+    Pour les données issues de la DGFIP, les informations d'identification d'un
+    particulier sont : le numéro fiscal et le numéro d'avis d'imposition.
+
+
+    Pour les données issues de la CAF, les informations d'identification d'un
+    particulier sont : le numéro d'allocataire et le code postal.
+
+
+    Pour les données issues de Pôle Emploi, les informations d'identification
+    d'un particulier sont : le numéro d'identifiant Pôle Emploi, PeamU.
+
+
+    Pour les données issues de MESRI, les informations d'identification d'un
+    particulier sont : l'Identifiant National Étudiant, INE.
+
+
+    Vous trouverez ci-dessous de quoi exécuter des requêtes HTTP sur
+    l'environnement API Particulier de test (particulier-test.api.gouv.fr). Lors
+    du développement de votre solution logicielle, nous vous recommandons
+    d'utiliser cet environnement.
+
+
+    ## L'environnement de test
+
+
+    L'environnement de test est fonctionnellement identique à l'environnement de
+    production.
+
+
+    Le token d'API à utiliser est un token de test.
+
+
+    Les données retournées sont des données de test.
+
+
+    ### Token de test
+
+
+    Voici la liste des clés d'API de tests. Chacun donne accès à un *scope*
+    différent.
+
+    Les clés d'API de bac à sable sont des chaines alphanumériques de 32 caractères et des UUIDv4, les clés d'API de production sont des UUIDv4.
+
+    | Scope                                                      |
+    Token                            |
+
+    |------------------------------------------------------------|----------------------------------|
+
+    | DGFIP - Avis d'imposition                                  |
+    83c68bf0b6013c4daf3f8213f7212aa5 |
+
+    | DGFIP - Adresse                                            |
+    02013fe1b5221dd7d914e4406fb88891 |
+
+    | CNAF - Quotient familial                                   |
+    73af98c480aa3abfd38830ec5c5354d8 |
+
+    | CNAF - Situation familiale                                 |
+    3841b13fa8032ed3c31d160d3437a76a |
+
+    | CNAF - Adresse                                      |
+    e0a109ba-8e2b-4809-95c5-6a818dda2351 |
+
+    | CNAF - Enfants                                 |
+    ce469960-7bfc-401d-8599-686d158939ae |
+
+    | CNAF - Allocataires                                 |
+    ea903339-692b-4cc2-96b3-09a2d6acd4d2 |
+
+    | "DGFIP - Avis d'imposition" et "CNAF - Situation familiale"|
+    d7e9c9f4c3ca00caadde31f50fd4521a |
+
+    | "DGFIP - Avis d'imposition", "CNAF - Situation familiale" et "CNAF - Quotient Familial"|
+    fb156a4e-d497-480f-b3ef-9bc1bccdfbb9 |
+
+    | Pôle Emploi - Identité, Contact, Adresse et Inscription                           |
+    fd38830c480221d0ff0b6013c4de6c32 |
+
+    | Pôle Emploi - Identité                           |
+    d76d8c36-f49d-4c26-b849-7466a9faf0d6 |
+
+    | Pôle Emploi - Contact                           |
+    b70015d5-6ecd-48a6-9a2b-9fdb9fdf1c67 |
+
+    | Pôle Emploi - Adresse                          |
+    438e839a-da85-4e10-a314-98092b856989 |
+
+    | Pôle Emploi - Inscription                           |
+    d726502d-ac6d-483f-b8b8-c9ba239547a6 |
+
+    | Statut Étudiant                                            |
+    1b8bea9a1df409af64c995e58014f642 |
+
+     **Important :** la taille du jeu de données retournées dépend du *scope* de la clé d'API utilisée. Certaines clés n'autorisent qu'un nombre réduit de données. Ainsi, suivant la clé utilisée, une même requête peut retourner des résultats différents. En effet, les disposition de l'article [L144-8](https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367412&dateTexte=&categorieLien=cid) n'autorise que l'échange des informations **strictement nécessaires** pour traiter une démarche. En conséquence, pendant vos tests, assurez-vous d'utiliser la clé d'API associée au *scope* correspondant aux données auxquelles vous aurez accès d'un point de vue légal.
+
+    ### Données de test
+
+
+    Des informations d'identification de particuliers de test sont disponibles
+    en ligne :
+
+
+    1. [données de la
+    CAF](https://github.com/betagouv/api-particulier/blob/master/api-particulier/api/caf/fake-responses.json)
+
+    2. [données des
+    impôts](https://airtable.com/invite/l?inviteId=inv3ImCypw30uuLK9&inviteToken=0482ffbcc5d830fb6a409161fc372635a48b6bbcffdcde552f5be4290f80db50)
+
+    3. [données de Pôle
+    Emploi](https://airtable.com/invite/l?inviteId=inv1n0CkFzq3Y0pvn&inviteToken=a5b49ec5bb9d2323df4adbdfc6c65da35a2248af30c38095101b3cca6ea0898a)
+
+    4. [données du statut étudiant -
+    étudiants](https://airtable.com/shrh9q7Kg4UaIllHA) et [données du statut
+    étudiant - inscriptions](https://airtable.com/shrjMnKbwlgllQ1Im)
+
+
+    Si vous souhaitez tester un cas qui n'est pas encore présent, nous vous
+    invitons à ajouter le cas :
+     
+    1. dans [la liste des cas de
+    test](https://airtable.com/invite/l?inviteId=inv3ImCypw30uuLK9&inviteToken=0482ffbcc5d830fb6a409161fc372635a48b6bbcffdcde552f5be4290f80db50)
+    pour les données des impôts
+
+    2. dans [la liste des cas de
+    test](https://airtable.com/invite/l?inviteId=inv1n0CkFzq3Y0pvn&inviteToken=a5b49ec5bb9d2323df4adbdfc6c65da35a2248af30c38095101b3cca6ea0898a)
+    pour les données Pôle Emploi
+
+    3. dans [le formulaire d'ajout d'étudiants de
+    test](https://airtable.com/shrLBFosU8hgXU63F) et [le formulaire d'ajout
+    d'inscriptions de test](https://airtable.com/shroKDzaHry2Gv3t1) pour les
+    données statut étudiant
+
+
+    ## Comment passer de l'environnement de test à l'environnement de production
+
+     Lors de votre passage en production :
+     - remplacez l'URL de particulier-test.api.gouv.fr à particulier.api.gouv.fr
+     - remplacez la clé d'API de test par la clé d'API obtenue suite à votre [demande d'autorisation](http://datapass.api.gouv.fr)
+  version: 1.0.0-oas3
+security:
+  - Cl_d_API: []
+paths:
+  /impots/svair:
+    get:
+      summary: Service de vérification de l'avis d'impôt sur le revenu
+      description: |
+        Le service permet de vérifier l'authenticité du justificatif d'impôt sur
+        le revenu ou de l'avis d'impôt sur le revenu présenté par un usager
+      parameters:
+        - $ref: '#/components/parameters/NumeroFiscal'
+        - $ref: '#/components/parameters/ReferenceAvis'
+      tags:
+        - Impots
+      deprecated: true
+      responses:
+        '200':
+          description: Avis d'imposition
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/AvisImposition'
+        '401':
+          description: Le token ne vous permet pas d'accéder à l'API
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: >-
+            Les paramètres fournis sont incorrects ou ne correspondent pas à un
+            avis
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Error'
+        default:
+          $ref: '#/components/responses/GenericError'
+  /v2/avis-imposition:
+    get:
+      summary: Service de vérification de l'avis d'impôt sur le revenu
+      description: |
+        Le service permet de vérifier l'authenticité du justificatif d'impôt sur
+        le revenu ou de l'avis d'impôt sur le revenu présenté par un usager
+      parameters:
+        - $ref: '#/components/parameters/NumeroFiscal'
+        - $ref: '#/components/parameters/ReferenceAvis'
+      tags:
+        - Impots
+      responses:
+        '200':
+          description: Avis d'imposition
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/AvisImpositionV2'
+        '401':
+          description: Le token ne vous permet pas d'accéder à l'API
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: >-
+            Les paramètres fournis sont incorrects ou ne correspondent pas à un
+            avis
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Error'
+        default:
+          $ref: '#/components/responses/GenericError'
+  /caf/famille:
+    get:
+      summary: Informations concernant la famille
+      description: >
+        Le service permet de récupérer la composition de la famille, l'adresse
+        déclarée à la CAF, ainsi que le quotient familial.
+
+        Les données sont actualisées chaque mois.
+      parameters:
+        - $ref: '#/components/parameters/NumeroAllocataire'
+        - $ref: '#/components/parameters/CodePostal'
+      tags:
+        - CAF
+      deprecated: true
+      responses:
+        '200':
+          description: Le quotient familial
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Famille'
+        '401':
+          description: Le token ne vous permet pas d'accéder à l'API
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: >-
+            Les paramètres fournis sont incorrects ou ne correspondent pas à un
+            allocataire CAF
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Error'
+        default:
+          description: Unexpected error
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Error'
+  /v2/composition-familiale:
+    get:
+      summary: Informations concernant la famille
+      description: >
+        Le service permet de récupérer la composition de la famille, l'adresse
+        déclarée à la CAF, ainsi que le quotient familial.
+
+        Les données sont actualisées chaque mois.
+      parameters:
+        - $ref: '#/components/parameters/NumeroAllocataire'
+        - $ref: '#/components/parameters/CodePostal'
+      tags:
+        - CAF
+      responses:
+        '200':
+          description: Le quotient familial
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Famille'
+        '401':
+          description: Le token ne vous permet pas d'accéder à l'API
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: >-
+            Les paramètres fournis sont incorrects ou ne correspondent pas à un
+            allocataire CAF
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Error'
+        default:
+          description: Unexpected error
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Error'
+  /v2/situations-pole-emploi:
+    get:
+      operationId: JobSeekerController_searchJobSeekerSituation
+      summary: Recherche de la situation Pôle Emploi d'un individu
+      parameters:
+        - name: identifiant
+          required: true
+          in: query
+          description: 'Identifiant Pôle Emploi de l''individu recherché, aussi appelé PeamU'
+          example: georges_moustaki_77
+          schema:
+            type: string
+      responses:
+        '200':
+          description: La situation Pôle Emploi d'un individu
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JobSeekerSituation'
+        '404':
+          description: Individu introuvable
+        '502':
+          description: Erreur en provenance des services Pôle Emploi
+      tags:
+        - Pôle Emploi
+  /v2/etudiants:
+    get:
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Etudiant'
+        '404':
+          description: Étudiant introuvable
+      operationId: get_student
+      parameters:
+        - name: ine
+          in: query
+          schema:
+            type: string
+          required: true
+      tags:
+        - Statut étudiant
+  /introspect:
+    get:
+      summary: Introspection du token donné en paramètre
+      description: >
+        Cet endpoint permet de découvrir les informations correspondant à un
+        token donné
+      tags:
+        - Token
+      responses:
+        '200':
+          description: l'introspection du token
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Introspection'
+        '404':
+          description: 'Token '
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Error'
+        default:
+          $ref: '#/components/responses/GenericError'
+  /ping:
+    get:
+      summary: Statut des serveurs applicatifs API Particulier
+      description: >
+        Ce endpoint permet de connaitre l'état du serveur API Particulier.
+
+        Si le résultat est autre qu'un code HTTP 200, le serveur rencontre un
+        problème.
+
+        On peut alors considérer que les résultat des autres endpoints seront
+        perturbés.
+      tags:
+        - Ping
+      security: []
+      responses:
+        '200':
+          description: pong
+          content:
+            '*/*':
+              schema:
+                type: string
+                example: pong
+  /impots/ping:
+    get:
+      summary: Status des serveurs de la DGFIP
+      description: >
+        Ce endpoint permet de connaitre l'état du serveur de la DGFIP sur lequel
+        s'appuie API Particulier pour vous restituer les données impôts.
+
+        Si le résultat est autre qu'un code HTTP 200, le serveur de la DGFIP
+        rencontre un problème.
+
+        On peut alors considérer que les résultats du endpoint /impots/svair
+        seront perturbés.
+      tags:
+        - Ping
+      security: []
+      deprecated: true
+      responses:
+        '200':
+          description: pong
+          content:
+            '*/*':
+              schema:
+                type: string
+                example: pong
+  /caf/ping:
+    get:
+      summary: Status des serveurs de la CAF
+      description: >
+        Ce endpoint permet de connaitre l'état du serveur de la CAF sur lequel
+        s'appuie API Particulier pour vous restituer les données famille.
+
+        Si le résultat est autre qu'un code HTTP 200, le serveur de la CAF
+        rencontre un problème.
+
+        On peut alors considérer que les résultats du endpoint /caf/famille
+        seront perturbés.
+      tags:
+        - Ping
+      deprecated: true
+      security: []
+      responses:
+        '200':
+          description: pong
+          content:
+            '*/*':
+              schema:
+                type: string
+                example: pong
+servers:
+  - url: //particulier-test.api.gouv.fr/api
+components:
+  parameters:
+    NumeroFiscal:
+      name: numeroFiscal
+      in: query
+      description: >-
+        Numéro fiscal propre à chaque citoyen (identifiant numérique de 13
+        chiffres)
+      required: true
+      schema:
+        type: number
+        format: string
+    ReferenceAvis:
+      name: referenceAvis
+      in: query
+      description: >-
+        Référence de l'avis fiscal (identifiant alphanumérique de 13
+        caractères). Attention, il est possible que l'utilisateur ajoute une
+        quatorzième lettre à la fin de sa référence d'avis. Il s'agit d'une clé
+        de vérification, il est nécessaire de l'enlever avant de l'envoyer sur
+        l'API Particulier.
+      required: true
+      schema:
+        type: string
+        format: string
+    NumeroAllocataire:
+      name: numeroAllocataire
+      in: query
+      description: Numéro d'allocataire
+      required: true
+      schema:
+        type: number
+        format: string
+    CodePostal:
+      name: codePostal
+      in: query
+      description: Code Postal
+      required: true
+      schema:
+        type: number
+        format: string
+  responses:
+    GenericError:
+      description: Erreur générique
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/Error'
+  securitySchemes:
+    Cl_d_API:
+      type: apiKey
+      name: X-API-Key
+      description: Jeton d'authentification
+      in: header
+  schemas:
+    Introspection:
+      type: object
+      properties:
+        _id:
+          type: string
+          description: Token introspecté
+        name:
+          type: string
+          description: Nom associé au token
+        scopes:
+          type: array
+          description: Scopes techniques associés au token
+          items:
+            type: string
+    AvisImposition:
+      type: object
+      properties:
+        declarant1:
+          $ref: '#/components/schemas/Declarant'
+        foyerFiscal:
+          $ref: '#/components/schemas/FoyerFiscal'
+        declarant2:
+          $ref: '#/components/schemas/Declarant'
+        dateRecouvrement:
+          type: string
+          description: 'Date de recouvrement; format: JJ/MM/AAA'
+        dateEtablissement:
+          type: string
+          description: 'Date d’établissement; format: JJ/MM/AAA'
+        nombreParts:
+          type: number
+          description: Nombre de parts
+        situationFamille:
+          type: string
+          description: 'Situation familiale (marié, célibataire...)'
+        nombrePersonnesCharge:
+          type: integer
+          description: 'Nombre de personne à charge '
+        revenuBrutGlobal:
+          type: integer
+          description: Revenu brut global
+        revenuImposable:
+          type: integer
+          description: Revenu imposable
+        impotRevenuNetAvantCorrections:
+          type: integer
+          description: >-
+            Revenu net avant correction. Prend la valeur null dans le cas d'un
+            revenu non imposable.
+        montantImpot:
+          type: integer
+          description: >-
+            Total de l’impôt sur le revenu net. Prend la valeur null dans le cas
+            d'un revenu non imposable.
+        revenuFiscalReference:
+          type: integer
+          description: Revenu fiscal de référence
+        anneeImpots:
+          type: string
+          description: 'Année au format: AAAA'
+        anneeRevenus:
+          type: string
+          description: 'Année au format: AAAA'
+        erreurCorrectif:
+          type: string
+          description: >-
+            S'il existe un correctif plus récent que l'avis contrôlé, ce champ
+            prend la valeur "Ce document ne correspond pas à la situation la
+            plus récente pour cet usager". Sinon, le champ est absent de la
+            réponse. La présence de ce champ indique qu'il existe un avis
+            d'imposition avec un numéro d'avis distinct qui contient les
+            informations plus récentes. La mise à jour de l'avis initial est en
+            général à l'initiative de l'administré auprès des impôts (par
+            exemple : changement de revenus ou du nombre de part). L'API
+            Particulier peut fournir cet avis à condition de connaître le numéro
+            de l'avis le plus récent. L'API Particulier ne peut pas fournir le
+            numéro de l'avis le plus récent en réponse de l'appel initial. Pour
+            trouver le numéro de cet avis, il faut le demander au particulier
+            auquel l'avis est adressé ou le demander manuellement auprès du
+            centre des impôts de votre région. Vous trouverez de plus amples
+            informations sur <a
+            href="https://www.impots.gouv.fr/portail/precisions-sur-le-service-de-verification-des-avis-dimpot-sur-le-revenu-svair">le
+            site des impôts</a>.
+        situationPartielle:
+          type: string
+          description: >-
+            Le champ "situationPartielle" indique, dans un foyer marié ou pacsé,
+            le décès d'un des contribuables. Cela signifie qu'il y aura 2 avis
+            de taxations pour une même année : une taxation pour le couple du
+            01/01/AAAA à la date du décès d'un déclarant, et une autre taxation,
+            pour le conjoint survivant, de la date de décès du conjoint au
+            31/12/AAAA. Ce champ prend la valeur "(*) Situation  {anneeRevenus} 
+            partielle". Sinon, le champ est absent de la réponse.
+    AvisImpositionV2:
+      type: object
+      properties:
+        declarant1:
+          $ref: '#/components/schemas/Declarant'
+        foyerFiscal:
+          $ref: '#/components/schemas/FoyerFiscal'
+        declarant2:
+          $ref: '#/components/schemas/Declarant'
+        dateRecouvrement:
+          type: string
+          description: 'Date de recouvrement; format: JJ/MM/AAA'
+        dateEtablissement:
+          type: string
+          description: 'Date d’établissement; format: JJ/MM/AAA'
+        nombreParts:
+          type: number
+          description: Nombre de parts
+        situationFamille:
+          type: string
+          description: 'Situation familiale (marié, célibataire...)'
+        nombrePersonnesCharge:
+          type: integer
+          description: 'Nombre de personne à charge '
+        revenuBrutGlobal:
+          type: integer
+          description: Revenu brut global
+          nullable: true
+        revenuImposable:
+          type: integer
+          description: Revenu imposable
+          nullable: true
+        impotRevenuNetAvantCorrections:
+          type: integer
+          description: >-
+            Revenu net avant correction. Prend la valeur null dans le cas d'un
+            revenu non imposable.
+          nullable: true
+        montantImpot:
+          type: integer
+          description: >-
+            Total de l’impôt sur le revenu net. Prend la valeur null dans le cas
+            d'un revenu non imposable.
+          nullable: true
+        revenuFiscalReference:
+          type: integer
+          description: Revenu fiscal de référence
+          nullable: true
+        anneeImpots:
+          type: string
+          description: 'Année au format: AAAA'
+        anneeRevenus:
+          type: string
+          description: 'Année au format: AAAA'
+        erreurCorrectif:
+          type: string
+          description: >-
+            S'il existe un correctif plus récent que l'avis contrôlé, ce champ
+            prend la valeur "Ce document ne correspond pas à la situation la
+            plus récente pour cet usager". Sinon, le champ est absent de la
+            réponse. La présence de ce champ indique qu'il existe un avis
+            d'imposition avec un numéro d'avis distinct qui contient les
+            informations plus récentes. La mise à jour de l'avis initial est en
+            général à l'initiative de l'administré auprès des impôts (par
+            exemple : changement de revenus ou du nombre de part). L'API
+            Particulier peut fournir cet avis à condition de connaître le numéro
+            de l'avis le plus récent. L'API Particulier ne peut pas fournir le
+            numéro de l'avis le plus récent en réponse de l'appel initial. Pour
+            trouver le numéro de cet avis, il faut le demander au particulier
+            auquel l'avis est adressé ou le demander manuellement auprès du
+            centre des impôts de votre région. Vous trouverez de plus amples
+            informations sur <a
+            href="https://www.impots.gouv.fr/portail/precisions-sur-le-service-de-verification-des-avis-dimpot-sur-le-revenu-svair">le
+            site des impôts</a>.
+        situationPartielle:
+          type: string
+          description: >-
+            Le champ "situationPartielle" indique, dans un foyer marié ou pacsé,
+            le décès d'un des contribuables. Cela signifie qu'il y aura 2 avis
+            de taxations pour une même année : une taxation pour le couple du
+            01/01/AAAA à la date du décès d'un déclarant, et une autre taxation,
+            pour le conjoint survivant, de la date de décès du conjoint au
+            31/12/AAAA. Ce champ prend la valeur "(*) Situation  {anneeRevenus} 
+            partielle". Sinon, le champ est absent de la réponse.
+    Declarant:
+      type: object
+      properties:
+        nom:
+          type: string
+          description: nom du déclarant
+        nomNaissance:
+          type: string
+          description: nom de naissance du déclarant
+        prenoms:
+          type: string
+          description: prenoms du déclarant
+        dateNaissance:
+          type: string
+          description: date de naissance du déclarant
+    FoyerFiscal:
+      type: object
+      properties:
+        annee:
+          type: integer
+          description: année
+        adresse:
+          type: string
+          description: adresse fiscale de l'année passée
+    PosteAdresse:
+      type: object
+      description: Adresse au format de la poste
+      properties:
+        identite:
+          type: string
+          description: >-
+            <b>Identité du destinataire : </b>Civilité, titre ou qualité + nom
+            et prénom
+        complementIdentite:
+          type: string
+          description: >-
+            <b>Complément d'information du destinataire ou point de remise :
+            </b>Numéro d'appartement, Escalier
+        complementIdentiteGeo:
+          type: string
+          description: >-
+            <b>Complément d'information du point géographique : </b>Entrée,
+            tour, immeuble, bâtiment, Résidence
+        numeroRue:
+          type: string
+          description: <b>Numéro et libellé de la voie</b>
+        lieuDit:
+          type: string
+          description: >-
+            <b>Lieu-dit ou service particulier de distribution :</b> poste
+            restante, boîte postale
+        codePostalVille:
+          type: string
+          description: <b>Code postale et localité de destination</b>
+        pays:
+          type: string
+          description: <b>Pays</b>
+    Person:
+      type: object
+      description: Personne référencée à la CAF
+      properties:
+        nomPrenom:
+          type: array
+          description: Noms et prénoms des personnes allocataires de la CAF
+          items:
+            type: string
+        dateDeNaissance:
+          type: string
+          description: 'Date de naissance au format: JJMMAAAA'
+        sexe:
+          type: string
+          description: '''M'' : masculin ou ''F'' : féminin'
+    Famille:
+      description: Foyer tel qu'il est déclaré à la CAF
+      type: object
+      properties:
+        allocataires:
+          type: array
+          items:
+            $ref: '#/components/schemas/Person'
+        enfants:
+          type: array
+          items:
+            $ref: '#/components/schemas/Person'
+        adresse:
+          $ref: '#/components/schemas/PosteAdresse'
+        quotientFamilial:
+          type: integer
+          description: Valeur du quotient familial calculé par la CAF
+        annee:
+          type: integer
+          description: Année du quotient familial
+        mois:
+          type: integer
+          description: Mois du quotient familial
+    Error:
+      type: object
+      properties:
+        reason:
+          type: string
+        message:
+          type: string
+        error:
+          type: string
+    Address:
+      type: object
+      properties:
+        codePostal:
+          type: string
+        INSEECommune:
+          type: string
+        localite:
+          type: string
+        ligneVoie:
+          type: string
+        ligneComplementDestinaire:
+          type: string
+        ligneComplementAdresse:
+          type: string
+        ligneComplementDistribution:
+          type: string
+        ligneNom:
+          type: string
+    JobSeekerSituation:
+      type: object
+      properties:
+        identifiant:
+          type: string
+        civilite:
+          type: string
+        nom:
+          type: string
+        nomUsage:
+          type: string
+        prenom:
+          type: string
+        sexe:
+          type: string
+        dateNaissance:
+          format: date-time
+          type: string
+        codeCertificationCNAV:
+          type: string
+        telephone:
+          type: string
+        telephone2:
+          type: string
+        email:
+          type: string
+        adresse:
+          $ref: '#/components/schemas/Address'
+        dateInscription:
+          format: date-time
+          type: string
+        dateCessationInscription:
+          format: date-time
+          type: string
+        codeCategorieInscription:
+          type: integer
+        libelleCategorieInscription:
+          type: string
+      required:
+        - identifiant
+        - adresse
+    Etudiant:
+      required:
+        - dateNaissance
+        - nom
+        - prenom
+      properties:
+        ine:
+          type: string
+          description: Identifiant unique de l'étudiant
+          example: 1234567890G
+        nom:
+          type: string
+          description: Le nom de naissance
+          example: Moustaki
+        prenom:
+          type: string
+          description: Le prénom
+          example: Georges
+          maxLength: 13
+        dateNaissance:
+          type: string
+          format: date-time
+          description: La date de naissance
+          example: 1992-11-29T00:00:00
+        inscriptions:
+          type: array
+          items:
+            $ref: "#/components/schemas/Inscription"
+      type: object
+    Inscription:
+      required:
+        - codeCommune
+        - dateDebutInscription
+        - dateFinInscription
+        - regime
+        - statut
+      properties:
+        dateDebutInscription:
+          type: string
+          format: date-time
+          description: La date de début d'inscription à l'établissement
+          example: 2019-09-01T00:00:00
+        dateFinInscription:
+          type: string
+          format: date-time
+          description: La date de fin d'inscription à l'établissement
+          example: 2020-06-29T00:00:00
+        statut:
+          type: string
+          description: Le statut de l'inscription
+          example: admis
+          enum:
+            - admis
+            - inscrit
+        regime:
+          type: string
+          description: Le régime de formation
+          example: formation initiale
+          enum:
+            - formation initiale
+            - formation continue
+        codeCommune:
+          type: string
+          description: Le code commune
+          example: "29085"
+        etablissement:
+          $ref: "#/components/schemas/Etablissement"
+      type: object
+    Etablissement:
+      required:
+        - nom
+        - uai
+      properties:
+        uai:
+          type: string
+          description: Identifiant unique de l'établissement
+          example: 0011402U
+        nom:
+          type: string
+          description: Nom de l'établissement
+          example: EGC AIN BOURG EN BRESSE EC GESTION ET COMMERCE (01000)
+      type: object
