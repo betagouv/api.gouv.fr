@@ -2,8 +2,8 @@
   "openapi": "3.0.3",
   "info": {
     "title": "Annuaire de l'éducation",
-    "version": "2.0.0",
-    "description": "\nCette API donne accès aux caractéristiques des établissements de l'Éducation nationale : Enseignement, Information et d'Orientation, Établissements administratifs.\n\nL'API est basée sur REST.\n\n- Seule la méthode HTTP `GET` est supportée.\n- Les points d'entrées retournent du JSON\n- Les points d'entrées utilisent [ODSQL](https://help.opendatasoft.com/apis/ods-search-v2/#odsql). Cela veut dire que les paramètres fonctionnent de la même manière sur tout les points d'entrées.\n",
+    "version": "2",
+    "description": "\nCette API donne accès aux caractéristiques des établissements de l'Éducation nationale : Enseignement, Information et d'Orientation, Établissements administratifs.\n\nL'API est basée sur REST.\n\n- Seule la méthode HTTP `GET` est supportée.\n- Les points d'entrées retournent du JSON.\n- Les points d'entrées utilisent [ODSQL](https://help.opendatasoft.com/apis/ods-search-v2/#odsql). Cela veut dire que les paramètres fonctionnent de la même manière sur l'ensemble des points d'entrées.\n",
     "contact": {}
   },
   "servers": [
@@ -24,20 +24,19 @@
   "paths": {
     "/catalog/datasets/fr-en-annuaire-education": {
       "get": {
-        "tags": ["Dataset"],
+        "tags": [
+          "Dataset"
+        ],
         "description": "Retourne les métadonnées de l'API et les différents points d'entrées disponibles.\n",
         "operationId": "getDataset",
         "parameters": [
-          {
-            "$ref": "#/components/parameters/timezone"
-          },
           {
             "$ref": "#/components/parameters/select"
           }
         ],
         "responses": {
           "200": {
-            "description": "The dataset",
+            "description": "Annuaire",
             "content": {
               "application/json": {
                 "schema": {
@@ -52,37 +51,37 @@
       },
       "parameters": []
     },
-    "/catalog/datasets/fr-en-annuaire-education/query": {
+    "/catalog/datasets/fr-en-annuaire-education/records": {
       "get": {
-        "tags": ["Dataset"],
+        "tags": [
+          "Dataset"
+        ],
         "description": "Réalise une requête sur l'annuaire pour récupérer les établissements.\n",
         "operationId": "getRecords",
         "parameters": [
           {
-            "$ref": "#/components/parameters/limit"
-          },
-          {
-            "$ref": "#/components/parameters/offset"
-          },
-          {
-            "$ref": "#/components/parameters/order_by"
-          },
-          {
             "$ref": "#/components/parameters/select"
-          },
-          {
-            "$ref": "#/components/parameters/timezone"
           },
           {
             "$ref": "#/components/parameters/where"
           },
           {
+            "$ref": "#/components/parameters/order_by"
+          },
+          
+          {
             "$ref": "#/components/parameters/group_by"
+          },
+          {
+            "$ref": "#/components/parameters/limit"
+          },
+          {
+            "$ref": "#/components/parameters/offset"
           }
         ],
         "responses": {
           "200": {
-            "description": "Records",
+            "description": "Etablissement",
             "content": {
               "application/json": {
                 "schema": {
@@ -182,7 +181,7 @@
       "where": {
         "name": "where",
         "in": "query",
-        "description": "Un tableau de filtres.\n\nUn filtre est une expression effectuant une recherche qui peut éganelement inclure des opérateurs logiques\n(NOT, AND, OR...) ainsi que d'autres fonctions pour effectuer des opérations complexes.\n\nConsultez [la documentation de référence](https://help.opendatasoft.com/apis/ods-search-v2) pour plsus de détails.\n",
+        "description": "Une expression pour filtrer les résultats, qui peut inclure des opérateurs logiques\n(`NOT`, `AND`, `OR`...) ainsi que d'autres fonctions pour effectuer des opérations complexes.\n\nConsultez [la documentation de référence](https://help.opendatasoft.com/apis/ods-search-v2) pour plus de détails.\n\nPar exemple : `statut_public_prive=\"Public\"` pour ne garder que les établissements publics.\n",
         "style": "form",
         "explode": true,
         "schema": {
@@ -195,7 +194,7 @@
       "limit": {
         "name": "limit",
         "in": "query",
-        "description": "Nombre d'établissements à retourner.\n\nA utiliser avec offset pour la pagination.\n\nLa valeur maximum de limit est 100. Pour récupérer plus de données, vous pouvez utiliser les exports.\nLa valeur par défaut est 10.\n",
+        "description": "Nombre d'établissements à retourner.\n\nA utiliser avec `offset` pour la pagination.\n\nLa valeur maximale de `limit` est 100. Pour récupérer plus de données, vous pouvez utiliser les exports.\nLa valeur par défaut est 10.\n",
         "schema": {
           "maximum": 100,
           "minimum": -1,
@@ -206,7 +205,7 @@
       "offset": {
         "name": "offset",
         "in": "query",
-        "description": "Index du premier établissement à retourner (démarre à 0).\n\nA utiliser avec limit pour la pagination.\n",
+        "description": "Indice du premier établissement à retourner (commence à 0).\n\nA utiliser avec `limit` pour la pagination.\n",
         "schema": {
           "minimum": 0,
           "type": "integer",
@@ -216,7 +215,7 @@
       "select": {
         "name": "select",
         "in": "query",
-        "description": "Expression select pour ajouter, supprimer, modifier les champs retournés.\nUne expression peut être:\n  - un joker ('*'): retoourne l'ensemble des champs\n  - un nom de champ: retourne seulement ce champ\n  - une expression complexe : retourne le resultat de l'expression. Un label peut être positionné pour cette expression. Par exemple : 'taille * 2 as taille_plus_grande' retournera un nouveau champ nommé taille_plus_grande et contennant le double de la valeur du cahmp taille.\n",
+        "description": "Permet d'ajouter, de supprimer et de modifier les champs retournés.\nUne expression peut être:\n  - un joker `*` : retourne l'ensemble des champs\n  - un nom de champ: retourne seulement ce champ\n  - une expression complexe : retourne le resultat de l'expression. Un label peut être positionné pour cette expression. Par exemple : `count(*) as compte` retournera un nouveau champ nommé `compte` contenant le nombre d'établissements présents dans la requête.\n",
         "schema": {
           "type": "string"
         }
@@ -224,7 +223,7 @@
       "group_by": {
         "name": "group_by",
         "in": "query",
-        "description": "Expression group by défini un ensemble de fonction pour une aggregation.\nCela permet de grouper les resultats en fonction de chaque valeur du champ.\n",
+        "description": "Permet de grouper les resultats selon les valeurs d'un champ.\n\nPar exemple : `group_by=statut_public_prive` groupe les résultats en fonction du statut de l'établissement.\n",
         "schema": {
           "type": "string"
         }
@@ -232,7 +231,7 @@
       "order_by": {
         "name": "order_by",
         "in": "query",
-        "description": "Liste de nom de champ séparée par des virgules, suivi par une indication d'ordre (`asc` ou `desc`).\n\nTri les résultats selon les valeurs des champs par ordre croissant par défaut.\nPour trier par ordre décroissant, vous pouvez utiliser le mot clé `desc`.\n\nPar exemple : `sum(age) desc, name asc`\n",
+        "description": "Liste de champs séparées par des virgules, suivi par une indication d'ordre (`asc` ou `desc`).\n\nTri les résultats selon les valeurs des champs par ordre croissant par défaut.\nPour trier par ordre décroissant, vous pouvez utiliser le mot clé `desc`.\n\nPar exemple : `nombre_d_eleves desc` pour trier les établissements du plus grand nombre d'élèves au plus petit.\n",
         "style": "form",
         "explode": false,
         "schema": {
@@ -240,15 +239,6 @@
           "items": {
             "type": "string"
           }
-        }
-      },
-      "timezone": {
-        "name": "timezone",
-        "in": "query",
-        "description": "Positionne le fuseau horaire pour les champs date",
-        "schema": {
-          "type": "string",
-          "default": "UTC"
         }
       }
     },
