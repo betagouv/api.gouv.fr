@@ -1,7 +1,6 @@
 ---
 title: API Particulier
 tagline: Accédez aux données fiscales (DGFIP), familiales (CAF), au statut pôle-emploi et au statut étudiant des particuliers pour simplifier des démarches administratives
-external_site: https://particulier.api.gouv.fr
 is_open: -1 # -1 means API not open
 datapass_link: https://datapass.api.gouv.fr/api-particulier
 access_page:
@@ -61,7 +60,7 @@ monitoring_link: https://status.particulier.api.gouv.fr
 monitoring_description: |
   La DINUM s’engage à ce que le Service soit accessible à 95% et la DINUM s’engage à améliorer progressivement ce rendement.
 contact_link: contact@particulier.api.gouv.fr
-doc_tech_link: /swaggers/api-particulier.yml
+doc_tech_link: https://particulier.api.gouv.fr/api/open-api.yml
 themes:
   - Particulier
 visits_2019: 8642
