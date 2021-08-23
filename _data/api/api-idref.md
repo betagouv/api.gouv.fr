@@ -19,7 +19,7 @@ keywords:
   - Bibliothèque
   - BnF
 contact_link: idref@abes.fr
-doc_tech_link: https://raw.githubusercontent.com/abes-esr/openapi/master/idref.yaml
+doc_tech_link: https://abes-esr.github.io/openapi/idref.yaml
 themes:
   - Education
   - Culture
