@@ -83,6 +83,9 @@ last_update: 08/10/2019
 
 ### Les données disponibles dans l'API
 
+L’API Impôt particulier peut restituer différentes données fiscales issues de la déclaration annuelle de revenus soumise à taxation.
+Le tableau ci-dessous présente les principales données de l’API Impôt particulier qui permettent de simplifier l’instruction des demandes.
+
 | Nom de la donnée                 | type         | Commentaire                                                             |
 | -------------------------------- | ------------ | ----------------------------------------------------------------------- |
 | Revenu fiscal de référence (RFR) | nombre       |                                                                         |
