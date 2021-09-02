@@ -1,4 +1,3 @@
-import { constant } from 'lodash';
 import React from 'react';
 import constants from '../../constants';
 
