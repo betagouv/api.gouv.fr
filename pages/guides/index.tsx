@@ -9,6 +9,16 @@ interface Props {
   generalGuides: IGuideElementShort[];
 }
 
+const GuideLink: React.FC<{ guide: IGuideElementShort }> = ({ guide }) => (
+  <RichLink
+    key={guide.path}
+    title={guide.title}
+    image={guide.image ? `/images/guides/thumbnail_${guide.image}` : undefined}
+    href={guide.path}
+    labels={guide.api || []}
+  />
+);
+
 const Guides: NextPage<Props> = ({ guidesForAnAPI, generalGuides }) => {
   return (
     <Page
@@ -22,16 +32,7 @@ const Guides: NextPage<Props> = ({ guidesForAnAPI, generalGuides }) => {
         <h2>Comment fonctionnent les API ?</h2>
         <div className="default-grid">
           {generalGuides.map(guide => (
-            <RichLink
-              key={guide.path}
-              title={guide.title}
-              image={
-                guide.image
-                  ? `/images/guides/thumbnail_${guide.image}`
-                  : undefined
-              }
-              href={guide.path}
-            />
+            <GuideLink key={guide.title} guide={guide} />
           ))}
         </div>
       </section>
@@ -39,17 +40,7 @@ const Guides: NextPage<Props> = ({ guidesForAnAPI, generalGuides }) => {
         <h2>Comment s’utilisent les API du service public ?</h2>
         <div className="default-grid">
           {guidesForAnAPI.map(guide => (
-            <RichLink
-              key={guide.path}
-              title={guide.title}
-              image={
-                guide.image
-                  ? `/images/guides/thumbnail_${guide.image}`
-                  : undefined
-              }
-              href={guide.path}
-              labels={guide.api}
-            />
+            <GuideLink key={guide.title} guide={guide} />
           ))}
         </div>
       </section>
