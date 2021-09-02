@@ -30,7 +30,7 @@ content_intro: |
 
   L'API permet de rechercher des établissements sur un territoire, d'obtenir une sélection par type d'établissement, et d'accéder à leurs coordonnées de contact.
 contact_link: https://data.education.gouv.fr/pages/contactez-nous/
-doc_tech_link: /swaggers/ods/api-annuaire-education.json
+doc_tech_link: /swaggers/ods/api-annuaire-education-v2.json
 doc_tech_external: https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/api
 visits_2019: 10602
 last_update: 01/06/2021

@@ -1,0 +1,1194 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Impôt_Particulier",
+    "description": "Exposition des informations fiscales des particuliers sur les revenus et les habitations.",
+    "version": "1.0"
+  },
+  "paths": {
+    "/spi/{spi}/lep/departement/{departement}/annrev/{annrev}/bareme/{bareme}": {
+      "get": {
+        "description": "indicateur LEP V2",
+        "operationId": "sayJAXBOuverturelep",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "required": true,
+            "description": "Jeton d'authentification. Header Authorization standard, utilisant un schéma Bearer. Exemple: \"bearer {token}\""
+          },
+          {
+            "name": "X-Correlation-ID",
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"
+            },
+            "in": "header",
+            "required": true,
+            "description": "Identifiant de corrélation de la requête (format UUID)"
+          },
+          {
+            "name": "ID_Teleservice",
+            "in": "header",
+            "description": "Identifiant de téléservice appelant",
+            "required": false,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "spi",
+            "description": "Numéro fiscal",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "departement",
+            "description": "Numéro de département (3 caractères)",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "annrev",
+            "description": "Année de revenus",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "bareme",
+            "description": "Année de barême",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/prs.dgfip.part.ouverturelep.v1+json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/OuvertureLepJAXBbean"
+                  },
+                  "type": "array"
+                }
+              }
+            },
+            "description": "successful operation"
+          },
+          "204": {
+            "description": "Aucune réponse ne peut être apportée"
+          },
+          "400": {
+            "description": "codeapp 4001 : mauvais format de spi / codeapp 4002 : mauvais format d'année (annrev ou bareme) / codeapp 4007 : mauvais format de département"
+          },
+          "403": {
+            "description": "codeapp 4031 : L’utilisateur n’a pas accès à la ressource"
+          },
+          "410": {
+            "description": "codeapp 4101 : La requête avec le spi et l'année ne renvoie aucun résultat \n codeapp 4102 : Le spi envoyé ne correspond à aucun usager"
+          },
+          "500": {
+            "description": "Erreur technique"
+          }
+        },
+        "summary": "indicateurLEPparDptAnnrevBareme",
+        "x-auth-type": "Application & Application User",
+        "x-throttling-tier": "Unlimited",
+        "x-scope": "RessourceLEP",
+        "security": [
+          {
+            "default": [
+              "RessourceLEP"
+            ]
+          }
+        ]
+      }
+    },
+    "/situations/ir/assiettes/annrev/{annrev}": {
+      "get": {
+        "summary": "sayJAXBSituationsIrAssiettesV1",
+        "description": "",
+        "operationId": "SayJAXBSituationsIrAssiettesFCV1",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/paramAuthorization"
+          },
+          {
+            "$ref": "#/components/parameters/paramXFranceConnectOAuth"
+          },
+          {
+            "$ref": "#/components/parameters/paramXCorrelationID"
+          },
+          {
+            "$ref": "#/components/parameters/paramIdTeleservice"
+          },
+          {
+            "name": "annrev",
+            "in": "path",
+            "description": "Année de revenus",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "headers": {},
+            "content": {
+              "application/prs.dgfip.part.situations.ir.assiettes.v1+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SituationsIRAssiettesJAXBbean"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false,
+        "x-auth-type": "Application & Application User",
+        "x-throttling-tier": "Unlimited",
+        "x-scope": "RessourceIR",
+        "security": [
+          {
+            "default": [
+              "RessourceIR"
+            ]
+          }
+        ]
+      }
+    },
+    "/spi/{spi}/situations/ir/assiettes/annrev/{annrev}": {
+      "get": {
+        "summary": "sayJAXBSituationsIrAssiettesV1",
+        "description": "",
+        "operationId": "SayJAXBSituationsIrAssiettesV1",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/paramAuthorization"
+          },
+          {
+            "$ref": "#/components/parameters/paramXCorrelationID"
+          },
+          {
+            "$ref": "#/components/parameters/paramIdTeleservice"
+          },
+          {
+            "name": "spi",
+            "in": "path",
+            "description": "Numéro fiscal",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "annrev",
+            "in": "path",
+            "description": "Année de revenus",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "headers": {},
+            "content": {
+              "application/prs.dgfip.part.situations.ir.assiettes.v1+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SituationsIRAssiettesJAXBbean"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false,
+        "x-auth-type": "Application & Application User",
+        "x-throttling-tier": "Unlimited",
+        "x-scope": "RessourceIR",
+        "security": [
+          {
+            "default": [
+              "RessourceIR"
+            ]
+          }
+        ]
+      }
+    },
+    "/spi/{spi}/situations/ir/factures/annrev/{annrev}": {
+      "get": {
+        "summary": "sayJAXBSituationsIrFacturesV1",
+        "description": "",
+        "operationId": "SayJAXBSituationsIrFacturesV1",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/paramAuthorization"
+          },
+          {
+            "$ref": "#/components/parameters/paramXCorrelationID"
+          },
+          {
+            "$ref": "#/components/parameters/paramIdTeleservice"
+          },
+          {
+            "name": "spi",
+            "in": "path",
+            "description": "Numéro fiscal",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "annrev",
+            "in": "path",
+            "description": "Année de revenus",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "headers": {},
+            "content": {
+              "application/prs.dgfip.part.situations.ir.factures.v1+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SituationsIRAssiettesFacturesJAXBbean"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false,
+        "x-auth-type": "Application & Application User",
+        "x-throttling-tier": "Unlimited",
+        "x-scope": "RessourceIRFacture",
+        "security": [
+          {
+            "default": [
+              "RessourceIRFacture"
+            ]
+          }
+        ]
+      }
+    },
+    "/situations/ir/factures/annrev/{annrev}": {
+      "get": {
+        "summary": "sayJAXBSituationsIrFacturesV1",
+        "description": "",
+        "operationId": "SayJAXBSituationsIrFacturesFCV1",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/paramAuthorization"
+          },
+          {
+            "$ref": "#/components/parameters/paramXFranceConnectOAuth"
+          },
+          {
+            "$ref": "#/components/parameters/paramXCorrelationID"
+          },
+          {
+            "$ref": "#/components/parameters/paramIdTeleservice"
+          },
+          {
+            "name": "annrev",
+            "in": "path",
+            "description": "Année de revenus",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "headers": {},
+            "content": {
+              "application/prs.dgfip.part.situations.ir.factures.v1+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SituationsIRAssiettesFacturesJAXBbean"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false,
+        "x-auth-type": "Application & Application User",
+        "x-throttling-tier": "Unlimited",
+        "x-scope": "RessourceIRFacture",
+        "security": [
+          {
+            "default": [
+              "RessourceIRFacture"
+            ]
+          }
+        ]
+      }
+    },
+    "/spi/{spi}/situations/th/assiettes/principale/annrev/{annrev}": {
+      "get": {
+        "summary": "sayJAXBSituationsTHPV1",
+        "description": "",
+        "operationId": "SayJAXBSituationsTHPV1",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/paramAuthorization"
+          },
+          {
+            "$ref": "#/components/parameters/paramXCorrelationID"
+          },
+          {
+            "$ref": "#/components/parameters/paramIdTeleservice"
+          },
+          {
+            "name": "spi",
+            "in": "path",
+            "description": "Numéro fiscal",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "annrev",
+            "in": "path",
+            "description": "Année de revenus",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "headers": {},
+            "content": {
+              "application/prs.dgfip.part.situations.th.assiettes.v1+json;charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/SituationsTH"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false,
+        "x-auth-type": "Application & Application User",
+        "x-throttling-tier": "Unlimited",
+        "x-scope": "RessourceTHPrincipale",
+        "security": [
+          {
+            "default": [
+              "RessourceTHPrincipale"
+            ]
+          }
+        ]
+      }
+    },
+    "/situations/th/assiettes/principale/annrev/{annrev}": {
+      "get": {
+        "summary": "sayJAXBSituationsTHPV1",
+        "description": "",
+        "operationId": "SayJAXBSituationsTHPFCV1",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/paramAuthorization"
+          },
+          {
+            "$ref": "#/components/parameters/paramXFranceConnectOAuth"
+          },
+          {
+            "$ref": "#/components/parameters/paramXCorrelationID"
+          },
+          {
+            "$ref": "#/components/parameters/paramIdTeleservice"
+          },
+          {
+            "name": "annrev",
+            "in": "path",
+            "description": "Année de revenus",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "headers": {},
+            "content": {
+              "application/prs.dgfip.part.situations.th.assiettes.v1+json;charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/SituationsTH"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false,
+        "x-auth-type": "Application & Application User",
+        "x-throttling-tier": "Unlimited",
+        "x-scope": "RessourceTHPrincipale",
+        "security": [
+          {
+            "default": [
+              "RessourceTHPrincipale"
+            ]
+          }
+        ]
+      }
+    },
+    "/spi/{spi}/situations/ifiisf/assiettes/annrev/{annrev}": {
+      "get": {
+        "summary": "sayJAXBSituationIfiIsfV1",
+        "description": "",
+        "operationId": "SayJAXBSituationIfiIsfV1",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/paramAuthorization"
+          },
+          {
+            "$ref": "#/components/parameters/paramXCorrelationID"
+          },
+          {
+            "$ref": "#/components/parameters/paramIdTeleservice"
+          },
+          {
+            "name": "spi",
+            "in": "path",
+            "description": "Numéro fiscal",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "annrev",
+            "in": "path",
+            "description": "Année de revenus",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "headers": {},
+            "content": {
+              "application/prs.dgfip.situations.ifiisf.v1+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SituationIfiIsf"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false,
+        "x-auth-type": "Application & Application User",
+        "x-throttling-tier": "Unlimited",
+        "x-scope": "RessourceIFI",
+        "security": [
+          {
+            "default": [
+              "RessourceIFI"
+            ]
+          }
+        ]
+      }
+    },
+    "/situations/ifiisf/assiettes/annrev/{annrev}": {
+      "get": {
+        "summary": "sayJAXBSituationIfiIsfV1",
+        "description": "",
+        "operationId": "SayJAXBSituationIfiIsfFCV1",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/paramAuthorization"
+          },
+          {
+            "$ref": "#/components/parameters/paramXFranceConnectOAuth"
+          },
+          {
+            "$ref": "#/components/parameters/paramXCorrelationID"
+          },
+          {
+            "$ref": "#/components/parameters/paramIdTeleservice"
+          },
+          {
+            "name": "annrev",
+            "in": "path",
+            "description": "Année de revenus",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "headers": {},
+            "content": {
+              "application/prs.dgfip.situations.ifiisf.v1+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SituationIfiIsf"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false,
+        "x-auth-type": "Application & Application User",
+        "x-throttling-tier": "Unlimited",
+        "x-scope": "RessourceIFI",
+        "security": [
+          {
+            "default": [
+              "RessourceIFI"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "SituationIfiIsf": {
+        "title": "SituationIfiIsf",
+        "allOf": [
+          {
+            "type": "object",
+            "properties": {
+              "indicateurIfiIsf": {
+                "type": "string"
+              }
+            }
+          }
+        ],
+        "description": ""
+      },
+      "OuvertureLepJAXBbean": {
+        "properties": {
+          "statut": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "SituationsTH": {
+        "title": "SituationsTH",
+        "allOf": [
+          {
+            "type": "object",
+            "properties": {
+              "situationsTH": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/SituationTH"
+                },
+                "description": ""
+              }
+            }
+          }
+        ],
+        "description": ""
+      },
+      "SituationTH": {
+        "title": "SituationTH",
+        "type": "object",
+        "properties": {
+          "btq": {
+            "type": "string"
+          },
+          "codeAft": {
+            "type": "string"
+          },
+          "codeCommune": {
+            "type": "string"
+          },
+          "codeDsf": {
+            "type": "string"
+          },
+          "libelleCommune": {
+            "type": "string"
+          },
+          "libelleEdition1": {
+            "type": "string"
+          },
+          "libelleEdition2": {
+            "type": "string"
+          },
+          "libelleVoie": {
+            "type": "string"
+          },
+          "locaux": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Locaux"
+            },
+            "description": ""
+          },
+          "natureImp": {
+            "type": "string"
+          },
+          "numVoie": {
+            "type": "string"
+          },
+          "regimeTax": {
+            "type": "string"
+          }
+        },
+        "description": ""
+      },
+      "Locaux": {
+        "title": "Locaux",
+        "type": "object",
+        "properties": {
+          "affectation": {
+            "type": "string"
+          },
+          "invariant": {
+            "type": "string"
+          },
+          "natureLocal": {
+            "type": "string"
+          }
+        },
+        "description": ""
+      },
+      "AftJAXBbean": {
+        "properties": {
+          "complementAdresse": {
+            "type": "string"
+          },
+          "getcodePostal": {
+            "type": "string"
+          },
+          "getcommune": {
+            "type": "string"
+          },
+          "voie": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "CodeRevJAXBbean": {
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "valeur": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "DateNaisDecJAXBbean": {
+        "properties": {
+          "annee": {
+            "type": "string"
+          },
+          "jour": {
+            "type": "string"
+          },
+          "mois": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "PacJAXBbean": {
+        "properties": {
+          "nbPac": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "nbPacF": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "nbPacG": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "nbPacH": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "nbPacI": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "nbPacJ": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "nbPacN": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "nbPacP": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "nbPacR": {
+            "format": "int32",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      },
+      "RevsJAXBbean": {
+        "properties": {
+          "alpha": {
+            "items": {
+              "$ref": "#/components/schemas/CodeRevJAXBbean"
+            },
+            "type": "array"
+          },
+          "chges": {
+            "items": {
+              "$ref": "#/components/schemas/CodeRevJAXBbean"
+            },
+            "type": "array"
+          },
+          "div": {
+            "items": {
+              "$ref": "#/components/schemas/CodeRevJAXBbean"
+            },
+            "type": "array"
+          },
+          "fonc": {
+            "items": {
+              "$ref": "#/components/schemas/CodeRevJAXBbean"
+            },
+            "type": "array"
+          },
+          "pro": {
+            "items": {
+              "$ref": "#/components/schemas/CodeRevJAXBbean"
+            },
+            "type": "array"
+          },
+          "pv": {
+            "items": {
+              "$ref": "#/components/schemas/CodeRevJAXBbean"
+            },
+            "type": "array"
+          },
+          "rcm": {
+            "items": {
+              "$ref": "#/components/schemas/CodeRevJAXBbean"
+            },
+            "type": "array"
+          },
+          "rici": {
+            "items": {
+              "$ref": "#/components/schemas/CodeRevJAXBbean"
+            },
+            "type": "array"
+          },
+          "tspr": {
+            "items": {
+              "$ref": "#/components/schemas/CodeRevJAXBbean"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "SitPartJAXBbean": {
+        "properties": {
+          "indEnfSeul5ansMin": {
+            "type": "string"
+          },
+          "indNonSeul": {
+            "type": "string"
+          },
+          "pensVeufGuerre": {
+            "type": "string"
+          },
+          "sitComb": {
+            "type": "string"
+          },
+          "sitPartF": {
+            "type": "string"
+          },
+          "sitPartP": {
+            "type": "string"
+          },
+          "sitPartW": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "SituationIRfactureJAXBbean": {
+        "properties": {
+          "codeLigne": {
+            "type": "string"
+          },
+          "colonne1": {
+            "type": "string"
+          },
+          "colonne2": {
+            "type": "string"
+          },
+          "colonne3": {
+            "type": "string"
+          },
+          "colonne4": {
+            "type": "string"
+          },
+          "libelleLigne": {
+            "type": "string"
+          },
+          "numLigne": {
+            "format": "int32",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      },
+      "SituationsIRAssiettesFacturesJAXBbean": {
+        "properties": {
+          "aft": {
+            "type": "string"
+          },
+          "aftDetail": {
+            "$ref": "#/components/schemas/AftJAXBbean"
+          },
+          "dateNaisDec1": {
+            "$ref": "#/components/schemas/DateNaisDecJAXBbean"
+          },
+          "dateNaisDec2": {
+            "$ref": "#/components/schemas/DateNaisDecJAXBbean"
+          },
+          "facture": {
+            "items": {
+              "$ref": "#/components/schemas/SituationIRfactureJAXBbean"
+            },
+            "type": "array"
+          },
+          "indDeficit": {
+            "type": "string"
+          },
+          "indOptionImpotSepar": {
+            "type": "string"
+          },
+          "mntRevbareme": {
+            "format": "int64",
+            "type": "integer"
+          },
+          "nbPart": {
+            "format": "double",
+            "type": "number"
+          },
+          "nmNaiDec1": {
+            "type": "string"
+          },
+          "nmNaiDec2": {
+            "type": "string"
+          },
+          "nmUsaDec1": {
+            "type": "string"
+          },
+          "nmUsaDec2": {
+            "type": "string"
+          },
+          "pac": {
+            "$ref": "#/components/schemas/PacJAXBbean"
+          },
+          "pensAlPer": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "prnmDec1": {
+            "type": "string"
+          },
+          "prnmDec2": {
+            "type": "string"
+          },
+          "rev": {
+            "$ref": "#/components/schemas/RevsJAXBbean"
+          },
+          "revenuBrutGlobal": {
+            "format": "int64",
+            "type": "integer"
+          },
+          "rfr": {
+            "format": "int64",
+            "type": "integer"
+          },
+          "sitFam": {
+            "type": "string"
+          },
+          "sitParDeclaree": {
+            "$ref": "#/components/schemas/SitPartJAXBbean"
+          },
+          "sitParIso": {
+            "type": "string"
+          },
+          "sitPart": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "SituationsIRAssiettesJAXBbean": {
+        "properties": {
+          "aft": {
+            "type": "string"
+          },
+          "aftDetail": {
+            "$ref": "#/components/schemas/AftJAXBbean"
+          },
+          "dateNaisDec1": {
+            "$ref": "#/components/schemas/DateNaisDecJAXBbean"
+          },
+          "dateNaisDec2": {
+            "$ref": "#/components/schemas/DateNaisDecJAXBbean"
+          },
+          "indDeficit": {
+            "type": "string"
+          },
+          "indOptionImpotSepar": {
+            "type": "string"
+          },
+          "mntRevbareme": {
+            "format": "int64",
+            "type": "integer"
+          },
+          "nbPart": {
+            "format": "double",
+            "type": "number"
+          },
+          "nmNaiDec1": {
+            "type": "string"
+          },
+          "nmNaiDec2": {
+            "type": "string"
+          },
+          "nmUsaDec1": {
+            "type": "string"
+          },
+          "nmUsaDec2": {
+            "type": "string"
+          },
+          "pac": {
+            "$ref": "#/components/schemas/PacJAXBbean"
+          },
+          "pensAlPer": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "prnmDec1": {
+            "type": "string"
+          },
+          "prnmDec2": {
+            "type": "string"
+          },
+          "rev": {
+            "$ref": "#/components/schemas/RevsJAXBbean"
+          },
+          "revenuBrutGlobal": {
+            "format": "int64",
+            "type": "integer"
+          },
+          "rfr": {
+            "format": "int64",
+            "type": "integer"
+          },
+          "sitFam": {
+            "type": "string"
+          },
+          "sitParDeclaree": {
+            "$ref": "#/components/schemas/SitPartJAXBbean"
+          },
+          "sitParIso": {
+            "type": "string"
+          },
+          "sitPart": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "parameters": {
+      "paramAuthorization": {
+        "name": "Authorization",
+        "schema": {
+          "type": "string"
+        },
+        "in": "header",
+        "required": true,
+        "description": "Jeton d'authentification. Header Authorization standard, utilisant un schéma Bearer. Exemple: \"bearer {token}\""
+      },
+      "paramXCorrelationID": {
+        "name": "X-Correlation-ID",
+        "schema": {
+          "type": "string",
+          "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"
+        },
+        "in": "header",
+        "required": true,
+        "description": "Identifiant de corrélation de la requête (format UUID)"
+      },
+      "paramXFranceConnectOAuth": {
+        "name": "X-FranceConnect-OAuth",
+        "schema": {
+          "type": "string"
+        },
+        "in": "header",
+        "required": true,
+        "description": "Jeton de consentement France Connect"
+      },
+      "paramIdTeleservice": {
+        "name": "ID_Teleservice",
+        "in": "header",
+        "description": "Identifiant de téléservice appelant",
+        "required": false,
+        "style": "simple",
+        "schema": {
+          "type": "string"
+        }
+      }
+    },
+    "securitySchemes": {
+      "Authorization": {
+        "type": "oauth2",
+        "description": "OAuth 2.0 avec un grant type Client Credentials. Header Authorization standard, utilisant un schéma Bearer. Exemple: \\\"Bearer {token}\\\"",
+        "flows": {
+          "clientCredentials": {
+            "tokenUrl": "https://IP-GATEWAY/token",
+            "scopes": {
+              "RessourceIR": "Ressources IR",
+              "RessourceIFI": "Ressource IFI",
+              "RessourceTHPrincipale": "RessourceTHPrincipale",
+              "RessourceLEP": "RessourceLEP",
+              "RessourceDPR": "RessourceDPR",
+              "RessourceIRFacture": "RessourceIRFacture"
+            }
+          }
+        }
+      },
+      "default": {
+        "type": "oauth2",
+        "flows": {
+          "implicit": {
+            "authorizationUrl": "https://IP-GATEWAY/authorize",
+            "scopes": {
+              "RessourceIR": "Ressources IR",
+              "RessourceIFI": "Ressource IFI",
+              "RessourceTHPrincipale": "RessourceTHPrincipale",
+              "RessourceLEP": "RessourceLEP",
+              "RessourceDPR": "RessourceDPR",
+              "RessourceIRFacture": "RessourceIRFacture"
+            }
+          }
+        }
+      }
+    }
+  },
+  "x-wso2-security": {
+    "apim": {
+      "x-wso2-scopes": [
+        {
+          "name": "Ressources IR",
+          "description": "Accès aux données liées à l'impôt sur le revenu.",
+          "key": "RessourceIR",
+          "roles": "Application/ImpotParticulierRessourceIR"
+        },
+        {
+          "name": "Ressource IFI",
+          "description": "Accès aux données liées à l'impôt sur la fortune immobilière.",
+          "key": "RessourceIFI",
+          "roles": "Application/ImpotParticulierRessourceIFI"
+        },
+        {
+          "name": "RessourceTHPrincipale",
+          "description": "Accès aux données de la taxe d'habitation.",
+          "key": "RessourceTHPrincipale",
+          "roles": " Application/ImpotParticulierRessourceTH"
+        },
+        {
+          "name": "RessourceLEP",
+          "description": "Accès aux données liées au Livret d'Epargne Populaire.",
+          "key": "RessourceLEP",
+          "roles": "Application/ImpotParticulierRessourceLEP"
+        },
+        {
+          "name": "RessourceDPR",
+          "description": "Accès aux données de la Déclaration Pré-Remplie (DPR)",
+          "key": "RessourceDPR",
+          "roles": "Application/ImpotParticulierRessourceDPR"
+        },
+        {
+          "name": "RessourceIRFacture",
+          "description": "Accès aux données liées à l'impôt sur le revenu et aux factures.",
+          "key": "RessourceIRFacture",
+          "roles": "Application/ImpotParticulierRessourceIRFac"
+        }
+      ]
+    }
+  },
+  "security": [
+    {
+      "Authorization": []
+    }
+  ],
+  "servers": [
+    {
+      "url": "https://IP-GATEWAY/impotparticulier/1.0"
+    },
+    {
+      "url": "http://IP-GATEWAY/impotparticulier/1.0"
+    }
+  ]
+}

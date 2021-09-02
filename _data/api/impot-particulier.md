@@ -60,7 +60,7 @@ themes:
   - Particulier
 contact_link: dtnum.donnees.demande-acces@dgfip.finances.gouv.fr
 visits_2019: 13000
-doc_tech_link: /swaggers/api-impot-particulier.yaml
+doc_tech_link: /swaggers/api-impot-particulier.json
 content_intro: |
   L'API Impôt particulier simplifie les démarches des usagers et le processus de gestion de vos téléservices. Elle permet l’échange d’informations fiscales entre la DGFiP et une entité administrative (administration, ministère, organisme public, collectivité) ou une entreprise dans le cadre de leurs obligations légales et réglementaires pour des missions d’intérêts général.
 
@@ -68,10 +68,11 @@ content_intro: |
 
   Pour l'usager : l'API Impôt particulier dématérialise les démarches à 100% :
 
-  1. Je me connecte ou je me "FranceConnect" sur un site pour réaliser une démarche.
-  2. **Soit** je me suis FranceConnecté et je consens à la transmission par la DGFiP, des seules données fiscales nécessaires, **soit** je renseigne mon identifiant fiscal
-  3. L'entité administrative qui opère le site récupère immédiatement mes informations
-  4. Je n’ai rien d'autre à faire, ma démarche est terminée !
+  1. Je me connecte ou je me "FranceConnect" sur un site pour réaliser une démarche administrative.
+  2. Si je me suis FranceConnecté, je suis informé de la liste des données qui seront transmises.
+  3. Si je ne me suis pas FranceConnecté, je communique mon identifiant fiscal (SPI) ou mon état civil complet.
+  4. Le fournisseur de service récupère immédiatement mes informations.
+  5. Je n’ai rien d’autre à faire, ma démarche est terminée !
 
   Pour l’acteur qui la met en place :
 
@@ -82,9 +83,15 @@ last_update: 08/10/2019
 
 ### Les données disponibles dans l'API
 
+L’API Impôt particulier peut restituer différentes données fiscales issues de la déclaration annuelle de revenus soumise à taxation.
+Le tableau ci-dessous présente les principales données de l’API Impôt particulier qui permettent de simplifier l’instruction des demandes.
+
 | Nom de la donnée                 | type         | Commentaire                                                             |
 | -------------------------------- | ------------ | ----------------------------------------------------------------------- |
-| Revenu fiscal de référence (RFR) | nombre       | Les revenus N figurent sur l'avis N+1                                   |
+| Revenu fiscal de référence (RFR) | nombre       |                                                                         |
 | Nombre de parts fiscales         | nombre       |                                                                         |
 | Adresse fiscale de taxation      | données JSON |                                                                         |
-| Données du local                 | données JSON | Informations liées à l'adresse (type de bien, régime de taxation, etc.) |
+| Données du local                 | données JSON | Exemples : régime de taxation, identifiant du local                     |
+
+Un document, présent dans le formulaire de la demande d’accès, liste un plus large panel des données
+pouvant être restituées par l’API Impôt particulier.

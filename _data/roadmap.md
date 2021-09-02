@@ -207,12 +207,30 @@
       path: /les-api/api_indemnites_journalieres_cnam
   7:
     - type: ADD_API
+      what: Identifiants et Référentiels pour l'enseignement supérieur et la recherche (IdRef) par l'ABES
+      path: /les-api/api-idref
+    - type: ADD_API
+      what: Système Universitaire de Documentation (Sudoc)
+      path: /les-api/api-sudoc
+  8:
+    - type: ADD_API
+      what: Référentiel des agences par Pôle emploi
+      path: /les-api/api-agences-pole-emploi
+    - type: ADD_API
+      what: Anotéa par Pôle emploi
+      path: /les-api/api-anotea
+    - type: ADD_API
+      what: Eligibilité aux aides à l'emploi (Clara) par Pôle emploi
+      path: /les-api/api-clara
+    - type: ADD_API
+      what: Répertoire Opérationnel des Métiers et des Emplois par Pôle emploi
+      path: /les-api/api-rome
+    - type: ADD_API
+      what: CVEC par le CNOUS
+    - type: ADD_API
       what: Attestation Codes Sécurité par l'Urssaf
     - type: ADD_API
       what: Déclaration préalable à l'embauche par l'Urssaf
-  8:
-    - type: ADD_API
-      what: CVEC par le CNOUS
   9:
     - type: ADD_API
       what: AgentConnect par la DINUM
