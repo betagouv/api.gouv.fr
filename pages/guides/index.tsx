@@ -1,0 +1,95 @@
+import React from 'react';
+import { NextPage } from 'next';
+import Page from '../../layouts/page';
+import { getAllGuides, IGuideElement, IGuideElementShort } from '../../model';
+import { RichLink } from '../../uiComponents';
+
+interface Props {
+  guidesForAnAPI: IGuideElementShort[];
+  generalGuides: IGuideElementShort[];
+}
+
+const Guides: NextPage<Props> = ({ guidesForAnAPI, generalGuides }) => {
+  return (
+    <Page
+      title="Liste des guides d’API"
+      description="La liste de toutes nos guides au sujet des API du service public."
+    >
+      <section className="fr-container page-baseline">
+        <h1>Comprendre les API du service public</h1>
+      </section>
+      <section className="fr-container sub-section">
+        <h2>Comment fonctionnent les API ?</h2>
+        <div className="default-grid">
+          {generalGuides.map(guide => (
+            <RichLink
+              key={guide.path}
+              title={guide.title}
+              image={
+                guide.image
+                  ? `/images/guides/thumbnail_${guide.image}`
+                  : undefined
+              }
+              href={guide.path}
+            />
+          ))}
+        </div>
+      </section>
+      <section className="fr-container sub-section">
+        <h2>Comment s’utilisent les API du service public ?</h2>
+        <div className="default-grid">
+          {guidesForAnAPI.map(guide => (
+            <RichLink
+              key={guide.path}
+              title={guide.title}
+              image={
+                guide.image
+                  ? `/images/guides/thumbnail_${guide.image}`
+                  : undefined
+              }
+              href={guide.path}
+              labels={guide.api}
+            />
+          ))}
+        </div>
+      </section>
+      <style jsx>{`
+        .sub-section {
+          margin-top: 50px;
+          margin-bottom: 50px;
+        }
+        .default-grid > span {
+          padding-top: 0;
+          padding-bottom: 0;
+        }
+      `}</style>
+    </Page>
+  );
+};
+
+export const getStaticProps = async () => {
+  const guides = await getAllGuides();
+
+  const simplify = (guide: IGuideElement): IGuideElementShort => {
+    return {
+      path: guide.path,
+      slug: guide.slug,
+      title: guide.title,
+      api: guide.api || [],
+      image: guide.image || null,
+    };
+  };
+
+  return {
+    props: {
+      guidesForAnAPI: guides
+        .filter(guide => (guide.api || []).length > 0)
+        .map(simplify),
+      generalGuides: guides
+        .filter(guide => (guide.api || []).length === 0)
+        .map(simplify),
+    },
+  };
+};
+
+export default Guides;

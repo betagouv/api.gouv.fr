@@ -10,6 +10,7 @@ export const HEADER_PAGE = {
   APIS: 'apis',
   FROM_SIGNUP: 'requests',
   SERVICES: 'services',
+  GUIDES: 'guides',
   ABOUT: 'about',
 };
 
@@ -20,9 +21,9 @@ const HEADER = [
     key: HEADER_PAGE.APIS,
   },
   {
-    href: '/services',
-    txt: 'Voir les réalisations',
-    key: HEADER_PAGE.SERVICES,
+    href: '/guides',
+    txt: 'Comprendre les API',
+    key: HEADER_PAGE.GUIDES,
   },
   { href: '/apropos', txt: 'À propos', key: HEADER_PAGE.ABOUT },
 ];

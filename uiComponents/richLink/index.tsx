@@ -1,3 +1,4 @@
+import { constant } from 'lodash';
 import React from 'react';
 import constants from '../../constants';
 
@@ -27,9 +28,10 @@ interface IProps {
   title: string;
   href: string;
   image?: string;
+  labels?: string[];
 }
 
-const RichLink: React.FC<IProps> = ({ title, href, image }) => (
+const RichLink: React.FC<IProps> = ({ title, href, image, labels = [] }) => (
   <>
     <a className="rich-link-wrapper dont-apply-link-style" href={href}>
       <div className="miniature layout-center">
@@ -38,6 +40,15 @@ const RichLink: React.FC<IProps> = ({ title, href, image }) => (
       <div className="title layout-center">
         <div>{title}</div>
       </div>
+      {labels.length > 0 && (
+        <div className="labels layout-center">
+          {labels.map(label => (
+            <div>
+              <b>{label}</b>
+            </div>
+          ))}
+        </div>
+      )}
     </a>
     <style jsx>{`
       .rich-link-wrapper {
@@ -74,6 +85,23 @@ const RichLink: React.FC<IProps> = ({ title, href, image }) => (
         height: 100%;
         display: block;
         object-fit: cover;
+      }
+
+      .labels {
+        flex-wrap: wrap;
+        background: ${constants.colors.lightestGrey};
+        border-top: 1px solid ${constants.colors.lightGrey};
+        padding: 5px;
+      }
+
+      .labels > div {
+        font-size: 0.7rem;
+        background-color: ${constants.colors.lightGrey};
+        color: ${constants.colors.darkGrey};
+        border-radius: 4px;
+        padding: 0 4px;
+        margin: 3px;
+        flex-shrink: 0;
       }
     `}</style>
   </>
