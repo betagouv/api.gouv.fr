@@ -3,6 +3,8 @@ title: Interroger le portail data.bnf.fr par API
 tagline: Vous souhaitez lister toutes les éditions du Médecin malgré lui de Molière ? Ce guide est fait pour vous
 tags: sparql, spectacle, livre, edition
 image: code.jpg
+noindex: false # this page will appear on Google
+publish: true # this page will appear on /guides page
 api:
   - API portail des données de la BnF - data.bnf.fr
 ---

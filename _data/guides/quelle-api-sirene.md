@@ -3,6 +3,8 @@ title: Quelle API Sirene utiliser ?
 tagline: Comprenez les différentes manières d’interroger la base SIRENE des entreprises
 tags: cas usage, api sirene,ETALAB, api entreprise, KBIS, INSEE, open data
 image: code.jpg
+noindex: false # this page will appear on Google
+publish: true # this page will appear on /guides page
 api:
   - API Sirene
   - API Sirene données ouvertes

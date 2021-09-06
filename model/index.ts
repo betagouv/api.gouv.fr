@@ -34,7 +34,9 @@ export interface IRoadmap {
 export interface IGuideElementShort {
   title: string;
   slug: string;
-  image: string;
+  image: string | null;
+  api: string[];
+  path: string;
 }
 
 export interface IGuideElement extends IGuideElementShort {
@@ -43,6 +45,7 @@ export interface IGuideElement extends IGuideElementShort {
   body: string;
   api: string[];
   noindex: boolean;
+  publish: boolean;
   related_guides?: string[];
 }
 

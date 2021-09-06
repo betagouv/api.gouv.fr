@@ -3,6 +3,8 @@ title: Reconquête de la qualité de l'eau
 tagline: Impact d'une campagne d'animation territoriale en faveur de l'agriculture biologique
 tags: agriculture biologique, shapefile, SIG, eau, aire de captage, qualité de l'eau
 image: cartobio-aac.jpg
+noindex: false # this page will appear on Google
+publish: true # this page will appear on /guides page
 api:
   - API CartoBio - Territoires
 ---

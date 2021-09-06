@@ -3,7 +3,9 @@ title: "Guide : qu'est ce qu'une bonne délibération pour accéder à API Parti
 tagline: "Vous êtes une collectivité territoriale et cherchez à être habilité à API Particulier ? Ce guide vous explique pas à pas ce qu'il faut renseigner comme cadre juridique pour être habilité."
 tags: déliberation, api particulier, habilitation juridique
 image: dossier.jpg
-api:
+noindex: false # this page will appear on Google
+publish: false # this page will appear on /guides page
+api: # empty = this page wont appear in an API page
 ---
 
 ## Pourquoi ce guide
@@ -26,6 +28,7 @@ Pour la gestion de l'accès aux téléservices, en fonction du niveau d'identifi
 - le cas échéant, les clés de fédération ou « alias » générés par le système permettant à l'usager d'établir des liens avec ses différents comptes
 
 Pour l'accomplissement des démarches administratives :
+
 - les informations et données à caractère personnel strictement nécessaires à l'accomplissement des démarches administratives mentionnées à <a href="https://www.legifrance.gouv.fr/loda/id/JORFTEXT000027697207/">l'article listant les téléservices habilités</a>.
 
 Par ailleurs, pour certaine démarche, un texte réglementaire peut lister précisément les informations qui peuvent être demandées aux usagers.
