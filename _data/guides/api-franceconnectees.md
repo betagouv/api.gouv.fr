@@ -3,6 +3,8 @@ title: Les API FranceConnectées
 tagline: 'Tout savoir sur les API FranceConnectées : comment ça marche, quel intérêt, les API FranceConnectées disponibles et à venir'
 tags:
 image: meta.png
+noindex: false # this page will appear on Google
+publish: true # this page will appear on /guides page
 api:
   - API Impôt particulier
   - API de droits à l'Assurance Maladie
@@ -75,6 +77,7 @@ _Schéma de fonctionnement des API FranceConnectées :_
 - API Statut complémentaire santé solidaire (ex-CMU) : _est-ce qu'un particulier reçoit la complémentaire santé solidaire ?_
 
 #### 📅 2022
+
 - API Quotient Familial CNAF : _quel est le montant du quotient familial d'un particulier ?_
 - API Statut Demandeur d'emploi : _est-ce qu'un particulier est actuellement demandeur d’emploi ?_
 

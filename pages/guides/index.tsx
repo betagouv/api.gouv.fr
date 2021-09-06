@@ -11,7 +11,6 @@ interface Props {
 
 const GuideLink: React.FC<{ guide: IGuideElementShort }> = ({ guide }) => (
   <RichLink
-    key={guide.path}
     title={guide.title}
     image={guide.image ? `/images/guides/thumbnail_${guide.image}` : undefined}
     href={guide.path}
@@ -71,12 +70,14 @@ export const getStaticProps = async () => {
     };
   };
 
+  const guidesToPublish = guides.filter(guide => guide.publish);
+
   return {
     props: {
-      guidesForAnAPI: guides
+      guidesForAnAPI: guidesToPublish
         .filter(guide => (guide.api || []).length > 0)
         .map(simplify),
-      generalGuides: guides
+      generalGuides: guidesToPublish
         .filter(guide => (guide.api || []).length === 0)
         .map(simplify),
     },

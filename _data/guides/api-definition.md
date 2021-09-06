@@ -2,6 +2,9 @@
 title: Qu’est-ce qu’une API ?
 tagline: Qu'est ce que ça veut dire API, à quoi ça sert et comment est-ce utilisé dans le service public ?
 tags: cas usage, api sirene,ETALAB, api entreprise, KBIS, INSEE, open data
+noindex: false # this page will appear on Google
+publish: true # this page will appear on /guides page
+api: # empty = this page wont appear in an API page
 ---
 
 API est un acronyme qui signifie (en anglais) Application Protocol Interface, ce qui n’est... vraiment pas très clair !

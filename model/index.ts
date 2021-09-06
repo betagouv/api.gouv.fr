@@ -45,6 +45,7 @@ export interface IGuideElement extends IGuideElementShort {
   body: string;
   api: string[];
   noindex: boolean;
+  publish: boolean;
   related_guides?: string[];
 }
 
