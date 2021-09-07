@@ -1,5 +1,5 @@
 ---
-title: API Gel des avoirs
+title: API Gels des avoirs
 tagline: Obtenir toutes les informations concernant le registre national des gels des avoirs
 is_open: 1 # 1 means API is fully open
 external_site: http://documentation.abes.fr/aideidrefdeveloppeur/index.html#WebServiceRest
