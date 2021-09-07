@@ -29,7 +29,7 @@ access_page:
       - Un éditeur de logiciel
     is_eligible: 0
     description: |
-      Les éditeurs de logiciels qui s'adressent aux diagnostiqueurs d'amiante et aux laboratoires certifiés peuvent utiliser l'API SI-Amiante.
+      Les éditeurs de logiciels qui s'adressent aux diagnostiqueurs amiante et aux laboratoires certifiés peuvent utiliser l'API SI-Amiante.
 
       <Button href="mailto:si-amiante@sante.gouv.fr">Demander un accès</Button>
 producer: mss
@@ -43,11 +43,11 @@ contact_link: si-amiante@sante.gouv.fr
 themes:
   - Santé
 content_intro: |
-  Par l'intermédiaire des éditeurs de logiciels, l'API SI-Amiante permet aux diagnostiqueurs d'amiante et aux laboratoires de transmettre aux autorités compétentes leurs rapports annuels et rapports d'alerte.
+  Par l'intermédiaire des éditeurs de logiciels, l'API SI-Amiante permet aux diagnostiqueurs amiante de transmettre aux autorités compétentes leurs rapports annuels et rapports d'alerte.
 
   ### A quoi sert l’API SI-Amiante ?
 
-  Le SI-Amiante est une plateforme développée par la Direction générale de la Santé, permettant à des organismes concourant à la mise en œuvre du code de la santé publique en matière d’amiante - diagnostiqueurs certifiés et laboratoires accrédités – de transmettre aux services de l’État par voie électronique des rapports annuels d’activité et des rapports d’alerte.
+  Le SI-Amiante est une plateforme développée par la Direction générale de la Santé, permettant à des organismes concourant à la mise en œuvre du code de la santé publique en matière d’amiante, dont les diagnostiqueurs certifiés, de transmettre aux services de l’État par voie électronique des rapports annuels d’activité et des rapports d’alerte.
 visits_2019: 2000
 doc_tech_link: /swaggers/api-si-amiante.yaml
 last_update: 01/04/2021
@@ -66,7 +66,7 @@ L'API SI-Amiante transmet les données suivantes :
 
 ### En savoir plus
 
-Les organismes concourant à la mise en œuvre du Code de la Santé Publique en matière d’amiante (diagnostiqueurs certifiés et laboratoires accrédités) produisent des rapports annuels d’activité et des rapports de repérage, qu’ils doivent transmettre aux services de l’État (Direction générale de la Santé au sein du Ministère chargé de la santé, Direction de l’Habitat, de l’Urbanisme et des Paysages au sein du Ministère chargé du logement, préfectures).
+Les diagnostiqueurs certifiés produisent des rapports annuels d’activité et des rapports de repérage, qu’ils doivent transmettre aux services de l’État (Direction générale de la Santé au sein du Ministère chargé de la santé, Direction de l’Habitat, de l’Urbanisme et des Paysages au sein du Ministère chargé du logement, préfectures).
 
 Le recueil et l’exploitation de ces informations répondent à des enjeux en termes de santé publique mais également de perfectionnement et de valorisation pour toute une branche professionnelle dont le développement reste récent.
 Il s’agit de rendre compte des actions de repérage, de connaître l’état du parc bâti, d’être alerté sur des situations à risques, et de conforter les procédures de contrôle et de suivi.
