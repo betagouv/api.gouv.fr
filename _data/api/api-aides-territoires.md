@@ -24,8 +24,7 @@ keywords:
 themes:
   - Administration & législation
 contact_link: https://aides-territoires.beta.gouv.fr/contact/
-#doc_tech_link: 
-doc_tech_external: https://aides-territoires.beta.gouv.fr/api/swagger/?version=1.3
+doc_tech_link: https://aides-territoires.beta.gouv.fr/api/schema/?version=1.3
 last_update: 07/09/2021
 ---
 
