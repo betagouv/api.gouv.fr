@@ -39,7 +39,9 @@ class MyApp extends App {
 
     return (
       <>
+        {/* eslint-disable-next-line */}
         <script type="module" src="/js/dsfr.module.min.js"></script>
+        {/* eslint-disable-next-line */}
         <script
           type="text/javascript"
           noModule

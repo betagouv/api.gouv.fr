@@ -1,5 +1,3 @@
-import React from 'react';
-
 import constants from '../../constants';
 import { ButtonLink } from '../../uiComponents/button';
 import { logCTA } from '../../utils/client/analytics';

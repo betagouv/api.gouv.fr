@@ -96,7 +96,7 @@ const Team: React.FC = () => (
       <h2>Une équipe, une mission</h2>
       <p>
         Au sein des administrations, la donnée est une ressource dispersée,
-        hétérogène et difficile d'accès. Les organisations qui construisent des
+        hétérogène et difficile d’accès. Les organisations qui construisent des
         services numériques pour les citoyens ou les agents de la fonction
         publique ont besoin de cette donnée et doivent faire face à :
       </p>
@@ -106,7 +106,7 @@ const Team: React.FC = () => (
           la difficulté d’identifier la bonne source de donnée, adaptée à leur
           service
         </li>
-        <li>la difficulté d’obtenir l'accès à la donnée</li>
+        <li>la difficulté d’obtenir l’accès à la donnée</li>
         <li>la difficulté de construire un service fiable avec la donnée</li>
       </ul>
       <p>
@@ -134,13 +134,13 @@ const Team: React.FC = () => (
       </ul>
       <h3>Où nous trouver ?</h3>
       <p>
-        Les bureaux de l'équipe se trouvent au sein de la Direction
+        Les bureaux de l’équipe se trouvent au sein de la Direction
         Interministérielle du Numérique (DINUM), au 20 avenue de Ségur à Paris
         (75007).
       </p>
       <h3>La fine équipe</h3>
       <div className="default-grid">
-        {teamData.map((teamate, index) => (
+        {teamData.map(teamate => (
           <a
             href={teamate.linkedin}
             rel="nofollow noopener noreferrer"

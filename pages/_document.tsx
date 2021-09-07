@@ -28,7 +28,6 @@ class MyDocument extends Document {
             crossOrigin="use-credentials"
           />
           <link rel="stylesheet" href="/css/dsfr.min.css"></link>
-
           <style
             dangerouslySetInnerHTML={{
               __html: `
@@ -80,6 +79,7 @@ class MyDocument extends Document {
           {process.env.NODE_ENV === 'production' && (
             <>
               <script
+                async
                 src="https://cdn.ravenjs.com/3.19.1/raven.min.js"
                 crossOrigin="anonymous"
               ></script>

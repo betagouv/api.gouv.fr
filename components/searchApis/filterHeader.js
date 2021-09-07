@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { SearchBar, Toggle, Dropdown } from '../../uiComponents';
 
 export const FilterHeader = ({

@@ -13,7 +13,7 @@ const Contact: React.FC = () => (
       <div>
         <h2>Obtenir des détails sur une API</h2>
         <p>
-          Contactez directement le producteur de l'API en question. Vous
+          Contactez directement le producteur de l’API en question. Vous
           trouverez un lien de contact sur la page la décrivant.
         </p>
 
@@ -26,12 +26,12 @@ const Contact: React.FC = () => (
       <div>
         <h2>Ajouter une API</h2>
         <p>
-          La demande d'ajout au catalogue se fait de manière autonome{' '}
+          La demande d’ajout au catalogue se fait de manière autonome{' '}
           <a href="https://github.com/betagouv/api.gouv.fr/blob/master/CONTRIBUTING.md">
             via GitHub
           </a>
           . Votre demande sera revue aussi vite que possible, et nous vous
-          aiderons à l'améliorer le cas échéant.
+          aiderons à l’améliorer le cas échéant.
         </p>
 
         <p>
@@ -40,8 +40,8 @@ const Contact: React.FC = () => (
 
         <ul>
           <li>
-            L'API doit être produite et exploitée par un organisme chargé de la
-            gestion d'un service public administratif (par exemple :
+            L’API doit être produite et exploitée par un organisme chargé de la
+            gestion d’un service public administratif (par exemple :
             Administrations de l’État centralisées et décentralisées;
             Collectivités territoriales; Établissements publics à caractère
             administratif; Organismes{' '}
@@ -51,12 +51,12 @@ const Contact: React.FC = () => (
             des régimes de protection sociale… ).
           </li>
           <li>
-            L'API doit permettre l'amélioration ou la création de services
-            rendus par d'autres organismes (publics ou privés) selon des règles
-            claires, stables et communiquées à l'avance.
+            L’API doit permettre l’amélioration ou la création de services
+            rendus par d’autres organismes (publics ou privés) selon des règles
+            claires, stables et communiquées à l’avance.
           </li>
           <li>
-            L'API doit avoir une documentation technique claire accessible par
+            L’API doit avoir une documentation technique claire accessible par
             internet.
           </li>
           <li>
@@ -65,9 +65,9 @@ const Contact: React.FC = () => (
             internet.
           </li>
           <li>
-            Il doit être possible de tester l'API sans intervention humaine.
-            Cela peut être obtenu par le biais d'une instance publique, de la
-            distribution de jetons test, ou encore d'un environnement « bac à
+            Il doit être possible de tester l’API sans intervention humaine.
+            Cela peut être obtenu par le biais d’une instance publique, de la
+            distribution de jetons test, ou encore d’un environnement « bac à
             sable » qui renvoie des données fausses mais à des formats
             identiques à celles obtenues après enrôlement.
           </li>
@@ -77,18 +77,18 @@ const Contact: React.FC = () => (
       <div>
         <h2>Ajouter un service</h2>
         <p>
-          La demande d'ajout au catalogue se fait de manière autonome{' '}
+          La demande d’ajout au catalogue se fait de manière autonome{' '}
           <a href="https://github.com/betagouv/api.gouv.fr/blob/master/CONTRIBUTING.md">
             via GitHub
           </a>
           . Votre demande sera revue aussi vite que possible, et nous vous
-          aiderons à l'améliorer le cas échéant.
+          aiderons à l’améliorer le cas échéant.
         </p>
-        <p>Un service peut être référencé s'il répond aux critères suivants.</p>
+        <p>Un service peut être référencé s’il répond aux critères suivants.</p>
         <ul>
           <li>
             Le service doit dépendre pour une de ses fonctionnalités
-            essentielles d'une ou plusieurs API référencées.
+            essentielles d’une ou plusieurs API référencées.
           </li>
           <li>Le service doit être accessible au grand public par internet.</li>
         </ul>
@@ -106,7 +106,7 @@ const Contact: React.FC = () => (
           <a href="https://github.com/betagouv/api.gouv.fr/issues">
             déjà prévue
           </a>{' '}
-          et, si ce n'est pas le cas,{' '}
+          et, si ce n’est pas le cas,{' '}
           <a href="https://github.com/betagouv/api.gouv.fr/issues/new">
             suggérez-la
           </a>{' '}
@@ -117,9 +117,9 @@ const Contact: React.FC = () => (
       <div>
         <h2>Autres</h2>
         <p>
-          Votre demande concerne l'une des api du catalogue, contactez
+          Votre demande concerne l’une des api du catalogue, contactez
           directement le fournisseur en utilisant le mail de contact présent sur
-          la page de description de l'api.
+          la page de description de l’api.
         </p>
         <p>
           Votre sujet concerne API.gouv.fr en général.{' '}
@@ -133,17 +133,17 @@ const Contact: React.FC = () => (
       <div>
         <h2>FranceConnect et ANTS</h2>
         <p>
-          Votre demande concerne l'utilisation de FranceConnect, écrivez au{' '}
+          Votre demande concerne l’utilisation de FranceConnect, écrivez au{' '}
           <a href="mailto:support.usagers@franceconnect.gouv.fr">
             support FranceConnect
           </a>{' '}
           .
         </p>
         <p>
-          Votre demande concerne une demande d'immatriculation ou de carte
+          Votre demande concerne une demande d’immatriculation ou de carte
           grise,
           <a href="https://ants.gouv.fr/Contacter-l-ANTS/Nous-contacter">
-            contactez l'ANTS
+            contactez l’ANTS
           </a>{' '}
           .
         </p>

@@ -1,6 +1,6 @@
 // from https://github.com/stopwords-iso/stopwords-fr/blob/master/raw/language-resource-stopwords.txt
 
-export default [
+const stopWords = [
   'a',
   'à',
   'â',
@@ -470,3 +470,5 @@ export default [
   'données',
   'donnée',
 ];
+
+export default stopWords;

@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { debounce } from 'lodash';
 
-import constants from '../../constants';
 import Loader from '../loader';
 import MagnifyingGlass from '../icon/magnifyingGlass';
 
@@ -9,7 +8,7 @@ const SearchBar = ({
   onSearch,
   placeholder,
   defaultValue = '',
-  label = null,
+  label = '',
   debounceRate = 100,
   results = [],
   isLoading = false,

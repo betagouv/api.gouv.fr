@@ -1,5 +1,3 @@
-import React from 'react';
-
 import ApiCard from './apiCard';
 
 const Results = ({ apiList }) => {

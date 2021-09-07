@@ -14,7 +14,7 @@ keywords:
   - Registre
 contact_link: https://gels-avoirs.dgtresor.gouv.fr/Contact
 doc_tech_link: /api/v1/proxy/http%3A%2F%2Fgels-avoirs.dgtresor.gouv.fr%2FApiPublic%2Fswagger%2Fv1%2Fswagger.json
-doc_tech_external: https://gels-avoirs.dgtresor.gouv.fr/ApiPublic/index.html
+doc_tech_external: https://gels-avoirs.dgtresor.gouv.fr/ApiPublic/swagger/v1/swagger.json
 themes:
   - Administration & législation
 visits_2019: 1000

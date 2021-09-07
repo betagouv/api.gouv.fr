@@ -125,7 +125,7 @@ const Documentation: React.FC<IProps> = ({ api, allApis }) => {
                 </>
               ) : (
                 <p>
-                  La documentation de cette API n'est pas disponible
+                  La documentation de cette API n’est pas disponible
                   publiquement.
                 </p>
               )}

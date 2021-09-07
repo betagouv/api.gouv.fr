@@ -1,5 +1,3 @@
-import React from 'react';
-
 const explanations = [
   {
     title: 'Trouvez <a href="/apropos#apis">l’API</a> dont vous avez besoin',

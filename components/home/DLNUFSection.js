@@ -1,5 +1,3 @@
-import React from 'react';
-
 const DLNUFSection = () => (
   <section id="use-cases" className="fr-container">
     <br />

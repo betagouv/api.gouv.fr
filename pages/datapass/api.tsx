@@ -27,7 +27,7 @@ const SignupApis: React.FC<IProps> = ({ signupApis }) => {
       <section className="page-body-container">
         <div className="fr-container ">
           {signupApis.map(api => (
-            <div className="api-card-datapass">
+            <div key={api.title} className="api-card-datapass">
               <div className="pic layout-center">
                 <img
                   src={`/images/api-logo/${api.logo || constants.logo}`}

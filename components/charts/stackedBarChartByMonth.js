@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import * as d3 from 'd3';
 import { uuid } from '../../utils';
 
@@ -71,9 +71,7 @@ const StackedBarChart = ({ data, labels, colors }) => {
 
     if (data && d3Container.current && containerWidth !== svgWidth) {
       setSvgWidth(svgWidth);
-      d3.select(d3Container.current)
-        .select('svg')
-        .remove();
+      d3.select(d3Container.current).select('svg').remove();
 
       const svg = d3
         .select(d3Container.current)
@@ -131,7 +129,7 @@ const StackedBarChart = ({ data, labels, colors }) => {
         .data(d => d)
         .enter()
         .append('rect')
-        .attr('class', function(d) {
+        .attr('class', function (d) {
           return `month-${d.data.month}-${chartUuid}`;
         })
         .attr('x', d => x(d.data.month))
@@ -139,19 +137,19 @@ const StackedBarChart = ({ data, labels, colors }) => {
         .attr('y', d => y(d[1]))
         .attr('height', d => height - y(d[1] - d[0]))
         .attr('cursor', 'help')
-        .on('mouseover', function(event, d) {
+        .on('mouseover', function (event, d) {
           d3.selectAll(`.month-${d.data.month}-${chartUuid}`).attr(
             'opacity',
             0.6
           );
         })
-        .on('mouseleave', function(event, d) {
+        .on('mouseleave', function (event, d) {
           d3.selectAll(`.month-${d.data.month}-${chartUuid}`).attr(
             'opacity',
             1
           );
         })
-        .on('mousemove', function(event, d) {
+        .on('mousemove', function (event, d) {
           if (!tooltip) return;
           tooltip.style('display', 'block');
 
@@ -161,7 +159,7 @@ const StackedBarChart = ({ data, labels, colors }) => {
             .style('left', event.pageX + 10 + 'px')
             .style('top', event.pageY + 20 + 'px');
         })
-        .on('mouseout', function(d) {
+        .on('mouseout', function (d) {
           if (!tooltip) return;
           tooltip.style('display', 'none');
         });
@@ -171,11 +169,13 @@ const StackedBarChart = ({ data, labels, colors }) => {
   };
 
   useEffect(() => {
+    /*eslint-disable*/
     tooltip = d3
       .select('body')
       .append('div')
       .attr('class', 'tooltip')
       .style('display', 'none');
+    /*eslint-enable*/
 
     if (!data || !d3Container.current) {
       return;

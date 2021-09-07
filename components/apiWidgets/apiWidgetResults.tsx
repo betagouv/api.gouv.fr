@@ -9,7 +9,7 @@ const ApiWidgetResults: React.FC<{ results: any[] | null }> = ({ results }) => (
         </p>
         <div className="results">
           {results.map(res => (
-            <div>{res}</div>
+            <div key={res}>{res}</div>
           ))}
         </div>
       </>

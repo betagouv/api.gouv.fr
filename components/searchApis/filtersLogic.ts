@@ -136,10 +136,3 @@ export const textHighlighter = (matches: number[][] | undefined, text = '') => {
   newText += text.slice(previousIdx);
   return newText;
 };
-
-export default {
-  filterAccess,
-  filterTheme,
-  computeSearchResults,
-  textHighlighter,
-};

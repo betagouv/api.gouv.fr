@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const apiLogo = (
   <svg viewBox="0 0 248 45" version="1.1" xmlns="http://www.w3.org/2000/svg">
     <title>api.gouv.fr.svg</title>
