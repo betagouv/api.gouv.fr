@@ -84,7 +84,7 @@ const AccessCondition: React.FC<IProps> = ({
       noIndex={true}
       usePreFooter={false}
     >
-      <div className="content-container">
+      <div className="fr-container">
         <div className="breadcrumb">
           <a href={`/les-api/${slug}`}>⇠ Fiche {title}</a>
         </div>

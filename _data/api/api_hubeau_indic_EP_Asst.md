@@ -4,7 +4,7 @@ tagline: Indicateurs des services d'eau et d'assainissement
 is_open: 1 # 1 means API is fully open
 external_site: https://hubeau.eaufrance.fr/page/documentation-eau_potable-assainissement
 partners:
-  - eau-france
+  - eaufrance
   - ofb
   - brgm
 producer: hub-eau

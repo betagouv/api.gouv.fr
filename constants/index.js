@@ -2,7 +2,6 @@ import links from './links';
 
 export default {
   links: links,
-  layout: { HEADER_HEIGHT: 75 },
   colors: {
     confidential: '#10c6b0',
     reference: '#23b0b7',
@@ -16,9 +15,9 @@ export default {
     darkGrey: '#272c32',
     service: '#af2341',
     main: '#275166',
-    darkBlue: '#003189',
-    blue: '#0048b3',
-    vividBlue: '#0064f9',
+    darkBlue: '#000081',
+    blue: '#000091',
+    vividBlue: '#0000b1',
     lightBlue: '#e5efff',
     lightestBlue: '#f8faff',
     backgroundBlueGradient: 'linear-gradient(45deg, #003189, #005adf)',

@@ -3,6 +3,8 @@ title: Inscriptions à la crèche
 tagline: Simplifiez les inscriptions à la crèche dans votre collectivité ?
 tags: cas usage, api particulier, portail-famille,  petite enfance
 image: garderie.jpg
+noindex: false # this page will appear on Google
+publish: true # this page will appear on /guides page
 api:
   - API Particulier
 related_guides:

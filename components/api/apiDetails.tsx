@@ -196,6 +196,12 @@ const IsFranceConnectedDetail: React.FC<IPropsIsFranceConnected> = ({
               FranceConnect.
             </>
           )}
+          <br />
+          <br />
+          Pour en savoir, plus consultez{' '}
+          <a href="/guides/api-franceconnectees">
+            le guide des API FranceConnectée.
+          </a>
         </div>
       )}
     </>

@@ -19,7 +19,7 @@ const PageHeader: React.FC<IProps> = ({
   owner_slug,
 }) => (
   <section id="mission-statement">
-    <div className="content-container">
+    <div className="fr-container">
       <div className="breadcrumb">
         <a href="/rechercher-api" className="dont-apply-link-style">
           ⇠ Toutes les API

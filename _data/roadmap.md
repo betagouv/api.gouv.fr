@@ -177,42 +177,73 @@
     - type: ADD_API
       what: Pro Santé Connect par l'ANS
       path: /les-api/api-pro-sante-connect
-    - type: ADD_API
-      what: Professionnels BIO par l'agence BIO
-    - type: ADD_API
-      what: CVEC par le CNOUS
-    - type: ADD_API
-      what: Statut Étudiant
-    - type: ADD_API
-      what: Bulletin Officiel des Annonces Civiles et Commerciales (BODACC)
-    - type: ADD_API
-      what: Liste des organismes de formation par la DGEFP
-    - type: ADD_API
-      what: Accès Libre
   6:
     - type: ADD_API
-      what: SI-Amiante
-      path: /les-api/api-si-amiante
+      what: Maladies Rares (ORPHAcode)
+      path: /les-api/api-orphacode
+    - type: ADD_API
+      what: annuaire de l'Education Nationale
+      path: /les-api/api-annuaire-education
+    - type: ADD_API
+      what: Annonces officielles et comptes annuels des associations
+      path: /les-api/api-annonces-comptes-annuels-associations-joafe
+    - type: ADD_API
+      what: Bulletin des Annonces Légales Obligatoires
+      path: /les-api/api-bulletin-annonces-legales-obligatoires-balo
+    - type: ADD_API
+      what: Hub'Eau - Hydrobiologie
+      path: /les-api/api_hubeau_hydrobiologie
     - type: ADD_API
       what: AgentConnect par la DINUM
     - type: ADD_API
-      what: Référentiel Partagé des Professionnels de Santé
+      what: Professionnels BIO
+      path: /les-api/api-professionnels-bio
     - type: ADD_API
-      what: Hermés par la DGFiP
+      what: Bulletin officiel des annonces des marchés publics par la DILA
+      path: /les-api/api-bulletin-annonces-marches-publics-boamp
     - type: ADD_API
-      what: AgentConnect par la DINUM
+      what: API Indemnités journalières par la CNAM
+      path: /les-api/api_indemnites_journalieres_cnam
   7:
+    - type: ADD_API
+      what: Identifiants et Référentiels pour l'enseignement supérieur et la recherche (IdRef) par l'ABES
+      path: /les-api/api-idref
+    - type: ADD_API
+      what: Système Universitaire de Documentation (Sudoc)
+      path: /les-api/api-sudoc
+  8:
+    - type: ADD_API
+      what: Référentiel des agences par Pôle emploi
+      path: /les-api/api-agences-pole-emploi
+    - type: ADD_API
+      what: Anotéa par Pôle emploi
+      path: /les-api/api-anotea
+    - type: ADD_API
+      what: Eligibilité aux aides à l'emploi (Clara) par Pôle emploi
+      path: /les-api/api-clara
+    - type: ADD_API
+      what: Répertoire Opérationnel des Métiers et des Emplois par Pôle emploi
+      path: /les-api/api-rome
+    - type: ADD_API
+      what: CVEC par le CNOUS
     - type: ADD_API
       what: Attestation Codes Sécurité par l'Urssaf
     - type: ADD_API
       what: Déclaration préalable à l'embauche par l'Urssaf
   9:
     - type: ADD_API
-      what: Indemnités Journalières distribuée par la CNAM
+      what: SI-Amiante
+      path: /les-api/api-si-amiante
     - type: ADD_API
-      what: Bulletin Officiel des Annonces Civiles et Commerciales par la DILA
+      what: AgentConnect par la DINUM
     - type: ADD_API
-      what: Bulletin des Annonces Légales Obligatoires par la DILA
+      what: Hermés par la DGFiP
     - type: ADD_API
-      what: Journal Officiel par la DILA
+      what: Liste des organismes de formation par la DGEFP
+    - type: ADD_API
+      what: Accès Libre
+    - type: ADD_API
+      what: Référentiel Partagé des Professionnels de Santé
+    - type: ADD_API
+      what: Statut Étudiant
 ---

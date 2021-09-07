@@ -18,7 +18,7 @@ access_page:
     description: |
       Si vous êtes une collectivité ou une administration, vous pouvez remplir une demande d’accès à l’API Entreprise vous-même pour l'entité que vous représentez.
 
-      Lors de votre demande vous devrez **renseigner le cadre juridique (un texte ou délibération/décision)** qui légitime l'entité pour laquelle vous opérez à recevoir ces données.
+      Lors de votre demande vous devrez **renseigner le cadre juridique** qui légitime l'entité pour laquelle vous opérez à recevoir ces données.
 
       <NextSteps />
       <Button href="https://datapass.api.gouv.fr/api-entreprise">Remplir une demande</Button>
@@ -248,4 +248,4 @@ La propriété intellectuelle :
 
 ### En savoir plus
 
-L’<External href="https://entreprise.api.gouv.fr/">API Entreprise</External> est une composante de l’État plateforme, l’accès à l’API Entreprise est modérée et régulée par la DINUM, qui attribue à chaque client des autorisations de récupération d’informations selon la nature des démarches à traiter (Marchés publics, aides publiques,…).
+L’<External href="https://entreprise.api.gouv.fr/">API Entreprise</External> est une composante de l’État plateforme, l’accès à l’API Entreprise est modéré et régulé par la DINUM, qui attribue à chaque client des autorisations de récupération d’informations selon la nature des démarches à traiter (Marchés publics, aides publiques,…).

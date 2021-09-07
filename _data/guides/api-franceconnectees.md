@@ -3,31 +3,33 @@ title: Les API FranceConnectées
 tagline: 'Tout savoir sur les API FranceConnectées : comment ça marche, quel intérêt, les API FranceConnectées disponibles et à venir'
 tags:
 image: meta.png
+noindex: false # this page will appear on Google
+publish: true # this page will appear on /guides page
 api:
   - API Impôt particulier
   - API de droits à l'Assurance Maladie
 ---
 
-FranceConnect permet au citoyen de s'authentifier à de nombreux services de l'administration. Ce dispositif permet de n'avoir qu'un compte à retenir pour tous les services de l'administration (<External href="https://franceconnect.gouv.fr/partenaires">en savoir plus sur FranceConnect</External>).
+FranceConnect permet au citoyen de s'authentifier à de nombreux services de l'administration. Ce dispositif permet d'utiliser un compte existant sur impots.fr ou ameli.fr par exemple, afin d'accéder à tous les services de l'administration (<External href="https://franceconnect.gouv.fr/partenaires">en savoir plus sur FranceConnect</External>).
 
-Les API FranceConnectées sont des API qui permettent de transmettre - en plus des données d'identité transmises par FranceConnect - d'autres données d'administrations au moment de la FranceConnection du citoyen à sa démarche.
+Les API FranceConnectées sont des API qui permettent de transmettre - en plus des données d'identité transmises par FranceConnect - d'autres données personnelles du citoyen lorsqu'il utilise FranceConnect dans sa démarche.
 
 Une API FranceConnecté s'utilise obligatoirement avec FranceConnect. C'est-à-dire que dans votre service numérique, l'utilisateur devra se FranceConnecter pour obtenir les données de l'API.
 
 ## En quoi ça change tout ?
 
-Les API FranceConnectées simplifient le parcours d'un citoyen à ses démarches, car elles évitent la saisie par le citoyen d'une clé d'appel aux API (par exemple : le _numéro fiscal_ sert de clef d'appel pour les API fiscales). C'est l'identité pivot de FranceConnect qui fait office de clé d'appel.
+Les API FranceConnectées simplifient le parcours d'un citoyen à ses démarches, car elles lui évitent la saisie de données personnelles utilisées comme clé d'appel aux API (par exemple : le _numéro fiscal_ sert de clé d'appel pour les API fiscales et doit être saisi par l'utilisateur si la démarche n'utilise pas d'API FranceConnectée). C'est l'identité pivot fournie par FranceConnect qui fait office de clé d'appel pour une API FranceConnectée, le citoyen n'a donc rien à saisir.
 
 Le parcours classique d'un citoyen dans une démarche :
 
-- 👤 Authentification
-- 🔍 Recherche de la clef d'appel dans ses documents personnels (par exemple _le numéro fiscal_)
+- 👤 Connexion par son compte associé à la démarche
+- 🔍 Recherche de la clé d'appel dans ses documents personnels (par exemple _le numéro fiscal_)
 - 🗝 Saisie de la clé d'appel
 - 👩‍💻 Récupération de données par API
 
 Le parcours grâce aux API FranceConnectées :
 
-- 🇫🇷 FranceConnection
+- 🇫🇷 Connexion par FranceConnect
 - ✅ Récupération de données grâce aux API FranceConnectées
 
 Les API FranceConnectées simplifient :
@@ -36,7 +38,7 @@ Les API FranceConnectées simplifient :
 | ------------------------------------------- | --------------------------------------------------------------- |
 | Des démarches simplifiées et accélérées     | Les délais de traitement sont instantannés                      |
 | Plus aucune pièces justificatives à fournir | Plus de pièces justificatives à traiter et à stocker            |
-| Plus d'erreur de frappe possible            | Plus de fraude possible car la donnée est certifiée à la source |
+| Plus d'erreur de saisie possible            | Plus de fraude possible car la donnée est certifiée à la source |
 
 ### Un cas pratique : la demande d'Aide Juridictionnelle
 
@@ -66,14 +68,18 @@ _Schéma de fonctionnement des API FranceConnectées :_
 
 #### 📅 3e trimestre 2021
 
-- API Statut Etudiant : _est-ce qu'un particulier est actuellement étudiant (et les dates associées) ?_
-- API Statut Boursier : _est-ce qu'un particulier est actuellement boursier_
+- API Statut Etudiant : _est-ce qu'un particulier est actuellement étudiant, et les dates d'étude associées ?_
+- API Statut Boursier : _est-ce qu'un particulier est actuellement boursier ?_
 
 #### 📅 4e trimestre 2021
 
-- API Statut Demandeur d'emploi : _est-ce qu'un particulier est actuellement demandeur d’emploi ?_
+- API Indemnités Pôle emploi : _quel montant des indemnités Pôle emploi est perçu par un citoyen ?_
+- API Statut complémentaire santé solidaire (ex-CMU) : _est-ce qu'un particulier reçoit la complémentaire santé solidaire ?_
+
+#### 📅 2022
+
 - API Quotient Familial CNAF : _quel est le montant du quotient familial d'un particulier ?_
-- API Secu : _quelles sont les dernières ressources percues par un particulier ?_
+- API Statut Demandeur d'emploi : _est-ce qu'un particulier est actuellement demandeur d’emploi ?_
 
 ## Comment accéder aux API FranceConnectées ?
 

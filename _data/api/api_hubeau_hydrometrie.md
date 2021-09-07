@@ -4,7 +4,7 @@ tagline: Hydrométrie temps réel
 is_open: 1 # 1 means API is fully open
 external_site: https://hubeau.eaufrance.fr/page/api-hydrometrie
 partners:
-  - eau-france
+  - eaufrance
   - ofb
   - schapi
   - brgm
@@ -38,6 +38,7 @@ last_update: 31/07/2019
 
 Les données publiques de [l'API "Hydrométrie"](https://hubeau.eaufrance.fr/page/api-hydrometrie) de Hub'Eau sont issues de la Plate-forme HYDRO Centrale (PHyC), opérée par le Service Central d’Hydrométéorologie et d’Appui à la Prévision des Inondations (SCHAPI).
 Cette Plate-forme stocke les mesures quasi temps-réel provenant d’environ 3000 stations hydrométriques qui constituent le réseau de mesure français, opéré par les Directions Régionales de l’Environnement de l’Aménagement et du Logement (DREAL) ou autres producteurs (collectivités, etc.)
+
 L'API permet d'interroger le **référentiel hydrométrique** ainsi que les **observations en quasi temps réel**, mises à jour par leur producteur toutes les 5 à 60 minutes dans la plateforme source (PHyC du SCHAPI). Hub'Eau interroge la source des données toutes les 2 minutes et maintient une profondeur d'historique égale à 1 mois **mais pour le moment, aucun traitement des données n'est appliqué au-delà des 24 dernières heures. Les données accessibles sont celles mesurées sur le terrain sans expertise et sans les améliorations apportées par les hydromètres.** Par exemple, un changement de courbe de tarage n'est actuellement pas pris en compte sur les données antérieures à ce changement. Une évolution est en préparation afin prendre en compte cette expertise au-delà des 24 dernières heures.
 
 Les observations sont exprimées en **mm** pour les hauteurs d'eau et en **l/s** pour les débits.
@@ -64,7 +65,7 @@ Dernières évolutions de l'API Hydrométrie :
 #### Simplifier l'accès aux données sur l'eau
 
 Service pérenne de la toile [Eau France](https://www.eaufrance.fr), [Hub'Eau](https://hubeau.eaufrance.fr/) met à disposition des API Rest favorisant l’accès aux données du [SIE](https://www.eaufrance.fr/donnees) dans des formats simples d’emploi et propices à la réutilisation (CSV, JSON, GeoJSON).
-Fondé sur une infrastructure et des méthodes adaptées au traitement et au stockage de données massives, les API Hub'Eau garantissent les meilleures performances de disponibilité (9 téra-octets de données fournies en 76 millions d'appels pour le 2e semestre 2019).
+Fondé sur une infrastructure et des méthodes adaptées au traitement et au stockage de données massives, les API Hub'Eau garantissent les meilleures performances de disponibilité (20 téra-octets de données fournies en 455 millions d'appels pour l'année 2020).
 Hub’Eau est le résultat de la collaboration de l’OFB et du BRGM dans le cadre du pôle de recherche et d'innovation en interopérabilité des systèmes d'information distribués sur l'eau : [INSIDE](http://www.pole-inside.fr/fr).
 
 Les autres API disponibles à ce jour dans Hub'Eau sont :

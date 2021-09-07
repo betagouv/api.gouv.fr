@@ -1,0 +1,94 @@
+/*
+ * DSFR v1.0.0-rc1.0 | restricted use
+ */
+/* ------------------------------------ *\
+  SUMMARY
+\* ------------------------------------ */
+
+.fr-summary {
+  --is-link: false;
+  --is-list: false;
+  padding: 1.5rem;
+}
+
+.fr-summary__title {
+  margin: 0 0 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.fr-summary__list > li {
+  margin: 0;
+}
+
+.fr-summary__list > li::before {
+  content: none;
+}
+
+.fr-summary__list > li > a {
+  display: inline-flex;
+  padding: 0.5rem;
+  margin: 0 -0.5rem;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+}
+
+.fr-summary__list > li > a::before {
+  margin-right: 0.5rem;
+  content: counters(list-number, ".") ".";
+}
+
+.fr-summary {
+  background-color: var(--beige);
+}
+
+.fr-summary__title {
+  color: var(--g800);
+}
+
+.fr-summary__list > li > a {
+  color: var(--g800);
+  background-color: var(--t-plain);
+}
+
+:root:not([data-fr-theme="dark" i]) .fr-summary__list > li > a {
+  --color-hover: var(--block-color-hover);
+  --color-active: var(--block-color-active);
+}
+
+:root:not([data-fr-theme="dark" i]) [class*="fr-scheme-light"] .fr-summary__list > li > a,
+:root:not([data-fr-theme="dark" i]) [class*="--scheme-light-"] .fr-summary__list > li > a {
+  --color-hover: var(--block-color-hover);
+  --color-active: var(--block-color-active);
+}
+
+:root:not([data-fr-theme="dark" i]) [class*="fr-scheme-dark"] .fr-summary__list > li > a,
+:root:not([data-fr-theme="dark" i]) [class*="--scheme-dark-"] .fr-summary__list > li > a {
+  --color-hover: var(--block-color-hover);
+  --color-active: var(--block-color-active);
+}
+
+:root[data-fr-theme="dark" i] .fr-summary__list > li > a {
+  --color-hover: var(--block-color-hover);
+  --color-active: var(--block-color-active);
+}
+
+@media (min-width: 48em) {
+  .fr-summary {
+    padding: 2rem;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .fr-summary__list > li > a:not(a):not(:disabled):hover,
+  .fr-summary__list > li > a[href]:hover {
+    background-image: linear-gradient(0deg, var(--color-hover), var(--color-hover));
+  }
+
+  .fr-summary__list > li > a:not(a):not(:disabled):active,
+  .fr-summary__list > li > a[href]:active {
+    background-image: linear-gradient(0deg, var(--color-active), var(--color-active));
+  }
+}

@@ -20,12 +20,12 @@ const SignupApis: React.FC<IProps> = ({ signupApis }) => {
       usePreFooter={false}
       title="Nouvelle demande d’habilitation"
     >
-      <section className="content-container page-baseline">
+      <section className="fr-container page-baseline">
         <h1>Effectuer une nouvelle demande d’habilitation</h1>
       </section>
 
       <section className="page-body-container">
-        <div className="content-container ">
+        <div className="fr-container ">
           {signupApis.map(api => (
             <div className="api-card-datapass">
               <div className="pic layout-center">

@@ -18,3 +18,7 @@ node_modules
 
 public/url-list.txt
 public/sitemap.xml
+
+# direnv
+.nvmrc
+.envrc

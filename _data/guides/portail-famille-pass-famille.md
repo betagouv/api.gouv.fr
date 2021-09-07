@@ -2,6 +2,8 @@
 title: Pass famille
 tagline: Venez en aide aux familles de votre collectivité
 tags: cas usage, api particulier, portail-famille, pass famille
+noindex: false # this page will appear on Google
+publish: true # this page will appear on /guides page
 api:
   - API Particulier
 related_guides:

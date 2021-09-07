@@ -36,7 +36,7 @@ const Service: React.FC<IProps> = ({
         <h2>{description}</h2>
       </section>
 
-      <div className="content-container content">
+      <div className="fr-container content">
         <div className="left-column-grid">
           <div className="left-column">
             <h3>{apiList.length > 1 ? 'Les API utilisées' : 'API utilisée'}</h3>

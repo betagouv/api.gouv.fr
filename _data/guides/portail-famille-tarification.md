@@ -3,6 +3,8 @@ title: Tarification de la restauration scolaire et des activités périscolaires
 tagline: Simplifiez le calcul des tarifs de la restauration scolaire, ou des activités périscolaires ou municipales dans votre colllectivité
 tags: cas usage, api particulier, portail-famille, tarification restauration scolaire, tarification activités périscolaires
 image: cantine.jpg
+noindex: false # this page will appear on Google
+publish: true # this page will appear on /guides page
 related_guides:
   - portail-famille-petite-enfance
   - portail-famille-pass-famille

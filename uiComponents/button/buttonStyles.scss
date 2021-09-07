@@ -11,6 +11,10 @@ button.button-link {
   cursor: pointer;
   text-align: center;
 
+  &:after {
+    display: none;
+  }
+
   > .content-wrapper {
     font-size: 1rem;
     padding: 8px 15px;

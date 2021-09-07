@@ -77,7 +77,7 @@ const API: React.FC<IProps> = ({ api, guides, datagouvDatasets }) => {
         owner_slug={owner_slug}
       />
 
-      <div id="description" className="content-container">
+      <div id="description" className="fr-container">
         <div className="right-column-grid">
           <div className="left-column text-style">
             <ApiDescription
@@ -100,6 +100,18 @@ const API: React.FC<IProps> = ({ api, guides, datagouvDatasets }) => {
               doc_external_link={doc_tech_external}
               account_link={account_link}
             />
+            <SupportAndTeam
+              logo={logo}
+              owner={owner}
+              owner_acronym={owner_acronym}
+              owner_slug={owner_slug}
+              link={contact_link}
+            />
+            <TechnicalDocumentation
+              swagger_link={doc_tech_link}
+              external_link={doc_tech_external}
+              slug={slug}
+            />
             <ApiDetails
               monitoring={monitoring_description}
               monitoring_link={monitoring_link}
@@ -107,19 +119,6 @@ const API: React.FC<IProps> = ({ api, guides, datagouvDatasets }) => {
               rate_limiting_resume={rate_limiting_resume}
               uptime={uptime}
               is_france_connected={is_france_connected}
-            />
-            <TechnicalDocumentation
-              swagger_link={doc_tech_link}
-              external_link={doc_tech_external}
-              slug={slug}
-            />
-
-            <SupportAndTeam
-              logo={logo}
-              owner={owner}
-              owner_acronym={owner_acronym}
-              owner_slug={owner_slug}
-              link={contact_link}
             />
 
             <Partners partners={partners} />
@@ -133,7 +132,7 @@ const API: React.FC<IProps> = ({ api, guides, datagouvDatasets }) => {
 
         .right-column-grid {
           display: grid;
-          grid-template-columns: 65% 35%;
+          grid-template-columns: 65% 31%;
           grid-gap: 40px;
         }
 

@@ -2,14 +2,16 @@
 title: Qu’est-ce qu’une API ?
 tagline: Qu'est ce que ça veut dire API, à quoi ça sert et comment est-ce utilisé dans le service public ?
 tags: cas usage, api sirene,ETALAB, api entreprise, KBIS, INSEE, open data
-noindex: true
+noindex: false # this page will appear on Google
+publish: true # this page will appear on /guides page
+api: # empty = this page wont appear in an API page
 ---
 
 API est un acronyme qui signifie (en anglais) Application Protocol Interface, ce qui n’est... vraiment pas très clair !
 
 ## Commençons par une analogie
 
-Vous souvenez vous des annuaires téléphonique ? 118-218, 118-412 (ici dire un truc non concurrence) etc.
+Vous souvenez vous des annuaires téléphonique ?
 
 ⇢ Un **annuaire téléphonique** permet à un **humain**, de demander une information à un autre **humain**, par **téléphone**.
 
@@ -22,6 +24,8 @@ Sur le web, les API jouent le même rôle que les annuaires. Sauf que le télép
 C'est un peu abstrait tout ça. Rien ne vaut un bon exemple !
 
 <ApiSireneWidget title='Un exemple d’API : l’API Sirene' />
+
+Dans cet exemple, votre ordinateur, utilise internet, pour demander à un autre ordinateur, des informations à propos des entreprises françaises.
 
 ## Et dans l’administration ca donne quoi ?
 
@@ -36,7 +40,7 @@ La majorité des API visibles sur la page [rechercher une api](/les-api/recherch
 - la [base documentaire Gallica](/les-api/api_gallica_document), de la Bibliothèque Nationale de France
 - la [liste des jours fériés en France](/les-api/jours-ferie)
 
-... Et encore [bien d'autres](/les-api/rechercher-api).
+... Et encore [bien d'autres](/rechercher-api).
 
 ### Des API en accès restreint
 
@@ -47,4 +51,4 @@ D'autres API sont en accès restreint. Cela veut dire que seules les entitées �
 
 ### On est prêt pour les détails !
 
-A partir d’ici, ca devient un peu plus technique et vous en savez déjà bien assez pour [découvrir la liste des API disponibles dans le service public](/les-api/rechercher-api)
+A partir d’ici, ca devient un peu plus technique et vous en savez déjà bien assez pour [découvrir la liste des API disponibles dans le service public](/rechercher-api)

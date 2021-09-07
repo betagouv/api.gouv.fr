@@ -11,7 +11,7 @@ clients:
   - collectivités
   - ministères
 partners:
-  - eau-france
+  - eaufrance
   - ofb
   - brgm
 keywords:

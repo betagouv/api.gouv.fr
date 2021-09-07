@@ -28,7 +28,7 @@ const USE_CASES = [
 ];
 
 const UseCaseSection = () => (
-  <section id="use-cases" className="content-container">
+  <section id="use-cases" className="fr-container">
     {USE_CASES.map(useCase => (
       <div className="use-case" key={useCase.title}>
         <div className="content-wrapper">

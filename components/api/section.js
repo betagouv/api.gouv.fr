@@ -1,6 +1,5 @@
 import React from 'react';
-
-import globals from '../../constants';
+import constants from '../../constants';
 
 const Section = ({ id, title, children }) => {
   return (
@@ -36,6 +35,7 @@ const Section = ({ id, title, children }) => {
           padding-right: 0.23em;
           opacity: 0;
           text-decoration: none;
+          color: ${constants.colors.blue};
         }
 
         h2:hover .header-anchor {
@@ -44,7 +44,7 @@ const Section = ({ id, title, children }) => {
         a.hidden-anchor {
           display: block;
           position: absolute;
-          top: -${parseInt(globals.layout.HEADER_HEIGHT, 10) + 15}px;
+          top: 0;
           visibility: hidden;
         }
       `}</style>

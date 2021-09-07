@@ -82,3 +82,22 @@ test('Every API requiring an account has an account link', async () => {
   });
   expect(ok).toBe(true);
 });
+
+test('Every API description contains no h1 / h2 titles ', async () => {
+  let ok = true;
+
+  allApis.forEach(api => {
+    //@ts-ignore
+    if (api.body.indexOf('\r\n## ') > -1 || api.body.indexOf('\r\n# ') > -1) {
+      console.log(`API ${api.slug} has an h1 or a h2 in description`);
+      ok = false;
+    }
+
+    const intro = api.content_intro || '';
+    if (intro.indexOf('\r\n## ') > -1 || intro.indexOf('\r\n# ') > -1) {
+      console.log(`API ${api.slug} has an h1 or a h2 in intro`);
+      ok = false;
+    }
+  });
+  expect(ok).toBe(true);
+});
