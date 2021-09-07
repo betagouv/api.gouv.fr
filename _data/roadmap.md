@@ -202,7 +202,7 @@
       what: Bulletin officiel des annonces des marchés publics par la DILA
       path: /les-api/api-bulletin-annonces-marches-publics-boamp
     - type: ADD_API
-      what: API Indemnités journalières par la CNAM
+      what: Indemnités journalières par la CNAM
       path: /les-api/api_indemnites_journalieres_cnam
   7:
     - type: ADD_API
@@ -233,7 +233,7 @@
       what: Gels des avoirs par la Direction Générale du Trésor
       path: /les-api/api-gels-avoirs
     - type: ADD_API
-      what: API Aides Territoires par le Ministère de la Transition Ecologique
+      what: Aides Territoires par le Ministère de la Transition Ecologique
       path: /les-api/api-aides-territoires
     - type: ADD_API
       what: INFINOE par la DGFiP
