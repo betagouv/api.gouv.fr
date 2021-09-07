@@ -224,26 +224,29 @@
     - type: ADD_API
       what: Répertoire Opérationnel des Métiers et des Emplois par Pôle emploi
       path: /les-api/api-rome
-    - type: ADD_API
-      what: CVEC par le CNOUS
-    - type: ADD_API
-      what: Attestation Codes Sécurité par l'Urssaf
-    - type: ADD_API
-      what: Déclaration préalable à l'embauche par l'Urssaf
+
   9:
     - type: ADD_API
       what: SI-Amiante
       path: /les-api/api-si-amiante
     - type: ADD_API
-      what: AgentConnect par la DINUM
+      what: Gels des avoirs par la Direction Générale du Trésor
+      path: /les-api/api-gels-avoirs
     - type: ADD_API
-      what: Hermés par la DGFiP
+      what: API Aides Territoires par le Ministère de la Transition Ecologique
+    - type: ADD_API
+      what: INFINOE par la DGFiP
+    - type: ADD_API
+      what: Référentiel Partagé des Professionnels de Santé par l'Agence du Numérique en Santé
+    - type: ADD_API
+      what: Statut Étudiant par le MESRI
+  10:
+    - type: ADD_API
+      what: CVEC par le CNOUS
+    - type: ADD_API
+      what: Attestation Codes Sécurité par l'Urssaf
+    - type: ADD_API
+      what: Déclaration préalable à l'embauche par l'Urssaf 
     - type: ADD_API
       what: Liste des organismes de formation par la DGEFP
-    - type: ADD_API
-      what: Accès Libre
-    - type: ADD_API
-      what: Référentiel Partagé des Professionnels de Santé
-    - type: ADD_API
-      what: Statut Étudiant
 ---
