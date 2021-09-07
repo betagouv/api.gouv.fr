@@ -194,8 +194,7 @@
       what: Hub'Eau - Hydrobiologie
       path: /les-api/api_hubeau_hydrobiologie
     - type: ADD_API
-      what: Bulletin Officiel des Annonces Civiles et Commerciales
-      path: /les-api/api-bulletin-annonces-civiles-commerciales-bodacc
+      what: AgentConnect par la DINUM
     - type: ADD_API
       what: Professionnels BIO
       path: /les-api/api-professionnels-bio
@@ -232,6 +231,9 @@
     - type: ADD_API
       what: Déclaration préalable à l'embauche par l'Urssaf
   9:
+    - type: ADD_API
+      what: SI-Amiante
+      path: /les-api/api-si-amiante
     - type: ADD_API
       what: AgentConnect par la DINUM
     - type: ADD_API
