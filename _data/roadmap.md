@@ -234,6 +234,7 @@
       path: /les-api/api-gels-avoirs
     - type: ADD_API
       what: API Aides Territoires par le Ministère de la Transition Ecologique
+      path: /les-api/api-aides-territoires
     - type: ADD_API
       what: INFINOE par la DGFiP
     - type: ADD_API
