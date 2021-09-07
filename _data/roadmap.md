@@ -202,7 +202,7 @@
       what: Bulletin officiel des annonces des marchés publics par la DILA
       path: /les-api/api-bulletin-annonces-marches-publics-boamp
     - type: ADD_API
-      what: API Indemnités journalières par la CNAM
+      what: Indemnités journalières par la CNAM
       path: /les-api/api_indemnites_journalieres_cnam
   7:
     - type: ADD_API
