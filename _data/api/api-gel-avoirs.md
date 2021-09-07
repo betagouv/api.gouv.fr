@@ -1,5 +1,5 @@
 ---
-title: API Gels des avoirs
+title: API Gel des avoirs
 tagline: Obtenir toutes les informations concernant le registre national des gels des avoirs
 is_open: 1 # 1 means API is fully open
 external_site: http://documentation.abes.fr/aideidrefdeveloppeur/index.html#WebServiceRest
@@ -13,7 +13,7 @@ keywords:
   - ONU
   - Registre
 contact_link: https://gels-avoirs.dgtresor.gouv.fr/Contact
-doc_tech_link: /api/v1/proxy/https%3A%2F%2Fgels-avoirs.dgtresor.gouv.fr%2FApiPublic%2Fswagger%2Fv1%2Fswagger.json
+doc_tech_link: /api/v1/proxy/http%3A%2F%2Fgels-avoirs.dgtresor.gouv.fr%2FApiPublic%2Fswagger%2Fv1%2Fswagger.json
 doc_tech_external: https://gels-avoirs.dgtresor.gouv.fr/ApiPublic/index.html
 themes:
   - Administration & législation
