@@ -1,27 +1,27 @@
 openapi: 3.0.0
 servers:
-  - url: 'https://amiante.rct01.kleegroup.com'
+  - url: https://si-amiante.sante.gouv.fr
     description: ''
     variables: {}
 info:
-  version: d2507b47-66bd-4b43-88c2-fe78ce3f6c59
-  title: Amiante API 
-  description: ''
-  termsOfService: 'nnnn'
+  version: 57dea956-141d-49fe-af61-9772b0c5f326
+  title: SI Amiante API
+  description: 'Vous trouverez ci-dessous l’ensemble des points d’entrés offerts par l’API SI AMIANTE. Pour effectuer veuillez vous rapprocher du support '
+  termsOfService: ''
   contact: 
-    email: 'si-amiante@dgs.gouv.fr'
+    email: "si-amiante@dgs.gouv.fr"
   license:
     name: ''
 paths:
   /enrolement:
     post:
-      summary: Service d’enrôlement
-      description: 'Lorsque l’utilisateur enregistre sa clé sur un logiciel, ce dernier doit faire appel à un web service d’enrôlement qui va servir à appairer le logiciel et la clé technique.
-L’appel à ce web service est indispensable à l’utilisation de la clé utilisateur. Elle ne sera pas activée sinon
-'
+      tags:
+      - "ENROLEMENT"
+      summary: 'Service d’enrôlement'
+      description: 'Lorsque l’utilisateur enregistre sa clé sur un logiciel, ce dernier doit faire appel à un web service d’enrôlement qui va servir à appairer le logiciel et la clé technique. L’appel à ce web service est indispensable à l’utilisation de la clé utilisateur. Elle ne sera pas activée sinon'
       operationId: enrolement
       parameters:
-        - $ref: '#/components/parameters/cle'
+        - $ref: '#/components/parameters/Content-Type'
       responses:
         '200':
           description: ''
@@ -32,15 +32,10 @@ L’appel à ce web service est indispensable à l’utilisation de la clé util
           application/json:
             schema:
               type: string
-              example: {}
-            example: |-
-              {
-                    "numCertif": "AB-657",
-                    "siren": "339787277",
-                    "denominationSociale": "Ma societé"                
-              }
   /rapportMlad:
     post:
+      tags:
+      - "MLAD"
       summary: Service de soumission du rapport MLAD
       description: ' Ce service permet de déposer un rapport MLAD (matériaux liste A dégradés) au format PDF ainsi que les informations associées à ce rapport '
       operationId: rapportMlad
@@ -87,6 +82,8 @@ L’appel à ce web service est indispensable à l’utilisation de la clé util
                 disabled: true
   /declarationActivite:
     post:
+      tags:
+        - "ACTIVITE"
       summary: Service de soumission de déclaration de l’activité
       description: 'Ce service permet le dépôt de la déclaration annuelle de l’activité.'
       operationId: declarationActivite
@@ -125,8 +122,10 @@ L’appel à ce web service est indispensable à l’utilisation de la clé util
                         }
                         ]
                   }            
-  /amiante-api/annulationMlad:
-    delete:
+  /annulationMlad:
+    patch:
+      tags:
+      - "MLAD"
       summary: Service d’annulation de rapport MLAD
       description: 'Ce service permet d’annuler le dépôt d’un rapport MLAD à partir de son numéro d’identification unique.'
       operationId: annulationMlad
@@ -149,6 +148,8 @@ L’appel à ce web service est indispensable à l’utilisation de la clé util
           
   /campagne:
     get:
+      tags:
+      - "CAMPAGNE"
       summary: Service Etat de la campagne
       description: 'L’utilisateur fait appel à ce web service pour récupérer les informations sur l’éventuelle campagne diagnostiqueur en cours.'
       operationId: campagne
@@ -159,7 +160,9 @@ L’appel à ce web service est indispensable à l’utilisation de la clé util
           description: ''
           headers: {}
   /supressionDeclarationActivite:
-    delete:
+    patch:
+      tags:
+      - "ACTIVITE"
       summary: Service de suppression de la déclaration de l’activité
       description: 'Ce service permet de supprimer les lignes soumises lors de précédentes déclarations de l’activité via l’identifiant unique associé.'
       operationId: supressionDeclarationActivite
@@ -169,7 +172,7 @@ L’appel à ce web service est indispensable à l’utilisation de la clé util
         '200':
           description: ''
           headers: {}
-       requestBody:
+      requestBody:
         required: true
         content:
           text/plain:
@@ -188,6 +191,8 @@ L’appel à ce web service est indispensable à l’utilisation de la clé util
               }         
   /modificationDeclarationActivite:
     post:
+      tags:
+      - "ACTIVITE"
       summary: Service de modification de la déclaration de l’activité
       description: 'Ce service permet de remplacer des lignes soumises lors de précédentes déclarations de l’activité par de nouvelles données via l’identifiant unique associé.'
       operationId: modificationDeclarationActivite
@@ -203,7 +208,7 @@ L’appel à ce web service est indispensable à l’utilisation de la clé util
           text/plain:
             schema:
               type: string
-                example: {
+              example: {
                 
                 "declarationsList": [
                     {
@@ -249,6 +254,8 @@ L’appel à ce web service est indispensable à l’utilisation de la clé util
 
   /historiqueMlad: 
      get:
+      tags:
+      - "MLAD"
       summary: Service de consultation de l’historique des rapports déposés
       description: 'Ce service permet de consulter l’historique des rapports déposés à l’aide d’une clé.'
       operationId: historiqueMlad
@@ -260,6 +267,8 @@ L’appel à ce web service est indispensable à l’utilisation de la clé util
           headers: {}
   /ressources: 
      get:
+      tags:
+      - "RESSOURCES"
       summary: Service d’accès aux ressources du SI Amiante
       description: 'L’utilisateur fait appel à ce web service pour récupérer les ressources de l’application SI Amiante.'
       operationId: ressources
@@ -271,6 +280,8 @@ L’appel à ce web service est indispensable à l’utilisation de la clé util
           headers: {}        
   /historiqueDeclaration: 
      get:
+      tags:
+      - "ACTIVITE"
       summary: Service de consultation de l’historique des campagnes de déclarations
       description: 'Ce service permet de consulter la liste des déclarations de l’activité déposées à l’aide d’une clé.'
       operationId: historiqueDeclaration
@@ -283,6 +294,8 @@ L’appel à ce web service est indispensable à l’utilisation de la clé util
           headers: {}
   /actualites: 
      get:
+      tags:
+      - "ACTUALITE"
       summary: Service d’accès aux actualités relatives à SI Amiante
       description: 'L’utilisateur fait appel à ce web service pour récupérer les actualités de l’application SI Amiante.'
       operationId: actualites
@@ -294,6 +307,8 @@ L’appel à ce web service est indispensable à l’utilisation de la clé util
           headers: {}
   /avisDeclaration: 
      get:
+      tags:
+      - "ACTIVITE"
       summary: Service de téléchargement de l’avis de déclaration
       description: 'Ce service permet de télécharger l’avis de déclaration effectuée à l’aide d’une clé.'
       operationId: avisDeclaration
@@ -304,9 +319,17 @@ L’appel à ce web service est indispensable à l’utilisation de la clé util
         '200':
           description: ''
           headers: {}
-
+              
 components:
   parameters:
+    Content-Type:
+      name: Content-Type
+      in: header
+      required: true
+      style: simple
+      schema:
+        type: string
+        example: application/json
     cle:
       name: cle
       in: header
@@ -314,7 +337,7 @@ components:
       style: simple
       schema:
         type: string
-        example: mthg2s2lzzn87pb3t11mzqqb1bp0jp169ity9c767forex27igfax7wcu77mj0fl
+        example: mr8ny1kyc3a19amk3bb446gd9pkh994g6h8xo7imkwt058ifo0isiypdg8ouor6p
     annee:
       name: annee
       in: query
@@ -322,7 +345,6 @@ components:
       style: form
       schema:
         type: number
-        example: 2020
 security: []
 tags: []
 externalDocs:
