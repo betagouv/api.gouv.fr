@@ -23,6 +23,7 @@ doc_tech_link: https://scanr-api.enseignementsup-recherche.gouv.fr/api/v2/api-do
 monitoring_link: https://scanr-api.enseignementsup-recherche.gouv.fr/api/services/counts
 datagouv_uuid:
   - 577cc85ac751df4e1b9901a0
+last_update: 01/05/2020
 ---
 
 ### Description de l'API

@@ -11,6 +11,7 @@ export const getLabel = m => {
 
 export const ORIGIN = '01/01/2020';
 
+// returns the last update date or 01/01/2020 if older
 export const getDate = api => {
   const createdAtArray = (api.last_update || ORIGIN).split('/');
 

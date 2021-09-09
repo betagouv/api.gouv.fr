@@ -23,6 +23,7 @@ contact_link: newshubeau@brgm.fr
 doc_tech_link: https://hubeau.eaufrance.fr/api/vbeta/hydrobio/api-docs
 themes:
   - Environnement
+last_update: 01/05/2020
 ---
 
 ### Description fonctionnelle de l'API Hydrobiologie

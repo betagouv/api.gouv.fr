@@ -27,6 +27,7 @@ datagouv_uuid:
   - 53699f97a3a729239d206178
   - 53699132a3a729239d203bcd
   - 53699dc9a3a729239d205d08
+last_update: 01/05/2020
 ---
 
 L’API ‘BDM’ permet d’accéder aux indicateurs diffusés sur insee.fr dans la rubrique “indices et séries chronologiques”. Les données sont identiques à celles présentées sur le site web de l’Insee.

@@ -21,6 +21,7 @@ themes:
 contact_link: https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/help.jag#contact
 doc_tech_link: /api/v1/proxy/https%3A%2F%2Fapi.insee.fr%2Fcatalogue%2Fapi-docs%2Fcarbon.super%2FDonneesLocales%2FV0.1%3FenvName%3Dnull
 doc_tech_external: https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/item-info.jag?name=DonneesLocales&version=V0.1&provider=insee
+last_update: 01/05/2020
 ---
 
 L’API ‘Données locales’ permet d’accéder aux données localisées à la commune, diffusées sur insee.fr dans la rubrique 'chiffres détaillés' (ou ‘chiffres clés’ pour les populations légales), sous forme de cubes prédéfinis.
