@@ -11,7 +11,14 @@ test('Can load all Apis', async () => {
   expect(allApis.length).toBeGreaterThan(0);
 });
 
-const compulsoryFields = ['title', 'tagline', 'producer', 'is_open', 'themes'];
+const compulsoryFields = [
+  'title',
+  'tagline',
+  'producer',
+  'is_open',
+  'themes',
+  'last_update',
+];
 compulsoryFields.forEach(fieldName => {
   test(`Every API has a ${fieldName} field`, async () => {
     let hasField = true;

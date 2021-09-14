@@ -53,9 +53,16 @@ const readAllProducersOnDisk = async () => {
   }, {});
 };
 
+const readRoadmapOnDisk = async () => {
+  const roadmapFile = require('../_data/roadmap.md');
+  const md = frontmatter(roadmapFile.default);
+  return formatRoadmap(md.attributes);
+};
+
 module.exports = {
   readAllApisOnDisk,
   readAllServicesOnDisk,
   readAllGuidesOnDisk,
   readAllProducersOnDisk,
+  readRoadmapOnDisk,
 };
