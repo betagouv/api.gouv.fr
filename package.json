@@ -15,8 +15,7 @@
     "create-thumbnail": "node node-scripts/createThumbnail.js",
     "check-accessibility": "node ./node-scripts/checkA11y.js",
     "check-broken-links": "node ./node-scripts/checkBrokenLinks.js",
-    "check-no-datapass-staging": "node ./node-scripts/checkNoDatapassStaging.js",
-    "check-all-api-in-roadmap":"node ./node-scripts/checkAllApiInRoadmap.js"
+    "check-no-datapass-staging": "node ./node-scripts/checkNoDatapassStaging.js"
   },
   "devDependencies": {
     "@axe-core/cli": "^4.2.1",
