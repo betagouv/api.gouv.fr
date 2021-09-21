@@ -38,7 +38,7 @@ La majorité des API visibles sur la page [rechercher une api](/les-api/recherch
 - l'ensemble des [adresses du territoire français](/les-api/base-adresse-nationale)
 - les Diagnostic de Performance Energetique des logements particuliers (DPE)
 - la [base documentaire Gallica](/les-api/api_gallica_document), de la Bibliothèque Nationale de France
-- la [liste des jours fériés en France](/les-api/jours-ferie)
+- la [liste des jours fériés en France](/les-api/jours-feries)
 
 ... Et encore [bien d'autres](/rechercher-api).
 
