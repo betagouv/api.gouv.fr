@@ -178,10 +178,8 @@ const IsFranceConnectedDetail: React.FC<IPropsIsFranceConnected> = ({
           <img src="/images/divers/franceConnectLogo.png" alt="fc-logo" />
         </div>
         <div>
-          {is_france_connected === 2
-            ? ' S’utilise avec '
-            : ' Peut s’utiliser avec '}
-          FranceConnect
+          FranceConnect :
+          {is_france_connected === 2 ? ' obligatoire' : ' compatible'}
         </div>
         <ShowMore isOpen={show} />
       </div>
