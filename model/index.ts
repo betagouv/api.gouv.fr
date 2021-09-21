@@ -86,6 +86,7 @@ export interface IApiShort {
   path: string;
   tagline: string;
   is_open: IIsApiOpen;
+  is_france_connected: number | undefined;
   owner: string;
 }
 
