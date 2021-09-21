@@ -193,6 +193,9 @@ const Footer = () => {
         .fr-footer .footer__social a {
           margin-right: 1rem;
         }
+        .fr-footer .fr-footer__brand a:before {
+          display: none;
+        }
 
         .fr-footer .footer__social .icon {
           width: 20px;
