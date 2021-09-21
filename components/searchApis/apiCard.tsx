@@ -54,8 +54,8 @@ const ApiCard: React.FC<IProps> = ({
             />
           </div>
 
-          {is_france_connected && is_france_connected > 0 && (
-            <div className="card-extra  fc-compat">
+          {is_france_connected && is_france_connected > 0 ? (
+            <div className="card-extra fc-compat">
               <img src="/images/divers/franceConnectLogo.png" alt="fc-logo" />
               <div>
                 {is_france_connected === 2
@@ -64,6 +64,8 @@ const ApiCard: React.FC<IProps> = ({
                 FranceConnect
               </div>
             </div>
+          ) : (
+            <></>
           )}
 
           <div className="card-extra">
