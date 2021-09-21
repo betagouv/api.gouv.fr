@@ -82,14 +82,19 @@ Maintenant que le traitement est automatisé, nous avons enfin le temps de mieux
 
 Si vous travaillez avec l'un des éditeurs ou intégrateurs ci-dessous vous pouvez faire une demande pré-remplie :
 
-| Editeur                      | Nom de la solution            | Date         | Lien vers la demande                                                                                                             |
-| ---------------------------- | ----------------------------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------- |
-| Agora Plus                   | Agor@Famille Premium          | 2017         | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=agora-plus">Remplir une demande</External>                 |
-| Ciril Group                  | Portail famille Civil Enfance | Juin 2021    | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=civil-enfance-ciril-group">Remplir une demande</External>  |
-| JVS                          | Parascol – MonEspaceFamille   | Juillet 2021 | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=jvs-parascol">Remplir une demande</External>               |
-| Arpège                       | Espace Citoyens Premium       |              | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=arpege-concerto">Remplir une demande</External>            |
-| NFI Nord France Informatique |                               | Janvier 2021 | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=nfi-grc">Remplir une demande</External>                    |
-| Entr'ouvert                  | Publik                        | Janvier 2021 | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=entrouvert-publik">Remplir une demande</External>          |
-| Berger Levrault              | BL Enfance                    | Mars 2021    | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=bl-enfance-berger-levrault">Remplir une demande</External> |
+| Editeur                      | Nom de la solution            | Date         | Lien vers la demande                                                                                                                |
+| ---------------------------- | ----------------------------- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
+| Agora Plus                   | Agor@Famille Premium          | 2017         | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=agora-plus">Remplir une demande</External>                    |
+| Ciril Group                  | Portail famille Civil Enfance | Juin 2021    | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=civil-enfance-ciril-group">Remplir une demande</External>     |
+| JVS                          | Parascol – MonEspaceFamille   | Juillet 2021 | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=jvs-parascol">Remplir une demande</External>                  |
+| Arpège                       | Espace Citoyens Premium       |              | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=arpege-concerto">Remplir une demande</External>               |
+| NFI Nord France Informatique |                               | Janvier 2021 | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=nfi-grc">Remplir une demande</External>                       |
+| Entr'ouvert                  | Publik                        | Janvier 2021 | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=entrouvert-publik">Remplir une demande</External>             |
+| Berger Levrault              | BL Enfance                    | Mars 2021    | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=bl-enfance-berger-levrault">Remplir une demande</External>    |
+| Jdéalise                     | Cantine de France             | Avril 2021   | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=cantine-de-france">Remplir une demande</External>             |
+| Mushroom                     | CityFamily                    | Juin 2021    | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=city-family-mushroom-software">Remplir une demande</External> |
+| TeamNet                      | Axel Portail Famille          | Juin 2021    | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=teamnet">Remplir une demande</External>                       |
+| Abelium                      | Domino Web                    | Juin 2021    | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=abelium">Remplir une demande</External>                       |
+| Waigéo                       | MyPérischool                  | Juillet 2021 | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=waigeo">Remplir une demande</External>                        |
 
 Vous êtes un éditeur et vous souhaitez apparaître dans cette liste ? Écrivez-nous à [contact@particulier.api.gouv.fr](mailto:contact@particulier.api.gouv.fr)

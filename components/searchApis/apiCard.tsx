@@ -13,7 +13,7 @@ interface IProps {
   uptime: number;
   logo: string;
   is_open: IIsApiOpen;
-  is_france_connected: number;
+  is_france_connected: number | null;
   owner: string;
   matches?: ISearchMatch;
 }
@@ -54,7 +54,7 @@ const ApiCard: React.FC<IProps> = ({
             />
           </div>
 
-          {is_france_connected > 0 && (
+          {is_france_connected && is_france_connected > 0 && (
             <div className="card-extra  fc-compat">
               <img src="/images/divers/franceConnectLogo.png" alt="fc-logo" />
               <div>

@@ -18,7 +18,7 @@ interface IPropsMonitoring {
 }
 
 interface IPropsIsFranceConnected {
-  is_france_connected?: 1 | 2;
+  is_france_connected: number | null;
 }
 
 interface IPropsDetails
@@ -216,7 +216,7 @@ const ApiDetails: React.FC<IPropsDetails> = ({
   monitoring_link,
   rate_limiting,
   rate_limiting_resume,
-  is_france_connected = undefined,
+  is_france_connected = null,
 }) => {
   return (
     <SubSection id="api-details-lateral-section" title="L’API en détail">
