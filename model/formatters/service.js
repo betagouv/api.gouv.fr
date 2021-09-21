@@ -23,7 +23,6 @@ const formatServiceWithApis = apis => (slug, data) => {
       is_open: match.is_open,
       logo: match.logo || null, // for serialization
       noindex: match.noindex || false,
-      is_france_connected: match.is_france_connected,
     };
   });
 

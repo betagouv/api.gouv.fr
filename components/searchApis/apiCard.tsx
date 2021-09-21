@@ -13,7 +13,7 @@ interface IProps {
   uptime: number;
   logo: string;
   is_open: IIsApiOpen;
-  is_france_connected: number | undefined;
+  is_france_connected: number;
   owner: string;
   matches?: ISearchMatch;
 }
