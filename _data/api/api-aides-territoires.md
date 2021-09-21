@@ -1,11 +1,12 @@
 ---
 title: API Aides Territoires
-tagline: Connaître toutes les aides publiques existantes pour une thématique selon le territoire
+tagline: Faciliter la recherche d'aides des collectivités territoriales et de leurs partenaires locaux
 external_site: https://aides-territoires.beta.gouv.fr/
 is_open: 1 # 1 means API is fully open
-producer: mtes
+producer: dgaln
 partners: 
-  - Ministère de la Cohésion des Territoires
+  - ANCT
+  - France Mobilités
 keywords:
   - Energie
   - Environnement
@@ -36,12 +37,14 @@ Aides Territoires est un moteur de recherche qui permet de retrouver près de 30
 
 ### À quoi sert l’API Aides Territoires ?
 
-Cette API permet d'afficher les résultats de recherches d'aides, en fonction de leur thématique, de leur localisation, et d'un ensemble de sous thématiques.
-La description des aides renvoie plusieurs informations : descriptif de l'aide, nature, critères d'éligibilité...
+Elle permet en tant que réutilisateur de données de récupérer les aides et leurs critères disponibles sur Aides-territoires.
 
-L'API est librement accessible, en revanche **elle ne permet pas de publier directement une aide**.
+### Alimenter l'API ?
 
-👉 Pour publier un dispositif d'aide, rendez-vous sur le [portail Aides Territoires](https://aides-territoires.beta.gouv.fr/comptes/inscription/?next=/aides/publications/)
+Pour garantir une information de qualité, Aides-territoires s’appuie sur les données référencées par les porteurs d’aides financières et d’ingénierie et les animateurs locaux via le [formulaire en ligne](https://aides-territoires.beta.gouv.fr/aides/publications), après la création d'un compte porteur sur Aides-territoires. 
+
+Si le porteur dispose déjà d’une base de données structurée et porte de nombreux dispositifs, Aides Territoires met en place un flux automatique. 
+[Contacter l'équipe](mailto:aides-territoires@beta.gouv.fr) pour plus d'informations.
 
 ### Quelles sont les données contenues dans l'API Aides Territoires ?
 
@@ -54,3 +57,4 @@ On retrouve - entre autres - pour chaque dispositif d'aide répertorié :
 | Nature                | Par exemple : aide financière      |
 | Zone géographique     | Zone couverte par le dispositif    |
 | Critères d'éligibilité| Les conditions pour en bénéficier  |
+| Lien vers la démarche | Lien pour candidater à l'aide      |
