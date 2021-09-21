@@ -13,6 +13,7 @@ interface IProps {
   uptime: number;
   logo: string;
   is_open: IIsApiOpen;
+  is_france_connected: number | null;
   owner: string;
   matches?: ISearchMatch;
 }
@@ -25,6 +26,7 @@ const ApiCard: React.FC<IProps> = ({
   logo,
   owner,
   is_open,
+  is_france_connected = 0,
   matches = {},
 }) => {
   return (
@@ -51,6 +53,18 @@ const ApiCard: React.FC<IProps> = ({
               }}
             />
           </div>
+
+          {is_france_connected && is_france_connected > 0 && (
+            <div className="card-extra  fc-compat">
+              <img src="/images/divers/franceConnectLogo.png" alt="fc-logo" />
+              <div>
+                {is_france_connected === 2
+                  ? ' S’utilise avec '
+                  : ' Peut s’utiliser avec '}
+                FranceConnect
+              </div>
+            </div>
+          )}
 
           <div className="card-extra">
             <div>
