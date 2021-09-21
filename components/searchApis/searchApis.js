@@ -4,6 +4,7 @@ import { debounce } from 'lodash';
 import FilterHeader from './filterHeader';
 import Results from './results';
 import {
+  API_ACCESS_TYPE,
   filterTheme,
   filterAccess,
   computeSearchResults,
@@ -26,11 +27,21 @@ const logResultsInMatomo = debounce((search, theme, resultCounts) => {
   }
 }, 1000);
 
+const allAPITypeOptions = [
+  { value: API_ACCESS_TYPE.ALL, label: 'Toutes les API' },
+  { value: API_ACCESS_TYPE.OPEN, label: 'Les API ouvertes à tous' },
+  { value: API_ACCESS_TYPE.NOT_OPEN, label: 'Les API en accès restreint' },
+  {
+    value: API_ACCESS_TYPE.FRANCE_CONNECT,
+    label: 'Les API compatibles avec FranceConnect',
+  },
+];
+
 const SearchApis = ({ allApis, allThemes }) => {
   const [apiList, setApiList] = useState(allApis);
 
   const [theme, setTheme] = useState(null);
-  const [isAccessOpen, setIsAccessOpen] = useState(false);
+  const [APIType, setAPIType] = useState(null);
   const [searchTerms, setSearchTerms] = useState('');
 
   const allThemesOptions = allThemes.map((el, index) => {
@@ -48,26 +59,34 @@ const SearchApis = ({ allApis, allThemes }) => {
     }
 
     const newApiList = res
-      .filter(filterAccess(isAccessOpen))
+      .filter(filterAccess(APIType))
       .filter(filterTheme(theme))
       .sort((a, b) => ((a.visits_2019 || 0) < (b.visits_2019 || 0) ? 1 : -1));
 
-    const themeAndAccess = `${theme}${isAccessOpen ? '-only-access-open' : ''}`;
+    const themeAndAccess = `${theme}${APIType || ''}`;
 
     logResultsInMatomo(searchTerms, themeAndAccess, newApiList.length);
 
     setApiList(newApiList);
 
     return () => {};
-  }, [theme, isAccessOpen, searchTerms, allApis]);
+  }, [theme, APIType, searchTerms, allApis]);
 
   const updateTheme = index => {
-    if (!!index) {
+    let idx;
+
+    try {
+      idx = parseInt(index, 10);
+    } catch {
+      idx = 0;
+    }
+
+    if (!!idx) {
       // no theme selected
       setTheme(null);
     }
     const newTheme = allThemesOptions.reduce((selectedTheme, theme) => {
-      if (theme.value === index) {
+      if (theme.value === idx) {
         return theme.label;
       }
       return selectedTheme;
@@ -80,9 +99,9 @@ const SearchApis = ({ allApis, allThemes }) => {
       <FilterHeader
         allThemesOptions={allThemesOptions}
         setTheme={updateTheme}
-        setIsAccessOpen={setIsAccessOpen}
+        allAPITypeOptions={allAPITypeOptions}
+        setAPIType={setAPIType}
         search={setSearchTerms}
-        isAccessOpen={isAccessOpen}
       />
       <Results apiList={apiList} />
     </>

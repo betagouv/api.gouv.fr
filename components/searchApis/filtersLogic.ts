@@ -10,11 +10,23 @@ export const filterTheme = (selectedTheme: string | null) => {
   return (api: IApi) => api.themes.includes(selectedTheme);
 };
 
-export const filterAccess = (noAccessRight: boolean) => {
-  if (!noAccessRight) {
-    return () => true;
+export enum API_ACCESS_TYPE {
+  ALL = '',
+  OPEN = 'open',
+  NOT_OPEN = 'notOpen',
+  FRANCE_CONNECT = 'franceConnect',
+}
+
+export const filterAccess = (APIType: API_ACCESS_TYPE) => {
+  if (APIType === API_ACCESS_TYPE.OPEN) {
+    return (api: IApi) => api.is_open !== -1;
+  } else if (APIType === API_ACCESS_TYPE.NOT_OPEN) {
+    return (api: IApi) => api.is_open === -1;
+  } else if (APIType === API_ACCESS_TYPE.FRANCE_CONNECT) {
+    return (api: IApi) =>
+      api.is_france_connected === 1 || api.is_france_connected === 2;
   }
-  return (api: IApi) => api.is_open !== -1;
+  return () => true;
 };
 
 /**

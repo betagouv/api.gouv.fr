@@ -7,7 +7,7 @@ interface SelectOption {
 
 interface IProps {
   selectOptions: SelectOption[];
-  onChange: (newSelectedOption: number | null) => void;
+  onChange: (newSelectedOption: any) => void;
   label?: string;
   width?: number;
   id?: string;
@@ -27,12 +27,15 @@ const Dropdown: React.FC<IProps> = ({
       onChange(null);
       return;
     }
-    const index = parseInt(event.target.value, 10);
-    onChange(index);
+    const value = event.target.value;
+    onChange(value);
   };
 
   return (
-    <div className="dropdown-wrapper" style={{ width: `${width}px` }}>
+    <div
+      className="dropdown-wrapper"
+      style={{ width: '100%', maxWidth: `${width}px` }}
+    >
       {label && <label htmlFor={id}>{label}</label>}
       <select id={id} onChange={onSelect} onBlur={onSelect}>
         <option value={-1}>

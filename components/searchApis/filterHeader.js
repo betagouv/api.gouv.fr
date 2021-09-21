@@ -1,11 +1,11 @@
-import { SearchBar, Toggle, Dropdown } from '../../uiComponents';
+import { SearchBar, Dropdown } from '../../uiComponents';
 
 export const FilterHeader = ({
   search,
   setTheme,
-  setIsAccessOpen,
-  isAccessOpen,
   allThemesOptions,
+  setAPIType,
+  allAPITypeOptions,
   searchFromQueryString,
 }) => (
   <section id="search-api-filters" className="fr-container ">
@@ -14,16 +14,12 @@ export const FilterHeader = ({
       onChange={setTheme}
       selectOptions={allThemesOptions}
     />
-    <div className="habilitation-wrapper">
-      <div className="label">Habilitation</div>
-      <div className="toggle">
-        <Toggle
-          label="Uniquement les API ouvertes à tous"
-          onChange={setIsAccessOpen}
-          isToggled={isAccessOpen}
-        />
-      </div>
-    </div>
+    <Dropdown
+      label="Type d’API"
+      onChange={setAPIType}
+      selectOptions={allAPITypeOptions}
+      width={350}
+    />
     <SearchBar
       onSearch={search}
       defaultValue={searchFromQueryString}
