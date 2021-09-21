@@ -27,6 +27,7 @@ a.api-card {
   > .content {
     flex-grow: 1;
     margin: 15px;
+    margin-bottom: 25px;
     position: relative;
 
     img {
@@ -51,8 +52,20 @@ a.api-card {
   }
 
   .card-extra {
-    padding: 0.5em 1em;
+    padding: 0rem 1rem 0.5rem;
     color: #222;
+    font-size: 0.9rem;
+  }
+
+  .fc-compat {
+    padding-bottom: 0.3rem;
+    display: flex;
+    align-items: center;
+
+    > img {
+      max-height: 20px;
+      margin-right: 5px;
+    }
   }
 
   .card-footer {
