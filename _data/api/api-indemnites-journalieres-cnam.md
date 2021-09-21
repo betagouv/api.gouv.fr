@@ -62,7 +62,7 @@ rate_limiting_description: |
 #monitoring_link: 
 monitoring_description: |
   Une supervision du service en temps réel est disponible à cette adresse.
-contact_link: partenaires-api-ameli.cnam@assurance-maladie.fr
+contact_link: partenaires-api-cnam@assurance-maladie.fr	
 doc_tech_link: https://api.swaggerhub.com/apis/meeoen/apij/1.0-apim
 themes:
   - Particulier
