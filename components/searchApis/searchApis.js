@@ -28,7 +28,6 @@ const logResultsInMatomo = debounce((search, theme, resultCounts) => {
 }, 1000);
 
 const allAPITypeOptions = [
-  { value: API_ACCESS_TYPE.ALL, label: 'Toutes les API' },
   { value: API_ACCESS_TYPE.OPEN, label: 'Les API ouvertes à tous' },
   { value: API_ACCESS_TYPE.NOT_OPEN, label: 'Les API en accès restreint' },
   {
