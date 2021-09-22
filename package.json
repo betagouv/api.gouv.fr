@@ -6,7 +6,7 @@
   "license": "AGPL-3.0-or-later",
   "node": "=12.16",
   "scripts": {
-    "sitemap": "node node-scripts/saveUrlList.js && sitemap < ./public/url-list.txt > ./public/sitemap.xml",
+    "sitemap": "node node-scripts/saveUrlList.js && node ./node_modules/sitemap/dist/cli.js < ./public/url-list.txt > ./public/sitemap.xml",
     "dev": "NODE_ENV=development next",
     "test": "jest",
     "start": "next start -p $PORT",
