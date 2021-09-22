@@ -12,11 +12,13 @@ export const FilterHeader = ({
     <Dropdown
       label="Thématique"
       onChange={setTheme}
+      placeholder="Toutes les thématiques"
       selectOptions={allThemesOptions}
     />
     <Dropdown
-      label="Type d’API"
+      label="Modalité d’accès"
       onChange={setAPIType}
+      placeholder="Tous les accès"
       selectOptions={allAPITypeOptions}
       width={350}
     />
