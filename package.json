@@ -19,9 +19,18 @@
   },
   "devDependencies": {
     "@axe-core/cli": "^4.2.1",
+    "husky": "^7.0.2",
+    "jest": "^27.0.4",
+    "prettier": "^2.3.1"
+  },
+  "dependencies": {
+    "@babel/core": "^7.15.5",
     "@babel/eslint-parser": "^7.14.4",
     "@babel/preset-typescript": "^7.13.0",
+    "@babel/runtime": "^7.13.10",
     "@types/cors": "^2.8.10",
+    "@types/d3": "6.7",
+    "@types/d3-scale": "^4.0.1",
     "@types/jest": "^27.0.1",
     "@types/lodash": "^4.14.170",
     "@types/react": "^17.0.10",
@@ -31,22 +40,10 @@
     "@zeit/next-sass": "^0.0.4",
     "babel-eslint": "^10.1.0",
     "broken-link-checker": "^0.7.8",
-    "eslint": "^7.28.0",
-    "eslint-config-next": "11.1.2",
-    "husky": "^7.0.2",
-    "jest": "^27.0.4",
-    "prettier": "^2.3.1",
-    "sass": "^1.34.1",
-    "sharp": "^0.29.1",
-    "sitemap": "^7.0.0",
-    "typescript": "^4.3.2"
-  },
-  "dependencies": {
-    "@babel/runtime": "^7.13.10",
-    "@types/d3": "6.7",
-    "@types/d3-scale": "^4.0.1",
     "cors": "^2.8.5",
     "d3": "6.7",
+    "eslint": "^7.28.0",
+    "eslint-config-next": "11.1.2",
     "front-matter": "^4.0.2",
     "lodash": "^4.17.21",
     "markdown-to-jsx": "^7.1.3",
@@ -55,7 +52,11 @@
     "raw-loader": "^4.0.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "sass": "^1.34.1",
+    "sharp": "^0.29.1",
+    "sitemap": "^7.0.0",
     "swagger-ui-dist": "^4.0.0-beta.4",
+    "typescript": "^4.3.2",
     "underscore.string": "^3.3.5"
   }
 }
