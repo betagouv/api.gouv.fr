@@ -243,6 +243,9 @@
       what: Statut Étudiant par le MESRI
   10:
     - type: ADD_API
+      what: Historique d'un véhicule par le Ministère de l'Intérieur
+      path: /les-api/api-historique-vehicule
+    - type: ADD_API
       what: CVEC par le CNOUS
     - type: ADD_API
       what: Attestation Codes Sécurité par l'Urssaf
