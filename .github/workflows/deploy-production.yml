@@ -18,7 +18,7 @@ jobs:
         shell: bash
         env:
           SSH_PRIVATE_KEY: ${{secrets.SSH_MACHINE_USER_PRIVATE_KEY}}
-          SSH_KNOWN_HOSTS: ${{secrets.SSH_KNOWN_HOSTS_STAGING}}
+          SSH_KNOWN_HOSTS: ${{secrets.SSH_KNOWN_HOSTS_PRODUCTION}}
 
       - name: Deploy to production
         run: ssh -i ./deploy.key www-data@www-production.infra.api.gouv.fr 'sh /opt/apps/www/www-deploy.sh'
