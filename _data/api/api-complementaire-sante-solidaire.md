@@ -44,20 +44,21 @@ themes:
   - Santé
   - Particulier
 #uptime: 
-contact_link: prosanteconnect.editeurs@esante.gouv.fr
-doc_tech_external: https://integrateurs-cps.asipsante.fr/pages/prosanteconnect/documentation-fs
-last_update: 22/03/2021
+#contact_link: 
+doc_tech_external: http://swagger.io  
+last_update: 28/09/2021
 ---
 
-Description
+Description en attente
 
 ### À quoi sert cette API ?
 
-Texte
+Texte en attente.
 
 ### Données disponibles dans l'API
 
-| Type                       | Données                                                  |
-| -------------------------- | -------------------------------------------------------- |
-| Identifiant national       | RPPS (ou ADELI)                                          |
-| Données sectorielles       | type d'activité (salarié ou libéral) et lieu d'activité. |
+L'API permet de savoir si une personne est :
+
+- bénéficiaire de la complémentaire santé solidaire,
+- non bénéficiaire,
+- inconnue.
