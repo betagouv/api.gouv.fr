@@ -1,8 +1,6 @@
-name: Deploy - Staging
+name: Deploy - Production
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 jobs:
@@ -22,5 +20,5 @@ jobs:
           SSH_PRIVATE_KEY: ${{secrets.SSH_MACHINE_USER_PRIVATE_KEY}}
           SSH_KNOWN_HOSTS: ${{secrets.SSH_KNOWN_HOSTS_STAGING}}
 
-      - name: Deploy to staging
-        run: ssh -i ./deploy.key www-data@www-staging.infra.api.gouv.fr 'sh /opt/apps/www/www-deploy.sh'
+      - name: Deploy to production
+        run: ssh -i ./deploy.key www-data@www-production.infra.api.gouv.fr 'sh /opt/apps/www/www-deploy.sh'
