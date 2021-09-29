@@ -28,15 +28,17 @@ aux API et à leurs producteurs.
 
 Les fournisseurs, de leur côté, ont avec ce catalogue un moyen simple de faire connaître leurs API.
 
-### Fournisseur d'API ? [Ajoutez votre API](https://api.gouv.fr/nouvelle-api) !
+## Fournisseur d'API ? Envie de référencer une nouvelle API ?
 
-## Installation locale
+[👉 Ajoutez votre API](https://api.gouv.fr/nouvelle-api) !
+
+## Comment ça marche ?
 
 ### Prérequis
 
 [Node.js](https://nodejs.org/en/) >= 16
 
-### Installation et serveur de développement
+### Serveur de développement
 
 Cette application utilise [Next.js](https://github.com/zeit/next.js).
 
@@ -66,7 +68,7 @@ npm run dev
 
 Par défaut, il écoutera sur le port `3000`, pour changer, utiliser `npm run dev -p 4242`.
 
-## Build
+### Build de production
 
 Cette application utilise [Next.js](https://github.com/zeit/next.js).
 
