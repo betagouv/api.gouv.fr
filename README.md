@@ -34,9 +34,9 @@ Les fournisseurs, de leur côté, ont avec ce catalogue un moyen simple de faire
 
 ### Prérequis
 
-[Node.js](https://nodejs.org/en/) >= 12
+[Node.js](https://nodejs.org/en/) >= 16
 
-### Script d’installation
+### Installation et serveur de développement
 
 Cette application utilise [Next.js](https://github.com/zeit/next.js).
 
@@ -46,7 +46,13 @@ Cette application utilise [Next.js](https://github.com/zeit/next.js).
 npm i
 ```
 
-2. Copier le fichier de configuration
+2. Variables d’environnement
+
+Afin de configurer le projet correctement, il est conseillé de créer un fichier `.env` avec les variables d’environnement nécessaires à l’application.
+
+`.env` permet de persister les variables d’environnement de développement dans un fichier plutôt que de les définir dans le shell, mais les deux fonctionnent. Cela fonctionne avec [dotenv](https://github.com/motdotla/dotenv) et [next-runtime-dotenv](https://github.com/tusbar/next-runtime-dotenv).
+
+Copier le fichier de configuration
 
 ```bash
 cp .env.sample .env
@@ -60,13 +66,7 @@ npm run dev
 
 Par défaut, il écoutera sur le port `3000`, pour changer, utiliser `npm run dev -p 4242`.
 
-Afin de configurer le projet correctement, il est conseillé de créer un fichier `.env` avec les variables d’environnement nécessaires à l’application.
-
-`.env` permet de persister les variables d’environnement de développement dans un fichier plutôt que de les définir dans le shell, mais les deux fonctionnent. Cela fonctionne avec [dotenv](https://github.com/motdotla/dotenv) et [next-runtime-dotenv](https://github.com/tusbar/next-runtime-dotenv).
-
-## Déploiement
-
-### Production
+## Build
 
 Cette application utilise [Next.js](https://github.com/zeit/next.js).
 
@@ -85,9 +85,9 @@ npm run build
 3. Lancer le serveur de production
 
 ```bash
-PORT=3000 npm start
+PORT=3000 npm run start
 ```
 
-### Développement
+### Preview apps
 
 Chaque pull request est déployé dans des [review app](https://devcenter.heroku.com/articles/github-integration-review-apps) sur [Heroku](https://dashboard.heroku.com/)
