@@ -11,6 +11,18 @@ const teamData = [
     img: 'Romain.jpg',
   },
   {
+    name: 'Mathilde Hoang',
+    title: 'Responsable circulation et ouverture des données',
+    linkedin: 'https://fr.linkedin.com/in/mathilde-hoang-01a72a88',
+    img: 'Mathilde.jpg',
+  },
+  {
+    name: 'Benoit Morane',
+    title: 'Développement des offres API',
+    linkedin: 'https://www.linkedin.com/in/benoit-morane-0b5773a5',
+    img: 'Benoit.jpg',
+  },
+  {
     name: 'Vincent Mazalaigue',
     title: 'Chargé de mission DLNUF',
     linkedin: 'https://www.linkedin.com/in/vmazalaigue/',
@@ -58,18 +70,6 @@ const teamData = [
     linkedin:
       'https://www.linkedin.com/in/%F0%9F%90%A4-lo%C3%AFc-delmaire-%F0%9F%90%A4-46813649/',
     img: 'Loic.jpg',
-  },
-  {
-    name: 'Benoit Morane',
-    title: 'Développement des offres API',
-    linkedin: 'https://www.linkedin.com/in/benoit-morane-0b5773a5',
-    img: 'Benoit.jpg',
-  },
-  {
-    name: 'Mathilde Hoang',
-    title: 'Chargée de mission open data',
-    linkedin: 'https://fr.linkedin.com/in/mathilde-hoang-01a72a88',
-    img: 'Benoit.jpg',
   },
   {
     name: 'Alexis Leclerc',
