@@ -11,6 +11,18 @@ const teamData = [
     img: 'Romain.jpg',
   },
   {
+    name: 'Mathilde Hoang',
+    title: 'Responsable circulation et ouverture des données',
+    linkedin: 'https://fr.linkedin.com/in/mathilde-hoang-01a72a88',
+    img: 'Mathilde.jpg',
+  },
+  {
+    name: 'Benoit Morane',
+    title: 'Développement des offres API',
+    linkedin: 'https://www.linkedin.com/in/benoit-morane-0b5773a5',
+    img: 'Benoit.jpg',
+  },
+  {
     name: 'Vincent Mazalaigue',
     title: 'Chargé de mission DLNUF',
     linkedin: 'https://www.linkedin.com/in/vmazalaigue/',
@@ -60,22 +72,10 @@ const teamData = [
     img: 'Loic.jpg',
   },
   {
-    name: 'Victor Gross',
-    title: 'Développement des offres API',
-    linkedin: 'https://fr.linkedin.com/in/victorgross',
-    img: 'Victor.jpg',
-  },
-  {
     name: 'Alexis Leclerc',
     title: 'API Entreprise',
     linkedin: 'https://www.linkedin.com/in/leclerca/',
     img: 'Alexis.jpg',
-  },
-  {
-    name: 'Cyril Kato',
-    title: 'API Entreprise',
-    linkedin: 'https://www.linkedin.com/in/cyrilllllll',
-    img: 'Cyril.jpg',
   },
   {
     name: 'Dorine Lambinet',
