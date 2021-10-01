@@ -35,13 +35,11 @@ API Particulier met à disposition les données de la CAF (composition familiale
 | Quotient Familial | Le quotient familial calculé par la CAF                                                          |
 | Avis d'imposition | Le statut d’imposition, montant de l'impôt, revenu fiscal de référence, nombre de parts fiscales |
 
-**Focus sur la différence entre le QF de la CAF et le QF de la DGFIP**
+**NB: quelle est la différence entre le Quotient Familial (QF) de la CAF et le Quotient Familial de la DGFIP**
 
-Le Quotient  Familial CAF est revu à chaque changement de situation familiale et/ou professionelle 
-Il prend en compte 1/12e du revenue imposable de l’année N-2 + les Prestations familiales du mois de référence divisés par le nombre de part fiscale du foyer
+Le Quotient  Familial CAF est revu à chaque changement de situation familiale et/ou professionelle. Il prend en compte 1/12e du revenue imposable de l’année N-2 + les Prestations familiales du mois de référence divisés par le nombre de part fiscale du foyer.
 
-Le Quotient Familiale « DGFIP » est calculé au moment de la déclaration de revenus.
-Il divise le revenue imposable de l’année N-1 par le nombre de part fiscale du foyer
+Le Quotient Familiale « DGFIP » est calculé au moment de la déclaration de revenus. Il divise le revenue imposable de l’année N-1 par le nombre de part fiscale du foyer.
 
 ## Comment accèder à la donnée ?
 
