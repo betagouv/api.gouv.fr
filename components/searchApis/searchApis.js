@@ -10,15 +10,13 @@ import {
   computeSearchResults,
 } from './filtersLogic';
 
-import constants from '../../constants';
-
 const logResultsInMatomo = debounce((search, theme, resultCounts) => {
   //@ts-ignore
   if (typeof window !== 'undefined' && window.Piwik) {
     //@ts-ignore
     const tracker = window.Piwik.getTracker(
-      `${constants.links.PIWIK.URL}/piwik.php`,
-      constants.links.PIWIK.SITE_ID
+      `${process.env.PIWIK_URL}/piwik.php`,
+      process.env.PIWIK_SITE_ID
     );
 
     if (tracker) {

@@ -6,16 +6,14 @@ import '../layouts/imports.scss';
 
 import 'swagger-ui-dist/swagger-ui.css';
 
-import constants from '../constants';
-
 class MyApp extends App {
   logPageView() {
     //@ts-ignore
     if (typeof window !== 'undefined' && window.Piwik) {
       //@ts-ignore
       const tracker = window.Piwik.getTracker(
-        `${constants.links.PIWIK.URL}/piwik.php`,
-        constants.links.PIWIK.SITE_ID
+        `${process.env.PIWIK_URL}/piwik.php`,
+        process.env.PIWIK_SITE_ID
       );
 
       if (tracker) {

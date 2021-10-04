@@ -1,6 +1,5 @@
 import React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-import constants from '../constants';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: any) {
@@ -56,25 +55,27 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          {process.env.NODE_ENV === 'production' && (
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `
+          {process.env.NODE_ENV === 'production' &&
+            process.env.PIWIK_URL &&
+            process.env.PIWIK_SITE_ID && (
+              <script
+                dangerouslySetInnerHTML={{
+                  __html: `
             <!-- Piwik -->
             var _paq = window._paq || [];
             _paq.push(['trackPageView']);
             _paq.push(['enableLinkTracking']);
             (function() {
-              var u="${constants.links.PIWIK.URL}";
+              var u="${process.env.PIWIK_URL}";
               _paq.push(['setTrackerUrl', u+'piwik.php']);
-              _paq.push(['setSiteId', ${constants.links.PIWIK.SITE_ID}]);
+              _paq.push(['setSiteId', ${process.env.PIWIK_SITE_ID}]);
               var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
               g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
             })();
             `,
-              }}
-            />
-          )}
+                }}
+              />
+            )}
           {/* last, we call sentry as we want to load it synchronously. It has to be executed BEFORE the other deferred scripts */}
           {process.env.NODE_ENV === 'production' && (
             <>
@@ -87,7 +88,7 @@ class MyDocument extends Document {
                 dangerouslySetInnerHTML={{
                   __html: `
                   <!-- Init Sentry -->
-                  Raven.config('${constants.links.SENTRY.URL}').install()
+                  Raven.config('${process.env.SENTRY_URL}').install()
                   `,
                 }}
               ></script>
