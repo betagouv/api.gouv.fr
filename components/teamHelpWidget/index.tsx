@@ -16,9 +16,9 @@ const TeamHelpWidget: React.FC<IProps> = ({
   <>
     <div className="team-help-widget">
       <div>
-        <img alt="" src="/images/equipe/Maelle.jpg" />
+        <img alt="" src="/images/equipe/Etienne.jpg" />
         <img alt="" src="/images/equipe/Xavier.jpg" />
-        <img alt="" src="/images/equipe/Christophe.jpg" />
+        <img alt="" src="/images/equipe/Raph.jpg" />
       </div>
       <p>{title}</p>
       <ButtonLink href={`/parcours-client?source=${source}`} alt>
