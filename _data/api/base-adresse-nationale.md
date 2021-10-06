@@ -4,31 +4,27 @@ tagline: Interrogez la base de données de l’intégralité des adresses du ter
 external_site: https://adresse.data.gouv.fr
 is_open: 1 # 1 means API is fully open
 partners:
-  - La poste
   - IGN
+  - ANCT
 producer: dinum
-stat:
-  lastXdays: 7
-  url: https://api-adresse.data.gouv.fr/analytics/stats.json
-  label: Adresses géocodées
-  path:
-    - queries_week
 keywords:
   - Carte
   - Adresse
+  - Localisation
+  - Géocodage
   - GPS
   - Code postal
-rate_limiting_resume: 10 appels / seconde / IP
+rate_limiting_resume: 50 appels / seconde / IP
 rate_limiting_description: |
-  L'API unitaire est disponible à hauteur de 10 appels par seconde et par adresse IP.
+  L'API unitaire est disponible à hauteur de 50 appels par seconde et par adresse IP.
   Le géocodage de masse (CSV) est disponible à hauteur d'un appel simultané par adresse IP.
 themes:
   - Géographie
 additional_css: api
 contact_link: adresse@data.gouv.fr
-doc_tech_external: https://adresse.data.gouv.fr/api
+doc_tech_external: https://adresse.data.gouv.fr/api-doc/adresse
 content_intro: |
-  L' API Adresse fait partie de la boîte-à-outils API Géo. Elle permet d'interroger facilement la Base Adresse Nationale.
+  L' API Adresse permet d'interroger facilement la Base Adresse Nationale.
 
   ### A quoi sert l'API Adresse ?
 
@@ -59,10 +55,7 @@ last_update: 10/12/2019
 
 ### En savoir plus
 
-La base <External href='https://adresse.data.gouv.fr'>Adresse Nationale</External> est constituée par la collaboration entre:
+La <External href='https://adresse.data.gouv.fr'>Base Adresse Nationale</External> est constituée par la collaboration entre:
 
-- des acteurs nationaux tels que l'[IGN](http://ign.fr/) et [La Poste](http://legroupe.laposte.fr/),
-- des acteurs locaux tels que les collectivités, les communes, les SDIS,
-- des citoyens par exemple à travers le projet [OpenStreetMap](http://osm.org) et l'association [OpenStreetMap France](http://openstreetmap.fr/).
-
-Le projet est co-gouverné par [l'Administrateur Général des Données](http://www.modernisation.gouv.fr/laction-publique-se-transforme/en-ouvrant-les-donnees-publiques/administrateur-general-des-donnees-chief-data-officer-interview-henri-verdier) et le [Conseil National de l'Information Géographique](http://cnig.gouv.fr).
+- des acteurs nationaux tels que la DINUM, l’[IGN](http://ign.fr/) et l’[ANCT](https://agence-cohesion-territoires.gouv.fr),
+- des acteurs locaux tels que les collectivités et en particulier les communes qui ont la compétence de l’adressage.
