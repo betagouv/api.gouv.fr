@@ -58,7 +58,14 @@ const SearchApis = ({ allApis, allThemes }) => {
     const newApiList = res
       .filter(filterAccess(APIType))
       .filter(filterTheme(theme))
-      .sort((a, b) => ((a.visits_2019 || 0) < (b.visits_2019 || 0) ? 1 : -1));
+      .sort((a, b) => {
+        //@ts-ignore
+        if (a.score && b.score) {
+          //@ts-ignore
+          return b.score - a.score;
+        }
+        return (b.visits_2019 || 0) - (a.visits_2019 || 0);
+      });
 
     const themeAndAccess = `${theme}${APIType || ''}`;
 
