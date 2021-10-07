@@ -25,9 +25,14 @@ const DocumentationLeftMenu: React.FC<IProps> = ({ allApis }) => {
         .filter(api => api.score !== 0);
     }
 
-    const newApiList = res.sort((a, b) =>
-      (a.visits_2019 || 0) < (b.visits_2019 || 0) ? 1 : -1
-    );
+    const newApiList = res.sort((a, b) => {
+      //@ts-ignore
+      if (a.score && b.score) {
+        //@ts-ignore
+        return a.score > b.score ? 1 : -1;
+      }
+      return (a.visits_2019 || 0) < (b.visits_2019 || 0) ? 1 : -1;
+    });
 
     setResults(newApiList);
 
