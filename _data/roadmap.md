@@ -247,7 +247,10 @@
     - type: ADD_API
       what: Attestation Codes Sécurité par l'Urssaf
     - type: ADD_API
-      what: Déclaration préalable à l'embauche par l'Urssaf 
+      what: Déclaration préalable à l'embauche par l'Urssaf
     - type: ADD_API
       what: Liste des organismes de formation par la DGEFP
+    - type: ADD_API
+      what: Publication des décisions rendues publiquement par la Cour de cassation, enrichies et pseudonymisées
+      path: /les-api/api-judilibre
 ---
