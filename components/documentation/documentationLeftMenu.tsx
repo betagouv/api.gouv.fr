@@ -29,9 +29,9 @@ const DocumentationLeftMenu: React.FC<IProps> = ({ allApis }) => {
       //@ts-ignore
       if (a.score && b.score) {
         //@ts-ignore
-        return a.score > b.score ? 1 : -1;
+        return b.score - a.score;
       }
-      return (a.visits_2019 || 0) < (b.visits_2019 || 0) ? 1 : -1;
+      return (b.visits_2019 || 0) - (a.visits_2019 || 0);
     });
 
     setResults(newApiList);

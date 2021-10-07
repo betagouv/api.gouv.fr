@@ -64,7 +64,7 @@ const SearchApis = ({ allApis, allThemes }) => {
           //@ts-ignore
           return b.score - a.score;
         }
-        return (a.visits_2019 || 0) - (b.visits_2019 || 0);
+        return (b.visits_2019 || 0) - (a.visits_2019 || 0);
       });
 
     const themeAndAccess = `${theme}${APIType || ''}`;
