@@ -1,6 +1,6 @@
 ---
-title: API Adresse (Base Adresse Nationale)
-tagline: Interrogez la base de données de l’intégralité des adresses du territoire français
+title: API Adresse (Base Adresse Nationale - BAN)
+tagline: Interrogez la Base Adresse Nationale, base de données de l’intégralité des adresses du territoire français
 external_site: https://adresse.data.gouv.fr
 is_open: 1 # 1 means API is fully open
 partners:
@@ -10,6 +10,9 @@ producer: dinum
 keywords:
   - Carte
   - Adresse
+  - Nationale
+  - Base
+  - BAN
   - Localisation
   - Géocodage
   - GPS
@@ -35,7 +38,7 @@ content_intro: |
   - faire une recherche géographique inversée (trouver la rue la plus proche de coordonnées géographiques)
 datagouv_uuid:
   - 5530fbacc751df5ff937dddb
-visits_2019: 6460
+visits_2019: 12000
 uptime: 100 # https://uptimerobot.com/dashboard.php#778110635
 last_update: 10/12/2019
 ---

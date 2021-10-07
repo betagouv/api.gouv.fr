@@ -49,7 +49,7 @@ const oldAPIs = [
   'API Look4 Géoportail',
   "Offres d'emploi",
   'API Résultats aux examens',
-  'API Adresse (Base Adresse Nationale)',
+  'API Adresse (Base Adresse Nationale - BAN)',
   'API BOAMP',
   'Données transports Brest métropole',
   'API Chorus Pro',

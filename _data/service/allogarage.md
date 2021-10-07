@@ -3,7 +3,7 @@ title: Allogarage
 link: http://www.allogarage.fr
 description: Trouvez un bon garage automobile près de chez vous
 api:
-  - API Adresse (Base Adresse Nationale)
+  - API Adresse (Base Adresse Nationale - BAN)
 screenshot: ecran_allogarage.jpg
 ---
 

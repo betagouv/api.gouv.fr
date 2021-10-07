@@ -469,6 +469,7 @@ const stopWords = [
   'apis',
   'données',
   'donnée',
+  'base',
 ];
 
 export default stopWords;

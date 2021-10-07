@@ -112,7 +112,7 @@ export const computeSearchResults = (needles: string[]) => {
     );
     // field can be boosted here
     const score =
-      matches.title.length * 0.1 +
+      matches.title.length * 0.4 +
       matches.tagline.length * 0.1 +
       matches.owner.length * 0.1 +
       matches.keywords.length * 0.1 +
