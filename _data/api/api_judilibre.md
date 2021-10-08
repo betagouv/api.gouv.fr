@@ -31,7 +31,7 @@ Au fur et à mesure du calendrier établi par l’arrêté du 28 avril 2021 s’
 
 L’API Judilibre, mise à disposition via [le portail PISTE](https://developer.aife.economie.gouv.fr/) et accessible gratuitement après inscription, permet notamment de rechercher en plein texte ou suivant des critères spécifiques parmi l’ensemble de ces décisions.
 
-Les données disponibles via l'API sont celles de la version du site de la Cour de cassation (https://courdecassation.fr).
+Les données disponibles via l'API sont celles de la version du site de la Cour de cassation (https://www.courdecassation.fr/recherche-judilibre).
 
 Cette version de l'API est une version bêta. Elle permet de recueillir vos remarques et vos suggestions d’amélioration. Elle est donc suceptible d'évoluer les prochains mois.
 
