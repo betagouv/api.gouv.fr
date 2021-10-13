@@ -23,7 +23,7 @@ data: |
    | Statistiques de la Justice | http://www.justice.gouv.fr/statistiques-10054/                                               |
    | ...
 
-    Le ministère de la Justice a par ailleurs rendu publique sa [feuille de route de la donnée]](https://www.justice.gouv.fr/le-ministere-de-la-justice-10017/ameliorer-laction-publique-grace-a-la-donnee-34097.html).
+    Le ministère de la Justice a par ailleurs rendu publique sa [feuille de route de la donnée](https://www.justice.gouv.fr/le-ministere-de-la-justice-10017/ameliorer-laction-publique-grace-a-la-donnee-34097.html).
 
 #contact: admin.donnees@justice.gouv.fr
 annuaire: https://lannuaire.service-public.fr/gouvernement/administration-centrale-ou-ministere_172234
