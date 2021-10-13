@@ -42,9 +42,15 @@ L'utilisation de ces données est soumise :
 
 ### Données disponibles dans l'API Judilibre
 
+L'API couvre le périmètre des décisions de l'ordre judiciaire, selon le calendrier suivant:
+- 30 septembre 2021 - décisions rendues par la Cour de cassation
+- 31 décembre 2024 - décisions rendues par les juridictions de premier degré en matière contraventionnelle et délictuelle
+- 31 décembre 2025 - décisions rendues par les cours d'appel en matière contraventionnelle et délictuelle
+- 31 décembre 2025 - des décisions rendues en matière criminelle
+
 Les données publiées par l'API sont :
 
-- le texte intégral des décisions
+- le texte des décisions (pseudonymisé)
 - les principales métadonnées associées à celles-ci (date, numéros de pourvoi, juridiction, chambre, formation, niveau de publication, solution, ECLI, ...)
 
 Ainsi que des enrichissements :
