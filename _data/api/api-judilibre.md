@@ -29,8 +29,6 @@ L'API est mise à disposition via [le portail PISTE](https://developer.aife.econ
 
 Les données disponibles via l'API sont également celles de la version du site de la Cour de cassation (https://www.courdecassation.fr/recherche-judilibre).
 
-Cette version de l'API est une version bêta. Elle permet de recueillir vos remarques et vos suggestions d’amélioration. Elle est donc suceptible d'évoluer les prochains mois.
-
 ### Conditions d'utilisation
 
 L'utilisation de ces données est soumise :
