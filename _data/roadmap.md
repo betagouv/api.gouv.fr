@@ -251,6 +251,6 @@
     - type: ADD_API
       what: Liste des organismes de formation par la DGEFP
     - type: ADD_API
-      what: Publication des décisions rendues publiquement par la Cour de cassation, enrichies et pseudonymisées
+      what: Judilibre par la Cour de cassation
       path: /les-api/api-judilibre
 ---
