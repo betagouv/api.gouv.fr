@@ -15,9 +15,7 @@ rate_limiting_description: |
 contact_link: judilibre.courdecassation@justice.fr
 doc_tech_link: /swaggers/JUDILIBRE-public.json
 themes:
-  - Droit
-  - Justice
-  - Jurisprudence judiciaire
+  - Droit et Justice
 producer: cour-de-cassation
 partners:
     - ministere-justice
