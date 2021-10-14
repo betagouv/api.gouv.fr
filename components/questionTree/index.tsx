@@ -1,3 +1,4 @@
+import { JSXElement } from '@babel/types';
 import React, { useState } from 'react';
 
 interface IQuestionTree {
@@ -8,7 +9,7 @@ interface IQuestionTree {
 interface ChoiceType {
   choice: string,
   next?: IQuestionTree,
-  displayNext?: boolean
+  result?: JSX.Element
 }
 
 const apiEntrepriseQuestionTree = {
@@ -29,7 +30,8 @@ const apiEntrepriseQuestionTree = {
               }
             },
             {
-              choice: 'choix 1.2'
+              choice: 'choix 1.2',
+              result: <div>Result</div>
             }
           ]
         }
@@ -59,6 +61,11 @@ const Question: React.FC<{questionTree: IQuestionTree}> = ({questionTree}) => {
         currentChoiceType && currentChoiceType.next ?
           <Question questionTree={currentChoiceType.next} /> :
             null
+      }
+      {
+        currentChoiceType && currentChoiceType.result ?
+          <div className='result'>{ currentChoiceType.result }</div> :
+          null
       }
     </div>
   )
