@@ -38,26 +38,29 @@ const apiEntrepriseQuestionTree = {
     ]
   }
 
-const Question: React.FC<{questionTree: IQuestionTree}> = ({questionTree}) =>
-{
+const Question: React.FC<{questionTree: IQuestionTree}> = ({questionTree}) => {
   const [currentChoiceType, setChoiceType] = useState<ChoiceType | null>(null)
 
   return (
-    <div>
-    {questionTree.question}
-    {
-      questionTree.choiceTree.map((choiceType, key) =>
-        <div key={key}>
-          <button onClick={() => setChoiceType(choiceType)}>{choiceType.choice}</button>
-        </div>
-      )
-    }
-    {
-      currentChoiceType && currentChoiceType.next ?
-        <Question questionTree={currentChoiceType.next} /> :
-          null
-    }
-  </div>
+    <div className='question-tree-wrapper'>
+      <p><strong>{questionTree.question}</strong></p>
+      {
+        questionTree.choiceTree.map((choiceType, key) =>
+          <button
+            key={key}
+            onClick={() => setChoiceType(choiceType)}
+            className={choiceType === currentChoiceType ? 'selected' : ''}
+          >
+            {choiceType.choice}
+          </button>
+        )
+      }
+      {
+        currentChoiceType && currentChoiceType.next ?
+          <Question questionTree={currentChoiceType.next} /> :
+            null
+      }
+    </div>
   )
 }
 

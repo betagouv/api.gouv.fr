@@ -1,0 +1,20 @@
+@import '../../constants/colors.scss';
+
+.question-tree-wrapper {
+  button {
+    display: inline-block;
+    background-color: $lightBlue;
+    padding: 5px 10px;
+    border-radius: 6px;
+    margin: 5px 5px 0 0;
+    border: 2px solid transparent;
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+    color: #373c42;
+
+    &.selected,
+    &:hover {
+      border-color: $blue;
+    }
+  }
+}
