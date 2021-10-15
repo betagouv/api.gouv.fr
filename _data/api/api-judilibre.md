@@ -23,7 +23,7 @@ monitoring_link: https://uptime.judilibre.io
 uptime: 99.90
 last_update: 07/10/2021
 ---
-L'API Judilibre assure la publication des décisions rendues publiquement par la Cour de cassation, enrichies et pseudonymisées. Elle est destinée à couvrir le périmètre des décisions de l'ordre judiciaire selon le calendrier établi par l’(arrêté du 28 avril 2021)[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000043426865].
+L'API Judilibre assure la publication des décisions rendues publiquement par la Cour de cassation, enrichies et pseudonymisées. Elle est destinée à couvrir le périmètre des décisions de l'ordre judiciaire selon le calendrier établi par l’[arrêté du 28 avril 2021](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000043426865).
 
 L'API est mise à disposition via [le portail PISTE](https://developer.aife.economie.gouv.fr/) et accessible gratuitement après inscription, permet notamment de rechercher en plein texte ou suivant des critères spécifiques parmi l’ensemble de ces décisions.
 
