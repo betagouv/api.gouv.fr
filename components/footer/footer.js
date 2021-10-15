@@ -2,7 +2,7 @@ import constants from '../../constants';
 
 const Footer = () => {
   return (
-    <footer className="fr-footer" role="contentinfo" id="footer">
+    <footer className="fr-footer" role="contentinfo">
       <div className="fr-container">
         <div className="fr-footer__body">
           <div className="fr-footer__brand fr-enlarge-link">
@@ -204,7 +204,7 @@ const Footer = () => {
 
         .public-partners {
           font-variant: small-caps;
-          color: ${constants.colors.grey};
+          color: ${constants.colors.darkGrey};
           font-weight: bold;
           width: 100%;
           font-size: 0.9rem;

@@ -4,8 +4,6 @@
 name: 'Pas de liens vers datapass-staging'
 
 on:
-  push:
-    branches: [master]
   pull_request:
     branches: [master]
 
