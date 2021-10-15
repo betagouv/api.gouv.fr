@@ -3,12 +3,17 @@ const fs = require('fs');
 
 console.info('=== A11y checker ===');
 
-fs.readFile('./public/url-list.txt', (err, urls) => {
-  if (err) throw err;
+const URLS = fs.readFileSync('./public/url-list.txt', {
+  encoding: 'utf8',
+  flag: 'r',
+});
+
+const PAGES = URLS.toString().split('\n').slice(0, 4);
+
+PAGES.forEach(page =>
   exec(
-    'axe ' +
-      urls.toString().split('\n').join(' ') +
-      ' --stdout --exit --disable scrollable-region-focusable --disable region',
+    './node_modules/@axe-core/cli/dist/src/bin/cli.js  ' + page,
+    ' --stdout --exit --disable scrollable-region-focusable --disable region',
     (err, stdout, stderr) => {
       if (err || stderr) {
         console.log(err, stderr);
@@ -22,5 +27,5 @@ fs.readFile('./public/url-list.txt', (err, urls) => {
         process.exit(1);
       }
     }
-  );
-});
+  )
+);
