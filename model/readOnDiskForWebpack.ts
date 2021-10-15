@@ -15,6 +15,22 @@ import {
 } from './formatters';
 import frontmatter from 'front-matter';
 
+interface IStore {
+  apis: { [key: string]: IApi };
+  services: { [key: string]: IService };
+  producers: { [key: string]: IProducerElement };
+  guides: { [key: string]: IGuideElement };
+  roadmap: IRoadmapElement[];
+}
+
+const store = {
+  apis: {},
+  services: {},
+  producers: {},
+  guides: {},
+  roadmap: [],
+} as IStore;
+
 const parseMarkdown = (
   context: any,
   formatter: (slug: string, data: any) => IApi | IService
@@ -52,27 +68,32 @@ const parseMarkdown = (
 };
 
 const loadServices = async (): Promise<{ [key: string]: IService }> => {
-  //@ts-ignore
-  const serviceFolderContext = require.context(
-    '../_data/service',
-    true,
-    /\.md$/
-  );
-  const apis = await loadApis();
-  const formatter = formatServiceWithApis(Object.values(apis));
+  if (Object.keys(store.services).length === 0) {
+    //@ts-ignore
+    const serviceFolderContext = require.context(
+      '../_data/service',
+      true,
+      /\.md$/
+    );
+    const apis = await loadApis();
+    const formatter = formatServiceWithApis(Object.values(apis));
 
-  const services = parseMarkdown(serviceFolderContext, formatter);
-  return services;
+    store.services = parseMarkdown(serviceFolderContext, formatter);
+  }
+  return store.services;
 };
 
 const loadApis = async (): Promise<{ [key: string]: IApi }> => {
-  //@ts-ignore
-  const apiFolderContext = require.context('../_data/api', true, /\.md$/);
+  if (Object.keys(store.apis).length === 0) {
+    //@ts-ignore
+    const apiFolderContext = require.context('../_data/api', true, /\.md$/);
 
-  const producers = await getAllProducers();
-  const formatter = formatApiWithOwner(Object.values(producers));
+    const producers = await getAllProducers();
+    const formatter = formatApiWithOwner(Object.values(producers));
 
-  return parseMarkdown(apiFolderContext, formatter);
+    store.apis = await parseMarkdown(apiFolderContext, formatter);
+  }
+  return store.apis;
 };
 
 export const getAPI = async (id: string): Promise<IApi> => {
@@ -95,30 +116,61 @@ export const getAllServices = async (): Promise<IService[]> => {
   return Object.values(data);
 };
 
-export const getRoadmap = async (): Promise<IRoadmapElement[]> => {
-  const roadmapFile = require('../_data/roadmap.md');
-  const md = frontmatter(roadmapFile.default);
-  return formatRoadmap(md.attributes as IRoadmap);
-};
-
-export const getGuide = async (slug: string): Promise<IGuideElement> => {
-  const file = require(`../_data/guides/${slug}.md`);
-  return formatGuide(slug, file.default);
-};
-
 export const getAllGuides = async (): Promise<IGuideElement[]> => {
-  //@ts-ignore
-  const guideFolderContext = require.context('../_data/guides', true, /\.md$/);
-  return Object.values(parseMarkdown(guideFolderContext, formatGuide));
-};
-
-export const getProducer = async (slug: string): Promise<IProducerElement> => {
-  const file = require(`../_data/producteurs/${slug}.md`);
-  return formatProducteur(slug, file.default);
+  const data = await loadGuides();
+  return Object.values(data);
 };
 
 export const getAllProducers = async (): Promise<IProducerElement[]> => {
-  //@ts-ignore
-  const folderContext = require.context('../_data/producteurs', true, /\.md$/);
-  return Object.values(parseMarkdown(folderContext, formatProducteur));
+  const data = await loadProducers();
+  return Object.values(data);
+};
+
+export const getRoadmap = async (): Promise<IRoadmapElement[]> => {
+  if (store.roadmap.length === 0) {
+    const roadmapFile = require('../_data/roadmap.md');
+    const md = frontmatter(roadmapFile.default);
+    store.roadmap = formatRoadmap(md.attributes as IRoadmap);
+  }
+  return store.roadmap;
+};
+
+export const getGuide = async (slug: string): Promise<IGuideElement> => {
+  const guides = await loadGuides();
+  return guides[slug];
+};
+
+export const loadGuides = async (): Promise<{
+  [key: string]: IGuideElement;
+}> => {
+  if (Object.keys(store.guides).length === 0) {
+    //@ts-ignore
+    const guideFolderContext = require.context(
+      '../_data/guides',
+      true,
+      /\.md$/
+    );
+    store.guides = parseMarkdown(guideFolderContext, formatGuide);
+  }
+  return store.guides;
+};
+
+export const getProducer = async (slug: string): Promise<IProducerElement> => {
+  const producers = await loadProducers();
+  return producers[slug];
+};
+
+export const loadProducers = async (): Promise<{
+  [key: string]: IProducerElement;
+}> => {
+  if (Object.keys(store.producers).length === 0) {
+    //@ts-ignore
+    const folderContext = require.context(
+      '../_data/producteurs',
+      true,
+      /\.md$/
+    );
+    store.producers = parseMarkdown(folderContext, formatProducteur);
+  }
+  return store.producers;
 };
