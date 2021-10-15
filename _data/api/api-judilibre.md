@@ -13,7 +13,7 @@ rate_limiting_resume: quota / jeton
 rate_limiting_description: |
   Les appels API sont limités par quotas par jetons d'accès.
 contact_link: judilibre.courdecassation@justice.fr
-doc_tech_link: https://github.com/Cour-de-cassation/judilibre-search/blob/dev/public/JUDILIBRE-public.json
+doc_tech_link: https://raw.githubusercontent.com/Cour-de-cassation/judilibre-search/dev/public/JUDILIBRE-public.json 
 themes:
   - Droit et Justice
 producer: cour-de-cassation
