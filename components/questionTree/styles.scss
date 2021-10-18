@@ -25,4 +25,20 @@
   p.choice {
     margin: 0;
   }
+
+  ul.list-links {
+    > li::before { content: none; }
+
+    > li {
+      display: inline;
+
+      > button {
+        background-color: $white;
+        border-radius: 0px;
+        border: 2px solid $blue;
+        color: $blue;
+        margin: 5px;
+      }
+    }
+  }
 }
