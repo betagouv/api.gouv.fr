@@ -44,14 +44,15 @@ const Question: React.FC<{questionTree: IQuestionTree}> = ({questionTree}) => {
 }
 
 const QuestionTree: React.FC<{ api: string }> = ({ api }) => {
-  if (api === 'api-entreprise') {
-    return (
-      <Question
-        questionTree={apiEntrepriseQuestionTree}
-      />
-    )
-  } else {
-    throw new Error('Should not be there.')
+  switch (api) {
+    case 'api-entreprise-or-association':
+      return (<Question questionTree={apiEntrepriseQuestionTree.entrepriseOrAssociation} />)
+    case 'api-entreprise-administration':
+      return (<Question questionTree={apiEntrepriseQuestionTree.administration}/>)
+    case 'api-entreprise-editeur':
+      return (<Question questionTree={apiEntrepriseQuestionTree.editeur}/>)
+    default:
+      throw new Error('Should not be there.')
   }
 }
 

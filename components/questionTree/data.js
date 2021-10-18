@@ -1,6 +1,6 @@
-export const apiEntrepriseQuestionTree = {
-    question: 'Premiere question',
-    choiceTree: [
+const apiEntrepriseOrAssociation = {
+  question: 'Premiere question',
+  choiceTree: [
       {
         choice: 'choix 1',
         next: {
@@ -26,4 +26,12 @@ export const apiEntrepriseQuestionTree = {
     ]
   }
 
-// <Button href="https://datapass.api.gouv.fr/api-entreprise">Remplir une demande</Button>
+const apiEntrepriseAdministration = {}
+
+const apiEntrepriseEditeur = {}
+
+export const apiEntrepriseQuestionTree = {
+  entrepriseOrAssociation: apiEntrepriseOrAssociation,
+  administration: apiEntrepriseAdministration,
+  editeur: apiEntrepriseEditeur
+}
