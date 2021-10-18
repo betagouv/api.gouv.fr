@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import { apiEntrepriseQuestionTree } from './data'
 
 interface IQuestionTree {
-  question: string,
+  question: JSX.Element,
+  description?: JSX.Element,
   choiceTree: ChoiceType[]
 }
 
 interface ChoiceType {
-  choice: string,
+  choice: JSX.Element,
   next?: IQuestionTree,
   result?: JSX.Element
 }
@@ -18,6 +19,7 @@ const Question: React.FC<{questionTree: IQuestionTree}> = ({questionTree}) => {
   return (
     <div className='question-tree-wrapper'>
       <p><strong>{questionTree.question}</strong></p>
+      <p>{questionTree.description}</p>
       {
         questionTree.choiceTree.map((choiceType, key) =>
           <button
@@ -25,7 +27,7 @@ const Question: React.FC<{questionTree: IQuestionTree}> = ({questionTree}) => {
             onClick={() => setChoiceType(choiceType)}
             className={choiceType === currentChoiceType ? 'selected' : ''}
           >
-            {choiceType.choice}
+            <p className='choice'>{choiceType.choice}</p>
           </button>
         )
       }
