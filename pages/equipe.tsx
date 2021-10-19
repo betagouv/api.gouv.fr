@@ -47,6 +47,12 @@ const teamData = [
     img: 'Xavier.jpg',
   },
   {
+    name: 'Samuel Faure',
+    title: 'API Entreprise',
+    linkedin: 'https://fr.linkedin.com/in/samuel-faure-0a118780',
+    img: 'Samuel.jpg',
+  },
+  {
     name: 'Stanislas Bernard',
     title: 'API Particulier',
     linkedin: 'https://www.linkedin.com/in/stanislas-bernard-3b14b586/',
