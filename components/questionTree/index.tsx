@@ -4,13 +4,16 @@ import { apiEntrepriseQuestionTree } from './data'
 interface IQuestionTree {
   question: JSX.Element,
   description?: JSX.Element,
+  big?: Boolean,
   choiceTree: ChoiceType[]
 }
 
 interface ChoiceType {
   choice: JSX.Element,
   next?: IQuestionTree,
-  result?: JSX.Element
+  transition?: JSX.Element,
+  result?: JSX.Element,
+  big?: Boolean
 }
 
 const Question: React.FC<{questionTree: IQuestionTree}> = ({questionTree}) => {
@@ -20,16 +23,26 @@ const Question: React.FC<{questionTree: IQuestionTree}> = ({questionTree}) => {
     <div className='question-tree-wrapper'>
       <p><strong>{questionTree.question}</strong></p>
       <p>{questionTree.description}</p>
-      {
-        questionTree.choiceTree.map((choiceType, key) =>
+      <div className={`choices${questionTree.big? ' big' : ''}`}>
+        {
+          questionTree.choiceTree.map((choiceType, key) =>
           <button
             key={key}
             onClick={() => setChoiceType(choiceType)}
-            className={choiceType === currentChoiceType ? 'selected' : ''}
+            className={`
+              ${choiceType === currentChoiceType ? 'selected' : ''}
+              ${questionTree.big ? ' big' : ''}
+            `}
           >
-            <p className='choice'>{choiceType.choice}</p>
-          </button>
-        )
+              <p className='choice'>{choiceType.choice}</p>
+            </button>
+          )
+        }
+      </div>
+      {
+        currentChoiceType && currentChoiceType.transition ?
+          <div className='transition'>{currentChoiceType.transition}</div> :
+          null
       }
       {
         currentChoiceType && currentChoiceType.next ?
@@ -38,7 +51,7 @@ const Question: React.FC<{questionTree: IQuestionTree}> = ({questionTree}) => {
       }
       {
         currentChoiceType && currentChoiceType.result ?
-          <div className='result'>{ currentChoiceType.result }</div> :
+          <div className='result'>{currentChoiceType.result}</div> :
           null
       }
     </div>

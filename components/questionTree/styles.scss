@@ -16,14 +16,33 @@
     &:hover {
       border-color: $blue;
     }
+
+    &.big {
+      min-width: 200px;
+      max-width: 240px;
+      height: 100%;
+      margin: 15px 15px 5px 5px;
+    }
+
+  }
+
+  .choices {
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 450px;
+
+    &.big {
+      flex-direction: column;
+    }
   }
 
   .result {
     margin-top: 2em;
   }
 
-  p.choice {
+  .choice {
     margin: 0;
+    text-align: left;
   }
 
   ul.list-links {
