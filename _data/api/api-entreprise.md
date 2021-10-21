@@ -33,7 +33,6 @@ access_page:
 
       <NextSteps />
       <QuestionTree api='api-entreprise-or-association'/>
-      <Button href="https://datapass.api.gouv.fr/api-entreprise">Remplir une demande</Button>
   - who:
       - Un éditeur de logiciel
     is_eligible: 0
@@ -44,7 +43,6 @@ access_page:
 
       <NextSteps is_editeur />
       <QuestionTree api='api-entreprise-editeur'/>
-      <Button href="https://datapass.api.gouv.fr/api-entreprise">Remplir une demande</Button>
 stat:
   lastXdays: 30
   url: https://dashboard.entreprise.api.gouv.fr/api/watchdoge/stats/last_30_days_usage

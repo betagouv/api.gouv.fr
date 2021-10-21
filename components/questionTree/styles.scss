@@ -50,14 +50,21 @@
 
     > li {
       display: inline;
-
-      > button {
-        background-color: $white;
-        border-radius: 0px;
-        border: 2px solid $blue;
-        color: $blue;
-        margin: 5px;
-      }
     }
   }
+
+  a.outside-link {
+    display: inline-block;
+    text-decoration: none;
+    background-color: $white;
+    border-radius: 0px;
+    border: 2px solid $blue;
+    color: $blue;
+    margin: 5px;
+    padding: 5px;
+  }
+}
+
+.margin-top {
+  margin-top: 15px;
 }

@@ -63,9 +63,9 @@ const QuestionTree: React.FC<{ api: string }> = ({ api }) => {
     case 'api-entreprise-or-association':
       return (<Question questionTree={apiEntrepriseQuestionTree.entrepriseOrAssociation} />)
     case 'api-entreprise-administration':
-      return (<Question questionTree={apiEntrepriseQuestionTree.administration}/>)
+      //return (<Question questionTree={apiEntrepriseQuestionTree.administration}/>)
     case 'api-entreprise-editeur':
-      return (<Question questionTree={apiEntrepriseQuestionTree.editeur}/>)
+      //return (<Question questionTree={apiEntrepriseQuestionTree.editeur}/>)
     default:
       throw new Error('Should not be there.')
   }
