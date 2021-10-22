@@ -20,7 +20,6 @@
     &.big {
       min-width: 200px;
       max-width: 240px;
-      height: 100%;
       margin: 15px 15px 5px 5px;
     }
 
@@ -33,6 +32,7 @@
 
     &.big {
       flex-direction: column;
+      align-content: baseline;
     }
   }
 
@@ -45,15 +45,7 @@
     text-align: left;
   }
 
-  ul.list-links {
-    > li::before { content: none; }
-
-    > li {
-      display: inline;
-    }
-  }
-
-  a.outside-link {
+  a.outside-link, .button-copy {
     display: inline-block;
     text-decoration: none;
     background-color: $white;
@@ -61,10 +53,19 @@
     border: 2px solid $blue;
     color: $blue;
     margin: 5px;
-    padding: 5px;
+    padding: 10px;
   }
-}
 
-.margin-top {
-  margin-top: 15px;
+  .button-copy {
+    font-size: small;
+    margin-left: 20px;
+    > span {
+      position: relative;
+      top: 2px;
+    }
+  }
+
+  .margin-top {
+    margin-top: 20px;
+  }
 }

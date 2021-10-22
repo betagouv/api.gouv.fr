@@ -7,6 +7,7 @@ interface IQuestionTree {
   question: JSX.Element,
   description?: JSX.Element,
   big?: Boolean,
+  forceHeight?: string,
   choiceTree: ChoiceType[]
 }
 
@@ -15,7 +16,6 @@ interface ChoiceType {
   next?: IQuestionTree,
   transition?: JSX.Element,
   result?: JSX.Element,
-  big?: Boolean
 }
 
 const Question: React.FC<{questionTree: IQuestionTree}> = ({questionTree}) => {
@@ -25,7 +25,10 @@ const Question: React.FC<{questionTree: IQuestionTree}> = ({questionTree}) => {
     <div className='question-tree-wrapper'>
       <p><strong>{questionTree.question}</strong></p>
       <p>{questionTree.description}</p>
-      <div className={`choices${questionTree.big? ' big' : ''}`}>
+      <div
+        className={`choices${questionTree.big? ' big' : ''}`}
+        style={{height: `${questionTree.forceHeight ? questionTree.forceHeight : 'auto'}`}}
+      >
         {
           questionTree.choiceTree.map((choiceType, key) =>
           <button

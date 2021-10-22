@@ -7,13 +7,13 @@ export const nonEligible =
     <p><strong>Vous n'êtes pas éligible à API Entreprise</strong> <span role="img" aria-label="émoji non">🚫</span></p>
     <p>L’usage des données de l’API Entreprise est reservé aux acteurs publics : les administrations, leurs opérateurs et les collectivités, les acteurs de santé, etc.</p>
     <p>D’autres API, publiques, permettent d’accéder à des données sur les entreprises et les associations :</p>
-    <ul className='list-links'>
-      <li><a className='outside-link'>API Sirene {rightArrow}</a></li>
-      <li><a className='outside-link'>API Registre National du Commerce et des Sociétés {rightArrow}</a></li>
-      <li><a className='outside-link'>API Répertoire National des associations {rightArrow}</a></li>
-      <li><a className='outside-link'>API Répertoire National des métiers {rightArrow}</a></li>
-      <li><a className='outside-link'>Rechercher une autre API {rightArrow}</a></li>
+    <ul>
+      <li>L'<a href=''>API Sirene, produite par l'INSEE</a>, permettant d’accéder aux données du répertoire Sirene de l’INSEE, à l’exception des entreprises non-diffusibles ;</li>
+      <li>L'<a href=''>API RNA, produite par la DINUM</a>, produite par la DINUM, permettant d’interroger le répertoire des associations françaises ;</li>
+      <li>L'<a href=''>API RNCS, produite par l'INPI</a>, donnant accès aux informations publiques détenues par les greffes, sur les sociétés françaises ;</li>
+      <li>L'<a href=''>API RNM, produite par CMA France</a>, produite par CMA France, intérrogeant le répertoire des entreprises artisanales françaises.</li>
     </ul>
+    <a className='outside-link'>Rechercher une autre API {rightArrow}</a>
   </>;
 
 export const eligible =
@@ -35,12 +35,14 @@ export const eligibleEditeurNotOk =
     <p><strong>Vous êtes éligible mais votre éditeur/profil acheteur n’a pas intégré l’API Entreprise<span role="img" aria-label="émoji loupe">🔎</span></strong><br/>Déposez une demande pour expliciter vos besoins et votre situation. L’équipe API Entreprise vous contactera pour identifier des pistes de solutions, et contactera le cas échéant votre éditeur.
     </p>
     {/* TODO: Check link */}
-    <ButtonLink href="https://datapass.api.gouv.fr/api-entreprise">Déposer une demande</ButtonLink>
+    <div className='margin-top'>
+      <ButtonLink href="https://datapass.api.gouv.fr/api-entreprise">Déposer une demande</ButtonLink>
+    </div>
     <p>
       <strong>Nota:</strong><br/>L’API Entreprise s’utilise au travers d’un logiciel métier, vous avez un éditeur qui vous met probablement à disposition un logiciel de ce type.
     </p>
     <p>
-      En revanche, ce dernier n’a pas encore intégré l’API Entreprise.Les instructeurs de l’API Entreprise devront, entre autres, vérifier si votre éditeur a les prérequis techniques pour utiliser l’API Entreprise.
+      En revanche, ce dernier n’a pas encore intégré l’API Entreprise.Les instructeurs de l’API Entreprise devront, entre autres, vérifier si votre éditeur a les <a href=''>prérequis techniques</a> pour utiliser l’API Entreprise.
     </p>
   </>
 
@@ -49,7 +51,9 @@ export const eligibleDevelopersOk =
     <p>
       <strong><span role="img" aria-label="émoji ok">✅</span> Vous êtes éligible et avez les compétences techniques pour intégrer l’API Entreprise</strong> à votre logiciel interne de traitement des démarches des associations et des entreprises.
     </p>
-    <div className='margin-top'><ButtonLink href="https://datapass.api.gouv.fr/api-entreprise">Déposer une demande</ButtonLink></div>
+    <div className='margin-top'>
+      <ButtonLink href="https://datapass.api.gouv.fr/api-entreprise">Déposer une demande</ButtonLink>
+    </div>
   </>
 
 // TODO add link
@@ -68,7 +72,9 @@ export const eligibleNoDevelopers =
         </li>
         <li>
           <strong>déposer une demande afin de nous expliquer votre contexte d’utilisation et vos besoins.</strong>, Les instructeurs d’API Entreprise étudierons votre demande. L’identification d’une équipe technique sera indispensable pour délivrer une habilitation :
-          <div className='margin-top'><ButtonLink href="https://datapass.api.gouv.fr/api-entreprise">Déposer une demande</ButtonLink></div>
+          <div className='margin-top'>
+            <ButtonLink href="https://datapass.api.gouv.fr/api-entreprise">Déposer une demande</ButtonLink>
+          </div>
         </li>
       </ul>
     </div>
@@ -78,7 +84,9 @@ export const editeurOk =
   <>
     <p><strong><span role="img" aria-label="émoji ok">✅</span> Vous êtes éligible pour mettre à disposition de vos utilisateurs l’API Entreprise.</strong></p>
     <p><span role="img" aria-label="émoji avertissement">⚠️</span>En tant que prestataire technique d’une entité administrative, vous pourrez être destinataire des informations techniques permettant l’usage de l’API mais en aucun cas des données elles-même</p>
-    <div className='margin-top'><ButtonLink href="https://datapass.api.gouv.fr/api-entreprise">Déposer une demande</ButtonLink></div>
+    <div className='margin-top'>
+      <ButtonLink href="https://datapass.api.gouv.fr/api-entreprise">Déposer une demande</ButtonLink>
+    </div>
   </>
 
 export const editeurAskAdministration =
@@ -101,6 +109,30 @@ export const pathEligible =
           // TODO: Add editeurs here, manage CSS issue
           big: true,
           choiceTree: [
+            {
+              choice: <>Éditeur X - Solution Z</>,
+              result: eligibleEditeurOk
+            },
+            {
+              choice: <>Éditeur X - Solution Z</>,
+              result: eligibleEditeurOk
+            },
+            {
+              choice: <>Éditeur X - Solution Z</>,
+              result: eligibleEditeurOk
+            },
+            {
+              choice: <>Éditeur X - Solution Z</>,
+              result: eligibleEditeurOk
+            },
+            {
+              choice: <>Éditeur X - Solution Z</>,
+              result: eligibleEditeurOk
+            },
+            {
+              choice: <>Éditeur X - Solution Z</>,
+              result: eligibleEditeurOk
+            },
             {
               choice: <>Éditeur X - Solution Z</>,
               result: eligibleEditeurOk
@@ -137,6 +169,30 @@ export const pathEligible =
               result: eligibleEditeurOk
             },
             {
+              choice: <>Éditeur X - Solution Z</>,
+              result: eligibleEditeurOk
+            },
+            {
+              choice: <>Éditeur X - Solution Z</>,
+              result: eligibleEditeurOk
+            },
+            {
+              choice: <>Éditeur X - Solution Z</>,
+              result: eligibleEditeurOk
+            },
+            {
+              choice: <>Éditeur X - Solution Z</>,
+              result: eligibleEditeurOk
+            },
+            {
+              choice: <>Éditeur X - Solution Z</>,
+              result: eligibleEditeurOk
+            },
+            {
+              choice: <>Éditeur X - Solution Z</>,
+              result: eligibleEditeurOk
+            },
+            {
               choice: <>Mon éditeur ne figure pas dans la liste ci-contre</>,
               result: eligibleEditeurNotOk
             }
@@ -150,6 +206,37 @@ export const pathEligible =
       {
         choice: <><strong>Je n’ai pas d’aide technique particulière.</strong><br/>Actuellement, je contacte les entreprises et associations une par une et traite leurs données à la main.</>,
         result: eligibleNoDevelopers
+      }
+    ]
+  }
+
+  export const pathDevelopForAdministration =
+  {
+    question: <>À qui sont destinés les interfaces/logiciels que vous concevez ?</>,
+    big: true,
+    forceHeight: '130px',
+    choiceTree: [
+      {
+        choice: <>Aux administrations et/ou aux collectivités</>,
+        next: {
+          question: <>Quel type de service proposez-vous aux administrations ?</>,
+          big: true,
+          forceHeight: '130px',
+          choiceTree: [
+            {
+              choice: <>Un <strong>logiciel métier clé en main</strong>, proposé à de nombreuses entités administratives</>,
+              result: editeurOk
+            },
+            {
+              choice: <>Un logiciel conçu <strong>sur mesure</strong> pour une administration.</>,
+              result: editeurAskAdministration
+            }
+          ]
+        }
+      },
+      {
+        choice: <>Aux entreprises/associations et/ou particuliers</>,
+        result: nonEligible
       }
     ]
   }

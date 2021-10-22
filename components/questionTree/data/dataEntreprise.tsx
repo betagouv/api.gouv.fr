@@ -1,9 +1,8 @@
 import {
   eligible,
   nonEligible,
-  editeurOk,
-  editeurAskAdministration,
-  pathEligible
+  pathEligible,
+  pathDevelopForAdministration
 } from './dataShared'
 
 const apiEntrepriseOrAssociation = {
@@ -21,31 +20,7 @@ const apiEntrepriseOrAssociation = {
       },
       {
         choice: <>Je développe des interfaces/logiciels pour une entité administrative</>,
-        next: {
-          question: <>À qui sont destinés les interfaces/logiciels que vous concevez ?</>,
-          choiceTree: [
-            {
-              choice: <>Aux administrations et/ou aux collectivités</>,
-              next: {
-                question: <>Quel type de service proposez-vous aux administrations ?</>,
-                choiceTree: [
-                  {
-                    choice: <>Un <strong>logiciel métier clé en main</strong>, proposé à de nombreuses entités administratives</>,
-                    result: editeurOk
-                  },
-                  {
-                    choice: <>Un logiciel conçu <strong>sur mesure</strong> pour une administration.</>,
-                    result: editeurAskAdministration
-                  }
-                ]
-              }
-            },
-            {
-              choice: <>Aux entreprises/associations et/ou particuliers</>,
-              result: nonEligible
-            }
-          ]
-        }
+        next: pathDevelopForAdministration
       }
     ]
   }
