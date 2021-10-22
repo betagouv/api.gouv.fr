@@ -49,6 +49,7 @@ export const eligibleDevelopersOk =
     <p>
       <strong><span role="img" aria-label="émoji ok">✅</span> Vous êtes éligible et avez les compétences techniques pour intégrer l’API Entreprise</strong> à votre logiciel interne de traitement des démarches des associations et des entreprises.
     </p>
+    <div className='margin-top'><ButtonLink href="https://datapass.api.gouv.fr/api-entreprise">Déposer une demande</ButtonLink></div>
   </>
 
 // TODO add link
@@ -77,6 +78,7 @@ export const editeurOk =
   <>
     <p><strong><span role="img" aria-label="émoji ok">✅</span> Vous êtes éligible pour mettre à disposition de vos utilisateurs l’API Entreprise.</strong></p>
     <p><span role="img" aria-label="émoji avertissement">⚠️</span>En tant que prestataire technique d’une entité administrative, vous pourrez être destinataire des informations techniques permettant l’usage de l’API mais en aucun cas des données elles-même</p>
+    <div className='margin-top'><ButtonLink href="https://datapass.api.gouv.fr/api-entreprise">Déposer une demande</ButtonLink></div>
   </>
 
 export const editeurAskAdministration =
@@ -85,3 +87,69 @@ export const editeurAskAdministration =
     <p><strong>C’est à elle de compléter une demande auprès d’API Entreprise.</strong> Elle devra dans sa demande d’habilitation vous renseigner en tant que “contact technique”. Le lien ci-dessous permet à l’administration d’accéder à la demande d’accès, partagez-lui :</p>
     <a href=''>Lien vers la page</a><button className='button-copy'>Copier le lien <span role="img" aria-label="icon file">{file}</span></button>
   </>
+
+export const pathEligible =
+  {
+    question: <>Qui sera en charge techniquement de l’intégration de l’API Entreprise ?</>,
+    big: true,
+    choiceTree: [
+      {
+        choice: <><strong>Mon profil acheteur.</strong><br/>J’utilise une solution clé en main pour les marchés publics.</>,
+        next: {
+          question: <>Votre éditeur ou profil acheteur a-t-il déjà intégré l'API Entreprise ?</>,
+          description: <>Sélectionnez votre éditeur dans la liste ci-dessous :</>,
+          // TODO: Add editeurs here, manage CSS issue
+          big: true,
+          choiceTree: [
+            {
+              choice: <>Éditeur X - Solution Z</>,
+              result: eligibleEditeurOk
+            },
+            {
+              choice: <>Éditeur X - Solution Z</>,
+              result: eligibleEditeurOk
+            },
+            {
+              choice: <>Mon éditeur ne figure pas dans la liste ci-contre</>,
+              result: eligibleEditeurNotOk
+            }
+          ]
+        }
+      },
+      {
+        choice: <><strong>Nos développeurs prestataires.</strong><br/>Ils conçoivent une solution logicielle sur-mesure pour mon administration.</>,
+        result: eligibleDevelopersOk
+      },
+      {
+        choice: <><strong>Mon éditeur.</strong><br/>J’utilise la solution clé en main proposée par un éditeur.</>,
+        next: {
+          question: <>Votre éditeur ou profil acheteur a-t-il déjà intégré l'API Entreprise ?</>,
+          description: <>Sélectionnez votre éditeur dans la liste ci-dessous :</>,
+          // TODO: Add editeurs here, manage CSS issue
+          big: true,
+          choiceTree: [
+            {
+              choice: <>Éditeur X - Solution Z</>,
+              result: eligibleEditeurOk
+            },
+            {
+              choice: <>Éditeur X - Solution Z</>,
+              result: eligibleEditeurOk
+            },
+            {
+              choice: <>Mon éditeur ne figure pas dans la liste ci-contre</>,
+              result: eligibleEditeurNotOk
+            }
+          ]
+        }
+      },
+      {
+        choice: <><strong>Nos développeurs internes.</strong><br/>Ils conçoivent une solution logicielle sur-mesure pour mon administration.</>,
+        result: eligibleDevelopersOk
+      },
+      {
+        choice: <><strong>Je n’ai pas d’aide technique particulière.</strong><br/>Actuellement, je contacte les entreprises et associations une par une et traite leurs données à la main.</>,
+        result: eligibleNoDevelopers
+      }
+    ]
+  }

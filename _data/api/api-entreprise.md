@@ -16,12 +16,8 @@ access_page:
       - Une entité administrative
     is_eligible: 1
     description: |
-      Si vous êtes une collectivité ou une administration, vous pouvez remplir une demande d’accès à l’API Entreprise vous-même pour l'entité que vous représentez.
+      L’API Entreprise vous permet d’accéder directement aux données des entreprises et des associations pour faciliter leurs démarches (demandes d’aides, marchés publics, ...).
 
-      Lors de votre demande vous devrez **renseigner le cadre juridique** qui légitime l'entité pour laquelle vous opérez à recevoir ces données.
-
-      <NextSteps />
-      <Button href="https://datapass.api.gouv.fr/api-entreprise">Remplir une demande</Button>
       <QuestionTree api='api-entreprise-administration'/>
   - who:
       - Une entreprise ou association
@@ -31,7 +27,6 @@ access_page:
 
       Lors de votre demande vous devrez **justifier** dans quelle mesure vous rentrez dans ce cadre juridique.
 
-      <NextSteps />
       <QuestionTree api='api-entreprise-or-association'/>
   - who:
       - Un éditeur de logiciel
@@ -41,7 +36,6 @@ access_page:
 
       Lors de votre demande vous devrez **renseigner le cadre juridique (un texte ou délibération/décision)** qui légitime  l'entité pour laquelle vous opérez à recevoir ces données.
 
-      <NextSteps is_editeur />
       <QuestionTree api='api-entreprise-editeur'/>
 stat:
   lastXdays: 30

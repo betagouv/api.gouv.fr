@@ -1,12 +1,9 @@
 import {
   eligible,
   nonEligible,
-  eligibleEditeurOk,
-  eligibleEditeurNotOk,
-  eligibleDevelopersOk,
-  eligibleNoDevelopers,
   editeurOk,
-  editeurAskAdministration
+  editeurAskAdministration,
+  pathEligible
 } from './dataShared'
 
 const apiEntrepriseOrAssociation = {
@@ -16,70 +13,7 @@ const apiEntrepriseOrAssociation = {
       {
         choice: <><strong>Oui</strong>, tel qu’inscrit dans la loi</>,
         transition: eligible,
-        next: {
-          question: <>Qui sera en charge techniquement de l’intégration de l’API Entreprise ?</>,
-          big: true,
-          choiceTree: [
-            {
-              choice: <><strong>Mon profil acheteur.</strong><br/>J’utilise une solution clé en main pour les marchés publics.</>,
-              next: {
-                question: <>Votre éditeur ou profil acheteur a-t-il déjà intégré l'API Entreprise ?</>,
-                description: <>Sélectionnez votre éditeur dans la liste ci-dessous :</>,
-                // TODO: Add editeurs here, manage CSS issue
-                big: true,
-                choiceTree: [
-                  {
-                    choice: <>Éditeur X - Solution Z</>,
-                    result: eligibleEditeurOk
-                  },
-                  {
-                    choice: <>Éditeur X - Solution Z</>,
-                    result: eligibleEditeurOk
-                  },
-                  {
-                    choice: <>Mon éditeur ne figure pas dans la liste ci-contre</>,
-                    result: eligibleEditeurNotOk
-                  }
-                ]
-              }
-            },
-            {
-              choice: <><strong>Nos développeurs prestataires.</strong><br/>Ils conçoivent une solution logicielle sur-mesure pour mon administration.</>,
-              result: eligibleDevelopersOk
-            },
-            {
-              choice: <><strong>Mon éditeur.</strong><br/>J’utilise la solution clé en main proposée par un éditeur.</>,
-              next: {
-                question: <>Votre éditeur ou profil acheteur a-t-il déjà intégré l'API Entreprise ?</>,
-                description: <>Sélectionnez votre éditeur dans la liste ci-dessous :</>,
-                // TODO: Add editeurs here, manage CSS issue
-                big: true,
-                choiceTree: [
-                  {
-                    choice: <>Éditeur X - Solution Z</>,
-                    result: eligibleEditeurOk
-                  },
-                  {
-                    choice: <>Éditeur X - Solution Z</>,
-                    result: eligibleEditeurOk
-                  },
-                  {
-                    choice: <>Mon éditeur ne figure pas dans la liste ci-contre</>,
-                    result: eligibleEditeurNotOk
-                  }
-                ]
-              }
-            },
-            {
-              choice: <><strong>Nos développeurs internes.</strong><br/>Ils conçoivent une solution logicielle sur-mesure pour mon administration.</>,
-              result: eligibleDevelopersOk
-            },
-            {
-              choice: <><strong>Je n’ai pas d’aide technique particulière.</strong><br/>Actuellement, je contacte les entreprises et associations une par une et traite leurs données à la main.</>,
-              result: eligibleNoDevelopers
-            }
-          ]
-        }
+        next: pathEligible
       },
       {
         choice: <strong>Non</strong>,
@@ -115,8 +49,5 @@ const apiEntrepriseOrAssociation = {
       }
     ]
   }
-
-const apiEntrepriseAdministration = {}
-
 
 export default apiEntrepriseOrAssociation;

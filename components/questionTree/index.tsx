@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { apiEntrepriseQuestionTree } from './data'
+import apiEntrepriseOrAssociation from './data/dataEntreprise'
+import apiEntrepriseEditeur from './data/dataEditeur'
+import apiEntrepriseAdministration from './data/dataAdministration'
 
 interface IQuestionTree {
   question: JSX.Element,
@@ -61,11 +63,11 @@ const Question: React.FC<{questionTree: IQuestionTree}> = ({questionTree}) => {
 const QuestionTree: React.FC<{ api: string }> = ({ api }) => {
   switch (api) {
     case 'api-entreprise-or-association':
-      return (<Question questionTree={apiEntrepriseQuestionTree.entrepriseOrAssociation} />)
+      return (<Question questionTree={apiEntrepriseOrAssociation} />)
     case 'api-entreprise-administration':
-      //return (<Question questionTree={apiEntrepriseQuestionTree.administration}/>)
+      return (<Question questionTree={apiEntrepriseAdministration}/>)
     case 'api-entreprise-editeur':
-      //return (<Question questionTree={apiEntrepriseQuestionTree.editeur}/>)
+      return (<Question questionTree={apiEntrepriseEditeur}/>)
     default:
       throw new Error('Should not be there.')
   }
