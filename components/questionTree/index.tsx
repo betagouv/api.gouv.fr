@@ -25,10 +25,12 @@ const Question: React.FC<{questionTree: IQuestionTree}> = ({questionTree}) => {
     <div className='question-tree-wrapper'>
       <p><strong>{questionTree.question}</strong></p>
       <p>{questionTree.description}</p>
-      <div
-        className={`choices${questionTree.big? ' big' : ''}`}
-        style={{height: `${questionTree.forceHeight ? questionTree.forceHeight : 'auto'}`}}
-      >
+      <div className={`choices${questionTree.big? ' big' : ''}`}>
+        <style jsx>{`
+            @media (min-width: 768px) {
+              height: ${questionTree.forceHeight ? questionTree.forceHeight : 'auto'}};
+            }
+        `}</style>
         {
           questionTree.choiceTree.map((choiceType, key) =>
           <button

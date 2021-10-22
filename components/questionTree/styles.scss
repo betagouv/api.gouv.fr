@@ -18,8 +18,7 @@
     }
 
     &.big {
-      min-width: 200px;
-      max-width: 240px;
+      max-width: 220px;
       margin: 15px 15px 5px 5px;
     }
 
@@ -28,7 +27,10 @@
   .choices {
     display: flex;
     flex-wrap: wrap;
-    max-height: 450px;
+
+    @media (min-width: 768px) {
+      max-height: 450px;
+    }
 
     &.big {
       flex-direction: column;
