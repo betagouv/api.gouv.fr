@@ -21,6 +21,7 @@ access_page:
       Lors de votre demande vous devrez **renseigner le cadre juridique** qui légitime l'entité pour laquelle vous opérez à recevoir ces données.
 
       <NextSteps />
+      <QuestionTree api='api-entreprise'/>
       <Button href="https://datapass.api.gouv.fr/api-entreprise">Remplir une demande</Button>
   - who:
       - Une entreprise
