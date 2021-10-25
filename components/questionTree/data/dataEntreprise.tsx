@@ -1,9 +1,6 @@
-import {
-  eligible,
-  nonEligible,
-  pathEligible,
-  pathDevelopForAdministration
-} from './dataShared'
+import { eligible, nonEligible } from './dataShared'
+
+import { pathEligible, pathDevelopForAdministration } from './paths';
 
 const apiEntrepriseOrAssociation = {
   question: <>Votre entreprise/association est-elle dîte “chargée d’une mission de service public” ?</>,

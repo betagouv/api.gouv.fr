@@ -4,8 +4,8 @@ import { ButtonLink } from '../../../uiComponents';
 
 export const nonEligible =
   <>
-    <p><strong>Vous n'êtes pas éligible à API Entreprise</strong> <span role="img" aria-label="émoji non">🚫</span></p>
-    <p>L’usage des données de l’API Entreprise est reservé aux acteurs publics : les administrations, leurs opérateurs et les collectivités, les acteurs de santé, etc.</p>
+    <p><strong>Vous n'êtes pas éligible à API Entreprise</strong> <span role="img" aria-label="émoji non">🚫</span><br/>
+    L’usage des données de l’API Entreprise est reservé aux acteurs publics : les administrations, leurs opérateurs et les collectivités, les acteurs de santé, etc.</p>
     <p>D’autres API, publiques, permettent d’accéder à des données sur les entreprises et les associations :</p>
     <ul>
       <li>L'<a href=''>API Sirene, produite par l'INSEE</a>, permettant d’accéder aux données du répertoire Sirene de l’INSEE, à l’exception des entreprises non-diffusibles ;</li>
@@ -15,6 +15,8 @@ export const nonEligible =
     </ul>
     <a className='outside-link'>Rechercher une autre API {rightArrow}</a>
   </>;
+
+
 
 export const eligible =
   <>
@@ -64,11 +66,11 @@ export const eligibleNoDevelopers =
       L’API Entreprise s’utilise au travers d’un logiciel métier, comme par exemple un profil acheteur pour les marchés publics. Si vous collectez et traitez les données à la main, vous n’avez probablement pas un logiciel dédié aux démarches.
     </p>
     <div>
-      <p>Vous pouvez:</p>
+      <p>Vous pouvez :</p>
       <ul>
         <li>
           <strong>contacter des éditeurs de logiciel ayant déjà intégré l’API Entreprise</strong>, ou découvrir d’autres alternatives :
-          <div className='margin-top'><a className='outside-link'>Liste des éditeurs branchés à l’API Entreprise {rightArrow}</a></div>
+          <div><a className='outside-link'>Liste des éditeurs branchés à l’API Entreprise {rightArrow}</a></div>
         </li>
         <li>
           <strong>déposer une demande afin de nous expliquer votre contexte d’utilisation et vos besoins.</strong>, Les instructeurs d’API Entreprise étudierons votre demande. L’identification d’une équipe technique sera indispensable pour délivrer une habilitation :
@@ -95,148 +97,3 @@ export const editeurAskAdministration =
     <p><strong>C’est à elle de compléter une demande auprès d’API Entreprise.</strong> Elle devra dans sa demande d’habilitation vous renseigner en tant que “contact technique”. Le lien ci-dessous permet à l’administration d’accéder à la demande d’accès, partagez-lui :</p>
     <a href=''>Lien vers la page</a><button className='button-copy'>Copier le lien <span role="img" aria-label="icon file">{file}</span></button>
   </>
-
-export const pathEligible =
-  {
-    question: <>Qui sera en charge techniquement de l’intégration de l’API Entreprise ?</>,
-    big: true,
-    choiceTree: [
-      {
-        choice: <><strong>Mon profil acheteur.</strong><br/>J’utilise une solution clé en main pour les marchés publics.</>,
-        next: {
-          question: <>Votre éditeur ou profil acheteur a-t-il déjà intégré l'API Entreprise ?</>,
-          description: <>Sélectionnez votre éditeur dans la liste ci-dessous :</>,
-          // TODO: Add editeurs here, manage CSS issue
-          big: true,
-          choiceTree: [
-            {
-              choice: <>Éditeur X - Solution Z</>,
-              result: eligibleEditeurOk
-            },
-            {
-              choice: <>Éditeur X - Solution Z</>,
-              result: eligibleEditeurOk
-            },
-            {
-              choice: <>Éditeur X - Solution Z</>,
-              result: eligibleEditeurOk
-            },
-            {
-              choice: <>Éditeur X - Solution Z</>,
-              result: eligibleEditeurOk
-            },
-            {
-              choice: <>Éditeur X - Solution Z</>,
-              result: eligibleEditeurOk
-            },
-            {
-              choice: <>Éditeur X - Solution Z</>,
-              result: eligibleEditeurOk
-            },
-            {
-              choice: <>Éditeur X - Solution Z</>,
-              result: eligibleEditeurOk
-            },
-            {
-              choice: <>Éditeur X - Solution Z</>,
-              result: eligibleEditeurOk
-            },
-            {
-              choice: <>Mon éditeur ne figure pas dans la liste ci-contre</>,
-              result: eligibleEditeurNotOk
-            }
-          ]
-        }
-      },
-      {
-        choice: <><strong>Nos développeurs prestataires.</strong><br/>Ils conçoivent une solution logicielle sur-mesure pour mon administration.</>,
-        result: eligibleDevelopersOk
-      },
-      {
-        choice: <><strong>Mon éditeur.</strong><br/>J’utilise la solution clé en main proposée par un éditeur.</>,
-        next: {
-          question: <>Votre éditeur ou profil acheteur a-t-il déjà intégré l'API Entreprise ?</>,
-          description: <>Sélectionnez votre éditeur dans la liste ci-dessous :</>,
-          // TODO: Add editeurs here, manage CSS issue
-          big: true,
-          choiceTree: [
-            {
-              choice: <>Éditeur X - Solution Z</>,
-              result: eligibleEditeurOk
-            },
-            {
-              choice: <>Éditeur X - Solution Z</>,
-              result: eligibleEditeurOk
-            },
-            {
-              choice: <>Éditeur X - Solution Z</>,
-              result: eligibleEditeurOk
-            },
-            {
-              choice: <>Éditeur X - Solution Z</>,
-              result: eligibleEditeurOk
-            },
-            {
-              choice: <>Éditeur X - Solution Z</>,
-              result: eligibleEditeurOk
-            },
-            {
-              choice: <>Éditeur X - Solution Z</>,
-              result: eligibleEditeurOk
-            },
-            {
-              choice: <>Éditeur X - Solution Z</>,
-              result: eligibleEditeurOk
-            },
-            {
-              choice: <>Éditeur X - Solution Z</>,
-              result: eligibleEditeurOk
-            },
-            {
-              choice: <>Mon éditeur ne figure pas dans la liste ci-contre</>,
-              result: eligibleEditeurNotOk
-            }
-          ]
-        }
-      },
-      {
-        choice: <><strong>Nos développeurs internes.</strong><br/>Ils conçoivent une solution logicielle sur-mesure pour mon administration.</>,
-        result: eligibleDevelopersOk
-      },
-      {
-        choice: <><strong>Je n’ai pas d’aide technique particulière.</strong><br/>Actuellement, je contacte les entreprises et associations une par une et traite leurs données à la main.</>,
-        result: eligibleNoDevelopers
-      }
-    ]
-  }
-
-  export const pathDevelopForAdministration =
-  {
-    question: <>À qui sont destinés les interfaces/logiciels que vous concevez ?</>,
-    big: true,
-    forceHeight: '130px',
-    choiceTree: [
-      {
-        choice: <>Aux administrations et/ou aux collectivités</>,
-        next: {
-          question: <>Quel type de service proposez-vous aux administrations ?</>,
-          big: true,
-          forceHeight: '130px',
-          choiceTree: [
-            {
-              choice: <>Un <strong>logiciel métier clé en main</strong>, proposé à de nombreuses entités administratives</>,
-              result: editeurOk
-            },
-            {
-              choice: <>Un logiciel conçu <strong>sur mesure</strong> pour une administration.</>,
-              result: editeurAskAdministration
-            }
-          ]
-        }
-      },
-      {
-        choice: <>Aux entreprises/associations et/ou particuliers</>,
-        result: nonEligible
-      }
-    ]
-  }

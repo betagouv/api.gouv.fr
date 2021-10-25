@@ -1,9 +1,4 @@
-import {
-  editeurOk,
-  editeurAskAdministration,
-  nonEligible,
-  pathDevelopForAdministration
-} from './dataShared'
+import { pathDevelopForAdministration } from './paths';
 
 const apiEntrepriseEditeur = pathDevelopForAdministration;
 
