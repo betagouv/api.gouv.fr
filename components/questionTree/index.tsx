@@ -23,14 +23,9 @@ const Question: React.FC<{questionTree: IQuestionTree}> = ({questionTree}) => {
 
   return (
     <div className='question-tree-wrapper'>
-      <p><strong>{questionTree.question}</strong></p>
+      <h3>{questionTree.question}</h3>
       <p>{questionTree.description}</p>
       <div className={`choices${questionTree.big? ' big' : ''}`}>
-        <style jsx>{`
-            @media (min-width: 768px) {
-              height: ${questionTree.forceHeight ? questionTree.forceHeight : 'auto'}};
-            }
-        `}</style>
         {
           questionTree.choiceTree.map((choiceType, key) =>
           <button
@@ -39,12 +34,19 @@ const Question: React.FC<{questionTree: IQuestionTree}> = ({questionTree}) => {
             className={`
               ${choiceType === currentChoiceType ? 'selected' : ''}
               ${questionTree.big ? ' big' : ''}
-            `}
+              `}
           >
               <p className='choice'>{choiceType.choice}</p>
             </button>
           )
         }
+        <style jsx>{`
+            @media (min-width: 768px) {
+              .choices {
+                height: ${questionTree.forceHeight ? questionTree.forceHeight : 'auto'}};
+              }
+            }
+        `}</style>
       </div>
       {
         currentChoiceType && currentChoiceType.transition ?
@@ -68,11 +70,11 @@ const Question: React.FC<{questionTree: IQuestionTree}> = ({questionTree}) => {
 const QuestionTree: React.FC<{ api: string }> = ({ api }) => {
   switch (api) {
     case 'api-entreprise-or-association':
-      return (<Question questionTree={apiEntrepriseOrAssociation} />)
+      return (<Question questionTree={apiEntrepriseOrAssociation as any} />)
     case 'api-entreprise-administration':
       return (<Question questionTree={apiEntrepriseAdministration}/>)
     case 'api-entreprise-editeur':
-      return (<Question questionTree={apiEntrepriseEditeur}/>)
+      return (<Question questionTree={apiEntrepriseEditeur as any}/>)
     default:
       throw new Error('Should not be there.')
   }

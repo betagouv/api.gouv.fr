@@ -1,7 +1,7 @@
 import {
   eligibleEditeurNotOk,
   eligibleEditeurOk,
-  nonEligible,
+  ApiEntrepriseNonEligible,
   eligibleNoDevelopers,
   eligibleDevelopersOk,
   editeurOk,
@@ -148,7 +148,7 @@ export const pathEligible =
       },
       {
         choice: <>Aux entreprises/associations et/ou particuliers</>,
-        result: nonEligible
+        result: ApiEntrepriseNonEligible({})
       }
     ]
   }

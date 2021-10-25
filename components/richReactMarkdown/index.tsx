@@ -11,6 +11,7 @@ import DatagouvWidget from '../widgets/datagouv';
 import FlatFileWidget from '../widgets/flatFile';
 import { H2WithAnchor, H3WithAnchor } from '../../uiComponents/titleWithAnchor';
 import QuestionTree from '../questionTree'
+import { ApiEntrepriseNonEligible } from '../questionTree/data/dataShared';
 
 const CenteredCta: React.FC<PropsWithChildren<{ href: string }>> = props => (
   <div className="layout-center">
@@ -77,7 +78,8 @@ const RichReactMarkdown: React.FC<{ source: string; addAnchor?: boolean }> = ({
         Datagouv: DatagouvWidget,
         h2: H2WithAnchor,
         h3: H3WithAnchor,
-        QuestionTree: QuestionTree
+        QuestionTree: QuestionTree,
+        ApiEntrepriseNonEligible: ApiEntrepriseNonEligible
       },
     }}
   />

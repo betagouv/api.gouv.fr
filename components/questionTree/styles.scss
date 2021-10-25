@@ -47,27 +47,27 @@
     text-align: left;
   }
 
-  a.outside-link, .button-copy {
-    display: inline-block;
-    text-decoration: none;
-    background-color: $white;
-    border-radius: 0px;
-    border: 2px solid $blue;
-    color: $blue;
-    margin: 5px;
-    padding: 10px;
-  }
-
-  .button-copy {
-    font-size: small;
-    margin-left: 20px;
-    > span {
-      position: relative;
-      top: 2px;
-    }
-  }
-
   .margin-top {
     margin-top: 20px;
+  }
+}
+
+a.outside-link, .button-copy {
+  display: inline-block;
+  text-decoration: none;
+  background-color: $white;
+  border-radius: 0px;
+  border: 2px solid $blue;
+  color: $blue;
+  margin: 5px;
+  padding: 10px;
+}
+
+.button-copy {
+  font-size: small;
+  margin-left: 20px;
+  > span {
+    position: relative;
+    top: 2px;
   }
 }

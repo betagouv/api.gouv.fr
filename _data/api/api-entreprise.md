@@ -9,9 +9,7 @@ access_page:
       - Un particulier
     is_eligible: -1
     description: |
-      Seules les administrations et certaines sociétés sont habilitées à utiliser API Entreprise.
-
-      <Button href="/rechercher-api">Rechercher une autre API</Button>
+      <ApiEntrepriseNonEligible particulier=true withAnnuaire=true/>
   - who:
       - Une entité administrative
     is_eligible: 1

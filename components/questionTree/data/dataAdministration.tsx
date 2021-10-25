@@ -1,6 +1,4 @@
-import {
-  pathEligible
-} from './dataShared'
+import { pathEligible } from './paths'
 
 const apiEntrepriseAdministration = pathEligible
 
