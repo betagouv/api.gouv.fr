@@ -11,9 +11,6 @@
     font-size: 1.1rem;
     line-height: 1.6rem;
     color: $darkestGrey;
-    // TODO: Update all components to new chart:
-    // Colour background: #e5e5f4
-    // Colour border: #000091
 
     &.selected,
     &:hover {
@@ -29,10 +26,6 @@
   .choices {
     display: flex;
     flex-wrap: wrap;
-
-    @media (min-width: 518px) {
-      max-height: 550px;
-    }
 
     @media (min-width: 768px) {
       max-height: 450px;

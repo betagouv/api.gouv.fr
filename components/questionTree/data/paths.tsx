@@ -12,6 +12,7 @@ const pathEditeur = {
   question: <>Votre éditeur ou profil acheteur a-t-il déjà intégré l'API Entreprise ?</>,
   description: <>Sélectionnez votre éditeur dans la liste ci-dessous :</>,
   big: true,
+  forceHeightTablet: '650px',
   choiceTree: [
     {
       choice: <>Achatpublic - achatpublic.com</>,
@@ -76,6 +77,7 @@ export const pathEligible =
   {
     question: <>Qui sera en charge techniquement de l’intégration de l’API Entreprise ?</>,
     big: true,
+    forceHeightTablet: '500px',
     choiceTree: [
       {
         choice: <><strong>Mon profil acheteur.</strong><br/>J’utilise une solution clé en main pour les marchés publics.</>,
@@ -105,6 +107,7 @@ export const pathEligible =
     question: <>À qui sont destinés les interfaces/logiciels que vous concevez ?</>,
     big: true,
     forceHeight: '130px',
+    forceHeightTablet: '130px',
     choiceTree: [
       {
         choice: <>Aux administrations et/ou aux collectivités</>,
@@ -112,6 +115,7 @@ export const pathEligible =
           question: <>Quel type de service proposez-vous aux administrations ?</>,
           big: true,
           forceHeight: '130px',
+          forceHeightTablet: '130px',
           choiceTree: [
             {
               choice: <>Un <strong>logiciel métier clé en main</strong>, proposé à de nombreuses entités administratives</>,

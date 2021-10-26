@@ -5,6 +5,8 @@ import { pathEligible, pathDevelopForAdministration } from './paths';
 const apiEntrepriseOrAssociation = {
   question: <>Votre entreprise/association est-elle :</>,
   big: true,
+  forceHeight: '300px',
+  forceHeightTablet: '480px',
   choiceTree: [
       {
         choice: <>dîte <strong>“chargée d’une mission de service public”</strong></>,

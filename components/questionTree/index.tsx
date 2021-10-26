@@ -8,6 +8,7 @@ interface IQuestionTree {
   description?: JSX.Element,
   big?: Boolean,
   forceHeight?: string,
+  forceHeightTablet?: string,
   choiceTree: ChoiceType[],
 }
 
@@ -29,8 +30,6 @@ const Question: React.FC<{
     setChoiceType(null)
   }, [parentsChoicesType]);
 
-
-
   return (
     <div className='question-tree-wrapper'>
       <h3>{questionTree.question}</h3>
@@ -51,6 +50,11 @@ const Question: React.FC<{
           )
         }
         <style jsx>{`
+            @media (min-width: 504px) {
+              .choices {
+                height: ${questionTree.forceHeightTablet ? questionTree.forceHeightTablet : 'auto'}};
+              }
+            }
             @media (min-width: 768px) {
               .choices {
                 height: ${questionTree.forceHeight ? questionTree.forceHeight : 'auto'}};
