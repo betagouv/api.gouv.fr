@@ -21,19 +21,11 @@ access_page:
       - Une entreprise ou association
     is_eligible: 0
     description: |
-      Seule les **sociétés chargées d’une mission de service public** sont éligibles.
-
-      Lors de votre demande vous devrez **justifier** dans quelle mesure vous rentrez dans ce cadre juridique.
-
       <QuestionTree api='api-entreprise-or-association'/>
   - who:
       - Un éditeur de logiciel
     is_eligible: 0
     description: |
-      Si vous êtes **éditeur de logiciels** et agissez pour le compte d'une administration ou d'une collectivité, vous pouvez remplir vous même une demande d'accès à l'API entreprise pour l'entité que vous représentez.
-
-      Lors de votre demande vous devrez **renseigner le cadre juridique (un texte ou délibération/décision)** qui légitime  l'entité pour laquelle vous opérez à recevoir ces données.
-
       <QuestionTree api='api-entreprise-editeur'/>
 stat:
   lastXdays: 30

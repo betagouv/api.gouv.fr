@@ -4,10 +4,10 @@ import { pathEligible, pathDevelopForAdministration } from './paths';
 
 const apiEntrepriseOrAssociation = {
   question: <>Votre entreprise/association est-elle :</>,
-  description: <>Les SNCF, la Poste sont des exemples d’entreprises chargées d’une mission de service public, tel que définies par la loi.</>,
+  big: true,
   choiceTree: [
       {
-        choice: <>dîte <strong>“chargée d’une mission de service public”</strong>, d’après un texte législatif ou réglementaire</>,
+        choice: <>dîte <strong>“chargée d’une mission de service public”</strong></>,
         transition: eligible,
         next: pathEligible
       },
@@ -25,7 +25,7 @@ const apiEntrepriseOrAssociation = {
         result: ApiEntrepriseNonEligible({withAnnuaire: true})
       },
       {
-        choice: <>dans <strong>aucune des situations</strong> ci-dessus</>,
+        choice: <>dans aucune de ces situations</>,
         result: ApiEntrepriseNonEligible({withAnnuaire: true})
       }
     ]

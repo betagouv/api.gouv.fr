@@ -10,7 +10,10 @@
     border: 2px solid transparent;
     font-size: 1.1rem;
     line-height: 1.6rem;
-    color: #373c42;
+    color: $darkestGrey;
+    // TODO: Update all components to new chart:
+    // Colour background: #e5e5f4
+    // Colour border: #000091
 
     &.selected,
     &:hover {
@@ -21,12 +24,15 @@
       max-width: 220px;
       margin: 15px 15px 5px 5px;
     }
-
   }
 
   .choices {
     display: flex;
     flex-wrap: wrap;
+
+    @media (min-width: 518px) {
+      max-height: 550px;
+    }
 
     @media (min-width: 768px) {
       max-height: 450px;
@@ -50,9 +56,38 @@
   .margin-top {
     margin-top: 20px;
   }
+
+  .small-margin-bottom {
+    margin-bottom: 10px;
+  }
+
+  a.outside-link, .secondary-link, .button-copy {
+    display: inline-block;
+    text-decoration: none;
+    background-color: $white;
+    border-radius: 0px;
+    border: 2px solid $blue;
+    color: $blue;
+    margin: 5px;
+    padding: 10px;
+  }
+
+  .button-copy {
+    font-size: small;
+    margin-left: 20px;
+    padding: 6px;
+    > span {
+      position: relative;
+      top: 2px;
+    }
+
+    &:active {
+      background-color: $lightBlue;
+    }
+  }
 }
 
-a.outside-link, .button-copy {
+a.secondary-link {
   display: inline-block;
   text-decoration: none;
   background-color: $white;
@@ -63,11 +98,4 @@ a.outside-link, .button-copy {
   padding: 10px;
 }
 
-.button-copy {
-  font-size: small;
-  margin-left: 20px;
-  > span {
-    position: relative;
-    top: 2px;
-  }
-}
+

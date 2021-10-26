@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import apiEntrepriseOrAssociation from './data/dataEntreprise'
 import apiEntrepriseEditeur from './data/dataEditeur'
 import apiEntrepriseAdministration from './data/dataAdministration'
@@ -8,7 +8,7 @@ interface IQuestionTree {
   description?: JSX.Element,
   big?: Boolean,
   forceHeight?: string,
-  choiceTree: ChoiceType[]
+  choiceTree: ChoiceType[],
 }
 
 interface ChoiceType {
@@ -18,8 +18,18 @@ interface ChoiceType {
   result?: JSX.Element,
 }
 
-const Question: React.FC<{questionTree: IQuestionTree}> = ({questionTree}) => {
+const Question: React.FC<{
+  questionTree: IQuestionTree,
+  parentsChoicesType: ChoiceType[],
+}>
+  = ({questionTree, parentsChoicesType }) => {
   const [currentChoiceType, setChoiceType] = useState<ChoiceType | null>(null)
+  // When user change a parent choice in the tree, we close children
+  useEffect(() => {
+    setChoiceType(null)
+  }, [parentsChoicesType]);
+
+
 
   return (
     <div className='question-tree-wrapper'>
@@ -48,6 +58,7 @@ const Question: React.FC<{questionTree: IQuestionTree}> = ({questionTree}) => {
             }
         `}</style>
       </div>
+      <div  />
       {
         currentChoiceType && currentChoiceType.transition ?
           <div className='transition'>{currentChoiceType.transition}</div> :
@@ -55,7 +66,10 @@ const Question: React.FC<{questionTree: IQuestionTree}> = ({questionTree}) => {
       }
       {
         currentChoiceType && currentChoiceType.next ?
-          <Question questionTree={currentChoiceType.next} /> :
+          <Question
+            questionTree={currentChoiceType.next}
+            parentsChoicesType={[...parentsChoicesType, currentChoiceType]}
+          /> :
             null
       }
       {
@@ -70,11 +84,11 @@ const Question: React.FC<{questionTree: IQuestionTree}> = ({questionTree}) => {
 const QuestionTree: React.FC<{ api: string }> = ({ api }) => {
   switch (api) {
     case 'api-entreprise-or-association':
-      return (<Question questionTree={apiEntrepriseOrAssociation as any} />)
+      return (<Question questionTree={apiEntrepriseOrAssociation as any} parentsChoicesType={[]}/>)
     case 'api-entreprise-administration':
-      return (<Question questionTree={apiEntrepriseAdministration}/>)
+      return (<Question questionTree={apiEntrepriseAdministration} parentsChoicesType={[]} />)
     case 'api-entreprise-editeur':
-      return (<Question questionTree={apiEntrepriseEditeur as any}/>)
+      return (<Question questionTree={apiEntrepriseEditeur as any} parentsChoicesType={[]} />)
     default:
       throw new Error('Should not be there.')
   }

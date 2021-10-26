@@ -8,6 +8,70 @@ import {
   editeurAskAdministration
 } from './dataShared';
 
+const pathEditeur = {
+  question: <>Votre éditeur ou profil acheteur a-t-il déjà intégré l'API Entreprise ?</>,
+  description: <>Sélectionnez votre éditeur dans la liste ci-dessous :</>,
+  big: true,
+  choiceTree: [
+    {
+      choice: <>Achatpublic - achatpublic.com</>,
+      result: eligibleEditeurOk
+    },
+    {
+      choice: <>Atexo - LocalTrustSub</>,
+      result: eligibleEditeurOk
+    },
+    {
+      choice: <>Atexo - Place</>,
+      result: eligibleEditeurOk
+    },
+    {
+      choice: <>AWS - AWS-achat</>,
+      result: eligibleEditeurOk
+    },
+    {
+      choice: <>Atline Services - marches-securises.fr</>,
+      result: eligibleEditeurOk
+    },
+    {
+      choice: <>Dematis - <br/> e-marchespublics.com</>,
+      result: eligibleEditeurOk
+    },
+    {
+      choice: <>Entr'ouvert - entrouvert.com</>,
+      result: eligibleEditeurOk
+    },
+    {
+      choice: <>Entr'ouvert - Publik</>,
+      result: eligibleEditeurOk
+    },
+    {
+      choice: <>E-attestations - <br/> E-attestations.com</>,
+      result: eligibleEditeurOk
+    },
+    {
+      choice: <>Klekoon - klekoon.com</>,
+      result: eligibleEditeurOk
+    },
+    {
+      choice: <>MGDIS -<br/> Portail des aides</>,
+      result: eligibleEditeurOk
+    },
+    {
+      choice: <>Provigis -<br/> Provigis plateforme</>,
+      result: eligibleEditeurOk
+    },
+    {
+      choice: <>Territoires numériques - Pack commande publique</>,
+      result: eligibleEditeurOk
+    },
+    {
+      choice: <><strong>Mon éditeur ne figure pas dans cette liste</strong></>,
+      result: eligibleEditeurNotOk
+    }
+  ]
+}
+
 export const pathEligible =
   {
     question: <>Qui sera en charge techniquement de l’intégration de l’API Entreprise ?</>,
@@ -15,108 +79,22 @@ export const pathEligible =
     choiceTree: [
       {
         choice: <><strong>Mon profil acheteur.</strong><br/>J’utilise une solution clé en main pour les marchés publics.</>,
-        next: {
-          question: <>Votre éditeur ou profil acheteur a-t-il déjà intégré l'API Entreprise ?</>,
-          description: <>Sélectionnez votre éditeur dans la liste ci-dessous :</>,
-          // TODO: Add editeurs here, manage CSS issue
-          big: true,
-          choiceTree: [
-            {
-              choice: <>Éditeur X - Solution Z</>,
-              result: eligibleEditeurOk
-            },
-            {
-              choice: <>Éditeur X - Solution Z</>,
-              result: eligibleEditeurOk
-            },
-            {
-              choice: <>Éditeur X - Solution Z</>,
-              result: eligibleEditeurOk
-            },
-            {
-              choice: <>Éditeur X - Solution Z</>,
-              result: eligibleEditeurOk
-            },
-            {
-              choice: <>Éditeur X - Solution Z</>,
-              result: eligibleEditeurOk
-            },
-            {
-              choice: <>Éditeur X - Solution Z</>,
-              result: eligibleEditeurOk
-            },
-            {
-              choice: <>Éditeur X - Solution Z</>,
-              result: eligibleEditeurOk
-            },
-            {
-              choice: <>Éditeur X - Solution Z</>,
-              result: eligibleEditeurOk
-            },
-            {
-              choice: <>Mon éditeur ne figure pas dans la liste ci-contre</>,
-              result: eligibleEditeurNotOk
-            }
-          ]
-        }
+        next: pathEditeur
       },
       {
-        choice: <><strong>Nos développeurs prestataires.</strong><br/>Ils conçoivent une solution logicielle sur-mesure pour mon administration.</>,
+        choice: <><strong>Nos développeurs prestataires.</strong><br/>Ils conçoivent une solution logicielle sur-mesure pour mon organisation.</>,
         result: eligibleDevelopersOk
       },
       {
-        choice: <><strong>Mon éditeur.</strong><br/>J’utilise la solution clé en main proposée par un éditeur.</>,
-        next: {
-          question: <>Votre éditeur ou profil acheteur a-t-il déjà intégré l'API Entreprise ?</>,
-          description: <>Sélectionnez votre éditeur dans la liste ci-dessous :</>,
-          // TODO: Add editeurs here, manage CSS issue
-          big: true,
-          choiceTree: [
-            {
-              choice: <>Éditeur X - Solution Z</>,
-              result: eligibleEditeurOk
-            },
-            {
-              choice: <>Éditeur X - Solution Z</>,
-              result: eligibleEditeurOk
-            },
-            {
-              choice: <>Éditeur X - Solution Z</>,
-              result: eligibleEditeurOk
-            },
-            {
-              choice: <>Éditeur X - Solution Z</>,
-              result: eligibleEditeurOk
-            },
-            {
-              choice: <>Éditeur X - Solution Z</>,
-              result: eligibleEditeurOk
-            },
-            {
-              choice: <>Éditeur X - Solution Z</>,
-              result: eligibleEditeurOk
-            },
-            {
-              choice: <>Éditeur X - Solution Z</>,
-              result: eligibleEditeurOk
-            },
-            {
-              choice: <>Éditeur X - Solution Z</>,
-              result: eligibleEditeurOk
-            },
-            {
-              choice: <>Mon éditeur ne figure pas dans la liste ci-contre</>,
-              result: eligibleEditeurNotOk
-            }
-          ]
-        }
+        choice: <><strong>Mon éditeur.</strong><br/>J’utilise une solution clé en main proposée par un éditeur.</>,
+        next: pathEditeur
       },
       {
-        choice: <><strong>Nos développeurs internes.</strong><br/>Ils conçoivent une solution logicielle sur-mesure pour mon administration.</>,
+        choice: <><strong>Nos développeurs internes.</strong><br/>Ils conçoivent une solution logicielle sur-mesure pour mon organisation.</>,
         result: eligibleDevelopersOk
       },
       {
-        choice: <><strong>Je n’ai pas d’aide technique particulière.</strong><br/>Actuellement, je contacte les entreprises et associations une par une et traite leurs données à la main.</>,
+        choice: <><strong>Je n’ai ni équipe technique, ni éditeur.</strong><br/>Actuellement, je contacte les entreprises et associations une par une et traite leurs données à la main.</>,
         result: eligibleNoDevelopers
       }
     ]
@@ -147,7 +125,7 @@ export const pathEligible =
         }
       },
       {
-        choice: <>Aux entreprises/associations et/ou particuliers</>,
+        choice: <>Aux entreprises, associations et/ou particuliers</>,
         result: ApiEntrepriseNonEligible({})
       }
     ]
