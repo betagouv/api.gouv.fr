@@ -237,6 +237,9 @@
       path: /les-api/api-aides-territoires
   10:
     - type: ADD_API
+      what: API Judilibre par la Cour de cassation
+      path: /les-api/api-judilibre
+    - type: ADD_API
       what: API Carto - module Nature par l'IGN
       path: /les-api/api-carto-nature
   11:
