@@ -185,39 +185,48 @@ L’API permet notamment de simplifier le dépôt et l'instruction des candidatu
 
 Pour cavoir la liste à jour des API disponibles, n'hésitez pas à consulter le <External href='https://entreprise.api.gouv.fr/catalogue/'>catalogue des données de l’API Entreprise</External>. Le catalogue vous permet également de découvrir la liste précise des données disponibles pour chacune des API.
 
-| API                                                                  | Administration                            |
+| API                                                                  | Fournisseur de la donnée                  |
 | -------------------------------------------------------------------- | ----------------------------------------- |
 | **Données générales :**                                              |                                           |
-| Les données de référence d'une entité                                | INSEE                                     |
-| Les données de référence d'un établissement                          | INSEE                                     |
-| Un extrait des données du Registre du Commerce et des Sociétés (RCS) | INFOGREFFE                                |
-| Les informations déclaratives d'une association                      | Ministère intérieur                       |
-| Divers documents d'une associaiton                                   | Ministère intérieur                       |
-| Les actes et statuts des personnes morales et physiques              | INPI                                      |
-| Les conventions collectives                                          | Fabrique Numérique des Ministères Sociaux |
-| Les données de référence d'une entreprise artisanale                 | CMA France                                |
-| Les effectifs d'une entreprise                                       | ACOSS                                     |
-| L'immatriculation EORI                                               | Douanes                                   |
-| **Données financières :**                                            |                                           |
-| Les chiffre d'affaires                                               | DGFiP                                     |
-| Les bilans annuels                                                   | INPI                                      |
-| Les 3 derniers bilans annuels                                        | Banque de france                          |
-| La déclarations de résultat (liasses fiscales)                       | DGFiP                                     |
-| **Les attestations sociales et fiscales :**                          |                                           |
-| L'attestation fiscale                                                | DGFiP                                     |
-| L'attestation de vigilance                                           | URSSAF                                    |
-| Conformité emploi des travailleurs handicapés                        | AGEFIPH                                   |
-| Conformité contisations de sécurité sociale agricole                 | MSA                                       |
-| Conformité cotisations retraite bâtiment et attestation              | PRO BTP                                   |
-| Carte professionnelle travaux publics                                | FNTP                                      |
-| L'attestation de cotisations congés payés & chômage intempéries      | CNETP                                     |
+| <External href='https://entreprise.api.gouv.fr/catalogue/#a-entreprises'>Données de référence d'une entité</External>                         | INSEE & Infogreffe                                    |
+| <External href='https://entreprise.api.gouv.fr/catalogue/#a-etablissements'>Données de référence d'un établissement</External>                 | INSEE                                                 |
+| <External href='https://entreprise.api.gouv.fr/catalogue/#a-extraits_rcs_infogreffe'>Extrait des données du Registre du Commerce et des Sociétés (RCS)</External> 
+| Infogreffe                                            |
+| <External href='https://entreprise.api.gouv.fr/catalogue/#a-associations'>Informations déclaratives d'une association</External>           
+| Ministère intérieur                                   |
+| <External href='https://entreprise.api.gouv.fr/catalogue/#a-documents_associations'>Divers documents d'une association</External>             | Ministère intérieur                                   |
+| <External href='https://entreprise.api.gouv.fr/catalogue/#a-actes_inpi'>Actes et statuts des personnes morales et physiques</External>     
+| INPI                                                  |
+| <External href='https://entreprise.api.gouv.fr/catalogue/#a-conventions_collectives'>Conventions collectives</External>                   
+| Fabrique Numérique des Ministères Sociaux             |
+| <External href='https://entreprise.api.gouv.fr/catalogue/#a-entreprises_artisanales_cma'>Données de référence d'une entreprise artisanale</External>                 
+| CMA France                                            |
+| <External href='https://entreprise.api.gouv.fr/catalogue/#a-effectifs_..._acoss_covid'>Effectifs d'une entreprise</External>                   | Urssaf Caisse nationale                               |
+| <External href='https://entreprise.api.gouv.fr/catalogue/#a-eori_douanes'>Immatriculation EORI</External>                                     | Douanes                                               |
+| **Informations financières :**                                       |                                           |
+| <External href='https://entreprise.api.gouv.fr/catalogue/#a-exercices'>Chiffre d'affaires</External>                                           | DGFiP                                                 |
+| <External href='https://entreprise.api.gouv.fr/catalogue/#a-bilans_inpi'>Bilans annuels</External>                                             | INPI                                                  |
+| <External href='https://entreprise.api.gouv.fr/catalogue/#a-bilans_entreprises_bdf'>3 derniers bilans annuels</External>                       | Banque de france                                      |
+| <External href='https://entreprise.api.gouv.fr/catalogue/#a-liasses_fiscales_dgfip'>Déclarations de résultat (liasses fiscales)</External> 
+| DGFiP                                                 |
+| **Attestations sociales et fiscales :**                              |                                           |
+| <External href='https://entreprise.api.gouv.fr/catalogue/#a-attestations_fiscales_dgfip'>Attestation fiscale</External>                       | DGFiP                                                 |
+| <External href='https://entreprise.api.gouv.fr/catalogue/#a-attestations_sociales_acoss'>Attestation de vigilance</External>                   | URSSAF                                                |
+| <External href='https://entreprise.api.gouv.fr/catalogue/#a-attestations_agefiph'>Conformité emploi des travailleurs handicapés</External>     | AGEFIPH                                               |
+| <External href='https://entreprise.api.gouv.fr/catalogue/#a-cotisations_msa'>Cotisations de sécurité sociale agricole</External> (conformité)  | MSA                                                   |
+| <External href='https://entreprise.api.gouv.fr/catalogue/#a-cotisation_retraite_probtp'>Cotisations retraite bâtiment</External> (conformité et attestation)              
+| PRO BTP                                               |
+| <External href='https://entreprise.api.gouv.fr/catalogue/#a-cartes_professionnelles_fntp'>Carte professionnelle travaux publics</External>     | FNTP                                                  |
+| <External href='https://entreprise.api.gouv.fr/catalogue/#a-certificats_cnetp'>Cotisations congés payés & chômage intempéries</External> (attestation)      
+| CNETP                                                 |
 | **Les certifications professionnelles :**                            |                                           |
-| Certifications biologiques en cours                                  | Agence BIO                                |
-| Le certificat RGE (Reconnu garant de l'environnement)                | ADEME                                     |
-| Le certificat de qualification bâtiment Qualibat                     | QUALIBAT                                  |
-| Le certificat de qualification d'ingénierie OPQIBI                   | OPQIBI                                    |
+| <External href='https://entreprise.api.gouv.fr/catalogue/#a-certificats_agence_bio'>Certifications en BIO</External>                           | Agence BIO                                            |
+| <External href='https://entreprise.api.gouv.fr/catalogue/#a-certificats_rge_ademe'>Certificat RGE (Reconnu garant de l'environnement)</External>                
+| ADEME                                                 |
+| <External href='https://entreprise.api.gouv.fr/catalogue/#a-certificats_qualibat'>Certificat de qualification bâtiment Qualibat</External>     | QUALIBAT                                              |
+| <External href='https://entreprise.api.gouv.fr/catalogue/#a-certificats_opqibi'>Certificat de qualification d'ingénierie OPQIBI</External>     | OPQIBI                                                |
 | **La propriété intellectuelle :**                                    |                                           |
-| Les brevets, modèles et marques déposés                              | INPI                                      |
+| <External href='https://entreprise.api.gouv.fr/catalogue/#a-extraits_courts_inpi'>Brevets, modèles et marques déposés</External>               | INPI                                                  |
 
 ### Quelles sont les conditions d'éligibilité à l'API Entreprise ?
 
