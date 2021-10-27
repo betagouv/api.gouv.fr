@@ -183,7 +183,7 @@ L’API permet notamment de simplifier le dépôt et l'instruction des candidatu
 
 ### API accessibles depuis l'API Entreprise
 
-Pour cavoir la liste à jour des API disponibles, n'hésitez pas à consulter le <External href='https://entreprise.api.gouv.fr/catalogue/'>catalogue des données de l’API Entreprise</External>. Le catalogue vous permet également de découvrir la liste précise des données disponibles pour chacune des API.
+Pour avoir la liste à jour des API disponibles, n'hésitez pas à consulter le <External href='https://entreprise.api.gouv.fr/catalogue/'>catalogue des données de l’API Entreprise</External>. Le catalogue vous permet également de découvrir la liste précise des données disponibles pour chacune des API.
 
 | API                                                                  | Fournisseur de la donnée                  |
 | -------------------------------------------------------------------- | ----------------------------------------- |
