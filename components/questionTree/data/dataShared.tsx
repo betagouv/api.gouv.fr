@@ -58,7 +58,7 @@ export const eligible =
 
 export const eligibleEditeurOk =
   <>
-    <p><strong><span role="img" aria-label="émoji ok">✅</span> Bonne nouvelle ! Vous êtes éligible et votre éditeur/profil acheteur a déjà intégré l’API Entreprise.</strong>
+    <p><strong><span role="img" aria-label="émoji ok">👍</span> Bonne nouvelle ! Vous êtes éligible et votre éditeur/profil acheteur a déjà intégré l’API Entreprise.</strong>
     </p>
     <p>
       Vous n’avez plus qu’à vous adresser directement à votre éditeur.
@@ -85,7 +85,7 @@ export const eligibleEditeurNotOk =
 export const eligibleDevelopersOk =
   <>
     <p>
-      <strong><span role="img" aria-label="émoji ok">✅</span> Vous êtes éligible et avez les compétences techniques pour intégrer l’API Entreprise</strong> à votre logiciel interne de traitement des démarches des associations et des entreprises.
+      <strong><span role="img" aria-label="émoji ok">👍</span> Vous êtes éligible et avez les compétences techniques pour intégrer l’API Entreprise</strong> à votre logiciel interne de traitement des démarches des associations et des entreprises.
     </p>
     <div className='margin-top'>
       <ButtonLink href="https://datapass.api.gouv.fr/api-entreprise" target='_blank'>Déposer une demande</ButtonLink>
@@ -123,7 +123,7 @@ export const eligibleNoDevelopers =
 
 export const editeurOk =
   <>
-    <p><strong><span role="img" aria-label="émoji ok">✅</span> Vous êtes éligible pour mettre à disposition de vos utilisateurs l’API Entreprise.</strong></p>
+    <p><strong><span role="img" aria-label="émoji ok">👍</span> Vous êtes éligible pour mettre à disposition de vos utilisateurs l’API Entreprise.</strong></p>
     <p><span role="img" aria-label="émoji avertissement">⚠️</span>En tant que prestataire technique d’une entité administrative, vous pourrez être destinataire des informations techniques permettant l’usage de l’API mais en aucun cas des données elles-même</p>
     <div className='margin-top'>
       <ButtonLink href="https://datapass.api.gouv.fr/api-entreprise?demarche=editeur">Déposer une demande</ButtonLink>
@@ -132,7 +132,7 @@ export const editeurOk =
 
 export const editeurAskAdministration =
   <>
-    <p><strong>L’administration pour laquelle vous proposez une prestation est éligible à l’API Entreprise </strong><span role="img" aria-label="émoji ok">✅</span></p>
+    <p><strong>L’administration pour laquelle vous proposez une prestation est éligible à l’API Entreprise </strong><span role="img" aria-label="émoji ok">👍</span></p>
     <p><strong>C’est à elle de compléter une demande auprès d’API Entreprise.</strong> Elle devra dans sa demande d’habilitation vous renseigner en tant que “contact technique”. Le lien ci-dessous permet à l’administration d’accéder à la demande d’accès, partagez-lui :</p>
     {/* TODO: change with specific form on datapass (when available) */}
     <a href='/les-api/api-entreprise/demande-acces' target='_blank'>Lien vers la page</a><button onClick={(e) => copyToClipboard(e)}className='secondary-link button-copy'>Copier le lien <span role="img" aria-label="icon file">{file}</span></button>

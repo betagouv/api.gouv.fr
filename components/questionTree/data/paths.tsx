@@ -39,14 +39,6 @@ const pathEditeur = {
       result: eligibleEditeurOk
     },
     {
-      choice: <>Entr'ouvert - entrouvert.com</>,
-      result: eligibleEditeurOk
-    },
-    {
-      choice: <>Entr'ouvert - Publik</>,
-      result: eligibleEditeurOk
-    },
-    {
       choice: <>E-attestations - <br/> E-attestations.com</>,
       result: eligibleEditeurOk
     },
@@ -80,7 +72,7 @@ export const pathEligible =
     forceHeightTablet: '500px',
     choiceTree: [
       {
-        choice: <><strong>Mon profil acheteur.</strong><br/>J’utilise une solution clé en main pour les marchés publics.</>,
+        choice: <><strong>Mon profil acheteur.</strong><br/>Rien à coder, j’utilise une solution clé en main pour les marchés publics.</>,
         next: pathEditeur
       },
       {
@@ -88,7 +80,7 @@ export const pathEligible =
         result: eligibleDevelopersOk
       },
       {
-        choice: <><strong>Mon éditeur.</strong><br/>J’utilise une solution clé en main proposée par un éditeur.</>,
+        choice: <><strong>Mon éditeur.</strong><br/>Rien à coder, j’utilise une solution clé en main proposée par un éditeur.</>,
         next: pathEditeur
       },
       {
