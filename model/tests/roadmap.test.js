@@ -1,14 +1,12 @@
-import { IApi } from '..';
-import { getDate } from '../../components/charts/utils';
-import { readAllApisOnDisk } from '../readOnDiskForNode';
+const { readAllApisOnDisk } = require('../readOnDiskForNode');
 const fs = require('fs');
 
 test('All Apis appear in Roadmap', async () => {
   const roadmapAsString = fs.readFileSync('./_data/roadmap.md', 'utf8');
   const apis = await readAllApisOnDisk();
 
-  const missingAPI: string[] = [];
-  apis.forEach((api: IApi) => {
+  const missingAPI = [];
+  apis.forEach(api => {
     const isPresent = roadmapAsString.indexOf(api.path) > -1;
     const isOld = oldAPIs.indexOf(api.title) > -1;
 

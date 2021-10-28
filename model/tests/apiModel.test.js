@@ -1,9 +1,7 @@
-import { uniq, flatten } from 'lodash';
+const { uniq, flatten } = require('lodash');
+const { readAllApisOnDisk } = require('../readOnDiskForNode');
 
-import { readAllApisOnDisk } from '../readOnDiskForNode';
-import { IApi } from '..';
-
-let allApis: IApi[];
+let allApis;
 
 test('Can load all Apis', async () => {
   allApis = await readAllApisOnDisk();
