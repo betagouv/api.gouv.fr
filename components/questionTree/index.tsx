@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import apiEntrepriseOrAssociation from './data/dataEntreprise'
 import apiEntrepriseEditeur from './data/dataEditeur'
 import apiEntrepriseAdministration from './data/dataAdministration'
+import { ObjectType } from 'typescript';
 
 interface IQuestionTree {
   question: JSX.Element,
@@ -21,9 +22,9 @@ interface ChoiceType {
 
 const Question: React.FC<{
   questionTree: IQuestionTree,
-  parentsChoicesType: ChoiceType[],
+  parentsChoicesType?: ChoiceType[],
 }>
-  = ({questionTree, parentsChoicesType }) => {
+  = ({questionTree, parentsChoicesType = [] }) => {
   const [currentChoiceType, setChoiceType] = useState<ChoiceType | null>(null)
   // When user change a parent choice in the tree, we close children
   useEffect(() => {
@@ -86,16 +87,13 @@ const Question: React.FC<{
 }
 
 const QuestionTree: React.FC<{ api: string }> = ({ api }) => {
-  switch (api) {
-    case 'api-entreprise-or-association':
-      return (<Question questionTree={apiEntrepriseOrAssociation as any} parentsChoicesType={[]}/>)
-    case 'api-entreprise-administration':
-      return (<Question questionTree={apiEntrepriseAdministration} parentsChoicesType={[]} />)
-    case 'api-entreprise-editeur':
-      return (<Question questionTree={apiEntrepriseEditeur as any} parentsChoicesType={[]} />)
-    default:
-      throw new Error('Should not be there.')
-  }
+  const data = {
+    'api-entreprise-or-association' : apiEntrepriseOrAssociation,
+    'api-entreprise-administration': apiEntrepriseAdministration,
+    'api-entreprise-editeur': apiEntrepriseEditeur
+ }
+
+  return <Question questionTree={data[api as keyof typeof data] as any}/>
 }
 
 export default QuestionTree;
