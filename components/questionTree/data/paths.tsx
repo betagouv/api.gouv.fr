@@ -69,7 +69,7 @@ export const pathEligible =
   {
     question: <>Qui sera en charge techniquement de l’intégration de l’API Entreprise ?</>,
     big: true,
-    forceHeightTablet: '500px',
+    forceHeightTablet: '600px',
     choiceTree: [
       {
         choice: <><strong>Mon profil acheteur.</strong><br/>Rien à coder, j’utilise une solution clé en main pour les marchés publics</>,
