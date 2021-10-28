@@ -72,23 +72,23 @@ export const pathEligible =
     forceHeightTablet: '500px',
     choiceTree: [
       {
-        choice: <><strong>Mon profil acheteur.</strong><br/>Rien à coder, j’utilise une solution clé en main pour les marchés publics.</>,
+        choice: <><strong>Mon profil acheteur.</strong><br/>Rien à coder, j’utilise une solution clé en main pour les marchés publics</>,
         next: pathEditeur
       },
       {
-        choice: <><strong>Nos développeurs prestataires.</strong><br/>Ils conçoivent une solution logicielle sur-mesure pour mon organisation.</>,
+        choice: <><strong>Nos développeurs prestataires.</strong><br/>Ils conçoivent une solution logicielle sur-mesure pour mon organisation</>,
         result: eligibleDevelopersOk
       },
       {
-        choice: <><strong>Mon éditeur.</strong><br/>Rien à coder, j’utilise une solution clé en main proposée par un éditeur.</>,
+        choice: <><strong>Mon éditeur.</strong><br/>Rien à coder, j’utilise une solution clé en main proposée par un éditeur</>,
         next: pathEditeur
       },
       {
-        choice: <><strong>Nos développeurs internes.</strong><br/>Ils conçoivent une solution logicielle sur-mesure pour mon organisation.</>,
+        choice: <><strong>Nos développeurs internes.</strong><br/>Ils conçoivent une solution logicielle sur-mesure pour mon organisation</>,
         result: eligibleDevelopersOk
       },
       {
-        choice: <><strong>Je n’ai ni équipe technique, ni éditeur.</strong><br/>Actuellement, je contacte les entreprises et associations une par une et traite leurs données à la main.</>,
+        choice: <><strong>Je n’ai ni équipe technique, ni éditeur.</strong><br/>Actuellement, je contacte les entreprises et associations une par une et traite leurs données à la main</>,
         result: eligibleNoDevelopers
       }
     ]
@@ -114,7 +114,7 @@ export const pathEligible =
               result: editeurOk
             },
             {
-              choice: <>Un logiciel conçu <strong>sur mesure</strong> pour une administration.</>,
+              choice: <>Un logiciel conçu <strong>sur mesure</strong> pour une administration</>,
               result: editeurAskAdministration
             }
           ]
