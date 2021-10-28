@@ -18,7 +18,7 @@ access_page:
 
       <QuestionTree api='api-entreprise-administration'/>
   - who:
-      - Une entreprise ou association
+      - Une entreprise ou une association
     is_eligible: 0
     description: |
       <QuestionTree api='api-entreprise-or-association'/>
