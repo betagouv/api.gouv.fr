@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import apiEntrepriseOrAssociation from './data/dataEntreprise'
 import apiEntrepriseEditeur from './data/dataEditeur'
 import apiEntrepriseAdministration from './data/dataAdministration'
-import { ObjectType } from 'typescript';
 
 interface IQuestionTree {
   question: JSX.Element,
@@ -10,10 +9,10 @@ interface IQuestionTree {
   big?: Boolean,
   forceHeight?: string,
   forceHeightTablet?: string,
-  choiceTree: ChoiceType[],
+  choiceTree: IChoiceType[],
 }
 
-interface ChoiceType {
+interface IChoiceType {
   choice: JSX.Element,
   next?: IQuestionTree,
   transition?: JSX.Element,
@@ -22,10 +21,10 @@ interface ChoiceType {
 
 const Question: React.FC<{
   questionTree: IQuestionTree,
-  parentsChoicesType?: ChoiceType[],
+  parentsChoicesType: IChoiceType[],
 }>
-  = ({questionTree, parentsChoicesType = [] }) => {
-  const [currentChoiceType, setChoiceType] = useState<ChoiceType | null>(null)
+  = ({questionTree, parentsChoicesType}) => {
+  const [currentChoiceType, setChoiceType] = useState<IChoiceType | null>(null)
   // When user change a parent choice in the tree, we close children
   useEffect(() => {
     setChoiceType(null)
@@ -93,7 +92,7 @@ const QuestionTree: React.FC<{ api: string }> = ({ api }) => {
     'api-entreprise-editeur': apiEntrepriseEditeur
  }
 
-  return <Question questionTree={data[api as keyof typeof data] as any}/>
+  return <Question questionTree={data[api as keyof typeof data] as any} parentsChoicesType={[]}/>
 }
 
 export default QuestionTree;
