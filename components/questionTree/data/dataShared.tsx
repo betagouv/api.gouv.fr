@@ -22,7 +22,9 @@ export const ApiEntrepriseNonEligible: React.FC<{
         withAnnuaire ?
         <>
           <p><strong>Vous recherchez une information sur une entreprise/association :</strong></p>
-          <a className='outside-link' href='https://annuaire-entreprises.data.gouv.fr/' target='_blank'>Consulter l'annuaire des entreprises</a>
+          <ButtonLink href='https://annuaire-entreprises.data.gouv.fr/' target='_blank' alt>
+            Consulter l'annuaire des entreprises
+          </ButtonLink>
           <p>
             <strong>Vous avez reperé une erreur dans la base de donnée Sirene sur votre entreprise/association :</strong><br/>
 
@@ -38,7 +40,7 @@ export const ApiEntrepriseNonEligible: React.FC<{
         <li>L'<a href='/les-api/api-rncs'target='_blank'>API RNCS, produite par l'INPI</a>, donnant accès aux informations publiques détenues par les greffes sur les sociétés françaises ;</li>
         <li>L'<a href='/les-api/api_rnm'target='_blank'>API RNM, produite par CMA France</a>, produite par CMA France, interrogeant le répertoire des entreprises artisanales françaises.</li>
       </ul>
-      <a className='secondary-link' href='rechercher-api'>Rechercher une autre API {rightArrow}</a>
+      <ButtonLink href='rechercher-api' alt>Rechercher une autre API {rightArrow}</ButtonLink>
       <style jsx>{`
         a {
           color: ${constants.colors.blue}
@@ -107,8 +109,8 @@ export const eligibleNoDevelopers =
       <ul>
         <li>
           <strong>contacter des éditeurs de logiciel ayant déjà intégré l’API Entreprise :</strong>
-          <div><a className='outside-link' href='https://entreprise.api.gouv.fr/use_cases/aides_publiques/#liste-d%C3%A9diteurs' target='_blank'>Liste des éditeurs Aides Publiques</a></div>
-          <div><a className='outside-link' href='https://entreprise.api.gouv.fr/use_cases/marches_publics/#liste-d%C3%A9diteurs' target='_blank'>Liste des éditeurs Marchés Publics</a></div>
+          <ButtonLink href='https://entreprise.api.gouv.fr/use_cases/aides_publiques/#liste-d%C3%A9diteurs' target='_blank' alt>Liste des éditeurs Aides Publiques</ButtonLink>
+          <ButtonLink href='https://entreprise.api.gouv.fr/use_cases/marches_publics/#liste-d%C3%A9diteurs' target='_blank' alt>Liste des éditeurs Marchés Publics</ButtonLink>
         </li>
         <li>
           {/* TODO: Remove after 'Merci' when datapass form available */}
@@ -135,7 +137,10 @@ export const editeurAskAdministration =
     <p><strong>L’administration pour laquelle vous proposez une prestation est éligible à l’API Entreprise </strong><span role="img" aria-label="émoji ok">👍</span></p>
     <p><strong>C’est à elle de compléter une demande auprès d’API Entreprise.</strong> Elle devra dans sa demande d’habilitation vous renseigner en tant que “contact technique”. Le lien ci-dessous permet à l’administration d’accéder à la demande d’accès, partagez-lui :</p>
     {/* TODO: change with specific form on datapass (when available) */}
-    <a href='/les-api/api-entreprise/demande-acces' target='_blank'>Lien vers la page</a><button onClick={(e) => copyToClipboard(e)}className='secondary-link button-copy'>Copier le lien <span role="img" aria-label="icon file">{file}</span></button>
+    <a href='/les-api/api-entreprise/demande-acces' target='_blank'>Lien vers la page</a>
+    <button onClick={(e) => copyToClipboard(e)}className='button-copy'>
+      Copier le lien <span role="img" aria-label="icon file">{file}</span>
+    </button>
   </>
 
 const copyToClipboard = (e: MouseEvent) => {
