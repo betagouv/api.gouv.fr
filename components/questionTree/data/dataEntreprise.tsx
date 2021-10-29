@@ -1,4 +1,4 @@
-import { eligible, ApiEntrepriseNonEligible } from './dataShared'
+import { Eligible, ApiEntrepriseNonEligible } from './dataShared'
 
 import { pathEligible, pathDevelopForAdministration } from './paths';
 
@@ -10,12 +10,12 @@ const apiEntrepriseOrAssociation = {
   choiceTree: [
       {
         choice: <>dîte <strong>“chargée d’une mission de service public”</strong></>,
-        answer: eligible,
+        answer: Eligible,
         next: pathEligible
       },
       {
         choice: <>dîte <strong>“délégataire de service public”</strong></>,
-        answer: eligible,
+        answer: Eligible,
         next: pathEligible
       },
       {

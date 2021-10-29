@@ -20,12 +20,12 @@ export const ApiEntrepriseNonEligible: React.FC<{particulier?: Boolean}> = ({par
   )
 };
 
-export const eligible =
+export const Eligible =
   <>
     <p><strong>Vous êtes éligible !</strong> <span role="img" aria-label="émoji oui">👌</span> Lors de la demande, vous devrez justifier par le cadre légal adéquat de votre statut de société chargée d’une mission de service public.</p>
   </>
 
-export const eligibleEditeurOk =
+export const EligibleEditeurOk =
   <>
     <p><strong><span role="img" aria-label="émoji ok">👍</span> Bonne nouvelle ! Vous êtes éligible et votre éditeur/profil acheteur a déjà intégré l’API Entreprise.</strong>
     </p>
@@ -34,7 +34,7 @@ export const eligibleEditeurOk =
     </p>
   </>
 
-export const eligibleEditeurNotOk =
+export const EligibleEditeurNotOk =
   <>
     <p><strong>Vous êtes éligible mais votre éditeur/profil acheteur n’a pas intégré l’API Entreprise<span role="img" aria-label="émoji loupe">🔎</span></strong><br/>Déposez une demande pour expliciter vos besoins et votre situation. L’équipe API Entreprise vous contactera pour identifier des pistes de solutions, et contactera le cas échéant votre éditeur (pensez donc bien à préciser le nom de votre éditeur et ses coordonnées).
     </p>
@@ -49,7 +49,7 @@ export const eligibleEditeurNotOk =
     </p>
   </>
 
-export const eligibleDevelopersOk =
+export const EligibleDevelopersOk =
   <>
     <p>
       <strong><span role="img" aria-label="émoji ok">👍</span> Vous êtes éligible et avez les compétences techniques pour intégrer l’API Entreprise</strong> à votre logiciel interne de traitement des démarches des associations et des entreprises.
@@ -59,7 +59,7 @@ export const eligibleDevelopersOk =
     </div>
   </>
 
-export const eligibleNoDevelopers =
+export const EligibleNoDevelopers =
   <>
     <p>
       <strong>
@@ -87,7 +87,7 @@ export const eligibleNoDevelopers =
     </div>
   </>
 
-export const editeurOk =
+export const EditeurOk =
   <>
     <p><strong><span role="img" aria-label="émoji ok">👍</span> Vous êtes éligible pour mettre à disposition de vos utilisateurs l’API Entreprise.</strong></p>
     <p><span role="img" aria-label="émoji avertissement">⚠️</span>En tant que prestataire technique d’une entité administrative, vous pourrez être destinataire des informations techniques permettant l’usage de l’API mais en aucun cas des données elles-même</p>
@@ -96,7 +96,7 @@ export const editeurOk =
     </div>
   </>
 
-export const editeurAskAdministration =
+export const EditeurAskAdministration =
   <>
     <p><strong>L’administration pour laquelle vous proposez une prestation est éligible à l’API Entreprise </strong><span role="img" aria-label="émoji ok">👍</span></p>
     <p><strong>C’est à elle de compléter une demande auprès d’API Entreprise.</strong> Elle devra dans sa demande d’habilitation vous renseigner en tant que “contact technique”. Le lien ci-dessous permet à l’administration d’accéder à la demande d’accès, partagez-lui :</p>
