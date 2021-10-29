@@ -169,7 +169,7 @@ content_intro: |
 
   ### À quoi sert l’API Entreprise ?
 
- En intégrant la brique API Entreprise dans votre système d’information ou votre site internet :
+En intégrant la brique API Entreprise dans votre système d’information ou votre site internet :
   - Vous n’avez **plus besoin de demander certains justificatifs** aux entreprises ;
   - Vous n’avez pas de vérification supplémentaire à réaliser car les **informations sont certifiées**; 
   - Vous accédez avec un seul compte aux données de **différents fournisseurs** tels que l’INSEE, la DGFIP, l’URSSAF, etc.
