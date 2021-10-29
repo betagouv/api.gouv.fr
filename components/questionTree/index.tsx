@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import apiEntrepriseOrAssociation from './data/dataEntreprise'
 import apiEntrepriseEditeur from './data/dataEditeur'
 import apiEntrepriseAdministration from './data/dataAdministration'
+import RichReactMarkdown from '../richReactMarkdown';
 
 interface IQuestionTree {
   question: JSX.Element,
@@ -15,8 +16,7 @@ interface IQuestionTree {
 interface IChoiceType {
   choice: JSX.Element,
   next?: IQuestionTree,
-  transition?: JSX.Element,
-  result?: JSX.Element,
+  answer?: JSX.Element,
 }
 
 const Question: React.FC<{
@@ -44,28 +44,29 @@ const Question: React.FC<{
               ${choiceType === currentChoiceType ? 'selected' : ''}
               ${questionTree.big ? ' big' : ''}
               `}
-          >
-              <p className='choice'>{choiceType.choice}</p>
-            </button>
+          ><p className='choice'>{choiceType.choice}</p>
+          </button>
           )
         }
         <style jsx>{`
-            @media (min-width: 504px) {
-              .choices {
-                height: ${questionTree.forceHeightTablet ? questionTree.forceHeightTablet : 'auto'}};
-              }
+          @media (min-width: 504px) {
+            .choices {
+              height: ${questionTree.forceHeightTablet ? questionTree.forceHeightTablet : 'auto'}};
             }
-            @media (min-width: 768px) {
-              .choices {
-                height: ${questionTree.forceHeight ? questionTree.forceHeight : 'auto'}};
-              }
+          }
+          @media (min-width: 768px) {
+            .choices {
+              height: ${questionTree.forceHeight ? questionTree.forceHeight : 'auto'}};
             }
-        `}</style>
+          }`}
+        </style>
       </div>
       <div  />
       {
-        currentChoiceType && currentChoiceType.transition ?
-          <div className='transition'>{currentChoiceType.transition}</div> :
+        currentChoiceType && currentChoiceType.answer ?
+          <div className='transition'>
+            {typeof currentChoiceType.answer === 'string' ? <RichReactMarkdown source={currentChoiceType.answer}/> : currentChoiceType.answer }
+          </div> :
           null
       }
       {
@@ -76,23 +77,18 @@ const Question: React.FC<{
           /> :
             null
       }
-      {
-        currentChoiceType && currentChoiceType.result ?
-          <div className='result'>{currentChoiceType.result}</div> :
-          null
-      }
     </div>
   )
 }
 
-const QuestionTree: React.FC<{ api: string }> = ({ api }) => {
-  const data = {
+const QuestionTree: React.FC<{ treeKey: string }> = ({ treeKey }) => {
+  const data:{[key: string]: any} = {
     'api-entreprise-or-association' : apiEntrepriseOrAssociation,
     'api-entreprise-administration': apiEntrepriseAdministration,
     'api-entreprise-editeur': apiEntrepriseEditeur
  }
 
-  return <Question questionTree={data[api as keyof typeof data] as any} parentsChoicesType={[]}/>
+  return <Question questionTree={data[treeKey]} parentsChoicesType={[]}/>
 }
 
 export default QuestionTree;

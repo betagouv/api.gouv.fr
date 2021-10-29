@@ -16,51 +16,51 @@ const pathEditeur = {
   choiceTree: [
     {
       choice: <>Achatpublic - achatpublic.com</>,
-      result: eligibleEditeurOk
+      answer: eligibleEditeurOk
     },
     {
       choice: <>Atexo - LocalTrustSub</>,
-      result: eligibleEditeurOk
+      answer: eligibleEditeurOk
     },
     {
       choice: <>Atexo - Place</>,
-      result: eligibleEditeurOk
+      answer: eligibleEditeurOk
     },
     {
       choice: <>AWS - AWS-achat</>,
-      result: eligibleEditeurOk
+      answer: eligibleEditeurOk
     },
     {
       choice: <>Atline Services - marches-securises.fr</>,
-      result: eligibleEditeurOk
+      answer: eligibleEditeurOk
     },
     {
       choice: <>Dematis - <br/> e-marchespublics.com</>,
-      result: eligibleEditeurOk
+      answer: eligibleEditeurOk
     },
     {
       choice: <>E-attestations - <br/> E-attestations.com</>,
-      result: eligibleEditeurOk
+      answer: eligibleEditeurOk
     },
     {
       choice: <>Klekoon - klekoon.com</>,
-      result: eligibleEditeurOk
+      answer: eligibleEditeurOk
     },
     {
       choice: <>MGDIS -<br/> Portail des aides</>,
-      result: eligibleEditeurOk
+      answer: eligibleEditeurOk
     },
     {
       choice: <>Provigis -<br/> Provigis plateforme</>,
-      result: eligibleEditeurOk
+      answer: eligibleEditeurOk
     },
     {
       choice: <>Territoires numériques - Pack commande publique</>,
-      result: eligibleEditeurOk
+      answer: eligibleEditeurOk
     },
     {
       choice: <><strong>Mon éditeur ne figure pas dans cette liste</strong></>,
-      result: eligibleEditeurNotOk
+      answer: eligibleEditeurNotOk
     }
   ]
 }
@@ -77,7 +77,7 @@ export const pathEligible =
       },
       {
         choice: <><strong>Nos développeurs prestataires.</strong><br/>Ils conçoivent une solution logicielle sur-mesure pour mon organisation</>,
-        result: eligibleDevelopersOk
+        answer: eligibleDevelopersOk
       },
       {
         choice: <><strong>Mon éditeur.</strong><br/>Rien à coder, j’utilise une solution clé en main proposée par un éditeur</>,
@@ -85,11 +85,11 @@ export const pathEligible =
       },
       {
         choice: <><strong>Nos développeurs internes.</strong><br/>Ils conçoivent une solution logicielle sur-mesure pour mon organisation</>,
-        result: eligibleDevelopersOk
+        answer: eligibleDevelopersOk
       },
       {
         choice: <><strong>Je n’ai ni équipe technique, ni éditeur.</strong><br/>Actuellement, je contacte les entreprises et associations une par une et traite leurs données à la main</>,
-        result: eligibleNoDevelopers
+        answer: eligibleNoDevelopers
       }
     ]
   }
@@ -111,18 +111,18 @@ export const pathEligible =
           choiceTree: [
             {
               choice: <>Un <strong>logiciel métier clé en main</strong>, proposé à de nombreuses entités administratives</>,
-              result: editeurOk
+              answer: editeurOk
             },
             {
               choice: <>Un logiciel conçu <strong>sur mesure</strong> pour une administration</>,
-              result: editeurAskAdministration
+              answer: editeurAskAdministration
             }
           ]
         }
       },
       {
         choice: <>Aux entreprises, associations et/ou particuliers</>,
-        result: ApiEntrepriseNonEligible({})
+        answer: ApiEntrepriseNonEligible({})
       }
     ]
   }

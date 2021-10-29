@@ -16,17 +16,17 @@ access_page:
     description: |
       L’API Entreprise vous permet d’accéder directement aux données des entreprises et des associations pour faciliter leurs démarches (demandes d’aides, marchés publics, ...).
 
-      <QuestionTree api='api-entreprise-administration'/>
+      <QuestionTree treeKey='api-entreprise-administration'/>
   - who:
       - Une entreprise ou une association
     is_eligible: 0
     description: |
-      <QuestionTree api='api-entreprise-or-association'/>
+      <QuestionTree treeKey='api-entreprise-or-association'/>
   - who:
       - Un éditeur de logiciel
     is_eligible: 0
     description: |
-      <QuestionTree api='api-entreprise-editeur'/>
+      <QuestionTree treeKey='api-entreprise-editeur'/>
 stat:
   lastXdays: 30
   url: https://dashboard.entreprise.api.gouv.fr/api/watchdoge/stats/last_30_days_usage

@@ -10,12 +10,12 @@ const apiEntrepriseOrAssociation = {
   choiceTree: [
       {
         choice: <>dîte <strong>“chargée d’une mission de service public”</strong></>,
-        transition: eligible,
+        answer: eligible,
         next: pathEligible
       },
       {
         choice: <>dîte <strong>“délégataire de service public”</strong></>,
-        transition: eligible,
+        answer: eligible,
         next: pathEligible
       },
       {
@@ -24,11 +24,11 @@ const apiEntrepriseOrAssociation = {
       },
       {
         choice: <>un <strong>cabinet d’avocat ou comptable</strong></>,
-        result: ApiEntrepriseNonEligible({withAnnuaire: true})
+        answer: ApiEntrepriseNonEligible({})
       },
       {
         choice: <>dans aucune de ces situations</>,
-        result: ApiEntrepriseNonEligible({withAnnuaire: true})
+        answer: ApiEntrepriseNonEligible({})
       }
     ]
   }
