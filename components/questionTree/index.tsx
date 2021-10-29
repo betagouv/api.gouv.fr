@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import apiEntrepriseOrAssociation from './data/dataEntreprise'
-import apiEntrepriseEditeur from './data/dataEditeur'
-import apiEntrepriseAdministration from './data/dataAdministration'
 import RichReactMarkdown from '../richReactMarkdown';
+import data from './data'
 
 interface IQuestionTree {
   question: JSX.Element,
@@ -82,13 +80,11 @@ const Question: React.FC<{
 }
 
 const QuestionTree: React.FC<{ treeKey: string }> = ({ treeKey }) => {
-  const data:{[key: string]: any} = {
-    'api-entreprise-or-association' : apiEntrepriseOrAssociation,
-    'api-entreprise-administration': apiEntrepriseAdministration,
-    'api-entreprise-editeur': apiEntrepriseEditeur
- }
-
-  return <Question questionTree={data[treeKey]} parentsChoicesType={[]}/>
+  if (data[treeKey]) {
+    return(<Question questionTree={data[treeKey]} parentsChoicesType={[]}/>)
+  } else {
+    throw new Error(`QuestionTree must be called with an existing key, but received :${treeKey},`)
+  }
 }
 
 export default QuestionTree;
