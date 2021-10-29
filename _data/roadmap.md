@@ -243,6 +243,12 @@
       what: Statut Étudiant par le MESRI
   10:
     - type: ADD_API
+      what: Judilibre par la Cour de cassation
+      path: /les-api/api-judilibre
+    - type: ADD_API
+      what: API Tiers de prestation par l'URSSAF
+      path: /les-api/api-tiers-de-prestation
+    - type: ADD_API
       what: CVEC par le CNOUS
     - type: ADD_API
       what: Attestation Codes Sécurité par l'Urssaf
@@ -250,7 +256,5 @@
       what: Déclaration préalable à l'embauche par l'Urssaf
     - type: ADD_API
       what: Liste des organismes de formation par la DGEFP
-    - type: ADD_API
-      what: Judilibre par la Cour de cassation
-      path: /les-api/api-judilibre
+
 ---
