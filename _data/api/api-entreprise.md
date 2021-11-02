@@ -170,7 +170,7 @@ content_intro: |
   ### À quoi sert l’API Entreprise ?
 
   En intégrant la brique API Entreprise dans votre système d’information ou votre site internet :
-    - Vous n’avez **plus besoin de demander certains justificatifs** aux entreprises ;
+    - Vous n’avez **plus besoin de demander certains justificatifs** aux entreprises et associations ;
     - Vous n’avez pas de vérification supplémentaire à réaliser car les **informations sont certifiées**; 
     - Vous accédez avec un seul compte aux données de **différents fournisseurs** tels que l’INSEE, la DGFIP, l’URSSAF, etc.
 
@@ -233,11 +233,11 @@ L’API Entreprise est réservée :
 - aux **acteurs publics investis d’une mission de service public** ✅ : les administrations, leurs opérateurs et les collectivités, les acteurs de santé, etc. 
 - à **leurs prestataires privés** qui peuvent être destinataires des informations techniques permettant l’usage de l’API mais en aucun cas des données elles-même.
 
-Même si elle a pour objectif de simplifier leurs démarches, l’API Entreprise ne s’adresse pas aux particuliers ❌, aux associations ❌ et aux entreprises.
+Même si elle a pour objectif de simplifier leurs démarches, l’API Entreprise ne s’adresse pas aux particuliers ❌, aux associations ❌ et aux entreprises ❌.
 
 Il faut également être <External href='https://entreprise.api.gouv.fr/doc/#fondamentaux'>techniquement en mesure d'intégrer l'API Entreprise</External>, c'est à dire : 
 - avoir une équipe technique qui peut intégrer des API ;
-- travailler ou s'apprêter à travailler avec un éditeur de logiciel ou un prestataire, qui soit en mesure d’intégrer API Entreprise.
+- travailler ou s'apprêter à travailler avec un prestataire ou un éditeur de logiciel, qui soit en mesure d’intégrer API Entreprise.
 
 L’<External href="https://entreprise.api.gouv.fr/">API Entreprise</External> est une composante de l’État plateforme, l’accès à l’API Entreprise est modéré et régulé par la DINUM, qui attribue des autorisations de récupération d’informations selon la nature des démarches à traiter (marchés publics, aides publiques,…).
 
@@ -247,9 +247,9 @@ Vous n'êtes pas éligible à l'API Entreprise ? Il existe d'autres alternatives
 
 - **Pour trouver une information sur une entreprise/association en particulier**, consultez <External href='https://annuaire-entreprises.data.gouv.fr/'>l'annuaire des entreprises</External> . 
 
-- **Vous avez reperé une erreur dans la base de donnée Sirene sur votre entreprise/association ?** Le lien suivant vous permet de la signaler directement à l'INSEE : https://www.sirene.fr/sirene/public/nous-contacter
+- **Vous avez reperé une erreur dans la base de donnée Sirene sur votre entreprise/association ?** Le lien suivant vous permet de la signaler directement à l'INSEE : <External href='https://www.sirene.fr/sirene/public/nous-contacter'>https://www.sirene.fr/sirene/public/nous-contacter</External>.
 
-- **Certaines données proposées par l'API Entreprise sont accessibles, par API, en open data :
+- **Certaines données proposées par l'API Entreprise sont accessibles, par API, en open data** :
     - l'[API Sirene, produite par l'INSEE](/les-api/sirene_v3), donnant accès aux données du répertoire Sirene de l’INSEE, à l’exception des entreprises <External href="https://www.insee.fr/fr/information/4127417">non-diffusibles</External> ; 
     - l'[API RNCS, produite par l'INPI](/les-api/api-rncs), donnant accès aux informations publiques détenues par les greffes sur les sociétés françaises ;
     - l'[API RNA, produite par la DINUM](/les-api/api_rna), interrogeant le répertoire des associations françaises ;
