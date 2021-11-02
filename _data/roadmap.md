@@ -235,13 +235,14 @@
     - type: ADD_API
       what: Aides Territoires par le Ministère de la Transition Ecologique
       path: /les-api/api-aides-territoires
-    - type: ADD_API
-      what: INFINOE par la DGFiP
-    - type: ADD_API
-      what: Référentiel Partagé des Professionnels de Santé par l'Agence du Numérique en Santé
-    - type: ADD_API
-      what: Statut Étudiant par le MESRI
   10:
+    - type: ADD_API
+      what: API Judilibre par la Cour de cassation
+      path: /les-api/api-judilibre
+    - type: ADD_API
+      what: API Carto - module Nature par l'IGN
+      path: /les-api/api-carto-nature
+  11:
     - type: ADD_API
       what: CVEC par le CNOUS
     - type: ADD_API
@@ -251,6 +252,10 @@
     - type: ADD_API
       what: Liste des organismes de formation par la DGEFP
     - type: ADD_API
-      what: Judilibre par la Cour de cassation
-      path: /les-api/api-judilibre
+      what: Référentiel Partagé des Professionnels de Santé par l'Agence du Numérique en Santé
+    - type: ADD_API
+      what: Statut Étudiant par le MESRI
+  12:
+    - type: ADD_API
+      what: INFINOE par la DGFiP
 ---
