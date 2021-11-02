@@ -11,14 +11,15 @@ access_page:
     is_eligible: 0
     description: |
       Si vous êtes prestataire de services à la personne, vous pouvez remplir une demande d’accès à l’API.
-
-      <Button href="https://datapass.api.gouv.fr/api-tiers-de-prestation">Remplir une demande</Button>
       
       Pour remplir votre demande, vous aurez uniquement besoin de :
       
       - Créer un compte api.gouv pour accéder au formulaire DataPass ;
       - Attestation fiscale ;
       - Coordonnées bancaires (RIB) au format pdf. 
+
+      <Button href="https://datapass.api.gouv.fr/api-tiers-de-prestation">Remplir une demande</Button>
+
   - who:
       - Un editeur de logiciel de service à la personne
       - Un éditeur de services web
@@ -36,14 +37,14 @@ access_page:
       Le mode mandataire complet implique que le particulier vous confie, contre rémunération, un certain nombre de tâches par contrat de mandat : recherche de candidatures, recrutement et embauche, calcul et établissement des bulletins de paie etc. et l’émission de votre part d’une facture à régler par le particulier.
       
       Le particulier est alors l’employeur de l’intervenant qui intervient à son domicile et vous procédez pour le compte du particulier au versement des cotisations et contributions sociales dues au titre de l'emploi du salarié concerné auprès de la branche recouvrement. 
-
-      <Button href="https://datapass.api.gouv.fr/api-tiers-de-prestation">Remplir une demande</Button>
       
       Pour remplir votre demande, vous aurez uniquement besoin de :
       
       - Créer un compte api.gouv pour accéder au formulaire DataPass ;
       - Attestation fiscale ;
       - Coordonnées bancaires (RIB) au format pdf. 
+
+      <Button href="https://datapass.api.gouv.fr/api-tiers-de-prestation">Remplir une demande</Button>
 
   - who:
       - Autre actvité
