@@ -169,16 +169,15 @@ content_intro: |
 
   ### À quoi sert l’API Entreprise ?
 
-En intégrant la brique API Entreprise dans votre système d’information ou votre site internet :
-  - Vous n’avez **plus besoin de demander certains justificatifs** aux entreprises ;
-  - Vous n’avez pas de vérification supplémentaire à réaliser car les **informations sont certifiées**; 
-  - Vous accédez avec un seul compte aux données de **différents fournisseurs** tels que l’INSEE, la DGFIP, l’URSSAF, etc.
-  
-Au delà de la simplification apportée aux agents habilités des administrations, l'API Entreprise rend service aux entreprises et associations en leur évitant de chercher leurs documents administratifs et en permettant le pré-remplissage automatique de leurs formulaires.
+  En intégrant la brique API Entreprise dans votre système d’information ou votre site internet :
+    - Vous n’avez **plus besoin de demander certains justificatifs** aux entreprises ;
+    - Vous n’avez pas de vérification supplémentaire à réaliser car les **informations sont certifiées**; 
+    - Vous accédez avec un seul compte aux données de **différents fournisseurs** tels que l’INSEE, la DGFIP, l’URSSAF, etc.
 
-L’API permet notamment de simplifier le dépôt et l'instruction des candidatures aux <External href='https://entreprise.api.gouv.fr/use_cases/marches_publics/'>marchés publics</External> et des demandes d'<External href='https://entreprise.api.gouv.fr/use_cases/aides_publiques/'>aides et subventions publiques</External>. 
-<External href='https://entreprise.api.gouv.fr/use_cases/'>Découvrir tous les cas d'usage</External>
+  Au delà de la simplification apportée aux agents habilités des administrations, l'API Entreprise rend service aux entreprises et associations en leur évitant de chercher leurs documents administratifs et en permettant le pré-remplissage automatique de leurs formulaires.
 
+  L’API permet notamment de simplifier le dépôt et l'instruction des candidatures aux <External href='https://entreprise.api.gouv.fr/use_cases/marches_publics/'>marchés publics</External> et des demandes d'<External href='https://entreprise.api.gouv.fr/use_cases/aides_publiques/'>aides et subventions publiques</External>. 
+  <External href='https://entreprise.api.gouv.fr/use_cases/'>Découvrir tous les cas d'usage</External>
 ---
 
 ### API accessibles depuis l'API Entreprise
