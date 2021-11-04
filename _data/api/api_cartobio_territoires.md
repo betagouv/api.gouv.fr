@@ -4,7 +4,7 @@ tagline: Un accès aux données des parcelles en agriculture biologique pour les
 producer: agence-bio
 category: public
 is_open: 1 # 1 means API is fully open
-external_site: https://www.data.gouv.fr/fr/datasets/616d6531c2951bbe8bd97771/
+doc_external_link: https://www.data.gouv.fr/fr/datasets/616d6531c2951bbe8bd97771/
 keywords:
   - CartoBio
   - Agriculture
@@ -14,8 +14,6 @@ keywords:
   - Agence Bio
   - Territoire
 contact_link: cartobio@beta.gouv.fr
-#doc_tech_external: https://github.com/entrepreneur-interet-general/CartoBio-Presentation/blob/master/docs/api-territoires.md
-doc_tech_link: https://cartobio.org/api/v1/documentation/json
 partners:
   - Ministère de l’Agriculture et de l’Alimentation
   - Ministère de la Transition Écologique
