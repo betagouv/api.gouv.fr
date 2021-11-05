@@ -66,10 +66,14 @@ export default async function handler(
   }
 
   if (slug[0] === 'proxy') {
-    const proxyUrl = slug[1];
+    const apiSlug = slug[1];
     try {
-      const response = await fetch(proxyUrl);
+      const api = await getAPI(apiSlug);
+      if (!api) {
+        throw new Error('invalid api');
+      }
 
+      const response = await fetch(api.doc_tech_link);
       const text = await response.text();
       Object.values(response.headers).forEach(headerKey =>
         // @ts-ignore
@@ -78,7 +82,7 @@ export default async function handler(
       res.send(text);
     } catch (err) {
       res.statusCode = 500;
-      res.send({ Error: err });
+      res.send('Server error');
     }
   }
 

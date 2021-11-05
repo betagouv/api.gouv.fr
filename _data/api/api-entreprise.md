@@ -157,7 +157,8 @@ rate_limiting_description: |
   <External href='https://entreprise.api.gouv.fr/doc/#respecter-la-volumétrie'>En savoir plus</External>
 monitoring_link: https://status.entreprise.api.gouv.fr/
 contact_link: https://entreprise.api.gouv.fr/support/
-doc_tech_link: /api/v1/proxy/https%3A%2F%2Fentreprise.api.gouv.fr%2Fv2%2Fopen-api.yml
+doc_tech_link: https://entreprise.api.gouv.fr/v2/open-api.yml
+useSwaggerProxy: true
 doc_tech_external: https://entreprise.api.gouv.fr/catalogue/
 themes:
   - Entreprise

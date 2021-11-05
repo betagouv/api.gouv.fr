@@ -29,7 +29,8 @@ access_page:
 
       <Button href="/rechercher-api">Revenir à la recherche</Button>
 contact_link: contact.tiercedeclaration@urssaf.fr
-doc_tech_link: /api/v1/proxy/https%3A%2F%2Fportailapi.urssaf.fr%2Findex.php%3Foption%3Dcom_apiportal%26view%3Ddefinition%26managerId%3D1%26menuId%3D181%26format%3Draw%26stateReturn%3DL2ZyLz9JdGVtaWQ9MTgxJmFwaUlkPTI0NzBkZGI1LTIyODYtNGZkNi1hNWI2LTVmNTAwOTM3ZmU5ZCZhcGlOYW1lPUFQSSUyMFRpZXJjZSUyMERlY2xhcmF0aW9uJTIwYXV0by1lbnRyZXByZW5ldXImYXBpVmVyc2lvbj0xLjIuMiZhcGl0YWI9dGVzdHMmbWFuYWdlcklkPTEmbWVudUlkPTE4MSZvcHRpb249Y29tX2FwaXBvcnRhbCZyZW5kZXJUb29sPTImdHlwZT1yZXN0JnVzYWdlPWFwaSZ2aWV3PWFwaXRlc3Rlcg%3D%3D%26path%3D%252Fdiscovery%252Fswagger%252Fapi%252Fid%252F2470ddb5-2286-4fd6-a5b6-5f500937fe9d%253FswaggerVersion%253D2.0%2526filename%253DAPI%252520Tierce%252520Declaration%252520auto-entrepreneur.json%2526extensions%253Dfalse
+doc_tech_link: https://portailapi.urssaf.fr/index.php?option=com_apiportal&view=definition&managerId=1&menuId=181&format=raw&stateReturn=L2ZyLz9JdGVtaWQ9MTgxJmFwaUlkPTI0NzBkZGI1LTIyODYtNGZkNi1hNWI2LTVmNTAwOTM3ZmU5ZCZhcGlOYW1lPUFQSSUyMFRpZXJjZSUyMERlY2xhcmF0aW9uJTIwYXV0by1lbnRyZXByZW5ldXImYXBpVmVyc2lvbj0xLjIuMiZhcGl0YWI9dGVzdHMmbWFuYWdlcklkPTEmbWVudUlkPTE4MSZvcHRpb249Y29tX2FwaXBvcnRhbCZyZW5kZXJUb29sPTImdHlwZT1yZXN0JnVzYWdlPWFwaSZ2aWV3PWFwaXRlc3Rlcg==&path=%2Fdiscovery%2Fswagger%2Fapi%2Fid%2F2470ddb5-2286-4fd6-a5b6-5f500937fe9d%3FswaggerVersion%3D2.0%26filename%3DAPI%2520Tierce%2520Declaration%2520auto-entrepreneur.json%26extensions%3Dfalse
+useSwaggerProxy: true
 doc_tech_external: https://portailapi.urssaf.fr/fr/
 keywords:
   - Urssaf
