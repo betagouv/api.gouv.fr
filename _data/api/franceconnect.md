@@ -3,7 +3,7 @@ title: FranceConnect et les API FranceConnectées
 tagline: Identifier les utilisateurs de votre site internet et accéder à certaines données d'identité certifiées. Accéder à des données supplémentaires via les API FranceConnectées
 external_site: https://franceconnect.gouv.fr/partenaires
 is_open: -1 # -1 means API not open
-datapass_link: https://franceconnect.gouv.fr/partenaires
+datapass_link: https://datapass.api.gouv.fr/franceconnect
 access_page:
   - who:
       - Un particulier
@@ -21,7 +21,7 @@ access_page:
       Si vous avez vérifié [votre éligibilité](https://franceconnect.gouv.fr/partenaires), vous pouvez demander à [intégrer le bouton FranceConnect](https://datapass.api.gouv.fr/franceconnect).
 
       <NextSteps />
-      <Button href="https://franceconnect.gouv.fr/partenaires">Vérifier mon éligibilité et remplir une demande</Button>
+      <Button href="https://datapass.api.gouv.fr/franceconnect">Remplir une demande</Button>
   - who:
       - Une collectivité ou une administration
     is_eligible: 1
@@ -29,7 +29,7 @@ access_page:
       Si vous souhaitez intégrer le bouton FranceConnect, [faites votre demande d’accès](https://datapass.api.gouv.fr/franceconnect).
 
       <NextSteps />
-      <Button href="https://franceconnect.gouv.fr/partenaires">Remplir une demande</Button>
+      <Button href="https://datapass.api.gouv.fr/franceconnect">Remplir une demande</Button>
 partners:
   - DGFiP
   - Ameli
