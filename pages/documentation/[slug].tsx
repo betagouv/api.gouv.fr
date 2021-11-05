@@ -27,6 +27,7 @@ const Documentation: React.FC<IProps> = ({ api, allApis }) => {
   const {
     title,
     doc_tech_link,
+    useSwaggerProxy,
     doc_tech_external,
     path,
     account_link,
@@ -36,6 +37,8 @@ const Documentation: React.FC<IProps> = ({ api, allApis }) => {
   } = api;
 
   const shareLink = `${constants.links.mailto.SHARE}?subject=Connaissez vous ${title} ?&body=https://api.gouv.fr/documentation/${slug}`;
+
+  const swaggerLink = useSwaggerProxy ? `/api/v1/proxy/${slug}` : doc_tech_link;
 
   const useSeparator =
     (is_open === -1 || (!!account_link && is_open !== 1)) &&
@@ -97,8 +100,8 @@ const Documentation: React.FC<IProps> = ({ api, allApis }) => {
             </div>
 
             <div>
-              {doc_tech_link ? (
-                <SwaggerUIWrapper url={doc_tech_link} />
+              {swaggerLink ? (
+                <SwaggerUIWrapper url={swaggerLink} />
               ) : doc_tech_external ? (
                 <>
                   <p>

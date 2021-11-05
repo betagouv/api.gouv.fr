@@ -129,6 +129,7 @@ export interface IApi extends IApiShort {
   external_site?: string;
   doc_tech_link: string;
   doc_tech_external: string;
+  useSwaggerProxy: boolean;
   monitoring_link: string;
   monitoring_description: string;
   rate_limiting_description: string;
