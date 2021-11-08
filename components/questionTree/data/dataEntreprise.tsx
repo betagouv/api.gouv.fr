@@ -3,7 +3,7 @@ import { Eligible, ApiEntrepriseNonEligible } from './dataShared'
 import { pathEligible, pathDevelopForAdministration } from './paths';
 
 const apiEntrepriseOrAssociation = {
-  question: <>Votre entreprise/association est-elle :</>,
+  question: 'Votre entreprise/association est-elle :',
   choiceTree: [
       {
         choice: 'dîte **“chargée d’une mission de service public”**',
@@ -11,20 +11,20 @@ const apiEntrepriseOrAssociation = {
         next: pathEligible
       },
       {
-        choice: <>dîte <strong>“délégataire de service public”</strong></>,
+        choice: 'dîte **"délégataire de service public”**',
         answer: Eligible,
         next: pathEligible
       },
       {
-        choice: <><strong>prestataire d’une entité administrative</strong> et développant des logiciels/interfaces</>,
+        choice: '**prestataire d’une entité administrative** et développant des logiciels/interfaces',
         next: pathDevelopForAdministration
       },
       {
-        choice: <>un <strong>cabinet d’avocat ou comptable</strong></>,
+        choice: 'un **cabinet d’avocat ou comptable**',
         answer: ApiEntrepriseNonEligible({})
       },
       {
-        choice: <>dans aucune de ces situations</>,
+        choice: 'dans aucune de ces situations',
         answer: ApiEntrepriseNonEligible({})
       }
     ]

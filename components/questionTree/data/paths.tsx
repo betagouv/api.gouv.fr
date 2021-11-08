@@ -9,55 +9,55 @@ import {
 } from './dataShared';
 
 const pathEditeur = {
-  question: <>Votre éditeur ou profil acheteur a-t-il déjà intégré l'API Entreprise ?</>,
-  description: <>Sélectionnez votre éditeur dans la liste ci-dessous :</>,
+  question: "Votre éditeur ou profil acheteur a-t-il déjà intégré l'API Entreprise ?",
+  description: 'Sélectionnez votre éditeur dans la liste ci-dessous :',
   choiceTree: [
     {
-      choice: <>Achatpublic - achatpublic.com</>,
+      choice: 'Achatpublic - achatpublic.com',
       answer: EligibleEditeurOk
     },
     {
-      choice: <>Atexo - LocalTrustSub</>,
+      choice: 'Atexo - LocalTrustSub',
       answer: EligibleEditeurOk
     },
     {
-      choice: <>Atexo - Place</>,
+      choice: 'Atexo - Place',
       answer: EligibleEditeurOk
     },
     {
-      choice: <>AWS - AWS-achat</>,
+      choice: 'AWS - AWS-achat',
       answer: EligibleEditeurOk
     },
     {
-      choice: <>Atline Services - marches-securises.fr</>,
+      choice: 'Atline Services - marches-securises.fr',
       answer: EligibleEditeurOk
     },
     {
-      choice: <>Dematis - e-marchespublics.com</>,
+      choice: 'Dematis - e-marchespublics.com',
       answer: EligibleEditeurOk
     },
     {
-      choice: <>E-attestations - E-attestations.com</>,
+      choice: 'E-attestations - E-attestations.com',
       answer: EligibleEditeurOk
     },
     {
-      choice: <>Klekoon - klekoon.com</>,
+      choice: 'Klekoon - klekoon.com',
       answer: EligibleEditeurOk
     },
     {
-      choice: <>MGDIS - Portail des aides</>,
+      choice: 'MGDIS - Portail des aides',
       answer: EligibleEditeurOk
     },
     {
-      choice: <>Provigis - Provigis plateforme</>,
+      choice: 'Provigis - Provigis plateforme',
       answer: EligibleEditeurOk
     },
     {
-      choice: <>Territoires numériques - Pack commande publique</>,
+      choice: 'Territoires numériques - Pack commande publique',
       answer: EligibleEditeurOk
     },
     {
-      choice: <><strong>Mon éditeur ne figure pas dans cette liste</strong></>,
+      choice: '**Mon éditeur ne figure pas dans cette liste**',
       answer: EligibleEditeurNotOk
     }
   ]
@@ -65,22 +65,22 @@ const pathEditeur = {
 
 export const pathEligible =
   {
-    question: <>Qui sera en charge techniquement de l’intégration de l’API Entreprise ?</>,
+    question: 'Qui sera en charge techniquement de l’intégration de l’API Entreprise ?',
     choiceTree: [
       {
-        choice: <><strong>Nos développeurs internes.</strong><br/>Ils conçoivent une solution logicielle sur-mesure pour mon organisation</>,
+        choice: '**Nos développeurs internes.**<br/>Ils conçoivent une solution logicielle sur-mesure pour mon organisation',
         answer: EligibleDevelopersOk
       },
       {
-        choice: <><strong>Nos développeurs prestataires.</strong><br/>Ils conçoivent une solution logicielle sur-mesure pour mon organisation</>,
+        choice: '**Nos développeurs prestataires.**<br/>Ils conçoivent une solution logicielle sur-mesure pour mon organisation',
         answer: EligibleDevelopersOk
       },
       {
-        choice: <><strong>Mon éditeur.</strong><br/>Rien à coder, j’utilise une solution clé en main proposée par un éditeur</>,
+        choice: '**Mon éditeur.**<br/>Rien à coder, j’utilise une solution clé en main proposée par un éditeur',
         next: pathEditeur
       },
       {
-        choice: <><strong>Je n’ai ni équipe technique, ni éditeur.</strong><br/>Actuellement, je contacte les entreprises et associations une par une et traite leurs données à la main</>,
+        choice: '**Je n’ai ni équipe technique, ni éditeur.**<br/>Actuellement, je contacte les entreprises et associations une par une et traite leurs données à la main',
         answer: EligibleNoDevelopers
       }
     ]
@@ -88,26 +88,26 @@ export const pathEligible =
 
   export const pathDevelopForAdministration =
   {
-    question: <>À qui sont destinés les interfaces/logiciels que vous concevez ?</>,
+    question: 'À qui sont destinés les interfaces/logiciels que vous concevez ?',
     choiceTree: [
       {
-        choice: <>Aux administrations et/ou aux collectivités</>,
+        choice: 'Aux administrations et/ou aux collectivités',
         next: {
-          question: <>Quel type de service proposez-vous aux administrations ?</>,
+          question: 'Quel type de service proposez-vous aux administrations ?',
           choiceTree: [
             {
-              choice: <>Un <strong>logiciel métier clé en main</strong>, proposé à de nombreuses entités administratives</>,
+              choice: 'Un **logiciel métier clé en main**, proposé à de nombreuses entités administratives',
               answer: EditeurOk
             },
             {
-              choice: <>Un logiciel conçu <strong>sur mesure</strong> pour une administration</>,
+              choice: 'Un logiciel conçu **sur mesure** pour une administration',
               answer: EditeurAskAdministration
             }
           ]
         }
       },
       {
-        choice: <>Aux entreprises, associations et/ou particuliers</>,
+        choice: 'Aux entreprises, associations et/ou particuliers',
         answer: ApiEntrepriseNonEligible({})
       }
     ]
