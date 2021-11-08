@@ -27,8 +27,8 @@ const Question: React.FC<{
 
   return (
     <div className='question-tree-wrapper'>
-      <h3>{questionTree.question}</h3>
-      <p>{questionTree.description}</p>
+      <h3>{preferMarkdown(questionTree.question)}</h3>
+      <p>{preferMarkdown(questionTree.description)}</p>
       <div className='choices'>
         {
           questionTree.choiceTree.map((choiceType, key) =>
@@ -36,7 +36,7 @@ const Question: React.FC<{
             key={key}
             onClick={() => setChoiceType(choiceType)}
             className={`${choiceType === currentChoiceType ? 'selected' : ''}`}
-          ><p className='choice'>{choiceType.choice}</p>
+          ><p className='choice'>{preferMarkdown(choiceType.choice)}</p>
           </button>
           )
         }
@@ -45,7 +45,7 @@ const Question: React.FC<{
       {
         currentChoiceType && currentChoiceType.answer ?
           <div className='transition'>
-            {typeof currentChoiceType.answer === 'string' ? <RichReactMarkdown source={currentChoiceType.answer}/> : currentChoiceType.answer }
+            {preferMarkdown(currentChoiceType.answer)}
           </div> :
           null
       }
@@ -59,6 +59,13 @@ const Question: React.FC<{
       }
     </div>
   )
+}
+
+const preferMarkdown = (input: string | JSX.Element | undefined) => {
+  if (typeof input == 'string')
+    return(<RichReactMarkdown source={input} />)
+  else
+    return(input)
 }
 
 const QuestionTree: React.FC<{ treeKey: string }> = ({ treeKey }) => {

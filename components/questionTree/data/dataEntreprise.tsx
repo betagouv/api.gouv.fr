@@ -6,7 +6,7 @@ const apiEntrepriseOrAssociation = {
   question: <>Votre entreprise/association est-elle :</>,
   choiceTree: [
       {
-        choice: <>dîte <strong>“chargée d’une mission de service public”</strong></>,
+        choice: 'dîte **“chargée d’une mission de service public”**',
         answer: Eligible,
         next: pathEligible
       },
