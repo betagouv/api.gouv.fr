@@ -11,29 +11,23 @@
     font-size: 1.1rem;
     line-height: 1.6rem;
     color: $darkestGrey;
+    width: 240px;
+    margin: 15px 15px 5px 5px;
 
     &.selected,
     &:hover {
       border-color: $blue;
-    }
-
-    &.big {
-      max-width: 220px;
-      margin: 15px 15px 5px 5px;
     }
   }
 
   .choices {
     display: flex;
     flex-wrap: wrap;
+    // flex-direction: column;
+    align-content: baseline;
 
     @media (min-width: 768px) {
       max-height: 450px;
-    }
-
-    &.big {
-      flex-direction: column;
-      align-content: baseline;
     }
   }
 
@@ -69,6 +63,12 @@
     }
     &:active {
       background-color: $lightBlue;
+    }
+  }
+
+  ul.no-bullets {
+    li::before {
+      content: none;
     }
   }
 }

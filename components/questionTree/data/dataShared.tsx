@@ -74,9 +74,15 @@ export const EligibleNoDevelopers =
       <ul>
         <li>
           <strong>contacter des éditeurs de logiciel ayant déjà intégré l’API Entreprise :</strong>
-          <ButtonLink href='https://entreprise.api.gouv.fr/use_cases/aides_publiques/#liste-d%C3%A9diteurs' target='_blank' alt>Liste des éditeurs Aides Publiques</ButtonLink>
-          <ButtonLink href='https://entreprise.api.gouv.fr/use_cases/marches_publics/#liste-d%C3%A9diteurs' target='_blank' alt>Liste des éditeurs Marchés Publics</ButtonLink>
-        </li>
+          <ul className="no-bullets">
+            <li>
+              <ButtonLink href='https://entreprise.api.gouv.fr/use_cases/aides_publiques/#liste-d%C3%A9diteurs' target='_blank' alt>Liste des éditeurs Aides Publiques</ButtonLink>
+            </li>
+            <li>
+              <ButtonLink href='https://entreprise.api.gouv.fr/use_cases/marches_publics/#liste-d%C3%A9diteurs' target='_blank' alt>Liste des éditeurs Marchés Publics</ButtonLink>
+            </li>
+          </ul>
+          </li>
         <li>
           <strong>déposer une demande afin de nous expliquer votre contexte d’utilisation et vos besoins.</strong> Les instructeurs d’API Entreprise étudieront votre demande. L’identification d’une équipe technique sera indispensable pour délivrer une habilitation. Merci de nous indiquer dans le formulaire que vous n'avez pas d'équipe technique pour accélerer le traitement de votre demande.
           <div className='margin-top'>

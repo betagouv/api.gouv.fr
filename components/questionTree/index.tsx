@@ -5,9 +5,6 @@ import data from './data'
 interface IQuestionTree {
   question: JSX.Element,
   description?: JSX.Element,
-  big?: Boolean,
-  forceHeight?: string,
-  forceHeightTablet?: string,
   choiceTree: IChoiceType[],
 }
 
@@ -32,32 +29,17 @@ const Question: React.FC<{
     <div className='question-tree-wrapper'>
       <h3>{questionTree.question}</h3>
       <p>{questionTree.description}</p>
-      <div className={`choices${questionTree.big? ' big' : ''}`}>
+      <div className='choices'>
         {
           questionTree.choiceTree.map((choiceType, key) =>
           <button
             key={key}
             onClick={() => setChoiceType(choiceType)}
-            className={`
-              ${choiceType === currentChoiceType ? 'selected' : ''}
-              ${questionTree.big ? ' big' : ''}
-              `}
+            className={`${choiceType === currentChoiceType ? 'selected' : ''}`}
           ><p className='choice'>{choiceType.choice}</p>
           </button>
           )
         }
-        <style jsx>{`
-          @media (min-width: 504px) {
-            .choices {
-              height: ${questionTree.forceHeightTablet ? questionTree.forceHeightTablet : 'auto'}};
-            }
-          }
-          @media (min-width: 768px) {
-            .choices {
-              height: ${questionTree.forceHeight ? questionTree.forceHeight : 'auto'}};
-            }
-          }`}
-        </style>
       </div>
       <div  />
       {
