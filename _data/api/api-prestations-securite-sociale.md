@@ -16,7 +16,7 @@ access_page:
       <Button href="https://datapass.api.gouv.fr/api-prestations-securite-sociale">Remplir une demande</Button>
   - who: 
       - Une administration
-  - is_eligible: 0
+    is_eligible: 0
     description: |
       Cette API est accessible aux administrations partenaires de France Connect. 
 
