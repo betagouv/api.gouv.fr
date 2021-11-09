@@ -1,7 +1,7 @@
 export const ApiEntrepriseNonEligible =
   " L’usage des données de l’API Entreprise est reservé aux acteurs publics : les administrations, leurs opérateurs et les collectivités, les acteurs de santé, etc. \
   \n \n \
-  <ButtonLink href='rechercher-api' alt>Rechercher une autre API</ButtonLink>"
+  <ButtonLink href='/les-api/api-entreprise#alternatives-en-acces-libre' alt>Rechercher une autre API</ButtonLink>"
 
 export const Eligible =
   "**Vous êtes éligible !** <span role='img' aria-label='émoji oui'>👌</span> Lors de la demande, vous devrez justifier par le cadre légal adéquat de votre statut de société chargée d’une mission de service public."
