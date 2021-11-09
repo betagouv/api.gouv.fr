@@ -52,13 +52,5 @@ Les articles suivants peuvent vous aider à justifier vos droits d'accès aux do
 - Article L114-8 : <External href="https://www.vie-publique.fr/eclairage/19591-protection-des-donnees-personnelles-essentiel-loi-cnil-du-20-juin-2018">La loi relative à la protection des données personnelles</External> \_ a été promulguée le 20 juin 2018. Elle adapte la loi "Informatique et libertés" du 6 janvier 1978 au "paquet européen de protection des données".
 - Certaines délibérations prises par la ville et/ou par la commune peuvent constituer le cadre légal
 
-## Pour remplir votre demande, vous aurez besoin :
-
-- de votre numéro SIRET
-- du cadre juridique
-- de la description du service justifiant une simplification pour les citoyens
-- des coordonnées de l'équipe
-- des coordonnées de votre délégué à la protection des données et responsable de traitement
-
 <NextSteps />
 <Button href="https://datapass.api.gouv.fr/api-particulier?demarche=tarif-restauration-scolaire">Remplir une demande</Button>
