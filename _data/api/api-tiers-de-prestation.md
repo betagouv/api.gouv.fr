@@ -78,9 +78,9 @@ Le prestataire peut ainsi :
 - Inscrire son client sur la plateforme,
 - Transmettre à l’Urssaf la facturation d’un service à la personne afin que son client puisse bénéficier de l’avance immédiate de crédit d’impôt.
 
-### A quoi sert l’API Tierce Déclaration auto-entrepreneur ?
+### A quoi sert l’API Tiers de prestation ?
 
-Avec cet API, un tiers de prestation peut :
+Avec cette API, un tiers de prestation peut :
 
 - Inscrire un particulier
 - Transmettre des demandes de paiement à l’Urssaf ;
