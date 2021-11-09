@@ -36,6 +36,11 @@ module.exports = {
         destination: '/les-api/api-indemnites-journalieres-cnam',
         permanent: true,
       },
+      {
+        source: '/les-api/api_cartobio_territoires',
+        destination: 'https://www.data.gouv.fr/fr/datasets/616d6531c2951bbe8bd97771/',
+        permanent: true,
+      }
     ];
   },
   webpack(config, options) {
