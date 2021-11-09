@@ -17,7 +17,7 @@ access_page:
       - Créer un compte api.gouv pour accéder au formulaire DataPass ;
       - Attestation fiscale.
 
-      <Button href="https://portailapi.urssaf.fr/fr/component/apiportal/registration">Remplir une demande</Button>
+      <Button href="https://datapass.api.gouv.fr/api-declaration-cesu">Remplir une demande</Button>
   - who:
       - Un mandataire de service à la personne
     is_eligible: 0
@@ -26,7 +26,7 @@ access_page:
 
        - Créer un compte api.gouv pour accéder au formulaire DataPass ;
        - Attestation fiscale.
-       <Button href="https://portailapi.urssaf.fr/fr/component/apiportal/registration">Remplir une demande</Button>
+       <Button href="https://datapass.api.gouv.fr/api-declaration-cesu">Remplir une demande</Button>
   - who:
       - Un editeur de logiciel de paie
       - Autres activités
