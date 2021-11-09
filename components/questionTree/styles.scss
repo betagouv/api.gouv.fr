@@ -2,7 +2,7 @@
 
 .question-tree-wrapper {
   button {
-    display: inline-block;
+    display: inline-flex;
     background-color: $lightBlue;
     padding: 5px 10px;
     border-radius: 6px;
@@ -23,7 +23,6 @@
   .choices {
     display: flex;
     flex-wrap: wrap;
-    align-content: baseline;
 
     @media (min-width: 768px) {
       max-height: 450px;

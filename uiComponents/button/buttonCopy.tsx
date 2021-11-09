@@ -1,6 +1,6 @@
 import React from 'react';
 import { MouseEvent } from 'react';
-import file from '../icon/file';
+import fileCopy from '../icon/fileCopy';
 
 interface IProps {
   source: string
@@ -8,7 +8,7 @@ interface IProps {
 
 const ButtonCopy: React.FC<IProps> = ({source}) =>
   <button onClick={(e) => copyToClipboard(e)} className='button-copy'>
-    Copier le lien <span role="img" aria-label="icon file">{file}</span>
+    Copier le lien <span role="img" aria-label="icon file">{fileCopy}</span>
   </button>
 
 const copyToClipboard = (e: MouseEvent) => {

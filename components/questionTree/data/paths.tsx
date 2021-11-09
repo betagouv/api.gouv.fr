@@ -68,19 +68,19 @@ export const pathEligible =
     question: 'Qui sera en charge techniquement de l’intégration de l’API Entreprise ?',
     choiceTree: [
       {
-        choice: '**Nos développeurs internes.**<br/>Ils conçoivent une solution logicielle sur-mesure pour mon organisation',
+        choice: '**Nos développeurs internes.**<br/>Ils conçoivent une solution logicielle sur-mesure pour mon organisation.',
         answer: EligibleDevelopersOk
       },
       {
-        choice: '**Nos développeurs prestataires.**<br/>Ils conçoivent une solution logicielle sur-mesure pour mon organisation',
+        choice: '**Nos développeurs prestataires.**<br/>Ils conçoivent une solution logicielle sur-mesure pour mon organisation.',
         answer: EligibleDevelopersOk
       },
       {
-        choice: '**Mon éditeur.**<br/>Rien à coder, j’utilise une solution clé en main proposée par un éditeur',
+        choice: '**Mon éditeur.**<br/>Rien à coder, j’utilise une solution clé en main proposée par un éditeur.',
         next: pathEditeur
       },
       {
-        choice: '**Je n’ai ni équipe technique, ni éditeur.**<br/>Actuellement, je contacte les entreprises et associations une par une et traite leurs données à la main',
+        choice: '**Je n’ai ni équipe technique, ni éditeur.**<br/>Actuellement, je contacte les entreprises et associations une par une et traite leurs données à la main.',
         answer: EligibleNoDevelopers
       }
     ]

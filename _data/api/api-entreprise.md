@@ -11,7 +11,7 @@ access_page:
     description: |
       L’usage des données de l’API Entreprise est reservé aux acteurs publics : les administrations, leurs opérateurs et les collectivités, les acteurs de santé, etc.
 
-      <ButtonLink href='/les-api/api-entreprise#alternatives-en-acces-libre' alt>Rechercher une autre API</ButtonLink>
+      <ButtonLink href='/les-api/api-entreprise#alternatives-en-acces-libre' alt>Consulter les alternatives</ButtonLink>
   - who:
       - Une entité administrative
     is_eligible: 1
