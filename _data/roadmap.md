@@ -250,6 +250,10 @@
       what: API Tiers de prestation par l'URSSAF
       path: /les-api/api-tiers-de-prestation
     - type: ADD_API
+      what: Prestations de sécurité sociale
+      path: /les-api/api-prestations-securite-sociale
+  12:
+    - type: ADD_API
       what: CVEC par le CNOUS
     - type: ADD_API
       what: Attestation Codes Sécurité par l'Urssaf
@@ -257,4 +261,5 @@
       what: Déclaration préalable à l'embauche par l'Urssaf
     - type: ADD_API
       what: Liste des organismes de formation par la DGEFP
+    
 ---
