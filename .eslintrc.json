@@ -7,7 +7,7 @@
     "@next/next/no-img-element": "off",
     "react/no-unescaped-entities": "off",
     "react/no-children-prop": "off",
-    "react/jsx-no-target-blank": [true, {
+    "react/jsx-no-target-blank": [2, {
       "allowReferrer": true
     }]
   }
