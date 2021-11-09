@@ -2,7 +2,7 @@ import React, { PropsWithChildren } from 'react';
 import Markdown from 'markdown-to-jsx';
 
 import IsFranceConnected from '../isFranceConnected';
-import { ButtonLink, ExternalLink, RichLink } from '../../uiComponents';
+import { ButtonLink, ButtonCopy, ExternalLink, RichLink } from '../../uiComponents';
 import Quote from '../../uiComponents/quote';
 import TeamHelpWidget from '../teamHelpWidget';
 import ApiRnaWidget from '../apiWidgets/apiRna';
@@ -11,7 +11,6 @@ import DatagouvWidget from '../widgets/datagouv';
 import FlatFileWidget from '../widgets/flatFile';
 import { H2WithAnchor, H3WithAnchor } from '../../uiComponents/titleWithAnchor';
 import QuestionTree from '../questionTree'
-import { ApiEntrepriseNonEligible } from '../questionTree/data/dataShared';
 
 const CenteredCta: React.FC<PropsWithChildren<{ href: string }>> = props => (
   <div className="layout-center">
@@ -64,6 +63,8 @@ const RichReactMarkdown: React.FC<{ source: string; addAnchor?: boolean }> = ({
     options={{
       overrides: {
         Button: CenteredCta,
+        ButtonCopy: ButtonCopy,
+        ButtonLink: ButtonLink,
         NextSteps: NextSteps,
         External: ExternalLink,
         IsFranceConnected: IsFranceConnected,
@@ -79,7 +80,6 @@ const RichReactMarkdown: React.FC<{ source: string; addAnchor?: boolean }> = ({
         h2: H2WithAnchor,
         h3: H3WithAnchor,
         QuestionTree: QuestionTree,
-        ApiEntrepriseNonEligible: ApiEntrepriseNonEligible
       },
     }}
   />

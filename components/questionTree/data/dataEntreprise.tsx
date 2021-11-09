@@ -21,11 +21,11 @@ const apiEntrepriseOrAssociation = {
       },
       {
         choice: 'un **cabinet d’avocat ou comptable**',
-        answer: ApiEntrepriseNonEligible({})
+        answer: ApiEntrepriseNonEligible
       },
       {
         choice: 'dans aucune de ces situations',
-        answer: ApiEntrepriseNonEligible({})
+        answer: ApiEntrepriseNonEligible
       }
     ]
   }

@@ -48,24 +48,6 @@
     margin-bottom: 10px;
   }
 
- .button-copy {
-    display: inline-block;
-    background-color: $white;
-    border-radius: 0px;
-    border: 2px solid $blue;
-    color: $blue;
-    margin: 5px 5px 5px 20px;
-    padding: 6px;
-    font-size: small;
-    > span {
-      position: relative;
-      top: 2px;
-    }
-    &:active {
-      background-color: $lightBlue;
-    }
-  }
-
   ul.no-bullets {
     li::before {
       content: none;

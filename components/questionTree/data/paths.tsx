@@ -108,7 +108,7 @@ export const pathEligible =
       },
       {
         choice: 'Aux entreprises, associations et/ou particuliers',
-        answer: ApiEntrepriseNonEligible({})
+        answer: ApiEntrepriseNonEligible
       }
     ]
   }

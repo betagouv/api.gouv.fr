@@ -9,7 +9,9 @@ access_page:
       - Un particulier
     is_eligible: -1
     description: |
-      <ApiEntrepriseNonEligible particulier=true withAnnuaire=true/>
+      L’usage des données de l’API Entreprise est reservé aux acteurs publics : les administrations, leurs opérateurs et les collectivités, les acteurs de santé, etc.
+
+      <ButtonLink href='rechercher-api' alt>Rechercher une autre API</ButtonLink>
   - who:
       - Une entité administrative
     is_eligible: 1
