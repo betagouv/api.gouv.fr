@@ -240,18 +240,21 @@
       what: API Judilibre par la Cour de cassation
       path: /les-api/api-judilibre
     - type: ADD_API
-      what: API Carto - module Nature par l'IGN
+      what: Carto - module Nature par l'IGN
       path: /les-api/api-carto-nature
   11:
     - type: ADD_API
       what: Judilibre par la Cour de cassation
       path: /les-api/api-judilibre
     - type: ADD_API
-      what: API Tiers de prestation par l'URSSAF
+      what: Tiers de prestation par l'URSSAF
       path: /les-api/api-tiers-de-prestation
     - type: ADD_API
       what: WFS Géoportail par l'IGN
       path: /les-api/api-carto-wfs-geoportail
+    - type: ADD_API
+      what: Terminologies de Santé par l'Agence du Numérique en Santé
+      path: /les-api/api-terminologies-sante
     - type: ADD_API
       what: CVEC par le CNOUS
     - type: ADD_API
@@ -259,5 +262,6 @@
     - type: ADD_API
       what: Déclaration préalable à l'embauche par l'Urssaf
     - type: ADD_API
-      what: Liste des organismes de formation par la DGEFP
+      what: Liste des organismes de formation par la DGEFP 
+      
 ---
