@@ -6,17 +6,14 @@ import ApiWidgetResults from './apiWidgetResults';
 import ApiWidgetWrapper from './apiWidgetWrapper';
 
 const ApiSireneWidget: React.FC<{ title: string }> = ({ title }) => {
-  const [isLoading, setIsLoading] = useState(false);
   const [results, setResults] = useState<any[] | null>(null);
 
   const search = (searchTerm: string) => {
     if (!searchTerm) {
       setResults(null);
-      setIsLoading(false);
       return;
     }
 
-    setIsLoading(true);
     fetch(
       `https://entreprise.data.gouv.fr/api/sirene/v1/full_text/${encodeURI(
         normalize(searchTerm)
@@ -42,7 +39,6 @@ const ApiSireneWidget: React.FC<{ title: string }> = ({ title }) => {
               </>
             ))
           );
-          setIsLoading(false);
         }, 400)
       )
       .catch(error => {
@@ -75,7 +71,6 @@ const ApiSireneWidget: React.FC<{ title: string }> = ({ title }) => {
             placeholder="Tapez le nom d’une entreprise"
             label="Recherchez une entreprise française"
             debounceRate={200}
-            isLoading={isLoading}
           />
         </div>
         <ApiWidgetResults results={results} />
