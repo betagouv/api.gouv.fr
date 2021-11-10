@@ -36,8 +36,18 @@ const Dropdown: React.FC<IProps> = ({
       className="dropdown-wrapper"
       style={{ width: '100%', maxWidth: `${width}px` }}
     >
-      {label && <label htmlFor={id}>{label}</label>}
-      <select id={id} onChange={onSelect} onBlur={onSelect}>
+      {label && (
+        <label className="fr-label" htmlFor={id}>
+          {label}
+        </label>
+      )}
+      <select
+        className="fr-select"
+        id={id}
+        name="select"
+        onChange={onSelect}
+        onBlur={onSelect}
+      >
         <option value={-1}>
           {placeholder || 'Veuillez selectionner une option'}
         </option>

@@ -24,6 +24,7 @@ export const FilterHeader = ({
     />
     <SearchBar
       onSearch={search}
+      style={{ marginTop: '10px', width: '400px', maxWidth: '100%' }}
       defaultValue={searchFromQueryString}
       placeholder="Recherchez un service, un ministère"
       label="Rechercher"
