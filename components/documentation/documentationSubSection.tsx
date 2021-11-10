@@ -66,6 +66,17 @@ export const Habilitation: React.FC<{ slug: string }> = ({ slug }) => (
   </DocSection>
 );
 
+export const SwaggerPartiallyFunctionnal: React.FC<{}> = ({}) => (
+  <div>
+    <br />
+    <b>Cette documentation peut ne pas fonctionner correctement :</b>
+    <br />
+    Ce swagger est protégé par une politique de "Cross-origin resource sharing"
+    (CORS) pouvant nuire à son bon fonctionnement.
+    <style jsx>{``}</style>
+  </div>
+);
+
 export const AccountNeeded: React.FC<{ account_link: string }> = ({
   account_link,
 }) => (
