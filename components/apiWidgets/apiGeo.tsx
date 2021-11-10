@@ -4,7 +4,6 @@ import SearchBar from '../../uiComponents/searchBar';
 import ApiWidgetWrapper from './apiWidgetWrapper';
 
 const GeoWidget: React.FC<{}> = () => {
-  const [isLoading, setIsLoading] = useState(false);
   const [results, setResults] = useState([]);
 
   const search = (searchTerm: string) => {
@@ -12,7 +11,6 @@ const GeoWidget: React.FC<{}> = () => {
       setResults([]);
     }
 
-    setIsLoading(true);
     fetch(
       `https://geo.api.gouv.fr/communes?nom=${encodeURI(
         searchTerm
@@ -27,7 +25,6 @@ const GeoWidget: React.FC<{}> = () => {
                 `${res.nom}, ${res.departement.nom} (${res.departement.code})`
             )
           );
-          setIsLoading(false);
         }, 400)
       )
       .catch(error => {
@@ -55,7 +52,6 @@ const GeoWidget: React.FC<{}> = () => {
           placeholder="Tapez le nom de votre commune"
           label="Recherchez une commune française"
           debounceRate={200}
-          isLoading={isLoading}
         />
       </div>
     </ApiWidgetWrapper>

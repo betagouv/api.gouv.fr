@@ -17,6 +17,7 @@ import { roundUptime, getUptimeState } from '../../utils';
 import share from '../../uiComponents/icon/share';
 import cardiogram from '../../uiComponents/icon/cardiogram';
 import Emoji from '../../uiComponents/emoji';
+import { SwaggerPartiallyFunctionnal } from '../../components/documentation/documentationSubSection';
 
 interface IProps {
   api: IApi;
@@ -98,6 +99,8 @@ const Documentation: React.FC<IProps> = ({ api, allApis }) => {
                 <ExternalDoc doc_link={doc_tech_external} />
               )}
             </div>
+
+            {useSwaggerProxy && <SwaggerPartiallyFunctionnal />}
 
             <div>
               {swaggerLink ? (

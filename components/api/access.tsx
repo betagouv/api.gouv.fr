@@ -95,7 +95,6 @@ const Access: React.FC<IAccessProps> = ({
         <ButtonLink
           href={accessHref}
           onClick={logDemanderAcces}
-          size="large"
           target={ext ? '_blank' : ''}
           rel={ext ? 'noreferrer noopener' : ''}
         >

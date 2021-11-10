@@ -52,7 +52,6 @@ const LinkAsAButton: React.FC<ILinkProps> = ({
   alt,
   rel,
   target,
-  disabled,
   children,
   size,
   onClick = () => {},
@@ -61,11 +60,9 @@ const LinkAsAButton: React.FC<ILinkProps> = ({
     rel={rel}
     target={target}
     onClick={onClick}
-    className={`dont-apply-link-style button-link ${alt ? 'alt' : 'default'} ${
-      disabled ? 'disabled' : ''
-    }
-  ${size}
-  `}
+    className={`fr-btn ${alt ? 'fr-btn--secondary' : ''} ${
+      !size ? '' : size === 'large' ? 'fr-btn--lg' : 'fr-btn--sm'
+    }`}
     href={href}
   >
     <div className="content-wrapper">{children}</div>
@@ -83,11 +80,10 @@ const ClassicButton: React.FC<IButtonProps> = ({
   <button
     onClick={onClick}
     type={type}
-    className={`dont-apply-link-style button-link ${alt ? 'alt' : 'default'} ${
-      disabled ? 'disabled' : ''
-    }
-  ${size}
-  `}
+    className={`fr-btn ${alt ? 'fr-btn--secondary' : ''} ${
+      size === 'large' ? 'fr-btn--lg' : 'fr-btn--sm'
+    }`}
+    disabled={!!disabled}
   >
     <div className="content-wrapper">{children}</div>
   </button>
