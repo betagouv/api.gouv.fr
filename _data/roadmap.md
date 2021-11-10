@@ -250,6 +250,9 @@
       what: API Tiers de prestation par l'URSSAF
       path: /les-api/api-tiers-de-prestation
     - type: ADD_API
+      what: WFS Géoportail par l'IGN
+      path: /les-api/api-carto-wfs-geoportail
+    - type: ADD_API
       what: CVEC par le CNOUS
     - type: ADD_API
       what: Attestation Codes Sécurité par l'Urssaf
