@@ -4,9 +4,13 @@ tagline: Calculer l'impôt, les cotisations, les aides sociales…
 external_site: https://api.openfisca.fr
 is_open: 1 # 1 means API is fully open
 partners:
-  - beta.gouv.fr
-  - Etalab
-  - Institut des Politiques Publiques
+  - Impôts
+  - Fiscalité
+  - Cotisations sociales
+  - Prélèvements sociaux
+  - Prestations sociales
+  - Droit
+  - Simulateur
 producer: dinum
 keywords:
   - Impôts
@@ -15,13 +19,12 @@ keywords:
   - Prélèvements sociaux
   - Prestations sociales
   - Droit
-  - Simulateur
+  - Loi
 themes:
   - Administration & législation
 contact_link: contact@openfisca.fr
 doc_tech_link: https://fr.openfisca.org/api/latest/spec
-visits_2019: 1982
-last_update: 15/01/2019
+last_update: 11/11/2021
 ---
 
 ### Calculer le droit
