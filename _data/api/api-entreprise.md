@@ -9,39 +9,31 @@ access_page:
       - Un particulier
     is_eligible: -1
     description: |
-      Seules les administrations et certaines sociétés sont habilitées à utiliser API Entreprise.
+      L’usage des données de l’API Entreprise est reservé aux acteurs publics : les administrations, leurs opérateurs et les collectivités, les acteurs de santé, etc.
 
-      <Button href="/rechercher-api">Rechercher une autre API</Button>
+      <ButtonLink href='/les-api/api-entreprise#alternatives-en-acces-libre' alt>Consulter les alternatives</ButtonLink>
   - who:
-      - Une collectivité ou une administration
+      - Une entité administrative
     is_eligible: 1
     description: |
-      Si vous êtes une collectivité ou une administration, vous pouvez remplir une demande d’accès à l’API Entreprise vous-même pour l'entité que vous représentez.
+      L’API Entreprise vous permet d’accéder directement aux données des entreprises et des associations pour faciliter leurs démarches (demandes d’aides, marchés publics, ...).
 
-      Lors de votre demande vous devrez **renseigner le cadre juridique** qui légitime l'entité pour laquelle vous opérez à recevoir ces données.
+      Pour vérifier que l’API Entreprise vous permet d’accéder aux données dont vous avez besoin, consultez :
 
-      <NextSteps />
-      <Button href="https://datapass.api.gouv.fr/api-entreprise">Remplir une demande</Button>
+      - le [catalogue des données](https://entreprise.api.gouv.fr/catalogue/) et la [documentation des API](https://entreprise.api.gouv.fr/doc/) ;
+      - les [cas d’usage](https://entreprise.api.gouv.fr/cas_usage/) de l’API Entreprise.
+
+      <QuestionTree treeKey='api-entreprise-administration'/>
   - who:
-      - Une entreprise
+      - Une entreprise ou une association
     is_eligible: 0
     description: |
-      Seule les **sociétés chargées d’une mission de service public** sont éligibles.
-
-      Lors de votre demande vous devrez **justifier** dans quelle mesure vous rentrez dans ce cadre juridique.
-
-      <NextSteps />
-      <Button href="https://datapass.api.gouv.fr/api-entreprise">Remplir une demande</Button>
+      <QuestionTree treeKey='api-entreprise-or-association'/>
   - who:
       - Un éditeur de logiciel
     is_eligible: 0
     description: |
-      Si vous êtes **éditeur de logiciels** et agissez pour le compte d'une administration ou d'une collectivité, vous pouvez remplir vous même une demande d'accès à l'API entreprise pour l'entité que vous représentez.
-
-      Lors de votre demande vous devrez **renseigner le cadre juridique (un texte ou délibération/décision)** qui légitime  l'entité pour laquelle vous opérez à recevoir ces données.
-
-      <NextSteps is_editeur />
-      <Button href="https://datapass.api.gouv.fr/api-entreprise">Remplir une demande</Button>
+      <QuestionTree treeKey='api-entreprise-editeur'/>
 stat:
   lastXdays: 30
   url: https://dashboard.entreprise.api.gouv.fr/api/watchdoge/stats/last_30_days_usage
