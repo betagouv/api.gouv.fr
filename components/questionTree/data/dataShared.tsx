@@ -8,7 +8,14 @@ export const ApiEntrepriseNonEligible =
 export const Eligible =
   "**<span role='img' aria-label='émoji oui'>👌</span> Vous êtes éligible !** \
   \n \
-  Lors de la demande, vous devrez justifier par le cadre légal adéquat de votre statut de société chargée d’une mission de service public."
+  Lors de la demande, vous devrez justifier par le cadre légal adéquat de votre statut de société chargée d’une mission de service public. \
+  \n \n \
+  Pour vérifier que l’API Entreprise vous permet d’accéder aux données dont vous avez besoin, consultez : \
+  \n \
+  - le [catalogue des données](https://entreprise.api.gouv.fr/catalogue/) et la [documentation des API](https://entreprise.api.gouv.fr/doc/) ; \
+  \n \
+  - les [cas d’usage](https://entreprise.api.gouv.fr/cas_usage/) de l’API Entreprise. \
+  "
 
 export const EligibleEditeurOk =
   "**<span role='img' aria-label='émoji ok'>👍</span> Bonne nouvelle ! Vous êtes éligible et votre éditeur/profil acheteur a déjà intégré l’API Entreprise.** \
@@ -56,7 +63,7 @@ export const EditeurOk =
   <ButtonLink href='https://datapass.api.gouv.fr/api-entreprise?demarche=editeur'>Déposer une demande</ButtonLink>"
 
 export const EditeurAskAdministration =
-  "**<span role='img' aria-label='émoji ok'>👍</span>L’administration pour laquelle vous proposez une prestation est éligible à l’API&nbsp;Entreprise** \
+  "**<span role='img' aria-label='émoji ok'>👍</span> L’administration pour laquelle vous proposez une prestation est éligible à l’API&nbsp;Entreprise** \
   \n \
   **C’est à elle de compléter une demande auprès d’API Entreprise.** Elle devra dans sa demande d’habilitation vous renseigner en tant que “contact technique”. Le lien ci-dessous permet à l’administration d’accéder à la demande d’accès, partagez-lui : \
   \n \
