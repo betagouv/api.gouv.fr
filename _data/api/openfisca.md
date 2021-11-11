@@ -36,7 +36,7 @@ Plusieurs milliers de variables sont calculables, et une [interface simple et cl
 
 ### Obtenir les valeurs définies par la loi
 
-En plus de ses capacités de calcul, OpenFisca expose également l'intégralité des valeurs de référence de la législation ([tranches d'imposition](https://legislation.openfisca.fr/impot_revenu.bareme), [taux AT/MP](https://legislation.openfisca.fr/cotsoc.accident.faible), montant du SMIC…), avec une couverture historique qui peut se compter en décennies.
+En plus de ses capacités de calcul, OpenFisca expose également l'intégralité des valeurs de référence de la législation ([tranches d'imposition](https://legislation.fr.openfisca.org/impot_revenu.bareme), [montant du SMIC](https://legislation.fr.openfisca.org/marche_travail.salaire_minimum.smic_h_b)…), avec une couverture historique qui peut se compter en décennies.
 
 ### Exemples
 
