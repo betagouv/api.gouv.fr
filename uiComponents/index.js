@@ -1,5 +1,6 @@
 import TypingCarousel from './typingCarousel';
-import { ButtonLink, ButtonCopy } from './button';
+import { ButtonLink } from './button';
+import ButtonCopy from './buttonCopy';
 import ExternalLink from './externalLink';
 import RichLink from './richLink';
 import Toggle from './toggle';

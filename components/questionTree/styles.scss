@@ -29,26 +29,8 @@
     }
   }
 
-  .result {
-    margin-top: 2rem;
-  }
-
   .choice {
     margin: 0;
     text-align: left;
-  }
-
-  .margin-top {
-    margin-top: 20px;
-  }
-
-  .small-margin-bottom {
-    margin-bottom: 10px;
-  }
-
-  ul.no-bullets {
-    li::before {
-      content: none;
-    }
   }
 }

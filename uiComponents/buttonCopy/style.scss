@@ -1,0 +1,16 @@
+button.button-copy {
+  display: inline-block;
+  background-color: $white;
+  border-radius: 0px;
+  width: 200px;
+  border: 2px solid $blue;
+  color: $blue;
+  margin: 5px 5px 5px 20px;
+  > span {
+    position: relative;
+    top: 2px;
+  }
+  &:active {
+    background-color: $lightBlue;
+  }
+}
