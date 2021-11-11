@@ -40,4 +40,4 @@ En plus de ses capacités de calcul, OpenFisca expose également l'intégralité
 
 ### Exemples
 
-Ce logiciel est utilisé par des chercheurs en économie et des services publics comme mes-aides.gouv.fr, embauche.beta.gouv.fr ou mesdroitssociaux.gouv.fr.
+Ce logiciel est utilisé par des chercheurs en économie, des entreprises, des associations comme [mes-aides.org](https://mes-aides.org), et des services publics numériques comme [mon-entreprise.fr](https://mon-entreprise.fr), [mesdroitssociaux.gouv.fr](https://mesdroitssociaux.gouv.fr), [ESTIME](https://estime.pole-emploi.fr)…
