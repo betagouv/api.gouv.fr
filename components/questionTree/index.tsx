@@ -27,35 +27,33 @@ const Question: React.FC<{
 
   return (
     <div className="question-tree-wrapper">
-      <h3>{<RichReactMarkdown source={questionTree.question} />}</h3>
-      {questionTree.description ? (
-        <p>{<RichReactMarkdown source={questionTree.description} />}</p>
-      ) : null}
+      <h3>
+        <RichReactMarkdown source={questionTree.question} />
+      </h3>
+      {questionTree.description && (
+        <RichReactMarkdown source={questionTree.description} />
+      )}
       <div className="choices">
         {questionTree.choiceTree.map((choiceType, key) => (
           <button
             key={key}
             onClick={() => setChoiceType(choiceType)}
-            className={`${choiceType === currentChoiceType ? 'selected' : ''}`}
+            className={choiceType === currentChoiceType ? 'selected' : ''}
           >
-            <p className="choice">
-              {<RichReactMarkdown source={choiceType.choice} />}
-            </p>
+            <RichReactMarkdown source={choiceType.choice} />
           </button>
         ))}
       </div>
       <div />
-      {currentChoiceType && currentChoiceType.answer ? (
-        <div className="transition">
-          {<RichReactMarkdown source={currentChoiceType.answer} />}
-        </div>
-      ) : null}
-      {currentChoiceType && currentChoiceType.next ? (
+      {currentChoiceType && currentChoiceType.answer && (
+        <RichReactMarkdown source={currentChoiceType.answer} />
+      )}
+      {currentChoiceType && currentChoiceType.next && (
         <Question
           questionTree={currentChoiceType.next}
           parentsChoicesType={[...parentsChoicesType, currentChoiceType]}
         />
-      ) : null}
+      )}
 
       <style jsx>{`
         .question-tree-wrapper button {
@@ -70,6 +68,7 @@ const Question: React.FC<{
           color: ${constants.colors.darkestGrey};
           width: 240px;
           margin: 15px 15px 5px 5px;
+          text-align: left;
         }
 
         .question-tree-wrapper button.selected,
@@ -82,10 +81,6 @@ const Question: React.FC<{
           flex-wrap: wrap;
         }
 
-        .question-tree-wrapper .choice {
-          margin: 0;
-          text-align: left;
-        }
         @media (min-width: 768px) {
           .question-tree-wrapper .choices {
             max-height: 450px;

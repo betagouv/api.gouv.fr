@@ -18,7 +18,7 @@ export default {
     darkBlue: '#000081',
     blue: '#000091',
     vividBlue: '#0000b1',
-    lightBlue: '#e5efff',
+    lightBlue: '#e5e5f4',
     lightestBlue: '#f8faff',
     backgroundBlueGradient: 'linear-gradient(45deg, #003189, #005adf)',
     red: '#dc3545',
