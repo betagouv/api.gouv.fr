@@ -3,15 +3,15 @@ import RichReactMarkdown from '../richReactMarkdown';
 import data from './data'
 
 interface IQuestionTree {
-  question: JSX.Element,
-  description?: JSX.Element,
+  question: string,
+  description?: string,
   choiceTree: IChoiceType[],
 }
 
 interface IChoiceType {
-  choice: JSX.Element,
+  choice: string,
   next?: IQuestionTree,
-  answer?: JSX.Element,
+  answer?: string,
 }
 
 const Question: React.FC<{
@@ -27,8 +27,8 @@ const Question: React.FC<{
 
   return (
     <div className='question-tree-wrapper'>
-      <h3>{preferMarkdown(questionTree.question)}</h3>
-      <p>{preferMarkdown(questionTree.description)}</p>
+      <h3>{<RichReactMarkdown source={questionTree.question}/>}</h3>
+      { questionTree.description ? <p>{<RichReactMarkdown source={questionTree.description}/>}</p> : null }
       <div className='choices'>
         {
           questionTree.choiceTree.map((choiceType, key) =>
@@ -36,7 +36,7 @@ const Question: React.FC<{
             key={key}
             onClick={() => setChoiceType(choiceType)}
             className={`${choiceType === currentChoiceType ? 'selected' : ''}`}
-          ><p className='choice'>{preferMarkdown(choiceType.choice)}</p>
+          ><p className='choice'>{<RichReactMarkdown source={choiceType.choice}/>}</p>
           </button>
           )
         }
@@ -45,7 +45,7 @@ const Question: React.FC<{
       {
         currentChoiceType && currentChoiceType.answer ?
           <div className='transition'>
-            {preferMarkdown(currentChoiceType.answer)}
+            {<RichReactMarkdown source={currentChoiceType.answer}/>}
           </div> :
           null
       }
@@ -59,13 +59,6 @@ const Question: React.FC<{
       }
     </div>
   )
-}
-
-const preferMarkdown = (input: string | JSX.Element | undefined) => {
-  if (typeof input == 'string')
-    return(<RichReactMarkdown source={input} />)
-  else
-    return(input)
 }
 
 const QuestionTree: React.FC<{ treeKey: string }> = ({ treeKey }) => {
