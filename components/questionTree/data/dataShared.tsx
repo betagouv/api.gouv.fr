@@ -12,7 +12,7 @@ export const Eligible =
   \n \n \
   Pour vérifier que l’API Entreprise vous permet d’accéder aux données dont vous avez besoin, consultez : \
   \n \
-  - le [catalogue des données](https://entreprise.api.gouv.fr/catalogue/) et la [documentation des API](https://entreprise.api.gouv.fr/doc/) ; \
+  - le [catalogue des données](https://entreprise.api.gouv.fr/catalogue/) ; \
   \n \
   - les [cas d’usage](https://entreprise.api.gouv.fr/cas_usage/) de l’API Entreprise. \
   "
