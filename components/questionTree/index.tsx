@@ -1,47 +1,51 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import constants from '../../constants';
 import RichReactMarkdown from '../richReactMarkdown';
-import data from './data';
+import { allQuestions } from './data';
 
 interface IQuestionTree {
   question: string;
-  description?: string;
   choiceTree: IChoiceType[];
 }
 
 interface IChoiceType {
-  choice: string;
+  choices: string[];
   next?: IQuestionTree;
   answer?: string;
 }
 
 const Question: React.FC<{
   questionTree: IQuestionTree;
-  parentsChoicesType: IChoiceType[];
-}> = ({ questionTree, parentsChoicesType }) => {
+  parentLabel?: string;
+}> = ({ questionTree, parentLabel }) => {
   const [currentChoiceType, setChoiceType] = useState<IChoiceType | null>(null);
+  const [selectedLabel, setSelectedLabel] = useState<string | undefined>(
+    undefined
+  );
   // When user change a parent choice in the tree, we close children
   useEffect(() => {
     setChoiceType(null);
-  }, [parentsChoicesType]);
+  }, [parentLabel]);
 
   return (
     <div className="question-tree-wrapper">
-      <h3>
-        <RichReactMarkdown source={questionTree.question} />
-      </h3>
-      {questionTree.description && (
-        <RichReactMarkdown source={questionTree.description} />
-      )}
+      <h3>{questionTree.question}</h3>
       <div className="choices">
         {questionTree.choiceTree.map((choiceType, key) => (
-          <button
-            key={key}
-            onClick={() => setChoiceType(choiceType)}
-            className={choiceType === currentChoiceType ? 'selected' : ''}
-          >
-            <RichReactMarkdown source={choiceType.choice} />
-          </button>
+          <Fragment key={key}>
+            {choiceType.choices.map(choice => (
+              <button
+                key={choice}
+                onClick={() => {
+                  setSelectedLabel(choice);
+                  setChoiceType(choiceType);
+                }}
+                className={choice === selectedLabel ? 'selected' : ''}
+              >
+                <RichReactMarkdown source={choice} />
+              </button>
+            ))}
+          </Fragment>
         ))}
       </div>
       <div />
@@ -51,7 +55,7 @@ const Question: React.FC<{
       {currentChoiceType && currentChoiceType.next && (
         <Question
           questionTree={currentChoiceType.next}
-          parentsChoicesType={[...parentsChoicesType, currentChoiceType]}
+          parentLabel={selectedLabel}
         />
       )}
 
@@ -61,13 +65,12 @@ const Question: React.FC<{
           background-color: ${constants.colors.lightBlue};
           padding: 5px 10px;
           border-radius: 6px;
-          margin: 5px 5px 0 0;
           border: 2px solid transparent;
           font-size: 1.1rem;
           line-height: 1.6rem;
           color: ${constants.colors.darkestGrey};
-          width: 240px;
-          margin: 15px 15px 5px 5px;
+          width: calc(30% - 12px);
+          margin: 6px 6px 0 0;
           text-align: left;
         }
 
@@ -81,9 +84,14 @@ const Question: React.FC<{
           flex-wrap: wrap;
         }
 
-        @media (min-width: 768px) {
-          .question-tree-wrapper .choices {
-            max-height: 450px;
+        @media (max-width: 900px) {
+          .question-tree-wrapper button {
+            width: calc(50% - 6px);
+          }
+        }
+        @media (max-width: 600px) {
+          .question-tree-wrapper button {
+            width: 100% - 6px);
           }
         }
       `}</style>
@@ -91,12 +99,15 @@ const Question: React.FC<{
   );
 };
 
-const QuestionTree: React.FC<{ treeKey: string }> = ({ treeKey }) => {
-  if (data[treeKey]) {
-    return <Question questionTree={data[treeKey]} parentsChoicesType={[]} />;
+const QuestionTree: React.FC<{ tree: string; question: string }> = ({
+  tree,
+  question,
+}) => {
+  if (allQuestions[tree] && allQuestions[tree][question]) {
+    return <Question questionTree={allQuestions[tree][question]} />;
   } else {
     throw new Error(
-      `QuestionTree must be called with an existing key, but received :${treeKey},`
+      `QuestionTree must be called with an existing key, but received : ${tree} and then ${question},`
     );
   }
 };
