@@ -1,5 +1,5 @@
 ---
-title: API Terminoligies de Santé (SMT)
+title: API Terminologies de Santé (SMT)
 tagline: Accéder au catalogue des terminologies de santé (Serveur Multi-Terminologies - SMT)
 external_site: https://smt.esante.gouv.fr/catalogue-des-terminologies/
 is_open: 1 
