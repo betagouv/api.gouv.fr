@@ -11,7 +11,7 @@ access_page:
     description: |
       L’usage des données de l’API Entreprise est reservé aux acteurs publics : les administrations, leurs opérateurs et les collectivités, les acteurs de santé, etc.
 
-      <ButtonLink href='/les-api/api-entreprise#alternatives-en-acces-libre' alt>Consulter les alternatives</ButtonLink>
+      <Button href='/les-api/api-entreprise#alternatives-en-acces-libre' >Consulter les alternatives</Button>
   - who:
       - Une entité administrative
     is_eligible: 1
@@ -23,17 +23,17 @@ access_page:
       - le [catalogue des données](https://entreprise.api.gouv.fr/catalogue/) ;
       - les [cas d’usage](https://entreprise.api.gouv.fr/cas_usage/) de l’API Entreprise.
 
-      <QuestionTree treeKey='api-entreprise-administration'/>
+      <QuestionTree tree='api-entreprise' question='administrations' />
   - who:
       - Une entreprise ou une association
     is_eligible: 0
     description: |
-      <QuestionTree treeKey='api-entreprise-or-association'/>
+      <QuestionTree tree='api-entreprise' question='entreprises-or-associations' />
   - who:
       - Un éditeur de logiciel
     is_eligible: 0
     description: |
-      <QuestionTree treeKey='api-entreprise-editeur'/>
+      <QuestionTree tree='api-entreprise' question='editors' />
 stat:
   lastXdays: 30
   url: https://dashboard.entreprise.api.gouv.fr/api/watchdoge/stats/last_30_days_usage

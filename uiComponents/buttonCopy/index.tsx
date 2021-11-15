@@ -1,13 +1,16 @@
 import React from 'react';
+import { ButtonLink } from '..';
 import fileCopy from '../icon/fileCopy';
 
 interface IProps {
-  source: string
+  source: string;
 }
 
-const ButtonCopy: React.FC<IProps> = ({source}) =>
-  <button onClick={() =>  navigator.clipboard.writeText(source)} className='button-copy'>
-    Copier le lien <span role="img" aria-label="icon file">{fileCopy}</span>
-  </button>
+const ButtonCopy: React.FC<IProps> = ({ source }) => (
+  <ButtonLink alt onClick={() => navigator.clipboard.writeText(source)}>
+    <span>Copier le lien </span>
+    <span>{fileCopy}</span>
+  </ButtonLink>
+);
 
 export default ButtonCopy;
