@@ -16,7 +16,7 @@ const apiEntrepriseQuestions = {
         <br/><br/>
         Pour vérifier que l’API Entreprise vous permet d’accéder aux données dont vous avez besoin, consultez :
         <br/>
-        - le [catalogue des données](https://entreprise.api.gouv.fr/catalogue/) et la [documentation des API](https://entreprise.api.gouv.fr/doc/) ;
+        - le [catalogue des données](https://entreprise.api.gouv.fr/catalogue/) ;
         <br/>
         - les [cas d’usage](https://entreprise.api.gouv.fr/cas_usage/) de l’API Entreprise.
         `,
