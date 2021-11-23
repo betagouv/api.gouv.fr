@@ -3,14 +3,6 @@ title: OpenFisca
 tagline: Calculer l'impôt, les cotisations, les aides sociales…
 external_site: https://fr.openfisca.org
 is_open: 1 # 1 means API is fully open
-partners:
-  - Impôts
-  - Fiscalité
-  - Cotisations sociales
-  - Prélèvements sociaux
-  - Prestations sociales
-  - Droit
-  - Simulateur
 producer: anct
 keywords:
   - Impôts
