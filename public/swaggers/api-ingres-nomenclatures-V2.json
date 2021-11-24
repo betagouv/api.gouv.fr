@@ -1,0 +1,791 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Api Ingres Nomenclature",
+    "version": "1.0.0",
+    "description": "L’API Nomenclature permet d’accéder à toutes les nomenclatures noyau gérées dans l’application Ingres du CISIRH, soit plus de 350 nomenclatures accessibles. Ce document a pour objectif de décrire les méthodes de l'API INGRES, présentées à l’aide du framework Swagger. Vous pouvez [ici voir les limites actuelles et évolutions futures de l'API](https://api.gouv.fr/les-api/API_Ingres_Nomenclatures) Dans le cadre du programme de modernisation de la chaine RH– Paye - Post-Paye de l’état, le CISIRH développe des outils visant à permettre la convergence des SIRH ministériels et le bon fonctionnement de la chaîne dans son ensemble.\nLes référentiels disponibles dans l’INstrument de Gestion des REferentielS RH (INGRES) assurent la qualité, la conformité et l’homogénéité des données utilisées. En « cible », Ingres doit garantir la mise à disposition des référentiels communs et faciliter les échanges avec les ministères et l’ensemble de la chaîne RH.\nIngres s'adresse aux services RH des ministères et aux directions de tutelle (DGAFP, DB, DGFiP) pour la consultation et la validation du contenu des référentiels, mais également aux équipes projets des ministères qui consultent et intègrent les informations dans les SIRH ou autres applications de la chaîne RH/Paye (ex : application de gestion des concours GRECO).\nIngres est une base de connaissance conforme à la réglementation et un outil de référence pour alimenter les SIRH ministériels qui permet :\nde disposer de la totalité du Dictionnaire des données ;\nd'accéder à la totalité du référentiel de paye (interministériel et ministériel) : consultation dans un même outil des fiches des référentiels de paye des ministères et des barèmes réglementaires afférents ;\nde consulter une base documentaire fiable et à jour de la réglementation avec des liens directs vers Légifrance et la Base de données Juridiques de la Fonction Publique (BJFP) ;\nd’extraire des rapports nécessaires au suivi et à la validation du contenu des référentiels ;\nd’intégrer des flux permettant une mise à jour automatisée des référentiels dans les SIRH.\nIngres est aussi un outil de la veille réglementaire effectuée par le CISIRH.\nIngres n’est pas un système d’information décisionnel. Il ne contient pas de données personnelles.\nINGRES comporte de nombreux domaines : Référentiel de Paye (RDP), Référentiels de Classification Centraux (RCC), Nomenclatures (Noyau, Fichier GEST, FIP) Nomenclatures externes  (HEXAPOSTE, TABANK etc.), Dictionnaire des données, Bibliothèque des actes, Règles de Gestion RH, Référentiel des textes et API.\nINGRES est une application qui s’enrichit constamment. Elle s’adapte régulièrement aux besoins des utilisateurs ministériels par une maintenance au fil de l’eau, et le développement de nouvelles fonctionnalités en mode projet sur des  thématiques priorisées avec nos clients, telles que l’évolution de la bibliothèque des actes au format de la Suite 9 HRa, l’enrichissement des RCC (durée de stage, codes ADAGE, …), la refonte des fiches RDP, etc…",
+    "termsOfService": "No",
+    "contact": {
+      "email": "api.cisirh@finances.gouv.fr"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://api.aife.economie.gouv.fr/cisirh/ingres-nomenclatures/v2"
+    }
+  ],
+  "x-apiVersion": "2.0",
+  "paths": {
+    "/nomenclatures/ping": {
+      "get": {
+        "description": "Healthcheck de l'API",
+        "tags": [
+          "HealthCheck"
+        ],
+        "responses": {
+          "200": {
+            "description": "Statut de santé de l'API"
+          }
+        }
+      }
+    },
+    "/nomenclatures/{nomenclatureId}": {
+      "get": {
+        "summary": "Retourne les attributs d'une nomenclature par son identifiant",
+        "description": "Retourne les attributs d'une nomenclature par son identifiant",
+        "tags": [
+          "Nomenclatures"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "nomenclatureId",
+            "description": "l'identifiant de la nomenclature recherchée",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "enVigueur",
+            "description": "Filtrer sur les identifiants en vigueur",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "in": "query",
+            "name": "linesLimit",
+            "description": "Limiter le nombre de résultats",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Liste de définitions d'identifiants",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/definition"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "La nomenclature est vide ou les paramètres de la requête n'ont donné aucun résultat",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error404"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erreur serveur",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error500"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/nomenclatures/{nomenclatureId}/{codeId}": {
+      "get": {
+        "summary": "Retourne les attributs d'une nomenclature par son identifiant",
+        "description": "Retourne les attributs d'une nomenclature par son identifiant",
+        "tags": [
+          "Nomenclatures"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "nomenclatureId",
+            "description": "l'identifiant de la nomenclature recherchée",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "codeId",
+            "description": "L'identifiant du code de la nomenclature recherchée",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Définition d'un identifiant",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/definition"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Le code n'a pas été trouvé",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error404"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erreur serveur",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error500"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/nomenclatures/byRepertoire/{codeId}": {
+      "get": {
+        "summary": "Retourne les attributs d'une nomenclature par son répertoire",
+        "description": "Retourne les attributs d'une nomenclature par son répertoire",
+        "tags": [
+          "Nomenclatures"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "codeId",
+            "description": "L'identifiant du répertoire de la nomenclature recherchée",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Liste de définitions d'identifiants",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/definition"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Le code n'a pas été trouvé",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error404"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erreur serveur",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error500"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/nomenclatures": {
+      "get": {
+        "summary": "Liste les nomenclatures disponibles.",
+        "description": "Retourne la liste des nomenclatures disponibles.",
+        "tags": [
+          "Nomenclatures"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "enVigueur",
+            "description": "Filtrer sur les identifiants en vigueur",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Une liste de nomenclatures",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/nomenclature"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Pas de nomenclatures",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error404"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erreur serveur",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error500"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/nomenclatures/MINISTERE/{ministereId}/CORPS": {
+      "get": {
+        "summary": "Corps d'un Ministère",
+        "description": "Retourne la liste des Corps d'un Ministère par son identifiant",
+        "operationId": "listeCorpsByMinistere",
+        "tags": [
+          "Nomenclatures"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "ministereId",
+            "description": "l'identifiant du ministère recherché",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Liste de définitions d'identifiants",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/definition"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "La nomenclature est vide ou les paramètres de la requête n'ont donné aucun résultat",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error404"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erreur serveur",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error500"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/nomenclatures/HEXAPOSTE/rechercheParCodePostal/{codePostal}": {
+      "get": {
+        "summary": "HEXAPOSTE par code Postal",
+        "description": "Recherche un code HEXAPOSTE par son code Postal",
+        "operationId": "hexaposteByCodePostal",
+        "tags": [
+          "Nomenclatures"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "codePostal",
+            "description": "code postal",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Un code HEXAPOSTE",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/definition"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Pas de résultats",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error404"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erreur serveur",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error500"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/nomenclatures/HEXAPOSTE/rechercheParCodeINSEE/{codeINSEE}": {
+      "get": {
+        "summary": "HEXAPOSTE par code INSEE",
+        "description": "Recherche un code HEXAPOSTE par son code INSEE",
+        "operationId": "hexaposteByCodeINSEE",
+        "tags": [
+          "Nomenclatures"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "codeINSEE",
+            "description": "code INSEE",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Un code HEXAPOSTE",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/definition"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Pas de résultats",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error404"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erreur serveur",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error500"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/nomenclatures/HEXAPOSTE/rechercheParCommune/{libCommune}": {
+      "get": {
+        "summary": "HEXAPOSTE par sa commune",
+        "description": "Recherche un code HEXAPOSTE par sa commune",
+        "operationId": "hexaposteByCommune",
+        "tags": [
+          "Nomenclatures"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "libCommune",
+            "description": "libellé Commune",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Un code HEXAPOSTE",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/definition"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Pas de résultats",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error404"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erreur serveur",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error500"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/nomenclatures/GRILLE/{grilleId}/echelons": {
+      "get": {
+        "summary": "Echelons d'une grille",
+        "description": "Retourne la liste des échelons d'une grille par son identifiant",
+        "operationId": "listeEchelonsByGrille",
+        "tags": [
+          "Nomenclatures"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "grilleId",
+            "description": "l'identifiant de la grille recherché",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Liste de définitions d'identifiants",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/definition"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Pas de résultats",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error404"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erreur serveur",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error500"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/nomenclatures/CORPS/{corpsId}/grades": {
+      "get": {
+        "summary": "Grades d'un Corps",
+        "description": "Retourne la liste des Grades d'un Corps par son identifiant",
+        "operationId": "listeGradesByCorps",
+        "tags": [
+          "Nomenclatures"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "corpsId",
+            "description": "l'identifiant du Corps recherché",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Liste de définitions d'identifiants",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/definition"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Pas de résultats",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error404"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erreur serveur",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error500"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "nomenclature": {
+        "type": "object",
+        "required": [
+          "identifiant",
+          "code",
+          "libelle",
+          "debutValidite",
+          "finValidite",
+          "statut"
+        ],
+        "properties": {
+          "identifiant": {
+            "type": "string",
+            "description": "Le nom de la nomenclature.",
+            "example": "ACTIVITE"
+          },
+          "code": {
+            "type": "string",
+            "description": "Le code d'accès de la nomenclature, ou répertoire.",
+            "example": "DJD"
+          },
+          "libelle": {
+            "type": "string",
+            "description": "Libelle de la nomenclature",
+            "example": "Activité"
+          },
+          "debutValidite": {
+            "type": "string",
+            "format": "date",
+            "description": "Date de début de validité de la nomenclature",
+            "example": "01/01/1900"
+          },
+          "finValidite": {
+            "type": "string",
+            "format": "date",
+            "description": "Date de fin de validité de la nomenclature",
+            "example": "31/12/2999"
+          },
+          "statut": {
+            "type": "string",
+            "description": "Statut de la nomenclature, Active ou non.",
+            "example": "A"
+          }
+        }
+      },
+      "definition": {
+        "type": "object",
+        "required": [
+          "identifiant",
+          "definitions",
+          "evenementsSurCode"
+        ],
+        "properties": {
+          "identifiant": {
+            "type": "string",
+            "description": "Code identifiant",
+            "example": 1000201
+          },
+          "definitions": {
+            "type": "object",
+            "description": "Définitions de l'identifiant",
+            "example": {
+              "nomenclatureAdage": {
+                "compte": "1",
+                "codeGrade": "0002",
+                "niveau": "01"
+              },
+              "libelle": {
+                "libelleLong": "ACTUAIRE  DE  LA  CAISSE NATIONALE DE CREDIT AGRICOLE  1ER ECHELON"
+              },
+              "validite": {
+                "status": "A",
+                "dateDebut": "1958-04-05T00:00:00Z",
+                "dateFin": null
+              }
+            }
+          },
+          "evenementsSurCode": {
+            "type": "object",
+            "description": "Liste les évnèments sur Code de l'identifiant",
+            "example": {
+              "nomenclature": {
+                "referentielNoyau": "ADAGE",
+                "typeReferentiel": "A",
+                "repertoireHRAccess": "EBV",
+                "code": "1000201"
+              },
+              "versionCourante": {
+                "version": "20.00.05",
+                "type": "U",
+                "status": "D"
+              },
+              "syntheseDesEvenements": {
+                "typeMiseAJourGlobale": "A",
+                "statusGlobal": "1",
+                "versionCreation": "20.00.05",
+                "versionCloture": null,
+                "versionSuppression": null
+              },
+              "evenementsSurCode": [
+                {
+                  "dateFonctionnelle": null,
+                  "versionNoyau": "20.00.05",
+                  "status": "1",
+                  "typeMiseAJour": "A",
+                  "utilisateur": "TRAITEMENT BATCH [JN9GD]",
+                  "nombreAttributs": "0",
+                  "horodatageMiseAJour": "2020-12-16T10:42:24Z"
+                },
+                {
+                  "dateFonctionnelle": "1958-04-05T00:00:00Z",
+                  "versionNoyau": "20.00.05",
+                  "status": "1",
+                  "typeMiseAJour": "A",
+                  "utilisateur": "TRAITEMENT BATCH [JN9GD]",
+                  "nombreAttributs": "1",
+                  "horodatageMiseAJour": "2020-12-16T10:42:24Z"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "Error404": {
+        "type": "object",
+        "required": [
+          "code",
+          "message"
+        ],
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "Code retour d'erreur",
+            "example": 404
+          },
+          "message": {
+            "type": "string",
+            "description": "description de l'erreur",
+            "example": "Aucune nomenclature n'a été trouvée"
+          }
+        }
+      },
+      "Error500": {
+        "type": "object",
+        "required": [
+          "code",
+          "message",
+          "detailedMessage"
+        ],
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "Code retour d'erreur",
+            "example": 500
+          },
+          "message": {
+            "type": "string",
+            "description": "description de l'erreur",
+            "example": "Erreur lors de la récupération des nomenclatures"
+          },
+          "detailedMessage": {
+            "type": "string",
+            "description": "description détaillée de l'erreur",
+            "example": "ORA-00933: SQL command not properly ended"
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Nomenclatures",
+      "description": "Visualisation de nomenclatures"
+    },
+    {
+      "name": "HealthCheck",
+      "description": "Méthode de santé de l'API. Vérification de son bon fonctionnement ainsi que retour d'utilisation système"
+    },
+    {
+      "name": "Errors",
+      "description": "Erreurs d'api"
+    }
+  ]
+}
