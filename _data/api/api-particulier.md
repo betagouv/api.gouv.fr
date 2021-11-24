@@ -110,9 +110,7 @@ L’Adresse est celle connue au 1er janvier de l’année d’imposition (exempl
 
 ### Précisions sur les données Statut étudiant (MESRI)
 
-Sont disponibles les données des étudiants inscrits dans un établisement sous tutelle du ministère de l'enseignement supérieur, et sur le champ des étudiants bacheliers en 2020 ou déjà inscrits dans l'enseignement supérieur en 2018-2019 ou 2019-2020.
-
-La couverture des établissements du champ des étudiants sera progressivement complétée d'ici la rentrée 2022.
+Sont disponibles les données d’étudiants inscrits dans les établissements sous tutelle du ministère de l'enseignement supérieur. La couverture des établissements du champ des étudiants sera progressivement complétée.
 
 ### Précisions sur les données Statut demandeur d'emploi (Pôle Emploi)
 
