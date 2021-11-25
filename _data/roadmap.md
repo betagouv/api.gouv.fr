@@ -256,6 +256,9 @@
       what: Terminologies de Santé par l'Agence du Numérique en Santé
       path: /les-api/api-terminologies-sante
     - type: ADD_API
+      what: Statut demandeur d'emploi par Pôle Emploi
+      path: /les-api/api-statut-demandeur-emploi
+    - type: ADD_API
       what: CVEC par le CNOUS
     - type: ADD_API
       what: Attestation Codes Sécurité par l'Urssaf

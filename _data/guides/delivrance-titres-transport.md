@@ -7,6 +7,7 @@ noindex: false # this page will appear on Google
 publish: true # this page will appear on /guides page
 api:
   - API Particulier
+  - API statut demandeur d'emploi
 ---
 
 Chaque année, les collectivités disposant de la compétence transport et leurs opérateurs doivent délivrer des titres de transport aux usagers, à un tarif adapté à leur situation.
