@@ -1,7 +1,6 @@
 import React, { PropsWithChildren } from 'react';
 import Markdown from 'markdown-to-jsx';
 
-import IsFranceConnected from '../isFranceConnected';
 import {
   ButtonLink,
   ButtonCopy,
@@ -72,7 +71,6 @@ const RichReactMarkdown: React.FC<{ source: string; addAnchor?: boolean }> = ({
         ButtonCopy: ButtonCopy,
         NextSteps: NextSteps,
         External: ExternalLink,
-        IsFranceConnected: IsFranceConnected,
         Quote: Quote,
         RichLink: RichLink,
         Grid: Grid,
