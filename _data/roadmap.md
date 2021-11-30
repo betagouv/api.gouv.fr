@@ -256,6 +256,9 @@
       what: Terminologies de Santé par l'Agence du Numérique en Santé
       path: /les-api/api-terminologies-sante
     - type: ADD_API
+      what: Qualité de l'eau potable par Hub'eau
+      path: /les-api/api_hubeau_eaupotable
+    - type: ADD_API
       what: CVEC par le CNOUS
     - type: ADD_API
       what: Attestation Codes Sécurité par l'Urssaf
