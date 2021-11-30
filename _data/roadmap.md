@@ -250,8 +250,8 @@
       what: API Tiers de prestation par l'URSSAF
       path: /les-api/api-tiers-de-prestation
     - type: ADD_API
-      what: Prestations de sécurité sociale
-      path: /les-api/api-prestations-securite-sociale
+      what: Prestations sociales
+      path: /les-api/api-prestations-sociales
   12:
     - type: ADD_API
       what: CVEC par le CNOUS

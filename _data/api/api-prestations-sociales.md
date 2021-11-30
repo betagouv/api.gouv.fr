@@ -1,5 +1,5 @@
 ---
-title: API Prestations de sécurité sociale
+title: API Prestations sociales
 tagline: Vérifiez si une personne est bénéficiaire d'une prestation de la sécurité sociale
 external_site: https://www.securite-sociale.fr/accueil
 is_open: -1 # -1 means API not open
@@ -7,23 +7,23 @@ is_france_connected: 1 # undefined | 1 | 2. 2 means can be used with FC, 2 means
 #datapass_link: 
 access_page: 
   - who:
-      - Une organisation partenaire de France Connect
-    is_eligible: 0
-    description: |
-      Cette API est accessible aux administrations et aux organisations partenaires de France Connect. 
-
-      <NextSteps />
-      <Button href="https://datapass.api.gouv.fr/api-prestations-securite-sociale">Remplir une demande</Button>
-  - who: 
       - Une administration
     is_eligible: 0
     description: |
-      Cette API est accessible aux administrations partenaires de France Connect. 
+      Cette API est accessible aux administrations. 
 
       <NextSteps />
-      <Button href="https://datapass.api.gouv.fr/api-prestations-securite-sociale">Remplir une demande</Button>
+      <Button href="https://datapass.api.gouv.fr/api-prestations-sociales">Remplir une demande</Button>
+  - who: 
+      - Une entreprise
+    is_eligible: 0
+    description: |
+      Cette API est accessible aux entreprises sous certaines conditions.   
+
+      <NextSteps />
+      <Button href="https://datapass.api.gouv.fr/api-prestations-sociales">Remplir une demande</Button>
   - who:
-      - Autre
+      - Un particulier
     is_eligible: -1
     description: |
       Seules les administrations et les organisations qui sont partenaires de France Connect sont éligibles. 
