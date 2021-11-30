@@ -1,8 +1,32 @@
-import constants from '../../constants';
-
 const Footer = () => {
   return (
     <footer className="fr-footer" role="contentinfo">
+      <div className="fr-footer__top">
+        <div className="fr-container">
+          <div className="fr-grid-row fr-grid-row--start fr-grid-row--gutters">
+            <div className="fr-col-12 fr-col-sm-3 fr-col-md-2">
+              <a className="fr-footer__top-link" href="/feuille-de-route">
+                Notre feuille de route
+              </a>
+            </div>
+            <div className="fr-col-12 fr-col-sm-3 fr-col-md-2">
+              <a className="fr-footer__top-link" href="/equipe">
+                Notre équipe
+              </a>
+            </div>
+            <div className="fr-col-12 fr-col-sm-3 fr-col-md-2">
+              <a className="fr-footer__top-link" href="/statistiques">
+                Nos chiffres clés
+              </a>
+            </div>
+            <div className="fr-col-12 fr-col-sm-3 fr-col-md-2">
+              <a className="fr-footer__top-link" href="/nouvelle-api">
+                Ajouter une API
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="fr-container">
         <div className="fr-footer__body">
           <div className="fr-footer__brand fr-enlarge-link">
@@ -56,45 +80,19 @@ const Footer = () => {
             </p>
             <ul className="fr-footer__content-list">
               <li className="fr-footer__content-item">
-                <a className="fr-footer__content-link" href="/feuille-de-route">
-                  Notre feuille de route
-                </a>
-              </li>
-              <li className="fr-footer__content-item">
-                <a className="fr-footer__content-link" href="/equipe">
-                  Notre équipe
-                </a>
-              </li>
-              <li className="fr-footer__content-item">
-                <a className="fr-footer__content-link" href="/statistiques">
-                  Nos chiffres clés
-                </a>
-              </li>
-              <li className="fr-footer__content-item">
-                <a className="fr-footer__content-link" href="/nouvelle-api">
-                  Ajouter une API
-                </a>
-              </li>
-            </ul>
-            <div className="public-partners">
-              <br />
-              partenaires&nbsp;:
-            </div>
-            <ul className="fr-footer__content-list">
-              <li className="fr-footer__content-item">
                 <a
                   className="fr-footer__content-link"
-                  href="https://beta.gouv.fr/"
+                  href="https://legifrance.gouv.fr"
                 >
-                  beta.gouv.fr
+                  legifrance.gouv.fr
                 </a>
               </li>
               <li className="fr-footer__content-item">
                 <a
                   className="fr-footer__content-link"
-                  href="https://www.etalab.gouv.fr/"
+                  href="https://gouvernement.fr"
                 >
-                  etalab.fr
+                  gouvernement.fr
                 </a>
               </li>
               <li className="fr-footer__content-item">
@@ -113,15 +111,28 @@ const Footer = () => {
                   data.gouv.fr
                 </a>
               </li>
-              <li className="fr-footer__content-item">
-                <a
-                  className="fr-footer__content-link"
-                  href="https://numerique.gouv.fr/"
-                >
-                  La DINUM
-                </a>
-              </li>
             </ul>
+          </div>
+        </div>
+        <div className="fr-footer__partners">
+          <h4 className="fr-footer__partners-title">Nos partenaires</h4>
+          <div>
+            <div className="fr-footer__partners-sub">
+              <ul>
+                <li>
+                  <a href="https://beta.gouv.fr/">beta.gouv.fr</a>
+                </li>
+                <li>
+                  <a href="https://www.etalab.gouv.fr/">etalab.fr</a>
+                </li>
+                <li>
+                  <a href="https://data.gouv.fr">data.gouv.fr</a>
+                </li>
+                <li>
+                  <a href="https://numerique.gouv.fr/">numerique.gouv.fr</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <div className="fr-footer__bottom">
@@ -202,12 +213,12 @@ const Footer = () => {
           height: 20px;
         }
 
-        .public-partners {
-          font-variant: small-caps;
-          color: ${constants.colors.darkGrey};
+        .fr-footer__partners-sub ul li > a {
+          height: auto;
+          width: auto;
           font-weight: bold;
-          width: 100%;
           font-size: 0.9rem;
+          margin-right: 20px;
         }
       `}</style>
     </footer>

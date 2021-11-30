@@ -6,17 +6,14 @@ import ApiWidgetResults from './apiWidgetResults';
 import ApiWidgetWrapper from './apiWidgetWrapper';
 
 const ApiRnaWidget: React.FC<{}> = () => {
-  const [isLoading, setIsLoading] = useState(false);
   const [results, setResults] = useState<any[] | null>(null);
 
   const search = (searchTerm: string) => {
     if (!searchTerm) {
       setResults(null);
-      setIsLoading(false);
       return;
     }
 
-    setIsLoading(true);
     fetch(
       `https://entreprise.data.gouv.fr/api/rna/v1/full_text/${encodeURI(
         normalize(searchTerm)
@@ -41,7 +38,6 @@ const ApiRnaWidget: React.FC<{}> = () => {
               </>
             ))
           );
-          setIsLoading(false);
         }, 400)
       )
       .catch(error => {
@@ -74,7 +70,6 @@ const ApiRnaWidget: React.FC<{}> = () => {
             placeholder="Tapez le nom d’une association"
             label="Recherchez une association française"
             debounceRate={200}
-            isLoading={isLoading}
           />
         </div>
         <ApiWidgetResults results={results} />

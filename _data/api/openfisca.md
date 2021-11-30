@@ -1,13 +1,9 @@
 ---
 title: OpenFisca
 tagline: Calculer l'impôt, les cotisations, les aides sociales…
-external_site: https://api.openfisca.fr
+external_site: https://fr.openfisca.org
 is_open: 1 # 1 means API is fully open
-partners:
-  - beta.gouv.fr
-  - Etalab
-  - Institut des Politiques Publiques
-producer: dinum
+producer: anct
 keywords:
   - Impôts
   - Fiscalité
@@ -15,13 +11,12 @@ keywords:
   - Prélèvements sociaux
   - Prestations sociales
   - Droit
-  - Simulateur
+  - Loi
 themes:
   - Administration & législation
-contact_link: contact@openfisca.fr
-doc_tech_link: https://fr.openfisca.org/api/latest/spec
-visits_2019: 1982
-last_update: 15/01/2019
+contact_link: contact@openfisca.org
+doc_tech_link: https://api.fr.openfisca.org/latest/spec
+last_update: 11/11/2021
 ---
 
 ### Calculer le droit
@@ -29,12 +24,12 @@ last_update: 15/01/2019
 OpenFisca est un moteur de calcul libre et ouvert qui permet de modéliser le système socio-fiscal de manière collaborative et transparente. Il permet de calculer un grand nombre de prélèvements sociaux, prestations sociales et d'impôts, et de simuler l'impact de réformes sur ces montants.
 Envoyez une situation, précisez ce que vous souhaitez calculer, et recevez des résultats en quelques millisecondes !
 
-Plusieurs milliers de variables sont calculables, et une [interface simple et claire](https://legislation.openfisca.fr) vous permet de toutes les découvrir.
+Plusieurs milliers de variables sont calculables, et une [interface simple et claire](https://legislation.fr.openfisca.org) vous permet de toutes les découvrir.
 
 ### Obtenir les valeurs définies par la loi
 
-En plus de ses capacités de calcul, OpenFisca expose également l'intégralité des valeurs de référence de la législation ([tranches d'imposition](https://legislation.openfisca.fr/impot_revenu.bareme), [taux AT/MP](https://legislation.openfisca.fr/cotsoc.accident.faible), montant du SMIC…), avec une couverture historique qui peut se compter en décennies.
+En plus de ses capacités de calcul, OpenFisca expose également l'intégralité des valeurs de référence de la législation ([tranches d'imposition](https://legislation.fr.openfisca.org/impot_revenu.bareme), [montant du SMIC](https://legislation.fr.openfisca.org/marche_travail.salaire_minimum.smic_h_b)…), avec une couverture historique qui peut se compter en décennies.
 
 ### Exemples
 
-Ce logiciel est utilisé par des chercheurs en économie et des services publics comme mes-aides.gouv.fr, embauche.beta.gouv.fr ou mesdroitssociaux.gouv.fr.
+Ce logiciel est utilisé par des chercheurs en économie, des entreprises, des associations comme [mes-aides.org](https://mes-aides.org), et des services publics numériques comme [mon-entreprise.fr](https://mon-entreprise.fr), [mesdroitssociaux.gouv.fr](https://mesdroitssociaux.gouv.fr), [ESTIME](https://estime.pole-emploi.fr)…

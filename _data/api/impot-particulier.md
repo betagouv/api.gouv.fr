@@ -22,7 +22,7 @@ access_page:
       Pour obtenir l’accès à l’API, vous devez notamment **justifier d'une simplification pour les citoyens** et vous engager à n'accéder qu’aux données strictement nécessaires à la démarche conformément au principe de proportionnalité.
 
       <NextSteps />
-      <IsFranceConnected fcLink="https://datapass.api.gouv.fr/api-impot-particulier-fc-sandbox" notFcLink="https://datapass.api.gouv.fr/api-impot-particulier-sandbox"/>
+      <QuestionTree tree='france-connected-api' question='dgfip' />
   - who:
       - Un éditeur de logiciel
     is_eligible: 0
@@ -32,7 +32,7 @@ access_page:
       Lors de votre demande vous devrez **justifier** dans quelle mesure l'entité pour laquelle vous opérez rentre dans ce cadre juridique.
 
       <NextSteps is_editeur/>
-      <IsFranceConnected fcLink="https://datapass.api.gouv.fr/api-impot-particulier-fc-sandbox" notFcLink="https://datapass.api.gouv.fr/api-impot-particulier-sandbox"/>
+      <QuestionTree tree='france-connected-api' question='dgfip' />
   - who:
       - Un établissement bancaire
     is_eligible: 0
@@ -86,12 +86,12 @@ last_update: 08/10/2019
 L’API Impôt particulier peut restituer différentes données fiscales issues de la déclaration annuelle de revenus soumise à taxation.
 Le tableau ci-dessous présente les principales données de l’API Impôt particulier qui permettent de simplifier l’instruction des demandes.
 
-| Nom de la donnée                 | type         | Commentaire                                                             |
-| -------------------------------- | ------------ | ----------------------------------------------------------------------- |
-| Revenu fiscal de référence (RFR) | nombre       |                                                                         |
-| Nombre de parts fiscales         | nombre       |                                                                         |
-| Adresse fiscale de taxation      | données JSON |                                                                         |
-| Données du local                 | données JSON | Exemples : régime de taxation, identifiant du local                     |
+| Nom de la donnée                 | type         | Commentaire                                         |
+| -------------------------------- | ------------ | --------------------------------------------------- |
+| Revenu fiscal de référence (RFR) | nombre       |                                                     |
+| Nombre de parts fiscales         | nombre       |                                                     |
+| Adresse fiscale de taxation      | données JSON |                                                     |
+| Données du local                 | données JSON | Exemples : régime de taxation, identifiant du local |
 
 Un document, présent dans le formulaire de la demande d’accès, liste un plus large panel des données
 pouvant être restituées par l’API Impôt particulier.
