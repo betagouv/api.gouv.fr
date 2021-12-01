@@ -22,13 +22,13 @@ last_update: 26/11/2021
 
 ### Description fonctionnelle de l'API Qualité de l'eau potable
 
-[La nouvelle API Qualité de l'eau potable](https://hubeau.eaufrance.fr/page/api-qualite-eau-potable) diffuse le jeu de données "DIS" (résultats du contrôle sanitaire de l'eau distribuée commune par commune) mis en ligne par le Ministère de la Solidarité et de la Santé sur le portail data.gouv.fr 
+[La nouvelle API Qualité de l'eau potable](https://hubeau.eaufrance.fr/page/api-qualite-eau-potable) diffuse le jeu de données "DIS" (résultats du contrôle sanitaire de l'eau distribuée commune par commune) mis en ligne par le Ministère des Solidarités et de la Santé sur le portail data.gouv.fr 
 
-Cette API a pu voir le jour grâce à un travail collaboratif de plusieurs mois avec la Direction Générale de la Santé.
+Cette API a pu voir le jour grâce à un travail collaboratif de plusieurs mois entre le BRGM, la Direction Générale de la Santé et l'OFB.
 
 Les données diffusées comprennent :
-- les prélèvements et résultats des analyses réalisées dans le cadre du contrôle sanitaire réglementaire sur les unités de distribution ou les installations directement en amont ;
-- les liens entre communes et unités de distribution.
+- les prélèvements et résultats des analyses réalisées dans le cadre du contrôle sanitaire réglementaire sur les unités de distribution ou les installations directement en amont ;  
+- les liens entre communes et unités de distribution.  
 
 Ces données correspondent à une compilation des bulletins d’analyses diffusés en ligne, commune par commune, sur le [site internet du Ministère en charge de la santé](http://eaupotable.sante.gouv.fr/).
 
@@ -39,11 +39,11 @@ Pour une API au plus près de vos besoins, expérimentez la version bêta et fai
 Source des données : [Résultats du contrôle sanitaire de l'eau distribuée commune par commune](https://www.data.gouv.fr/fr/datasets/resultats-du-controle-sanitaire-de-leau-distribuee-commune-par-commune/).  
   
 Les différentes opérations possibles sont :
-- **communes_udi** : permet de faire le lien entre communes et unités de distribution (réseaux) ;
+- **communes_udi** : permet de faire le lien entre communes et unités de distribution (réseaux) ;  
 - **resultats_dis** : permet de lister les prélèvements, résultats d'analyses et conclusions sanitaires issus du contrôle sanitaire de l'eau distribuée commune par commune. 
 
 Dernières évolutions de l'API Qualité de l'eau potable de Hub'Eau:
-- 29/11/2021 : mise à disposition de la version beta publique
+- 29/11/2021 : mise à disposition de la version beta publique  
 
 ### Connaissez-vous Hub'Eau ?
 
