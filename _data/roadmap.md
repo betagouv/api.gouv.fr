@@ -259,12 +259,13 @@
       what: Qualité de l'eau potable par Hub'eau
       path: /les-api/api_hubeau_eaupotable
     - type: ADD_API
+      what: Déclaration préalable à l'embauche par l'Urssaf
+      path: /les-api/api-declaration-embauche
+    - type: ADD_API
       what: CVEC par le CNOUS
     - type: ADD_API
       what: Attestation Codes Sécurité par l'Urssaf
     - type: ADD_API
-      what: Déclaration préalable à l'embauche par l'Urssaf
-    - type: ADD_API
-      what: Liste des organismes de formation par la DGEFP 
+      what: Liste des organismes de formation par la DGEFP
       
 ---
