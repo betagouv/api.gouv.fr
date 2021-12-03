@@ -20,7 +20,6 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ env.node-version }}
-      - run: npm i
       - name: Cache node modules
         uses: actions/cache@v2
         id: restore-dependencies
@@ -34,6 +33,7 @@ jobs:
             ${{ runner.os }}-npm-cache-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
+      - run: npm i
 
   lint:
     name: Lint
