@@ -27,9 +27,9 @@ jobs:
           cache-name: cache-node-modules
         with:
           path: ./node_modules
-          key: ${{ runner.os }}-npm-cache-${{ github.sha }}-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-npm-cache-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-npm-cache-${{ github.sha }}-
+            ${{ runner.os }}-npm-cache-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
       - run: npm i
@@ -52,7 +52,7 @@ jobs:
           cache-name: cache-node-modules
         with:
           path: ./node_modules
-          key: ${{ runner.os }}-npm-cache-${{ github.sha }}-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-npm-cache-${{ hashFiles('**/package-lock.json') }}
       - run: npm run lint
 
   no-datapass-staging:
@@ -85,7 +85,7 @@ jobs:
           cache-name: cache-node-modules
         with:
           path: ./node_modules
-          key: ${{ runner.os }}-npm-cache-${{ github.sha }}-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-npm-cache-${{ hashFiles('**/package-lock.json') }}
       - run: npm run build
       - uses: actions/cache@v2
         id: restore-build
@@ -111,5 +111,5 @@ jobs:
           cache-name: cache-node-modules
         with:
           path: ./node_modules
-          key: ${{ runner.os }}-npm-cache-${{ github.sha }}-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-npm-cache-${{ hashFiles('**/package-lock.json') }}
       - run: npm run test
