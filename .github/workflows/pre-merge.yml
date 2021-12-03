@@ -9,7 +9,7 @@ on:
 
 jobs:
   dependencies:
-    name: 'Build'
+    name: 'Install dependencies'
     runs-on: ubuntu-latest
 
     strategy:
@@ -37,7 +37,7 @@ jobs:
             ${{ runner.os }}-
 
   lint:
-    name: Build
+    name: Lint
     runs-on: ubuntu-latest
     needs: [dependencies]
 
