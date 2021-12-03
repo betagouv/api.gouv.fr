@@ -1,0 +1,868 @@
+{
+  "swagger": "2.0",
+  "host": "localhost:81",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "info": {
+    "title": "Api grand publique HistoVec",
+    "version": "1.0.0"
+  },
+  "tags": [],
+  "paths": {
+    "/histovec/api/v1/health": {
+      "get": {
+        "operationId": "getHistovecApiV1Health",
+        "tags": [
+          "histovec"
+        ],
+        "responses": {
+          "default": {
+            "schema": {
+              "type": "string"
+            },
+            "description": "Successful"
+          }
+        }
+      }
+    },
+    "/histovec/api/v1/version": {
+      "get": {
+        "operationId": "getHistovecApiV1Version",
+        "tags": [
+          "histovec"
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "$ref": "#/definitions/VersionReponse"
+            },
+            "description": "Successful"
+          }
+        }
+      }
+    },
+    "/histovec/api/v1/report_by_code": {
+      "post": {
+        "operationId": "postHistovecApiV1Report_by_code",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Report_by_code_payload"
+            }
+          }
+        ],
+        "tags": [
+          "histovec"
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "$ref": "#/definitions/ReportResponse"
+            },
+            "description": "Successful"
+          }
+        }
+      }
+    },
+    "/histovec/api/v1/report_by_data": {
+      "post": {
+        "operationId": "postHistovecApiV1Report_by_data",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Report_by_data_payload"
+            }
+          }
+        ],
+        "tags": [
+          "histovec"
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "$ref": "#/definitions/ReportResponse"
+            },
+            "description": "Successful"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "VersionReponse": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "string",
+          "description": "Version du backend",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        }
+      }
+    },
+    "vehicule_by_code": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "description": "Code HistoVec du rapport HistoVec demandé.",
+          "pattern": "^(?:[A-Za-z\\d+/]{4})*(?:[A-Za-z\\d+/]{3}=|[A-Za-z\\d+/]{2}==)?-(?:[A-Za-z\\d+/]{4})*(?:[A-Za-z\\d+/]{3}=|[A-Za-z\\d+/]{2}==)?$"
+        }
+      },
+      "required": [
+        "code"
+      ]
+    },
+    "controles_techniques_option_by_code": {
+      "type": "object",
+      "properties": {
+        "controles_techniques": {
+          "type": "boolean",
+          "description": "Récupérer les contrôles techniques du véhicule dans le rapport. Non par défaut."
+        }
+      }
+    },
+    "Report_by_code_payload": {
+      "type": "object",
+      "properties": {
+        "vehicule": {
+          "$ref": "#/definitions/vehicule_by_code"
+        },
+        "options": {
+          "$ref": "#/definitions/controles_techniques_option_by_code"
+        }
+      }
+    },
+    "resp-particulier": {
+      "type": "object",
+      "properties": {
+        "nom_anonymise": {
+          "type": "string",
+          "description": "Rubrique C.1 : Nom (anonymisé) dans l’Etat membre d’immatriculation, à la date de délivrance du document, du titulaire du certificat d’immatriculation."
+        },
+        "prenoms_anonymises": {
+          "type": "string",
+          "description": "Rubrique C.1 : Prénoms (anonymisés) dans l’Etat membre d’immatriculation, à la date de délivrance du document, du titulaire du certificat d’immatriculation."
+        },
+        "code_postal": {
+          "type": "string",
+          "description": "Rubrique C.1 : Code postal de l'adresse dans l’Etat membre d’immatriculation, à la date de délivrance du document, du titulaire du certificat d’immatriculation."
+        }
+      }
+    },
+    "resp-personne_morale": {
+      "type": "object",
+      "properties": {
+        "raison_sociale_anonymisee": {
+          "type": "string",
+          "description": "Rubrique C.1 : Raison sociale (anonymisée) dans l’Etat membre d’immatriculation, à la date de délivrance du document, du titulaire du certificat d’immatriculation."
+        },
+        "siren_anonymise": {
+          "type": "string",
+          "description": "Numéro SIREN (anonymisé) présent dans KBIS de la personne morale."
+        },
+        "code_postal": {
+          "type": "string",
+          "description": "Rubrique C.1 : Code postal de l'adresse dans l’Etat membre d’immatriculation, à la date de délivrance du document, du titulaire du certificat d’immatriculation."
+        }
+      }
+    },
+    "resp-titulaire": {
+      "type": "object",
+      "properties": {
+        "particulier": {
+          "$ref": "#/definitions/resp-particulier"
+        },
+        "personne_morale": {
+          "$ref": "#/definitions/resp-personne_morale"
+        }
+      }
+    },
+    "resp-caracteristiques_techniques": {
+      "type": "object",
+      "properties": {
+        "marque": {
+          "type": "string",
+          "description": "Rubrique D.1 : Marque du véhicule."
+        },
+        "tvv": {
+          "type": "string",
+          "description": "Rubrique D.2 : Type, variante (si disponible), version (si disponible)."
+        },
+        "numero_cnit": {
+          "type": "string",
+          "description": "Rubrique D.2.1 : Code national d’identification du type (en cas de réception UE)."
+        },
+        "nom_commercial": {
+          "type": "string",
+          "description": "Rubrique D.3 : Dénomination commerciale."
+        },
+        "couleur": {
+          "type": "string",
+          "description": "Couleur du véhicule."
+        },
+        "type_de_reception": {
+          "type": "string",
+          "description": "Type de réception (en général UE)."
+        },
+        "vin_anonymise": {
+          "type": "string",
+          "description": "Rubrique E : Numéro d’identification du véhicule (VIN : Vehicle Identification Number) anonymisé."
+        },
+        "ptta": {
+          "type": "integer",
+          "description": "Rubrique F.1 : Masse en charge maximale techniquement admissible (en kg), sauf pour les motocycles, plus communément appelé PT techniquement admissible pour Poids Total Techniquement Admissible.",
+          "minimum": 0
+        },
+        "ptac": {
+          "type": "number",
+          "description": "Rubrique F.2 : Masse en charge maximale admissible du véhicule en service dans l’Etat membre d’immatriculation (en kg), anciennement appelé PTAC pour Poids Total Autorisé en Charge.",
+          "minimum": 0
+        },
+        "ptra": {
+          "type": "integer",
+          "description": "Rubrique F.3 : Masse en charge maximale admissible de l’ensemble en service dans l’Etat membre d’immatriculation (en kg), plus communément appelé PTRA pour Poids Total Roulant Autorisé.",
+          "minimum": 0
+        },
+        "ptes": {
+          "type": "integer",
+          "description": "Rubrique G : Masse du véhicule en service avec carrosserie et dispositif d’attelage en cas de véhicule tracteur de catégorie autre que M1, plus communément appelé PT service pour Poids Total en Service.",
+          "minimum": 0
+        },
+        "ptav": {
+          "type": "integer",
+          "description": "Rubrique G.1 : Poids à vide national, plus communément appelé PTAV pour Poids Total A Vide.",
+          "minimum": 0
+        },
+        "date_emission": {
+          "type": "string",
+          "format": "date",
+          "description": "Rubrique I : Date de l’immatriculation à laquelle se réfère le présent certificat."
+        },
+        "categorie_ue": {
+          "type": "string",
+          "description": "Rubrique J : Catégorie du véhicule (UE)."
+        },
+        "genre_national": {
+          "type": "string",
+          "description": "Rubrique J.1 : Genre national."
+        },
+        "carrosserie_ue": {
+          "type": "string",
+          "description": "Rubrique J.2 : Carrosserie (UE)."
+        },
+        "carrosserie_fr": {
+          "type": "string",
+          "description": "Rubrique J.3 : Carrosserie (désignation nationale)."
+        },
+        "numero_de_reception": {
+          "type": "string",
+          "description": "Rubrique K : Numéro de réception par type (si disponible)."
+        },
+        "cylindree": {
+          "type": "number",
+          "description": "Rubrique P.1 : Cylindrée (en cm3).",
+          "minimum": 0
+        },
+        "puissance_nette": {
+          "type": "number",
+          "description": "Rubrique P.2 : Puissance nette maximale (en kW) (si disponible).",
+          "minimum": 0
+        },
+        "energie": {
+          "type": "string",
+          "description": "Rubrique P.3 : Type de carburant ou source d’énergie."
+        },
+        "puissance_cv": {
+          "type": "integer",
+          "description": "Rubrique P.6 : Puissance administrative nationale (chevaux fiscaux).",
+          "minimum": 0
+        },
+        "rapport_puissance_masse": {
+          "type": "number",
+          "description": "Rubrique Q : Rapport puissance / masse en kW/kg (uniquement pour les motocycles).",
+          "minimum": 0
+        },
+        "places_assises": {
+          "type": "integer",
+          "description": "Rubrique S.1 : Nombre de places assises dans le véhicule.",
+          "minimum": 0
+        },
+        "places_debout": {
+          "type": "integer",
+          "description": "Rubrique S.2 : Nombre de places debout dans le véhicule.",
+          "minimum": 0
+        },
+        "niveau_sonore": {
+          "type": "integer",
+          "description": "Rubrique U.1 : Niveau sonore à l’arrêt [en dB(A)].",
+          "minimum": 0
+        },
+        "vitesse_du_moteur": {
+          "type": "integer",
+          "description": "Rubrique U.2 : Vitesse du moteur (en min-1).",
+          "minimum": 0
+        },
+        "emission_co2": {
+          "type": "integer",
+          "description": "Rubrique V.7 : Emission de CO2 (en g/km).",
+          "minimum": 0
+        },
+        "classe_environnementale_ue": {
+          "type": "string",
+          "description": "Rubrique V.9 : Indication de la classe environnementale de réception UE : mention de la version applicable en vertu de la directive 70/220/CEE ou de la directive 88/77/CEE."
+        }
+      }
+    },
+    "resp-etat_certificat_immatriculation": {
+      "type": "object",
+      "properties": {
+        "duplicata": {
+          "type": "boolean",
+          "description": "Un duplicata a été émis pour ce certificat d'immatriculation."
+        },
+        "annule": {
+          "type": "boolean",
+          "description": "Le certificat d'immatriculation est annulé."
+        },
+        "perdu": {
+          "type": "boolean",
+          "description": "Le certificat d'immatriculation a été perdu."
+        },
+        "vole": {
+          "type": "boolean",
+          "description": "Le certificat d'immatriculation a été volé."
+        }
+      }
+    },
+    "resp-certificat_immatriculation": {
+      "type": "object",
+      "properties": {
+        "date_premiere_immatriculation": {
+          "type": "string",
+          "format": "date",
+          "description": "Rubrique B : Date de la première immatriculation du véhicule."
+        },
+        "nombre_de_mois_depuis_date_emission_certificat_immatriculation": {
+          "type": "integer",
+          "description": "Nombre de mois depuis la date d'émission du certificat d'immatriculation en cours de validité.",
+          "minimum": 0
+        },
+        "numero_immatriculation_anonymisee": {
+          "type": "string",
+          "description": "Rubrique A : Numéro d'immatriculation (anonymisé)."
+        },
+        "titulaire": {
+          "$ref": "#/definitions/resp-titulaire"
+        },
+        "caracteristiques_techniques": {
+          "$ref": "#/definitions/resp-caracteristiques_techniques"
+        },
+        "etat": {
+          "$ref": "#/definitions/resp-etat_certificat_immatriculation"
+        }
+      }
+    },
+    "resp-procedures_ve": {
+      "type": "object",
+      "properties": {
+        "numero_immatriculation_au_format_fni": {
+          "type": "boolean",
+          "description": "Le véhicule possède encore un numéro d'immatriculation au format FNI."
+        },
+        "date_derniere_procedure_ve": {
+          "type": "string",
+          "format": "date",
+          "description": "Date de la dernière procédure VE du véhicule."
+        },
+        "date_fin_derniere_procedure_ve": {
+          "type": "string",
+          "format": "date",
+          "description": "Date de fin de la dernière procédure VE du véhicule."
+        },
+        "apte_a_circuler": {
+          "type": "boolean",
+          "description": "Le véhicule est apte à circuler."
+        },
+        "nombre_de_procedures_ve": {
+          "type": "integer",
+          "description": "Nombre de procédure(s) VE en cours.",
+          "minimum": 0
+        },
+        "procedure_ve_en_cours": {
+          "type": "boolean",
+          "description": "Le véhicule a au moins une Procédure VE en cours."
+        }
+      }
+    },
+    "resp-etat": {
+      "type": "object",
+      "properties": {
+        "nombre_de_titulaires": {
+          "type": "integer",
+          "description": "Nombre de titulaire(s) depuis la date de 1ère immatriculation en France du véhicule (titulaire actuel compris). Seules les immatriculations en France sont comptabilisées.",
+          "minimum": 0
+        },
+        "vignette_critair": {
+          "type": "string",
+          "description": "Numéro de la vignette Critair.",
+          "enum": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "ELECTRIQUE",
+            "NON_CLASSE"
+          ]
+        },
+        "vole": {
+          "type": "boolean",
+          "description": "Le véhicule a été volé."
+        },
+        "procedures_ve": {
+          "$ref": "#/definitions/resp-procedures_ve"
+        }
+      }
+    },
+    "resp-element_historique_vehicule": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "string",
+          "format": "date",
+          "description": "Date de l'opération."
+        },
+        "date_annulation": {
+          "type": "string",
+          "format": "date",
+          "description": "Présent lors d'une opération annulant une précédente opération de l'historique. Date de l'annulation de l'opération précédente."
+        },
+        "type": {
+          "type": "string",
+          "description": "Type de l'opération."
+        },
+        "numero_agrement_expert": {
+          "type": "string",
+          "description": "Numéro d'agrément de l'expert (si l'opération a nécessité la venue d'un expert)."
+        }
+      }
+    },
+    "resp-historique_vehicule": {
+      "type": "array",
+      "description": "Historique des opérations du véhicule.",
+      "items": {
+        "$ref": "#/definitions/resp-element_historique_vehicule"
+      }
+    },
+    "resp-import_en_france": {
+      "type": "object",
+      "properties": {
+        "vehicule_importe_depuis_etranger": {
+          "type": "boolean",
+          "description": "Véhicule ayant déjà roulé à l'étranger avant."
+        },
+        "date_import": {
+          "type": "string",
+          "format": "date",
+          "description": "Date d'import en France, que le véhicule soit neuf ou importé depuis l'étranger."
+        },
+        "date_premiere_immatriculation_etranger": {
+          "type": "string",
+          "format": "date",
+          "description": "Date de première immatriculation à l'étranger, avant d'arriver en France."
+        }
+      }
+    },
+    "resp-suspension": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "string",
+          "format": "date",
+          "description": "Date de la suspension du véhicule."
+        },
+        "motif": {
+          "type": "string",
+          "description": "Motif de la suspension du véhicule."
+        },
+        "remise_du_titre": {
+          "type": "boolean",
+          "description": "Remise du certificat d'immatriculation aux forces de l'ordre."
+        },
+        "retrait_du_titre": {
+          "type": "boolean",
+          "description": "Retrait de l'autorisation de circuler du véhicule."
+        }
+      }
+    },
+    "resp-suspensions": {
+      "type": "array",
+      "description": "Liste des suspensions en cours sur le véhicule.",
+      "items": {
+        "$ref": "#/definitions/resp-suspension"
+      }
+    },
+    "resp-declaration_valant_saisie": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "string",
+          "format": "date",
+          "description": "Date de la déclaration valant saisie du véhicule."
+        },
+        "nom_personne_morale": {
+          "type": "string",
+          "description": "Nom de la personne morale ayant effectué la déclaration valant saisie du véhicule."
+        }
+      }
+    },
+    "resp-declarations_valant_saisie": {
+      "type": "array",
+      "description": "Liste des déclarations valant saisie en cours sur le véhicule.",
+      "items": {
+        "$ref": "#/definitions/resp-declaration_valant_saisie"
+      }
+    },
+    "resp-gage": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "string",
+          "format": "date",
+          "description": "Date du gage du véhicule."
+        },
+        "nom_creancier": {
+          "type": "string",
+          "description": "Nom du créancier du gage du véhicule."
+        }
+      }
+    },
+    "resp-gages": {
+      "type": "array",
+      "description": "Liste des gages en cours sur le véhicule.",
+      "items": {
+        "$ref": "#/definitions/resp-gage"
+      }
+    },
+    "resp-ove": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "string",
+          "format": "date",
+          "description": "Date de l'OVE du véhicule."
+        }
+      }
+    },
+    "resp-oves": {
+      "type": "array",
+      "description": "Liste des oppositions en cours dues à un Véhicule Endommagé.",
+      "items": {
+        "$ref": "#/definitions/resp-ove"
+      }
+    },
+    "resp-ovei": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "string",
+          "format": "date",
+          "description": "Date de l'OVEI du véhicule."
+        }
+      }
+    },
+    "resp-oveis": {
+      "type": "array",
+      "description": "Liste des oppositions en cours dues à un véhicule économiquement irréparable.",
+      "items": {
+        "$ref": "#/definitions/resp-ovei"
+      }
+    },
+    "resp-otci": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "string",
+          "format": "date",
+          "description": "Date de l'OTCI du véhicule."
+        }
+      }
+    },
+    "resp-otcis": {
+      "type": "array",
+      "description": "Liste des oppositions au transfert du certificat d'immatriculation en cours.",
+      "items": {
+        "$ref": "#/definitions/resp-otci"
+      }
+    },
+    "resp-otci_pv": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "string",
+          "format": "date",
+          "description": "Date de l'OTCI PV du véhicule."
+        }
+      }
+    },
+    "resp-otcis_pv": {
+      "type": "array",
+      "description": "Liste des oppositions au transfert du certificat d'immatriculation en cours dues à un PV non payé.",
+      "items": {
+        "$ref": "#/definitions/resp-otci_pv"
+      }
+    },
+    "resp-opposition": {
+      "type": "object",
+      "properties": {
+        "oves": {
+          "$ref": "#/definitions/resp-oves"
+        },
+        "oveis": {
+          "$ref": "#/definitions/resp-oveis"
+        },
+        "otcis": {
+          "$ref": "#/definitions/resp-otcis"
+        },
+        "otcis_pv": {
+          "$ref": "#/definitions/resp-otcis_pv"
+        }
+      }
+    },
+    "situation_administrative": {
+      "type": "object",
+      "description": "Liste des anomalies en cours sur le véhicule.",
+      "properties": {
+        "suspensions": {
+          "$ref": "#/definitions/resp-suspensions"
+        },
+        "declarations_valant_saisie": {
+          "$ref": "#/definitions/resp-declarations_valant_saisie"
+        },
+        "gages": {
+          "$ref": "#/definitions/resp-gages"
+        },
+        "opposition": {
+          "$ref": "#/definitions/resp-opposition"
+        }
+      }
+    },
+    "resp-vehicule": {
+      "type": "object",
+      "properties": {
+        "date_mise_a_jour": {
+          "type": "string",
+          "format": "date",
+          "description": "Date de mise à jour de la donnée du rapport HistoVec."
+        },
+        "certificat_immatriculation": {
+          "$ref": "#/definitions/resp-certificat_immatriculation"
+        },
+        "etat": {
+          "$ref": "#/definitions/resp-etat"
+        },
+        "historique": {
+          "$ref": "#/definitions/resp-historique_vehicule"
+        },
+        "import_en_france": {
+          "$ref": "#/definitions/resp-import_en_france"
+        },
+        "situation_administrative": {
+          "$ref": "#/definitions/situation_administrative"
+        }
+      }
+    },
+    "resp-element_historique_controles_techniques": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "string",
+          "format": "date",
+          "description": "Date du contrôle technique."
+        },
+        "nature": {
+          "type": "string",
+          "description": "Code représentant la nature du contrôle technique (pour plus de détail, voir le champ \"nature_libelle\").",
+          "enum": [
+            "VTP",
+            "VTC",
+            "CV",
+            "CVC"
+          ]
+        },
+        "nature_libelle": {
+          "type": "string",
+          "description": "Descriptif textuel de la nature du contrôle technique."
+        },
+        "resultat": {
+          "type": "string",
+          "description": "Code représentant le résultat du contrôle technique (pour plus de détail, voir le champ \"resultat_libelle\").",
+          "enum": [
+            "A",
+            "AP",
+            "S",
+            "SP",
+            "R",
+            "RP",
+            "X"
+          ]
+        },
+        "resultat_libelle": {
+          "type": "string",
+          "description": "Interprétation textuelle du résultat (dépend de la date du contrôle technique)."
+        },
+        "km": {
+          "type": "integer",
+          "description": "Relevé du kilométrage à la date du contrôle technique.",
+          "minimum": 0
+        }
+      }
+    },
+    "resp-historique_controles_techniques": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/resp-element_historique_controles_techniques"
+      }
+    },
+    "resp-controles_techniques": {
+      "type": "object",
+      "properties": {
+        "historique": {
+          "$ref": "#/definitions/resp-historique_controles_techniques"
+        },
+        "date_mise_a_jour": {
+          "type": "string",
+          "format": "date",
+          "description": "Date de mise à jour de la donnée des contrôles techniques."
+        }
+      }
+    },
+    "ReportResponse": {
+      "type": "object",
+      "properties": {
+        "vehicule": {
+          "$ref": "#/definitions/resp-vehicule"
+        },
+        "controles_techniques": {
+          "$ref": "#/definitions/resp-controles_techniques"
+        }
+      }
+    },
+    "prenoms": {
+      "type": "array",
+      "description": "Prénoms tels que renseignés sur le certificat d'immatriculation. Renseigner un prénom par élément de liste.",
+      "items": {
+        "type": "string",
+        "x-convert": {
+          "trim": true
+        }
+      }
+    },
+    "particulier": {
+      "type": "object",
+      "description": "Remplir cette partie UNIQUEMENT si le véhicule appartient à un particulier.",
+      "properties": {
+        "nom": {
+          "type": "string",
+          "description": "Nom tel que renseigné sur le certificat d'immatriculation.",
+          "x-convert": {
+            "trim": true
+          }
+        },
+        "prenoms": {
+          "$ref": "#/definitions/prenoms"
+        }
+      }
+    },
+    "personne_morale": {
+      "type": "object",
+      "description": "Remplir cette partie UNIQUEMENT si le véhicule appartient à une personne morale.",
+      "properties": {
+        "raison_sociale": {
+          "type": "string",
+          "description": "Raison sociale telle que renseignée sur le certificat d'immatriculation.",
+          "x-convert": {
+            "trim": true
+          }
+        },
+        "siren": {
+          "type": "string",
+          "description": "Numéro de SIREN tel que renseigné sur le KBIS de l'entreprise. Si vous êtes une personne morale sans SIREN, ne le remplissez pas.",
+          "default": "000000000",
+          "pattern": "^\\d{9}$"
+        }
+      }
+    },
+    "titulaire": {
+      "type": "object",
+      "properties": {
+        "particulier": {
+          "$ref": "#/definitions/particulier"
+        },
+        "personne_morale": {
+          "$ref": "#/definitions/personne_morale"
+        }
+      }
+    },
+    "certificat_immatriculation": {
+      "type": "object",
+      "properties": {
+        "titulaire": {
+          "$ref": "#/definitions/titulaire"
+        },
+        "numero_immatriculation": {
+          "type": "string",
+          "description": "Numéro d'immatriculation tel que renseigné sur le certificat d'immatriculation.",
+          "pattern": "^\\s*[0-9]{2,4}(-|\\s+)?[a-zA-Z]{2,3}(-|\\s+)?([0-9]{2,3}|2A|2B)\\s*$|^[a-zA-Z]{1,2}(-|\\s+)?[0-9]{2,3}(-|\\s+)?[a-zA-Z]{1,2}$"
+        },
+        "numero_formule": {
+          "type": "string",
+          "description": "Numéro de formule tel que renseigné sur le certificat d'immatriculation. Remplir UNIQUEMENT si le véhicule possède un numéro d'immatriculation au format SIV.",
+          "pattern": "^(\\d{2,4}[a-zA-Z]{2}\\d{5})$"
+        },
+        "date_emission_certificat_immatriculation": {
+          "type": "string",
+          "format": "date",
+          "description": "Date d'émission du certificat d'immatriculation telle que renseignée sur le certificat d'immatriculation. Remplir UNIQUEMENT si le véhicule possède un numéro d'immatriculation au format FNI."
+        }
+      },
+      "required": [
+        "numero_immatriculation"
+      ]
+    },
+    "vehicule_by_data": {
+      "type": "object",
+      "properties": {
+        "certificat_immatriculation": {
+          "$ref": "#/definitions/certificat_immatriculation"
+        }
+      }
+    },
+    "controles_techniques_option_by_data": {
+      "type": "object",
+      "properties": {
+        "controles_techniques": {
+          "type": "boolean",
+          "description": "Récupérer les contrôles techniques du véhicule dans le rapport HistoVec. Désactivé par défaut."
+        }
+      }
+    },
+    "Report_by_data_payload": {
+      "type": "object",
+      "properties": {
+        "vehicule": {
+          "$ref": "#/definitions/vehicule_by_data"
+        },
+        "options": {
+          "$ref": "#/definitions/controles_techniques_option_by_data"
+        }
+      }
+    }
+  }
+}

@@ -258,6 +258,10 @@
     - type: ADD_API
       what: Qualité de l'eau potable par Hub'eau
       path: /les-api/api_hubeau_eaupotable
+  12:
+    - type: ADD_API
+      what: API Historique d'un véhicule par le Ministère de l'Intérieur
+      path: /les-api/api-historique-vehicule
     - type: ADD_API
       what: CVEC par le CNOUS
     - type: ADD_API
