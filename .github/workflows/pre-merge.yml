@@ -7,7 +7,7 @@ on:
     branches: [master]
 
 env:
-  node-version: [16.x]
+  node-version: 16.x
 
 jobs:
   dependencies:
