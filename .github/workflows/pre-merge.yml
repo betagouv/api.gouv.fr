@@ -26,6 +26,7 @@ jobs:
         env:
           cache-name: cache-node-modules
         with:
+          # Cache node_modules. To cache global, you may try ~/.npm
           path: ./node_modules
           key: ${{ runner.os }}-npm-cache-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
