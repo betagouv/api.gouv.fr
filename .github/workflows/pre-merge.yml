@@ -6,21 +6,20 @@ on:
   pull_request:
     branches: [master]
 
+env:
+  node-version: [16.x]
+
 jobs:
   dependencies:
     name: 'Install dependencies'
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [16.x]
-
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js ${{ env.node-version }}
         uses: actions/setup-node@v2
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: ${{ env.node-version }}
       - run: npm i
       - name: Cache node modules
         uses: actions/cache@v2
@@ -31,26 +30,22 @@ jobs:
           # npm cache files are stored in `~/.npm` on Linux/macOS
           path: ~/.npm
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
-          # restore-keys: |
-          #   ${{ runner.os }}-build-${{ env.cache-name }}-
-          #   ${{ runner.os }}-build-
-          #   ${{ runner.os }}-
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
 
   lint:
     name: Lint
     runs-on: ubuntu-latest
     needs: [dependencies]
 
-    strategy:
-      matrix:
-        node-version: [16.x]
-
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js ${{ env.node-version }}
         uses: actions/setup-node@v2
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: ${{ env.node-version }}
       - name: Load node modules
         uses: actions/cache@v2
         id: restore-dependencies
@@ -66,17 +61,12 @@ jobs:
     name: 'No link to datapass-staging'
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [16.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js ${{ env.node-version }}
         uses: actions/setup-node@v2
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: ${{ env.node-version }}
       - run: npm run check-no-datapass-staging
 
   build:
@@ -84,16 +74,12 @@ jobs:
     runs-on: ubuntu-latest
     needs: [dependencies]
 
-    strategy:
-      matrix:
-        node-version: [16.x]
-
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js ${{ env.node-version }}
         uses: actions/setup-node@v2
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: ${{ env.node-version }}
       - name: Load node modules
         uses: actions/cache@v2
         id: restore-dependencies
@@ -115,16 +101,12 @@ jobs:
     runs-on: ubuntu-latest
     needs: [dependencies]
 
-    strategy:
-      matrix:
-        node-version: [16.x]
-
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js ${{ env.node-version }}
         uses: actions/setup-node@v2
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: ${{ env.node-version }}
       - name: Load node modules
         uses: actions/cache@v2
         id: restore-dependencies
