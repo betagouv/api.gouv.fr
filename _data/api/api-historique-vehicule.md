@@ -2,33 +2,7 @@
 title: API Historique d'un véhicule (HistoVec)
 tagline: Permettre aux vendeurs et loueurs de véhicules de partager l'historique d'un véhicule.
 external_site: https://histovec.interieur.gouv.fr/histovec/
-is_open: -1 # -1 means API not open
-#datapass_link: 
-access_page: 
-  - who:
-      - Un particulier
-    is_eligible: -1
-    description: |
-      Les particuliers peuvent accéder à l'historique de leur véhicule à partir du service en ligne proposé sur le site HistoVec.
-
-      <Button href="https://histovec.interieur.gouv.fr/histovec">Accéder au service Histovec</Button>
-  - who:
-      - Une entreprise
-    is_eligible: 0
-    description: |
-      Les entreprises et plateformes de vente ou de location de véhicules peuvent utiliser l'API Histovec. Les titulaires du véhicule doivent renseigner un identifiant, récupéré sur le portail HistoVec afin de permettre à l'API de renvoyer l'historique du Véhicule.
-
-      <NextSteps />
-      <Button href="https://datapass.api.gouv.fr">Remplir une demande</Button>
-  - who:
-      - Une plateforme de vente ou location de véhicules entre particuliers
-    is_eligible: 1
-    description: |
-      Les entreprises et plateformes de vente ou de location de véhicules peuvent utiliser l'API Histovec. Les titulaires du véhicule doivent renseigner un identifiant, récupéré sur le portail HistoVec afin de permettre à l'API de renvoyer l'historique du Véhicule.
-
-      <NextSteps />
-      <Button href="https://datapass.api.gouv.fr">Remplir une demande</Button>
-#partners:
+is_open: 1  
 producer: ministere-interieur
 keywords:
   - Vehicule
@@ -45,8 +19,7 @@ keywords:
 themes:
   - Particulier
   - Entreprise
-#uptime: 
-#contact_link: 
+contact_link: contact-api-histovec@interieur.gouv.fr
 doc_tech_link: /swaggers/api-historique-vehicule.json
 last_update: 27/09/2021
 ---
