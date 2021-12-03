@@ -27,7 +27,7 @@ jobs:
           cache-name: cache-node-modules
         with:
           # npm cache files are stored in `~/.npm` on Linux/macOS
-          path: ~/.npm
+          path: ./node_modules
           key: ${{ runner.os }}-npm-cache-${{ github.sha }}-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-npm-cache-${{ github.sha }}-
@@ -87,11 +87,8 @@ jobs:
           cache-name: cache-node-modules
         with:
           # npm cache files are stored in `~/.npm` on Linux/macOS
-          path: ~/.npm
+          path: ./node_modules
           key: ${{ runner.os }}-npm-cache-${{ github.sha }}-${{ hashFiles('**/package-lock.json') }}
-      - run: ls -al ~/.npm
-      - run: npm i
-      - run: ls -al ~/.npm
       - run: npm run build
       - uses: actions/cache@v2
         id: restore-build
