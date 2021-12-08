@@ -5,6 +5,7 @@ name: 'Pre merge checks'
 on:
   pull_request:
     branches: [master]
+  workflow_dispatch:
 
 env:
   node-version: 16.x
