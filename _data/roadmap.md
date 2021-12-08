@@ -255,9 +255,13 @@
     - type: ADD_API
       what: Terminologies de Santé par l'Agence du Numérique en Santé
       path: /les-api/api-terminologies-sante
+  12:
     - type: ADD_API
       what: Qualité de l'eau potable par Hub'eau
       path: /les-api/api_hubeau_eaupotable
+    - type: ADD_API
+      what: Statut étudiant - écriture, par le MESRI
+      path: /les-api/api-statut-etudiant-ecriture
     - type: ADD_API
       what: CVEC par le CNOUS
     - type: ADD_API
@@ -265,6 +269,6 @@
     - type: ADD_API
       what: Déclaration préalable à l'embauche par l'Urssaf
     - type: ADD_API
-      what: Liste des organismes de formation par la DGEFP 
-      
+      what: Liste des organismes de formation par la DGEFP   
+       
 ---
