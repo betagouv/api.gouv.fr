@@ -28,6 +28,9 @@
       what: Ingres Noyau
       path: /les-api/API_Ingres_Noyau
     - type: ADD_API
+      what: Ingres Nomenclatures
+      path: /les-api/API_Ingres_Nomenclatures
+    - type: ADD_API
       what: Répertoire National des Associations
       path: /les-api/api_rna
   7:

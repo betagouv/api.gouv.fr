@@ -1,0 +1,798 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Api Ingres Noyau",
+    "description": "L’API Noyau permet d’accéder aux fichiers de diffusion XML et Excel des nomenclatures noyau gérées dans l’application Ingres du CISIRH, soit plus de 350 nomenclatures accessibles. Vous pouvez [ici voir les limites actuelles et évolutions futures de l'API](https://api.gouv.fr/les-api/API_Ingres_Noyau) Dans le cadre du programme de modernisation de la chaine RH– Paye - Post-Paye de l’état, le CISIRH développe des outils visant à permettre la convergence des SIRH ministériels et le bon fonctionnement de la chaîne dans son ensemble.\nLes référentiels disponibles dans l’INstrument de Gestion des REferentielS RH (INGRES) assurent la qualité, la conformité et l’homogénéité des données utilisées. En « cible », Ingres doit garantir la mise à disposition des référentiels communs et faciliter les échanges avec les ministères et l’ensemble de la chaîne RH.\nIngres s'adresse aux services RH des ministères et aux directions de tutelle (DGAFP, DB, DGFiP) pour la consultation et la validation du contenu des référentiels, mais également aux équipes projets des ministères qui consultent et intègrent les informations dans les SIRH ou autres applications de la chaîne RH/Paye (ex : application de gestion des concours GRECO).\nIngres est une base de connaissance conforme à la réglementation et un outil de référence pour alimenter les SIRH ministériels qui permet :\nde disposer de la totalité du Dictionnaire des données ;\nd'accéder à la totalité du référentiel de paye (interministériel et ministériel) : consultation dans un même outil des fiches des référentiels de paye des ministères et des barèmes réglementaires afférents ;\nde consulter une base documentaire fiable et à jour de la réglementation avec des liens directs vers Légifrance et la Base de données Juridiques de la Fonction Publique (BJFP) ;\nd’extraire des rapports nécessaires au suivi et à la validation du contenu des référentiels ;\nd’intégrer des flux permettant une mise à jour automatisée des référentiels dans les SIRH.\nIngres est aussi un outil de la veille réglementaire effectuée par le CISIRH.\nIngres n’est pas un système d’information décisionnel. Il ne contient pas de données personnelles.\nINGRES comporte de nombreux domaines : Référentiel de Paye (RDP), Référentiels de Classification Centraux (RCC), Nomenclatures (Noyau, Fichier GEST, FIP) Nomenclatures externes  (HEXAPOSTE, TABANK etc.), Dictionnaire des données, Bibliothèque des actes, Règles de Gestion RH, Référentiel des textes et API.\nINGRES est une application qui s’enrichit constamment. Elle s’adapte régulièrement aux besoins des utilisateurs ministériels par une maintenance au fil de l’eau, et le développement de nouvelles fonctionnalités en mode projet sur des  thématiques priorisées avec nos clients, telles que l’évolution de la bibliothèque des actes au format de la Suite 9 HRa, l’enrichissement des RCC (durée de stage, codes ADAGE, …), la refonte des fiches RDP, etc…",
+    "termsOfService": "No",
+    "contact": {
+      "email": "api.cisirh@finances.gouv.fr"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://api.aife.economie.gouv.fr/cisirh/ingres-noyau/v2"
+    }
+  ],
+  "x-apiVersion": "2.0",
+  "paths": {
+    "/nomenclatures/ping": {
+      "get": {
+        "description": "Healthcheck de l'API",
+        "tags": [
+          "HealthCheck"
+        ],
+        "responses": {
+          "200": {
+            "description": "Statut de santé de l'API"
+          }
+        }
+      }
+    },
+    "/diffusions": {
+      "get": {
+        "summary": "Liste des versions diffusions",
+        "description": "Liste les versions de diffusions disponibles",
+        "operationId": "listeDiffusions",
+        "tags": [
+          "Diffusions"
+        ],
+        "responses": {
+          "200": {
+            "description": "Liste les versions de diffusions disponibles",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/versionDiffusion"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Aucune version de diffusion n'est disponible",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error404"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erreur serveur",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error500"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/diffusions/{version}": {
+      "get": {
+        "summary": "Liste des formats Noyau",
+        "description": "Liste les formats Noyaux disponibles d'une version de diffusion",
+        "operationId": "listeVersionsDiffusions",
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "description": "Version de la diffusion",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^\\d{2}\\.\\d{2}\\.\\d{2}$|^HORSVERS$"
+            }
+          }
+        ],
+        "tags": [
+          "Diffusions"
+        ],
+        "responses": {
+          "200": {
+            "description": "Liste de formats Noyau",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/formatNoyau"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Aucune aucun format Noyau n'est disponible pour cette version de diffusion",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error404"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erreur serveur",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error500"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/diffusions/{version}/{formatNoyau}": {
+      "get": {
+        "summary": "Liste des types Diffusion",
+        "description": "Liste les types de diffusions disponibles d'un format Noyau",
+        "operationId": "listeTypesDiffusion",
+        "tags": [
+          "Diffusions"
+        ],
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "description": "Version de la diffusion",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^\\d{2}\\.\\d{2}\\.\\d{2}$|^HORSVERS$"
+            }
+          },
+          {
+            "name": "formatNoyau",
+            "in": "path",
+            "description": "format noyau de la version de diffusion",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^\\d{2}\\.\\d{2}\\.\\d{2}$"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Liste de types Diffusion",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/typeDiffusion"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Aucun type diffusion n'est disponible pour ce format Noyau",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error404"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erreur serveur",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error500"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/diffusions/{version}/{formatNoyau}/{typeDiffusion}": {
+      "get": {
+        "summary": "Liste des nomenclatures",
+        "description": "Liste les nomenclatures d'un type de diffusion",
+        "operationId": "listeNomenclatures",
+        "tags": [
+          "Diffusions"
+        ],
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "description": "Version de la diffusion",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^\\d{2}\\.\\d{2}\\.\\d{2}$|^HORSVERS$"
+            }
+          },
+          {
+            "name": "formatNoyau",
+            "in": "path",
+            "description": "format noyau de la version de diffusion",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^\\d{2}\\.\\d{2}\\.\\d{2}$"
+            }
+          },
+          {
+            "name": "typeDiffusion",
+            "in": "path",
+            "description": "type de diffusion du format noyau de la version de diffusion",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^differentielle$|^complete$"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Liste de nomenclatures",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/nomenclatureDiffusion"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Aucune nomenclature n'est disponible pour ce type diffusion",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error404"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erreur serveur",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error500"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/diffusions/{version}/{formatNoyau}/{typeDiffusion}/{nomenclature}": {
+      "get": {
+        "summary": "Récupère une nomenclature",
+        "description": "Récupère une nomenclature au format XML",
+        "operationId": "getNomenclature",
+        "tags": [
+          "Diffusions"
+        ],
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "description": "Version de la diffusion",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^\\d{2}\\.\\d{2}\\.\\d{2}|HORSVERS$"
+            }
+          },
+          {
+            "name": "formatNoyau",
+            "in": "path",
+            "description": "format noyau de la version de diffusion",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^\\d{2}\\.\\d{2}\\.\\d{2}$"
+            }
+          },
+          {
+            "name": "typeDiffusion",
+            "in": "path",
+            "description": "type de diffusion du format noyau de la version de diffusion",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^differentielle$|^complete$"
+            }
+          },
+          {
+            "name": "nomenclature",
+            "in": "path",
+            "description": "nomenclature recherchée",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "[A-Z|1-9]+(_[A-Z|1-9]+)*$"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Description de la nomenclature au format XML",
+            "content": {
+              "application/xml": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Aucune nomenclature n'est disponible pour ce type diffusion",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error404"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erreur serveur",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error500"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/diffusions/{version}/{formatNoyau}/{typeDiffusion}/{nomenclature}/xml": {
+      "get": {
+        "summary": "Récupère une nomenclature",
+        "description": "Récupère une nomenclature au format XML",
+        "operationId": "getNomenclatureXml",
+        "tags": [
+          "Diffusions"
+        ],
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "description": "Version de la diffusion",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^\\d{2}\\.\\d{2}\\.\\d{2}$|^HORSVERS$"
+            }
+          },
+          {
+            "name": "formatNoyau",
+            "in": "path",
+            "description": "format noyau de la version de diffusion",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^\\d{2}\\.\\d{2}\\.\\d{2}$"
+            }
+          },
+          {
+            "name": "typeDiffusion",
+            "in": "path",
+            "description": "type de diffusion du format noyau de la version de diffusion",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^differentielle$|^complete$"
+            }
+          },
+          {
+            "name": "nomenclature",
+            "in": "path",
+            "description": "nomenclature recherchée",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^[A-Z\\d]+(_[A-Z\\d])*$"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Description de la nomenclature au format XML",
+            "content": {
+              "application/xml": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Aucune nomenclature n'est disponible pour ce type diffusion",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error404"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erreur serveur",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error500"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/diffusions/{version}/{formatNoyau}/{typeDiffusion}/{nomenclature}/xls": {
+      "get": {
+        "summary": "Récupère une nomenclature",
+        "description": "Récupère une nomenclature au format XLS",
+        "operationId": "getNomenclatureXls",
+        "tags": [
+          "Diffusions"
+        ],
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "description": "Version de la diffusion",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^\\d{2}\\.\\d{2}\\.\\d{2}$|^HORSVERS$"
+            }
+          },
+          {
+            "name": "formatNoyau",
+            "in": "path",
+            "description": "format noyau de la version de diffusion",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^\\d{2}\\.\\d{2}\\.\\d{2}$"
+            }
+          },
+          {
+            "name": "typeDiffusion",
+            "in": "path",
+            "description": "type de diffusion du format noyau de la version de diffusion",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^differentielle$|^complete$"
+            }
+          },
+          {
+            "name": "nomenclature",
+            "in": "path",
+            "description": "nomenclature recherchée",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^[A-Z\\d]+(_[A-Z\\d])*$"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Description de la nomenclature au format XLS",
+            "content": {
+              "application/xls": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Aucune nomenclature n'est disponible pour ce type diffusion",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error404"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erreur serveur",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error500"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/diffusions/{version}/{formatNoyau}/{typeDiffusion}/{nomenclature}/json": {
+      "get": {
+        "summary": "Récupère une nomenclature",
+        "description": "Récupère une nomenclature au format JSON",
+        "operationId": "getNomenclatureJson",
+        "tags": [
+          "Diffusions"
+        ],
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "description": "Version de la diffusion",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^\\d{2}\\.\\d{2}\\.\\d{2}$|^HORSVERS$"
+            }
+          },
+          {
+            "name": "formatNoyau",
+            "in": "path",
+            "description": "format noyau de la version de diffusion",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^\\d{2}\\.\\d{2}\\.\\d{2}$"
+            }
+          },
+          {
+            "name": "typeDiffusion",
+            "in": "path",
+            "description": "type de diffusion du format noyau de la version de diffusion",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^differentielle$|^complete$"
+            }
+          },
+          {
+            "name": "nomenclature",
+            "in": "path",
+            "description": "nomenclature recherchée",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^[A-Z\\d]+(_[A-Z\\d])*$"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Description de la nomenclature au format JSON",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Aucune nomenclature n'est disponible pour ce type diffusion",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error404"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erreur serveur",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error500"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/diffusions/{version}/{formatNoyau}/{typeDiffusion}/export": {
+      "get": {
+        "summary": "Export des nomenclatures",
+        "description": "Export de toutes les nomenclatures au format xml disponibles d'un type noyau dans un fichier .zip",
+        "operationId": "exportNomenclatures",
+        "tags": [
+          "Diffusions"
+        ],
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "description": "Version de la diffusion",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^\\d{2}\\.\\d{2}\\.\\d{2}|HORSVERS$"
+            }
+          },
+          {
+            "name": "formatNoyau",
+            "in": "path",
+            "description": "format noyau de la version de diffusion",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^\\d{2}\\.\\d{2}\\.\\d{2}$"
+            }
+          },
+          {
+            "name": "typeDiffusion",
+            "in": "path",
+            "description": "type de diffusion du format noyau de la version de diffusion",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^differentielle$|^complete$"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ".zip des nomenclatures au format .xml au type de diffusion",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/exportNomenclature"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Aucune nomenclatures disponible pour ce type diffusion",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error404"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erreur serveur",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error500"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "diffusion": {
+        "type": "string",
+        "description": "Numéro de la version.",
+        "example": "HORSVERS"
+      },
+      "versionDiffusion": {
+        "type": "string",
+        "description": "Numéro du format Noyau.",
+        "example": "21.00.00"
+      },
+      "formatNoyau": {
+        "type": "string",
+        "description": "Numéro du type diffusion.",
+        "example": "complete"
+      },
+      "typeDiffusion": {
+        "type": "string",
+        "description": "Numéro du format Noyau.",
+        "example": "complete"
+      },
+      "nomenclatureDiffusion": {
+        "type": "object",
+        "required": [
+          "identifiant",
+          "numero"
+        ],
+        "properties": {
+          "identifiant": {
+            "type": "string",
+            "description": "Le nom de la nomenclature.",
+            "example": "AFCT_PPL"
+          },
+          "numero": {
+            "type": "string",
+            "description": "Le numéro de la nomenclature.",
+            "example": 138
+          }
+        }
+      },
+      "exportNomenclature": {
+        "description": "fichier zip de nomenclatures",
+        "type": "string",
+        "format": "binary"
+      },
+      "Error404": {
+        "type": "object",
+        "required": [
+          "code",
+          "message"
+        ],
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "Code retour d'erreur",
+            "example": 404
+          },
+          "message": {
+            "type": "string",
+            "description": "description de l'erreur",
+            "example": "Aucune version de diffusion n'a été trouvée"
+          }
+        }
+      },
+      "Error500": {
+        "type": "object",
+        "required": [
+          "code",
+          "message",
+          "detailedMessage"
+        ],
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "Code retour d'erreur",
+            "example": 500
+          },
+          "message": {
+            "type": "string",
+            "description": "description de l'erreur",
+            "example": "Internal Server Error : Lecture impossible du dossier pour /diffusions/HORSVERS/17.00.00/complete/CORPS"
+          },
+          "detailedMessage": {
+            "type": "string",
+            "description": "description détaillée de l'erreur",
+            "example": "/data/ingres/production/HORSVERS/17.00.00/complete | Erreur Scandir ENOENT: Le chemin d'accès est introuvable"
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Diffusions",
+      "description": "null"
+    },
+    {
+      "name": "HealthCheck",
+      "description": "Méthode de santé de l'API. Vérification de son bon fonctionnement ainsi que retour d'utilisation système"
+    },
+    {
+      "name": "Errors",
+      "description": "Erreurs d'api"
+    }
+  ]
+}

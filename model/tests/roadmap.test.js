@@ -24,6 +24,7 @@ test('All Apis appear in Roadmap', async () => {
 
 const oldAPIs = [
   'API Ingres Nomenclatures',
+  'API Ingres Noyau',
   'Légifrance Bêta',
   'API La Bonne Boite',
   'API Référentiel SANDRE Version 1',
