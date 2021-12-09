@@ -42,7 +42,7 @@ const teamData = [
   },
   {
     name: 'Xavier Jouppe',
-    title: 'Api.gouv.fr',
+    title: 'Annuaire des Entreprises',
     linkedin: 'https://www.linkedin.com/in/xavier-jouppe-a9030579/',
     img: 'Xavier.jpg',
   },
@@ -88,6 +88,24 @@ const teamData = [
     title: 'Designeuse produit',
     linkedin: 'https://www.linkedin.com/in/dorine-lambinet-99534b117/',
     img: 'Dorine.jpg',
+  },
+  {
+    name: 'Nicolas Lambinet',
+    title: 'Datapass',
+    linkedin: 'https://www.linkedin.com/in/nicolas-schweisguth-a374744b/',
+    img: 'Nicolas.jpg',
+  },
+  {
+    name: 'Hajar Ait El Kadi',
+    title: 'Annuaire des Entreprises',
+    linkedin: 'https://www.linkedin.com/in/hajaraitelkadi/',
+    img: 'Hajar.jpg',
+  },
+  {
+    name: 'Anais Tailhade',
+    title: 'Datapass',
+    linkedin: 'https://www.linkedin.com/in/anais-tailhade-596b95225/',
+    img: 'Anais.jpg',
   },
 ];
 
