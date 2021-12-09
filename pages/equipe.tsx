@@ -90,7 +90,7 @@ const teamData = [
     img: 'Dorine.jpg',
   },
   {
-    name: 'Nicolas Lambinet',
+    name: 'Nicolas Schweisguth',
     title: 'Datapass',
     linkedin: 'https://www.linkedin.com/in/nicolas-schweisguth-a374744b/',
     img: 'Nicolas.jpg',
