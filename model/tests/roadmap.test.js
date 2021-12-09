@@ -54,7 +54,7 @@ const oldAPIs = [
   'API Chorus Pro',
   'FranceConnect et les API FranceConnectées',
   'API Indicateur de Fréquences de Traitements phytopharmaceutiques',
-  'le.Taxi',
+  'le.taxi',
   'OpenFisca',
   'API RVA Rennes Métropole',
   'API travaux Rennes Métropole',
