@@ -255,6 +255,7 @@
     - type: ADD_API
       what: Terminologies de Santé par l'Agence du Numérique en Santé
       path: /les-api/api-terminologies-sante
+  12:
     - type: ADD_API
       what: Statut demandeur d'emploi par Pôle Emploi
       path: /les-api/api-statut-demandeur-emploi
