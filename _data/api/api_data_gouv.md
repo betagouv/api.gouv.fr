@@ -21,7 +21,7 @@ themes:
   - Géographie
   - Particulier
   - Transport
-contact_link: support@data.gouv.fr
+contact_link: https://support.data.gouv.fr/
 doc_tech_link: https://www.data.gouv.fr/api/1/swagger.json
 doc_tech_external: https://doc.data.gouv.fr/api/reference/
 datagouv_uuid:
