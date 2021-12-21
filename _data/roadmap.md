@@ -261,6 +261,10 @@
     - type: ADD_API
       what: Qualité de l'eau potable par Hub'eau
       path: /les-api/api_hubeau_eaupotable
+  12:
+    - type: ADD_API
+      what: Structures de l'inclusion par le Ministère du Travail, de l'Emploi et de l'Insertion
+      path: /les-api/api-structures-inclusion
     - type: ADD_API
       what: CVEC par le CNOUS
     - type: ADD_API
