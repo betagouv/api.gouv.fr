@@ -45,7 +45,7 @@ L'API référence toutes les entreprises sociales inclusives.
 **Handicap :**
 
 - Entreprises adaptées,
-- Entreprises adapptées de travail temporaire
+- Entreprises adaptées de travail temporaire
 - Etablissements et services d'aides par le travail
 
 ### Quelles sont les données contenues dans l'API Structures de l'inclusion ?
@@ -58,6 +58,6 @@ On retrouve - entre autres - pour chaque dispositif d'aide répertorié :
 | brand                 | Nom commercial                     |
 | siret                 | Numéro de siret de la structure    |
 | offers                | Offres proposées par la structure  |
-| sectors               | Secteurs d'activités               |
+| sectors               | Secteurs d'activité                |
 | networks              | Liens avec les différents réseaux  |
 | labels                | Labels de la structure             |
