@@ -50,7 +50,7 @@ const ApiOpenDataSources: React.FC<{ datasetsList: IDataGouvDataset[] }> = ({
 }) => {
   const uniq = datasetsList.length === 1;
   return (
-    <Section id="api-open-data-sources" title="Source de données ouverte">
+    <Section id="api-open-data-sources" title="Source de données ouvertes">
       <div>
         Cette API se base sur{' '}
         {uniq
