@@ -13,7 +13,7 @@ access_page:
       <NextSteps />
       <Button href="https://datapass.api.gouv.fr/le-taxi-chauffeurs">Remplir une demande</Button>
   - who:
-      - Application de mobilité (pro et grand public)
+      - Application de mobilité
     is_eligible: 1
     description: |
       Vous pouvez remplir une demande d’accès à l’API le.taxi dans le cadre des articles [L. 3121-11-1](https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000029528684&cidTexte=LEGITEXT000023086525) et [R3121-24 à R3121-33](https://www.legifrance.gouv.fr/affichCode.do?idSectionTA=LEGISCTA000032278146&cidTexte=LEGITEXT000023086525) du Code des transports.
@@ -28,6 +28,13 @@ access_page:
       
       <NextSteps />
       <Button href="https://datapass.api.gouv.fr/le-taxi-clients">Remplir une demande</Button>
+  - who:
+      - Un éditeur logiciel pour les flottes de taxis
+    is_eligible: 0
+    description: |
+      Prenez contact avec nous directement. Les éditeurs logiciels qui équipent les flottes de taxis ont un statut spécifique sur notre API (manager de flotte).
+      Ecrivez-nous à equipe@le.taxi en nous présentant votre structure et nous reviendrons très rapidement vers vous.
+      <Button href="mailto:equipe@le.taxi">Nous écrire</Button>
   - who:
       - Artisan taxi
     is_eligible: -1
