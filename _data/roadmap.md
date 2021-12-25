@@ -266,6 +266,9 @@
       what: Structures de l'inclusion par le Ministère du Travail, de l'Emploi et de l'Insertion
       path: /les-api/api-structures-inclusion
     - type: ADD_API
+      what: Conventions collectives par le Ministère du Travail, de l'Emploi et de l'Insertion
+      path: /les-api/api-conventions-collectives 
+    - type: ADD_API
       what: CVEC par le CNOUS
     - type: ADD_API
       what: Attestation Codes Sécurité par l'Urssaf
