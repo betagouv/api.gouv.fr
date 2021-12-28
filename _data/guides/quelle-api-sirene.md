@@ -64,7 +64,7 @@ Ensuite chaque API se différencie par ses limites d'utilisation et les traiteme
 | API            | API Sirene données ouvertes                                                             | API Sirene de l'INSEE                                                                                                         | API Entreprise                                                                   |
 | -------------- | --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
 | Limite d’usage | Totalement ouverte ([accéder à la documentation](/les-api/api-sirene-donnees-ouvertes)) | Nécessite un compte ([se créer un compte](https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/sign-up.jag)) | Sous habilitation ([voir les conditions](/les-api/api-entreprise/demande-acces)) |
-| Limite d’appel | 7 appels par secondes                                                                   | 30 appels par minute                                                                                                          | 2000 appels par 10 minutes                                                       |
+| Limite d’appel | 7 appels par seconde                                                                   | 30 appels par minute                                                                                                          | 2000 appels par 10 minutes                                                       |
 
 ### Deuxième différence : les données disponibles
 
