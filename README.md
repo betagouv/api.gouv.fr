@@ -1,12 +1,8 @@
 # api.gouv.fr
 
-[![Build](https://github.com/betagouv/api.gouv.fr/actions/workflows/build-successful.yml/badge.svg)](https://github.com/betagouv/api.gouv.fr/actions/workflows/build-successful.yml)
-[![Code accessible](https://github.com/betagouv/api.gouv.fr/actions/workflows/check-accessibility.yml/badge.svg)](https://github.com/betagouv/api.gouv.fr/actions/workflows/check-accessibility.yml)
-[![Pas de lien cassé](https://github.com/betagouv/api.gouv.fr/actions/workflows/check-broken-links.yml/badge.svg)](https://github.com/betagouv/api.gouv.fr/actions/workflows/check-broken-links.yml)
-[![Pas de lien vers datapass-staging](https://github.com/betagouv/api.gouv.fr/actions/workflows/no-datapass-staging.yml/badge.svg)](https://github.com/betagouv/api.gouv.fr/actions/workflows/no-datapass-staging.yml)
-[![Code mis en forme](https://github.com/betagouv/api.gouv.fr/actions/workflows/linting.yml/badge.svg)](https://github.com/betagouv/api.gouv.fr/actions/workflows/linting.yml)
-[![Code testé](https://github.com/betagouv/api.gouv.fr/actions/workflows/tests.yml/badge.svg)](https://github.com/betagouv/api.gouv.fr/actions/workflows/tests.yml)
-[![Maintainability](https://api.codeclimate.com/v1/badges/71623eda1dc52631faad/maintainability)](https://codeclimate.com/github/betagouv/api.gouv.fr/maintainability)
+[![Build, lint & tests](https://github.com/betagouv/api.gouv.fr/actions/workflows/pre-merge.yml/badge.svg)](https://github.com/betagouv/api.gouv.fr/actions/workflows/pre-merge.yml)
+[![Accessibilité](https://github.com/betagouv/api.gouv.fr/actions/workflows/check-accessibility.yml/badge.svg)](https://github.com/betagouv/api.gouv.fr/actions/workflows/check-accessibility.yml)
+[![Liens morts](https://github.com/betagouv/api.gouv.fr/actions/workflows/check-broken-links.yml/badge.svg)](https://github.com/betagouv/api.gouv.fr/actions/workflows/check-broken-links.yml)
 
 **api.gouv.fr** catalogue les API produites par les administrations centrales, les
 collectivités territoriales, les établissements publics… Chaque API est
