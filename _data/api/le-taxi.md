@@ -29,7 +29,7 @@ access_page:
       <NextSteps />
       <Button href="https://datapass.api.gouv.fr/le-taxi-clients">Remplir une demande</Button>
   - who:
-      - Un éditeur logiciel pour les flottes de taxis
+      - Editeur logiciel pour les flottes de taxis
     is_eligible: 0
     description: |
       Prenez contact avec nous directement. Les éditeurs logiciels qui équipent les flottes de taxis ont un statut spécifique sur notre API (manager de flotte).
