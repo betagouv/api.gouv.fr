@@ -142,10 +142,7 @@ const Contact: React.FC = () => (
         <p>
           Votre demande concerne une demande d’immatriculation ou de carte
           grise,
-          <a href="https://ants.gouv.fr/Contacter-l-ANTS/Nous-contacter">
-            contactez l’ANTS
-          </a>{' '}
-          .
+          <a href="https://ants.gouv.fr/contactez-nous">contactez l’ANTS</a> .
         </p>
       </div>
     </div>

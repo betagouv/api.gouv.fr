@@ -170,8 +170,8 @@ content_intro: |
 
   Au delà de la simplification apportée aux agents habilités des administrations, l'API Entreprise rend service aux entreprises et associations en leur évitant de chercher leurs documents administratifs et en permettant le pré-remplissage automatique de leurs formulaires.
 
-  L’API permet notamment de simplifier le dépôt et l'instruction des candidatures aux <External href='https://entreprise.api.gouv.fr/use_cases/marches_publics/'>marchés publics</External> et des demandes d'<External href='https://entreprise.api.gouv.fr/use_cases/aides_publiques/'>aides et subventions publiques</External>.
-  <External href='https://entreprise.api.gouv.fr/use_cases/'>Découvrir tous les cas d'usage</External>
+  L’API permet notamment de simplifier le dépôt et l'instruction des candidatures aux <External href='https://entreprise.api.gouv.fr/cas_usage/marches_publics/'>marchés publics</External> et des demandes d'<External href='https://entreprise.api.gouv.fr/cas_usage/aides_publiques/'>aides et subventions publiques</External>.
+  <External href='https://entreprise.api.gouv.fr/cas_usage/'>Découvrir tous les cas d'usage</External>
 ---
 
 ### API accessibles depuis l'API Entreprise
