@@ -1,7 +1,7 @@
 ---
 title: API Ingres - Nomenclatures
 tagline: Récupérez l'ensemble des référentiels utilisés par les Systèmes d'Information des Ressources Humaines de la Fonction Publique d'Etat
-datapass_link: https://datapass.api.gouv.fr/api-ingres-nomenclature 
+datapass_link: https://datapass.api.gouv.fr/api-ingres
 access_page: 
   - who:
       - Un particulier
@@ -23,7 +23,7 @@ access_page:
       Son utilisation par une application tierce ne saurait engager la responsabilité du CISIRH, par exemple, en termes de disponibilité.
 
       <NextSteps />
-      <Button href="https://datapass.api.gouv.fr/api-ingres-nomenclatures">Remplir une demande</Button>
+      <Button href="https://datapass.api.gouv.fr/api-ingres">Remplir une demande</Button>
 extrenal_site: https://pissarho.cisirh.rie.gouv.fr/actualites/ingres/deploiement-de-deux-api-sur-lapplication-ingres
 is_open: -1
 producer: cisirh
