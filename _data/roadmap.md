@@ -268,6 +268,14 @@
     - type: ADD_API
       what: Conventions collectives par le Ministère du Travail, de l'Emploi et de l'Insertion
       path: /les-api/api-conventions-collectives 
+2022:
+  1:
+    - type: ADD_API
+      what: FANTOIR par l'IGN
+      path: /les-api/api-fantoir
+    - type: ADD_API
+      what: Statut étudiant par le Ministère de l'Enseignement Supérieur, de la Recherche et de l'Innovation
+      path: /les-api/api-statut-etudiant
     - type: ADD_API
       what: CVEC par le CNOUS
     - type: ADD_API
@@ -276,13 +284,5 @@
       what: Déclaration préalable à l'embauche par l'Urssaf
     - type: ADD_API
       what: Liste des organismes de formation par la DGEFP 
-2022:
-  1:
-    - type: ADD_API
-      what: FANTOIR par l'IGN
-      path: /les-api/api-fantoir 
-    - type: ADD_API
-      what: Statut étudiant par le Ministère de l'Enseignement Supérieur, de la Recherche et de l'Innovation
-      path: /les-api/api-statut-etudiant
       
 ---
