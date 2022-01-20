@@ -78,13 +78,13 @@ Si vous êtes un établissement, sous tutelle ou non du ministère de l'enseigne
 
 L'API retourne selon le cas :
 
-| Donnée                             | Description                                                                  |
-| ---------------------------------- | ---------------------------------------------------------------------------- |
-| INE                                | Identifiant National de l'étudiant                                           |
-| Inscription en formation continue  | Permet d’interroger les données des étudiants en formation continue. Données : date de début et de fin d'inscription  |
-| Inscriptions en formation initiale | Permet d’interroger les données des étudiants en formation initiale. Données : dates de début et fin d'inscription  |
-| Admissions                         | Limite la recherche aux seuls étudiants admis (non-inscrits)                 |
-| Etablissement                      | Le ou les établissements du lieu d'étude (nom et identifiant de l'établissement)     |
+| Donnée                             | Description                                                                   |
+| ---------------------------------- | ----------------------------------------------------------------------------- |
+| INE                                | Identifiant National de l'étudiant                                            |
+| Inscription en formation continue  | Permet d’interroger les données des étudiants en formation continue. Données : date de début, de fin d'inscription, et code COG de la commune du lieu d'étude    |
+| Inscriptions en formation initiale | Permet d’interroger les données des étudiants en formation initiale. Données : dates de début, fin d'inscription et code COG de la commune du lieu d'étude     |
+| Admissions                         | Limite la recherche aux seuls étudiants admis (non-inscrits)                  |
+| Etablissement                      | Le ou les établissements (nom et  indentifiant - UAI)                         |
 
 ### Modalités d'utilisation des scopes
 
@@ -92,7 +92,7 @@ Vous aurez à sélectionner des scopes de données dans votre demande. Voici leu
 
 Deux scopes sont utilisés comme "masque de données". Ces données ne seront donc pas retournées si le scope n'a pas été sélectionné.
 
-- Etablissements : renvoi le ou les établissements et code COG du lieu d'étude
+- Etablissements : renvoie le ou les établissements et code COG du lieu d'étude
 - INE (Identifiant National Etudiant)
 
 Trois scopes ont été réalisés pour ne travailler que sur une population restreinte
