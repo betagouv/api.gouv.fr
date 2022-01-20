@@ -279,6 +279,9 @@
 2022:
   1:
     - type: ADD_API
+      what: FANTOIR par l'IGN
+      path: /les-api/api-fantoir 
+    - type: ADD_API
       what: Statut étudiant par le Ministère de l'Enseignement Supérieur, de la Recherche et de l'Innovation
       path: /les-api/api-statut-etudiant
       
