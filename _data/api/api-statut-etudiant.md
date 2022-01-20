@@ -21,7 +21,7 @@ access_page:
       - Une entreprise
     is_eligible: 0
     description: |
-      Vous pouvez accéder à l’API uniquement si vous êtes partenaire de France Connect, et pour un cas d’usage autorisé par la loi. Vous devrez fournir le cadre juridique qui vous autorise à utiliser ces données.
+      Vous pouvez accéder à l’API uniquement si vous êtes [partenaire de France Connect](https://franceconnect.gouv.fr/partenaires), et pour un cas d’usage autorisé par la loi. Vous devrez fournir le cadre juridique qui vous autorise à utiliser ces données.
 
       <NextSteps />
       <Button href="https://datapass.api.gouv.fr/api-statut-etudiant">Remplir une demande</Button>
@@ -29,9 +29,11 @@ is_open: -1
 is_france_connected: 1
 producer: mesri
 partners: 
-- Renater
+  - Renater
 keywords:
   - etudiant
+  - identifiant
+  - national
   - enseignement
   - inscription
   - université
@@ -92,20 +94,20 @@ Vous aurez à sélectionner des scopes de données dans votre demande. Voici leu
 
 Deux scopes sont utilisés comme "masque de données". Ces données ne seront donc pas retournées si le scope n'a pas été sélectionné.
 
-- Etablissements : renvoie le ou les établissements et code COG du lieu d'étude
-- INE (Identifiant National Etudiant)
+- "Etablissements" : renvoie le ou les établissements et code COG du lieu d'étude
+- "INE (Identifiant National Etudiant)"
 
 Trois scopes ont été réalisés pour ne travailler que sur une population restreinte
 
-- Admission : si ce scope est sélectionné la recherche de l'étudiant s'effectuera sur la population restreinte aux seuls admis (inscription non-définitive).
-- Inscriptions en formation initiale
-- Inscription en formation continue
+- "Admission" : si ce scope est sélectionné la recherche de l'étudiant s'effectuera sur la population restreinte aux seuls admis (inscription non-définitive).
+- "Inscriptions en formation initiale"
+- "Inscription en formation continue"
 
 Cas d'usage principal :
 Si je souhaite m'assurer que les utilisateurs d'un téléservice sont bien des étudiants de mon département, je coche :
 
-- établissements,
-- Inscriptions en formation initiale,
-- Inscription en formation continue.
+- "établissements",
+- "Inscriptions en formation initiale",
+- "Inscription en formation continue".
 
 Si je souhaitais offrir un service d'assistance personnalisé pour les étudiants seulement admis, il me faudrait utiliser le scope admission.
