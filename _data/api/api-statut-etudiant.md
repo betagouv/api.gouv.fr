@@ -81,7 +81,7 @@ L'API retourne selon le cas :
 | Donnée                             | Description                                                                  |
 | ---------------------------------- | ---------------------------------------------------------------------------- |
 | INE                                | Identifiant National de l'étudiant                                           |
-| Inscription en formation continue  | Permet d’interroger les données des étudiants en formation continue Données : date de début et de fin d'inscription  |
+| Inscription en formation continue  | Permet d’interroger les données des étudiants en formation continue. Données : date de début et de fin d'inscription  |
 | Inscriptions en formation initiale | Permet d’interroger les données des étudiants en formation initiale. Données : dates de début et fin d'inscription  |
 | Admissions                         | Limite la recherche aux seuls étudiants admis (non-inscrits)                 |
 | Etablissement                      | Le ou les établissements et code COG de la commune du lieu d'étude           |
