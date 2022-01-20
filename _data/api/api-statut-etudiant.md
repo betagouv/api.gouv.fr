@@ -24,7 +24,7 @@ access_page:
       Vous pouvez accéder à l’API uniquement si vous êtes partenaire de France Connect, et pour un cas d’usage autorisé par la loi. Vous devrez fournir le cadre juridique qui vous autorise à utiliser ces données.
 
       <NextSteps />
-      <Button href="https://datapass.api.gouv.fr/api-statut-etudiant-fc">Remplir une demande</Button>
+      <Button href="https://datapass.api.gouv.fr/api-statut-etudiant">Remplir une demande</Button>
 is_open: -1
 is_france_connected: 1
 producer: mesri

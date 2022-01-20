@@ -24,7 +24,7 @@ const isFranceConnectedQuestions = {
       {
         choices: ['Oui'],
         answer: `Vous pouvez remplir une demande :
-        <Button href="https://datapass.api.gouv.fr/api-statut-etudiant-fc">Remplir une demande</Button>`,
+        <Button href="https://datapass.api.gouv.fr/api-statut-etudiant">Remplir une demande</Button>`,
       },
       {
         choices: ['Non'],
