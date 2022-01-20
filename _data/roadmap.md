@@ -276,5 +276,10 @@
       what: Déclaration préalable à l'embauche par l'Urssaf
     - type: ADD_API
       what: Liste des organismes de formation par la DGEFP 
+2022:
+  1:
+    - type: ADD_API
+      what: Statut étudiant par le Ministère de l'Enseignement Supérieur, de la Recherche et de l'Innovation
+      path: /les-api/api-statut-etudiant
       
 ---
