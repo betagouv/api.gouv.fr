@@ -48,16 +48,15 @@ L'aide juridictionnelle est une prise en charge par l'État des frais judiciaire
 
 ### Les données disponibles par API FranceConnectées
 
-| Nom                        | Description                                                                                   | API                                                               |
-| -------------------------- | --------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
-| Revenu fiscal de référence | Les revenus déclarés auprès de l'administration fiscale                                       | [API Impôt particulier](/les-api/impot-particulier)               |
-| Adresse fiscale            | L'adresse déclarée auprès de l'administration fiscale                                         | [API Impôt particulier](/les-api/impot-particulier)               |
-| Nombre de parts fiscales   |                                                                                               | [API Impôt particulier](/les-api/impot-particulier)               |
-| bénéficiaires              | Les bénéficiaires de l'individu connecté via FranceConnect                                    | [API de droits Assurance Maladie](/les-api/api_ameli_droits_cnam) |
-| caisse                     | L'organisme de rattachement du bénéficiaire (régime, centre de gestion, adresse de la caisse) | [API de droits Assurance Maladie](/les-api/api_ameli_droits_cnam) |
-| niveau de couverture       | Droits de base, droits à une complémentaire santé solidaire, présence d'un médecin traitant   | [API de droits Assurance Maladie](/les-api/api_ameli_droits_cnam) |
-| motifs d’exonération       | Uniquement accessible aux établissements de soins                                             | [API de droits Assurance Maladie](/les-api/api_ameli_droits_cnam) |
-| médecin traitant           | Uniquement accessible aux établissements de soins                                             | [API de droits Assurance Maladie](/les-api/api_ameli_droits_cnam) |
+| API       | Description                                         |Administration   |
+| --------- | ----------------------------------------------------|-----------------|
+| [API Impôt particulier](https://api.gouv.fr/les-api/impot-particulier)  | Revenus déclarés auprès de l'administration fiscale |DGFiP   |
+| [API Indemnités Journalières](https://api.gouv.fr/les-api/api-indemnites-journalieres-cnam)   | Montant des indemnités journalières de l'Assurance Maladie payé à un assuré sur une période|CNAM |
+| [API de droits à l'Assurance Maladie](https://api.gouv.fr/les-api/api_ameli_droits_cnam) | Droits d’un individu ou d’une famille (enfants rattachés), gérés par le régime général de l’Assurance Maladie |CNAM   |
+| [API Statut étudiant](https://api.gouv.fr/les-api/api-statut-etudiant)| Statut de l’nscription dans un établissement de l’enseignment suprérieur |MESRI   |
+| API Prestations sociales (bientôt disponible)    | Inscription au RSA, bénéficiaires de la CSS (complémentaire sociale solidaire) |DSS |
+| API Statut étudiant boursier (bientôt disponible)| Statut d’étudiant boursier  |CNOUS / MESRI                                          |
+| API Indemnités Pôle Emploi (bientôt disponible)  | Montant des indemnités versée par pôle emploi   |Pôle Emploi                        |
 
 ### Comment ça marche ?
 
@@ -66,26 +65,19 @@ _Schéma de fonctionnement des API FranceConnectées :_
 
 ### La feuille de route des API FranceConnectées
 
-#### 📅 3e trimestre 2021
+#### 📅 2e trimestre 2022
 
-- API Statut Etudiant : _est-ce qu'un particulier est actuellement étudiant, et les dates d'étude associées ?_
-- API Statut Boursier : _est-ce qu'un particulier est actuellement boursier ?_
+- API Statut Demandeur d'emploi : _est-ce qu'un particulier est actuellement demandeur d’emploi ?_
 
-#### 📅 4e trimestre 2021
-
-- API Indemnités Pôle emploi : _quel montant des indemnités Pôle emploi est perçu par un citoyen ?_
-- API Statut complémentaire santé solidaire (ex-CMU) : _est-ce qu'un particulier reçoit la complémentaire santé solidaire ?_
-
-#### 📅 2022
+#### 📅 Fin 2022
 
 - API Quotient Familial CNAF : _quel est le montant du quotient familial d'un particulier ?_
-- API Statut Demandeur d'emploi : _est-ce qu'un particulier est actuellement demandeur d’emploi ?_
 
 ## Comment accéder aux API FranceConnectées ?
 
 Les API FranceConnectées ne sont accessibles qu’aux administrations publiques, collectivités territoriales ou entreprises privées en situation de mission de service public. Elles nécessitent de :
 
-1. Avoir FranceConnect sur son téléservice
+1. Avoir FranceConnect [sur son téléservice](https://franceconnect.gouv.fr/partenaires)
 2. Faire une demande d'accès à l’API FranceConnectée en question
 3. Brancher l’API
 4. 🎉 Commencer à dématérialiser 🥳

@@ -41,6 +41,15 @@ keywords:
   - Authentification
   - Identification
   - SSO
+  - CSS
+  - RSA
+  - Etudiant
+  - DGfiP
+  - Prestations sociales
+  - Chômage
+  - CNAM
+  - MESRI
+  - Boursier
 themes:
   - Particulier
 contact_link: support.partenaires@franceconnect.gouv.fr
@@ -54,12 +63,24 @@ L‘API FranceConnect permet à des administrations, des collectivités ou des e
 
 ### A quoi ca sert ?
 
-- Intégrer le fédérateur d’identité FranceConnect, afin de recueillir des données d’identité vérifiées de vos utilisateurs en vue :
-  - D’une entrée en relation 100% dématérialisée et 100% sécurisée
-  - D’une connexion sans identifiant et mot de passe dédié à votre service
-- Accéder à des données supplémentaires grâce aux [API “FranceConnectées” DGFIP, CNAM, SIV...](#api-franceconnectees)
+Premièrement, à intégrer le fédérateur d’identité FranceConnect, afin de recueillir des données d’identité vérifiées de vos utilisateurs en vue :
+
+- D’une entrée en relation 100% dématérialisée et 100% sécurisée
+- D’une connexion sans identifiant et mot de passe dédié à votre service
+
+Deuxièmement, à accéder à des données supplémentaires grâce aux [API “FranceConnectées” DGFIP, CNAM, SIV...](#api-franceconnectees)
 
 ### Les données disponibles via l'API
+
+| API       | Description                                         |Administration   |
+| --------- | ----------------------------------------------------|-----------------|
+| [API Impôt particulier](https://api.gouv.fr/les-api/impot-particulier)  | Revenus déclarés auprès de l'administration fiscale |DGFiP   |
+| [API Indemnités Journalières](https://api.gouv.fr/les-api/api-indemnites-journalieres-cnam)   | Montant des indemnités journalières de l'Assurance Maladie payé à un assuré sur une période|CNAM |
+| [API de droits à l'Assurance Maladie](https://api.gouv.fr/les-api/api_ameli_droits_cnam) | Droits d’un individu ou d’une famille (enfants rattachés), gérés par le régime général de l’Assurance Maladie |CNAM   |
+| [API Statut étudiant](https://api.gouv.fr/les-api/api-statut-etudiant)| Statut de l’nscription dans un établissement de l’enseignment suprérieur |MESRI   |
+| API Prestations sociales (bientôt disponible)    | Inscription au RSA, bénéficiaires de la CSS (complémentaire sociale solidaire) |DSS |
+| API Statut étudiant boursier (bientôt disponible)| Statut d’étudiant boursier  |CNOUS / MESRI                                          |
+| API Indemnités Pôle Emploi (bientôt disponible)  | Montant des indemnités versée par pôle emploi   |Pôle Emploi                        |
 
 Utiliser l'API FranceConnect pour identifier les utilisateurs de votre site permet également d'accéder à des données d'état civil. C'est ce qu'on appelle **l'identité pivot**.
 
@@ -69,13 +90,6 @@ Utiliser l'API FranceConnect pour identifier les utilisateurs de votre site perm
 | Prénoms   | tous les prénoms de l’état civil |
 | Naissance | date  et lieu (ville/pays)       |
 | Sexe      | Homme / Femme                    |
-
-En plus de cette identité pivot, selon votre cas d'usage, vous pouvez aussi avoir accès aux informations complémentaires :
-
-| Nom          | Description                                                                                                                      |
-| ------------ | -------------------------------------------------------------------------------------------------------------------------------- |
-| adresse mail | l'adresse de courrier électronique qui est enregistrée auprès du fournisseur d'identité choisi par l'usager lors de sa connexion |
-| Nom d'usage  |                                                                                                                                  |
 
 ### Comment ça marche ?
 
