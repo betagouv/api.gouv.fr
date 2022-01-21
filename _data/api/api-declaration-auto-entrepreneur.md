@@ -28,7 +28,7 @@ access_page:
       Vous n'êtes pas autorisé à accéder à ces données.
 
       <Button href="/rechercher-api">Revenir à la recherche</Button>
-contact_link: contact.tiercedeclaration@urssaf.fr
+contact_link: contact-api@urssaf.fr
 doc_tech_link: https://portailapi.urssaf.fr/index.php?option=com_apiportal&view=definition&managerId=1&menuId=181&format=raw&stateReturn=L2ZyLz9JdGVtaWQ9MTgxJmFwaUlkPTI0NzBkZGI1LTIyODYtNGZkNi1hNWI2LTVmNTAwOTM3ZmU5ZCZhcGlOYW1lPUFQSSUyMFRpZXJjZSUyMERlY2xhcmF0aW9uJTIwYXV0by1lbnRyZXByZW5ldXImYXBpVmVyc2lvbj0xLjIuMiZhcGl0YWI9dGVzdHMmbWFuYWdlcklkPTEmbWVudUlkPTE4MSZvcHRpb249Y29tX2FwaXBvcnRhbCZyZW5kZXJUb29sPTImdHlwZT1yZXN0JnVzYWdlPWFwaSZ2aWV3PWFwaXRlc3Rlcg==&path=%2Fdiscovery%2Fswagger%2Fapi%2Fid%2F2470ddb5-2286-4fd6-a5b6-5f500937fe9d%3FswaggerVersion%3D2.0%26filename%3DAPI%2520Tierce%2520Declaration%2520auto-entrepreneur.json%26extensions%3Dfalse
 useSwaggerProxy: true
 doc_tech_external: https://portailapi.urssaf.fr/fr/

@@ -53,7 +53,7 @@ access_page:
       Pour accéder à l’API Tiers de prestation, vous devez être un organisme de service à la personne au sens de l’article de l'article L. 7232-6 du code du travail.
 
       <Button href="/rechercher-api">Revenir à la recherche</Button>
-contact_link: contact.api@urssaf.fr
+contact_link: contact-api@urssaf.fr
 doc_tech_link: /swaggers/api-tiers-de-prestation.json
 doc_tech_external: https://portailapi.urssaf.fr/fr/
 keywords:
