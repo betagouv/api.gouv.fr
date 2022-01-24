@@ -39,7 +39,7 @@ stat:
 partners:
   - dgfip
   - CNAF
-  - Pôle emploi
+  - pole-emploi
   - mesri
 producer: dinum
 keywords:

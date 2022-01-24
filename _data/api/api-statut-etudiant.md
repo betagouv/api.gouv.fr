@@ -29,7 +29,7 @@ is_open: -1
 is_france_connected: 1
 producer: mesri
 partners: 
-  - Renater
+  - renater
 keywords:
   - etudiant
   - identifiant
