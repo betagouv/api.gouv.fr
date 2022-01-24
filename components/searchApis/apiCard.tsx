@@ -153,6 +153,9 @@ const ApiCard: React.FC<IProps> = ({
           margin: 0 0.2em;
           background-color: ${getUptimeState(uptime)};
         }
+        .card-extra.fc-compat > img {
+          width: initial !important;
+        }
       `}</style>
     </>
   );
