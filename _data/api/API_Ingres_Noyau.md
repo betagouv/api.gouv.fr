@@ -3,7 +3,7 @@ title: API Ingres Noyau
 tagline: Récupérez l'ensemble des référentiels utilisés par les Systèmes d'Informations des Ressources Humaines de la Fonction Publique d'Etat
 producer: cisirh
 is_open: -1 # -1 means API not open
-datapass_link: https://datapass.api.gouv.fr/api-ingres-noyau 
+datapass_link: https://datapass.api.gouv.fr/api-ingres
 access_page: 
   - who:
       - Une application RH
@@ -16,7 +16,7 @@ access_page:
 
       Son utilisation par une application tierce ne saurait engager la responsabilité du CISIRH, par exemple, en termes de disponibilité.
 
-      <Button href="https://datapass.api.gouv.fr/api-ingres-noyau">Faire une demande d'accès</Button>
+      <Button href="https://datapass.api.gouv.fr/api-ingres">Faire une demande d'accès</Button>
   - who:
       - Un particulier
       - Autre
