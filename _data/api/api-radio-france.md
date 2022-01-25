@@ -1,7 +1,7 @@
 ---
 title: API Radio France
 tagline: Accéder aux programmes et aux contenus produits par Radio France
-external_site: https://api.insee.fr
+external_site: https://www.radiofrance.com/lopen-api-radio-france
 producer: radio-france
 is_open: 0 # 0 means API require an account
 account_link: https://developers.radiofrance.fr/
