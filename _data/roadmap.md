@@ -277,6 +277,9 @@
       what: Statut étudiant par le Ministère de l'Enseignement Supérieur, de la Recherche et de l'Innovation
       path: /les-api/api-statut-etudiant
     - type: ADD_API
+      what: API Statut étudiant - écriture par le Ministère de l'Enseignement Supérieur, de la Recherche et de l'Innovation
+      path: /les-api/api-statut-etudiant-ecriture
+    - type: ADD_API
       what: CVEC par le CNOUS
     - type: ADD_API
       what: Attestation Codes Sécurité par l'Urssaf
