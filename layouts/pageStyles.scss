@@ -273,6 +273,24 @@ a.dont-apply-link-style {
     border-radius: 2px;
     overflow: auto;
   }
+
+  details {
+    background-color: #eee;
+    border-radius: 6px;
+    padding: 10px 15px;
+  }
+
+  details > summary:after {
+    content: '(Cliquez pour déplier)';
+    font-style: italic;
+    font-size: 0.9rem;
+    margin-left: 15px;
+    color: #777;
+  }
+
+  details[open] > summary:after {
+    display: none;
+  }
 }
 
 h1 {
