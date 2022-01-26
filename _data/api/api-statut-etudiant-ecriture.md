@@ -1,5 +1,5 @@
 ---
-title: API Statut Etudiant - ecriture
+title: API Statut Etudiant - écriture
 tagline: Alimentez l'API Statut Etudiant en tant qu'établissement de l'enseignement supérieur.
 access_page:
   - who:
@@ -53,7 +53,7 @@ visits_2019: 4000
 last_update: 25/01/2022
 ---
 
-L'API « statut étudiant – écriture » permet aux établissement d’enseignement supérieur, publics ou privés, d’enregistrer les étudiants qu’ils ont inscrits dans le référentiel commun mis en place par RENATER pour le compte du MESRI.
+L'API statut étudiant – écriture permet aux établissement d’enseignement supérieur d’enregistrer les étudiants qu’ils ont inscrits dans le référentiel commun mis en place par RENATER pour le compte du MESRI.
 
 ⚠️ Pour accéder à l'API Statut Etudiant en lecture (dans le but de vérifier le statut étudiant),
 ➤ [**c'est ici**](https://api.gouv.fr/les-api/api-statut-etudiant).
