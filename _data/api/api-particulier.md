@@ -63,7 +63,7 @@ contact_link: contact@particulier.api.gouv.fr
 doc_tech_link: https://particulier.api.gouv.fr/api/open-api.yml
 themes:
   - Particulier
-visits_2019: 8642
+visits_2019: 15831
 uptime: 99.992 # https://uptimerobot.com/dashboard#777746216 * https://uptimerobot.com/dashboard#778826562 / 2
 last_update: 31/03/2021
 content_intro: |

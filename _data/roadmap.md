@@ -277,6 +277,12 @@
       what: Statut étudiant par le Ministère de l'Enseignement Supérieur, de la Recherche et de l'Innovation
       path: /les-api/api-statut-etudiant
     - type: ADD_API
+      what: Radio France
+      path: /les-api/api-radio-france
+    - type: ADD_API
+      what: Géorisques par le Bureau de Recherches Géologiques et Minières (BRGM)
+      path: /les-api/api-georisques
+    - type: ADD_API
       what: CVEC par le CNOUS
     - type: ADD_API
       what: Attestation Codes Sécurité par l'Urssaf

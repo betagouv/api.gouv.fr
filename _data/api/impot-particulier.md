@@ -59,7 +59,7 @@ monitoring_description: |
 themes:
   - Particulier
 contact_link: dtnum.donnees.demande-acces@dgfip.finances.gouv.fr
-visits_2019: 13000
+visits_2019: 9856
 doc_tech_link: /swaggers/api-impot-particulier.json
 content_intro: |
   L'API Impôt particulier simplifie les démarches des usagers et le processus de gestion de vos téléservices. Elle permet l’échange d’informations fiscales entre la DGFiP et une entité administrative (administration, ministère, organisme public, collectivité) ou une entreprise dans le cadre de leurs obligations légales et réglementaires pour des missions d’intérêts général.
