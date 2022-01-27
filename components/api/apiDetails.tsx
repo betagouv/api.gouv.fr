@@ -9,6 +9,7 @@ import Cardiogram from '../../uiComponents/icon/cardiogram';
 interface IPropsRateLimiting {
   rate_limiting?: string;
   rate_limiting_resume?: string;
+  rate_limiting_link?: string
 }
 
 interface IPropsMonitoring {
@@ -129,6 +130,7 @@ const MonitoringDetail: React.FC<IPropsMonitoring> = ({
 const RateLimitingDetail: React.FC<IPropsRateLimiting> = ({
   rate_limiting,
   rate_limiting_resume,
+  rate_limiting_link
 }) => {
   const [showRateLimitDesc, setShowRateLimitDesc] = useState(false);
   const toggle = () => setShowRateLimitDesc(!showRateLimitDesc);
@@ -153,6 +155,20 @@ const RateLimitingDetail: React.FC<IPropsRateLimiting> = ({
       {rate_limiting && showRateLimitDesc && (
         <div className="details">
           <i>{rate_limiting}</i>
+          { rate_limiting_link &&
+            <>
+              <div className="layout-right vertical-margin">
+                <ButtonLink
+                  href={rate_limiting_link}
+                  target="_blank"
+                  rel="noopener"
+                  alt
+                >
+                  En savoir plus
+                </ButtonLink>
+              </div>
+            </>
+          }
         </div>
       )}
     </>
@@ -214,6 +230,7 @@ const ApiDetails: React.FC<IPropsDetails> = ({
   monitoring_link,
   rate_limiting,
   rate_limiting_resume,
+  rate_limiting_link,
   is_france_connected = null,
 }) => {
   return (
@@ -226,6 +243,7 @@ const ApiDetails: React.FC<IPropsDetails> = ({
       <RateLimitingDetail
         rate_limiting={rate_limiting}
         rate_limiting_resume={rate_limiting_resume}
+        rate_limiting_link={rate_limiting_link}
       />
       {(is_france_connected === 1 || is_france_connected === 2) && (
         <IsFranceConnectedDetail is_france_connected={is_france_connected} />
