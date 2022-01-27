@@ -54,7 +54,7 @@ keywords:
   - idNat
 themes:
   - Santé
-uptime: 99.21
+uptime: 99.8
 contact_link: prosanteconnect.editeurs@esante.gouv.fr
 doc_tech_external: https://integrateurs-cps.asipsante.fr/pages/prosanteconnect/documentation-fs
 last_update: 22/03/2021
