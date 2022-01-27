@@ -273,6 +273,9 @@
     - type: ADD_API
       what: FANTOIR par l'IGN
       path: /les-api/api-fantoir
+    - type: INFO
+      what: |
+        L'API Statut étudiant est disponible dans l'API Particulier : elle permet de [simplifier la tarification solidaire dans les transports en commun](https://api.gouv.fr/guides/delivrance-titres-transport)
     - type: ADD_API
       what: Statut étudiant par le Ministère de l'Enseignement Supérieur, de la Recherche et de l'Innovation
       path: /les-api/api-statut-etudiant
@@ -285,13 +288,24 @@
     - type: ADD_API
       what: Géorisques par le Bureau de Recherches Géologiques et Minières (BRGM)
       path: /les-api/api-georisques
+  2:
     - type: ADD_API
-      what: CVEC par le CNOUS
+      what: Statut étudiant boursier par le CNOUS
     - type: ADD_API
-      what: Attestation Codes Sécurité par l'Urssaf
+      what: CaptchEtat par l'AIFE
+    - type: ADD_API
+      what: AgentConnect par la DINUM
+    - type: ADD_API
+      what: Prestations sociales par la Direction de la Sécurité Sociale
+  3:
     - type: ADD_API
       what: Déclaration préalable à l'embauche par l'Urssaf
     - type: ADD_API
-      what: Liste des organismes de formation par la DGEFP 
-      
+      what: Statut demandeur d'emploi, par Pôle Emploi
+    - type: ADD_API
+      what: Historique d'un véhicule (HistoVec), par le Ministère de l'Intérieur
+  4:
+    - type: ADD_API
+      what: Indemnités Pôle Emploi, par Pôle Emploi
+
 ---
