@@ -1,6 +1,7 @@
 ---
 title: API Statut Etudiant
 tagline: Vérifiez si une personne est inscrite dans un établissement de l'enseignement supérieur
+datapass_link: https://datapass.api.gouv.fr/api-statut-etudiant
 access_page:
   - who:
       - Un particulier

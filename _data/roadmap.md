@@ -288,11 +288,12 @@
     - type: ADD_API
       what: Géorisques par le Bureau de Recherches Géologiques et Minières (BRGM)
       path: /les-api/api-georisques
+    - type: ADD_API
+      what: CaptchEtat par l'AIFE
+      path: /les-api/api-captchetat
   2:
     - type: ADD_API
       what: Statut étudiant boursier par le CNOUS
-    - type: ADD_API
-      what: CaptchEtat par l'AIFE
     - type: ADD_API
       what: AgentConnect par la DINUM
     - type: ADD_API
