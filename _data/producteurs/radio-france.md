@@ -1,7 +1,7 @@
 ---
 name: Radio France
 logo: logo-radio-france.png
-type: Etablissement public
+type: autre
 site: https://www.radiofrance.com/
 short: 
 description: |
