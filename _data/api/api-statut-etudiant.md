@@ -87,7 +87,7 @@ L'API retourne selon le cas :
 | Inscriptions en formation continue | Permet d’interroger les données des étudiants en formation continue. Données : date de début, de fin d'inscription, et code COG de la commune du lieu d'étude    |
 | Inscriptions en formation initiale | Permet d’interroger les données des étudiants en formation initiale. Données : dates de début, fin d'inscription et code COG de la commune du lieu d'étude     |
 | Admissions                         | Limite la recherche aux seuls étudiants admis (non-inscrits)                  |
-| Etablissement                      | Le ou les établissements (nom et  indentifiant - UAI)                         |
+| Etablissement                      | Le ou les établissements (nom et  identifiant - UAI)                         |
 
 ### Modalités d'utilisation des scopes
 
