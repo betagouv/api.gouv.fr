@@ -294,6 +294,7 @@
   2:
     - type: ADD_API
       what: Statut étudiant boursier par le CNOUS
+      path: /les-api/api-statut-etudiant-boursier
     - type: ADD_API
       what: AgentConnect par la DINUM
     - type: ADD_API
