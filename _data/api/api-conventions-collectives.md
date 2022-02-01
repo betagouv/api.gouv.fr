@@ -23,7 +23,7 @@ themes:
   - Emploi
   - Administration & législation
 contact_link: codedutravailnumerique@travail.gouv.fr
-doc_tech_link: https://raw.githubusercontent.com/SocialGouv/recherche-entreprises/master/api/openapi.yaml
+doc_tech_external: https://github.com/SocialGouv/siret2idcc
 datagouv_uuid:
   - 5b7ffc618b4c4169d30727e0
   - 5e7201d522f2a43e9f736a9a
