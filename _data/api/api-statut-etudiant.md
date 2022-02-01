@@ -51,7 +51,7 @@ visits_2019: 4000
 last_update: 10/01/2022
 ---
 
-L'API Statut Etudiant permet de vérifier si une personne est inscrite dans un établissement de l'enseignement supérieur.
+Cette API permet de vérifier si un individu identifié avec FranceConnect dispose du statut d'étudiant du fait de son inscription dans un établissement d'enseignement supérieur.
 
 ### À quoi sert l’API Statut Etudiant ?
 
