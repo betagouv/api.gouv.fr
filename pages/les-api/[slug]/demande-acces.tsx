@@ -80,13 +80,13 @@ const AccessCondition: React.FC<IProps> = ({
     if (visitorType === null) {
       logParcoursDemandeAcces('1. Commence le parcours client', title);
     }
-  }, []);
+  }, [title, visitorType]);
 
   useEffect(() => {
     if (visitorType !== null) {
       logParcoursDemandeAcces('2. Renseigne un statut de visiteur', title, visitorType);
     }
-  }, [visitorType]);
+  }, [title, visitorType]);
 
   return (
     <Page
