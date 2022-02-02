@@ -1,5 +1,6 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import constants from '../../constants';
+import { logParcoursDemandeAcces } from '../../utils/client/analytics';
 import RichReactMarkdown from '../richReactMarkdown';
 import { allQuestions } from './data';
 
@@ -17,7 +18,8 @@ interface IChoiceType {
 const Question: React.FC<{
   questionTree: IQuestionTree;
   parentLabel?: string;
-}> = ({ questionTree, parentLabel }) => {
+  apiName?: string;
+}> = ({ questionTree, parentLabel, apiName }) => {
   const [currentChoiceType, setChoiceType] = useState<IChoiceType | null>(null);
   const [selectedLabel, setSelectedLabel] = useState<string | undefined>(
     undefined
@@ -38,6 +40,11 @@ const Question: React.FC<{
                 key={choice}
                 onClick={() => {
                   setSelectedLabel(choice);
+                  logParcoursDemandeAcces(
+                    '3. Renseigne un sujet de question',
+                    formatCategoryName(apiName),
+                    choice
+                  );
                   setChoiceType(choiceType);
                 }}
                 className={choice === selectedLabel ? 'selected' : ''}
@@ -54,6 +61,7 @@ const Question: React.FC<{
       )}
       {currentChoiceType && currentChoiceType.next && (
         <Question
+          apiName={apiName}
           questionTree={currentChoiceType.next}
           parentLabel={selectedLabel}
         />
@@ -104,11 +112,25 @@ const QuestionTree: React.FC<{ tree: string; question: string }> = ({
   question,
 }) => {
   if (allQuestions[tree] && allQuestions[tree][question]) {
-    return <Question questionTree={allQuestions[tree][question]} />;
+    return (
+      <Question apiName={tree} questionTree={allQuestions[tree][question]} />
+    );
   } else {
     throw new Error(
       `QuestionTree must be called with an existing key, but received : ${tree} and then ${question},`
     );
+  }
+};
+
+// Category name for analytics should be the API title
+const formatCategoryName = (title: string | undefined) => {
+  switch (title) {
+    case 'api-entreprise':
+      return 'API Entreprise';
+    case 'france-connected-api':
+      return 'FranceConnect et les API FranceConnectées';
+    default:
+      return '*';
   }
 };
 
