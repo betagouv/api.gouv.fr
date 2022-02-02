@@ -1,5 +1,6 @@
 import React from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
+import { logParcoursClient } from '../../utils/client/analytics';
 
 import {
   getAPI,
