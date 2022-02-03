@@ -42,6 +42,17 @@ const logParcoursClient = (step, value = '*') => {
   }
 };
 
+const logParcoursDemandeAcces = (step, api = '*', value = '*') => {
+  if (typeof window !== 'undefined' && window._paq) {
+    window._paq.push([
+      'trackEvent',
+      `Parcours API - ${api}`,
+      step,
+      `valeur : ${value}`,
+    ]);
+  }
+};
+
 const logFeedback = answer => {
   if (typeof window !== 'undefined' && window._paq) {
     window._paq.push([
@@ -69,6 +80,7 @@ export {
   logDemanderAcces,
   logLPCTA,
   logParcoursClient,
+  logParcoursDemandeAcces,
   logFeedback,
   logFeedbackDetails,
 };

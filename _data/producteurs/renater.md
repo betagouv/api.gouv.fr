@@ -3,8 +3,8 @@ name: RENATER # producteur de l'API
 nameWithPronoun: RENATER
 logo: logo-renater.svg
 type: Etablissement public
-short: Le Réseau National de télécommunications pour la Technologie, l’Enseignement et la Recherche, est l’acteur de référence des infrastructures du numérique de la communauté enseignement recherche.
-contact: support-statutetudiant@renater.fr
+short: Le Réseau National de télécommunications pour la Technologie, l’Enseignement et la Recherche, est l’acteur de référence des infrastructures numériques de la communauté enseignement recherche.
+contact: mailto:support-statutetudiant@renater.fr
 description: |
   Le réseau RENATER se structure autour de quatre grands axes stratégiques : 
   

@@ -34,22 +34,32 @@ content_intro: |
 
 ### À quoi sert l'API Radio France ?
 
-L'API de Radio France permet aujourd'hui d'accéder à :
+L'API de Radio France permet aujourd'hui d'accéder :
 
-- la grille de programmes (quelle émission, quel titre, passe à quelle heure sur une chaîne)
-  - de France Inter,
-  - de franceinfo,
-  - des 44 locales de France Bleu,
-  - de France Culture,
-  - de France Musique,
-  - Fip, Mouv’ et leurs webradios,
-- l'url des podcasts et des pages émission,
-- des données associées telles que :
-  - titre,
-  - chapô,
-  - tags,
-  - noms des producteurs et des invités,
-  - durée de l’émission.
+#### 🗓 À la grille de programmes : quelle émission, quel titre passe à quelle heure sur une chaîne ?
+
+- de France Inter,
+- de franceinfo,
+- des 44 locales de France Bleu,
+- de France Culture,
+- de France Musique et leurs webradios,
+- Fip et leurs webradios,
+- Mouv’ et leurs webradios.
+
+#### 🎤 Aux contenus
+
+- connaître ce qui se passe en direct,
+- récupérer les infomations sur une émission / sur un podcast,
+- récupérer les derniers épisodes d'une émission / d'un podcast, avec notamment les liens pour leur écoute.
+
+#### 🔎 Aux données associées
+
+- titre,
+- chapô,
+- tags,
+- noms des producteurs,
+- noms des invités,
+- durée de l’émission.
 
 ### À qui s'adresse l'API Radio France
 

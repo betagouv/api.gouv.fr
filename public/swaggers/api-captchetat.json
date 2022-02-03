@@ -1,0 +1,411 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "L'AIFE a mis en oeuvre une API permettant la génération d'un CAPTCHA dans le but premier de pouvoir l'adresser à ses applications internes mais également, par la suite, à ses partenaires et à l'interministériel.<p> Cette API permet la génération d'un CAPTCHA de type chaine de caractères à reproduire et la vérification de la saisie effectuée.</p> <p>Son intégration doit se faire au niveau de la couche présentation (Front-End) et, étant exposée sur PISTE, ses accès et ses utilisateurs sont gérés via PISTE.<p/> <p>Vous trouverez ci-après le guide d'implémention du CAPTCHEtat de l'AIFE.</p>",
+    "version" : "1.0",
+    "title" : "CaptchEtat",
+    "contact" : {
+      "name" : "Support CaptchEtat",
+      "email" : "piste.aife@finances.gouv.fr"
+    }
+  },
+  "host" : "api.piste.gouv.fr",
+  "basePath" : "/piste/captcha",
+  "schemes" : [ "https" ],
+  "security" : [ {
+    "API Key" : [ ]
+  }, {
+    "OAuthImplicit" : [ "resource.READ" ]
+  }, {
+    "OAuthImplicit" : [ "apiCAPTCHA" ]
+  }, {
+    "OAuthAccessCode" : [ "resource.READ" ]
+  }, {
+    "OAuthAccessCode" : [ "apiCAPTCHA" ]
+  } ],
+  "paths" : {
+    "/simple-captcha-endpoint" : {
+      "get" : {
+        "tags" : [ "Captcha" ],
+        "summary" : "Endpoint permettant de récupérer un élément du captcha",
+        "description" : "La génération d'un captcha se réalise au travers de plusieurs appels à ce endpoint, en fonction du type de ressource qui doit être généré. <p>Seul le premier appel de génération est à composer, les autres sont auto-générés dans le retour obtenu dans le premier appel.</p>",
+        "operationId" : "GET /simple-captcha-endpoint",
+        "produces" : [ "application/json", "text/html", "text/css", "image/png", "image/gif", "text/javascript", "audio/x-wav" ],
+        "parameters" : [ {
+          "name" : "get",
+          "in" : "query",
+          "description" : "Type d'objet voulant être récupéré.",
+          "required" : true,
+          "type" : "string",
+          "enum" : [ "html", "layout-stylesheet", "script-include", "image", "reload-icon", "sound-icon", "reload-disabled-icon", "sound-disabled-icon", "sound", "p" ]
+        }, {
+          "name" : "c",
+          "in" : "query",
+          "description" : "Nom du captcha voulant être récupéré. Ce parametre est obligatoire lorsqu'on choisi les types d'objets du parametre get suivants (html, script-include, image, sound, p(refresh))",
+          "required" : false,
+          "type" : "string",
+          "enum" : [ "captchaFR", "captchaEN", "numerique6_7CaptchaFR", "numerique6_7CaptchaEN", "alphabetique6_7CaptchaFR", "alphabetique6_7CaptchaEN", "alphanumerique12CaptchaFR", "alphanumerique12CaptchaEN", "alphabetique12CaptchaFR", "alphabetique12CaptchaEN", "numerique12CaptchaFR", "numerique12CaptchaEN", "alphanumerique6to9LightCaptchaEN", "alphanumerique6to9LightCaptchaFR", "alphanumerique4to6LightCaptchaEN", "alphanumerique4to6LightCaptchaFR" ]
+        }, {
+          "name" : "t",
+          "in" : "query",
+          "description" : "Identifiant captcha, c'est un parametre technique non utilisable par le developpeur. Il est renseigné dans les requêtes auto-générées.",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "cs",
+          "in" : "query",
+          "description" : "Code style du captcha, c'est un parametre technique non utilisable par le developpeur. Il est renseigné dans les requêtes auto-générées.",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "d",
+          "in" : "query",
+          "description" : "Si le paramètre existe, le navigateur peut créer une balise audio via javascript en tant qu'audio ; c'est un parametre technique non utilisable par le developpeur. Il est renseigné dans les requêtes auto-générées.",
+          "required" : false,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Ok",
+            "schema" : {
+              "$ref" : "#/definitions/resultCaptcha"
+            }
+          },
+          "400" : {
+            "description" : "Bad request. Mauvais format de la requête."
+          },
+          "500" : {
+            "description" : "Internal Server Error. Erreur Interne du Serveur"
+          },
+          "404" : {
+            "description" : "Not found. Ressource introuvable."
+          }
+        }
+      }
+    },
+    "/valider-captcha" : {
+      "post" : {
+        "tags" : [ "CaptchEtat" ],
+        "summary" : "Valide un captcha",
+        "description" : "Endpoint permettant la validation d'un captcha généré à partir de l'id et du code associé.",
+        "operationId" : "POST /valider-captcha",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/validerCaptcha"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Ok",
+            "schema" : {
+              "type" : "boolean",
+              "description" : "Quand le captcha est validé, la réponse sera true, sinon false"
+            }
+          },
+          "500" : {
+            "description" : "Internal Server Error"
+          },
+          "404" : {
+            "description" : "Not found"
+          },
+          "405" : {
+            "description" : "Invalid input"
+          }
+        }
+      }
+    },
+    "/version" : {
+      "get" : {
+        "tags" : [ "CaptchEtat" ],
+        "summary" : "Renvoie la version de l'application CaptchEtat",
+        "description" : "Endpoint permettant de récupérer la version de l'application CaptchEtat.",
+        "operationId" : "GET /version",
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "Ok",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "version" : {
+                  "type" : "string"
+                }
+              }
+            }
+          },
+          "500" : {
+            "description" : "Internal Server Error"
+          },
+          "404" : {
+            "description" : "Not found"
+          }
+        }
+      }
+    },
+    "/healthcheck" : {
+      "get" : {
+        "tags" : [ "Captcha" ],
+        "summary" : "Teste l'état du service CaptchEtat.",
+        "description" : "API permettant de tester l'état du service Captcha. Ce endpoint renvoie les statuts de fonctionnement de l'API et de ses composants.",
+        "operationId" : "GET /healthcheck",
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "Ok",
+            "schema" : {
+              "$ref" : "#/definitions/resultHealthcheck"
+            }
+          },
+          "500" : {
+            "description" : "Internal Server Error"
+          },
+          "404" : {
+            "description" : "Not found"
+          }
+        }
+      }
+    },
+    "/info" : {
+      "get" : {
+        "tags" : [ "CaptchEtat" ],
+        "summary" : "Renvoie les informations relatives à l'application CaptchEtat.",
+        "description" : "Endpoint permettant de renvoyer les informations relatives à la version de l'application CaptchEtat.",
+        "operationId" : "GET /info",
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "Ok",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "app" : {
+                  "type" : "object",
+                  "properties" : {
+                    "version" : {
+                      "type" : "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500" : {
+            "description" : "Internal Server Error"
+          },
+          "404" : {
+            "description" : "Not found"
+          }
+        }
+      }
+    },
+    "/captcha/{id}/code/infos" : {
+      "get" : {
+        "tags" : [ "CaptchEtat" ],
+        "summary" : "Récupère les informations d'un captcha à partir de son identifiant.",
+        "description" : "Endpoint permettant de récupérer la taille et le type d'un captcha à partir de son identifiant.",
+        "operationId" : "GET /captcha/{id}/code/infos",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "Identifiant du captcha",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Ok",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "taille" : {
+                  "type" : "integer"
+                },
+                "type" : {
+                  "type" : "string"
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "Bad Request"
+          }
+        }
+      }
+    }
+  },
+  "securityDefinitions" : {
+    "API Key" : {
+      "description" : "API Key",
+      "type" : "apiKey",
+      "name" : "KeyId",
+      "in" : "header"
+    },
+    "OAuthImplicit" : {
+      "description" : "OAuth",
+      "type" : "oauth2",
+      "authorizationUrl" : "https://oauth.piste.dev.chorus.aife/api/oauth/authorize",
+      "flow" : "implicit",
+      "scopes" : {
+        "resource.READ" : "",
+        "apiCAPTCHA" : ""
+      },
+      "x-axway" : {
+        "accessTokenLocationQueryString" : "Bearer",
+        "tokenName" : "access_token",
+        "scopesMatching" : "Any",
+        "accessTokenLocation" : "HEADER",
+        "typeDisplayName" : "OAuth 2.0",
+        "authorizationHeaderPrefix" : ""
+      }
+    },
+    "OAuthAccessCode" : {
+      "description" : "OAuth",
+      "type" : "oauth2",
+      "authorizationUrl" : "https://oauth.piste.dev.chorus.aife/api/oauth/authorize",
+      "tokenUrl" : "https://oauth.piste.dev.chorus.aife/api/oauth/token",
+      "flow" : "accessCode",
+      "scopes" : {
+        "resource.READ" : "",
+        "apiCAPTCHA" : ""
+      },
+      "x-axway" : {
+        "clientSecretName" : "client_secret",
+        "authorizationHeaderPrefix" : "",
+        "accessTokenLocationQueryString" : "Bearer",
+        "clientIdName" : "client_id",
+        "tokenName" : "access_code",
+        "scopesMatching" : "Any",
+        "accessTokenLocation" : "HEADER",
+        "typeDisplayName" : "OAuth 2.0"
+      }
+    }
+  },
+  "definitions" : {
+    "resultHealthcheck" : {
+      "type" : "object",
+      "properties" : {
+        "status" : {
+          "type" : "string",
+          "example" : "UP"
+        },
+        "components" : {
+          "type" : "object",
+          "properties" : {
+            "diskSpace" : {
+              "type" : "object",
+              "properties" : {
+                "status" : {
+                  "type" : "string",
+                  "example" : "UP"
+                },
+                "details" : {
+                  "type" : "object",
+                  "properties" : {
+                    "total" : {
+                      "type" : "string",
+                      "example" : "2136997888,"
+                    },
+                    "free" : {
+                      "type" : "string",
+                      "example" : "2074886144,"
+                    },
+                    "threshold" : {
+                      "type" : "string",
+                      "example" : "10485760,"
+                    },
+                    "exists" : {
+                      "type" : "boolean",
+                      "example" : true
+                    }
+                  }
+                }
+              }
+            },
+            "memcachedHealth" : {
+              "type" : "object",
+              "properties" : {
+                "status" : {
+                  "type" : "string",
+                  "example" : "UP"
+                }
+              }
+            },
+            "ping" : {
+              "type" : "object",
+              "properties" : {
+                "status" : {
+                  "type" : "string",
+                  "example" : "UP"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "resultCaptcha" : {
+      "type" : "string",
+      "description" : "Plusieurs types de réponses sont possibles html, son ...",
+      "example" : "exemple d'une réponse html = <div> <link type=\"text/css\" rel=\"stylesheet\" href=\"/api/simple-captcha-endpoint?get=layout-stylesheet&amp;t=1629882000\" /> <div class=\"BDC_CaptchaDiv \" id=\"captchaFR_CaptchaDiv\" style=\"width: 280px !important; height: 75px !important; \"><!-- --><div class=\"BDC_CaptchaImageDiv\" id=\"captchaFR_CaptchaImageDiv\" style=\"width: 250px !important; height: 75px !important;\"><!-- --><img class=\"BDC_CaptchaImage\" id=\"captchaFR_CaptchaImage\" src=\"/api/simple-captcha-endpoint?get=image&amp;c=captchaFR&amp;t=7b9901b234c34f08aa168da6109791f4\" alt=\"Retype the CAPTCHA code from the image\" style=\"visibility: hidden !important\" /><!-- --></div><!-- --><div class=\"BDC_CaptchaIconsDiv\" id=\"captchaFR_CaptchaIconsDiv\" style=\"width: 24px !important;\"><!-- --><a class=\"BDC_ReloadLink\" id=\"captchaFR_ReloadLink\" href=\"#\" title=\"Générer un nouveau captcha\"><img class=\"BDC_ReloadIcon\" id=\"captchaFR_ReloadIcon\" src=\"/api/simple-captcha-endpoint?get=reload-icon\" alt=\"Générer un nouveau captcha\" /></a><!-- --><a rel=\"nofollow\" class=\"BDC_SoundLink\" id=\"captchaFR_SoundLink\" href=\"/api/simple-captcha-endpoint?get=sound&amp;c=captchaFR&amp;t=7b9901b234c34f08aa168da6109791f4\" title=\"Énoncez le code du captcha\"><img class=\"BDC_SoundIcon\" id=\"captchaFR_SoundIcon\" src=\"/api/simple-captcha-endpoint?get=sound-icon\" alt=\"Énoncez le code du captcha\" /></a><!-- --><div class=\"BDC_Placeholder\" id=\"captchaFR_AudioPlaceholder\">&amp;nbsp;</div><!-- --></div> <script src=\"/api/simple-captcha-endpoint?get=script-include&amp;c=captchaFR&amp;t=7b9901b234c34f08aa168da6109791f4\" type=\"text/javascript\"></script> <input type=\"hidden\" id=\"BDC_VCID_captchaFR\" name=\"BDC_VCID_captchaFR\" value=\"7b9901b234c34f08aa168da6109791f4\" /> <input type=\"hidden\" id=\"BDC_BackWorkaround_captchaFR\" name=\"BDC_BackWorkaround_captchaFR\" value=\"0\" /> <input type=\"hidden\" id=\"BDC_Hs_captchaFR\" name=\"BDC_Hs_captchaFR\" value=\"9d8c19caf07a3ec31fa6f61d7082c6c6e4ec8b9b\" /> <input type=\"hidden\" id=\"BDC_SP_captchaFR\" name=\"BDC_SP_captchaFR\" value=\"304647208\" /> </div> </div>"
+    },
+    "validerCaptcha" : {
+      "type" : "object",
+      "required" : [ "code", "id" ],
+      "properties" : {
+        "id" : {
+          "type" : "integer",
+          "format" : "int64",
+          "example" : 304647208,
+          "description" : "identifiant du captcha à valider"
+        },
+        "code" : {
+          "type" : "string",
+          "example" : "AJKDLDOM3",
+          "description" : "Code du captcha à valider"
+        }
+      }
+    }
+  },
+  "externalDocs" : {
+    "description" : "Guide Implementation CAPTCHEtat",
+    "url" : "https://aife.economie.gouv.fr/referentiel/wp-content/uploads/sites/8/2021/12/CAPTCHEtat_GUIDE_IMPLEMENTATION.pdf"
+  },
+  "x-axway" : {
+    "serviceType" : "rest",
+    "image" : "/api/portal/v1.4/discovery/swagger/apis/32d6b18b-0430-47c9-888c-1ebabf7563a5/image",
+    "basePaths" : [ "https://api.piste.dev.chorus.aife" ],
+    "retirementDate" : 0,
+    "corsEnabled" : true,
+    "deprecated" : false,
+    "availableSDK" : {
+      "ios-swift" : "/discovery/sdk/32d6b18b-0430-47c9-888c-1ebabf7563a5/ios-swift",
+      "titanium" : "/discovery/sdk/32d6b18b-0430-47c9-888c-1ebabf7563a5/titanium",
+      "android" : "/discovery/sdk/32d6b18b-0430-47c9-888c-1ebabf7563a5/android",
+      "nodejs" : "/discovery/sdk/32d6b18b-0430-47c9-888c-1ebabf7563a5/nodejs"
+    },
+    "apiResourceType" : "swagger20",
+    "accessGrantedDate" : 1642695595630,
+    "expired" : false,
+    "customProperties" : {
+      "CGU" : "CGU_API_CAPTCHA-V.1.1",
+      "url_oauth" : "oauth.piste.gouv.fr",
+      "need_approval" : "Ext",
+      "approval_ext_org" : "SERVICE-DATAPASS",
+      "url_sdbx" : "sandbox-api.piste.gouv.fr",
+      "url_prod" : "api.piste.gouv.fr",
+      "url_oauth_sdbx" : "sandbox-oauth.piste.gouv.fr"
+    },
+    "id" : "32d6b18b-0430-47c9-888c-1ebabf7563a5",
+    "state" : "published"
+  }
+}
+

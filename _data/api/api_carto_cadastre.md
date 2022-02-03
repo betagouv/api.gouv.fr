@@ -29,7 +29,7 @@ last_update: 19/05/2020
 #rate_limiting_description: |
 ---
 
-L'API Carto - module cadastre permet d'obtenir les les informations suivantes issues de la BD PARCELLAIRE :
+L'API Carto - module cadastre permet d'obtenir les informations suivantes issues de la BD PARCELLAIRE :
 
 - Obtenir les géométries pour une commune
 - Obtenir les divisions parcellaires d’une commune

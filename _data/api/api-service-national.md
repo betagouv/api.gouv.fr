@@ -1,6 +1,7 @@
 ---
 title: API Service National
 tagline: Vérifiez si un candidat est en règle vis-à-vis de ses obligations de Service National et peut s’inscrire au concours ou à l’examen dont vous êtes en charge.
+datapass_link: https://datapass.api.gouv.fr/api-service-national
 access_page:
   - who:
       - Un particulier
@@ -29,7 +30,7 @@ access_page:
       Par conséquent, les services de ressources humaines ou de recrutement chargés, en application de dispositions statutaires, de vérifier la situation des personnes de moins de 25 ans au regard des obligations de service national, sont autorisés à faire une demande d'accès à l'API :
 
       <NextSteps />
-      <Button href="https://datapass.api.gouv.fr/api-service-national?demarche=inscription-examens">Remplir une demande</Button>
+      <Button href="https://datapass.api.gouv.fr/api-service-national">Remplir une demande</Button>
 is_open: -1
 producer: ministere-armees
 keywords:

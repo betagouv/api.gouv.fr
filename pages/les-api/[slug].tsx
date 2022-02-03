@@ -1,5 +1,6 @@
 import React from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
+import { logParcoursClient } from '../../utils/client/analytics';
 
 import {
   getAPI,
@@ -54,6 +55,7 @@ const API: React.FC<IProps> = ({ api, guides, datagouvDatasets }) => {
     monitoring_description,
     rate_limiting_description,
     rate_limiting_resume,
+    rate_limiting_link,
     body,
     is_open,
     partners,
@@ -117,6 +119,7 @@ const API: React.FC<IProps> = ({ api, guides, datagouvDatasets }) => {
               monitoring_link={monitoring_link}
               rate_limiting={rate_limiting_description}
               rate_limiting_resume={rate_limiting_resume}
+              rate_limiting_link={rate_limiting_link}
               uptime={uptime}
               is_france_connected={is_france_connected}
             />

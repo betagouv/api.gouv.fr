@@ -1,0 +1,359 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API SupData",
+        "description": "\r\n## Bienvenue sur la documentation interactive d'API Supdata.\r\nAPI de l'insertion des inscriptions dans la base SupData\r\n\r\n",
+        "contact": {
+            "email": "support-statutetudiant@renater.fr"
+        },
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "{schema}://{baseUrl}/api/",
+            "description": "Api SupData",
+            "variables": {
+                "schema": {
+                    "enum": [
+                        "https",
+                        "http"
+                    ],
+                    "default": "https"
+                },
+                "baseUrl": {
+                    "enum": [
+                        "api.renater.fr"
+                    ],
+                    "default": "api.renater.fr"
+                }
+            }
+        }
+    ],
+    "paths": {
+        "/inscription": {
+            "post": {
+                "tags": [
+                    "inscription"
+                ],
+                "summary": "Insertion unitaire d'une inscription",
+                "description": "Le service permet d'insérer les inscriptions de façon unitaire",
+                "operationId": "InscriptionEndpoint::post",
+                "parameters": [
+                    {
+                        "name": "X-API-Key",
+                        "in": "header",
+                        "description": "Le token d'identification pour l'API",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "3841b13fa8032ed3c31d160d3437a76a"
+                    }
+                ],
+                "requestBody": {
+                    "description": "Client side search object",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/BodySchema"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "L&#039;&eacute;tudiant correspondant aux crit&egrave;res de recherche",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/SucessSchema"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "la valeur du paramètre n'est pas valide",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorSchema400"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Le token ne vous permet pas d'acc&eacute;der a l'API",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorSchema401"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "etudiant ou établissement introuvable",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorSchema404"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Erreur Serveur Interne",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorSchema500"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "BodySchema": {
+                "properties": {
+                    "ine": {
+                        "title": "INE",
+                        "description": "INE",
+                        "type": "string",
+                        "format": "string",
+                        "example": "070578267KH"
+                    },
+                    "dateNaissance": {
+                        "title": "Date de naissance",
+                        "description": "date de naissance",
+                        "type": "date",
+                        "format": "date",
+                        "example": "1999-03-30"
+                    },
+                    "dateDebutInscription": {
+                        "title": "date debut inscription",
+                        "description": "date debut inscription",
+                        "type": "string",
+                        "format": "date",
+                        "example": "2019-09-01"
+                    },
+                    "dateFinInscription": {
+                        "title": "date fin inscription",
+                        "description": "date fin inscription",
+                        "type": "string",
+                        "format": "date",
+                        "example": "2020-08-31"
+                    },
+                    "statut": {
+                        "type": "string",
+                        "example": 1
+                    },
+                    "codeCommune": {
+                        "type": "string",
+                        "format": "string",
+                        "example": "44000"
+                    },
+                    "uai": {
+                        "title": "UAI",
+                        "description": "UAI",
+                        "type": "string",
+                        "format": "sring",
+                        "example": "0011402U"
+                    }
+                },
+                "type": "object"
+            },
+            "ErrorSchema400": {
+                "required": [
+                    "message",
+                    "uid",
+                    "details"
+                ],
+                "properties": {
+                    "message": {
+                        "type": "string",
+                        "example": "la valeur du paramètre n'est pas valide"
+                    },
+                    "uid": {
+                        "type": "string",
+                        "example": "5e68e563116ab_0000"
+                    },
+                    "details": {
+                        "type": "json",
+                        "example": {
+                            "method": "POST",
+                            "endpoint": "inscription",
+                            "parameter": "le format ode l' INE n'est pas valide"
+                        }
+                    }
+                },
+                "type": "object"
+            },
+            "ErrorSchema401": {
+                "required": [
+                    "message",
+                    "uid",
+                    "details"
+                ],
+                "properties": {
+                    "message": {
+                        "type": "string",
+                        "example": "échec d'authentification"
+                    },
+                    "uid": {
+                        "type": "string",
+                        "example": "5e68e563116ab_0000"
+                    },
+                    "details": {
+                        "type": "json",
+                        "example": {
+                            "method": "POST",
+                            "endpoint": "inscription",
+                            "parameter": "le token 384 n'est pas valide"
+                        }
+                    }
+                },
+                "type": "object"
+            },
+            "ErrorSchema404": {
+                "required": [
+                    "message",
+                    "uid",
+                    "details"
+                ],
+                "properties": {
+                    "message": {
+                        "type": "string",
+                        "example": "étudiant introuvable"
+                    },
+                    "uid": {
+                        "type": "string",
+                        "example": "5e68e563116ab_0000"
+                    },
+                    "details": {
+                        "type": "json",
+                        "example": {
+                            "method": "POST",
+                            "endpoint": "inscription",
+                            "parameter": [
+                                "080890290EH",
+                                "2000-05-30"
+                            ]
+                        }
+                    }
+                },
+                "type": "object"
+            },
+            "ErrorSchema500": {
+                "required": [
+                    "message",
+                    "uid",
+                    "details"
+                ],
+                "properties": {
+                    "message": {
+                        "type": "string",
+                        "example": "erreur serveur interne"
+                    },
+                    "uid": {
+                        "type": "string",
+                        "example": "5e68e563116ab_0000"
+                    },
+                    "details": {
+                        "type": "json",
+                        "example": {
+                            "method": "POST",
+                            "endpoint": "inscription",
+                            "parameter": ""
+                        }
+                    }
+                },
+                "type": "object"
+            },
+            "InscriptionSchema": {
+                "properties": {
+                    "id_inscription": {
+                        "title": "ID de l'inscription",
+                        "description": "id de l'inscription",
+                        "type": "string",
+                        "format": "int",
+                        "example": "12"
+                    },
+                    "ine": {
+                        "title": "INE",
+                        "description": "INE",
+                        "type": "string",
+                        "format": "int",
+                        "example": "090567778FF"
+                    },
+                    "dateNaissance": {
+                        "title": "Date de naissance",
+                        "description": "date de naissance",
+                        "type": "date",
+                        "format": "date",
+                        "example": "1999-09-01"
+                    },
+                    "dateDebutInscription": {
+                        "title": "date debut inscription",
+                        "description": "date debut inscription",
+                        "type": "string",
+                        "format": "date",
+                        "example": "2019-09-01"
+                    },
+                    "dateFinInscription": {
+                        "title": "date fin inscription",
+                        "description": "date fin inscription",
+                        "type": "string",
+                        "format": "date",
+                        "example": "2020-08-31"
+                    },
+                    "statut": {
+                        "type": "string",
+                        "enum": [
+                            "admis",
+                            "inscrit"
+                        ]
+                    },
+                    "codeCommune": {
+                        "type": "string",
+                        "format": "string",
+                        "example": "44000"
+                    },
+                    "uai": {
+                        "title": "UAI",
+                        "description": "UAI",
+                        "type": "string",
+                        "format": "sring",
+                        "example": "0011402U"
+                    }
+                },
+                "type": "object"
+            },
+            "SucessSchema": {
+                "properties": {
+                    "message": {
+                        "title": "Message retour",
+                        "description": "Message retour",
+                        "type": "string",
+                        "format": "string",
+                        "example": "une nouvelle inscription créée"
+                    },
+                    "inscription": {
+                        "$ref": "#/components/schemas/InscriptionSchema"
+                    }
+                },
+                "type": "object"
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "inscription",
+            "description": "Insertion des inscriptions"
+        }
+    ]
+}

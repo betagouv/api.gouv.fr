@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import RichReactMarkdown from '../../../components/richReactMarkdown';
+import { logParcoursDemandeAcces } from '../../../utils/client/analytics';
 
 import {
   getAPI,
@@ -74,6 +75,18 @@ const AccessCondition: React.FC<IProps> = ({
 
     window.setTimeout(() => setIsLoading(false), 500);
   };
+
+  useEffect(() => {
+    if (visitorType === null) {
+      logParcoursDemandeAcces('1. Commence le parcours client', title);
+    }
+  }, [title, visitorType]);
+
+  useEffect(() => {
+    if (visitorType !== null) {
+      logParcoursDemandeAcces('2. Renseigne un statut de visiteur', title, visitorType);
+    }
+  }, [title, visitorType]);
 
   return (
     <Page

@@ -1,6 +1,7 @@
 ---
 title: API Statut Etudiant
 tagline: Vérifiez si une personne est inscrite dans un établissement de l'enseignement supérieur
+datapass_link: https://datapass.api.gouv.fr/api-statut-etudiant
 access_page:
   - who:
       - Un particulier
@@ -50,7 +51,7 @@ visits_2019: 4000
 last_update: 10/01/2022
 ---
 
-L'API Statut Etudiant permet de vérifier si une personne est inscrite dans un établissement de l'enseignement supérieur.
+Cette API permet de vérifier si un individu identifié avec FranceConnect dispose du statut d'étudiant du fait de son inscription dans un établissement d'enseignement supérieur.
 
 ### À quoi sert l’API Statut Etudiant ?
 
@@ -86,7 +87,7 @@ L'API retourne selon le cas :
 | Inscriptions en formation continue | Permet d’interroger les données des étudiants en formation continue. Données : date de début, de fin d'inscription, et code COG de la commune du lieu d'étude    |
 | Inscriptions en formation initiale | Permet d’interroger les données des étudiants en formation initiale. Données : dates de début, fin d'inscription et code COG de la commune du lieu d'étude     |
 | Admissions                         | Limite la recherche aux seuls étudiants admis (non-inscrits)                  |
-| Etablissement                      | Le ou les établissements (nom et  indentifiant - UAI)                         |
+| Etablissement                      | Le ou les établissements (nom et  identifiant - UAI)                         |
 
 ### Modalités d'utilisation des scopes
 

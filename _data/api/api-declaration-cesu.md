@@ -4,6 +4,7 @@ tagline: Connectez-vous directement à l’Urssaf pour accéder aux services du 
 external_site: https://open.urssaf.fr/explore/?sort=modified
 producer: urssaf
 is_open: -1 # 1 means API is fully open
+datapass_link: https://datapass.api.gouv.fr/api-declaration-cesu
 access_page:
   - who:
       - Un editeur d’application mobile
