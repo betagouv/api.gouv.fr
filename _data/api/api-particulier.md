@@ -1,6 +1,6 @@
 ---
 title: API Particulier
-tagline: Accédez à des données de plusieurs administration pour simplifier les démarches de vos usagers (revenu fiscal de référence, quotient familial, statut demandeur d’emploi et statut étudiant et étudiant boursier...)
+tagline: Accédez à des données de plusieurs administrations pour simplifier les démarches de vos usagers (revenu fiscal de référence, quotient familial, statut demandeur d’emploi et statut étudiant et étudiant boursier...)
 is_open: -1 # -1 means API not open
 datapass_link: https://datapass.api.gouv.fr/api-particulier
 access_page:
