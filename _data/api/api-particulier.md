@@ -71,7 +71,7 @@ content_intro: |
 
   ### A quoi sert l’API Particulier ?
 
-  L'API particulier permet d'obtenir une multitude de données provenant d'administration différentes dans le cadre de démarches lignes ( appelée aussi formulaires en ligne ou téléservices). Un usage dans les logiciels métiers est aussi possible. 
+  L'API particulier permet d'obtenir une multitude de données provenant d'administration différentes dans le cadre de démarches lignes (appelée aussi formulaires en ligne ou téléservices). Un usage dans les logiciels métiers est aussi possible. 
 
   **Avantages pour les administrations :** 
 
