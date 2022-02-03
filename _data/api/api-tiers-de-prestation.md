@@ -23,11 +23,13 @@ access_page:
   - who:
       - Un editeur de logiciel de service à la personne
       - Un éditeur de services web
-    is_eligible: -1
+    is_eligible: 0
     description: |
-      Si vous êtes éditeur de logiciel services à la personne /éditeur de service web et agissez ou comptez agir pour le compte de vos clients en qualité de responsable technique, c’est votre client qui doit  remplir une demande d’accès à l’API en vous indiquant comme référent technique.
+      Si vous êtes éditeur de logiciel services à la personne / éditeur de service web, vous pouvez remplir une demande d'accès à l'API.
+      
+      Vous ne pourrez toutefois recevoir que des accès à l'environnement de test, et non à l'environnement de production.
 
-      <Button href="/rechercher-api">Revenir à la recherche</Button>
+      <Button href="https://datapass.api.gouv.fr/api-tiers-de-prestation">Remplir une demande</Button>
   - who:
       - Un mandataire de service à la personne
     is_eligible: 0
