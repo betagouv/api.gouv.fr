@@ -1,6 +1,6 @@
 ---
 title: API Particulier
-tagline: Accédez aux données fiscales (DGFIP), familiales (CAF), au statut pôle-emploi et au statut étudiant des particuliers pour simplifier des démarches administratives
+tagline: Accédez à des données de plusieurs administration pour simplifier les démarches de vos usagers (revenu fiscal de référence, quotient familial, statut demandeur d’emploi et statut étudiant et étudiant boursier...)
 is_open: -1 # -1 means API not open
 datapass_link: https://datapass.api.gouv.fr/api-particulier
 access_page:
@@ -67,65 +67,161 @@ visits_2019: 15831
 uptime: 99.992 # https://uptimerobot.com/dashboard#777746216 * https://uptimerobot.com/dashboard#778826562 / 2
 last_update: 31/03/2021
 content_intro: |
-  API Particulier facilite l'accès des administrations aux données fiscales (DGFIP), familiales (CAF), au statut pôle-emploi et au statut étudiant d'un citoyen, pour simplifier les démarches administratives mises en oeuvre par les collectivités et les administrations.
+ L'API Particulier est un bouquet de données proposé pour simplifier les démarches administratives. 
 
   ### A quoi sert l’API Particulier ?
 
-  Permet aux administrations d'accéder à des informations **certifiées à la source** et ainsi :
+  L'API particulier permet d'obtenir une multitude de données provenant d'administration différentes dans le cadre de démarches lignes ( appelée aussi formulaires en ligne ou téléservices). Un usage dans les logiciels métiers est aussi possible. 
 
-  - de s’affranchir des pièces justificatives lors des démarches en ligne
-  - de réduire le nombre d’erreurs de saisie
-  - d'écarter le risque de fraude documentaire
+  **Avantages pour les administrations :** 
 
-  Du point de vue de l’usager, une démarche qui utilise API Particulier s'apparente à ça :
+  - automatiser l'instuction des demandes,
+  - disposer d'information certifiées à la source,
+  - consulter et mettre à jour des données en back-office.
 
-  1. Je me connecte sur le site de ma commune pour réaliser une démarche.
-  2. En lieu de justificatif de revenu, je saisis mon numéro fiscal et mon numéro d’avis d’imposition.
-  3. Ma commune récupère immédiatement mon revenu fiscal de référence et je n’ai plus rien à faire !
+
+  **Avantages pour les administrations usagers :**
+  
+  - simplifier leurs démarches en ligne gâce à la suppression des pièces justificatives (remplacées par des données),
+  - accélérer le traitement de leurs dossiers.
+
+
+  **Que dois-je faire pour utiliser une API ?**
+  
+  - Je contacte mon éditeur pour m'assurer que son produit utilise l'API particulier ou je transmets le lien vers la documentation technique au gestionnaire de mon formulaire  (DSI ou éditeur), 
+  - Je demande un accès aux données dont j'ai besoin, 
+  - Je transmets le droit d'accès à l'éditeur.
+
 ---
 
 ### Données accessibles dans l'API
 
-| Nom                       | Description                                                                            | Origine des données                                                               |
-| ------------------------- | -------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| RFR                       | Le revenu fiscal de référence (RFR) de l'année en cours et le nombre de parts du foyer | DGFIP                                                                             |
-| Avis d’imposition         | Montant d'impôt, revenu brut, net, imposable, date de recouvrement et d'établissement  | DGFIP                                                                             |
-| Déclarants                | Les nom, prénoms, date de naissance des déclarants du foyer fiscal                     | DGFIP                                                                             |
-| Adresse fiscale           | L'adresse fiscale structurée ainsi que les coordonnées GPS                             | DGFIP                                                                             |
-| Quotient familial         | Le quotient familial (QF) du mois précédent pour la famille                            | CAF                                                                               |
-| Composition familiale     | Liste des parents et des enfants de la famille (avec nom, prénoms, date de naissance)  | CAF                                                                               |
-| Adresse                   | L'adresse structurée détenue par la CAF                                                | CAF                                                                               |
-| Statut demandeur d'emploi | Si applicable, les informations de statut demandeur d‘emploi d‘un individu             | Pôle emploi                                                                       |
-| Statut étudiant           | Si applicable, les informations de statut étudiant d‘un individu                       | Ministère de l'enseignement supérieur, de la recherche et de l'innovation (MESRI) |
+| Donnée                                     | Description                                                                            |
+| ------------------------------------------ | -------------------------------------------------------------------------------------- |
+| [Données fiscales (DGFiP](/les-api/api-particulier#donnees-fiscales)    | Revenu fiscal de référence, déclarants, nombre de parts.  |
+| [Quotient familial (CNAF)](/les-api/api-particulier#quotient-familial)  | Quotient familial, composition familiale          |
+| [Statut étudiant (MESRI)](/les-api/api-particulier#statut-etudiant)  | Statut, établissement(s)                                     |
+| Statut étudiant boursier (CNOUS)| Statut, niveau de bourse(s)                                     |
+| [Statut demandeur d'emploi (Pôle Emploi)](/les-api/api-particulier#statut-demandeur-d'emploi)| Statut et catégorie (A,B,C,D)      |
+| Bénéficiaire d'une prestation sociale | RSA, CSS (complémentaire santé solidaire)               |
 
-Pour plus d’informations techniques sur la structuration des données, vous pouvez <External href='/documentation/api-particulier'>consulter la documentation technique</External>
+### Données fiscales
 
-### Précisions sur les données fiscales (DGFiP)
+<details>
+   <summary>Liste des données</summary>
+| Donnée                       | Description                                                                                        |
+| ---------------------------- | -------------------------------------------------------------------------------------------------- |
+| RFR                          | Le revenu fiscal de référence (RFR) de l'année en cours et le nombre de parts du foyer             |
+| Avis d'imposition            | Montant d'impôt, revenu brut, net, imposable, date de recouvrement et d'établissement              |
+| Déclarants                   | Les nom, prénoms, date de naissance des déclarants du foyer fiscal                                 |
+| Adresse fiscale              | L'adresse fiscale structurée ainsi que les coordonnées GPS                                         |
 
+</details>
+
+<p>
+
+<details>
+   <summary>Précisions sur les données</summary>
 Seules les données des deux dernières années sont disponibles. Par exemple en 2019, il n'est pas possible d'obtenir de données sur l'année 2017.
 
 Les déclarants du foyer fiscal sont la(le) contribuable elle(lui)-même et le(la) conjoint(e) ou partenaire de Pacs.
 
 L’Adresse est celle connue au 1er janvier de l’année d’imposition (exemple au 1er janvier 2018 pour les revenus de 2017)
+</details>
 
-### Précisions sur les données Statut étudiant (MESRI)
+### Quotient familial
 
-Sont disponibles les données d’étudiants inscrits dans les établissements sous tutelle du ministère de l'enseignement supérieur. La couverture des établissements du champ des étudiants sera progressivement complétée.
+<details>
+   <summary>Liste des données</summary>
+| Donnée                       | Description                                                                                        |
+| ---------------------------- | -------------------------------------------------------------------------------------------------- |
+| Quotient familial            | Le quotient familial (QF) du mois précédent pour la famille                                        |
+| Composition familiale        | Liste des parents et des enfants de la famille (avec nom, prénoms, date de naissance)              |
+| Adresse                      | L'adresse structurée détenue par la CAF                                                            |
+</details>
 
-### Précisions sur les données Statut demandeur d'emploi (Pôle Emploi)
+### Statut étudiant
 
-Sont disponibles les données des demandeurs d’emploi inscrits ou ayant été inscrits à Pôle emploi depuis 2010, date d’inscription et de cessation d’inscription le cas échéant.
+<details>
+   <summary>Liste des données</summary>
+| Donnée                             | Description                                                                   |
+| ---------------------------------- | ----------------------------------------------------------------------------- |
+| INE                                | Identifiant National de l'étudiant                                            |
+| Inscriptions en formation continue | Permet d’interroger les données des étudiants en formation continue. Données : date de début, de fin d'inscription, et code COG de la commune du lieu d'étude    |
+| Inscriptions en formation initiale | Permet d’interroger les données des étudiants en formation initiale. Données : dates de début, fin d'inscription et code COG de la commune du lieu d'étude     |
+| Admissions                         | Limite la recherche aux seuls étudiants admis (non-inscrits)                  |
+| Etablissement                      | Le ou les établissements (nom et  identifiant - UAI)                         |
 
-Les catégories de situation des demandeurs d’emploi sont les 5 proposées par Pôle emploi: A, B, C, D et E. La répartition permet d'établir une classification selon la disponibilité du demandeur d'emploi.
+</details>
 
-- A : Personne sans emploi, tenue d'accomplir des actes positifs de recherche d'emploi, à la recherche d'un emploi quel que soit le type de contrat (CDI,CDD, à temps plein, à temps partiel, temporaire ou saisonnier)
-- B : Personne ayant exercé une activité réduite de 78 heures maximum par mois, tenue d'accomplir des actes positifs de recherche d'emploi
-- C : Personne ayant exercé une activité réduite de plus de 78 heures par mois, tenue d'accomplir des actes positifs de recherche d'emploi
-- D : Personne sans emploi, qui n'est pas immédiatement disponible, et qui n'est pas tenue d'accomplir des actes positifs de recherche d'emploi (demandeur d'emploi en formation, en maladie, etc.)
+<p>
+
+<details>
+   <summary>Précisions sur les données</summary>
+Vous aurez à sélectionner des scopes de données dans votre demande. Voici leur fonctionnement :
+
+Deux scopes sont utilisés comme "masque de données". Ces données ne seront 
+donc pas retournées si le scope n'a pas été sélectionné.
+
+- "Etablissements" : renvoie le ou les établissements et code COG du lieu d'étude
+- "INE (Identifiant National Etudiant)"
+
+Trois scopes ont été réalisés pour ne travailler que sur une population restreinte
+
+- "Admission" : si ce scope est sélectionné la recherche de l'étudiant s'effectuera sur la population restreinte aux seuls admis (inscription non-définitive).
+- "Inscriptions en formation initiale"
+- "Inscription en formation continue"
+
+**Périmètre  :**
+
+Cette api délivre les données des étudiants inscrits dans les 
+établissements sous tutelle du ministère de l'enseignement supérieur.
+
+La couverture des établissements du champ des étudiants sera progressivement complétée.
+
+🔎 Consulter le [nombre d'étudiants identifiés dans l'API](https://statutetudiant.esr.gouv.fr/)
+</details>
+
+### Statut demandeur d'emploi
+
+<details>
+   <summary>Liste des données</summary>
+| Donnée                       | Description                                                                                        |
+| ---------------------------- | -------------------------------------------------------------------------------------------------- |
+| Identité                     | Nom, prénom, civilité, date de naissance                                                           |
+| Données de contact           | e-mail, téléphone                                                                                  |
+| Adresse                      |                                                                                                    |
+| Inscription                  | Date d’inscription, date de cessation inscription, Categorie d’inscription                         |
+
+</details>
+
+<p>
+
+<details>
+   <summary>Précisions sur les données</summary>
+Sont disponibles les données des demandeurs d’emploi inscrits ou 
+ayant été inscrits à Pôle emploi depuis 2010, date d’inscription et de 
+cessation d’inscription le cas échéant.
+
+Les catégories de situation des demandeurs d’emploi sont les 5 proposées par Pôle emploi: 
+A, B, C, D et E. La répartition permet d'établir une classification 
+selon la disponibilité du demandeur d'emploi.
+
+- A : Personne
+sans emploi, tenue d'accomplir des actes positifs de recherche d'emploi, à la recherche d'un emploi quel que soit le type de contrat (CDI,CDD, à temps plein, à temps partiel, temporaire ou saisonnier)
+- B :
+Personne ayant exercé une activité réduite de 78 heures maximum par
+mois, tenue d'accomplir des actes positifs de recherche d'emploi
+- C : Personne ayant exercé une activité réduite de plus de 78 heures par
+mois, tenue d'accomplir des actes positifs de recherche d'emploi
+- D : Personne sans emploi, qui n'est pas immédiatement disponible, et qui
+n'est pas tenue d'accomplir des actes positifs de recherche d'emploi
+(demandeur d'emploi en formation, en maladie, etc.)
 - E : Personne pourvue d'un emploi, et qui n'est pas tenue d'accomplir des actes positifs de recherche d'emploi
 
 L’Adresse est celle déclarée par le demandeur lors de son inscription ou suite à une déclaration de changement d’adresse.
 L’API devrait inclure d’ici fin 2021 des données relatives à l’indemnisation des demandeurs d’emploi.
+</details>
 
 ### Conditions générales d'utilisation
 
