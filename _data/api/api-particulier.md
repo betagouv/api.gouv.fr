@@ -80,7 +80,7 @@ content_intro: |
   - consulter et mettre à jour des données en back-office.
 
 
-  **Avantages pour les administrations usagers :**
+  **Avantages pour les usagers :**
   
   - simplifier leurs démarches en ligne gâce à la suppression des pièces justificatives (remplacées par des données),
   - accélérer le traitement de leurs dossiers.
