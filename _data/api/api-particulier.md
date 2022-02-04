@@ -76,21 +76,21 @@ content_intro: |
   **Avantages pour les administrations :** 
 
   - automatiser l'instuction des demandes,
-  - disposer d'information certifiées à la source,
+  - disposer d'informations certifiées à la source,
   - consulter et mettre à jour des données en back-office.
 
 
   **Avantages pour les usagers :**
   
-  - simplifier leurs démarches en ligne gâce à la suppression des pièces justificatives (remplacées par des données),
+  - simplifier leurs démarches en ligne grâce à la suppression des pièces justificatives (remplacées par des données),
   - accélérer le traitement de leurs dossiers.
 
 
   **Que dois-je faire pour utiliser une API ?**
   
   - Je contacte mon éditeur pour m'assurer que son produit utilise l'API particulier ou je transmets le lien vers la documentation technique au gestionnaire de mon formulaire  (DSI ou intégrateur), 
-  - Je demande un accès aux données dont j'ai besoin, 
-  - Je transmets le droit d'accès à l'éditeur.
+  - je demande un accès aux données dont j'ai besoin, 
+  - je transmets le droit d'accès (jeton) à l'éditeur.
 
 ---
 
@@ -111,11 +111,10 @@ content_intro: |
    <summary>Liste des données</summary>
 | Donnée                       | Description                                                                                        |
 | ---------------------------- | -------------------------------------------------------------------------------------------------- |
-| Etat Civil, déclarant 1  | Nom, nom de naissance, prénom(s), date de naissance            |
-| Etat Civil, déclarant 2  | Nom, nom de naissance, prénom(s), date de naissance            |
-| Echéances de l'avis d'imposition  | Date de recouvrement, date d'établissement            |
-| Situation du foyer fiscal  | Adresse, année de déclaration, nombre de parts, nombre de personnes à charge, situation de famille (marié, pacsé, célibataire, veuf, divorcé)  |
-| DGFiP, agrégats fiscaux   | Revenu brut global, revenu imposable, impôt sur le revenu net avant corrections, montant de l'impôt, revenu fiscal de référence, année de l'impôt, année des revenus   |
+| Etat civil du /des déclarant(s)   | Nom, nom de naissance, prénom(s), date de naissance            |
+| Échéances de l'avis d'imposition  | Date de recouvrement, date d'établissement                            |
+| Situation du foyer fiscal  | Adresse, année de déclaration, nombre de parts, nombre de personnes à charge, situation de famille  |
+| Agrégats fiscaux   | Revenu brut global, revenu imposable, impôt sur le revenu net avant corrections, montant de l'impôt, revenu fiscal de référence, année de l'impôt, année des revenus   |
 
 </details>
 
@@ -123,6 +122,10 @@ content_intro: |
 
 <details>
    <summary>Précisions sur les données</summary>
+
+⚠️ Attention : si vous comptez utiliser uniquement les données de la DGFIP, il convient d'utiliser l'API [impôt particulier](https://api.gouv.fr/les-api/impot-particulier)
+
+**Données complémentaires**
 
 Erreur correctif : ce scope complémentaire indique si un correctif plus récent que l'avis recherché est disponible.
 
@@ -134,7 +137,7 @@ Seules les données des deux dernières années sont disponibles. Par exemple en
 
 Les déclarants du foyer fiscal sont la(le) contribuable elle(lui)-même et le(la) conjoint(e) ou partenaire de Pacs.
 
-L’Adresse est celle connue au 1er janvier de l’année d’imposition (exemple au 1er janvier 2022 pour les revenus de 2021)
+L’Adresse est celle connue au 1er janvier de l’année d’imposition (exemple au 1er janvier 2022 pour les revenus de 2021).
 </details>
 
 ### Quotient familial
@@ -144,7 +147,7 @@ L’Adresse est celle connue au 1er janvier de l’année d’imposition (exempl
 | Donnée                       | Description                                                                                        |
 | ---------------------------- | -------------------------------------------------------------------------------------------------- |
 | Quotient familial            | Le quotient familial (QF) du mois précédent pour la famille                                        |
-| Composition familiale        | Liste des parents et des enfants de la famille (avec nom, prénoms, date de naissance)              |
+| Composition familiale        | Liste des parents et des enfants de la famille (avec nom, prénoms, date de naissance).             |
 | Adresse                      | L'adresse structurée détenue par la CAF                                                            |
 </details>
 
@@ -162,11 +165,11 @@ S’il n’y a pas de quotient familial calculé pour cette période de référe
    <summary>Liste des données</summary>
 | Donnée                             | Description                                                                   |
 | ---------------------------------- | ----------------------------------------------------------------------------- |
-| INE                                | Identifiant National de l'étudiant                                            |
-| Inscriptions en formation continue | Permet d’interroger les données des étudiants en formation continue. Données : date de début, de fin d'inscription, et code COG de la commune du lieu d'étude    |
-| Inscriptions en formation initiale | Permet d’interroger les données des étudiants en formation initiale. Données : dates de début, fin d'inscription et code COG de la commune du lieu d'étude     |
-| Admissions                         | Limite la recherche aux seuls étudiants admis (non-inscrits)                  |
-| Etablissement                      | Le ou les établissements (nom et  identifiant - UAI)                         |
+| INE                                | Identifiant national de l'étudiant                                            |
+| Inscriptions en formation continue | Permet d’interroger les données des étudiants en formation continue. Données : date de début, de fin d'inscription, et code COG de la commune du lieu d'étude.    |
+| Inscriptions en formation initiale | Permet d’interroger les données des étudiants en formation initiale. Données : dates de début, fin d'inscription et code COG de la commune du lieu d'étude.     |
+| Admissions                         | Limite la recherche aux seuls étudiants admis (non-inscrits).                  |
+| Etablissement                      | Le ou les établissements (nom et  identifiant - UAI).                         |
 
 </details>
 
@@ -207,7 +210,7 @@ La couverture des établissements du champ des étudiants sera progressivement c
 | Identité                     | Nom, prénom, civilité, date de naissance                                                           |
 | Données de contact           | e-mail, téléphone                                                                                  |
 | Adresse                      |                                                                                                    |
-| Inscription                  | Date d’inscription, date de cessation inscription, Categorie d’inscription                         |
+| Inscription                  | Date d’inscription, date de cessation inscription, catégorie d’inscription                         |
 
 </details>
 
