@@ -88,7 +88,7 @@ content_intro: |
 
   **Que dois-je faire pour utiliser une API ?**
   
-  - Je contacte mon éditeur pour m'assurer que son produit utilise l'API particulier ou je transmets le lien vers la documentation technique au gestionnaire de mon formulaire  (DSI ou éditeur), 
+  - Je contacte mon éditeur pour m'assurer que son produit utilise l'API particulier ou je transmets le lien vers la documentation technique au gestionnaire de mon formulaire  (DSI ou intégrateur), 
   - Je demande un accès aux données dont j'ai besoin, 
   - Je transmets le droit d'accès à l'éditeur.
 
@@ -111,10 +111,11 @@ content_intro: |
    <summary>Liste des données</summary>
 | Donnée                       | Description                                                                                        |
 | ---------------------------- | -------------------------------------------------------------------------------------------------- |
-| RFR                          | Le revenu fiscal de référence (RFR) de l'année en cours et le nombre de parts du foyer             |
-| Avis d'imposition            | Montant d'impôt, revenu brut, net, imposable, date de recouvrement et d'établissement              |
-| Déclarants                   | Les nom, prénoms, date de naissance des déclarants du foyer fiscal                                 |
-| Adresse fiscale              | L'adresse fiscale structurée ainsi que les coordonnées GPS                                         |
+| Etat Civil, déclarant 1  | Nom, nom de naissance, prénom(s), date de naissance            |
+| Etat Civil, déclarant 2  | Nom, nom de naissance, prénom(s), date de naissance            |
+| Echéances de l'avis d'imposition  | Date de recouvrement, date d'établissement            |
+| Situation du foyer fiscal  | Adresse, année de déclaration, nombre de parts, nombre de personnes à charge, situation de famille (marié, pacsé, célibataire, veuf, divorcé)  |
+| DGFiP, agrégats fiscaux   | Revenu brut global, revenu imposable, impôt sur le revenu net avant corrections, montant de l'impôt, revenu fiscal de référence, année de l'impôt, année des revenus   |
 
 </details>
 
@@ -122,11 +123,18 @@ content_intro: |
 
 <details>
    <summary>Précisions sur les données</summary>
-Seules les données des deux dernières années sont disponibles. Par exemple en 2019, il n'est pas possible d'obtenir de données sur l'année 2017.
+
+Erreur correctif : ce scope complémentaire indique si un correctif plus récent que l'avis recherché est disponible.
+
+Situation partielle : ce scope retourne une réponse dans un foyer marié ou pacsé, quand un décès d'un des contribuables affiche les données de l’avis avec l’indication « situation partielle ». Les références de l’autre avis sont donc nécessaires pour le consulter.
+
+**Périmètre**
+
+Seules les données des deux dernières années sont disponibles. Par exemple en 2022, il n'est pas possible d'obtenir de données sur l'année 2020.
 
 Les déclarants du foyer fiscal sont la(le) contribuable elle(lui)-même et le(la) conjoint(e) ou partenaire de Pacs.
 
-L’Adresse est celle connue au 1er janvier de l’année d’imposition (exemple au 1er janvier 2018 pour les revenus de 2017)
+L’Adresse est celle connue au 1er janvier de l’année d’imposition (exemple au 1er janvier 2022 pour les revenus de 2021)
 </details>
 
 ### Quotient familial
@@ -138,6 +146,14 @@ L’Adresse est celle connue au 1er janvier de l’année d’imposition (exempl
 | Quotient familial            | Le quotient familial (QF) du mois précédent pour la famille                                        |
 | Composition familiale        | Liste des parents et des enfants de la famille (avec nom, prénoms, date de naissance)              |
 | Adresse                      | L'adresse structurée détenue par la CAF                                                            |
+</details>
+
+<p>
+
+<details>
+   <summary>Précisions sur les données</summary>
+Le quotient familial retourné par l'API est celui du mois de référence qui est M-1 (M= mois de l’appel).
+S’il n’y a pas de quotient familial calculé pour cette période de référence, l'API ne restituera pas de quotient familial.
 </details>
 
 ### Statut étudiant
