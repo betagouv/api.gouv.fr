@@ -32,7 +32,7 @@ content_intro: |
 
   En intégrant l'API dans votre système d'information, vous pouvez notamment :
 
-  - rechercher une communes par nom, code postal ou coordonnées géographiques
+  - rechercher une commune par nom, code postal ou coordonnées géographiques
   - rechercher un département par son nom
   - rechercher une région par son nom
 contact_link: geo@api.gouv.fr
