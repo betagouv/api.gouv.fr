@@ -298,6 +298,7 @@
       what: AgentConnect par la DINUM
     - type: ADD_API
       what: Prestations sociales par la Direction de la Sécurité Sociale
+      path: /les-api/api-prestations-sociales
   3:
     - type: ADD_API
       what: Déclaration préalable à l'embauche par l'Urssaf
