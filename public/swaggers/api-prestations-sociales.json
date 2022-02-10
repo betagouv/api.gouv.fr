@@ -1,0 +1,718 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "API des prestations",
+    "description": "L'API des prestations permet de vérifier si une personne est bénéficiaire de certaines prestations sociale, par exemple  la Complémentaire Santé Solidaire (CSS) ou le Revenu de Solidarité Active.\n\nCes prestations sont issues du Répertoire National Commun de la Protection Sociale (RNCPS), créé par la loi 2066-1640 du 21 décembre 2006, l’article L. 114-12-1 du code de la sécurité sociale. \nLe RNCPS a vocation à recenser les bénéficiaires de prestations sociales obligatoires. Il regroupe, sur la base du NIR, des données d’état civil et d’affiliation ainsi que la nature des prestations servies.\n\nL'API SECU s’inscrit dans la continuité de la démarche du RNCPS dont l'objectif est de renforcer la qualité de service offert aux assurés sociaux en détectant des droits potentiellement manquants.\n",
+    "version": "1.0"
+  },
+  "security": [
+    {
+      "oAuth2Token": []
+    }
+  ],
+  "paths": {
+    "/prestations/v1/CSS": {
+      "summary": "CSS hors FranceConnect",
+      "description": "A partir des éléments d'état civil d'un assuré, le service indique si l'assuré est bénéficiaire ou non de la CSS",
+      "get": {
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-Correlation-Id"
+          },
+          {
+            "$ref": "#/components/parameters/nom_naissance"
+          },
+          {
+            "$ref": "#/components/parameters/liste_prenoms"
+          },
+          {
+            "$ref": "#/components/parameters/nom_usage"
+          },
+          {
+            "$ref": "#/components/parameters/code_lieunaissance"
+          },
+          {
+            "$ref": "#/components/parameters/code_paysnaissance"
+          },
+          {
+            "$ref": "#/components/parameters/date_naissance"
+          },
+          {
+            "$ref": "#/components/parameters/genre"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Requête traitée avec succès.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Reponse"
+                },
+                "examples": {
+                  "exemple": {
+                    "value": {
+                      "code": true,
+                      "libelle": "L'assuré est bénéficiaire de la CSS"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "La syntaxe de la requête est erronée",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Erreur"
+                },
+                "examples": {
+                  "exemple": {
+                    "value": {
+                      "error_code": 40002,
+                      "error": "Nom de naissance ou nom d'usage absent"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "L'accès à cette ressource est interdit",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Erreur"
+                },
+                "examples": {
+                  "exemple": {
+                    "value": {
+                      "error_code": 40301,
+                      "error": "Le token d'acces ne permet d'accéder à la ressource"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Ressource non trouvée",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Erreur"
+                },
+                "examples": {
+                  "exemple": {
+                    "value": {
+                      "error_code": 40402,
+                      "error": "Le NIR n'a pas été trouvé dans le SNGI"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Dépassement de quota",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Erreur"
+                },
+                "examples": {
+                  "exemple": {
+                    "value": {
+                      "error_code": 42901,
+                      "error": "La limite d’utilisation de l’API, qui est allouée au partenaire a été atteinte"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erreur interne du serveur",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Erreur"
+                },
+                "examples": {
+                  "exemple": {
+                    "value": {
+                      "error_code": 50001,
+                      "error": "Erreur technique"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "summary": "CSS hors France Connect",
+        "operationId": "css_hfc",
+        "description": "A partir des éléments d'état civil d'un assuré, l'API indique si l'assuré est bénéficiaire ou non de la CSS (complémentaire santé solidaire)"
+      },
+      "parameters": []
+    },
+    "/prestations/v1/fc/CSS": {
+      "get": {
+        "summary": "CSS avec France Connect",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "Requête traitée avec succès.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Reponse"
+                },
+                "examples": {
+                  "exemple": {
+                    "value": {
+                      "code": true,
+                      "libelle": "L'assuré est bénéficiaire de la CSS"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "La syntaxe de la requête est erronée",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Erreur"
+                },
+                "examples": {
+                  "exemple": {
+                    "value": {
+                      "error_code": 40002,
+                      "error": "Nom de naissance ou nom d'usage absent"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "L'accès à cette ressource est interdit",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Erreur"
+                },
+                "examples": {
+                  "exemple": {
+                    "value": {
+                      "error_code": 40301,
+                      "error": "Le token d'acces ne permet d'accéder à la ressource"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Ressource non trouvée",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Erreur"
+                },
+                "examples": {
+                  "exemple": {
+                    "value": {
+                      "error_code": 40402,
+                      "error": "Le NIR n'a pas été trouvé dans le SNGI"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Dépassement de quota",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Erreur"
+                },
+                "examples": {
+                  "exemple": {
+                    "value": {
+                      "error_code": 42901,
+                      "error": "La limite d’utilisation de l’API, qui est allouée au partenaire a été atteinte"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erreur interne du serveur",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Erreur"
+                },
+                "examples": {
+                  "exemple": {
+                    "value": {
+                      "error_code": 50001,
+                      "error": "Erreur technique"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "css_fc",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-Correlation-Id"
+          },
+          {
+            "$ref": "#/components/parameters/X-FranceConnect-Token"
+          }
+        ],
+        "description": "A partir du jeton France Connect transmis par le fournisseur de service, l'API indique si l'assuré est bénéficiaire ou non de la CSS (complémentaire santé solidaire)"
+      }
+    },
+    "/prestations/v1/RSA": {
+      "summary": "CSS hors FranceConnect",
+      "description": "A partir des éléments d'état civil d'un assuré, le service indique si l'assuré est bénéficiaire ou non de la CSS",
+      "get": {
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-Correlation-Id"
+          },
+          {
+            "$ref": "#/components/parameters/nom_naissance"
+          },
+          {
+            "$ref": "#/components/parameters/liste_prenoms"
+          },
+          {
+            "$ref": "#/components/parameters/nom_usage"
+          },
+          {
+            "$ref": "#/components/parameters/code_lieunaissance"
+          },
+          {
+            "$ref": "#/components/parameters/code_paysnaissance"
+          },
+          {
+            "$ref": "#/components/parameters/date_naissance"
+          },
+          {
+            "$ref": "#/components/parameters/genre"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Requête traitée avec succès.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Reponse"
+                },
+                "examples": {
+                  "exemple": {
+                    "value": {
+                      "code": true,
+                      "libelle": "L'assuré est bénéficiaire du RSA"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "La syntaxe de la requête est erronée",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Erreur"
+                },
+                "examples": {
+                  "exemple": {
+                    "value": {
+                      "error_code": 40002,
+                      "error": "Nom de naissance ou nom d'usage absent"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "L'accès à cette ressource est interdit",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Erreur"
+                },
+                "examples": {
+                  "exemple": {
+                    "value": {
+                      "error_code": 40301,
+                      "error": "Le token d'acces ne permet d'accéder à la ressource"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Ressource non trouvée",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Erreur"
+                },
+                "examples": {
+                  "exemple": {
+                    "value": {
+                      "error_code": 40402,
+                      "error": "Le NIR n'a pas été trouvé dans le SNGI"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Dépassement de quota",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Erreur"
+                },
+                "examples": {
+                  "exemple": {
+                    "value": {
+                      "error_code": 42901,
+                      "error": "La limite d’utilisation de l’API, qui est allouée au partenaire a été atteinte"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erreur interne du serveur",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Erreur"
+                },
+                "examples": {
+                  "exemple": {
+                    "value": {
+                      "error_code": 50001,
+                      "error": "Erreur technique"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "summary": "RSA hors France Connect",
+        "operationId": "rsa_hfc",
+        "description": "A partir des éléments d'état civil d'un assuré, l'API indique si l'assuré est bénéficiaire ou non du RSA (revenu de solidarité active)"
+      },
+      "parameters": []
+    },
+    "/prestations/v1/fc/RSA": {
+      "get": {
+        "summary": "RSA avec France Connect",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "Requête traitée avec succès.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Reponse"
+                },
+                "examples": {
+                  "exemple": {
+                    "value": {
+                      "code": true,
+                      "libelle": "L'assuré est bénéficiaire du RSA"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "La syntaxe de la requête est erronée",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Erreur"
+                },
+                "examples": {
+                  "exemple": {
+                    "value": {
+                      "error_code": 40002,
+                      "error": "Nom de naissance ou nom d'usage absent"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "L'accès à cette ressource est interdit",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Erreur"
+                },
+                "examples": {
+                  "exemple": {
+                    "value": {
+                      "error_code": 40301,
+                      "error": "Le token d'acces ne permet d'accéder à la ressource"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Ressource non trouvée",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Erreur"
+                },
+                "examples": {
+                  "exemple": {
+                    "value": {
+                      "error_code": 40402,
+                      "error": "Le NIR n'a pas été trouvé dans le SNGI"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Dépassement de quota",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Erreur"
+                },
+                "examples": {
+                  "exemple": {
+                    "value": {
+                      "error_code": 42901,
+                      "error": "La limite d’utilisation de l’API, qui est allouée au partenaire a été atteinte"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erreur interne du serveur",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Erreur"
+                },
+                "examples": {
+                  "exemple": {
+                    "value": {
+                      "error_code": 50001,
+                      "error": "Erreur technique"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "rsa_fc",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-Correlation-Id"
+          },
+          {
+            "$ref": "#/components/parameters/X-FranceConnect-Token"
+          }
+        ],
+        "description": "A partir du jeton France Connect transmis par le fournisseur de service, l'API indique si l'assuré est bénéficiaire ou non du RSA (revenu de solidarité active)"
+      },
+      "parameters": []
+    }
+  },
+  "components": {
+    "schemas": {
+      "Erreur": {
+        "description": "En cas d'erreur, l'API Prestations retourne l'objet suivant en complément du code http\nLes 3 premiers numérique de la valeur 'error_code' correspondent au code http",
+        "type": "object",
+        "properties": {
+          "error_code": {
+            "type": "integer",
+            "example": 40002
+          },
+          "error": {
+            "type": "string",
+            "example": "Nom de naissance ou nom d'usage absent"
+          }
+        }
+      },
+      "Reponse": {
+        "description": "Cet objet est retourné lorsque le traitement s'est correctement déroulé (code http 200)",
+        "type": "object",
+        "x-examples": {},
+        "properties": {
+          "code": {
+            "type": "boolean"
+          },
+          "libelle": {
+            "type": "string",
+            "example": "L'assuré est bénéficiaire de la CSS"
+          }
+        },
+        "required": [
+          "code",
+          "libelle"
+        ]
+      }
+    },
+    "responses": {},
+    "parameters": {
+      "X-Correlation-Id": {
+        "name": "X-Correlation-Id",
+        "in": "header",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "format": "uuid",
+		  "maxLength": 255
+        },
+        "description": "ID de corrélation pour assurer la traçabilité. Cet ID doit être unique et au format UUID"
+      },
+      "X-FranceConnect-Token": {
+        "name": "X-FranceConnect-Token",
+        "in": "header",
+        "required": true,
+        "schema": {
+          "type": "string",
+		  "maxLength": 255
+        },
+        "description": "Jeton France Connect "
+      },
+      "code_lieunaissance": {
+        "name": "code_lieunaissance",
+        "in": "query",
+        "description": "Code INSEE du lieu de naissance de la personne sur 5 chiffres \nSi la personne est née à l'étranger, rubrique vide \n(cf. nomenclature INSEE)",
+        "allowEmptyValue": false,
+        "schema": {
+          "type": "string",
+          "minLength": 5,
+          "maxLength": 5
+        }
+      },
+      "code_paysnaissance": {
+        "name": "code_paysnaissance",
+        "in": "query",
+        "description": "Code INSEE du pays de naissance sur 5 chiffres\nPour la France : 99100\n(cf. nomenclature INSEE)",
+        "allowEmptyValue": false,
+        "schema": {
+          "type": "string",
+          "minLength": 5,
+          "maxLength": 5,
+          "example": "99100"
+        },
+        "required": true
+      },
+      "date_naissance": {
+        "name": "date_naissance",
+        "in": "query",
+        "description": "Date de naissance au format : YYYY-MM-DD\n[ YYYY-MM-DD ] - (\\d{4})-(\\d{2})-(\\d{2})\n[ YYYY-01-01 ] - (\\d{4})-01-01 - (Présumé mois)\n[ YYYY-MM-01 ] - (\\d{4})-(\\d{2})-01 - (Présumé jours)\nDate de naissance < ou = Date du jour \nDate de naissance > ou = 01.01.1850",
+        "required": true,
+        "allowEmptyValue": false,
+        "schema": {
+          "type": "string"
+        }
+      },
+      "genre": {
+        "name": "genre",
+        "in": "query",
+        "description": "1 caractère numérique\nM : masculin ou F : féminin",
+        "required": true,
+        "allowEmptyValue": false,
+        "schema": {
+          "type": "string",
+          "enum": [
+            "M",
+            "F"
+          ]
+        }
+      },
+      "liste_prenoms": {
+        "name": "liste_prenoms",
+        "in": "query",
+        "description": "Liste des prénoms de la personne communiquée par le demandeur : \nIls peuvent être en majuscules ou en minuscules, comporter des caractères accentués ou pas.\nIls sont séparés entre eux par un espace.\n2 prénoms séparés par un tiret constituent un seul prénom composé\n[A-Za-zÀÂÄÇÉÈÊËÎÏÔÖÙÛÜŸàâäçéèêëîïôöùûüÿÆŒæœ -']",
+        "allowEmptyValue": false,
+        "schema": {
+          "type": "string"
+        }
+      },
+      "nom_naissance": {
+        "name": "nom_naissance",
+        "in": "query",
+        "description": "Nom de naissance de la personne recherchée\nIl est en majuscules et peut comporter des caractères accentués ou pas\n[A-ZÀÂÄÇÉÈÊËÎÏÔÖÙÛÜŸÆŒ \\-']",
+        "allowEmptyValue": false,
+        "schema": {
+          "type": "string"
+        }
+      },
+      "nom_usage": {
+        "name": "nom_usage",
+        "in": "query",
+        "description": "Nom d’usage de la personne recherchée\nIl est en majuscules et peut comporter des caractères accentués ou pas\n[A-ZÀÂÄÇÉÈÊËÎÏÔÖÙÛÜŸÆŒ \\-']",
+        "allowEmptyValue": false,
+        "schema": {
+          "type": "string"
+        }
+      }
+    },
+    "examples": {},
+    "requestBodies": {},
+    "headers": {},
+    "securitySchemes": {
+      "oAuth2Token": {
+        "type": "oauth2",
+        "flows": {
+          "clientCredentials": {
+            "tokenUrl": "",
+            "scopes": {
+              "CSS_HFC": "Ressource CSS Hors France Connect",
+              "CSS_FC": "Ressource CSS avec France Connect",
+              "RSA_HFC": "Ressource RSA hors France Connect",
+              "RSA_FC": "Ressource RSA avec France Connect"
+            }
+          }
+        },
+        "description": ""
+      }
+    },
+    "links": {},
+    "callbacks": {}
+  },
+  "servers": []
+}
