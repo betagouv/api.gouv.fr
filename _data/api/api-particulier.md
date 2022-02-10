@@ -98,10 +98,10 @@ content_intro: |
 
 | Donnée                                     | Description                                                                            |
 | ------------------------------------------ | -------------------------------------------------------------------------------------- |
-| [Données fiscales (DGFiP)](/les-api/api-particulier#donnees-fiscales)    | Revenu fiscal de référence, déclarants, nombre de parts  |
-| [Quotient familial (CNAF)](/les-api/api-particulier#quotient-familial)  | Quotient familial, composition familiale          |
-| [Statut étudiant (MESRI)](/les-api/api-particulier#statut-etudiant)  | Statut, établissement(s)                                     |
-| Statut étudiant boursier (CNOUS)| Statut, niveau de bourse                                      |
+| [Données fiscales (DGFiP)](#donnees-fiscales)    | Revenu fiscal de référence, déclarants, nombre de parts  |
+| [Quotient familial (CNAF)](#quotient-familial)  | Quotient familial, composition familiale          |
+| [Statut étudiant (MESRI)](#statut-etudiant)  | Statut, établissement(s)                                     |
+| [Statut étudiant boursier (CNOUS)](#statut-etudiant-boursier)| Statut, niveau de bourse                                      |
 | [Statut demandeur d'emploi (Pôle Emploi)](/les-api/api-particulier#statut-demandeur-d'emploi)| Statut et catégorie (A,B,C,D)      |
 | Bénéficiaire d'une prestation sociale | RSA, CSS (complémentaire santé solidaire)               |
 
@@ -199,6 +199,47 @@ Cette api délivre les données des étudiants inscrits dans les
 La couverture des établissements du champ des étudiants sera progressivement complétée.
 
 🔎 Consulter le [nombre d'étudiants identifiés dans l'API](https://statutetudiant.esr.gouv.fr/)
+</details>
+
+### Statut étudiant boursier
+
+<details>
+   <summary>Liste des données</summary>
+| Donnée                             | Description                                                                   |
+| ---------------------------------- | ----------------------------------------------------------------------------- |
+| Statut boursier                    | Indique si l'étudiant est boursier                                            |
+| Echelon de la bourse               | Echelon de la bourse de 0bis à 8                                              |
+| email                              | Adresse mail                                                                  |
+| Période de versement / Date de rentrée  | Date de début de rentrée scolaire ou universitaire  et durée de versement de la bourse  |
+| Statut de la bourse                | Statut définitif ou provisoire (conditionnel)                                 |
+| Ville d'étude                      | Libellé de la ville d'étude                                                   |
+
+</details>
+
+<p>
+
+<details>
+   <summary>Précisions sur les données</summary>
+L’API délivre les données des étudiants :
+
+- **Boursiers d’État** sur critères sociaux (gérés par les Crous) ;
+- **Boursiers sur critères sociaux des filières sanitaires et sociales des régions.**
+
+<details>
+
+   <summary>🔎 Liste des régions dont les données sont disponibles</summary>
+
+⚠️ La liste des boursiers gérés par les régions, disponible dans cette API, sera mise à jour dès mise à disposition des informations.
+
+---
+
+#### Régions disponibles**
+
+- Normandie
+
+</details>
+
+Une extension de cette API est prévue pour prendre en compte les étudiants boursiers Campus France ainsi qu’une ouverture vers la formation continue.
 </details>
 
 ### Statut demandeur d'emploi
