@@ -207,9 +207,10 @@ La couverture des établissements du champ des étudiants sera progressivement c
    <summary>Liste des données</summary>
 | Donnée                             | Description                                                                   |
 | ---------------------------------- | ----------------------------------------------------------------------------- |
+| Identité                           | Nom, prénom, date de naissance, ville de naissance                            |
 | Statut boursier                    | Indique si l'étudiant est boursier                                            |
 | Echelon de la bourse               | Echelon de la bourse de 0bis à 8                                              |
-| email                              | Adresse mail                                                                  |
+| Mail                               | Adresse mail                                                                  |
 | Période de versement / Date de rentrée  | Date de début de rentrée scolaire ou universitaire  et durée de versement de la bourse  |
 | Statut de la bourse                | Statut définitif ou provisoire (conditionnel)                                 |
 | Ville d'étude                      | Libellé de la ville d'étude                                                   |
@@ -223,23 +224,14 @@ La couverture des établissements du champ des étudiants sera progressivement c
 L’API délivre les données des étudiants :
 
 - **Boursiers d’État** sur critères sociaux (gérés par les Crous) ;
-- **Boursiers sur critères sociaux des filières sanitaires et sociales des régions.**
-
-<details>
-
-   <summary>🔎 Liste des régions dont les données sont disponibles</summary>
+- **Boursiers sur critères sociaux des filières sanitaires et sociales des régions :**
+  - Normandie
 
 ⚠️ La liste des boursiers gérés par les régions, disponible dans cette API, sera mise à jour dès mise à disposition des informations.
 
 ---
 
-#### Régions disponibles**
-
-- Normandie
-
-</details>
-
-Une extension de cette API est prévue pour prendre en compte les étudiants boursiers Campus France ainsi qu’une ouverture vers la formation continue.
+Une extension de cette API est prévue pour **prendre en compte les étudiants boursiers Campus France** ainsi qu’une ouverture vers la formation continue.
 </details>
 
 ### Statut demandeur d'emploi
@@ -281,6 +273,9 @@ n'est pas tenue d'accomplir des actes positifs de recherche d'emploi
 
 L’Adresse est celle déclarée par le demandeur lors de son inscription ou suite à une déclaration de changement d’adresse.
 L’API devrait inclure d’ici fin 2021 des données relatives à l’indemnisation des demandeurs d’emploi.
+
+**⚠️ L’usage de cette API n’est possible que dans le cadre d’un téléservice.**
+**La conservation en back-office des identifiants après l’appel n’est pas possible à ce stade.**
 </details>
 
 ### Conditions générales d'utilisation
