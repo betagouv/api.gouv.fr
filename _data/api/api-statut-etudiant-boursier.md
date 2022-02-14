@@ -91,8 +91,6 @@ L’API délivre les données des étudiants :
 
 </details>
 
-Une extension de cette API est prévue pour prendre en compte les étudiants boursiers Campus France ainsi qu’une ouverture vers la formation continue.
-
 ### Données
 
 L'API retourne selon le cas :
