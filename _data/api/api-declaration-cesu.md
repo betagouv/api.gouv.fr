@@ -36,7 +36,7 @@ access_page:
       Vous n'êtes pas autorisé à accéder à ces données.
 
       <Button href="/rechercher-api">Revenir à la recherche</Button>
-contact_link: contact-api@urssaf.fr
+contact_link: habilitation-api@urssaf.fr
 doc_tech_link: https://portailapi.urssaf.fr/index.php?option=com_apiportal&view=definition&managerId=1&menuId=181&format=raw&stateReturn=L2ZyLz9JdGVtaWQ9MTgxJmFwaUlkPTA1Zjk1MjFmLTI1YWMtNGU0OC04ZjkzLTQ0N2E2NmJmNGFhMCZhcGlOYW1lPUFQSSUyMFRpZXJjZSUyMERlY2xhcmF0aW9uJTIwQ0VTVSZhcGlWZXJzaW9uPTEuMC4wJmFwaXRhYj10ZXN0cyZtYW5hZ2VySWQ9MSZtZW51SWQ9MTgxJm9wdGlvbj1jb21fYXBpcG9ydGFsJnJlbmRlclRvb2w9MiZ0eXBlPXJlc3QmdXNhZ2U9YXBpJnZpZXc9YXBpdGVzdGVy&path=%2Fdiscovery%2Fswagger%2Fapi%2Fid%2F05f9521f-25ac-4e48-8f93-447a66bf4aa0%3FswaggerVersion%3D2.0%26filename%3DAPI%2520Tierce%2520Declaration%2520CESU.json%26extensions%3Dfalse
 useSwaggerProxy: true
 doc_tech_external: https://portailapi.urssaf.fr/fr/
