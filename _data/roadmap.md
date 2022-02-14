@@ -293,6 +293,9 @@
       path: /les-api/api-captchetat
   2:
     - type: ADD_API
+      what: RappelConso, par le Ministère de l'économie, des finances et de la relance
+      path: /les-api/api-rappel-conso 
+    - type: ADD_API
       what: Statut étudiant boursier par le CNOUS
     - type: ADD_API
       what: AgentConnect par la DINUM
