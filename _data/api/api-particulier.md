@@ -229,9 +229,6 @@ L’API délivre les données des étudiants :
 
 ⚠️ La liste des boursiers gérés par les régions, disponible dans cette API, sera mise à jour dès mise à disposition des informations.
 
----
-
-Une extension de cette API est prévue pour **prendre en compte les étudiants boursiers Campus France** ainsi qu’une ouverture vers la formation continue.
 </details>
 
 ### Statut demandeur d'emploi
