@@ -30,7 +30,7 @@ content_intro: |
 contact_link: https://data.economie.gouv.fr/pages/contact
 doc_tech_link: https://data.economie.gouv.fr/api/v2/swagger.json
 visits_2019: 3000
-last_update: 17/01/2020
+last_update: 14/02/2022
 ---
 
 ### Principales données disponibles
