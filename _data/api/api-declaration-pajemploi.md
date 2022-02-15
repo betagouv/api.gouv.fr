@@ -28,7 +28,7 @@ access_page:
       Vous n'êtes pas autorisé à accéder à ces données.
 
       <Button href="/rechercher-api">Revenir à la recherche</Button>
-contact_link: contact-api@urssaf.fr
+contact_link: habilitation-api@urssaf.fr
 doc_tech_link: /swaggers/api-pajemploi.json
 doc_tech_external: https://portailapi.urssaf.fr/fr/
 keywords:
