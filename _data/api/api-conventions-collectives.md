@@ -37,14 +37,8 @@ L'API Conventions collectives permet de rechercher les conventions collectives d
 Chaque entreprise applique des [conventions collectives propres à son secteur d'activité](https://www.service-public.fr/particuliers/vosdroits/F78) (contrat de travail, congés, salaires, hygiène, licenciement, etc...).
 Conclues par les organisations syndicales et les groupements d'employeurs, elles varient selon le secteur d'activité et donc selon les entreprises. Cette API permet d'associer une entreprise à des conventions collectves.
 
-<Button href="https://recherche-entreprises.fabrique.social.gouv.fr/">Voir le démonstrateur</Button>
-
-### Quelles sont les données contenues dans l'API Structures de l'inclusion ?
+### Quelles sont les données contenues dans l'API Conventions collectives ?
 
 | Donnée                                                                                                                                                                        | usage                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------- |
-| [geo-sirene](https://www.data.gouv.fr/fr/datasets/base-sirene-des-entreprises-et-de-leurs-etablissements-siren-siret/#resource-community-c6006b4d-0b4b-4504-a762-1efe69c7ed18) | Version géocodée du stock des établiseement              |
-| [insee-sirene](https://www.data.gouv.fr/fr/datasets/base-sirene-des-entreprises-et-de-leurs-etablissements-siren-siret/)                                                       | Base Sirene des entreprises et de leurs établissements   |
 | [siret2idcc](https://www.data.gouv.fr/fr/datasets/liste-des-conventions-collectives-par-entreprise-siret/#_)                                                                   | Lien vers la convention collective                       |
-| [kali-data](https://github.com/SocialGouv/kali-data)                                                                                                                           | Informations sur les conventions collectives             |
-| [codes-naf](https://github.com/SocialGouv/codes-naf)                                                                                                                           | Liste des codes NAF (Nomenclature d’activités française) |
