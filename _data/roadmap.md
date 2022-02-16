@@ -293,6 +293,9 @@
       path: /les-api/api-captchetat
   2:
     - type: ADD_API
+      what: Indemnisation par Pôle emploi
+      path: /les-api/api-indemnisation-pole-emploi
+    - type: ADD_API
       what: Statut étudiant boursier par le CNOUS
     - type: ADD_API
       what: AgentConnect par la DINUM
