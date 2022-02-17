@@ -74,7 +74,7 @@ Cette application utilise [Next.js](https://github.com/zeit/next.js).
 npm i
 ```
 
-2. Générer les bundles de production
+2. Générer les balluchons de production
 
 ```bash
 npm run build
@@ -88,4 +88,4 @@ PORT=3000 npm run start
 
 ### Preview apps
 
-Chaque pull request est déployé dans des [review app](https://devcenter.heroku.com/articles/github-integration-review-apps) sur [Heroku](https://dashboard.heroku.com/)
+Chaque demande d'extraction est déployée dans des [review app](https://devcenter.heroku.com/articles/github-integration-review-apps) sur [Heroku](https://dashboard.heroku.com/)
