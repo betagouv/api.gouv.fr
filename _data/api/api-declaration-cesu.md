@@ -31,6 +31,7 @@ access_page:
   - who:
       - Un editeur de logiciel de paie
       - Autres activités
+      - Un auto-entrepreneur
     is_eligible: -1
     description: |
       Vous n'êtes pas autorisé à accéder à ces données.
