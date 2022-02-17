@@ -50,7 +50,6 @@ access_page:
 
   - who:
       - Autre actvité
-      - Un auto-entrepreneur
     is_eligible: -1
     description: |
       Pour accéder à l’API Tiers de prestation, vous devez être un organisme de service à la personne au sens de l’article de l'article L. 7232-6 du code du travail.
