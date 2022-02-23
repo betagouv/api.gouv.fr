@@ -203,7 +203,53 @@ La couverture des établissements du champ des étudiants sera progressivement c
 
 ### Statut étudiant boursier
 
+<details>
+   <summary>Liste des données</summary>
+| Donnée                             | Description                                                                   |
+| ---------------------------------- | ----------------------------------------------------------------------------- |
+| Statut boursier                    | Indique si l'étudiant est boursier                                            |
+| Echelon de la bourse               | Echelon de la bourse de 0bis à 8                                              |
+| email                              | Adresse mail                                                                  |
+| Période de versement / Date de rentrée  | Date de début de rentrée scolaire ou universitaire  et durée de versement de la bourse  |
+| Statut de la bourse                | Statut définitif ou provisoire (conditionnel)                                |
+| Ville d'étude                      | Libellé de la ville d'étude                                                   |
 
+</details>
+
+<p>
+
+<details>
+   <summary>Précisions sur les données</summary>
+Vous aurez à sélectionner des scopes de données dans votre demande. Voici leur fonctionnement :
+
+Deux scopes sont utilisés comme "masque de données". Ces données ne seront 
+donc pas retournées si le scope n'a pas été sélectionné.
+
+- "Etablissements" : renvoie le ou les établissements et code COG du lieu d'étude
+- "INE (Identifiant National Etudiant)"
+
+Trois scopes ont été réalisés pour ne travailler que sur une population restreinte
+
+- "Admission" : si ce scope est sélectionné la recherche de l'étudiant s'effectuera sur la population restreinte aux seuls admis (inscription non-définitive).
+- "Inscriptions en formation initiale"
+- "Inscription en formation continue"
+
+**Périmètre  :**
+L’API délivre les données des étudiants :
+
+- **Boursiers d’État** sur critères sociaux (gérés par les Crous) ;
+- **Boursiers sur critères sociaux des filières sanitaires et sociales des régions.**
+
+### Liste des régions dont les données sont disponibles dans l'API
+
+⚠️ La liste des boursiers gérés par les régions, disponible dans cette API, sera mise à jour dès mise à disposition des informations.
+ L’API à ce jour, couvre uniquement le périmètre des boursiers sur critères sociaux à l’exception des boursiers Campus France et des autres bourses.
+
+**Régions disponibles**
+
+- Normandie
+
+</details>
 
 ### Statut demandeur d'emploi
 
