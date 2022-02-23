@@ -312,6 +312,8 @@
     - type: ADD_API
       what: Déclaration préalable à l'embauche par l'Urssaf
     - type: ADD_API
+      what: Prestations sociales par la Direction de la Sécurité Sociale
+    - type: ADD_API
       what: Statut demandeur d'emploi, par Pôle Emploi
     - type: ADD_API
       what: Historique d'un véhicule (HistoVec), par le Ministère de l'Intérieur
