@@ -300,13 +300,14 @@
       path: /les-api/api-prix-controles-techniques
     - type: ADD_API
       what: Statut étudiant boursier par le CNOUS
+      path: /les-api/api-statut-etudiant-boursier
     - type: ADD_API
       what: AgentConnect par la DINUM
-    - type: ADD_API
-      what: Prestations sociales par la Direction de la Sécurité Sociale
   3:
     - type: ADD_API
       what: Déclaration préalable à l'embauche par l'Urssaf
+    - type: ADD_API
+      what: Prestations sociales par la Direction de la Sécurité Sociale
     - type: ADD_API
       what: Statut demandeur d'emploi, par Pôle Emploi
     - type: ADD_API
