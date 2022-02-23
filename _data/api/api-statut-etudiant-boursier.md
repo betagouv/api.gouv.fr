@@ -1,6 +1,6 @@
 ---
 title: API Statut étudiant boursier
-tagline: Vérifiez si individu identifié avec FranceConnect est un étudiant boursier
+tagline: Vérifiez si un individu identifié avec FranceConnect est un étudiant boursier
 datapass_link: https://datapass.api.gouv.fr/api-statut-etudiant-boursier
 access_page:
   - who:
@@ -84,9 +84,7 @@ L’API délivre les données des étudiants :
 ⚠️ La liste des boursiers gérés par les régions, disponible dans cette API, sera mise à jour dès mise à disposition des informations.
  L’API à ce jour, couvre uniquement le périmètre des boursiers sur critères sociaux à l’exception des boursiers Campus France et des autres bourses.
 
----
-
-#### Régions disponibles**
+#### Régions disponibles
 
 - Normandie
 
