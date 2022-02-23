@@ -55,7 +55,7 @@ L'aide juridictionnelle est une prise en charge par l'État des frais judiciaire
 | [API de droits à l'Assurance Maladie](https://api.gouv.fr/les-api/api_ameli_droits_cnam) | Droits d’un individu ou d’une famille (enfants rattachés), gérés par le régime général de l’Assurance Maladie |CNAM   |
 | [API Statut étudiant](https://api.gouv.fr/les-api/api-statut-etudiant)| Statut de l’nscription dans un établissement de l’enseignment suprérieur |MESRI   |
 | API Prestations sociales (bientôt disponible)    | Inscription au RSA, bénéficiaires de la CSS (complémentaire sociale solidaire) |DSS |
-| API Statut étudiant boursier (bientôt disponible)| Statut d’étudiant boursier  |CNOUS / MESRI                                          |
+| [API Statut étudiant boursier](https://api.gouv.fr/les-api/api-statut-etudiant-boursier)| Statut d’étudiant boursier  |CNOUS / MESRI                                          |
 | API Indemnités Pôle Emploi (bientôt disponible)  | Montant des indemnités versée par pôle emploi   |Pôle Emploi                        |
 
 ### Comment ça marche ?
