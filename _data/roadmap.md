@@ -305,6 +305,9 @@
       what: Statut étudiant boursier par le CNOUS
       path: /les-api/api-statut-etudiant-boursier
     - type: ADD_API
+      what: calendrier scolaire, par le Ministère de l'Education Nationale, de la Jeunesse et des Sports
+      path: /les-api/api-calendrier-scolaire
+    - type: ADD_API
       what: AgentConnect par la DINUM
   3:
     - type: ADD_API
