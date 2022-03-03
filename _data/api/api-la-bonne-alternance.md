@@ -35,9 +35,9 @@ content_intro: |
 
   En tant qu’opérateur public ou privé traitant des questions d’orientation, de formation, ou d’emploi en alternance, vous souhaitez enrichir vos services en récupérant tout ou partie des données des formations en apprentissage, des offres d’emploi en alternance et des entreprises présentant un fort potentiel de recrutement en alternance (marché caché) ?
 
-  **👉 L’API ou le widget La Bonne Alternance sont faits pour vous !** [En savoir plus](#service-la-bonne-alternance)
+  **👉 Le service La Bonne Alternance est fait pour vous !** [En savoir plus](#service-la-bonne-alternance)
 
-  Vous êtes un OPCO, un organisme de formation ou tout autre acteur accompagnant des entreprises? Vous souhaitez proposer un service simplifié de dépôt d’offres en alternance à vos entreprises partenaires, tout en facilitant la diffusion et le suivi de leurs offres ?
+  Vous êtes un OPCO, un organisme de formation ou tout autre acteur accompagnant des entreprises ? Vous souhaitez proposer un service simplifié de dépôt d’offres en alternance à vos entreprises partenaires, tout en facilitant la diffusion et le suivi de leurs offres ?
 
   **👉 Le service Matcha est fait pour vous !** [En savoir plus](#service-matcha)
 
