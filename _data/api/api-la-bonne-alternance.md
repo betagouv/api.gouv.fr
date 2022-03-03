@@ -66,7 +66,7 @@ content_intro: |
 
 <details>
   <summary>API</summary>
-L’ensemble des données présentées ci-dessus est accessible en tout ou partie via l’API Alternance.
+L’ensemble des données présentées ci-dessus est accessible en tout ou partie via l’API La Bonne Alternance.
 Ce format permet une intégration personnalisée des données sur l’interface de votre choix.
 Selon la route d’API utilisée, vous pouvez récupérer les formations et/ou les entreprises en fonction d’un lieu et d’un ou plusieurs métiers donnés.
 
@@ -109,7 +109,7 @@ Matcha dispose d’une API permettant d’accéder à l’ensemble des fonctionn
 
 Pour intégrer facilement le formulaire simplifié de dépôt d’offres.
 
-**🔎 Exemple d’exploitation** du widget sur [l’OPCO AKTO](https://www.akto.fr/deposer-une-offre-demploi-en-alternance/)
+🔎 Exemple d’exploitation du widget sur [**l’OPCO AKTO**](https://www.akto.fr/deposer-une-offre-demploi-en-alternance/)
 
 **Comment exploiter le widget ?**
 
@@ -147,9 +147,9 @@ Le service de candidature en ligne Je candidate est aujourd’hui déployé au s
 
 Pour proposer le service de prise de rendez-vous aux utilisateurs de votre site internet en intégrant le widget Rendez-vous apprentissage.
 
-**🔎 Exemple d’exploitation du widget** [sur le site de l’Onisep.](https://www.onisep.fr/Ressources/Univers-Lycee/Lycees/Ile-de-France/Essonne/cfa-faculte-des-metiers-de-l-essonne-site-d-evry/cap-esthetique-cosmetique-parfumerie)
+🔎 Exemple d’exploitation du widget [**sur le site de l’Onisep.**](https://www.onisep.fr/Ressources/Univers-Lycee/Lycees/Ile-de-France/Essonne/cfa-faculte-des-metiers-de-l-essonne-site-d-evry/cap-esthetique-cosmetique-parfumerie)
 
-**📄 Comment exploiter et tester le widget ?** [Consultez cette documentation.](https://rdv-cfa.apprentissage.beta.gouv.fr/widget/tutorial)
+📄 Comment exploiter et tester le widget ? [**Consultez cette documentation.**](https://rdv-cfa.apprentissage.beta.gouv.fr/widget/tutorial)
 
 </details>
 
