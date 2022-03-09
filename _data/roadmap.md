@@ -311,6 +311,9 @@
       what: AgentConnect par la DINUM
   3:
     - type: ADD_API
+      what: Statut demandeur d'emploi, par Pôle Emploi et accessible bia France Connect
+      path: /les-api/api-statut-demandeur-emploi
+    - type: ADD_API
       what: Prestations sociales par la Direction de la Sécurité Sociale
     - type: ADD_API
       what: Déclaration préalable à l'embauche par l'Urssaf
