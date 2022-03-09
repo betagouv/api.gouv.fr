@@ -8,7 +8,6 @@ publish: true # this page will appear on /guides page
 api:
   - API Particulier
 related_guides:
-  - portail-famille-pass-famille
   - portail-famille-tarification
 ---
 
