@@ -75,3 +75,5 @@ Seuls les étudiants dont les établissements transmettent leurs données pourro
 | Code commune                                            | Code postal de la commune de l'établissement                             |
 | Régime                                                  | Formation initiale / formation continue                                  |
 | Statut                                                  | Exemple : admis                                                          |
+| Date de début                                           | Date de début de l’inscription. Exemple : 2021-09-01                     |
+| Date de fin                                             | Date de fin de l’inscription. Exemple : 2022-08-31                       |

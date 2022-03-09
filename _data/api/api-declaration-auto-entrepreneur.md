@@ -21,6 +21,19 @@ access_page:
 
       <Button href="https://datapass.api.gouv.fr/api-declaration-auto-entrepreneur">Remplir une demande</Button>
   - who:
+      - Un auto-entrepreneur
+    is_eligible: 0
+    description: |
+      Les auto-entrepreneurs peuvent accéder à l'API sous certaines conditions. 
+
+      Pour remplir votre demande, vous aurez uniquement besoin de :
+
+      - Créer un compte api.gouv pour accéder au formulaire DataPass ;
+      - Attestation fiscale ;
+      - Attestation sociale.
+
+      <Button href="https://datapass.api.gouv.fr/api-declaration-auto-entrepreneur">Remplir une demande</Button>
+  - who:
       - Un editeur de logiciel de paie
       - Autres activités
     is_eligible: -1

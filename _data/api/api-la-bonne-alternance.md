@@ -1,11 +1,12 @@
 ---
 title: API Alternance
-tagline: Accédez aux données liées aux formations en apprentissage, aux offres d’emploi en alternance et aux entreprises susceptibles de recruter en alternance.
+tagline: Facilitez la mise en relation des candidats à l’alternance avec les entreprises et organismes de formation. 
 external_site: https://labonnealternance.pole-emploi.fr/
 producer: dinum
 is_open: 1 # -1 means API not open
 partners:
-  - Pôle emploi
+  - pole-emploi
+  - Mission interministérielle pour l'apprentissage
 keywords:
   - apprentissage
   - widget
@@ -19,69 +20,144 @@ themes:
   - Emploi
 last_update: 14/12/2020
 content_intro: |
-  L’API Alternance permet d’exposer les deux composantes de l'alternance : la **formation** et l'**emploi**. Ce service permet d’exposer également les entreprises susceptibles de recruter sur l'ensemble du périmètre Alternance. Le site <External href="https://labonnealternance.pole-emploi.fr?utm_medium=mweb&utm_source=apigouvfr&utm_campaign=pagelba_apigouvfr">La Bonne Alternance</External> donne un aperçu visuel de ces données.
+  L’API Alternance a vocation à faciliter la mise en relation des candidats à l’alternance avec les entreprises accueillant des alternants et les CFA.
+  Elle permet ainsi d’exposer et de recueillir les données des deux principales composantes de l'alternance : la formation et l'emploi. 
+  L’échange de données est possible à partir de trois services proposés par La Bonne Alternance, dans une approche complémentaire. 
+  
+  Chacun de ces services peut-être appelé de manière indépendante : 
+  
+  - **La Bonne Alternance** qui agrège et diffuse l’offre de formation en apprentissage, l’offre d’emploi en alternance et identifie les entreprises susceptibles de recruter en alternance ;
+  - **Matcha** qui facilite le dépôt, la gestion et la multidiffusion d’offres d’emploi en alternance pour les entreprises et les organismes de formation 
+  - **Je candidate** qui simplifie la prise de contact entre un candidat à l’alternance et une entreprise qui recrute en alternance ;
+  - **RDV Apprentissage** qui simplifie la prise de contact entre un candidat à l’alternance et un organisme de formation en apprentissage.
 
-  En bref, l'API Alternance vous permet d'exposer : 
+  ## A quoi sert l'API Alternance ?
 
-  - une carte et une liste de résultats de formations en apprentissage et/ou d’emplois en alternance,
-  - un formulaire de recueil d’offres d’emploi en alternance,
-  - un formulaire de prise de contact auprès d’un organisme de formation.
+  En tant qu’opérateur public ou privé traitant des questions d’orientation, de formation, ou d’emploi en alternance, vous souhaitez enrichir vos services en récupérant tout ou partie des données des formations en apprentissage, des offres d’emploi en alternance et des entreprises présentant un fort potentiel de recrutement en alternance (marché caché) ?
+
+  **👉 Le service La Bonne Alternance est fait pour vous !** [En savoir plus](#service-la-bonne-alternance)
+
+  Vous êtes un OPCO, un organisme de formation ou tout autre acteur accompagnant des entreprises ? Vous souhaitez proposer un service simplifié de dépôt d’offres en alternance à vos entreprises partenaires, tout en facilitant la diffusion et le suivi de leurs offres ?
+
+  **👉 Le service Matcha est fait pour vous !** [En savoir plus](#service-matcha)
+
+  Vous exposez des entreprises qui recrutent en alternance sur votre site internet ? Vous souhaitez permettre aux jeunes de candidater en quelques clics auprès de ces entreprises ? 
+
+  **👉 Le service Je candidate est fait pour vous !** [En savoir plus](#service-je-candidate)
+
+  Vous exposez des formations en alternance sur votre site internet ? Vous souhaitez permettre aux jeunes de prendre un premier contact avec les organismes proposant ces formations ? 
 
 
-  ### A quoi sert l'API Alternance ?
+  **👉 Le service Rendez-vous apprentissage est fait pour vous !** [En savoir plus](#service-rendez-vous-apprentissage)
 
-  L’API Alternance sert à offrir une information complète et centralisée aux publics en recherche d’une formation en apprentissage et/ou d’un contrat en alternance.
-
-  En tant qu’opérateur public ou privé traitant des questions d’orientation, de formation ou d’emploi en général, et d’alternance (apprentissage, professionnalisation) en particulier, il est possible de récupérer indépendamment ou simultanément les données :
-
-  - formations en apprentissage
-  - offres d’emploi en alternance
-  - entreprises présentant un fort potentiel de recrutement en alternance
-
-  Selon l’API sélectionnée, ces données sont récupérables pour :
-
-  - un secteur géographique (point géographique, département, région ou France entière)
-  - un secteur professionnel (domaine ou ensemble de domaines professionnels ou tous domaines professionnels)
-  - un métier ou ensemble de métiers définis
 ---
+### Service La Bonne Alternance
 
-### Données accessibles dans l'API
+#### Origine des données
 
-| Nom                                                | Description                                                                                                                                                                                                                            |
-| -------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Formations en apprentissage                        | Les données sont alimentées en flux par le Réseau Carif-Oref et consolidées dans un catalogue produit par la Mission Nationale Apprentissage (<External href="https://catalogue.apprentissage.beta.gouv.fr/">API catalogue</External>) |
-| Offres d’emploi en alternance                   | Les données sont collectées par l’API Offres d’emploi de Pôle emploi, qui agrège également des offres déposées par des partenaires de Pôle emploi.                                                                                     |
-| Offres d’emploi en alternance (Matcha)          | Les données sont collectées à partir d'un formulaire de reccueil simplifié                                                                                      |
-| Entreprises susceptibles de recruter en alternance | Les données proviennent d’un algorithme prédictif qui analyse 6 années de recrutements en alternance                                                                                                                                   |
-| Entreprises à fort potentiel de recrutement        | Les données proviennent d’un algorithme prédictif qui analyse les recrutements en CDI et CDD de plus de 30 jours des 6 années passées (<External href="https://api.gouv.fr/les-api/LaBonneBoite">API La Bonne Boite</External>)        |
+|Donnée                       |Origine                                                                                   |
+|---------------------------- | -----------------------------------------------------------------------------------------|
+|Formations en apprentissage  |Les données sont alimentées par le [catalogue des formations](https://catalogue.apprentissage.beta.gouv.fr/) en apprentissage. Ce service, développé par la mission interministérielle pour l’apprentissage, permet les contrôles et enrichissements des informations collectées par les Carif-Oref. *Source “formations” dans l’API*
+|Offres d’emploi en alternance (Pôle emploi et partenaires)   |Les données sont alimentées par l’API Offres d’emploi de Pôle emploi, qui agrège les offres déposées sur Pôle emploi et les sites de [ses partenaires](https://www.pole-emploi.fr/candidat/vos-services-en-ligne/des-partenaires-pour-vous-propos.html). *Source “offres” dans l’API*|
+|Offres d’emploi en alternance (Matcha)|Les données sont collectées à partir du formulaire simplifié de recueil de besoins en recrutement de La Bonne Alternance nommé “Matcha”. *Source “Matcha” dans l’API*|
+|Entreprises susceptibles de recruter en alternance| Les données proviennent de l’algorithme prédictif de La Bonne Alternance. Chaque mois, il identifie une liste restreinte d’entreprises à fort potentiel d’embauche, afin d’encourager et de faciliter les démarches de candidatures spontanées des candidats. *Source “lba” dans l’API* |
 
-### Descriptif et données de chaque API
+#### Formats disponibles
 
-Nos API normalisent les données sources pour restituer en un même format, soit :
+<details>
+  <summary>API</summary>
+L’ensemble des données présentées ci-dessus est accessible en tout ou partie via l’API La Bonne Alternance.
+Ce format permet une intégration personnalisée des données sur l’interface de votre choix.
+Selon la route d’API utilisée, vous pouvez récupérer les formations et/ou les entreprises en fonction d’un lieu et d’un ou plusieurs métiers donnés.
 
-1. les formations en apprentissage pour un métier, un ensemble de métiers, un domaine professionnel, un ensemble de domaines professionnels autour d'un point géographique
-2. les formations en apprentissage dans un département, une région ou dans la France entière pour un métier, un ensemble de métiers, un domaine professionnel ou un ensemble de domaines professionnels
-3. les entreprises recrutant ou susceptibles de recruter en alternance référencées par les APIs de Pôle emploi, pour un métier ou un ensemble de métiers, autour d'un point géographique
-4. les entreprises recrutant en alternance qui ont déposé une offre d’emploi via le formulaire de dépôt simplifié, pour un ensemble de métiers, autour d’un point géographique
-5. les formations en apprentissage et les entreprises recrutant ou susceptibles de recruter en alternance référencées par les APIs de Pôle emploi, pour un métier ou un ensemble de métiers, autour d'un point géographique.
+🔎 Exemple d’exploitation de l’API sur [**1jeune1solution.**](https://www.1jeune1solution.gouv.fr/apprentissage?commune=75101&distance=30&etudes=all&metier=Boulangerie,%20p%C3%A2tisserie,%20chocolaterie&type=company&page=1)
 
-### Autres formats de données disponibles
+📄 Comment exploiter et tester l’API ? [**Consulter cette documentation.**](https://api.gouv.fr/documentation/api-la-bonne-alternance)
 
-Les données récupérables par l'API Alternance peuvent aussi être affichées sous forme de widget, ce qui permet la prise en charge complète de l’affichage des données pour l’utilisateur. Ce widget s’intègre aux sites déjà existants, il est disponible en plusieurs tailles et <External href="/guides/widget-la-bonne-alternance">intégrable en marque blanche</External>.
+</details>
+<br>
+<details>
+  <summary>Widget</summary>
 
-Deux autres widget sont également disponibles:
+Les données présentées ci-dessus sont également disponibles sous forme de widget. 
+Ce format permet une intégration rapide et simplifiée sur l’interface de votre choix.
+Le widget est disponible en marque blanche et est proposé en plusieurs tailles. Par ailleurs, différents filtres peuvent être appliqués aux données qu’il restitue.
 
-- **Widget Matcha** : il    permet à une plateforme d’intégrer un formulaire de saisie pour un employeur qui souhaite diffuser une offre ; cette offre est redistribuée sur le site web La Bonne Alternance et sur d’autres sites grâce à l’API jobs mentionnée ci-dessus. 
-🔎 [Exemple d’intégration ici](https://www.akto.fr/deposer-une-offre-demploi-en-alternance/)
-- **Widget Rendez-vous apprentissage** : il permet à une plateforme d’intégrer un bouton qui ouvre un formulaire de prise de contact auprès d’un organisme de formation. 
-🔎 [Exemple d’intégration ici](https://www.onisep.fr/Ressources/Univers-Lycee/Lycees/Ile-de-France/Essonne/cfa-faculte-des-metiers-de-l-essonne-site-d-evry/cap-esthetique-cosmetique-parfumerie)
+🔎 Exemple d’exploitation du widget sur [**jassuremonfutur**](https://www.jassuremonfutur.fr/annuaire-formation-assurance), en lançant une recherche “Chargé de clientèle” à “Paris”.
 
-### Réutilisation
+📄 Comment exploiter le widget ? [Consultez cette documentation.](https://api.gouv.fr/guides/widget-la-bonne-alternance)
 
-La réutilisation de ces données engage la responsabilité du réutilisateur.
+👉 Comment tester le widget ? [Consultez cette page.](https://labonnealternance.apprentissage.beta.gouv.fr/test-widget)
 
-### L'équipe
+</details>
 
-Les API et widgets sont produits par la DINUM, et pour certains en partenariat avec pole-emploi.
+### Service Matcha
 
-Pour en savoir plus, consultez la <External href="https://mission-apprentissage.gitbook.io/general/">présentation de l'équipe</External>.
+#### Formats disponibles
+
+<details>
+  <summary>API</summary>
+
+Matcha dispose d’une API permettant d’accéder à l’ensemble des fonctionnalités proposées originalement sur le formulaire, vous permettant ainsi de configurer notre formulaire selon vos usages et besoins.
+
+📄 Comment exploiter l’API ? [Consultez cette documentation.](https://matcha.apprentissage.beta.gouv.fr/api/v1/docs/)
+
+</details>
+<br>
+<details>
+  <summary>Widget</summary>
+
+Pour intégrer facilement le formulaire simplifié de dépôt d’offres.
+
+🔎 Exemple d’exploitation du widget sur [**l’OPCO AKTO**](https://www.akto.fr/deposer-une-offre-demploi-en-alternance/)
+
+**Comment exploiter le widget ?**
+
+👉 Utilisez le code suivant au sein d’une balise HTML :
+
+```html
+<iframe loading="lazy" src="https://matcha.apprentissage.beta.gouv.fr/widget/{ORIGINE}/" width="100%" height="800" frameborder="0" style="max-width: 100%;"></iframe>
+```
+--> en remplaçant "ORIGINE" par le nom de votre établissement.
+
+👉 Comment tester le widget ? Consultez [cette page.](https://matcha-recette.apprentissage.beta.gouv.fr/widget/matcha)
+
+</details>
+
+### Service Je candidate
+
+#### Format disponible
+
+<details>
+  <summary>Widget</summary>
+
+Le service de candidature en ligne Je candidate est aujourd’hui déployé au sein du widget du service La Bonne Alternance.
+
+👉 Pour en savoir plus, [contactez l'équipe](mailto:labonnealternance@apprentissage.beta.gouv.fr)
+
+</details>
+
+
+### Service Rendez-vous apprentissage
+
+#### Format disponible
+
+<details>
+  <summary>Widget</summary>
+
+Pour proposer le service de prise de rendez-vous aux utilisateurs de votre site internet en intégrant le widget Rendez-vous apprentissage.
+
+🔎 Exemple d’exploitation du widget [**sur le site de l’Onisep.**](https://www.onisep.fr/Ressources/Univers-Lycee/Lycees/Ile-de-France/Essonne/cfa-faculte-des-metiers-de-l-essonne-site-d-evry/cap-esthetique-cosmetique-parfumerie)
+
+📄 Comment exploiter et tester le widget ? [**Consultez cette documentation.**](https://rdv-cfa.apprentissage.beta.gouv.fr/widget/tutorial)
+
+</details>
+
+## Réutilisation
+
+L’exploitation de ces données engage la responsabilité du réutilisateur.
+
+## L'équipe
+
+Ces API et widgets sont produits par l'équipe de la mission interministérielle pour l'apprentissage, au sein de la DINUM. Pôle emploi est partenaire du développement de certains d'entre eux.
+Pour en savoir plus, [consultez la présentation du service La Bonne Alternance.](https://beta.gouv.fr/startups/la-bonne-alternance.html)
