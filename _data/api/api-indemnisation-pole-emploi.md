@@ -49,6 +49,7 @@ keywords:
   - demandeur
   - emploi
   - chômeur
+  - social
   - inscription
   - travail
 rate_limiting_resume: 
