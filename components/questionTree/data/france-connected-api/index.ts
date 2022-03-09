@@ -35,6 +35,7 @@ const isFranceConnectedQuestions = {
       },
     ],
   },
+  indemnisationPe: {
   statutEtudiantBoursier: {
     question:
       'Utilisez-vous ou comptez-vous utiliser FranceConnect sur votre service ?',
@@ -42,24 +43,11 @@ const isFranceConnectedQuestions = {
       {
         choices: ['Oui'],
         answer: `Vous pouvez remplir une demande :
-        <Button href="https://datapass.api.gouv.fr/api-statut-etudiant-boursier">Remplir une demande</Button>`,
+        <Button href="https://datapass.api.gouv.fr/api-indemnisation-pole-emploi">Remplir une demande</Button>`,
       },
       {
         choices: ['Non'],
-        answer: `En remplissant cette demande, vous allez obtenir l’accès à l'API Statut étudiant boursier, via l'API Particulier.
-        <br/>
-        <Button href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</Button>
-        `,
-      },
-    ],
-  },
-  IndemnisationPe: {
-    question:
-      'Utilisez-vous ou comptez-vous utiliser FranceConnect sur votre service ?',
-    choiceTree: [
-      {
-        choices: ['Oui'],
-        answer: `Vous pouvez remplir une demande :
+        answer: `En remplissant cette demande, vous allez obtenir l’accès à l'API Indemnisation Pôle emploi, via l'API Particulier.
         <Button href="https://datapass.api.gouv.fr/api-statut-etudiant-boursier">Remplir une demande</Button>`,
       },
       {

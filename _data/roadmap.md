@@ -312,6 +312,7 @@
   3:
     - type: ADD_API
       what: Indemnisation Pôle Emploi, par Pôle Emploi
+      path: /les-api/api-indemnisation-pole-emploi
   4:
     - type: ADD_API
       what: Prestations sociales par la Direction de la Sécurité Sociale
