@@ -78,8 +78,8 @@ Deuxièmement, à accéder à des données supplémentaires grâce aux [API “F
 | [API Indemnités Journalières](https://api.gouv.fr/les-api/api-indemnites-journalieres-cnam)   | Montant des indemnités journalières de l'Assurance Maladie payé à un assuré sur une période|CNAM |
 | [API de droits à l'Assurance Maladie](https://api.gouv.fr/les-api/api_ameli_droits_cnam) | Droits d’un individu ou d’une famille (enfants rattachés), gérés par le régime général de l’Assurance Maladie |CNAM   |
 | [API Statut étudiant](https://api.gouv.fr/les-api/api-statut-etudiant)| Statut de l’nscription dans un établissement de l’enseignment suprérieur |MESRI   |
+| [API Statut étudiant boursier](https://api.gouv.fr/les-api/api-statut-etudiant-boursier)                     | Statut d’étudiant boursier  |CNOUS / MESRI            |
 | API Prestations sociales (bientôt disponible)    | Inscription au RSA, bénéficiaires de la CSS (complémentaire sociale solidaire) |DSS |
-| API Statut étudiant boursier (bientôt disponible)| Statut d’étudiant boursier  |CNOUS / MESRI                                          |
 | API Indemnités Pôle Emploi (bientôt disponible)  | Montant des indemnités versée par pôle emploi   |Pôle Emploi                        |
 
 Utiliser l'API FranceConnect pour identifier les utilisateurs de votre site permet également d'accéder à des données d'état civil. C'est ce qu'on appelle **l'identité pivot**.

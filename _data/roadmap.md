@@ -275,7 +275,7 @@
       path: /les-api/api-fantoir
     - type: INFO
       what: |
-        L'API Statut étudiant est disponible dans l'API Particulier : elle permet de [simplifier la tarification solidaire dans les transports en commun](https://api.gouv.fr/guides/delivrance-titres-transport)
+        L'API Statut étudiant est disponible dans l'API Particulier : elle permetnotamment de [simplifier la tarification solidaire dans les transports en commun](https://api.gouv.fr/guides/delivrance-titres-transport)
     - type: ADD_API
       what: Statut étudiant par le Ministère de l'Enseignement Supérieur, de la Recherche et de l'Innovation
       path: /les-api/api-statut-etudiant
@@ -294,16 +294,29 @@
   2:
     - type: ADD_API
       what: Indemnisation par Pôle emploi
-      path: /les-api/api-indemnisation-pole-emploi
+      what: RappelConso, par le Ministère de l'économie, des finances et de la relance
+      path: /les-api/api-rappel-conso 
+    - type: ADD_API
+      what: Prix des contrôles techniques par le Ministère de l'économie, des finances et de la relance
+      path: /les-api/api-prix-controles-techniques
+    - type: INFO
+      what: |
+        L'API Statut étudiant boursier est disponible dans l'API Particulier : elle permet notamment de [simplifier la tarification solidaire dans les transports en commun](https://api.gouv.fr/guides/delivrance-titres-transport)
     - type: ADD_API
       what: Statut étudiant boursier par le CNOUS
+      path: /les-api/api-statut-etudiant-boursier
+    - type: ADD_API
+      what: calendrier scolaire, par le Ministère de l'Education Nationale, de la Jeunesse et des Sports
+      path: /les-api/api-calendrier-scolaire
     - type: ADD_API
       what: AgentConnect par la DINUM
-    - type: ADD_API
-      what: Prestations sociales par la Direction de la Sécurité Sociale
   3:
     - type: ADD_API
+      what: Prestations sociales par la Direction de la Sécurité Sociale
+    - type: ADD_API
       what: Déclaration préalable à l'embauche par l'Urssaf
+    - type: ADD_API
+      what: Prestations sociales par la Direction de la Sécurité Sociale
     - type: ADD_API
       what: Statut demandeur d'emploi, par Pôle Emploi
     - type: ADD_API
