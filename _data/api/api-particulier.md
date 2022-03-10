@@ -72,6 +72,8 @@ content_intro: |
   ### A quoi sert l’API Particulier ?
 
   L'API particulier permet d'obtenir une multitude de données provenant d'administration différentes dans le cadre de démarches lignes (appelée aussi formulaires en ligne ou téléservices). Un usage dans les logiciels métiers est aussi possible. 
+  
+
 
   **Avantages pour les administrations :** 
 
@@ -79,11 +81,22 @@ content_intro: |
   - disposer d'informations certifiées à la source,
   - consulter et mettre à jour des données en back-office.
 
+<Quote logo="/images/guides/boulbi.svg" who='Ville de Boulogne-Billancourt' title='Services de la mairie'>
+Pour la première année en 2020, au lieu de se déplacer en mairie, près de 75% des familles boulonnaises ont opté pour la mise à jour par voie électronique de leur quotient familial. Cette mesure simplificatrice, en limitant l’utilisation du papier, est également une avancée pour la préservation de notre environnement
+</Quote>
+
 
   **Avantages pour les usagers :**
   
-  - simplifier leurs démarches en ligne grâce à la suppression des pièces justificatives (remplacées par des données),
+  - simplifier leurs démarches en ligne grâce à la suppression des pièces justificatives (remplacées par des données) et des erreurs de saisie
   - accélérer le traitement de leurs dossiers.
+
+  <Quote logo="/images/guides/clamart.svg" who='Ville de Clamart' title='Simon-Pierre Chalvidan, directeur général adjoint des services'>
+En 2014, nos usagers prenaient une demi-journée de congés pour effectuer leurs démarches en mairie. Aujourd'hui, ils les effectuent en ligne en 5 minutes.
+</Quote>
+
+**Pour en savoir plus :**&nbsp;<External href="https://www.dailymotion.com/video/x7xsjgz"> voir le témoignage de la ville de Clamart</External> (à partir de la 9eme minute).
+
 
 
   **Que dois-je faire pour utiliser une API ?**
