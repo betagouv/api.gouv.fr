@@ -99,13 +99,14 @@ En 2014, nos usagers prenaient une demi-journée de congés pour effectuer leurs
 
 
 
+---
+
   **Que dois-je faire pour utiliser une API ?**
   
   - Je contacte mon éditeur pour m'assurer que son produit utilise l'API particulier ou je transmets le lien vers la documentation technique au gestionnaire de mon formulaire  (DSI ou intégrateur), 
   - je demande un accès aux données dont j'ai besoin, 
   - je transmets le droit d'accès (jeton) à l'éditeur.
 
----
 
 ### Données accessibles dans l'API
 
