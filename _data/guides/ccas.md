@@ -26,7 +26,6 @@ le principe du "Dites-le nous une fois" (...) permet aux citoyens de ne pas avoi
 C'est dans ce cadre que le SITIV intègre directement au logiciel métier les informations des usagers (...) Les saisies dans les dossiers usagers sont ainsi **facilitées et certifiées**.
 </Quote>
 
-
 ## Les données disponibles
 
 Voici les données de la CAF (composition familiale du foyer du demandeur) et de la DGFIP (pour vérifier les conditions d'éligibilité d'une demande) accessibles directement avec l'API, ce sont les données les plus utilisées pour ce service, mais la liste ci-dessous n'est pas exhaustive :
@@ -39,51 +38,27 @@ Voici les données de la CAF (composition familiale du foyer du demandeur) et de
 | Avis d'imposition | statut d’imposition, montant de l'impôt, revenu fiscal de référence, nombre de parts fiscales |
 | Adresse           | L'adresse du foyer et/ou l'adresse fiscale du demandeur                                       |
 
-
 ## Comment accéder à la donnée
 
-**Cadre légal :**
 L'utilisation des données par les CCAS est encadrée légalement, et demande donc de formuler une demande. Vous pouvez motiver votre demande à l'aide des articles suivants :
 
-Article <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000026799356&cidTexte=LEGITEXT000006074069&dateTexte=20121219">L.312-1</External> et <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000031106561&cidTexte=LEGITEXT000006074069&dateTexte=20150809"> R123-5 </External> du _Code de l'action sociale et des familles_
+- Article <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000026799356&cidTexte=LEGITEXT000006074069&dateTexte=20121219">L.312-1</External> et <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000031106561&cidTexte=LEGITEXT000006074069&dateTexte=20150809"> R123-5 </External> du _Code de l'action sociale et des familles_
 
-Article <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000033219997&cidTexte=LEGITEXT000031366350&dateTexte=20161009">L.114-8</External> et <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=83A5E43D6A6710F0F0FFE705AA476AA5.tplgfr26s_3?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000038029900&dateTexte=20190213&categorieLien=id#LEGIARTI000038029900">R114-9-3 </External> du _Code des relations entre le public et l'administration_
+- Article <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000033219997&cidTexte=LEGITEXT000031366350&dateTexte=20161009">L.114-8</External> et <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=83A5E43D6A6710F0F0FFE705AA476AA5.tplgfr26s_3?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000038029900&dateTexte=20190213&categorieLien=id#LEGIARTI000038029900">R114-9-3 </External> du _Code des relations entre le public et l'administration_
 
+Si vous travaillez avec un des éditeurs ou intégrateurs, <a href='#editeurs'>consultez la section éditeurs.</a>
 
-**Pour remplir votre demande, vous aurez besoin :**
-- de votre numéro SIRET
-- du cadre juridique
-- de la description du service justifiant une simplification pour les citoyens
-- des coordonnées de l'équipe
-- des coordonnées de votre délégué à la protection des données et responsable de traitement
-
-
-**Modus Operandi pour les administrations :**
-- Vérifiez dans la liste ci-dessous que votre éditeur propose bien ce cas d'usage
-- Cliquez sur "Remplir une demande"
-- Remplissez les données relatives à votre organisation
-- Sélectionnez "Développeurs en interne" si vous développez vous-même une solution, ou "Editeur de logiciel" si vous travaillez avec un editeur
-- Sélectionnez votre éditeur et le formulaire adapté
-
-PS : Ne modifiez pas la liste des données d'un formulairre pré-rempli
-PS : L’éditeur ne peut pas remplir une demande à la place de l’organisation qui exploitera les données
-PS : Si votre éditeur n'est pas dans la liste,  contactez-le, remontez-nous l’information, ou contactez un autre éditeur de la liste
-
-
-
+<NextSteps/>
 <br/>
-<Button href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</Button>
-
-
-
-
+<Button href="https://datapass.api.gouv.fr/api-particulier?demarche=ccas">Remplir une demande</Button>
 
 ## Editeurs
 
 Si vous travaillez avec l'un des éditeurs ou intégrateurs ci-dessous vous pouvez faire une demande simplifiée :
 
-| Editeur | Nom de la solution       |
-| ------- | ------------------------ |
-| Up      | Millesime Action Sociale |
-| Arpège  | Sonate Opus              |
+| Editeur | Nom de la solution       | Date           | Lien vers la demande                                                                                              |
+| ------- | ------------------------ | -------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Up      | Millesime Action Sociale | Mi-Mai 2020    | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=ccas-up">Remplir une demande</External>     |
+| Arpège  | Sonate Opus              | Septembre 2020 | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=ccas-arpege">Remplir une demande</External> |
 
+Vous êtes un éditeur et vous souhaitez apparaître dans cette liste ? Écrivez-nous à [contact@particulier.api.gouv.fr](mailto:contact@particulier.api.gouv.fr)
