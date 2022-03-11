@@ -11,7 +11,6 @@ api:
 
 De nombreuses collectivités proposent aux familles une tarification “solidaire” des services municipaux, et utilisent généralement l'adresse, le quotient familial de la Caisse d’Allocations Familiales (CAF) et la composition du foyer pour cela.
 
-
 ## Calcul du tarif à appliquer
 
 En intégrant la brique API Particulier dans votre système d'information, ou votre site internet :
@@ -20,9 +19,7 @@ En intégrant la brique API Particulier dans votre système d'information, ou vo
 - Vous n'avez pas de vérification supplémentaire car les informations sont certifiées 
 - La démarche peut être faite 100% en ligne
 
-
 Ce système présente des avantages importants pour les familles et pour les agents.
-
 
 ## Les données disponibles
 
@@ -71,13 +68,8 @@ PS : Ne modifiez pas la liste des données d'un formulairre pré-rempli
 PS : L’éditeur ne peut pas remplir une demande à la place de l’organisation qui exploitera les données
 PS : Si votre éditeur n'est pas dans la liste,  contactez-le, remontez-nous l’information, ou contactez un autre éditeur de la liste
 
-
-
 <br/>
 <Button href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</Button>
-
-
-
 
 ## Editeurs
 
@@ -94,8 +86,8 @@ Si vous travaillez avec l'un des éditeurs ou intégrateurs ci-dessous vous pouv
 | Berger Levrault              | BL Enfance                    |
 | Jdéalise                     | Cantine de France             |
 | Mushroom                     | CityFamily                    |
-| TeamNet                      | Axel Portail Famille          |       
-| Abelium                      | Domino Web                    |       
-| Waigéo                       | MyPérischool                  |       
+| TeamNet                      | Axel Portail Famille          |
+| Abelium                      | Domino Web                    |
+| Waigéo                       | MyPérischool                  |
 
 Vous êtes un éditeur et vous souhaitez apparaître dans cette liste ? Écrivez-nous à [contact@particulier.api.gouv.fr](mailto:contact@particulier.api.gouv.fr)
