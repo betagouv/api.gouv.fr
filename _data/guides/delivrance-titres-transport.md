@@ -15,6 +15,10 @@ Chaque année, les collectivités et les autorités organisatrices de mobilités
 
 Ces informations peuvent être obtenues par les collectivités et AOM grâce à l’usage des API. L’accès aux données certifiées par API accélère la dématérialisation totale de la démarche, facilite le traitement des dossiers et réduit le risque d’erreur et de fraudes aux déclarations.
 
+**🔍 Consulter [l'étude réalisée par DINUM auprès de 20 AOM](/resources/rapport-gart.pdf) visant à répertorier l'ensemble des besoins de pièces justificatives**
+
+**👋 Pour participer au groupe de travail associé, [vous pouvez écrire ici](mailto:contact@api.gouv.fr?subject=Participation-au-cas-d'usage-transports)**
+
 ## Les données disponibles
 
 Afin de faciliter les traitement des dossiers, vous pouvez utiliser des données librement disponibles (open data) ainsi que des données couvertes par des secrets.
