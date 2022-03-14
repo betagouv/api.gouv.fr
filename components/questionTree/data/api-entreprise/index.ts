@@ -14,11 +14,7 @@ const apiEntrepriseQuestions = {
         <br/>
         Lors de la demande, vous devrez justifier par le cadre légal adéquat de votre statut de société chargée d’une mission de service public.
         <br/><br/>
-        Pour vérifier que l’API Entreprise vous permet d’accéder aux données dont vous avez besoin, consultez :
-        <br/>
-        - le [catalogue des données](https://entreprise.api.gouv.fr/catalogue/) ;
-        <br/>
-        - les [cas d’usage](https://entreprise.api.gouv.fr/cas_usage/) de l’API Entreprise.
+        Pour vérifier que l’API Entreprise vous permet d’accéder aux données dont vous avez besoin, consultez : <br/> - le [catalogue des données](https://entreprise.api.gouv.fr/catalogue/) ; <br/> - les [cas d’usage](https://entreprise.api.gouv.fr/cas_usage/) de l’API Entreprise.
         `,
         next: pathEligible,
       },
