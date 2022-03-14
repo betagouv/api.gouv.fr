@@ -87,14 +87,6 @@ content_intro: |
 
   Cette API délivre les données d’indemnisation des demandeurs d’emploi toujours inscrits sur les listes de Pôle emploi dans toutes les catégories. 
 
-  Les catégories de situation des demandeurs d’emploi sont les 5 proposées par Pôle emploi: A, B, C, D et E. La répartition permet d'établir une classification selon la disponibilité du demandeur d'emploi.
-
-  <details>
-    <summary> Quelles sont les catégories de demandeurs d'emploi ?</summary>
-    _Catégories de demandeurs d'emploi :_
-    ![Catégories des demandeurs d'emploi](/images/divers/categories-pe.png)
-  </details>
-
 ---
 
 ### Détail sur les données accessibles dans l'API
