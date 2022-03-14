@@ -37,7 +37,7 @@ Deux modalités d'appel existent, que le service en ligne utilise le dispositif 
 | Indemnité demandeur d'emploi | Mars 2022               | En cours de test          |
 | Statut CSS                   | Juin 2022               | Juin 2022                 |
 | Statut RSA                   | Juin 2022               | Juin 2022                 |
-| Statut élève scolarisé       | Fin-2022                | Non prévu                  |
+| Statut élève scolarisé       | Fin-2022                | En cours d'étude          |
 
 ### Les données disponibles en libre accès
 
