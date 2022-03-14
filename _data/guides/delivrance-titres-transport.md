@@ -21,20 +21,19 @@ Afin de faciliter les traitement des dossiers, vous pouvez utiliser des données
 
 ### Les données couvertes par un secret
 
-Deux modalités d'appel existent, que le service en ligne utilise le dispositif FranceConnect [API dites franceConnectée](https://api.gouv.fr/guides/api-franceconnectees) ou non [API Particulier](https://api.gouv.fr/les-api/impot-particulier).
+Deux modalités d'appel existent, que le service en ligne utilise le dispositif FranceConnect [API dites franceConnectée](https://api.gouv.fr/guides/api-franceconnectees) ou non [API Particulier](https://api.gouv.fr/les-api/api-particulier).
 
-| Donnée                       | API Particulier         |API FranceConnect         |
-| ---------------------------- | ----------------------- |------------------------- |
-| Revenu fiscal                | ✅                      |✅                         |
-| Quotient familial            | ✅                      | Fin 2022                  |
-| Statut demandeur d'emploi    | ✅                      | Mars 2022                 |
-| Indemnité demandeur d'emploi | Mars 2022               |En cours de test           |
-| Statut CSS                   | Février 2022            |Février 2022               |
-| Statut RSA                   | Mars    2022            |Mars 2022                  |
-| Statut étudiant              | ✅                      | ✅                         |
-| Statut étudiant boursier     | Janvier 2022            |Janvier 2022               |
-| Statut élève scolarisé       | Mi-2022                 |Non prévu                  |
-| Statut élève scolarisé       | Fin 2022                |Non prévu                  |
+| Donnée                                           | API Particulier         |API FranceConnect          |
+| ------------------------------------------------ | ----------------------- |-------------------------- |
+| [Revenu fiscal](/les-api/impot-particulier)      | ✅                      |✅                          |
+| [Quotient familial](/les-api/api-particulier)    | ✅                      | Fin 2022                   |
+| [Statut étudiant](/les-api/api-statut-etudiant)  | ✅                      | ✅                         |
+| [Statut étudiant boursier](/les-api/api-statut-etudiant-boursier)| ✅      | ✅                         |
+| Statut demandeur d'emploi    | ✅                      | En cours de test          |
+| Indemnité demandeur d'emploi | Mars 2022               | En cours de test          |
+| Statut CSS                   | Juin 2022               | Juin 2022                 |
+| Statut RSA                   | Juin 2022               | Juin 2022                 |
+| Statut élève scolarisé       | Fin-2022                | Non prévu                  |
 
 ### Les données disponibles en libre accès
 
