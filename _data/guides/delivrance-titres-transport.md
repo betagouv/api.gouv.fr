@@ -27,12 +27,12 @@ Afin de faciliter les traitement des dossiers, vous pouvez utiliser des données
 
 Deux modalités d'appel existent, que le service en ligne utilise le dispositif FranceConnect [API dites franceConnectée](https://api.gouv.fr/guides/api-franceconnectees) ou non [API Particulier](https://api.gouv.fr/les-api/api-particulier).
 
-| Donnée                                           | API Particulier         |API FranceConnect          |
-| ------------------------------------------------ | ----------------------- |-------------------------- |
-| [Revenu fiscal](/les-api/impot-particulier)      | ✅                      |✅                          |
-| [Quotient familial](/les-api/api-particulier)    | ✅                      | Fin 2022                   |
-| [Statut étudiant](/les-api/api-statut-etudiant)  | ✅                      | ✅                         |
-| [Statut étudiant boursier](/les-api/api-statut-etudiant-boursier)| ✅      | ✅                         |
+| Donnée                         | API Particulier         |API FranceConnect                                 |
+| ------------------------------ | ----------------------- |------------------------------------------------- |
+|  Revenu fiscal                 | ✅                      |[✅ Accéder à l'API](/les-api/impot-particulier)  |
+|  Quotient familial             | ✅                      | Fin 2022                                         |
+|  Statut étudiant               | ✅                      | [✅ Accéder à l'API](/les-api/api-statut-etudiant) |
+| Statut étudiant boursier      | ✅                      | [✅ Accéder à l'API](/les-api/api-statut-etudiant-boursier) |
 | Statut demandeur d'emploi    | ✅                      | En cours de test          |
 | Indemnité demandeur d'emploi | Mars 2022               | En cours de test          |
 | Statut CSS                   | Juin 2022               | Juin 2022                 |
