@@ -157,6 +157,8 @@ L’Adresse est celle connue au 1er janvier de l’année d’imposition (exempl
    <summary>Précisions sur les données</summary>
 Le quotient familial retourné par l'API est celui du mois de référence qui est M-1 (M= mois de l’appel).
 S’il n’y a pas de quotient familial calculé pour cette période de référence, l'API ne restituera pas de quotient familial.
+
+Les données de l’API Particulier ne permettent pas encore de calculer les tarifs en établissement d'accueil du jeune enfant (crèche, multi-accueil, halte-garderie…).
 </details>
 
 ### Statut étudiant
@@ -295,3 +297,9 @@ L’API devrait inclure d’ici fin 2021 des données relatives à l’indemnisa
 ### Conditions générales d'utilisation
 
 Les conditions générales d'utilisation sont disponibles à [cette adresse](http://api.gouv.fr/resources/CGU%20API%20Particulier.pdf).
+
+### Infolettre API Particulier
+
+Chaque année, l'équipe de l'API Particulier envoie un bilan chiffré sur l'utilisation de l'API, et la feuille de route de l'année suivante (nouvelles démarches, prochaines données qui intègrent l'API...).
+
+<Button href="mailto:contact@api.gouv.fr?subject=Infolettre API Particulier&body=Bonjour, je souhaiterais m'abonner à l'infolettre API Particulier.">Abonnez-vous à l'infolettre API Particulier</Button>
