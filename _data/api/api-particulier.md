@@ -295,3 +295,9 @@ L’API devrait inclure d’ici fin 2021 des données relatives à l’indemnisa
 ### Conditions générales d'utilisation
 
 Les conditions générales d'utilisation sont disponibles à [cette adresse](http://api.gouv.fr/resources/CGU%20API%20Particulier.pdf).
+
+### Infolettre API Particulier
+
+Chaque année, l'équipe de l'API Particulier envoie un bilan chiffré sur l'utilisation de l'API, et la feuille de route de l'année suivante (nouvelles démarches, prochaines données qui intègrent l'API...).
+
+<Button href="mailto:contact@api.gouv.fr?subject=Infolettre API Particulier&body=Bonjour, je souhaiterais m'abonner à l'infolettre API Particulier.">Abonnez-vous à l'infolettre API Particulier</Button>
