@@ -6,7 +6,6 @@ image: cantine.jpg
 noindex: false # this page will appear on Google
 publish: true # this page will appear on /guides page
 related_guides:
-  - portail-famille-petite-enfance
 api:
   - API Particulier
 ---
