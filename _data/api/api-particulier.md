@@ -157,6 +157,8 @@ L’Adresse est celle connue au 1er janvier de l’année d’imposition (exempl
    <summary>Précisions sur les données</summary>
 Le quotient familial retourné par l'API est celui du mois de référence qui est M-1 (M= mois de l’appel).
 S’il n’y a pas de quotient familial calculé pour cette période de référence, l'API ne restituera pas de quotient familial.
+
+Les données de l’API Particulier ne permettent pas encore de calculer les tarifs en établissement d'accueil du jeune enfant (crèche, multi-accueil, halte-garderie…).
 </details>
 
 ### Statut étudiant
