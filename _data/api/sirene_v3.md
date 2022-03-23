@@ -35,8 +35,8 @@ L'API Sirene permet d'accéder simplement aux données de multiples administrati
 | dénomination      | le nom de l'entreprise                                                          |
 | SIREN             | le numero unique de l'entreprise                                                |
 | SIRET             | le numero unique de l'établissement                                             |
-| NAF               | le code NAF ou code APE, un code d'activité suivant la nomenclaure de l'INSEE   |
-| date              | la date de création et de cloture (si applicable)                               |
+| NAF               | le code NAF ou code APE, un code d'activité suivant la nomenclature de l'INSEE  |
+| date              | la date de création et de clôture (si applicable)                               |
 | siege social      | Est-ce que cet établissement est le siège social de l'entreprise                |
 | forme juridique   | la forme juridique de l'établissement (SARL, SAS, entreprise individuelle etc.) |
 | tranche effectifs | la fourchette des effectifs de l'établissement                                  |
