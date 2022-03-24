@@ -44,7 +44,7 @@ keywords:
 themes:
   - Particulier
 contact_link: dsnj-api.contact.fct@intradef.gouv.fr
-doc_tech_link: /swaggers/api-service-national.yaml
+doc_tech_link: https://presaje.sga.defense.gouv.fr/api/doc
 visits_2019: 4000
 last_update: 01/02/2020
 ---
