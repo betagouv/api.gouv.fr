@@ -52,7 +52,7 @@ last_update: 25/01/2022
 - pollution des sols, SIS et anciens sites industriels,
 - registre des Emissions Polluantes.
 
-### Quelles sont les types de données renvoyés par l'API Géorisques ?
+### Quels sont les types de données renvoyés par l'API Géorisques ?
 
 En fonction du code INSEE ou de la géolocalisation interrogée, l'API permet les requêtes suivantes :
 
