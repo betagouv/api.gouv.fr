@@ -312,19 +312,22 @@
       what: Formations initiales, par l'ONISEP
       path: /les-api/api-formations-initiales
     - type: ADD_API
+      what: Pseudonymisation de documents par la DINUM
+      path: /les-api/pseudonymisation-documents
+  4:
+    - type: ADD_API
+      what: Indemnités Pôle Emploi, par Pôle Emploi
+    - type: ADD_API
+      what: AgentConnect par la DINUM
+  5:
+    - type: ADD_API
       what: Prestations sociales par la Direction de la Sécurité Sociale
     - type: ADD_API
       what: Déclaration préalable à l'embauche par l'Urssaf
     - type: ADD_API
       what: Prestations sociales par la Direction de la Sécurité Sociale
     - type: ADD_API
-      what: Statut demandeur d'emploi, par Pôle Emploi
+      what: Statut demandeur d'emploi (FranceConnect), par Pôle Emploi
     - type: ADD_API
       what: Historique d'un véhicule (HistoVec), par le Ministère de l'Intérieur
-    - type: ADD_API
-      what: AgentConnect par la DINUM
-  4:
-    - type: ADD_API
-      what: Indemnités Pôle Emploi, par Pôle Emploi
-
 ---
