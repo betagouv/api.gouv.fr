@@ -313,7 +313,7 @@
       path: /les-api/api-formations-initiales
     - type: ADD_API
       what: Pseudonymisation de documents par la DINUM
-      path: /les-api/pseudonymisation-documents
+      path: /les-api/api-pseudonymisation-documents
   4:
     - type: ADD_API
       what: Indemnités Pôle Emploi, par Pôle Emploi
