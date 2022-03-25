@@ -8,6 +8,9 @@ publish: true # this page will appear on /guides page
 api:
   - API Impôt particulier
   - API de droits à l'Assurance Maladie
+  - API Statut étudiant
+  - API Statut étudiant boursier
+  - API Indemnités journalières de la CNAM
 ---
 
 FranceConnect permet au citoyen de s'authentifier à de nombreux services de l'administration. Ce dispositif permet d'utiliser un compte existant sur impots.fr ou ameli.fr par exemple, afin d'accéder à tous les services de l'administration (<External href="https://franceconnect.gouv.fr/partenaires">en savoir plus sur FranceConnect</External>).
