@@ -29,9 +29,9 @@ L'[**API Découpage Administratif**](https://api.gouv.fr/les-api/api-geo) permet
 
 L'API Découpage Administratif est principalement destinée à un besoin de recherches pour des formulaires en partant du nom de la commune, du code postal ou bien du code INSEE.
 
-<iframe id="inlineFrameExample"
-    title="Inline Frame Example"
-    width="800"
+<iframe id="geo"
+    title="geo"
+    width="100%"
     height="800"
     src="https://geo.api.gouv.fr/decoupage-administratif/communes#name">
 </iframe>
