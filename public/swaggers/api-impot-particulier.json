@@ -9,7 +9,7 @@
     "/spi/{spi}/lep/departement/{departement}/annrev/{annrev}/bareme/{bareme}": {
       "get": {
         "description": "indicateur LEP V2",
-        "operationId": "sayJAXBOuverturelep",
+        "operationId": "Ouverturelep",
         "parameters": [
           {
             "name": "Authorization",
@@ -113,7 +113,7 @@
         "x-scope": "RessourceLEP",
         "security": [
           {
-            "default": [
+            "Authorization": [
               "RessourceLEP"
             ]
           }
@@ -122,9 +122,9 @@
     },
     "/situations/ir/assiettes/annrev/{annrev}": {
       "get": {
-        "summary": "sayJAXBSituationsIrAssiettesV1",
+        "summary": "SituationsIrAssiettesV1",
         "description": "",
-        "operationId": "SayJAXBSituationsIrAssiettesFCV1",
+        "operationId": "SituationsIrAssiettesFCV1",
         "parameters": [
           {
             "$ref": "#/components/parameters/paramAuthorization"
@@ -169,7 +169,7 @@
         "x-scope": "RessourceIR",
         "security": [
           {
-            "default": [
+            "Authorization": [
               "RessourceIR"
             ]
           }
@@ -178,9 +178,9 @@
     },
     "/spi/{spi}/situations/ir/assiettes/annrev/{annrev}": {
       "get": {
-        "summary": "sayJAXBSituationsIrAssiettesV1",
+        "summary": "SituationsIrAssiettesV1",
         "description": "",
-        "operationId": "SayJAXBSituationsIrAssiettesV1",
+        "operationId": "SituationsIrAssiettesV1",
         "parameters": [
           {
             "$ref": "#/components/parameters/paramAuthorization"
@@ -232,7 +232,7 @@
         "x-scope": "RessourceIR",
         "security": [
           {
-            "default": [
+            "Authorization": [
               "RessourceIR"
             ]
           }
@@ -241,9 +241,9 @@
     },
     "/spi/{spi}/situations/ir/factures/annrev/{annrev}": {
       "get": {
-        "summary": "sayJAXBSituationsIrFacturesV1",
+        "summary": "SituationsIrFacturesV1",
         "description": "",
-        "operationId": "SayJAXBSituationsIrFacturesV1",
+        "operationId": "SituationsIrFacturesV1",
         "parameters": [
           {
             "$ref": "#/components/parameters/paramAuthorization"
@@ -295,7 +295,7 @@
         "x-scope": "RessourceIRFacture",
         "security": [
           {
-            "default": [
+            "Authorization": [
               "RessourceIRFacture"
             ]
           }
@@ -304,9 +304,9 @@
     },
     "/situations/ir/factures/annrev/{annrev}": {
       "get": {
-        "summary": "sayJAXBSituationsIrFacturesV1",
+        "summary": "SituationsIrFacturesV1",
         "description": "",
-        "operationId": "SayJAXBSituationsIrFacturesFCV1",
+        "operationId": "SituationsIrFacturesFCV1",
         "parameters": [
           {
             "$ref": "#/components/parameters/paramAuthorization"
@@ -351,8 +351,222 @@
         "x-scope": "RessourceIRFacture",
         "security": [
           {
-            "default": [
+            "Authorization": [
               "RessourceIRFacture"
+            ]
+          }
+        ]
+      }
+    },
+    "/spi/{spi}/dernieresituation/ir/assiettes/annrev/{annrev}": {
+      "get": {
+        "summary": "derniereSituationIR",
+        "description": "Fournit la  situation IR de la dernière période d'un millésime",
+        "operationId": "sayJAXBDerniereSituationsIrAssiettesV1",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/paramAuthorization"
+          },
+          {
+            "$ref": "#/components/parameters/paramXCorrelationID"
+          },
+          {
+            "$ref": "#/components/parameters/paramIdTeleservice"
+          },
+          {
+            "name": "spi",
+            "in": "path",
+            "description": "Numéro fiscal",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "annrev",
+            "in": "path",
+            "description": "Année de revenus",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "headers": {},
+            "content": {
+              "application/prs.dgfip.part.derniere.situations.ir.assiettes.v1+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SituationsIRAssiettesMillesimeJAXBbean"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false,
+        "x-auth-type": "Application & Application User",
+        "x-throttling-tier": "Unlimited",
+        "x-scope": "RessourceIRDerniere",
+        "security": [
+          {
+            "Authorization": [
+              "RessourceIRDerniere"
+            ]
+          }
+        ]
+      }
+    },
+    "/dernieresituation/ir/assiettes/annrev/{annrev}": {
+      "get": {
+        "summary": "derniereSituationIR",
+        "description": "Fournit la  situation IR de la derniere période d'un millesime",
+        "operationId": "sayJAXBDerniereSituationsIrAssiettesFCV1",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/paramAuthorization"
+          },
+          {
+            "$ref": "#/components/parameters/paramXFranceConnectOAuth"
+          },
+          {
+            "$ref": "#/components/parameters/paramXCorrelationID"
+          },
+          {
+            "$ref": "#/components/parameters/paramIdTeleservice"
+          },
+          {
+            "name": "annrev",
+            "in": "path",
+            "description": "Année de revenus",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "headers": {},
+            "content": {
+              "application/prs.dgfip.part.derniere.situations.ir.assiettes.v1+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SituationsIRAssiettesMillesimeJAXBbean"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false,
+        "x-auth-type": "Application & Application User",
+        "x-throttling-tier": "Unlimited",
+        "x-scope": "RessourceIRDerniere",
+        "security": [
+          {
+            "Authorization": [
+              "RessourceIRDerniere"
+            ]
+          }
+        ]
+      }
+    },
+    "/spi/{spi}/dernieresituation/ir/assiettes/deuxans": {
+      "get": {
+        "summary": "derniereSituationIRdernierMillesime",
+        "description": "Fournit la  situation IR de la derniere période des 2 derniers millesimes",
+        "operationId": "sayJAXBDerniereSituationsIrAssiettesDeuxDernierMillesimeV1",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/paramAuthorization"
+          },
+          {
+            "$ref": "#/components/parameters/paramXCorrelationID"
+          },
+          {
+            "$ref": "#/components/parameters/paramIdTeleservice"
+          },
+          {
+            "name": "spi",
+            "in": "path",
+            "description": "Numéro fiscal",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "headers": {},
+            "content": {
+              "application/prs.dgfip.part.derniere.situations.ir.assiettes.v1+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SituationsIRAssiettesMillesimeJAXBbean"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false,
+        "x-auth-type": "Application & Application User",
+        "x-throttling-tier": "Unlimited",
+        "x-scope": "RessourceIRDerniere2",
+        "security": [
+          {
+            "Authorization": [
+              "RessourceIRDerniere2"
+            ]
+          }
+        ]
+      }
+    },
+    "/dernieresituation/ir/assiettes/deuxans": {
+      "get": {
+        "summary": "derniereSituationIRdernierMillesime",
+        "description": "Fournit la  situation IR de la derniere période des 2 derniers millesimes",
+        "operationId": "sayJAXBDerniereSituationsIrAssiettesDeuxDernierMillesimeFCV1",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/paramAuthorization"
+          },
+          {
+            "$ref": "#/components/parameters/paramXFranceConnectOAuth"
+          },
+          {
+            "$ref": "#/components/parameters/paramXCorrelationID"
+          },
+          {
+            "$ref": "#/components/parameters/paramIdTeleservice"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "headers": {},
+            "content": {
+              "application/prs.dgfip.part.derniere.situations.ir.assiettes.v1+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SituationsIRAssiettesMillesimeJAXBbean"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false,
+        "x-auth-type": "Application & Application User",
+        "x-throttling-tier": "Unlimited",
+        "x-scope": "RessourceIRDerniere2",
+        "security": [
+          {
+            "Authorization": [
+              "RessourceIRDerniere2"
             ]
           }
         ]
@@ -360,9 +574,9 @@
     },
     "/spi/{spi}/situations/th/assiettes/principale/annrev/{annrev}": {
       "get": {
-        "summary": "sayJAXBSituationsTHPV1",
+        "summary": "SituationsTHPV1",
         "description": "",
-        "operationId": "SayJAXBSituationsTHPV1",
+        "operationId": "SituationsTHPV1",
         "parameters": [
           {
             "$ref": "#/components/parameters/paramAuthorization"
@@ -413,7 +627,7 @@
         "x-scope": "RessourceTHPrincipale",
         "security": [
           {
-            "default": [
+            "Authorization": [
               "RessourceTHPrincipale"
             ]
           }
@@ -422,9 +636,9 @@
     },
     "/situations/th/assiettes/principale/annrev/{annrev}": {
       "get": {
-        "summary": "sayJAXBSituationsTHPV1",
+        "summary": "SituationsTHPV1",
         "description": "",
-        "operationId": "SayJAXBSituationsTHPFCV1",
+        "operationId": "SituationsTHPFCV1",
         "parameters": [
           {
             "$ref": "#/components/parameters/paramAuthorization"
@@ -468,7 +682,7 @@
         "x-scope": "RessourceTHPrincipale",
         "security": [
           {
-            "default": [
+            "Authorization": [
               "RessourceTHPrincipale"
             ]
           }
@@ -477,9 +691,9 @@
     },
     "/spi/{spi}/situations/ifiisf/assiettes/annrev/{annrev}": {
       "get": {
-        "summary": "sayJAXBSituationIfiIsfV1",
+        "summary": "SituationIfiIsfV1",
         "description": "",
-        "operationId": "SayJAXBSituationIfiIsfV1",
+        "operationId": "SituationIfiIsfV1",
         "parameters": [
           {
             "$ref": "#/components/parameters/paramAuthorization"
@@ -531,7 +745,7 @@
         "x-scope": "RessourceIFI",
         "security": [
           {
-            "default": [
+            "Authorization": [
               "RessourceIFI"
             ]
           }
@@ -540,9 +754,9 @@
     },
     "/situations/ifiisf/assiettes/annrev/{annrev}": {
       "get": {
-        "summary": "sayJAXBSituationIfiIsfV1",
+        "summary": "SituationIfiIsfV1",
         "description": "",
-        "operationId": "SayJAXBSituationIfiIsfFCV1",
+        "operationId": "SituationIfiIsfFCV1",
         "parameters": [
           {
             "$ref": "#/components/parameters/paramAuthorization"
@@ -587,7 +801,7 @@
         "x-scope": "RessourceIFI",
         "security": [
           {
-            "default": [
+            "Authorization": [
               "RessourceIFI"
             ]
           }
@@ -980,6 +1194,112 @@
         },
         "type": "object"
       },
+      "SituationsIRAssiettesMillesimeJAXBbean": {
+        "properties": {
+          "annRevenu": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "rfr": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "sitFam": {
+            "type": "string"
+          },
+          "nbPart": {
+            "type": "number",
+            "format": "double"
+          },
+          "pac": {
+            "$ref": "#/components/schemas/PacJAXBbean"
+          },
+          "nmNaiDec1": {
+            "type": "string"
+          },
+          "nmUsaDec1": {
+            "type": "string"
+          },
+          "prnmDec1": {
+            "type": "string"
+          },
+          "dateNaisDec1": {
+            "$ref": "#/components/schemas/DateNaisDecJAXBbean"
+          },
+          "nmNaiDec2": {
+            "type": "string"
+          },
+          "nmUsaDec2": {
+            "type": "string"
+          },
+          "prnmDec2": {
+            "type": "string"
+          },
+          "dateNaisDec2": {
+            "$ref": "#/components/schemas/DateNaisDecJAXBbean"
+          },
+          "aft": {
+            "type": "string"
+          },
+          "aftDetail": {
+            "$ref": "#/components/schemas/AftJAXBbean"
+          },
+          "sitParIso": {
+            "type": "string"
+          },
+          "pensAlPer": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "indDeficit": {
+            "type": "string"
+          },
+          "revenuBrutGlobal": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "sitPart": {
+            "type": "string"
+          },
+          "sitParDeclaree": {
+            "$ref": "#/components/schemas/SitPartJAXBbean"
+          },
+          "indOptionImpotSepar": {
+            "type": "string"
+          },
+          "mntRevbareme": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "datRec": {
+            "type": "string"
+          },
+          "datEtab": {
+            "type": "string"
+          },
+          "impAvImput": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "montTotIr": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "revImposable": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "numRole": {
+            "type": "string"
+          },
+          "fipNum": {
+            "type": "string"
+          },
+          "rev": {
+            "$ref": "#/components/schemas/RevsJAXBbean"
+          }
+        }
+      },
       "SituationsIRAssiettesJAXBbean": {
         "properties": {
           "aft": {
@@ -1112,24 +1432,9 @@
               "RessourceIFI": "Ressource IFI",
               "RessourceTHPrincipale": "RessourceTHPrincipale",
               "RessourceLEP": "RessourceLEP",
-              "RessourceDPR": "RessourceDPR",
-              "RessourceIRFacture": "RessourceIRFacture"
-            }
-          }
-        }
-      },
-      "default": {
-        "type": "oauth2",
-        "flows": {
-          "implicit": {
-            "authorizationUrl": "https://IP-GATEWAY/authorize",
-            "scopes": {
-              "RessourceIR": "Ressources IR",
-              "RessourceIFI": "Ressource IFI",
-              "RessourceTHPrincipale": "RessourceTHPrincipale",
-              "RessourceLEP": "RessourceLEP",
-              "RessourceDPR": "RessourceDPR",
-              "RessourceIRFacture": "RessourceIRFacture"
+              "RessourceIRFacture": "RessourceIRFacture",
+              "RessourceIRDerniere": "RessourceIRDerniere",
+              "RessourceIRDerniere2": "RessourceIRDerniere2"
             }
           }
         }
@@ -1164,16 +1469,22 @@
           "roles": "Application/ImpotParticulierRessourceLEP"
         },
         {
-          "name": "RessourceDPR",
-          "description": "Accès aux données de la Déclaration Pré-Remplie (DPR)",
-          "key": "RessourceDPR",
-          "roles": "Application/ImpotParticulierRessourceDPR"
-        },
-        {
           "name": "RessourceIRFacture",
           "description": "Accès aux données liées à l'impôt sur le revenu et aux factures.",
           "key": "RessourceIRFacture",
           "roles": "Application/ImpotParticulierRessourceIRFac"
+        },
+        {
+          "name": "RessourceIRDerniere",
+          "description": "Accès aux données liées à l'impôt sur le revenu : situation sur la dernière année.",
+          "key": "RessourceIRDerniere",
+          "roles": "Application/ImpotParticulierIRDerniere"
+        },
+        {
+          "name": "RessourceIRDerniere2",
+          "description": "Accès aux données liées à l'impôt sur le revenu : situation sur les deux dernières années.",
+          "key": "RessourceIRDerniere2",
+          "roles": "Application/ImpotParticulierIRDerniere2"
         }
       ]
     }
