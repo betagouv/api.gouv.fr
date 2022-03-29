@@ -24,9 +24,9 @@ Derrière ce module, c'est la Base Adresse Nationale qui est appelée, grâce à
 
 L'exemple ci-dessous fonctionne grâce à l'API Adresse : testez en saisissant une adresse :
 
-<iframe id="inlineFrameExample"
-    title="Inline Frame Example"
-    width="800"
+<iframe id="adresse"
+    title="Adresse"
+    width="100%"
     height="400"
     src="https://adresse.data.gouv.fr/base-adresse-nationale#5.25/46.833/3.666">
 </iframe>
