@@ -98,12 +98,13 @@ content_intro: |
 
 | Donnée                                     | Description                                                                            |
 | ------------------------------------------ | -------------------------------------------------------------------------------------- |
-| [Données fiscales (DGFiP)](/les-api/api-particulier#donnees-fiscales)    | Revenu fiscal de référence, déclarants, nombre de parts  |
-| [Quotient familial (CNAF)](/les-api/api-particulier#quotient-familial)  | Quotient familial, composition familiale          |
-| [Statut étudiant (MESRI)](/les-api/api-particulier#statut-etudiant)  | Statut, établissement(s)                                     |
-| [Statut étudiant boursier (CNOUS)](#statut-etudiant-boursier)| Statut, niveau de bourse                                      |
-| [Statut demandeur d'emploi (Pôle Emploi)](/les-api/api-particulier#statut-demandeur-d'emploi)| Statut et catégorie (A,B,C,D)      |
-| Bénéficiaire d'une prestation sociale | RSA, CSS (complémentaire santé solidaire)               |
+| ✅ [Données fiscales (DGFiP)](/les-api/api-particulier#donnees-fiscales)    | Revenu fiscal de référence, déclarants, nombre de parts  |
+| ✅ [Quotient familial (CNAF)](/les-api/api-particulier#quotient-familial)  | Quotient familial, composition familiale          |
+| ✅ [Statut étudiant (MESRI)](/les-api/api-particulier#statut-etudiant)  | Statut, établissement(s)                                     |
+| ✅ [Statut étudiant boursier (CNOUS)](#statut-etudiant-boursier)| Statut, niveau de bourse                                      |
+| ✅ [Statut demandeur d'emploi (Pôle Emploi)](/les-api/api-particulier#statut-demandeur-d'emploi)| Statut et catégorie (A,B,C,D)      |
+| ⌛️ Indemnisation de Pôle emploi (disponible en mai 2022) | RSA, CSS (complémentaire santé solidaire)               |
+| ⌛️ Bénéficiaire d'une prestation sociale (disponible en juin 2022) | RSA, CSS (complémentaire santé solidaire)               |
 
 ### Données fiscales
 
