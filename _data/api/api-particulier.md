@@ -75,7 +75,7 @@ content_intro: |
 
   **Avantages pour les administrations :** 
 
-  - automatiser l'instuction des demandes,
+  - automatiser l'instruction des demandes,
   - disposer d'informations certifiées à la source,
   - consulter et mettre à jour des données en back-office.
 
