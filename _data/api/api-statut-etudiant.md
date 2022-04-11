@@ -73,7 +73,7 @@ Cette api délivre les données des étudiants inscrits dans les établissements
 
 La couverture des établissements du champ des étudiants sera progressivement complétée.
 
-🔎 Consulter le [nombre d'étudiants identifiés dans l'API](https://statutetudiant.esr.gouv.fr)
+<iframe src="https://data.enseignementsup-recherche.gouv.fr/explore/embed/dataset/fr-esr-api-statut-etudiant/viz/?static=false&datasetcard=false&apikey=509275f034986f39f87d0ccf2a075efe6c2df21f253e505abb58af38" width="800" height="600" frameborder="0"></iframe>
 
 Si vous êtes un établissement, sous tutelle ou non du ministère de l'enseignement supérieur, et que vous souhaitez inscrire vos étudiants dans le référentiel, consultez cette page : <https://statutetudiant.esr.gouv.fr>.
 
