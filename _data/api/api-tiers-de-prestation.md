@@ -72,6 +72,7 @@ keywords:
 themes:
   - Entreprise
 last_update: 12/08/2021
+hide_pre_footer: true
 ---
 
 L’API Tiers de prestation facilite les échanges entre l’Urssaf et les prestataires ou mandataires de services à la personne.
