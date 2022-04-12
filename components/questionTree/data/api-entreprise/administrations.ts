@@ -21,7 +21,7 @@ export const pathDevelopForAdministration = {
             ],
             answer: `**L’administration pour laquelle vous proposez une prestation est éligible à l’API&nbsp;Entreprise <span role='img' aria-label='émoji ok'>👍</span>**
             <br/>
-            **C’est à elle de compléter une demande auprès d’API Entreprise.** Elle devra dans sa demande d’habilitation vous renseigner en tant que “contact technique”. Le lien ci-dessous permet à l’administration d’accéder à la demande d’accès, partagez-lui :
+            **C’est à elle de compléter une demande auprès d’API Entreprise.** Elle devra dans sa demande d’habilitation vous renseigner en tant que “contact technique”. Le lien ci-dessous permet à l’administration d’accéder à la demande d’habilitation, partagez-lui :
             <br/>
             <External href='/les-api/api-entreprise/demande-acces'>Lien vers la page</External>
             &nbsp;

@@ -21,7 +21,7 @@ L’API Service National, permet de savoir si une personne est en règle vis à 
 
 ## Simplifier les inscriptions aux concours et examens, ainsi que les recrutements de la fonction publique
 
-Si votre organisation est éligible - car elle peut légalement demander d’être en règle vis à vis du service national - vous pouvez faire une demande d’accès à l’API.
+Si votre organisation est éligible - car elle peut légalement demander d’être en règle vis à vis du service national - vous pouvez faire une demande d’habilitation à l’API.
 
 Le Ministère des Armées vérifiera la légitimité de votre demande, et si l’accès à l’API vous est accordé, vous pourrez l’utiliser pour simplifier vos démarches de cette manière :
 
@@ -42,7 +42,7 @@ Le Ministère des Armées vérifiera la légitimité de votre demande, et si l�
 
 Conformément aux dispositions de l’article L114-6  du code du service national, les personnes de moins de 25 ans assujetties à l'obligation de participer à la journée défense et citoyenneté doivent être en règle pour être autorisées à s'inscrire aux examens et concours soumis au contrôle de l'autorité publique.
 
-Par conséquent, dans le cadre de cette vérification, si vous êtes un service chargé de l'inscription à un examen ou un concours soumis au contrôle de l'autorité publique, pouvez faire une demande d'accès à l'API.
+Par conséquent, dans le cadre de cette vérification, si vous êtes un service chargé de l'inscription à un examen ou un concours soumis au contrôle de l'autorité publique, pouvez faire une demande d'habilitation à l'API.
 
 <Button href="https://datapass.api.gouv.fr/api-service-national?demarche=inscription-examens">Demander un accès à l'API Service National</Button>
 
@@ -57,7 +57,7 @@ Par conséquent, dans le cadre de cette vérification, si vous êtes un service 
 
 Conformément aux dispositions de l’article L114-6  du code du service national, les personnes de moins de 25 ans assujetties à l'obligation de participer à la journée défense et citoyenneté doivent être en règle pour être autorisées à s'inscrire aux examens et concours soumis au contrôle de l'autorité publique.
 
-Par conséquent, dans le cadre de cette vérification, si vous êtes un service chargé de l'inscription à un examen ou un concours soumis au contrôle de l'autorité publique, pouvez faire une demande d'accès à l'API.
+Par conséquent, dans le cadre de cette vérification, si vous êtes un service chargé de l'inscription à un examen ou un concours soumis au contrôle de l'autorité publique, pouvez faire une demande d'habilitation à l'API.
 
 <Button href="https://datapass.api.gouv.fr/api-service-national?demarche=inscription-examens">Demander un accès à l'API Service National</Button>
 
@@ -74,7 +74,7 @@ Par conséquent, dans le cadre de cette vérification, si vous êtes un service 
 
 Conformément aux dispositions de l’article L111-3  du code du service national, nul ne peut être investi de fonctions publiques s'il ne justifie avoir satisfait aux obligations imposées par ce code.
 
-Par conséquent, les services de ressources humaines ou de recrutement chargés, en application de dispositions statutaires, de vérifier la situation des personnes de moins de 25 ans au regard des obligations de service national, sont autorisés à faire une demande d'accès à l'API :
+Par conséquent, les services de ressources humaines ou de recrutement chargés, en application de dispositions statutaires, de vérifier la situation des personnes de moins de 25 ans au regard des obligations de service national, sont autorisés à faire une demande d'habilitation à l'API :
 
 <Button href="https://datapass.api.gouv.fr/api-service-national?demarche=status-service-national">Demander un accès à l'API Service National</Button>
 

@@ -26,7 +26,7 @@ Chaque API fait l'objet d'une page. Celle-ci doit être comprise par le plus gra
 
 - Lire la documentation fonctionnelle de l'API qui est un élément clé de son appropriation ;
 - Accéder à la documentation technique (avec des swaggers), de préférence hébergée par le producteur de l'API afin de faciliter sa mise à jour ;
-- Faire une demande d'accès à l'API (si celle-ci n'est pas en open data) ;
+- Faire une demande d'habilitation à l'API (si celle-ci n'est pas en open data) ;
 - Contacter l'équipe en charge de l'API pour des questions techniques à laquelle la documentation ne répond pas.
 
 > 💡 [api.gouv.fr](http://api.gouv.fr) est donc un catalogue, qui référence les API existantes en hébergeant les documentations associées.
@@ -122,7 +122,7 @@ Pour les API qui demandent une habilitation pour y avoir accès, DataPass permet
 
 Pour les API qui ne sont pas intégrées aux bouquets API Particulier ou API Entreprise, et qui ne sont pas FranceConnectées, un formulaire DataPass dédié doit être créé.
 
-DataPass propose un formulaire clé en main de demande d'accès à une API qu'il est possible de pré-remplir, pour faciliter la gestion des demandes.
+DataPass propose un formulaire clé en main de demande d'habilitation à une API qu'il est possible de pré-remplir, pour faciliter la gestion des demandes.
 
    <details>
       <summary>Que peut-on paramétrer dans DataPass ?</summary>
@@ -150,7 +150,7 @@ Lorsqu'un formulaire est complété et envoyé par un demandeur, plusieurs perso
 
 - **les instructeurs** (les personnes qui pourront valider ou refuser les demandes) ;
 - **les lecteurs** (les personnes qui pourront accéder aux demandes) ;
-- **l'adresse mail générique de notification** ("vous avez reçu une nouvelle demande d'accès à l'API").
+- **l'adresse mail générique de notification** ("vous avez reçu une nouvelle demande d'habilitation à l'API").
 
 Une fois la demande consultée, l'instructeur a trois possibilités : valider la demande, refuser la demande, ou demander une modification.
 

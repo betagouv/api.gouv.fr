@@ -81,6 +81,6 @@ _Schéma de fonctionnement des API FranceConnectées :_
 Les API FranceConnectées ne sont accessibles qu’aux administrations publiques, collectivités territoriales ou entreprises privées en situation de mission de service public. Elles nécessitent de :
 
 1. Avoir FranceConnect [sur son téléservice](https://franceconnect.gouv.fr/partenaires)
-2. Faire une demande d'accès à l’API FranceConnectée en question
+2. Faire une demande d'habilitation à l’API FranceConnectée en question
 3. Brancher l’API
 4. 🎉 Commencer à dématérialiser 🥳
