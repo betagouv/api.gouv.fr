@@ -26,7 +26,7 @@ access_page:
       - Une collectivité ou une administration
     is_eligible: 1
     description: |
-      Vous pouvez réaliser une demande d'accès à l'API.
+      Vous pouvez réaliser une demande d'habilitation à l'API.
 
       <NextSteps />
       <Button href="https://datapass.api.gouv.fr/api-pro-sante-connect">Remplir une demande</Button>

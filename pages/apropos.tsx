@@ -106,7 +106,7 @@ const About: React.FC = () => (
           d’éligibilité.
         </p>
         <p>
-          Si vous respectez ces critères vous pouvez faire une demande d’accès.
+          Si vous respectez ces critères vous pouvez faire une demande d’habilitation.
         </p>
       </div>
       <div>

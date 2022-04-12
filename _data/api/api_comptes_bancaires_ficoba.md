@@ -42,7 +42,7 @@ access_page:
     description: |
       Dans le cadre de la vérification de l’éligibilité au <External href="https://www.service-public.fr/particuliers/vosdroits/F2367">LEP</External> et autres produits d'épargne réglementés, les banques peuvent être considérées comme une administration au sens de <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367308&dateTexte=&categorieLien=cid">l'article L100-3</External> du *code des relations entre le public et l'administration*.
 
-      Si vous entrez dans ce cadre, vous pouvez effectuer une demande d'accès à l’API FICOBA.
+      Si vous entrez dans ce cadre, vous pouvez effectuer une demande d'habilitation à l’API FICOBA.
 
       <NextSteps service_description="de la description du service justifiant l'accès aux données" />
       <Button href="https://datapass.api.gouv.fr/api-ficoba-sandbox">Remplir une demande</Button>

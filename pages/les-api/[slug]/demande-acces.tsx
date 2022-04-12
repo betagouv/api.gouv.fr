@@ -91,7 +91,7 @@ const AccessCondition: React.FC<IProps> = ({
   return (
     <Page
       headerKey={HEADER_PAGE.APIS}
-      title={`Demande d’accès ${title}`}
+      title={`Demande d’habilitation ${title}`}
       description={`${title} est une des APIs du service public. Découvrez ses conditions d’accès.`}
       canonical={`https://api.gouv.fr/les-api/${slug}/demande-acces`}
       noIndex={true}
@@ -104,7 +104,7 @@ const AccessCondition: React.FC<IProps> = ({
       </div>
 
       <div className="text-wrapper text-style">
-        <h1>Demande d’accès {title}</h1>
+        <h1>Demande d’habilitation {title}</h1>
         <p>
           <span role="img" aria-label="émoji clé">
             🔑

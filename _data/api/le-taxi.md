@@ -8,7 +8,7 @@ access_page:
       - Groupement de taxis
     is_eligible: 1
     description: |
-      Vous pouvez remplir une demande d’accès à l’API le.taxi dans le cadre des articles [L. 3121-11-1](https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000029528684&cidTexte=LEGITEXT000023086525) et [R3121-24 à R3121-33](https://www.legifrance.gouv.fr/affichCode.do?idSectionTA=LEGISCTA000032278146&cidTexte=LEGITEXT000023086525) du Code des transports.
+      Vous pouvez remplir une demande d’habilitation à l’API le.taxi dans le cadre des articles [L. 3121-11-1](https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000029528684&cidTexte=LEGITEXT000023086525) et [R3121-24 à R3121-33](https://www.legifrance.gouv.fr/affichCode.do?idSectionTA=LEGISCTA000032278146&cidTexte=LEGITEXT000023086525) du Code des transports.
 
       <NextSteps />
       <Button href="https://datapass.api.gouv.fr/le-taxi-chauffeurs">Remplir une demande</Button>
@@ -16,7 +16,7 @@ access_page:
       - Application de mobilité
     is_eligible: 1
     description: |
-      Vous pouvez remplir une demande d’accès à l’API le.taxi dans le cadre des articles [L. 3121-11-1](https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000029528684&cidTexte=LEGITEXT000023086525) et [R3121-24 à R3121-33](https://www.legifrance.gouv.fr/affichCode.do?idSectionTA=LEGISCTA000032278146&cidTexte=LEGITEXT000023086525) du Code des transports.
+      Vous pouvez remplir une demande d’habilitation à l’API le.taxi dans le cadre des articles [L. 3121-11-1](https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000029528684&cidTexte=LEGITEXT000023086525) et [R3121-24 à R3121-33](https://www.legifrance.gouv.fr/affichCode.do?idSectionTA=LEGISCTA000032278146&cidTexte=LEGITEXT000023086525) du Code des transports.
 
       <NextSteps />
       <Button href="https://datapass.api.gouv.fr/le-taxi-clients">Remplir une demande</Button>
@@ -24,7 +24,7 @@ access_page:
       - Acteur de mobilité publique
     is_eligible: 1
     description: |
-      Vous pouvez remplir une demande d’accès à l’API le.taxi dans le cadre des articles [L. 3121-11-1](https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000029528684&cidTexte=LEGITEXT000023086525) et [R3121-24 à R3121-33](https://www.legifrance.gouv.fr/affichCode.do?idSectionTA=LEGISCTA000032278146&cidTexte=LEGITEXT000023086525) du Code des transports.
+      Vous pouvez remplir une demande d’habilitation à l’API le.taxi dans le cadre des articles [L. 3121-11-1](https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000029528684&cidTexte=LEGITEXT000023086525) et [R3121-24 à R3121-33](https://www.legifrance.gouv.fr/affichCode.do?idSectionTA=LEGISCTA000032278146&cidTexte=LEGITEXT000023086525) du Code des transports.
       
       <NextSteps />
       <Button href="https://datapass.api.gouv.fr/le-taxi-clients">Remplir une demande</Button>
