@@ -316,14 +316,15 @@
       path: /les-api/api-pseudonymisation-documents
   4:
     - type: ADD_API
+      what: Déclaration préalable à l'embauche par l'Urssaf
+      path: /les-api/api-declaration-embauche
+    - type: ADD_API
       what: Indemnités Pôle Emploi, par Pôle Emploi
     - type: ADD_API
       what: AgentConnect par la DINUM
   5:
     - type: ADD_API
       what: Prestations sociales par la Direction de la Sécurité Sociale
-    - type: ADD_API
-      what: Déclaration préalable à l'embauche par l'Urssaf
     - type: ADD_API
       what: Prestations sociales par la Direction de la Sécurité Sociale
     - type: ADD_API
