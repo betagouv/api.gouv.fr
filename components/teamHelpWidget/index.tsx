@@ -21,9 +21,11 @@ const TeamHelpWidget: React.FC<IProps> = ({
         <img alt="" src="/images/equipe/Raph.jpg" />
       </div>
       <p>{title}</p>
-      <ButtonLink href={`/parcours-client?source=${source}`} alt>
-        {btnLabel}
-      </ButtonLink>
+      <div style={{ backgroundColor: 'white' }}>
+        <ButtonLink href={`/parcours-client?source=${source}`} alt>
+          {btnLabel}
+        </ButtonLink>
+      </div>
     </div>
     <style jsx>{`
       div.team-help-widget {
@@ -41,7 +43,7 @@ const TeamHelpWidget: React.FC<IProps> = ({
         position: relative;
       }
 
-      div.team-help-widget > div {
+      div.team-help-widget > div:first-child {
         position: absolute;
         top: -10px;
       }
