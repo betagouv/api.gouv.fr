@@ -15,9 +15,11 @@ const ApiTripletSection = ({ apiList }) => {
         </div>
       </div>
       <div className="layout-center">
-        <ButtonLink href="rechercher-api" size="large" alt>
-          Voir toutes les API ☞
-        </ButtonLink>
+        <div style={{ backgroundColor: 'white' }}>
+          <ButtonLink href="rechercher-api" size="large" alt>
+            Voir toutes les API ☞
+          </ButtonLink>
+        </div>
       </div>
     </section>
   );
