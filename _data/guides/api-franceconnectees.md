@@ -39,7 +39,7 @@ Les API FranceConnectées simplifient :
 
 | La démarche du citoyen                      | Le traitement de l'agent                                        |
 | ------------------------------------------- | --------------------------------------------------------------- |
-| Des démarches simplifiées et accélérées     | Les délais de traitement sont instantannés                      |
+| Des démarches simplifiées et accélérées     | Les délais de traitement sont instantanés                       |
 | Plus aucune pièces justificatives à fournir | Plus de pièces justificatives à traiter et à stocker            |
 | Plus d'erreur de saisie possible            | Plus de fraude possible car la donnée est certifiée à la source |
 
@@ -56,7 +56,7 @@ L'aide juridictionnelle est une prise en charge par l'État des frais judiciaire
 | [API Impôt particulier](https://api.gouv.fr/les-api/impot-particulier)  | Revenus déclarés auprès de l'administration fiscale |DGFiP   |
 | [API Indemnités Journalières](https://api.gouv.fr/les-api/api-indemnites-journalieres-cnam)   | Montant des indemnités journalières de l'Assurance Maladie payé à un assuré sur une période|CNAM |
 | [API de droits à l'Assurance Maladie](https://api.gouv.fr/les-api/api_ameli_droits_cnam) | Droits d’un individu ou d’une famille (enfants rattachés), gérés par le régime général de l’Assurance Maladie |CNAM   |
-| [API Statut étudiant](https://api.gouv.fr/les-api/api-statut-etudiant)| Statut de l’nscription dans un établissement de l’enseignment suprérieur |MESRI   |
+| [API Statut étudiant](https://api.gouv.fr/les-api/api-statut-etudiant)| Statut de l’inscription dans un établissement de l’enseignement supérieur |MESRI   |
 | API Prestations sociales (bientôt disponible)    | Inscription au RSA, bénéficiaires de la CSS (complémentaire sociale solidaire) |DSS |
 | [API Statut étudiant boursier](https://api.gouv.fr/les-api/api-statut-etudiant-boursier)| Statut d’étudiant boursier  |CNOUS / MESRI                                          |
 | API Indemnités Pôle Emploi (bientôt disponible)  | Montant des indemnités versée par pôle emploi   |Pôle Emploi                        |
