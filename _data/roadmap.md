@@ -316,6 +316,9 @@
       path: /les-api/api-pseudonymisation-documents
   4:
     - type: ADD_API
+      what: CVEC par le CNOUS
+      path: /les-api/api-cvec
+    - type: ADD_API
       what: Indemnités Pôle Emploi, par Pôle Emploi
     - type: ADD_API
       what: AgentConnect par la DINUM
