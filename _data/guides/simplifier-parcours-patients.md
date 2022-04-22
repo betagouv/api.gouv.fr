@@ -7,6 +7,8 @@ noindex: false # this page will appear on Google
 publish: true # this page will appear on /guides page
 api:
   - API de droits à l'Assurance Maladie
+  - FranceConnect et les API FranceConnectées
+
 ---
 
 L'API Droits de l'Assurance Maladie permet aux personnes identifiées via FranceConnect d'éviter de fournir une attestation de droits au cours de leur parcours de soin.
