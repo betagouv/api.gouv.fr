@@ -7,6 +7,9 @@ noindex: false # this page will appear on Google
 publish: true # this page will appear on /guides page
 api:
   - API Particulier
+  - FranceConnect et les API FranceConnectées
+  - API Statut Etudiant
+  - API Statut étudiant boursier
 ---
 
 ## Simplifier le traitement des dossiers grâce aux API

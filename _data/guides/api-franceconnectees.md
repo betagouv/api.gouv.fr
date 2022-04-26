@@ -8,7 +8,7 @@ publish: true # this page will appear on /guides page
 api:
   - API Impôt particulier
   - API de droits à l'Assurance Maladie
-  - API Statut étudiant
+  - API Statut Etudiant
   - API Statut étudiant boursier
   - API Indemnités journalières de la CNAM
 ---
