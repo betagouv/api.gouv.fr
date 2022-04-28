@@ -1,6 +1,6 @@
 ---
 title: Simplifier les démarches des étudiants
-tagline: Utilisez les API dans vos services en ligne pour simplifier les démarche des étudiants 
+tagline: Utilisez les API dans vos services en ligne pour simplifier les démarches des étudiants 
 tags: cas usage, adresse, geo, postal, commune
 image: etudiants.png
 noindex: false # this page will appear on Google
