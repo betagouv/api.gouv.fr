@@ -43,7 +43,7 @@ keywords:
   - déclarer
 themes:
   - Entreprise
-last_update: 02/12/2021
+last_update: 11/05/2022
 ---
 
 L’Urssaf met à disposition une nouvelle offre de service pour la déclaration préalable à l’embauche : L’API DPAE.
