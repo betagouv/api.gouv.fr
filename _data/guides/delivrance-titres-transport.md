@@ -1,5 +1,5 @@
 ---
-title: Faciliter la tarification sociale et solidaire des transports
+title: Tarification sociale et solidaire des transports
 tagline: Vous êtes une collectivité, un opérateur ou un éditeur de logiciel ? Appliquez facilement un tarif de vos titres de transport adapté à la situation de vos usagers, en utilisant les données de l'API Particulier.
 tags: cas usage, api particulier, transport
 image: transport.jpg
@@ -19,27 +19,19 @@ Ces informations peuvent être obtenues par les collectivités et AOM grâce à 
 
 **👋 Pour participer au groupe de travail associé, [vous pouvez écrire ici](mailto:contact@api.gouv.fr?subject=Participation-au-cas-d'usage-transports)**
 
-## Les données disponibles
+
+## Calcul tarification transports
 
 Afin de faciliter les traitement des dossiers, vous pouvez utiliser des données librement disponibles (open data) ainsi que des données couvertes par des secrets.
 
-### Les données couvertes par un secret
+### Les données disponibles
 
-Deux modalités d'appel existent, que le service en ligne utilise le dispositif FranceConnect [API dites franceConnectée](https://api.gouv.fr/guides/api-franceconnectees) ou non [API Particulier](https://api.gouv.fr/les-api/api-particulier).
+**Les données de nos API**
 
-| Donnée                                           | API Particulier         |API FranceConnect          |
-| ------------------------------------------------ | ----------------------- |-------------------------- |
-| [Revenu fiscal](/les-api/impot-particulier)      | ✅                      |✅                          |
-| [Quotient familial](/les-api/api-particulier)    | ✅                      | Fin 2022                   |
-| [Statut étudiant](/les-api/api-statut-etudiant)  | ✅                      | ✅                         |
-| [Statut étudiant boursier](/les-api/api-statut-etudiant-boursier)| ✅      | ✅                         |
-| Statut demandeur d'emploi    | ✅                      | En cours de test          |
-| Indemnité demandeur d'emploi | Mars 2022               | En cours de test          |
-| Statut CSS                   | Juin 2022               | Juin 2022                 |
-| Statut RSA                   | Juin 2022               | Juin 2022                 |
-| Statut élève scolarisé       | Fin-2022                | En cours d'étude          |
+En savoir plus sur les <External href="https://api.gouv.fr/les-api/api-particulier#donnees-accessibles-dans-l'api">données à disposition</External> 
 
-### Les données disponibles en libre accès
+
+**Les données disponibles en libre accès**
 
 Les données disponibles en libre accès sont référencées sur [api.gouv.fr](http://api.gouv.fr/) et/ou sur [data.gouv.fr](http://data.gouv.fr/) :
 
@@ -47,36 +39,27 @@ Les données disponibles en libre accès sont référencées sur [api.gouv.fr](h
 - 📂 [Fichier : Etablissements scolaires](https://www.data.gouv.fr/fr/datasets/annuaire-de-leducation/)
 - 📂 [Fichier : Etablissements de l'enseignement supérieur](https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-principaux-etablissements-enseignement-superieur/map/?disjunctive.type_d_etablissement&disjunctive.typologie_d_universites_et_assimiles&location=4,43.06889,0.74707&basemap=e69ab1)
 
-### Ils utilisent les API pour simplifier le traitement des dossiers
+**Comment faire :**
+  <External href="https://datapass.api.gouv.fr/api-particulier?demarche=agora-plus">Méthodologie pour accéder aux API</External>  
 
-- Syndicat mixte de l’aire grenobloise
-- Région Nouvelle Aquitaine
-- Syndicat des Mobilités Pays Basque
+## Cadre Juridique
 
-## Les critères d’accès aux données couvertes par un secret
-
-**Vous devrez être habilité pour accéder aux données couvertes par un secret et justifier de votre droit d'en savoir** :
+L'utilisation des données est encadrée légalement. Vous devez formuler une demande auprès de nos services et la motiver.
 
 - L'article L114-8 du code des relations entre le public et l'administration fixe le cadre général des échanges de données au sein de l'administration ;
-- Plusieurs autres sources peuvent être évoquées comme le code des transports qui donne compétence aux collectivités.
+- En tant que collectivités territoriales vous avez donc un droit d'accès à certaines données dans le cadre de demandes, services pro-actifs et déclarations usagers. Vérifiez et indiquez quel est l'objet de votre téléservices en cliquant sur le lien suivant : [Arrêté du 04/07/13 sur les téléservices](https://www.legifrance.gouv.fr/loda/id/JORFTEXT000027697207/#:~:text=Dans%20les%20r%C3%A9sum%C3%A9s-,Arr%C3%AAt%C3%A9%20du%204%20juillet%202013%20autorisant%20la%20mise%20en%20%C5%93uvre,publiques%20locales%20dont%20ils%20sont)
 
-**Il est indispensable de fournir l'acte qui fixe les conditions tarifaires qui permettra d'apprécier finement le droit d'accès à chaque donnée.**
+**Il est indispensable de fournir l'acte/ la délibération qui fixe les conditions tarifaires qui permettra d'apprécier finement le droit d'accès à chaque donnée.**
 
-## Le processus d’accès aux données
 
-### Pour les données des API dites "France connectées"
-
-Vous devez formuler une demande par API.
-
-👉 [Les API France connectées sont listées ici](https://api.gouv.fr/guides/api-franceconnectees)
-
-### Pour les API non “FranceConnectées”
-
-Vous devez formuler une demande unique pour accéder à l'ensemble des données de l'API particulier.
-
-**⚠️ Cas particulier :** si vous n'avez besoin que des données fiscales, vous devez [faire une demande à la DGFIP](https://api.gouv.fr/les-api/impot-particulier).
-
-<br/>
 <Button href="https://datapass.api.gouv.fr/api-particulier">Demander un accès à l'API Particulier</Button>
 
-Vous avez besoin de plus de données ? Demandez les avec le bouton 'Une question ?'
+
+## Editeurs
+
+Si vous travaillez avec l'un des éditeurs ou intégrateurs ci-dessous vous pouvez faire une demande pré-remplie :
+
+| Editeur                      | Nom de la solution            | Date         | Lien vers la demande                                                                                                                |
+| ---------------------------- | ----------------------------- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
+
+Vous êtes un éditeur et vous souhaitez apparaître dans cette liste ? Écrivez-nous à [contact@particulier.api.gouv.fr](mailto:contact@particulier.api.gouv.fr)
