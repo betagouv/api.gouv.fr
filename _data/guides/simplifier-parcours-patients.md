@@ -7,6 +7,8 @@ noindex: false # this page will appear on Google
 publish: true # this page will appear on /guides page
 api:
   - API de droits à l'Assurance Maladie
+  - FranceConnect et les API FranceConnectées
+
 ---
 
 L'API Droits de l'Assurance Maladie permet aux personnes identifiées via FranceConnect d'éviter de fournir une attestation de droits au cours de leur parcours de soin.
@@ -19,15 +21,16 @@ En moyenne en 2022, **nous simplifions le parcours de 130 patients par jour**, q
 
 ### Le parcours avant
 
-1. Je me connecte sur le portail de l'Assurance Maladie
-2. Je recherche mon attestation de droits
-3. Je télécharge le document
-4. J'envoie mon attestation de droits à l'établissement de soin
+1. Je me connecte sur le portail de l'Assurance Maladie,
+2. Je recherche mon attestation de droits,
+3. Je télécharge le document,
+4. J'envoie mon attestation de droits à l'établissement de soin.
 
 ### Le parcours après
 
-1. Lors de ma pré-inscription, je m'identifie via FranceConnect
-2. ✅ C'est terminé, mon attestation a été transmise directement à l'établissement
+1. Lors de ma pré-inscription, je m'identifie via FranceConnect,
+2. Je consens au partage de mes données (CNAM, attestation de droits),
+3. ✅ C'est terminé, mon attestation a été transmise directement à l'établissement.
 
 ## Avantages pour l'établissement de santé
 

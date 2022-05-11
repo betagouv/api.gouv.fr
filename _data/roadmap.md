@@ -315,6 +315,9 @@
       what: Pseudonymisation de documents par la DINUM
       path: /les-api/api-pseudonymisation-documents
   4:
+      what: CVEC par le CNOUS
+      path: /les-api/api-cvec
+  5:
     - type: ADD_API
       what: Déclaration préalable à l'embauche par l'Urssaf
       path: /les-api/api-declaration-embauche
@@ -322,9 +325,7 @@
       what: Indemnités Pôle Emploi, par Pôle Emploi
     - type: ADD_API
       what: AgentConnect par la DINUM
-  5:
-    - type: ADD_API
-      what: Prestations sociales par la Direction de la Sécurité Sociale
+  6: 
     - type: ADD_API
       what: Prestations sociales par la Direction de la Sécurité Sociale
     - type: ADD_API
