@@ -315,6 +315,7 @@
       what: Pseudonymisation de documents par la DINUM
       path: /les-api/api-pseudonymisation-documents
   4:
+    - type: ADD_API
       what: CVEC par le CNOUS
       path: /les-api/api-cvec
   5:
