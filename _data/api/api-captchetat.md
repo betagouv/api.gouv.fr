@@ -36,7 +36,7 @@ keywords:
   - PISTE
 themes:
   - Administration
-contact_link: piste.aife@finances.gouv.fr
+contact_link: https://piste.gouv.fr/support/#/
 doc_tech_link: /swaggers/api-captchetat.json
 visits_2019: 1500
 last_update: 28/01/2022
