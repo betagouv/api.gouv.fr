@@ -47,12 +47,8 @@ const readAllGuideImage = async () => {
   console.log(`*** Thumbnails check done ! ***`);
   if (newThumbnailCount > 0) {
     console.log(`Please commit ${newThumbnailCount} new thumbnails.`);
-    process.exit();
+    process.exit(1);
   }
 };
 
-async function main() {
-  await readAllGuideImage();
-}
-
-main();
+readAllGuideImage();
