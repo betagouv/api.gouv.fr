@@ -19,12 +19,13 @@ themes:
   - Environnement
 visits_2019: 568
 last_update: 12/06/2018
+content_intro: |
+  [L'API Etat Piscicole](http://hubeau.eaufrance.fr/page/api-poisson) de Hub'Eau ou **API Poissons** permet de connaître les poissons décomptés par pêche électrique dans une rivière.
+  La source de données est : [Informations sur les Milieux Aquatiques pour la Gestion Environnementale (IMAGE)](http://www.image.eaufrance.fr/).
 ---
 
 ### Description fonctionnelle de l'API Poissons
 
-[L'API Etat Piscicole](http://hubeau.eaufrance.fr/page/api-poisson) de Hub'Eau ou **API Poissons** permet de connaître les poissons décomptés par pêche électrique dans une rivière.
-La source de données est : [Informations sur les Milieux Aquatiques pour la Gestion Environnementale (IMAGE)](http://www.image.eaufrance.fr/).
 Il s'agit des données de taille des poissons pêchés au moyen de pêches électriques. Elles proviennent essentiellement de l'AFB (anciennement ONEMA, anciennement CSP).
 Les données sont exposées sous la forme d'une API REST, les formats supportés sont : JSON, GeoJSON et CSV.
 

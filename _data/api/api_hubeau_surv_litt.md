@@ -28,11 +28,11 @@ themes:
 contact_link: newshubeau@brgm.fr
 doc_tech_link: https://hubeau.eaufrance.fr/api/vbeta/surveillance_littoral/api-docs
 last_update: 16/04/2021
+content_intro: |
+  [L'API "Surveillance du Littoral"](https://hubeau.eaufrance.fr/page/api-surveillance-littoral) diffuse les données de surveillance du littoral gérées et valorisées par [l'Institut français de recherche pour l'exploitation de la mer (IFREMER)](https://wwz.ifremer.fr) à travers le [système d'information QUADRIGE](http://quadrige.eaufrance.fr).
 ---
 
 ### Description fonctionnelle de l'API Surveillance du littoral
-
-[L'API "Surveillance du Littoral"](https://hubeau.eaufrance.fr/page/api-surveillance-littoral) diffuse les données de surveillance du littoral gérées et valorisées par [l'Institut français de recherche pour l'exploitation de la mer (IFREMER)](https://wwz.ifremer.fr) à travers le [système d'information QUADRIGE](http://quadrige.eaufrance.fr).
 
 QUADRIGE regroupe de nombreuses thématiques : Phytoplancton et hydrologie, suivi environnemental de centrale nucléaire, Microbiologie, Benthos, ...). Chacune de ces thématiques fera l'objet d'un endpoint (opération) de l'API Surveillance du Littoral. A titre de test, c'est la thématique **Contaminants chimiques et écotoxicologie** qui a été choisie pour initier la diffusion des données de QUADRIGE via Hub'Eau.
 

@@ -20,11 +20,12 @@ themes:
   - Environnement
 visits_2019: 381
 last_update: 11/06/2018
+content_intro: |
+  [L'API Qualité des nappes d'eau souterraine](https://hubeau.eaufrance.fr/page/api-qualite-nappes) de Hub'Eau permet d'accéder aux données sur la qualité physico-chimique des nappes d'eau souterraines françaises.
 ---
 
 ### Description fonctionnelle de l'API Qualité des nappes d'eau souterraine
 
-[L'API Qualité des nappes d'eau souterraine](https://hubeau.eaufrance.fr/page/api-qualite-nappes) de Hub'Eau permet d'accéder aux données sur la qualité physico-chimique des nappes d'eau souterraines françaises.
 Ces données sont issues de la [banque nationale d'Accès aux Données sur les Eaux Souterraines ADES](http://ades.eaufrance.fr/).
 Au 29 novembre 2017, les données concernent 67 millions d'analyses réparties sur 74000 points d'eau.
 Les données sont exposées sous la forme d'une API REST, les formats supportés sont : JSON, GeoJSON et CSV.
