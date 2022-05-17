@@ -35,7 +35,7 @@ content_intro: |
   - rechercher une commune par nom, code postal ou coordonnées géographiques
   - rechercher un département par son nom
   - rechercher une région par son nom
-contact_link: geo@api.gouv.fr
+contact_link: geo@data.gouv.fr
 doc_tech_link: https://geo.api.gouv.fr/definition.yml
 doc_tech_external: https://geo.api.gouv.fr/decoupage-administratif
 uptime: 100 # https://uptimerobot.com/dashboard#777757460
