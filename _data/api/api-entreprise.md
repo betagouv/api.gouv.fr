@@ -145,12 +145,12 @@ keywords:
   - Compétences
   - Rénovation énergétique
 rate_limiting_resume: 1000 requêtes/min par IP
-rate_limiting_description: 'Les limites de volumétrie sont détaillées ici :'
+rate_limiting_description: "Les limites de volumétrie sont détaillées ici :"
 rate_limiting_link: https://entreprise.api.gouv.fr/doc/#respecter-la-volumétrie/
 monitoring_link: https://status.entreprise.api.gouv.fr/
 contact_link: https://entreprise.api.gouv.fr/support/
 doc_tech_link: https://entreprise.api.gouv.fr/v2/open-api.yml
-# ! CORS are only authorized on api.gouv.fr - will not work on localhost
+useSwaggerProxy: true
 doc_tech_external: https://entreprise.api.gouv.fr/catalogue/
 themes:
   - Entreprise
