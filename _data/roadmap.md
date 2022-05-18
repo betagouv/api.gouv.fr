@@ -323,6 +323,9 @@
       what: Déclaration préalable à l'embauche par l'Urssaf
       path: /les-api/api-declaration-embauche
     - type: ADD_API
+      what: Infinoé par la DGFiP
+      path: /les-api/api-infinoe
+    - type: ADD_API
       what: Indemnités Pôle Emploi, par Pôle Emploi
     - type: ADD_API
       what: AgentConnect par la DINUM
