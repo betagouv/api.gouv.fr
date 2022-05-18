@@ -45,7 +45,7 @@ La DREAL Bretagne propose une cartographie des stations hydrométriques de la r�
     title="Adresse"
     width="100%"
     height="400"
-    src="http://uhbretagne.yo.fr/carte_alarmes.html">
+    src="https://uhbretagne.yo.fr/carte_alarmes.html">
 </iframe>
 
 💡 [Voir le cas d'usage](http://uhbretagne.yo.fr/carte_alarmes.html)
