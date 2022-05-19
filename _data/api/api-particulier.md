@@ -75,6 +75,7 @@ content_intro: |
   <Quote logo="/images/guides/clamart.svg" who='Ville de Clamart' title='Aurélie Coutant, directrice de la relation usagers'>
   Maintenant que le traitement est automatisé, nous avons enfin le temps de mieux accompagner les usagers en difficulté, de leur expliquer plus largement les prestations auxquelles ils peuvent avoir accès.
   </Quote>
+  
  ###Avantages pour les usagers :
 
   - La démarche est réalisable 100% en ligne mais aussi en guichet.
