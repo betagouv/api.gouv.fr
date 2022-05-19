@@ -1,5 +1,5 @@
 ---
-title: Tarification sociale et solidaire des transports
+title: Tarification transports
 tagline: Vous êtes une collectivité, un opérateur ou un éditeur de logiciel ? Appliquez facilement un tarif de vos titres de transport adapté à la situation de vos usagers, en utilisant les données de l'API Particulier.
 tags: cas usage, api particulier, transport
 image: transport.jpg
@@ -31,7 +31,7 @@ Afin de faciliter les traitement des dossiers, vous pouvez utiliser des données
 
 **Les données de nos API**
 
-En savoir plus sur les <External href="https://api.gouv.fr/les-api/api-particulier#donnees-accessibles-dans-l'api">données à disposition</External> 
+En savoir plus sur les données à disposition  <External href="https://api.gouv.fr/les-api/api-particulier#donnees-accessibles-dans-l'api"> via l'API Particulier </External>  et via  <External href="https://api.gouv.fr/rechercher-api"> les autres API d'api.gouv.fr </External>
 
 
 **Les données disponibles en libre accès**
@@ -60,9 +60,7 @@ L'utilisation des données est encadrée légalement. Vous devez formuler une de
 
 ## Editeurs
 
-Si vous travaillez avec l'un des éditeurs ou intégrateurs ci-dessous vous pouvez faire une demande pré-remplie :
+Si vous travaillez avec l'un des éditeurs ou intégrateurs ci-dessous vous pouvez faire une demande pré-remplie
 
-| Editeur                      | Nom de la solution            | Date         | Lien vers la demande                                                                                                                |
-| ---------------------------- | ----------------------------- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
 
 Vous êtes un éditeur et vous souhaitez apparaître dans cette liste ? Écrivez-nous à [contact@particulier.api.gouv.fr](mailto:contact@particulier.api.gouv.fr)
