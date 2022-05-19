@@ -69,12 +69,13 @@ last_update: 31/03/2021
 content_intro: |
  L'API Particulier (En savoir plus sur <External href="https://api.gouv.fr/guides/api-definition">les API</External>) est un bouquet de données proposé pour simplifier les démarches administratives. L'API Particulier permet d'obtenir une multitude de données provenant d'administration différentes dans le cadre de démarches en ligne (appelée aussi formulaires en ligne ou téléservices). Un usage dans les logiciels métiers est aussi possible. 
 
- **Avantages pour les administrations et collectivités** 
-
+ **Avantages pour les administrations et collectivités :** 
+ 
   - Les informations sont certifiées par le fournisseur de données, il n'y a plus de saisie des données à effectuer.
   <Quote logo="/images/guides/clamart.svg" who='Ville de Clamart' title='Aurélie Coutant, directrice de la relation usagers'>
   Maintenant que le traitement est automatisé, nous avons enfin le temps de mieux accompagner les usagers en difficulté, de leur expliquer plus largement les prestations auxquelles ils peuvent avoir accès.
   </Quote>
+
  **Avantages pour les usagers :**
 
   - La démarche est réalisable 100% en ligne mais aussi en guichet.
