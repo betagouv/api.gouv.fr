@@ -76,7 +76,7 @@ content_intro: |
   Maintenant que le traitement est automatisé, nous avons enfin le temps de mieux accompagner les usagers en difficulté, de leur expliquer plus largement les prestations auxquelles ils peuvent avoir accès.
   </Quote>
 
-**Avantages pour les usagers :**
+ **Avantages pour les usagers :**
 
   - La démarche est réalisable 100% en ligne mais aussi en guichet.
   - Plus besoin de rassembler les documents demandés ou de saisir des informations déjà connues de l'administration.
