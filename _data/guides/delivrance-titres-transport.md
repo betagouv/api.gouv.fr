@@ -58,9 +58,5 @@ L'utilisation des données est encadrée légalement. Vous devez formuler une de
 <Button href="https://datapass.api.gouv.fr/api-particulier">Demander un accès à l'API Particulier</Button>
 
 
-## Editeurs
-
-Si vous travaillez avec l'un des éditeurs ou intégrateurs ci-dessous vous pouvez faire une demande pré-remplie
-
 
 Vous êtes un éditeur et vous souhaitez apparaître dans cette liste ? Écrivez-nous à [contact@particulier.api.gouv.fr](mailto:contact@particulier.api.gouv.fr)
