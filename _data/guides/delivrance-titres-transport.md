@@ -42,6 +42,14 @@ Les données disponibles en libre accès sont référencées sur [api.gouv.fr](h
 - 📂 [Fichier : Etablissements scolaires](https://www.data.gouv.fr/fr/datasets/annuaire-de-leducation/)
 - 📂 [Fichier : Etablissements de l'enseignement supérieur](https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-principaux-etablissements-enseignement-superieur/map/?disjunctive.type_d_etablissement&disjunctive.typologie_d_universites_et_assimiles&location=4,43.06889,0.74707&basemap=e69ab1)
 
+
+**Ils utilisent les API pour simplifier le traitement des dossiers**
+
+- Syndicat mixte de l’aire grenobloise
+- Région Nouvelle Aquitaine
+- Syndicat des Mobilités Pays Basque
+
+
 **Comment faire :**
   <External href="https://datapass.api.gouv.fr/api-particulier?demarche=agora-plus">Méthodologie pour accéder aux API</External>  
 
