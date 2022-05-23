@@ -127,6 +127,13 @@ content_intro: |
 #### Données fiscales
 
 <details>
+    <summary>Paramètres à renseigner par l'utilisateur</summary>
+Informations à saisir par l'utilisateur (secrets) : Numéro fiscal propre à chaque citoyen (identifiant numérique de 13 chiffres), et Référence de l'avis fiscal (identifiant alphanumérique de 13 caractères) - 14 si dégrèvement -)
+</details>
+
+<p>
+
+<details>
    <summary>Liste des données</summary>
 | Donnée                       | Description                                                                                        |
 | ---------------------------- | -------------------------------------------------------------------------------------------------- |
@@ -135,7 +142,6 @@ content_intro: |
 | Situation du foyer fiscal  | Adresse, année de déclaration, nombre de parts, nombre de personnes à charge, situation de famille  |
 | Agrégats fiscaux   | Revenu brut global, revenu imposable, impôt sur le revenu net avant corrections, montant de l'impôt, revenu fiscal de référence, année de l'impôt, année des revenus   |
 
-Informations à saisir par l'utilisateur (secrets) : Numéro fiscal propre à chaque citoyen (identifiant numérique de 13 chiffres), et Référence de l'avis fiscal (identifiant alphanumérique de 13 caractères) - 14 si dégrèvement -)
 
 </details>
 
@@ -143,8 +149,6 @@ Informations à saisir par l'utilisateur (secrets) : Numéro fiscal propre à ch
 
 <details>
    <summary>Précisions sur les données</summary>
-
-Informations à saisir par l'utilisateur (secrets) : Numéro fiscal propre à chaque citoyen (identifiant numérique de 13 chiffres), et Référence de l'avis fiscal (identifiant alphanumérique de 13 caractères) - 14 si dégrèvement -)
 
 ⚠️ Attention : si vous comptez utiliser uniquement les données de la DGFIP, il convient d'utiliser l'API [impôt particulier](https://api.gouv.fr/les-api/impot-particulier)
 
@@ -166,6 +170,13 @@ L’Adresse est celle connue au 1er janvier de l’année d’imposition (exempl
 #### Quotient familial
 
 <details>
+    <summary>Paramètres à renseigner par l'utilisateur</summary>
+Informations à saisir par l'utilisateur (secrets) : Numéro d'allocataire et Code postal
+</details>
+
+<p>
+
+<details>
    <summary>Liste des données</summary>
 | Donnée                       | Description                                                                                        |
 | ---------------------------- | -------------------------------------------------------------------------------------------------- |
@@ -173,7 +184,6 @@ L’Adresse est celle connue au 1er janvier de l’année d’imposition (exempl
 | Composition familiale        | Liste des parents et des enfants de la famille (avec nom, prénoms, date de naissance).             |
 | Adresse                      | L'adresse structurée détenue par la CAF                                                            |
 
-Informations à saisir par l'utilisateur (secrets) : Numéro d'allocataire et Code postal
 
 </details>
 
@@ -188,12 +198,17 @@ Les données de l’API Particulier ne permettent pas encore de calculer les t
 
 -> Le Quotient  Familial CAF est revu à chaque changement de situation familiale et/ou professionelle. Il prend en compte 1/12e du revenue imposable de l’année N-2 + les Prestations familiales du mois de référence divisés par le nombre de parts fiscales du foyer. Le Quotient Familiale « DGFIP » est calculé au moment de la déclaration de revenus. Il divise le revenue imposable de l’année N-1 par le nombre de part fiscale du foyer.
 
-Informations à saisir par l'utilisateur (secrets) : Numéro d'allocataire et Code postal
-
 
 </details>
 
 #### Statut étudiant
+
+<details>
+    <summary>Paramètres à renseigner par l'utilisateur</summary>
+Informations à saisir par l'utilisateur (secrets) : Identifiant National Étudiant et Etat civil (nom, prénom, date de naissance, sexe et lieu de naissance)
+</details>
+
+<p>
 
 <details>
    <summary>Liste des données</summary>
@@ -205,7 +220,6 @@ Informations à saisir par l'utilisateur (secrets) : Numéro d'allocataire et Co
 | Admissions                         | Limite la recherche aux seuls étudiants admis (non-inscrits).                  |
 | Etablissement                      | Le ou les établissements (nom et  identifiant - UAI).                         |
 
-Informations à saisir par l'utilisateur (secrets) : Identifiant National Étudiant et Etat civil (nom, prénom, date de naissance, sexe et lieu de naissance)
 
 </details>
 
@@ -213,7 +227,6 @@ Informations à saisir par l'utilisateur (secrets) : Identifiant National Étudi
 
 <details>
    <summary>Précisions sur les données</summary>
-Informations à saisir par l'utilisateur (secrets) : Identifiant National Étudiant et Etat civil (nom, prénom, date de naissance, sexe et lieu de naissance)
 
 Vous aurez à sélectionner des scopes de données dans votre demande. Voici leur fonctionnement :
 
@@ -242,6 +255,13 @@ La couverture des établissements du champ des étudiants sera progressivement c
 #### Statut étudiant boursier
 
 <details>
+    <summary>Paramètres à renseigner par l'utilisateur</summary>
+Informations à saisir par l'utilisateur (secrets) : Nom d’utilisateur Pôle emploi choisi par le particulier lors de la création de son espace personnel en ligne.
+</details>
+
+<p>
+
+<details>
    <summary>Liste des données</summary>
 | Donnée                             | Description                                                                   |
 | ---------------------------------- | ----------------------------------------------------------------------------- |
@@ -252,7 +272,6 @@ La couverture des établissements du champ des étudiants sera progressivement c
 | Statut de la bourse                | Statut définitif ou provisoire (conditionnel)                                |
 | Ville d'étude                      | Libellé de la ville d'étude                                                   |
 
-Informations à saisir par l'utilisateur (secrets) : Identifiant National Étudiant et Etat civil (nom, prénom, date de naissance, sexe et lieu de naissance)
 
 </details>
 
@@ -304,7 +323,6 @@ L’API délivre les données des étudiants :
 | Adresse                      |                                                                                                    |
 | Inscription                  | Date d’inscription, date de cessation inscription, catégorie d’inscription                         |
 
-Informations à saisir par l'utilisateur (secrets) : Nom d’utilisateur Pôle emploi choisi par le particulier lors de la création de son espace personnel en ligne.
 
 </details>
 
