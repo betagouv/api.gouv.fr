@@ -1,5 +1,5 @@
 ---
-title: Simplifier l'instruction des dossiers dans un CCAS
+title: Aides sociales
 tagline: Vous êtes un CCAS ou un éditeur de logiciel ? Accédez facilement aux données de la CAF et de la DGFIP grâce à l'API Particulier et notre  accompagnement pas à pas.
 tags: cas usage, api particulier, CCAS
 image: dossier.jpg
@@ -14,41 +14,28 @@ Les Centres Communaux d'Action Sociale sont amenés à instruire de nombreux dos
 Ces dossiers utilisent généralement les données d’état-civil, l'adresse, le quotient familial de la Caisse d’Allocations Familiales (CAF), la composition du foyer, l'avis d'imposition.
 Avec la brique API Particulier vous avez la possibilité de diminuer les erreurs, réduire le risque de fraude et faciliter le traitement des dossiers par vos équipes en **accédant facilement aux données** nécessaires au calcul.
 
-En intégrant la brique API Particulier dans votre système d'information, ou votre site internet :
+## Simplifier l'instruction des dossiers dans un CCAS
 
-- Vous accèdez facilement aux données de la CAF et de la DGFIP.
-- Vous n'avez **plus besoin de demander** d'avis fiscal ou de quotient familial aux parents
-- Vous n'avez **pas de vérifications supplémentaires** car les informations sont **certifiées**
-- La démarche peut-être faite 100% en ligne
+En intégrant la brique API Particulier dans votre système d'information, ou votre site internet :
 
 <Quote logo="/images/guides/sitiv.png" link='https://www.sitiv.fr/Actualites/L-action-sociale-des-villes-du-SITIV-integre-le-dispositif-Dites-le-nous-une-fois' who='Le SITIV' title='membre du réseau Déclic'>
 le principe du "Dites-le nous une fois" (...) permet aux citoyens de ne pas avoir à donner leur consentement mais d'être simplement informés de l'utilisation de leurs pièces.
 C'est dans ce cadre que le SITIV intègre directement au logiciel métier les informations des usagers (...) Les saisies dans les dossiers usagers sont ainsi **facilitées et certifiées**.
 </Quote>
 
-## Les données disponibles
+En savoir plus sur les <External href="https://api.gouv.fr/les-api/api-particulier#donnees-accessibles-dans-l'api">données à disposition</External> et sur la <External href="https://datapass.api.gouv.fr/api-particulier?demarche=agora-plus">méthodologie pour y accéder</External>   
+                         
 
-Voici les données de la CAF (composition familiale du foyer du demandeur) et de la DGFIP (pour vérifier les conditions d'éligibilité d'une demande) accessibles directement avec l'API, ce sont les données les plus utilisées pour ce service, mais la liste ci-dessous n'est pas exhaustive :
+## Cadre Juridique
 
-| Donnée            | Commentaire                                                                                   |
-| ----------------- | --------------------------------------------------------------------------------------------- |
-| Allocataire       | L'état-civil du demandeur (nom prénom date de naissance)                                      |
-| Enfant(s)         | Le/La/Les enfant(s) (nom, prenom, date de naissance)                                          |
-| Quotient Familial | Le quotient familial calculé par la CAF                                                       |
-| Avis d'imposition | statut d’imposition, montant de l'impôt, revenu fiscal de référence, nombre de parts fiscales |
-| Adresse           | L'adresse du foyer et/ou l'adresse fiscale du demandeur                                       |
+L'utilisation des données est encadrée légalement. Vous devez formuler une demande auprès de nos services et la motiver.
 
-## Comment accéder à la donnée
+- L'article L114-8 du code des relations entre le public et l'administration fixe le cadre général des échanges de données au sein de l'administration ;
+- En tant que collectivités territoriales vous avez donc un droit d'accès à certaines données dans le cadre de demandes, services pro-actifs et déclarations usagers. Vérifiez et indiquez quel est l'objet de votre téléservices en cliquant sur le lien suivant : [Arrêté du 04/07/13 sur les téléservices](https://www.legifrance.gouv.fr/loda/id/JORFTEXT000027697207/#:~:text=Dans%20les%20r%C3%A9sum%C3%A9s-,Arr%C3%AAt%C3%A9%20du%204%20juillet%202013%20autorisant%20la%20mise%20en%20%C5%93uvre,publiques%20locales%20dont%20ils%20sont)
 
-L'utilisation des données par les CCAS est encadrée légalement, et demande donc de formuler une demande. Vous pouvez motiver votre demande à l'aide des articles suivants :
+**Il est indispensable de fournir l'acte/ la délibération qui fixe les conditions tarifaires qui permettra d'apprécier finement le droit d'accès à chaque donnée.**
 
-- Article <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000026799356&cidTexte=LEGITEXT000006074069&dateTexte=20121219">L.312-1</External> et <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000031106561&cidTexte=LEGITEXT000006074069&dateTexte=20150809"> R123-5 </External> du _Code de l'action sociale et des familles_
 
-- Article <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000033219997&cidTexte=LEGITEXT000031366350&dateTexte=20161009">L.114-8</External> et <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=83A5E43D6A6710F0F0FFE705AA476AA5.tplgfr26s_3?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000038029900&dateTexte=20190213&categorieLien=id#LEGIARTI000038029900">R114-9-3 </External> du _Code des relations entre le public et l'administration_
-
-Si vous travaillez avec un des éditeurs ou intégrateurs, <a href='#editeurs'>consultez la section éditeurs.</a>
-
-<NextSteps/>
 <br/>
 <Button href="https://datapass.api.gouv.fr/api-particulier?demarche=ccas">Remplir une demande</Button>
 

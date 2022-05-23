@@ -18,13 +18,14 @@ themes:
   - Environnement
 visits_2019: 55
 last_update: 24/07/2019
+content_intro: |
+  [L'API Prélèvements en eau](https://hubeau.eaufrance.fr/page/api-prelevements-eau) fournit des informations sur les volumes annuels directement prélevés sur la ressource en eau, déclinés par localisation et catégorie d’usage de l’eau. Ces informations sont issues de la gestion des redevances par les agences et offices de l’eau.
+  
+  Source des données : [Banque Nationale des Prélèvements quantitatifs en Eau (BNPE)](https://bnpe.eaufrance.fr/).  
 ---
 
 ### Description fonctionnelle de l'API Prélèvements en eau
 
-[L'API Prélèvements en eau](https://hubeau.eaufrance.fr/page/api-prelevements-eau) fournit des informations sur les volumes annuels directement prélevés sur la ressource en eau, déclinés par localisation et catégorie d’usage de l’eau. Ces informations sont issues de la gestion des redevances par les agences et offices de l’eau.
-Source des données : [Banque Nationale des Prélèvements quantitatifs en Eau (BNPE)](https://bnpe.eaufrance.fr/).  
-  
 Les données sont exposées sous la forme d'une API REST, les formats supportés sont : JSON, GeoJSON et CSV.  
   
 Pour en savoir plus, consultez [le site de la BNPE](https://bnpe.eaufrance.fr/). Vous y trouverez notamment des [cartes de peuplement de la base de données par années](https://bnpe.eaufrance.fr/cartes-peuplement-base).  

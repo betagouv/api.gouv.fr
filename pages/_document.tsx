@@ -76,24 +76,6 @@ class MyDocument extends Document {
                 }}
               />
             )}
-          {/* last, we call sentry as we want to load it synchronously. It has to be executed BEFORE the other deferred scripts */}
-          {process.env.NODE_ENV === 'production' && (
-            <>
-              <script
-                async
-                src="https://cdn.ravenjs.com/3.19.1/raven.min.js"
-                crossOrigin="anonymous"
-              ></script>
-              <script
-                dangerouslySetInnerHTML={{
-                  __html: `
-                  <!-- Init Sentry -->
-                  Raven.config('${process.env.SENTRY_URL}').install()
-                  `,
-                }}
-              ></script>
-            </>
-          )}
         </body>
       </Html>
     );

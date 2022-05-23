@@ -1,54 +1,57 @@
 ---
-title: Tarification de la restauration scolaire et des activités périscolaires et municipales
+title: Portail Famille
 tagline: Simplifiez le calcul des tarifs de la restauration scolaire, ou des activités périscolaires ou municipales dans votre colllectivité
-tags: cas usage, api particulier, portail-famille, tarification restauration scolaire, tarification activités périscolaires
-image: cantine.jpg
+tags: cas usage, api particulier, portail famille, quotient familial dématérialisé, tarification restauration scolaire, tarification activités périscolaires
+image: portail_famille.jpg
 noindex: false # this page will appear on Google
 publish: true # this page will appear on /guides page
-related_guides:
 api:
   - API Particulier
 ---
 
-Chaque année, les collectivités doivent calculer les tarifs de la restauration scolaire et des activités périscolaires, applicables à chaque famille en fonction de sa situation.
+De plus en plus de communes mettent à disposition des habitants un Portail Famille permettant d'accéder à des services en ligne pour gérer les activités de l'ensemble de la famille : la crèche, l'halte-garderie, les centres de loisirs, la restauration scolaire, les goûter, les études, le conservatoire, l'atelier beaux-arts et autres.
 
-En général, le calcul des tarifs utilise le quotient familial de la Caisse d’Allocations Familiales (CAF) ou l'avis d'imposition (DGFIP) fournis par les citoyens.
+Ce type de portail permet généralement de reserver et de payer en ligne les factures liées aux activitiés péri- et extrascolaires, de suivre les paiements et de gérer les informations liées au compte de la famille.
 
-Avec la brique API Particulier, vous avez la possibilité de récupérer automatiquement des données certifiées à la source, permettant ainsi de réduire les risques d'erreurs ainsi que les fraudes aux déclarations. Cela vous permet par ailleurs de faire gagner un temps précieux aux agents en évitant des validations manuelles de pièces jointes et donc de faciliter le traitement des dossiers par vos équipes en accédant **automatiquement aux données nécessaires** au calcul du tarif appliqué.
+En général, le calcul des tarifs utilise le quotient familial de la Caisse d’Allocations Familiales (CAF) et/ou l'avis d'imposition (DGFIP) fournis par les citoyens.
 
-En intégrant la brique API Particulier dans votre système d'information ou votre site internet :
+## Calcul du Quotient Famillial dématerialisé
 
-- Vous accédez facilement aux données de la CAF et de la DGFIP
-- Vous n'avez **plus besoin de demander** d'avis fiscal ou de quotient familial aux parents
-- Vous n'avez **pas de vérification supplémentaire** car les informations sont **certifiées**
-- La démarche peut être faite 100% en ligne
+En intégrant la brique API Particulier dans votre portail famille,  les familles peuvent obtennir une tarification immédiate et automatique, permise la liaison avec les données de la CAF et de la DGFiP. D'autres sources de données sont disponibles.
 
-## Quelles données utilisez-vous ?
+En savoir plus sur les <External href="https://api.gouv.fr/les-api/api-particulier#donnees-accessibles-dans-l'api">données à disposition</External> et sur la <External href="https://datapass.api.gouv.fr/api-particulier?demarche=agora-plus">méthodologie pour y accéder</External>   
 
-API Particulier met à disposition les données de la CAF (composition familiale du foyer du demandeur) et les données de la DGFIP (pour vérifier les conditions d'éligibilité d'une demande). Voici la liste non exhaustive des données accessibles :
 
-| Donnée            | Commentaire                                                                                      |
-| ----------------- | ------------------------------------------------------------------------------------------------ |
-| Adresse           | L'adresse fiscale du foyer et/ou du demandeur                                                    |
-| Quotient Familial | Le quotient familial calculé par la CAF                                                          |
-| Avis d'imposition | Le statut d’imposition, montant de l'impôt, revenu fiscal de référence, nombre de parts fiscales |
-
-**Quelle est la différence entre le Quotient Familial (QF) de la CAF et le Quotient Familial de la DGFIP**
-
-Le Quotient  Familial CAF est revu à chaque changement de situation familiale et/ou professionelle. Il prend en compte 1/12e du revenue imposable de l’année N-2 + les Prestations familiales du mois de référence divisés par le nombre de parts fiscales du foyer.
-
-Le Quotient Familiale « DGFIP » est calculé au moment de la déclaration de revenus. Il divise le revenue imposable de l’année N-1 par le nombre de part fiscale du foyer.
-
-## Comment accèder à la donnée ?
+## Cadre Juridique
 
 L'utilisation des données est encadrée légalement. Vous devez formuler une demande auprès de nos services et la motiver.
 
-Les articles suivants peuvent vous aider à justifier vos droits d'accès aux données :
+- L'article L114-8 du code des relations entre le public et l'administration fixe le cadre général des échanges de données au sein de l'administration ;
+- En tant que collectivités territoriales vous avez donc un droit d'accès à certaines données dans le cadre de demandes, services pro-actifs et déclarations usagers. Vérifiez et indiquez quel est l'objet de votre téléservices en cliquant sur le lien suivant : [Arrêté du 04/07/13 sur les téléservices](https://www.legifrance.gouv.fr/loda/id/JORFTEXT000027697207/#:~:text=Dans%20les%20r%C3%A9sum%C3%A9s-,Arr%C3%AAt%C3%A9%20du%204%20juillet%202013%20autorisant%20la%20mise%20en%20%C5%93uvre,publiques%20locales%20dont%20ils%20sont)
 
-- Article <External href="https://www.legifrance.gouv.fr/affichCode.do;jsessionid=BADF41D6CFF34AAC5E88C9B3ADF9280C.tplgfr29s_1?idSectionTA=LEGISCTA000006182383&cidTexte=LEGITEXT000006071191&dateTexte=20190528">L.213</External> du _Code de l'éducation_
-- Article <External href=https://www.legifrance.gouv.fr/affichCode.do?idSectionTA=LEGISCTA000020743087&cidTexte=LEGITEXT000006071191>R531-52</External> du _Code de l'éducation_
-- Article L114-8 : <External href="https://www.vie-publique.fr/eclairage/19591-protection-des-donnees-personnelles-essentiel-loi-cnil-du-20-juin-2018">La loi relative à la protection des données personnelles</External> \_ a été promulguée le 20 juin 2018. Elle adapte la loi "Informatique et libertés" du 6 janvier 1978 au "paquet européen de protection des données".
-- Certaines délibérations prises par la ville et/ou par la commune peuvent constituer le cadre légal
+**Il est indispensable de fournir l'acte/ la délibération qui fixe les conditions tarifaires qui permettra d'apprécier finement le droit d'accès à chaque donnée.**
 
-<NextSteps />
-<Button href="https://datapass.api.gouv.fr/api-particulier?demarche=tarif-restauration-scolaire">Remplir une demande</Button>
+
+<br/>
+<Button href="https://datapass.api.gouv.fr/api-particulier?demarche=ccas">Remplir une demande</Button>
+
+## Editeurs
+
+Si vous travaillez avec l'un des éditeurs ou intégrateurs ci-dessous vous pouvez faire une demande pré-remplie :
+
+| Editeur                      | Nom de la solution            | Date         | Lien vers la demande                                                                                                                |
+| ---------------------------- | ----------------------------- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
+| Agora Plus                   | Agor@Famille Premium          | 2017         | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=agora-plus">Remplir une demande</External>                    |
+| Ciril Group                  | Portail famille Civil Enfance | Juin 2021    | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=civil-enfance-ciril-group">Remplir une demande</External>     |
+| JVS                          | Parascol – MonEspaceFamille   | Juillet 2021 | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=jvs-parascol">Remplir une demande</External>                  |
+| Arpège                       | Espace Citoyens Premium       |              | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=arpege-concerto">Remplir une demande</External>               |
+| NFI Nord France Informatique |                               | Janvier 2021 | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=nfi-grc">Remplir une demande</External>                       |
+| Entr'ouvert                  | Publik                        | Janvier 2021 | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=entrouvert-publik">Remplir une demande</External>             |
+| Berger Levrault              | BL Enfance                    | Mars 2021    | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=bl-enfance-berger-levrault">Remplir une demande</External>    |
+| Jdéalise                     | Cantine de France             | Avril 2021   | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=cantine-de-france">Remplir une demande</External>             |
+| Mushroom                     | CityFamily                    | Juin 2021    | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=city-family-mushroom-software">Remplir une demande</External> |
+| TeamNet                      | Axel Portail Famille          | Juin 2021    | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=teamnet">Remplir une demande</External>                       |
+| Abelium                      | Domino Web                    | Juin 2021    | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=abelium">Remplir une demande</External>                       |
+| Waigéo                       | MyPérischool                  | Juillet 2021 | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=waigeo">Remplir une demande</External>                        |
+
+Vous êtes un éditeur et vous souhaitez apparaître dans cette liste ? Écrivez-nous à [contact@particulier.api.gouv.fr](mailto:contact@particulier.api.gouv.fr)

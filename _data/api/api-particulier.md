@@ -1,6 +1,6 @@
 ---
 title: API Particulier
-tagline: Accédez à des données de plusieurs administrations pour simplifier les démarches de vos usagers (revenu fiscal de référence, quotient familial, statut demandeur d’emploi et statut étudiant et étudiant boursier...)
+tagline: Accédez à des données de plusieurs administrations pour simplifier les démarches de vos usagers (revenu fiscal de référence, quotient familial, statut demandeur d’emploi, statut étudiant et étudiant boursier...)
 is_open: -1 # -1 means API not open
 datapass_link: https://datapass.api.gouv.fr/api-particulier
 access_page:
@@ -26,9 +26,9 @@ access_page:
       - Un éditeur de logiciel
     is_eligible: 0
     description: |
-      Si vous êtes **éditeur de logiciels** et agissez pour le compte d'une administration ou d'une collectivité, vous pouvez remplir une demande d’habilitation à l’API Particulier vous-même pour l'entité que vous représentez, dans le cadre de <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367412&dateTexte=&categorieLien=cid">l'article L114-8</External> du *code des relations entre le public et l'administration*.
+      Si vous êtes **éditeur de logiciels** , c'est à votre collectivité ou administration de faire sa demande d'habilitation vous pouvez remplir une demande d’habilitation à l’API Particulier, dans le cadre de <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367412&dateTexte=&categorieLien=cid">l'article L114-8</External> du *code des relations entre le public et l'administration*.
 
-      Lors de votre demande vous devrez **justifier** dans quelle mesure l'entité pour laquelle vous opérez rentre dans ce cadre juridique.
+      Vous pouvez nous demandez de vous référencer sur un cas d'usage afin de proposer des formulaires pré-remplis et ainsi simplifier l'expérience de vos clients.
 
       <NextSteps is_editeur />
       <Button href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</Button>
@@ -67,46 +67,65 @@ visits_2019: 15831
 uptime: 99.992 # https://uptimerobot.com/dashboard#777746216 * https://uptimerobot.com/dashboard#778826562 / 2
 last_update: 31/03/2021
 content_intro: |
- L'API Particulier est un bouquet de données proposé pour simplifier les démarches administratives. 
-
-  ### A quoi sert l’API Particulier ?
-
-  L'API particulier permet d'obtenir une multitude de données provenant d'administration différentes dans le cadre de démarches lignes (appelée aussi formulaires en ligne ou téléservices). Un usage dans les logiciels métiers est aussi possible. 
-
-  **Avantages pour les administrations :** 
-
-  - automatiser l'instruction des demandes,
-  - disposer d'informations certifiées à la source,
-  - consulter et mettre à jour des données en back-office.
-
-
-  **Avantages pour les usagers :**
-  
-  - simplifier leurs démarches en ligne grâce à la suppression des pièces justificatives (remplacées par des données),
-  - accélérer le traitement de leurs dossiers.
-
-
-  **Que dois-je faire pour utiliser une API ?**
-  
-  - Je contacte mon éditeur pour m'assurer que son produit utilise l'API particulier ou je transmets le lien vers la documentation technique au gestionnaire de mon formulaire  (DSI ou intégrateur), 
-  - je demande un accès aux données dont j'ai besoin, 
-  - je transmets le droit d'accès (jeton) à l'éditeur.
+ L'API Particulier (En savoir plus sur <External href="https://api.gouv.fr/guides/api-definition">les API</External>) est un bouquet de données proposé pour simplifier les démarches administratives. L'API Particulier permet d'obtenir une multitude de données provenant d'administration différentes dans le cadre de démarches en ligne (appelée aussi formulaires en ligne ou téléservices). Un usage dans les logiciels métiers est aussi possible. 
 
 ---
 
-### Données accessibles dans l'API
+ **Avantages pour les administrations et collectivités** 
 
-| Donnée                                     | Description                                                                            |
-| ------------------------------------------ | -------------------------------------------------------------------------------------- |
-| ✅ [Données fiscales (DGFiP)](/les-api/api-particulier#donnees-fiscales)    | Revenu fiscal de référence, déclarants, nombre de parts  |
-| ✅ [Quotient familial (CNAF)](/les-api/api-particulier#quotient-familial)  | Quotient familial, composition familiale          |
-| ✅ [Statut étudiant (MESRI)](/les-api/api-particulier#statut-etudiant)  | Statut, établissement(s)                                     |
-| ✅ [Statut étudiant boursier (CNOUS)](#statut-etudiant-boursier)| Statut, niveau de bourse                                      |
-| ✅ [Statut demandeur d'emploi (Pôle Emploi)](/les-api/api-particulier#statut-demandeur-d'emploi)| Statut et catégorie (A,B,C,D)      |
-| ⌛️ Indemnisation de Pôle emploi (disponible en mai 2022) | RSA, CSS (complémentaire santé solidaire)               |
-| ⌛️ Bénéficiaire d'une prestation sociale (disponible en juin 2022) | RSA, CSS (complémentaire santé solidaire)               |
+  - Les informations sont certifiées par le fournisseur de données, il n'y a plus de saisie des données à effectuer.
+  <Quote logo="/images/guides/clamart.svg" who='Ville de Clamart' title='Aurélie Coutant, directrice de la relation usagers'>
+  Maintenant que le traitement est automatisé, nous avons enfin le temps de mieux accompagner les usagers en difficulté, de leur expliquer plus largement les prestations auxquelles ils peuvent avoir accès.
+  </Quote>
 
-### Données fiscales
+**Avantages pour les usagers :**
+
+  - La démarche est réalisable 100% en ligne mais aussi en guichet.
+  - Plus besoin de rassembler les documents demandés ou de saisir des informations déjà connues de l'administration.
+  <Quote logo="/images/guides/clamart.svg" who='Ville de Clamart' title='Simon-Pierre Chalvidan, directeur général adjoint des services'>
+  En 2014, nos usagers prenaient une demi-journée de congés pour effectuer leurs démarches en mairie. Aujourd'hui, ils les effectuent en ligne en 5 minutes.
+  </Quote>
+
+## Données accessibles dans l'API Particulier
+
+  | Donnée | Description | API Particulier | API FranceConnect |
+  |---------------------|---------------------------------------------- |------------------- |--------------------------- |
+  | [Données fiscales (DGFiP)](/les-api/api-particulier#donnees-fiscales)    | Revenu fiscal de référence, déclarants, nombre de parts  | ✅      | ✅                    |   
+  | [Quotient familial (CNAF)](/les-api/api-particulier#quotient-familial)  | Quotient familial, composition familiale          | ✅                      | Fin 2022                   |
+  | [Statut étudiant (MESRI)](/les-api/api-particulier#statut-etudiant)  | Statut, établissement | ✅                      | ✅                         |
+  | [Statut étudiant boursier (CNOUS)](#statut-etudiant-boursier)| Statut, niveau de bourse                                     | ✅      | ✅                         |
+  | [Statut demandeur d'emploi (Pôle Emploi)](/les-api/api-particulier#statut-demandeur-demploi)| Statut et catégorie (A,B,C,D)      | ✅                      | En cours de test          |
+  | Indemnités demandeur d'emploi | à définir | Mai 2022               | En cours de test          |
+  | Statut CSS                 | à définir | Juin 2022               | Juin 2022                 |
+  | Statut RSA                 | à définir | Juin 2022               | Juin 2022                 |
+  | Statut élève scolarisé      | à définir | Fin-2022                | En cours d'étude          |
+
+  **En savoir plus sur les API et les API France Connectées :**
+
+  <External href="https://api.gouv.fr/guides/api-definition"> Les API </External> 
+
+  <External href="https://api.gouv.fr/guides/api-franceconnectees"> les API France Connectées </External> 
+
+  -> Il est suggéré d'utiliser directement, si elles existent, les API classiques (France connectées ou non) si vous souhaitez accéder à une seule source de données.
+
+## Que dois-je faire pour utiliser l'API Particulier ?
+
+### Je suis un éditeur :
+
+- J'identifie les données que j'aimerais utiliser pour un cas d'usage donné.
+- Je consulte la documentation technique, et j'utilise le bac à sable pour tester les appels d'API
+- Je contacte [cette adresse](https://api.gouv.fr/parcours-client?source=preFooter) pour être référencé sur le cas d'usage associé et avoir un formulaire pré-rempli à disposition de mes clients.
+
+### Je suis une collectivité ou une administration
+
+- Je consulte sur https://api.gouv.fr/les-api/api-particulier et les cas d’usage pour savoir si mon éditeur intègre l’API Particulier. Sinon je contacte mon éditeur et je lui transmets le lien vers la documentation technique.
+- Je clique sur "faire une demande d'habilitation", je sélectionne mon éditeur, puis le formulaire correspondant à mon besoin. Sans éditeur, je sélectionne “demande libre”.
+- Je complète mon formulaire (numéro SIRET, cadre juridique - dont délibération -, coordonnées de l'équipe, du délégué à la protection des données et du responsable de traitement)
+- Je transmets le droit d'accès (token/jeton) à l'éditeur ou à mes développeurs.
+
+## Détails sur les données
+
+#### Données fiscales
 
 <details>
    <summary>Liste des données</summary>
@@ -141,7 +160,7 @@ Les déclarants du foyer fiscal sont la(le) contribuable elle(lui)-même et le(l
 L’Adresse est celle connue au 1er janvier de l’année d’imposition (exemple au 1er janvier 2022 pour les revenus de 2021).
 </details>
 
-### Quotient familial
+#### Quotient familial
 
 <details>
    <summary>Liste des données</summary>
@@ -160,9 +179,11 @@ Le quotient familial retourné par l'API est celui du mois de référence qui es
 S’il n’y a pas de quotient familial calculé pour cette période de référence, l'API ne restituera pas de quotient familial.
 
 Les données de l’API Particulier ne permettent pas encore de calculer les tarifs en établissement d'accueil du jeune enfant (crèche, multi-accueil, halte-garderie…).
+
+-> Le Quotient  Familial CAF est revu à chaque changement de situation familiale et/ou professionelle. Il prend en compte 1/12e du revenue imposable de l’année N-2 + les Prestations familiales du mois de référence divisés par le nombre de parts fiscales du foyer. Le Quotient Familiale « DGFIP » est calculé au moment de la déclaration de revenus. Il divise le revenue imposable de l’année N-1 par le nombre de part fiscale du foyer.
 </details>
 
-### Statut étudiant
+#### Statut étudiant
 
 <details>
    <summary>Liste des données</summary>
@@ -204,7 +225,7 @@ La couverture des établissements du champ des étudiants sera progressivement c
 🔎 Consulter le [nombre d'étudiants identifiés dans l'API](https://statutetudiant.esr.gouv.fr/)
 </details>
 
-### Statut étudiant boursier
+#### Statut étudiant boursier
 
 <details>
    <summary>Liste des données</summary>
@@ -254,7 +275,7 @@ L’API délivre les données des étudiants :
 
 </details>
 
-### Statut demandeur d'emploi
+#### Statut demandeur d'emploi
 
 <details>
    <summary>Liste des données</summary>
@@ -295,11 +316,11 @@ L’Adresse est celle déclarée par le demandeur lors de son inscription ou sui
 L’API devrait inclure d’ici fin 2021 des données relatives à l’indemnisation des demandeurs d’emploi.
 </details>
 
-### Conditions générales d'utilisation
+## Conditions générales d'utilisation
 
 Les conditions générales d'utilisation sont disponibles à [cette adresse](http://api.gouv.fr/resources/CGU%20API%20Particulier.pdf).
 
-### Infolettre API Particulier
+## Infolettre API Particulier
 
 Chaque année, l'équipe de l'API Particulier envoie un bilan chiffré sur l'utilisation de l'API, et la feuille de route de l'année suivante (nouvelles démarches, prochaines données qui intègrent l'API...).
 

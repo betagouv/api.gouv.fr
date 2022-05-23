@@ -18,11 +18,11 @@ doc_tech_link: https://hubeau.eaufrance.fr/api/vbeta/qualite_eau_potable/api-doc
 themes:
   - Environnement
 last_update: 26/11/2021
+content_intro: |
+  [La nouvelle API Qualité de l'eau potable](https://hubeau.eaufrance.fr/page/api-qualite-eau-potable) diffuse le jeu de données "DIS" (résultats du contrôle sanitaire de l'eau distribuée commune par commune) mis en ligne par le Ministère des Solidarités et de la Santé sur le portail data.gouv.fr
 ---
 
 ### Description fonctionnelle de l'API Qualité de l'eau potable
-
-[La nouvelle API Qualité de l'eau potable](https://hubeau.eaufrance.fr/page/api-qualite-eau-potable) diffuse le jeu de données "DIS" (résultats du contrôle sanitaire de l'eau distribuée commune par commune) mis en ligne par le Ministère des Solidarités et de la Santé sur le portail data.gouv.fr 
 
 Cette API a pu voir le jour grâce à un travail collaboratif de plusieurs mois entre le BRGM, la Direction Générale de la Santé et l'OFB.
 

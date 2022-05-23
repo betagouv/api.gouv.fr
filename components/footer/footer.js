@@ -148,6 +148,11 @@ const Footer = () => {
               </a>
             </li>
             <li className="fr-footer__bottom-item">
+              <a className="fr-footer__bottom-link" href="/accessibilite">
+                Accessibilité : non-conforme
+              </a>
+            </li>
+            <li className="fr-footer__bottom-item">
               <a
                 className="fr-footer__bottom-link"
                 href="https://github.com/betagouv/api.gouv.fr"

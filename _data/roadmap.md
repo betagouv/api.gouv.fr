@@ -323,15 +323,16 @@
       what: Déclaration préalable à l'embauche par l'Urssaf
       path: /les-api/api-declaration-embauche
     - type: ADD_API
-      what: Indemnités Pôle Emploi, par Pôle Emploi
-    - type: ADD_API
       what: AgentConnect par la DINUM
+      path: /les-api/agent-connect
   6:
     - type: ADD_API
       what: Recherche d’entreprises
       path: /les-api/api-recherche-entreprises
     - type: ADD_API
       what: Prestations sociales par la Direction de la Sécurité Sociale
+    - type: ADD_API
+      what: Indemnités Pôle Emploi, par Pôle Emploi
     - type: ADD_API
       what: Statut demandeur d'emploi (FranceConnect), par Pôle Emploi
     - type: ADD_API
