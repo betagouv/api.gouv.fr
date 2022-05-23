@@ -63,7 +63,7 @@ L'API permet de rechercher une entreprise et retourne pour chaque résultat :
 | ------------------------- | ------------------------------------------ |
 | NAF                       | filtrer les entreprises par code NAF       |
 | Code postal               | filtrer les entreprises par un code postal |
-| ESS                       | uniquement les entreprises de l’ESS        |
+| Effectif salarié                       | filtrer par tranche effectif salarié        |
 | Entreprises individuelles | uniquement les entreprises individuelles   |
 
 Pour en savoir plus sur les filtres avancés, consultez la [documentation.](/documentation/api-recherche-entreprises)
