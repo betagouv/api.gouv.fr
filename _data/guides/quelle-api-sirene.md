@@ -7,7 +7,7 @@ noindex: false # this page will appear on Google
 publish: true # this page will appear on /guides page
 api:
   - API Sirene
-  - API Sirene données ouvertes
+  - API Recherche d’entreprises
 ---
 
 ### Qu'est-ce que le répertoire Sirene ?
@@ -47,11 +47,14 @@ La base Sirene est publiée sur <External href='https://data.gouv.fr'>data.gouv.
 
 ### Je cherche à obtenir les données à la demande, grâce à une API
 
-Le moyen privilégié pour obtenir les données a la demande, ce sont les API. Au sein du service public, 3 API permettent d'interroger la base Sirene :
+Le moyen privilégié pour obtenir les données a la demande, ce sont les API. Au sein du service public, 2 API permettent d'interroger la base Sirene :
 
-- l'[API Sirene données ouvertes](/les-api/api-sirene-donnees-ouvertes)
-- l'[API Sirene de l'INSEE](/les-api/sirene_v3)
-- l'[API Entreprise](/les-api/api-entreprise)
+- l’[API Sirene de l’INSEE](/les-api/sirene_v3)
+- l’[API Entreprise](/les-api/api-entreprise)
+
+Il existe une troisième API qui utilise les données de la base sirene afin de proposer une recherche sur les entreprises françaises. C'est l’[API Recherche d’enterprises](/les-api/api-recherche-entreprises).
+
+Attention, cette API ne permet pas d'accèder aux données complètes de la base Sirene, mais uniquement de rechercher une entreprise, par sa dénomination ou son adresse.
 
 ## Comment choisir quelle API utiliser ?
 
@@ -64,7 +67,7 @@ Ensuite chaque API se différencie par ses limites d'utilisation et les traiteme
 | API            | API Sirene données ouvertes                                                             | API Sirene de l'INSEE                                                                                                         | API Entreprise                                                                   |
 | -------------- | --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
 | Limite d’usage | Totalement ouverte ([accéder à la documentation](/les-api/api-sirene-donnees-ouvertes)) | Nécessite un compte ([se créer un compte](https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/sign-up.jag)) | Sous habilitation ([voir les conditions](/les-api/api-entreprise/demande-acces)) |
-| Limite d’appel | 7 appels par seconde                                                                   | 30 appels par minute                                                                                                          | 2000 appels par 10 minutes                                                       |
+| Limite d’appel | 7 appels par seconde                                                                    | 30 appels par minute                                                                                                          | 2000 appels par 10 minutes                                                       |
 
 ### Deuxième différence : les données disponibles
 
@@ -79,27 +82,27 @@ En revanche certaines données ne sont pas présentes dans toutes les API :
 
 Le tableau ci-dessous fait une synthèse de ces différence pour vous aider a choisir :
 
-| API                                     | API Sirene données ouvertes | API Sirene de l'INSEE | API Entreprise |
-| --------------------------------------- | --------------------------- | --------------------- | -------------- |
-| Etablissements diffusibles              | ✅ Oui                      | ✅ Oui                | ✅ Oui         |
-| Etablissements non-diffusibles          | ❌ Non                      | ✅ Oui                | ✅ Oui         |
-| Refus d'immatriculation par le Greffe   | ❌ Non                      | ✅ Oui                | ❌ Non         |
-| Recherche des prédecesseurs/successeurs | ❌ Non                      | ✅ Oui                | ❌ Non         |
-| geolocalisation                         | ✅ Oui                      | ❌ Non                | ❌ Non         |
+| API                                     | API Sirene de l'INSEE | API Entreprise |
+| --------------------------------------- | --------------------- | -------------- |
+| Etablissements diffusibles              | ✅ Oui                | ✅ Oui         |
+| Etablissements non-diffusibles          | ✅ Oui                | ✅ Oui         |
+| Refus d'immatriculation par le Greffe   | ✅ Oui                | ❌ Non         |
+| Recherche des prédecesseurs/successeurs | ✅ Oui                | ❌ Non         |
+| geolocalisation                         | ❌ Non                | ❌ Non         |
+| recherche par dénomination              | ✅ Oui                | ❌ Non         |
 
 ### Troisième différence : l’éligibilité
 
 Les trois API ne visent pas les mêmes publics. Pensez à vérifier votre éligibilité :
 
-| API                                                               | API Sirene données ouvertes | API Sirene de l'INSEE | API Entreprise |
-| ----------------------------------------------------------------- | --------------------------- | --------------------- | -------------- |
-| Particulier                                                       | ✅ Oui                      | ✅ Oui                | ❌ Non         |
-| Entreprise ou association                                         | ✅ Oui                      | ✅ Oui                | ❌ Non         |
-| Entreprise ou association chargée d’une mission de service public | ✅ Oui                      | ✅ Oui                | ✅ Oui         |
-| Administration (collectivité, ministère)                          | ✅ Oui                      | ✅ Oui                | ✅ Oui         |
+| API                                                               | API Sirene de l'INSEE | API Entreprise |
+| ----------------------------------------------------------------- | --------------------- | -------------- |
+| Particulier                                                       | ✅ Oui                | ❌ Non         |
+| Entreprise ou association                                         | ✅ Oui                | ❌ Non         |
+| Entreprise ou association chargée d’une mission de service public | ✅ Oui                | ✅ Oui         |
+| Administration (collectivité, ministère)                          | ✅ Oui                | ✅ Oui         |
 
 Vous avez fait votre choix ? Lancez-vous :
 
-- l'[API Sirene données ouvertes](/les-api/api-sirene-donnees-ouvertes)
 - l'[API Sirene de l'INSEE](/les-api/sirene_v3)
 - l'[API Entreprise](/les-api/api-entreprise)

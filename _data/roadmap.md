@@ -267,7 +267,7 @@
       path: /les-api/api-structures-inclusion
     - type: ADD_API
       what: Conventions collectives par le Ministère du Travail, de l'Emploi et de l'Insertion
-      path: /les-api/api-conventions-collectives 
+      path: /les-api/api-conventions-collectives
 2022:
   1:
     - type: ADD_API
@@ -294,7 +294,7 @@
   2:
     - type: ADD_API
       what: RappelConso, par le Ministère de l'économie, des finances et de la relance
-      path: /les-api/api-rappel-conso 
+      path: /les-api/api-rappel-conso
     - type: ADD_API
       what: Prix des contrôles techniques par le Ministère de l'économie, des finances et de la relance
       path: /les-api/api-prix-controles-techniques
@@ -325,7 +325,10 @@
     - type: ADD_API
       what: AgentConnect par la DINUM
       path: /les-api/agent-connect
-  6: 
+  6:
+    - type: ADD_API
+      what: Recherche d’entreprises
+      path: /les-api/api-recherche-entreprises
     - type: ADD_API
       what: Prestations sociales par la Direction de la Sécurité Sociale
     - type: ADD_API
