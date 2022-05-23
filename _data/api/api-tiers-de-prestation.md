@@ -10,7 +10,7 @@ access_page:
       - Un prestataire de service à la personne
     is_eligible: 0
     description: |
-      Si vous êtes prestataire de services à la personne, vous pouvez remplir une demande d’accès à l’API.
+      Si vous êtes prestataire de services à la personne, vous pouvez remplir une demande d’habilitation à l’API.
       
       Pour remplir votre demande, vous aurez uniquement besoin de :
       
@@ -25,7 +25,7 @@ access_page:
       - Un éditeur de services web
     is_eligible: 0
     description: |
-      Si vous êtes éditeur de logiciel services à la personne / éditeur de service web, vous pouvez remplir une demande d'accès à l'API.
+      Si vous êtes éditeur de logiciel services à la personne / éditeur de service web, vous pouvez remplir une demande d'habilitation à l'API.
       
       Vous ne pourrez toutefois recevoir que des accès à l'environnement de test, et non à l'environnement de production.
 
@@ -34,7 +34,7 @@ access_page:
       - Un mandataire de service à la personne
     is_eligible: 0
     description: |
-      Si vous êtes mandataire de services à la personne en tant que mandataire complet, vous pouvez remplir une demande d’accès à l’API. 
+      Si vous êtes mandataire de services à la personne en tant que mandataire complet, vous pouvez remplir une demande d’habilitation à l’API. 
       
       Le mode mandataire complet implique que le particulier vous confie, contre rémunération, un certain nombre de tâches par contrat de mandat : recherche de candidatures, recrutement et embauche, calcul et établissement des bulletins de paie etc. et l’émission de votre part d’une facture à régler par le particulier.
       
@@ -72,6 +72,7 @@ keywords:
 themes:
   - Entreprise
 last_update: 12/08/2021
+hide_pre_footer: true
 ---
 
 L’API Tiers de prestation facilite les échanges entre l’Urssaf et les prestataires ou mandataires de services à la personne.

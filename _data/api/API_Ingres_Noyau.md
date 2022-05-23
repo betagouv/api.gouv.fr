@@ -16,7 +16,7 @@ access_page:
 
       Son utilisation par une application tierce ne saurait engager la responsabilité du CISIRH, par exemple, en termes de disponibilité.
 
-      <Button href="https://datapass.api.gouv.fr/api-ingres">Faire une demande d'accès</Button>
+      <Button href="https://datapass.api.gouv.fr/api-ingres">Faire une demande d'habilitation</Button>
   - who:
       - Un particulier
       - Autre

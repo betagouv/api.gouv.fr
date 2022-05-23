@@ -20,12 +20,13 @@ themes:
   - Environnement
 visits_2019: 430
 last_update: 12/06/2018
+content_intro: |
+  [L'API Indicateurs eau potable et assainissement](https://hubeau.eaufrance.fr/page/api-indicateurs-services) de Hub'Eau permet de connaître les **indicateurs** réglementaires sur les services publics d'eau, d'assainissement et sur l'assainissement non collectif.
+  
+  En effet, dans le but d’évaluer les performances de chacun de ces services et afin de permettre les comparaisons d’une année sur l’autre et entre services similaires, le ministère chargé de l’écologie a piloté dès 2004 l’élaboration d’un référentiel commun en concertation avec les acteurs de l’eau.
 ---
 
 ### Description fonctionnelle de l'API Indicateurs eau potable et assainissement
-
-[L'API Indicateurs eau potable et assainissement](https://hubeau.eaufrance.fr/page/api-indicateurs-services) de Hub'Eau permet de connaître les **indicateurs** réglementaires sur les services publics d'eau, d'assainissement et sur l'assainissement non collectif.
-En effet, dans le but d’évaluer les performances de chacun de ces services et afin de permettre les comparaisons d’une année sur l’autre et entre services similaires, le ministère chargé de l’écologie a piloté dès 2004 l’élaboration d’un référentiel commun en concertation avec les acteurs de l’eau.
 
 Une trentaine d’indicateurs sur des aspects économiques, techniques, sociaux et environnementaux ont ainsi été créés. Il s’agit d’indicateurs permettant de suivre les différentes composantes du service et qui, pris dans leur ensemble, offrent une vision globale de ses performances. Ces indicateurs constituent des outils de pilotage facilitant l’inscription des services dans une démarche de progrès.
 La source de données est [le Système d'Information sur les Services Publics d'Eau et d'Assainissement (SISPEA), hébergé sur le site Services de la toile EauFrance](http://www.services.eaufrance.fr/).

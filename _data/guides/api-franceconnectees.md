@@ -8,6 +8,9 @@ publish: true # this page will appear on /guides page
 api:
   - API Impôt particulier
   - API de droits à l'Assurance Maladie
+  - API Statut Etudiant
+  - API Statut étudiant boursier
+  - API Indemnités journalières de la CNAM
 ---
 
 FranceConnect permet au citoyen de s'authentifier à de nombreux services de l'administration. Ce dispositif permet d'utiliser un compte existant sur impots.fr ou ameli.fr par exemple, afin d'accéder à tous les services de l'administration (<External href="https://franceconnect.gouv.fr/partenaires">en savoir plus sur FranceConnect</External>).
@@ -36,7 +39,7 @@ Les API FranceConnectées simplifient :
 
 | La démarche du citoyen                      | Le traitement de l'agent                                        |
 | ------------------------------------------- | --------------------------------------------------------------- |
-| Des démarches simplifiées et accélérées     | Les délais de traitement sont instantannés                      |
+| Des démarches simplifiées et accélérées     | Les délais de traitement sont instantanés                       |
 | Plus aucune pièces justificatives à fournir | Plus de pièces justificatives à traiter et à stocker            |
 | Plus d'erreur de saisie possible            | Plus de fraude possible car la donnée est certifiée à la source |
 
@@ -53,7 +56,7 @@ L'aide juridictionnelle est une prise en charge par l'État des frais judiciaire
 | [API Impôt particulier](https://api.gouv.fr/les-api/impot-particulier)  | Revenus déclarés auprès de l'administration fiscale |DGFiP   |
 | [API Indemnités Journalières](https://api.gouv.fr/les-api/api-indemnites-journalieres-cnam)   | Montant des indemnités journalières de l'Assurance Maladie payé à un assuré sur une période|CNAM |
 | [API de droits à l'Assurance Maladie](https://api.gouv.fr/les-api/api_ameli_droits_cnam) | Droits d’un individu ou d’une famille (enfants rattachés), gérés par le régime général de l’Assurance Maladie |CNAM   |
-| [API Statut étudiant](https://api.gouv.fr/les-api/api-statut-etudiant)| Statut de l’nscription dans un établissement de l’enseignment suprérieur |MESRI   |
+| [API Statut étudiant](https://api.gouv.fr/les-api/api-statut-etudiant)| Statut de l’inscription dans un établissement de l’enseignement supérieur |MESRI   |
 | API Prestations sociales (bientôt disponible)    | Inscription au RSA, bénéficiaires de la CSS (complémentaire sociale solidaire) |DSS |
 | [API Statut étudiant boursier](https://api.gouv.fr/les-api/api-statut-etudiant-boursier)| Statut d’étudiant boursier  |CNOUS / MESRI                                          |
 | API Indemnités Pôle Emploi (bientôt disponible)  | Montant des indemnités versée par pôle emploi   |Pôle Emploi                        |
@@ -78,6 +81,6 @@ _Schéma de fonctionnement des API FranceConnectées :_
 Les API FranceConnectées ne sont accessibles qu’aux administrations publiques, collectivités territoriales ou entreprises privées en situation de mission de service public. Elles nécessitent de :
 
 1. Avoir FranceConnect [sur son téléservice](https://franceconnect.gouv.fr/partenaires)
-2. Faire une demande d'accès à l’API FranceConnectée en question
+2. Faire une demande d'habilitation à l’API FranceConnectée en question
 3. Brancher l’API
 4. 🎉 Commencer à dématérialiser 🥳

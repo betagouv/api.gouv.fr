@@ -21,12 +21,12 @@ themes:
   - Environnement
 visits_2019: 2868
 last_update: 18/06/2018
+content_intro: |
+  [L'API "Température en continu"](https://hubeau.eaufrance.fr/page/api-temperature-continu) de Hub'Eau permet d'interroger les données de températures relevées par des capteurs automatiques posés dans les cours d'eau de France métropolitaine.
+  Ces capteurs enregistrent la température à des fréquences variant de une à quelques heures.
 ---
 
 ### Description fonctionnelle de l'API Température en continu des cours d'eau
-
-[L'API "Température en continu"](https://hubeau.eaufrance.fr/page/api-temperature-continu) de Hub'Eau permet d'interroger les données de températures relevées par des capteurs automatiques posés dans les cours d'eau de France métropolitaine.
-Ces capteurs enregistrent la température à des fréquences variant de une à quelques heures.
 
 Deux opérations (endpoints) sont disponibles :
 

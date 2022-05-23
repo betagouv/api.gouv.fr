@@ -6,7 +6,7 @@ const USE_CASES = [
   {
     title: 'Les transports scolaires de la région Nouvelle-Aquitaine',
     content:
-      'La région Nouvelle-Aquitaine propose une dégressivité du tarif des transports scolaires en fonction du revenu fiscal est nécessaire pour vous permettre de bénéficier éventuellement de la dégressivité du tarif. Un service en ligne permet aux familles de s’inscrire et de payer en ligne l’abonnement. Les familles n’ont pas produire de pièce justificative à l’appui de leur démarche.',
+      'La région Nouvelle-Aquitaine propose une dégressivité du tarif des transports scolaires en fonction du revenu fiscal est nécessaire pour vous permettre de bénéficier éventuellement de la dégressivité du tarif. Un service en ligne permet aux familles de s’inscrire et de payer en ligne l’abonnement. Les familles n’ont pas à produire de pièce justificative à l’appui de leur démarche.',
     // apis: [],
     picture: '/images/home/nouvelleAquitaine.jpg',
     button: {

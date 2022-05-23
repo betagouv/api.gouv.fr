@@ -11,7 +11,7 @@ access_page:
     description: |
       La plateforme s’adresse à l’ensemble des fournisseurs de l'Etat, tant privés que publics, afin de leur permettre de transmettre de façon efficace et automatique leurs factures à destination de la sphère publique.
 
-      <Button href="https://developer.aife.economie.gouv.fr/">Faire une demande d'accès</Button>
+      <Button href="https://developer.aife.economie.gouv.fr/">Faire une demande d'habilitation</Button>
   - who:
       - Une collectivité
       - Un établissement public
@@ -22,7 +22,7 @@ access_page:
 
       Elle permet de traiter l’ensemble des factures de manière optimisée en réduisant les délais de validation et d’enregistrement.
 
-      <Button href="https://developer.aife.economie.gouv.fr/">Faire une demande d'accès</Button>
+      <Button href="https://developer.aife.economie.gouv.fr/">Faire une demande d'habilitation</Button>
   - who:
       - Un particulier
     is_eligible: -1

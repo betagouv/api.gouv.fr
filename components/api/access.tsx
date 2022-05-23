@@ -80,7 +80,7 @@ const Access: React.FC<IAccessProps> = ({
         <AccessButton
           emoji="🔑"
           emojiLabel="clef"
-          label="Faire une demande d’accès"
+          label="Faire une demande d’habilitation"
         />
       );
       break;

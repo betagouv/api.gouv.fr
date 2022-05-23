@@ -30,8 +30,8 @@ access_page:
     description: |
       Les personnes éligibles au services sont définies dans les <External href="https://www.legifrance.gouv.fr/codes/id/LEGIARTI000041577735/2020-02-14/">articles L561-2 à L561-4</External> du *Code monétaire et financier* concernant les personnes assujetties aux obligations de lutte contre le blanchiment des capitaux et le financement du terrorisme.
 
-      Si vous faites parties des personnes éligible, vous pouvez remplir une demande en téléchargeant et complétant <External href='/resources/formulaire_rbe.pdf'>le formulaire de demande d'accès</External>.
-      Une fois le formulaire complété, soumettez votre demande d'accès à l'API :
+      Si vous faites parties des personnes éligible, vous pouvez remplir une demande en téléchargeant et complétant <External href='/resources/formulaire_rbe.pdf'>le formulaire de demande d'habilitation</External>.
+      Une fois le formulaire complété, soumettez votre demande d'habilitation à l'API :
 
       <Button href="mailto:rbe@inpi.fr">Soumettre ma demande</Button>
 doc_tech_external: https://www.inpi.fr/sites/default/files/inpi_doc_tech_rbe_api_fevrier_2020_v1.4.pdf

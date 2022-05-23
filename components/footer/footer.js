@@ -73,7 +73,7 @@ const Footer = () => {
           </div>
           <div className="fr-footer__content">
             <p className="fr-footer__content-desc">
-              Crée en 2016, <a href="/">api.gouv.fr</a> est le site qui
+              Créé en 2016, <a href="/">api.gouv.fr</a> est le site qui
               référence les API du service public, mises à la disposition des
               collectivités, des ministères et des entreprises pour construire
               des services informatiques au service de tous.
@@ -145,6 +145,11 @@ const Footer = () => {
             <li className="fr-footer__bottom-item">
               <a className="fr-footer__bottom-link" href="/vie-privee">
                 Audience & vie privée
+              </a>
+            </li>
+            <li className="fr-footer__bottom-item">
+              <a className="fr-footer__bottom-link" href="/accessibilite">
+                Accessibilité : non-conforme
               </a>
             </li>
             <li className="fr-footer__bottom-item">

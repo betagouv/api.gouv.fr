@@ -10,7 +10,7 @@ api: # empty = this page wont appear in an API page
 
 ## Pourquoi ce guide
 
-Pour accéder à <a href="https://datapass.api.gouv.fr/api-particulier">l'API Particulier</a>, il faut remplir une demande d'accès et être habilité. Dans cette demande d'habilitation, une rubrique concerne "le cadre juridique vous autorisant à traiter les données". L'objectif de ce guide est de clarifier ce qui est attendu dans cette rubrique.
+Pour accéder à <a href="https://datapass.api.gouv.fr/api-particulier">l'API Particulier</a>, il faut remplir une demande d'habilitation et être habilité. Dans cette demande d'habilitation, une rubrique concerne "le cadre juridique vous autorisant à traiter les données". L'objectif de ce guide est de clarifier ce qui est attendu dans cette rubrique.
 
 ## Le socle juridique permettant la circulation des données entre administrations
 

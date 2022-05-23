@@ -16,9 +16,9 @@ access_page:
       - Une collectivité ou une administration
     is_eligible: 1
     description: |
-      Si vous êtes une collectivité ou une administration, vous pouvez remplir une demande d’accès à l’API Engagement vous-même pour l'entité que vous représentez.
+      Si vous êtes une collectivité ou une administration, vous pouvez remplir une demande d’habilitation à l’API Engagement vous-même pour l'entité que vous représentez.
 
-      C'est cette demande d'accès qui vous permet à la fois de poster des annonces, ou de diffuser un flux d'annonces.
+      C'est cette demande d'habilitation qui vous permet à la fois de poster des annonces, ou de diffuser un flux d'annonces.
 
       <NextSteps />
       <Button href="https://doc.api-engagement.beta.gouv.fr/getting-started/create-your-account">Demander un accès</Button>

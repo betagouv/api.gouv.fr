@@ -61,6 +61,7 @@ const API: React.FC<IProps> = ({ api, guides, datagouvDatasets }) => {
     partners,
     content_intro,
     is_france_connected,
+    hide_pre_footer,
   } = api;
 
   return (
@@ -69,6 +70,7 @@ const API: React.FC<IProps> = ({ api, guides, datagouvDatasets }) => {
       title={title}
       description={`${title} est une des APIs du service public. ${tagline}`}
       canonical={`https://api.gouv.fr/les-api/${slug}`}
+      usePreFooter={!hide_pre_footer}
     >
       <PageHeader
         title={title}

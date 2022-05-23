@@ -32,12 +32,13 @@ contact_link: newshubeau@brgm.fr
 doc_tech_link: https://hubeau.eaufrance.fr/api/v1/hydrometrie/api-docs
 visits_2019: 801
 last_update: 31/07/2019
+content_intro: |
+  Les données publiques de [l'API "Hydrométrie"](https://hubeau.eaufrance.fr/page/api-hydrometrie) de Hub'Eau sont issues de la Plate-forme HYDRO Centrale (PHyC), opérée par le Service Central d’Hydrométéorologie et d’Appui à la Prévision des Inondations (SCHAPI).
+  
+  Cette Plate-forme stocke les mesures quasi temps-réel provenant d’environ 3000 stations hydrométriques qui constituent le réseau de mesure français, opéré par les Directions Régionales de l’Environnement de l’Aménagement et du Logement (DREAL) ou autres producteurs (collectivités, etc.)
 ---
 
 ### Description fonctionnelle de l'API Hydrométrie
-
-Les données publiques de [l'API "Hydrométrie"](https://hubeau.eaufrance.fr/page/api-hydrometrie) de Hub'Eau sont issues de la Plate-forme HYDRO Centrale (PHyC), opérée par le Service Central d’Hydrométéorologie et d’Appui à la Prévision des Inondations (SCHAPI).
-Cette Plate-forme stocke les mesures quasi temps-réel provenant d’environ 3000 stations hydrométriques qui constituent le réseau de mesure français, opéré par les Directions Régionales de l’Environnement de l’Aménagement et du Logement (DREAL) ou autres producteurs (collectivités, etc.)
 
 L'API permet d'interroger le **référentiel hydrométrique** ainsi que les **observations en quasi temps réel**, mises à jour par leur producteur toutes les 5 à 60 minutes dans la plateforme source (PHyC du SCHAPI). Hub'Eau interroge la source des données toutes les 2 minutes et maintient une profondeur d'historique égale à 1 mois **mais pour le moment, aucun traitement des données n'est appliqué au-delà des 24 dernières heures. Les données accessibles sont celles mesurées sur le terrain sans expertise et sans les améliorations apportées par les hydromètres.** Par exemple, un changement de courbe de tarage n'est actuellement pas pris en compte sur les données antérieures à ce changement. Une évolution est en préparation afin prendre en compte cette expertise au-delà des 24 dernières heures.
 

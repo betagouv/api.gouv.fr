@@ -26,7 +26,7 @@ access_page:
       - Une collectivité ou une administration
     is_eligible: 1
     description: |
-      Si vous souhaitez intégrer le bouton FranceConnect, [faites votre demande d’accès](https://datapass.api.gouv.fr/franceconnect).
+      Si vous souhaitez intégrer le bouton FranceConnect, [faites votre demande d’habilitation](https://datapass.api.gouv.fr/franceconnect).
 
       <NextSteps />
       <Button href="https://datapass.api.gouv.fr/franceconnect">Remplir une demande</Button>

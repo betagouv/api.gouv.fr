@@ -307,21 +307,32 @@
     - type: ADD_API
       what: calendrier scolaire, par le Ministère de l'Education Nationale, de la Jeunesse et des Sports
       path: /les-api/api-calendrier-scolaire
-    - type: ADD_API
-      what: AgentConnect par la DINUM
   3:
     - type: ADD_API
-      what: Indemnisation Pôle Emploi, par Pôle Emploi
-      path: /les-api/api-indemnisation-pole-emploi
+      what: Formations initiales, par l'ONISEP
+      path: /les-api/api-formations-initiales
+    - type: ADD_API
+      what: Pseudonymisation de documents par la DINUM
+      path: /les-api/api-pseudonymisation-documents
   4:
     - type: ADD_API
-      what: Prestations sociales par la Direction de la Sécurité Sociale
+      what: CVEC par le CNOUS
+      path: /les-api/api-cvec
+  5:
     - type: ADD_API
       what: Déclaration préalable à l'embauche par l'Urssaf
+      path: /les-api/api-declaration-embauche
+    - type: ADD_API
+      what: AgentConnect par la DINUM
+      path: /les-api/agent-connect
+  6: 
+    - type: ADD_API
+      what: Indemnisation Pôle Emploi, par Pôle Emploi
+      path: /les-api/api-indemnisation-pole-emploi  
     - type: ADD_API
       what: Prestations sociales par la Direction de la Sécurité Sociale
     - type: ADD_API
-      what: Statut demandeur d'emploi, par Pôle Emploi
+      what: Statut demandeur d'emploi (FranceConnect), par Pôle Emploi
     - type: ADD_API
       what: Historique d'un véhicule (HistoVec), par le Ministère de l'Intérieur
 ---
