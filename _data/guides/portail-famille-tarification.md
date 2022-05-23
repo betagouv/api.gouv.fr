@@ -1,5 +1,5 @@
 ---
-title: Tarification services municipaux / Portail Famille
+title: Tarification des services municipaux / Portail Famille
 tagline: Simplifiez le calcul des tarifs de la restauration scolaire, ou des activités périscolaires ou municipales dans votre colllectivité
 tags: cas usage, api particulier, portail famille, quotient familial dématérialisé, tarification restauration scolaire, tarification activités périscolaires
 image: portail_famille.jpg
@@ -21,6 +21,11 @@ En intégrant la brique API Particulier dans votre portail famille,  les famille
 
 En savoir plus sur les <External href="https://api.gouv.fr/les-api/api-particulier#donnees-accessibles-dans-l'api">données à disposition</External> et sur la <External href="https://datapass.api.gouv.fr/api-particulier?demarche=agora-plus">méthodologie pour y accéder</External>   
 
+
+**Ils utilisent les API pour simplifier le traitement des dossiers**
+- Syndicat mixte de l’aire grenobloise
+- Région Nouvelle Aquitaine
+- Syndicat des Mobilités Pays Basque
 
 ## Cadre Juridique
 

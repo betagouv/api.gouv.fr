@@ -1,5 +1,5 @@
 ---
-title: Tarification transports
+title: Tarification des transports en commun
 tagline: Vous êtes une collectivité, un opérateur ou un éditeur de logiciel ? Appliquez facilement un tarif de vos titres de transport adapté à la situation de vos usagers, en utilisant les données de l'API Particulier.
 tags: cas usage, api particulier, transport
 image: transport.jpg
@@ -23,7 +23,7 @@ Ces informations peuvent être obtenues par les collectivités et AOM grâce à 
 **👋 Pour participer au groupe de travail associé, [vous pouvez écrire ici](mailto:contact@api.gouv.fr?subject=Participation-au-cas-d'usage-transports)**
 
 
-## Calcul tarification transports
+## Calcul tarification transports en commun
 
 Afin de faciliter les traitement des dossiers, vous pouvez utiliser des données librement disponibles (open data) ainsi que des données couvertes par des secrets.
 
