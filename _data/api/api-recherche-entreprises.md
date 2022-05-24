@@ -26,7 +26,7 @@ doc_tech_link: https://recherche-entreprises.api.gouv.fr/docs/swagger.json
 datagouv_uuid:
   - 5b7ffc618b4c4169d30727e0
 visits_2019: 10000
-last_update: 11/10/2020
+last_update: 23/05/2022
 content_intro: |
   L’API Recherche d’entreprises permet à tout le monde de rechercher et de trouver une entreprise française.
 
