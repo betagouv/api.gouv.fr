@@ -337,4 +337,19 @@
       what: Statut demandeur d'emploi (FranceConnect), par Pôle Emploi
     - type: ADD_API
       what: Historique d'un véhicule (HistoVec), par le Ministère de l'Intérieur
+  12:
+    - type: ADD_API
+      what: Données foncières par le CEREMA
+2023:
+  1:
+    - type: ADD_API
+      what: SIPSI (déclaration des travailleurs étrangers) par le Ministère du Travail
+    - type: ADD_API
+      what: Quotient Familial, par la MSA
+    - type: ADD_API
+      what: Famille nombreuse, par le Ministère des Transports
+  3:
+    - type: ADD_API
+      what: Scolarité, par le Ministère de l'Education Nationale
+
 ---
