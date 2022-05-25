@@ -20,6 +20,15 @@ Plusieurs sources de données disponibles par API sont proposées afin d’évit
 
 Ces API sont principalement utilisées dans la cadre de services ligne qui peuvent, de ce fait, être **complètement dématérialisés sans intervention d’agents.**
 
+**L’usage des ces API permet aussi :**
+
+1. d’obtenir des données sûres et d’éviter les fraudes,
+2. de ne pas avoir à contrôler et stocker des pièces justificatives,
+3. de diminuer/supprimer les interventions en   en backoffice,
+4. d’éviter les erreurs de saisie (de l’usager ou du service traitant).
+
+Une utilisation logicielle au guichet est aussi possible.
+
 ## Comment ça marche ?
 
 Les API sont disponibles - que les téléservices utilisent  franceConnect ou non. 
@@ -28,13 +37,6 @@ Les API sont disponibles - que les téléservices utilisent  franceConnect ou no
 
 Un téléservice peut aussi proposer deux modes de connection, l’un avec FranceConnect, l’autre sans.
 Dans ce dernier cas il convient d’utiliser [l’API particulier](https://api.gouv.fr/les-api/api-particulier ).  
-
-**L’usage des ces API permet aux collectivités et AOM  :**
-
-1. d’obtenir des données sûres et d’éviter les fraudes,
-2. de ne pas avoir à contrôler et stocker des pièces justificatives,
-3. de diminuer/supprimer les interventions en   en backoffice,
-4. d’éviter les erreurs de saisie (de l’usager ou du service traitant).
 
 **🔍 Consulter [l'étude réalisée par DINUM auprès de 20 AOM](/resources/rapport-gart.pdf) visant à répertorier l'ensemble des besoins de pièces justificatives**
 
@@ -67,23 +69,14 @@ En complément, des données complémentaires sont disponibles en libre accès :
 | [Base adresse nationale](https://api.gouv.fr/les-api/base-adresse-nationale)  | Permettre l'autocomplétion d'un adresse postale dans un formulaire en ligne       |
 | [Découpage administratif](https://api.gouv.fr/les-api/api-geo)  | Permettre aux usagers de sélectionner une commune dans une liste (ou de l'autocompléter) |
 
-## Cadre Juridique
+## Comment accéder aux données ?
 
-L'utilisation des données est encadrée légalement. Vous devez formuler une demande auprès de nos services et la motiver.
-
-- L'article L114-8 du code des relations entre le public et l'administration fixe le cadre général des échanges de données au sein de l'administration ;
-- En tant que collectivités territoriales vous avez donc un droit d'accès à certaines données dans le cadre de demandes, services pro-actifs et déclarations usagers. Vérifiez et indiquez quel est l'objet de votre téléservices en cliquant sur le lien suivant : [Arrêté du 04/07/13 sur les téléservices](https://www.legifrance.gouv.fr/loda/id/JORFTEXT000027697207/#:~:text=Dans%20les%20r%C3%A9sum%C3%A9s-,Arr%C3%AAt%C3%A9%20du%204%20juillet%202013%20autorisant%20la%20mise%20en%20%C5%93uvre,publiques%20locales%20dont%20ils%20sont)
-
-**Il est indispensable de fournir l'acte/ la délibération qui fixe les conditions tarifaires qui permettra d'apprécier finement le droit d'accès à chaque donnée.**
-
-## Comment accéder à la donnée ?
-
-Vous devez formuler une demande d’habilitation auprès du fournisseur de donnée et justifier du droit d’en savoir.  
+Vous devez formuler une demande d’habilitation auprès de chaque fournisseur de donnée pour les API FranceConnectée ou d’une seule demande pour l'API particulier.
 
 Pour remplir votre demande, vous aurez besoin :
 
-1. de votre numéro SIRET
-2. du cadre juridique qui vous légitime à demander les données
+- de votre numéro SIRET
+- du cadre juridique qui vous légitime à demander les données
 
 <details>
   <summary>Précisions sur le cadre juridique</summary>
@@ -101,26 +94,25 @@ Pour le **transport scolaire** : Les transports scolaires sont des transports r�
 
 <br>
 
-3. de la description du service justifiant une simplification pour les citoyens
-4. des coordonnées de l'équipe
-5. des coordonnées de votre délégué à la protection des données et responsable de traitement
+- de la description du service justifiant une simplification pour les citoyens
+- des coordonnées de l'équipe
+- des coordonnées de votre délégué à la protection des données et responsable de traitement
 
-<Button href="https://datapass.api.gouv.fr/api-particulier">Demander un accès à l'API Particulier</Button>
+<Button href="https://api.gouv.fr/guides/delivrance-titres-transports#les-donnees-disponibles">Accéder aux API</Button>
 
 ## Les AOM qui l'utilisent déjà
 
-| AOM                             | Cas d'usage            |Avancement   |
-| ------------------------------- | ---------------------- |-------------|
-| Département de la Gironde       | Transports scolaires   |En production   |
-| Bordeaux Métropole              | Transports scolaires   |En production   |
-| CA du Grand Cognac              | Transports scolaires   |En production   |
-| Syndicat Mixte des Mobilités de l'Aire Grenobloise | Transports scolaires    |En production   |
-| Grand Angoulême                 | Transports scolaires   |En production   |
-| Syndicat des Mobilités Pays Basque-Adour | Transports scolaires      |En production   |
-| Région Provence-Alpes-Côte-d'Azur| Transports scolaires  |En production   |
-| Transports Aghlomération Montpellier | Transports scolaires   |En production   |
-| Commune d'Issoire              | Transports scolaires   |En production   |
-| Communauté de commune de Poher Communauté | Transports scolaires  |En production   |
-| Île de France Mobilités         | Transports publics  |En production   |
-| Région Nouvelle Aquitaine       | Transports publics  |En production   |
-| Bordeaux Métropole              | Transports public   |Début 2023   |
+| Autorité | Type de transport |
+| --- | --- |
+| Transports Agglomération Montpellier | Transports publics |
+| Commune d'Issoire   | Transports scolaires |
+| Région Provence-Alpes-Côte-d'Azur | Transports publics |
+| Syndicat des Mobilités Pays Basque-Adour | Transports publics |
+| Bordeaux Métropole   | Transports publics |
+| Syndicat Mixte des Mobilités de l'Aire Grenobloise | Transports publics |
+| Grand Angoulême | transports scolaires |
+| Département de la Gironde  | Transport scolaire adapté |
+| CA du Grand Cognac | transports scolaires |
+| Région Nouvelle Aquitaine  | Tarifications transports |
+| Autorité organisatrice des mobilités des territoires lyonnais | Transports publics |
+| Île de France Mobilités | Transports publics |
