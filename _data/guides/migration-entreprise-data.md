@@ -13,7 +13,9 @@ api:
 
 Le projet entreprise.data.gouv.fr était un ensemble d’API open data, gratuites, donnant accès aux données des entreprises et des associations.
 
-Ce projet était une expérimentation qui arrive à son terme. Il a été choisi de ne pas le pérenniser **par soucis d'efficatité de l'action publique**. En effet, la plupart des API du projet entreprise.data.gouv.fr ont aujourd'hui des alternatives officielles, et les API du projet font doublon.
+Ce projet était une expérimentation qui arrive à son terme. Il a été choisi de ne pas le pérenniser **par soucis d'efficacité de l'action publique**. En effet, la plupart des API du projet entreprise.data.gouv.fr ont aujourd'hui des alternatives officielles, et les API du projet font doublon.
+
+Par conséquent, les API qui constituaient entreprise.data.gouv.fr, vont être soit décommissionnées, soit transférées à l'administration la plus pertinente :
 
 | Donnée                                                                                          | Statut          |
 | ----------------------------------------------------------------------------------------------- | --------------- |
@@ -22,6 +24,10 @@ Ce projet était une expérimentation qui arrive à son terme. Il a été choisi
 | [Registre National du Commerce et des Sociétés](#registre-national-du-commerce-et-des-societes) | ❌ décommission |
 | [Répertoire National des Associations](#repertoire-national-des-associations)                   | ➡️ transfert    |
 | [Répertoire National des Métiers](#repertoire-national-des-metiers)                             | ➡️ transfert    |
+
+Dans le cas des API décommissionnées, les utilisateurs des anciennces API ont 3 mois à compter du premier Juin pour migrer leurs téléservices vers les API de substitution.
+
+Toutes les API de substitution sont officielles et gratuites.
 
 ### Recherche d’entreprise
 
