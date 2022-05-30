@@ -49,7 +49,7 @@ Les API FranceConnectées simplifient :
 L'aide juridictionnelle est une prise en charge par l'État des frais judiciaires, réservée aux revenus les plus modestes. Grâce à la vérification des revenus avec l'API Impot Particulier FranceConnectée, ce sont 1,2 millions de formulaires CERFA qui seront soumis en ligne en lieu et place d'un dossier papier !
 </Quote>
 
-### Les données disponibles par API FranceConnectées
+### La feuille de route des API FranceConnectées
 
 | Nom       | Description                                         |Statut   |Dispo sans FranceConnect | Administration|
 | --------- | --------- |----------------------------------------------------|-----------------|--------- |
@@ -70,16 +70,6 @@ L'aide juridictionnelle est une prise en charge par l'État des frais judiciaire
 
 _Schéma de fonctionnement des API FranceConnectées :_
 ![Fonctionnement des API FranceConnectées](https://franceconnect.gouv.fr/images/how-it-works-data.svg)
-
-### La feuille de route des API FranceConnectées
-
-#### 📅 2e trimestre 2022
-
-- API Statut Demandeur d'emploi : _est-ce qu'un particulier est actuellement demandeur d’emploi ?_
-
-#### 📅 Fin 2022
-
-- API Quotient Familial CNAF : _quel est le montant du quotient familial d'un particulier ?_
 
 ## Comment accéder aux API FranceConnectées ?
 
