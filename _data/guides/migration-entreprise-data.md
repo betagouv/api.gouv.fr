@@ -1,6 +1,6 @@
 ---
 title: Guide de migration des API entreprise.data.gouv.fr
-tagline: Découvrez les différents services qsui remplacent entreprise.data.gouv.fr
+tagline: Découvrez les API alternatives aux API entreprise.data.gouv.fr
 tags: cas usage, api sirene, ETALAB, api entreprise, INSEE, open data
 image: code.jpg
 noindex: false # this page will appear on Google
@@ -11,23 +11,23 @@ api:
   - API Recherche d’entreprises
 ---
 
-Le projet entreprise.data.gouv.fr était un ensemble d’API open data, gratuites, donnant accès aux données des entreprises et des associations.
+Vous utilisez les API entreprise.data.gouv.fr ? Ce projet était une expérimentation qui se termine. Le service va fermer le 1er Septembre 2022.
 
-Ce projet était une expérimentation qui arrive à son terme. Il a été choisi de ne pas le pérenniser **par soucis d'efficacité de l'action publique**. En effet, la plupart des API du projet entreprise.data.gouv.fr ont aujourd'hui des alternatives officielles, et les API du projet font doublon.
+En effet, les API du projet étaient non-officielles. La plupart d'entre elles ayant à présent des alternatives officielles, le projet n’a plus lieu d’être.
 
-Par conséquent, les API qui constituaient entreprise.data.gouv.fr, vont être soit décommissionnées, soit transférées à l'administration la plus pertinente :
+Les API qui constituaient entreprise.data.gouv.fr, vont être soit décommissionnées, soit transférées à l'administration la plus pertinente. Découvrez comment migrer vers des API alternatives.
 
-| Donnée                                                                                          | Statut          |
-| ----------------------------------------------------------------------------------------------- | --------------- |
-| [Recherche d’entreprise](#recherche-d’entreprise)                                               | ❌ décommission |
-| [Base Sirene](#base-sirene)                                                                     | ❌ décommission |
-| [Registre National du Commerce et des Sociétés](#registre-national-du-commerce-et-des-societes) | ❌ décommission |
-| [Répertoire National des Associations](#repertoire-national-des-associations)                   | ➡️ transfert    |
-| [Répertoire National des Métiers](#repertoire-national-des-metiers)                             | ➡️ transfert    |
+| API entreprise.data.gouv.fr                                                                     | API alternative                                                   |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| [Recherche d’entreprise](#recherche-d’entreprise)                                               | [API Recherche d’Entreprises](/les-api/api-recherche-entreprises) |
+| [Base Sirene](#base-sirene)                                                                     | [API Sirene V3](/les-api/sirene_v3)                               |
+| [Registre National du Commerce et des Sociétés](#registre-national-du-commerce-et-des-societes) | [API RNCS](/les-api/api-rncs)                                     |
+| [Répertoire National des Associations](#repertoire-national-des-associations)                   | API maintenue : vous pouvez continuer à l’utiliser                |
+| [Répertoire National des Métiers](#repertoire-national-des-metiers)                             | API maintenue : vous pouvez continuer à l’utiliser                |
 
-Dans le cas des API décommissionnées, les utilisateurs des anciennces API ont 3 mois à compter du premier Juin pour migrer leurs téléservices vers les API de substitution.
+Dans le cas des API décommissionnées, les utilisateurs des anciennes API ont 3 mois à compter du 1er Juin 2022 pour migrer leurs téléservices vers les API alternatives.
 
-Toutes les API de substitution sont officielles et gratuites.
+Toutes les API alternatives sont officielles et gratuites.
 
 ### Recherche d’entreprise
 
@@ -41,7 +41,7 @@ Ces routes permettaient de construire facilement un moteur de recherche, faire d
 
 </details>
 
-#### API de substitution :
+#### API alternative :
 
 La [DINUM](/producteurs/dinum) publie une nouvelle API : [l'API Recherche d’Entreprises](/les-api/api-recherche-entreprises).
 
@@ -61,7 +61,7 @@ Ces routes permettaient de faire du remplissage automatique de formulaires avec 
 
 </details>
 
-#### API de substitution :
+#### API alternative :
 
 [L’Insee](/producteurs/insee) maintient la version officielle de [l'API Sirene V3](/les-api/sirene_v3).
 
@@ -82,7 +82,7 @@ Cette route permettait d’accéder au contenu du Registre National du Commerce 
 
 </details>
 
-#### API de substitution :
+#### API alternative :
 
 [L’Inpi](/producteurs/inpi) maintient la version officielle de [l'API RNCS](/les-api/api-rncs).
 
