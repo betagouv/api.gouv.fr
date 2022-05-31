@@ -69,22 +69,22 @@ last_update: 31/03/2021
 content_intro: |
  L'API Particulier (En savoir plus sur <External href="https://api.gouv.fr/guides/api-definition">les API</External>) est un bouquet de données proposé pour simplifier les démarches administratives. L'API Particulier permet d'obtenir une multitude de données provenant d'administration différentes dans le cadre de démarches en ligne (appelée aussi formulaires en ligne ou téléservices). Un usage dans les logiciels métiers est aussi possible. 
 
----
-
- **Avantages pour les administrations et collectivités** 
-
+ **Avantages pour les administrations et collectivités :** 
+ 
   - Les informations sont certifiées par le fournisseur de données, il n'y a plus de saisie des données à effectuer.
   <Quote logo="/images/guides/clamart.svg" who='Ville de Clamart' title='Aurélie Coutant, directrice de la relation usagers'>
   Maintenant que le traitement est automatisé, nous avons enfin le temps de mieux accompagner les usagers en difficulté, de leur expliquer plus largement les prestations auxquelles ils peuvent avoir accès.
   </Quote>
 
-**Avantages pour les usagers :**
+ **Avantages pour les usagers :**
 
   - La démarche est réalisable 100% en ligne mais aussi en guichet.
   - Plus besoin de rassembler les documents demandés ou de saisir des informations déjà connues de l'administration.
   <Quote logo="/images/guides/clamart.svg" who='Ville de Clamart' title='Simon-Pierre Chalvidan, directeur général adjoint des services'>
   En 2014, nos usagers prenaient une demi-journée de congés pour effectuer leurs démarches en mairie. Aujourd'hui, ils les effectuent en ligne en 5 minutes.
   </Quote>
+
+---
 
 ## Données accessibles dans l'API Particulier
 
@@ -106,7 +106,6 @@ content_intro: |
 
   <External href="https://api.gouv.fr/guides/api-franceconnectees"> les API France Connectées </External> 
 
-  -> Il est suggéré d'utiliser directement, si elles existent, les API classiques (France connectées ou non) si vous souhaitez accéder à une seule source de données.
 
 ## Que dois-je faire pour utiliser l'API Particulier ?
 
@@ -128,6 +127,13 @@ content_intro: |
 #### Données fiscales
 
 <details>
+    <summary>Paramètres à renseigner par l'utilisateur</summary>
+Informations à saisir par l'utilisateur (secrets) : Numéro fiscal propre à chaque citoyen (identifiant numérique de 13 chiffres), et Référence de l'avis fiscal (identifiant alphanumérique de 13 caractères) - 14 si dégrèvement -)
+</details>
+
+<p>
+
+<details>
    <summary>Liste des données</summary>
 | Donnée                       | Description                                                                                        |
 | ---------------------------- | -------------------------------------------------------------------------------------------------- |
@@ -135,6 +141,7 @@ content_intro: |
 | Échéances de l'avis d'imposition  | Date de recouvrement, date d'établissement                            |
 | Situation du foyer fiscal  | Adresse, année de déclaration, nombre de parts, nombre de personnes à charge, situation de famille  |
 | Agrégats fiscaux   | Revenu brut global, revenu imposable, impôt sur le revenu net avant corrections, montant de l'impôt, revenu fiscal de référence, année de l'impôt, année des revenus   |
+
 
 </details>
 
@@ -163,12 +170,21 @@ L’Adresse est celle connue au 1er janvier de l’année d’imposition (exempl
 #### Quotient familial
 
 <details>
+    <summary>Paramètres à renseigner par l'utilisateur</summary>
+Informations à saisir par l'utilisateur (secrets) : Numéro d'allocataire et Code postal
+</details>
+
+<p>
+
+<details>
    <summary>Liste des données</summary>
 | Donnée                       | Description                                                                                        |
 | ---------------------------- | -------------------------------------------------------------------------------------------------- |
 | Quotient familial            | Le quotient familial (QF) du mois précédent pour la famille                                        |
 | Composition familiale        | Liste des parents et des enfants de la famille (avec nom, prénoms, date de naissance).             |
 | Adresse                      | L'adresse structurée détenue par la CAF                                                            |
+
+
 </details>
 
 <p>
@@ -181,9 +197,18 @@ S’il n’y a pas de quotient familial calculé pour cette période de référe
 Les données de l’API Particulier ne permettent pas encore de calculer les tarifs en établissement d'accueil du jeune enfant (crèche, multi-accueil, halte-garderie…).
 
 -> Le Quotient  Familial CAF est revu à chaque changement de situation familiale et/ou professionelle. Il prend en compte 1/12e du revenue imposable de l’année N-2 + les Prestations familiales du mois de référence divisés par le nombre de parts fiscales du foyer. Le Quotient Familiale « DGFIP » est calculé au moment de la déclaration de revenus. Il divise le revenue imposable de l’année N-1 par le nombre de part fiscale du foyer.
+
+
 </details>
 
 #### Statut étudiant
+
+<details>
+    <summary>Paramètres à renseigner par l'utilisateur</summary>
+Informations à saisir par l'utilisateur (secrets) : Identifiant National Étudiant et Etat civil (nom, prénom, date de naissance, sexe et lieu de naissance)
+</details>
+
+<p>
 
 <details>
    <summary>Liste des données</summary>
@@ -195,12 +220,14 @@ Les données de l’API Particulier ne permettent pas encore de calculer les t
 | Admissions                         | Limite la recherche aux seuls étudiants admis (non-inscrits).                  |
 | Etablissement                      | Le ou les établissements (nom et  identifiant - UAI).                         |
 
+
 </details>
 
 <p>
 
 <details>
    <summary>Précisions sur les données</summary>
+
 Vous aurez à sélectionner des scopes de données dans votre demande. Voici leur fonctionnement :
 
 Deux scopes sont utilisés comme "masque de données". Ces données ne seront 
@@ -228,6 +255,13 @@ La couverture des établissements du champ des étudiants sera progressivement c
 #### Statut étudiant boursier
 
 <details>
+    <summary>Paramètres à renseigner par l'utilisateur</summary>
+Informations à saisir par l'utilisateur (secrets) : Nom d’utilisateur Pôle emploi choisi par le particulier lors de la création de son espace personnel en ligne.
+</details>
+
+<p>
+
+<details>
    <summary>Liste des données</summary>
 | Donnée                             | Description                                                                   |
 | ---------------------------------- | ----------------------------------------------------------------------------- |
@@ -238,12 +272,15 @@ La couverture des établissements du champ des étudiants sera progressivement c
 | Statut de la bourse                | Statut définitif ou provisoire (conditionnel)                                |
 | Ville d'étude                      | Libellé de la ville d'étude                                                   |
 
+
 </details>
 
 <p>
 
 <details>
    <summary>Précisions sur les données</summary>
+Informations à saisir par l'utilisateur (secrets) : Identifiant National Étudiant et Etat civil (nom, prénom, date de naissance, sexe et lieu de naissance)
+
 Vous aurez à sélectionner des scopes de données dans votre demande. Voici leur fonctionnement :
 
 Deux scopes sont utilisés comme "masque de données". Ces données ne seront 
@@ -286,6 +323,7 @@ L’API délivre les données des étudiants :
 | Adresse                      |                                                                                                    |
 | Inscription                  | Date d’inscription, date de cessation inscription, catégorie d’inscription                         |
 
+
 </details>
 
 <p>
@@ -314,6 +352,9 @@ n'est pas tenue d'accomplir des actes positifs de recherche d'emploi
 
 L’Adresse est celle déclarée par le demandeur lors de son inscription ou suite à une déclaration de changement d’adresse.
 L’API devrait inclure d’ici fin 2021 des données relatives à l’indemnisation des demandeurs d’emploi.
+
+Informations à saisir par l'utilisateur (secrets) : Nom d’utilisateur Pôle emploi choisi par le particulier lors de la création de son espace personnel en ligne.
+
 </details>
 
 ## Conditions générales d'utilisation
