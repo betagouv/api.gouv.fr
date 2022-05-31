@@ -267,7 +267,7 @@
       path: /les-api/api-structures-inclusion
     - type: ADD_API
       what: Conventions collectives par le Ministère du Travail, de l'Emploi et de l'Insertion
-      path: /les-api/api-conventions-collectives 
+      path: /les-api/api-conventions-collectives
 2022:
   1:
     - type: ADD_API
@@ -294,7 +294,7 @@
   2:
     - type: ADD_API
       what: RappelConso, par le Ministère de l'économie, des finances et de la relance
-      path: /les-api/api-rappel-conso 
+      path: /les-api/api-rappel-conso
     - type: ADD_API
       what: Prix des contrôles techniques par le Ministère de l'économie, des finances et de la relance
       path: /les-api/api-prix-controles-techniques
@@ -323,14 +323,33 @@
       what: Déclaration préalable à l'embauche par l'Urssaf
       path: /les-api/api-declaration-embauche
     - type: ADD_API
-      what: Indemnités Pôle Emploi, par Pôle Emploi
-    - type: ADD_API
       what: AgentConnect par la DINUM
-  6: 
+      path: /les-api/agent-connect
+  6:
+    - type: ADD_API
+      what: Recherche d’entreprises
+      path: /les-api/api-recherche-entreprises
     - type: ADD_API
       what: Prestations sociales par la Direction de la Sécurité Sociale
+    - type: ADD_API
+      what: Indemnités Pôle Emploi, par Pôle Emploi
     - type: ADD_API
       what: Statut demandeur d'emploi (FranceConnect), par Pôle Emploi
     - type: ADD_API
       what: Historique d'un véhicule (HistoVec), par le Ministère de l'Intérieur
+  12:
+    - type: ADD_API
+      what: Données foncières par le CEREMA
+2023:
+  1:
+    - type: ADD_API
+      what: SIPSI (déclaration des travailleurs étrangers) par le Ministère du Travail
+    - type: ADD_API
+      what: Quotient Familial, par la MSA
+    - type: ADD_API
+      what: Famille nombreuse, par le Ministère des Transports
+  3:
+    - type: ADD_API
+      what: Scolarité, par le Ministère de l'Education Nationale
+
 ---

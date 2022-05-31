@@ -1,5 +1,5 @@
 ---
-title: Tarification des transports en commun
+title: Tarification sociale et solidaire des transports
 tagline: Vous êtes une collectivité, un opérateur ou un éditeur de logiciel ? Appliquez facilement un tarif de vos titres de transport adapté à la situation de vos usagers, en utilisant les données de l'API Particulier.
 tags: cas usage, api particulier, transport
 image: transport.jpg
@@ -12,7 +12,7 @@ api:
   - API Statut étudiant boursier
 ---
 
-## Simplifier le traitement des dossiers grâce aux API
+## Calcul tarification transports en commun
 
 Chaque année, les collectivités et les autorités organisatrices de mobilités (AOM) mettent en œuvre des tarifications sociales et solidaires. Le calcul de ces tarifs prend en compte différentes informations sur l’usager telles que son niveau de ressource, son statut étudiant ou professionnel ou encore les différentes aides qu’ils perçoit.
 
@@ -23,35 +23,22 @@ Ces informations peuvent être obtenues par les collectivités et AOM grâce à 
 **👋 Pour participer au groupe de travail associé, [vous pouvez écrire ici](mailto:contact@api.gouv.fr?subject=Participation-au-cas-d'usage-transports)**
 
 
-## Calcul tarification transports en commun
 
-Afin de faciliter les traitement des dossiers, vous pouvez utiliser des données librement disponibles (open data) ainsi que des données couvertes par des secrets.
+## Les données disponibles
 
-### Les données disponibles
+**Les données nécessitant une habilitation**
 
-**Les données de nos API**
-
-En savoir plus sur les données à disposition  <External href="https://api.gouv.fr/les-api/api-particulier#donnees-accessibles-dans-l'api"> via l'API Particulier </External>  et via  <External href="https://api.gouv.fr/rechercher-api"> les autres API d'api.gouv.fr </External>
+En savoir plus sur les <External href="https://api.gouv.fr/les-api/api-particulier#donnees-accessibles-dans-l'api">données à disposition</External> 
 
 
 **Les données disponibles en libre accès**
 
-Les données disponibles en libre accès sont référencées sur [api.gouv.fr](http://api.gouv.fr/) et/ou sur [data.gouv.fr](http://data.gouv.fr/) :
-
-- 🔍 [API : Etablissements scolaires](https://api.gouv.fr/les-api/api-annuaire-education)
-- 📂 [Fichier : Etablissements scolaires](https://www.data.gouv.fr/fr/datasets/annuaire-de-leducation/)
-- 📂 [Fichier : Etablissements de l'enseignement supérieur](https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-principaux-etablissements-enseignement-superieur/map/?disjunctive.type_d_etablissement&disjunctive.typologie_d_universites_et_assimiles&location=4,43.06889,0.74707&basemap=e69ab1)
-
-
-**Ils utilisent les API pour simplifier le traitement des dossiers**
-
-- Syndicat mixte de l’aire grenobloise
-- Région Nouvelle Aquitaine
-- Syndicat des Mobilités Pays Basque
-
-
-**Comment faire :**
-  <External href="https://datapass.api.gouv.fr/api-particulier?demarche=agora-plus">Méthodologie pour accéder aux API</External>  
+Les données disponibles en libre accès sont référencées sur [api.gouv.fr](http://api.gouv.fr/) et/ou sur [data.gouv.fr](http://data.gouv.fr/). Par exemple :
+| Donnée  | Utilité                                             |
+|---------| --------|
+| [Etablissements scolaires](https://api.gouv.fr/les-api/api-annuaire-education)  | Permettre aux usagers de sélectionner un établissement scolaire dans une liste   |
+| [Base adresse nationale](https://api.gouv.fr/les-api/base-adresse-nationale)  | Permettre l'autocomplétion d'un adresse postale dans un formulaire en ligne       |
+| [Découpage administratif](https://api.gouv.fr/les-api/api-geo)  | Permettre aux usagers de sélectionner une commune dans une liste (ou de l'autocompléter) |
 
 ## Cadre Juridique
 
@@ -66,5 +53,22 @@ L'utilisation des données est encadrée légalement. Vous devez formuler une de
 <Button href="https://datapass.api.gouv.fr/api-particulier">Demander un accès à l'API Particulier</Button>
 
 
+## Les AOM qui l'utilisent déjà
 
-Vous êtes un éditeur et vous souhaitez apparaître dans cette liste ? Écrivez-nous à [contact@particulier.api.gouv.fr](mailto:contact@particulier.api.gouv.fr)
+| Autorité | Type de transport |
+| --- | --- |
+| Transports Agglomération Montpellier | Transports publics |
+| Commune d'Issoire   | Transports scolaires |
+| Région Provence-Alpes-Côte-d'Azur | Transports publics |
+| Syndicat des Mobilités Pays Basque-Adour | Transports publics |
+| Bordeaux Métropole   | Transports publics |
+| Syndicat Mixte des Mobilités de l'Aire Grenobloise | Transports publics |
+| Grand Angoulême | transports scolaires |
+| Département de la Gironde  | Transport scolaire adapté |
+| CA du Grand Cognac | transports scolaires |
+| Région Nouvelle Aquitaine  | Tarifications transports |
+| Autorité organisatrice des mobilités des territoires lyonnais | Transports publics |
+| Île de France Mobilités | Transports publics |
+
+
+Vous êtes un AOM et vous souhaitez apparaître dans cette liste ? Écrivez-nous à [contact@particulier.api.gouv.fr](mailto:contact@particulier.api.gouv.fr)

@@ -30,13 +30,13 @@ datagouv_uuid:
   - 59785a7888ee385cb8d806af
   - 5964c402c751df0671f823d0
 last_update: 16/06/2020
+content_intro: |
+  L’API RNCS permet d'interroger les informations publiques sur les sociétés françaises immatriculées dans les registres locaux des greffes des tribunaux à compétence commerciale. Ces informations sont centralisées à l'INPI.
+
+  ### A quoi sert cette API ?
+
+  L’API Registre National du Commerce et des Sociétés vous permet d’accéder aux données des sociétés immatriculées à l’INPI grâce à leurs SIREN.
 ---
-
-L’API RNCS permet d'interroger les informations publiques sur les sociétés françaises immatriculées dans les registres locaux des greffes des tribunaux à compétence commerciale. Ces informations sont centralisées à l'INPI.
-
-### A quoi sert cette API ?
-
-L’API Registre National du Commerce et des Sociétés vous permet d’accéder aux données des sociétés immatriculées à l’INPI grâce à leurs SIREN:
 
 ### Données
 

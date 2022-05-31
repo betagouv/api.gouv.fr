@@ -40,9 +40,9 @@ Elle est mise à disposition de l’ensemble des établissements de l'enseigneme
 
 ### Données
 
-| Champ          | Description                                                                            |
-| -------------- | -------------------------------------------------------------------------------------- |
-| Nom          | Nom de naissance de l’étudiant                                                           |
+| Champ              | Description                                                                          |
+| ------------------ | -------------------------------------------------------------------------------------- |
+| Nom                | Nom de naissance de l’étudiant                                                           |
 | Nom usage    | Nom d’usage de l’étudiant                                                                |
 | Prénom       | Prénom de l’étudiant                                                                     |
 | Sexe | F ou M                                                                                           |
@@ -51,3 +51,18 @@ Elle est mise à disposition de l’ensemble des établissements de l'enseigneme
 | crous |Nom du Crous de rattachement                                                                     |
 | etat : code et libellé | Définit le statut de validité ou non de l’attestation                          |
 | exoneration : active et motif | Définit s’il y a lieu l’exonération appliquée à l’attestation           |
+
+### Informations complémentaires
+
+⚠️ Les différents états à vérifier pour confirmer la validité de l’api sont les suivants :
+
+| Etat de validation                                 | Code associé                                       |
+| -------------------------------------------------- | -------------------------------------------------- |
+| Attestation valide, après exonération              | 73                                                 |
+| Attestation valide, payé                           | 75                                                 |
+| Attestation valide, payé par un tiers              | 76                                                 |
+| Attestation valide, boursier                       | 71                                                 |
+| Attestation valide                                 | 70                                                 |
+| Attestation valide remboursée                      | 98                                                 |
+
+**Dans tout autre état , l’attestation est à considérer comme une  non valide.**
