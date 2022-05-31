@@ -61,6 +61,10 @@ Si vous travaillez avec l'un des éditeurs ou intégrateurs ci-dessous vous pouv
 | AIGA                         | iNoé                          |
 | Qiis                         | eTicket                       |
 | JVS-Mairistem                | Parascol                      |
+| 3D Ouest                     | P3D Ouest                     |
+| Amiciel                      | Malice                        |
+
+
 
 
 Vous êtes un éditeur et vous souhaitez apparaître dans cette liste ? Écrivez-nous à [contact@particulier.api.gouv.fr](mailto:contact@particulier.api.gouv.fr)
