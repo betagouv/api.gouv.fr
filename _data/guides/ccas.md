@@ -23,7 +23,7 @@ le principe du "Dites-le nous une fois" (...) permet aux citoyens de ne pas avoi
 C'est dans ce cadre que le SITIV intègre directement au logiciel métier les informations des usagers (...) Les saisies dans les dossiers usagers sont ainsi **facilitées et certifiées**.
 </Quote>
 
-En savoir plus sur les <External href="https://api.gouv.fr/les-api/api-particulier#donnees-accessibles-dans-l'api">données à disposition</External> et sur la <External href="https://datapass.api.gouv.fr/api-particulier?demarche=agora-plus">méthodologie pour y accéder</External>   
+En savoir plus sur les <External href="https://api.gouv.fr/les-api/api-particulier#donnees-accessibles-dans-l'api-particulier">données à disposition</External> et sur la <External href="https://api.gouv.fr/les-api/api-particulier#que-dois-je-faire-pour-utiliser-l'api-particulier-?">méthodologie pour y accéder</External>   
                          
 
 ## Cadre Juridique
