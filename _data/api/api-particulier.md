@@ -279,21 +279,6 @@ Informations à saisir par l'utilisateur (secrets) : Nom d’utilisateur Pôle e
 
 <details>
    <summary>Précisions sur les données</summary>
-Informations à saisir par l'utilisateur (secrets) : Identifiant National Étudiant et Etat civil (nom, prénom, date de naissance, sexe et lieu de naissance)
-
-Vous aurez à sélectionner des scopes de données dans votre demande. Voici leur fonctionnement :
-
-Deux scopes sont utilisés comme "masque de données". Ces données ne seront 
-donc pas retournées si le scope n'a pas été sélectionné.
-
-- "Etablissements" : renvoie le ou les établissements et code COG du lieu d'étude
-- "INE (Identifiant National Etudiant)"
-
-Trois scopes ont été réalisés pour ne travailler que sur une population restreinte
-
-- "Admission" : si ce scope est sélectionné la recherche de l'étudiant s'effectuera sur la population restreinte aux seuls admis (inscription non-définitive).
-- "Inscriptions en formation initiale"
-- "Inscription en formation continue"
 
 **Périmètre  :**
 L’API délivre les données des étudiants :
