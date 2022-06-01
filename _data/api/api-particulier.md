@@ -127,7 +127,7 @@ content_intro: |
 #### Données fiscales
 
 <details>
-    <summary>Paramètres à renseigner par l'utilisateur</summary>
+    <summary>Paramètres d'appel, à renseigner par l'utilisateur du téléservice</summary>
 Informations à saisir par l'utilisateur (secrets) : Numéro fiscal propre à chaque citoyen (identifiant numérique de 13 chiffres), et Référence de l'avis fiscal (identifiant alphanumérique de 13 caractères) - 14 si dégrèvement -)
 </details>
 
@@ -170,7 +170,7 @@ L’Adresse est celle connue au 1er janvier de l’année d’imposition (exempl
 #### Quotient familial
 
 <details>
-    <summary>Paramètres à renseigner par l'utilisateur</summary>
+    <summary>Paramètres d'appel, à renseigner par l'utilisateur du téléservice</summary>
 Informations à saisir par l'utilisateur (secrets) : Numéro d'allocataire et Code postal
 </details>
 
@@ -204,8 +204,8 @@ Les données de l’API Particulier ne permettent pas encore de calculer les t
 #### Statut étudiant
 
 <details>
-    <summary>Paramètres à renseigner par l'utilisateur</summary>
-Informations à saisir par l'utilisateur (secrets) : Identifiant National Étudiant et Etat civil (nom, prénom, date de naissance, sexe et lieu de naissance)
+    <summary>Paramètres d'appel, à renseigner par l'utilisateur du téléservice</summary>
+Informations à saisir par l'utilisateur (secrets) : Identifiant National Étudiant (réservé à l'enseignement supérieur) ou Etat civil (nom, prénom, date de naissance, sexe et lieu de naissance)
 </details>
 
 <p>
@@ -255,8 +255,8 @@ La couverture des établissements du champ des étudiants sera progressivement c
 #### Statut étudiant boursier
 
 <details>
-    <summary>Paramètres à renseigner par l'utilisateur</summary>
-Informations à saisir par l'utilisateur (secrets) : Identifiant National Étudiant et Etat civil (nom, prénom, date de naissance, sexe et lieu de naissance)
+    <summary>Paramètres d'appel, à renseigner par l'utilisateur du téléservice</summary>
+Informations à saisir par l'utilisateur (secrets) : Identifiant National Étudiant (réservé à l'enseignement supérieur) ou Etat civil (nom, prénom, date de naissance, sexe et lieu de naissance)
 </details>
 
 <p>
@@ -300,7 +300,7 @@ L’API délivre les données des étudiants :
 #### Statut demandeur d'emploi
 
 <details>
-    <summary>Paramètres à renseigner par l'utilisateur</summary>
+    <summary>Paramètres d'appel, à renseigner par l'utilisateur du téléservice</summary>
 Informations à saisir par l'utilisateur (secrets) : Nom d’utilisateur Pôle emploi choisi par le particulier lors de la création de son espace personnel en ligne.
 </details>
 
