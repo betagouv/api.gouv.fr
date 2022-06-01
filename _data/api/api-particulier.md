@@ -117,7 +117,7 @@ content_intro: |
 
 ### Je suis une collectivité ou une administration
 
-- Je consulte sur https://api.gouv.fr/les-api/api-particulier et les cas d’usage pour savoir si mon éditeur intègre l’API Particulier. Sinon je contacte mon éditeur et je lui transmets le lien vers la documentation technique.
+- Je consulte sur les cas d’usage pour savoir si mon éditeur intègre l’API Particulier. Sinon je contacte mon éditeur et je lui transmets le lien vers la documentation technique.
 - Je clique sur "faire une demande d'habilitation", je sélectionne mon éditeur, puis le formulaire correspondant à mon besoin. Sans éditeur, je sélectionne “demande libre”.
 - Je complète mon formulaire (numéro SIRET, cadre juridique - dont délibération -, coordonnées de l'équipe, du délégué à la protection des données et du responsable de traitement)
 - Je transmets le droit d'accès (token/jeton) à l'éditeur ou à mes développeurs.
