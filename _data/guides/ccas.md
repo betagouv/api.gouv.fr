@@ -43,9 +43,9 @@ L'utilisation des données est encadrée légalement. Vous devez formuler une de
 
 Si vous travaillez avec l'un des éditeurs ou intégrateurs ci-dessous vous pouvez faire une demande simplifiée :
 
-| Editeur | Nom de la solution       | Date           | Lien vers la demande                                                                                              |
-| ------- | ------------------------ | -------------- | ----------------------------------------------------------------------------------------------------------------- |
-| Up      | Millesime Action Sociale | Mi-Mai 2020    | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=ccas-up">Remplir une demande</External>     |
-| Arpège  | Sonate Opus              | Septembre 2020 | <External href="https://datapass.api.gouv.fr/api-particulier?demarche=ccas-arpege">Remplir une demande</External> |
+| Editeur | Nom de la solution       |
+| ------- | ------------------------ |
+| ArcheMC2| ArcheMC2 Social          |
+| Arpège  | Sonate Opus              |
 
 Vous êtes un éditeur et vous souhaitez apparaître dans cette liste ? Écrivez-nous à [contact@particulier.api.gouv.fr](mailto:contact@particulier.api.gouv.fr)

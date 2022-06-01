@@ -102,9 +102,10 @@ content_intro: |
 
   **En savoir plus sur les API et les API France Connectées :**
 
-  <External href="https://api.gouv.fr/guides/api-definition"> Les API </External> 
+  - <External href="https://api.gouv.fr/guides/api-definition"> Les API </External> 
 
-  <External href="https://api.gouv.fr/guides/api-franceconnectees"> les API France Connectées </External> 
+
+  - <External href="https://api.gouv.fr/guides/api-franceconnectees"> les API France Connectées </External> 
 
 
 ## Que dois-je faire pour utiliser l'API Particulier ?
@@ -128,7 +129,9 @@ content_intro: |
 
 <details>
     <summary>Paramètres d'appel, à renseigner par l'utilisateur du téléservice</summary>
-Informations à saisir par l'utilisateur (secrets) : Numéro fiscal propre à chaque citoyen (identifiant numérique de 13 chiffres), et Référence de l'avis fiscal (identifiant alphanumérique de 13 caractères) - 14 si dégrèvement -)
+Informations à saisir par l'utilisateur (secrets) : 
+- Numéro fiscal propre à chaque citoyen (identifiant numérique de 13 chiffres),  
+- Référence de l'avis fiscal (identifiant alphanumérique de 13 caractères, 14 en cas dee dégrèvement)
 </details>
 
 <p>
@@ -171,7 +174,9 @@ L’Adresse est celle connue au 1er janvier de l’année d’imposition (exempl
 
 <details>
     <summary>Paramètres d'appel, à renseigner par l'utilisateur du téléservice</summary>
-Informations à saisir par l'utilisateur (secrets) : Numéro d'allocataire et Code postal
+Informations à saisir par l'utilisateur (secrets) :
+- Numéro d'allocataire
+- Code postal
 </details>
 
 <p>
@@ -205,7 +210,9 @@ Les données de l’API Particulier ne permettent pas encore de calculer les t
 
 <details>
     <summary>Paramètres d'appel, à renseigner par l'utilisateur du téléservice</summary>
-Informations à saisir par l'utilisateur (secrets) : Identifiant National Étudiant (réservé à l'enseignement supérieur) ou Etat civil (nom, prénom, date de naissance, sexe et lieu de naissance)
+Informations à saisir par l'utilisateur (secrets) : 
+- Identifiant National Étudiant (réservé à l'enseignement supérieur)
+- Etat civil (nom, prénom, date de naissance, sexe et lieu de naissance)
 </details>
 
 <p>
@@ -256,7 +263,9 @@ La couverture des établissements du champ des étudiants sera progressivement c
 
 <details>
     <summary>Paramètres d'appel, à renseigner par l'utilisateur du téléservice</summary>
-Informations à saisir par l'utilisateur (secrets) : Identifiant National Étudiant (réservé à l'enseignement supérieur) ou Etat civil (nom, prénom, date de naissance, sexe et lieu de naissance)
+Informations à saisir par l'utilisateur (secrets) : 
+- Identifiant National Étudiant (réservé à l'enseignement supérieur)
+- Etat civil (nom, prénom, date de naissance, sexe et lieu de naissance)
 </details>
 
 <p>
@@ -301,7 +310,8 @@ L’API délivre les données des étudiants :
 
 <details>
     <summary>Paramètres d'appel, à renseigner par l'utilisateur du téléservice</summary>
-Informations à saisir par l'utilisateur (secrets) : Nom d’utilisateur Pôle emploi choisi par le particulier lors de la création de son espace personnel en ligne.
+Informations à saisir par l'utilisateur (secrets) : 
+- Nom d’utilisateur Pôle emploi choisi par le particulier lors de la création de son espace personnel en ligne.
 </details>
 
 <p>
