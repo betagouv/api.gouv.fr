@@ -256,7 +256,7 @@ La couverture des établissements du champ des étudiants sera progressivement c
 
 <details>
     <summary>Paramètres à renseigner par l'utilisateur</summary>
-Informations à saisir par l'utilisateur (secrets) : Nom d’utilisateur Pôle emploi choisi par le particulier lors de la création de son espace personnel en ligne.
+Informations à saisir par l'utilisateur (secrets) : Identifiant National Étudiant et Etat civil (nom, prénom, date de naissance, sexe et lieu de naissance)
 </details>
 
 <p>
@@ -300,6 +300,15 @@ L’API délivre les données des étudiants :
 #### Statut demandeur d'emploi
 
 <details>
+    <summary>Paramètres à renseigner par l'utilisateur</summary>
+Informations à saisir par l'utilisateur (secrets) : Nom d’utilisateur Pôle emploi choisi par le particulier lors de la création de son espace personnel en ligne.
+</details>
+
+<p>
+
+
+
+<details>
    <summary>Liste des données</summary>
 | Donnée                       | Description                                                                                        |
 | ---------------------------- | -------------------------------------------------------------------------------------------------- |
@@ -337,8 +346,6 @@ n'est pas tenue d'accomplir des actes positifs de recherche d'emploi
 
 L’Adresse est celle déclarée par le demandeur lors de son inscription ou suite à une déclaration de changement d’adresse.
 L’API devrait inclure d’ici fin 2021 des données relatives à l’indemnisation des demandeurs d’emploi.
-
-Informations à saisir par l'utilisateur (secrets) : Nom d’utilisateur Pôle emploi choisi par le particulier lors de la création de son espace personnel en ligne.
 
 </details>
 
