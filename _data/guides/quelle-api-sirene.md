@@ -37,7 +37,7 @@ Elle contient, pour chacun de ces établissement :
 
 ### Je cherche la donnée d'une entreprise en particulier
 
-Dans ce cas, le plus rapide est souvent d'utiliser votre moteur de recherche favori. Tapez dans la barre de recherche le nom de l'entreprise ou son siret si vous le connaissez, vous devriez trouver parmi les résultats les réponses à vos questions.
+Le plus rapide est de chercher sur <External href="https://annuaire-entreprises.data.gouv.fr">l’Annuaire des Entreprises</External> ou sur votre moteur de recherche favori. Tapez dans la barre de recherche le nom de l'entreprise ou son siret si vous le connaissez, vous devriez trouver parmi les résultats les réponses à vos questions.
 
 ### Je cherche à télécharger toutes les données, sous forme brute
 
