@@ -37,7 +37,7 @@ Elle contient, pour chacun de ces établissement :
 
 ### Je cherche la donnée d'une entreprise en particulier
 
-Dans ce cas, le plus rapide est souvent d'utiliser votre moteur de recherche favori. Tapez dans la barre de recherche le nom de l'entreprise ou son siret si vous le connaissez, vous devriez trouver parmi les résultats les réponses à vos questions.
+Le plus rapide est de chercher sur <External href="https://annuaire-entreprises.data.gouv.fr">l’Annuaire des Entreprises</External> ou sur votre moteur de recherche favori. Tapez dans la barre de recherche le nom de l'entreprise ou son siret si vous le connaissez, vous devriez trouver parmi les résultats les réponses à vos questions.
 
 ### Je cherche à télécharger toutes les données, sous forme brute
 
@@ -64,10 +64,10 @@ Ensuite chaque API se différencie par ses limites d'utilisation et les traiteme
 
 ### Première différence : les limitations d'usage et d'appel
 
-| API            | API Sirene données ouvertes                                                             | API Sirene de l'INSEE                                                                                                         | API Entreprise                                                                   |
-| -------------- | --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| Limite d’usage | Totalement ouverte ([accéder à la documentation](/les-api/api-sirene-donnees-ouvertes)) | Nécessite un compte ([se créer un compte](https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/sign-up.jag)) | Sous habilitation ([voir les conditions](/les-api/api-entreprise/demande-acces)) |
-| Limite d’appel | 7 appels par seconde                                                                    | 30 appels par minute                                                                                                          | 2000 appels par 10 minutes                                                       |
+| API            | API Sirene de l'INSEE                                                                                                         | API Entreprise                                                                   |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| Limite d’usage | Nécessite un compte ([se créer un compte](https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/sign-up.jag)) | Sous habilitation ([voir les conditions](/les-api/api-entreprise/demande-acces)) |
+| Limite d’appel | 30 appels par minute                                                                                                          | 2000 appels par 10 minutes                                                       |
 
 ### Deuxième différence : les données disponibles
 
