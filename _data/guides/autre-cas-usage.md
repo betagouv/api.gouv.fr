@@ -4,7 +4,7 @@ tagline: Vous souhaitez utiliser l'API Particulier pour un cas d'usage non menti
 tags: cas usage, api particulier
 image: code.jpg
 noindex: false # this page will appear on Google
-publish: true # this page will appear on /guides page
+publish: false # this page will appear on /guides page
 related_guides:
 api:
   - API Particulier
