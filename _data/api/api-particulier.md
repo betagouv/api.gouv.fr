@@ -123,7 +123,12 @@ content_intro: |
 
 <details>
     <summary>Paramètres à renseigner par l'utilisateur</summary>
-Informations à saisir par l'utilisateur (secrets) : Numéro fiscal propre à chaque citoyen (identifiant numérique de 13 chiffres), et Référence de l'avis fiscal (identifiant alphanumérique de 13 caractères) - 14 si dégrèvement -)
+
+Informations à saisir par l'utilisateur (secrets) :
+
+- Numéro fiscal propre à chaque citoyen (identifiant numérique de 13 chiffres),
+- Référence de l'avis fiscal (identifiant alphanumérique de 13 caractères) - 14 si dégrèvement -)
+
 </details>
 
 <p>
@@ -136,7 +141,6 @@ Informations à saisir par l'utilisateur (secrets) : Numéro fiscal propre à ch
 | Échéances de l'avis d'imposition  | Date de recouvrement, date d'établissement                            |
 | Situation du foyer fiscal  | Adresse, année de déclaration, nombre de parts, nombre de personnes à charge, situation de famille  |
 | Agrégats fiscaux   | Revenu brut global, revenu imposable, impôt sur le revenu net avant corrections, montant de l'impôt, revenu fiscal de référence, année de l'impôt, année des revenus   |
-
 
 </details>
 
@@ -166,7 +170,10 @@ L’Adresse est celle connue au 1er janvier de l’année d’imposition (exempl
 
 <details>
     <summary>Paramètres à renseigner par l'utilisateur</summary>
-Informations à saisir par l'utilisateur (secrets) : Numéro d'allocataire et Code postal
+
+- Numéro d'allocataire
+- Code postal
+
 </details>
 
 <p>
@@ -200,7 +207,10 @@ Les données de l’API Particulier ne permettent pas encore de calculer les t
 
 <details>
     <summary>Paramètres à renseigner par l'utilisateur</summary>
-Informations à saisir par l'utilisateur (secrets) : Identifiant National Étudiant et Etat civil (nom, prénom, date de naissance, sexe et lieu de naissance)
+Informations à saisir par l'utilisateur (secrets) :
+
+- Identifiant National Étudiant
+- Etat civil (nom, prénom, date de naissance, sexe et lieu de naissance)
 </details>
 
 <p>
@@ -248,11 +258,6 @@ La couverture des établissements du champ des étudiants sera progressivement c
 </details>
 
 #### Statut étudiant boursier
-
-<details>
-    <summary>Paramètres à renseigner par l'utilisateur</summary>
-Informations à saisir par l'utilisateur (secrets) : Nom d’utilisateur Pôle emploi choisi par le particulier lors de la création de son espace personnel en ligne.
-</details>
 
 <p>
 
@@ -308,6 +313,16 @@ L’API délivre les données des étudiants :
 </details>
 
 #### Statut demandeur d'emploi
+
+<details>
+    <summary>Paramètres à renseigner par l'utilisateur</summary>
+
+Informations à saisir par l'utilisateur (secrets) :
+
+- Nom d’utilisateur Pôle emploi choisi par le particulier lors de la création de son espace personnel en ligne.
+</details>
+
+<br>
 
 <details>
    <summary>Liste des données</summary>
