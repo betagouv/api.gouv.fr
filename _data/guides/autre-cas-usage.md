@@ -7,7 +7,6 @@ noindex: false # this page will appear on Google
 publish: false # this page will appear on /guides page
 related_guides:
 api:
-  - API Particulier
 ---
 
 ### Vous avez une idée de cas d'usage non répertorié ?

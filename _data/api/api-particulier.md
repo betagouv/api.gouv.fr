@@ -67,12 +67,14 @@ visits_2019: 15831
 uptime: 99.992 # https://uptimerobot.com/dashboard#777746216 * https://uptimerobot.com/dashboard#778826562 / 2
 last_update: 31/03/2021
 content_intro: |
- L'API Particulier (En savoir plus sur <External href="https://api.gouv.fr/guides/api-definition">les API</External>) est un bouquet de données proposé pour simplifier les démarches administratives. L'API Particulier permet d'obtenir une multitude de données provenant d'administration différentes dans le cadre de démarches en ligne (appelée aussi formulaires en ligne ou téléservices). Un usage dans les logiciels métiers est aussi possible. 
+ L'API Particulier est un bouquet de données proposé pour simplifier les démarches administratives. L'API Particulier permet d'obtenir une multitude de données provenant d'administration différentes dans le cadre de démarches en ligne (appelée aussi formulaires en ligne ou téléservices). Un usage dans les logiciels métiers est aussi possible. 
+
+ 🔎 En savoir plus sur [les API](/guides/api-definition) 
 
  **Avantages pour les administrations et collectivités :** 
  
   - Les informations sont certifiées par le fournisseur de données, il n'y a plus de saisie des données à effectuer.
-  <Quote logo="/images/guides/clamart.svg" who='Ville de Clamart' title='Aurélie Coutant, directrice de la relation usagers'>
+  <Quote logo="/images/guides/clamart.svg" who='Ville de Clamart' title='Aurélie Coutant'>
   Maintenant que le traitement est automatisé, nous avons enfin le temps de mieux accompagner les usagers en difficulté, de leur expliquer plus largement les prestations auxquelles ils peuvent avoir accès.
   </Quote>
 
@@ -80,7 +82,7 @@ content_intro: |
 
   - La démarche est réalisable 100% en ligne mais aussi en guichet.
   - Plus besoin de rassembler les documents demandés ou de saisir des informations déjà connues de l'administration.
-  <Quote logo="/images/guides/clamart.svg" who='Ville de Clamart' title='Simon-Pierre Chalvidan, directeur général adjoint des services'>
+  <Quote logo="/images/guides/clamart.svg" who='Ville de Clamart' title='Simon-Pierre Chalvidan'>
   En 2014, nos usagers prenaient une demi-journée de congés pour effectuer leurs démarches en mairie. Aujourd'hui, ils les effectuent en ligne en 5 minutes.
   </Quote>
 
@@ -90,7 +92,7 @@ content_intro: |
 
   | Donnée | Description | API Particulier | API FranceConnect |
   |---------------------|---------------------------------------------- |------------------- |--------------------------- |
-  | [Données fiscales (DGFiP)](/les-api/api-particulier#donnees-fiscales)    | Revenu fiscal de référence, déclarants, nombre de parts  | ✅      | ✅                    |   
+  | [Données fiscales (DGFiP)](/les-api/api-particulier#donnees-fiscales)    | Revenu fiscal de référence, déclarants, nombre de parts  | ✅      | ✅                    |
   | [Quotient familial (CNAF)](/les-api/api-particulier#quotient-familial)  | Quotient familial, composition familiale          | ✅                      | Fin 2022                   |
   | [Statut étudiant (MESRI)](/les-api/api-particulier#statut-etudiant)  | Statut, établissement | ✅                      | ✅                         |
   | [Statut étudiant boursier (CNOUS)](#statut-etudiant-boursier)| Statut, niveau de bourse                                     | ✅      | ✅                         |
@@ -112,7 +114,7 @@ content_intro: |
 
 ### Je suis une collectivité ou une administration
 
-- Je consulte sur https://api.gouv.fr/les-api/api-particulier et les cas d’usage pour savoir si mon éditeur intègre l’API Particulier. Sinon je contacte mon éditeur et je lui transmets le lien vers la documentation technique.
+- Je consulte [les cas d’usage de l'API Particulier](/les-api/api-particulier#exemples-d’application) pour savoir si mon éditeur intègre l’API Particulier. Sinon je contacte mon éditeur et je lui transmets le lien vers la documentation technique.
 - Je clique sur "faire une demande d'habilitation", je sélectionne mon éditeur, puis le formulaire correspondant à mon besoin. Sans éditeur, je sélectionne “demande libre”.
 - Je complète mon formulaire (numéro SIRET, cadre juridique - dont délibération -, coordonnées de l'équipe, du délégué à la protection des données et du responsable de traitement)
 - Je transmets le droit d'accès (token/jeton) à l'éditeur ou à mes développeurs.
@@ -122,19 +124,19 @@ content_intro: |
 #### Données fiscales
 
 <details>
-    <summary>Paramètres à renseigner par l'utilisateur</summary>
+  <summary>Paramètres d'appel à renseigner par l'utilisateur</summary>
 
-Informations à saisir par l'utilisateur (secrets) :
-
-- Numéro fiscal propre à chaque citoyen (identifiant numérique de 13 chiffres),
-- Référence de l'avis fiscal (identifiant alphanumérique de 13 caractères) - 14 si dégrèvement -)
+| Donnée                       | Description                                                                                        |
+| ---------------------------- | -------------------------------------------------------------------------------------------------- |
+| Numéro fiscal                | Identifiant numérique de 13 chiffres                                                               |
+| Référence de l'avis fiscal   | Identifiant alphanumérique de 13 caractères (14 si dégrèvement)                                    |
 
 </details>
 
 <p>
 
 <details>
-   <summary>Liste des données</summary>
+  <summary>Liste des données</summary>
 | Donnée                       | Description                                                                                        |
 | ---------------------------- | -------------------------------------------------------------------------------------------------- |
 | Etat civil du /des déclarant(s)   | Nom, nom de naissance, prénom(s), date de naissance            |
@@ -147,7 +149,7 @@ Informations à saisir par l'utilisateur (secrets) :
 <p>
 
 <details>
-   <summary>Précisions sur les données</summary>
+  <summary>Précisions sur les données</summary>
 
 ⚠️ Attention : si vous comptez utiliser uniquement les données de la DGFIP, il convient d'utiliser l'API [impôt particulier](https://api.gouv.fr/les-api/impot-particulier)
 
@@ -169,17 +171,19 @@ L’Adresse est celle connue au 1er janvier de l’année d’imposition (exempl
 #### Quotient familial
 
 <details>
-    <summary>Paramètres à renseigner par l'utilisateur</summary>
+  <summary>Paramètres d'appel à renseigner par l'utilisateur</summary>
 
-- Numéro d'allocataire
-- Code postal
+| Donnée                       | Description                                                                                        |
+| ---------------------------- | -------------------------------------------------------------------------------------------------- |
+| Numéro d'allocataire         |                                                                                                    |
+| Code postal                  | Exemple : 84250                                                                                    |
 
 </details>
 
 <p>
 
 <details>
-   <summary>Liste des données</summary>
+  <summary>Liste des données</summary>
 | Donnée                       | Description                                                                                        |
 | ---------------------------- | -------------------------------------------------------------------------------------------------- |
 | Quotient familial            | Le quotient familial (QF) du mois précédent pour la famille                                        |
@@ -192,7 +196,7 @@ L’Adresse est celle connue au 1er janvier de l’année d’imposition (exempl
 <p>
 
 <details>
-   <summary>Précisions sur les données</summary>
+  <summary>Précisions sur les données</summary>
 Le quotient familial retourné par l'API est celui du mois de référence qui est M-1 (M= mois de l’appel).
 S’il n’y a pas de quotient familial calculé pour cette période de référence, l'API ne restituera pas de quotient familial.
 
@@ -200,23 +204,26 @@ Les données de l’API Particulier ne permettent pas encore de calculer les t
 
 -> Le Quotient  Familial CAF est revu à chaque changement de situation familiale et/ou professionelle. Il prend en compte 1/12e du revenue imposable de l’année N-2 + les Prestations familiales du mois de référence divisés par le nombre de parts fiscales du foyer. Le Quotient Familiale « DGFIP » est calculé au moment de la déclaration de revenus. Il divise le revenue imposable de l’année N-1 par le nombre de part fiscale du foyer.
 
-
 </details>
 
 #### Statut étudiant
 
 <details>
-    <summary>Paramètres à renseigner par l'utilisateur</summary>
-Informations à saisir par l'utilisateur (secrets) :
+  <summary>Paramètres d'appel à renseigner par l'utilisateur</summary>
 
-- Identifiant National Étudiant
-- Etat civil (nom, prénom, date de naissance, sexe et lieu de naissance)
+Ils sont mutuellement exclusifs
+
+| Donnée                       | Description                                                                                        |
+| ---------------------------- | -------------------------------------------------------------------------------------------------- |
+| Identifiant National Étudiant| L'appel par INE est réservé aux acteurs de la sphère de l'enseignement.                            |
+| Etat civil                   | Nom, prénom, date de naissance, sexe et lieu de naissance                                          |
+
 </details>
 
 <p>
 
 <details>
-   <summary>Liste des données</summary>
+  <summary>Liste des données</summary>
 | Donnée                             | Description                                                                   |
 | ---------------------------------- | ----------------------------------------------------------------------------- |
 | INE                                | Identifiant national de l'étudiant                                            |
@@ -225,13 +232,12 @@ Informations à saisir par l'utilisateur (secrets) :
 | Admissions                         | Limite la recherche aux seuls étudiants admis (non-inscrits).                  |
 | Etablissement                      | Le ou les établissements (nom et  identifiant - UAI).                         |
 
-
 </details>
 
 <p>
 
 <details>
-   <summary>Précisions sur les données</summary>
+  <summary>Précisions sur les données</summary>
 
 Vous aurez à sélectionner des scopes de données dans votre demande. Voici leur fonctionnement :
 
@@ -259,10 +265,22 @@ La couverture des établissements du champ des étudiants sera progressivement c
 
 #### Statut étudiant boursier
 
+<details>
+  <summary>Paramètres d'appel à renseigner par l'utilisateur</summary>
+
+Ils sont mutuellement exclusifs
+
+| Donnée                       | Description                                                                                        |
+| ---------------------------- | -------------------------------------------------------------------------------------------------- |
+| Identifiant National Étudiant| L'appel par INE est réservé aux acteurs de la sphère de l'enseignement.                            |
+| Etat civil                   | Nom, prénom, date de naissance, sexe et lieu de naissance                                          |
+
+</details>
+
 <p>
 
 <details>
-   <summary>Liste des données</summary>
+  <summary>Liste des données</summary>
 | Donnée                             | Description                                                                   |
 | ---------------------------------- | ----------------------------------------------------------------------------- |
 | Statut boursier                    | Indique si l'étudiant est boursier                                            |
@@ -272,13 +290,12 @@ La couverture des établissements du champ des étudiants sera progressivement c
 | Statut de la bourse                | Statut définitif ou provisoire (conditionnel)                                |
 | Ville d'étude                      | Libellé de la ville d'étude                                                   |
 
-
 </details>
 
 <p>
 
 <details>
-   <summary>Précisions sur les données</summary>
+  <summary>Précisions sur les données</summary>
 Informations à saisir par l'utilisateur (secrets) : Identifiant National Étudiant et Etat civil (nom, prénom, date de naissance, sexe et lieu de naissance)
 
 Vous aurez à sélectionner des scopes de données dans votre demande. Voici leur fonctionnement :
@@ -315,17 +332,18 @@ L’API délivre les données des étudiants :
 #### Statut demandeur d'emploi
 
 <details>
-    <summary>Paramètres à renseigner par l'utilisateur</summary>
+  <summary>Paramètres à renseigner par l'utilisateur</summary>
 
-Informations à saisir par l'utilisateur (secrets) :
+| Donnée                       | Description                                                                                        |
+| ---------------------------- | -------------------------------------------------------------------------------------------------- |
+| Nom d’utilisateur Pôle emploi| Choisi par le particulier lors de la création de son espace personnel en ligne.                    |
 
-- Nom d’utilisateur Pôle emploi choisi par le particulier lors de la création de son espace personnel en ligne.
 </details>
 
 <br>
 
 <details>
-   <summary>Liste des données</summary>
+  <summary>Liste des données</summary>
 | Donnée                       | Description                                                                                        |
 | ---------------------------- | -------------------------------------------------------------------------------------------------- |
 | Identité                     | Nom, prénom, civilité, date de naissance                                                           |
@@ -333,13 +351,12 @@ Informations à saisir par l'utilisateur (secrets) :
 | Adresse                      |                                                                                                    |
 | Inscription                  | Date d’inscription, date de cessation inscription, catégorie d’inscription                         |
 
-
 </details>
 
 <p>
 
 <details>
-   <summary>Précisions sur les données</summary>
+  <summary>Précisions sur les données</summary>
 Sont disponibles les données des demandeurs d’emploi inscrits ou
 ayant été inscrits à Pôle emploi depuis 2010, date d’inscription et de
 cessation d’inscription le cas échéant.
