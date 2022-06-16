@@ -98,7 +98,7 @@ Pour le **transport scolaire** : Les transports scolaires sont des transports r�
 - des coordonnées de l'équipe
 - des coordonnées de votre délégué à la protection des données et responsable de traitement
 
-<Button href="https://api.gouv.fr/guides/delivrance-titres-transports#les-donnees-disponibles">Accéder aux API</Button>
+<Button href="#les-donnees-disponibles">Accéder aux API</Button>
 
 ## Les AOM qui l'utilisent déjà
 

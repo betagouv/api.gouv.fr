@@ -34,7 +34,7 @@ access_page:
       <Button href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</Button>
 stat:
   lastXdays: 30
-  url: https://monitoring.particulier.api.gouv.fr/api/stats/
+  url: https://status.api.gouv.fr/
   label: justificatifs papier évités
 partners:
   - dgfip
@@ -56,7 +56,7 @@ keywords:
 rate_limiting_resume: 20 appels / seconde / jeton
 rate_limiting_description: |
   L'API est disponible à hauteur de 20 appels par secondes et par jetons d'accès.
-monitoring_link: https://status.particulier.api.gouv.fr
+monitoring_link: https://status.api.gouv.fr/
 monitoring_description: |
   La DINUM s’engage à ce que le Service soit accessible à 95% et la DINUM s’engage à améliorer progressivement ce rendement.
 contact_link: contact@particulier.api.gouv.fr
@@ -97,9 +97,9 @@ content_intro: |
   | [Statut étudiant (MESRI)](/les-api/api-particulier#statut-etudiant)  | Statut, établissement | ✅                      | ✅                         |
   | [Statut étudiant boursier (CNOUS)](#statut-etudiant-boursier)| Statut, niveau de bourse                                     | ✅      | ✅                         |
   | [Statut demandeur d'emploi (Pôle Emploi)](/les-api/api-particulier#statut-demandeur-demploi)| Statut et catégorie (A,B,C,D)      | ✅                      | En cours de test          |
-  | Indemnités demandeur d'emploi | à définir | Mai 2022               | En cours de test          |
-  | Statut CSS                 | à définir | Juin 2022               | Juin 2022                 |
-  | Statut RSA                 | à définir | Juin 2022               | Juin 2022                 |
+  | Indemnités demandeur d'emploi | à définir | Juin 2022               | En cours de test          |
+  | Statut CSS                 | à définir | Juillet 2022               | Juillet 2022                 |
+  | Statut RSA                 | à définir | Juillet 2022               | Juillet 2022                 |
   | Statut élève scolarisé      | à définir | Fin-2022                | En cours d'étude          |
 
 **En savoir plus sur [les API](https://api.gouv.fr/guides/api-definition) et les [API France Connectées](https://api.gouv.fr/guides/api-franceconnectees) :**

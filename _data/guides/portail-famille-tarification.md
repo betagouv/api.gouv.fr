@@ -1,5 +1,5 @@
 ---
-title: Portail Famille
+title: Tarification des services publics municipaux et scolaires
 tagline: Simplifiez le calcul des tarifs de la restauration scolaire, ou des activités périscolaires ou municipales dans votre colllectivité
 tags: cas usage, api particulier, portail famille, quotient familial dématérialisé, tarification restauration scolaire, tarification activités périscolaires
 image: portail_famille.jpg

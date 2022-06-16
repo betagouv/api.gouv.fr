@@ -1,5 +1,5 @@
 ---
-title: Aides sociales
+title: Attribution des aides sociales dans les CCAS
 tagline: Vous êtes un CCAS ou un éditeur de logiciel ? Accédez facilement aux données de la CAF et de la DGFIP grâce à l'API Particulier et notre  accompagnement pas à pas.
 tags: cas usage, api particulier, CCAS
 image: dossier.jpg
