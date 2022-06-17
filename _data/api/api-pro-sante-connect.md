@@ -58,9 +58,10 @@ uptime: 99.8
 contact_link: prosanteconnect.editeurs@esante.gouv.fr
 doc_tech_external: https://integrateurs-cps.asipsante.fr/pages/prosanteconnect/documentation-fs
 last_update: 22/03/2021
----
+content_intro: | 
+  L‘API Pro Santé Connect permet à des administrations, des éditeurs de logiciels ou des entreprises d’ajouter un bouton Pro Santé Connect, pour recueillir des données d’identité fiables et ainsi identifier les utilisateurs de leur service en ligne (en vue d’une entrée en relation ou connexion).
 
-L‘API Pro Santé Connect permet à des administrations, des éditeurs de logiciels ou des entreprises d’ajouter un bouton Pro Santé Connect, pour recueillir des données d’identité fiables et ainsi identifier les utilisateurs de leur service en ligne (en vue d’une entrée en relation ou connexion).
+---
 
 ### À quoi sert cette API ?
 
