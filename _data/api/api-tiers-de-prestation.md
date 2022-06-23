@@ -103,7 +103,7 @@ Sur validation de la demande de paiement, le Tiers de prestation reçoit par vir
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | idClient          | Identifiant du client du tiers de prestation                                                                                         |
 | idDemandePaiement | Identifiant de la demande de paiement                                                                                                |
-| numFactureTiers   | Numéro de la facture statut Statut de a demande de paiement                                                                          |
+| numFactureTiers   | Numéro de la facture                                                                          |
 
 **Concernant l'appel de recherche d'une demande de paiement :**
 
