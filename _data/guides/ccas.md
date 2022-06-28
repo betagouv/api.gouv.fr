@@ -47,5 +47,6 @@ Si vous travaillez avec l'un des éditeurs ou intégrateurs ci-dessous vous pouv
 | ------- | ------------------------ |
 | ArcheMC2| ArcheMC2 Social          |
 | Arpège  | Sonate Opus              |
+| AFI     | Melissandre              |
 
 Vous êtes un éditeur et vous souhaitez apparaître dans cette liste ? Écrivez-nous à [contact@particulier.api.gouv.fr](mailto:contact@particulier.api.gouv.fr)
