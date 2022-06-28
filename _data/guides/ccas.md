@@ -45,7 +45,7 @@ Si vous travaillez avec l'un des éditeurs ou intégrateurs ci-dessous vous pouv
 
 | Editeur | Nom de la solution       |
 | ------- | ------------------------ |
-| ArcheMC2| ArcheMC2 Social          |
+| ArcheMC2| Millésime Action Sociale |
 | Arpège  | Sonate Opus              |
 | AFI     | Melissandre              |
 
