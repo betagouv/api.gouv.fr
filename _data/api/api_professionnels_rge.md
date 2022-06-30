@@ -1,7 +1,7 @@
 ---
 title: API Professionnels RGE
 tagline: Le recensement des professionnels RGE (Reconnu Garant de l'Environnement)
-external_site: https://data.ademe.fr/datasets/liste-des-entreprises-rge
+external_site: https://data.ademe.fr/datasets/liste-des-entreprises-rge-2
 is_open: 1 # 1 means API is fully open
 producer: ademe
 keywords:
@@ -15,10 +15,10 @@ themes:
   - Environnement
 contact_link: https://www.ademe.fr/content/contacter
 doc_tech_link: https://koumoul.com/s/data-fair/api/v1/datasets/liste-des-entreprises-rge/api-docs.json
-doc_tech_external: https://data.ademe.fr/datasets/liste-des-entreprises-rge
+doc_tech_external: https://data.ademe.fr/datasets/liste-des-entreprises-rge-2
 datagouv_uuid:
-  - 600966dac71dd5e4f7bcbf5c
-last_update: 27/07/2020
+  - 62bd63b70ff1edf452b83a6b
+last_update: 30/06/2022
 ---
 
 L'ADEME et les pouvoirs publics accordent la mention "Reconnu Garant de l'Environnement" (RGE) aux entreprises à l'origine de travaux ou d'études **concourant à la rénovation énergétique ou à l’installation d’énergies renouvelables**.
