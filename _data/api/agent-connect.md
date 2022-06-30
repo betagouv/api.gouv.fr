@@ -63,7 +63,7 @@ Les administrations partenaires fournissent des identités, qui permettent aux a
 
 Utiliser l'API AgentConnect pour identifier les agents utilisateurs de votre site permet d'accéder à **l'identité pivot**.
 
-| Nom                       | Vaeur                    |Caractère                |Description                                 |
+| Nom                       | Valeur                   |Caractère                |Description                                 |
 | ------------------------- | -------------------------|-------------------------|--------------------------------------------|
 | Nom                       | usual_name               |Obligatoire              |John                                        |
 | Prénom                    | given_name               |Obligatoire              |Lennon                                      |
@@ -72,7 +72,7 @@ Utiliser l'API AgentConnect pour identifier les agents utilisateurs de votre sit
 
 En plus de cette identité pivot, selon votre cas d'usage, vous pouvez aussi avoir accès aux informations complémentaires :
 
-| Nom                       | Vaeur                    |Caractère                |Description                                 |
+| Nom                       | Valeur                   |Caractère                |Description                                 |
 | ------------------------- | ------------------------ |-------------------------|--------------------------------------------|
 | SIREN                     | Siren                    |Facultatif               |110 020 013                                 |
 | SIRET                     | Siret                    |Facultatif               |110 020 013 00097                           |
