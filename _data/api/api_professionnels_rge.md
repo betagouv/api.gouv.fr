@@ -15,7 +15,7 @@ themes:
   - Environnement
 contact_link: https://www.ademe.fr/content/contacter
 doc_tech_link: https://koumoul.com/s/data-fair/api/v1/datasets/liste-des-entreprises-rge/api-docs.json
-doc_tech_external: [https://data.ademe.fr/datasets/liste-des-entreprises-rge-2](https://data.ademe.fr/datasets/liste-des-entreprises-rge-2)
+doc_tech_external: https://data.ademe.fr/datasets/liste-des-entreprises-rge-2
 datagouv_uuid:
   - 62bd63b70ff1edf452b83a6b
 last_update: 30/06/2022
