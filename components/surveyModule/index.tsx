@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import constants from '../../constants';
-import { ButtonLink } from '../../uiComponents';
+import { useRouter } from 'next/router';
+
+const rootUrl: String =
+  'https://0u6d4427zal.typeform.com/to/qF8yRRC6#source_page=';
 
 const SurveyModule: React.FC = ({ children }) => (
   <div className="notice-wrapper">
@@ -8,8 +11,11 @@ const SurveyModule: React.FC = ({ children }) => (
     <div className="notice-item">
       <h6>Aidez-nous à vous aider !</h6>
       <p className="mention">
-        Répondez à <a href="#">ce questionnaire</a> rapide pour mieux vous
-        connaitre.
+        Répondez à{' '}
+        <a href={rootUrl + useRouter().asPath} target="_blank" rel="noreferrer">
+          ce questionnaire
+        </a>{' '}
+        rapide pour mieux vous connaitre.
       </p>
     </div>
 
