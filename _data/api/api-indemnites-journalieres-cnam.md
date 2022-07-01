@@ -24,7 +24,7 @@ access_page:
       Seules les assurances et complémentaires santé qui sont partenaires de France Connect sont éligibles. 
 
       Cela étant dit, si vous avez un projet précis :
-      <Button href="mailto:partenaires-api-cnam@assurance-maladie.fr">Contactez-nous pour exposer votre projet</Button>
+      <Button href="mailto:partenaires-api-ameli.cnam@assurance-maladie.fr">Contactez-nous pour exposer votre projet</Button>
 partners:
   - CNAM
 producer: cnam
