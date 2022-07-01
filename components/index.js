@@ -4,6 +4,7 @@ import Header, { HEADER_PAGE } from './header/header';
 import DocHeader from './header/docHeader';
 import Meta from './meta';
 import Error from './error';
+import SurveyModule from './surveyModule';
 
 export {
   Footer,
@@ -14,4 +15,5 @@ export {
   ServiceCard,
   Error,
   DocHeader,
+  SurveyModule,
 };
