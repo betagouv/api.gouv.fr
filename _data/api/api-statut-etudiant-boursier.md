@@ -50,7 +50,7 @@ themes:
   - Particulier
   - Education
 contact_link: api-boursier@cnous.fr
-doc_tech_link: https://api-pp.nuonet.fr/statut-boursier/doc/get.json
+doc_tech_link: https://particulier.api.gouv.fr/api/open-api.yml
 visits_2019: 4000
 last_update: 08/02/2022
 ---
