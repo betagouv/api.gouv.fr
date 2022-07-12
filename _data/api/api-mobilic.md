@@ -12,7 +12,7 @@ access_page:
 
       <Button href="/rechercher-api">Rechercher une autre API</Button>
   - who:
-      - Un éditeur de logiciel du secteur des transports routiers
+      - Un éditeur de logiciel des secteurs du transport léger et du déménagement
     is_eligible: 1
     description: |
       L'API est accessible aux éditeurs, vous devrez créer un compte pour accéder à l'API
@@ -70,7 +70,7 @@ L'API Mobilic permet aux applications métier de transmettre et de lire simpleme
 
 📲 Les travailleurs mobiles saisissent leur temps de travail sur l’application web Mobilic
 
-🖥 Les gestionnaires d'entreprise consultent les données saisies
+🖥 Les gestionnaires d'entreprises consultent et valident les données saisies
 
 ### Pourquoi s'interfacer avec l'API Mobilic ?
 

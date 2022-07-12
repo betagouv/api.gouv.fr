@@ -329,6 +329,10 @@
     - type: ADD_API
       what: Recherche d’entreprises
       path: /les-api/api-recherche-entreprises
+  7:
+    - type: ADD_API
+      what: Mobilic, par le Ministère de la Transition Ecologique
+      path: /les-api/api-mobilic
     - type: ADD_API
       what: Prestations sociales par la Direction de la Sécurité Sociale
     - type: ADD_API
