@@ -309,8 +309,8 @@
       path: /les-api/api-calendrier-scolaire
   3:
     - type: ADD_API
-      what: Formations initiales, par l'ONISEP
-      path: /les-api/api-formations-initiales
+      what: Données ouvertes de l'ONISEP
+      path: /les-api/api-onisep
     - type: ADD_API
       what: Pseudonymisation de documents par la DINUM
       path: /les-api/api-pseudonymisation-documents
@@ -329,6 +329,10 @@
     - type: ADD_API
       what: Recherche d’entreprises
       path: /les-api/api-recherche-entreprises
+  7:
+    - type: ADD_API
+      what: Mobilic, par le Ministère de la Transition Ecologique
+      path: /les-api/api-mobilic
     - type: ADD_API
       what: Prestations sociales par la Direction de la Sécurité Sociale
     - type: ADD_API
