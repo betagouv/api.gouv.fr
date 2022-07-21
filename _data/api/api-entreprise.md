@@ -178,11 +178,25 @@ Pour avoir la liste à jour des API disponibles, n'hésitez pas à consulter le 
 | API                                                                                                                                                               | Fournisseur de la donnée                  |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
 | **Données générales :**                                                                                                                                           |                                           |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-entreprises'>Données de référence d'une entité</External>                                             | INSEE & Infogreffe                        |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-etablissements'>Données de référence d'un établissement</External>                                    | INSEE                                     |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-extraits_rcs_infogreffe'>Extrait des données du Registre du Commerce et des Sociétés (RCS)</External> | Infogreffe                                |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-associations'>Informations déclaratives d'une association</External>                                  | Ministère intérieur                       |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-documents_associations'>Divers documents d'une association</External>                                 | Ministère intérieur                       |
+| <External href='https://entreprise.api.gouv.fr/catalogue/insee/etablissements_diffusibles'>Données établissement diffusible</External>           | Insee                       |
+| <External href='https://entreprise.api.gouv.fr/catalogue/insee/etablissements'>Données établissement</External>                                    | Insee                                     |
+| <External href='https://entreprise.api.gouv.fr/catalogue/infogreffe/mandataires_sociaux'>Mandataires sociaux</External> 
+| Infogreffe                   |
+| <External href='https://entreprise.api.gouv.fr/catalogue/infogreffe/rcs/extrait'>Extrait RCS</External> 
+| Infogreffe                |
+| <External href='https://entreprise.api.gouv.fr/catalogue/insee/unites_legales_diffusibles'>Données unité légale diffusible</External>             | Insee      |
+| <External href='https://entreprise.api.gouv.fr/catalogue/insee/unites_legales'>Données unité légale</External> 
+| Insee    |
+| <External href='https://entreprise.api.gouv.fr/catalogue/insee/siege_social_diffusibles'>Données siège social diffusible</External>               | Insee           |
+| <External href='https://entreprise.api.gouv.fr/catalogue/insee/siege_social'>Données siège social</External> 
+| Insee         |
+| <External href='https://entreprise.api.gouv.fr/catalogue/insee/adresse_etablissements_diffusibles'>Adresse établissement diffusible</External>   | Insee           |
+| <External href='https://entreprise.api.gouv.fr/catalogue/insee/adresse_etablissements'>Adresse établissement</External> 
+| Insee         |
+| <External href='https://entreprise.api.gouv.fr/catalogue/ministere_interieur/rna'>
+Données du RNA d'une association</External>               
+| Ministère intérieur                       |
+| <External href='https://entreprise.api.gouv.fr/catalogue/ministere_interieur/documents_associations'>Divers documents d'une association</External>             | Ministère intérieur                       |
 | <External href='https://entreprise.api.gouv.fr/catalogue/#a-actes_inpi'>Actes et statuts des personnes morales et physiques</External>                            | INPI                                      |
 | <External href='https://entreprise.api.gouv.fr/catalogue/#a-conventions_collectives'>Conventions collectives</External>                                           | Fabrique Numérique des Ministères Sociaux |
 | <External href='https://entreprise.api.gouv.fr/catalogue/#a-entreprises_artisanales_cma'>Données de référence d'une entreprise artisanale</External>              | CMA France                                |
