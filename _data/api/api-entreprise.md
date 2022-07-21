@@ -18,10 +18,7 @@ access_page:
     description: |
       L’API Entreprise vous permet d’accéder directement aux données des entreprises et des associations pour faciliter leurs démarches (demandes d’aides, marchés publics, ...).
 
-      Pour vérifier que l’API Entreprise vous permet d’accéder aux données dont vous avez besoin, consultez :
-
-      - le [catalogue des données](https://entreprise.api.gouv.fr/catalogue/) ;
-      - les [cas d’usage](https://entreprise.api.gouv.fr/cas_usage/) de l’API Entreprise.
+      Pour vérifier que l’API Entreprise vous permet d’accéder aux données dont vous avez besoin, consultez le [catalogue des données](https://entreprise.api.gouv.fr/catalogue).
 
       <QuestionTree tree='api-entreprise' question='administrations' />
   - who:
@@ -146,19 +143,19 @@ keywords:
   - Rénovation énergétique
 rate_limiting_resume: 1000 requêtes/min par IP
 rate_limiting_description: "Les limites de volumétrie sont détaillées ici :"
-rate_limiting_link: https://entreprise.api.gouv.fr/doc/#respecter-la-volumétrie/
+rate_limiting_link: https://entreprise.api.gouv.fr/developpeurs#respecter-la-volum%C3%A9trie
 monitoring_link: https://status.entreprise.api.gouv.fr/
-contact_link: https://entreprise.api.gouv.fr/support/
+contact_link: https://entreprise.api.gouv.fr/faq
 doc_tech_link: https://entreprise.api.gouv.fr/v2/open-api.yml
 useSwaggerProxy: true
-doc_tech_external: https://entreprise.api.gouv.fr/catalogue/
+doc_tech_external: https://entreprise.api.gouv.fr/developpeurs
 themes:
   - Entreprise
 visits_2019: 12610
 uptime: 100
 last_update: 14/09/2020
 content_intro: |
-  API Entreprise permet aux entités administratives d'accéder aux données et aux documents administratifs des entreprises et des associations, afin de simplifier leurs démarches.
+  <External href="https://entreprise.api.gouv.fr/">API Entreprise</External> permet aux entités administratives d'accéder aux données et aux documents administratifs des entreprises et des associations, afin de simplifier leurs démarches.
 
   ### À quoi sert l’API Entreprise ?
 
@@ -170,8 +167,8 @@ content_intro: |
 
   Au delà de la simplification apportée aux agents habilités des administrations, l'API Entreprise rend service aux entreprises et associations en leur évitant de chercher leurs documents administratifs et en permettant le pré-remplissage automatique de leurs formulaires.
 
-  L’API permet notamment de simplifier le dépôt et l'instruction des candidatures aux <External href='https://entreprise.api.gouv.fr/cas_usage/marches_publics/'>marchés publics</External> et des demandes d'<External href='https://entreprise.api.gouv.fr/cas_usage/aides_publiques/'>aides et subventions publiques</External>.
-  <External href='https://entreprise.api.gouv.fr/cas_usage/'>Découvrir tous les cas d'usage</External>
+  L’API permet notamment de simplifier le dépôt et l'instruction des candidatures aux marchés publics et des demandes d'aides et subventions publiques.
+  
 ---
 
 ### API accessibles depuis l'API Entreprise
@@ -221,7 +218,7 @@ L’API Entreprise est réservée :
 
 Même si elle a pour objectif de simplifier leurs démarches, l’API Entreprise ne s’adresse pas aux particuliers ❌, aux associations ❌ et aux entreprises ❌.
 
-Il faut également être <External href='https://entreprise.api.gouv.fr/doc/#fondamentaux'>techniquement en mesure d'intégrer l'API Entreprise</External>, c'est à dire :
+Il faut également être <External href='https://entreprise.api.gouv.fr/developpeurs#prerequis-techniques'>techniquement en mesure d'intégrer l'API Entreprise</External>, c'est à dire :
 
 - avoir une équipe technique qui peut intégrer des API ;
 - travailler ou s'apprêter à travailler avec un prestataire ou un éditeur de logiciel, qui soit en mesure d’intégrer API Entreprise.
