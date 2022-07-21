@@ -197,31 +197,48 @@ Pour avoir la liste à jour des API disponibles, n'hésitez pas à consulter le 
 Données du RNA d'une association</External>               
 | Ministère intérieur                       |
 | <External href='https://entreprise.api.gouv.fr/catalogue/ministere_interieur/documents_associations'>Divers documents d'une association</External>             | Ministère intérieur                       |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-actes_inpi'>Actes et statuts des personnes morales et physiques</External>                            | INPI                                      |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-conventions_collectives'>Conventions collectives</External>                                           | Fabrique Numérique des Ministères Sociaux |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-entreprises_artisanales_cma'>Données de référence d'une entreprise artisanale</External>              | CMA France                                |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-effectifs_..._acoss_covid'>Effectifs d'une entreprise</External>                                      | Urssaf Caisse nationale                   |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-eori_douanes'>Immatriculation EORI</External>                                                         | Douanes                                   |
-| **Informations financières :**                                                                                                                                    |                                           |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-exercices'>Chiffre d'affaires</External>                                                              | DGFiP                                     |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-bilans_inpi'>Bilans annuels</External>                                                                | INPI                                      |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-bilans_entreprises_bdf'>3 derniers bilans annuels</External>                                          | Banque de france                          |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-liasses_fiscales_dgfip'>Déclarations de résultat (liasses fiscales)</External>                        | DGFiP                                     |
-| **Attestations sociales et fiscales :**                                                                                                                           |                                           |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-attestations_fiscales_dgfip'>Attestation fiscale</External>                                           | DGFiP                                     |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-attestations_sociales_acoss'>Attestation de vigilance</External>                                      | URSSAF                                    |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-attestations_agefiph'>Conformité emploi des travailleurs handicapés</External>                        | AGEFIPH                                   |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-cotisations_msa'>Cotisations de sécurité sociale agricole</External> (conformité)                     | MSA                                       |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-cotisation_retraite_probtp'>Cotisations retraite bâtiment</External> (conformité et attestation)      | PRO BTP                                   |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-cartes_professionnelles_fntp'>Carte professionnelle travaux publics</External>                        | FNTP                                      |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-certificats_cnetp'>Cotisations congés payés & chômage intempéries</External> (attestation)            | CNETP                                     |
-| **Les certifications professionnelles :**                                                                                                                         |                                           |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-certificats_agence_bio'>Certifications en BIO</External>                                              | Agence BIO                                |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-certificats_rge_ademe'>Certificat RGE (Reconnu garant de l'environnement)</External>                  | ADEME                                     |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-certificats_qualibat'>Certificat de qualification bâtiment Qualibat</External>                        | QUALIBAT                                  |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-certificats_opqibi'>Certificat de qualification d'ingénierie OPQIBI</External>                        | OPQIBI                                    |
-| **La propriété intellectuelle :**                                                                                                                                 |                                           |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-extraits_courts_inpi'>Brevets, modèles et marques déposés</External>                                  | INPI                                      |
+| <External href='https://entreprise.api.gouv.fr/catalogue/inpi/actes'>Actes</External>                            
+| Inpi         |
+| <External href='https://entreprise.api.gouv.fr/catalogue/fabrique_numerique_ministeres_sociaux/conventions_collectives'>Conventions collectives</External>                         
+| Fabrique Numérique des Ministères Sociaux |
+| <External href='https://entreprise.api.gouv.fr/catalogue/cma_france/rnm'>Données du RNM d'une entreprise artisanale</External>              
+| CMA France                                |
+| <External href='https://entreprise.api.gouv.fr/catalogue/urssaf/effectifs'>
+Effectif d'une entreprise</External>                                      
+| Urssaf Caisse nationale                   |
+| <External href='https://entreprise.api.gouv.fr/catalogue/douanes/immatriculation_eori'>Immatriculation EORI</External>                             | Douanes                                   |
+| **Informations financières :**                                                   |                                           |
+| <External href='https://entreprise.api.gouv.fr/catalogue/dgfip/chiffres_affaires'>Chiffre d'affaires</External>                                   | DGFiP                                     |
+| <External href='https://entreprise.api.gouv.fr/catalogue/inpi/comptes_annuels_rncs'>Comptes annuels du RNCS</External>                     | Inpi                                     |
+| <External href='https://entreprise.api.gouv.fr/catalogue/banque_de_france/bilans'>3 derniers bilans annuels</External>                                       | Banque de france                          |
+| <External href='https://entreprise.api.gouv.fr/catalogue/dgfip/liasses_fiscales'>Liasses fiscales</External>                        
+| DGFiP                                     |
+| **Attestations sociales et fiscales :**                                           |                                           |
+| <External href='https://entreprise.api.gouv.fr/catalogue/dgfip/attestations_fiscales'>Attestation fiscale</External>                             | DGFiP                                     |
+| <External href='https://entreprise.api.gouv.fr/catalogue/urssaf/attestation_vigilance'>Attestation de vigilance</External>                         | URSSAF                                    |
+| <External href='https://entreprise.api.gouv.fr/catalogue/msa/conformites_cotisations'>Conformité cotisations de sécurité sociale agricole</External>                   
+| MSA                                       |
+| <External href='https://entreprise.api.gouv.fr/catalogue/probtp/conformites_cotisations_retraite'>Conformités des cotisations retraites</External>  | PRO BTP                                   |
+| <External href='https://entreprise.api.gouv.fr/catalogue/fntp/carte_professionnelle_travaux_public'>Carte professionnelle travaux publics</External>                        
+| FNTP                                      |
+| <External href='https://entreprise.api.gouv.fr/catalogue/cnetp/attestations_cotisations_conges_payes_chomage_intemperies'>
+Attestation de cotisations congés payés & chômage-intempéries
+</External           
+| CNETP                                     |
+| **Les certifications professionnelles :**                           |                                           |
+| <External href='https://entreprise.api.gouv.fr/catalogue/agence_bio/certifications_bio'>Certification en BIO</External>                               | Agence BIO                                |
+| <External href='https://entreprise.api.gouv.fr/catalogue/ademe/certifications_rge'>Certification RGE (Reconnu garant de l'environnement)</External>                  
+| ADEME                                     |
+| <External href='https://entreprise.api.gouv.fr/catalogue/qualibat/certifications_batiment'>Certification Qualibat</External>                        | QUALIBAT                                  |
+| <External href='https://entreprise.api.gouv.fr/catalogue/opqibi/qualifications_ingenierie'>Certification d'ingénierie OPQIBI</External>           | OPQIBI                                    |
+| **La propriété intellectuelle :**                                            |   |
+| <External href='https://entreprise.api.gouv.fr/catalogue/inpi/brevets'>Brevets déposés</External>               
+| Inpi                                     |
+| <External href='https://entreprise.api.gouv.fr/catalogue/inpi/marques'>Marques déposées</External>               
+| Inpi                                     |
+| <External href='https://entreprise.api.gouv.fr/catalogue/inpi/modeles'>Modèles déposés</External>               
+| Inpi                                      |
+
 
 ### Quelles sont les conditions d'éligibilité à l'API Entreprise ?
 
