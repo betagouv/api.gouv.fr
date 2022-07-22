@@ -18,10 +18,7 @@ access_page:
     description: |
       L’API Entreprise vous permet d’accéder directement aux données des entreprises et des associations pour faciliter leurs démarches (demandes d’aides, marchés publics, ...).
 
-      Pour vérifier que l’API Entreprise vous permet d’accéder aux données dont vous avez besoin, consultez :
-
-      - le [catalogue des données](https://entreprise.api.gouv.fr/catalogue/) ;
-      - les [cas d’usage](https://entreprise.api.gouv.fr/cas_usage/) de l’API Entreprise.
+      Pour vérifier que l’API Entreprise vous permet d’accéder aux données dont vous avez besoin, consultez le [catalogue des données](https://entreprise.api.gouv.fr/catalogue).
 
       <QuestionTree tree='api-entreprise' question='administrations' />
   - who:
@@ -146,19 +143,19 @@ keywords:
   - Rénovation énergétique
 rate_limiting_resume: 1000 requêtes/min par IP
 rate_limiting_description: "Les limites de volumétrie sont détaillées ici :"
-rate_limiting_link: https://entreprise.api.gouv.fr/doc/#respecter-la-volumétrie/
+rate_limiting_link: https://entreprise.api.gouv.fr/developpeurs#respecter-la-volum%C3%A9trie
 monitoring_link: https://status.entreprise.api.gouv.fr/
-contact_link: https://entreprise.api.gouv.fr/support/
+contact_link: https://entreprise.api.gouv.fr/faq
 doc_tech_link: https://entreprise.api.gouv.fr/v2/open-api.yml
 useSwaggerProxy: true
-doc_tech_external: https://entreprise.api.gouv.fr/catalogue/
+doc_tech_external: https://entreprise.api.gouv.fr/developpeurs
 themes:
   - Entreprise
 visits_2019: 12610
 uptime: 100
 last_update: 14/09/2020
 content_intro: |
-  API Entreprise permet aux entités administratives d'accéder aux données et aux documents administratifs des entreprises et des associations, afin de simplifier leurs démarches.
+  <External href="https://entreprise.api.gouv.fr/">API Entreprise</External> permet aux entités administratives d'accéder aux données et aux documents administratifs des entreprises et des associations, afin de simplifier leurs démarches.
 
   ### À quoi sert l’API Entreprise ?
 
@@ -170,47 +167,83 @@ content_intro: |
 
   Au delà de la simplification apportée aux agents habilités des administrations, l'API Entreprise rend service aux entreprises et associations en leur évitant de chercher leurs documents administratifs et en permettant le pré-remplissage automatique de leurs formulaires.
 
-  L’API permet notamment de simplifier le dépôt et l'instruction des candidatures aux <External href='https://entreprise.api.gouv.fr/cas_usage/marches_publics/'>marchés publics</External> et des demandes d'<External href='https://entreprise.api.gouv.fr/cas_usage/aides_publiques/'>aides et subventions publiques</External>.
-  <External href='https://entreprise.api.gouv.fr/cas_usage/'>Découvrir tous les cas d'usage</External>
+  L’API permet notamment de simplifier le dépôt et l'instruction des candidatures aux marchés publics et des demandes d'aides et subventions publiques.
+  
 ---
 
 ### API accessibles depuis l'API Entreprise
 
 Pour avoir la liste à jour des API disponibles, n'hésitez pas à consulter le <External href='https://entreprise.api.gouv.fr/catalogue/'>catalogue des données de l’API Entreprise</External>. Le catalogue vous permet également de découvrir la liste précise des données disponibles pour chacune des API.
 
-| API                                                                                                                                                               | Fournisseur de la donnée                  |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
-| **Données générales :**                                                                                                                                           |                                           |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-entreprises'>Données de référence d'une entité</External>                                             | INSEE & Infogreffe                        |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-etablissements'>Données de référence d'un établissement</External>                                    | INSEE                                     |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-extraits_rcs_infogreffe'>Extrait des données du Registre du Commerce et des Sociétés (RCS)</External> | Infogreffe                                |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-associations'>Informations déclaratives d'une association</External>                                  | Ministère intérieur                       |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-documents_associations'>Divers documents d'une association</External>                                 | Ministère intérieur                       |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-actes_inpi'>Actes et statuts des personnes morales et physiques</External>                            | INPI                                      |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-conventions_collectives'>Conventions collectives</External>                                           | Fabrique Numérique des Ministères Sociaux |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-entreprises_artisanales_cma'>Données de référence d'une entreprise artisanale</External>              | CMA France                                |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-effectifs_..._acoss_covid'>Effectifs d'une entreprise</External>                                      | Urssaf Caisse nationale                   |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-eori_douanes'>Immatriculation EORI</External>                                                         | Douanes                                   |
-| **Informations financières :**                                                                                                                                    |                                           |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-exercices'>Chiffre d'affaires</External>                                                              | DGFiP                                     |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-bilans_inpi'>Bilans annuels</External>                                                                | INPI                                      |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-bilans_entreprises_bdf'>3 derniers bilans annuels</External>                                          | Banque de france                          |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-liasses_fiscales_dgfip'>Déclarations de résultat (liasses fiscales)</External>                        | DGFiP                                     |
-| **Attestations sociales et fiscales :**                                                                                                                           |                                           |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-attestations_fiscales_dgfip'>Attestation fiscale</External>                                           | DGFiP                                     |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-attestations_sociales_acoss'>Attestation de vigilance</External>                                      | URSSAF                                    |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-attestations_agefiph'>Conformité emploi des travailleurs handicapés</External>                        | AGEFIPH                                   |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-cotisations_msa'>Cotisations de sécurité sociale agricole</External> (conformité)                     | MSA                                       |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-cotisation_retraite_probtp'>Cotisations retraite bâtiment</External> (conformité et attestation)      | PRO BTP                                   |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-cartes_professionnelles_fntp'>Carte professionnelle travaux publics</External>                        | FNTP                                      |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-certificats_cnetp'>Cotisations congés payés & chômage intempéries</External> (attestation)            | CNETP                                     |
-| **Les certifications professionnelles :**                                                                                                                         |                                           |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-certificats_agence_bio'>Certifications en BIO</External>                                              | Agence BIO                                |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-certificats_rge_ademe'>Certificat RGE (Reconnu garant de l'environnement)</External>                  | ADEME                                     |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-certificats_qualibat'>Certificat de qualification bâtiment Qualibat</External>                        | QUALIBAT                                  |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-certificats_opqibi'>Certificat de qualification d'ingénierie OPQIBI</External>                        | OPQIBI                                    |
-| **La propriété intellectuelle :**                                                                                                                                 |                                           |
-| <External href='https://entreprise.api.gouv.fr/catalogue/#a-extraits_courts_inpi'>Brevets, modèles et marques déposés</External>                                  | INPI                                      |
+| API               | Fournisseur de la donnée                  |
+| ----------------- | ----------------------------------------- |
+| **Données générales :**                                                                                              |                                           |
+| <External href='https://entreprise.api.gouv.fr/catalogue/insee/etablissements_diffusibles'>Données établissement diffusible</External>           
+| Insee                       |
+| <External href='https://entreprise.api.gouv.fr/catalogue/insee/etablissements'>Données établissement</External>     
+| Insee                                     |
+| <External href='https://entreprise.api.gouv.fr/catalogue/infogreffe/mandataires_sociaux'>Mandataires sociaux</External> 
+| Infogreffe                   |
+| <External href='https://entreprise.api.gouv.fr/catalogue/infogreffe/rcs/extrait'>Extrait RCS</External> 
+| Infogreffe                |
+| <External href='https://entreprise.api.gouv.fr/catalogue/insee/unites_legales_diffusibles'>Données unité légale diffusible</External>             | Insee      |
+| <External href='https://entreprise.api.gouv.fr/catalogue/insee/unites_legales'>Données unité légale</External> 
+| Insee    |
+| <External href='https://entreprise.api.gouv.fr/catalogue/insee/siege_social_diffusibles'>Données siège social diffusible</External>               | Insee           |
+| <External href='https://entreprise.api.gouv.fr/catalogue/insee/siege_social'>Données siège social</External> 
+| Insee         |
+| <External href='https://entreprise.api.gouv.fr/catalogue/insee/adresse_etablissements_diffusibles'>Adresse établissement diffusible</External>   | Insee           |
+| <External href='https://entreprise.api.gouv.fr/catalogue/insee/adresse_etablissements'>Adresse établissement</External> 
+| Insee         |
+| <External href='https://entreprise.api.gouv.fr/catalogue/ministere_interieur/rna'>
+Données du RNA d'une association</External>               
+| Ministère de l'Intérieur                       |
+| <External href='https://entreprise.api.gouv.fr/catalogue/ministere_interieur/documents_associations'>Divers documents d'une association</External>             | Ministère de l'Intérieur                       |
+| <External href='https://entreprise.api.gouv.fr/catalogue/inpi/actes'>Actes</External>                            
+| Inpi         |
+| <External href='https://entreprise.api.gouv.fr/catalogue/fabrique_numerique_ministeres_sociaux/conventions_collectives'>Conventions collectives</External>                         
+| Fabrique numérique des Ministères sociaux |
+| <External href='https://entreprise.api.gouv.fr/catalogue/cma_france/rnm'>Données du RNM d'une entreprise artisanale</External>              
+| CMA France                                |
+| <External href='https://entreprise.api.gouv.fr/catalogue/urssaf/effectifs'>
+Effectif d'une entreprise</External>                                      
+| Urssaf Caisse nationale                   |
+| <External href='https://entreprise.api.gouv.fr/catalogue/douanes/immatriculation_eori'>Immatriculation EORI</External>                             | Douanes                                   |
+| **Informations financières :**                                                   |                                   |
+| <External href='https://entreprise.api.gouv.fr/catalogue/dgfip/chiffres_affaires'>Chiffre d'affaires</External>                                   | DGFiP                                     |
+| <External href='https://entreprise.api.gouv.fr/catalogue/inpi/comptes_annuels_rncs'>Comptes annuels du RNCS</External>                     | Inpi                                     |
+| <External href='https://entreprise.api.gouv.fr/catalogue/banque_de_france/bilans'>3 derniers bilans annuels</External>                                       | Banque de france                          |
+| <External href='https://entreprise.api.gouv.fr/catalogue/dgfip/liasses_fiscales'>Liasses fiscales</External>         
+| DGFiP                                     |
+| **Attestations sociales et fiscales :**                                           |                                 |
+| <External href='https://entreprise.api.gouv.fr/catalogue/dgfip/attestations_fiscales'>Attestation fiscale</External> | DGFiP                                     |
+| <External href='https://entreprise.api.gouv.fr/catalogue/urssaf/attestation_vigilance'>Attestation de vigilance</External>                         
+| URSSAF                                    |
+| <External href='https://entreprise.api.gouv.fr/catalogue/msa/conformites_cotisations'>Conformité cotisations de sécurité sociale agricole</External>                   
+| MSA                                       |
+| <External href='https://entreprise.api.gouv.fr/catalogue/probtp/conformites_cotisations_retraite'>Conformités des cotisations retraites</External>  
+| PRO BTP                                   |
+| <External href='https://entreprise.api.gouv.fr/catalogue/fntp/carte_professionnelle_travaux_public'>Carte professionnelle travaux publics</External>                        
+| FNTP                                      |
+| <External href='https://entreprise.api.gouv.fr/catalogue/cnetp/attestations_cotisations_conges_payes_chomage_intemperies'>
+Attestation de cotisations congés payés & chômage-intempéries</External>  
+| CNETP                                     |
+| **Les certifications professionnelles :**                           |                                           |
+| <External href='https://entreprise.api.gouv.fr/catalogue/agence_bio/certifications_bio'>Certification en BIO</External>                               
+| Agence BIO                                |
+| <External href='https://entreprise.api.gouv.fr/catalogue/ademe/certifications_rge'>Certification RGE (Reconnu garant de l'environnement)</External>                  
+| ADEME                                     |
+| <External href='https://entreprise.api.gouv.fr/catalogue/qualibat/certifications_batiment'>Certification Qualibat</External>                        
+| QUALIBAT                                  |
+| <External href='https://entreprise.api.gouv.fr/catalogue/opqibi/qualifications_ingenierie'>Certification d'ingénierie OPQIBI</External>           
+| OPQIBI                                    |
+| **La propriété intellectuelle :**         |   |
+| <External href='https://entreprise.api.gouv.fr/catalogue/inpi/brevets'>Brevets déposés</External>               
+| Inpi                                     |
+| <External href='https://entreprise.api.gouv.fr/catalogue/inpi/marques'>Marques déposées</External>               
+| Inpi                                     |
+| <External href='https://entreprise.api.gouv.fr/catalogue/inpi/modeles'>Modèles déposés</External>               
+| Inpi                                      |
 
 ### Quelles sont les conditions d'éligibilité à l'API Entreprise ?
 
@@ -221,7 +254,7 @@ L’API Entreprise est réservée :
 
 Même si elle a pour objectif de simplifier leurs démarches, l’API Entreprise ne s’adresse pas aux particuliers ❌, aux associations ❌ et aux entreprises ❌.
 
-Il faut également être <External href='https://entreprise.api.gouv.fr/doc/#fondamentaux'>techniquement en mesure d'intégrer l'API Entreprise</External>, c'est à dire :
+Il faut également être <External href='https://entreprise.api.gouv.fr/faq#quels-sont-les-prerequis-techniques-pour-utiliser-l-api'>techniquement en mesure d'intégrer l'API Entreprise</External>, c'est à dire :
 
 - avoir une équipe technique qui peut intégrer des API ;
 - travailler ou s'apprêter à travailler avec un prestataire ou un éditeur de logiciel, qui soit en mesure d’intégrer API Entreprise.
