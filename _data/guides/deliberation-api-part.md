@@ -35,15 +35,11 @@ Par ailleurs, pour certaine démarche, un texte réglementaire peut lister préc
 
 ## Est-il besoin de faire une nouvelle délibération pour accéder à API Particulier ?
 
-Dans la plupart des cas, non !
-
-Si vous avez bien lu ce qui précède, à aucun moment nous ne parlons de réaliser une délibération spéciale pour API Particulier.
-
-Si votre démarche est listée <a href="https://www.legifrance.gouv.fr/loda/id/JORFTEXT000027697207/">parmis les démarches à l'article suivant</a>, une délibération n'est même pas nécessaire.
+Oui ! Il est indispensable de fournir l'acte/ la délibération qui fixe les conditions tarifaires qui permettra d'apprécier finement le droit d'accès à chaque donnée.
 
 Eventuellement : vous pouvez retrouver une délibération passée qui expose le mode de fonctionnement d'une démarche. Par exemple dans le cadre d'une facturation de prestation enfance : une délibération avec les barèmes appliqués suivant le montant du quotient familial est le type de délibération nécessaire et suffisant.
 
-Une délibération qui dirait "le conseil communal décide d'utiliser API Particulier pour consommer les données CAF et DGFiP en vue de simplifier la démarche" manquerait de précision sur la finalité des données nécessaires et ne permettrait pas de vérifier le respect de la minimisation des données appelées.
+Une délibération qui dirait "le conseil communal décide d'utiliser API Particulier pour consommer les données CAF en vue de simplifier la démarche" manquerait de précision sur la finalité des données nécessaires et ne permettrait pas de vérifier le respect de la minimisation des données appelées.
 
 ## Pour différentes données, voilà des exemples de finalités valides
 
