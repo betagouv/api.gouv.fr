@@ -1,6 +1,6 @@
 ---
 title: Tarification sociale et solidaire des transports
-tagline: Vous êtes une collectivité, un opérateur ou un éditeur de logiciel ? Appliquez facilement un tarif de vos titres de transport adapté à la situation de vos usagers, en utilisant les données de l'API Particulier.
+tagline: Vous êtes une collectivité, un opérateur ou un éditeur de logiciel ? Appliquez facilement un tarif de vos titres de transport adapté à la situation de vos usagers, en utilisant les API.
 tags: cas usage, api particulier, transport
 image: transport.jpg
 noindex: false # this page will appear on Google
@@ -44,9 +44,11 @@ Dans ce dernier cas il convient d’utiliser [l’API particulier](https://api.g
 
 ## Les données disponibles
 
+⚠️ **Les données particulier de la DGFIP ne sont plus délivrées par l'API Particulier**. Pour accéder aux données fiscales des particuliers, utiliser l'[API Impôt Particulier - DGFIP](/les-api/impot-particulier).
+
 | Nom       | Description                                         |Statut   |Dispo sans FranceConnect | Administration|
 | --------- | --------- |----------------------------------------------------|-----------------|--------- |
-| [API Impôt particulier](https://api.gouv.fr/les-api/impot-particulier)  | Revenus déclarés auprès de l'administration fiscale |✅ En production   |[API Impôt particulier](https://api.gouv.fr/les-api/impot-particulier) - [API  particulier](https://api.gouv.fr/les-api/api-particulier)   |DGFiP   |
+| [API Impôt particulier](https://api.gouv.fr/les-api/impot-particulier)  | Revenus déclarés auprès de l'administration fiscale |✅ En production   |[API Impôt particulier](https://api.gouv.fr/les-api/impot-particulier) -  |DGFiP   |
 | [API Indemnités Journalières](https://api.gouv.fr/les-api/api-indemnites-journalieres-cnam)   | Montant des indemnités journalières de l'Assurance Maladie payé à un assuré sur une période|✅ En production   |Non prévu |CNAM |
 | [API de droits à l'Assurance Maladie](https://api.gouv.fr/les-api/api_ameli_droits_cnam) | Droits d’un individu ou d’une famille (enfants rattachés), gérés par le régime général de l’Assurance Maladie |✅ En production  |Non prévu |CNAM   |
 | [API Statut étudiant](https://api.gouv.fr/les-api/api-statut-etudiant)| Statut de l’inscription dans un établissement de l’enseignement supérieur |✅ En production  |[API  particulier](https://api.gouv.fr/les-api/api-particulier)|MESRI   |
