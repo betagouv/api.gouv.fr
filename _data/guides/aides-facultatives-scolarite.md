@@ -53,6 +53,8 @@ Ces API sont principalement utilisées dans la cadre de services ligne qui peuve
 | Statut étudiant boursier | [✅ API Particulier](/les-api/api-particulier) | [✅ API Statut étudiant boursier](/les-api/api-statut-etudiant-boursier) |
 | Scolarité | ⌛️ Fin 2022 | Non prévue |
 
+⚠️ **Les données particulier de la DGFIP ne sont plus délivrées par l'API Particulier**. Pour accéder aux données fiscales des particuliers, utiliser l'[API Impôt Particulier - DGFIP](/les-api/impot-particulier).
+
 ## Comment accéder aux données ?
 
 Les API sont disponibles - que les téléservices utilisent franceConnect ou non.
