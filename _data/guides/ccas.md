@@ -1,6 +1,6 @@
 ---
 title: Attribution des aides sociales dans les CCAS
-tagline: Vous êtes un CCAS ou un éditeur de logiciel ? Accédez facilement aux données de la CAF et de la DGFIP grâce à l'API Particulier et notre  accompagnement pas à pas.
+tagline: Vous êtes un CCAS ou un éditeur de logiciel ? Accédez facilement aux données de la CAF grâce à l'API Particulier et notre  accompagnement pas à pas.
 tags: cas usage, api particulier, CCAS
 image: dossier.jpg
 noindex: false # this page will appear on Google
@@ -14,12 +14,14 @@ Les Centres Communaux d'Action Sociale sont amenés à instruire de nombreux dos
 Ces dossiers utilisent généralement les données d’état-civil, l'adresse, le quotient familial de la Caisse d’Allocations Familiales (CAF), la composition du foyer, l'avis d'imposition.
 Avec la brique API Particulier vous avez la possibilité de diminuer les erreurs, réduire le risque de fraude et faciliter le traitement des dossiers par vos équipes en **accédant facilement aux données** nécessaires au calcul.
 
+⚠️ **Les données particulier de la DGFIP ne sont plus délivrées par l'API Particulier**. Pour accéder aux données fiscales des particuliers, utiliser l'[API Impôt Particulier - DGFIP](/les-api/impot-particulier).
+
 ## Simplifier l'instruction des dossiers dans un CCAS
 
 En intégrant la brique API Particulier dans votre système d'information, ou votre site internet :
 
 <Quote logo="/images/guides/sitiv.png" link='https://www.sitiv.fr/Actualites/L-action-sociale-des-villes-du-SITIV-integre-le-dispositif-Dites-le-nous-une-fois' who='Le SITIV' title='membre du réseau Déclic'>
-le principe du "Dites-le nous une fois" (...) permet aux citoyens de ne pas avoir à donner leur consentement mais d'être simplement informés de l'utilisation de leurs pièces.
+Le principe du "Dites-le nous une fois" (...) permet aux citoyens de ne pas avoir à donner leur consentement mais d'être simplement informés de l'utilisation de leurs pièces.
 C'est dans ce cadre que le SITIV intègre directement au logiciel métier les informations des usagers (...) Les saisies dans les dossiers usagers sont ainsi **facilitées et certifiées**.
 </Quote>
 
@@ -39,11 +41,11 @@ L'utilisation des données est encadrée légalement. Vous devez formuler une de
 <br/>
 <Button href="https://datapass.api.gouv.fr/api-particulier?demarche=ccas">Remplir une demande</Button>
 
-## Editeurs
+## Éditeurs
 
 Si vous travaillez avec l'un des éditeurs ou intégrateurs ci-dessous vous pouvez faire une demande simplifiée :
 
-| Editeur | Nom de la solution       |
+| Éditeur | Nom de la solution       |
 | ------- | ------------------------ |
 | ArcheMC2| ArcheMC2 Social          |
 | Arpège  | Sonate Opus              |
