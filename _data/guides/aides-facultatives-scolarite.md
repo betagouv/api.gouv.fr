@@ -47,7 +47,7 @@ Ces API sont principalement utilisées dans la cadre de services ligne qui peuve
 
 | Nom de la donnée | Disponibilité API Particulier | Disponibilité France Connect |
 | --- | --- | --- |
-| Données fiscales (DGFiP) | [✅ API Particulier](/les-api/api-particulier) | [✅ Données fiscales (DGFiP)](/les-api/impot-particulier) |
+| Données fiscales (DGFiP) | ❌ Disponible sur l'[API Impôt particulier - DGFIP](/les-api/impot-particulier) | [✅ Données fiscales (DGFiP)](/les-api/impot-particulier) |
 | Quotient famillial (CNAF) | [✅ API Particulier](/les-api/api-particulier) | ⌛️ Fin 2022 |
 | Statut étudiant | [✅ API Particulier](/les-api/api-particulier) | [✅ API Statut étudiant](/les-api/api-statut-etudiant) |
 | Statut étudiant boursier | [✅ API Particulier](/les-api/api-particulier) | [✅ API Statut étudiant boursier](/les-api/api-statut-etudiant-boursier) |
