@@ -1,6 +1,6 @@
 ---
 title: Tarification des services publics municipaux et scolaires
-tagline: Simplifiez le calcul des tarifs de la restauration scolaire, ou des activités périscolaires ou municipales dans votre colllectivité
+tagline: Simplifiez le calcul des tarifs de la restauration scolaire, ou des activités périscolaires ou municipales dans votre collectivité
 tags: cas usage, api particulier, portail famille, quotient familial dématérialisé, tarification restauration scolaire, tarification activités périscolaires
 image: portail_famille.jpg
 noindex: false # this page will appear on Google
@@ -15,15 +15,17 @@ Ce type de portail permet généralement de reserver et de payer en ligne les fa
 
 En général, le calcul des tarifs utilise le quotient familial de la Caisse d’Allocations Familiales (CAF) et/ou l'avis d'imposition (DGFIP) fournis par les citoyens.
 
-## Calcul du Quotient Famillial dématerialisé
+## Calcul du Quotient Familial dématerialisé
 
-En intégrant la brique API Particulier dans votre portail famille,  les familles peuvent obtennir une tarification immédiate et automatique, permise la liaison avec les données de la CAF et de la DGFiP. D'autres sources de données sont disponibles.
+En intégrant les API dans votre portail famille, les familles peuvent obtenir une tarification immédiate et automatique, permise grâce à la liaison avec les données de l'API Particulier et de la DGFIP. D'autres sources de données sont disponibles.
 
-En savoir plus sur les [données à disposition](https://api.gouv.fr/les-api/api-particulier#donnees-accessibles-dans-l'api) et sur la [méthodologie pour y accéder](https://api.gouv.fr/les-api/api-particulier#que-dois-je-faire-pour-utiliser-l'api-particulier-?)
+En savoir plus sur les [données mise à disposition par l'API Particulier](https://api.gouv.fr/les-api/api-particulier#donnees-accessibles-dans-l'api) et sur la [méthodologie pour y accéder](https://api.gouv.fr/les-api/api-particulier#que-dois-je-faire-pour-utiliser-l'api-particulier-?).
+
+⚠️ **Les données particulier de la DGFIP ne sont plus délivrées par l'API Particulier**. Pour accéder aux données fiscales des particuliers, utiliser l'[API Impôt Particulier - DGFIP](/les-api/impot-particulier).
 
 ## Cadre Juridique
 
-L'utilisation des données est encadrée légalement. Vous devez formuler une demande auprès de nos services et la motiver.
+L'utilisation des données est encadrée légalement. Vous devez formuler une demande auprès des services de l'API Particulier et/ou de la DGFIP en fournissant un cadre légal : 
 
 - L'article L114-8 du code des relations entre le public et l'administration fixe le cadre général des échanges de données au sein de l'administration ;
 - En tant que collectivités territoriales vous avez donc un droit d'accès à certaines données dans le cadre de demandes, services pro-actifs et déclarations usagers. Vérifiez et indiquez quel est l'objet de votre téléservices en cliquant sur le lien suivant : [Arrêté du 04/07/13 sur les téléservices](https://www.legifrance.gouv.fr/loda/id/JORFTEXT000027697207/#:~:text=Dans%20les%20r%C3%A9sum%C3%A9s-,Arr%C3%AAt%C3%A9%20du%204%20juillet%202013%20autorisant%20la%20mise%20en%20%C5%93uvre,publiques%20locales%20dont%20ils%20sont)
@@ -32,13 +34,13 @@ L'utilisation des données est encadrée légalement. Vous devez formuler une de
 
 
 <br/>
-<Button href="https://datapass.api.gouv.fr/api-particulier?demarche=ccas">Remplir une demande</Button>
+<Button href="https://datapass.api.gouv.fr/api-particulier?demarche=ccas">Remplir une demande API Particulier</Button>
 
-## Editeurs
+## Éditeurs
 
 Si vous travaillez avec l'un des éditeurs ou intégrateurs ci-dessous vous pouvez faire une demande pré-remplie :
 
-| Editeur                      | Nom de la solution            |
+| Éditeur                      | Nom de la solution            |
 | ---------------------------- | ----------------------------- |
 | Agora Plus                   | Agor@Famille Premium          |
 | Ciril Group                  | Civil Enfance                 |
