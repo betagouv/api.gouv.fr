@@ -1,6 +1,6 @@
 ---
 title: API Particulier
-tagline: Accédez à des données de plusieurs administrations pour simplifier les démarches de vos usagers (revenu fiscal de référence, quotient familial, statut demandeur d’emploi, statut étudiant et étudiant boursier...)
+tagline: Accédez à des données de plusieurs administrations pour simplifier les démarches de vos usagers (quotient familial, statut demandeur d’emploi, statut étudiant et étudiant boursier...)
 is_open: -1 # -1 means API not open
 datapass_link: https://datapass.api.gouv.fr/api-particulier
 access_page:
@@ -37,20 +37,17 @@ stat:
   url: https://status.api.gouv.fr/
   label: justificatifs papier évités
 partners:
-  - dgfip
   - CNAF
   - pole-emploi
-  - mesri
+  - mesr
 producer: dinum
 keywords:
-  - Impots
   - Quotient Familial
   - statut
   - étudiant
   - demandeur
   - emploi
   - ccas
-  - Revenu Fiscal de Référence
   - Adresse
   - Justificatif de domicile
 rate_limiting_resume: 20 appels / seconde / jeton
@@ -90,9 +87,11 @@ content_intro: |
 
 ## Données accessibles dans l'API Particulier
 
+⚠️ **Les données fiscales des particuliers de la DGFIP ne sont plus disponibles dans API Particulier**. Pour obtenir le revenu fiscal de référence, les informations sur les déclarants et le nombre de parts du foyer fiscal, il vous faut interroger directement ➤ [**l'API Impôt particulier*](https://api.gouv.fr/les-api/impot-particulier).
+
+
   | Donnée | Description | API Particulier | API FranceConnect |
-  |---------------------|---------------------------------------------- |------------------- |--------------------------- |
-  | [Données fiscales (DGFiP)](/les-api/api-particulier#donnees-fiscales)    | Revenu fiscal de référence, déclarants, nombre de parts  | ✅      | ✅                    |
+  |---------------------|---------------------------------------------- |------------------- |--------------------------- |               |
   | [Quotient familial (CNAF)](/les-api/api-particulier#quotient-familial)  | Quotient familial, composition familiale          | ✅                      | Fin 2022                   |
   | [Statut étudiant (MESRI)](/les-api/api-particulier#statut-etudiant)  | Statut, établissement | ✅                      | ✅                         |
   | [Statut étudiant boursier (CNOUS)](#statut-etudiant-boursier)| Statut, niveau de bourse                                     | ✅      | ✅                         |
@@ -120,53 +119,6 @@ content_intro: |
 - Je transmets le droit d'accès (token/jeton) à l'éditeur ou à mes développeurs.
 
 ## Détails sur les données
-
-#### Données fiscales
-
-<details>
-  <summary>Paramètres d'appel à renseigner par l'utilisateur</summary>
-
-| Donnée                       | Description                                                                                        |
-| ---------------------------- | -------------------------------------------------------------------------------------------------- |
-| Numéro fiscal                | Identifiant numérique de 13 chiffres                                                               |
-| Référence de l'avis fiscal   | Identifiant alphanumérique de 13 caractères (14 si dégrèvement)                                    |
-
-</details>
-
-<p>
-
-<details>
-  <summary>Liste des données</summary>
-| Donnée                       | Description                                                                                        |
-| ---------------------------- | -------------------------------------------------------------------------------------------------- |
-| Etat civil du /des déclarant(s)   | Nom, nom de naissance, prénom(s), date de naissance            |
-| Échéances de l'avis d'imposition  | Date de recouvrement, date d'établissement                            |
-| Situation du foyer fiscal  | Adresse, année de déclaration, nombre de parts, nombre de personnes à charge, situation de famille  |
-| Agrégats fiscaux   | Revenu brut global, revenu imposable, impôt sur le revenu net avant corrections, montant de l'impôt, revenu fiscal de référence, année de l'impôt, année des revenus   |
-
-</details>
-
-<p>
-
-<details>
-  <summary>Précisions sur les données</summary>
-
-⚠️ Attention : si vous comptez utiliser uniquement les données de la DGFIP, il convient d'utiliser l'API [impôt particulier](https://api.gouv.fr/les-api/impot-particulier)
-
-**Données complémentaires**
-
-Erreur correctif : ce scope complémentaire indique si un correctif plus récent que l'avis recherché est disponible.
-
-Situation partielle : ce scope retourne une réponse dans un foyer marié ou pacsé, quand un décès d'un des contribuables affiche les données de l’avis avec l’indication « situation partielle ». Les références de l’autre avis sont donc nécessaires pour le consulter.
-
-**Périmètre**
-
-Seules les données des deux dernières années sont disponibles. Par exemple en 2022, il n'est pas possible d'obtenir de données sur l'année 2020.
-
-Les déclarants du foyer fiscal sont la(le) contribuable elle(lui)-même et le(la) conjoint(e) ou partenaire de Pacs.
-
-L’Adresse est celle connue au 1er janvier de l’année d’imposition (exemple au 1er janvier 2022 pour les revenus de 2021).
-</details>
 
 #### Quotient familial
 
