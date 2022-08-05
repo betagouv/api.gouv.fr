@@ -64,12 +64,12 @@ visits_2019: 15831
 uptime: 99.992 # https://uptimerobot.com/dashboard#777746216 * https://uptimerobot.com/dashboard#778826562 / 2
 last_update: 31/03/2021
 content_intro: |
- L'API Particulier est un bouquet de données proposé pour simplifier les démarches administratives. L'API Particulier permet d'obtenir une multitude de données provenant d'administration différentes dans le cadre de démarches en ligne (appelée aussi formulaires en ligne ou téléservices). Un usage dans les logiciels métiers est aussi possible. 
+ L'API Particulier est un bouquet de données proposé pour simplifier les démarches administratives. L'API Particulier permet d'obtenir une multitude de données provenant d'administration différentes dans le cadre de démarches en ligne (appelée aussi formulaires en ligne ou téléservices). Un usage dans les logiciels métiers est aussi possible.
 
- 🔎 En savoir plus sur [les API](/guides/api-definition) 
+ 🔎 En savoir plus sur [les API](/guides/api-definition)
 
- **Avantages pour les administrations et collectivités :** 
- 
+ **Avantages pour les administrations et collectivités :**
+
   - Les informations sont certifiées par le fournisseur de données, il n'y a plus de saisie des données à effectuer.
   <Quote logo="/images/guides/clamart.svg" who='Ville de Clamart' title='Aurélie Coutant'>
   Maintenant que le traitement est automatisé, nous avons enfin le temps de mieux accompagner les usagers en difficulté, de leur expliquer plus largement les prestations auxquelles ils peuvent avoir accès.
@@ -87,8 +87,7 @@ content_intro: |
 
 ## Données accessibles dans l'API Particulier
 
-⚠️ **Les données fiscales des particuliers de la DGFIP ne sont plus disponibles dans API Particulier**. Pour obtenir le revenu fiscal de référence, les informations sur les déclarants et le nombre de parts du foyer fiscal, il vous faut interroger directement ➤ [**l'API Impôt particulier*](https://api.gouv.fr/les-api/impot-particulier).
-
+⚠️ Les données fiscales des particuliers ne sont plus disponibles via l'API Particulier, produit opéré par la DINUM. Pour obtenir ces données (ex : le revenu fiscal de référence, les informations sur les déclarants et le nombre de parts du foyer fiscal), veuillez désormais interroger directement l'API dédiée à l'accès aux données fiscales des particuliers [**l'API Impôt particulier** de la DGFiP](https://api.gouv.fr/les-api/impot-particulier).
 
   | Donnée | Description | API Particulier | API FranceConnect |
   |---------------------|---------------------------------------------- |------------------- |--------------------------- |               |
@@ -193,7 +192,7 @@ Ils sont mutuellement exclusifs
 
 Vous aurez à sélectionner des scopes de données dans votre demande. Voici leur fonctionnement :
 
-Deux scopes sont utilisés comme "masque de données". Ces données ne seront 
+Deux scopes sont utilisés comme "masque de données". Ces données ne seront
 donc pas retournées si le scope n'a pas été sélectionné.
 
 - "Etablissements" : renvoie le ou les établissements et code COG du lieu d'étude
@@ -207,7 +206,7 @@ Trois scopes ont été réalisés pour ne travailler que sur une population rest
 
 **Périmètre  :**
 
-Cette api délivre les données des étudiants inscrits dans les 
+Cette api délivre les données des étudiants inscrits dans les
 établissements sous tutelle du ministère de l'enseignement supérieur.
 
 La couverture des établissements du champ des étudiants sera progressivement complétée.
@@ -252,7 +251,7 @@ Informations à saisir par l'utilisateur (secrets) : Identifiant National Étudi
 
 Vous aurez à sélectionner des scopes de données dans votre demande. Voici leur fonctionnement :
 
-Deux scopes sont utilisés comme "masque de données". Ces données ne seront 
+Deux scopes sont utilisés comme "masque de données". Ces données ne seront
 donc pas retournées si le scope n'a pas été sélectionné.
 
 - "Etablissements" : renvoie le ou les établissements et code COG du lieu d'étude
