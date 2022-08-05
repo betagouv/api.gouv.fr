@@ -53,7 +53,7 @@ Ces API sont principalement utilisées dans la cadre de services ligne qui peuve
 | Statut étudiant boursier | [✅ API Particulier](/les-api/api-particulier) | [✅ API Statut étudiant boursier](/les-api/api-statut-etudiant-boursier) |
 | Scolarité | ⌛️ Fin 2022 | Non prévue |
 
-⚠️ Les données fiscales des particuliers ne sont plus disponibles via l'API Particulier, produit opéré par la DINUM. Pour obtenir ces données (ex : le revenu fiscal de référence, les informations sur les déclarants et le nombre de parts du foyer fiscal), veuillez désormais interroger directement l'API dédiée à l'accès aux données fiscales des particuliers [**l'API Impôt particulier** de la DGFiP](https://api.gouv.fr/les-api/impot-particulier).
+⚠️ **Les données fiscales des particuliers ne sont plus disponibles via l'API Particulier, produit opéré par la DINUM.** Pour obtenir ces données (ex : le revenu fiscal de référence, les informations sur les déclarants et le nombre de parts du foyer fiscal), veuillez désormais interroger directement l'API dédiée à l'accès aux données fiscales des particuliers [**l'API Impôt particulier** de la DGFiP](https://api.gouv.fr/les-api/impot-particulier).
 
 ## Comment accéder aux données ?
 

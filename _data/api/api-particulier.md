@@ -87,7 +87,7 @@ content_intro: |
 
 ## Données accessibles dans l'API Particulier
 
-⚠️ Les données fiscales des particuliers ne sont plus disponibles via l'API Particulier, produit opéré par la DINUM. Pour obtenir ces données (ex : le revenu fiscal de référence, les informations sur les déclarants et le nombre de parts du foyer fiscal), veuillez désormais interroger directement l'API dédiée à l'accès aux données fiscales des particuliers [**l'API Impôt particulier** de la DGFiP](https://api.gouv.fr/les-api/impot-particulier).
+⚠️ **Les données fiscales des particuliers ne sont plus disponibles via l'API Particulier, produit opéré par la DINUM.** Pour obtenir ces données (ex : le revenu fiscal de référence, les informations sur les déclarants et le nombre de parts du foyer fiscal), veuillez désormais interroger directement l'API dédiée à l'accès aux données fiscales des particuliers [**l'API Impôt particulier** de la DGFiP](https://api.gouv.fr/les-api/impot-particulier).
 
   | Donnée | Description | API Particulier | API FranceConnect |
   |---------------------|---------------------------------------------- |------------------- |--------------------------- |               |

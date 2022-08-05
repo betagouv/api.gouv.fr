@@ -14,7 +14,7 @@ Les Centres Communaux d'Action Sociale sont amenés à instruire de nombreux dos
 Ces dossiers utilisent généralement les données d’état-civil, l'adresse, le quotient familial de la Caisse d’Allocations Familiales (CAF), la composition du foyer, l'avis d'imposition.
 Avec la brique API Particulier vous avez la possibilité de diminuer les erreurs, réduire le risque de fraude et faciliter le traitement des dossiers par vos équipes en **accédant facilement aux données** nécessaires au calcul.
 
-⚠️ Les données fiscales des particuliers ne sont plus disponibles via l'API Particulier, produit opéré par la DINUM. Pour obtenir ces données (ex : le revenu fiscal de référence, les informations sur les déclarants et le nombre de parts du foyer fiscal), veuillez désormais interroger directement l'API dédiée à l'accès aux données fiscales des particuliers [**l'API Impôt particulier** de la DGFiP](https://api.gouv.fr/les-api/impot-particulier).
+⚠️ **Les données fiscales des particuliers ne sont plus disponibles via l'API Particulier, produit opéré par la DINUM.** Pour obtenir ces données (ex : le revenu fiscal de référence, les informations sur les déclarants et le nombre de parts du foyer fiscal), veuillez désormais interroger directement l'API dédiée à l'accès aux données fiscales des particuliers [**l'API Impôt particulier** de la DGFiP](https://api.gouv.fr/les-api/impot-particulier).
 
 ## Simplifier l'instruction des dossiers dans un CCAS
 
