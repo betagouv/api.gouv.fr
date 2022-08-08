@@ -70,6 +70,7 @@ Pour être informé de la sortie des nouvelles API et les tester en avant-premi�
 - [Géorivière, gérez et suivez vos cours d'eau](https://georiviere.fr/)
 - [Les pesticides dans les cours d'eau des Pays de la Loire](https://ssm-ecologie.shinyapps.io/qualite-des-eaux/)
 - [Les nitrates dans les cours d'eau et les nappes souterraines des Pays de la Loire](https://ssm-ecologie.shinyapps.io/nitrates_eau/)
+- [Qualité des lacs et cours d'eau (visualiseur des APIs qualité physico-chimique des cours d'eau, hydrobiologie et température de Hub'Eau)](https://hubeau.eaufrance.fr/sites/default/files/api/demo/qualriv.htm)
 - [Soumettez le votre sur la page GitHub des utilisateurs de Hub'Eau](https://github.com/BRGM/hubeau)
 
 ### Glossaire
