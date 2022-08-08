@@ -17,9 +17,9 @@ contact_link: newshubeau@brgm.fr
 doc_tech_link: https://hubeau.eaufrance.fr/api/vbeta/qualite_eau_potable/api-docs
 themes:
   - Environnement
-last_update: 26/11/2021
+last_update: 08/08/2022
 content_intro: |
-  [La nouvelle API Qualité de l'eau potable](https://hubeau.eaufrance.fr/page/api-qualite-eau-potable) diffuse le jeu de données "DIS" (résultats du contrôle sanitaire de l'eau distribuée commune par commune) mis en ligne par le Ministère des Solidarités et de la Santé sur le portail data.gouv.fr
+  [L'API Qualité de l'eau potable](https://hubeau.eaufrance.fr/page/api-qualite-eau-potable) de Hub'Eau diffuse le jeu de données "DIS" (résultats du contrôle sanitaire de l'eau distribuée commune par commune) mis en ligne par le Ministère des Solidarités et de la Santé sur le portail data.gouv.fr
 ---
 
 ### Description fonctionnelle de l'API Qualité de l'eau potable
@@ -62,7 +62,7 @@ D'une durée de quelques mois, ces campagnes ont pour objectif de recueillir un 
 Pour être informé de la sortie des nouvelles API et les tester en avant-première, inscrivez-vous à la [newsletter](https://hubeau.eaufrance.fr/newsletter) !
 
 ### Exemples de réutilisation
-
+- [Qualité de l'eau potable des 12 derniers mois sur Aix-Marseille-Provence](https://data.ampmetropole.fr/explore/dataset/ls-qualite-de-leau-potable-12-mois/table/)
 - [Soumettez le votre sur la page GitHub des utilisateurs de Hub'Eau](https://github.com/BRGM/hubeau)
 
 ### Glossaire
