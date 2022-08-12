@@ -15,7 +15,7 @@ publish: false # this page will appear on /guides page
 
 ## Liste des paiements
 
-Ce service permet de récupérer la liste des paiements d'un demandeur d'emploi connecté (jeton France Connect) pour la période d’inscription en cours.
+A partir de d'identifiant d'individu, à savoir son “Code territoire” et son “Identifiant Regional”, ce service permet de récupérer la liste des paiements d'un demandeur d'emploi pour la période d’inscription en cours.
 
 ### Description de la requête
 
