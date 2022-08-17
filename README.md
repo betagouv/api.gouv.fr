@@ -86,6 +86,44 @@ npm run build
 PORT=3000 npm run start
 ```
 
+
+
+### Tests
+
+1. Linter
+
+```bash
+npm run lint
+```
+
+2. Tests unitaires
+
+```bash
+npm run test
+```
+
+3. Autres tests
+
+```bash
+// a11y
+npm run check-accessibility
+
+//404
+npm run check-broken-links
+
+// no link to datapass staging
+npm run check-no-datapass-staging
+```
+
+### Miniatures
+
+Avant chaque commit est lancé un script qui redimmensionne et compresse les images des pages de guides :
+
+```bash
+// a11y
+npm run create-thumbnail
+```
+
 ### Preview apps
 
 Chaque pull request est déployé dans des [review app](https://devcenter.heroku.com/articles/github-integration-review-apps) sur [Heroku](https://dashboard.heroku.com/)
