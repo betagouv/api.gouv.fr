@@ -89,3 +89,16 @@ PORT=3000 npm run start
 ### Preview apps
 
 Chaque pull request est déployé dans des [review app](https://devcenter.heroku.com/articles/github-integration-review-apps) sur [Heroku](https://dashboard.heroku.com/)
+
+### Deploiement
+
+Le déploiement se fait par (Github action)[https://github.com/betagouv/api.gouv.fr/actions]
+
+A chaque "merge" sur master : 
+
+- Laissez le déploiement se faire automatiquement sur (staging)[https://staging.api.gouv.fr] via l'action (deploy-staging)[https://github.com/betagouv/api.gouv.fr/actions/workflows/deploy-staging.yml]
+- Vérifiez vos changements sur (staging)[https://staging.api.gouv.fr]
+- Lancez manuellement le déploiement sur (production)[https://api.gouv.fr] : sur (deploy-production)[https://github.com/betagouv/api.gouv.fr/actions/workflows/deploy-production.yml] et cliquez sur "Run workflow" -> "Run workflow"
+
+NB: Si plusieurs déploiements sont déclenchés en même temps, seul le premier va jusqu'au bout. Les autres sont automatiquement interrompus.
+
