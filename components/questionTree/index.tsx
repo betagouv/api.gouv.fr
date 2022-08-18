@@ -129,6 +129,8 @@ const formatCategoryName = (title: string | undefined) => {
       return 'API Entreprise';
     case 'france-connected-api':
       return 'FranceConnect et les API FranceConnectées';
+    case 'api-particulier':
+      return 'API Particulier';
     default:
       return '*';
   }
