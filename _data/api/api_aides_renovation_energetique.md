@@ -18,7 +18,7 @@ rate_limiting_resume: 10 appels / seconde / IP
 themes:
   - Environnement
 contact_link: https://www.ademe.fr/content/contacter
-doc_tech_link: https://koumoul.com/s/data-fair/api/v1/datasets/simul'aideuros-dispositifs/api-docs.json
+doc_tech_link: https://data.ademe.fr/data-fair/api/v1/datasets/simul'aideuros-dispositifs/api-docs.json
 doc_tech_external: https://data.ademe.fr/datasets/simul'aideuros-dispositifs
 datagouv_uuid:
   - 5fcf368c7b470cf97746c4c1
@@ -42,7 +42,7 @@ L'API Aides financières à la rénovation énergetique permet d'interroger la l
 
 L’outil, proposé dans la France entière, y compris l’outremer, est encore en cours de déploiement en Bourgogne-Franche Comté, Aura et Pays de Loire ce qui explique une « sous-représentation » de certaines régions dans la base de données mise à disposition. Il est disponible sous forme d'IFRAME (contact : <a href='mailto:simulaides@ademe.fr'>simulaides@ademe.fr</a>)
 
-Cette liste est accompagnée [d'un lexique des données Simul'Aid€s](https://koumoul.com/s/data-fair/api/v1/datasets/simul'aideuros-dispositifs/metadata-attachments/Simulaide_lexique_donn%C3%A9es.pdf) afin d’en faciliter la compréhension.
+Cette liste est accompagnée [d'un lexique des données Simul'Aid€s](https://data.ademe.fr/data-fair/api/v1/datasets/simul'aideuros-dispositifs/metadata-attachments/Simulaide_lexique_donn%C3%A9es.pdf) afin d’en faciliter la compréhension.
 
 Vous pouvez également consulter la [la moyenne des coûts de travaux](https://data.ademe.fr/datasets/simul'aideuros-cout-des-travaux), saisis par les ménages.
 

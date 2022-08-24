@@ -15,7 +15,7 @@ rate_limiting_resume: 10 appels / seconde / IP
 themes:
   - Environnement
 contact_link: https://www.ademe.fr/content/contacter
-doc_tech_link: https://koumoul.com/s/data-fair/api/v1/datasets/dpe-france/api-docs.json
+doc_tech_link: https://data.ademe.fr/data-fair/api/v1/datasets/dpe-france/api-docs.json
 doc_tech_external: https://data.ademe.fr/datasets/dpe-france
 datagouv_uuid:
   - 5ee2391763c79811ddfbc86a
