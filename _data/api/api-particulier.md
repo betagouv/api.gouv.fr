@@ -118,8 +118,8 @@ L'API Particulier n'est pas France connectée. Certaines des données de l'API P
   | **Quotient familial CAF** - CNAF | _Disponible fin 2023_         |
   | **Statut étudiant** - MESR |  ✅ [API Statut Étudiant](les-api/api-statut-etudiant) |
   | **Statut étudiant boursier** - Cnous   | ✅ [API Statut Étudiant boursier](les-api/api-statut-etudiant-boursier)                      |
-  | **Statut demandeur d'emploi** - Pôle Emploi | _En cours de test_          |
-
+  | **Statut demandeur d'emploi** - Pôle Emploi | ✅ [API statut demandeur d'emploi](les-api/api-statut-demandeur-emploi)   |
+  | **Indemnisation Pôle emploi** - Pôle Emploi | ✅ [API indemnisation Pôle emploi](les-api/api-indemnisation-pole-emploi)       |
 
 🔎 En savoir plus sur [les API](https://api.gouv.fr/guides/api-definition) et les [API France Connectées](https://api.gouv.fr/guides/api-franceconnectees).
 
