@@ -2,6 +2,7 @@
 title: API statut demandeur d'emploi
 tagline: Vérifier si une personne a le statut de demandeur d'emploi sans lui demander de justificatif
 is_open: -1 # -1 means API not open
+is_france_connected: 1
 access_page:
   - who:
       - Un particulier
