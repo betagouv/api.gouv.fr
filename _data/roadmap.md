@@ -333,14 +333,20 @@
     - type: ADD_API
       what: Mobilic, par le Ministère de la Transition Ecologique
       path: /les-api/api-mobilic
+  8:
+    - type: ADD_API
+      what: Indemnisation Pôle Emploi, par Pôle Emploi
+      path: /les-api/api-indemnisation-pole-emploi
+    - type: ADD_API
+      what: Statut demandeur d'emploi (FranceConnect), par Pôle Emploi
+      path: /les-api/api-statut-demandeur-emploi
+  9:
     - type: ADD_API
       what: Prestations sociales par la Direction de la Sécurité Sociale
     - type: ADD_API
-      what: Indemnités Pôle Emploi, par Pôle Emploi
-    - type: ADD_API
-      what: Statut demandeur d'emploi (FranceConnect), par Pôle Emploi
-    - type: ADD_API
       what: Historique d'un véhicule (HistoVec), par le Ministère de l'Intérieur
+    - type: ADD_API
+      what: Rendez-vous permis, par le Ministère de l'Intérieur
   12:
     - type: ADD_API
       what: Données foncières par le CEREMA
