@@ -340,6 +340,12 @@
     - type: ADD_API
       what: Statut demandeur d'emploi (FranceConnect), par Pôle Emploi
       path: /les-api/api-statut-demandeur-emploi
+    - type: ADD_API
+      what: Ecobalyse, par le Ministère de la Transition Ecologique
+      path: /les-api/api-ecobalyse
+    - type: ADD_API
+      what: Mon entreprise, par l'URSSAF
+      path: /les-api/api-mon-entreprise
   9:
     - type: ADD_API
       what: Prestations sociales par la Direction de la Sécurité Sociale
