@@ -4,7 +4,7 @@ tagline: Utilisez les API dans vos services en ligne pour simplifier les démarc
 tags: cas usage, adresse, geo, postal, commune
 image: dossier.jpg
 noindex: false # this page will appear on Google
-publish: true # this page will appear on /guides page
+publish: false # this page will appear on /guides page
 api:
   - API Entreprise
   - API Fichier des Comptes Bancaires et Assimilés (FICOBA)
