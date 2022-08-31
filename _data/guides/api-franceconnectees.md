@@ -11,6 +11,8 @@ api:
   - API Statut Etudiant
   - API Statut étudiant boursier
   - API Indemnités journalières de la CNAM
+  - API Indemnisation Pôle emploi
+  - API statut demandeur d'emploi
 ---
 
 FranceConnect permet au citoyen de s'authentifier à de nombreux services de l'administration. Ce dispositif permet d'utiliser un compte existant sur impots.fr ou ameli.fr par exemple, afin d'accéder à tous les services de l'administration (<External href="https://franceconnect.gouv.fr/partenaires">en savoir plus sur FranceConnect</External>).
@@ -58,8 +60,8 @@ L'aide juridictionnelle est une prise en charge par l'État des frais judiciaire
 | [API de droits à l'Assurance Maladie](https://api.gouv.fr/les-api/api_ameli_droits_cnam) | Droits d’un individu ou d’une famille (enfants rattachés), gérés par le régime général de l’Assurance Maladie |✅ En production  |Non prévu |CNAM   |
 | [API Statut étudiant](https://api.gouv.fr/les-api/api-statut-etudiant)| Statut de l’inscription dans un établissement de l’enseignement supérieur |✅ En production  |[API  particulier](https://api.gouv.fr/les-api/api-particulier)|MESRI   |
 | [API Statut étudiant boursier](https://api.gouv.fr/les-api/api-statut-etudiant-boursier)| Statut d’étudiant boursier  |✅ En production  | [API  particulier](https://api.gouv.fr/les-api/api-particulier) |CNOUS / MESRI                                          |
-| API statut demandeur d'emploi   |Statut et catégorie (A,B,C,D)   |⌛️ bientôt disponible |[API  particulier](https://api.gouv.fr/les-api/api-particulier)| Pôle Emploi                        |
-| API Indemnités Pôle emploi   | Montant des indemnités versées par pôle emploi   |⌛️ bientôt disponible|⌛️ bientôt disponible |Pôle Emploi                        |
+| [API statut demandeur d'emploi](/les-api/api-statut-demandeur-emploi)   |Statut et catégorie (A,B,C,D)   |✅ En production |[API  particulier](https://api.gouv.fr/les-api/api-particulier)| Pôle Emploi                        |
+| [API Indemnités Pôle emploi](/les-api/api-indemnisation-pole-emploi)   | Montant des indemnités versées par pôle emploi   |✅ En production|⌛️ bientôt disponible |Pôle Emploi                        |
 | API Prestations sociales   | Inscription au RSA, bénéficiaires de la CSS (complémentaire sociale solidaire) |⌛️ bientôt disponible   |⌛️ bientôt disponible|DSS |
 |API scolarité | attestation de socolarité, apprenti, boursier |Mars 2023  |fin 2022|MEN|
 |API quotient familial | Quotient familial, composition familiale|En cours de spécification  | [API  particulier](https://api.gouv.fr/les-api/api-particulier)|CNAF|
