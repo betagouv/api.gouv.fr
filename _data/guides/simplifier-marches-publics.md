@@ -3,7 +3,7 @@ title: Simplifier la gestion marchés publics
 tagline: Utilisez les API dans vos services en ligne pour simplifier les démarches des étudiants 
 tags: cas usage, adresse, geo, postal, commune
 image: dossier.jpg
-noindex: false # this page will appear on Google
+noindex: true # this page will appear on Google
 publish: false # this page will appear on /guides page
 api:
   - API Entreprise
