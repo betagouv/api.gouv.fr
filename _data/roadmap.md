@@ -348,6 +348,9 @@
       path: /les-api/api-mon-entreprise
   9:
     - type: ADD_API
+      what: Fichier des décès, par le Ministère de l'Intérieur
+      path: /les-api/api-fichier-deces
+    - type: ADD_API
       what: Prestations sociales par la Direction de la Sécurité Sociale
     - type: ADD_API
       what: Historique d'un véhicule (HistoVec), par le Ministère de l'Intérieur
