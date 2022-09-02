@@ -83,7 +83,7 @@ content_intro: |
 
   ⚠️ Pour les administrations qui ne proposent pas la connexion via FranceConnect ou pour lesquelles les démarches en ligne sont accessibles également sans FranceConnect, les mêmes données sont **disponibles dans [l'API Particulier](/les-api/api-particulier) (à compter de décembre 2022).**
 
-  Cette API à un intérêt à être mobilisée en complément de l'API statut demandeur d'emploi, version FranceConnectée, qui sera disponible à compter de juin 2022. 
+  Cette API à un intérêt à être mobilisée en complément de [l'API statut demandeur d'emploi, version FranceConnectée](/les-api/api-statut-demandeur-emploi). 
 
   ### Quel est le périmètre de l'API ?
 
@@ -93,8 +93,13 @@ content_intro: |
 
 ### Détail sur les données accessibles dans l'API
 
-L'API retourne pour les usagers reconnus comme demandeur d’emploi inscrits la liste des paiements reçus depuis la dernière inscription et ceci par mois et par spécificité de paiement.
-
+<details>
+<summary>Paramètres d'appel</summary>
+Non applicable : identité pivot France Connect
+</details>
+<br>
+<details>
+<summary>Liste des données</summary>
 | Donnée                                | Description                                                                                       |
 | ------------------------------------- | ------------------------------------------------------------------------------------------------- |
 | Date de paiement                      | Date à laquelle le dernier versement a été fait au demandeur d’emploi                             |
@@ -102,3 +107,10 @@ L'API retourne pour les usagers reconnus comme demandeur d’emploi inscrits la 
 | Montant correspondants aux paiements d’allocations | Permet d’en connaitre de la part du montant total lié à une allocation Pôle emploi en situation de recherche ou de formation (ARE, ASP, AER, ASS, RFPE, AFD, RFF, AAP …) |
 | Montant correspondant aux paiements d’aide  | Permet d’en connaitre de la part du montant total lié à une aide complémentaire à l’allocation (Aide à la reprise et à la création d’entreprise, Aide à la mobilité, ..)     |
 | Montant correspondant à d’autres paiements  | Permet d’en connaitre de la part du montant total lié à d’autres paiements exceptionnels (Prime de Noël, Acompte, Avance, reversement)​  |
+</details>
+<br>
+<details>
+<summary>Précisions sur les donnéesl</summary>
+L'API retourne pour les usagers reconnus comme demandeur d’emploi inscrits la liste des paiements reçus depuis la dernière inscription et ceci par mois et par spécificité de paiement.
+</details>
+

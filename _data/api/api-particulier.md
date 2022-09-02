@@ -75,18 +75,23 @@ content_intro: |
   ### À quoi sert l’API Particulier ?
 
   **En tant qu'administration ou collectivité**, en intégrant la brique API Particulier dans votre système d’information ou votre site internet :
-
-  - Vous n’avez **plus besoin de demander certains justificatifs** aux particuliers ;
-  - Vous n’avez pas de vérification supplémentaire à réaliser car les **informations sont certifiées** ;
-  - Vous accédez avec un seul compte aux **données de différents fournisseurs** : la Caisse nationale des allocations familiales (CNAF), Pôle-emploi, le ministère de l'enseignement supérieur et de la recherche (MESR) et enfin le Centre national des œuvres universitaires et scolaires (Cnous).
+  
+  ✅ Vous n’avez **plus besoin de demander certains justificatifs** aux particuliers ;
+  
+  ✅ Vous n’avez pas de vérification supplémentaire à réaliser car les **informations sont certifiées** 
+  
+  ✅ Vous accédez avec un seul compte aux **données de différents fournisseurs** : 
+    la Caisse nationale des allocations familiales (CNAF), Pôle-emploi, le ministère de l'enseignement supérieur et de la recherche (MESR) et enfin le Centre national des œuvres universitaires et scolaires (Cnous).
 
     <Quote logo="/images/guides/clamart.svg" who='Ville de Clamart' title='Aurélie Coutant'>
     Maintenant que le traitement est automatisé, nous avons enfin le temps de mieux accompagner les usagers en difficulté, de leur expliquer plus largement les prestations auxquelles ils peuvent avoir accès.
     </Quote>
 
   **C'est aussi plus simple pour vos usagers !**
-  - Leur démarche est réalisable 100% en ligne autant qu'en guichet.
-  - Ils n'ont plus besoin de rassembler et saisir les documents ou informations déjà connues de l'administration.
+
+  ✅ Leur démarche est réalisable 100% en ligne autant qu'en guichet ;
+  
+  ✅ Ils n'ont plus besoin de rassembler et saisir les documents ou informations déjà connues de l'administration.
 
     <Quote logo="/images/guides/clamart.svg" who='Ville de Clamart' title='Simon-Pierre Chalvidan'>
     En 2014, nos usagers prenaient une demi-journée de congés pour effectuer leurs démarches en mairie. Aujourd'hui, ils les effectuent en ligne en 5 minutes.
