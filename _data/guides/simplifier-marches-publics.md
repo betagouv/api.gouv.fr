@@ -1,6 +1,6 @@
 ---
 title: Simplifier la gestion marchés publics
-tagline: Utilisez les API dans vos services en ligne pour simplifier les démarches des étudiants 
+tagline: Utilisez les API pour faciliter les candidatures aux appels d'offre et simplifier l'instruction des dossiers
 tags: cas usage, adresse, geo, postal, commune
 image: dossier.jpg
 noindex: true # this page will appear on Google
@@ -16,13 +16,13 @@ api:
 Lorsqu’un appel d’offre est lancé par votre administration, des entreprises peuvent y candidater pour proposer leurs prestations.
 
 Dans ce cadre, de nombreux justificatifs sont demandés aux entreprises, et vérifiés par l’administration.
-La multiplicité des données traitées nécessite du temps à la fois pour les entreprises candidates et pour les administrations en charge du suivi des dossiers.
+La multiplicité des données traitées nécessite du temps à la fois pour les entreprises candidates et pour les administrations en charge du suivi et de l'instruction des dossiers.
 
 Pour y remédier, [api.gouv.fr](http://api.gouv.fr) référence des API et des bouquets d’API permettant de faciliter l’instruction des dossiers.
 
 ### 📨 Faciliter le dépôt des candidatures
 
-Le dépôt des candidatures peut être simplifié, en pré-remplissant les formulaire des entreprises et associations. Les informations les concernant sont automatiquement insérées lorsqu’elles ont entré leur numéro SIRET ou RNA.
+Le dépôt des candidatures peut être simplifié, en pré-remplissant les formulaires des entreprises et associations. Les informations les concernant sont automatiquement insérées lorsqu’elles ont entré leur numéro SIRET ou RNA.
 
 ### ⏰ Accélérer la construction **du dossier et le travail de l’organisation publique instructrice**
 
@@ -38,13 +38,13 @@ Dans le cadre des appels d’offre émis par les administrations, les entreprise
 
 Les administrations sont tenues de vérifier que le RIB saisi est correct, et qu’il est bien rattaché à l’entité juridique qui candidate (SIRET).
 
-L’API FICOBA permet d’effectuer cette vérification de manière automatique.
+L’[API FICOBA](/les-api/api_comptes_bancaires_ficoba) permet d’effectuer cette vérification de manière automatique.
 
 ## **Ce que cela change pour vous, administrations**
 
 En intégrant les API dans votre système d’information ou votre site internet :
 
-- ✅ Vous **accédez facilement aux données** de l’Insee, la DGFIP, l’URSSAF, etc. ;
+- ✅ Vous **accédez facilement aux données publiques** nécessaires au suivi et à l'instruction des marchés publics ;
 - ✅ Vous n’avez **plus besoin de demander et re-demander certains justificatifs** aux entreprises ;
 - ✅ Vous n’avez pas de vérification supplémentaire à réaliser car les **informations sont certifiées à la source**.
 
