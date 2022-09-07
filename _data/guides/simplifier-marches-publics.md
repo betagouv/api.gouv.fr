@@ -1,6 +1,6 @@
 ---
 title: Simplifier la gestion marchés publics
-tagline: Utilisez les API pour faciliter les candidatures aux appels d'offre et instruire les dossiers
+tagline: Utilisez les API pour faciliter les candidatures aux appels d'offre et simplifier l'instruction des dossiers
 tags: cas usage, adresse, geo, postal, commune
 image: dossier.jpg
 noindex: true # this page will appear on Google
