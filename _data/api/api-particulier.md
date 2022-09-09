@@ -254,7 +254,7 @@ _Source_ : [data.caf.fr](http://data.caf.fr/dataset/population-des-foyers-alloca
 
 ### API Statut étudiant - MESR <a name="doc-api-statut-etudiant-mesr"></a>
 
-Liste des inscriptions - et pré-inscriptions pour le CROUS - aux établissements d'enseignement supérieur.
+Liste des inscriptions - et pré-inscriptions pour le CROUS - aux établissements d'enseignement supérieur d'un étudiant.
   
 **Format de la donnée** : JSON 
   
@@ -387,6 +387,10 @@ La distinction principale entre formation initiale et formation continue est le 
 </details>
 
 ### API Statut étudiant boursier - Cnous <a name="doc-api-statut-etudiant-boursier-cnous"></a>
+  
+Statut boursier d'un étudiant.
+
+**Format de la donnée** : JSON
 
 <details>
   <summary>Paramètres d'appel</summary>
@@ -408,47 +412,68 @@ Pour appeler l'API statut étudiant boursier, deux modes d'appel sont possibles 
 
 | Donnée                       | Description                          |
 | ---------------------------- | ------------------------------------ |
-| Identifiant National Étudiant (INE)| Numéro à 11 caractères, _par exemple 990000001HH_                            |
+| Identifiant National Étudiant (INE)| Numéro à 11 caractères, _par exemple 990000001HH_     |
 
 </details>
 
+<p>
+  
+<details>
+  <summary>Périmètre de l'API</summary>
+  
+#### Particuliers concernés :
+
+Cette API délivre **uniquement les bourses "obligatoires"**, elle ne concerne par les bourses d'ordre facultatif. Le périmètre n'est pas exhaustif à ce jour.
+  
+L'API délivre les données : 
+
+- ✅ des **boursiers d’État sur critères sociaux (gérés par les Crous)** ;
+- des **boursiers sur critères sociaux des filières sanitaires et sociales** des régions Normandie et Occitanie.
+
+L'API ne délivre pas encore les infos des ❌ étudiants boursiers étrangers.
+  
+#### Périmètre géographique :
+  
+Uniquement les informations des boursiers de nationalité française.
+L'API couvre : 
+- le ✅ territoire français, dont les ✅ DROM. 
+- ❌ Les territoires d'outre-mer ne sont pas couverts.
+  
+Pour les boursiers sur critères sociaux des filières sanitaires et sociales, d'autres régions devraient être couvertes à l'avenir.
+  
+#### Fréquence de mise à jour des données :
+  
+Les données sont **mises à jour une fois par an, début septembre, une fois tous les étudiants inscrits**.
+
+</details>
+  
 <p>
 
 <details>
   <summary>Liste des données</summary>
+  
 
-| Donnée                             | Description                                                                   |
-| ---------------------------------- | ----------------------------------------------------------------------------- |
-| Statut boursier                    | Indique si l'étudiant est boursier                                            |
-| Échelon de la bourse               | Échelon de la bourse de 0bis à 8                                              |
-| e-mail                              | Adresse e-mail                                                                  |
-| Période de versement / Date de rentrée  | Date de début de rentrée scolaire ou universitaire  et durée de versement de la bourse  |
-| Statut de la bourse                | Statut définitif ou provisoire (conditionnel)                                |
-| Ville d'étude                      | Libellé de la ville d'étude                                                   |
+| Donnée d'identité de l'étudiant    | Description                              | Exemple             |
+| ---------------------------------- | -----------------------------------------|-------------------- |
+| Nom                                |                                          |      `Martin`       |
+| Prénoms                            |                                          |   `Camille`         |
+| Date de naissance                  |                                          |  `2000-01-01`       |
+| Lieu de naissance                  |         Libellé de la commune de naissance        |     `Poitiers`         |
+| Sexe                  |                |     `M` ou  `F`      |
 
-</details>
-
-<p>
-
-<details>
-  <summary>Précisions sur les données</summary>
-
-**Périmètre  :**
-L’API délivre les données des étudiants boursiers :
-
-- **Boursiers d’État** sur critères sociaux (gérés par les Crous) ;
-- **Boursiers sur critères sociaux des filières sanitaires et sociales des régions.**
-
-#### Liste des régions dont les données sont disponibles dans l'API
-
-⚠️ La liste des boursiers gérés par les régions, disponible dans cette API, sera mise à jour dès mise à disposition des informations.
- L’API à ce jour, couvre uniquement le périmètre des boursiers sur critères sociaux à l’exception des boursiers Campus France et des autres bourses.
-
-**Régions disponibles**
-
-- Normandie
+| Donnée                             | Description                      |    Exemple       |
+| ---------------------------------- | -------------------------------- | ----------- |
+| Statut boursier        | Indique si l'étudiant est boursier |          `true`   ou `false`         |
+| Échelon de la bourse   | Correspond au montant reçu pour l'année scolaire. Il y a 8 échelon de bourse, de 0bis à 7. Chaque échelon est composé de deux montants, le premier correspondant au montant versé pour 10 mois ; le second, plus élevé, pour les étudiants bénéficiant du maintien de la bourse pendant les grandes vacances universitaires. <br> Les taux sont fixé par arrêté, la [page dédiée sur Service-public.fr](https://www.service-public.fr/particuliers/vosdroits/F12214) détaille les montants et vous permettra de retrouver l'arrêté de l'année en cours.    |  `0bis`, `1`, `2`, `3`, `4`, `5`, `6`, `7`   |
+|  Date de rentrée  | Date de début de rentrée scolaire ou universitaire     |    |
+|  Durée de versement de la bourse  | Nombre de mois de versement de la bourse  |   `12` |
+| Statut de la bourse    | Statut définitif ou provisoire (conditionnel)     | `0` ou  >=`1`|
+| Ville d'étude          | Libellé de la ville d'étude                       | `Paris` |
+| Établissement          |                                                   |`Carnot` |
+| E-mail                 | Adresse e-mail                                    | |
 
 </details>
+
 
 ### API Statut demandeur d'emploi - Pôle emploi <a name="doc-api-statut-demandeur-emploi-pole-emploi"></a>
 
