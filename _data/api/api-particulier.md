@@ -163,7 +163,7 @@ Vous pouvez nous demander de vous référencer sur un cas d'usage afin de propos
 
 Quotient familial et composition de la famille d'un allocataire de la Caisse nationale des allocations familiales (CNAF).
 
-**Format des données délivrées** : JSON
+**Format de la donnée** : JSON
 
 <details>
   <summary>Paramètres d'appel</summary>
@@ -349,7 +349,7 @@ Ce filtrage s'effectue dès la demande d'habilitation, où vous devrez cocher re
 <details>
   <summary>Liste des données</summary>
   
-Cette API délivre les informations de l'étudiant sur l'**année en cours** : sa civilité et la liste de ses admissions et inscriptions dans les différents établissements.
+Cette API délivre les informations de l'étudiant sur l'**année en cours** : 
 
 | Donnée d'identité de l'étudiant    | Description                              | Exemple             |
 | ---------------------------------- | -----------------------------------------|-------------------- |
@@ -358,7 +358,7 @@ Cette API délivre les informations de l'étudiant sur l'**année en cours** : s
 | Date de naissance                  |                                          |  `2000-01-01`       |
 | Lieu de naissance                  |         Code insee ou code postal        |     `35315`         |
   
-| Liste des inscriptions <br> _techniquement jusqu'à 10_ <br> Avec pour chaque inscription :  | Description       | Exemple   |
+| Liste des inscriptions             | Description       | Exemple   |
 | ---------------------------------- | -----------------------------------------|-------------------- |
 | Date de début                      |    Début de la période d'étude           |      `2023-09-01`   |
 | Date de fin                        |    Fin de la période d'étude             |   `2023-08-31`      |
@@ -367,7 +367,8 @@ Cette API délivre les informations de l'étudiant sur l'**année en cours** : s
 | Nom de l'établissement  |                    |   `EGC AIN BOURG EN BRESSE EC GESTION ET COMMERCE (01000)`      |
 | Identifiant de l'établissement UAI  |                      |   `0011402U`      |
 | Lieu d'étude |          Code Insee ou code COG de la commune         |   `75115`      |
-                                          |
+  
+ℹ️ Le nombre d'inscriptions est techniquement de 10 au maximum.
 
 </details>
 
@@ -375,29 +376,14 @@ Cette API délivre les informations de l'étudiant sur l'**année en cours** : s
 
 <details>
   <summary>Précisions sur les données</summary>
+  
+#### Quelle différence entre formation continue, la reprise d'études et la formation initiale ?
+  
+La **formation initiale** correspond à un parcours d’études amorcé à l’école élémentaire et suivi sans interruption de plus d’un an. S'il y a interruption, il s’agit d'une **reprise d’études**.
 
-Vous aurez à sélectionner des scopes de données dans votre demande. Voici leur fonctionnement :
+La **formation continue** est, quant à elle, destinée aux salariés, employés ou demandeurs d’emploi. Elle a pour objectif de conforter, améliorer ou acquérir des connaissances professionnelles au-delà de la formation initiale. 
+La distinction principale entre formation initiale et formation continue est le critère de conventionnement, spécifique à la formation continue et qui se traduit par la signature d’une convention ou d’un contrat de formation professionnelle entre la personne et l’établissement formateur tel qu’il est décrit dans les [articles L.6353-1 à L. 6353-7 du Code du travail](https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006072050/LEGISCTA000006178215/#LEGISCTA000006178215) et l’[article D. 714-62 du Code de l’éducation](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000027866356/).
 
-Deux scopes sont utilisés comme "masque de données". Ces données ne seront
-donc pas retournées si le scope n'a pas été sélectionné.
-
-- "Etablissements" : renvoie le ou les établissements et code COG du lieu d'étude
-- "INE (Identifiant National Etudiant)"
-
-Trois scopes ont été réalisés pour ne travailler que sur une population restreinte
-
-- "Admission" : si ce scope est sélectionné la recherche de l'étudiant s'effectuera sur la population restreinte aux seuls admis (inscription non-définitive).
-- "Inscription en formation initiale"
-- "Inscription en formation continue"
-
-**Périmètre  :**
-
-Cette api délivre les données des étudiants inscrits dans les
-établissements sous tutelle du ministère de l'enseignement supérieur.
-
-La couverture des établissements du champ des étudiants sera progressivement complétée.
-
-🔎 Consulter le [nombre d'étudiants identifiés dans l'API](https://statutetudiant.esr.gouv.fr/)
 </details>
 
 ### API Statut étudiant boursier - Cnous <a name="doc-api-statut-etudiant-boursier-cnous"></a>
