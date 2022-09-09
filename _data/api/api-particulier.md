@@ -97,6 +97,8 @@ content_intro: |
     En 2014, nos usagers prenaient une demi-journée de congés pour effectuer leurs démarches en mairie. Aujourd'hui, ils les effectuent en ligne en 5 minutes.
     </Quote>
 
+⚠️ Les données de l’API ne permettent pas encore de calculer les tarifs en établissement d'accueil du jeune enfant (crèche, multi-accueil, halte-garderie…). **Elles ne doivent donc pas être utilisées pour le calcul des participations familiales en Eaje.**
+
 ---
 
 ## API accessibles depuis l'API Particulier
@@ -121,10 +123,10 @@ L'API Particulier n'est pas France connectée. Certaines des données de l'API P
   | API sur API Particulier | Alternatives France connectées |
 |------------------- |--------------------------- |
   | **Quotient familial CAF** - CNAF | _Disponible fin 2023_         |
-  | **Statut étudiant** - MESR |  ✅ [API Statut Étudiant](les-api/api-statut-etudiant) |
-  | **Statut étudiant boursier** - Cnous   | ✅ [API Statut Étudiant boursier](les-api/api-statut-etudiant-boursier)                      |
-  | **Statut demandeur d'emploi** - Pôle Emploi | ✅ [API statut demandeur d'emploi](les-api/api-statut-demandeur-emploi)   |
-  | **Indemnisation Pôle emploi** - Pôle Emploi | ✅ [API indemnisation Pôle emploi](les-api/api-indemnisation-pole-emploi)       |
+  | **Statut étudiant** - MESR |  ✅ [API Statut Étudiant](/les-api/api-statut-etudiant) |
+  | **Statut étudiant boursier** - Cnous   | ✅ [API Statut Étudiant boursier](/les-api/api-statut-etudiant-boursier)                      |
+  | **Statut demandeur d'emploi** - Pôle Emploi | ✅ [API statut demandeur d'emploi](/les-api/api-statut-demandeur-emploi)   |
+  | **Indemnisation Pôle emploi** - Pôle Emploi | ✅ [API indemnisation Pôle emploi](/les-api/api-indemnisation-pole-emploi)       |
 
 🔎 En savoir plus sur [les API](https://api.gouv.fr/guides/api-definition) et les [API France Connectées](https://api.gouv.fr/guides/api-franceconnectees).
 
@@ -157,16 +159,48 @@ Vous pouvez nous demander de vous référencer sur un cas d'usage afin de propos
 
 ## Détails sur les données
 
-#### API Quotient familial CAF - CNAF <a name="doc-api-qf-cnaf"></a>
+### API Quotient familial CAF - CNAF <a name="doc-api-qf-cnaf"></a>
+
+Quotient familial et composition de la famille d'un allocataire de la Caisse nationale des allocations familiales (CNAF).
+
+**Format des données délivrées** : JSON
 
 <details>
   <summary>Paramètres d'appel</summary>
+ 
+Pour effectuer l'appel, deux paramètres sont à compléter :
 
-| Donnée                       | Description                            |
-| ---------------------------- | -------------------------------------- |
-| Numéro d'allocataire         |                                        |
-| Code postal                  | Exemple : 84250                        |
+| Donnée                 | Description           |    Exemple |
+| ---------------------- | --------------------- |----------- |
+| Numéro d'allocataire   |  1 à 7 chiffres. Le numéro d'allocataire n'est pas un numéro unique, il doit être accompagné du code postal pour que la CNAF retrouve le dossier de l'allocataire.              |       `0012345`     |
+| Code postal            | Il s'agit d'un code postal français (métropôle & DROM COM). Cette donnée permet de faire la correspondance avec la CAF de rattachement de l’allocataire. Un code postal complet peut être entré par l'usager, même si seuls les 2 premiers chiffres (exemple : 75 pour 75007) sont nécessaire pour trouver la Caf associée.      |    `75007`        |
+ 
+</details>
 
+<p>
+
+<details>
+  <summary>Périmètre de l'API</summary>
+  
+#### Particuliers concernés :
+Cette API concerne les allocataires du régime général de la sécurité sociale.
+❌ Il n'y a pas les particuliers relevant du régime agricole qui eux sont rattachés à la MSA, ce qui représente 1 à 2% des allocataires.
+
+ℹ️ Le QF CNAF est calculé seulement pour les allocataires dont les ressources sont déclarées. En effet, pour calculer le quotient familial, la CNAF collecte tous les mois auprès de la DGFIP les ressources de l'individu (revenus salariés et non-salariés, du capital, rentes ...). Elle récupère le bilan en fin d'année. Sans la réception de ces ressources, le QF CNAF ne peut être calculé : une erreur est renvoyée.
+
+ℹ️ Si le particulier n'a plus d'allocations, son QF n'est pas renvoyé. Une erreur sera transmise.  
+
+
+#### Périmètre géographique :
+✅ Allocataires de France métropolitaine
+✅ Allocataires DROM COM
+✅ Allocataires de nationalité étrangère
+
+#### Fréquence de mise à jour des données :
+Les données sont **mises à jour en temps réel**, l'API étant directement relié au système d'information de la Caisse nationale des allocations familiales.
+
+⚠️ **Les informations obtenues sont représentatives de la situation connue par la CNAF et peuvent évoluer très fréquemment**. Le Quotient familial CAF est recalculé tous les mois, il peut être rétroactif et dépend de la situation du particulier et de l'état du droit. Il peut donc y avoir des écarts, notamment si la situation de la personne évolue entre temps : perte d'un emploi, évolution des ressources, arrivée d'un enfant, majorité d'un enfant, modification de la législation etc. Depuis que les allocations logement sont contemporaines (transmises très régulièrement), le QF est amené à évoluer lui aussi très fréquemment.
+  
 </details>
 
 <p>
@@ -176,9 +210,10 @@ Vous pouvez nous demander de vous référencer sur un cas d'usage afin de propos
 
 | Donnée                       | Description    |
 | ---------------------------- |--------------- |
-| Quotient familial  CAF         | Le quotient familial CAF du mois précédent pour la famille                                         |
-| Composition familiale        | Liste des parents et des enfants de la famille (avec nom, prénoms, date de naissance).             |
-| Adresse                      | L'adresse structurée détenue par la CAF                                                            |
+| Quotient familial  CAF         | ⚠️ Il faut distinguer le quotient familial de la CAF du QF fiscal. ([En savoir plus](#faq-diff-qf-fiscal)             |
+| Informations sur les parents composant la famille        | Prénoms, noms et dates de naissance |
+| Informations sur les enfants composant la famille        |   Prénoms, noms et dates de naissance ⚠️ Il s'agit des enfants au sens de la CNAF ([En savoir plus](#faq-def-enfant-caf) |
+| Adresse                      | Adresse structurée détenue par la CAF. C'est une adresse déclarative.                   |
 
 
 </details>
@@ -187,16 +222,28 @@ Vous pouvez nous demander de vous référencer sur un cas d'usage afin de propos
 
 <details>
   <summary>Précisions sur les données</summary>
+  
+⚠️ Les données de l’API ne permettent pas encore de calculer les tarifs en établissement d'accueil du jeune enfant (crèche, multi-accueil, halte-garderie…). **Elles ne doivent donc pas être utilisées pour le calcul des participations familiales en Eaje.**
 
-Le quotient familial CAF retourné par l'API est celui du mois de référence qui est M-1 (M= mois de l’appel).
-S’il n’y a pas de quotient familial calculé pour cette période de référence, l'API ne restituera pas de quotient familial.
+#### Quelle différence entre le QF de la CAF et le QF de l'administration fiscale ? <a name="faq-diff-qf-fiscal"></a>
 
-Les données de l’API Particulier ne permettent pas encore de calculer les tarifs en établissement d'accueil du jeune enfant (crèche, multi-accueil, halte-garderie…).
+Le quotient familial retourné par l'API est le quotient familial de la CAF. Ce QF est différent de celui de l'administration fiscale car il prend en compte les prestations familiales. Contrairement au quotient familial DGFIP calculé au moment de la déclaration de revenu, le QF de la CAF est revu à chaque changement de situation familiale et/ou professionnelle. 
 
--> Le quotient familial CAF est revu à chaque changement de situation familiale et/ou professionnelle. Il prend en compte le revenu imposable de l’année N-2 divisé par 12 + les prestations familiales du mois de référence, le tout divisé par le nombre de parts fiscales du foyer.
+([Source : Caf.fr](https://caf.fr/allocataires/vies-de-famille/articles/quotient-familial-caf-impots-quelles-differences))
 
-⚠️ Il faut distinguer le quotient familial de la CAF du QF fiscal, [pour en savoir plus, consultez cet article de la CAF](https://caf.fr/allocataires/vies-de-famille/articles/quotient-familial-caf-impots-quelles-differences).
-Le quotient familial « DGFIP » est calculé au moment de la déclaration de revenus. Il divise le revenu imposable de l’année N-1 par le nombre de part fiscale du foyer.
+_Calcul du QF de la CAF :_ Revenu imposable de l’année N-2 divisé par 12 + **les prestations familiales du mois de référence**, le tout divisé par le nombre de parts fiscales du foyer. 
+
+
+#### Qu'est-ce qu'un enfant au sens de la CNAF ? <a name="faq-def-enfant-caf"></a>
+
+La liste des enfants transmis par l'API correspond à la notion d'enfant à charge au sens de la législation familiale.
+Pour qu'un enfant soit considéré comme "à charge", l’allocataire doit assurer financièrement son entretien de manière effective et permanente et assumer à son égard la responsabilité affective et éducative. Il n'y a pas d'obligation de lien de parenté avec l’enfant. 
+
+Deux notions d’enfant à charge cohabitent :
+- enfant à charge au sens des prestations familiales (Pf) : un enfant est reconnu à charge s’il est âgé d’un mois à moins de 20 ans quelle que soit sa situation, dès lors que son salaire net mensuel ne dépasse pas 55 % du Smic brut ;
+- enfant à charge au sens de la législation familiale: en plus des enfants à charge au sens des Pf, sont également considérés à charge pour les aides au logement, les enfants âgés de moins de 21 ans en Métropole (22 ans dans les Dom), les enfants âgés de 20 à 25 ans pour le calcul du Rmi/Rsa, et dès le mois de leur naissance, les enfants bénéficiaires de l’allocation de base de la Paje.
+
+([Source : data.caf.fr](http://data.caf.fr/dataset/population-des-foyers-allocataires-par-commune/resource/3baa3b5b-8376-4b24-a79b-10ee364e956f)
 
 </details>
 
