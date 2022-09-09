@@ -456,7 +456,7 @@ Les données sont **mises à jour une fois par an, début septembre, une fois to
 | Donnée d'identité de l'étudiant    | Description                              | Exemple             |
 | ---------------------------------- | -----------------------------------------|-------------------- |
 | Nom                                |                                          |      `Martin`       |
-| Prénoms                            |                                          |   `Camille`         |
+| Prénoms                            |     Plusieurs prénoms possibles           |   `Camille`         |
 | Date de naissance                  |                                          |  `2000-01-01`       |
 | Lieu de naissance                  |         Libellé de la commune de naissance        |     `Poitiers`         |
 | Sexe                  |                |     `M` ou  `F`      |
@@ -476,27 +476,83 @@ Les données sont **mises à jour une fois par an, début septembre, une fois to
 
 
 ### API Statut demandeur d'emploi - Pôle emploi <a name="doc-api-statut-demandeur-emploi-pole-emploi"></a>
+  
+Données d'identité, de contact et de statut du demandeur d'emploi.
+  
+**Format de la donnée** : JSON
 
 <details>
   <summary>Paramètre d'appel</summary>
 
-| Donnée                       | Description                                                                                        |
-| ---------------------------- | -------------------------------------------------------------------------------------------------- |
+| Donnée                       | Description                                 |
+| ---------------------------- | ------------------------------------------- |
 | Nom d’utilisateur Pôle emploi| Choisi par le particulier lors de la création de son espace personnel en ligne.                    |
 
 </details>
 
 <p>
+  
+<details>
+  <summary>Périmètre de l'API</summary>
+  
+#### Particuliers concernés :
+
+L’API délivre des informations sur les ✅ **personnes inscrites comme demandeur d’emploi**.
+  
+Cela signifie que l'API transmet des informations sur les demandeurs d'emploi : 
+- en recherche d'emploi ;
+- qui ne sont pas disponibles immédiatement ;
+- qui ne sont pas tenus de faire des actes positifs de recherche d’emploi.
+  
+L'API renvoie la catégorie du demandeur d'emploi permettant justement de déterminer la situation précise du demandeur.
+  
+ℹ️ L'API délivre des informations sur les demandeurs d'emploi ayant été inscrits à Pôle emploi depuis 2010, y compris ceux dont l'inscription a pris fin. Dans ce cas, seules les dates d'inscription et de cessation d'inscription sont renvoyées.
+Actuellement, la durée de conservation de ces données (durée prévues à l’[article R. 5312-44 du code du travail](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000032625875/) relatif au système d’information de Pôle emploi) va être amenée à changer, suite à la mise en œuvre du droit à l’oubli, travaux en cours.
+
+
+#### Périmètre géographique :
+  
+**Tous les demandeurs d'emploi** sont concernés :
+- ✅ France métropolitaine
+- ✅ DROM COM
+- ✅ Travailleurs étrangers ressortissant d'un européen (membre de l’Union Européenne, de l’Espace économique européen, de la Suisse, Monaco, Andorre ou Saint- Martin) ou ayant [les titres et autorisations nécessaires](https://www.pole-emploi.fr/candidat/mes-droits-aux-aides-et-allocati/a-chaque-situation-son-allocatio/quelle-est-ma-situation-personne/je-suis-travailleur-etranger--pu.html) pour être inscrits à pôle emploi.
+  
+
+
+#### Fréquence de mise à jour des données :
+  
+Les données sont **mises à jour en temps réel**, l'API étant directement reliée au système d'information de Pôle emploi.
+
+Les informations obtenues sont représentatives de la situation à date du demandeur d'emploi. Par exemple, la catégorie d'inscription, donnée qui peut évoluer au cours du temps, est mise à jour en temps réel également.
+
+</details>
+  
+<p>
 
 <details>
   <summary>Liste des données</summary>
+  
+| Donnée d'identité du demandeur d'emploi    | Description                              | Exemple             |
+| ---------------------------------- | -----------------------------------------|-------------------- |
+| Nom de naissance                   |                                          |      `Martin`       |
+| Nom d'usage                        |                                          |      `Dupont`       |
+| Prénom                             |   Limité à 13 caractères                 |   `Camille`         |
+| Civilité                           |                                          |   `MME` `M`        |
+| Date de naissance                  |                                          |  `1967-11-17T00:00:00+01:00"`       |
+| Sexe                               |                                          |     `masculin` ou  `feminin`      |
+| Code et libellé du statut de certification d'identité CNAV        |        Pôle emploi dépend d’un flux de certification d’identité émis par la CNAV. Un individu peut avoir été certifié ou non.  |   _Considéré comme certifié :_ <br> `VC` `IDENTITE CERTIFIEE`<br>`IC` : `IDENTITE ASSIMILEE CERTIFIEE`<br>`PC` : `IDENTITE CERTIFIEE PARTIELLEMENT`<br><br> _Considéré comme non certifié :_ <br>`AC` : `ATTENTE TRAITEMENT RETOUR CNAV`<br>`DC` : `DEMANDE CERTIF. ENVOYEE` <br> `EC` : `ECHEC DE CERTIFICATION CNAV`<br>`null` : `IDENTITE NON CERTIFIEE`<br>`RC` : `REFUS PROPOSITION DE CERTIFICATION`|
+  
+| Donnée de contact                 | Description                              | Exemple             |
+| ---------------------------------- | -----------------------------------------|-------------------- |
+| E-mail                             |                                          |      `camille.dupont@domaine.com`       |
+| Téléphones                         |  Plusieurs numéros possibles             |      `0606060606`       |
+| Adresse                         |  Déclarée par le demandeur lors de son inscription ou suite à une déclaration de changement d’adresse.           |            |
 
-| Donnée                       | Description                                                                                        |
-| ---------------------------- | -------------------------------------------------------------------------------------------------- |
-| Identité                     | Nom, prénom, civilité, date de naissance                                                           |
-| Données de contact           | e-mail, téléphone                                                                                  |
-| Adresse                      |                                                                                                    |
-| Inscription                  | Date d’inscription, date de cessation inscription, catégorie d’inscription                         |
+| Données d'inscription Pôle Emploi | Description                               | Exemple             |
+| ---------------------------------- | -----------------------------------------|-------------------- |
+| Date d’inscription                 |                                          |      `2021-01-07T00:00:00+01:00`       |
+| Date de cessation inscription      |                                          |      `2023-03-12`       |
+| Code et libellé de la catégorie d’inscription       |       5 catégories d'inscriptions différentes, consulter ci-dessous la rubrique "Précision sur les données" pour en savoir plus.                                   |      `1` `PERSONNE SANS EMPLOI DISPONIBLE DUREE INDETERMINEE PLEIN TPS` <br>`2` `PERSONNE SANS EMPLOI DISPONIBLE DUREE INDETERMINEE PARTIEL` <br>`3` `PERSONNE SANS EMPLOI DISPONIBLE DUREE DETERMINEE OU SAISON`<br>`4` `PERSONNE SANS EMPLOI DISPONIBLE DUREE DETERMINEE OU SAISON`<br>`5` `PERSONNE SANS EMPLOI DISPONIBLE DUREE DETERMINEE OU SAISON`     |
 
 </details>
 
