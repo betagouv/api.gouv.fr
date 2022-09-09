@@ -23,6 +23,7 @@ access_page:
 
       <NextSteps />
       <QuestionTree tree='france-connected-api' question='dgfip' />
+      <QuestionTree tree='dgfip-migration' question='dgfipMigration' />
   - who:
       - Un éditeur de logiciel
     is_eligible: 0
