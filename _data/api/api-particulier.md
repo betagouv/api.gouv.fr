@@ -183,7 +183,9 @@ Pour effectuer l'appel, deux paramètres sont à compléter :
   <summary>Périmètre de l'API</summary>
   
 #### Particuliers concernés :
-Cette API concerne les allocataires du régime général de la sécurité sociale.
+  
+Cette API concerne les **allocataires du régime général** de la sécurité sociale.
+
 ❌ Il n'y a pas les particuliers relevant du régime agricole qui eux sont rattachés à la MSA, ce qui représente 1 à 2% des allocataires.
 
 ℹ️ Le QF CNAF est calculé seulement pour les allocataires dont les ressources sont déclarées. En effet, pour calculer le quotient familial, la CNAF collecte tous les mois auprès de la DGFIP les ressources de l'individu (revenus salariés et non-salariés, du capital, rentes ...). Elle récupère le bilan en fin d'année. Sans la réception de ces ressources, le QF CNAF ne peut être calculé : une erreur est renvoyée.
@@ -192,11 +194,13 @@ Cette API concerne les allocataires du régime général de la sécurité social
 
 
 #### Périmètre géographique :
-✅ Allocataires de France métropolitaine
-✅ Allocataires DROM COM
-✅ Allocataires de nationalité étrangère
+  
+- ✅ Allocataires de France métropolitaine
+- ✅ Allocataires DROM COM
+- ✅ Allocataires de nationalité étrangère
 
 #### Fréquence de mise à jour des données :
+  
 Les données sont **mises à jour en temps réel**, l'API étant directement relié au système d'information de la Caisse nationale des allocations familiales.
 
 ⚠️ **Les informations obtenues sont représentatives de la situation connue par la CNAF et peuvent évoluer très fréquemment**. Le Quotient familial CAF est recalculé tous les mois, il peut être rétroactif et dépend de la situation du particulier et de l'état du droit. Il peut donc y avoir des écarts, notamment si la situation de la personne évolue entre temps : perte d'un emploi, évolution des ressources, arrivée d'un enfant, majorité d'un enfant, modification de la législation etc. Depuis que les allocations logement sont contemporaines (transmises très régulièrement), le QF est amené à évoluer lui aussi très fréquemment.
@@ -210,9 +214,9 @@ Les données sont **mises à jour en temps réel**, l'API étant directement rel
 
 | Donnée                       | Description    |
 | ---------------------------- |--------------- |
-| Quotient familial  CAF         | ⚠️ Il faut distinguer le quotient familial de la CAF du QF fiscal. ([En savoir plus](#faq-diff-qf-fiscal)             |
+| Quotient familial  CAF         | ⚠️ Il faut distinguer le quotient familial de la CAF du QF fiscal. Plus de détails dans la rubbrique ci-dessous "Précision sur les données".             |
 | Informations sur les parents composant la famille        | Prénoms, noms et dates de naissance |
-| Informations sur les enfants composant la famille        |   Prénoms, noms et dates de naissance ⚠️ Il s'agit des enfants au sens de la CNAF ([En savoir plus](#faq-def-enfant-caf) |
+| Informations sur les enfants composant la famille        |   Prénoms, noms et dates de naissance ⚠️ Il s'agit des enfants au sens de la CNAF. Plus de détails dans la rubbrique ci-dessous "Précision sur les données". |
 | Adresse                      | Adresse structurée détenue par la CAF. C'est une adresse déclarative.                   |
 
 
@@ -229,9 +233,9 @@ Les données sont **mises à jour en temps réel**, l'API étant directement rel
 
 Le quotient familial retourné par l'API est le quotient familial de la CAF. Ce QF est différent de celui de l'administration fiscale car il prend en compte les prestations familiales. Contrairement au quotient familial DGFIP calculé au moment de la déclaration de revenu, le QF de la CAF est revu à chaque changement de situation familiale et/ou professionnelle. 
 
-([Source : Caf.fr](https://caf.fr/allocataires/vies-de-famille/articles/quotient-familial-caf-impots-quelles-differences))
-
 _Calcul du QF de la CAF :_ Revenu imposable de l’année N-2 divisé par 12 + **les prestations familiales du mois de référence**, le tout divisé par le nombre de parts fiscales du foyer. 
+
+_Source_ : [Caf.fr](https://caf.fr/allocataires/vies-de-famille/articles/quotient-familial-caf-impots-quelles-differences)
 
 
 #### Qu'est-ce qu'un enfant au sens de la CNAF ? <a name="faq-def-enfant-caf"></a>
@@ -243,11 +247,11 @@ Deux notions d’enfant à charge cohabitent :
 - enfant à charge au sens des prestations familiales (Pf) : un enfant est reconnu à charge s’il est âgé d’un mois à moins de 20 ans quelle que soit sa situation, dès lors que son salaire net mensuel ne dépasse pas 55 % du Smic brut ;
 - enfant à charge au sens de la législation familiale: en plus des enfants à charge au sens des Pf, sont également considérés à charge pour les aides au logement, les enfants âgés de moins de 21 ans en Métropole (22 ans dans les Dom), les enfants âgés de 20 à 25 ans pour le calcul du Rmi/Rsa, et dès le mois de leur naissance, les enfants bénéficiaires de l’allocation de base de la Paje.
 
-([Source : data.caf.fr](http://data.caf.fr/dataset/population-des-foyers-allocataires-par-commune/resource/3baa3b5b-8376-4b24-a79b-10ee364e956f)
+_Source_ : [data.caf.fr](http://data.caf.fr/dataset/population-des-foyers-allocataires-par-commune/resource/3baa3b5b-8376-4b24-a79b-10ee364e956f)
 
 </details>
 
-#### API Statut étudiant - MESR <a name="doc-api-statut-etudiant-mesr"></a>
+### API Statut étudiant - MESR <a name="doc-api-statut-etudiant-mesr"></a>
 
 <details>
   <summary>Paramètres d'appel</summary>
@@ -319,7 +323,7 @@ La couverture des établissements du champ des étudiants sera progressivement c
 🔎 Consulter le [nombre d'étudiants identifiés dans l'API](https://statutetudiant.esr.gouv.fr/)
 </details>
 
-#### API Statut étudiant boursier - Cnous <a name="doc-api-statut-etudiant-boursier-cnous"></a>
+### API Statut étudiant boursier - Cnous <a name="doc-api-statut-etudiant-boursier-cnous"></a>
 
 <details>
   <summary>Paramètres d'appel</summary>
@@ -372,7 +376,7 @@ L’API délivre les données des étudiants boursiers :
 - **Boursiers d’État** sur critères sociaux (gérés par les Crous) ;
 - **Boursiers sur critères sociaux des filières sanitaires et sociales des régions.**
 
-### Liste des régions dont les données sont disponibles dans l'API
+#### Liste des régions dont les données sont disponibles dans l'API
 
 ⚠️ La liste des boursiers gérés par les régions, disponible dans cette API, sera mise à jour dès mise à disposition des informations.
  L’API à ce jour, couvre uniquement le périmètre des boursiers sur critères sociaux à l’exception des boursiers Campus France et des autres bourses.
@@ -383,7 +387,7 @@ L’API délivre les données des étudiants boursiers :
 
 </details>
 
-#### API Statut demandeur d'emploi - Pôle emploi <a name="doc-api-statut-demandeur-emploi-pole-emploi"></a>
+### API Statut demandeur d'emploi - Pôle emploi <a name="doc-api-statut-demandeur-emploi-pole-emploi"></a>
 
 <details>
   <summary>Paramètre d'appel</summary>
