@@ -223,6 +223,7 @@ Les données sont **mises à jour en temps réel**, l'API étant directement rel
 </details>
 
 <p>
+  
 
 <details>
   <summary>Précisions sur les données</summary>
@@ -253,15 +254,19 @@ _Source_ : [data.caf.fr](http://data.caf.fr/dataset/population-des-foyers-alloca
 
 ### API Statut étudiant - MESR <a name="doc-api-statut-etudiant-mesr"></a>
 
+Liste des inscriptions - et pré-inscriptions pour le CROUS - aux établissements d'enseignement supérieur.
+  
+**Format de la donnée** : JSON 
+  
+
 <details>
   <summary>Paramètres d'appel</summary>
-
 
 Pour appeler l'API statut étudiant, deux modes d'appel sont possibles :
 
 **Un mode d'appel avec l'état civil de l'étudiant :**
 
-| Donnée                       |       Description        |
+| Donnée                       |       Modalité        |
 | ---------------------------- | ------------------------ |
 | Nom de l'étudiant            |   Nécessaire             |
 | Prénom                       |   Nécessaire             |
@@ -269,28 +274,100 @@ Pour appeler l'API statut étudiant, deux modes d'appel sont possibles :
 | Lieu de naissance            |      Facultatif          |
 
 
-**Un mode d'appel avec l'identifiant national étudiant :**
+**Ou un mode d'appel avec l'identifiant national étudiant :**
 ⚠️ Ce mode est exclusivement accessible aux services de la sphère éducative.
 
-| Donnée                       | Description                          |
-| ---------------------------- | ------------------------------------ |
-| Identifiant National Étudiant (INE)| Numéro à 11 caractères, _par exemple 990000001HH_                            |
+| Donnée                       | Description                          |  Exemple    |
+| ---------------------------- | ------------------------------------ | ----------- |
+| Identifiant National Étudiant (INE)| Numéro à 11 caractères | `990000001HH`         |
 
 
 </details>
 
 <p>
+  
+<details>
+  <summary>Périmètre de l'API</summary>
+  
+#### Particuliers concernés :
+
+Cette API concerne les ✅ **étudiants inscrits dans les établissements sous tutelle du ministère de l'enseignement supérieur**, ou pré-inscrits au sens du CROUS.
+
+Ne sont pas concernés : 
+
+- ❌ les établissements sous tutelle du ministère de l'agriculture ;
+- ❌ les établissements sous tutelle du ministère de la culture ;
+- ❌ les établissements du secondaire (BTS, classes préparatoires,...) ;
+- ❌ les établissements privés.
+
+ℹ️ La couverture des établissements du champ des étudiants sera progressivement complétée. Le MSER, fournisseur de la donnée, précise que l'ambition de cette API est bien de couvrir un nombre maximum d’étudiants, même à terme les étudiants dont les établissements sont sous tutelles autre que celle du Ministère l’Enseignement Supérieur et de la Recherche.
+
+
+**Les étudiants concernés sont ceux ayant au minimum une admission ou inscription dans l'année en cours** quelque soit leur régime :  étudiant en formation initiale, apprenti, stagiaire de la formation continue, contrat de professionnalisation...
+
+⚠️ **Tous les établissements ne délivrent pas les informations des étudiants pré-inscrits au sens du CNOUS**, indiqués par le statut `admis`. Par conséquent si un étudiant est pré-inscrit au sens du CNOUS" et que l'API ne vous renvoie pas d'information, il n'est pas possible de considérer de façon définitive que cet étudiant n'est pas pré-inscrit.
+
+
+#### Périmètre géographique :
+  
+Le référentiel national du statut étudiant couvre une partie des établissements de ✅ métropole et les départements et régions d'outre-mer : Martinique, Guadeloupe, Guyane et Réunion.
+
+Ne sont pas couverts : 
+
+- ❌ les collectivités d’outre-mer Mayotte, Polynésie française, Saint-Barthélemy, Saint-Martin, Saint-Pierre-et-Miquelon, Wallis-et-Futuna ;
+- ❌ Les établissements français de l'étranger.
+
+ℹ️ Le MSER, fournisseur de la donnée, précise que l'ambition de cette API est bien de couvrir tous les établissements situées en France métropolitaine et d’outre-mer, y compris les collectivités d’outre-mer. Les établissements français de l'étranger ne seront pas contre pas couverts.
+
+<iframe src="https://data.enseignementsup-recherche.gouv.fr/explore/embed/dataset/fr-esr-api-statut-etudiant/viz/?static=false&datasetcard=false&apikey=509275f034986f39f87d0ccf2a075efe6c2df21f253e505abb58af38" width="800" height="600" frameborder="0"></iframe>
+
+
+#### Fréquence de mise à jour des données :
+  
+La mise à jour des informations est **variable selon les établissements** car tous les établissements ne procèdent pas de la même manière pour fournir les données d'admission et d’inscription :
+
+- Pour les **grandes universités**, le délai peut être en **temps réel** ;
+- Pour les petits établissements, le délai est probablement plus long.
+
+Des inscriptions peuvent avoir lieu toute l'année, et la transmission de ces informations par les établissements se fait elle aussi tout au long de l'année.
+
+  
+#### Réduire le périmètre par rapport aux types d'inscriptions
+  
+Il est possible de filtrer la donnée transmise en n'interrogeant qu'une partie de la base des étudiants : 
+- Uniquement les inscriptions en formation continue [;
+- Uniquement les inscriptions en formation initiale ; 
+- Ou uniquement les pré-inscriptions pour le CROUS.
+
+Ce filtrage s'effectue dès la demande d'habilitation, où vous devrez cocher respectivement la ou les cases "Inscriptions en formation continue", Inscriptions en formation intiale" ou "Admissions".
+**⚠️ Ce filtrage est définitif, pour élargir le périmètre vous devrez demander un nouveau jeton.**
+  
+</details>
+  
+<p>
 
 <details>
   <summary>Liste des données</summary>
+  
+Cette API délivre les informations de l'étudiant sur l'**année en cours** : sa civilité et la liste de ses admissions et inscriptions dans les différents établissements.
 
-| Donnée                             | Description                                                                   |
-| ---------------------------------- | ----------------------------------------------------------------------------- |
-| INE                                | Identifiant national de l'étudiant                                            |
-| Inscriptions en formation continue | Permet d’interroger les données des étudiants en formation continue. Données : date de début, de fin d'inscription, et code COG de la commune du lieu d'étude.    |
-| Inscriptions en formation initiale | Permet d’interroger les données des étudiants en formation initiale. Données : dates de début, fin d'inscription et code COG de la commune du lieu d'étude.     |
-| Admissions                         | Limite la recherche aux seuls étudiants admis (non-inscrits).                  |
-| Etablissement                      | Le ou les établissements (nom et  identifiant - UAI).                         |
+| Donnée d'identité de l'étudiant    | Description                              | Exemple             |
+| ---------------------------------- | -----------------------------------------|-------------------- |
+| Nom                                |                                          |      `Martin`       |
+| Prénom                             |                                          |   `Camille`         |
+| Date de naissance                  |                                          |  `2000-01-01`       |
+| Lieu de naissance                  |         Code insee ou code postal        |     `35315`         |
+  
+| Liste des inscriptions <br> _techniquement jusqu'à 10_ <br> Avec pour chaque inscription :  | Description       | Exemple   |
+| ---------------------------------- | -----------------------------------------|-------------------- |
+| Date de début                      |    Début de la période d'étude           |      `2023-09-01`   |
+| Date de fin                        |    Fin de la période d'étude             |   `2023-08-31`      |
+| Statut de l'étudiant               |  _Deux modalités :_ <br>**Inscrit** : inscrit dans l'établissement <br> **Admis (pré-inscrit au sens du CROUS)**   : Le statut admis correspond à une pré-inscription de l'étudiant dans un établissement, et ne garantit pas que l'étudiant soit accepté par l'établissement. Cette pré-inscription permet à l'étudiant de faire ses démarches auprès du CROUS. <br> Les étudiants "admis" passent au statut "inscrit" une fois leur inscription validée par l'établissement. L'inscription dépend des critères de l'établissement : acceptation la candidature, paiement des droits d'inscription...  Tous les étudiants "admis" ne sont donc pas forcément de futurs étudiants "inscrits"                  |  `inscrit` ou `admis`       |
+| Régime de l'étudiant                 |     _Deux modalités :_ <br> **Formation initiale ou reprise d'études** : Ce champ indique que l'étudiant est en formation initiale ou en reprise d'études. La formation initiale correspond à un parcours d’études amorcé à l’école élémentaire et suivi sans interruption de plus d’un an. Si il y a interruption, il s’agit d'une reprise d’études. <br> **Formation continue** :  Ce champ indique que l'étudiant est en formation continue. Ce type de formation est destinée aux salariés, employés ou demandeurs d’emploi et a pour objectif de conforter, améliorer ou acquérir des connaissances professionnelles au-delà de la formation initiale. La formation continue s'accompagne toujours de la signature d’une convention ou d’un contrat de formation professionnelle entre la personne et l’établissement formateur.    |     `formation initiale` ou `formation continue`      |
+| Nom de l'établissement  |                    |   `EGC AIN BOURG EN BRESSE EC GESTION ET COMMERCE (01000)`      |
+| Identifiant de l'établissement UAI  |                      |   `0011402U`      |
+| Lieu d'étude |          Code Insee ou code COG de la commune         |   `75115`      |
+                                          |
 
 </details>
 
