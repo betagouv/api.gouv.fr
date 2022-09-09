@@ -160,7 +160,7 @@ Vous pouvez nous demander de vous référencer sur un cas d'usage afin de propos
 #### API Quotient familial CAF - CNAF <a name="doc-api-qf-cnaf"></a>
 
 <details>
-  <summary>Paramètres d'appel à renseigner par l'utilisateur</summary>
+  <summary>Paramètres d'appel</summary>
 
 | Donnée                       | Description                            |
 | ---------------------------- | -------------------------------------- |
@@ -203,7 +203,7 @@ Le quotient familial « DGFIP » est calculé au moment de la déclaration de 
 #### API Statut étudiant - MESR <a name="doc-api-statut-etudiant-mesr"></a>
 
 <details>
-  <summary>Paramètres d'appel à renseigner par l'utilisateur</summary>
+  <summary>Paramètres d'appel</summary>
 
 
 Pour appeler l'API statut étudiant, deux modes d'appel sont possibles :
@@ -275,7 +275,7 @@ La couverture des établissements du champ des étudiants sera progressivement c
 #### API Statut étudiant boursier - Cnous <a name="doc-api-statut-etudiant-boursier-cnous"></a>
 
 <details>
-  <summary>Paramètres d'appel à renseigner par l'utilisateur</summary>
+  <summary>Paramètres d'appel</summary>
 
 Pour appeler l'API statut étudiant boursier, deux modes d'appel sont possibles :
 
@@ -339,7 +339,7 @@ L’API délivre les données des étudiants boursiers :
 #### API Statut demandeur d'emploi - Pôle emploi <a name="doc-api-statut-demandeur-emploi-pole-emploi"></a>
 
 <details>
-  <summary>Paramètres à renseigner par l'utilisateur</summary>
+  <summary>Paramètre d'appel</summary>
 
 | Donnée                       | Description                                                                                        |
 | ---------------------------- | -------------------------------------------------------------------------------------------------- |
