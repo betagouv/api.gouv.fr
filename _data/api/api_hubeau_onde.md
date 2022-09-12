@@ -17,7 +17,7 @@ contact_link: newshubeau@brgm.fr
 doc_tech_link: https://hubeau.eaufrance.fr/api/vbeta/ecoulement/api-docs
 themes:
   - Environnement
-last_update: 05/08/2022
+last_update: 12/09/2022
 content_intro: |
   [L'API Ecoulement des cours d'eau](https://hubeau.eaufrance.fr/page/api-ecoulement) diffuse les données de l’observatoire national des étiages, [Onde](https://onde.eaufrance.fr/). Ces données résultent d'observations visuelles de l’écoulement des petits et moyens cours d’eau réalisées par les agents départementaux de l'Office français de la biodiversité (OFB) pendant la période estivale. Elles couvrent la France hexagonale (Corse comprise) et plus de 10 ans de collecte. 
 ---
