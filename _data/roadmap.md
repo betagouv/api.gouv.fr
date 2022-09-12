@@ -347,6 +347,10 @@
       what: Mon entreprise, par l'URSSAF
       path: /les-api/api-mon-entreprise
   9:
+    - type: INFO
+      what: |
+        Mise à jour de [l'API Géo](/les-api/api-geo) : il est désormais possible (entre autres) de récupérer les contours des EPCI et la localisation des mairies des communes.
+        [Voir le release complet](https://github.com/etalab/api-geo/releases/tag/v2.2.0)
     - type: ADD_API
       what: Prestations sociales par la Direction de la Sécurité Sociale
     - type: ADD_API
