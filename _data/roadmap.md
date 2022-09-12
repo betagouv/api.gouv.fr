@@ -333,14 +333,33 @@
     - type: ADD_API
       what: Mobilic, par le Ministère de la Transition Ecologique
       path: /les-api/api-mobilic
+  8:
+    - type: ADD_API
+      what: Indemnisation Pôle Emploi, par Pôle Emploi
+      path: /les-api/api-indemnisation-pole-emploi
+    - type: ADD_API
+      what: Statut demandeur d'emploi (FranceConnect), par Pôle Emploi
+      path: /les-api/api-statut-demandeur-emploi
+    - type: ADD_API
+      what: Ecobalyse, par le Ministère de la Transition Ecologique
+      path: /les-api/api-ecobalyse
+    - type: ADD_API
+      what: Mon entreprise, par l'URSSAF
+      path: /les-api/api-mon-entreprise
+  9:
+    - type: INFO
+      what: |
+        Mise à jour de [l'API Géo](/les-api/api-geo) : il est désormais possible (entre autres) de récupérer les contours des EPCI et la localisation des mairies des communes.
+        [Voir le release complet](https://github.com/etalab/api-geo/releases/tag/v2.2.0)
+    - type: ADD_API
+      what: Ecoulement des cours d'eau, par Eau France
+      path: /les-api/api_hubeau_onde
     - type: ADD_API
       what: Prestations sociales par la Direction de la Sécurité Sociale
     - type: ADD_API
-      what: Indemnités Pôle Emploi, par Pôle Emploi
-    - type: ADD_API
-      what: Statut demandeur d'emploi (FranceConnect), par Pôle Emploi
-    - type: ADD_API
       what: Historique d'un véhicule (HistoVec), par le Ministère de l'Intérieur
+    - type: ADD_API
+      what: Rendez-vous permis, par le Ministère de l'Intérieur
   12:
     - type: ADD_API
       what: Données foncières par le CEREMA
