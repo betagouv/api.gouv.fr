@@ -81,7 +81,7 @@ Deuxièmement, à accéder à des données supplémentaires grâce aux [API “F
 | [API Statut étudiant](https://api.gouv.fr/les-api/api-statut-etudiant)| Statut de l’inscription dans un établissement de l’enseignement supérieur |✅ En production  |[API  particulier](https://api.gouv.fr/les-api/api-particulier)|MESRI   |
 | [API Statut étudiant boursier](https://api.gouv.fr/les-api/api-statut-etudiant-boursier)| Statut d’étudiant boursier  |✅ En production  | [API  particulier](https://api.gouv.fr/les-api/api-particulier) |CNOUS / MESRI                                          |
 | API statut demandeur d'emploi   |Statut et catégorie (A,B,C,D)   |⌛️ bientôt disponible |[API  particulier](https://api.gouv.fr/les-api/api-particulier)| Pôle Emploi                        |
-| API Indemnités Pôle emploi   | Montant des indemnités versées par pôle emploi   |⌛️ bientôt disponible|⌛️ bientôt disponible |Pôle Emploi                        |
+| [API Indemnités Pôle emploi](/les-api/api-indemnisation-pole-emploi)   | Montant des indemnités versées par pôle emploi   |✅ En production|⌛️ bientôt disponible |Pôle Emploi                        |
 | API Prestations sociales   | Inscription au RSA, bénéficiaires de la CSS (complémentaire sociale solidaire) |⌛️ bientôt disponible   |⌛️ bientôt disponible|DSS |
 |API scolarité | attestation de socolarité, apprenti, boursier |Mars 2023  |fin 2022|MEN|
 |API quotient familial | Quotient familial, composition familiale|En cours de spécification  | [API  particulier](https://api.gouv.fr/les-api/api-particulier)|CNAF|

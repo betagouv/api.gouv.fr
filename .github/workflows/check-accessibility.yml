@@ -4,8 +4,9 @@
 name: Accessibilité
 
 on:
-  schedule:
-    - cron: '0 0 * * *'
+#  Deactivated as axe does not work properly
+#  schedule:
+#    - cron: '0 0 * * *'
   workflow_dispatch:
 
 jobs:

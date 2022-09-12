@@ -67,3 +67,11 @@ L'API permet de rechercher une entreprise et retourne pour chaque résultat :
 | Entreprises individuelles | uniquement les entreprises individuelles   |
 
 Pour en savoir plus sur les filtres avancés, consultez la [documentation.](/documentation/api-recherche-entreprises)
+
+
+## Infolettre
+
+Pour vous abonner à l'infolettre pour être informé des mises à jour de la part de l’équipe :
+
+<Button href="https://app.mailjet.com/widget/iframe/zR1/NZO">Abonnez-vous à l'infolettre</Button>
+
