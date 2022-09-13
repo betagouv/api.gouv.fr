@@ -18,7 +18,7 @@ doc_tech_link: https://hubeau.eaufrance.fr/api/v1/etat_piscicole/api-docs
 themes:
   - Environnement
 visits_2019: 568
-last_update: 05/08/2022
+last_update: 12/06/2018
 content_intro: |
   [L'API Etat Piscicole](https://hubeau.eaufrance.fr/page/api-poisson) de Hub'Eau ou **API Poisson** diffuse les données collectées lors d'opérations de pêches scientifiques à l'électricité (observations dans un premier temps, puis à terme stations de prélèvement, opérations, et indicateurs). Ces données couvrent la France hexagonale (Corse comprise) et plus de 50 ans de collecte.
   La source de données est la base ASPE opérée par l'OFB.
