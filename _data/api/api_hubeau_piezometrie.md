@@ -2,7 +2,7 @@
 title: Hub'Eau - Piézométrie
 tagline: Piézométrie (niveau des nappes d'eau souterraine)
 is_open: 1 # 1 means API is fully open
-external_site: https://hubeau.eaufrance.fr/page/documentation_piezometrie
+external_site: https://hubeau.eaufrance.fr/page/api-piezometrie
 partners:
   - eaufrance
   - ofb
@@ -38,22 +38,18 @@ Les mises à jour de la banque ADES sont intégrées quotidiennement à l'API.
 
 Testez le [démonstrateur de l'API Piézométrie](https://hubeau.eaufrance.fr/sites/default/files/api/demo/piezo/piezo.htm) et récupérez le [code Javascript](https://github.com/BRGM/hubeau/tree/master/demonstrateurs/piezo) qui l'a généré pour construire vous même vos applications basées sur Hub'Eau.
 
-**NOUVEAU : l'opération chroniques_tr permet d'interroger en quasi temps-réel les piézomètres qui télé-transmettent leurs données brutes horaires**. Découvrez le [tableau des quelques 1400 Piézomètres Temps Réel](https://hubeau.eaufrance.fr/sites/default/files/api/demo/piezo/stations_piezo_tr.html) et [un exemple de visualiseur des données Temps Réel](https://hubeau.eaufrance.fr/sites/default/files/api/demo/piezo/_demo_tr/).
-
-Les données sont exposées sous la forme d'une API REST, les formats supportés sont : JSON, GeoJSON et CSV.
+ Les données sont exposées sous la forme d'une API REST, les formats supportés sont : JSON, GeoJSON et CSV.
 
 Les différentes opérations possibles sont :
 
 - **stations** : permet de rechercher les stations de mesure des niveaux des nappes d'eau (stations piézométriques ou piézomètres).
 - **chroniques** : permet d'accéder aux chroniques piézométriques (évolution dans le temps du niveau des nappes) par station de mesure ;
-- **chroniques_tr** : permet d'accéder en temps quasi-réel aux données piézométriques brutes de fréquence horaire télé-transmises par environ 1400 piézomètres.
+- **chroniques_tr** : permet d'accéder en temps quasi-réel aux données piézométriques brutes de fréquence horaire télé-transmises par environ 1700 piézomètres.
 
 Dernières évolutions de l'API Piézométrie de Hub'Eau:
-
+- 17/03/2020 : v1.4.0 L'opération chroniques est à son tour enrichie avec de nouvelles informations : continuité des mesures, producteur, nature des mesures et profondeur de l'eau par rapport au repère
 - 14/02/2020 : v1.3.0 : l'opération stations s'enrichit avec des informations supplémentaires dont l'altitude, la profondeur d'investigation, le département, les masses d'eau captées, le nombre de mesures disponibles... et offre la possibilité de requêter sur de nouveaux paramètre dont la date d'activité et le nombre minimal de mesures disponibles
 - 22/01/2020 : v1.2.0 : Mise à disposition de l'opération chroniques_tr permettant d'interroger en quasi-temps réel les piézomètres qui télé-transmettent leurs données
-- 08/01/2019 : fermeture de l'API en v0
-- 25/07/2018 : v1.1.1 : mise à jour technique permettant d'augmenter la fréquence de mise à jour des données
 
 ### Connaissez-vous Hub'Eau ?
 
@@ -63,26 +59,20 @@ Service pérenne de la toile [Eau France](https://www.eaufrance.fr), [Hub'Eau](h
 Fondé sur une infrastructure et des méthodes adaptées au traitement et au stockage de données massives, les API Hub'Eau garantissent les meilleures performances de disponibilité (9 téra-octets de données fournies en 76 millions d'appels pour le 2e semestre 2019).
 Hub’Eau est le résultat de la collaboration de l’OFB et du BRGM dans le cadre du pôle de recherche et d'innovation en interopérabilité des systèmes d'information distribués sur l'eau : [INSIDE](http://www.pole-inside.fr/fr).
 
-Les autres API disponibles à ce jour dans Hub'Eau sont :
-
-- [Etat piscicole](/les-api/api_hubeau_poissons) ;
-- [Indicateurs Eau potable et Assainissement](/les-api/api_hubeau_indic_EP_Asst) ;
-- [Qualité physico-chimique des cours d'eau](/les-api/api_hubeau_qualite_rivieres) ;
-- [Qualité des nappes d'eau souterraine](/les-api/api_hubeau_qualite_nappes_eau_sout) ;
-- [Température des cours d'eau](/les-api/api_hubeau_temperature_rivieres) ;
-- [Hydrométrie](/les-api/api_hubeau_hydrometrie) ;
-- [Prélèvements en eau (beta)](/les-api/api_hubeau_prelevements).
+Pour découvrir toutes les API disponibles dans Hub'Eau, visitez [la page Hub'Eau sur api.gouv](https://api.gouv.fr/producteurs/hub-eau) ou directement [le portail Hub'Eau](https://hubeau.eaufrance.fr/page/apis).  
 
 #### Un service en co-construction
 
 Pour des API toujours plus en phase avec les besoins utilisateurs, Hub'Eau a inauguré en 2018 une [politique de bêta testing](https://hubeau.eaufrance.fr/page/apis) en organisant une campagne de tests ouverte avant la mise la mise en production de chaque nouvelle API.
-D'une durée de 30 à 45 jours, ces campagnes ont pour objectif de recueillir un maximum de retour d’expérience des utilisateurs sur les points forts et les points faibles des API en construction.
-Pour être informé de la sortie des nouvelles API et les tester en avant-première, inscrivez-vous à la [newsletter](https://hubeau.eaufrance.fr/page/news-letter-hubeau) !
+D'une durée de quelques mois, ces campagnes ont pour objectif de recueillir un maximum de retour d’expérience des utilisateurs sur les points forts et les points faibles des API en construction. Les retours se font sur [le forum de contribution GitHub](http://github.com/BRGM/hubeau/issues).
+Pour être informé de la sortie des nouvelles API et les tester en avant-première, inscrivez-vous à la [newsletter](https://hubeau.eaufrance.fr/newsletter) !
 
 ### Exemples de réutilisation
 
-- [Visualiseur des données piézométriques Temps Réel](https://hubeau.eaufrance.fr/sites/default/files/api/demo/piezo/_demo_tr/)
+- [Visualiseur des données piézométriques Temps Réel](https://hubeau.eaufrance.fr/sites/default/files/api/demo/piezo_tr.htm)
+- [Visualiseur des chroniques piézométriques historiques](https://hubeau.eaufrance.fr/sites/default/files/api/demo/piezo_chroniques.htm)
 - [Evolution des niveaux des nappes d'eau souterraine](https://hubeau.eaufrance.fr/sites/default/files/api/demo/piezo/piezo.htm)
+- [BioMétéo 24](https://biometeo.dordogne.fr/) Une « météo de la biodiversité » pour sensibiliser et accompagner le grand public vers une prise en compte de l’écologie au quotidien
 - [Soumettez le votre sur la page GitHub des utilisateurs de Hub'Eau](https://github.com/BRGM/hubeau)
 
 ### Glossaire
