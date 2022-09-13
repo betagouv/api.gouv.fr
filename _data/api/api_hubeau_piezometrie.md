@@ -27,7 +27,7 @@ stat:
 contact_link: newshubeau@brgm.fr
 doc_tech_link: https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/api-docs
 visits_2019: 328
-last_update: 05/08/2022
+last_update: 10/03/2020
 content_intro: |
   [L'API Piézométrie](https://hubeau.eaufrance.fr/page/api-piezometrie) de Hub'Eau permet d'accéder aux données sur le niveau des nappes d'eau souterraines. Ces données sont issues du portail [ADES](http://www.ades.eaufrance.fr). Elles portent sur les mesures de piézométrie (niveau d'eau dans les nappes d'eau souterraine), France entière, en provenance de tous les partenaires du système d'information sur l'eau.
 ---
