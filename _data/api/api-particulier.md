@@ -132,7 +132,7 @@ L'API Particulier n'est pas France connectée. Certaines des données de l'API P
 
 ## Quelles sont les étapes pour utiliser l'API Particulier ?
 
-### Je suis une collectivité ou une administration
+### Je suis une collectivité ou une administration :
 
 1. **Je consulte [les cas d’usage de l'API Particulier](/les-api/api-particulier#exemples-d’application)** :
   - Si j'ai un éditeur de logiciel, je consulte le tableau en bas du cas d'usage pour savoir si mon éditeur intègre déjà l’API Particulier.
@@ -552,7 +552,7 @@ Les informations obtenues sont représentatives de la situation à date du deman
 | ---------------------------------- | -----------------------------------------|-------------------- |
 | Date d’inscription                 |                                          |      `2021-01-07T00:00:00+01:00`       |
 | Date de cessation inscription      |                                          |      `2023-03-12`       |
-| Code et libellé de la catégorie d’inscription       |       5 catégories d'inscriptions différentes, consulter ci-dessous la rubrique "Précision sur les données" pour en savoir plus.                                   |      `1` `PERSONNE SANS EMPLOI DISPONIBLE DUREE INDETERMINEE PLEIN TPS` <br>`2` `PERSONNE SANS EMPLOI DISPONIBLE DUREE INDETERMINEE PARTIEL` <br>`3` `PERSONNE SANS EMPLOI DISPONIBLE DUREE DETERMINEE OU SAISON`<br>`4` `PERSONNE SANS EMPLOI DISPONIBLE DUREE DETERMINEE OU SAISON`<br>`5` `PERSONNE SANS EMPLOI DISPONIBLE DUREE DETERMINEE OU SAISON`     |
+| Code et libellé de la catégorie d’inscription       |       5 catégories d'inscriptions différentes, consulter ci-dessous la rubrique "Précision sur les données" pour en savoir plus.                                   |      `1` `PERSONNE SANS EMPLOI DISPONIBLE DUREE INDETERMINEE PLEIN TPS` <br>`2` `PERSONNE SANS EMPLOI DISPONIBLE DUREE INDETERMINEE PARTIEL` <br>`3` `PERSONNE SANS EMPLOI DISPONIBLE DUREE DETERMINEE OU SAISON`<br>`4` `PERSONNE SANS EMPLOI NON DISPONIBLE IMMEDIATEMENT`<br>`5` `PERSONNE POURVUE D'UN EMPLOI A LA RECHERCHE D'UN AUTRE`     |
 
 </details>
 
@@ -562,18 +562,18 @@ Les informations obtenues sont représentatives de la situation à date du deman
   <summary>Précisions sur les données</summary>
 
 
-Les catégories de situation des demandeurs d’emploi sont les suivantes :
+La catégorie du demandeur d'emploi délivrée par l'API correspond aux 5 premières catégories administratives définies par l’[arrêté du 5 février 1992 portant application de l’article L. 5411-2 du Code du travail](https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000174464/). Les différentes situations des demandeurs d’emploi sont les suivantes :
 
-| Catégorie                    | Description                                                                                        |
-| ---------------------------- | -------------------------------------------------------------------------------------------------- |
-| 1           | Personnes sans emploi, immédiatement disponibles au sens de l'article R. 311-3-3 (article R.5411-9 du CT), tenues d'accomplir des actes positifs de recherche d'emploi, à la recherche d'un emploi à durée indéterminée à plein temps                                                                                  |
-| 2          | Personnes sans emploi, immédiatement disponibles au sens de l'article R. 311-3-3 (article R.5411-9 du CT), tenues d'accomplir des actes positifs de recherche d'emploi, à la recherche d'un emploi à durée indéterminée à temps partiel               |
-| 3          | Personnes sans emploi, immédiatement disponibles au sens de l'article R. 311-3-3 (article R.5411-9 du CT), tenues d'accomplir des actes positifs de recherche d'emploi, à la recherche d'un emploi à durée déterminée temporaire ou saisonnier, y compris de très courte durée      |
-| 4          | Personnes sans emploi, non immédiatement disponibles, à la recherche d'un emploi      |
-| 5          | Personnes pourvues d'un emploi, à la recherche d'un autre emploi    |
-| 6          | Personnes non immédiatement disponibles au sens de l'article R. 311-3-3 (1°) (article R.5411-10 1°) du CT) à la recherche d'un autre emploi, à durée indéterminée à plein temps, tenues d'accomplir des actes positifs de recherche d'emploi |
-| 7          | Personnes non immédiatement disponibles au sens de l'article R. 311-3-3 (1°) (article R.5411-10 1°) du CT) à la recherche d'un autre emploi, à durée indéterminée à temps partiel, tenues d'accomplir des actes positifs de recherche d'emploi      |
-| 8          | Personnes non immédiatement disponibles au sens de l'article R. 311-3-3 (1°) (article R.5411-10 1°) du CT) à la recherche d'un autre emploi, à durée déterminée, temporaire ou saisonnier, y compris de très courte durée, tenues d'accomplir des actes positifs de recherche d'emploi      |
+| Catégorie administrative existantes     | Description                            |  Catégorie présente dans l'API|
+| --------------------------------------- | -------------------------------------- |------------------------------ |
+| 1           | Personnes sans emploi, immédiatement disponibles, tenues d'accomplir des actes positifs de recherche d'emploi, à la **recherche d'un emploi à durée indéterminée à plein temps**.   |  ✅  |
+| 2          | Personnes sans emploi, immédiatement disponibles, tenues d'accomplir des actes positifs de recherche d'emploi, à la **recherche d'un emploi à durée indéterminée à temps partiel**. |  ✅  |
+| 3          | Personnes sans emploi, immédiatement disponibles, tenues d'accomplir des actes positifs de recherche d'emploi, à la **recherche d'un emploi à durée déterminée temporaire ou saisonnier, y compris de très courte durée**. |  ✅  |
+| 4          | Personnes sans emploi, **non immédiatement disponibles**, à la recherche d'un emploi.|  ✅  |
+| 5          | Personnes **pourvues d'un emploi, à la recherche d'un autre emploi.** |  ✅  |
+| 6          | Personnes non immédiatement disponibles à la recherche d'un autre emploi, à durée indéterminée à plein temps, tenues d'accomplir des actes positifs de recherche d'emploi. |  ❌  |
+| 7          | Personnes non immédiatement disponibles à la recherche d'un autre emploi, à durée indéterminée à temps partiel, tenues d'accomplir des actes positifs de recherche d'emploi.  |  ❌  |
+| 8          | Personnes non immédiatement à la recherche d'un autre emploi, à durée déterminée, temporaire ou saisonnier, y compris de très courte durée, tenues d'accomplir des actes positifs de recherche d'emploi.  |  ❌  |
 
 
 </details>
