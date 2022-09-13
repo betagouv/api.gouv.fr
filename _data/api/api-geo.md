@@ -45,11 +45,12 @@ last_update: 17/01/2020
 
 ### Données disponibles
 
-| Nom         | Description                                                                                                            |
-| ----------- | ---------------------------------------------------------------------------------------------------------------------- |
-| Commune     | Le nom, la population, le code INSEE, le code postal, la géolocalisation (latitude, longitude) et le contour (GeoJSON) |
-| Département | Le nom, le code INSEE du département, et la région de rattachement                                                     |
-| Région      | La liste des régions et leur code INSEE                                                                                |
+| Nom         | Description                                                                                                              |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------ |
+| Commune     | Le nom, la population, le code INSEE, le code postal, la géolocalisation (latitude, longitude) et le contour (GeoJSON), localisation de la mairie |
+| Département | Le nom, le code INSEE du département, et la région de rattachement                                                       |
+| Région      | La liste des régions et leur code INSEE                                                                                  |
+| EPCI        | Le nom, le département et la région de rattachement, le contour des Etablissements publics de coopération intercommunale |
 
 ### Couverture du territoire
 
