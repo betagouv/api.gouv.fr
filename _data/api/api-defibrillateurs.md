@@ -50,7 +50,7 @@ datagouv_uuid:
 contact_link: contact@geodae.sante.gouv.fr
 doc_tech_external: https://api-geodae.sante.gouv.fr/api/doc
 visits_2019: 1500
-last_update: 28/01/2022
+last_update: 14/09/2022
 ---
 
 L'API Base nationale des défibrillateurs permet d'intégrer les données sur les défibrilateurs dans vos systèmes d'information ou dans une application.
