@@ -358,6 +358,9 @@
       what: Démarches du Ministère de la culture
       path: /les-api/api-demarches-ministere-culture
     - type: ADD_API
+      what: Base nationale des défibrillateurs, par le Ministère de la Santé
+      path: /les-api/api-defibrillateurs
+    - type: ADD_API
       what: Prestations sociales par la Direction de la Sécurité Sociale
     - type: ADD_API
       what: Historique d'un véhicule (HistoVec), par le Ministère de l'Intérieur
