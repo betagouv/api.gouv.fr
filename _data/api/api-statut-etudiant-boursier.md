@@ -71,7 +71,7 @@ Les administrations accèdent à des informations certifiées à la source et pe
 
 **Pour les administrations qui souhaitent aussi donner accès à leurs démarches sans FranceConnect, les mêmes données sont disponibles dans [l'API particulier](https://api.gouv.fr/les-api/api-particulier)**.
 
-### Quels étudiants peut-on retrouver grâce cette API ?
+### Quels étudiants peut-on retrouver grâce à cette API ?
 
 L’API délivre les données des étudiants :
 
