@@ -75,12 +75,12 @@ content_intro: |
   ### À quoi sert l’API Particulier ?
 
   **En tant qu'administration ou collectivité**, en intégrant la brique API Particulier dans votre système d’information ou votre site internet :
-  
+
   ✅ Vous n’avez **plus besoin de demander certains justificatifs** aux particuliers ;
-  
-  ✅ Vous n’avez pas de vérification supplémentaire à réaliser car les **informations sont certifiées** 
-  
-  ✅ Vous accédez avec un seul compte aux **données de différents fournisseurs** : 
+
+  ✅ Vous n’avez pas de vérification supplémentaire à réaliser car les **informations sont certifiées**
+
+  ✅ Vous accédez avec un seul compte aux **données de différents fournisseurs** :
     la Caisse nationale des allocations familiales (CNAF), Pôle-emploi, le ministère de l'enseignement supérieur et de la recherche (MESR) et enfin le Centre national des œuvres universitaires et scolaires (Cnous).
 
     <Quote logo="/images/guides/clamart.svg" who='Ville de Clamart' title='Aurélie Coutant'>
@@ -90,14 +90,14 @@ content_intro: |
   **C'est aussi plus simple pour vos usagers !**
 
   ✅ Leur démarche est réalisable 100% en ligne autant qu'en guichet ;
-  
+
   ✅ Ils n'ont plus besoin de rassembler et saisir les documents ou informations déjà connues de l'administration.
 
     <Quote logo="/images/guides/clamart.svg" who='Ville de Clamart' title='Simon-Pierre Chalvidan'>
     En 2014, nos usagers prenaient une demi-journée de congés pour effectuer leurs démarches en mairie. Aujourd'hui, ils les effectuent en ligne en 5 minutes.
     </Quote>
 
-⚠️ Les données de l’API ne permettent pas encore de calculer les tarifs en établissement d'accueil du jeune enfant (crèche, multi-accueil, halte-garderie…). **Elles ne doivent donc pas être utilisées pour le calcul des participations familiales en Eaje.**
+  ⚠️ Les données de l’API ne permettent pas encore de calculer les tarifs en établissement d'accueil du jeune enfant (crèche, multi-accueil, halte-garderie…). **Elles ne doivent donc pas être utilisées pour le calcul des participations familiales en Eaje.**
 
 ---
 
@@ -167,52 +167,52 @@ Quotient familial et composition de la famille d'un allocataire de la Caisse nat
 
 <details>
   <summary>Paramètres d'appel</summary>
- 
+
 Pour effectuer l'appel, deux paramètres sont à compléter :
 
 | Donnée                 | Description           |    Exemple |
 | ---------------------- | --------------------- |----------- |
 | Numéro d'allocataire   |  1 à 7 chiffres. Le numéro d'allocataire n'est pas un numéro unique, il doit être accompagné du code postal pour que la CNAF retrouve le dossier de l'allocataire.              |       `0012345`     |
 | Code postal            | Il s'agit d'un code postal français (métropôle & DROM COM). Cette donnée permet de faire la correspondance avec la CAF de rattachement de l’allocataire. Un code postal complet peut être entré par l'usager, même si seuls les 2 premiers chiffres (exemple : 75 pour 75007) sont nécessaire pour trouver la Caf associée.      |    `75007`        |
- 
+
 </details>
 
 <p>
 
 <details>
   <summary>Périmètre de l'API</summary>
-  
+
 #### Particuliers concernés :
-  
-Cette API concerne les **allocataires de la majorité des régimes** : 
+
+Cette API concerne les **allocataires de la majorité des régimes** :
 - ✅ le régime général ;
-- ✅ les titulaires de l'éducation nationale, 
-- ✅ les retraités de la fonction publique d'État et des collectivités locales ; 
+- ✅ les titulaires de l'éducation nationale,
+- ✅ les retraités de la fonction publique d'État et des collectivités locales ;
 - ✅ les régimes spéciaux suivants : Artiste auteur compositeur, France Télécom, Industries électriques et gazières, Marin du commerce et pêche, Mines (régime général), Poste, RATP, SNCF, les pensions des autres régimes.
-  
-Ne sont pas concernés par cette API, les bénéficiaires des régimes suivants :  
+
+Ne sont pas concernés par cette API, les bénéficiaires des régimes suivants :
 - ❌ le régime agricole, les bénéficiaires étant rattachés à la MSA, ce qui représente 1 à 2% des allocataires ;
-- ❌ le régime des titulaires de l'Assemblée nationale et du Sénat ; 
+- ❌ le régime des titulaires de l'Assemblée nationale et du Sénat ;
 - ❌ le régime de la navigation intérieure.
- 
+
 
 ℹ️ Le QF CNAF est calculé seulement pour les allocataires dont les ressources sont déclarées. En effet, pour calculer le quotient familial, la CNAF collecte tous les mois auprès de la DGFIP les ressources de l'individu (revenus salariés et non-salariés, du capital, rentes ...). Elle récupère le bilan en fin d'année. Sans la réception de ces ressources, le QF CNAF ne peut être calculé : une erreur est renvoyée.
 
-ℹ️ Si le particulier n'a plus d'allocations, son QF n'est pas renvoyé. Une erreur sera transmise.  
+ℹ️ Si le particulier n'a plus d'allocations, son QF n'est pas renvoyé. Une erreur sera transmise.
 
 
 #### Périmètre géographique :
-  
+
 - ✅ Allocataires de France métropolitaine
 - ✅ Allocataires DROM COM
 - ✅ Allocataires de nationalité étrangère
 
 #### Fréquence de mise à jour des données :
-  
+
 Les données sont **mises à jour en temps réel**, l'API étant directement relié au système d'information de la Caisse nationale des allocations familiales.
 
 ⚠️ **Les informations obtenues sont représentatives de la situation connue par la CNAF et peuvent évoluer très fréquemment**. Le Quotient familial CAF est recalculé tous les mois, il peut être rétroactif et dépend de la situation du particulier et de l'état du droit. Il peut donc y avoir des écarts, notamment si la situation de la personne évolue entre temps : perte d'un emploi, évolution des ressources, arrivée d'un enfant, majorité d'un enfant, modification de la législation etc. Depuis que les allocations logement sont contemporaines (transmises très régulièrement), le QF est amené à évoluer lui aussi très fréquemment.
-  
+
 </details>
 
 <p>
@@ -231,18 +231,18 @@ Les données sont **mises à jour en temps réel**, l'API étant directement rel
 </details>
 
 <p>
-  
+
 
 <details>
   <summary>Précisions sur les données</summary>
-  
+
 ⚠️ Les données de l’API ne permettent pas encore de calculer les tarifs en établissement d'accueil du jeune enfant (crèche, multi-accueil, halte-garderie…). **Elles ne doivent donc pas être utilisées pour le calcul des participations familiales en Eaje.**
 
 #### Quelle différence entre le QF de la CAF et le QF de l'administration fiscale ? <a name="faq-diff-qf-fiscal"></a>
 
-Le quotient familial retourné par l'API est le quotient familial de la CAF. Ce QF est différent de celui de l'administration fiscale car il prend en compte les prestations familiales. Contrairement au quotient familial DGFIP calculé au moment de la déclaration de revenu, le QF de la CAF est revu à chaque changement de situation familiale et/ou professionnelle. 
+Le quotient familial retourné par l'API est le quotient familial de la CAF. Ce QF est différent de celui de l'administration fiscale car il prend en compte les prestations familiales. Contrairement au quotient familial DGFIP calculé au moment de la déclaration de revenu, le QF de la CAF est revu à chaque changement de situation familiale et/ou professionnelle.
 
-_Calcul du QF de la CAF :_ Revenu imposable de l’année N-2 divisé par 12 + **les prestations familiales du mois de référence**, le tout divisé par le nombre de parts fiscales du foyer. 
+_Calcul du QF de la CAF :_ Revenu imposable de l’année N-2 divisé par 12 + **les prestations familiales du mois de référence**, le tout divisé par le nombre de parts fiscales du foyer.
 
 _Source_ : [Caf.fr](https://caf.fr/allocataires/vies-de-famille/articles/quotient-familial-caf-impots-quelles-differences)
 
@@ -250,7 +250,7 @@ _Source_ : [Caf.fr](https://caf.fr/allocataires/vies-de-famille/articles/quotien
 #### Qu'est-ce qu'un enfant au sens de la CNAF ? <a name="faq-def-enfant-caf"></a>
 
 La liste des enfants transmis par l'API correspond à la notion d'enfant à charge au sens de la législation familiale.
-Pour qu'un enfant soit considéré comme "à charge", l’allocataire doit assurer financièrement son entretien de manière effective et permanente et assumer à son égard la responsabilité affective et éducative. Il n'y a pas d'obligation de lien de parenté avec l’enfant. 
+Pour qu'un enfant soit considéré comme "à charge", l’allocataire doit assurer financièrement son entretien de manière effective et permanente et assumer à son égard la responsabilité affective et éducative. Il n'y a pas d'obligation de lien de parenté avec l’enfant.
 
 Deux notions d’enfant à charge cohabitent :
 - enfant à charge au sens des prestations familiales (Pf) : un enfant est reconnu à charge s’il est âgé d’un mois à moins de 20 ans quelle que soit sa situation, dès lors que son salaire net mensuel ne dépasse pas 55 % du Smic brut ;
@@ -263,9 +263,9 @@ _Source_ : [data.caf.fr](http://data.caf.fr/dataset/population-des-foyers-alloca
 ### API Statut étudiant - MESR <a name="doc-api-statut-etudiant-mesr"></a>
 
 Liste des inscriptions - et pré-inscriptions pour le CROUS - aux établissements d'enseignement supérieur d'un étudiant.
-  
-**Format de la donnée** : JSON 
-  
+
+**Format de la donnée** : JSON
+
 
 <details>
   <summary>Paramètres d'appel</summary>
@@ -293,15 +293,15 @@ Pour appeler l'API statut étudiant, deux modes d'appel sont possibles :
 </details>
 
 <p>
-  
+
 <details>
   <summary>Périmètre de l'API</summary>
-  
+
 #### Particuliers concernés :
 
 Cette API concerne les ✅ **étudiants inscrits dans les établissements sous tutelle du ministère de l'enseignement supérieur**, ou pré-inscrits au sens du CROUS.
 
-Ne sont pas concernés : 
+Ne sont pas concernés :
 
 - ❌ les établissements sous tutelle du ministère de l'agriculture ;
 - ❌ les établissements sous tutelle du ministère de la culture ;
@@ -317,10 +317,10 @@ Ne sont pas concernés :
 
 
 #### Périmètre géographique :
-  
+
 Le référentiel national du statut étudiant couvre une partie des établissements de ✅ métropole et les départements et régions d'outre-mer : Martinique, Guadeloupe, Guyane et Réunion.
 
-Ne sont pas couverts : 
+Ne sont pas couverts :
 
 - ❌ les collectivités d’outre-mer Mayotte, Polynésie française, Saint-Barthélemy, Saint-Martin, Saint-Pierre-et-Miquelon, Wallis-et-Futuna ;
 - ❌ Les établissements français de l'étranger.
@@ -331,7 +331,7 @@ Ne sont pas couverts :
 
 
 #### Fréquence de mise à jour des données :
-  
+
 La mise à jour des informations est **variable selon les établissements** car tous les établissements ne procèdent pas de la même manière pour fournir les données d'admission et d’inscription :
 
 - Pour les **grandes universités**, le délai peut être en **temps réel** ;
@@ -339,25 +339,25 @@ La mise à jour des informations est **variable selon les établissements** car 
 
 Des inscriptions peuvent avoir lieu toute l'année, et la transmission de ces informations par les établissements se fait elle aussi tout au long de l'année.
 
-  
+
 #### Réduire le périmètre par rapport aux types d'inscriptions
-  
-Il est possible de filtrer la donnée transmise en n'interrogeant qu'une partie de la base des étudiants : 
+
+Il est possible de filtrer la donnée transmise en n'interrogeant qu'une partie de la base des étudiants :
 - Uniquement les inscriptions en formation continue [;
-- Uniquement les inscriptions en formation initiale ; 
+- Uniquement les inscriptions en formation initiale ;
 - Ou uniquement les pré-inscriptions pour le CROUS.
 
 Ce filtrage s'effectue dès la demande d'habilitation, où vous devrez cocher respectivement la ou les cases "Inscriptions en formation continue", Inscriptions en formation intiale" ou "Admissions".
 **⚠️ Ce filtrage est définitif, pour élargir le périmètre vous devrez demander un nouveau jeton.**
-  
+
 </details>
-  
+
 <p>
 
 <details>
   <summary>Liste des données</summary>
-  
-Cette API délivre les informations de l'étudiant sur l'**année en cours** : 
+
+Cette API délivre les informations de l'étudiant sur l'**année en cours** :
 
 | Donnée d'identité de l'étudiant    | Description                              | Exemple             |
 | ---------------------------------- | -----------------------------------------|-------------------- |
@@ -365,7 +365,7 @@ Cette API délivre les informations de l'étudiant sur l'**année en cours** :
 | Prénom                             |                                          |   `Camille`         |
 | Date de naissance                  |                                          |  `2000-01-01`       |
 | Lieu de naissance                  |         Code insee ou code postal        |     `35315`         |
-  
+
 | Liste des inscriptions             | Description       | Exemple   |
 | ---------------------------------- | -----------------------------------------|-------------------- |
 | Date de début                      |    Début de la période d'étude           |      `2023-09-01`   |
@@ -375,7 +375,7 @@ Cette API délivre les informations de l'étudiant sur l'**année en cours** :
 | Nom de l'établissement  |                    |   `EGC AIN BOURG EN BRESSE EC GESTION ET COMMERCE (01000)`      |
 | Identifiant de l'établissement UAI  |                      |   `0011402U`      |
 | Lieu d'étude |          Code Insee ou code COG de la commune         |   `75115`      |
-  
+
 ℹ️ Le nombre d'inscriptions est techniquement de 10 au maximum.
 
 </details>
@@ -384,18 +384,18 @@ Cette API délivre les informations de l'étudiant sur l'**année en cours** :
 
 <details>
   <summary>Précisions sur les données</summary>
-  
+
 #### Quelle différence entre formation continue, la reprise d'études et la formation initiale ?
-  
+
 La **formation initiale** correspond à un parcours d’études amorcé à l’école élémentaire et suivi sans interruption de plus d’un an. S'il y a interruption, il s’agit d'une **reprise d’études**.
 
-La **formation continue** est, quant à elle, destinée aux salariés, employés ou demandeurs d’emploi. Elle a pour objectif de conforter, améliorer ou acquérir des connaissances professionnelles au-delà de la formation initiale. 
+La **formation continue** est, quant à elle, destinée aux salariés, employés ou demandeurs d’emploi. Elle a pour objectif de conforter, améliorer ou acquérir des connaissances professionnelles au-delà de la formation initiale.
 La distinction principale entre formation initiale et formation continue est le critère de conventionnement, spécifique à la formation continue et qui se traduit par la signature d’une convention ou d’un contrat de formation professionnelle entre la personne et l’établissement formateur tel qu’il est décrit dans les [articles L.6353-1 à L. 6353-7 du Code du travail](https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006072050/LEGISCTA000006178215/#LEGISCTA000006178215) et l’[article D. 714-62 du Code de l’éducation](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000027866356/).
 
 </details>
 
 ### API Statut étudiant boursier - Cnous <a name="doc-api-statut-etudiant-boursier-cnous"></a>
-  
+
 Statut boursier d'un étudiant.
 
 **Format de la donnée** : JSON
@@ -425,41 +425,41 @@ Pour appeler l'API statut étudiant boursier, deux modes d'appel sont possibles 
 </details>
 
 <p>
-  
+
 <details>
   <summary>Périmètre de l'API</summary>
-  
+
 #### Particuliers concernés :
 
 Cette API délivre **uniquement les bourses "obligatoires"**, elle ne concerne par les bourses d'ordre facultatif. Le périmètre n'est pas exhaustif à ce jour.
-  
-L'API délivre les données : 
+
+L'API délivre les données :
 
 - ✅ des **boursiers d’État sur critères sociaux (gérés par les Crous)** ;
 - des **boursiers sur critères sociaux des filières sanitaires et sociales** des régions Normandie et Occitanie.
 
 L'API ne délivre pas encore les infos des ❌ étudiants boursiers étrangers.
-  
+
 #### Périmètre géographique :
-  
+
 Uniquement les informations des boursiers de nationalité française.
-L'API couvre : 
-- le ✅ territoire français, dont les ✅ DROM. 
+L'API couvre :
+- le ✅ territoire français, dont les ✅ DROM.
 - ❌ Les territoires d'outre-mer ne sont pas couverts.
-  
+
 Pour les boursiers sur critères sociaux des filières sanitaires et sociales, d'autres régions devraient être couvertes à l'avenir.
-  
+
 #### Fréquence de mise à jour des données :
-  
+
 Les données sont **mises à jour une fois par an, début septembre, une fois tous les étudiants inscrits**.
 
 </details>
-  
+
 <p>
 
 <details>
   <summary>Liste des données</summary>
-  
+
 
 | Donnée d'identité de l'étudiant    | Description                              | Exemple             |
 | ---------------------------------- | -----------------------------------------|-------------------- |
@@ -484,9 +484,9 @@ Les données sont **mises à jour une fois par an, début septembre, une fois to
 
 
 ### API Statut demandeur d'emploi - Pôle emploi <a name="doc-api-statut-demandeur-emploi-pole-emploi"></a>
-  
+
 Données d'identité, de contact et de statut du demandeur d'emploi.
-  
+
 **Format de la donnée** : JSON
 
 <details>
@@ -499,47 +499,47 @@ Données d'identité, de contact et de statut du demandeur d'emploi.
 </details>
 
 <p>
-  
+
 <details>
   <summary>Périmètre de l'API</summary>
-  
+
 #### Particuliers concernés :
 
 L’API délivre des informations sur les ✅ **personnes inscrites comme demandeur d’emploi**.
-  
-Cela signifie que l'API transmet des informations sur les demandeurs d'emploi : 
+
+Cela signifie que l'API transmet des informations sur les demandeurs d'emploi :
 - en recherche d'emploi ;
 - qui ne sont pas disponibles immédiatement ;
 - qui ne sont pas tenus de faire des actes positifs de recherche d’emploi.
-  
+
 L'API renvoie la catégorie du demandeur d'emploi permettant justement de déterminer la situation précise du demandeur.
-  
+
 ℹ️ L'API délivre des informations sur les demandeurs d'emploi ayant été inscrits à Pôle emploi depuis 2010, y compris ceux dont l'inscription a pris fin. Dans ce cas, seules les dates d'inscription et de cessation d'inscription sont renvoyées.
 Actuellement, la durée de conservation de ces données (durée prévues à l’[article R. 5312-44 du code du travail](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000032625875/) relatif au système d’information de Pôle emploi) va être amenée à changer, suite à la mise en œuvre du droit à l’oubli, travaux en cours.
 
 
 #### Périmètre géographique :
-  
+
 **Tous les demandeurs d'emploi** sont concernés :
 - ✅ France métropolitaine
 - ✅ DROM COM
 - ✅ Travailleurs étrangers ressortissant d'un européen (membre de l’Union Européenne, de l’Espace économique européen, de la Suisse, Monaco, Andorre ou Saint- Martin) ou ayant [les titres et autorisations nécessaires](https://www.pole-emploi.fr/candidat/mes-droits-aux-aides-et-allocati/a-chaque-situation-son-allocatio/quelle-est-ma-situation-personne/je-suis-travailleur-etranger--pu.html) pour être inscrits à pôle emploi.
-  
+
 
 
 #### Fréquence de mise à jour des données :
-  
+
 Les données sont **mises à jour en temps réel**, l'API étant directement reliée au système d'information de Pôle emploi.
 
 Les informations obtenues sont représentatives de la situation à date du demandeur d'emploi. Par exemple, la catégorie d'inscription, donnée qui peut évoluer au cours du temps, est mise à jour en temps réel également.
 
 </details>
-  
+
 <p>
 
 <details>
   <summary>Liste des données</summary>
-  
+
 | Donnée d'identité du demandeur d'emploi    | Description                              | Exemple             |
 | ---------------------------------- | -----------------------------------------|-------------------- |
 | Nom de naissance                   |                                          |      `Martin`       |
@@ -549,7 +549,7 @@ Les informations obtenues sont représentatives de la situation à date du deman
 | Date de naissance                  |                                          |  `1967-11-17T00:00:00+01:00"`       |
 | Sexe                               |                                          |     `masculin` ou  `feminin`      |
 | Code et libellé du statut de certification d'identité CNAV        |        Pôle emploi dépend d’un flux de certification d’identité émis par la CNAV. Un individu peut avoir été certifié ou non.  |   _Considéré comme certifié :_ <br> `VC` `IDENTITE CERTIFIEE`<br>`IC` : `IDENTITE ASSIMILEE CERTIFIEE`<br>`PC` : `IDENTITE CERTIFIEE PARTIELLEMENT`<br><br> _Considéré comme non certifié :_ <br>`AC` : `ATTENTE TRAITEMENT RETOUR CNAV`<br>`DC` : `DEMANDE CERTIF. ENVOYEE` <br> `EC` : `ECHEC DE CERTIFICATION CNAV`<br>`null` : `IDENTITE NON CERTIFIEE`<br>`RC` : `REFUS PROPOSITION DE CERTIFICATION`|
-  
+
 | Donnée de contact                 | Description                              | Exemple             |
 | ---------------------------------- | -----------------------------------------|-------------------- |
 | E-mail                             |                                          |      `camille.dupont@domaine.com`       |
