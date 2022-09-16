@@ -361,6 +361,12 @@
       what: Base nationale des défibrillateurs, par le Ministère de la Santé
       path: /les-api/api-defibrillateurs
     - type: ADD_API
+      what: Services publics plus - structures
+      path: /les-api/api-services-publics-plus-structures
+    - type: ADD_API
+      what: Services publics plus - expériences
+      path: /les-api/api-services-publics-plus-experiences
+    - type: ADD_API
       what: Prestations sociales par la Direction de la Sécurité Sociale
     - type: ADD_API
       what: Historique d'un véhicule (HistoVec), par le Ministère de l'Intérieur
