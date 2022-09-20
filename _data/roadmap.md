@@ -367,6 +367,9 @@
       what: Services publics plus - expériences
       path: /les-api/api-services-publics-plus-experiences
     - type: ADD_API
+      what: Data subventions, par la DINUM
+      path: /les-api/api-data-subventions
+    - type: ADD_API
       what: Prestations sociales par la Direction de la Sécurité Sociale
     - type: ADD_API
       what: Historique d'un véhicule (HistoVec), par le Ministère de l'Intérieur
