@@ -188,12 +188,12 @@ Cette API concerne les **allocataires de la majorité des régimes** :
 - ✅ le régime général ;
 - ✅ les titulaires de l'éducation nationale,
 - ✅ les retraités de la fonction publique d'État et des collectivités locales ;
-- ✅ les régimes spéciaux suivants : Artiste auteur compositeur, France Télécom, Industries électriques et gazières, Marin du commerce et pêche, Mines (régime général), Poste, RATP, SNCF, les pensions des autres régimes.
+- ✅ les régimes spéciaux suivants : Artiste auteur compositeur, France Télécom, Industries électriques et gazières, Marin du commerce et pêche, Mines (régime général), Poste, RATP, SNCF, Navigation intérieure en cas d'accord local et les pensions des autres régimes.
 
 Ne sont pas concernés par cette API, les bénéficiaires des régimes suivants :
 - ❌ le régime agricole, les bénéficiaires étant rattachés à la MSA, ce qui représente 1 à 2% des allocataires ;
 - ❌ le régime des titulaires de l'Assemblée nationale et du Sénat ;
-- ❌ le régime de la navigation intérieure.
+- ❌ le régime de la navigation intérieure **sauf** lorsqu'un accord local est passé, et que le régime est alors pris en compte par la CAF.
 
 
 ℹ️ Le QF CNAF est calculé seulement pour les allocataires dont les ressources sont déclarées. En effet, pour calculer le quotient familial, la CNAF collecte tous les mois auprès de la DGFIP les ressources de l'individu (revenus salariés et non-salariés, du capital, rentes ...). Elle récupère le bilan en fin d'année. Sans la réception de ces ressources, le QF CNAF ne peut être calculé : une erreur est renvoyée.
