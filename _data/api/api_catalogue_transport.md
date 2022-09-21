@@ -16,7 +16,7 @@ external_site: https://transport.data.gouv.fr
 is_open: 1 # 1 means API is fully open
 contact_link: contact@transport.beta.gouv.fr
 doc_tech_link: https://transport.data.gouv.fr/api/openapi
-last_update: 15/09/2022
+last_update: 01/05/2020
 ---
 
 [transport.data.gouv.fr](https://transport.data.gouv.fr) est le Point d'Accès National aux données de transport de la France. Il rassemble toutes les données de mobilité utiles aux développeurs et éditeurs d'application qui facilitent le calcul d'itinéraire, au bénéfice des voyageurs.
