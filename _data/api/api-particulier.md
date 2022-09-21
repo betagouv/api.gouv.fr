@@ -345,7 +345,7 @@ Des inscriptions peuvent avoir lieu toute l'année, et la transmission de ces in
 Lors de votre demande d'habilitation, vous allez déterminer le périmètre des données en interrogeant tout ou partie de la base des étudiants :
 - les inscriptions en formation initiale (cocher "Inscriptions en formation initiale");
 - et/ou les inscriptions en formation continue (cocher "Inscriptions en formation continue");
-- et/ou les pré-inscriptions pour le CROUS (cocher "Pré-inscriptions au sens du CNOUS").
+- et/ou les pré-inscriptions pour le CROUS (cocher "Pré-inscriptions CROUS").
 
 Si vous cochez les trois cases, vous aurez donc accès à toute la base. 
 
