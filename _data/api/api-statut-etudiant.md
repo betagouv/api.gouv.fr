@@ -29,7 +29,7 @@ access_page:
 is_open: -1
 is_france_connected: 1
 producer: mesri
-partners: 
+partners:
   - renater
 keywords:
   - etudiant
@@ -81,13 +81,13 @@ Si vous êtes un établissement, sous tutelle ou non du ministère de l'enseigne
 
 L'API retourne selon le cas :
 
-| Donnée                             | Description                                                                   |
-| ---------------------------------- | ----------------------------------------------------------------------------- |
-| INE                                | Identifiant National de l'étudiant                                            |
-| Inscriptions en formation continue | Permet d’interroger les données des étudiants en formation continue. Données : date de début, de fin d'inscription, et code COG de la commune du lieu d'étude    |
-| Inscriptions en formation initiale | Permet d’interroger les données des étudiants en formation initiale. Données : dates de début, fin d'inscription et code COG de la commune du lieu d'étude     |
-| Admissions                         | Limite la recherche aux seuls étudiants admis (non-inscrits)                  |
-| Etablissement                      | Le ou les établissements (nom et  identifiant - UAI)                         |
+| Donnée                             | Description                                                                                                                                                   |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| INE                                | Identifiant National de l'étudiant                                                                                                                            |
+| Inscriptions en formation continue | Permet d’interroger les données des étudiants en formation continue. Données : date de début, de fin d'inscription, et code COG de la commune du lieu d'étude |
+| Inscriptions en formation initiale | Permet d’interroger les données des étudiants en formation initiale. Données : dates de début, fin d'inscription et code COG de la commune du lieu d'étude    |
+| Admissions                         | Limite la recherche aux seuls étudiants admis (non-inscrits)                                                                                                  |
+| Etablissement                      | Le ou les établissements (nom et identifiant - UAI)                                                                                                           |
 
 ### Modalités d'utilisation des scopes
 
@@ -112,3 +112,15 @@ Si je souhaite m'assurer que les utilisateurs d'un téléservice sont bien des �
 - "Inscription en formation continue".
 
 Si je souhaitais offrir un service d'assistance personnalisé pour les étudiants seulement admis, il me faudrait utiliser le scope admission.
+
+### Scopes à transmettre à FranceConnect
+
+Afin d'accéder aux informations détenues dans l'API Statut Étudiant il faut renseigner à FranceConnect les scopes que vous avez choisi.
+
+Voici la liste des scopes :
+
+- Numéro INE : `mesri_identifiant`
+- Inscriptions en formation continue : `mesri_inscription_autre`
+- Inscriptions en formation initiale : `mesri_inscription_etudiant`
+- Admissions : `mesri_admission`
+- Établissements : `mesri_etablissements`
