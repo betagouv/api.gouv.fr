@@ -2,7 +2,7 @@ import React from 'react';
 
 import { apiLogo } from './logos';
 import { logCTA } from '../../utils/client/analytics';
-import SurveyModule from '../surveyModule';
+import CommunicationModule from '../communicationModule';
 
 const DocHeader = () => (
   <header role="banner" className="fr-header">
@@ -47,7 +47,7 @@ const DocHeader = () => (
             <div className="fr-header__tools-links">
               <ul className="fr-links-group">
                 <li className="external">
-                  <SurveyModule />
+                  <CommunicationModule />
                 </li>
               </ul>
             </div>
