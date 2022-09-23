@@ -311,7 +311,7 @@ Ne sont pas concernés :
 ℹ️ La couverture des établissements du champ des étudiants sera progressivement complétée. Le MSER, fournisseur de la donnée, précise que l'ambition de cette API est bien de couvrir un nombre maximum d’étudiants, même à terme les étudiants dont les établissements sont sous tutelles autre que celle du Ministère l’Enseignement Supérieur et de la Recherche.
 
 
-**Les étudiants concernés sont ceux ayant au minimum une admission ou inscription dans l'année en cours** quelque soit leur régime :  étudiant en formation initiale, apprenti, stagiaire de la formation continue, contrat de professionnalisation...
+**Les étudiants concernés sont ceux ayant au minimum une pré-inscription ou inscription dans l'année en cours** quelque soit leur régime :  étudiant en formation initiale, apprenti, stagiaire de la formation continue, contrat de professionnalisation...
 
 ⚠️ **Tous les établissements ne délivrent pas les informations des étudiants pré-inscrits au sens du CNOUS**, indiqués par le statut _admis_. Par conséquent si un étudiant est pré-inscrit au sens du CNOUS et que l'API ne vous renvoie pas d'information, il n'est pas possible de considérer de façon définitive que cet étudiant n'est pas pré-inscrit.
 
@@ -332,7 +332,7 @@ Ne sont pas couverts :
 
 #### Fréquence de mise à jour des données :
 
-La mise à jour des informations est **variable selon les établissements** car tous les établissements ne procèdent pas de la même manière pour fournir les données d'admission et d’inscription :
+La mise à jour des informations est **variable selon les établissements** car tous les établissements ne procèdent pas de la même manière pour fournir les données de pré-inscription et d’inscription :
 
 - Pour les **grandes universités**, le délai peut être en **temps réel** ;
 - Pour les petits établissements, le délai est probablement plus long.
@@ -340,15 +340,16 @@ La mise à jour des informations est **variable selon les établissements** car 
 Des inscriptions peuvent avoir lieu toute l'année, et la transmission de ces informations par les établissements se fait elle aussi tout au long de l'année.
 
 
-#### Réduire le périmètre par rapport aux types d'inscriptions :
+#### Choisir dès votre demande d'habilitation le périmètre des données transmises :
 
-Il est possible de filtrer la donnée transmise en n'interrogeant qu'une partie de la base des étudiants :
-- Uniquement les inscriptions en formation continue ;
-- Uniquement les inscriptions en formation initiale ;
-- Ou uniquement les pré-inscriptions pour le CROUS.
+Lors de votre demande d'habilitation, vous allez déterminer le périmètre des données en interrogeant tout ou partie de la base des étudiants :
+- les inscriptions en formation initiale (cocher "Inscriptions en formation initiale");
+- et/ou les inscriptions en formation continue (cocher "Inscriptions en formation continue");
+- et/ou les pré-inscriptions pour le CROUS (cocher "Pré-inscriptions CROUS").
 
-Ce filtrage s'effectue dès la demande d'habilitation, où vous devrez cocher respectivement la ou les cases "Inscriptions en formation continue", Inscriptions en formation intiale" ou "Admissions".
-**⚠️ Ce filtrage est définitif, pour élargir le périmètre vous devrez demander un nouveau jeton.**
+Si vous cochez les trois cases, vous aurez donc accès à toute la base. 
+
+**⚠️ Le périmètre choisi est définitif, pour élargir ou réduire le périmètre vous devrez demander un nouveau jeton.**
 
 </details>
 
@@ -370,7 +371,7 @@ Cette API délivre les informations de l'étudiant sur l'**année en cours** :
 | ---------------------------------- | -----------------------------------------|-------------------- |
 | Date de début                      |    Début de la période d'étude           |      `2023-09-01`   |
 | Date de fin                        |    Fin de la période d'étude             |   `2023-08-31`      |
-| Statut de l'étudiant               |  _Deux modalités :_ <br>**Inscrit** : inscrit dans l'établissement <br> **Admis (pré-inscrit au sens du CROUS)**   : Le statut admis correspond à une pré-inscription de l'étudiant dans un établissement, et ne garantit pas que l'étudiant soit accepté par l'établissement. Cette pré-inscription permet à l'étudiant de faire ses démarches auprès du CROUS. <br> Les étudiants "admis" passent au statut "inscrit" une fois leur inscription validée par l'établissement. L'inscription dépend des critères de l'établissement : acceptation la candidature, paiement des droits d'inscription...  Tous les étudiants "admis" ne sont donc pas forcément de futurs étudiants "inscrits"                  |  `inscrit` ou `admis`       |
+| Statut de l'étudiant               |  _Deux modalités :_ <br>**Inscrit** : inscrit dans l'établissement <br> **Admis (pré-inscrit au sens du CROUS)**   : Le statut admis correspond à une pré-inscription de l'étudiant dans un établissement, en formation initiale ou continue. Ce statut ne garantit pas que l'étudiant soit accepté par l'établissement. Cette pré-inscription permet à l'étudiant de faire ses démarches auprès du CROUS. <br> Les étudiants "admis" passent au statut "inscrit" une fois leur inscription validée par l'établissement. L'inscription dépend des critères de l'établissement : acceptation la candidature, paiement des droits d'inscription...  Tous les étudiants "admis" ne sont donc pas forcément de futurs étudiants "inscrits"                  |  `inscrit` ou `admis`       |
 | Régime de l'étudiant                 |     _Deux modalités :_ <br> **Formation initiale ou reprise d'études** : Ce champ indique que l'étudiant est en formation initiale ou en reprise d'études. La formation initiale correspond à un parcours d’études amorcé à l’école élémentaire et suivi sans interruption de plus d’un an. Si il y a interruption, il s’agit d'une reprise d’études. <br> **Formation continue** :  Ce champ indique que l'étudiant est en formation continue. Ce type de formation est destinée aux salariés, employés ou demandeurs d’emploi et a pour objectif de conforter, améliorer ou acquérir des connaissances professionnelles au-delà de la formation initiale. La formation continue s'accompagne toujours de la signature d’une convention ou d’un contrat de formation professionnelle entre la personne et l’établissement formateur.    |     `formation initiale` ou `formation continue`      |
 | Nom de l'établissement  |                    |   `EGC AIN BOURG EN BRESSE EC GESTION ET COMMERCE (01000)`      |
 | Identifiant de l'établissement UAI  |                      |   `0011402U`      |
