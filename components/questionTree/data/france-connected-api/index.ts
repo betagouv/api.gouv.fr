@@ -5,16 +5,48 @@ const isFranceConnectedQuestions = {
     choiceTree: [
       {
         choices: ['Oui'],
-        answer: `Vous pouvez remplir une demande :
-        <Button href="https://datapass.api.gouv.fr/api-impot-particulier-fc-sandbox">Remplir une demande</Button>`,
+        next:
+        {
+          question:
+            'Souhaitez vous migrer de l’API Particulier (DINUM) vers l’API Impôt Particulier (DGFiP) ?',
+          choiceTree: [
+            {
+              choices: ['Oui',],
+              answer: `**<span role='img' aria-label='émoji ok'>👍</span> Vous êtes éligible et pouvez remplir une demande de migration.
+              <br/><br/>
+              <Button href='https://datapass.api.gouv.fr/api-impot-particulier-fc-sandbox?demarche=migration_api_particulier' target='_blank' rel="noreferrer noopener">Déposer une demande</Button>`,
+            },
+            {
+              choices: ['Non',],
+              answer: `**<span role='img' aria-label='émoji ok'>👍</span> Vous êtes éligible et pouvez remplir une demande.
+              <br/><br/>
+              <Button href='https://datapass.api.gouv.fr/api-impot-particulier-fc-sandbox' target='_blank' rel="noreferrer noopener">Déposer une demande</Button>`,
+            },
+          ],
+        },
       },
       {
         choices: ['Non'],
-        answer: `En remplissant cette demande, vous allez obtenir l’accès à l'API Impôt Particulier. Afin d'accéder aux données sans FranceConnect, il est également nécessaire d’avoir accès à <External href="/les-api/api_r2p/demande-acces"> l'API R2P</External> afin d'obtenir l'identifiant fiscal (SPI).
-        <br/>
-        <Button href="https://datapass.api.gouv.fr/api-impot-particulier-sandbox">Remplir une demande</Button>
-        `,
-      },
+        next:
+        {
+          question:
+            'Souhaitez vous migrer de l’API Particulier (DINUM) vers l’API Impôt Particulier (DGFiP) ?',
+          choiceTree: [
+            {
+              choices: ['Oui',],
+              answer: `**<span role='img' aria-label='émoji ok'>👍</span> Vous êtes éligible et pouvez remplir une demande de migration.
+              <br/><br/>
+              <Button href='https://datapass.api.gouv.fr/api-impot-particulier-sandbox?demarche=migration_api_particulier' target='_blank' rel="noreferrer noopener">Déposer une demande</Button>`,
+            },
+            {
+              choices: ['Non',],
+              answer: `**<span role='img' aria-label='émoji ok'>👍</span> Vous êtes éligible et pouvez remplir une demande.
+              <br/><br/>
+              <Button href='https://datapass.api.gouv.fr/api-impot-particulier-sandbox' target='_blank' rel="noreferrer noopener">Déposer une demande</Button>`,
+            },
+          ],
+        },
+      },  
     ],
   },
   statutEtudiant: {
