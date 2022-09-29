@@ -375,6 +375,7 @@
       what: Historique d'un véhicule (HistoVec), par le Ministère de l'Intérieur
     - type: ADD_API
       what: Rendez-vous permis, par le Ministère de l'Intérieur
+      path: /les-api/api-permis-conduire
   12:
     - type: ADD_API
       what: Données foncières par le CEREMA
