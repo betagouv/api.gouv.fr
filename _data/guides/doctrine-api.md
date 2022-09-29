@@ -10,9 +10,7 @@ api: # empty = this page wont appear in an API page
 
 ## Pourquoi une doctrine pour les API ?
 
-Les données sont un actif stratégique pour la modernisation du service public et de l’action publique. Elles facilitent la mise en œuvre et le pilotage des politiques publiques, et leur circulation permet la simplification des démarches administratives pour les citoyens et les entreprises.
-
-Le présent document précise ce cadre d’action et identifie les bonnes pratiques à poursuivre en matière d’usage et d’exposition d’API par les administrations.
+Élaboré par la DINUM avec les administrateurs ministériels des données, des algorithmes et des codes sources (AMDAC), ce cadre de recommandations précise le cadre d’action et identifie les bonnes pratiques à poursuivre en matière d’usage et d’exposition d’API par les administrations. L’objectif : favoriser le partage de données entre elles et ainsi faciliter les démarches des usagers.
 
 [👉 Voir le cadre interministériel d’administration de la donnée, publié en septembre 2021](https://www.numerique.gouv.fr/actualites/donnees-algorithmes-codes-sources-mobilisation-generale-sans-precedent-15-feuilles-de-route-ministerielles/)
 
@@ -31,9 +29,13 @@ Le présent document précise ce cadre d’action et identifie les bonnes pratiq
 
 ### Catalogue de données et services disponibles
 
-#### Principe 1
+#### Recommandation 1
 
 En complément de la description (métadonnées), les données et services publiquement accessibles sont visibles sur un catalogue exposé sur Internet, référencé sur les moteurs de recherche usuels et intelligibles (la description des API au sein du catalogue ou de l’API manager propose un contenu destiné aux opérationnels, fonctionnels comme techniques).
+
+La description d’une donnée doit référencer les API qui l’exposent. L’exemple ci-dessous présente les API disponibles pour la [base Sirene des entreprises et de leurs établissements](https://www.data.gouv.fr/fr/datasets/base-sirene-des-entreprises-et-de-leurs-etablissements-siren-siret/), sur la page correspondant à ce jeu de données sur data.gouv.fr :
+
+<img src="/images/guides/sirene-data.png"/>
 
 Exemples:
 
@@ -41,16 +43,15 @@ Exemples:
 - [API Impôt Particulier](https://api.gouv.fr/les-api/impot-particulier) vise à référencer toute la verticale métier des finances publiques
 - Documentation fonctionnelle et technique
 
-#### Principe 2
+#### Recommandation 2
 
 A chaque API exposée correspond :
 
 - **Une documentation fonctionnelle** présentant la sémantique des données, leur qualité ainsi que leur source et leurs propriétés usuelles. Elle explicite également le processus de demande d’accès et l’éligibilité des réutilisateurs. Si un catalogue existe, un lien vers la description de la donnée est proposé ;
 - **Une documentation technique** présentant les modalités d’interrogation et de récupération de la donnée ;
 - **Les conditions générales d’utilisation** précisant les conditions contractuelles d’accès à l’API ;
-- La description d’une API décrit également **les périodes de validité de l’interface** (cf. principes 7 & 8) et son niveau de service (cf. principes 10 & 11).
 
-> 💡 *La spécification d’une API respecte les standards répandus au sein de la communauté (norme OpenAPI en 2022). Cette description ne doit pas doublonner avec celle d’une donnée existante, ni ne s’affranchit de la nécessité de décrire la donnée dans un catalogue de données (principe de découvrabilité). Une API fournissant plusieurs jeux de données doit être décrite une seule fois et intégrer les liens vers chaque description des données fournies.*
+La description d’une API décrit également **les périodes de validité de l’interface** (cf. principes 7 & 8) et son niveau de service (cf. principes 10 & 11).
 
 <details>
    <summary>Ressources utiles</summary>
@@ -65,7 +66,7 @@ A chaque API exposée correspond :
 
 ### Gestion des habilitations d’accès aux API à accès restreint
 
-#### Principe 3
+#### Recommandation 3
 
 L’accès aux API à accès restreint se fait par demande du réutilisateur (administrations, éditeurs, entreprises…).
 
@@ -74,9 +75,11 @@ Les API peuvent s’appuyer sur un mécanisme d’authentification de l’utilis
 - Pour les personnes physiques : FranceConnect, AgentConnect et EduConnect
 - Pour les personnes morales : ProConnect
 
-#### Principe 4
+#### Recommandation 4
 
-Si le droit d’accès n’est pas préétabli, le processus de demande se fait de la manière la plus simple possible pour le réutilisateur. Dans le cadre de demandes d’accès prévues par la loi et si le demandeur est éligible, une réponse sera transmise aux réutilisateurs **dans un délai recommandé de 15 jours calendaires.** Le code des relations entre le public et l’administration prévoit un délai légal maximum de 30 jours pour répondre à une demande (article R311-13).
+Si le droit d’accès n’est pas préétabli, le processus de demande se fait de la manière la plus simple possible pour le réutilisateur. 
+
+Dans le cadre de demandes d’accès prévues par la loi et si le demandeur est éligible, une réponse sera transmise aux réutilisateurs **dans un délai recommandé de 15 jours calendaires.** Le code des relations entre le public et l’administration prévoit un délai légal maximum de 30 jours pour répondre à une demande [(article R311-13)](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000031370409).
 
 <details>
    <summary>Ressources utiles</summary>
@@ -89,11 +92,9 @@ Si le droit d’accès n’est pas préétabli, le processus de demande se fait 
 
 **Bac à sable d'expérimentation public**
 
-> 👍 ***Bonne pratique*** *: A chaque API devrait correspondre une version “bac à sable”, accessible en fonction du caractère des données ouvertes ou en accès restreint, exposant une version fictive des données et présentant les mêmes modalités techniques d’exposition.*
+#### Recommandation 5
 
-> 🚨 ***Attention*** *: bac à sable public n’est pas synonyme de données publiques, et ne représente donc pas une faille de sécurité ! Si exposer la structure de la donnée représente une faille de sécurité, cela dénote d’un problème de conception du système exposant la donnée.*
-
-#### Principe 5
+A chaque API devrait correspondre une version “bac à sable”, accessible en fonction du caractère des données ouvertes ou en accès restreint, exposant une version fictive des données et présentant les mêmes modalités techniques d’exposition.
 
 Pour les API ouvertes, le bac à sable potentiel est accessible au grand public, sans demande préalable du réutilisateur. Pour les API à accès restreint, le bac à sable contenant des données fictives pourrait être accessible au réutilisateur après demande d’un jeton au fournisseur de données, bien que cette pratique ne soit pas recommandée.
 
@@ -101,7 +102,7 @@ Pour les API ouvertes, le bac à sable potentiel est accessible au grand public,
 
 ### Utilisation des standards technologiques du moment pour faciliter l’interopérabilité
 
-#### Principe 6
+#### Recommandation 6
 
 Les données et services sont exposés selon des standards techniques communément partagés et adoptés.
 
@@ -112,13 +113,13 @@ Il est utilisé par exemple pour les spécifications du standard OpenAPI (https:
 
 ### Stabilité du modèle des interfaces
 
-#### Principe 7
+#### Recommandation 7
 
 Les données et services sont exposés selon une interface (modalités d’appel et structuration des données échangées) définie pour une période donnée.
 
 Les développements Agile ou nécessitant une évolution prévisible seront rendus identifiables et préciseront une période de validité courte de 1 à 2 mois.
 
-#### Principe 8
+#### Recommandation 8
 
 **Ces périodes de validité de l’interface sont explicitement présentées aux réutilisateurs dans la documentation.** Les modifications prévisibles s’accompagneront de l’actualisation préalable des informations descriptives intégrant des liens vers des communications et guides permettant aux réutilisateurs d’anticiper les évolutions. 
 
@@ -126,7 +127,7 @@ Les réutilisateurs pourront basculer durant une période définie et communiqu�
 
 Le détail de ces informations sera présenté en détail dans les conditions générales d’utilisation de l’API.
 
-#### Principe 9
+#### Recommandation 9
 
 Toute modification non rétro-compatible impose un versionning en tant que version majeure et une cohabitation de l’ancien et du nouveau modèle pendant une période de recouvrement. **Celle-ci doit être communiquée à l’avance en diffusant le nouveau contrat d’interface de l’API.** A défaut d’information préalable ou d’accord des réutilisateurs, la période de cohabitation sera comprise entre 6 mois et 1 an.
 
@@ -136,7 +137,7 @@ Si une évolution de la donnée interdit le maintien de l’ensemble des fonctio
 
 ### Indications sur le temps de réponse et la tenue en charge
 
-#### Principe 10
+#### Recommandation 10
 
 La charge admise par une API est consultable en toute transparence par les réutilisateurs :
 
@@ -148,13 +149,13 @@ La charge admise par une API est consultable en toute transparence par les réut
 
 **4. Dans le cas d’une API sujette à des fortes évolutions en fonction de la saisonnalité,** le temps de réponse maximal sera précisé ainsi que les risques de rupture de service.
 
-#### Principe 11
+#### Recommandation 11
 
 Les temps de réponse moyens et maximaux sont présentés dans la documentation de l’API. Les temps de réponse mesurés ou estimés sont fournis à titre indicatif et non contractuel. Tout autre démarche relève d’un d’accord entre le fournisseur d’API et les réutilisateurs en fonction de leurs cas d’usages.
 
 ### Transparence sur la disponibilité de l’API
 
-#### Principe 12
+#### Recommandation 12
 
 L’état de l’API représente sa capacité à être appelée dans les conditions réelles par un réutilisateur. Il est rendu accessible aux réutilisateurs et consultable en temps réel sous forme d’une URL, indiquée dans la description de l’API, permettant de tester que l'API se déclare disponible et requetable. En complément, il est souhaitable de permettre de consulter un historique entre 6 mois et une année.
 
@@ -162,13 +163,13 @@ L’état de l’API représente sa capacité à être appelée dans les conditi
    <summary>Exemple pour l'API Particulier</summary>
 
 > <img src="/images/guides/doctrine_dispo_api.png" alt= "disponibilité" style="width:700px"/>
-> [Voir la page complète](https://status.particulier.api.gouv.fr/)
+> [Voir la page complète](https://status.api.gouv.fr/)
 
 </details>
 
 ### Suivi des consommations des données et services
 
-#### Principe 13
+#### Recommandation 13
 
 Les consommations des API sont enregistrées pour être ensuite restituées aux bénéficiaires (réutilisateur, producteur, API managers ou exploitants).
 
@@ -176,7 +177,7 @@ Les consommations des API sont enregistrées pour être ensuite restituées aux 
 
 ## 🩺 Curation de la donnée
 
-#### Principe 14
+#### Recommandation 14
 
 Les réutilisateurs disposent d’un moyen technique ou organisationnel leur permettant de faire des retours sur la qualité des données vers leur gestionnaire ou via la description des données au sein de leur catalogue d’origine.
 
@@ -188,11 +189,11 @@ Les réutilisateurs disposent également d’un moyen technique ou organisationn
 
 ### Gratuité de la donnée, et de l’exposition
 
-#### Principe 15
+#### Recommandation 15
 
 L’accès à la donnée et aux services doit être égalitaire. Les fournisseurs de données cherchent à adapter les modalités d’accès aux besoins des réutilisateurs.
 
-#### Principe 16
+#### Recommandation 16
 
 Les données ainsi que les API sont mises à disposition gratuitement, pour les réutilisateurs uniquement, sauf exceptions devant faire l’objet d’une justification par l’administration productrice.
 
