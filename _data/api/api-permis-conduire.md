@@ -17,7 +17,7 @@ access_page:
     description: |
       L'API n'est pas disponible pour le moment, pour en savoir plus sur sa mise à disposition, nous vous invitons à contacter l'ANTS.
       
-      <Button href="ants-permis-pro@interieur.gouv.fr">Contacter l'ANTS</Button>
+      <Button href="mailto:ants-permis-pro@interieur.gouv.fr">Contacter l'ANTS</Button>
 is_open: -1
 producer: minint
 keywords:
