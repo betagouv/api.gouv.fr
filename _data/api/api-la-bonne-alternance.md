@@ -22,12 +22,12 @@ last_update: 14/12/2020
 content_intro: |
   L’API Alternance a vocation à faciliter la mise en relation des candidats à l’alternance avec les entreprises accueillant des alternants et les CFA.
   Elle permet ainsi d’exposer et de recueillir les données des deux principales composantes de l'alternance : la formation et l'emploi. 
-  L’échange de données est possible à partir de trois services proposés par La Bonne Alternance, dans une approche complémentaire. 
+  L’échange de données est possible à partir de trois services proposés par La bonne alternance, dans une approche complémentaire. 
   
   Chacun de ces services peut-être appelé de manière indépendante : 
   
-  - **La Bonne Alternance** qui agrège et diffuse l’offre de formation en apprentissage, l’offre d’emploi en alternance et identifie les entreprises susceptibles de recruter en alternance ;
-  - **Matcha** qui facilite le dépôt, la gestion et la multidiffusion d’offres d’emploi en alternance pour les entreprises et les organismes de formation 
+  - **La bonne alternance** qui agrège et diffuse l’offre de formation en apprentissage, l’offre d’emploi en alternance et identifie les entreprises susceptibles de recruter en alternance ;
+  - **La bonne alternance recruteur et CFA** qui facilitent le dépôt, la gestion et la multidiffusion d’offres d’emploi en alternance pour les entreprises et les organismes de formation 
   - **Je candidate** qui simplifie la prise de contact entre un candidat à l’alternance et une entreprise qui recrute en alternance ;
   - **RDV Apprentissage** qui simplifie la prise de contact entre un candidat à l’alternance et un organisme de formation en apprentissage.
 
@@ -35,11 +35,11 @@ content_intro: |
 
   En tant qu’opérateur public ou privé traitant des questions d’orientation, de formation, ou d’emploi en alternance, vous souhaitez enrichir vos services en récupérant tout ou partie des données des formations en apprentissage, des offres d’emploi en alternance et des entreprises présentant un fort potentiel de recrutement en alternance (marché caché) ?
 
-  **👉 Le service La Bonne Alternance est fait pour vous !** [En savoir plus](#service-la-bonne-alternance)
+  **👉 Le service La bonne alternance est fait pour vous !** [En savoir plus](#service-la-bonne-alternance)
 
   Vous êtes un OPCO, un organisme de formation ou tout autre acteur accompagnant des entreprises ? Vous souhaitez proposer un service simplifié de dépôt d’offres en alternance à vos entreprises partenaires, tout en facilitant la diffusion et le suivi de leurs offres ?
 
-  **👉 Le service Matcha est fait pour vous !** [En savoir plus](#service-matcha)
+  **👉 Le service La bonne alternance recruteur et organisme de formation sont faits pour vous !** [En savoir plus](#service-matcha)
 
   Vous exposez des entreprises qui recrutent en alternance sur votre site internet ? Vous souhaitez permettre aux jeunes de candidater en quelques clics auprès de ces entreprises ? 
 
@@ -51,7 +51,7 @@ content_intro: |
   **👉 Le service Rendez-vous apprentissage est fait pour vous !** [En savoir plus](#service-rendez-vous-apprentissage)
 
 ---
-### Service La Bonne Alternance
+### Service La bonne alternance
 
 #### Origine des données
 
@@ -59,14 +59,14 @@ content_intro: |
 |---------------------------- | -----------------------------------------------------------------------------------------|
 |Formations en apprentissage  |Les données sont alimentées par le [catalogue des formations](https://catalogue.apprentissage.beta.gouv.fr/) en apprentissage. Ce service, développé par la mission interministérielle pour l’apprentissage, permet les contrôles et enrichissements des informations collectées par les Carif-Oref. *Source “formations” dans l’API*
 |Offres d’emploi en alternance (Pôle emploi et partenaires)   |Les données sont alimentées par l’API Offres d’emploi de Pôle emploi, qui agrège les offres déposées sur Pôle emploi et les sites de [ses partenaires](https://www.pole-emploi.fr/candidat/vos-services-en-ligne/des-partenaires-pour-vous-propos.html). *Source “offres” dans l’API*|
-|Offres d’emploi en alternance (Matcha)|Les données sont collectées à partir du formulaire simplifié de recueil de besoins en recrutement de La Bonne Alternance nommé “Matcha”. *Source “Matcha” dans l’API*|
-|Entreprises susceptibles de recruter en alternance| Les données proviennent de l’algorithme prédictif de La Bonne Alternance. Chaque mois, il identifie une liste restreinte d’entreprises à fort potentiel d’embauche, afin d’encourager et de faciliter les démarches de candidatures spontanées des candidats. *Source “lba” dans l’API* |
+|Offres d’emploi en alternance (Matcha)|Les données sont collectées à partir du formulaire simplifié de recueil de besoins en recrutement de La bonne alternance nommé La bonne alternance recruteur et organisme de formation. *Source “matcha” dans l’API*|
+|Entreprises susceptibles de recruter en alternance| Les données proviennent de l’algorithme prédictif de La bonne alternance. Chaque mois, il identifie une liste restreinte d’entreprises à fort potentiel d’embauche, afin d’encourager et de faciliter les démarches de candidatures spontanées des candidats. *Source “lba” dans l’API* |
 
 #### Formats disponibles
 
 <details>
   <summary>API</summary>
-L’ensemble des données présentées ci-dessus est accessible en tout ou partie via l’API La Bonne Alternance.
+L’ensemble des données présentées ci-dessus est accessible en tout ou partie via l’API La bonne alternance.
 Ce format permet une intégration personnalisée des données sur l’interface de votre choix.
 Selon la route d’API utilisée, vous pouvez récupérer les formations et/ou les entreprises en fonction d’un lieu et d’un ou plusieurs métiers donnés.
 
@@ -91,7 +91,7 @@ Le widget est disponible en marque blanche et est proposé en plusieurs tailles.
 
 </details>
 
-### Service Matcha
+### Service La bonne alternance recruteur et organisme de formation
 
 #### Formats disponibles
 
@@ -129,11 +129,28 @@ Pour intégrer facilement le formulaire simplifié de dépôt d’offres.
 #### Format disponible
 
 <details>
+
+  <summary>API</summary>
+Je candidate dispose d’une API permettant l’envoi sécurisé de candidatures en ligne.
+
+
+📄 Comment exploiter l’API ? 
+
+Consultez la route POST “api/v1/application” [de cette documentation.](https://api.gouv.fr/documentation/api-la-bonne-alternance)
+
+</details>
+
+<br>
+
+<details>
   <summary>Widget</summary>
 
-Le service de candidature en ligne Je candidate est aujourd’hui déployé au sein du widget du service La Bonne Alternance.
+Pour simplifier l’envoi de candidatures entre vos candidats et recruteurs, vous pouvez utiliser le widget Je candidate.
+Le service de candidature en ligne Je candidate est également déployé par défaut au sein du widget du service La bonne alternance.
 
-👉 Pour en savoir plus, [contactez l'équipe](mailto:labonnealternance@apprentissage.beta.gouv.fr)
+🔎 Exemple d’exploitation du widget sur le site de [1jeune1solution](https://www.1jeune1solution.gouv.fr/apprentissage?).
+
+📄 Comment exploiter et tester le widget ? [Consultez cette documentation](https://mission-apprentissage.gitbook.io/la-bonne-alternance/documentation#tester-le-widget-de-candidature-labonnealternance).
 
 </details>
 
@@ -145,7 +162,7 @@ Le service de candidature en ligne Je candidate est aujourd’hui déployé au s
 <details>
   <summary>Widget</summary>
 
-Pour proposer le service de prise de rendez-vous aux utilisateurs de votre site internet en intégrant le widget Rendez-vous apprentissage.
+Pour proposer le service de prise de rendez-vous aux utilisateurs de votre site internet, vous pouvez intégrer le widget Rendez-vous apprentissage.
 
 🔎 Exemple d’exploitation du widget [**sur le site de l’Onisep.**](https://www.onisep.fr/Ressources/Univers-Lycee/Lycees/Ile-de-France/Essonne/cfa-faculte-des-metiers-de-l-essonne-site-d-evry/cap-esthetique-cosmetique-parfumerie)
 
