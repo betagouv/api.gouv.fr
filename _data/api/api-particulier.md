@@ -238,7 +238,7 @@ Les données sont **mises à jour en temps réel**, l'API étant directement rel
 
 ⚠️ Les données de l’API ne permettent pas encore de calculer les tarifs en établissement d'accueil du jeune enfant (Eaje) (crèche, multi-accueil, halte-garderie…). **Elles ne doivent donc pas être utilisées pour le calcul des participations familiales en Eaje.**
   
-#### Pourquoi le quotient familial (QF) retourné par l'API Entreprise est-il parfois différent de celui transmis par le CDAP ?<a name="faq-diff-qf-api-part-et-cdap"></a>
+#### Pourquoi le quotient familial (QF) retourné par l'API Particulier est-il parfois différent de celui transmis par le CDAP ?<a name="faq-diff-qf-api-part-et-cdap"></a>
   
 Actuellement, il peut arriver que le quotient familial transmis par l'API particulier diffère de celui obtenu sur le [CDAP (Consultation du dossier allocataire par les partenaires)](https://www.caf.fr/partenaires/cdap). Voici des éléments de réponses pour comprendre les différences suivantes : 
 - *Le montant du QF est différent :* La différence des montants observés est souvent liée à une différence de temporalité. L'API Particulier délivre le QF du mois M-1 ; là où le CDAP vous indique le QF en cours. 
