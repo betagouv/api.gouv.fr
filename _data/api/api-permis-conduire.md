@@ -17,7 +17,7 @@ access_page:
     description: |
       L'API n'est pas disponible pour le moment, pour en savoir plus sur sa mise à disposition, nous vous invitons à contacter l'ANTS.
       
-      <Button href="/les-api/api-permis-conduire/demande-acces">Demander un accès à l'ANTS</Button>
+      <Button href="mailto:ants-permis-pro@interieur.gouv.fr/">Demander un accès à l'ANTS</Button>
 is_open: -1
 producer: minint
 keywords:
@@ -47,4 +47,4 @@ last_update: 28/09/2022
 
 L'API Rendez-vous Permis (en projet) permettra la portabilité des dossiers des élèves en auto-école, et ainsi faciliter leur inscription au permis de conduire.
 
-**L'API est prochainement disponible : pour en savoir plus sur les modalités d'utilisation, [vous pouvez contacter l'ANTS à cette adresse.](ants-permis-pro@interieur.gouv.fr)**
+**L'API est prochainement disponible : pour en savoir plus sur les modalités d'utilisation, [contactez l'ANTS](/les-api/api-permis-conduire/demande-acces)**
