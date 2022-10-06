@@ -42,7 +42,7 @@ themes:
 contact_link: ants-permis-pro@interieur.gouv.fr
 doc_tech_external: https://permisdeconduire.ants.gouv.fr/
 visits_2019: 100
-last_update: 28/09/2022
+last_update: 06/10/2022
 ---
 
 L'API Rendez-vous Permis (en projet) permettra la portabilité des dossiers des élèves en auto-école, et ainsi faciliter leur inscription au permis de conduire.
