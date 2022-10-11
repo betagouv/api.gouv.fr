@@ -18,7 +18,7 @@ access_page:
     description: |
       L’API Entreprise vous permet d’accéder directement aux données des entreprises et des associations pour faciliter leurs démarches (demandes d’aides, marchés publics, ...).
 
-      Pour vérifier que l’API Entreprise vous permet d’accéder aux données dont vous avez besoin, consultez le [catalogue des données](https://entreprise.api.gouv.fr/catalogue).
+      Pour vérifier que l’API Entreprise vous permet d’accéder aux données dont vous avez besoin, consultez nos différents [cas d'usages](https://entreprise.api.gouv.fr/cas_usages) (marchés publics, aides et subventions, portail GRU ...) et le [catalogue des API](https://entreprise.api.gouv.fr/catalogue).
 
       <QuestionTree tree='api-entreprise' question='administrations' />
   - who:
