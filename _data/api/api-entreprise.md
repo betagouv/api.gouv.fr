@@ -16,7 +16,10 @@ access_page:
       - Une entité administrative
     is_eligible: 1
     description: |
-      L’API Entreprise vous permet d’accéder directement aux données des entreprises et des associations pour faciliter leurs démarches (demandes d’aides, marchés publics, ...).
+      L’API Entreprise vous permet d’accéder directement aux données administratives des entreprises et des associations pour faciliter leurs démarches (demandes d’aides, marchés publics, ...). 
+      
+Voici quelques exemples de données distribuées par l'API Entreprise : identité des entreprises et des assocations, adresses, extrait Kbis, effectifs, mandataires sociaux, attestations sociales et fiscales, données financières, carte professionnelle travaux publics, diverses certifications... 
+Ces données sont issues de différents fournisseurs, tels que l'Urssaf, la DGFIP, l'Insee, la MSA et l'Inpi.
 
       Pour vérifier que l’API Entreprise vous permet d’accéder aux données dont vous avez besoin, consultez nos différents [cas d'usages](https://entreprise.api.gouv.fr/cas_usages) (marchés publics, aides et subventions, portail GRU ...) et le [catalogue des API](https://entreprise.api.gouv.fr/catalogue).
 
