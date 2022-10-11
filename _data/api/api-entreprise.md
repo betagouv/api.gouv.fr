@@ -36,9 +36,8 @@ stat:
   url: https://dashboard.entreprise.api.gouv.fr/api/watchdoge/stats/last_30_days_usage
   label: informations non redemandées aux entreprises
 partners:
-  - ADEME
-  - Agefiph
-  - Agence BIO
+  - ademe
+  - agence-bio
   - Banque de france
   - CMA France
   - CNETP
@@ -47,9 +46,9 @@ partners:
   - Fabrique numérique des ministères sociaux
   - FNTP
   - Infogreffe
-  - INPI
-  - INSEE
-  - Ministère intérieur
+  - inpi
+  - insee
+  - minint
   - MSA
   - OPQIBI
   - ProBTP
