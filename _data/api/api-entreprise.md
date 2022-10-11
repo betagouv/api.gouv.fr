@@ -17,9 +17,6 @@ access_page:
     is_eligible: 1
     description: |
       L’API Entreprise vous permet d’accéder directement aux données administratives des entreprises et des associations pour faciliter leurs démarches (demandes d’aides, marchés publics, ...). 
-      
-Voici quelques exemples de données distribuées par l'API Entreprise : identité des entreprises et des assocations, adresses, extrait Kbis, effectifs, mandataires sociaux, attestations sociales et fiscales, données financières, carte professionnelle travaux publics, diverses certifications... 
-Ces données sont issues de différents fournisseurs, tels que l'Urssaf, la DGFIP, l'Insee, la MSA et l'Inpi.
 
       Pour vérifier que l’API Entreprise vous permet d’accéder aux données dont vous avez besoin, consultez nos différents [cas d'usages](https://entreprise.api.gouv.fr/cas_usages) (marchés publics, aides et subventions, portail GRU ...) et le [catalogue des API](https://entreprise.api.gouv.fr/catalogue).
 
@@ -158,6 +155,8 @@ uptime: 100
 last_update: 14/09/2020
 content_intro: |
   <External href="https://entreprise.api.gouv.fr/">API Entreprise</External> permet aux entités administratives d'accéder aux données et aux documents administratifs des entreprises et des associations, afin de simplifier leurs démarches.
+  
+  **Exemples de données distribuées par l'API Entreprise** : identité des entreprises et des associations, adresse, extrait Kbis, effectif, mandataires sociaux, attestations sociale et fiscale, données financières, carte professionnelle travaux publics, diverses certifications... 
 
   ### À quoi sert l’API Entreprise ?
 
@@ -165,9 +164,9 @@ content_intro: |
 
     - Vous n’avez **plus besoin de demander certains justificatifs** aux entreprises et associations&nbsp;;
     - Vous n’avez pas de vérification supplémentaire à réaliser car les **informations sont certifiées**&nbsp;;
-    - Vous accédez avec un seul compte aux données de **différents fournisseurs** tels que l’INSEE, la DGFIP, l’URSSAF, etc.
+    - Vous accédez avec un seul compte aux données de **différents fournisseurs** tels que l’Insee, la DGFIP, l’Urssaf, l'Inpi etc.
 
-  Pour en savoir plus : 
+  Pour en savoir plus :
   <Button href="https://entreprise.api.gouv.fr/">Consulter le site API Entreprise</Button>
   
   **L'API Entreprise simplifie les démarches de différents cas d'usages** : 
