@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 
 import { logCTA } from '../../utils/client/analytics';
 import { apiLogo } from './logos';
-import SurveyModule from '../surveyModule';
+import CommunicationModule from '../communicationModule';
 const DATAPASS_URL =
   process.env.NEXT_PUBLIC_DATAPASS_URL || 'https://datapass.api.gouv.fr';
 
@@ -69,7 +69,7 @@ const Header = ({ headerKey = 'home' }) => {
               <div className="fr-header__tools-links">
                 <ul className="fr-links-group">
                   <li className="external">
-                    <SurveyModule />
+                    <CommunicationModule />
                   </li>
                 </ul>
               </div>

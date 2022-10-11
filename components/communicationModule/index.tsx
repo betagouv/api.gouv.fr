@@ -5,20 +5,22 @@ import { useRouter } from 'next/router';
 const rootUrl: String =
   'https://0u6d4427zal.typeform.com/to/qF8yRRC6#source_page=';
 
-const SurveyModule: React.FC = ({ children }) => (
+const CommunicationModule: React.FC = ({ children }) => (
   <div className="notice-wrapper">
-    <div className="notice-item">{getIcon()}</div>
-    <div className="notice-item">
-      <h6>Aidez-nous à vous aider !</h6>
-      <p className="mention">
-        Répondez à{' '}
-        <a href={rootUrl + useRouter().asPath} target="_blank" rel="noreferrer">
-          ce questionnaire
-        </a>{' '}
-        rapide pour mieux vous connaitre.
-      </p>
-    </div>
-
+    <a
+      className="bigLink"
+      href={rootUrl + useRouter().asPath}
+      target="_blank"
+      rel="noreferrer"
+    >
+      <div className="notice-item">{getIcon()}</div>
+      <div className="notice-item">
+        <h6>Les API : à quoi ça sert ?</h6>
+        <p className="mention">
+          Participez au <strong>webinaire</strong> le 22 septembre.
+        </p>
+      </div>
+    </a>{' '}
     <style jsx>{`
       div.notice-item {
         margin: 10px;
@@ -31,15 +33,17 @@ const SurveyModule: React.FC = ({ children }) => (
         padding: 0 10px;
         background-color: ${constants.colors.lightBlue};
         border-radius: 10px;
-
         margin: large;
       }
       span.notice-title {
         font-weight: bold;
       }
       a {
-        font-weight: bold;
-        text-decoration: underline;
+        font-weight: regular;
+        text-decoration: none;
+      }
+      a.bigLink {
+        display: flex;
       }
       h6 {
         margin: 0;
@@ -131,4 +135,4 @@ function getIcon() {
     </svg>
   );
 }
-export default SurveyModule;
+export default CommunicationModule;
