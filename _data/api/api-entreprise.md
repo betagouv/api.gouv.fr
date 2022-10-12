@@ -187,7 +187,7 @@ En intégrant la brique API Entreprise dans votre système d’information ou vo
 ### Quelles sont les conditions d'éligibilité à l'API Entreprise ?
 
 L'<External href="https://entreprise.api.gouv.fr/">API Entreprise</External> s'adresse aux entités administratives délivrant un service aux entreprises et aux associations. 
-L’API Entreprise est une composante de l’État plateforme, l’accès à l’API Entreprise est modéré et régulé par la DINUM, qui attribue des autorisations de récupération d’informations selon la nature des démarches à traiter (marchés publics, aides publiques,…). [En savoir plus sur les conditions d'éligibilité](https://entreprise.api.gouv.fr/faq#quelles-sont-les-conditions-d-eligibilite)
+L’API Entreprise est une composante de l’État plateforme, l’accès à l’API Entreprise est modéré et régulé par la DINUM, qui attribue des autorisations de récupération d’informations selon la nature des démarches à traiter (marchés publics, aides publiques,…). <External href="https://entreprise.api.gouv.fr/faq#quelles-sont-les-conditions-d-eligibilite">En savoir plus sur les conditions d'éligibilité</External>
 
 ### Alternatives en accès libre
 
