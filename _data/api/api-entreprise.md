@@ -156,39 +156,38 @@ last_update: 14/09/2020
 content_intro: |
   <External href="https://entreprise.api.gouv.fr/">API Entreprise</External> permet aux entités administratives d'accéder aux données et aux documents administratifs des entreprises et des associations, afin de simplifier leurs démarches.
   
-  **Exemples de données distribuées par l'API Entreprise** : identité des entreprises et des associations, adresse, extrait Kbis, effectif, mandataires sociaux, attestations sociale et fiscale, données financières, carte professionnelle travaux publics, diverses certifications... 
-
-  ### À quoi sert l’API Entreprise ?
-
-  En intégrant la brique API Entreprise dans votre système d’information ou votre site internet :
-
-    - Vous n’avez **plus besoin de demander certains justificatifs** aux entreprises et associations&nbsp;;
-    - Vous n’avez pas de vérification supplémentaire à réaliser car les **informations sont certifiées**&nbsp;;
-    - Vous accédez avec un seul compte aux données de **différents fournisseurs** tels que l’Insee, la DGFIP, l’Urssaf, l'Inpi etc.
-
-  Pour en savoir plus :
   <Button href="https://entreprise.api.gouv.fr/">Consulter le site API Entreprise</Button>
-  
-  **L'API Entreprise simplifie les démarches de différents cas d'usages** : 
-  - le dépôt des candidatures aux <External href="https://entreprise.api.gouv.fr/cas_usages/marches_publics">marchés publics</External> et leur instruction ;
-  - le dépôt des demandes d'<External href="https://entreprise.api.gouv.fr/cas_usages/subventions">aides et subventions publiques</External> et l'instruction des dossiers ;
-  - les démarches sur les <External href="https://entreprise.api.gouv.fr/cas_usages/portail_gru">portails GRU et GRC</External> ;
-  - la <External href="https://entreprise.api.gouv.fr/cas_usages/fraude">détection de la fraude</External>.
-  
-    <Button href="https://entreprise.api.gouv.fr/cas_usages">Voir tous les cas d'usages</Button>
   
 ---
 
-### API accessibles depuis l'API Entreprise
+
+### À quoi sert l’API Entreprise ?
+
+L'API Entreprise donne accès à des données sur les entreprises et les associations : identité des entreprises et des associations, adresse, extrait Kbis, effectif, mandataires sociaux, attestations sociale et fiscale, données financières, carte professionnelle travaux publics, diverses certifications... 
+
+**L'accès à ces données par l'API Entreprise simplifie les démarches de différents cas d'usages** : 
+- le dépôt des candidatures aux <External href="https://entreprise.api.gouv.fr/cas_usages/marches_publics">marchés publics</External> et leur instruction ;
+- le dépôt des demandes d'<External href="https://entreprise.api.gouv.fr/cas_usages/subventions">aides et subventions publiques</External> et l'instruction des dossiers ;
+- les démarches sur les <External href="https://entreprise.api.gouv.fr/cas_usages/portail_gru">portails GRU et GRC</External> ;
+- la <External href="https://entreprise.api.gouv.fr/cas_usages/fraude">détection de la fraude</External>.
+
+<Button href="https://entreprise.api.gouv.fr/cas_usages">Voir tous les cas d'usages</Button>
+
+### Ce que cela change pour vous, administrations et collectivités :
+
+En intégrant la brique API Entreprise dans votre système d’information ou votre site internet :
+- 📥 Vous n’avez **plus besoin de demander certains justificatifs** aux entreprises et associations&nbsp;;
+- 🔍 Vous n’avez pas de vérification supplémentaire à réaliser car les **informations sont certifiées**&nbsp;;
+- 🔌 Vous accédez avec un seul compte aux données de **différents fournisseurs** tels que l’Insee, la DGFIP, l’Urssaf, l'Inpi etc.
+
+### API disponibles dans le hub API Entreprise :
 
 <Button href="https://entreprise.api.gouv.fr/catalogue">Consulter le catalogue des API</Button>
 
 ### Quelles sont les conditions d'éligibilité à l'API Entreprise ?
 
 L'<External href="https://entreprise.api.gouv.fr/">API Entreprise</External> s'adresse aux entités administratives délivrant un service aux entreprises et aux associations. 
-L’API Entreprise est une composante de l’État plateforme, l’accès à l’API Entreprise est modéré et régulé par la DINUM, qui attribue des autorisations de récupération d’informations selon la nature des démarches à traiter (marchés publics, aides publiques,…).
-
-<Button href="https://entreprise.api.gouv.fr/faq#quelles-sont-les-conditions-d-eligibilite">Consulter les conditions d'éligibilité</Button>
+L’API Entreprise est une composante de l’État plateforme, l’accès à l’API Entreprise est modéré et régulé par la DINUM, qui attribue des autorisations de récupération d’informations selon la nature des démarches à traiter (marchés publics, aides publiques,…). <External href="https://entreprise.api.gouv.fr/faq#quelles-sont-les-conditions-d-eligibilite">En savoir plus sur les conditions d'éligibilité</External>
 
 ### Alternatives en accès libre
 
