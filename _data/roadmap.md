@@ -369,13 +369,20 @@
     - type: ADD_API
       what: Data subventions, par la DINUM
       path: /les-api/api-data-subventions
+  10:
+    - type: ADD_API
+      what: Mirabel (revues), par Sciences Po Lyon
+      path: /les-api/api-mirabel
+    - type: ADD_API
+      what: Ma Sécurité, par le Service des Technologies et des Systèmes d'Information de la Sécurité Intérieure
+      path: /les-api/api-ma-securite
+    - type: ADD_API
+      what: Rendez-vous permis, par le Ministère de l'Intérieur
+      path: /les-api/api-permis-conduire
     - type: ADD_API
       what: Prestations sociales par la Direction de la Sécurité Sociale
     - type: ADD_API
       what: Historique d'un véhicule (HistoVec), par le Ministère de l'Intérieur
-    - type: ADD_API
-      what: Rendez-vous permis, par le Ministère de l'Intérieur
-      path: /les-api/api-permis-conduire
   12:
     - type: ADD_API
       what: Données foncières par le CEREMA
