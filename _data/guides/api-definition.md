@@ -7,7 +7,7 @@ publish: true # this page will appear on /guides page
 api: # empty = this page wont appear in an API page
 ---
 
-API est un acronyme qui signifie (en anglais) Application Protocol Interface, ce qui n’est... vraiment pas très clair !
+API est un acronyme qui signifie (en anglais) Application Programming Interface, ce qui n’est... vraiment pas très clair !
 
 ## Commençons par une analogie
 
