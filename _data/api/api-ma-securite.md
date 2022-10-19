@@ -9,6 +9,7 @@ is_open: -1
 access_page:
   - who:
       - Un particulier
+      - Une entreprise
     is_eligible: -1
     description: |
       Vous ne pouvez pas accéder à ces informations.
@@ -18,7 +19,8 @@ access_page:
       - Une administration
     is_eligible: 1
     description: |
-      L'API est accessible sous certaines conditions
+      L’API est accessible gratuitement en accès restreint. Une signature de convention avec la gendarmerie nationale constitue un préalable à la génération de la clé d’API. L’intention est de permettre aux partenaires de la gendarmerie nationale de diffuser facilement les informations susceptibles d’intéresser leur client.
+
       
       <Button href="mailto:masecuritelappli@gendarmerie.interieur.gouv.fr">Demander un accès à l'API</Button>
 external_site: https://www.interieur.gouv.fr/
@@ -39,9 +41,47 @@ themes:
 last_update: 18/10/2022
 visits_2019: 1000
 ---
+L’API Ma Securite a été développée pour l’application smartphone éponyme. Elle permet a chaque gendarme d’informer la population de tout événement opérationnel basé notamment sur la prévention de la délinquance.
 
-L'application Ma Sécurité permet (parmi d'autres fonctionnalités) aux citoyens d'accéder aux actualités et informations relatives à la sécurité au niveau local.
+## A quoi sert l'API Ma Sécurité ?
 
-### A quoi sert l'API Ma Sécurité ?
+Intégrer l'API MaSecurite, c’est pouvoir informer vos utilisateurs de l’actualité portant sur :
 
-L'API permet de diffuser des informations et actualités par brigade, commissariat, departement, region ou par thématique.
+#### Pour l'échelon National :
+
+- Securite Routière
+- Aide aux victimes
+- Numérique
+- Entreprises et commerces
+- Famille
+- Jeunesse
+- Vie pratique
+- Recrutement
+
+#### Pour l'échelon local :
+
+- L'actualité opérationnelle de chaque brigade de gendarmerie 
+
+#### Événementiel :
+
+- Actualité temporaire liée aux grands événements sportifs ou culturels (ex : Tour de France)
+
+## Données disponibles
+
+Chaque actualité contient :
+
+- Titre
+- Message
+- Date de création
+- Thématique
+- Localité
+- URL (optionnel)
+- Image (optionnel)
+
+## Technique
+
+L’API renvoie un résultat paginé au format JSON. Elle est protégée par une clé d’API qui sera générée pour chaque client, sur requête et validation. 
+
+## Modalités d’accès
+
+L’API est accessible gratuitement en accès restreint. Une signature de convention avec la gendarmerie nationale constitue un préalable à la génération de la clé d’API. L’intention est de permettre aux partenaires de la gendarmerie nationale de diffuser facilement les informations susceptibles d’intéresser leur client.
