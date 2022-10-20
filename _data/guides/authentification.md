@@ -34,7 +34,7 @@ Plutôt que de demander des justificatifs et de les vérifier manuellement, Comp
 
 *Comptes Territoires sera prochainement disponible sur le catalogue api.gouv.fr*
 
-### 🔐 Accès à des des données ou des logiciels
+### 🔐 Accès à des données ou des logiciels
 
 Certains logiciels et services en ligne sont réservés aux agents de l'Etat, d'autres sont accessibles uniquement aux professionnels de la santé. Lors de la création de compte pour accéder à ces applications, il est possible d'authentifier les utilisateurs de manière sécurisée :
 
