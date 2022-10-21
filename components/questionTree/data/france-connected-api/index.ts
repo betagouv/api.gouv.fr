@@ -5,25 +5,8 @@ const isFranceConnectedQuestions = {
     choiceTree: [
       {
         choices: ['Oui'],
-        next:
-        {
-          question:
-            'Souhaitez vous migrer de l’API Particulier (DINUM) vers l’API Impôt Particulier (DGFiP) ?',
-          choiceTree: [
-            {
-              choices: ['Oui',],
-              answer: `**<span role='img' aria-label='émoji ok'>👍</span> Vous êtes éligible et pouvez remplir une demande de migration.
-              <br/><br/>
-              <Button href='https://datapass.api.gouv.fr/api-impot-particulier-fc-sandbox?demarche=migration_api_particulier' target='_blank' rel="noreferrer noopener">Déposer une demande</Button>`,
-            },
-            {
-              choices: ['Non',],
-              answer: `**<span role='img' aria-label='émoji ok'>👍</span> Vous êtes éligible et pouvez remplir une demande.
-              <br/><br/>
-              <Button href='https://datapass.api.gouv.fr/api-impot-particulier-fc-sandbox' target='_blank' rel="noreferrer noopener">Déposer une demande</Button>`,
-            },
-          ],
-        },
+        answer: `Vous pouvez remplir une demande :
+        <Button href="https://datapass.api.gouv.fr/api-impot-particulier-fc-sandbox">Remplir une demande</Button>`,
       },
       {
         choices: ['Non'],
