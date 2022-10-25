@@ -38,6 +38,7 @@ const extractApiAttributes = (api: IApi) => {
     owner_acronym,
     logo,
     datagouv_uuid,
+    datapass_link,
   } = api;
   return {
     title,
@@ -49,6 +50,7 @@ const extractApiAttributes = (api: IApi) => {
     owner_acronym,
     logo: `/images/api-logo/${logo || constants.logo}`,
     datagouv_uuid,
+    datapass_link,
   };
 };
 
