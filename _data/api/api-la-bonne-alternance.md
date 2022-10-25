@@ -18,6 +18,11 @@ contact_link: labonnealternance@apprentissage.beta.gouv.fr
 doc_tech_link: https://labonnealternance.apprentissage.beta.gouv.fr/api-docs/swagger.json
 themes:
   - Emploi
+rate_limiting_resume: de 5  à 20 appels / seconde
+rate_limiting_description: |
+  Les quotas diffèrent en fonction des routes
+uptime: 98.82
+monitoring_link: https://mission-apprentissage.github.io/upptime/history/la-bonne-alternance-api
 last_update: 14/12/2020
 content_intro: |
   L’API Alternance a vocation à faciliter la mise en relation des candidats à l’alternance avec les entreprises accueillant des alternants et les CFA.
