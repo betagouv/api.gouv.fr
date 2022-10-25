@@ -380,6 +380,12 @@
       what: Rendez-vous permis, par le Ministère de l'Intérieur
       path: /les-api/api-permis-conduire
     - type: ADD_API
+      what: Données locales de consommation d'énergie, par le SDES
+      path: /les-api/api-donnees-locales-energie
+    - type: ADD_API
+      what: Données ouvertes d'Enedis, par Enedis
+      path: /les-api/api-donnees-ouvertes-enedis
+    - type: ADD_API
       what: Prestations sociales par la Direction de la Sécurité Sociale
     - type: ADD_API
       what: Historique d'un véhicule (HistoVec), par le Ministère de l'Intérieur
