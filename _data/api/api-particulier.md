@@ -19,6 +19,8 @@ access_page:
 
       Pour obtenir un agrément, vous devez **justifier d'une simplification pour les citoyens**, et vous engager à
       n'accéder aux données personnelles qu'avec **l'accord explicite** de l'usager.
+
+      <NextSteps />
       <QuestionTree tree='api-particulier' question='apipart'/>
   - who:
       - Un éditeur de logiciel
