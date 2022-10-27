@@ -13,7 +13,7 @@ export const pathDevelopForAdministration = {
             answer: `**Vous êtes éligible pour mettre à disposition de vos utilisateurs l’API Entreprise <span role='img' aria-label='émoji ok'>👍</span>**
               <span role='img' aria-label='émoji avertissement'>⚠️</span> en tant que prestataire technique d’une entité administrative, vous pourrez être destinataire des informations techniques permettant l’usage de l’API mais en aucun cas des données elles-même.
               <br/>
-              <Button href='https://form.typeform.com/to/pQ0iFKzi' alt>Formulaire de contact pour intégrer l'API Entreprise</Button>`,
+              <Button href='https://datapass.api.gouv.fr/api-entreprise?demarche=editeur' alt>Déposer une demande pour intégrer l'API Entreprise</Button>`,
           },
           {
             choices: [

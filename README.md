@@ -86,6 +86,57 @@ npm run build
 PORT=3000 npm run start
 ```
 
+
+
+### Tests
+
+1. Linter
+
+```bash
+npm run lint
+```
+
+2. Tests unitaires
+
+```bash
+npm run test
+```
+
+3. Autres tests
+
+```bash
+// a11y
+npm run check-accessibility
+
+//404
+npm run check-broken-links
+
+// no link to datapass staging
+npm run check-no-datapass-staging
+```
+
+### Miniatures
+
+Avant chaque commit est lancé un script qui redimmensionne et compresse les images des pages de guides :
+
+```bash
+// a11y
+npm run create-thumbnail
+```
+
 ### Preview apps
 
 Chaque pull request est déployé dans des [review app](https://devcenter.heroku.com/articles/github-integration-review-apps) sur [Heroku](https://dashboard.heroku.com/)
+
+### Deploiement
+
+Le déploiement se fait par [Github action](https://github.com/betagouv/api.gouv.fr/actions)
+
+A chaque "merge" sur master : 
+
+- Laissez le déploiement se faire automatiquement sur [staging](https://staging.api.gouv.fr) via l'action [deploy-staging](https://github.com/betagouv/api.gouv.fr/actions/workflows/deploy-staging.yml)
+- Vérifiez vos changements sur [staging](https://staging.api.gouv.fr)
+- Lancez manuellement le déploiement sur [production](https://api.gouv.fr) : sur [deploy-production](https://github.com/betagouv/api.gouv.fr/actions/workflows/deploy-production.yml) et cliquez sur "Run workflow" -> "Run workflow"
+
+NB: Si plusieurs déploiements sont déclenchés en même temps, seul le premier va jusqu'au bout. Les autres sont automatiquement interrompus.
+

@@ -31,12 +31,12 @@ Une utilisation logicielle au guichet est aussi possible.
 
 ## Comment ça marche ?
 
-Les API sont disponibles - que les téléservices utilisent  franceConnect ou non. 
+Les API sont disponibles - que les téléservices utilisent  franceConnect ou non.
 
 🔎 En savoir plus sur [les API FranceConnectées](https://api.gouv.fr/guides/api-franceconnectees)
 
 Un téléservice peut aussi proposer deux modes de connection, l’un avec FranceConnect, l’autre sans.
-Dans ce dernier cas il convient d’utiliser [l’API particulier](https://api.gouv.fr/les-api/api-particulier ).  
+Dans ce dernier cas il convient d’utiliser [l’API particulier](https://api.gouv.fr/les-api/api-particulier ).
 
 **🔍 Consulter [l'étude réalisée par DINUM auprès de 20 AOM](/resources/rapport-gart.pdf) visant à répertorier l'ensemble des besoins de pièces justificatives**
 
@@ -44,7 +44,7 @@ Dans ce dernier cas il convient d’utiliser [l’API particulier](https://api.g
 
 ## Les données disponibles
 
-⚠️ **Les données particulier de la DGFIP ne sont plus délivrées par l'API Particulier**. Pour accéder aux données fiscales des particuliers, utiliser l'[API Impôt Particulier - DGFIP](/les-api/impot-particulier).
+⚠️ **Les données fiscales des particuliers ne sont plus disponibles via l'API Particulier, produit opéré par la DINUM.** Pour obtenir ces données (ex : le revenu fiscal de référence, les informations sur les déclarants et le nombre de parts du foyer fiscal), veuillez désormais interroger directement l'API dédiée à l'accès aux données fiscales des particuliers [**l'API Impôt particulier** de la DGFiP](https://api.gouv.fr/les-api/impot-particulier).
 
 | Nom       | Description                                         |Statut   |Dispo sans FranceConnect | Administration|
 | --------- | --------- |----------------------------------------------------|-----------------|--------- |

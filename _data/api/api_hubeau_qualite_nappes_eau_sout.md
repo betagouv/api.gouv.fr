@@ -2,7 +2,7 @@
 title: Hub'Eau - Qualité des nappes d'eau souterraine
 tagline: Qualité physico-chimique des nappes d'eau souterraine
 is_open: 1 # 1 means API is fully open
-external_site: http://hubeau.eaufrance.fr/page/documentation-qualite-nappes-deau-souterraines
+external_site: https://hubeau.eaufrance.fr/page/api-qualite-nappes
 partners:
   - eaufrance
   - ofb
@@ -26,37 +26,18 @@ content_intro: |
 
 ### Description fonctionnelle de l'API Qualité des nappes d'eau souterraine
 
-Ces données sont issues de la [banque nationale d'Accès aux Données sur les Eaux Souterraines ADES](http://ades.eaufrance.fr/).
-Au 29 novembre 2017, les données concernent 67 millions d'analyses réparties sur 74000 points d'eau.
+Ces données sont issues de la [banque nationale d'Accès aux Données sur les Eaux Souterraines ADES](http://ades.eaufrance.fr/). Elles concernent plus de 100 millions d'analyses.
 Les données sont exposées sous la forme d'une API REST, les formats supportés sont : JSON, GeoJSON et CSV.
 
 Les différentes opérations possibles sont :
 
 - stations : permet de rechercher les stations de mesure de la qualité des eaux souterraines (ou points d'eau : puits, forages et sources) ;
-- analyses : permet de récupérer les résultats des analyses, concernant différents paramètres physico-chimiques comme la conductivité, les nitrates, les substances pesticides, les métaux...
-
-La recherche des analyses est possible via de nombreux critères :
-
-- code du point d'eau,
-- code ou nom de commune,
-- département ou région,
-- code ou nom de bassin ou de circonscription administrative de bassin,
-- code ou nom d'aquifère (selon le référentiel BD LISA),
-- code ou nom de masse d'eau,
-- code ou nom de réseau de mesures,
-- coordonnées géographiques,
-- producteur des données,
-- code du paramètre analysé (nitrates, pH, glyphosate, etc) ou du groupe de paramètres (pesticides, métaux, etc),
-- code ou nom de la fraction analysée (eau brute, eau filtrée, etc),
-- code remarque de l'analyse (domaine de validité, < seuil de détection, > seuil de saturation, traces, etc),
-- code ou nom de la méthode d'analyse,
-- code ou nom du statut de l'analyse (donnée brute, contrôlée ou interprétée),
-- code ou nom de la qualification du résultat (correcte, incorrecte, incertaine),
-- dates mini et maxi de prélèvement,
-- valeurs mini et maxi du résultat de l'analyse.
+- analyses : permet de récupérer les résultats des analyses, concernant différents paramètres physico-chimiques comme la conductivité, les nitrates, les substances pesticides, les métaux... La recherche des analyses est possible via de nombreux critères dont le point d'eau, la commune, l'aquifère, la masse d'eau, le réseau de mesures, le producteur des données...
 
 Dernières évolutions de l'API Qualité des nappes d'eau souterraine:
-
+- 05/02/2019 : v1.2.0 - branchement sur un nouvel entrepôt de données permettant 1) une mise à jour au fil de l'eau (au même rythme que dans la base ADES) ; 2) la correction du bug pouvant faire varier le nombre de résultats pour une même requête
+- 22/05/2018 : v1.1.0 - ajout d'une limitation sur la profondeur d'accès aux résultats, ajout du header "link" pour le format CSV, correction du code retour pour le format CSV gérant le code 200 et 206  
+- 22/01/2018 : v1.0.1 - correction de bugs  
 - 29/11/2017 : mise à disposition de la v1
 
 ### Connaissez-vous Hub'Eau ?
@@ -65,25 +46,19 @@ Dernières évolutions de l'API Qualité des nappes d'eau souterraine:
 
 Service pérenne de la toile [Eau France](https://www.eaufrance.fr), [Hub'Eau](https://hubeau.eaufrance.fr/) met à disposition des API Rest favorisant l’accès aux données du [SIE](https://www.eaufrance.fr/donnees) dans des formats simples d’emploi et propices à la réutilisation (CSV, JSON, GeoJSON).
 Fondé sur une infrastructure et des méthodes adaptées au traitement et au stockage de données massives, les API Hub'Eau garantissent les meilleures performances de disponibilité.
-Hub’Eau est le résultat de la collaboration de l’AFB et du BRGM dans le cadre du pôle de recherche et d'innovation en interopérabilité des systèmes d'information distribués sur l'eau : [INSIDE](http://www.pole-inside.fr/fr).
+Hub’Eau est le résultat de la collaboration de l’OFB et du BRGM dans le cadre du pôle de recherche et d'innovation en interopérabilité des systèmes d'information distribués sur l'eau : [INSIDE](http://www.pole-inside.fr/fr).
 
-Les autres API disponibles à ce jour dans Hub'Eau sont :
-
-- [Etat piscicole](/les-api/api_hubeau_poissons) ;
-- [Indicateurs Eau potable et Assainissement](/les-api/api_hubeau_indic_EP_Asst) ;
-- [Piézométrie](/les-api/api_hubeau_piezometrie) ;
-- [Qualité physico-chimique des cours d'eau](/les-api/api_hubeau_qualite_rivieres).
+Pour découvrir toutes les API disponibles dans Hub'Eau, visitez [la page Hub'Eau sur api.gouv](https://api.gouv.fr/producteurs/hub-eau) ou directement [le portail Hub'Eau](https://hubeau.eaufrance.fr/page/apis).  
 
 #### Un service en co-construction
 
-Pour des API toujours plus en phase avec les besoins utilisateurs, Hub'Eau inaugure en 2018 une [politique de bêta testing](https://hubeau.eaufrance.fr/page/apis) en organisant une campagne de tests ouverte avant la mise la mise en production de chaque nouvelle API.
-D'une durée de 30 à 45 jours, ces campagnes ont pour objectif de recueillir un maximum de retour d’expérience des utilisateurs sur les points forts et les points faibles des API en construction.
-Pour être informé de la sortie des nouvelles API et les tester en avant-première, inscrivez-vous à la [newsletter](https://hubeau.eaufrance.fr/page/news-letter-hubeau) !
+Pour des API toujours plus en phase avec les besoins utilisateurs, Hub'Eau a inauguré en 2018 une [politique de bêta testing](https://hubeau.eaufrance.fr/page/apis) en organisant une campagne de tests ouverte avant la mise la mise en production de chaque nouvelle API.
+D'une durée de quelques mois, ces campagnes ont pour objectif de recueillir un maximum de retour d’expérience des utilisateurs sur les points forts et les points faibles des API en construction. Les retours se font sur [le forum de contribution GitHub](http://github.com/BRGM/hubeau/issues).
+Pour être informé de la sortie des nouvelles API et les tester en avant-première, inscrivez-vous à la [newsletter](https://hubeau.eaufrance.fr/newsletter) !
 
 ### Exemples de réutilisation
-
-- [Qualité des nappes d'eau souterraine dans votre commune](http://www.nalguise.net/quales/quales.php)
-- [Cartographie de la qualité des nappes d'eau souterraine en France](http://www.nalguise.net/quales/quales_carto.php)
+- [Les nitrates dans les cours d'eau et les nappes souterraines des Pays de la Loire](https://ssm-ecologie.shinyapps.io/nitrates_eau/)
+- [Visualiseur Hub'Eau de la qualité des nappes](https://hubeau.eaufrance.fr/sites/default/files/api/demo/qualnap.htm)
 - [Soumettez le votre sur la page GitHub des utilisateurs de Hub'Eau](https://github.com/BRGM/hubeau)
 
 ### Glossaire
@@ -91,10 +66,6 @@ Pour être informé de la sortie des nouvelles API et les tester en avant-premi�
 #### ADES
 
 [ADES](http://www.ades.eaufrance.fr) est la banque nationale d’Accès aux Données sur les Eaux Souterraines qui rassemble sur son site internet public des données quantitatives et qualitatives relatives aux eaux souterraines, dont les objectifs sont de constituer un outil de collecte et de conservation des données sur les eaux souterraines, d’être mobilisable par un large ensemble de partenaires, de permettre les traitements nécessaires à l’action de chacun des partenaires, d’être le guichet d’accès aux informations sur les eaux souterraines, d’avoir un suivi de l’état patrimonial des ressources pour répondre à la politique des eaux souterraines, et enfin d’adopter au niveau national un principe de transparence et d’accessibilité aux données sur les eaux souterraines.
-
-#### AFB
-
-L'[OFB (Office Français de la Biodiversité)](https://ofb.gouv.fr/) a été créée le 1er janvier 2017. Elle regroupe l'Agence des aires marines protégées, l'Atelier technique des espaces naturels, l'Office national de l'eau et des milieux aquatiques et les Parcs nationaux de France. L'AFB , établissement public du ministère en charge de l'environnement, exerce des missions d’appui à la mise en œuvre des politiques publiques dans les domaines de la connaissance, la préservation, la gestion et la restauration de la biodiversité et des milieux terrestres, aquatiques et marins. Elle vient en appui aux acteurs publics mais travaille également en partenariat étroit avec les acteurs socio-économiques. Elle a aussi vocation à aller à la rencontre du public pour mobiliser les citoyens en faveur de la biodiversité. En matière d’espaces protégés, elle gère notamment les parcs naturels marins et le sanctuaire de mammifères marins Agoa aux Antilles. Elle est opératrice et animatrice de sites Natura 2000 en mer. Les parcs nationaux sont rattachés à l’Agence, des synergies fortes sont mises en place avec eux.
 
 #### Aquifère
 
@@ -111,6 +82,10 @@ Les eaux souterraines désignent toutes les eaux se trouvant sous la surface du 
 #### Nappe d'eau souterraine
 
 Une nappe d'eau souterraine est une eau contenue dans les interstices ou les fissures d'une roche du sous-sol qu'on nomme aquifère.
+
+#### OFB
+
+L'[OFB (Office Français de la Biodiversité)](https://ofb.gouv.fr/) a été créée le 1er janvier 2017. Elle regroupe l'Agence des aires marines protégées, l'Atelier technique des espaces naturels, l'Office national de l'eau et des milieux aquatiques et les Parcs nationaux de France. L'AFB , établissement public du ministère en charge de l'environnement, exerce des missions d’appui à la mise en œuvre des politiques publiques dans les domaines de la connaissance, la préservation, la gestion et la restauration de la biodiversité et des milieux terrestres, aquatiques et marins. Elle vient en appui aux acteurs publics mais travaille également en partenariat étroit avec les acteurs socio-économiques. Elle a aussi vocation à aller à la rencontre du public pour mobiliser les citoyens en faveur de la biodiversité. En matière d’espaces protégés, elle gère notamment les parcs naturels marins et le sanctuaire de mammifères marins Agoa aux Antilles. Elle est opératrice et animatrice de sites Natura 2000 en mer. Les parcs nationaux sont rattachés à l’Agence, des synergies fortes sont mises en place avec eux.
 
 #### SANDRE
 

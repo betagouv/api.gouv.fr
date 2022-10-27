@@ -19,7 +19,7 @@ themes:
   - Environnement
 last_update: 26/11/2021
 content_intro: |
-  [La nouvelle API Qualité de l'eau potable](https://hubeau.eaufrance.fr/page/api-qualite-eau-potable) diffuse le jeu de données "DIS" (résultats du contrôle sanitaire de l'eau distribuée commune par commune) mis en ligne par le Ministère des Solidarités et de la Santé sur le portail data.gouv.fr
+  [L'API Qualité de l'eau potable](https://hubeau.eaufrance.fr/page/api-qualite-eau-potable) de Hub'Eau diffuse le jeu de données "DIS" (résultats du contrôle sanitaire de l'eau distribuée commune par commune) mis en ligne par le Ministère des Solidarités et de la Santé sur le portail data.gouv.fr
 ---
 
 ### Description fonctionnelle de l'API Qualité de l'eau potable
@@ -53,16 +53,16 @@ Service pérenne de la toile [Eau France](https://www.eaufrance.fr), [Hub'Eau](h
 Fondé sur une infrastructure et des méthodes adaptées au traitement et au stockage de données massives, les API Hub'Eau garantissent les meilleures performances de disponibilité.
 Hub’Eau est le résultat de la collaboration de l’OFB et du BRGM dans le cadre du pôle de recherche et d'innovation en interopérabilité des systèmes d'information distribués sur l'eau : [INSIDE](http://www.pole-inside.fr/fr).
 
-Pour découvrir toutes les API disponibles dans Hub'Eau, visitez [la page Hub'Eau sur api.gouv](https://api.gouv.fr/producteurs/hub-eau) ou directement sur [le portail Hub'Eau](https://hubeau.eaufrance.fr/page/apis).  
+Pour découvrir toutes les API disponibles dans Hub'Eau, visitez [la page Hub'Eau sur api.gouv](https://api.gouv.fr/producteurs/hub-eau) ou directement [le portail Hub'Eau](https://hubeau.eaufrance.fr/page/apis).   
 
 #### Un service en co-construction
 
 Pour des API toujours plus en phase avec les besoins utilisateurs, Hub'Eau a inauguré en 2018 une [politique de bêta testing](https://hubeau.eaufrance.fr/page/apis) en organisant une campagne de tests ouverte avant la mise la mise en production de chaque nouvelle API.
-D'une durée de quelques mois, ces campagnes ont pour objectif de recueillir un maximum de retour d’expérience des utilisateurs sur les points forts et les points faibles des API en construction.
+D'une durée de quelques mois, ces campagnes ont pour objectif de recueillir un maximum de retour d’expérience des utilisateurs sur les points forts et les points faibles des API en construction. Les retours se font sur [le forum de contribution GitHub](http://github.com/BRGM/hubeau/issues).
 Pour être informé de la sortie des nouvelles API et les tester en avant-première, inscrivez-vous à la [newsletter](https://hubeau.eaufrance.fr/newsletter) !
 
 ### Exemples de réutilisation
-
+- [Qualité de l'eau potable des 12 derniers mois sur Aix-Marseille-Provence](https://data.ampmetropole.fr/explore/dataset/ls-qualite-de-leau-potable-12-mois/table/)
 - [Soumettez le votre sur la page GitHub des utilisateurs de Hub'Eau](https://github.com/BRGM/hubeau)
 
 ### Glossaire

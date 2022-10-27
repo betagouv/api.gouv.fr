@@ -15,7 +15,7 @@ keywords:
   - Plan d'eau
   - Rivière
 contact_link: newshubeau@brgm.fr
-doc_tech_link: https://hubeau.eaufrance.fr/api/v1/qualite_rivieres/api-docs
+doc_tech_link: https://hubeau.eaufrance.fr/api/v2/qualite_rivieres/api-docs
 themes:
   - Environnement
 visits_2019: 509
@@ -26,8 +26,14 @@ content_intro: |
 
 ### Description fonctionnelle de l'API Qualité des cours d'eau
 
-Depuis la fin février 2018, l'ensemble des données sur la France entière (y compris les DROM) est disponible, en provenance de [Naïades](http://naiades.eaufrance.fr/).
-Plus de 175 millions d'analyses réparties sur 20 000 stations sont disponibles.
+Les données de l'API "Qualité des cours d'eau" sont issues de la base [Naïades](http://naiades.eaufrance.fr/). Disponibles sur la France entière (y compris les DROM), elles portent sur les résultats des mesures de la qualité physico-chimique des cours d’eau et des plans d’eau transmises par les Agences de l'Eau.  
+Plus de 200 millions d'analyses réparties sur plus de 20 000 stations sont disponibles.
+
+Une version 2 de l'API est désormais disponible. Cette nouvelle version ajoute de nombreuses informations dans les réponses des différents endpoints, ajoute également des paramètres requêtables (fraction, statut, qualification, réseau, masse d'eau, ...) et corrige des problèmes d'interrogation des conditions environnementales.
+De plus, dans la version v2 de l'API, les données sont dorénavant synchronisées en continu avec la base Naïades.
+
+La v1 de l'API reste disponible jusqu'au 31 décembre 2022, avec des données figées.
+
 Les données sont exposées sous la forme d'une API REST, les formats supportés sont : JSON, GeoJSON et CSV.
 
 Un ensemble de 4 méthodes permet de rechercher l'ensemble des informations liées à la qualité physico-chimiques des eaux superficielles continentales (cours d'eau et plans d'eau) :
@@ -37,18 +43,10 @@ Un ensemble de 4 méthodes permet de rechercher l'ensemble des informations lié
 - **condition_environnementale_pc** : permet de rechercher les conditions environnementales (température de l'air, présence de feuilles, mousses, irisations, etc) lors des opérations de prélèvements physico-chimiques ;
 - **analyse_pc** : permet de rechercher les analyses physico-chimiques effectuées sur les échantillons confectionnés lors des opérations de prélèvement sur les différentes stations. Ces analyses concernent différents paramètres physico-chimiques comme la conductivité, les nitrates, les substances pesticides, les métaux lourds...
 
-Les données sont issues de la [base de données Naïades](http://www.naiades.eaufrance.fr/). Elles sont synchronisées avec la base Naïades après de gros épisodes d'alimentation. Entre deux étapes d'alimentation, des écarts sont donc possibles entre Naïades et l’API Hub'Eau. Au cours de l'année 2021, il est prévu la mise en place d'un mécanisme de synchronisation continue des données, ce qui supprimera tout écart entre les données Naïades et Hub'Eau.
-
 Dernières évolutions de l'API Qualité des cours d'eau de Hub'Eau:
-
-- 08/01/2019 : fermeture de l'API en v0
+ - 19/07/2022 : v2.0.0 - synchronisation continue des données avec la base Naiades, correction des problèmes d'interrogation des conditions environnementales, ajout de paramètres requêtables (fraction, statut, qualification, réseau, masse d'eau, ...), ajout de nombreuses informations supplémentaires dans les réponses des différents endpoints
 - 22/05/2018 : v1.1.0 - ajout d'une limitation sur la profondeur d'accès aux résultats pour ne pas faire tomber le serveur, ajout du header "link" pour le format CSV, correction code retour pour le format CSV gérant les codes 200 et 206
 - 26/02/2018 : passage à la v1 - changement de la structure de l'API avec mise à disposition des données sur la France entière (la v0 ne proposait que les bassins Adour-Garonne et Loire-Bretagne) et ajout d'informations comme les conditions environnementales des prélèvements
-- 29/11/2017 : ajout de l'attribut api_version (string) dans la réponse : version de l'API
-- 04/05/2017 : mise à jour de l'adresse de l'API api.hubeau.fr vers [hubeau.eaufrance.fr/](http://hubeau.eaufrance.fr/)
-- 25/10/2016 : ajout des données qualité des rivières de l'agence de l'eau Loire Bretagne
-- 21/09/2016 : ajout des libellés SANDRE à côté des codes SANDRE dans la réponse
-- 08/08/2016 : ajout du paramètre fields, la valeur est une liste des champs souhaités dans la réponse, par exemple fields=code_station,localisation
 
 ### Connaissez-vous Hub'Eau ?
 
@@ -58,25 +56,21 @@ Service pérenne de la toile [Eau France](https://www.eaufrance.fr), [Hub'Eau](h
 Fondé sur une infrastructure et des méthodes adaptées au traitement et au stockage de données massives, les API Hub'Eau garantissent les meilleures performances de disponibilité.
 Hub’Eau est le résultat de la collaboration de l’AFB et du BRGM dans le cadre du pôle de recherche et d'innovation en interopérabilité des systèmes d'information distribués sur l'eau : [INSIDE](http://www.pole-inside.fr/fr).
 
-Les autres API disponibles à ce jour dans Hub'Eau sont :
-
-- [Etat piscicole](/les-api/api_hubeau_poissons) ;
-- [Indicateurs Eau potable et Assainissement](/les-api/api_hubeau_indic_EP_Asst) ;
-- [Piézométrie](/les-api/api_hubeau_piezometrie) ;
-- [Qualité physico-chimique des cours d'eau](/les-api/api_hubeau_qualite_rivieres) ;
-- [Qualité des nappes d'eau souterraine](/les-api/api_hubeau_qualite_nappes_eau_sout) ;
-- [Température des cours d'eau](/les-api/api_hubeau_temperature_rivieres) ;
-- [Prélèvements en eau](/les-api/api_hubeau_prelevements) ;  
-- [Hydrométrie](/les-api/api_hubeau_hydrometrie).  
+Pour découvrir toutes les API disponibles dans Hub'Eau, visitez [la page Hub'Eau sur api.gouv](https://api.gouv.fr/producteurs/hub-eau) ou directement [le portail Hub'Eau](https://hubeau.eaufrance.fr/page/apis).  
 
 #### Un service en co-construction
 
 Pour des API toujours plus en phase avec les besoins utilisateurs, Hub'Eau a inauguré en 2018 une [politique de bêta testing](https://hubeau.eaufrance.fr/page/apis) en organisant une campagne de tests ouverte avant la mise la mise en production de chaque nouvelle API.
-D'une durée de quelques mois, ces campagnes ont pour objectif de recueillir un maximum de retour d’expérience des utilisateurs sur les points forts et les points faibles des API en construction.
-Pour être informé de la sortie des nouvelles API et les tester en avant-première, inscrivez-vous à la [newsletter](https://hubeau.eaufrance.fr/page/news-letter-hubeau) !
+D'une durée de quelques mois, ces campagnes ont pour objectif de recueillir un maximum de retour d’expérience des utilisateurs sur les points forts et les points faibles des API en construction. Les retours se font sur [le forum de contribution GitHub](http://github.com/BRGM/hubeau/issues).
+Pour être informé de la sortie des nouvelles API et les tester en avant-première, inscrivez-vous à la [newsletter](https://hubeau.eaufrance.fr/newsletter) !
 
 ### Exemples de réutilisation
 
+- [Observatoire du bassin versant de la Sèvre Nantaise](https://www.sevre-nantaise.com/observatoire/qualite-eau-phosphore)
+- [Géorivière, gérez et suivez vos cours d'eau](https://georiviere.fr/)
+- [Les pesticides dans les cours d'eau des Pays de la Loire](https://ssm-ecologie.shinyapps.io/qualite-des-eaux/)
+- [Les nitrates dans les cours d'eau et les nappes souterraines des Pays de la Loire](https://ssm-ecologie.shinyapps.io/nitrates_eau/)
+- [Qualité des lacs et cours d'eau (visualiseur des APIs qualité physico-chimique des cours d'eau, hydrobiologie et température de Hub'Eau)](https://hubeau.eaufrance.fr/sites/default/files/api/demo/qualriv.htm)
 - [Soumettez le votre sur la page GitHub des utilisateurs de Hub'Eau](https://github.com/BRGM/hubeau)
 
 ### Glossaire
@@ -91,7 +85,7 @@ Le [BRGM (Bureau de Recherches Géologiques et Minières)](http://www.brgm.fr/),
 
 #### Naïades
 
-[Naïades](http://www.naiades.eaufrance.fr/) est l'interface nationale pour l'accès aux données des rivières et des lacs. Elle permet aux utilisateurs d'accéder aux données collectées par les agences de l'eau, les offices de l'eau et l'AFB sur les paramètres physiques, les concentrations de substances chimiques, les inventaires d'espèces et l'hydromorphologie en un point unique dans des formats standardisés.
+[Naïades](http://www.naiades.eaufrance.fr/) est l'interface nationale pour l'accès aux données des rivières et des lacs. Elle permet aux utilisateurs d'accéder aux données collectées par les agences de l'eau, les offices de l'eau et l'OFB sur les paramètres physiques, les concentrations de substances chimiques, les inventaires d'espèces et l'hydromorphologie en un point unique dans des formats standardisés.
 
 #### OFB
 
