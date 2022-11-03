@@ -21,6 +21,10 @@ themes:
 rate_limiting_resume: de 5  à 20 appels / seconde
 rate_limiting_description: |
   Les quotas diffèrent en fonction des routes
+stats_detail_resume: de 5  à 20 appels / seconde
+stats_detail_description: |
+  Les quotas diffèrent en fonction des routes
+stats_detail_link: http://apple.com
 uptime: 98.82
 monitoring_link: https://mission-apprentissage.github.io/upptime/history/la-bonne-alternance-api
 last_update: 14/12/2020
