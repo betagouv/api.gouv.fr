@@ -200,7 +200,7 @@ const StatsDetail: React.FC<IPropsStatsDetail> = ({
         role="button"
         tabIndex={0}
       >
-        <div>{Speedometer}</div>
+        <div>{Stats}</div>
         <div>
           {stats_detail_resume
             ? `Stats : ${stats_detail_resume}`
