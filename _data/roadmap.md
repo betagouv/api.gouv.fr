@@ -389,6 +389,10 @@
       what: Prestations sociales par la Direction de la Sécurité Sociale
     - type: ADD_API
       what: Historique d'un véhicule (HistoVec), par le Ministère de l'Intérieur
+  11:
+    - type: ADD_API
+      what: Sesali, par l'Agence du Numérique en Santé
+      path: /les-api/api-sesali
   12:
     - type: ADD_API
       what: Données foncières par le CEREMA
