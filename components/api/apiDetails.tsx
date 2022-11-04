@@ -5,11 +5,18 @@ import constants from '../../constants';
 import { ButtonLink } from '../../uiComponents';
 import Speedometer from '../../uiComponents/icon/speedometer';
 import Cardiogram from '../../uiComponents/icon/cardiogram';
+import Stats from '../../uiComponents/icon/stats';
 
 interface IPropsRateLimiting {
   rate_limiting?: string;
   rate_limiting_resume?: string;
   rate_limiting_link?: string
+}
+
+interface IPropsStatsDetail {
+  stats_detail?: string;
+  stats_detail_resume?: string;
+  stats_detail_link?: string
 }
 
 interface IPropsMonitoring {
@@ -24,6 +31,7 @@ interface IPropsIsFranceConnected {
 
 interface IPropsDetails
   extends IPropsRateLimiting,
+    IPropsStatsDetail,
     IPropsMonitoring,
     IPropsIsFranceConnected {}
 
@@ -175,6 +183,54 @@ const RateLimitingDetail: React.FC<IPropsRateLimiting> = ({
   );
 };
 
+const StatsDetail: React.FC<IPropsStatsDetail> = ({
+  stats_detail,
+  stats_detail_resume,
+  stats_detail_link
+}) => {
+  const [showStatsDetailDesc, setShowStatsDetailDesc] = useState(false);
+  const toggle = () => setShowStatsDetailDesc(!showStatsDetailDesc);
+  const toggleKey = triggerOnEnterKey(toggle);
+  return (
+    <>
+      <div
+        className="badge  cursor-pointer"
+        onClick={toggle}
+        onKeyDown={toggleKey}
+        role="button"
+        tabIndex={0}
+      >
+        <div>{Stats}</div>
+        <div>
+          {stats_detail_resume
+            ? `Stats : ${stats_detail_resume}`
+            : 'Les statistiques d‘utilisation de cette API ne sont pas communiquées'}
+        </div>
+        {stats_detail && <ShowMore isOpen={showStatsDetailDesc} />}
+      </div>
+      {stats_detail && showStatsDetailDesc && (
+        <div className="details">
+          <i>{stats_detail}</i>
+          { stats_detail_link &&
+            <>
+              <div className="layout-right vertical-margin">
+                <ButtonLink
+                  href={stats_detail_link}
+                  target="_blank"
+                  rel="noopener"
+                  alt
+                >
+                  En savoir plus
+                </ButtonLink>
+              </div>
+            </>
+          }
+        </div>
+      )}
+    </>
+  );
+};
+
 const IsFranceConnectedDetail: React.FC<IPropsIsFranceConnected> = ({
   is_france_connected,
 }) => {
@@ -231,6 +287,9 @@ const ApiDetails: React.FC<IPropsDetails> = ({
   rate_limiting,
   rate_limiting_resume,
   rate_limiting_link,
+  stats_detail,
+  stats_detail_resume,
+  stats_detail_link,
   is_france_connected = null,
 }) => {
   return (
@@ -244,6 +303,11 @@ const ApiDetails: React.FC<IPropsDetails> = ({
         rate_limiting={rate_limiting}
         rate_limiting_resume={rate_limiting_resume}
         rate_limiting_link={rate_limiting_link}
+      />
+      <StatsDetail
+        stats_detail={stats_detail}
+        stats_detail_resume={stats_detail_resume}
+        stats_detail_link={stats_detail_link}
       />
       {(is_france_connected === 1 || is_france_connected === 2) && (
         <IsFranceConnectedDetail is_france_connected={is_france_connected} />
