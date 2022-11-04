@@ -135,7 +135,7 @@ export interface IApi extends IApiShort {
   rate_limiting_description: string;
   rate_limiting_resume: string;
   rate_limiting_link: string;
-  stats_detail: string;
+  stats_detail_description: string;
   stats_detail_resume: string;
   stats_detail_link: string;
   partners: { slug?: string; name: string }[];
