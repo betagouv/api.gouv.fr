@@ -3,7 +3,7 @@ title: API Fichier des Comptes Bancaires et Assimilés (FICOBA)
 tagline: Accédez aux coordonnées bancaires d'un usager connues de l’administration fiscale (DGFIP) et transmises par les établissements bancaires
 producer: dgfip
 is_open: -1
-datapass_link: https://signup.api.gouv.fr/api-ficoba-sandbox
+datapass_link: https://datapass.api.gouv.fr/api-ficoba-sandbox
 access_page:
   - who:
       - Un particulier

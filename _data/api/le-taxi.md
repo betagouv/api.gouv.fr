@@ -11,7 +11,7 @@ access_page:
       Vous pouvez remplir une demande d’habilitation à l’API le.taxi dans le cadre des articles [L. 3121-11-1](https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000029528684&cidTexte=LEGITEXT000023086525) et [R3121-24 à R3121-33](https://www.legifrance.gouv.fr/affichCode.do?idSectionTA=LEGISCTA000032278146&cidTexte=LEGITEXT000023086525) du Code des transports.
 
       <NextSteps />
-      <Button href="https://datapass.api.gouv.fr/le-taxi-chauffeurs">Remplir une demande</Button>
+      <Button href="https://datapass.api.gouv.fr/le-taxi?demarche=applicatif_chauffeur">Remplir une demande</Button>
   - who:
       - Application de mobilité
     is_eligible: 1
@@ -19,7 +19,7 @@ access_page:
       Vous pouvez remplir une demande d’habilitation à l’API le.taxi dans le cadre des articles [L. 3121-11-1](https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000029528684&cidTexte=LEGITEXT000023086525) et [R3121-24 à R3121-33](https://www.legifrance.gouv.fr/affichCode.do?idSectionTA=LEGISCTA000032278146&cidTexte=LEGITEXT000023086525) du Code des transports.
 
       <NextSteps />
-      <Button href="https://datapass.api.gouv.fr/le-taxi-clients">Remplir une demande</Button>
+      <Button href="https://datapass.api.gouv.fr/le-taxi?demarche=applicatif_client">Remplir une demande</Button>
   - who:
       - Acteur de mobilité publique
     is_eligible: 1
@@ -27,7 +27,7 @@ access_page:
       Vous pouvez remplir une demande d’habilitation à l’API le.taxi dans le cadre des articles [L. 3121-11-1](https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000029528684&cidTexte=LEGITEXT000023086525) et [R3121-24 à R3121-33](https://www.legifrance.gouv.fr/affichCode.do?idSectionTA=LEGISCTA000032278146&cidTexte=LEGITEXT000023086525) du Code des transports.
       
       <NextSteps />
-      <Button href="https://datapass.api.gouv.fr/le-taxi-clients">Remplir une demande</Button>
+      <Button href="https://datapass.api.gouv.fr/le-taxi?demarche=applicatif_client">Remplir une demande</Button>
   - who:
       - Editeur logiciel pour les flottes de taxis
     is_eligible: 0
@@ -49,7 +49,7 @@ access_page:
       Seuls les opérateurs de taxi ou éditeurs d’application peuvent demander un accès à l’API.
 
       <Button href="mailto:equipe@le.taxi">Nous écrire</Button>
-datapass_link: https://datapass.api.gouv.fr/le-taxi-clients #default access link
+datapass_link: https://datapass.api.gouv.fr/le-taxi #default access link
 partners:
   - Atlantis Taxi
   - G7
