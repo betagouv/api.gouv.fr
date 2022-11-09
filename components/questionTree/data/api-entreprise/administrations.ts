@@ -14,7 +14,7 @@ export const pathDevelopForAdministration = {
               <br/>
               <span role='img' aria-label='émoji avertissement'>⚠️</span> En tant que prestataire technique d’une entité administrative, vous pourrez être destinataire des informations techniques permettant l’usage de l’API mais en aucun cas des données elles-même.
               <br/>
-              <span role='img' aria-label='émoji information'>ℹ️</span>**Pour que votre demande soit traitée plus rapidement :** Au niveau de la section _Les modèles pré-remplis_, le modèle "_Demande spécifique aux éditeurs de logiciels_" est selectionné. Il est impératif de garder ce modèle et de ne pas en changer.
+              <span role='img' aria-label='émoji information'>ℹ️</span>**Pour que votre demande soit traitée plus rapidement :** Au niveau de la section _Les modèles pré-remplis_, le modèle "_Demande spécifique aux éditeurs de logiciels_" est sélectionné. Il est impératif de garder ce modèle et de ne pas en changer.
               <br/>
               <Button href='https://datapass.api.gouv.fr/api-entreprise?demarche=editeur' alt>Déposer une demande pour intégrer l'API Entreprise</Button>`,
           },
