@@ -385,17 +385,20 @@
     - type: ADD_API
       what: Données ouvertes d'Enedis, par Enedis
       path: /les-api/api-donnees-ouvertes-enedis
-    - type: ADD_API
-      what: Prestations sociales par la Direction de la Sécurité Sociale
-    - type: ADD_API
-      what: Historique d'un véhicule (HistoVec), par le Ministère de l'Intérieur
   11:
     - type: ADD_API
       what: Sesali, par l'Agence du Numérique en Santé
       path: /les-api/api-sesali
+    - type: ADD_API
+      what: Accès Libre, par le Ministère de la Transition Ecologique
+      path: /les-api/api-acces-libre
   12:
     - type: ADD_API
       what: Données foncières par le CEREMA
+    - type: ADD_API
+      what: Prestations sociales par la Direction de la Sécurité Sociale
+    - type: ADD_API
+      what: Historique d'un véhicule (HistoVec), par le Ministère de l'Intérieur
 2023:
   1:
     - type: ADD_API
