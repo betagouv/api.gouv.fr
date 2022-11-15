@@ -29,7 +29,7 @@ RGE est une mention indispensable pour que les clients bénéficient des aides d
 
 ### À quoi sert l’API Professionnels RGE ?
 
-Cette API donne accès au recensement des entreprises RGE avec leur domaine de travaux. Elle permet de vérifier si une entreprise est agrée RGEE (Reconnu Garant de l'Environnement).
+Cette API donne accès au recensement des entreprises RGE avec leur domaine de travaux. Elle permet de vérifier si une entreprise est agrée RGE (Reconnu Garant de l'Environnement).
 
 Pour plus d'informations sur les entreprises RGE, vous pouvez vous rendre sur le site <External href="https://www.faire.gouv.fr/">faire.fr</External>.
 
