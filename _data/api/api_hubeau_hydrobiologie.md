@@ -23,7 +23,7 @@ contact_link: newshubeau@brgm.fr
 doc_tech_link: https://hubeau.eaufrance.fr/api/v1/hydrobio/api-docs
 themes:
   - Environnement
-last_update: 05/08/2022
+last_update: 15/11/2022
 content_intro: |
   [L'API Hydrobiologie](https://hubeau.eaufrance.fr/page/api-hydrobiologie) de Hub'Eau diffuse les données de peuplement des cours d'eau bancarisées par le [portail NAIADES](http://www.naiades.eaufrance.fr/).
 ---
