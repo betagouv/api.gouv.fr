@@ -20,7 +20,7 @@ api:
 
 ## La donnée au coeur de la transition énergétique
 
-Pour pouvroir agir contre le réchauffement climatique et dans un contexte de crise énergétique, l'accès à des données à jour et de qualité est primordial.
+Pour pouvoir agir contre le réchauffement climatique et dans un contexte de crise énergétique, l'accès à des données à jour et de qualité est primordial.
 
 De même, l'orientation et le suivi des politiques énergétiques ne peut se faire sans un partage efficace des données entre administrations et opérateurs de l'énergie.
 
