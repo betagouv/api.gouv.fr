@@ -1,5 +1,5 @@
 ---
-title: API Aide financieres de l’ADEME
+title: API Aides financieres de l’ADEME
 tagline: Interrogez l’ensemble des dossiers d’aides engagées par l’ADEME sur les trois dernières années
 external_site: https://data.ademe.fr/datasets/les-aides-financieres-de-l'ademe
 is_open: 1 # 1 means API is fully open
