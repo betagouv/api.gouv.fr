@@ -20,27 +20,24 @@ keywords:
   - Plan d'eau
   - Rivière
 contact_link: newshubeau@brgm.fr
-doc_tech_link: https://hubeau.eaufrance.fr/api/vbeta/hydrobio/api-docs
+doc_tech_link: https://hubeau.eaufrance.fr/api/v1/hydrobio/api-docs
 themes:
   - Environnement
-last_update: 01/05/2020
+last_update: 15/11/2022
 content_intro: |
-  [[L'API Hydrobiologie](https://hubeau.eaufrance.fr/page/api-hydrobiologie) de Hub'Eau diffuse les données de peuplement des cours d'eau bancarisées par le [portail NAIADES](http://www.naiades.eaufrance.fr/).
+  [L'API Hydrobiologie](https://hubeau.eaufrance.fr/page/api-hydrobiologie) de Hub'Eau diffuse les données de peuplement des cours d'eau bancarisées par le [portail NAIADES](http://www.naiades.eaufrance.fr/).
 ---
 
 ### Description fonctionnelle de l'API Hydrobiologie
 
 Les données hydrobiologiques concernent :
 
-- les Macroinvertébrés aquatiques : 1,6 million de taxons répertoriés, 175 000 indices biologiques
-- les Diatomées benthiques : 675 000 taxons, 50 000 indices
-- les Macrophytes : 150 000 taxons, 10 000 indices
-- les Poissons : 170 000 taxons, 4 000 indices
+- les Macroinvertébrés aquatiques
+- les Diatomées benthiques
+- les Macrophytes
+- les Poissons
 
-NB. Les poissons répertoriés ici proviennent de la base ASPE de l'OFB tandis que l'API Poissons fournit les données de la base IMAGE. La base ASPE fournit des données actuelles contrairement à IMAGE qui est figée. ASPE fournit de plus des indices ou résultats biologiques (IPR) mais ne fournit pas les effectifs par classes de taille des individus contrairement à IMAGE.
-
-L'API est actuellement en version beta.
-Pendant cette période de test, nous vous invitons à faire remonter toute demande de correction ou tout besoin non satisfait sur [le forum de contribution Github](https://github.com/BRGM/hubeau/issues).
+L'API est passée en version 1 depuis le 19 juillet 2022.
 
 3 opérations permettent de rechercher l'ensemble des informations liées à la qualité hydrobiologique des eaux superficielles continentales (cours d'eau et plans d'eau) :
 
@@ -49,7 +46,7 @@ Pendant cette période de test, nous vous invitons à faire remonter toute deman
 - **taxons** : permet de récupérer les listes floristiques ou faunistiques.
 
 Dernières évolutions de l'API Hydrobiologie de Hub'Eau:
-
+- 19/07/2022 : mise à disposition de la v1 : ajout notamment des paramètres code_prelevement et code_banque_reference.
 - 28/05/2020 : mise à disposition de la version beta
 
 ### Connaissez-vous Hub'Eau ?
@@ -58,24 +55,15 @@ Dernières évolutions de l'API Hydrobiologie de Hub'Eau:
 
 Service pérenne de la toile [Eau France](https://www.eaufrance.fr), [Hub'Eau](https://hubeau.eaufrance.fr/) met à disposition des API Rest favorisant l’accès aux données du [SIE](https://www.eaufrance.fr/donnees) dans des formats simples d’emploi et propices à la réutilisation (CSV, JSON, GeoJSON).
 Fondé sur une infrastructure et des méthodes adaptées au traitement et au stockage de données massives, les API Hub'Eau garantissent les meilleures performances de disponibilité.
-Hub’Eau est le résultat de la collaboration de l’AFB et du BRGM dans le cadre du pôle de recherche et d'innovation en interopérabilité des systèmes d'information distribués sur l'eau : [INSIDE](http://www.pole-inside.fr/fr).
+Hub’Eau est le résultat de la collaboration de l’OFB et du BRGM dans le cadre du pôle de recherche et d'innovation en interopérabilité des systèmes d'information distribués sur l'eau : [INSIDE](http://www.pole-inside.fr/fr).
 
-Les autres API disponibles à ce jour dans Hub'Eau sont :
-
-- [Etat piscicole](/les-api/api_hubeau_poissons) ;
-- [Indicateurs Eau potable et Assainissement](/les-api/api_hubeau_indic_EP_Asst) ;
-- [Piézométrie](/les-api/api_hubeau_piezometrie) ;
-- [Qualité physico-chimique des cours d'eau](/les-api/api_hubeau_qualite_rivieres) ;
-- [Qualité des nappes d'eau souterraine](/les-api/api_hubeau_qualite_nappes_eau_sout) ;
-- [Température des cours d'eau](/les-api/api_hubeau_temperature_rivieres) ;
-- [Prélèvements en eau](/les-api/api_hubeau_prelevements) ;
-- [Hydrométrie](/les-api/api_hubeau_hydrometrie).
+Pour découvrir toutes les API disponibles dans Hub'Eau, visitez [la page Hub'Eau sur api.gouv](https://api.gouv.fr/producteurs/hub-eau) ou directement [le portail Hub'Eau](https://hubeau.eaufrance.fr/page/apis).  
 
 #### Un service en co-construction
 
 Pour des API toujours plus en phase avec les besoins utilisateurs, Hub'Eau a inauguré en 2018 une [politique de bêta testing](https://hubeau.eaufrance.fr/page/apis) en organisant une campagne de tests ouverte avant la mise la mise en production de chaque nouvelle API.
-D'une durée de quelques mois, ces campagnes ont pour objectif de recueillir un maximum de retour d’expérience des utilisateurs sur les points forts et les points faibles des API en construction.
-Pour être informé de la sortie des nouvelles API et les tester en avant-première, inscrivez-vous à la [newsletter](https://hubeau.eaufrance.fr/page/news-letter-hubeau) !
+D'une durée de quelques mois, ces campagnes ont pour objectif de recueillir un maximum de retour d’expérience des utilisateurs sur les points forts et les points faibles des API en construction. Les retours se font sur [le forum de contribution GitHub](http://github.com/BRGM/hubeau/issues).
+Pour être informé de la sortie des nouvelles API et les tester en avant-première, inscrivez-vous à la [newsletter](https://hubeau.eaufrance.fr/newsletter) !
 
 ### Exemples de réutilisation
 
