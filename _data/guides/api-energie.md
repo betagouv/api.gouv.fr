@@ -85,6 +85,13 @@ Cette API donne accès au recensement des diagnostics de performance énergétiq
 ### Simplifier l'accès aux dispositifs d'aides relatives à l'énergie
 
 <details>
+<summary>Diagnostics de performance énergétique (DPE) des bâtiments tertiaires</summary>
+Cette API donne accès au recensement des diagnostics de performance énergétique (DPE) des bâtiments tertiaires de la France entière.
+
+<Button href="https://api.gouv.fr/les-api/api_dpe_batiments_publics">Accéder à l'API</Button>
+</details>
+
+<details>
 <summary>Professionnels RGE</summary>
 Cette API donne accès au recensement des entreprises RGE avec leur domaine de travaux. Elle permet de vérifier si une entreprise est agrée RGEE (Reconnu Garant de l'Environnement).
 
@@ -92,13 +99,6 @@ Cette API donne accès au recensement des entreprises RGE avec leur domaine de t
 </details>
 
 <br>
-
-<details>
-<summary>Diagnostics de performance énergétique (DPE) des bâtiments tertiaires</summary>
-Cette API donne accès au recensement des diagnostics de performance énergétique (DPE) des bâtiments tertiaires de la France entière.
-
-<Button href="https://api.gouv.fr/les-api/api_dpe_batiments_publics">Accéder à l'API</Button>
-</details>
 
 ### Réaliser un bilan d'émissions de gaz à effet de serre (GES)
 
