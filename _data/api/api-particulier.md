@@ -21,7 +21,7 @@ access_page:
       n'accéder aux données personnelles qu'avec **l'accord explicite** de l'usager.
 
       <NextSteps />
-      <Button href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</Button>
+      <QuestionTree tree='api-particulier' question='apipart'/>
   - who:
       - Un éditeur de logiciel
     is_eligible: 0
