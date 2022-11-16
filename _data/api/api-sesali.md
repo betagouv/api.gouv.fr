@@ -19,8 +19,6 @@ access_page:
     description: |
       Seuls les les éditeurs de logiciels raccordés à Pro Santé Connect sont habilitées à utiliser l'API Sesali.
 
-
-      <NextSteps />
       <Button href="mailto:ans-europe@esante.gouv.fr">Demander un accès</Button>
 partners:
   - Ministère des Solidarités et de la Santé (MSS)
