@@ -639,11 +639,11 @@ Exemple [ici](https://airtable.com/appMEKRGMNrw4YRff) avec les données bac à s
 <details>
   <summary>Comment récupérer mon jeton d'accès (token) une fois ma demande validée ?</summary>
 
-1. **Une fois votre demande d'habilitation validée, un e-mail vous est envoyé** avec un lien vers [mon.portail-test-staging.api.gouv.fr/](https://mon.portail-test-staging.api.gouv.fr/).
+1. **Une fois votre demande d'habilitation validée, un e-mail vous est envoyé** avec un lien vers [mon.portail.api.gouv.fr/](https://mon.portail.api.gouv.fr/).
 
 2. **Une fenêtre de connexion (compte Datapass) s'ouvre**. Renseignez les mêmes identifiants utilisés lors de votre demande d'habilitation.
 
-3. Sur votre espace [mon.portail-test-staging.api.gouv.fr/](https://mon.portail-test-staging.api.gouv.fr/), **votre jeton est disponible et peut-être copié**.
+3. Sur votre espace [mon.portail.api.gouv.fr/](https://mon.portail.api.gouv.fr/), **votre jeton est disponible et peut-être copié**.
 <br>⚠️ **Votre token vous est propre, il ne faut pas le diffuser.**  Vous ne devez jamais copier-coller un token dans un moteur de recherche ou dans un e-mail. L’usage de votre token se fait uniquement dans votre logiciel métier sécurisé utilisé pour réaliser vos appels.
 
 4. **Vous devez transmettre ce jeton à votre éditeur ? Ou à votre équipe technique ?** Utilisez un moyen de transmission sécurisé (messagerie cryptée par exemple).
