@@ -237,11 +237,11 @@ Les données sont **mises à jour en temps réel**, l'API étant directement rel
   <summary>Précisions sur les données</summary>
 
 ⚠️ Les données de l’API ne permettent pas encore de calculer les tarifs en établissement d'accueil du jeune enfant (Eaje) (crèche, multi-accueil, halte-garderie…). **Elles ne doivent donc pas être utilisées pour le calcul des participations familiales en Eaje.**
-  
+
 #### Pourquoi le quotient familial (QF) retourné par l'API Particulier est-il parfois différent de celui transmis par le CDAP ?<a name="faq-diff-qf-api-part-et-cdap"></a>
-  
-Actuellement, il peut arriver que le quotient familial transmis par l'API particulier diffère de celui obtenu sur le [CDAP (Consultation du dossier allocataire par les partenaires)](https://www.caf.fr/partenaires/cdap). Voici des éléments de réponses pour comprendre les différences suivantes : 
-- **Le montant du QF est différent :** La différence des montants observés est souvent liée à une différence de temporalité. L'API Particulier délivre le QF du mois M-1 ; là où le CDAP indique le QF en cours. 
+
+Actuellement, il peut arriver que le quotient familial transmis par l'API particulier diffère de celui obtenu sur le [CDAP (Consultation du dossier allocataire par les partenaires)](https://www.caf.fr/partenaires/cdap). Voici des éléments de réponses pour comprendre les différences suivantes :
+- **Le montant du QF est différent :** La différence des montants observés est souvent liée à une différence de temporalité. L'API Particulier délivre le QF du mois M-1 ; là où le CDAP indique le QF en cours.
 - **Le montant du QF est à 0 sur API Particulier, au lieu de non connu sur le CDAP** : Actuellement, l'API de la CNAF qui alimente l'API Particulier, n'indique pas par un code erreur précis le cas des allocataires dont le QF n'est pas calculable faute de connaître les ressources perçues. En effet, actuellement, un QF à 0 est envoyé, plutôt qu'une erreur. La CNAF a conscience que ce retour peut porter à confusion. Il est prévu une évolution dans la future API.
 - **Le montant du QF n'est pas délivré par l'API Particulier (affiché non droit) alors qu'il est délivré par le CDAP** : Lorsqu'aucune prestation n'est versée au mois M, l'API CNAF, source de l'API Particulier, ne retourne pas de QF, y compris si en M-1 la personne avait bien des prestations. Une question métier est en cours pour faire évoluer l’API afin de fournir le dernier QF calculé ainsi que la date de ce dernier calcul.
 
@@ -356,7 +356,7 @@ Lors de votre demande d'habilitation, vous allez déterminer le périmètre des 
 - et/ou les inscriptions en formation continue (cocher "Inscriptions en formation continue");
 - et/ou les pré-inscriptions pour le CROUS (cocher "Pré-inscriptions CROUS").
 
-Si vous cochez les trois cases, vous aurez donc accès à toute la base. 
+Si vous cochez les trois cases, vous aurez donc accès à toute la base.
 
 **⚠️ Le périmètre choisi est définitif, pour élargir ou réduire le périmètre vous devrez demander un nouveau jeton.**
 
