@@ -392,6 +392,9 @@
     - type: ADD_API
       what: Accès Libre, par le Ministère de la Transition Ecologique
       path: /les-api/api-acces-libre
+    - type: ADD_API
+      what: Evènements par Pôle emploi
+      path: /les-api/api-evenements-pole-emploi
   12:
     - type: ADD_API
       what: Données foncières par le CEREMA
