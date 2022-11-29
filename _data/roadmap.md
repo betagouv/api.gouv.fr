@@ -395,6 +395,9 @@
     - type: ADD_API
       what: Evènements par Pôle emploi
       path: /les-api/api-evenements-pole-emploi
+    - type: ADD_API
+      what: Transparence-Santé Déclaration Entreprises
+      path: /les-api/api-transparence-sante 
   12:
     - type: ADD_API
       what: Données foncières par le CEREMA
