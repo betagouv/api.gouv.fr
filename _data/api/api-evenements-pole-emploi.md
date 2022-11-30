@@ -1,5 +1,5 @@
 ---
-title: Evénements Pôle emploi
+title: API Evénements Pôle emploi
 tagline: Retrouvez en un coup d’œil tous les événements liés à l’emploi sélectionnés par Pôle emploi
 producer: pole-emploi
 category: Public
