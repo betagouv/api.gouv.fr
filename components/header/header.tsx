@@ -8,7 +8,6 @@ const DATAPASS_URL =
 
 export const HEADER_PAGE = {
   APIS: 'apis',
-  FROM_SIGNUP: 'requests',
   SERVICES: 'services',
   GUIDES: 'guides',
   ABOUT: 'about',
@@ -94,29 +93,19 @@ const Header = ({ headerKey = 'home' }) => {
             aria-label="Menu principal"
           >
             <ul className="fr-nav__list">
-              {headerKey !== HEADER_PAGE.FROM_SIGNUP ? (
-                <>
-                  {HEADER.map(item => (
-                    <Fragment key={item.href}>
-                      <li
-                        className={`fr-nav__item ${
-                          headerKey === item.key ? 'current' : ''
-                        }`}
-                      >
-                        <a className="fr-nav__link" href={`${item.href}`}>
-                          {item.txt}
-                        </a>
-                      </li>
-                    </Fragment>
-                  ))}
-                </>
-              ) : (
-                <li className="fr-nav__item">
-                  <a className="fr-nav__link" href={`${DATAPASS_URL}`}>
-                    Mes demandes
-                  </a>
-                </li>
-              )}
+              {HEADER.map(item => (
+                <Fragment key={item.href}>
+                  <li
+                    className={`fr-nav__item ${
+                      headerKey === item.key ? 'current' : ''
+                    }`}
+                  >
+                    <a className="fr-nav__link" href={`${item.href}`}>
+                      {item.txt}
+                    </a>
+                  </li>
+                </Fragment>
+              ))}
             </ul>
           </nav>
         </div>
