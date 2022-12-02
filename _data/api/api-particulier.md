@@ -24,14 +24,13 @@ access_page:
       <QuestionTree tree='api-particulier' question='apipart'/>
   - who:
       - Un éditeur de logiciel
-    is_eligible: 0
+    is_eligible: -1
     description: |
       Si vous êtes **éditeur de logiciels, c'est à votre collectivité ou administration de faire sa demande d'habilitation.**
 
-      Vous pouvez nous demander de vous référencer sur un cas d'usage afin de proposer des formulaires pré-remplis et ainsi simplifier l'expérience de vos clients publics.
+      En revanche, vous pouvez nous demander de vous référencer sur un cas d'usage afin de proposer des formulaires pré-remplis et ainsi simplifier l'expérience de vos clients publics.
 
-      <NextSteps is_editeur />
-      <Button href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</Button>
+      <Button href="mailto:contact@particulier.api.gouv.fr">Nous contacter</Button>
 stat:
   lastXdays: 30
   url: https://status.api.gouv.fr/
