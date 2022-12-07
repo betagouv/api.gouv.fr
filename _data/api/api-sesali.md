@@ -41,7 +41,7 @@ keywords:
 themes:
   - Santé
 contact_link: ans-europe@esante.gouv.fr
-doc_tech_external: https://sesali.fr/ncpehfr-gui/index.html
+doc_tech_external: https://industriels.esante.gouv.fr/produits-services/sesali
 last_update: 04/11/2022
 content_intro: | 
     Le Service Sesali (Service Européen de SAnté en LIgne) permet aux professionnels de santé français d’accéder à la synthèse médicale d’un patient européen de manière sécurisée, structurée et en français. Plus de barrière linguistique !
