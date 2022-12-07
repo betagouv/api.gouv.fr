@@ -1,7 +1,7 @@
 ---
 title: API Impacts environnementaux - AGRIBALYSE®
 tagline: Interrogez base de données des indicateurs d'impacts environnementaux des produits agricoles et alimentaires produits et/ou consommés en France
-external_site: https://data.ademe.fr/datasets/agribalyse-synthese
+external_site: https://data.ademe.fr/datasets/agribalyse-31-synthese
 is_open: 1 # 1 means API is fully open
 producer: ademe
 keywords:
@@ -17,11 +17,11 @@ rate_limiting_resume: 10 appels / seconde / IP
 themes:
   - Environnement
 contact_link: https://www.ademe.fr/content/contacter
-doc_tech_link: https://data.ademe.fr/data-fair/api/v1/datasets/agribalyse-synthese/api-docs.json
-doc_tech_external: https://data.ademe.fr/datasets/agribalyse-synthese
+doc_tech_link: https://data.ademe.fr/data-fair/api/v1/datasets/agribalyse-31-synthese/api-docs.json
+doc_tech_external: https://data.ademe.fr/datasets/agribalyse-31-synthese
 datagouv_uuid:
-  - 5f71f6b9f23df7fcd508af57
-last_update: 27/07/2020
+  - 6389c6639c0407956f4e43c1
+last_update: 05/12/2022
 ---
 
 L'API Impacts environnementaux permet d'interroger la base AGRIBALYSE® qui référence les indicateurs d'impacts environnementaux des produits agricoles produits en France et des produits alimentaires consommés en France.
@@ -61,10 +61,10 @@ Plus largement une large [documentation](https://ecolab.gitbook.io/documentation
 
 Deux autres jeux de données liés sont disponibles :
 
-| Nom de la donnée                  | Lien                                                                                  |
-| --------------------------------- | ------------------------------------------------------------------------------------- |
-| Détails par étape du cycle de vie | [voir le jeu de données](https://data.ademe.fr/datasets/agribalyse-detail-etape)      |
-| Détails par ingrédient            | [voir le jeu de données](https://data.ademe.fr/datasets/agribalyse-detail-ingredient) |
+| Nom de la donnée                  | Lien                                                                                         |
+| --------------------------------- | -------------------------------------------------------------------------------------------- |
+| Détails par étape du cycle de vie | [voir le jeu de données](https://data.ademe.fr/datasets/agribalyse-31-detail-par-etape)      |
+| Détails par ingrédient            | [voir le jeu de données](https://data.ademe.fr/datasets/agribalyse-31-detail-par-ingredient) |
 
 ### À propos de l'Open Data a l’ADEME
 
