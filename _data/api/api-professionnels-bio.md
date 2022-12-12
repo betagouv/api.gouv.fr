@@ -45,9 +45,9 @@ Voici les données accessibles :
 | Numero bio               | Identifiant fonctionnel de l'opérateur BIO utilisé également dans d'autres outils de l'administration publique |
 | Siret                    | SIRET renseigné par l'opérateur (14 caractères)                                                                |
 | Informations générales   | dénomination, code NAF, gérant                                                                                 |
-| Catégorie de l'opérateur | Vente directe, Grossiste, Grande et moyenne surfce, magasin spécialisé, Artisant/Commerçant, Restaurant        |
+| Catégorie de l'opérateur | Vente directe, Grossiste, Grande et moyenne surface, magasin spécialisé, Artisant/Commerçant, Restaurant        |
 | Adresse(s)               | Liste des adresses de l'opérateur (minimum le siège social)                                                    |
-| Production(s)            | Liste des productions certifiées bio de l'opérateur (plusieurs possibles)                                      |
+| Production(s)            | Liste des productions certifiées bio de l'opérateur (plusieurs possibles). Un état apporte une information sur chaque production (**AB** : Production bio, **C1** : Production en 1ère année de conversion, **C2** : Production en 2ème année de conversion, **C3** : Production en 3ème année de conversion, **CS** : Animaux en conversion simultanée avec les terres agricoles, **CNS** : Animaux en conversion non simultanée avec les terres agricoles, **EAC** : En cours de contrôle)                                     |
 | Activité(s)              | Liste des activités BIO de l'opérateur (plusieurs activités possibles)                                         |
 | Certificat(s)            | Lien vers les certificats en ligne de l’opérateur                                                              |
 | Site                     | Site officiel de l'opérateur et liens vers les pages des réseaux sociaux                                       |
