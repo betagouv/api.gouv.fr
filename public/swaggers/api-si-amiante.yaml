@@ -80,13 +80,13 @@ paths:
                 value: test
                 type: text
                 disabled: true
-  /declarationActivite:
+  /declarationActivite/v2:
     post:
       tags:
         - "ACTIVITE"
       summary: Service de soumission de déclaration de l’activité
       description: 'Ce service permet le dépôt de la déclaration annuelle de l’activité.'
-      operationId: declarationActivite
+      operationId: createDeclarationActiviteV2
       parameters:
         - $ref: '#/components/parameters/cle'
       responses:
@@ -122,6 +122,49 @@ paths:
                         }
                         ]
                   }            
+  /declarationActivite:
+    post:
+      tags:
+        - "ACTIVITE"
+      summary: Service déprécié remplacé par la version v2
+      description: 'Ce service permet le dépôt de la déclaration annuelle de l’activité.'
+      operationId: createDeclarationActivite
+      parameters:
+        - $ref: '#/components/parameters/cle'
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      requestBody:
+        required: true
+        content:
+          text/plain:
+            schema:
+              type: string
+              example: 
+                                  {
+                      "declarationsList": [
+                        {
+                          "identifiantLogiciel" : "id001",
+                          "annee" : "2020",
+                          "codePostal" : "78000",
+                          "ville" : "Versailles",
+                          "departement" : "078",
+                          "typeBatiment": "T2",
+                          "anneeConstructionDebut " : "1998",
+                          "anneeConstructionFin" : "2001",
+                          "activiteConcernee" : "A4", 
+                          "objectif" : "O4",
+                          "materiauxListeA" : "N3",
+                          "materiauxListeB" : "B4",
+                          "autresMateriaux" : "false",
+                          "analysesRealisees" : 5,
+                          "analysesPositives" : 4,
+                          "materiauxPresents" : "M1"
+                        }
+                        ]
+                  }            
+
   /annulationMlad:
     patch:
       tags:
@@ -189,13 +232,75 @@ paths:
                     }
                 ]
               }         
-  /modificationDeclarationActivite:
+  /modificationDeclarationActivite/v2:
     post:
       tags:
       - "ACTIVITE"
       summary: Service de modification de la déclaration de l’activité
       description: 'Ce service permet de remplacer des lignes soumises lors de précédentes déclarations de l’activité par de nouvelles données via l’identifiant unique associé.'
       operationId: modificationDeclarationActivite
+      parameters:
+        - $ref: '#/components/parameters/cle'
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      requestBody:
+        required: true
+        content:
+          text/plain:
+            schema:
+              type: string
+              example: {
+                
+                "declarationsList": [
+                    {
+                        "identifiantDeclarationActivite": "1002",
+                        "identifiantLogiciel": "id002",
+                        "annee": "2020",
+                        "codePostal": "01000",
+                        "ville": "Bourg-en-Bresse",
+                        "departement": "001",
+                        "typeBatiment": "T1",
+                        "anneeConstructionDebut": "1985",
+                        "anneeConstructionFin": "1995",
+                        "activiteConcernee": "A2",
+                        "objectif": "O2",
+                        "materiauxListeA": "N2",
+                        "materiauxListeB": "B3",
+                        "autresMateriaux": "true",
+                        "analysesRealisees": "10",
+                        "analysesPositives": "5",
+                        "materiauxPresents": "M2"
+                    },
+                    {
+                        "identifiantDeclarationActivite": "1044",
+                        "identifiantLogiciel": "4566666",
+                        "annee": "2020",
+                        "codePostal": "75001",
+                        "ville": "Paris",
+                        "departement": "075",
+                        "typeBatiment": "T2",
+                        "anneeConstructionDebut": "1980",
+                        "anneeConstructionFin": "",
+                        "activiteConcernee": "A2",
+                        "objectif": "O2",
+                        "materiauxListeA": "N2",
+                        "materiauxListeB": "B3",
+                        "autresMateriaux": "false",
+                        "analysesRealisees": "15",
+                        "analysesPositives": "10",
+                        "materiauxPresents": "M3"
+                    }
+                ]
+              }
+  /modificationDeclarationActivite:
+    post:
+      tags:
+      - "ACTIVITE"
+      summary: déprécié par la version v2 du service.
+      description: 'Ce service permet de remplacer des lignes soumises lors de précédentes déclarations de l’activité par de nouvelles données via l’identifiant unique associé.'
+      operationId: modifierDeclarationsOld
       parameters:
         - $ref: '#/components/parameters/cle'
       responses:
