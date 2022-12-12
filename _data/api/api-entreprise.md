@@ -16,7 +16,7 @@ access_page:
       - Une entité administrative
     is_eligible: 1
     description: |
-      L’API Entreprise vous permet d’accéder directement aux données administratives des entreprises et des associations pour faciliter leurs démarches (demandes d’aides, marchés publics, ...). 
+      L’API Entreprise vous permet d’accéder directement aux données administratives des entreprises et des associations pour faciliter leurs démarches (demandes d’aides, marchés publics, ...).
 
       Pour vérifier que l’API Entreprise vous permet d’accéder aux données dont vous avez besoin, consultez nos différents [cas d'usages](https://entreprise.api.gouv.fr/cas_usages) (marchés publics, aides et subventions, portail GRU ...) et le [catalogue des API](https://entreprise.api.gouv.fr/catalogue).
 
@@ -144,6 +144,9 @@ rate_limiting_resume: 1000 requêtes/min par IP
 rate_limiting_description: 'Les limites de volumétrie sont détaillées ici :'
 rate_limiting_link: https://entreprise.api.gouv.fr/developpeurs#respecter-la-volum%C3%A9trie
 monitoring_link: https://status.entreprise.api.gouv.fr/
+stats_detail_resume: Les statistiques sont disponibles sur 2 mois
+stats_detail_description: Accédez au suivi des consommations des API
+stats_detail_link: https://entreprise.api.gouv.fr/stats
 contact_link: https://entreprise.api.gouv.fr/faq
 doc_tech_link: https://entreprise.api.gouv.fr/v3/openapi.yaml
 useSwaggerProxy: true
@@ -155,17 +158,17 @@ uptime: 100
 last_update: 14/09/2020
 content_intro: |
   <External href="https://entreprise.api.gouv.fr/">API Entreprise</External> permet aux entités administratives d'accéder aux données et aux documents administratifs des entreprises et des associations, afin de simplifier leurs démarches.
-  
+
   <Button href="https://entreprise.api.gouv.fr/">Consulter le site API Entreprise</Button>
-  
+
 ---
 
 
 ### À quoi sert l’API Entreprise ?
 
-L'API Entreprise donne accès à des données sur les entreprises et les associations : identité des entreprises et des associations, adresse, extrait Kbis, effectif, mandataires sociaux, attestations sociale et fiscale, données financières, carte professionnelle travaux publics, diverses certifications... 
+L'API Entreprise donne accès à des données sur les entreprises et les associations : identité des entreprises et des associations, adresse, extrait Kbis, effectif, mandataires sociaux, attestations sociale et fiscale, données financières, carte professionnelle travaux publics, diverses certifications...
 
-**L'accès à ces données par l'API Entreprise simplifie les démarches de différents cas d'usages** : 
+**L'accès à ces données par l'API Entreprise simplifie les démarches de différents cas d'usages** :
 - le dépôt des candidatures aux <External href="https://entreprise.api.gouv.fr/cas_usages/marches_publics">marchés publics</External> et leur instruction ;
 - le dépôt des demandes d'<External href="https://entreprise.api.gouv.fr/cas_usages/subventions">aides et subventions publiques</External> et l'instruction des dossiers ;
 - les démarches sur les <External href="https://entreprise.api.gouv.fr/cas_usages/portail_gru">portails GRU et GRC</External> ;
@@ -186,7 +189,7 @@ En intégrant la brique API Entreprise dans votre système d’information ou vo
 
 ### Quelles sont les conditions d'éligibilité à l'API Entreprise ?
 
-L'<External href="https://entreprise.api.gouv.fr/">API Entreprise</External> s'adresse aux entités administratives délivrant un service aux entreprises et aux associations. 
+L'<External href="https://entreprise.api.gouv.fr/">API Entreprise</External> s'adresse aux entités administratives délivrant un service aux entreprises et aux associations.
 L’API Entreprise est une composante de l’État plateforme, l’accès à l’API Entreprise est modéré et régulé par la DINUM, qui attribue des autorisations de récupération d’informations selon la nature des démarches à traiter (marchés publics, aides publiques,…). <External href="https://entreprise.api.gouv.fr/faq#quelles-sont-les-conditions-d-eligibilite">En savoir plus sur les conditions d'éligibilité</External>
 
 ### Alternatives en accès libre
