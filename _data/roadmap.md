@@ -400,6 +400,9 @@
       path: /les-api/api-transparence-sante 
   12:
     - type: ADD_API
+      what: Smart Verify, par IN Groupe (Imprimerie Nationale)
+      path: /les-api/api-smart-verify
+    - type: ADD_API
       what: Données foncières par le CEREMA
     - type: ADD_API
       what: Prestations sociales par la Direction de la Sécurité Sociale
