@@ -6,7 +6,6 @@ is_open: -1
 access_page:
   - who:
       - Un particulier
-      - Une entreprise
     is_eligible: -1
     description: |
       Vous ne pouvez pas accéder à ces informations.
@@ -14,11 +13,12 @@ access_page:
       <Button href="/rechercher-api">Rechercher une autre API</Button>
   - who:
       - Une administration
+      - Une entreprise
     is_eligible: 1
     description: |
       L’API est accessible gratuitement en accès restreint.
       
-      <Button href="info@ingroupe.com">Demander un accès à l'API</Button>
+      <Button href="https://messervices.ingroupe.com/about">Demander un accès à l'API</Button>
 external_site: https://catalogue.numerique.gouv.fr/solutions/smart-verify
 keywords:
   - 2D DOC
@@ -37,7 +37,7 @@ keywords:
   - QR code
   - 
   - urgences
-contact_link: info@ingroupe.com
+contact_link: https://messervices.ingroupe.com/about
 doc_tech_external: https://catalogue.numerique.gouv.fr/solutions/smart-verify
 themes:
   - Sécurité
