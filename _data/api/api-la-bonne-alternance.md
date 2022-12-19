@@ -15,7 +15,7 @@ keywords:
   - emploi
   - offre
 contact_link: labonnealternance@apprentissage.beta.gouv.fr
-doc_tech_link: https://labonnealternance.apprentissage.beta.gouv.fr/api-docs/swagger.json
+doc_tech_external: https://labonnealternance.apprentissage.beta.gouv.fr/api/v1/lba-docs
 themes:
   - Emploi
 rate_limiting_resume: de 5  à 20 appels / seconde
