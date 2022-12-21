@@ -58,7 +58,7 @@ stats_detail_link: https://particulier.api.gouv.fr/stats
 monitoring_link: https://status.api.gouv.fr/
 monitoring_description: |
   La DINUM s’engage à ce que le Service soit accessible à 95% et la DINUM s’engage à améliorer progressivement ce rendement.
-contact_link: contact@particulier.api.gouv.fr
+contact_link: api-particulier@api.gouv.fr
 doc_tech_link: https://particulier.api.gouv.fr/api/open-api.yml
 themes:
   - Particulier
