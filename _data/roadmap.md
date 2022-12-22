@@ -361,12 +361,6 @@
       what: Base nationale des défibrillateurs, par le Ministère de la Santé
       path: /les-api/api-defibrillateurs
     - type: ADD_API
-      what: Services publics plus - structures
-      path: /les-api/api-services-publics-plus-structures
-    - type: ADD_API
-      what: Services publics plus - expériences
-      path: /les-api/api-services-publics-plus-experiences
-    - type: ADD_API
       what: Data subventions, par la DINUM
       path: /les-api/api-data-subventions
   10:
@@ -395,13 +389,19 @@
     - type: ADD_API
       what: Evènements par Pôle emploi
       path: /les-api/api-evenements-pole-emploi
-    - type: ADD_API
-      what: Transparence-Santé Déclaration Entreprises
-      path: /les-api/api-transparence-sante 
   12:
     - type: ADD_API
       what: Smart Verify, par IN Groupe (Imprimerie Nationale)
       path: /les-api/api-smart-verify
+    - type: ADD_API
+      what: Services publics plus - structures
+      path: /les-api/api-services-publics-structures
+    - type: ADD_API
+      what: Services publics plus - expériences
+      path: /les-api/api-services-publics-experiences
+    - type: ADD_API
+      what: Services publics plus - résultats, par la DITP
+      path: /les-api/api-services-publics-resultats
     - type: ADD_API
       what: Données foncières par le CEREMA
     - type: ADD_API
