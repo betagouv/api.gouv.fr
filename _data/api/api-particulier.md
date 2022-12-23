@@ -116,7 +116,9 @@ content_intro: |
   | **Statut RSA**                 |Direction de la Sécurité Sociale | oui / non| T4 2022               |
   | **Statut élève scolarisé**        | Ministère de l'éducation nationale| Attestation de scolarité et statut boursier | T4 2022                |
 
-⚠️ **Les données fiscales des particuliers ne sont plus disponibles via l'API Particulier, produit opéré par la DINUM.** Pour obtenir ces données (ex : le revenu fiscal de référence, les informations sur les déclarants et le nombre de parts du foyer fiscal), veuillez désormais interroger directement l'API dédiée à l'accès aux données fiscales des particuliers [**l'API Impôt particulier** de la DGFiP](https://api.gouv.fr/les-api/impot-particulier). Cette API est aussi compatible avec France Connect.
+⚠️ La diffusion des données fiscales par l'API particulier, pour les administrations déjà habilités est prolongée jusqu'au 31 mars 2023. 
+
+Les administration qui souhaitent obtenir ces données (ex : le revenu fiscal de référence, les informations sur les déclarants et le nombre de parts du foyer fiscal), doivent en demander l'accès sur [**l'API Impôt particulier** de la DGFiP](https://api.gouv.fr/les-api/impot-particulier). Cette API est aussi compatible avec France Connect.
 
 ### Et si j'ai besoin d'une API France connectée ? <a name="api-france-connectees"></a>
 
