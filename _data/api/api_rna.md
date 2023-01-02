@@ -23,7 +23,7 @@ monitoring_link: https://status.entreprise.data.gouv.fr/
 monitoring_description: |
   Une supervision du service en temps réel est disponible à cette adresse.
 contact_link: entreprise@data.gouv.fr
-doc_tech_external: https://entreprise.data.gouv.fr/api_doc/rna
+doc_tech_link: /swaggers/api-rna.json
 datagouv_uuid:
   - 58e53811c751df03df38f42d
 visits_2019: 3000
