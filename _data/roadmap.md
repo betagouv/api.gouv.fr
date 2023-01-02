@@ -403,6 +403,18 @@
       what: Services publics plus - résultats, par la DITP
       path: /les-api/api-services-publics-resultats
     - type: ADD_API
+      what: Accès à l'emploi, par Pôle emploi
+      path: /les-api/api-acces-emploi
+    - type: ADD_API
+      what: Informations sur l'emploi dans un territoire, par Pôle emploi
+      path: /les-api/api-informations-emploi-territoire
+    - type: ADD_API
+      what: Marché du travail, par Pôle emploi
+      path: /les-api/api-marche-travail
+    - type: ADD_API
+      what: Sortants de formation et accès à l'emploi, par Pôle emploi
+      path: /les-api/api-formation-acces-emploi
+    - type: ADD_API
       what: Données foncières par le CEREMA
     - type: ADD_API
       what: Prestations sociales par la Direction de la Sécurité Sociale
