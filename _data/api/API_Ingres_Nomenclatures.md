@@ -120,6 +120,10 @@ https://api.piste.gouv.fr/cisirh/ingres-nomenclatures/v2
 Le CISIRH met à disposition cette API exploitable accessible uniquement par les ministères ou institutions ayant accès au Réseau Interministériel de l'Etat (RIE).
 Son utilisation par une application tierce ne saurait engager la responsabilité du CISIRH, par exemple, en termes de disponibilité.
 
+- L'API est disponible, ouverte et supervisée 24/24H, hors interruptions de service et de maintenance.
+- L'API est couverte de 7H à 20H, du lundi au vendredi, hors jours fériés.
+- La présence des équipes de supervision s'étale de 9H à 18H, du lundi au vendredi, hors jours fériés.
+
 ### Nouveautés de la version 2.0
 
 L’ensemble des attributs gérés dans l'application Ingres est désormais restitué pour chacune des nomenclatures.

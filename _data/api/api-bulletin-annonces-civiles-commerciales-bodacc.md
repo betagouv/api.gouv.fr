@@ -31,7 +31,6 @@ last_update: 28/06/2021
 ### A quoi sert l’API Bulletin des annonces civiles et commerciales (BODACC) ?
 
 Afin de faciliter la réutilisation des données du Bulletin officiel des annonces civiles et commerciales (BODACC), la direction de l’information légale et administrative (DILA) met à disposition une API accessible gratuitement.
-Cette version de l’API est une version bêta. Elle permet de recueillir vos remarques et vos suggestions d’amélioration ; elle pourra donc évoluer pendant toute la durée du test.
 
 Les principales fonctionnalités :
 

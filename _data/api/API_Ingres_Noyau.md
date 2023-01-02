@@ -124,6 +124,10 @@ La liste exhaustive est trop longue pour être listée ici, vous pouvez y accéd
 Le CISIRH met à disposition cette API exploitable accessible uniquement par les ministères ou institutions ayant accès au Réseau Interministériel de l'Etat (RIE).
 Son utilisation par une application tierce ne saurait engager la responsabilité du CISIRH, par exemple, en termes de disponibilité.
 
+- L'API est disponible, ouverte et supervisée 24/24H, hors interruptions de service et de maintenance.
+- L'API est couverte de 7H à 20H, du lundi au vendredi, hors jours fériés.
+- La présence des équipes de supervision s'étale de 9H à 18H, du lundi au vendredi, hors jours fériés.
+
 ### Limitations actuelles
 
 Le format de restitution des données est celui défini par le noyau RH FPE. Il s'agit de fichiers XML et de leur équivalent au format Excel.
