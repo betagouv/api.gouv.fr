@@ -423,6 +423,9 @@
 2023:
   1:
     - type: ADD_API
+      what: Transparence Santé, par la Direction Générale de la Santé
+      path: /les-api/api-transparence-sante
+    - type: ADD_API
       what: SIPSI (déclaration des travailleurs étrangers) par le Ministère du Travail
     - type: ADD_API
       what: Quotient Familial, par la MSA
