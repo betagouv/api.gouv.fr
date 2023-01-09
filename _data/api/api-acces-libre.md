@@ -39,4 +39,4 @@ Par exemple, l'API peut être intégrée sur un site web pour afficher les infor
 
 🔎 [Voir le site acceslibre et accéder aux données](https://acceslibre.beta.gouv.fr/#block_search_form)
 
-🏢 [Contrubuer en ajoutant un établissement ou en complétant des informations](https://acceslibre.beta.gouv.fr/contrib/start/)
+🏢 [Contribuer en ajoutant un établissement ou en complétant des informations](https://acceslibre.beta.gouv.fr/contrib/start/)
