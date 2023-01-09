@@ -2,7 +2,6 @@ import React from 'react';
 
 import { apiLogo } from './logos';
 import { logCTA } from '../../utils/client/analytics';
-import SurveyModule from '../surveyModule';
 
 const DocHeader = () => (
   <header role="banner" className="fr-header">
@@ -47,7 +46,12 @@ const DocHeader = () => (
             <div className="fr-header__tools-links">
               <ul className="fr-links-group">
                 <li className="external">
-                  <SurveyModule />
+                  <a
+                    className="fr-link fr-fi-question-fill"
+                    href="/parcours-client?source=header"
+                    onClick={() => logCTA('CTA header')}>
+                    Une question ?
+                  </a>
                 </li>
               </ul>
             </div>
