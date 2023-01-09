@@ -52,7 +52,7 @@ keywords:
   - Boursier
 themes:
   - Particulier
-contact_link: support.partenaires@franceconnect.gouv.fr
+contact_link: contact@api.gouv.fr
 doc_tech_external: https://partenaires.franceconnect.gouv.fr/fcp/fournisseur-service
 visits_2019: 5000
 uptime: 99.893 # https://uptimerobot.com/dashboard.php#778110642
