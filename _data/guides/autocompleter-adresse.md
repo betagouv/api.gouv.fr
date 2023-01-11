@@ -1,5 +1,5 @@
 ---
-title: Autocompléter une adresse postale dans un formulaire en ligne
+title: Autocompléter une adresse dans un formulaire en ligne
 tagline: Facilitez le remplissage d'un formulaire en ligne en autocomplétant l'adresse saisie grâce à l'API Adresse
 tags: cas usage, adresse, geo, postal, commune
 image: adresse.png
