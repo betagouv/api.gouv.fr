@@ -65,7 +65,7 @@ export const getStaticProps = async () => {
       path: guide.path,
       slug: guide.slug,
       title: guide.title,
-      api: guide.api || [],
+      api: guide.api && guide.api.length ? guide.api.slice(0, 3) : [],
       image: guide.image || null,
     };
   };
