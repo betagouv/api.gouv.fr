@@ -30,7 +30,7 @@ access_page:
 
       En revanche, vous pouvez nous demander de vous référencer sur un cas d'usage afin de proposer des formulaires pré-remplis et ainsi simplifier l'expérience de vos clients publics.
 
-      <Button href="https://form.typeform.com/to/GU90FCIE">Nous contacter</Button>
+      <Button href="https://form.typeform.com/to/GU90FCIE">Demander à être référencé</Button>
 stat:
   lastXdays: 30
   url: https://status.api.gouv.fr/
