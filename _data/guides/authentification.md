@@ -42,14 +42,13 @@ Certains logiciels et services en ligne sont réservés aux agents de l’État,
 
 ## Quelles API utiliser pour authentifier des personnes ou des organisations ?
 
-| Population                             | FranceConnect | AgentConnect | MonComptePro | ProSantéConnect |
-|----------------------------------------|---------------|--------------|--------------|-----------------|
-| Particuliers                           | ✅             | ❌            | ❌            | ❌               |
-| Professionnels                         | ❌             | ✅            | ✅            | ✅               |
-| Professionnels de la santé             | ❌             | ❌            | ❌            | ✅               |
-| Entreprises                            | ❌             | ❌            | ✅            | ❌               |
-| Agents de l'administration centrale    | ❌             | ✅            | ✅            | ❌               |
-| Agents des collectivités territoriales | ❌             | ❌            | ✅            | ❌               |
+| <div style="width:485px">Population</div>                 | FranceConnect | AgentConnect | MonComptePro | ProSantéConnect |
+|-----------------------------------------------------------|---------------|--------------|--------------|-----------------|
+| Particuliers                                              | ✅             | ❌            | ❌            | ❌               |
+| Professionnels du privé - Entreprises                     | ❌             | ❌            | ✅            | ❌               |
+| Professionnels du public - Fonction Publique Hospitalière | ❌             | ❌            | ❌            | ✅ ✅            |
+| Professionnels du public - Fonction Publique d'État       | ❌             | ✅ ✅         | ✅            | ❌               |
+| Professionnels du public - Fonction Publique Territoriale | ❌             | ❌            | ✅            | ❌               |
 
 ## Quid de ProConnect ?
 
