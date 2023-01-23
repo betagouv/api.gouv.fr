@@ -40,7 +40,7 @@ OPTIONAL {
 }
 ```
 
-L'API renvoie toutes les editions connues, avec le lien vers la version numérique dans Gallica, quand elle existe.
+L'API renvoie toutes les éditions connues, avec le lien vers la version numérique dans Gallica, quand elle existe.
 
 ## Un autre exemple : la liste de tous les spectacles représentés dans une ville
 
