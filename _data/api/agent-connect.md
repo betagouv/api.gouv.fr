@@ -36,7 +36,7 @@ keywords:
 themes:
   - Administration
 contact_link: support.partenaires@agentconnect.gouv.fr
-doc_tech_external: https://github.com/france-connect/Documentation-AgentConnect/blob/main/doc-fs.md
+doc_tech_external: https://github.com/france-connect/Documentation-AgentConnect/blob/main/doc_fs.md
 visits_2019: 4000
 #uptime:
 last_update: 20/05/2022

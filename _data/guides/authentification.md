@@ -36,7 +36,7 @@ Plutôt que de demander des justificatifs et de les vérifier manuellement, MonC
 
 Certains logiciels et services en ligne sont réservés aux agents de l’État, d'autres sont accessibles uniquement aux professionnels de la santé. Lors de la création de compte pour accéder à ces applications, il est possible d'authentifier les utilisateurs de manière sécurisée :
 
-- [AgentConnect](/les-api/agent-connect) pour les agents de l'administration centrale,
+- [AgentConnect](/les-api/agent-connect) pour les agents de l'administration centrale (vous pourrez trouver les administrations centrales partenaires [sur le site de AgentConnect](https://agentconnect.gouv.fr/)),
 - [Pro Santé Connect](/les-api/api-pro-sante-connect) pour les professionnels de la sphère sanitaire et sociale,
 - [MonComptePro](https://moncomptepro.beta.gouv.fr/partenaire) pour les agents des collectivités territoriales et l’ensemble des professionnels.
 
