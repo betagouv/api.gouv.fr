@@ -45,7 +45,7 @@ const About: React.FC = () => (
           </a>
           {', '}
           leur logiciel de paie communique directement les données de leurs
-          employés à l’Etat grace à... une API !
+          employés à l’Etat grâce à... une API !
         </p>
         <p>
           Afin d’aider toutes les organisations qui veulent{' '}
@@ -97,7 +97,7 @@ const About: React.FC = () => (
         <p>
           D’autres données, comme par exemple les données fiscales, sont
           sensibles et doivent être protégées.{' '}
-          <b>Ces données ne sont pas accessibles à tous</b> et seuls les
+          <b>Ces données ne sont pas accessibles à tous</b> et seules les
           organisations habilitées sont autorisées à y accéder.
         </p>
         <p>

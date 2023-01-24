@@ -93,7 +93,7 @@ content_intro: |
 
   ✅ Leur démarche est réalisable 100% en ligne autant qu'en guichet ;
 
-  ✅ Ils n'ont plus besoin de rassembler et saisir les documents ou informations déjà connues de l'administration.
+  ✅ Ils n'ont plus besoin de rassembler et saisir les informations ou documents déjà connus de l'administration.
 
     <Quote logo="/images/guides/clamart.svg" who='Ville de Clamart' title='Simon-Pierre Chalvidan'>
     En 2014, nos usagers prenaient une demi-journée de congés pour effectuer leurs démarches en mairie. Aujourd'hui, ils les effectuent en ligne en 5 minutes.
