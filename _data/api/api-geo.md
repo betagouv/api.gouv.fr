@@ -54,7 +54,7 @@ last_update: 17/01/2020
 
 ### Couverture du territoire
 
-France métropolitaine et [DROM](https://fr.wikipedia.org/wiki/D%C3%A9partement_et_r%C3%A9gion_d%27outre-mer).
+France métropolitaine, [DROM](https://fr.wikipedia.org/wiki/D%C3%A9partement_et_r%C3%A9gion_d%27outre-mer) et [COM](https://fr.wikipedia.org/wiki/Collectivit%C3%A9_d%27outre-mer).
 
 ### Coordonnées géographiques
 
