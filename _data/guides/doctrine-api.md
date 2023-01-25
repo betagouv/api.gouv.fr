@@ -72,7 +72,7 @@ L’accès aux API à accès restreint se fait par demande du réutilisateur (ad
 
 Les API peuvent s’appuyer sur un mécanisme d’authentification de l’utilisateur final assurant une gestion des droits au sein de la plateforme qui les fournit. Les dispositifs d’authentification des citoyens, des agents ou des personnes morales conçus par les pouvoirs publics pourront être utilisés, en particulier lorsque le consentement de l’utilisateur est nécessaire pour faire circuler la donnée :
 
-- Pour les personnes physiques : FranceConnect, AgentConnect et EduConnect
+- Pour les personnes physiques : FranceConnect, AgentConnect, EduConnect et MonComptePro
 - Pour les personnes morales : ProConnect
 
 #### Recommandation 4
