@@ -44,12 +44,11 @@ Certains logiciels et services en ligne sont réservés aux agents de l’État,
 
 | Population                             | FranceConnect | AgentConnect | MonComptePro | ProSantéConnect |
 |----------------------------------------|---------------|--------------|--------------|-----------------|
-| Particuliers                           | ✅             | ❌            | ❌            | ❌               |
-| Professionnels                         | ❌             | ✅            | ✅            | ✅               |
-| Professionnels de la santé             | ❌             | ❌            | ❌            | ✅               |
-| Entreprises                            | ❌             | ❌            | ✅            | ❌               |
-| Agents de l'administration centrale    | ❌             | ✅            | ✅            | ❌               |
-| Agents des collectivités territoriales | ❌             | ❌            | ✅            | ❌               |
+| Particuliers                                    | ⭐⭐⭐            | ❎           | ❎           | ❎              |
+| Pros - Privé - Entreprises                      | ❎            | ❎           | ⭐⭐           | ❎              |
+| Pros - Public - Fonction Publique Hospitalière  | ❎            | ❎           | ❎           | ⭐⭐⭐              |
+| Pros - Public - Fonction Publique d'État        | ❎            | ⭐⭐⭐           | ⭐           | ❎              |
+| Pros - Public - Fonction Publique Territoriale  | ❎            | ❎           | ⭐⭐⭐           | ❎              |
 
 ## Quid de ProConnect ?
 
