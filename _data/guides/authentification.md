@@ -53,6 +53,7 @@ Certains logiciels et services en ligne sont réservés aux agents de l’État,
 | Agents des collectivités territoriales | ❌             | ❌            | ✅            | ❌               |
 
 ## Quid de ProConnect ?
+
 ProConnect ne permet pas d’authentifier les personnes. Il permet de certifier qu’une personne est bien un dirigeant. [Plus d’info](https://proconnect.gouv.fr/).
 
 ## Comment accéder aux API ?
