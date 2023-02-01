@@ -43,16 +43,16 @@ Certains logiciels et services en ligne sont réservés aux agents de l’État,
 
 ## Quelles API utiliser pour authentifier des personnes ou des organisations ?
 
-| <div style="width:485px">Population</div>                 | FranceConnect | AgentConnect | MonComptePro | ProSantéConnect |
-|-----------------------------------------------------------|---------------|--------------|--------------|-----------------|
-| Particuliers                                              | ✅             | ❌            | ❌            | ❌               |
-| Professionnels du privé - Entreprises                     | ❌             | ❌            | ✅            | ❌               |
-| Professionnels du public - Fonction Publique Hospitalière | ❌             | ❌            | ❌            | ✅ ✅            |
-| Professionnels du public - Fonction Publique d'État       | ❌             | ✅ ✅         | ✅            | ❌               |
-| Professionnels du public - Fonction Publique Territoriale | ❌             | ❌            | ✅            | ❌               |
+| Population                             | FranceConnect | AgentConnect | MonComptePro | ProSantéConnect |
+|----------------------------------------|---------------|--------------|--------------|-----------------|
+| Particuliers                           | ✅             | ❌            | ❌            | ❌               |
+| Professionnels                         | ❌             | ✅            | ✅            | ✅               |
+| Professionnels de la santé             | ❌             | ❌            | ❌            | ✅               |
+| Entreprises                            | ❌             | ❌            | ✅            | ❌               |
+| Agents de l'administration centrale    | ❌             | ✅            | ✅            | ❌               |
+| Agents des collectivités territoriales | ❌             | ❌            | ✅            | ❌               |
 
 ## Quid de ProConnect ?
-
 ProConnect ne permet pas d’authentifier les personnes. Il permet de certifier qu’une personne est bien un dirigeant. [Plus d’info](https://proconnect.gouv.fr/).
 
 ## Comment accéder aux API ?
