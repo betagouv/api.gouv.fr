@@ -9,27 +9,27 @@ access_page:
       - Un particulier
     is_eligible: -1
     description: |
-      Seules les administrations et les entreprises sont habilitées à utiliser l'API FranceConnect ou intégrer le bouton FranceConnect.
+      Seules les administrations et les entreprises sont habilitées à utiliser MonComptePro.
 
-      Si vous cherchez à contacter l'équipe FranceConnect, vous pouvez écrire à [support@franceconnect.gouv.fr](mailto:support@franceconnect.gouv.fr)
+      Si vous cherchez à contacter l'équipe MonComptePro, vous pouvez écrire à [contact@moncomptepro.beta.gouv.fr](mailto:contact@moncomptepro.beta.gouv.fr)
 
       <Button href="/rechercher-api">Ou vous pouvez rechercher une autre API</Button>
   - who:
       - Une entreprise
     is_eligible: 0
     description: |
-      Vous pouvez vérifier votre éligibilité en demandant à [MonComptePro](https://moncomptepro.beta.gouv.fr/partenaire) qui vous accompagnera dans vos démarches.
+      Vous pouvez vérifier votre éligibilité en demandant à [MonComptePro](contact@moncomptepro.beta.gouv.fr) qui vous accompagnera dans vos démarches.
 
       <NextSteps />
-      <Button href="https://moncomptepro.beta.gouv.fr/partenaire">Contacter l'équipe MonComptePro</Button>
+      <Button href="mailto:contact@moncomptepro.beta.gouv.fr">Contacter l'équipe MonComptePro</Button>
   - who:
       - Une collectivité ou une administration
     is_eligible: 1
     description: |
-      Si vous souhaitez intégrer MonComptePro, [contactez l'équipe MonComptePro](https://moncomptepro.beta.gouv.fr/partenaire) qui vous accompagnera dans vos démarches.
+      Si vous souhaitez intégrer MonComptePro, [contactez l'équipe MonComptePro](contact@moncomptepro.beta.gouv.fr) qui vous accompagnera dans vos démarches.
 
       <NextSteps />
-      <Button href="https://moncomptepro.beta.gouv.fr/partenaire">Contacter l'équipe MonComptePro</Button>
+      <Button href="mailto:contact@moncomptepro.beta.gouv.fr">Contacter l'équipe MonComptePro</Button>
 partners:
   - DataPass
   - API Entreprise
