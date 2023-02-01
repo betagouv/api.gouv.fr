@@ -23,8 +23,12 @@ monitoring_description: |
   Une supervision du service en temps réel est disponible à cette adresse.
 contact_link: recherche-entreprises@api.gouv.fr
 doc_tech_link: https://recherche-entreprises.api.gouv.fr/docs/swagger.json
+doc_tech_external: https://recherche-entreprises.api.gouv.fr/docs/
 datagouv_uuid:
   - 5b7ffc618b4c4169d30727e0
+  - 5c34c4d1634f4173183a64f1
+  - 62bd63b70ff1edf452b83a6b
+  - 5fc9b4729dbf684fecb13bae
 visits_2019: 10000
 last_update: 23/05/2022
 content_intro: |
