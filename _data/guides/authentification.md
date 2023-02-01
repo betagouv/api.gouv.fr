@@ -42,13 +42,19 @@ Certains logiciels et services en ligne sont réservés aux agents de l’État,
 
 ## Quelles API utiliser pour authentifier des personnes ou des organisations ?
 
-| Population                             | FranceConnect | AgentConnect | MonComptePro | ProSantéConnect |
-|----------------------------------------|---------------|--------------|--------------|-----------------|
-| Particuliers                                    | ⭐⭐⭐            | ❌           | ❌           | ❌              |
-| Pros - Privé - Entreprises                      | ❌            | ❌           | ⭐⭐           | ❌              |
-| Pros - Public - Fonction Publique Hospitalière  | ❌            | ❌           | ❌           | ⭐⭐⭐              |
-| Pros - Public - Fonction Publique d'État        | ❌            | ⭐⭐⭐           | ⭐           | ❌              |
-| Pros - Public - Fonction Publique Territoriale  | ❌            | ❌           | ⭐⭐⭐           | ❌              |
+Avant de vous donner la tableau comparatif, voici un petit aparté pour distinguer **l'identification** de **l'authentification** :
+- **L'identification** est une phase qui consiste à établir l'identité de l'utilisateur. Elle permet répondre à la question : "Qui êtes vous ?". L'utilisateur utilise un identifiant (que l'on nomme "Compte d'accès", "Nom d'utilisateur" ou "Login" en anglais) qui l'identifie et qui lui est attribué individuellement. Cet identifiant est unique.
+- **L'authentification** est une phase qui permet à l'utilisateur d'apporter la preuve de son identité. Elle intervient après la phase dite d'identification. Elle permet de répondre à la question : "Êtes-vous réellement cette personne ?".
+
+
+
+| Population                                      |   FranceConnect   |   AgentConnect   |   MonComptePro   |   ProSantéConnect   |
+|-------------------------------------------------|-------------------|------------------|------------------|---------------------|
+| Particuliers                                    | Authentification  | ❌               | ❌               | ❌                  |
+| Pros - Privé - Entreprises                      | ❌                | ❌               |  Identification  | ❌                  |
+| Pros - Public - Fonction Publique Hospitalière  | ❌                | ❌               | ❌               |  Authentification   |
+| Pros - Public - Fonction Publique d'État        | ❌                | Authentification |  Identification  | ❌                  |
+| Pros - Public - Fonction Publique Territoriale  | ❌                | ❌               |  Identification  | ❌                  |
 
 ## Quid de ProConnect ?
 
