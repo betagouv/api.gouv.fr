@@ -154,7 +154,7 @@
 2021:
   1:
     - type: ADD_API
-      what: La Bonne Alternance
+      what: La bonne alternance
       path: /les-api/api-la-bonne-alternance
   3:
     - type: ADD_API
