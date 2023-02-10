@@ -45,20 +45,20 @@ content_intro: |
 
   En tant qu’opérateur public ou privé traitant des questions d’orientation, de formation, ou d’emploi en alternance, vous souhaitez enrichir vos services en récupérant tout ou partie des données des formations en apprentissage, des offres d’emploi en alternance et des entreprises présentant un fort potentiel de recrutement en alternance (marché caché) ?
 
-  **👉 Le service La bonne alternance est fait pour vous !** [En savoir plus](#consommer-les-opportunités-d’emploi-et/ou-de-formations-en-alternance)
+  **👉 Le service La bonne alternance est fait pour vous !** [En savoir plus](#consommer-les-opportunites-d’emploi-et/ou-de-formations-en-alternance)
 
   Vous êtes un OPCO, un organisme de formation ou tout autre acteur accompagnant des entreprises ? Vous souhaitez proposer un service simplifié de dépôt d’offres en alternance à vos entreprises partenaires, tout en facilitant la diffusion et le suivi de leurs offres ?
 
-  **👉 Le service La bonne alternance recruteur et organisme de formation sont faits pour vous !** [En savoir plus](#déposer-des-offres-d’emploi-en-toute-simplicité)
+  **👉 Le service La bonne alternance recruteur et organisme de formation sont faits pour vous !** [En savoir plus](#deposer-des-offres-d’emploi-en-toute-simplicite)
 
   Vous exposez des entreprises qui recrutent en alternance sur votre site internet ? Vous souhaitez permettre aux jeunes de candidater en quelques clics auprès de ces entreprises ?
 
-  **👉 Le service Je candidate est fait pour vous !** [En savoir plus](#permettre-aux-candidats-de-postuler-auprès-des-entreprises)
+  **👉 Le service Je candidate est fait pour vous !** [En savoir plus](#permettre-aux-candidats-de-postuler-aupres-des-entreprises)
 
   Vous exposez des formations en alternance sur votre site internet ? Vous souhaitez permettre aux jeunes de prendre un premier contact avec les organismes proposant ces formations ?
 
 
-  **👉 Le service Rendez-vous apprentissage est fait pour vous !** [En savoir plus](#permettre-aux-candidats-de-prendre-rendez-vous-auprès-des-centre-de-formation-en-apprentissage)
+  **👉 Le service Rendez-vous apprentissage est fait pour vous !** [En savoir plus](#permettre-aux-candidats-de-prendre-rendez-vous-aupres-des-centre-de-formation-en-apprentissage)
 
 ---
 ### Consommer les opportunités d’emploi et/ou de formations en alternance
