@@ -11,6 +11,7 @@ api:
   - AgentConnect
   - API Statut Etudiant
   - API Statut étudiant boursier
+  - MonComptePro
 ---
 
 ## Dans quel cas l'authentification des personnes ou des organisations est nécessaire ?
@@ -65,4 +66,4 @@ Les API d’authentification sont réservées aux administrations et à leurs é
 
 #### [🏥 API Pro Santé Connect](/les-api/api-pro-sante-connect)
 
-#### [🏢 API MonComptePro](https://moncomptepro.beta.gouv.fr/partenaire)
+#### [🏢 API MonComptePro](/les-api/moncomptepro)
