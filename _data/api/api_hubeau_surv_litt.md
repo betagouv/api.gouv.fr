@@ -26,8 +26,8 @@ keywords:
 themes:
   - Environnement
 contact_link: newshubeau@brgm.fr
-doc_tech_link: https://hubeau.eaufrance.fr/api/vbeta/surveillance_littoral/api-docs
-last_update: 16/04/2021
+doc_tech_link: https://hubeau.eaufrance.fr/api/v1/surveillance_littoral/api-docs
+last_update: 01/02/2023
 content_intro: |
   [L'API "Surveillance du Littoral"](https://hubeau.eaufrance.fr/page/api-surveillance-littoral) diffuse les données de surveillance du littoral gérées et valorisées par [l'Institut français de recherche pour l'exploitation de la mer (IFREMER)](https://wwz.ifremer.fr) à travers le [système d'information QUADRIGE](http://quadrige.eaufrance.fr).
 ---
@@ -49,6 +49,7 @@ Les données sont exposées sous la forme d'une API REST, les formats supportés
 
 Dernières évolutions de l'API Surveillance du Littoral :
 
+- 16/11/2022 : mise à disposition de la v1
 - 15/04/2021 : mise à disposition de la version beta
 
 ### Connaissez-vous Hub'Eau ?
