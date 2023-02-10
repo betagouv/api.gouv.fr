@@ -7,6 +7,7 @@ is_open: 1 # -1 means API not open
 partners:
   - pole-emploi
   - Mission interministérielle pour l'apprentissage
+  - Le Réseau des Carif-Oref
 keywords:
   - apprentissage
   - widget
@@ -44,23 +45,23 @@ content_intro: |
 
   En tant qu’opérateur public ou privé traitant des questions d’orientation, de formation, ou d’emploi en alternance, vous souhaitez enrichir vos services en récupérant tout ou partie des données des formations en apprentissage, des offres d’emploi en alternance et des entreprises présentant un fort potentiel de recrutement en alternance (marché caché) ?
 
-  **👉 Le service La bonne alternance est fait pour vous !** [En savoir plus](#service-la-bonne-alternance)
+  **👉 Le service La bonne alternance est fait pour vous !** [En savoir plus](#consommer-les-opportunités-d’emploi-et/ou-de-formations-en-alternance)
 
   Vous êtes un OPCO, un organisme de formation ou tout autre acteur accompagnant des entreprises ? Vous souhaitez proposer un service simplifié de dépôt d’offres en alternance à vos entreprises partenaires, tout en facilitant la diffusion et le suivi de leurs offres ?
 
-  **👉 Le service La bonne alternance recruteur et organisme de formation sont faits pour vous !** [En savoir plus](#service-matcha)
+  **👉 Le service La bonne alternance recruteur et organisme de formation sont faits pour vous !** [En savoir plus](#déposer-des-offres-d’emploi-en-toute-simplicité)
 
-  Vous exposez des entreprises qui recrutent en alternance sur votre site internet ? Vous souhaitez permettre aux jeunes de candidater en quelques clics auprès de ces entreprises ? 
+  Vous exposez des entreprises qui recrutent en alternance sur votre site internet ? Vous souhaitez permettre aux jeunes de candidater en quelques clics auprès de ces entreprises ?
 
-  **👉 Le service Je candidate est fait pour vous !** [En savoir plus](#service-je-candidate)
+  **👉 Le service Je candidate est fait pour vous !** [En savoir plus](#permettre-aux-candidats-de-postuler-auprès-des-entreprises)
 
-  Vous exposez des formations en alternance sur votre site internet ? Vous souhaitez permettre aux jeunes de prendre un premier contact avec les organismes proposant ces formations ? 
+  Vous exposez des formations en alternance sur votre site internet ? Vous souhaitez permettre aux jeunes de prendre un premier contact avec les organismes proposant ces formations ?
 
 
-  **👉 Le service Rendez-vous apprentissage est fait pour vous !** [En savoir plus](#service-rendez-vous-apprentissage)
+  **👉 Le service Rendez-vous apprentissage est fait pour vous !** [En savoir plus](#permettre-aux-candidats-de-prendre-rendez-vous-auprès-des-centre-de-formation-en-apprentissage)
 
 ---
-### Service La bonne alternance
+### Consommer les opportunités d’emploi et/ou de formations en alternance
 
 #### Origine des données
 
@@ -100,14 +101,14 @@ Le widget est disponible en marque blanche et est proposé en plusieurs tailles.
 
 </details>
 
-### Service La bonne alternance recruteur et organisme de formation
+### Déposer des offres d’emploi en toute simplicité
 
 #### Formats disponibles
 
 <details>
   <summary>API</summary>
 
-Matcha dispose d’une API permettant d’accéder à l’ensemble des fonctionnalités proposées originalement sur le formulaire, vous permettant ainsi de configurer notre formulaire selon vos usages et besoins.
+Le service de dépôt d'offres dispose d’une API permettant d’accéder à l’ensemble des fonctionnalités proposées originalement sur le formulaire, vous permettant ainsi de configurer notre formulaire selon vos usages et besoins.
 
 📄 Comment exploiter l’API ? [Consultez cette documentation.](https://matcha.apprentissage.beta.gouv.fr/api/v1/docs/)
 
@@ -125,15 +126,21 @@ Pour intégrer facilement le formulaire simplifié de dépôt d’offres.
 👉 Utilisez le code suivant au sein d’une balise HTML :
 
 ```html
-<iframe loading="lazy" src="https://matcha.apprentissage.beta.gouv.fr/widget/{ORIGINE}/" width="100%" height="800" frameborder="0" style="max-width: 100%;"></iframe>
+<iframe loading="lazy" src="https://labonnealternance-recette.apprentissage.beta.gouv.fr/espace-pro/widget/[ORIGINE]/" width="100%" height="800" frameborder="0" style="max-width: 100%;"></iframe>
 ```
 --> en remplaçant "ORIGINE" par le nom de votre établissement.
+
+Exemple :
+
+```html
+<iframe loading="lazy" src="https://labonnealternance-recette.apprentissage.beta.gouv.fr/espace-pro/widget/akto" width="100%" height="800" frameborder="0" style="max-width: 100%;"></iframe>
+```
 
 👉 Comment tester le widget ? Consultez [cette page.](https://matcha-recette.apprentissage.beta.gouv.fr/widget/matcha)
 
 </details>
 
-### Service Je candidate
+### Permettre aux candidats de postuler auprès des entreprises
 
 #### Format disponible
 
@@ -164,18 +171,16 @@ Le service de candidature en ligne Je candidate est également déployé par dé
 </details>
 
 
-### Service Rendez-vous apprentissage
+### Permettre aux candidats de prendre rendez-vous auprès des centre de formation en apprentissage
 
 #### Format disponible
 
 <details>
-  <summary>Widget</summary>
+  <summary>API</summary>
 
-Pour proposer le service de prise de rendez-vous aux utilisateurs de votre site internet, vous pouvez intégrer le widget Rendez-vous apprentissage.
+Le service Rendez-vous apprentissage dispose d’une API permettant de générer un lien d'accès à un formulaire de mise en relation entre un candidat à l'alternance et un contact en charge de la formation dans un centre de formation.
 
-🔎 Exemple d’exploitation du widget [**sur le site de l’Onisep.**](https://www.onisep.fr/Ressources/Univers-Lycee/Lycees/Ile-de-France/Essonne/cfa-faculte-des-metiers-de-l-essonne-site-d-evry/cap-esthetique-cosmetique-parfumerie)
-
-📄 Comment exploiter et tester le widget ? [**Consultez cette documentation.**](https://rdv-cfa.apprentissage.beta.gouv.fr/widget/tutorial)
+📄 Comment exploiter l'API ? [**Consultez cette documentation.**](https://labonnealternance.apprentissage.beta.gouv.fr/api/v1/lbar-docs/#/Rendez-vous/post_appointment_request_context_create)
 
 </details>
 
@@ -186,4 +191,4 @@ L’exploitation de ces données engage la responsabilité du réutilisateur.
 ## L'équipe
 
 Ces API et widgets sont produits par l'équipe de la mission interministérielle pour l'apprentissage, au sein de la DINUM. Pôle emploi est partenaire du développement de certains d'entre eux.
-Pour en savoir plus, [consultez la présentation du service La Bonne Alternance.](https://beta.gouv.fr/startups/la-bonne-alternance.html)
+Pour en savoir plus, [consultez la présentation du service La bonne alternance.](https://beta.gouv.fr/startups/la-bonne-alternance.html)

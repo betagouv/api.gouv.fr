@@ -1,15 +1,15 @@
 ---
 title: Comment installer le widget formulaire de dépôt d'offre d'alternance sur son site ?
 tagline: Intégrez le widget LBA sur votre site, pour afficher les formations et les entreprises qui proposent un apprentissage.
-tags: cas usage, La Bonne alternance, apprentissage, widget, pole emploi, matcha, alternance
+tags: cas usage, La bonne alternance, apprentissage, widget, pole emploi, matcha, alternance
 image: code.jpg
 noindex: false # this page will appear on Google
 publish: true # this page will appear on /guides page
 api:
-  - API La Bonne Alternance
+  - API La bonne alternance
 ---
 
-Voici à quoi ressemble le widget La Bonne Alternance. Il permet d'afficher directement sur votre site les formations et les entreprises qui proposent un apprentissage en interrogeant les données de <External href="/les-api/api-la-bonne-alternance">l'API La Bonne Alternance</External>
+Voici à quoi ressemble le widget La bonne alternance. Il permet d'afficher directement sur votre site les formations et les entreprises qui proposent un apprentissage en interrogeant les données de <External href="/les-api/api-la-bonne-alternance">l'API La bonne alternance</External>
 
 <iframe style="height: 700px; width: 380px;max-width: 100%;margin: auto;display: block;" src="https://labonnealternance.apprentissage.beta.gouv.fr/recherche-apprentissage?radius=60&romes=F1702,F1705,F1701&scope=all&lat=47&lon=2.2&caller=ID_service_appelant_labonnealternance&return_uri=/&return_logo_url=https://api.gouv.fr/images/api-logo/dinum.png" />
 
