@@ -22,16 +22,23 @@ export const pathEligible = {
           {
             choices: [
               'Achatpublic - achatpublic.com',
-              'Atexo - LocalTrustSub',
-              'Atexo - Place',
-              'AWS - AWS-achat',
+              'Actradis'
+              'Arnia - Pack commande publique'
+              'Atexo - LocalTrust',`
               'Atline Services - marches-securises.fr',
+              'AWS - AWS-achat',
+              'Axyus',
               'Dematis - e-marchespublics.com',
               'E-attestations - E-attestations.com',
+              'Entr'ouvert - Publik',
               'Klekoon - klekoon.com',
+              'Maximilien',
+              'Megalis Bretagne',
               'MGDIS - Portail des aides',
+              'PICTAV Informatique',
               'Provigis - Provigis plateforme',
-              'Territoires numériques - Pack commande publique',
+              'SmartGlobal - Smart Global Governance',
+              'Solution Attestations',
             ],
             answer: `**Bonne nouvelle ! Vous êtes éligible et votre éditeur/profil acheteur a déjà intégré l’API Entreprise. <span role='img' aria-label='émoji ok'>👍</span>**
             <br/><br/>
