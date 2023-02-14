@@ -24,6 +24,15 @@ keywords:
   - Bibliothèque
 contact_link: sudoc@abes.fr
 doc_tech_link: https://abes-esr.github.io/openapi/sudoc.yaml
+stat:
+  lastXdays: 29
+  url: https://status-api.abes.fr/
+monitoring_description: |
+monitoring_link: https://status-api.abes.fr/
+uptime: 99.96
+rate_limiting_resume: 1 appel / seconde / IP
+rate_limiting_description: |
+  L'API est disponible à hauteur de 1 appel par secondes et par adresse IP.
 themes:
   - Education
   - Culture
