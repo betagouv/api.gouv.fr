@@ -61,8 +61,8 @@ export const pathEligible = {
       L’API Entreprise s’utilise au travers d’un logiciel métier, comme par exemple un profil acheteur pour les marchés publics. Si vous collectez et traitez les données à la main, vous n’avez probablement pas un logiciel dédié aux démarches.
       <br/>
       <span role='img' aria-label='émoji cadeau'>🎁</span>**Nouveauté ! Faîtes partie des premiers utilisateurs de l'annuaire des entreprises pour les agents publics**.<br/> Vous êtes intéressé par un site internet gratuit et permettant d'accéder en un clic aux données des entreprises et des associations ? 
-      <br/>Complétez-les formulaires suivants :<br/>- <External href='TODO'>Demande d'accès "subventions des associations"</External>
-      <br/>- <External href='TODO'>Demande d'accès "marchés publics"</External>.
+      <br/>- <External href='TODO'>Demander un accès au site pour les données utiles "subventions des associations"</External>
+      <br/>- <External href='TODO'>Demander un accès au site pour les données utiles "marchés publics"</External>.
       <br/>
       **Autrement, vous pouvez :<br/>** - **contacter des éditeurs de logiciel ayant déjà intégré l’API Entreprise :**
       <br/><Button href='https://entreprise.api.gouv.fr/cas_usage/aides_publiques/#liste-d%C3%A9diteurs' target='_blank' rel="noreferrer noopener" alt>Liste des éditeurs Aides Publiques</Button>
