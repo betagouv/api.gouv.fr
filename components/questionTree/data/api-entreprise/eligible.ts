@@ -7,7 +7,7 @@ export const pathEligible = {
         '**Nos développeurs internes.**<br/>Ils conçoivent une solution logicielle sur-mesure pour mon organisation.',
         '**Nos développeurs prestataires.**<br/>Ils conçoivent une solution logicielle sur-mesure pour mon organisation.',
       ],
-      answer: `**<span role='img' aria-label='émoji ok'>👍</span> Vous êtes éligible et avez les compétences techniques pour intégrer l’API Entreprise** à votre logiciel interne de traitement des démarches des associations et des entreprises.**
+      answer: `**<span role='img' aria-label='émoji ok'>👍</span> Vous êtes éligible et avez les <External href='https://entreprise.api.gouv.fr/developpeurs#prerequis-techniques'>prérequis techniques</External> pour intégrer l’API Entreprise** à votre logiciel interne de traitement des démarches des associations et des entreprises.**
       <br/><br/>
       <Button href='https://datapass.api.gouv.fr/api-entreprise' target='_blank' rel="noreferrer noopener">Déposer une demande</Button>`,
     },
@@ -56,7 +56,7 @@ export const pathEligible = {
       choices: [
         '**Je n’ai ni équipe technique, ni éditeur.**<br/>Actuellement, je contacte les entreprises et associations une par une et traite leurs données à la main.',
       ],
-      answer: `** Vous êtes éligible mais n'avez pas les <External href='https://entreprise.api.gouv.fr/doc/#fondamentaux'>prérequis techniques</External> pour utiliser l’API&nbsp;Entreprise <span role='img' aria-label='émoji loupe'>🔎</span>**
+      answer: `** Vous êtes éligible mais n'avez pas les <External href='https://entreprise.api.gouv.fr/developpeurs#prerequis-techniques'>prérequis techniques</External> pour utiliser l’API&nbsp;Entreprise <span role='img' aria-label='émoji loupe'>🔎</span>**
       <br/>
       L’API Entreprise s’utilise au travers d’un logiciel métier, comme par exemple un profil acheteur pour les marchés publics. Si vous collectez et traitez les données à la main, vous n’avez probablement pas un logiciel dédié aux démarches.
       <br/>
