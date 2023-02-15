@@ -425,18 +425,21 @@
     - type: ADD_API
       what: Transparence Santé, par la Direction Générale de la Santé
       path: /les-api/api-transparence-sante
+  2:
+    - type: ADD_API
+      what: MonComptePro, par la DINUM
+      path: /les-api/moncomptepro
+    - type: ADD_API
+      what: GRDF ADICT, par GRDF
+      path: /les-api/api-grdf-adict
+  3:
+    - type: ADD_API
+      what: Scolarité, par le Ministère de l'Education Nationale
     - type: ADD_API
       what: SIPSI (déclaration des travailleurs étrangers) par le Ministère du Travail
     - type: ADD_API
       what: Quotient Familial, par la MSA
     - type: ADD_API
       what: Famille nombreuse, par le Ministère des Transports
-  2:
-    - type: ADD_API
-      what: MonComptePro, par la DINUM
-      path: /les-api/moncomptepro
-  3:
-    - type: ADD_API
-      what: Scolarité, par le Ministère de l'Education Nationale
 
 ---
