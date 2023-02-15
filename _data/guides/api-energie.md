@@ -15,6 +15,7 @@ api:
   - API Aide financieres de l’ADEME
   - API Professionnels RGE
   - API Base Carbone®
+  - API GRDF ADICT
 
 ---
 
@@ -49,6 +50,15 @@ L'API Données ouvertes d'Enedis permet d'accéder aux données sur les producti
 L'API Données locales de consommation d'énergie permet de suivre la consommation d'électricite, gaz, livraison de chaleur, froid et les ventes de carburants.
 
 <Button href="https://api.gouv.fr/les-api/api-donnees-locales-energie">Accéder à l'API</Button>
+</details>
+
+<br>
+
+<details>
+<summary>API GRDF ADICT</summary>
+GRDF ADICT est un service de mise à disposition des données individuelles de consommation de gaz par API. Il vous permet d’accéder, par un flux automatisé et sécurisé, aux données brutes (non mises en forme) des clients qui souhaitent les partager avec vous et de les intégrer à vos services.
+
+<Button href="https://api.gouv.fr/les-api/api-grdf-adict">Accéder à l'API</Button>
 </details>
 
 ### ⚡️ Diagnostiquer ou connaître la performance énergétique d'un bâtiment
@@ -112,6 +122,15 @@ Aides Territoires est un moteur de recherche qui permet de retrouver près de 30
 La Base Carbone® est une base de données publique de facteurs d'émissions, nécessaires à la réalisation d’un bilan d’émissions de gaz à effet de serre (GES) et plus généralement tout exercice de comptabilité carbone.
 
 <Button href="https://api.gouv.fr/les-api/api_base_carbone">Accéder à l'API</Button>
+</details>
+
+<br>
+
+<details>
+<summary>API GRDF ADICT</summary>
+GRDF ADICT est un service de mise à disposition des données individuelles de consommation de gaz par API. Il vous permet d’accéder, par un flux automatisé et sécurisé, aux données brutes (non mises en forme) des clients qui souhaitent les partager avec vous et de les intégrer à vos services.
+
+<Button href="https://api.gouv.fr/les-api/api-grdf-adict">Accéder à l'API</Button>
 </details>
 
 ## Comment intégrer ces API dans vos outils ou sites internet ?
