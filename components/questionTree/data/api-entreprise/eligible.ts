@@ -22,15 +22,15 @@ export const pathEligible = {
           {
             choices: [
               'Achatpublic - achatpublic.com',
-              'Actradis'
-              'Arnia - Pack commande publique'
-              'Atexo - LocalTrust',`
+              'Actradis',
+              'Arnia - Pack commande publique',
+              'Atexo - LocalTrust',
               'Atline Services - marches-securises.fr',
               'AWS - AWS-achat',
               'Axyus',
               'Dematis - e-marchespublics.com',
               'E-attestations - E-attestations.com',
-              'Entr'ouvert - Publik',
+              'Entr\'ouvert - Publik',
               'Klekoon - klekoon.com',
               'Maximilien',
               'Megalis Bretagne',
@@ -67,9 +67,11 @@ export const pathEligible = {
       <br/>
       L’API Entreprise s’utilise au travers d’un logiciel métier, comme par exemple un profil acheteur pour les marchés publics. Si vous collectez et traitez les données à la main, vous n’avez probablement pas un logiciel dédié aux démarches.
       <br/>
-      <span role='img' aria-label='émoji cadeau'>🎁</span>**Nouveauté ! Faîtes partie des premiers utilisateurs de l'annuaire des entreprises pour les agents publics**.<br/> Vous êtes intéressé par un site internet gratuit et permettant d'accéder en un clic aux données des entreprises et des associations ? 
-      <br/>- <External href='TODO'>Demander un accès au site pour les données utiles "subventions des associations"</External>
+      <br/>
+      <span role='img' aria-label='émoji cadeau'>🎁</span>**Nouveauté ! Faîtes partie des premiers utilisateurs de l'annuaire des entreprises pour les agents publics**.<br/> Vous êtes intéressé par un site internet gratuit et permettant d'accéder en un clic aux données des entreprises et des associations ?
+      <br/>- <External href='https://form.typeform.com/to/ol1jlpdf'>Demander un accès au site pour les données utiles "subventions des associations"</External>
       <br/>- <External href='TODO'>Demander un accès au site pour les données utiles "marchés publics"</External>.
+      <br/>
       <br/>
       **Autrement, vous pouvez :<br/>** - **contacter des éditeurs de logiciel ayant déjà intégré l’API Entreprise :**
       <br/><Button href='https://entreprise.api.gouv.fr/cas_usage/aides_publiques/#liste-d%C3%A9diteurs' target='_blank' rel="noreferrer noopener" alt>Liste des éditeurs Aides Publiques</Button>
