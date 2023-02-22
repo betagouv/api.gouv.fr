@@ -28,7 +28,7 @@ monitoring_link: https://status-api.abes.fr/
 uptime: 99.96
 rate_limiting_resume: 1 appel / seconde / IP
 rate_limiting_description: |
-  L'API est disponible à hauteur de 1 appel par secondes et par adresse IP.
+  L'API est disponible à hauteur de 1 appel par seconde et par adresse IP.
 themes:
   - Education
   - Culture

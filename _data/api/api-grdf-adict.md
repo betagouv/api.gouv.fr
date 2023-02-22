@@ -1,6 +1,6 @@
 ---
 title: API GRDF ADICT
-tagline: Accédez aux données de consommation de gaz des personnes morales clientes de GRDF en tant que tiers
+tagline: Accédez aux données de consommation de gaz des clients de GRDF en tant que tiers
 external_site: https://sites.grdf.fr/web/portail-api-grdf-adict
 is_open: -1 # -1 means API not open
 access_page:
@@ -51,11 +51,20 @@ content_intro: |
   leur suivi de consommation multi-sites.
 visits_2019: 2500
 last_update: 15/02/2023
+stat:
+  lastXdays: 29
+  url: https://status-api.abes.fr/
+monitoring_description: |
+monitoring_link: https://status-api.abes.fr/
+uptime: 100
+rate_limiting_resume: 1 appel / seconde / IP
+rate_limiting_description: |
+  L'API est disponible à hauteur de 1 appel par seconde et par adresse IP.
 ---
 
 ### À quoi sert l'API GRDF ADICT ?
 
-L'API GRDF ADICT permet d'accéder aux données de consommation de gaz de personnes morales (entreprises, collectivités territoriales...), sous réserve de leur consentement.
+L'API GRDF ADICT permet d'accéder aux données de consommation de gaz de tous les clients de GRDF (particuliers, entreprises, collectivités territoriales...), sous réserve de leur consentement.
 
 👉 Par exemple, une entreprise souhaite optimiser sa consommation de gaz et confie le suivi à un bureau d'études spécialisé. Elle donne son consentement au bureau d'études pour accéder aux données de consommation, qui sont fournies par l'API GRDF ADICT.
 
@@ -67,7 +76,7 @@ En tant que tiers, intégrer l'API GRDF ADICT vous permettra :
 
 ☑️ D’être **conforme au RGPD**, grâce au consentement du client GRDF et à la sécurisation de l'accès aux données
 
-☑️ D'accéder à **des données certifiées et à la source**
+☑️ D'accéder à **des données certifiées et à la source** quel que soit le fournisseur du client
 
 ### Données accessibles dans l'API
 
