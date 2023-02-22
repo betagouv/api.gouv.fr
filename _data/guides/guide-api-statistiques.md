@@ -27,6 +27,7 @@ api:
   - API Resultats de qualité des services publics
   - API Professionnels BIO
   - API données ouvertes de l’Urssaf
+  - API données foncières
 ---
 
 # Quelles API utiliser pour créer des tableaux de bord et piloter les politiques publiques ?
@@ -205,6 +206,15 @@ Cette API donne accès aux données sur les subventions attribuées aux associat
 </details>
 
 ## 📊 Les API sur le développement économique
+
+<details>
+<summary>API données foncières</summary>
+Accéder aux indicateur et statistiques détaillées sur les transactions immobilières dans votre territoire
+
+<Button href="https://api.gouv.fr/les-api/api-donnees-foncieres">Accéder à l'API</Button>
+</details>
+
+<br>
 
 <details>
 <summary>API données ouvertes de l’Urssaf</summary>
