@@ -415,8 +415,6 @@
       what: Sortants de formation et accès à l'emploi, par Pôle emploi
       path: /les-api/api-formation-acces-emploi
     - type: ADD_API
-      what: Données foncières par le CEREMA
-    - type: ADD_API
       what: Prestations sociales par la Direction de la Sécurité Sociale
     - type: ADD_API
       what: Historique d'un véhicule (HistoVec), par le Ministère de l'Intérieur
@@ -432,6 +430,9 @@
     - type: ADD_API
       what: GRDF ADICT, par GRDF
       path: /les-api/api-grdf-adict
+    - type: ADD_API
+      what: Données foncières par le CEREMA
+      path: /les-api/api-donnees-foncieres
   3:
     - type: ADD_API
       what: Scolarité, par le Ministère de l'Education Nationale
