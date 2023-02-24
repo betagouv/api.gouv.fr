@@ -70,7 +70,6 @@ export const pathEligible = {
       <br/>
       <span role='img' aria-label='émoji cadeau'>🎁</span>**Nouveauté ! Faîtes partie des premiers utilisateurs de l'annuaire des entreprises pour les agents publics**.<br/> Vous êtes intéressé par un site internet gratuit et permettant d'accéder en un clic aux données des entreprises et des associations ?
       <br/>- <External href='https://form.typeform.com/to/ol1jlpdf'>Demander un accès au site pour les données utiles "subventions des associations"</External>
-      <br/>- <External href='TODO'>Demander un accès au site pour les données utiles "marchés publics"</External>.
       <br/>
       <br/>
       **Autrement, vous pouvez :<br/>** - **contacter des éditeurs de logiciel ayant déjà intégré l’API Entreprise :**
