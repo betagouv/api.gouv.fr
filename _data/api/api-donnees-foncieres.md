@@ -33,7 +33,7 @@ access_page:
 
         <Button href="https://consultdf.cerema.fr/consultdf/">Faire une demande</Button>
   - who:
-      - Une structure déjà bénéficiaire des fichiers MAJIC
+      - Une structure bénéficiaire des données foncières
     is_eligible: 1
     description: |
         <Button href="https://consultdf.cerema.fr/consultdf/">Faire une demande</Button>
@@ -62,7 +62,7 @@ themes:
   - Géographie
   - Particulier
 content_intro: |
-  L'API Données foncières permet d'accéder aux données foncières (restreintes) et aux données ouvertes sur les transactions immobilières (DVF) et indicateurs par territoires. 
+  L'API Données foncières permet d'accéder aux principales données foncières, d’origine fiscale, enrichies par le Cerema et la Direction Générale de l’Aménagement, du Logement et de la Nature (DGALN).
 
   🧪 *L'API est actuellement en version beta, le niveau de service sera progressivement amélioré au cours de l'année 2023.*
 
@@ -74,18 +74,63 @@ last_update: 21/02/2023
 
 ## À quoi sert l'API données foncières ?
 
-L'API données foncières permet d'accéder aux caractéristiques sur les locaux et les parcelles, dont les prix des ventes immobilières.
+Les **flux ouverts** de cette API permettent d’accéder aux **transactions foncières et immobilières** issues de DVF et à des différents indicateurs de territoires relatifs au **prix de l’immobilier** ou la **consommation d’espace NAF** depuis 2010. 
 
-### Statistiques sur les transactions immobilières
+Les **flux restreints**, pour les bénéficiaires publics, permettent d’accéder aux **informations détaillées sur les parcelles, unités foncières, locaux et propriétaires** issus de l’information cadastrale (Fichiers fonciers) ainsi qu’aux **données enrichies de prix du foncier et de l’immobilier** (DV3F).
 
-Une partie des données est librement accessible : [voir la cartographie des demandes de valeurs foncières](https://app.dvf.etalab.gouv.fr/).
-Dans ce cas, l'API peut être utilisée pour alimenter des tableaux de bord sur les **prix de l'immobilier**, de réaliser des **statistiques selon les territoires et les types de biens**.
+### Des données d’observation pour les territoires
 
-### Usages réservés aux collectivités territoriales
+Une partie des données est librement accessible. Dans ce cas, l'API peut être utilisée pour alimenter des cartes et tableaux de bord sur les **prix de l'immobilier**, la consommation d’espace, de réaliser des statistiques selon différentes échelles de territoire. Exemple : https://dataviz.cerema.fr/dynmark/
 
-D'autres données sont réservées à l'usage exclusif de l'administration, car elles contiennent des données personnelles (informations sur les propriétaires et leurs locaux, données fiscales, etc...). Ces données peuvent par exemple servir [aux études locales sur la vacance des logements.](https://datafoncier.cerema.fr/usages)
+### Des usages destinés aux acteurs publics de l’aménagement
+
+Les données réservées à la sphère publique (Etat, collectivités territoriales, etc.) contiennent des données personnelles sur les propriétaires, leur foncier et leurs locaux. 
+
+Elles constituent un socle d’informations très riche, adapté aux missions des acteurs de l’aménagement dans la définition, la conduite et l’évaluation de leurs politiques publiques : mesure de l’étalement urbain, lutte contre la vacance des logements, identification des friches, rénovation énergétique, identification des enjeux en zone à risques, observatoires fonciers, etc.
 
 ## Quelles sont les données accessibles dans l'API données foncières ?
+
+### 🔐 Fichiers fonciers (accès restreint)
+
+<details> 
+    <summary>Présentation</summary>
+    <p>
+Il s'agit des données "MAJIC" enrichies.
+<p>
+Les Fichiers fonciers décrivent de manière détaillée le foncier, les locaux ainsi que les différents droits de propriété qui leur sont liés. Ils sont aujourd’hui devenus essentiels dans de nombreux domaines tels que l’occupation du sol, l’aménagement, le logement, le risque et l’énergie.
+</details>
+
+<br>
+
+<details> 
+    <summary>Détail des données</summary>
+    <p>
+    - parcelle (en geojson et json)
+    - tableau unifié parcellaire (en geojson et json)
+</details>
+
+<br>
+
+<details> 
+    <summary>Modalités d'accès</summary>
+    <p>
+    Ces données sont en accès restreint, réservées à un usage dans le cadre d'une mission de service public.
+    <p>
+    **Les bénéficiaires des données foncières sont parmi les structures suivantes :**
+
+    - Services de l'État,
+    - Établissements publics de l'État,
+    - Collectivités territoriales,
+    - Agences d'urbanisme,
+    - EPF, SAFER, ADIL, OLAP, SCoT,
+    - Organismes de recherche,
+    - Infrastructures de données géographiques,
+    - Autres structures bénéficiaires de MAJIC.
+
+<Button href="/les-api/api-donnees-foncieres/demande-acces">Demander un accès</Button>
+
+</details>
+
 
 ### 🔐 DV3F - accès restreint
 
@@ -145,11 +190,11 @@ La géolocalisation s'appuie sur les différents millésimes du Plan cadastral i
 <details> 
     <summary>Détail des données</summary>
     <p>
-    **DV3F - Géomutations : ** Retourne, en GeoJSON, les mutations pour la commune ou l'emprise rectangulaire demandée
+    **DVF+ - Géomutations : ** Retourne, en GeoJSON, les mutations pour la commune ou l'emprise rectangulaire demandée
     <p>
-    **DV3F - Mutations :** Retourne les mutations pour la commune ou l'emprise rectangulaire demandée
+    **DVF+ - Mutations :** Retourne les mutations pour la commune ou l'emprise rectangulaire demandée
     <p>
-    **DVF - IdMutations :** Retourne la mutation pour l'identifiant de mutation demandé
+    **DVF+ - IdMutations :** Retourne la mutation pour l'identifiant de mutation demandé
 </details>
 
 <br>
@@ -162,57 +207,14 @@ La géolocalisation s'appuie sur les différents millésimes du Plan cadastral i
     <Button href="/documentation/api-donnees-foncieres">Accéder à l'API</Button>
 </details>
 
-### 🔐 Fichiers fonciers (accès restreint)
+### 🔓 Indicateurs de territoire (avvès ouvert)
 
 <details> 
     <summary>Présentation</summary>
     <p>
-Il s'agit des données "MAJIC" enrichies.
+Les indicateurs agrégés proposés correspondent aux [données de consommation d’espace](https://artificialisation.developpement-durable.gouv.fr/) issus des Fichiers fonciers et [les indicateurs de prix de l’immobiliers](https://cartagene.cerema.fr/portal/apps/instant/portfolio/index.html?appid=670464db4dff42279b10de3c0bea0d2e) issus de DV3F.
 <p>
-Les Fichiers fonciers décrivent de manière détaillée le foncier, les locaux ainsi que les différents droits de propriété qui leur sont liés. Ils sont aujourd’hui devenus essentiels dans de nombreux domaines tels que l’occupation du sol, l’aménagement, le logement, le risque et l’énergie.
-</details>
-
-<br>
-
-<details> 
-    <summary>Détail des données</summary>
-    <p>
-    - locaux
-    - parcelles
-    - propriétaires
-    - tableau unifié parcellaire
-</details>
-
-<br>
-
-<details> 
-    <summary>Modalités d'accès</summary>
-    <p>
-    Ces données sont en accès restreint, réservées à un usage dans le cadre d'une mission de service public.
-    <p>
-    **Les bénéficiaires des données foncières sont parmi les structures suivantes :**
-
-    - Services de l'État,
-    - Établissements publics de l'État,
-    - Collectivités territoriales,
-    - Agences d'urbanisme,
-    - EPF, SAFER, ADIL, OLAP, SCoT,
-    - Organismes de recherche,
-    - Infrastructures de données géographiques,
-    - Autres structures bénéficiaires de MAJIC.
-
-<Button href="/les-api/api-donnees-foncieres/demande-acces">Demander un accès</Button>
-
-</details>
-
-### 🔓 Indicateurs (open data)
-
-<details> 
-    <summary>Présentation</summary>
-    <p>
-La base de données DV3F facilite l'observation des marchés et permet de produire des indicateurs de prix et de volumes de transactions à différentes échelles géographiques afin d'apprécier et d'étudier les marchés fonciers et immobiliers d'un territoire.
-<p>
-[Accéder aux cartographies et aux indicateurs](https://cartagene.cerema.fr/portal/apps/instant/portfolio/index.html?appid=670464db4dff42279b10de3c0bea0d2e)
+Ces données sont disponibles sur différentes périmètres administratifs et pour différentes périodes à partir de 2010.
 </details>
 
 <br>
@@ -241,8 +243,11 @@ La base de données DV3F facilite l'observation des marchés et permet de produi
 
 - Voir la [liste des usages possibles des données foncières](https://datafoncier.cerema.fr/usages)
 - Accéder aux [outils d'observation et d'analyse du foncier](https://datafoncier.cerema.fr/les-outils-dobservation-et-danalyse-du-foncier)
+- Notebook Python pour [tester différentes utilisations des données](https://nbviewer.org/gist/aherman59/fc52ff258a91063d3d3d89c61fa5ad35)
 
 ### Documentation
 
 - [Mieux comprendre les données du CEREMA](https://datafoncier.cerema.fr/donnees)
-- [Dictionnaire des fichiers fonciers](http://doc-datafoncier.cerema.fr/ff/doc_fftp/)
+- [Dictionnaire des bases de données foncières](http://doc-datafoncier.cerema.fr/)
+ 
+
