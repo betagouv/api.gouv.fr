@@ -1,5 +1,5 @@
 ---
-name: Direction générale de l'aménagement, du logemment et de la nature
+name: Direction générale de l'aménagement, du logement et de la nature
 nameWithPronoun: la DGALN
 logo: mtes.png
 acronym: DGALN
