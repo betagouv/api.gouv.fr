@@ -20,7 +20,7 @@ jobs:
           SSH_PRIVATE_KEY: ${{secrets.SSH_MACHINE_USER_PRIVATE_KEY}}
           SSH_HOST: ${{ secrets.SSH_HOST_PRODUCTION }}
 
-      - name: Deploy to staging
+      - name: Deploy to production
         run: ssh -i ./deploy.key www-data@$SSH_HOST 'sh /opt/apps/www/www-deploy.sh'
         env:
           SSH_HOST: ${{ secrets.SSH_HOST_PRODUCTION }}
