@@ -5,24 +5,6 @@ import constants from '../constants';
 
 const teamData = [
   {
-    name: 'Romain Tales',
-    title: 'Chef de mission DATA',
-    linkedin: 'https://www.linkedin.com/in/romain-tales-5969737',
-    img: 'Romain.jpg',
-  },
-  {
-    name: 'Mathilde Hoang',
-    title: 'Responsable circulation et ouverture des données',
-    linkedin: 'https://fr.linkedin.com/in/mathilde-hoang-01a72a88',
-    img: 'Mathilde.jpg',
-  },
-  {
-    name: 'Benoit Morane',
-    title: 'Développement des offres API',
-    linkedin: 'https://www.linkedin.com/in/benoit-morane-0b5773a5',
-    img: 'Benoit.jpg',
-  },
-  {
     name: 'Vincent Mazalaigue',
     title: 'Chargé de mission DLNUF',
     linkedin: 'https://www.linkedin.com/in/vmazalaigue/',
@@ -30,15 +12,9 @@ const teamData = [
   },
   {
     name: 'Etienne Pichot Damon',
-    title: 'Relations avec les administrations',
+    title: 'Responsable du catalogue api.gouv.fr',
     linkedin: 'https://www.linkedin.com/in/etiennepichotdamon/',
     img: 'Etienne.jpg',
-  },
-  {
-    name: 'Alexandre De Pablo',
-    title: 'API Entreprise',
-    linkedin: 'https://www.linkedin.com/in/alexandre-de-pablo-4b9a49a6/',
-    img: 'Alexandre.jpg',
   },
   {
     name: 'Xavier Jouppe',
@@ -51,12 +27,6 @@ const teamData = [
     title: 'API Entreprise',
     linkedin: 'https://fr.linkedin.com/in/samuel-faure-0a118780',
     img: 'Samuel.jpg',
-  },
-  {
-    name: 'Stanislas Bernard',
-    title: 'API Particulier',
-    linkedin: 'https://www.linkedin.com/in/stanislas-bernard-3b14b586/',
-    img: 'Stanislas.jpg',
   },
   {
     name: 'Amandine Audras',
