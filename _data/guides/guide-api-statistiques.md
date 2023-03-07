@@ -126,7 +126,7 @@ Cette API donne accès au recensement des diagnostics de performance énergétiq
 
 <details>
 <summary>Hub'Eau - Qualité des cours d'eau</summary>
-Cette API permmet de connaître les mesures de qualité physico-chimique des cours d'eau.
+Cette API permet de connaître les mesures de qualité physico-chimique des cours d'eau.
 
 <Button href="https://api.gouv.fr/les-api/api_hubeau_qualite_rivieres">Accéder à l'API</Button>
 </details>
@@ -135,7 +135,7 @@ Cette API permmet de connaître les mesures de qualité physico-chimique des cou
 
 <details>
 <summary>Hub'Eau - Piézométrie</summary>
-Cette API permmet de connaître le niveau des nappes d'eau souterraine
+Cette API permet de connaître le niveau des nappes d'eau souterraine
 
 <Button href="https://api.gouv.fr/les-api/api_hubeau_piezometrie">Accéder à l'API</Button>
 </details>
