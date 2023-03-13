@@ -653,3 +653,8 @@ Exemple [ici](https://airtable.com/appMEKRGMNrw4YRff) avec les données bac à s
 4. **Vous devez transmettre ce jeton à votre éditeur ? Ou à votre équipe technique ?** Utilisez un moyen de transmission sécurisé (messagerie cryptée par exemple).
 
 </details>
+  
+## Support utilisateur
+ 
+Vous êtes utilisateur de l'API Particulier, vous rencontrez un problème et avez besoin d'échanger avec nous en transmettant des données sensibles ? Utilisez le [formulaire de transfert d'informations sécurisées](https://www.demarches-simplifiees.fr/commencer/api-particulier-transfert-securise-d-informations).
+
