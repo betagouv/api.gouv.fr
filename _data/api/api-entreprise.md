@@ -148,7 +148,7 @@ stats_detail_resume: Les statistiques sont disponibles sur 2 mois
 stats_detail_description: Accédez au suivi des consommations des API
 stats_detail_link: https://entreprise.api.gouv.fr/stats
 contact_link: https://entreprise.api.gouv.fr/faq
-doc_tech_link: https://entreprise.api.gouv.fr/v3/openapi.yaml
+doc_tech_link: https://entreprise.api.gouv.fr/v3/openapi-entreprise.yaml
 useSwaggerProxy: true
 doc_tech_external: https://entreprise.api.gouv.fr/developpeurs
 themes:
