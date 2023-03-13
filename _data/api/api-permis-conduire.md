@@ -14,7 +14,8 @@ access_page:
   - who:
       - Une auto-école
     is_eligible: 1
-    description: |     
+    description: |
+      <Button href="mailto:support-api-erpc@interieur.gouv.fr">Demander un accès</Button>
       
 is_open: -1
 producer: minint
