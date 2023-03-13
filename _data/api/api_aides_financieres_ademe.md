@@ -21,8 +21,8 @@ contact_link: https://www.ademe.fr/content/contacter
 doc_tech_link: https://data.ademe.fr/data-fair/api/v1/datasets/les-aides-financieres-de-l'ademe/api-docs.json
 doc_tech_external: https://data.ademe.fr/datasets/les-aides-financieres-de-l'ademe
 datagouv_uuid:
-  - 5f081465a1409f219b08f0f7
-last_update: 27/07/2020
+  - 640afdff7a07961cdc232d19
+last_update: 10/03/2023
 ---
 
 L'API Aides financières de l'ADEME permet d'interroger l’ensemble des dossiers d’aides engagées par l’ADEME sur les trois dernières années, non confidentiels, sans limite de montants, pour des dossiers de subventions et d’aides remboursables.
