@@ -435,6 +435,9 @@
       path: /les-api/api-donnees-foncieres
   3:
     - type: ADD_API
+      what: DUME, par l'AIFE
+      path: /les-api/api-dume
+    - type: ADD_API
       what: Scolarité, par le Ministère de l'Education Nationale
     - type: ADD_API
       what: SIPSI (déclaration des travailleurs étrangers) par le Ministère du Travail
