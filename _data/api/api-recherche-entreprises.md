@@ -77,5 +77,5 @@ Pour en savoir plus sur les filtres avancés, consultez la [documentation.](/doc
 
 Pour vous abonner à l'infolettre pour être informé des mises à jour de la part de l’équipe :
 
-<Button href="https://app.mailjet.com/widget/iframe/zR1/NZO">Abonnez-vous à l'infolettre</Button>
+<Button href="https://redir.entreprise.api.gouv.fr/wgt/ls12/2qo/form?c=dfdffd14">Abonnez-vous à l'infolettre</Button>
 
