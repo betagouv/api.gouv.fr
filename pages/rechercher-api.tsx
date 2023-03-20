@@ -7,6 +7,7 @@ import Page from '../layouts/page';
 import SearchApis from '../components/searchApis';
 import { HEADER_PAGE } from '../components';
 import constants from '../constants';
+import { filterExceptions } from '../components/searchApis/filtersLogic';
 
 interface IProps {
   allApis: IApi[];
@@ -51,9 +52,11 @@ export const getStaticProps: GetStaticProps = async () => {
     (a.visits_2019 || 0) < (b.visits_2019 || 0) ? 1 : -1
   );
 
+  const filteredAllApis = sortedAllApis.filter(filterExceptions());
+
   return {
     props: {
-      allApis: sortedAllApis,
+      allApis: filteredAllApis,
       allThemes,
     },
   };
