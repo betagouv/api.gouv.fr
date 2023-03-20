@@ -45,7 +45,7 @@ const NewAPI = () => (
         </p>
         <div className="layout-center">
           <ButtonLink
-            href="https://startupdetat.typeform.com/to/Wq5CGU4M"
+            href="https://tally.so/r/nPp8px"
             target="_blank"
             rel="noopener noreferrer"
             size="large"
