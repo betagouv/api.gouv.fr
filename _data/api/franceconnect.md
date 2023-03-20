@@ -29,7 +29,7 @@ access_page:
       Si vous souhaitez intégrer le bouton FranceConnect, [faites votre demande d’habilitation](https://datapass.api.gouv.fr/franceconnect).
 
       <NextSteps />
-      <Button href="https://datapass.api.gouv.fr/franceconnect">Remplir une demande</Button>
+      <Button href="https://datapass.api.gouv.fr/franceconnect?demarche=collectivite">Remplir une demande</Button>
 partners:
   - DGFiP
   - Ameli
