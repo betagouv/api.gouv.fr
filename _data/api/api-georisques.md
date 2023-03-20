@@ -28,6 +28,7 @@ content_intro: |
 contact_link: https://assistance.brgm.fr/aide/Georisques
 doc_tech_link: https://www.georisques.gouv.fr/api/v1/api-docs
 visits_2019: 3000
+rate_limiting_resume: 1000 requêtes/min par IP
 last_update: 25/01/2022
 ---
 
