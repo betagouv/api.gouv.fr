@@ -25,7 +25,7 @@ themes:
   - Environnement
 content_intro: |
   L'API Géorisques permet d'afficher pour un territoire donné la liste des données et documents relatifs aux risques naturels et technologiques existants.
-contact_link: https://assistance.brgm.fr/aide/Georisques
+contact_link: https://www.georisques.gouv.fr/questions-reponses
 doc_tech_link: https://www.georisques.gouv.fr/api/v1/api-docs
 visits_2019: 3000
 rate_limiting_resume: 1000 requêtes/min par IP
