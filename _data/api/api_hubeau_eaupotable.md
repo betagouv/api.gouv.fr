@@ -14,10 +14,10 @@ keywords:
   - Eau potable
   - Qualité de l'eau
 contact_link: newshubeau@brgm.fr
-doc_tech_link: https://hubeau.eaufrance.fr/api/vbeta/qualite_eau_potable/api-docs
+doc_tech_link: https://hubeau.eaufrance.fr/api/v1/qualite_eau_potable/api-docs
 themes:
   - Environnement
-last_update: 26/11/2021
+last_update: 16/11/2022
 content_intro: |
   [L'API Qualité de l'eau potable](https://hubeau.eaufrance.fr/page/api-qualite-eau-potable) de Hub'Eau diffuse le jeu de données "DIS" (résultats du contrôle sanitaire de l'eau distribuée commune par commune) mis en ligne par le Ministère des Solidarités et de la Santé sur le portail data.gouv.fr
 ---
@@ -43,6 +43,7 @@ Les différentes opérations possibles sont :
 - **resultats_dis** : permet de lister les prélèvements, résultats d'analyses et conclusions sanitaires issus du contrôle sanitaire de l'eau distribuée commune par commune. 
 
 Dernières évolutions de l'API Qualité de l'eau potable de Hub'Eau:
+- 16/11/2022 : passage de l'API en version 1
 - 29/11/2021 : mise à disposition de la version beta publique  
 
 ### Connaissez-vous Hub'Eau ?
