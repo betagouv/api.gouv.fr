@@ -1,6 +1,6 @@
 ---
-title: Courtier fonctionnel SFiP
-tagline: Raccordez-vous directement à la DGFiP pour récupérer les éléments fiscaux nécessaires à vos téléservices, éliminez le traitement et le stockage des pièces justificatives
+title: API Service Finances Publiques (SFiP)
+tagline: Raccordez-vous directement au courtier SFiP pour récupérer les données nécessaires à vos téléservices. Ce nouveau service rassemblera pour vous les données strictement nécessaires issues de différentes API de la DGFiP, en excluant les données intermédiaires.
 producer: dgfip
 is_open: -1 # -1 means API not open
 is_france_connected: 1 # undefined | 1 | 2. 2 means can be used with FC, 2 means has to be used with FC
@@ -26,7 +26,7 @@ access_page:
       - Un éditeur de logiciel
     is_eligible: 0
     description: |
-      Si vous êtes **éditeur de logiciels** et agissez pour le compte d'une administration ou d'une collectivité, vous pouvez remplir une demande d’habilitation au courtier fonctionnel SFiP vous-même pour l'entité que vous représentez, dans le cadre de <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367412&dateTexte=&categorieLien=cid">l'article L114-8</External> du *code des relations entre le public et l'administration*.
+      Si vous êtes **éditeur de logiciels** et agissez pour le compte d'une administration ou d'une collectivité, vous pouvez remplir une demande d’habilitation au courtier fonctionnel SFiP vous-même pour l'entité que vous représentez, dans le cadre de [l'article L114-8](https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367412&dateTexte=&categorieLien=cid) du *code des relations entre le public et l'administration*.
 
       Lors de votre demande vous devrez **justifier** dans quelle mesure l'entité pour laquelle vous opérez rentre dans ce cadre juridique.
 
@@ -49,45 +49,43 @@ keywords:
   - Justificatif de domicile
 rate_limiting_resume: illimité
 rate_limiting_description: |
-  Votre volume d'utilisation du courtier fonctionnel SFiP n'est pas limité par défaut mais fait l'objet d'une déclaration lors de votre demande d'habilitation. En cas d'utilisation abusive, la DGFiP se réserve le droit de restreindre et/ou couper votre accès à tout moment.
+  Le volume d’utilisation du courtier SFiP n’est pas limité par défaut, mais fait l’objet d’une déclaration lors de votre demande d’accès. En cas d’utilisation abusive, la DGFiP se réserve le droit de restreindre et/ou couper votre accès à tout moment.
 monitoring_description: |
   La DGFIP s’engage à ce que le service soit accessible à plus de 98,5% et à communiquer sur les coupures de service ponctuelles qui pourraient survenir.
 themes:
   - Particulier
 contact_link: dtnum.donnees.demande-acces@dgfip.finances.gouv.fr
-visits_2019: 9856
+visits_2019: 0
 doc_tech_link: /swaggers/api-impot-particulier.json
 content_intro: |
-  L'API Impôt particulier simplifie les démarches des usagers et le processus de gestion de vos téléservices. Elle permet l’échange d’informations fiscales entre la DGFiP et une entité administrative (administration, ministère, organisme public, collectivité) ou une entreprise dans le cadre de leurs obligations légales et réglementaires pour des missions d’intérêts général.
+  Le courtier SFiP est un service de la DGFiP simplifiant le recours aux différentes API de la DGFiP. Il permet aux partenaires : entité administrative (administration, ministère, organisme public, collectivité) ou entreprise ; de récupérer les données strictement nécessaires à la simplification des démarches des usagers et au processus de gestion des téléservices. 
+  Pour ce faire, il enchaîne pour le compte du partenaire, les appels aux différentes API et restitue les données qu’il aura rassemblées en excluant les données intermédiaires.
 
   ### A quoi sert l’API Impôt particulier ?
 
-  Pour l'usager : l'API Impôt particulier dématérialise les démarches à 100% :
+  Pour l’acteur qui le met en place :
 
-  1. Je me connecte ou je me "FranceConnect" sur un site pour réaliser une démarche administrative.
-  2. Si je me suis FranceConnecté, je suis informé de la liste des données qui seront transmises.
-  3. Si je ne me suis pas FranceConnecté, je communique mon identifiant fiscal (SPI) ou mon état civil complet.
-  4. Le fournisseur de service récupère immédiatement mes informations.
-  5. Je n’ai rien d’autre à faire, ma démarche est terminée !
+  - Réduction des coûts de traitements Back office
+  - Transmission par la DGFiP de données fiables et fraîches
+  - Simplification (un seul DataPass nécessaire pour se raccorder à plusieurs APIs)
+  - Sécurisation juridique et administrative
 
-  Pour l’acteur qui la met en place :
-
-  - Réduction des coûts de traitement back-office : pas besoin de pièces justificatives complémentaires
-  - Fin du risque de fraude documentaire et des erreurs de saisie : transmission immédiate par la DGFiP de données fiables et fraîches
-last_update: 08/10/2019
+last_update: 27/03/2023
 ---
 
 ### Les données disponibles dans l'API
 
-L’API Impôt particulier peut restituer différentes données fiscales issues de la déclaration annuelle de revenus soumise à taxation.
-Le tableau ci-dessous présente les principales données de l’API Impôt particulier qui permettent de simplifier l’instruction des demandes.
+L’API SFiP peut restituer sous réserve du respect des conditions juridiques requises, et sur demande des partenaires, toutes les données des API DGFiP existantes.
+Ces données sont accessibles dans la documentation de chaque API.
 
-| Nom de la donnée                 | type         | Commentaire                                         |
-| -------------------------------- | ------------ | --------------------------------------------------- |
-| Revenu fiscal de référence (RFR) | nombre       |                                                     |
-| Nombre de parts fiscales         | nombre       |                                                     |
-| Adresse fiscale de taxation      | données JSON |                                                     |
-| Données du local                 | données JSON | Exemples : régime de taxation, identifiant du local |
+Le tableau ci-dessous présente un exemple non exhaustif du type de données restituées :
 
-Un document, présent dans le formulaire de la demande d’habilitation, liste un plus large panel des données
-pouvant être restituées par l’API Impôt particulier.
+| Nom de la donnée                                           | type           | Commentaire                                            |
+| ---------------------------------------------------------- | -------------- | ------------------------------------------------------ |
+| Nom d'usage                                                | Alphanumérique |                                                        |
+| Prénom d'usage                                             | Alphanumérique |                                                        |
+| Situation de famille                                       | Alphanumérique | Exemple : « M » pour marié                             |
+| Situation d’invalidité au regard de l’impôt sur le revenu  | Numérique      | 1 si Case « 7DG » cochée dans la déclaration de revenu |
+| Éligibilité à la détention d’un livret d’épargne populaire | Alphanumérique | O pour Oui ou N pour Non                               |
+
+Un document, présent dans le formulaire de demande d’accès liste un plus large panel de données pouvant être restituées par le courtier.
