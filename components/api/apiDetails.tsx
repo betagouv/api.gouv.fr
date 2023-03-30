@@ -91,7 +91,7 @@ const MonitoringDetail: React.FC<IPropsMonitoring> = ({
           <>
             <div>{Cardiogram}</div>
             <div>
-              La disponibilité sur le dernier mois n'est pas communiquée
+              La disponibilité sur le dernier mois n’est pas communiquée
             </div>
           </>
         )}
