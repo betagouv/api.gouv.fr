@@ -10,6 +10,11 @@ export const filterTheme = (selectedTheme: string | null) => {
   return (api: IApi) => api.themes.includes(selectedTheme);
 };
 
+export const filterExceptions = () => {
+  const excludedFromResults = ['api-sfip'];
+  return (api: IApi) => !excludedFromResults.includes(api.slug);
+};
+
 export enum API_ACCESS_TYPE {
   ALL = '',
   OPEN = 'open',

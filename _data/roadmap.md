@@ -445,5 +445,7 @@
       what: Quotient Familial, par la MSA
     - type: ADD_API
       what: Famille nombreuse, par le Ministère des Transports
-
+    - type: ADD_API
+      what: Courtier Fonctionnel SFiP, par la DGFiP
+      path: /les-api/api-sfip
 ---
