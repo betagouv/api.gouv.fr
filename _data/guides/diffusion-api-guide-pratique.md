@@ -12,15 +12,15 @@ Ce guide a pour objectif de détailler les critères permettant à une API d'êt
 
 # Table des matières
 
-- [📒 Api.gouv.fr : le catalogue des API de l'Etat](#📒-api.gouv.fr-:-le-catalogue-des-api-de-l'etat)
+- [📒 api.gouv.fr : le catalogue des API de l'Etat](#📒-api.gouv.fr-:-le-catalogue-des-api-de-l'etat)
 - [📌 Standards à respecter pour qu'une API puisse être référencée](#📌-quels-sont-les-standards-a-respecter-pour-qu'une-api-puisse-etre-referencee-?)
 - [👌 Quelle est la qualité de service demandée ?](#👌-quelle-est-la-qualite-de-service-demandee-?)
 - [📡 Référencement sur api.gouv.fr : en pratique](#📡-referencement-sur-api.gouv.fr-:-en-pratique)
 - [🔑 Gestion de l'accès à votre API](#🔑-gestion-de-l'acces-a-votre-api)
 
-## 📒 Api.gouv.fr : le catalogue des API de l'Etat
+## 📒 api.gouv.fr : le catalogue des API de l'Etat
 
-[Api.gouv.fr](http://api.gouv.fr) n'exige pas un choix technique ou une architecture spécifique pour référencer une API. Il existe en revanche des standards permettant de fournir un service optimal (architecture adaptée à l'usage, documentation claire, forte disponibilité...).
+[api.gouv.fr](http://api.gouv.fr) n'exige pas un choix technique ou une architecture spécifique pour référencer une API. Il existe en revanche des standards permettant de fournir un service optimal (architecture adaptée à l'usage, documentation claire, forte disponibilité...).
 
 Chaque API fait l'objet d'une page. Celle-ci doit être comprise par le plus grand nombre, elle décrit l'API, comment elle peut être utilisée et les données contenues. Depuis cette page, les visiteurs pourront :
 

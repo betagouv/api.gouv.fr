@@ -14,7 +14,7 @@ const About: React.FC = () => (
     canonical={`https://api.gouv.fr/apropos`}
   >
     <div className="text-wrapper text-style">
-      <h1 className="layout-center">Api.gouv.fr, à quoi ça sert ?</h1>
+      <h1 className="layout-center">api.gouv.fr, à quoi ça sert ?</h1>
       <p>
         Ce site référence les API du service public, mises à la disposition des
         collectivités, des ministères et des entreprises pour construire des
