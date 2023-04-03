@@ -275,7 +275,7 @@ _Source_ : [data.caf.fr](http://data.caf.fr/dataset/population-des-foyers-alloca
 
 ### API Statut étudiant - MESR <a name="doc-api-statut-etudiant-mesr"></a>
 
-Liste des inscriptions - et pré-inscriptions CROUS - aux établissements d'enseignement supérieur d'un étudiant.
+Liste des inscriptions - et pré-inscriptions - aux établissements d'enseignement supérieur d'un étudiant.
 
 **Format de la donnée** : JSON
 
@@ -384,8 +384,8 @@ Cette API délivre les informations de l'étudiant sur l'**année en cours** :
 | ---------------------------------- | -----------------------------------------|-------------------- |
 | Date de début                      |    Début de la période d'étude           |      `2023-09-01`   |
 | Date de fin                        |    Fin de la période d'étude             |   `2023-08-31`      |
-| Statut de l'étudiant               |  _Deux modalités :_ <br>**Inscrit** : inscrit dans l'établissement <br> **Admis (pré-inscrit au sens du CROUS)**   : Le statut admis correspond à une pré-inscription de l'étudiant dans un établissement, en formation initiale ou continue. Ce statut ne garantit pas que l'étudiant soit accepté par l'établissement. Cette pré-inscription permet à l'étudiant de faire ses démarches auprès du CROUS. <br> Les étudiants "admis" passent au statut "inscrit" une fois leur inscription validée par l'établissement. L'inscription dépend des critères de l'établissement : acceptation la candidature, paiement des droits d'inscription...  Tous les étudiants "admis" ne sont donc pas forcément de futurs étudiants "inscrits"                  |  `inscrit` ou `admis`       |
-| Régime de l'étudiant                 |     _Deux modalités :_ <br> **Formation initiale ou reprise d'études** : Ce champ indique que l'étudiant est en formation initiale ou en reprise d'études. La formation initiale correspond à un parcours d’études amorcé à l’école élémentaire et suivi sans interruption de plus d’un an. Si il y a interruption, il s’agit d'une reprise d’études. <br> **Formation continue** :  Ce champ indique que l'étudiant est en formation continue. Ce type de formation est destinée aux salariés, employés ou demandeurs d’emploi et a pour objectif de conforter, améliorer ou acquérir des connaissances professionnelles au-delà de la formation initiale. La formation continue s'accompagne toujours de la signature d’une convention ou d’un contrat de formation professionnelle entre la personne et l’établissement formateur.    |     `formation initiale` ou `formation continue`      |
+| Statut de l'étudiant               |  _Deux modalités :_ <br>**Inscrits** : Le statut correspond aux étudiants inscrits, en formation initiale ou continue, en vue de préparer un diplôme, certification ou un concours de l’enseignement supérieur dans un établissement public ou privé, et qui se sont acquittés du montant des droits d’inscription ou, sur autorisation de l’établissement d’un premier versement des droits d’inscription ou, en ont été exonérés. <br> **Admis (pré-inscrit)**   : Le statut admis correspond aux étudiants inscrits en vue de préparer un diplôme, certification ou un concours de l’enseignement supérieur dans un établissement public ou privé, et qui ne se sont pas encore acquittés du montant des droits d’inscription (ou d’un premier versement) ou qui n’en n’ont pas encore été exonérés. <br> Les étudiants "admis" passent au statut "inscrit" une fois leur inscription validée par l'établissement. L'inscription dépend des critères de l'établissement : acceptation la candidature, paiement des droits d'inscription...  Tous les étudiants "admis" ne sont donc pas forcément de futurs étudiants "inscrits"                  |  `inscrit` ou `admis`       |
+| Régime de l'étudiant                 |     _Deux modalités :_ <br> **Formation initiale** : Ce champ indique que l'étudiant est en formation initiale sous statut étudiant (y compris dans le cadre de reprise d’études) ou en en apprentissage. <br> **Formation continue** :  Ce champ indique que l'étudiant est en formation continue ou en contrat de professionalisation.   |     `formation initiale` ou `formation continue`      |
 | Nom de l'établissement  |                    |   `EGC AIN BOURG EN BRESSE EC GESTION ET COMMERCE (01000)`      |
 | Identifiant de l'établissement UAI  |                      |   `0011402U`      |
 | Lieu d'étude |          Code Insee ou code COG de la commune         |   `75115`      |
@@ -399,11 +399,8 @@ Cette API délivre les informations de l'étudiant sur l'**année en cours** :
 <details>
   <summary>Précisions sur les données</summary>
 
-#### Quelle différence entre formation continue, la reprise d'études et la formation initiale ?
+#### Quelle différence entre formation continue et la formation initiale ?
 
-La **formation initiale** correspond à un parcours d’études amorcé à l’école élémentaire et suivi sans interruption de plus d’un an. S'il y a interruption, il s’agit d'une **reprise d’études**.
-
-La **formation continue** est, quant à elle, destinée aux salariés, employés ou demandeurs d’emploi. Elle a pour objectif de conforter, améliorer ou acquérir des connaissances professionnelles au-delà de la formation initiale.
 La distinction principale entre formation initiale et formation continue est le critère de conventionnement, spécifique à la formation continue et qui se traduit par la signature d’une convention ou d’un contrat de formation professionnelle entre la personne et l’établissement formateur tel qu’il est décrit dans les [articles L.6353-1 à L. 6353-7 du Code du travail](https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006072050/LEGISCTA000006178215/#LEGISCTA000006178215) et l’[article D. 714-62 du Code de l’éducation](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000027866356/).
 
 </details>
