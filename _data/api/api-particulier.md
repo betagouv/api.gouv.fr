@@ -144,10 +144,10 @@ content_intro: |
   | **Statut étudiant** | MESR | Statut, établissement<br>[📖 Documentation](https://particulier.api.gouv.fr/catalogue/mesr/statut_etudiant) | ✅                      |
   | **Statut étudiant boursier** | Cnous | Statut, niveau de bourse<br>[📖 Documentation](https://particulier.api.gouv.fr/catalogue/mesr/cnous/statut_etudiant_boursier)      | ✅      |
   | **Statut demandeur d'emploi** | Pôle Emploi |Statut et catégorie (A,B,C,D)<br>[📖 Documentation](https://particulier.api.gouv.fr/catalogue/pole_emploi/situation)     | ✅          |
-  | **Indemnités demandeur d'emploi** | Pôle Emploi | Montants et types d'indemnisations | T4 2022               |
-  | **Statut CSS**              |  Direction de la Sécurité Sociale | oui / non | T4 2022               |
-  | **Statut RSA**                 |Direction de la Sécurité Sociale | oui / non| T4 2022               |
-  | **Statut élève scolarisé**        | Ministère de l'éducation nationale| Attestation de scolarité et statut boursier | T4 2022                |
+  | **Indemnités demandeur d'emploi** | Pôle Emploi | Montants et types d'indemnisations | T2 2023               |
+  | **Statut Complémentaire santé solidaire (CSS)**              |  Direction de la Sécurité Sociale | oui / non | T2 2023               |
+  | **Statut RSA**                 |Direction de la Sécurité Sociale | oui / non (en définition)| T4 2023               |
+  | **Statut élève scolarisé**        | Ministère de l'éducation nationale| Attestation de scolarité et statut boursier | T2 2023                |
 
 
 ### Et si j'ai besoin d'une API France connectée ? <a name="api-france-connectees"></a>
