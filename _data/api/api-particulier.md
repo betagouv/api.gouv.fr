@@ -144,23 +144,23 @@ content_intro: |
   | **Statut étudiant** | MESR | Statut, établissement<br>[📖 Documentation](https://particulier.api.gouv.fr/catalogue/mesr/statut_etudiant) | ✅                      |
   | **Statut étudiant boursier** | Cnous | Statut, niveau de bourse<br>[📖 Documentation](https://particulier.api.gouv.fr/catalogue/mesr/cnous/statut_etudiant_boursier)      | ✅      |
   | **Statut demandeur d'emploi** | Pôle Emploi |Statut et catégorie (A,B,C,D)<br>[📖 Documentation](https://particulier.api.gouv.fr/catalogue/pole_emploi/situation)     | ✅          |
+  | **Statut élève scolarisé**   | Ministère de l'éducation nationale| Attestation de scolarité et statut boursier |T2 2023    |
   | **Indemnités demandeur d'emploi** | Pôle Emploi | Montants et types d'indemnisations | T2 2023               |
-  | **Statut Complémentaire santé solidaire (CSS)**              |  Direction de la Sécurité Sociale | oui / non | T2 2023               |
-  | **Statut RSA**                 |Direction de la Sécurité Sociale | oui / non (en définition)| T4 2023               |
-  | **Statut élève scolarisé**        | Ministère de l'éducation nationale| Attestation de scolarité et statut boursier | T2 2023                |
+  | **Statut Complémentaire santé solidaire (CSS)**              |  Direction de la sécurité sociale | Indique si le particulier a la CSS, avec ou sans participation. | T2 2023               |
+  | **Statut Revenu de solidarité active (RSA)**                 |Direction de la sécurité sociale | _En cours de définition_| T4 2023               |
 
 
 ### Et si j'ai besoin d'une API France connectée ? <a name="api-france-connectees"></a>
 
-L'API Particulier n'est pas France connectée. Certaines des données de l'API Particulier sont par contre disponibles en mode France connecté, en vous branchant à chaque API, une par une :
+Certaines API du bouquet API Particulier peuvent être utilisées avec FranceConnect :
 
-  | API sur API Particulier | Alternatives France connectées |
-|------------------- |--------------------------- |
-  | **Quotient familial CAF** - CNAF | _Disponible fin 2023_         |
-  | **Statut étudiant** - MESR |  ✅ [API Statut Étudiant](/les-api/api-statut-etudiant) |
-  | **Statut étudiant boursier** - Cnous   | ✅ [API Statut Étudiant boursier](/les-api/api-statut-etudiant-boursier)                      |
-  | **Statut demandeur d'emploi** - Pôle Emploi | ✅ [API statut demandeur d'emploi](/les-api/api-statut-demandeur-emploi)   |
-  | **Indemnisation Pôle emploi** - Pôle Emploi | ✅ [API indemnisation Pôle emploi](/les-api/api-indemnisation-pole-emploi)       |
+  | API sur API Particulier | Utilisable avec FranceConnect depuis API Particulier | Alternatives |
+  |------------------- |--------------------------- | ---------------- |
+  | **Quotient familial CAF** - CNAF | ❌ _Calendrier prévu fin 2023_    | Pas d'alternative |
+  | **Statut étudiant** - MESR |  ✅ Oui ! | / |
+  | **Statut étudiant boursier** - Cnous   |  ✅ Oui ! | / |  
+  | **Statut demandeur d'emploi** - Pôle Emploi | ❌ Non...  | Données disponibles avec FranceConnect depuis une autre API : ✅ [API statut demandeur d'emploi](/les-api/api-statut-demandeur-emploi)   |
+  | **Indemnisation Pôle emploi** - Pôle Emploi | ❌ Non...  | Données disponibles avec FranceConnect depuis une autre API : ✅ [API indemnisation Pôle emploi](/les-api/api-indemnisation-pole-emploi)       |
 
 🔎 En savoir plus sur [les API](https://api.gouv.fr/guides/api-definition) et les [API France Connectées](https://api.gouv.fr/guides/api-franceconnectees).
 
