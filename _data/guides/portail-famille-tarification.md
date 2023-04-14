@@ -23,7 +23,7 @@ En général, le calcul des tarifs utilise le quotient familial de la Caisse d�
 ## Table des matières
 
 - [Simplifier les démarches du portail famille grâce aux API](#simplifier-les-demarches-du-portail-famille-grace-aux-API)
-- [Liste des API utiles](#liste-des-api-utiles)
+- [Les API et données utiles](#les-api-et-donnees-utiles)
 - [Améliorer votre portail famille avec l'API Particulier](#ameliorer-votre-portail-famille-avec-l-api-particulier)
   - [Exemple d'application](#exemple-d-application)
   - [Liste des éditeurs](#les-editeurs-proposant-des-portails-famille-connectes-a-l-api-particulier)
@@ -40,7 +40,7 @@ Communes et intercommunalités, en intégrant des API dans votre portail famille
 - 🎯 Enfin, vous **participez activement à la simplification des démarches pour les citoyens** en mettant en place le [« Dites-le-nous une fois »](https://www.numerique.gouv.fr/services/guichet-dites-le-nous-une-fois/) : vous ne demandez plus aux familles une information qu’elles ont déjà donnée ou que l’administration connaît déjà.
 Vous vous mettez ainsi **en conformité avec la législation** et, plus particulièrement l’[article L113-12 du Code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037313155).
 
-## Liste des API utiles
+## Les API et données utiles
 
 | API utiles | Données disponibles |  API utilisable avec France Connect |
 | --- | --- | --- |
@@ -59,7 +59,7 @@ Avec l'API Particulier, vous avez notamment accès au statut demandeur d'emploi,
 
 ### Exemple d'application
 
-#### Un parent souhaite inscrire son enfant à la cantine, sur le portail famille de sa commune connecté à l'API Particulier.
+**Un parent souhaite inscrire son enfant à la cantine, sur le portail famille de sa commune connecté à l'API Particulier.**
 
 Prenons le cas d'une tarification sociale progressive de la cantine scolaire basée sur le quotient familial, avec une tarification aménagée pour les demandeurs d'emploi :
 
@@ -69,15 +69,11 @@ Prenons le cas d'une tarification sociale progressive de la cantine scolaire bas
 
 2. La tarification de la cantine scolaire est automatiquement calculée en fonction du quotient familial. Le parent n'a plus qu'à terminer l'inscription.
 
-3. Dans le cas d'une tarification aménagée pour les demandeurs d'emploi, ce même parent renseigne son identifiant pôle emploi dans le portail famille. 
+3. Dans le cas d'une tarification aménagée pour les demandeurs d'emploi, ce même parent **renseigne son identifiant pôle emploi** dans le portail famille. 
 
 > ⚙️ **En arrière plan** : Un appel à l'API statut demandeur d'emploi du bouquet API Particulier est effectué et permet de confirmer le statut et de vérifier l'identité.
 
 Selon la tarification appliquée par votre commune ou intercommunalité, différentes API peuvent être utiles et sont détaillées ci-après.
-
-#### Témoignage de la ville de TODO
-
-LOREM IPSUM TODO
 
 ### Les éditeurs proposant des portails famille connectés à l'API Particulier
 

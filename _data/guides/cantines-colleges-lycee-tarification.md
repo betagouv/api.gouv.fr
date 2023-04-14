@@ -22,7 +22,7 @@ Pour en savoir plus, consulter cette page de [Service-Public.fr](https://www.ser
 ## Table des matières
 
 - [Simplifier la tarification des cantines au collège et lycée grâce à l'API Particulier](#simplifier-la-tarification-des-cantines-au-college-et-lycee-grace-a-l-api-particulier)
-- [Améliorer votre portail famille avec l'API Particulier](#ameliorer-votre-portail-famille-avec-l-api-particulier)
+- [Les données utiles](#les-donnees-utiles)
   - [Exemple d'application](#exemple-d-application)
   - [Liste des éditeurs](#les-editeurs-connectes-a-l-api-particulier)
 - [Demander un accès à l'API Particulier](#demander-un-acces-a-l-api-particulier)
@@ -57,18 +57,13 @@ Avec l'API Particulier, vous aurez notamment accès au quotient familial CAF né
 
 ## Exemple d'application
 
-### Un parent souhaite inscrire son enfant à la cantine du lycée depuis le site de sa région connecté à l'API Particulier :
+**### **Un parent souhaite inscrire son enfant à la cantine du lycée depuis le site de sa région connecté à l'API Particulier** :
 
 1. Le parent se connecte à son espace personnel sur le site de la région, il clique sur la démarche dédiée à l'inscription cantine scolaire et **renseigne son numéro d'allocataire et son code postal**.
 
 > ⚙️ **En arrière plan** : Un appel à l'API quotient familial CAF du bouquet API Particulier est effectué et permet de récupérer le quotient familial du mois en cours.
 
 2. La tarification de la cantine scolaire est automatiquement calculée en fonction du quotient familial. Le parent n'a plus qu'à terminer l'inscription.
-
-
-### Témoignage du collège de TODO
-
-LOREM IPSUM TODO
 
 ## Les éditeurs connectés à l'API Particulier
 
