@@ -128,3 +128,5 @@ Les [API disponibles dans l'API Particulier](https://particulier.api.gouv.fr/cat
 <Button href="https://datapass.api.gouv.fr/api-particulier?demarche=ccas">Remplir une demande API Particulier</Button>
 
 Vous avez besoin d'autres données distribuées par d'autres fournisseurs ? Il vous faudra faire une demande dédiée par API.
+
+⚠️ Lors de votre demande d’habilitation, vous vous engagez à ne demander que les données strictement nécessaires à la réalisation de la démarche administrative

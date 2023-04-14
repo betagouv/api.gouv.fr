@@ -47,6 +47,14 @@ Avec l'API Particulier, vous aurez notamment accès au quotient familial CAF né
 <Button href="https://particulier.api.gouv.fr/catalogue/cnaf/quotient_familial">Découvrir l'API Quotient familial CAF sur API Particulier</Button>
 
 
+| API de l'API Particulier | Données fournies  | Utilité pour ce cas d'usage |
+| --- | --- |
+| [API Quotient familial CAF](https://particulier.api.gouv.fr/catalogue/cnaf/quotient_familial) - CNAF - opérée par la DINUM | Quotient familial CAF, composition familiale  | ✅ Utile |
+| [API Statut étudiant](https://particulier.api.gouv.fr/catalogue/mesr/statut_etudiant) - Mesr - opérée par la DINUM | Statut étudiant | ❌ inutile |
+| [API Statut étudiant boursier ](https://particulier.api.gouv.fr/catalogue/cnous/statut_etudiant_boursier) - Cnous - opérée par la DINUM | Statut étudiant boursier, échelon de bourse | ❌ inutile |
+| [API Statut demandeur d'emploi](https://particulier.api.gouv.fr/catalogue/pole_emploi/situation) - Pôle emploi - opérée par la DINUM | Statut demandeur d'emploi | 🆗 Peut être utile selon votre système de tarification |
+
+
 ## Exemple d'application
 
 ### Un parent souhaite inscrire son enfant à la cantine du lycée depuis le site de sa région connecté à l'API Particulier :
@@ -88,6 +96,8 @@ L'[Arrêté du 04/07/13 sur les téléservices](https://www.legifrance.gouv.fr/l
 
 ### Formulaires de demande d'accès
 
-Vous souhaitez demander un accès à l'[API Particulier](https://particulier.api.gouv.fr/catalogue) ? Déposer votre demande d'habilitation :
+Vous souhaitez demander un accès à l'[API Particulier](https://particulier.api.gouv.fr/catalogue) ? Déposez votre demande d'habilitation :
 
 <Button href="https://datapass.api.gouv.fr/api-particulier?demarche=ccas">Remplir une demande API Particulier</Button>
+
+⚠️ Lors de votre demande d’habilitation, vous vous engagez à ne demander que les données strictement nécessaires à la réalisation de la démarche administrative.
