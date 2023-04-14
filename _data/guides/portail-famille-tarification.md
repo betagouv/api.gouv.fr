@@ -10,7 +10,7 @@ api:
 ---
 
 <details>
-   <summary>**Qu'est-ce qu'un portail famille ?**</summary>
+   <summary>Qu'est-ce qu'un portail famille ?</summary>
 
 De plus en plus de communes et intercommunalités mettent à disposition des habitants un portail famille permettant d'accéder à des services en ligne pour gérer les activités de l'ensemble de la famille : la crèche, l'halte-garderie, les centres de loisirs, la restauration scolaire, les goûters, les études, le conservatoire, l'atelier beaux-arts etc..
 
@@ -23,9 +23,11 @@ En général, le calcul des tarifs utilise le quotient familial de la Caisse d�
 # Table des matières
 
 - [Une simplification des démarches du portail famille grâce aux API](#une-simplification-des-démarches-du-portail-famille-grâce-aux-API)
-- [Exemple d'application](#exemple-d-application)
-
-
+- [Liste des API utiles](#liste-des-api-utiles)
+- [Améliorer votre portail famille avec API Particulier](#ameliorer-votre-portail-famille-avec-api-particulier)
+  - [Exemple d'application](#exemple-d-application)
+  - [Liste des éditeurs](#les-editeurs-proposant-des-portails-famille-connectes-a-l-api-particulier)
+- [Demander un accès aux API](#demander-un-accès-aux-api)
 
 ## Une simplification des démarches du portail famille grâce aux API 
 
@@ -38,23 +40,18 @@ Communes et intercommunalités, en intégrant des API dans votre portail famille
 - 🎯 Enfin, vous **participez activement à la simplification des démarches pour les citoyens en mettant en place le [« Dites-le-nous une fois »](https://www.numerique.gouv.fr/services/guichet-dites-le-nous-une-fois/) : vous ne demandez plus aux familles une information qu’elles ont déjà donnée ou que l’administration connaît déjà.
 Vous vous mettez ainsi **en conformité avec la législation** et, plus particulièrement l’[Article L113-12 du Code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037313155).
 
-
 ## Liste des API utiles
 
+| API utiles | Données disponibles |  API utilisable avec France Connect |
+| --- | --- | --- |
+| [API Impôt particulier - DGFIP](/les-api/impot-particulier) | Revenu fiscal de référence, nombre de parts fiscales | ✅ |
+| [API Statut demandeur d'emploi - Pôle emploi](/les-api/api-statut-demandeur-emploi) | Statut demandeur d'emploi | ✅ |
+| [API Indemnisation Pôle emploi - Pôle emploi](/les-api/api-indemnisation-pole-emploi) | Indémnités pôle emploi | ✅ |
+| Bouquet [API Particulier](https://particulier.api.gouv.fr/catalogue) | Quotient familial CAF, composition familiale ; statut demandeur d'emploi ; statut étudiant, statut étudiant boursier et échelon ; statut élève scolarisé et échelon de bourse | ⚙️ Partiellement FranceConnecté |
 
+## Améliorer votre portail famille API Particulier
 
-
-
-## Calcul du Quotient Familial dématerialisé
-
-En savoir plus sur les [données mises à disposition par l'API Particulier](https://api.gouv.fr/les-api/api-particulier#donnees-accessibles-dans-l'api) et sur la [méthodologie pour y accéder](https://api.gouv.fr/les-api/api-particulier#que-dois-je-faire-pour-utiliser-l'api-particulier-?).
-
-⚠️ **Les données fiscales des particuliers ne sont plus disponibles via l'API Particulier, produit opéré par la DINUM.** Pour obtenir ces données (ex : le revenu fiscal de référence, les informations sur les déclarants et le nombre de parts du foyer fiscal), veuillez désormais interroger directement l'API dédiée à l'accès aux données fiscales des particuliers [**l'API Impôt particulier** de la DGFiP](https://api.gouv.fr/les-api/impot-particulier).
-
-
-## Améliorer votre portail famille avec le bouquet API Particulier
-
-L'API Particulier est un bouquet d'API délivrant des informations administratives des particuliers, issues de différents fournisseurs de données.
+L'API Particulier est un bouquet d'API délivrant des informations administratives des particuliers issues de différents fournisseurs de données.
 
 Avec l'API Particulier, vous avez notamment accès au statut demandeur d'emploi, au statut élève scolarisé, au statut étudiant, aux échelons de bourses, et au quotient familial CAF.
 
@@ -79,6 +76,8 @@ Prenons le cas d'une tarification sociale progressive de la cantine scolaire bas
 Selon la tarification appliquée par votre commune ou intercommunalité, différentes API peuvent être utiles et sont détaillées ci-après.
 
 #### Témoignage de la ville de TODO
+
+LOREM IPSUM TODO
 
 ### Les éditeurs proposant des portails famille connectés à l'API Particulier
 
@@ -106,10 +105,8 @@ Les éditeurs suivants proposent des portails famille et sont déjà connectés 
 
 Vous êtes un éditeur et vous souhaitez apparaître dans cette liste ? Écrivez-nous à [api-particulier@api.gouv.fr](mailto:api-particulier@api.gouv.fr)
 
-
 <br/>
 <Button href="https://datapass.api.gouv.fr/api-particulier?demarche=ccas">Remplir une demande API Particulier</Button>
-
 
 ## Demander un accès aux API
 
