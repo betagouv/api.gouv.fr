@@ -1,6 +1,6 @@
 ---
 title: API Particulier
-tagline: Entités administratives, simplifiez les démarches des particuliers en récupérant pour eux leurs informations administratives : quotient familial CAF, composition familiale, statut demandeur d’emploi, étudiant et étudiant boursier.
+tagline: Entités administratives, simplifiez les démarches des particuliers en récupérant pour eux leurs informations administratives (quotient familial CAF, composition familiale, statut demandeur d’emploi, étudiant et étudiant boursier).
 is_open: -1 # -1 means API not open
 datapass_link: https://datapass.api.gouv.fr/api-particulier
 access_page:
