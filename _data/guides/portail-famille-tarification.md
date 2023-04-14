@@ -22,7 +22,7 @@ En général, le calcul des tarifs utilise le quotient familial de la Caisse d�
 
 # Table des matières
 
-- [Une simplification des démarches du portail famille grâce aux API](#une-simplification-des-démarches-du-portail-famille-grâce-aux-API)
+- [Une simplification des démarches du portail famille grâce aux API](#une-simplification-des-demarches-du-portail-famille-grace-aux-API)
 - [Liste des API utiles](#liste-des-api-utiles)
 - [Améliorer votre portail famille avec l'API Particulier](#ameliorer-votre-portail-famille-avec-l-api-particulier)
   - [Exemple d'application](#exemple-d-application)
@@ -65,7 +65,7 @@ Prenons le cas d'une tarification sociale progressive de la cantine scolaire bas
 
 1. Le parent se connecte à son espace personnel sur le portail famille, il clique sur la démarche dédiée à l'inscription cantine scolaire et **renseigne son numéro d'allocataire et son code postal**.
 
-> ⚙️ **En arrière plan** : Un appel à l'API quotient familial CAF du bouquet API Particulier est effctué et permet de récupérer le quotient familial du mois en cours.
+> ⚙️ **En arrière plan** : Un appel à l'API quotient familial CAF du bouquet API Particulier est effectué et permet de récupérer le quotient familial du mois en cours.
 
 2. La tarification de la cantine scolaire est automatiquement calculée en fonction du quotient familial. Le parent n'a plus qu'à terminer l'inscription.
 
