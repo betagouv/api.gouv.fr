@@ -1,6 +1,6 @@
 ---
-title: Attribution des aides sociales dans les CCAS
-tagline: Vous êtes un CCAS ou un éditeur de logiciel ? Accédez facilement aux données de la CAF grâce à l'API Particulier et notre  accompagnement pas à pas.
+title: Délivrance d'aides dans les centres communaux d'action sociale (CCAS)
+tagline: CCAS, simplifiez le dépôt et l'instruction des dossiers d'aides sociales grâce à l'API Particulier.
 tags: cas usage, api particulier, CCAS
 image: dossier.jpg
 noindex: false # this page will appear on Google
@@ -9,14 +9,26 @@ api:
   - API Particulier
 ---
 
-Les Centres Communaux d'Action Sociale sont amenés à instruire de nombreux dossiers d'obtention d'aide sociale : aide sociale légale, aide alimentaire, chèque énergie, aide au bus, etc..
+<details>
+   <summary>Quel est la mission des centres communaux d'action sociale ?</summary>
+
+Les centres communaux d'action sociale (CCAS) sont amenés à instruire de nombreux dossiers d'obtention d'aide sociale pour leurs usagers : aide sociale légale, aide alimentaire, chèque énergie, aide au bus, etc..
 
 Ces dossiers utilisent généralement les données d’état-civil, l'adresse, le quotient familial de la Caisse d’Allocations Familiales (CAF), la composition du foyer, l'avis d'imposition.
+
+</details>
+
 Avec la brique API Particulier vous avez la possibilité de diminuer les erreurs, réduire le risque de fraude et faciliter le traitement des dossiers par vos équipes en **accédant facilement aux données** nécessaires au calcul.
 
-⚠️ **Les données fiscales des particuliers ne sont plus disponibles via l'API Particulier, produit opéré par la DINUM.** Pour obtenir ces données (ex : le revenu fiscal de référence, les informations sur les déclarants et le nombre de parts du foyer fiscal), veuillez désormais interroger directement l'API dédiée à l'accès aux données fiscales des particuliers [**l'API Impôt particulier** de la DGFiP](https://api.gouv.fr/les-api/impot-particulier).
+## Table des matières
 
-## Simplifier l'instruction des dossiers dans un CCAS
+- [Simplifier la délivrance d'aides sociales grâce à l'API Particulier](#simplifier-la-delivrance-d-aide-sociale-grace-a-l-api-particulier)
+- [Les données utiles](#les-donnees-utiles)
+  - [Exemple d'application](#exemple-d-application)
+  - [Liste des éditeurs](#les-editeurs-connectes-a-l-api-particulier)
+- [Demander un accès à l'API Particulier](#demander-un-acces-a-l-api-particulier)
+
+## Simplifier la délivrance d'aides sociales grâce à l'API Particulier
 
 En intégrant la brique API Particulier dans votre système d'information, ou votre site internet :
 
