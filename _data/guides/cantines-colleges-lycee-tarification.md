@@ -19,17 +19,17 @@ Pour en savoir plus, consulter cette page de [Service-Public.fr](https://www.ser
 </details>
 
 
-# Table des matières
+## Table des matières
 
-- [Une simplification de la tarification des cantines au collège et lycée grâce à l'API Particulier](#une-simplification-de-la-tarification-des-cantines-au-college-et-lycee-grace-a-l-api-particulier)
+- [Simplifier la tarification des cantines au collège et lycée grâce à l'API Particulier](#simplifier-la-tarification-des-cantines-au-college-et-lycee-grace-a-l-api-particulier)
 - [Améliorer votre portail famille avec l'API Particulier](#ameliorer-votre-portail-famille-avec-l-api-particulier)
   - [Exemple d'application](#exemple-d-application)
-  - [Liste des éditeurs](#les-editeurs-proposant-des-portails-famille-connectes-a-l-api-particulier)
-- [Demander un accès aux API](#demander-un-accès-aux-api)
+  - [Liste des éditeurs](#les-editeurs-connectes-a-l-api-particulier)
+- [Demander un accès à l'API Particulier](#demander-un-acces-a-l-api-particulier)
 
-## Une simplification de la tarification des cantines au collège et lycée grâce à l'API Particulier
+## Simplifier la tarification des cantines au collège et lycée grâce à l'API Particulier
 
-Département et région, en intégrant des l'API Particulier dans votre système d'information :
+Département et région, en intégrant l'API Particulier dans votre système d'information :
 
 - 😃 les familles peuvent obtenir une **tarification solidaire et sociale immédiate et automatique** pour la cantine des collèges et lycées, permise grâce à la liaison avec les données de l'API Particulier dont notamment le quotient familial CAF ;
 
@@ -52,7 +52,7 @@ Avec l'API Particulier, vous aurez notamment accès au quotient familial CAF né
 | [API Quotient familial CAF](https://particulier.api.gouv.fr/catalogue/cnaf/quotient_familial) - CNAF - opérée par la DINUM | Quotient familial CAF, composition familiale  | ✅ Utile |
 | [API Statut étudiant](https://particulier.api.gouv.fr/catalogue/mesr/statut_etudiant) - Mesr - opérée par la DINUM | Statut étudiant | ❌ inutile |
 | [API Statut étudiant boursier ](https://particulier.api.gouv.fr/catalogue/cnous/statut_etudiant_boursier) - Cnous - opérée par la DINUM | Statut étudiant boursier, échelon de bourse | ❌ inutile |
-| [API Statut demandeur d'emploi](https://particulier.api.gouv.fr/catalogue/pole_emploi/situation) - Pôle emploi - opérée par la DINUM | Statut demandeur d'emploi | 🆗 Peut être utile selon votre système de tarification |
+| [API Statut demandeur d'emploi](https://particulier.api.gouv.fr/catalogue/pole_emploi/situation) - Pôle emploi - opérée par la DINUM | Statut demandeur d'emploi | 🆗 Utile selon votre système de tarification |
 
 
 ## Exemple d'application
@@ -87,7 +87,7 @@ Vous êtes un éditeur et vous souhaitez apparaître dans cette liste ? Écrivez
 
 L'utilisation des données est encadrée légalement. Vous devez formuler une demande auprès de l'API Particulier en justifiant du cadre légal de l'utilisation des données :
 
-- Cadre légal général : l'[Article L114-8 du Code des relations entre le public et l'administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045213315) fixe le cadre général des échanges de données au sein de l'administration ;
+- Cadre légal général : l'[Article L114-8 du Code des relations entre le public et l'administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045213315) fixe le cadre général qui oblige l’administration à échanger des données lors d’une démarche d’un usager ;
 
 - Cadre légal spécifique aux téléservices : En tant que collectivités territoriales vous avez donc un droit d'accès à certaines données dans le cadre de demandes, services pro-actifs et déclarations usagers. 
 L'[Arrêté du 04/07/13 sur les téléservices](https://www.legifrance.gouv.fr/loda/id/JORFTEXT000027697207/#:~:text=Dans%20les%20r%C3%A9sum%C3%A9s-,Arr%C3%AAt%C3%A9%20du%204%20juillet%202013%20autorisant%20la%20mise%20en%20%C5%93uvre,publiques%20locales%20dont%20ils%20sont) détaille à l'article 1 la liste des démarches par secteur. Aidez-vous de cet arrêté pour justifier de votre cadre légal.
