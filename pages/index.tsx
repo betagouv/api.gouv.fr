@@ -19,7 +19,7 @@ interface IProps {
 
 const Home: React.FC<IProps> = ({ apis }) => (
   <Page
-    title="Api.gouv.fr"
+    title="api.gouv.fr"
     canonical={`https://api.gouv.fr`}
     description="Simplifiez le partage et la circulation des données administratives grace à api.gouv, le site qui référence toutes les API du service public."
   >
