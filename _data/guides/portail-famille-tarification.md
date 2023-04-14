@@ -23,7 +23,7 @@ En général, le calcul des tarifs utilise le quotient familial de la Caisse d�
 # Table des matières
 
 - [Une simplification des démarches du portail famille grâce aux API](#une-simplification-des-démarches-du-portail-famille-grâce-aux-API)
-- [Exemple d'applications](#exemple-d-applications)
+- [Exemple d'application](#exemple-d-application)
 
 
 
@@ -38,13 +38,12 @@ Communes et intercommunalités, en intégrant des API dans votre portail famille
 - 🎯 Enfin, vous **participez activement à la simplification des démarches pour les citoyens en mettant en place le [« Dites-le-nous une fois »](https://www.numerique.gouv.fr/services/guichet-dites-le-nous-une-fois/) : vous ne demandez plus aux familles une information qu’elles ont déjà donnée ou que l’administration connaît déjà.
 Vous vous mettez ainsi **en conformité avec la législation** et, plus particulièrement l’[Article L113-12 du Code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037313155).
 
-## Exemple d'applications 
 
-### Une famille souhaite inscrire son enfant à la cantine, sur le portail famille de sa commune, connecté à l'API Particulier et à d'autres API
+## Liste des API utiles
 
-1. Lorem
-2. Lorem
-3. Lorem
+
+
+
 
 ## Calcul du Quotient Familial dématerialisé
 
@@ -52,22 +51,38 @@ En savoir plus sur les [données mises à disposition par l'API Particulier](htt
 
 ⚠️ **Les données fiscales des particuliers ne sont plus disponibles via l'API Particulier, produit opéré par la DINUM.** Pour obtenir ces données (ex : le revenu fiscal de référence, les informations sur les déclarants et le nombre de parts du foyer fiscal), veuillez désormais interroger directement l'API dédiée à l'accès aux données fiscales des particuliers [**l'API Impôt particulier** de la DGFiP](https://api.gouv.fr/les-api/impot-particulier).
 
-## Cadre Juridique
 
-L'utilisation des données est encadrée légalement. Vous devez formuler une demande auprès des services de l'API Particulier et/ou de la DGFIP en fournissant un cadre légal :
+## Améliorer votre portail famille avec le bouquet API Particulier
 
-- L'article L114-8 du code des relations entre le public et l'administration fixe le cadre général des échanges de données au sein de l'administration ;
-- En tant que collectivités territoriales vous avez donc un droit d'accès à certaines données dans le cadre de demandes, services pro-actifs et déclarations usagers. Vérifiez et indiquez quel est l'objet de votre téléservice en cliquant sur le lien suivant : [Arrêté du 04/07/13 sur les téléservices](https://www.legifrance.gouv.fr/loda/id/JORFTEXT000027697207/#:~:text=Dans%20les%20r%C3%A9sum%C3%A9s-,Arr%C3%AAt%C3%A9%20du%204%20juillet%202013%20autorisant%20la%20mise%20en%20%C5%93uvre,publiques%20locales%20dont%20ils%20sont)
+L'API Particulier est un bouquet d'API délivrant des informations administratives des particuliers, issues de différents fournisseurs de données.
 
-**Il est indispensable de fournir l'acte/ la délibération qui fixe les conditions tarifaires qui permettra d'apprécier finement le droit d'accès à chaque donnée.**
+Avec l'API Particulier, vous avez notamment accès au statut demandeur d'emploi, au statut élève scolarisé, au statut étudiant, aux échelons de bourses, et au quotient familial CAF.
 
+<Button href="https://particulier.api.gouv.fr/catalogue">Découvrir l'API Particulier</Button>
 
-<br/>
-<Button href="https://datapass.api.gouv.fr/api-particulier?demarche=ccas">Remplir une demande API Particulier</Button>
+### Exemple d'application
 
-## Éditeurs
+#### Un parent souhaite inscrire son enfant à la cantine, sur le portail famille de sa commune connecté à l'API Particulier.
 
-Si vous travaillez avec l'un des éditeurs ou intégrateurs ci-dessous vous pouvez faire une demande pré-remplie :
+Prenons le cas d'une tarification sociale progressive de la cantine scolaire basée sur le quotient familial, avec une tarification aménagée pour les demandeurs d'emploi :
+
+1. Le parent se connecte à son espace personnel sur le portail famille, il clique sur la démarche dédiée à l'inscription cantine scolaire et **renseigne son numéro d'allocataire et son code postal**.
+
+> ⚙️ **En arrière plan** : Un appel à l'API quotient familial CAF du bouquet API Particulier est effctué et permet de récupérer le quotient familial du mois en cours.
+
+2. La tarification de la cantine scolaire est automatiquement calculée en fonction du quotient familial. Le parent n'a plus qu'à terminer l'inscription.
+
+3. Dans le cas d'une tarification aménagée pour les demandeurs d'emploi, ce même parent renseigne son identifiant pôle emploi dans le portail famille. 
+
+> ⚙️ **En arrière plan** : Un appel à l'API statut demandeur d'emploi du bouquet API Particulier est effectué et permet de confirmer le statut et de vérifier l'identité.
+
+Selon la tarification appliquée par votre commune ou intercommunalité, différentes API peuvent être utiles et sont détaillées ci-après.
+
+#### Témoignage de la ville de TODO
+
+### Les éditeurs proposant des portails famille connectés à l'API Particulier
+
+Les éditeurs suivants proposent des portails famille et sont déjà connectés à l'API Particulier :
 
 | Éditeur                      | Nom de la solution            |
 | ---------------------------- | ----------------------------- |
@@ -90,3 +105,29 @@ Si vous travaillez avec l'un des éditeurs ou intégrateurs ci-dessous vous pouv
 | Amiciel                      | Malice                        |
 
 Vous êtes un éditeur et vous souhaitez apparaître dans cette liste ? Écrivez-nous à [api-particulier@api.gouv.fr](mailto:api-particulier@api.gouv.fr)
+
+
+<br/>
+<Button href="https://datapass.api.gouv.fr/api-particulier?demarche=ccas">Remplir une demande API Particulier</Button>
+
+
+## Demander un accès aux API
+
+### Justifier votre cadre juridique
+
+L'utilisation des données est encadrée légalement. Vous devez formuler une demande auprès de l'API Particulier et/ou des autres API en justifiant du cadre légal de l'utilisation des données :
+
+- Cadre légal général : l'[Article L114-8 du Code des relations entre le public et l'administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045213315) fixe le cadre général des échanges de données au sein de l'administration ;
+
+- Cadre légal spécifique aux téléservices : En tant que collectivités territoriales vous avez donc un droit d'accès à certaines données dans le cadre de demandes, services pro-actifs et déclarations usagers. 
+L'[Arrêté du 04/07/13 sur les téléservices](https://www.legifrance.gouv.fr/loda/id/JORFTEXT000027697207/#:~:text=Dans%20les%20r%C3%A9sum%C3%A9s-,Arr%C3%AAt%C3%A9%20du%204%20juillet%202013%20autorisant%20la%20mise%20en%20%C5%93uvre,publiques%20locales%20dont%20ils%20sont) détaille à l'article 1 la liste des démarches par secteur. Aidez-vous de cet arrêté pour justifier de votre cadre légal.
+
+- Justificatif des données nécessaires au calcul de la tarification : Il est indispensable de **fournir l'acte/ la délibération** qui fixe les conditions tarifaires et qui permettra d'apprécier finement le droit d'accès à chaque donnée.
+
+### Formulaires de demande d'accès
+
+Les [API disponibles dans l'API Particulier](https://particulier.api.gouv.fr/catalogue) vous intéressent ? Vous n'avez qu'une seule demande d'habilitation à effectuer : 
+
+<Button href="https://datapass.api.gouv.fr/api-particulier?demarche=ccas">Remplir une demande API Particulier</Button>
+
+Vous avez besoin du revenu fiscal de référence pour votre tarification ? Il vous faudra faire une demande dédiée auprès de l'[API Impôt Particulier de la DGFIP](/les-api/impot-particulier).
