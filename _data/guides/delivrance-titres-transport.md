@@ -15,8 +15,8 @@ api:
 ## Table des matières
 
 - [Simplifier la tarification des transports grâce aux API](#simplifier-la-tarification-des-transports-grace-aux-api)
+- [Exemple d'application](#exemple-d-application)
 - [Les API et données utiles](#les-api-et-donnees-utiles)
-(#les-editeurs-connectes-a-l-api-particulier)
 - [Ils utilisent déjà les API](#ils-utilisent-déjà-les-api)
 - [Demander un accès aux API](#demander-un-acces-aux-api)
 
@@ -32,6 +32,18 @@ Collectivités et opérateurs, en intégrant des API dans vos systèmes d'inform
 
 - 🎯 Enfin, vous **participez activement à la simplification des démarches pour les citoyens** en mettant en place le [« Dites-le-nous une fois »](https://www.numerique.gouv.fr/services/guichet-dites-le-nous-une-fois/) : vous ne demandez plus aux usagers une information qu’ils ont déjà donnée ou que l’administration connaît déjà.
 Vous vous mettez ainsi **en conformité avec la législation** et, plus particulièrement l’[article L113-12 du Code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037313155).
+
+## Exemple d'application
+
+**Un usager demandeur d'emploi souhaite obtenir un titre de transport :**
+
+1. L'usager se connecte à son espace personnel, avec ou sans FranceConnect, sur le site de la démarche en ligne. Le formulaire lui propose plusieurs statuts, il clique sur "demandeur d'emploi" et **renseigne son identifiant pôle emploi**.
+
+> ⚙️ **En arrière plan** : Un appel à l'API statut demandeur d'emploi est effectué et permet de confirmer le statut.
+
+2. La tarification du titre de transport est automatiquement calculée. L'usager n'a plus qu'à régler son titre.
+
+Selon la tarification appliquée, différentes API peuvent être utiles et sont détaillées ci-après.
 
 ## Les API et données utiles
 
@@ -70,6 +82,7 @@ En complément, certaines données (en libre accès) peuvent être utiles pour f
 | [Etablissements scolaires](https://api.gouv.fr/les-api/api-annuaire-education)  | Permettre aux usagers de sélectionner un établissement scolaire dans une liste   |
 | [Base adresse nationale](https://api.gouv.fr/les-api/base-adresse-nationale)  | Permettre l'autocomplétion d'un adresse postale dans un formulaire en ligne       |
 | [Découpage administratif](https://api.gouv.fr/les-api/api-geo)  | Permettre aux usagers de sélectionner une commune dans une liste (ou de l'autocompléter) |
+
 
 ## Ils utilisent déjà les API
 
