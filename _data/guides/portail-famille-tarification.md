@@ -24,7 +24,7 @@ En général, le calcul des tarifs utilise le quotient familial de la Caisse d�
 
 - [Une simplification des démarches du portail famille grâce aux API](#une-simplification-des-démarches-du-portail-famille-grâce-aux-API)
 - [Liste des API utiles](#liste-des-api-utiles)
-- [Améliorer votre portail famille avec API Particulier](#ameliorer-votre-portail-famille-avec-api-particulier)
+- [Améliorer votre portail famille avec l'API Particulier](#ameliorer-votre-portail-famille-avec-l-api-particulier)
   - [Exemple d'application](#exemple-d-application)
   - [Liste des éditeurs](#les-editeurs-proposant-des-portails-famille-connectes-a-l-api-particulier)
 - [Demander un accès aux API](#demander-un-accès-aux-api)
@@ -33,23 +33,23 @@ En général, le calcul des tarifs utilise le quotient familial de la Caisse d�
 
 Communes et intercommunalités, en intégrant des API dans votre portail famille :
 
-- 😃 les familles peuvent obtenir une **tarification solidaire et sociale immédiate et automatique**, permise grâce à la liaison avec les données de l'API Particulier et de la DGFIP ;
+- 😃 les familles peuvent obtenir une **tarification solidaire et sociale immédiate et automatique**, permise grâce à la liaison avec les données de l'API Particulier, de la DGFIP et d'autres fournisseurs d'API ;
 
 - ⏰ Vous accélérez le traitement des dossiers car vos agents n’ont **pas de vérifications supplémentaires à réaliser**, les informations obtenues par les API sous-mentionnées sont certifiées 🔎 ;
 
-- 🎯 Enfin, vous **participez activement à la simplification des démarches pour les citoyens en mettant en place le [« Dites-le-nous une fois »](https://www.numerique.gouv.fr/services/guichet-dites-le-nous-une-fois/) : vous ne demandez plus aux familles une information qu’elles ont déjà donnée ou que l’administration connaît déjà.
-Vous vous mettez ainsi **en conformité avec la législation** et, plus particulièrement l’[Article L113-12 du Code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037313155).
+- 🎯 Enfin, vous **participez activement à la simplification des démarches pour les citoyens** en mettant en place le [« Dites-le-nous une fois »](https://www.numerique.gouv.fr/services/guichet-dites-le-nous-une-fois/) : vous ne demandez plus aux familles une information qu’elles ont déjà donnée ou que l’administration connaît déjà.
+Vous vous mettez ainsi **en conformité avec la législation** et, plus particulièrement l’[article L113-12 du Code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037313155).
 
 ## Liste des API utiles
 
 | API utiles | Données disponibles |  API utilisable avec France Connect |
 | --- | --- | --- |
-| [API Impôt particulier - DGFIP](/les-api/impot-particulier) | Revenu fiscal de référence, nombre de parts fiscales | ✅ |
-| [API Statut demandeur d'emploi - Pôle emploi](/les-api/api-statut-demandeur-emploi) | Statut demandeur d'emploi | ✅ |
-| [API Indemnisation Pôle emploi - Pôle emploi](/les-api/api-indemnisation-pole-emploi) | Indémnités pôle emploi | ✅ |
-| Bouquet [API Particulier](https://particulier.api.gouv.fr/catalogue) | Quotient familial CAF, composition familiale ; statut demandeur d'emploi ; statut étudiant, statut étudiant boursier et échelon ; statut élève scolarisé et échelon de bourse | ⚙️ Partiellement FranceConnecté |
+| [API Impôt particulier](/les-api/impot-particulier) - DGFIP | Revenu fiscal de référence, nombre de parts fiscales | ✅ |
+| [API Statut demandeur d'emploi](/les-api/api-statut-demandeur-emploi) - Pôle emploi | Statut demandeur d'emploi | ✅ |
+| [API Indemnisation Pôle emploi](/les-api/api-indemnisation-pole-emploi) - Pôle emploi | Indémnités chômage | ✅ |
+| Bouquet [API Particulier](https://particulier.api.gouv.fr/catalogue) - opéré par la DINUM | Quotient familial CAF, composition familiale ; statut demandeur d'emploi ; statut étudiant, statut étudiant boursier et échelon ; statut élève scolarisé et échelon de bourse | ⚙️ Partiellement FranceConnecté |
 
-## Améliorer votre portail famille API Particulier
+## Améliorer votre portail famille avec l'API Particulier
 
 L'API Particulier est un bouquet d'API délivrant des informations administratives des particuliers issues de différents fournisseurs de données.
 
@@ -127,4 +127,4 @@ Les [API disponibles dans l'API Particulier](https://particulier.api.gouv.fr/cat
 
 <Button href="https://datapass.api.gouv.fr/api-particulier?demarche=ccas">Remplir une demande API Particulier</Button>
 
-Vous avez besoin du revenu fiscal de référence pour votre tarification ? Il vous faudra faire une demande dédiée auprès de l'[API Impôt Particulier de la DGFIP](/les-api/impot-particulier).
+Vous avez besoin d'autres données distribuées par d'autres fournisseurs ? Il vous faudra faire une demande dédiée par API.
