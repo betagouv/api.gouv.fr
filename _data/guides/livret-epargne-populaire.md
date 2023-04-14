@@ -1,12 +1,12 @@
 ---
 title: Simplifiez les souscriptions au livret d'épargne populaire (LEP) grâce aux API
-tagline: Vous êtes un établissement bancaire et souhaitez simplifier la souscription au LEP ? Utilisez l'API Impôt particulier pour vérifier l'éligibilité de vos clients à la détention d'un livret d'épargne populaire (LEP).
+tagline: Vous êtes un établissement bancaire et souhaitez simplifier la souscription au LEP ? Utilisez l'API Service Finances Publiques (SFiP) pour vérifier l'éligibilité de vos clients à la détention d'un livret d'épargne populaire (LEP).
 tags: cas usage, impôts, RFR, banque, lep, epargne, livret, revenu, fiscal, tarification, revenu, quotient
 image: lep.png
 noindex: false # this page will appear on Google
 publish: true # this page will appear on /guides page
 api:
-  - API Impôt particulier
+  - API Service Finances Publiques (SFiP)
 ---
 
 Le livret d'épargne populaire (LEP) est un placement garanti et défiscalisé, avec un taux d'intérêt qui est le double de celui du livret A. Pour en bénéficier, il faut être en dessous d'un plafond de revenus.
@@ -17,7 +17,7 @@ Le livret d'épargne populaire (LEP) est un placement garanti et défiscalisé, 
 
 Pour ouvrir un livret d'épargne populaire, les établissements bancaires sont tenus de vérifier l'éligibilité de leurs clients : leurs revenus ne doivent pas dépasser un certain seuil. Plutôt que de demander un avis d'imposition, il est possible d'instruire un dossier directement à partir d'informations issues de l'administration.
 
-Pour un client donné, un indicateur d'éligibilité au LEP (oui ou non) vous est transmis [via l'API Impôt Particulier](/les-api/impot-particulier), de la Direction Générale des Finances publiques.
+Pour un client donné, un indicateur d'éligibilité au LEP (oui ou non) vous est transmis [via l'API Service Finances Publiques (SFiP)](/les-api/api-sfip), de la Direction Générale des Finances publiques.
 
 ### Avantage pour les clients
 
@@ -43,13 +43,13 @@ Dans le cadre de la vérification de l'éligibilité au LEP, et conformément au
 
 Si vous entrez dans ce cadre, vous pouvez effectuer une demande d'habilitation à l’API Impôt particulier.
 
-## Comment accéder à l'API Impôt Particulier ?
+## Comment accéder à l'API Service Finances Publiques (SFiP) ?
 
 Pour accéder à l'API, il est nécessaire de demander une habilitation.
 
 <NextSteps />
-<Button href='https://datapass.api.gouv.fr/api-impot-particulier-sandbox?demarche=eligibilite_lep'>Remplir une demande</Button>
+<Button href='https://datapass.api.gouv.fr/api-sfip-sandbox?demarche=eligibilite_lep'>Remplir une demande</Button>
 
 ## En savoir plus sur les données renvoyées par l'API
 
-🔍 Accédez à la [fiche descriptive de l'API Impôt Particulier](/les-api/impot-particulier#les-donnees-disponibles-dans-l'api)
+🔍 Accédez à la [fiche descriptive de l'API Service Finances Publiques (SFiP)](/les-api/api-sfip#les-donnees-disponibles-dans-l’api)
