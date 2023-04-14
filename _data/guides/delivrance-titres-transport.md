@@ -63,7 +63,7 @@ Dans ce dernier cas il conviendra d’utiliser [l’API particulier](https://api
 🔎 En savoir plus sur [les API FranceConnectées](https://api.gouv.fr/guides/api-franceconnectees)
 
 
-En complément, certaines données (en libre accès) peuvent être utile pour faciliter le parcours en ligne de vos usagers :
+En complément, certaines données (en libre accès) peuvent être utiles pour faciliter le parcours en ligne de vos usagers :
 
 | Base de donnée  | Usage  |
 |---------| --------|
@@ -73,7 +73,7 @@ En complément, certaines données (en libre accès) peuvent être utile pour fa
 
 ## Ils utilisent déjà les API
 
-De nombreuses autorités d'organisation de la mobilité utilisent déjà des API et ont ainsi dématérialisé la tarification de leurs titres de transport : 
+De nombreuses autorités d'organisation de la mobilité (AOM) utilisent déjà des API et ont ainsi dématérialisé la tarification de leurs titres de transport : 
 
 | AOM | Type de transport  |
 | --- | --- |
