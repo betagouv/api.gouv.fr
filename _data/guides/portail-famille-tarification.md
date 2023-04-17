@@ -12,11 +12,11 @@ api:
 <details>
    <summary>Qu'est-ce qu'un portail famille ?</summary>
 
-De plus en plus de communes et intercommunalités mettent à disposition des habitants un portail famille permettant d'accéder à des services en ligne pour gérer les activités de l'ensemble de la famille : la crèche, l'halte-garderie, les centres de loisirs, la restauration scolaire, les goûters, les études, le conservatoire, l'atelier beaux-arts etc..
+Les communes et intercommunalités mettent à disposition des habitants un portail famille permettant d'accéder à des services en ligne pour gérer l'inscription et la facturation des services proposés par la collectivité : la crèche, l'halte-garderie, les centres de loisirs, la restauration scolaire, les goûters, les études, le conservatoire, l'atelier beaux-arts etc..
 
-Ce type de portail permet généralement de réserver et payer en ligne les factures liées aux activités péri- et extrascolaires, de suivre les paiements et de gérer les informations liées au compte de la famille. La tarification de ces activités peut être sociale ou solidaire, c'est-à-dire adaptée en fonction du statut ou des ressources de la famille.
+Ce type de portail permet généralement de réserver et payer en ligne les factures liées aux activités péri- et extrascolaires, de suivre les paiements et de gérer les informations liées au compte de la famille. La tarification de ces activités est adaptée aux ressources de la famille.
 
-En général, le calcul des tarifs utilise le quotient familial de la Caisse d’allocations familiales (CAF) et/ou l'avis d'imposition (DGFIP) fournis par les citoyens.
+Selon la politique tarifaire choisie, le calcul des tarifs est réalisé grâce au quotient familial de la Caisse d’allocations familiales (CAF) et/ou l'avis d'imposition (DGFIP) fournis par les citoyens.
 
 </details>
 
@@ -33,21 +33,19 @@ En général, le calcul des tarifs utilise le quotient familial de la Caisse d�
 
 Communes et intercommunalités, en intégrant des API dans votre portail famille :
 
-- 😃 les familles peuvent obtenir une **tarification solidaire et sociale immédiate et automatique**, permise grâce à la liaison avec les données de l'API Particulier, de la DGFIP et d'autres fournisseurs d'API ;
+- 😃 les familles n'ont plus à fournir d'attestion caf ou d'avis d'imposition pour obtenir un tarif adapté à leurs revenus grâce à la liaison avec les données de la CNAF (l'API Particulier), ou de la DGFIP (API impôt particulier) ;
 
-- ⏰ Vous accélérez le traitement des dossiers car vos agents n’ont **pas de vérifications supplémentaires à réaliser**, les informations obtenues par les API sous-mentionnées sont certifiées 🔎 ;
+- ⏰ Vous accélérez le traitement des dossiers car vos agents n’ont **pas à vérifier les données déclarée aux pièces justificatives fournies **, les informations obtenues par les API sous-mentionnées sont certifiées 🔎 ;
 
-- 🎯 Enfin, vous **participez activement à la simplification des démarches pour les citoyens** en mettant en place le [« Dites-le-nous une fois »](https://www.numerique.gouv.fr/services/guichet-dites-le-nous-une-fois/) : vous ne demandez plus aux familles une information qu’elles ont déjà donnée ou que l’administration connaît déjà.
-Vous vous mettez ainsi **en conformité avec la législation** et, plus particulièrement l’[article L113-12 du Code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037313155).
+- 🎯 Enfin, vous **participez activement à la simplification des démarches pour les citoyens** en mettant en place le « Dites-le-nous une fois  vous ne demandez plus aux familles une information qu’elles ont déjà donnée ou que l’administration connaît déjà.
+Vous vous mettez ainsi **en conformité avec la législation** et, plus particulièrement l’[article L114-8 du Code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045213315).
 
 ## Les API et données utiles
 
 | API utiles | Données disponibles |  API utilisable avec France Connect |
 | --- | --- | --- |
 | [API Impôt particulier](/les-api/impot-particulier) - DGFIP | Revenu fiscal de référence, nombre de parts fiscales | ✅ |
-| [API Statut demandeur d'emploi](/les-api/api-statut-demandeur-emploi) - Pôle emploi | Statut demandeur d'emploi | ✅ |
-| [API Indemnisation Pôle emploi](/les-api/api-indemnisation-pole-emploi) - Pôle emploi | Indémnités chômage | ✅ |
-| Bouquet [API Particulier](https://particulier.api.gouv.fr/catalogue) - opéré par la DINUM | Quotient familial CAF, composition familiale ; statut demandeur d'emploi ; statut étudiant, statut étudiant boursier et échelon ; statut élève scolarisé et échelon de bourse | ⚙️ Partiellement FranceConnecté |
+| Bouquet [API Particulier](https://particulier.api.gouv.fr/catalogue) - opéré par la DINUM | Quotient familial CAF, composition familiale| ⚙️ en cours de FranceConnection |
 
 ## Améliorer votre portail famille avec l'API Particulier
 
@@ -63,17 +61,12 @@ Avec l'API Particulier, vous avez notamment accès au statut demandeur d'emploi,
 
 Prenons le cas d'une tarification sociale progressive de la cantine scolaire basée sur le quotient familial, avec une tarification aménagée pour les demandeurs d'emploi :
 
-1. Le parent se connecte à son espace personnel sur le portail famille, il clique sur la démarche dédiée à l'inscription cantine scolaire et **renseigne son numéro d'allocataire et son code postal**.
+Le parent se connecte à son espace personnel sur le portail famille, il clique sur la démarche dédiée à l'inscription cantine scolaire et **renseigne son numéro d'allocataire CAF et son code postal**.
 
 > ⚙️ **En arrière plan** : Un appel à l'API quotient familial CAF du bouquet API Particulier est effectué et permet de récupérer le quotient familial du mois en cours.
 
-2. La tarification de la cantine scolaire est automatiquement calculée en fonction du quotient familial. Le parent n'a plus qu'à terminer l'inscription.
+Le parent est automatiquement positionné dans la grille tarifaire de la collectivité. Le parent n'a plus qu'à terminer l'inscription.
 
-3. Dans le cas d'une tarification aménagée pour les demandeurs d'emploi, ce même parent **renseigne son identifiant pôle emploi** dans le portail famille. 
-
-> ⚙️ **En arrière plan** : Un appel à l'API statut demandeur d'emploi du bouquet API Particulier est effectué et permet de confirmer le statut et de vérifier l'identité.
-
-Selon la tarification appliquée par votre commune ou intercommunalité, différentes API peuvent être utiles et sont détaillées ci-après.
 
 ### Les éditeurs proposant des portails famille connectés à l'API Particulier
 
@@ -102,7 +95,7 @@ Les éditeurs suivants proposent des portails famille et sont déjà connectés 
 Vous êtes un éditeur et vous souhaitez apparaître dans cette liste ? Écrivez-nous à [api-particulier@api.gouv.fr](mailto:api-particulier@api.gouv.fr)
 
 <br/>
-<Button href="https://datapass.api.gouv.fr/api-particulier?demarche=ccas">Remplir une demande API Particulier</Button>
+<Button href="https://datapass.api.gouv.fr/api-particulier">Vous êtes un collectivité et souhaitez demander un accès aux données de la CAF</Button>
 
 ## Demander un accès aux API
 
@@ -121,7 +114,7 @@ L'[Arrêté du 04/07/13 sur les téléservices](https://www.legifrance.gouv.fr/l
 
 Les [API disponibles dans l'API Particulier](https://particulier.api.gouv.fr/catalogue) vous intéressent ? Vous n'avez qu'une seule demande d'habilitation à effectuer : 
 
-<Button href="https://datapass.api.gouv.fr/api-particulier?demarche=ccas">Remplir une demande API Particulier</Button>
+<Button href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande API Particulier</Button>
 
 Vous avez besoin d'autres données distribuées par d'autres fournisseurs ? Il vous faudra faire une demande dédiée par API.
 
