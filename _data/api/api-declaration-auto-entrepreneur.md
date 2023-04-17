@@ -96,7 +96,7 @@ Un tiers déclarant est une personne physique ou morale qui assure, à titre pro
 
 L’API Tierce Déclaration auto-entrepreneur est une API REST gratuite avec un accès restreint qui utilise la cinématique d’authentification Oauth2 Client Credentials.
 
-Pour accéder à cette API gratuite, il faut en faire la demande [via le formulaire de demande de souscription](https://portailapi.urssaf.fr/fr/component/apiportal/registration) ou [via email](mailto:contact.tiercedeclaration@urssaf.fr) et signer la licence d’utilisation.
+Pour accéder à cette API gratuite, il faut en faire la demande [via le formulaire de demande de souscription](https://api.gouv.fr/les-api/api-declaration-auto-entrepreneur/demande-acces).
 
 Une fois le dossier validé, un accès API bac à sable puis un accès API production sont fournis.
 
