@@ -33,9 +33,9 @@ Selon la politique tarifaire choisie, le calcul des tarifs est réalisé grâce 
 
 Communes et intercommunalités, en intégrant des API dans votre portail famille :
 
-- 😃 les familles n'ont plus à fournir d'attestion caf ou d'avis d'imposition pour obtenir un tarif adapté à leurs revenus grâce à la liaison avec les données de la CNAF (l'API Particulier), ou de la DGFIP (API impôt particulier) ;
+- 😃 les **familles n'ont plus à fournir d'attestion CAF ou d'avis d'imposition** pour obtenir un tarif adapté à leurs revenus grâce à la liaison avec les données de la CNAF (l'API Particulier), ou de la DGFIP (API impôt particulier) ;
 
-- ⏰ Vous accélérez le traitement des dossiers car vos agents n’ont **pas à vérifier les données déclarée aux pièces justificatives fournies **, les informations obtenues par les API sous-mentionnées sont certifiées 🔎 ;
+- ⏰ Vous accélérez le traitement des dossiers car vos agents n’ont **pas à vérifier les données déclarées aux pièces justificatives fournies **, les informations obtenues par les API sous-mentionnées sont certifiées 🔎 ;
 
 - 🎯 Enfin, vous **participez activement à la simplification des démarches pour les citoyens** en mettant en place le « Dites-le-nous une fois  vous ne demandez plus aux familles une information qu’elles ont déjà donnée ou que l’administration connaît déjà.
 Vous vous mettez ainsi **en conformité avec la législation** et, plus particulièrement l’[article L114-8 du Code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045213315).
@@ -93,9 +93,6 @@ Les éditeurs suivants proposent des portails famille et sont déjà connectés 
 | Amiciel                      | Malice                        |
 
 Vous êtes un éditeur et vous souhaitez apparaître dans cette liste ? Écrivez-nous à [api-particulier@api.gouv.fr](mailto:api-particulier@api.gouv.fr)
-
-<br/>
-<Button href="https://datapass.api.gouv.fr/api-particulier">Vous êtes un collectivité et souhaitez demander un accès aux données de la CAF</Button>
 
 ## Demander un accès aux API
 
