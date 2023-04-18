@@ -129,7 +129,7 @@ content_intro: |
 ## API accessibles depuis l'API Particulier
 
   | API | Fournisseur des données | Données | Disponibilité sur API Particulier | Peut s'utiliser avec FranceConnect
-  |---------------------|----------|------------------------------------- |------------------- |
+  |---------------------|----------|------------------------------------- |------------------- |------------- |
   | **Quotient familial CAF** | CNAF | Quotient familial CAF, composition familiale<br>[📖 Documentation](https://particulier.api.gouv.fr/catalogue/cnaf/quotient_familial) <br> Extension du périmètre au régime agricole (MSA) prévu T3 2023 | ✅                      | Prévu T1 2024                      |
   | **Statut étudiant** | MESR | Statut, établissement<br>[📖 Documentation](https://particulier.api.gouv.fr/catalogue/mesr/statut_etudiant) | ✅                      |✅             |
   | **Statut étudiant boursier** | Cnous | Statut, niveau de bourse<br>[📖 Documentation](https://particulier.api.gouv.fr/catalogue/mesr/cnous/statut_etudiant_boursier)      | ✅      |  ✅             |
