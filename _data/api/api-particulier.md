@@ -69,6 +69,8 @@ keywords:
   - scolarité
   - indémnisation
   - chomage
+  - dîtes le nous une fois
+  - dlnuf
 rate_limiting_resume: 20 appels / seconde / jeton
 rate_limiting_description: |
   L'API est disponible à hauteur de 20 appels par secondes et par jeton d'accès.
@@ -98,13 +100,14 @@ content_intro: |
   - dans les logiciels métiers utilisés par les agents habilités en guichet.
 
   ### À quoi sert l’API Particulier ?
-  
-  L'API Particulier est un bouquet d'API donnant accès à des données administratives des particuliers : quotient familial CAF, composition familiale, statut demandeur d’emploi, statut élève scolarisé et élève boursier, statut étudiant et statut étudiant boursier.
-  
-  **L'accès à ces données par l'API Particulier permet de simplifier les démarches des particuliers** dans leur accès aux aides et aux services publics. Le calcul du tarif d'une carte de transport ou d'un abonnement des enfants à la cantine peut par exemple être fait automatiquement.
 
   L'API Particulier permet de **mettre en oeuvre le principe « Dites-le-nous une fois »**, en application de l’[article L114-8 du Code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045213315).
   
+  L'API Particulier est **un bouquet d'API** donnant accès à des données administratives des particuliers : quotient familial CAF, composition familiale, statut demandeur d’emploi, statut élève scolarisé et élève boursier, statut étudiant et statut étudiant boursier.
+
+  **Les usagers n'ont plus à fournir de pièces justificatives à l'appui de leurs démarches administratives**, telles que la tarification sociale et solidaire des transports, la cantine à 1 euro, les aides facultatives à la scolarité, etc.
+
+
   ### API disponibles dans le bouquet API Particulier :
 
 <Button href="https://particulier.api.gouv.fr/catalogue">Consulter le catalogue des API</Button>
