@@ -96,7 +96,6 @@ content_intro: |
 
   - dans le cadre des démarches en ligne proposées aux usagers (formulaires en ligne ou téléservices) ;
   - dans les logiciels métiers utilisés par les agents habilités en guichet.
-  - l'API particulier n'est pas encore France connectée, de fait, même si votre service intègre le bouton France Connect, les informations de vos usagers nécessaires à l'appel de l'API (comme par exemple le numéro d'allocataire ou la date de naissance) et détenues dans l'identifiant France connect, devront transiter dans vos systèmes.
 
   ### À quoi sert l’API Particulier ?
   
