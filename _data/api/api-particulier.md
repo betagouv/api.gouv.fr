@@ -133,9 +133,9 @@ content_intro: |
   | **Quotient familial CAF** | CNAF | Quotient familial CAF, composition familiale<br>[📖 Documentation](https://particulier.api.gouv.fr/catalogue/cnaf/quotient_familial) <br> Extension du périmètre au régime agricole (MSA) prévu T3 2023 | ✅                      | Prévu T1 2024                      |
   | **Statut étudiant** | MESR | Statut, établissement<br>[📖 Documentation](https://particulier.api.gouv.fr/catalogue/mesr/statut_etudiant) | ✅                      |✅             |
   | **Statut étudiant boursier** | Cnous | Statut, niveau de bourse<br>[📖 Documentation](https://particulier.api.gouv.fr/catalogue/mesr/cnous/statut_etudiant_boursier)      | ✅      |  ✅             |
-  | **Statut demandeur d'emploi** | Pôle Emploi |Statut et catégorie (A,B,C,D)<br>[📖 Documentation](https://particulier.api.gouv.fr/catalogue/pole_emploi/situation)     | ✅          | ➡️ Pas FranceConnecté dans API Particulier mais disponible avec [cette API](/les-api/api-statut-demandeur-emploi)            |
+  | **Statut demandeur d'emploi** | Pôle Emploi |Statut et catégorie (A,B,C,D)<br>[📖 Documentation](https://particulier.api.gouv.fr/catalogue/pole_emploi/situation)     | ✅          | ➡️ Pas FranceConnecté dans API Particulier mais disponible avec [cette API](/les-api/api-statut-demandeur-emploi).            |
   | **Statut élève scolarisé**   | Ministère de l'éducation nationale| Attestation de scolarité et statut boursier |T2 2023    | Prévu       |
-  | **Liste des paiements de Pôle emploi** | Pôle Emploi | Montants des paiements des allocations ou des aides | T2 2023               | ➡️ Ne sera pas FranceConnecté dans API Particulier mais déjà disponible avec [cette API](/les-api/api-indemnisation-pole-emploi) |
+  | **Liste des paiements de Pôle emploi** | Pôle Emploi | Montants des paiements des allocations ou des aides | T2 2023               | ➡️ Ne sera pas FranceConnecté dans API Particulier mais déjà disponible avec [cette API](/les-api/api-indemnisation-pole-emploi). |
   | **Statut Complémentaire santé solidaire (CSS)**              |  Direction de la sécurité sociale | Indique si le particulier a la CSS, avec ou sans participation. | T2 2023               | T2 2023               |
   | **Statut Revenu de solidarité active (RSA)**                 |Direction de la sécurité sociale | _En cours de définition_| T4 2023               | T4 2023               |
 
@@ -190,18 +190,6 @@ Chaque année, l'équipe de l'API Particulier envoie un bilan chiffré sur l'uti
   - J'écris à [cette adresse](https://api.gouv.fr/parcours-client?source=preFooter) pour être référencé sur le cas d'usage associé et avoir un formulaire pré-rempli à disposition de mes clients.
   
 </details>
-
-<details>
-  <summary>Les API sur API Particulier sont-elles France connectées ?</summary>
-
-L’API particulier n'est pas encore France connectée, de fait, même si votre service intègre le bouton France Connect, les informations de vos usagers nécessaires à l'appel de l'API (comme par exemple le numéro d'allocataire ou la date de naissance) et détenues dans l'identifiant France connect, devront transiter dans vos systèmes.
-
-En revanche, certaines données présentes dans le bouquet API Particulier sont aussi accessibles par une version France connectée des API. Il vous faudra alors faire une demande d'accès auprès de ces API directement. La liste des alternatives France connectée est décrite [plus haut, à cette rubrique](#api-france-connectees).
-
-🔎 En savoir plus sur les [API France Connectées](/guides/api-franceconnectees).
-
-</details>
-
 
 <details>
   <summary>Comment tester l'API ? Un jeton d'accès est-il nécessaire pour accéder au bac à sable ?</summary>
