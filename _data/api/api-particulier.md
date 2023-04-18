@@ -99,7 +99,7 @@ content_intro: |
 
   ### À quoi sert l’API Particulier ?
   
-  L'API Particulier est un bouquet d'API donnant accès à des données administratives des particuliers : quotient familial CAF, composition familiale, statut demandeur d’emploi, statut étudiant et statut boursier avec échelon.
+  L'API Particulier est un bouquet d'API donnant accès à des données administratives des particuliers : quotient familial CAF, composition familiale, statut demandeur d’emploi, statut élève scolarisé et élève boursier, statut étudiant et statut étudiant boursier avec échelon.
   
   **L'accès à ces données par l'API Particulier permet de simplifier les démarches des particuliers** dans leur accès aux aides et aux services publics. Le calcul du tarif d'une carte de transport ou d'un abonnement des enfants à la cantine peut par exemple être fait automatiquement.
   
