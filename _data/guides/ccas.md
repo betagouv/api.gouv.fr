@@ -10,7 +10,7 @@ api:
 ---
 
 <details>
-   <summary>Quel est la mission des centres communaux d'action sociale ?</summary>
+   <summary>Quelle est la mission des centres communaux d'action sociale ?</summary>
 
 Les centres communaux d'action sociale (CCAS) sont amenés à instruire de nombreux dossiers d'obtention d'aide sociale pour leurs usagers : aide sociale légale, aide alimentaire, chèque énergie, aide au bus, etc..
 
@@ -30,7 +30,7 @@ Ces dossiers utilisent généralement les données d’état-civil, l'adresse, l
 
 ## Simplifier la délivrance d'aides sociales en CCAS grâce aux API
 
-Centres communaux d'action sociale, en intégrant des API dans vos systèmes d'information :
+CCAS, en intégrant des API dans vos systèmes d'information :
 
 - 😃 les **familles n'ont plus à fournir les justificatifs de leur statut ou de leur revenu (certificat de scolarité, statut boursier, attestation CAF, revenu fiscal de référence, avis d'imposition, etc.)** pour leurs demandes d'aides sociales ;  
 
@@ -40,7 +40,7 @@ Centres communaux d'action sociale, en intégrant des API dans vos systèmes d'i
 
 <Quote logo="/images/guides/sitiv.png" link='https://www.sitiv.fr/Actualites/L-action-sociale-des-villes-du-SITIV-integre-le-dispositif-Dites-le-nous-une-fois' who='Le SITIV' title='membre du réseau Déclic'>
 Le principe du "Dites-le nous une fois" (...) permet aux citoyens de ne pas avoir à donner leur consentement mais d'être simplement informés de l'utilisation de leurs pièces.
-C'est dans ce cadre que le SITIV intègre directement au logiciel métier les informations des usagers (...) Les saisies dans les dossiers usagers sont ainsi **facilitées et certifiées**.
+C'est dans ce cadre que le SITIV intègre directement au logiciel métier les informations des usagers (...) Les saisies dans les dossiers usagers sont ainsi facilitées et certifiées.
 </Quote>
 
 
