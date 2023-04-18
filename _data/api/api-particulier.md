@@ -119,13 +119,9 @@ content_intro: |
 
   - ✅ Vous accédez avec une seule habilitation aux **données de différents fournisseurs** : la Caisse nationale des allocations familiales (CNAF), la sécurité sociale agricole (MSA), Pôle emploi, le ministère de l'enseignement supérieur et de la recherche (MESR), le ministère de l'éduction nationale (MEN) et enfin le Centre national des œuvres universitaires et scolaires (Cnous).
 
-  ### C'est aussi plus simple pour vos usagers :
+  - ✅ Enfin, vous **participez activement à la simplification des démarches pour les citoyens** en mettant en place le « Dites-le-nous une fois » vous ne demandez plus aux familles une information qu’elles ont déjà donnée ou que l’administration connaît déjà.
+  Vous vous mettez ainsi **en conformité avec la législation** et, plus particulièrement l’[article L114-8 du Code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045213315).
 
-  - ✅ Leur démarche est réalisable 100% en ligne autant qu'en guichet ;
-
-  - ✅ Ils n'ont plus besoin de rassembler et saisir les informations ou documents déjà connus de l'administration.
-
-  ⚠️ Les données de l’API ne permettent pas encore de calculer les tarifs en établissement d'accueil du jeune enfant (crèche, multi-accueil, halte-garderie…). **Elles ne doivent donc pas être utilisées pour le calcul des participations familiales en Eaje.**
 
 ---
 

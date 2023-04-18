@@ -37,7 +37,7 @@ Communes et intercommunalités, en intégrant des API dans votre portail famille
 
 - ⏰ Vous accélérez le traitement des dossiers car vos agents n’ont **pas à vérifier les données déclarées aux pièces justificatives fournies **, les informations obtenues par les API sous-mentionnées sont certifiées 🔎 ;
 
-- 🎯 Enfin, vous **participez activement à la simplification des démarches pour les citoyens** en mettant en place le « Dites-le-nous une fois  vous ne demandez plus aux familles une information qu’elles ont déjà donnée ou que l’administration connaît déjà.
+- 🎯 Enfin, vous **participez activement à la simplification des démarches pour les citoyens** en mettant en place le « Dites-le-nous une fois » vous ne demandez plus aux familles une information qu’elles ont déjà donnée ou que l’administration connaît déjà.
 Vous vous mettez ainsi **en conformité avec la législation** et, plus particulièrement l’[article L114-8 du Code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045213315).
 
 ## Les API et données utiles
@@ -46,6 +46,9 @@ Vous vous mettez ainsi **en conformité avec la législation** et, plus particul
 | --- | --- | --- |
 | [API Impôt particulier](/les-api/impot-particulier) - DGFIP | Revenu fiscal de référence, nombre de parts fiscales | ✅ |
 | Bouquet [API Particulier](https://particulier.api.gouv.fr/catalogue) - opéré par la DINUM | Quotient familial CAF, composition familiale| ⚙️ en cours de FranceConnection |
+
+
+⚠️ Les données de l’API Impôt particulier ne permettent pas de calculer les tarifs en établissement d'accueil du jeune enfant (crèche, multi-accueil, halte-garderie…). **Elles ne doivent donc pas être utilisées pour le calcul des participations familiales en Eaje.** Une API spécifique est en cours de préparation.
 
 ## Améliorer votre portail famille avec l'API Particulier
 
