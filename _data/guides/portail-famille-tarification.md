@@ -26,7 +26,7 @@ Selon la politique tarifaire choisie, le calcul des tarifs est réalisé grâce 
 - [Les API et données utiles](#les-api-et-donnees-utiles)
 - [Améliorer votre portail famille avec l'API Particulier](#ameliorer-votre-portail-famille-avec-l-api-particulier)
   - [Exemple d'application](#exemple-d-application)
-  - [Liste des éditeurs](#les-editeurs-proposant-des-portails-famille-connectes-a-l-api-particulier)
+  - [Liste des éditeurs](#liste-des-editeurs)
 - [Demander un accès aux API](#demander-un-acces-aux-api)
 
 ## Simplifier les démarches du portail famille grâce aux API 
@@ -70,7 +70,7 @@ Le parent se connecte à son espace personnel sur le portail famille, il clique 
 Le parent est automatiquement positionné dans la grille tarifaire de la collectivité. Le parent n'a plus qu'à terminer l'inscription.
 
 
-### Les éditeurs proposant des portails famille connectés à l'API Particulier
+### Liste des éditeurs
 
 Les éditeurs suivants proposent des portails famille et sont déjà connectés à l'API Particulier :
 
