@@ -99,37 +99,31 @@ content_intro: |
 
   ### À quoi sert l’API Particulier ?
   
-  L'API Particulier est un bouquet d'API donnant accès à des données administratives des particuliers : quotient familial CAF, composition familiale, statut demandeur d’emploi, statut élève scolarisé et élève boursier, statut étudiant et statut étudiant boursier avec échelon.
+  L'API Particulier est un bouquet d'API donnant accès à des données administratives des particuliers : quotient familial CAF, composition familiale, statut demandeur d’emploi, statut élève scolarisé et élève boursier, statut étudiant et statut étudiant boursier.
   
   **L'accès à ces données par l'API Particulier permet de simplifier les démarches des particuliers** dans leur accès aux aides et aux services publics. Le calcul du tarif d'une carte de transport ou d'un abonnement des enfants à la cantine peut par exemple être fait automatiquement.
   
-  ### API disponibles dans le hub API Particulier :
+  ### API disponibles dans le bouquet API Particulier :
 
 <Button href="https://particulier.api.gouv.fr/catalogue">Consulter le catalogue des API</Button>
   
-  ### Ce qu'API Particulier change pour vous, administrations et collectivités :
+  ### Ce qu'API Particulier change pour vous, administrations :
 
-  **En tant qu'administration ou collectivité**, en intégrant la brique API Particulier dans votre système d’information ou votre site internet :
+  **En tant qu'administration**, en intégrant la brique API Particulier dans votre système d’information ou votre site internet :
 
-  - ✅ Vous n’avez **plus besoin de demander certaines informations** aux particuliers ;
+  - ✅ Vous n’avez **plus besoin de demander certaines informations** aux particuliers, comme le certificat de scolarité ou l'attestation CAF ;
 
-  - ✅ Vous n’avez pas de vérification supplémentaire à réaliser car les **informations sont certifiées**
+  - ✅ Vous n’avez **pas de saisie ou de vérification** supplémentaire à réaliser ; 
+  
+  - ✅ les **informations sont certifiées** ;
 
-  - ✅ Vous accédez avec un seul compte aux **données de différents fournisseurs** : la Caisse nationale des allocations familiales (CNAF), Pôle emploi, le ministère de l'enseignement supérieur et de la recherche (MESR) et enfin le Centre national des œuvres universitaires et scolaires (Cnous).
-
-    <Quote logo="/images/guides/clamart.svg" who='Ville de Clamart' title='Aurélie Coutant'>
-    Maintenant que le traitement est automatisé, nous avons enfin le temps de mieux accompagner les usagers en difficulté, de leur expliquer plus largement les prestations auxquelles ils peuvent avoir accès.
-    </Quote>
+  - ✅ Vous accédez avec une seule habilitation aux **données de différents fournisseurs** : la Caisse nationale des allocations familiales (CNAF), la sécurité sociale agricole (MSA), Pôle emploi, le ministère de l'enseignement supérieur et de la recherche (MESR), le ministère de l'éduction nationale (MEN) et enfin le Centre national des œuvres universitaires et scolaires (Cnous).
 
   ### C'est aussi plus simple pour vos usagers :
 
   - ✅ Leur démarche est réalisable 100% en ligne autant qu'en guichet ;
 
   - ✅ Ils n'ont plus besoin de rassembler et saisir les informations ou documents déjà connus de l'administration.
-
-    <Quote logo="/images/guides/clamart.svg" who='Ville de Clamart' title='Simon-Pierre Chalvidan'>
-    En 2014, nos usagers prenaient une demi-journée de congés pour effectuer leurs démarches en mairie. Aujourd'hui, ils les effectuent en ligne en 5 minutes.
-    </Quote>
 
   ⚠️ Les données de l’API ne permettent pas encore de calculer les tarifs en établissement d'accueil du jeune enfant (crèche, multi-accueil, halte-garderie…). **Elles ne doivent donc pas être utilisées pour le calcul des participations familiales en Eaje.**
 
