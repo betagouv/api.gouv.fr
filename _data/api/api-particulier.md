@@ -102,6 +102,8 @@ content_intro: |
   L'API Particulier est un bouquet d'API donnant accès à des données administratives des particuliers : quotient familial CAF, composition familiale, statut demandeur d’emploi, statut élève scolarisé et élève boursier, statut étudiant et statut étudiant boursier.
   
   **L'accès à ces données par l'API Particulier permet de simplifier les démarches des particuliers** dans leur accès aux aides et aux services publics. Le calcul du tarif d'une carte de transport ou d'un abonnement des enfants à la cantine peut par exemple être fait automatiquement.
+
+  L'API Particulier permet de **mettre en oeuvre le principe « Dites-le-nous une fois »**, en application de l’[article L114-8 du Code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045213315).
   
   ### API disponibles dans le bouquet API Particulier :
 
@@ -118,10 +120,6 @@ content_intro: |
   - ✅ les **informations sont certifiées** ;
 
   - ✅ Vous accédez avec une seule habilitation aux **données de différents fournisseurs** : la Caisse nationale des allocations familiales (CNAF), la sécurité sociale agricole (MSA), Pôle emploi, le ministère de l'enseignement supérieur et de la recherche (MESR), le ministère de l'éduction nationale (MEN) et enfin le Centre national des œuvres universitaires et scolaires (Cnous).
-
-  - ✅ Enfin, vous **participez activement à la simplification des démarches pour les citoyens** en mettant en place le « Dites-le-nous une fois » vous ne demandez plus aux familles une information qu’elles ont déjà donnée ou que l’administration connaît déjà.
-  Vous vous mettez ainsi **en conformité avec la législation** et, plus particulièrement l’[article L114-8 du Code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045213315).
-
 
 ---
 
