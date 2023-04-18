@@ -33,19 +33,18 @@ Selon la politique tarifaire choisie, le calcul des tarifs est réalisé grâce 
 
 Communes et intercommunalités, en intégrant des API dans votre portail famille :
 
-- 😃 les **familles n'ont plus à fournir d'attestion CAF ou d'avis d'imposition** pour obtenir un tarif adapté à leurs revenus grâce à la liaison avec les données de la CNAF (l'API Particulier), ou de la DGFIP (API impôt particulier) ;
+- 😃 les **familles n'ont plus à fournir d'attestation CAF ou d'avis d'imposition** pour obtenir un tarif adapté à leurs revenus grâce à la liaison avec les données de la CNAF (l'API Particulier), ou de la DGFIP (API impôt particulier) ;
 
-- ⏰ Vous accélérez le traitement des dossiers car vos agents n’ont **pas à vérifier les données déclarées aux pièces justificatives fournies **, les informations obtenues par les API sous-mentionnées sont certifiées 🔎 ;
+- ⏰ Vous accélérez le traitement des dossiers car vos agents n’ont **pas à vérifier les données saisies et les pièces justificatives fournies**, les informations obtenues par les API sous-mentionnées sont certifiées 🔎 ;
 
-- 🎯 Enfin, vous **participez activement à la simplification des démarches pour les citoyens** en mettant en place le « Dites-le-nous une fois » vous ne demandez plus aux familles une information qu’elles ont déjà donnée ou que l’administration connaît déjà.
-Vous vous mettez ainsi **en conformité avec la législation** et, plus particulièrement l’[article L114-8 du Code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045213315).
+- 🎯 Enfin, vous **participez activement à la simplification des démarches pour les citoyens** en mettant en oeuvre le « Dites-le-nous une fois », en application de l’[article L114-8 du Code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045213315).
 
 ## Les API et données utiles
 
-| API utiles | Données disponibles |  API utilisable avec France Connect |
+| API utiles | Données disponibles |  Peut s'utiliser avec FranceConnect |
 | --- | --- | --- |
 | [API Impôt particulier](/les-api/impot-particulier) - DGFIP | Revenu fiscal de référence, nombre de parts fiscales | ✅ |
-| Bouquet [API Particulier](https://particulier.api.gouv.fr/catalogue) - opéré par la DINUM | Quotient familial CAF, composition familiale| ⚙️ en cours de FranceConnection |
+| Bouquet [API Particulier](https://particulier.api.gouv.fr/catalogue) - opéré par la DINUM | Quotient familial CAF, composition familiale| ⚙️ Certaines API sont disponibles avec FranceConnect |
 
 
 ⚠️ Les données de l’API Impôt particulier ne permettent pas de calculer les tarifs en établissement d'accueil du jeune enfant (crèche, multi-accueil, halte-garderie…). **Elles ne doivent donc pas être utilisées pour le calcul des participations familiales en Eaje.** Une API spécifique est en cours de préparation.
@@ -54,7 +53,7 @@ Vous vous mettez ainsi **en conformité avec la législation** et, plus particul
 
 L'API Particulier est un bouquet d'API délivrant des informations administratives des particuliers issues de différents fournisseurs de données.
 
-Avec l'API Particulier, vous avez notamment accès au statut demandeur d'emploi, au statut élève scolarisé, au statut étudiant, aux échelons de bourses, et au quotient familial CAF.
+Avec l'API Particulier, vous avez notamment accès au quotient familial CAF, au statut élève scolarisé et boursier, au statut étudiant et étudiant boursier, au statut demandeur d'emploi...
 
 <Button href="https://particulier.api.gouv.fr/catalogue">Découvrir l'API Particulier</Button>
 
@@ -116,6 +115,6 @@ Les [API disponibles dans l'API Particulier](https://particulier.api.gouv.fr/cat
 
 <Button href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande API Particulier</Button>
 
-Vous avez besoin d'autres données distribuées par d'autres fournisseurs ? Il vous faudra faire une demande dédiée par API.
+Vous avez besoin des données de revenu de la DGFIP ? Il vous faudra faire une [demande d'habilitation dédiée](/les-api/impot-particulier).
 
 ⚠️ Lors de votre demande d’habilitation, vous vous engagez à ne demander que les données strictement nécessaires à la réalisation de la démarche administrative.

@@ -35,8 +35,7 @@ Département et région, en intégrant l'API Particulier dans votre système d'i
 
 - ⏰ Vous accélérez le traitement des dossiers car vos agents n’ont **pas de vérifications supplémentaires à réaliser**, les informations obtenues par l'API sont certifiées 🔎 ;
 
-- 🎯 Enfin, vous **participez activement à la simplification des démarches pour les citoyens** en mettant en place le [« Dites-le-nous une fois »](https://www.numerique.gouv.fr/services/guichet-dites-le-nous-une-fois/) : vous ne demandez plus aux familles une information qu’elles ont déjà donnée ou que l’administration connaît déjà.
-Vous vous mettez ainsi **en conformité avec la législation** et, plus particulièrement l’[article L113-12 du Code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037313155).
+- 🎯 Enfin, vous **participez activement à la simplification des démarches pour les citoyens** en mettant en oeuvre le [« Dites-le-nous une fois »](https://www.numerique.gouv.fr/services/guichet-dites-le-nous-une-fois/), en application de l’[article L113-12 du Code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037313155).
 
 ## Les données utiles
 
@@ -52,7 +51,7 @@ Avec l'API Particulier, vous aurez notamment accès au quotient familial CAF né
 | [API Quotient familial CAF](https://particulier.api.gouv.fr/catalogue/cnaf/quotient_familial) - CNAF - opérée par la DINUM | Quotient familial CAF, composition familiale  | ✅ Utile |
 | [API Statut étudiant](https://particulier.api.gouv.fr/catalogue/mesr/statut_etudiant) - Mesr - opérée par la DINUM | Statut étudiant | ❌ inutile |
 | [API Statut étudiant boursier ](https://particulier.api.gouv.fr/catalogue/cnous/statut_etudiant_boursier) - Cnous - opérée par la DINUM | Statut étudiant boursier, échelon de bourse | ❌ inutile |
-| [API Statut demandeur d'emploi](https://particulier.api.gouv.fr/catalogue/pole_emploi/situation) - Pôle emploi - opérée par la DINUM | Statut demandeur d'emploi | 🆗 Utile selon votre système de tarification |
+| [API Statut demandeur d'emploi](https://particulier.api.gouv.fr/catalogue/pole_emploi/situation) - Pôle emploi - opérée par la DINUM | Statut demandeur d'emploi | 🆗 Utile selon votre type de tarification |
 
 
 ## Exemple d'application

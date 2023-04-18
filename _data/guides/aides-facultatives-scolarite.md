@@ -13,74 +13,85 @@ api:
   - API Impôt particulier
 ---
 
-## Simplifier l’attribution des aides facultatives à la scolarité
+<details>
+   <summary>Qu'est-ce que les aides facultatives à la scolarité ?</summary>
 
-Communes, départements, régions ont mis en place des aides sociales pour aider les familles à financer la scolarité des enfants ou des étudiants.
+Les communes, départements et régions ont mis en place des aides sociales pour aider les familles à financer la scolarité des enfants ou des étudiants.
 
 Ces aides facultatives prennent différentes formes : aide financière, fourniture de matériel informatique, bon d’achat pour des livres. Elle sont conditionnées à certains critères sociaux.
 
-Plusieurs API permettent, dans les téléservices (formulaire de demande en ligne) utilisés pour récolter les demandes d’aide, d’éviter aux parents ou aux étudiants d’avoir à justifier de leurs statuts ou de leurs revenus.
+Pour les obtenir, les familles doivent fournir des justificatifs de revenus et/ou de statut.
+</details>
 
-## Comment simplifier les dispositifs d’aides grâce aux API ?
+## Table des matières
 
-Pour bénéficier des aides, les personnes doivent justifier qu’elles y ont droit : conditions de revenu, statut d’étudiant, de boursier, ou d’élève.
+- [Simplifier l'attribution des aides facultatives à la scolarité grâce aux API](#simplifier-l-attribution-des-aides-facultatives-a-la-scolarite-grace-aux-API)
+- [Les API et données utiles](#les-api-et-donnees-utiles)
+- [Améliorer la délivrance des aides facultatives avec l'API Particulier](#ameliorer-la-delivrance-des-aides-facultatives-avec-l-api-particulier)
+  - [Exemple d'application](#exemple-d-application)
+- [Demander un accès aux API](#demander-un-acces-aux-api)
 
-Plusieurs sources de données disponibles par API sont proposées afin d’éviter aux étudiants ou aux parents d’avoir à justifier de leurs statuts ou de leurs revenus.
+## Simplifier l'attribution des aides facultatives à la scolarité grâce aux API 
 
-Ces API sont principalement utilisées dans la cadre de services ligne qui peuvent, de ce fait, être **complètement dématérialisés sans intervention d’agents.**
+Collectivités, en intégrant des API dans vos systèmes d'information :
 
-**L’usage des ces API permet aussi :**
+- 😃 les **familles n'ont plus à fournir les justificatifs de leur statut ou de leur revenu (certificat de scolarité, statut boursier, attestation CAF, revenu fiscal de référence, etc.)** pour renseigner leurs demandes d'aides facultatives ;  
 
-1. d’obtenir des données sûres et d’éviter les fraudes,
-2. de ne pas avoir à contrôler et stocker des pièces justificatives,
-3. de diminuer/supprimer les interventions en en backoffice,
-4. d’éviter les erreurs de saisie (de l’usager ou du service traitant).
+- ⏰ Vous accélérez le traitement des dossiers car vos agents n’ont **pas à vérifier les données saisies et les pièces justificatives fournies**, les informations obtenues par les API sous-mentionnées sont certifiées 🔎 ;
 
-## Quelles données sont disponibles par API ?
+- 🎯 Enfin, vous **participez activement à la simplification des démarches pour les citoyens** en mettant en oeuvre le « Dites-le-nous une fois », en application de l’[article L114-8 du Code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045213315).
 
-| Nom de la donnée | Disponibilité API Particulier | Disponibilité France Connect |
+
+## Les API et données utiles
+
+| API utiles | Données disponibles |  Peut s'utiliser avec FranceConnect |
 | --- | --- | --- |
-| Données fiscales (DGFiP) | ❌ Disponible sur l'[API Impôt particulier - DGFIP](/les-api/impot-particulier) | [✅ Données fiscales (DGFiP)](/les-api/impot-particulier) |
-| Quotient famillial (CNAF) | [✅ API Particulier](/les-api/api-particulier) | ⌛️ Fin 2022 |
-| Statut étudiant | [✅ API Particulier](/les-api/api-particulier) | [✅ API Statut étudiant](/les-api/api-statut-etudiant) |
-| Statut étudiant boursier | [✅ API Particulier](/les-api/api-particulier) | [✅ API Statut étudiant boursier](/les-api/api-statut-etudiant-boursier) |
-| Scolarité | ⌛️ Fin 2022 | Non prévue |
+| [API Impôt particulier](/les-api/impot-particulier) - DGFIP | Revenu fiscal de référence, nombre de parts fiscales | ✅ |
+| Bouquet [API Particulier](https://particulier.api.gouv.fr/catalogue) - opéré par la DINUM | Quotient familial CAF, composition familiale, statut élève scolarisé et boursier, statut étudiant et étudiant boursier, | ⚙️ Certaines API sont disponibles avec FranceConnect |
 
-⚠️ **Les données fiscales des particuliers ne sont plus disponibles via l'API Particulier, produit opéré par la DINUM.** Pour obtenir ces données (ex : le revenu fiscal de référence, les informations sur les déclarants et le nombre de parts du foyer fiscal), veuillez désormais interroger directement l'API dédiée à l'accès aux données fiscales des particuliers [**l'API Impôt particulier** de la DGFiP](https://api.gouv.fr/les-api/impot-particulier).
 
-## Comment accéder aux données ?
+## Améliorer la délivrance des aides facultatives avec l'API Particulier
 
-Les API sont disponibles - que les téléservices utilisent franceConnect ou non.
+L'API Particulier est un bouquet d'API délivrant des informations administratives des particuliers issues de différents fournisseurs de données.
 
-🔎 En savoir plus sur [les API FranceConnectées](https://api.gouv.fr/guides/api-franceconnectees)
+Avec l'API Particulier, vous avez notamment accès au quotient familial CAF, au statut élève scolarisé et boursier, au statut étudiant et étudiant boursier, au statut demandeur d'emploi...
 
-Un téléservice peut aussi proposer deux modes de connection, l’un avec FranceConnect, l’autre sans. Dans ce dernier cas il convient d’utiliser [l’API particulier](https://api.gouv.fr/les-api/api-particulier).
+<Button href="https://particulier.api.gouv.fr/catalogue">Découvrir l'API Particulier</Button>
 
-Vous devez formuler une demande d’habilitation auprès de chaque fournisseur de donnée pour les API FranceConnectées ou d’une seule demande pour l'API particulier.
+### Exemple d'application
 
-### Pour remplir votre demande, vous devrez fournir :
+**Un parent souhaite bénéficier de la fourniture d'un ordinateur pour son enfant scolarisé, depuis le portail de sa commune connecté à l'API Particulier.**
 
-#### 1. Votre numéro SIRET
+Le parent se connecte à son espace personnel, il clique sur la démarche de demande d'un ordinateur pour les études de son enfant, il **renseigne le nom, prénom, sexe, date de naissance et établissement scolaire de son enfant**.
 
-Nous vérifierons que vous êtes bien une administration au sens des articles [(100-3](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000031367308) ou [300-2](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000033218936/) du [code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/codes/id/LEGITEXT000031366350/))
+> ⚙️ **En arrière plan** : Un appel à l'API élève scolarisé du bouquet API Particulier est effectué et permet de vérifier que l'élève est bien scolarisé.
 
-#### 2. Le nom du projet et sa description
+Le parent n'a pas besoin de fournir le certificat de scolarité, la vérification a été faite automatiquement. L'attribution d'un ordinateur étant conditionnée selon les revenus, le parent **renseigne son numéro d'allocataire CAF, son code postal**.
 
-Nous vérifierons que la finalité du service pour lequel votre demande est formulée s’inscrit dans le traitement des démarches du public ou accomplissement une mission de service public ( article 114-8 du code des relations entre le public et l’administration)
+> ⚙️ **En arrière plan** : Un appel à l'API quotient familial CAF du bouquet API Particulier est effectué et permet de récupérer le quotient familial du mois en cours.
 
-#### 3. Le cadre juridique (décret, arrêté délibération, décision…) qui vous légitime à obtenir les données.
+La famille est identifiée comme éligible à l'aide. Le parent n'a plus qu'à confirmer sa demande. Du côté de la commune, les agents n'auront pas à vérifier les informations renseignées car celles-ci sont certifiées.
 
-Nous vérifierons que le cadre juridique qui fonde votre mission vous permet d’avoir connaissance des données demandées
 
-  <details>
-    <summary>En savoir plus sur le cadre juridique</summary>
-    Le cadre juridique général permet aux administrations d’obtenir, auprès d’autres administrations les données qui leur sont nécessaires pour accomplir leur mission de service public. Ce cadre est prévu par le code des relations entre le public et l’administration (art. 114-8 et suivants) pour, notamment, traiter les demandes et déclarations du public. En outre l’article 1er  de la loi pour une République numérique permet d’obtenir les données nécessaires, plus largement, à l’accomplissement d’une mission de service public. D’autres dispositions spécifiques peuvent également prévoir des mesures analogues.
-  </details>
+## Demander un accès aux API
 
-#### 4. Les coordonnées des personnes responsables de l’utilisation de l’API :
+### Justifier votre cadre juridique
 
-- responsable de traitement,
-- responsable technique : il peut être au sein de l’organnisation de l’administration ou un prestataire (éditeur, intégrateur),
-- délégué à la protection des données (informé automatiquement lors de la soumission du formulaire).
+L'utilisation des données est encadrée légalement. Vous devez formuler une demande auprès de l'API Particulier et/ou des autres API en justifiant du cadre légal de l'utilisation des données :
 
-<Button href="#quelles-donnees-sont-disponibles-par-api-?">Accéder aux API</Button>
+- Cadre légal général : l'[Article L114-8 du Code des relations entre le public et l'administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045213315) fixe le cadre général qui oblige l’administration à échanger des données lors d’une démarche d’un usager ;
+
+- Cadre légal spécifique aux téléservices : En tant que collectivités territoriales vous avez donc un droit d'accès à certaines données dans le cadre de demandes, services pro-actifs et déclarations usagers. 
+L'[Arrêté du 04/07/13 sur les téléservices](https://www.legifrance.gouv.fr/loda/id/JORFTEXT000027697207/#:~:text=Dans%20les%20r%C3%A9sum%C3%A9s-,Arr%C3%AAt%C3%A9%20du%204%20juillet%202013%20autorisant%20la%20mise%20en%20%C5%93uvre,publiques%20locales%20dont%20ils%20sont) détaille à l'article 1 la liste des démarches par secteur. Aidez-vous de cet arrêté pour justifier de votre cadre légal.
+
+- Justificatif des données nécessaires au calcul de la tarification : Il est indispensable de **fournir l'acte/ la délibération** qui fixe les conditions tarifaires et qui permettra d'apprécier finement le droit d'accès à chaque donnée.
+
+### Formulaires de demande d'accès
+
+Les [API disponibles dans l'API Particulier](https://particulier.api.gouv.fr/catalogue) vous intéressent ? Vous n'avez qu'une seule demande d'habilitation à effectuer : 
+
+<Button href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande API Particulier</Button>
+
+Vous avez besoin des données de revenu de la DGFIP ? Il vous faudra faire une [demande d'habilitation dédiée](/les-api/impot-particulier).
+
+⚠️ Lors de votre demande d’habilitation, vous vous engagez à ne demander que les données strictement nécessaires à la réalisation de la démarche administrative.
