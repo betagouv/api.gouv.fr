@@ -50,29 +50,36 @@ La DINUM a réalisé une [étude auprès de 20 autorités organisatrices de la m
 
 **👋 Pour participer au groupe de travail associé, [vous pouvez écrire ici](mailto:contact@api.gouv.fr?subject=Participation-au-cas-d'usage-transports)**
 
+### Détail de toutes les données
 
-De nombreux justificatifs sont d'ores et déjà disponibles par API et votre téléservice peut proposer deux modes de connection, l’un avec FranceConnect, l’autre sans.
-Dans ce dernier cas il conviendra d’utiliser [l’API particulier](https://api.gouv.fr/les-api/api-particulier ).
+| Données disponibles |  API utilisables **avec FranceConnect** | API utilisables **sans** FranceConnect |
+| --- | --- | --- |
+| Revenu fiscal de référence, nombre de parts fiscales | ✅ [API Impôt particulier - DGFIP](/les-api/impot-particulier) | ✅ [API Impôt particulier - DGFIP](/les-api/impot-particulier) |
+| Quotient familial CAF/MSA et composition familiale | ⚙️ Usage avec FranceConnect en cours de spécification | ✅ Disponible sans FranceConnect dans [API Particulier](https://particulier.api.gouv.fr/catalogue/cnaf/quotient_familial) |
+| Montant des indemnités journalières de l'Assurance Maladie payé à un assuré sur une période |✅ [API Indemnités Journalières - CNAM](https://api.gouv.fr/les-api/api-indemnites-journalieres-cnam)   | ❌ Usage sans FranceConnect non-prévu |
+| Droits d’un individu ou d’une famille (enfants rattachés), gérés par le régime général de l’Assurance Maladie |✅ [API de droits à l'Assurance Maladie - CNAM](https://api.gouv.fr/les-api/api_ameli_droits_cnam)  | ❌ Usage sans FranceConnect non-prévu |
+| Statut étudiant d'un établissement de l’enseignement supérieur - MESRI |✅ [API Statut étudiant - MESRI ](https://api.gouv.fr/les-api/api-statut-etudiant)| ✅ Disponible sans FranceConnect dans [API Particulier](https://particulier.api.gouv.fr/catalogue/mesr/statut_etudiant)|
+| Statut d’étudiant boursier - CNOUS  | ✅ Disponible avec FranceConnect dans [API Particulier](https://particulier.api.gouv.fr/catalogue/cnous/statut_etudiant_boursier) |  ✅ Disponible sans FranceConnect dans [API Particulier](https://particulier.api.gouv.fr/catalogue/cnous/statut_etudiant_boursier)|
+|Statut demandeur d'emploi et catégorie (A,B,C,D) Pôle emploi  |✅ [API statut demandeur d'emploi - Pôle Emploi ](/les-api/api-statut-demandeur-emploi) |✅ Disponible sans FranceConnect dans l'[API Particulier](https://particulier.api.gouv.fr/catalogue/pole_emploi/situation)|   
+| Montants des paiements des allocations ou des aides - Pôle emploi |✅ [API Indemnités Pôle emploi - Pôle Emploi](/les-api/api-indemnisation-pole-emploi)  |⌛️ bientôt disponible sans FranceConnect dans l'[API Particulier](https://particulier.api.gouv.fr/catalogue) |
+| Statut Complémentaire santé solidaire (CSS), avec ou sans participation - Direction de la sécurité sociale | ⌛️ bientôt disponible (T2 2023)    | ⌛️ bientôt disponible (T2 2023) sans FranceConnect dans l'[API Particulier](https://particulier.api.gouv.fr/catalogue)    |
+| Statut Revenu de solidarité active (RSA) - Direction de la sécurité sociale | ⌛️ bientôt disponible (T4 2023)    | ⌛️ bientôt disponible (T4 2023) sans FranceConnect dans l'[API Particulier](https://particulier.api.gouv.fr/catalogue)    |
+| Statut élève collège et lycée scolarisé et statut boursier - Ministère de l'éducation nationale | T2 2023    | ⌛️ bientôt disponible sans FranceConnect dans l'[API Particulier](https://particulier.api.gouv.fr/catalogue)  |
+| Carte famille nombreuse - Ministère des transports |  ⌛️ prévu T1 2024 | ⌛️ prévu T1 2024 |
 
+### Données utiles de l'API Particulier
 
-| Nom       | Description         |Statut   |Dispo sans FranceConnect | Administration|
-| --------- | --------- |----------------------------------------------------|-----------------|--------- |
-| [API Impôt particulier](https://api.gouv.fr/les-api/impot-particulier)  | Revenus déclarés auprès de l'administration fiscale |✅ Disponible   |[API Impôt particulier](https://api.gouv.fr/les-api/impot-particulier) -  |DGFiP   |
-| [API Indemnités Journalières](https://api.gouv.fr/les-api/api-indemnites-journalieres-cnam)   | Montant des indemnités journalières de l'Assurance Maladie payé à un assuré sur une période|✅ Disponible   |Non prévu |CNAM |
-| [API de droits à l'Assurance Maladie](https://api.gouv.fr/les-api/api_ameli_droits_cnam) | Droits d’un individu ou d’une famille (enfants rattachés), gérés par le régime général de l’Assurance Maladie |✅ Disponible  |Non prévu |CNAM   |
-| [API Statut étudiant](https://api.gouv.fr/les-api/api-statut-etudiant)| Statut de l’inscription dans un établissement de l’enseignement supérieur |✅ Disponible  |[API  particulier](https://api.gouv.fr/les-api/api-particulier)|MESRI   |
-| [API Statut étudiant boursier](https://api.gouv.fr/les-api/api-statut-etudiant-boursier)| Statut d’étudiant boursier  |✅ Disponible  | [API  particulier](https://api.gouv.fr/les-api/api-particulier) |CNOUS / MESRI                                          |
-| API statut demandeur d'emploi   |Statut et catégorie (A,B,C,D)   |⌛️ bientôt disponible |[API  particulier](https://api.gouv.fr/les-api/api-particulier)| Pôle Emploi                        |
-| API Indemnités Pôle emploi   | Montant des indemnités versées par pôle emploi   |⌛️ bientôt disponible|⌛️ bientôt disponible |Pôle Emploi                        |
-| API Prestations sociales   | Inscription au RSA, bénéficiaires de la CSS (complémentaire sociale solidaire) |⌛️ bientôt disponible   |⌛️ bientôt disponible|DSS |
-|API scolarité | attestation de socolarité, apprenti, boursier |Mars 2023  |fin 2022|MEN|
-|API quotient familial | Quotient familial, composition familiale|En cours de spécification  | [API  particulier](https://api.gouv.fr/les-api/api-particulier)|CNAF|
-|API quotient familial| Quotient familial, composition familiale |  2023|En cours de spécification|MSA|
-|API famille nombreuse| carte famille nombreuse |  2023|2023|Ministère des transports|
+En synthèse de ce tableau, avec le bouquet [API Particulier](https://particulier.api.gouv.fr/catalogue) opéré par la DINUM, vous avez accès avec une seule habilitation aux données suivantes :
+- Quotient familial CAF et composition familiale (_Usage sans FranceConnect_)
+- Statut étudiant dans un établissement de l’enseignement supérieur (_Usage avec et sans FranceConnect_)
+- Statut étudiant boursier (_Usage avec et sans FranceConnect_)
+- Statut élève scolarisé et élève boursier (_Usage avec et sans FranceConnect_)
+- Statut demandeur d'emploi (_Usage sans FranceConnect_)
 
 
 🔎 En savoir plus sur [les API FranceConnectées](https://api.gouv.fr/guides/api-franceconnectees)
 
+### API intéressantes pour améliorer l'expérience utilisateur
 
 En complément, certaines données (en libre accès) peuvent être utiles pour faciliter le parcours en ligne de vos usagers :
 
