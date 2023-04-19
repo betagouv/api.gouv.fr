@@ -1,5 +1,5 @@
 ---
-title: API Base Carbone®
+title: API Base Carbone
 tagline: Les facteurs d'émissions de GES, nécessaires à la réalisation d’un bilan d’émissions de gaz à effet de serre
 external_site: https://data.ademe.fr/datasets/base-carbone(r)
 is_open: 1 # 1 means API is fully open
@@ -14,7 +14,7 @@ keywords:
 rate_limiting_resume: 10 appels / seconde / IP
 themes:
   - Environnement
-contact_link: https://www.ademe.fr/content/contacter
+contact_link: centrederessourcesges@ademe.fr
 doc_tech_link: https://data.ademe.fr/data-fair/api/v1/datasets/base-carbone(r)/api-docs.json
 doc_tech_external: https://data.ademe.fr/datasets/base-carbone(r)
 datagouv_uuid:
@@ -22,7 +22,7 @@ datagouv_uuid:
 last_update: 27/07/2020
 ---
 
-La Base Carbone® est une base de données publique de facteurs d'émissions, nécessaires à la réalisation d’un bilan d’émissions de gaz à effet de serre (GES) et plus généralement tout exercice de comptabilité carbone.
+La Base Carbone est une base de données publique de facteurs d'émissions, nécessaires à la réalisation d’un bilan d’émissions de gaz à effet de serre (GES) et plus généralement tout exercice de comptabilité carbone.
 
 ### À quoi sert l’API Base Carbone ?
 
