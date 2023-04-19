@@ -442,7 +442,7 @@
     - type: ADD_API
       what: SIPSI (déclaration des travailleurs étrangers) par le Ministère du Travail
     - type: ADD_API
-      what: Quotient Familial, par la MSA
+      what: Quotient Familial, par la MSA, CECI EST UN TEST NE PAS MERGER
     - type: ADD_API
       what: Famille nombreuse, par le Ministère des Transports
     - type: ADD_API
