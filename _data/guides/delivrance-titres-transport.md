@@ -55,7 +55,7 @@ La DINUM a réalisé une [étude auprès de 20 autorités organisatrices de la m
 | Données utiles |  API **avec FranceConnect** | API **sans** FranceConnect |
 | --- | --- | --- |
 | **Revenu fiscal de référence**, nombre de parts fiscales | ✅ Avec FranceConnect : [API Impôt particulier - DGFIP](/les-api/impot-particulier) | ✅ Sans FranceConnect : [API Impôt particulier - DGFIP](/les-api/impot-particulier) |
-| **Quotient familial CAF/MSA** et composition familiale | ⚙️ Avec FranceConnect : en cours de spécification | ✅ Sans FranceConnect : [API Quotient familial CAF du **bouquet API Particulier**](https://particulier.api.gouv.fr/catalogue/cnaf/quotient_familial) |
+| **Quotient familial CAF/MSA** et composition familiale | ⚙️ Avec FranceConnect : _en cours de spécification_ | ✅ Sans FranceConnect : [API Quotient familial CAF du **bouquet API Particulier**](https://particulier.api.gouv.fr/catalogue/cnaf/quotient_familial) |
 | **Montant indemnités journalières de l'assuré** par l'assurance maladie |✅ Avec FranceConnect : [API Indemnités Journalières - CNAM](https://api.gouv.fr/les-api/api-indemnites-journalieres-cnam)   | ❌ Sans FranceConnect : _non-prévu_ |
 | **Droits d’un individu ou d’une famille** (enfants rattachés), gérés par le régime général de l’Assurance Maladie |✅ Avec FranceConnect : [API de droits à l'Assurance Maladie - CNAM](https://api.gouv.fr/les-api/api_ameli_droits_cnam)  | ❌ Sans FranceConnect : _non-prévu_ |
 | **Statut élève collège et lycée scolarisé** et statut boursier - Ministère de l'éducation nationale | ⌛️ Avec FranceConnect : prévu T2 2023    | ✅ Sans FranceConnect : [API statut élève scolarisé du **bouquet API Particulier**](https://particulier.api.gouv.fr/catalogue/pole_emploi/situation) |
