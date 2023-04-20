@@ -3,7 +3,7 @@ title: API Structures de l'inclusion
 tagline: Retrouvez facilement les informations sur les structures de l'inclusion
 external_site: https://lemarche.inclusion.beta.gouv.fr/
 is_open: 1 # 1 means API is fully open
-producer: mtei
+producer: gip-inclusion
 keywords:
   - Insertion
   - social

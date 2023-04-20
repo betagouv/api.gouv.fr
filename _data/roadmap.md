@@ -448,4 +448,8 @@
     - type: ADD_API
       what: Courtier Fonctionnel SFiP, par la DGFiP
       path: /les-api/api-sfip
+  4:
+    - type: ADD_API
+      what: data·inclusion, par le GIP Plateforme de l'inclusion
+      path: /les-api/api-data-inclusion
 ---
