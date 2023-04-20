@@ -41,7 +41,7 @@ Pour un client donné, un indicateur d'éligibilité au LEP (oui ou non) vous es
 
 Dans le cadre de la vérification de l'éligibilité au LEP, et conformément aux dispositions de l'article [L 166 AA du Livre de Procédures Fiscales](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000042627574/2022-06-15), l'administration fiscale indique aux établissements bancaires, à leur demande, si les personnes demandant l'ouverture d'un compte remplissent les conditions d'ouverture et de détention. Le [décret N° 2021-277 du 12 mars 2021](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000043246555) précise les modalités d'application de ce dispositif légal.
 
-Si vous entrez dans ce cadre, vous pouvez effectuer une demande d'habilitation à l’API Impôt particulier.
+Si vous entrez dans ce cadre, vous pouvez effectuer une demande d'habilitation à l’API Service Finances Publiques (SFiP).
 
 ## Comment accéder à l'API Service Finances Publiques (SFiP) ?
 
