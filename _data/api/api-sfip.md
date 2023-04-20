@@ -3,7 +3,7 @@ title: API Service Finances Publiques (SFiP)
 tagline: Raccordez-vous directement au courtier SFiP pour récupérer les données nécessaires à vos téléservices. Ce nouveau service rassemblera pour vous les données strictement nécessaires issues de différentes API de la DGFiP, en excluant les données intermédiaires.
 producer: dgfip
 is_open: -1 # -1 means API not open
-is_france_connected: 1 # undefined | 1 | 2. 2 means can be used with FC, 2 means has to be used with FC
+is_france_connected: 0 # undefined | 1 | 2. 2 means can be used with FC, 2 means has to be used with FC
 access_page:
   - who:
       - Un particulier
@@ -21,7 +21,8 @@ access_page:
 
       Pour obtenir l’accès à l’API, vous devez notamment **justifier d’une simplification pour les citoyens** et vous engager à n’accéder qu’aux données strictement nécessaires à la démarche conformément au principe de proportionnalité.
 
-      <NextSteps /> 
+      <NextSteps />
+      <Button href="https://datapass.api.gouv.fr/api-sfip-sandbox">Remplir une demande</Button>
   - who:
       - Un éditeur de logiciel
     is_eligible: 0
@@ -31,13 +32,14 @@ access_page:
       Lors de votre demande vous devrez **justifier** dans quelle mesure l’entité pour laquelle vous opérez rentre dans ce cadre juridique.
 
       <NextSteps is_editeur/>
+      <Button href="https://datapass.api.gouv.fr/api-sfip-sandbox">Remplir une demande</Button>
   - who:
       - Un établissement bancaire
     is_eligible: 0
     description: |
       Dans le cadre de la vérification de l’éligibilité au LEP, et conformément aux dispositions de l’article [L 166 AA du Livre de Procédures Fiscales](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000042627574/2022-06-15), l’administration fiscale indique aux établissements bancaires, à leur demande, si les personnes demandant l’ouverture d’un compte remplissent les conditions d’ouverture et de détention. Le [décret N° 2021-277 du 12 mars 2021](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000043246555) précise les modalités d’application de ce dispositif légal.
 
-      Si vous entrez dans ce cadre, vous pouvez effectuer une demande d’habilitation au courtier fonctionnel SFiP.
+      Si vous entrez dans ce cadre, vous pouvez effectuer une demande d’habilitation à l’API Service Finances Publiques (SFiP).
 
       <NextSteps />
       <Button href="https://datapass.api.gouv.fr/api-sfip-sandbox?demarche=eligibilite_lep">Remplir une demande</Button>
