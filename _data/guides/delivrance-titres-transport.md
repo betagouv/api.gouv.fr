@@ -24,8 +24,6 @@ api:
 
 Autorités organisatrices de mobilité, en utilisant les API :
 
-- 😃 les usagers peuvent obtenir une **tarification solidaire et sociale immédiate et automatique** de leur titre de transport, permise grâce à la liaison avec les données de différentes API délivrant les statuts sociaux et ressources de l'usager ;
-
 - 😃 Pour mettre en oeuvre une **tarification sociale**, il n'est plus nécessaire de collecter : 
    - le **statut demandeur d'emploi**  ;
    - le **statut élève collège/lycée et élève boursier** ;
@@ -56,16 +54,18 @@ Selon la tarification appliquée, différentes API peuvent être utiles et sont 
 
 ## Les API et données utiles
 
-La DINUM a réalisé une [étude auprès de 20 autorités organisatrices de la mobilité (AOM)](/resources/rapport-gart.pdf) pour répertorier l'ensemble des besoins de pièces justificatives**.
+La définition des besoins de pièces justificatives nécessaires à ce cas d'usage est en cours par un groupe de travail coordonné par la DINUM.
 
-**👋 Pour participer au groupe de travail associé, [vous pouvez écrire ici](mailto:contact@api.gouv.fr?subject=Participation-au-cas-d'usage-transports)**
+Une première [étude auprès de 20 autorités organisatrices de la mobilité (AOM)](/resources/rapport-gart.pdf) a été effectuée.
+
+**👋 Pour participer à ce group de travail, [écrivez-nous ici](mailto:contact@api.gouv.fr?subject=Participation-au-cas-d'usage-transports)**.
 
 ### Détail de toutes les données
 
 | Données utiles |  API **avec FranceConnect** | API **sans** FranceConnect |
 | --- | --- | --- |
 | **Revenu fiscal de référence**, nombre de parts fiscales | ✅ Avec FranceConnect&nbsp;: [API Impôt particulier - DGFIP](/les-api/impot-particulier) | ✅ Sans FranceConnect&nbsp;: [API Impôt particulier - DGFIP](/les-api/impot-particulier) |
-| **Quotient familial CAF/MSA** et composition familiale | ⚙️ Avec FranceConnect&nbsp;: _en cours de spécification_ | ✅ Sans FranceConnect&nbsp;: [API Quotient familial CAF du **bouquet API Particulier**](https://particulier.api.gouv.fr/catalogue/cnaf/quotient_familial) |
+| **Quotient familial CAF/MSA** et composition familiale | ⌛️ Avec FranceConnect&nbsp;: prévu T1 2024| ✅ Sans FranceConnect&nbsp;: [API Quotient familial CAF du **bouquet API Particulier**](https://particulier.api.gouv.fr/catalogue/cnaf/quotient_familial) |
 | **Certificat de scolarité primaire/secondaire et statut boursier** - Ministère de l'éducation nationale | ⌛️ Avec FranceConnect&nbsp;: prévu T2 2023    | ✅ Sans FranceConnect&nbsp;: [API statut élève scolarisé du **bouquet API Particulier**](https://particulier.api.gouv.fr/catalogue/pole_emploi/situation) |
 | **Certificat de scolarité étudiant** d'un établissement de l’enseignement supérieur - MESRI |✅ Avec FranceConnect&nbsp;: [API Statut étudiant - MESRI ](https://api.gouv.fr/les-api/api-statut-etudiant)| ✅ Sans FranceConnect&nbsp;: [API statut étudiant du **bouquet API Particulier**](https://particulier.api.gouv.fr/catalogue/mesr/statut_etudiant)|
 | **Statut étudiant boursier** - CNOUS  | ✅ Avec FranceConnect&nbsp;: [API statut étudiant boursier du **bouquet API Particulier**](https://particulier.api.gouv.fr/catalogue/cnous/statut_etudiant_boursier) |  ✅ Sans FranceConnect&nbsp;: [API statut étudiant boursier du **bouquet API Particulier**](https://particulier.api.gouv.fr/catalogue/cnous/statut_etudiant_boursier)|
@@ -73,7 +73,7 @@ La DINUM a réalisé une [étude auprès de 20 autorités organisatrices de la m
 | **Montants des paiements des allocations ou des aides** - Pôle emploi |✅ Avec FranceConnect&nbsp;: [API Indemnités Pôle emploi - Pôle Emploi](/les-api/api-indemnisation-pole-emploi)  | ⌛️ Sans FranceConnect&nbsp;: _prévu T2 2023 dans le [bouquet API Particulier](https://particulier.api.gouv.fr/catalogue)_ |
 | **Statut complémentaire santé solidaire (CSS)**, avec ou sans participation - Direction de la sécurité sociale | ⌛️ Avec FranceConnect&nbsp;: _prévu T2 2023 dans le [bouquet API Particulier](https://particulier.api.gouv.fr/catalogue)_    | ⌛️ Sans FranceConnect&nbsp;: _prévu T2 2023 dans le [bouquet API Particulier](https://particulier.api.gouv.fr/catalogue)_    |
 | **Statut revenu de solidarité active (RSA)** - Direction de la sécurité sociale | ⌛️ Avec FranceConnect&nbsp;: _prévu T2 2023 dans le [bouquet API Particulier](https://particulier.api.gouv.fr/catalogue)_    | ⌛️ Sans FranceConnect&nbsp;: _prévu T4 2023 dans le [bouquet API Particulier](https://particulier.api.gouv.fr/catalogue)_    |
-| **Carte famille nombreuse** - Ministère des transports |  ⌛️ Avec FranceConnect&nbsp;: _prévu T1 2024_ | ⌛️ Sans FranceConnect&nbsp;: _prévu T1 2024_ |
+| **Carte famille nombreuse** - Ministère des transports | ⚙️ Avec FranceConnect&nbsp;: Besoin en cours de qualification, nous écrire à [equipe@particulier.api.gouv.fr](mailto:equipe@particulier.api.gouv.fr) si vous en avez besoin. | ⚙️ Sans FranceConnect&nbsp;: Besoin en cours de qualification, nous écrire à [equipe@particulier.api.gouv.fr](mailto:equipe@particulier.api.gouv.fr) si vous en avez besoin.  |
 
 ### Données utiles de l'API Particulier
 
@@ -95,8 +95,6 @@ En complément, certaines données (en libre accès) peuvent être utiles pour f
 |---------| --------|
 | [Etablissements scolaires](https://api.gouv.fr/les-api/api-annuaire-education)  | Permettre aux usagers de sélectionner un établissement scolaire dans une liste   |
 | [Base adresse nationale](https://api.gouv.fr/les-api/base-adresse-nationale)  | Permettre l'autocomplétion d'un adresse postale dans un formulaire en ligne       |
-| [Découpage administratif](https://api.gouv.fr/les-api/api-geo)  | Permettre aux usagers de sélectionner une commune dans une liste (ou de l'autocompléter) |
-
 
 ## Ils utilisent déjà les API
 
@@ -116,6 +114,7 @@ De nombreuses autorités d'organisation de la mobilité (AOM) utilisent déjà d
 | Région Nouvelle Aquitaine  | Tarifications transports |
 | Autorité organisatrice des mobilités des territoires lyonnais | Transports publics |
 | Île de France Mobilités | Transports publics |
+| Syndicat mixte des mobilités de l'aire Grenobloise | Transports publics |
 
 
 ## Demander un accès aux API
@@ -126,14 +125,13 @@ Vous devez formuler une demande d’habilitation auprès de chaque fournisseur d
 
 L'utilisation des données est encadrée légalement. Vous devez formuler une demande auprès de l'API Particulier et/ou des autres API en justifiant du cadre légal de l'utilisation des données :
 
-
 - Cadre légal général : l'[Article L114-8 du Code des relations entre le public et l'administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045213315) fixe le cadre général qui oblige l’administration à échanger des données lors d’une démarche d’un usager ;
 
-- Cadre légal spécifique aux transports scolaires : Les transports scolaires sont des transports réguliers publics régis par l'[article L. 3111-7 du Code des transports](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043343069)
- et par l'[article L. 214-18 du Code de l'éducation](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000030999998)
-
-- Cadre légal spécifique aux transport en commun** :  [Articles L1231-1 et L1231-3 du Code des transports](https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000023086525/LEGISCTA000023069255/#LEGISCTA000023085815)
-
+- Cadres légaux spécifiques : 
+  - transports en commun** : [Articles L1231-1 et L1231-3 du Code des transports](https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000023086525/LEGISCTA000023069255/#LEGISCTA000023085815)
+  - transports scolaires : [Article L. 3111-7 du Code des transports](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043343069) et [article L. 214-18 du Code de l'éducation](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000030999998)
+  - Utilisation de la complémentaire santé solidaire comme critère de tarification : [Article L1113-1 du Code des transports](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000042005921).
+    
 
 ### Formulaires de demande d'accès
 
