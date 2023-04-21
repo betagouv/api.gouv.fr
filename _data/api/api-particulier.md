@@ -88,37 +88,30 @@ visits_2019: 15831
 uptime: 99.992 # https://uptimerobot.com/dashboard#777746216 * https://uptimerobot.com/dashboard#778826562 / 2
 last_update: 31/03/2021
 content_intro: |
-  <External href="https://particulier.api.gouv.fr/">API Particulier</External> permet aux entités administratives d'accéder aux données administratives des particuliers, afin de simplifier leurs démarches.
-
-  <Button href="https://particulier.api.gouv.fr/">Consulter le site API Particulier</Button>
-
----
-
-  Ce bouquet de données provenant d'administrations différentes est utilisable :
-
-  - dans le cadre des démarches en ligne proposées aux usagers (formulaires en ligne ou téléservices) ;
-  - dans les logiciels métiers utilisés par les agents habilités en guichet.
-
   ### À quoi sert l’API Particulier ?
 
-  L'API Particulier permet de **mettre en oeuvre le principe « Dites-le-nous une fois »**, en application de l’[article L114-8 du Code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045213315).
+  L'<External href="https://particulier.api.gouv.fr/">API Particulier permet de **mettre en oeuvre le principe « Dites-le-nous une fois »**, en application de l’<External href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045213315">article L114-8 du Code des relations entre le public et l’administration</External>.
+
   
-  L'API Particulier est **un bouquet d'API** donnant accès à des données administratives des particuliers : quotient familial CAF, composition familiale, statut demandeur d’emploi, certificat de scolarité des élèves du primaire, du secondaire et étudiant, statuts élève et étudiant boursier ...
+  L'API Particulier est **un bouquet d'API** donnant accès à des données administratives des particuliers : quotient familial CAF, composition familiale, statut demandeur d’emploi, certificat de scolarité des élèves du primaire, du secondaire et étudiant, statuts élève et étudiant boursier ... il est utilisable dans le cadre des démarches en ligne et téléservices proposés aux usagers, ainsi que dans les logiciels métiers utilisés par les agents habilités en guichet.
+
 
   **Les usagers n'ont plus à fournir de pièces justificatives à l'appui de leurs démarches administratives**, telles que la tarification sociale et solidaire des transports, la cantine à 1 euro, les aides facultatives à la scolarité...
 
   
   ### Ce qu'API Particulier change pour vous, administrations :
 
+
   **Administrations**, en intégrant la brique API Particulier dans votre système d’information ou votre site internet :
 
-  - ✅ Vous n’avez **plus besoin de demander certaines informations** aux particuliers, comme le certificat de scolarité ou l'attestation CAF ;
+  ✅ Vous n’avez **plus besoin de demander certaines informations** aux particuliers, comme le certificat de scolarité ou l'attestation CAF ;
 
-  - ✅ Vous n’avez **pas de saisie ou de vérification** supplémentaire à réaliser ; 
+  ✅ Vous n’avez **pas de saisie ou de vérification** supplémentaire à réaliser ; 
   
-  - ✅ Les **informations sont certifiées** ;
+  ✅ Les **informations sont certifiées** ;
 
-  - ✅ Vous accédez avec une seule habilitation aux **données de différents fournisseurs** : la Caisse nationale des allocations familiales (CNAF), la sécurité sociale agricole (MSA), Pôle emploi, le ministère de l'enseignement supérieur et de la recherche (MESR), le ministère de l'éduction nationale (MEN) et enfin le Centre national des œuvres universitaires et scolaires (Cnous).
+  ✅ Vous accédez avec une seule habilitation aux **données de différents fournisseurs** : la Caisse nationale des allocations familiales (CNAF), la sécurité sociale agricole (MSA), Pôle emploi, le ministère de l'enseignement supérieur et de la recherche (MESR), le ministère de l'éduction nationale (MEN) et enfin le Centre national des œuvres universitaires et scolaires (Cnous).
+
 
   <Button href="https://particulier.api.gouv.fr">Consulter le site API Particulier</Button>
 
@@ -126,7 +119,6 @@ content_intro: |
 
 ## API accessibles depuis l'API Particulier
 
-<Button href="https://particulier.api.gouv.fr/catalogue">Consulter le catalogue des API</Button>
 
   | API | Fournisseur des données | Données | Disponibilité sur API Particulier | Peut s'utiliser avec FranceConnect |
   |---------------------|----------|------------------------------------- |------------------- |------------- |
@@ -138,6 +130,10 @@ content_intro: |
   | **Liste des paiements de Pôle emploi** | Pôle Emploi | Montants des paiements des allocations ou des aides | T2 2023               | ➡️ Ne sera pas FranceConnecté dans API Particulier mais déjà disponible avec [cette API](/les-api/api-indemnisation-pole-emploi). |
   | **Statut Complémentaire santé solidaire (CSS)**              |  Direction de la sécurité sociale | Indique si le particulier a la CSS, avec ou sans participation. | T2 2023               | T2 2023               |
   | **Statut Revenu de solidarité active (RSA)**                 |Direction de la sécurité sociale | _En cours de définition_| T4 2023               | T4 2023               |
+
+
+<Button href="https://particulier.api.gouv.fr/catalogue">Consulter le catalogue des API</Button>
+
 
 🔎 En savoir plus sur [les API](https://api.gouv.fr/guides/api-definition) et les [API France Connectées](https://api.gouv.fr/guides/api-franceconnectees).
 
@@ -160,6 +156,7 @@ Chaque année, l'équipe de l'API Particulier envoie un bilan chiffré sur l'uti
   Pour mieux comprendre ce qu'est une API, consulter cette [page](/guides/api-definition).
 
 </details>
+
 
 <details>
   <summary>Quelles sont les étapes pour utiliser l'API Particulier ?</summary>
@@ -184,12 +181,12 @@ Chaque année, l'équipe de l'API Particulier envoie un bilan chiffré sur l'uti
   ℹ️ Si vous êtes **éditeur de logiciels, c'est à votre client public, collectivité ou administration, de faire sa demande d'habilitation auprès de l'API Particulier**.
 
   Vous pouvez nous demander de vous référencer sur un cas d'usage afin de proposer un formulaire pré-rempli qui simplifiera l'expérience de vos clients. Voici la procédure à suivre :
-
   - Je repère les données dont mes clients publics ont besoin pour un cas d'usage précis que je peux ou pourrai proposer dans ma solution logicielle ;
   - Je consulte la documentation technique, et j'utilise le bac à sable pour tester les appels d'API ;
   - J'écris à [cette adresse](https://api.gouv.fr/parcours-client?source=preFooter) pour être référencé sur le cas d'usage associé et avoir un formulaire pré-rempli à disposition de mes clients.
   
 </details>
+
 
 <details>
   <summary>Comment tester l'API ? Un jeton d'accès est-il nécessaire pour accéder au bac à sable ?</summary>
@@ -202,16 +199,13 @@ Exemple [ici](https://airtable.com/appMEKRGMNrw4YRff) avec les données bac à s
 
 </details>
 
+
 <details>
   <summary>Comment récupérer mon jeton d'accès (token) une fois ma demande validée ?</summary>
-
 1. **Une fois votre demande d'habilitation validée, un e-mail vous est envoyé** avec un lien vers [mon.portail-test-staging.api.gouv.fr/](https://mon.portail-test-staging.api.gouv.fr/).
-
 2. **Une fenêtre de connexion (compte Datapass) s'ouvre**. Renseignez les mêmes identifiants utilisés lors de votre demande d'habilitation.
-
 3. Sur votre espace [mon.portail-test-staging.api.gouv.fr/](https://mon.portail-test-staging.api.gouv.fr/), **votre jeton est disponible et peut-être copié**.
 <br>⚠️ **Votre token vous est propre, il ne faut pas le diffuser.**  Vous ne devez jamais copier-coller un token dans un moteur de recherche ou dans un e-mail. L’usage de votre token se fait uniquement dans votre logiciel métier sécurisé utilisé pour réaliser vos appels.
-
 4. **Vous devez transmettre ce jeton à votre éditeur ? Ou à votre équipe technique ?** Utilisez un moyen de transmission sécurisé (messagerie cryptée par exemple).
 
 </details>
