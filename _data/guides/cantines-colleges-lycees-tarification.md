@@ -1,8 +1,8 @@
 ---
 title: Tarification cantine des collèges et lycées
-tagline: Départements et régions, simplifiez les démarches des familles en calculant automatiquement leur tarif de restauration scolaire pour les collégiens et lycéens.
+tagline: Départements et régions, simplifiez les démarches des familles en calculant automatiquement le tarif de restauration scolaire des collégiens et lycéens.
 tags: cas usage, api particulier, quotient familial dématérialisé, tarification restauration scolaire, cantine collège, cantine lycée
-image: portail_famille.jpg
+image: cantines-colleges-lycees-tarification.jpg
 noindex: false # this page will appear on Google
 publish: true # this page will appear on /guides page
 api:
