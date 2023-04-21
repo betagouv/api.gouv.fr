@@ -1,5 +1,5 @@
 ---
-title: Délivrance d'aides dans les centres communaux d'action sociale (CCAS)
+title: Aides des centres communaux d'action sociale (CCAS)
 tagline: CCAS, simplifiez le dépôt et l'instruction des dossiers d'aides sociales grâce à l'API Particulier.
 tags: cas usage, api particulier, CCAS
 image: dossier.jpg

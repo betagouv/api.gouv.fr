@@ -1,6 +1,6 @@
 ---
-title: Attribution des aides facultatives à la scolarité
-tagline: Simplifiez l'attribution des aides facultatives pour l'équipement des élèves et des étudiants.
+title: Aides facultatives à la scolarité
+tagline: Simplifiez l'attribution des aides facultatives pour les élèves et des étudiants.
 tags: cas usage, api particulier, ecole, collège, lycée, université, bourse, boursier, subvention
 image: scolarite.jpg
 noindex: false # this page will appear on Google

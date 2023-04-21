@@ -1,6 +1,6 @@
 ---
-title: Tarification des transports
-tagline: Collectivités et opérateurs, appliquez facilement un tarif des titres de transport adapté à la situation de vos usagers.
+title: Tarification sociale et solidaire des transports
+tagline: AOM, obtenez automatiquement les données nécessaires à l'attribution des tarifs réduits de transports collectifs.
 tags: cas usage, api particulier, transport
 image: transport.jpg
 noindex: false # this page will appear on Google
@@ -22,11 +22,21 @@ api:
 
 ## Simplifier la tarification des transports grâce aux API
 
-Collectivités et opérateurs, en intégrant des API dans vos systèmes d'information :
+Autorités organisatrices de mobilité, en utilisant les API :
 
 - 😃 les usagers peuvent obtenir une **tarification solidaire et sociale immédiate et automatique** de leur titre de transport, permise grâce à la liaison avec les données de différentes API délivrant les statuts sociaux et ressources de l'usager ;
 
-- ⏰ Vous pouvez **dématérialiser totalement votre service en ligne** de délivrance de titre car vos agents n’ont **plus besoin de vérifier les justificatifs**, les informations obtenues par les API sous-mentionnées sont certifiées 🔎 ;
+- 😃 Pour mettre en oeuvre une **tarification sociale**, il n'est plus nécessaire de collecter : 
+   - le **statut demandeur d'emploi**  ;
+   - le **statut élève collège/lycée et élève boursier** ;
+   - le **statut étudiant et étudiant boursier** ;
+   - les bénéficiaires de la **complémentaire santé solidaire avec ou sans participation**.
+
+- 😃 Pour mettre en oeuvre une **tarification solidaire**, il n'est plus nécessaire de collecter : 
+   - le **quotient familial CAF**  ;
+   - le **revenu fiscal de référence**.
+
+- ⏰ Vous pouvez **dématérialiser totalement votre service en ligne** car vos agents n’ont **plus besoin de vérifier les justificatifs**, les informations obtenues par les API sous-mentionnées sont certifiées 🔎 ;
 
 - 👨‍💼 Une **utilisation logicielle au guichet est aussi possible**, tout en évitant le stock des pièces justificatives, les erreurs de saisie et les fraudes.
 
@@ -36,11 +46,11 @@ Collectivités et opérateurs, en intégrant des API dans vos systèmes d'inform
 
 **Un usager demandeur d'emploi souhaite obtenir un titre de transport :**
 
-1. L'usager se connecte à son espace personnel, avec ou sans FranceConnect, sur le site de la démarche en ligne. Le formulaire lui propose plusieurs statuts, il clique sur "demandeur d'emploi" et **renseigne son identifiant pôle emploi**.
+1. L'usager se connecte à son espace personnel avec FranceConnect, sur le site de la démarche en ligne. Son statut de demandeur d'emploi est automatiquement reconnu.
 
 > ⚙️ **En arrière plan** : Un appel à l'API statut demandeur d'emploi est effectué et permet de confirmer le statut.
 
-2. La tarification du titre de transport est automatiquement calculée. L'usager n'a plus qu'à régler son titre.
+2. La réduction est automatiquement attribuée. L'usager n'a plus qu'à régler son titre.
 
 Selon la tarification appliquée, différentes API peuvent être utiles et sont détaillées ci-après.
 
@@ -56,10 +66,8 @@ La DINUM a réalisé une [étude auprès de 20 autorités organisatrices de la m
 | --- | --- | --- |
 | **Revenu fiscal de référence**, nombre de parts fiscales | ✅ Avec FranceConnect&nbsp;: [API Impôt particulier - DGFIP](/les-api/impot-particulier) | ✅ Sans FranceConnect&nbsp;: [API Impôt particulier - DGFIP](/les-api/impot-particulier) |
 | **Quotient familial CAF/MSA** et composition familiale | ⚙️ Avec FranceConnect&nbsp;: _en cours de spécification_ | ✅ Sans FranceConnect&nbsp;: [API Quotient familial CAF du **bouquet API Particulier**](https://particulier.api.gouv.fr/catalogue/cnaf/quotient_familial) |
-| **Montant indemnités journalières de l'assuré** par l'assurance maladie |✅ Avec FranceConnect&nbsp;: [API Indemnités Journalières - CNAM](https://api.gouv.fr/les-api/api-indemnites-journalieres-cnam)   | ❌ Sans FranceConnect&nbsp;: _non-prévu_ |
-| **Droits d’un individu ou d’une famille** (enfants rattachés), gérés par le régime général de l’Assurance Maladie |✅ Avec FranceConnect&nbsp;: [API de droits à l'Assurance Maladie - CNAM](https://api.gouv.fr/les-api/api_ameli_droits_cnam)  | ❌ Sans FranceConnect&nbsp;: _non-prévu_ |
-| **Statut élève collège et lycée scolarisé** et statut boursier - Ministère de l'éducation nationale | ⌛️ Avec FranceConnect&nbsp;: prévu T2 2023    | ✅ Sans FranceConnect&nbsp;: [API statut élève scolarisé du **bouquet API Particulier**](https://particulier.api.gouv.fr/catalogue/pole_emploi/situation) |
-| **Statut étudiant** d'un établissement de l’enseignement supérieur - MESRI |✅ Avec FranceConnect&nbsp;: [API Statut étudiant - MESRI ](https://api.gouv.fr/les-api/api-statut-etudiant)| ✅ Sans FranceConnect&nbsp;: [API statut étudiant du **bouquet API Particulier**](https://particulier.api.gouv.fr/catalogue/mesr/statut_etudiant)|
+| **Certificat de scolarité primaire/secondaire et statut boursier** - Ministère de l'éducation nationale | ⌛️ Avec FranceConnect&nbsp;: prévu T2 2023    | ✅ Sans FranceConnect&nbsp;: [API statut élève scolarisé du **bouquet API Particulier**](https://particulier.api.gouv.fr/catalogue/pole_emploi/situation) |
+| **Certificat de scolarité étudiant** d'un établissement de l’enseignement supérieur - MESRI |✅ Avec FranceConnect&nbsp;: [API Statut étudiant - MESRI ](https://api.gouv.fr/les-api/api-statut-etudiant)| ✅ Sans FranceConnect&nbsp;: [API statut étudiant du **bouquet API Particulier**](https://particulier.api.gouv.fr/catalogue/mesr/statut_etudiant)|
 | **Statut étudiant boursier** - CNOUS  | ✅ Avec FranceConnect&nbsp;: [API statut étudiant boursier du **bouquet API Particulier**](https://particulier.api.gouv.fr/catalogue/cnous/statut_etudiant_boursier) |  ✅ Sans FranceConnect&nbsp;: [API statut étudiant boursier du **bouquet API Particulier**](https://particulier.api.gouv.fr/catalogue/cnous/statut_etudiant_boursier)|
 | **Statut demandeur d'emploi** et catégorie (A,B,C,D) - Pôle emploi  |✅ Avec FranceConnect&nbsp;: [API statut demandeur d'emploi - Pôle Emploi ](/les-api/api-statut-demandeur-emploi) |✅ Sans FranceConnect&nbsp;: [API statut demandeur d'emploi du **bouquet API Particulier**](https://particulier.api.gouv.fr/catalogue/pole_emploi/situation)|   
 | **Montants des paiements des allocations ou des aides** - Pôle emploi |✅ Avec FranceConnect&nbsp;: [API Indemnités Pôle emploi - Pôle Emploi](/les-api/api-indemnisation-pole-emploi)  | ⌛️ Sans FranceConnect&nbsp;: _prévu T2 2023 dans le [bouquet API Particulier](https://particulier.api.gouv.fr/catalogue)_ |
