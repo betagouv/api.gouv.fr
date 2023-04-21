@@ -102,15 +102,11 @@ content_intro: |
   ### Ce qu'API Particulier change pour vous, administrations :
 
 
-  **Administrations**, en intégrant la brique API Particulier dans votre système d’information ou votre site internet :
-
-  ✅ Vous n’avez **plus besoin de demander certaines informations** aux particuliers, comme le certificat de scolarité ou l'attestation CAF ;
-
-  ✅ Vous n’avez **pas de saisie ou de vérification** supplémentaire à réaliser ; 
-  
-  ✅ Les **informations sont certifiées** ;
-
-  ✅ Vous accédez avec une seule habilitation aux **données de différents fournisseurs** : la Caisse nationale des allocations familiales (CNAF), la sécurité sociale agricole (MSA), Pôle emploi, le ministère de l'enseignement supérieur et de la recherche (MESR), le ministère de l'éduction nationale (MEN) et enfin le Centre national des œuvres universitaires et scolaires (Cnous).
+  En intégrant la brique API Particulier dans votre système d’information ou votre site internet :
+  - ✅ Vous n’avez **plus besoin de demander certaines informations** aux particuliers, comme le certificat de scolarité ou l'attestation CAF ;
+  - ✅ Vous n’avez **pas de saisie ou de vérification** supplémentaire à réaliser ; 
+  - ✅ Les **informations sont certifiées** ;
+  - ✅ Vous accédez avec une seule habilitation aux **données de différents fournisseurs** : la Caisse nationale des allocations familiales (CNAF), la sécurité sociale agricole (MSA), Pôle emploi, le ministère de l'enseignement supérieur et de la recherche (MESR), le ministère de l'éduction nationale (MEN) et enfin le Centre national des œuvres universitaires et scolaires (Cnous).
 
 
   <Button href="https://particulier.api.gouv.fr">Consulter le site API Particulier</Button>
@@ -124,12 +120,13 @@ content_intro: |
   |---------------------|----------|------------------------------------- |------------------- |------------- |
   | **Quotient familial CAF** | CNAF | Quotient familial CAF, composition familiale<br>[📖 Documentation](https://particulier.api.gouv.fr/catalogue/cnaf/quotient_familial) <br> Extension du périmètre au régime agricole (MSA) prévu T3 2023 | ✅                      | Prévu T1 2024                      |
   | **Certificat de scolarité étudiant** | MESR | Statut, établissement<br>[📖 Documentation](https://particulier.api.gouv.fr/catalogue/mesr/statut_etudiant) | ✅                      |✅             |
-  | **Statut étudiant boursier** | Cnous | Statut, niveau de bourse<br>[📖 Documentation](https://particulier.api.gouv.fr/catalogue/mesr/cnous/statut_etudiant_boursier)      | ✅      |  ✅             |
+  | **Statut étudiant boursier** | Cnous | Statut étudiant, statut boursier<br>[📖 Documentation](https://particulier.api.gouv.fr/catalogue/mesr/cnous/statut_etudiant_boursier)      | ✅      |  ✅             |
   | **Statut demandeur d'emploi** | Pôle Emploi |Statut et catégorie (A,B,C,D)<br>[📖 Documentation](https://particulier.api.gouv.fr/catalogue/pole_emploi/situation)     | ✅          | ➡️ Pas FranceConnecté dans API Particulier mais disponible avec [cette API](/les-api/api-statut-demandeur-emploi).            |
-  | **Certificat de scolarité primaire/secondaire et statut élève boursier**   | Ministère de l'éducation nationale| Attestation de scolarité et statut boursier |T2 2023    | Prévu       |
+  | **Certificat de scolarité primaire/secondaire et statut élève boursier**   | Ministère de l'éducation nationale| Statut scolarisé et statut boursier |T2 2023    | Prévu       |
   | **Liste des paiements de Pôle emploi** | Pôle Emploi | Montants des paiements des allocations ou des aides | T2 2023               | ➡️ Ne sera pas FranceConnecté dans API Particulier mais déjà disponible avec [cette API](/les-api/api-indemnisation-pole-emploi). |
   | **Statut Complémentaire santé solidaire (CSS)**              |  Direction de la sécurité sociale | Indique si le particulier a la CSS, avec ou sans participation. | T2 2023               | T2 2023               |
   | **Statut Revenu de solidarité active (RSA)**                 |Direction de la sécurité sociale | _En cours de définition_| T4 2023               | T4 2023               |
+
 
 
 <Button href="https://particulier.api.gouv.fr/catalogue">Consulter le catalogue des API</Button>
@@ -157,6 +154,7 @@ Chaque année, l'équipe de l'API Particulier envoie un bilan chiffré sur l'uti
 
 </details>
 
+<br>
 
 <details>
   <summary>Quelles sont les étapes pour utiliser l'API Particulier ?</summary>
@@ -187,6 +185,7 @@ Chaque année, l'équipe de l'API Particulier envoie un bilan chiffré sur l'uti
   
 </details>
 
+<br>
 
 <details>
   <summary>Comment tester l'API ? Un jeton d'accès est-il nécessaire pour accéder au bac à sable ?</summary>
@@ -199,9 +198,11 @@ Exemple [ici](https://airtable.com/appMEKRGMNrw4YRff) avec les données bac à s
 
 </details>
 
+<br>
 
 <details>
   <summary>Comment récupérer mon jeton d'accès (token) une fois ma demande validée ?</summary>
+  
 1. **Une fois votre demande d'habilitation validée, un e-mail vous est envoyé** avec un lien vers [mon.portail-test-staging.api.gouv.fr/](https://mon.portail-test-staging.api.gouv.fr/).
 2. **Une fenêtre de connexion (compte Datapass) s'ouvre**. Renseignez les mêmes identifiants utilisés lors de votre demande d'habilitation.
 3. Sur votre espace [mon.portail-test-staging.api.gouv.fr/](https://mon.portail-test-staging.api.gouv.fr/), **votre jeton est disponible et peut-être copié**.
