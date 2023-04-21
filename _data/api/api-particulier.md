@@ -90,7 +90,7 @@ last_update: 31/03/2021
 content_intro: |
   ### À quoi sert l’API Particulier ?
 
-  L'<External href="https://particulier.api.gouv.fr/">API Particulier permet de **mettre en oeuvre le principe « Dites-le-nous une fois »**, en application de l’<External href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045213315">article L114-8 du Code des relations entre le public et l’administration</External>.
+  L'<External href="https://particulier.api.gouv.fr/">API Particulier</External> permet de **mettre en oeuvre le principe « Dites-le-nous une fois »**, en application de l’<External href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045213315">article L114-8 du Code des relations entre le public et l’administration</External>.
 
   
   L'API Particulier est **un bouquet d'API** donnant accès à des données administratives des particuliers : quotient familial CAF, composition familiale, statut demandeur d’emploi, certificat de scolarité des élèves du primaire, du secondaire et étudiant, statuts élève et étudiant boursier ... il est utilisable dans le cadre des démarches en ligne et téléservices proposés aux usagers, ainsi que dans les logiciels métiers utilisés par les agents habilités en guichet.
