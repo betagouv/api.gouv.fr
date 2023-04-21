@@ -20,7 +20,7 @@ Les communes, départements et régions ont mis en place des aides sociales pour
 
 Ces aides facultatives prennent différentes formes : aide financière, fourniture de matériel informatique, bon d’achat pour des livres. Elle sont conditionnées à certains critères sociaux.
 
-Pour les obtenir, les familles doivent fournir des justificatifs de revenus et/ou de statut.
+Pour en bénéficier, il convient de justifier que l'élève ou l'étudiant concerné est bien scolarisé et parfois de fournir un justificatif de revenu ou de bourse. 
 </details>
 
 ## Table des matières
@@ -33,21 +33,24 @@ Pour les obtenir, les familles doivent fournir des justificatifs de revenus et/o
 
 ## Simplifier l'attribution des aides facultatives à la scolarité grâce aux API 
 
-Collectivités, en intégrant des API dans vos systèmes d'information :
+Collectivités, en intégrant des API dans vos formulaires en ligne :
 
-- 😃 les **familles n'ont plus à fournir les justificatifs de leur statut ou de leur revenu (certificat de scolarité, statut boursier, attestation CAF, revenu fiscal de référence, etc.)** pour renseigner leurs demandes d'aides facultatives ;  
+- 😃 Pour instruire les dossiers, il n'est plus nécessaire de collecter : 
+   - les **certificats de scolarité des élèves et/ou carte d'étudiant**  ;
+   - les **justificatifs de bourse** ;
+   - les **justificatifs de revenus**.
 
-- ⏰ Vous accélérez le traitement des dossiers car vos agents n’ont **pas à vérifier les données saisies et les pièces justificatives fournies**, les informations obtenues par les API sous-mentionnées sont certifiées 🔎 ;
+- ⏰ Vous pouvez automatiser le traitement des dossiers, les agents n’auront **plus à vérifier les pièces justificatives fournies**, les informations obtenues par les API sous-mentionnées sont certifiées 🔎 ;
 
-- 🎯 Enfin, vous **participez activement à la simplification des démarches pour les citoyens** en mettant en oeuvre le « Dites-le-nous une fois », en application de l’[article L114-8 du Code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045213315).
+- 🎯 Enfin, vous **participez à la simplification des démarches pour les citoyens** en mettant en oeuvre le « Dites-le-nous une fois », en application de l’[article L114-8 du Code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045213315).
 
 
 ## Les API et données utiles
 
 | API utiles | Données disponibles |  Peut s'utiliser avec FranceConnect |
 | --- | --- | --- |
+| Bouquet [API Particulier](https://particulier.api.gouv.fr/catalogue) - opéré par la DINUM | Statut élève scolarisé et boursier, statut étudiant et étudiant boursier, quotient familial CAF | ⚙️ Certaines API sont disponibles avec FranceConnect |
 | [API Impôt particulier](/les-api/impot-particulier) - DGFIP | Revenu fiscal de référence, nombre de parts fiscales | ✅ |
-| Bouquet [API Particulier](https://particulier.api.gouv.fr/catalogue) - opéré par la DINUM | Quotient familial CAF, composition familiale, statut élève scolarisé et boursier, statut étudiant et étudiant boursier, | ⚙️ Certaines API sont disponibles avec FranceConnect |
 
 
 ## Améliorer la délivrance des aides facultatives avec l'API Particulier
@@ -72,6 +75,17 @@ Le parent n'a pas besoin de fournir le certificat de scolarité, la vérificatio
 
 La famille est identifiée comme éligible à l'aide. Le parent n'a plus qu'à confirmer sa demande. Du côté de la commune, les agents n'auront pas à vérifier les informations renseignées car celles-ci sont certifiées.
 
+
+## Ils utilisent l'API Particulier
+
+<Quote logo="/images/guides/logo-dep-drome.png" link='https://www.ladrome.fr/mon-quotidien/education/le-departement-aide/' who='Département de la Drôme' title='Bourse départementale des collèges'>
+Nous utilisons l'API Particulier pour délivrer des bourses aux collégiens. Cette aide est soumise à un barème dépendant des ressources de la famille.
+L'API Particulier est utilisée actuellement pour récupérer le quotient familial CAF et la composition de la famille.
+</Quote>
+
+<Quote logo="/images/guides/logo-dep-haute-savoie.png" link='https://actu.hautesavoie.fr/explorez-actu/le-pret-etudiant-il-est-encore-temps' who='Département de la Haute-Savoie' title='Délivrer des prêts étudiants'>
+Nous utilisons l'API Particulier pour onnaître le quotient familial d'un étudiant ou de ses parents (s'il en est dépendant fiscalement) afin de vérifier l'éligibilité de sa demande de prêt.
+</Quote>
 
 ## Demander un accès aux API
 
