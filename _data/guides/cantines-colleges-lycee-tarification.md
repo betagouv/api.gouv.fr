@@ -12,7 +12,7 @@ api:
 <details>
    <summary>Comment fonctionne la tarification des cantines dans les collèges et lycées ?</summary>
 
-Les départements sont en charge des cantines des collèges, et les régions, des cantines des lycées. Dans ce cadre, ce sont ces collectivités qui fixent les tarifs de la restauration scolaire et qui peuvent décider d'appliquer une tarification sociale sur la base du quotient familial des familles.
+Les départements sont en charge des cantines des collèges, et les régions, des cantines des lycées. Dans ce cadre, ce sont ces collectivités qui fixent les tarifs de la restauration scolaire et qui peuvent décider d'appliquer une tarification sociale sur la base des revenus de la famille.
 
 Pour en savoir plus, consulter cette page de [Service-Public.fr](https://www.service-public.fr/particuliers/vosdroits/F24569)
 
@@ -21,42 +21,45 @@ Pour en savoir plus, consulter cette page de [Service-Public.fr](https://www.ser
 
 ## Table des matières
 
-- [Simplifier la tarification des cantines au collège et lycée grâce à l'API Particulier](#simplifier-la-tarification-des-cantines-au-college-et-lycee-grace-a-l-api-particulier)
-- [Les données utiles](#les-donnees-utiles)
+- [Simplifier la tarification des cantines au collège et lycée grâce aux API](#simplifier-la-tarification-des-cantines-au-college-et-lycee-grace-aux-api)
+- [Les API et données utiles](#les-api-et-données-utiles)
+- [Améliorer votre tarification cantine avec l'API Particulier](#améliorer-votre-portail-famille-avec-lapi-particulier)
   - [Exemple d'application](#exemple-d-application)
   - [Liste des éditeurs](#les-editeurs-connectes-a-l-api-particulier)
-- [Demander un accès à l'API Particulier](#demander-un-acces-a-l-api-particulier)
+- [Demander un accès aux API](#demander-un-accès-aux-api)
 
-## Simplifier la tarification des cantines au collège et lycée grâce à l'API Particulier
 
-Département et région, en intégrant l'API Particulier dans votre système d'information :
+## Simplifier la tarification des cantines au collège et lycée grâce aux API
 
-- 😃 les familles peuvent obtenir une **tarification solidaire et sociale immédiate et automatique** pour la cantine des collèges et lycées, permise grâce à la liaison avec les données de l'API Particulier dont notamment le quotient familial CAF ;
+Départements et régions, en intégrant l'API Particulier dans votre système d'information :
 
-- ⏰ Vous accélérez le traitement des dossiers car vos agents n’ont **pas de vérifications supplémentaires à réaliser**, les informations obtenues par l'API sont certifiées 🔎 ;
+- 😃 Pour instruire les dossiers, il n'est plus nécessaire de demander aux familles de renseigner : 
+   - leur **quotient familial CAF** ;
+   - leur **revenu fiscal de référence** ;
+
+- ⏰ Vous accélérez le traitement des dossiers car vos agents n’ont **pas à vérifier les données saisies et les pièces justificatives fournies**, les informations obtenues par l'API sont certifiées 🔎 ;
 
 - 🎯 Enfin, vous **participez à la simplification des démarches pour les citoyens** en mettant en oeuvre le [« Dites-le-nous une fois »](https://www.numerique.gouv.fr/services/guichet-dites-le-nous-une-fois/), en application de l’[article L113-12 du Code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037313155).
 
-## Les données utiles
+## Les API et données utiles
 
-L'API Particulier est un bouquet d'API délivrant des informations administratives des particuliers issues de différents fournisseurs de données, dont notamment la CNAF.
+| API utiles | Données disponibles |  Peut s'utiliser avec FranceConnect |
+| --- | --- | --- |
+| Bouquet [API Particulier](https://particulier.api.gouv.fr/catalogue) - opéré par la DINUM | Quotient familial CAF, composition familiale| ⚙️ Certaines API sont disponibles avec FranceConnect |
+| [API Impôt particulier](/les-api/impot-particulier) - DGFIP | Revenu fiscal de référence, nombre de parts fiscales | ✅ |
 
-Avec l'API Particulier, vous aurez notamment accès au quotient familial CAF nécessaire au calcul de la tarification solidaire.
 
-<Button href="https://particulier.api.gouv.fr/catalogue/cnaf/quotient_familial">Découvrir l'API Quotient familial CAF sur API Particulier</Button>
+## Améliorer votre tarification cantine avec l'API Particulier
 
+L'API Particulier est un bouquet d'API délivrant des informations administratives des particuliers issues de différents fournisseurs de données.
 
-| API de l'API Particulier | Données fournies  | Utilité pour ce cas d'usage |
-| --- | --- |
-| [API Quotient familial CAF](https://particulier.api.gouv.fr/catalogue/cnaf/quotient_familial) - CNAF - opérée par la DINUM | Quotient familial CAF, composition familiale  | ✅ Utile |
-| [API Statut étudiant](https://particulier.api.gouv.fr/catalogue/mesr/statut_etudiant) - Mesr - opérée par la DINUM | Statut étudiant | ❌ inutile |
-| [API Statut étudiant boursier ](https://particulier.api.gouv.fr/catalogue/cnous/statut_etudiant_boursier) - Cnous - opérée par la DINUM | Statut étudiant boursier, échelon de bourse | ❌ inutile |
-| [API Statut demandeur d'emploi](https://particulier.api.gouv.fr/catalogue/pole_emploi/situation) - Pôle emploi - opérée par la DINUM | Statut demandeur d'emploi | 🆗 Utile selon votre type de tarification |
+Avec l'API Particulier, vous avez notamment accès au quotient familial CAF, au statut élève scolarisé et boursier, au statut étudiant et étudiant boursier, au statut demandeur d'emploi...
 
+<Button href="https://particulier.api.gouv.fr/catalogue">Découvrir l'API Particulier</Button>
 
 ## Exemple d'application
 
-**### **Un parent souhaite inscrire son enfant à la cantine du lycée depuis le site de sa région connecté à l'API Particulier** :
+### Un parent souhaite inscrire son enfant à la cantine du lycée depuis le site de sa région connecté à l'API Particulier** :
 
 1. Le parent se connecte à son espace personnel sur le site de la région, il clique sur la démarche dédiée à l'inscription cantine scolaire et **renseigne son numéro d'allocataire et son code postal**.
 
@@ -64,18 +67,8 @@ Avec l'API Particulier, vous aurez notamment accès au quotient familial CAF né
 
 2. La tarification de la cantine scolaire est automatiquement calculée en fonction du quotient familial. Le parent n'a plus qu'à terminer l'inscription.
 
-## Les éditeurs connectés à l'API Particulier
 
-Les éditeurs suivants sont déjà connectés à l'API Particulier :
-
-TODO
-
-Vous êtes un éditeur et vous souhaitez apparaître dans cette liste ? Écrivez-nous à [api-particulier@api.gouv.fr](mailto:api-particulier@api.gouv.fr)
-
-<br/>
-<Button href="https://datapass.api.gouv.fr/api-particulier?demarche=ccas">Remplir une demande API Particulier</Button>
-
-## Demander un accès à l'API Particulier
+## Demander un accès aux API
 
 ### Justifier votre cadre juridique
 
@@ -86,7 +79,7 @@ L'utilisation des données est encadrée légalement. Vous devez formuler une de
 - Cadre légal spécifique aux téléservices : En tant que collectivités territoriales vous avez donc un droit d'accès à certaines données dans le cadre de demandes, services pro-actifs et déclarations usagers. 
 L'[Arrêté du 04/07/13 sur les téléservices](https://www.legifrance.gouv.fr/loda/id/JORFTEXT000027697207/#:~:text=Dans%20les%20r%C3%A9sum%C3%A9s-,Arr%C3%AAt%C3%A9%20du%204%20juillet%202013%20autorisant%20la%20mise%20en%20%C5%93uvre,publiques%20locales%20dont%20ils%20sont) détaille à l'article 1 la liste des démarches par secteur. Aidez-vous de cet arrêté pour justifier de votre cadre légal.
 
-- Justificatif des données nécessaires au calcul de la tarification : Il est indispensable de **fournir l'acte/ la délibération** qui fixe les conditions tarifaires et qui permettra d'apprécier finement le droit d'accès à chaque donnée.
+- Fournir **l'acte/la délibération** qui fixe les critères de la tarification.
 
 ### Formulaires de demande d'accès
 
@@ -94,4 +87,8 @@ Vous souhaitez demander un accès à l'[API Particulier](https://particulier.api
 
 <Button href="https://datapass.api.gouv.fr/api-particulier?demarche=ccas">Remplir une demande API Particulier</Button>
 
+Vous avez besoin des données fiscales ? Il vous faudra faire une [demande d'habilitation dédiée auprès de la DGFIP](/les-api/impot-particulier).
+
 ⚠️ Lors de votre demande d’habilitation, vous vous engagez à ne demander que les données strictement nécessaires à la réalisation de la démarche administrative.
+
+🛠 🧰 Avant de faire votre demande d'habilitation, **assurez-vous que votre service informatique ou votre éditeur de logiciel est en mesure d'intégrer des API**. L'API Particulier détaille [ici une liste de prérequis techniques](https://particulier.api.gouv.fr/developpeurs#prerequis-techniques). 

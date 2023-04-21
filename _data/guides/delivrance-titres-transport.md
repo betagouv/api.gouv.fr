@@ -26,11 +26,11 @@ Autorités organisatrices de mobilité, en utilisant les API :
 
 - 😀 Pour mettre en oeuvre une **tarification sociale**, il n'est plus nécessaire de collecter : 
    - le **statut demandeur d'emploi**  ;
-   - le **statut élève collège/lycée et élève boursier** ;
-   - le **statut étudiant et étudiant boursier** ;
-   - les bénéficiaires de la **complémentaire santé solidaire avec ou sans participation**.
+   - le **certificat de scolarité collège/lycée et le statut élève boursier** ;
+   - le **certificat de scolarité étudiant et le statut étudiant boursier** ;
+   - le statut bénéficiaire de la **complémentaire santé solidaire avec ou sans participation**.
 
-- 😃 Pour mettre en oeuvre une **tarification solidaire**, il n'est plus nécessaire de collecter : 
+- 😃 Pour mettre en oeuvre une **tarification solidaire**, il n'est plus nécessaire de demander : 
    - le **quotient familial CAF**  ;
    - le **revenu fiscal de référence**.
 
@@ -66,7 +66,7 @@ Une première [étude auprès de 20 autorités organisatrices de la mobilité (A
 | --- | --- | --- |
 | **Revenu fiscal de référence**, nombre de parts fiscales | ✅ Avec FranceConnect&nbsp;: [API Impôt particulier - DGFIP](/les-api/impot-particulier) | ✅ Sans FranceConnect&nbsp;: [API Impôt particulier - DGFIP](/les-api/impot-particulier) |
 | **Quotient familial CAF/MSA** et composition familiale | ⌛️ Avec FranceConnect&nbsp;: prévu T1 2024| ✅ Sans FranceConnect&nbsp;: [API Quotient familial CAF du **bouquet API Particulier**](https://particulier.api.gouv.fr/catalogue/cnaf/quotient_familial) |
-| **Certificat de scolarité primaire/secondaire et statut boursier** - Ministère de l'éducation nationale | ⌛️ Avec FranceConnect&nbsp;: prévu T2 2023    | ✅ Sans FranceConnect&nbsp;: [API statut élève scolarisé du **bouquet API Particulier**](https://particulier.api.gouv.fr/catalogue/pole_emploi/situation) |
+| **Certificat de scolarité primaire/secondaire et statut élève boursier** - Ministère de l'éducation nationale | ⌛️ Avec FranceConnect&nbsp;: prévu T2 2023    | ✅ Sans FranceConnect&nbsp;: [API statut élève scolarisé du **bouquet API Particulier**](https://particulier.api.gouv.fr/catalogue) |
 | **Certificat de scolarité étudiant** d'un établissement de l’enseignement supérieur - MESRI |✅ Avec FranceConnect&nbsp;: [API Statut étudiant - MESRI ](https://api.gouv.fr/les-api/api-statut-etudiant)| ✅ Sans FranceConnect&nbsp;: [API statut étudiant du **bouquet API Particulier**](https://particulier.api.gouv.fr/catalogue/mesr/statut_etudiant)|
 | **Statut étudiant boursier** - CNOUS  | ✅ Avec FranceConnect&nbsp;: [API statut étudiant boursier du **bouquet API Particulier**](https://particulier.api.gouv.fr/catalogue/cnous/statut_etudiant_boursier) |  ✅ Sans FranceConnect&nbsp;: [API statut étudiant boursier du **bouquet API Particulier**](https://particulier.api.gouv.fr/catalogue/cnous/statut_etudiant_boursier)|
 | **Statut demandeur d'emploi** et catégorie (A,B,C,D) - Pôle emploi  |✅ Avec FranceConnect&nbsp;: [API statut demandeur d'emploi - Pôle Emploi ](/les-api/api-statut-demandeur-emploi) |✅ Sans FranceConnect&nbsp;: [API statut demandeur d'emploi du **bouquet API Particulier**](https://particulier.api.gouv.fr/catalogue/pole_emploi/situation)|   
@@ -79,9 +79,9 @@ Une première [étude auprès de 20 autorités organisatrices de la mobilité (A
 
 En synthèse de ce tableau, avec le bouquet [API Particulier](https://particulier.api.gouv.fr/catalogue) opéré par la DINUM, vous avez accès avec une seule habilitation aux données suivantes :
 - Quotient familial CAF et composition familiale (_Usage sans FranceConnect_)
-- Statut étudiant dans un établissement de l’enseignement supérieur (_Usage avec et sans FranceConnect_)
+- Certificat de scolarité étudiant (_Usage avec et sans FranceConnect_)
 - Statut étudiant boursier (_Usage avec et sans FranceConnect_)
-- Statut élève scolarisé et élève boursier (_Usage avec et sans FranceConnect_)
+- Certificat de scolarité primaire/secondaire et statut élève boursier (_Usage avec et sans FranceConnect_)
 - Statut demandeur d'emploi (_Usage sans FranceConnect_)
 
 
@@ -142,3 +142,5 @@ Les [API disponibles dans l'API Particulier](https://particulier.api.gouv.fr/cat
 Vous avez besoin d'autres données distribuées par d'autres fournisseurs ? Il vous faudra faire une demande dédiée par API.
 
 ⚠️ Lors de votre demande d’habilitation, vous vous engagez à ne demander que les données strictement nécessaires à la réalisation de la démarche administrative.
+
+🛠 🧰 Avant de faire votre demande d'habilitation, **assurez-vous que votre service informatique ou votre éditeur de logiciel est en mesure d'intégrer des API**. L'API Particulier détaille [ici une liste de prérequis techniques](https://particulier.api.gouv.fr/developpeurs#prerequis-techniques). 

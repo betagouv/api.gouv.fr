@@ -131,10 +131,10 @@ content_intro: |
   | API | Fournisseur des données | Données | Disponibilité sur API Particulier | Peut s'utiliser avec FranceConnect |
   |---------------------|----------|------------------------------------- |------------------- |------------- |
   | **Quotient familial CAF** | CNAF | Quotient familial CAF, composition familiale<br>[📖 Documentation](https://particulier.api.gouv.fr/catalogue/cnaf/quotient_familial) <br> Extension du périmètre au régime agricole (MSA) prévu T3 2023 | ✅                      | Prévu T1 2024                      |
-  | **Statut étudiant** | MESR | Statut, établissement<br>[📖 Documentation](https://particulier.api.gouv.fr/catalogue/mesr/statut_etudiant) | ✅                      |✅             |
+  | **Certificat de scolarité étudiant** | MESR | Statut, établissement<br>[📖 Documentation](https://particulier.api.gouv.fr/catalogue/mesr/statut_etudiant) | ✅                      |✅             |
   | **Statut étudiant boursier** | Cnous | Statut, niveau de bourse<br>[📖 Documentation](https://particulier.api.gouv.fr/catalogue/mesr/cnous/statut_etudiant_boursier)      | ✅      |  ✅             |
   | **Statut demandeur d'emploi** | Pôle Emploi |Statut et catégorie (A,B,C,D)<br>[📖 Documentation](https://particulier.api.gouv.fr/catalogue/pole_emploi/situation)     | ✅          | ➡️ Pas FranceConnecté dans API Particulier mais disponible avec [cette API](/les-api/api-statut-demandeur-emploi).            |
-  | **Statut élève scolarisé**   | Ministère de l'éducation nationale| Attestation de scolarité et statut boursier |T2 2023    | Prévu       |
+  | **Certificat de scolarité primaire/secondaire et statut élève boursier**   | Ministère de l'éducation nationale| Attestation de scolarité et statut boursier |T2 2023    | Prévu       |
   | **Liste des paiements de Pôle emploi** | Pôle Emploi | Montants des paiements des allocations ou des aides | T2 2023               | ➡️ Ne sera pas FranceConnecté dans API Particulier mais déjà disponible avec [cette API](/les-api/api-indemnisation-pole-emploi). |
   | **Statut Complémentaire santé solidaire (CSS)**              |  Direction de la sécurité sociale | Indique si le particulier a la CSS, avec ou sans participation. | T2 2023               | T2 2023               |
   | **Statut Revenu de solidarité active (RSA)**                 |Direction de la sécurité sociale | _En cours de définition_| T4 2023               | T4 2023               |

@@ -24,24 +24,27 @@ Ces dossiers utilisent généralement les données d’état-civil, l'adresse, l
 - [Simplifier la délivrance d'aides sociales en CCAS grâce aux API](#simplifier-la-delivrance-d-aides-sociales-en-ccas-grace-aux-API)
 - [Les API et données utiles](#les-api-et-donnees-utiles)
 - [Améliorer votre service avec l'API Particulier](#ameliorer-votre-service-avec-l-api-particulier)
-  - [Exemple d'application](#exemple-d-application)
+  - [Ils utilisent l'API Particulier](#ils-utilisent-lapi-particulier)
   - [Liste des éditeurs](#liste-des-editeurs)
 - [Demander un accès aux API](#demander-un-acces-aux-api)
 
 ## Simplifier la délivrance d'aides sociales en CCAS grâce aux API
 
-CCAS, en intégrant des API dans vos systèmes d'information :
+CCAS, en intégrant des API dans vos outils en backoffice :
 
-- 😃 les **familles n'ont plus à fournir les justificatifs de leur statut ou de leur revenu (certificat de scolarité, statut boursier, attestation CAF, revenu fiscal de référence, avis d'imposition, etc.)** pour leurs demandes d'aides sociales ;  
+- 😃 Pour aider les citoyens à réaliser leurs démarches, les agents sur place n'ont plus besoin de collecter :
+   - le **statut demandeur d'emploi**  ;
+   - le **certificat de scolarité collège/lycée et le statut élève boursier** ;
+   - le **certificat de scolarité étudiant et le statut étudiant boursier** ;
+   - le statut bénéficiaire de la **complémentaire santé solidaire avec ou sans participation** ;
+   - le **quotient familial CAF** ;
+   - le **revenu fiscal de référence**.
+
 
 - ⏰ Vous accélérez le traitement des dossiers car vos agents n’ont **pas à vérifier les données saisies et les pièces justificatives fournies**, les informations obtenues par les API sous-mentionnées sont certifiées 🔎 ;
 
 - 🎯 Enfin, vous **participez à la simplification des démarches pour les citoyens** en mettant en oeuvre le « Dites-le-nous une fois », en application de l’[article L114-8 du Code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045213315).
 
-<Quote logo="/images/guides/sitiv.png" link='https://www.sitiv.fr/Actualites/L-action-sociale-des-villes-du-SITIV-integre-le-dispositif-Dites-le-nous-une-fois' who='Le SITIV' title='membre du réseau Déclic'>
-Le principe du "Dites-le nous une fois" (...) permet aux citoyens de ne pas avoir à donner leur consentement mais d'être simplement informés de l'utilisation de leurs pièces.
-C'est dans ce cadre que le SITIV intègre directement au logiciel métier les informations des usagers (...) Les saisies dans les dossiers usagers sont ainsi facilitées et certifiées.
-</Quote>
 
 
 ## Les API et données utiles
@@ -49,13 +52,23 @@ C'est dans ce cadre que le SITIV intègre directement au logiciel métier les in
 | API utiles | Données disponibles |  Peut s'utiliser avec FranceConnect |
 | --- | --- | --- |
 | [API Impôt particulier](/les-api/impot-particulier) - DGFIP | Revenu fiscal de référence, nombre de parts fiscales | ✅ |
-| Bouquet [API Particulier](https://particulier.api.gouv.fr/catalogue) - opéré par la DINUM | Quotient familial CAF, composition familiale| ⚙️ Certaines API sont disponibles avec FranceConnect |
-
+| Bouquet [API Particulier](https://particulier.api.gouv.fr/catalogue) - opéré par la DINUM | Quotient familial CAF, composition familiale, statut boursier élève, statut boursier étudiant, statut demandeur d'emploi, statut complémentaire santé solidaire| ⚙️ Certaines API sont disponibles avec FranceConnect |
 
 
 ## Améliorer votre service avec l'API Particulier
 
-### Exemple d'application
+L'API Particulier est un bouquet d'API délivrant des informations administratives des particuliers issues de différents fournisseurs de données.
+
+Avec l'API Particulier, vous avez notamment accès au quotient familial CAF, au statut élève scolarisé et boursier, au statut étudiant et étudiant boursier, au statut demandeur d'emploi...
+
+<Button href="https://particulier.api.gouv.fr/catalogue">Découvrir l'API Particulier</Button>
+
+### Ils utilisent l'API Particulier
+
+<Quote logo="/images/guides/sitiv.png" link='https://www.sitiv.fr/Actualites/L-action-sociale-des-villes-du-SITIV-integre-le-dispositif-Dites-le-nous-une-fois' who='Le SITIV' title='membre du réseau Déclic'>
+Le principe du "Dites-le nous une fois" (...) permet aux citoyens de ne pas avoir à donner leur consentement mais d'être simplement informés de l'utilisation de leurs pièces.
+C'est dans ce cadre que le SITIV intègre directement au logiciel métier les informations des usagers (...) Les saisies dans les dossiers usagers sont ainsi facilitées et certifiées.
+</Quote>
 
 ### Liste des éditeurs
 
@@ -92,3 +105,5 @@ Les [API disponibles dans l'API Particulier](https://particulier.api.gouv.fr/cat
 Vous avez besoin des données de revenu de la DGFIP ? Il vous faudra faire une [demande d'habilitation dédiée](/les-api/impot-particulier).
 
 ⚠️ Lors de votre demande d’habilitation, vous vous engagez à ne demander que les données strictement nécessaires à la réalisation de la démarche administrative.
+
+🛠 🧰 Avant de faire votre demande d'habilitation, **assurez-vous que votre service informatique ou votre éditeur de logiciel est en mesure d'intégrer des API**. L'API Particulier détaille [ici une liste de prérequis techniques](https://particulier.api.gouv.fr/developpeurs#prerequis-techniques). 
