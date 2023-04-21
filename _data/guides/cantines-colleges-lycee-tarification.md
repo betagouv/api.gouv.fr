@@ -31,14 +31,11 @@ Pour en savoir plus, consulter cette page de [Service-Public.fr](https://www.ser
 ## Simplifier la tarification des cantines au collège et lycée grâce aux API
 
 Départements et régions, en intégrant l'API Particulier dans votre système d'information :
-
-😃 Pour instruire les dossiers, **il n'est plus nécessaire de demander aux familles de renseigner** : 
+- 😃 Pour instruire les dossiers, **il n'est plus nécessaire de demander aux familles de renseigner** : 
    - leur quotient familial CAF ;
    - leur revenu fiscal de référence ;
-
-⏰ Vous accélérez le traitement des dossiers car vos agents n’ont **pas à vérifier les données saisies et les pièces justificatives fournies**, les informations obtenues par l'API sont certifiées 🔎 ;
-
-🎯 Enfin, vous **participez à la simplification des démarches pour les citoyens** en mettant en oeuvre le [« Dites-le-nous une fois »](https://www.numerique.gouv.fr/services/guichet-dites-le-nous-une-fois/), en application de l’[article L113-12 du Code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037313155).
+- ⏰ Vous accélérez le traitement des dossiers car vos agents n’ont **pas à vérifier les données saisies et les pièces justificatives fournies**, les informations obtenues par l'API sont certifiées 🔎 ;
+- 🎯 Enfin, vous **participez à la simplification des démarches pour les citoyens** en mettant en oeuvre le [« Dites-le-nous une fois »](https://www.numerique.gouv.fr/services/guichet-dites-le-nous-une-fois/), en application de l’[article L113-12 du Code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037313155).
 
 ## Les API et données utiles
 
