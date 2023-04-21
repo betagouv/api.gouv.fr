@@ -29,6 +29,7 @@ Pour en bénéficier, il convient de justifier que l'élève ou l'étudiant conc
 - [Les API et données utiles](#les-api-et-donnees-utiles)
 - [Améliorer la délivrance des aides facultatives avec l'API Particulier](#ameliorer-la-delivrance-des-aides-facultatives-avec-l-api-particulier)
   - [Exemple d'application](#exemple-d-application)
+  - [Ils utilisent l'API Particulier](#ils-utilisent-lapi-particulier)
 - [Demander un accès aux API](#demander-un-acces-aux-api)
 
 ## Simplifier l'attribution des aides facultatives à la scolarité grâce aux API 
@@ -63,7 +64,7 @@ Avec l'API Particulier, vous avez notamment accès au quotient familial CAF, au 
 
 ### Exemple d'application
 
-**Un parent souhaite bénéficier de la fourniture d'un ordinateur pour son enfant scolarisé, depuis le portail de sa commune connecté à l'API Particulier.**
+**Un parent souhaite bénéficier de la fourniture d'un ordinateur pour son enfant scolarisé, depuis le portail de son département connecté à l'API Particulier.**
 
 Le parent se connecte à son espace personnel, il clique sur la démarche de demande d'un ordinateur pour les études de son enfant, il **renseigne le nom, prénom, sexe, date de naissance et établissement scolaire de son enfant**.
 
@@ -73,15 +74,16 @@ Le parent n'a pas besoin de fournir le certificat de scolarité, la vérificatio
 
 > ⚙️ **En arrière plan** : Un appel à l'API quotient familial CAF du bouquet API Particulier est effectué et permet de récupérer le quotient familial du mois en cours.
 
-La famille est identifiée comme éligible à l'aide. Le parent n'a plus qu'à confirmer sa demande. Du côté de la commune, les agents n'auront pas à vérifier les informations renseignées car celles-ci sont certifiées.
+La famille est identifiée comme éligible à l'aide. Le parent n'a plus qu'à confirmer sa demande. Du côté du département, les agents n'auront pas à vérifier les informations renseignées car celles-ci sont certifiées.
 
 
-## Ils utilisent l'API Particulier
+### Ils utilisent l'API Particulier
 
 <Quote logo="/images/guides/logo-dep-drome.png" link='https://www.ladrome.fr/mon-quotidien/education/le-departement-aide/' who='Département de la Drôme' title='Bourse départementale des collèges'>
 Nous utilisons l'API Particulier pour délivrer des bourses aux collégiens. Cette aide est soumise à un barème dépendant des ressources de la famille.
 L'API Particulier est utilisée actuellement pour récupérer le quotient familial CAF et la composition de la famille.
 </Quote>
+
 
 <Quote logo="/images/guides/logo-dep-haute-savoie.png" link='https://actu.hautesavoie.fr/explorez-actu/le-pret-etudiant-il-est-encore-temps' who='Département de la Haute-Savoie' title='Délivrer des prêts étudiants'>
 Nous utilisons l'API Particulier pour onnaître le quotient familial d'un étudiant ou de ses parents (s'il en est dépendant fiscalement) afin de vérifier l'éligibilité de sa demande de prêt.
@@ -95,10 +97,9 @@ L'utilisation des données est encadrée légalement. Vous devez formuler une de
 
 - Cadre légal général : l'[Article L114-8 du Code des relations entre le public et l'administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045213315) fixe le cadre général qui oblige l’administration à échanger des données lors d’une démarche d’un usager ;
 
-- Cadre légal spécifique aux téléservices : En tant que collectivités territoriales vous avez donc un droit d'accès à certaines données dans le cadre de demandes, services pro-actifs et déclarations usagers. 
-L'[Arrêté du 04/07/13 sur les téléservices](https://www.legifrance.gouv.fr/loda/id/JORFTEXT000027697207/#:~:text=Dans%20les%20r%C3%A9sum%C3%A9s-,Arr%C3%AAt%C3%A9%20du%204%20juillet%202013%20autorisant%20la%20mise%20en%20%C5%93uvre,publiques%20locales%20dont%20ils%20sont) détaille à l'article 1 la liste des démarches par secteur. Aidez-vous de cet arrêté pour justifier de votre cadre légal.
+- Cadre réglementaire qui permet à la collectivité de mettre en place l'aide.
 
-- Justificatif des données nécessaires au calcul de la tarification : Il est indispensable de **fournir l'acte/ la délibération** qui fixe les conditions tarifaires et qui permettra d'apprécier finement le droit d'accès à chaque donnée.
+- Fournir **la délibération** qui justifie les données nécessaires à l'attribution de l'aide.
 
 ### Formulaires de demande d'accès
 
@@ -106,6 +107,6 @@ Les [API disponibles dans l'API Particulier](https://particulier.api.gouv.fr/cat
 
 <Button href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande API Particulier</Button>
 
-Vous avez besoin des données de revenu de la DGFIP ? Il vous faudra faire une [demande d'habilitation dédiée](/les-api/impot-particulier).
+Vous avez besoin des données fiscales ? Il vous faudra faire une [demande d'habilitation dédiée](/les-api/impot-particulier).
 
 ⚠️ Lors de votre demande d’habilitation, vous vous engagez à ne demander que les données strictement nécessaires à la réalisation de la démarche administrative.
