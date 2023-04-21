@@ -113,7 +113,7 @@ content_intro: |
 
 ---
 
-## API accessibles depuis l'API Particulier
+## API accessibles avec l'API Particulier
 
 
   | API | Fournisseur des données | Données | Disponibilité sur API Particulier | Peut s'utiliser avec FranceConnect |
@@ -202,7 +202,7 @@ Exemple [ici](https://airtable.com/appMEKRGMNrw4YRff) avec les données bac à s
 
 <details>
   <summary>Comment récupérer mon jeton d'accès (token) une fois ma demande validée ?</summary>
-  
+
 1. **Une fois votre demande d'habilitation validée, un e-mail vous est envoyé** avec un lien vers [mon.portail-test-staging.api.gouv.fr/](https://mon.portail-test-staging.api.gouv.fr/).
 2. **Une fenêtre de connexion (compte Datapass) s'ouvre**. Renseignez les mêmes identifiants utilisés lors de votre demande d'habilitation.
 3. Sur votre espace [mon.portail-test-staging.api.gouv.fr/](https://mon.portail-test-staging.api.gouv.fr/), **votre jeton est disponible et peut-être copié**.
