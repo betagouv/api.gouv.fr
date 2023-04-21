@@ -24,31 +24,31 @@ api:
 
 Autorités organisatrices de mobilité, en utilisant les API :
 
-- 😀 Pour mettre en oeuvre une **tarification sociale, il n'est plus nécessaire de collecter** : 
+😀 Pour mettre en oeuvre une **tarification sociale, il n'est plus nécessaire de collecter** : 
    - le statut demandeur d'emploi  ;
    - le certificat de scolarité collège/lycée et le statut élève boursier ;
    - le certificat de scolarité étudiant et le statut étudiant boursier ;
    - le statut bénéficiaire de la complémentaire santé solidaire avec ou sans participation.
 
-- 😃 Pour mettre en oeuvre une **tarification solidaire, il n'est plus nécessaire de demander** : 
+😃 Pour mettre en oeuvre une **tarification solidaire, il n'est plus nécessaire de demander** : 
    - le quotient familial CAF  ;
    - le revenu fiscal de référence.
 
-- 🖥 Vous pouvez **dématérialiser totalement votre service en ligne** car vos agents n’ont **plus besoin de vérifier les justificatifs**, les informations obtenues par les API sous-mentionnées sont certifiées 🔎 ;
+🖥 Vous pouvez **dématérialiser totalement votre service en ligne** car vos agents n’ont **plus besoin de vérifier les justificatifs**, les informations obtenues par les API sous-mentionnées sont certifiées 🔎 ;
 
-- 👨‍💼 Une **utilisation logicielle au guichet est aussi possible**, tout en évitant le stock des pièces justificatives, les erreurs de saisie et les fraudes.
+👨‍💼 Une **utilisation logicielle au guichet est aussi possible**, tout en évitant le stock des pièces justificatives, les erreurs de saisie et les fraudes.
 
-- 🎯 Enfin, vous **participez à la simplification des démarches pour les citoyens** en mettant en oeuvre le [« Dites-le-nous une fois »](https://www.numerique.gouv.fr/services/guichet-dites-le-nous-une-fois/), en application de l’[article L113-12 du Code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037313155).
+🎯 Enfin, vous **participez à la simplification des démarches pour les citoyens** en mettant en oeuvre le [« Dites-le-nous une fois »](https://www.numerique.gouv.fr/services/guichet-dites-le-nous-une-fois/), en application de l’[article L113-12 du Code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037313155).
 
 ## Exemple d'utilisation
 
 **Un usager demandeur d'emploi souhaite obtenir un titre de transport :**
 
-1. L'usager se connecte à son espace personnel avec FranceConnect, sur le site de la démarche en ligne. Son statut de demandeur d'emploi est automatiquement reconnu.
+**Étape 1 :** L'usager se connecte à son espace personnel avec FranceConnect, sur le site de la démarche en ligne. Son statut de demandeur d'emploi est automatiquement reconnu.
 
 > ⚙️ **En arrière plan** : Un appel à l'API statut demandeur d'emploi est effectué et permet de confirmer le statut.
 
-2. La réduction est automatiquement attribuée. L'usager n'a plus qu'à régler son titre.
+**Étape 2 :** La réduction est automatiquement attribuée. L'usager n'a plus qu'à régler son titre.
 
 Selon la tarification appliquée, différentes API peuvent être utiles et sont détaillées ci-après.
 
@@ -58,7 +58,7 @@ La définition des besoins de pièces justificatives nécessaires à ce cas d'us
 
 Une première [étude auprès de 20 autorités organisatrices de la mobilité (AOM)](/resources/rapport-gart.pdf) a été effectuée.
 
-**👋 Pour participer à ce group de travail, [écrivez-nous ici](mailto:contact@api.gouv.fr?subject=Participation-au-cas-d'usage-transports)**.
+**👋 Pour participer à ce groupe de travail, [écrivez-nous ici](mailto:contact@api.gouv.fr?subject=Participation-au-cas-d'usage-transports)**.
 
 ### Détail de toutes les données
 
@@ -124,9 +124,7 @@ Vous devez formuler une demande d’habilitation auprès de chaque fournisseur d
 ### Justifier votre cadre juridique
 
 L'utilisation des données est encadrée légalement. Vous devez formuler une demande auprès de l'API Particulier et/ou des autres API en justifiant du cadre légal de l'utilisation des données :
-
 - Cadre légal général : l'[Article L114-8 du Code des relations entre le public et l'administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045213315) fixe le cadre général qui oblige l’administration à échanger des données lors d’une démarche d’un usager ;
-
 - Cadres légaux spécifiques : 
   - transports en commun** : [Articles L1231-1 et L1231-3 du Code des transports](https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000023086525/LEGISCTA000023069255/#LEGISCTA000023085815)
   - transports scolaires : [Article L. 3111-7 du Code des transports](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043343069) et [article L. 214-18 du Code de l'éducation](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000030999998)

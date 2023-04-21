@@ -100,7 +100,7 @@ content_intro: |
 
   
   ### Ce qu'API Particulier change pour vous, administrations :
-  
+
 
   **Administrations**, en intégrant la brique API Particulier dans votre système d’information ou votre site internet :
 
@@ -181,7 +181,6 @@ Chaque année, l'équipe de l'API Particulier envoie un bilan chiffré sur l'uti
   ℹ️ Si vous êtes **éditeur de logiciels, c'est à votre client public, collectivité ou administration, de faire sa demande d'habilitation auprès de l'API Particulier**.
 
   Vous pouvez nous demander de vous référencer sur un cas d'usage afin de proposer un formulaire pré-rempli qui simplifiera l'expérience de vos clients. Voici la procédure à suivre :
-
   - Je repère les données dont mes clients publics ont besoin pour un cas d'usage précis que je peux ou pourrai proposer dans ma solution logicielle ;
   - Je consulte la documentation technique, et j'utilise le bac à sable pour tester les appels d'API ;
   - J'écris à [cette adresse](https://api.gouv.fr/parcours-client?source=preFooter) pour être référencé sur le cas d'usage associé et avoir un formulaire pré-rempli à disposition de mes clients.
@@ -203,14 +202,10 @@ Exemple [ici](https://airtable.com/appMEKRGMNrw4YRff) avec les données bac à s
 
 <details>
   <summary>Comment récupérer mon jeton d'accès (token) une fois ma demande validée ?</summary>
-
 1. **Une fois votre demande d'habilitation validée, un e-mail vous est envoyé** avec un lien vers [mon.portail-test-staging.api.gouv.fr/](https://mon.portail-test-staging.api.gouv.fr/).
-
 2. **Une fenêtre de connexion (compte Datapass) s'ouvre**. Renseignez les mêmes identifiants utilisés lors de votre demande d'habilitation.
-
 3. Sur votre espace [mon.portail-test-staging.api.gouv.fr/](https://mon.portail-test-staging.api.gouv.fr/), **votre jeton est disponible et peut-être copié**.
 <br>⚠️ **Votre token vous est propre, il ne faut pas le diffuser.**  Vous ne devez jamais copier-coller un token dans un moteur de recherche ou dans un e-mail. L’usage de votre token se fait uniquement dans votre logiciel métier sécurisé utilisé pour réaliser vos appels.
-
 4. **Vous devez transmettre ce jeton à votre éditeur ? Ou à votre équipe technique ?** Utilisez un moyen de transmission sécurisé (messagerie cryptée par exemple).
 
 </details>

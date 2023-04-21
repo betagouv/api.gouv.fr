@@ -32,7 +32,7 @@ Ces dossiers utilisent généralement les données d’état-civil, l'adresse, l
 
 CCAS, en intégrant des API dans vos outils en backoffice :
 
-- 😃 Pour aider les citoyens à réaliser leurs démarches, **les agents sur place n'ont plus besoin de collecter** :
+😃 Pour aider les citoyens à réaliser leurs démarches, **les agents sur place n'ont plus besoin de collecter** :
    - le statut demandeur d'emploi  ;
    - le certificat de scolarité collège/lycée et le statut élève boursier ;
    - le certificat de scolarité étudiant et le statut étudiant boursier ;
@@ -41,9 +41,9 @@ CCAS, en intégrant des API dans vos outils en backoffice :
    - le revenu fiscal de référence.
 
 
-- ⏰ Vous accélérez le traitement des dossiers car vos agents n’ont **pas à vérifier les données saisies et les pièces justificatives fournies**, les informations obtenues par les API sous-mentionnées sont certifiées 🔎 ;
+⏰ Vous accélérez le traitement des dossiers car vos agents n’ont **pas à vérifier les données saisies et les pièces justificatives fournies**, les informations obtenues par les API sous-mentionnées sont certifiées 🔎 ;
 
-- 🎯 Enfin, vous **participez à la simplification des démarches pour les citoyens** en mettant en oeuvre le « Dites-le-nous une fois », en application de l’[article L114-8 du Code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045213315).
+🎯 Enfin, vous **participez à la simplification des démarches pour les citoyens** en mettant en oeuvre le « Dites-le-nous une fois », en application de l’[article L114-8 du Code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045213315).
 
 
 
@@ -88,12 +88,9 @@ Vous êtes un éditeur et vous souhaitez apparaître dans cette liste ? Écrivez
 ### Justifier votre cadre juridique
 
 L'utilisation des données est encadrée légalement. Vous devez formuler une demande auprès de l'API Particulier et/ou des autres API en justifiant du cadre légal de l'utilisation des données :
-
 - Cadre légal général : l'[Article L114-8 du Code des relations entre le public et l'administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045213315) fixe le cadre général qui oblige l’administration à échanger des données lors d’une démarche d’un usager ;
-
 - Cadre légal spécifique aux téléservices : En tant que collectivités territoriales vous avez donc un droit d'accès à certaines données dans le cadre de demandes, services pro-actifs et déclarations usagers. 
 L'[Arrêté du 04/07/13 sur les téléservices](https://www.legifrance.gouv.fr/loda/id/JORFTEXT000027697207/#:~:text=Dans%20les%20r%C3%A9sum%C3%A9s-,Arr%C3%AAt%C3%A9%20du%204%20juillet%202013%20autorisant%20la%20mise%20en%20%C5%93uvre,publiques%20locales%20dont%20ils%20sont) détaille à l'article 1 la liste des démarches par secteur. Aidez-vous de cet arrêté pour justifier de votre cadre légal.
-
 - Justificatif des données nécessaires au calcul de la tarification : Il est indispensable de **fournir l'acte/ la délibération** qui fixe les conditions tarifaires et qui permettra d'apprécier finement le droit d'accès à chaque donnée.
 
 ### Formulaires de demande d'accès
