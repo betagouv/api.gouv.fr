@@ -103,14 +103,10 @@ content_intro: |
 
   L'API Particulier permet de **mettre en oeuvre le principe « Dites-le-nous une fois »**, en application de l’[article L114-8 du Code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045213315).
   
-  L'API Particulier est **un bouquet d'API** donnant accès à des données administratives des particuliers : quotient familial CAF, composition familiale, statut demandeur d’emploi, statut élève scolarisé et élève boursier, statut étudiant et statut étudiant boursier...
+  L'API Particulier est **un bouquet d'API** donnant accès à des données administratives des particuliers : quotient familial CAF, composition familiale, statut demandeur d’emploi, certificat de scolarité des élèves du primaire, du secondaire et étudiant, statuts élève et étudiant boursier ...
 
   **Les usagers n'ont plus à fournir de pièces justificatives à l'appui de leurs démarches administratives**, telles que la tarification sociale et solidaire des transports, la cantine à 1 euro, les aides facultatives à la scolarité...
 
-
-  ### API disponibles dans le bouquet API Particulier :
-
-<Button href="https://particulier.api.gouv.fr/catalogue">Consulter le catalogue des API</Button>
   
   ### Ce qu'API Particulier change pour vous, administrations :
 
@@ -124,9 +120,13 @@ content_intro: |
 
   - ✅ Vous accédez avec une seule habilitation aux **données de différents fournisseurs** : la Caisse nationale des allocations familiales (CNAF), la sécurité sociale agricole (MSA), Pôle emploi, le ministère de l'enseignement supérieur et de la recherche (MESR), le ministère de l'éduction nationale (MEN) et enfin le Centre national des œuvres universitaires et scolaires (Cnous).
 
+  <Button href="https://particulier.api.gouv.fr">Consulter le site API Particulier</Button>
+
 ---
 
 ## API accessibles depuis l'API Particulier
+
+<Button href="https://particulier.api.gouv.fr/catalogue">Consulter le catalogue des API</Button>
 
   | API | Fournisseur des données | Données | Disponibilité sur API Particulier | Peut s'utiliser avec FranceConnect |
   |---------------------|----------|------------------------------------- |------------------- |------------- |
