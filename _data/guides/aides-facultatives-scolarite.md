@@ -107,6 +107,6 @@ Les [API disponibles dans l'API Particulier](https://particulier.api.gouv.fr/cat
 
 <Button href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande API Particulier</Button>
 
-Vous avez besoin des données fiscales ? Il vous faudra faire une [demande d'habilitation dédiée](/les-api/impot-particulier).
+Vous avez besoin des données fiscales ? Il vous faudra faire une [demande d'habilitation dédiée auprès de la DGFIP](/les-api/impot-particulier).
 
 ⚠️ Lors de votre demande d’habilitation, vous vous engagez à ne demander que les données strictement nécessaires à la réalisation de la démarche administrative.

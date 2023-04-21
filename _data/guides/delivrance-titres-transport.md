@@ -40,7 +40,7 @@ Autorités organisatrices de mobilité, en utilisant les API :
 
 - 🎯 Enfin, vous **participez à la simplification des démarches pour les citoyens** en mettant en oeuvre le [« Dites-le-nous une fois »](https://www.numerique.gouv.fr/services/guichet-dites-le-nous-une-fois/), en application de l’[article L113-12 du Code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037313155).
 
-## Exemple d'application
+## Exemple d'utilisation
 
 **Un usager demandeur d'emploi souhaite obtenir un titre de transport :**
 

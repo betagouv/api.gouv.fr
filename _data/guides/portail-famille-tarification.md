@@ -22,18 +22,20 @@ Selon la politique tarifaire choisie, le calcul des tarifs est réalisé grâce 
 
 ## Table des matières
 
-- [Simplifier les démarches du portail famille grâce aux API](#simplifier-les-demarches-du-portail-famille-grace-aux-API)
-- [Les API et données utiles](#les-api-et-donnees-utiles)
-- [Améliorer votre portail famille avec l'API Particulier](#ameliorer-votre-portail-famille-avec-l-api-particulier)
-  - [Exemple d'application](#exemple-d-application)
-  - [Liste des éditeurs](#liste-des-editeurs)
-- [Demander un accès aux API](#demander-un-acces-aux-api)
+- [Simplifier les démarches du portail famille grâce aux API](#simplifier-les-démarches-du-portail-famille-grâce-aux-api)
+- [Les API et données utiles](#les-api-et-données-utiles)
+- [Améliorer votre portail famille avec l'API Particulier](#améliorer-votre-portail-famille-avec-lapi-particulier)
+  - [Exemple d'utilisation](#exemple-dutilisation)
+  - [Liste des éditeurs](#liste-des-éditeurs)
+- [Demander un accès aux API](#demander-un-accès-aux-api)
 
 ## Simplifier les démarches du portail famille grâce aux API 
 
 Communes et intercommunalités, en intégrant des API dans votre portail famille :
 
-- 😃 les **familles n'ont plus à fournir d'attestation CAF ou d'avis d'imposition** pour obtenir un tarif adapté à leurs revenus grâce à la liaison avec les données de la CNAF (l'API Particulier), ou de la DGFIP (API impôt particulier) ;
+- 😃 Pour instruire les dossiers, il n'est plus nécessaire de demander aux familles de renseigner : 
+   - leur **quotient familial CAF** ;
+   - leur **revenu fiscal de référence**.
 
 - ⏰ Vous accélérez le traitement des dossiers car vos agents n’ont **pas à vérifier les données saisies et les pièces justificatives fournies**, les informations obtenues par les API sous-mentionnées sont certifiées 🔎 ;
 
@@ -43,9 +45,8 @@ Communes et intercommunalités, en intégrant des API dans votre portail famille
 
 | API utiles | Données disponibles |  Peut s'utiliser avec FranceConnect |
 | --- | --- | --- |
-| [API Impôt particulier](/les-api/impot-particulier) - DGFIP | Revenu fiscal de référence, nombre de parts fiscales | ✅ |
 | Bouquet [API Particulier](https://particulier.api.gouv.fr/catalogue) - opéré par la DINUM | Quotient familial CAF, composition familiale| ⚙️ Certaines API sont disponibles avec FranceConnect |
-
+| [API Impôt particulier](/les-api/impot-particulier) - DGFIP | Revenu fiscal de référence, nombre de parts fiscales | ✅ |
 
 ⚠️ Les données de l’API Impôt particulier ne permettent pas de calculer les tarifs en établissement d'accueil du jeune enfant (crèche, multi-accueil, halte-garderie…). **Elles ne doivent donc pas être utilisées pour le calcul des participations familiales en Eaje.** Une API spécifique est en cours de préparation.
 
@@ -57,7 +58,7 @@ Avec l'API Particulier, vous avez notamment accès au quotient familial CAF, au 
 
 <Button href="https://particulier.api.gouv.fr/catalogue">Découvrir l'API Particulier</Button>
 
-### Exemple d'application
+### Exemple d'utilisation
 
 **Un parent souhaite inscrire son enfant à la cantine, sur le portail famille de sa commune connecté à l'API Particulier.**
 
@@ -115,6 +116,6 @@ Les [API disponibles dans l'API Particulier](https://particulier.api.gouv.fr/cat
 
 <Button href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande API Particulier</Button>
 
-Vous avez besoin des données de revenu de la DGFIP ? Il vous faudra faire une [demande d'habilitation dédiée](/les-api/impot-particulier).
+Vous avez besoin des données fiscales ? Il vous faudra faire une [demande d'habilitation dédiée auprès de la DGFIP](/les-api/impot-particulier).
 
 ⚠️ Lors de votre demande d’habilitation, vous vous engagez à ne demander que les données strictement nécessaires à la réalisation de la démarche administrative.
