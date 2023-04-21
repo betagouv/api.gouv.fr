@@ -110,3 +110,5 @@ Les [API disponibles dans l'API Particulier](https://particulier.api.gouv.fr/cat
 Vous avez besoin des données fiscales ? Il vous faudra faire une [demande d'habilitation dédiée auprès de la DGFIP](/les-api/impot-particulier).
 
 ⚠️ Lors de votre demande d’habilitation, vous vous engagez à ne demander que les données strictement nécessaires à la réalisation de la démarche administrative.
+
+🛠 🧰 Avant de faire votre demande d'habilitation, **assurez-vous que votre service informatique ou votre éditeur de logiciel est en mesure d'intégrer des API**. L'API Particulier détaille [ici une liste de prérequis techniques](https://particulier.api.gouv.fr/developpeurs#prerequis-techniques). 

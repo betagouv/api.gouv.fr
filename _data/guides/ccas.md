@@ -21,12 +21,12 @@ Ces dossiers utilisent généralement les données d’état-civil, l'adresse, l
 
 ## Table des matières
 
-- [Simplifier la délivrance d'aides sociales en CCAS grâce aux API](#simplifier-la-delivrance-d-aides-sociales-en-ccas-grace-aux-API)
-- [Les API et données utiles](#les-api-et-donnees-utiles)
-- [Améliorer votre service avec l'API Particulier](#ameliorer-votre-service-avec-l-api-particulier)
+- [Simplifier la délivrance d'aides sociales en CCAS grâce aux API](#simplifier-la-délivrance-daides-sociales-en-ccas-grâce-aux-api)
+- [Les API et données utiles](#les-api-et-données-utiles)
+- [Améliorer votre service avec l'API Particulier](#améliorer-votre-service-avec-lapi-particulier)
   - [Ils utilisent l'API Particulier](#ils-utilisent-lapi-particulier)
-  - [Liste des éditeurs](#liste-des-editeurs)
-- [Demander un accès aux API](#demander-un-acces-aux-api)
+  - [Liste des éditeurs](#liste-des-éditeurs)
+- [Demander un accès aux API](#demander-un-accès-aux-api)
 
 ## Simplifier la délivrance d'aides sociales en CCAS grâce aux API
 
