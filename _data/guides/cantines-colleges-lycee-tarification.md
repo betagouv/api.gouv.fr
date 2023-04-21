@@ -21,11 +21,10 @@ Pour en savoir plus, consulter cette page de [Service-Public.fr](https://www.ser
 
 ## Table des matières
 
-- [Simplifier la tarification des cantines au collège et lycée grâce aux API](#simplifier-la-tarification-des-cantines-au-college-et-lycee-grace-aux-api)
+- [Simplifier la tarification des cantines au collège et lycée grâce aux API](#simplifier-la-tarification-des-cantines-au-collège-et-lycée-grâce-aux-api)
 - [Les API et données utiles](#les-api-et-données-utiles)
-- [Améliorer votre tarification cantine avec l'API Particulier](#améliorer-votre-portail-famille-avec-lapi-particulier)
-  - [Exemple d'application](#exemple-d-application)
-  - [Liste des éditeurs](#les-editeurs-connectes-a-l-api-particulier)
+- [Améliorer votre tarification cantine avec l'API Particulier](#améliorer-votre-tarification-cantine-avec-lapi-particulier)
+  - [Exemple d'utilisation](#exemple-dutilisation)
 - [Demander un accès aux API](#demander-un-accès-aux-api)
 
 
@@ -57,9 +56,9 @@ Avec l'API Particulier, vous avez notamment accès au quotient familial CAF, au 
 
 <Button href="https://particulier.api.gouv.fr/catalogue">Découvrir l'API Particulier</Button>
 
-## Exemple d'application
+### Exemple d'utilisation
 
-### Un parent souhaite inscrire son enfant à la cantine du lycée depuis le site de sa région connecté à l'API Particulier** :
+**Un parent souhaite inscrire son enfant à la cantine du lycée depuis le site de sa région connecté à l'API Particulier** :
 
 1. Le parent se connecte à son espace personnel sur le site de la région, il clique sur la démarche dédiée à l'inscription cantine scolaire et **renseigne son numéro d'allocataire et son code postal**.
 
