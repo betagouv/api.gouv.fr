@@ -32,13 +32,13 @@ Ces dossiers utilisent généralement les données d’état-civil, l'adresse, l
 
 CCAS, en intégrant des API dans vos outils en backoffice :
 
-- 😃 Pour aider les citoyens à réaliser leurs démarches, les agents sur place n'ont plus besoin de collecter :
-   - le **statut demandeur d'emploi**  ;
-   - le **certificat de scolarité collège/lycée et le statut élève boursier** ;
-   - le **certificat de scolarité étudiant et le statut étudiant boursier** ;
-   - le statut bénéficiaire de la **complémentaire santé solidaire avec ou sans participation** ;
-   - le **quotient familial CAF** ;
-   - le **revenu fiscal de référence**.
+- 😃 Pour aider les citoyens à réaliser leurs démarches, **les agents sur place n'ont plus besoin de collecter** :
+   - le statut demandeur d'emploi  ;
+   - le certificat de scolarité collège/lycée et le statut élève boursier ;
+   - le certificat de scolarité étudiant et le statut étudiant boursier ;
+   - le statut bénéficiaire de la complémentaire santé solidaire avec ou sans participation ;
+   - le quotient familial CAF ;
+   - le revenu fiscal de référence.
 
 
 - ⏰ Vous accélérez le traitement des dossiers car vos agents n’ont **pas à vérifier les données saisies et les pièces justificatives fournies**, les informations obtenues par les API sous-mentionnées sont certifiées 🔎 ;

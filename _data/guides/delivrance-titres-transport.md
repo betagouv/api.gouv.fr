@@ -24,15 +24,15 @@ api:
 
 Autorités organisatrices de mobilité, en utilisant les API :
 
-- 😀 Pour mettre en oeuvre une **tarification sociale**, il n'est plus nécessaire de collecter : 
-   - le **statut demandeur d'emploi**  ;
-   - le **certificat de scolarité collège/lycée et le statut élève boursier** ;
-   - le **certificat de scolarité étudiant et le statut étudiant boursier** ;
-   - le statut bénéficiaire de la **complémentaire santé solidaire avec ou sans participation**.
+- 😀 Pour mettre en oeuvre une **tarification sociale, il n'est plus nécessaire de collecter** : 
+   - le statut demandeur d'emploi  ;
+   - le certificat de scolarité collège/lycée et le statut élève boursier ;
+   - le certificat de scolarité étudiant et le statut étudiant boursier ;
+   - le statut bénéficiaire de la complémentaire santé solidaire avec ou sans participation.
 
-- 😃 Pour mettre en oeuvre une **tarification solidaire**, il n'est plus nécessaire de demander : 
-   - le **quotient familial CAF**  ;
-   - le **revenu fiscal de référence**.
+- 😃 Pour mettre en oeuvre une **tarification solidaire, il n'est plus nécessaire de demander** : 
+   - le quotient familial CAF  ;
+   - le revenu fiscal de référence.
 
 - 🖥 Vous pouvez **dématérialiser totalement votre service en ligne** car vos agents n’ont **plus besoin de vérifier les justificatifs**, les informations obtenues par les API sous-mentionnées sont certifiées 🔎 ;
 

@@ -32,9 +32,9 @@ Pour en savoir plus, consulter cette page de [Service-Public.fr](https://www.ser
 
 Départements et régions, en intégrant l'API Particulier dans votre système d'information :
 
-- 😃 Pour instruire les dossiers, il n'est plus nécessaire de demander aux familles de renseigner : 
-   - leur **quotient familial CAF** ;
-   - leur **revenu fiscal de référence** ;
+- 😃 Pour instruire les dossiers, **il n'est plus nécessaire de demander aux familles de renseigner** : 
+   - leur quotient familial CAF ;
+   - leur revenu fiscal de référence ;
 
 - ⏰ Vous accélérez le traitement des dossiers car vos agents n’ont **pas à vérifier les données saisies et les pièces justificatives fournies**, les informations obtenues par l'API sont certifiées 🔎 ;
 

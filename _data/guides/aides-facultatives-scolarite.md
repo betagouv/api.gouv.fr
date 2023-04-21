@@ -36,10 +36,10 @@ Pour en bénéficier, il convient de justifier que l'élève ou l'étudiant conc
 
 Collectivités, en intégrant des API dans vos formulaires en ligne :
 
-- 😃 Pour instruire les dossiers, il n'est plus nécessaire de collecter : 
-   - les **certificats de scolarité des élèves et/ou carte d'étudiant**  ;
-   - les **justificatifs de bourse** ;
-   - les **justificatifs de revenus**.
+- 😃 Pour instruire les dossiers, **il n'est plus nécessaire de collecter** : 
+   - les certificats de scolarité des élèves et/ou carte d'étudiant  ;
+   - les justificatifs de bourse ;
+   - les justificatifs de revenus.
 
 - 🖥 Vous pouvez automatiser le traitement des dossiers, les agents n’auront **plus à vérifier les pièces justificatives fournies**, les informations obtenues par les API sous-mentionnées sont certifiées 🔎 ;
 
