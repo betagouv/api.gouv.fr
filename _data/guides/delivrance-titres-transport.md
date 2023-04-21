@@ -14,17 +14,17 @@ api:
 
 ## Table des matières
 
-- [Simplifier la tarification des transports grâce aux API](#simplifier-la-tarification-des-transports-grace-aux-api)
-- [Exemple d'application](#exemple-d-application)
-- [Les API et données utiles](#les-api-et-donnees-utiles)
+- [Simplifier la tarification des transports grâce aux API](#simplifier-la-tarification-des-transports-grâce-aux-api)
+- [Exemple d'utilisation](#exemple-dutilisation)
+- [Les API et données utiles](#les-api-et-données-utiles)
 - [Ils utilisent déjà les API](#ils-utilisent-déjà-les-api)
-- [Demander un accès aux API](#demander-un-acces-aux-api)
+- [Demander un accès aux API](#demander-un-accès-aux-api)
 
 ## Simplifier la tarification des transports grâce aux API
 
 Autorités organisatrices de mobilité, en utilisant les API :
 
-- 😃 Pour mettre en oeuvre une **tarification sociale**, il n'est plus nécessaire de collecter : 
+- 😀 Pour mettre en oeuvre une **tarification sociale**, il n'est plus nécessaire de collecter : 
    - le **statut demandeur d'emploi**  ;
    - le **statut élève collège/lycée et élève boursier** ;
    - le **statut étudiant et étudiant boursier** ;
@@ -34,7 +34,7 @@ Autorités organisatrices de mobilité, en utilisant les API :
    - le **quotient familial CAF**  ;
    - le **revenu fiscal de référence**.
 
-- ⏰ Vous pouvez **dématérialiser totalement votre service en ligne** car vos agents n’ont **plus besoin de vérifier les justificatifs**, les informations obtenues par les API sous-mentionnées sont certifiées 🔎 ;
+- 🖥 Vous pouvez **dématérialiser totalement votre service en ligne** car vos agents n’ont **plus besoin de vérifier les justificatifs**, les informations obtenues par les API sous-mentionnées sont certifiées 🔎 ;
 
 - 👨‍💼 Une **utilisation logicielle au guichet est aussi possible**, tout en évitant le stock des pièces justificatives, les erreurs de saisie et les fraudes.
 

@@ -25,12 +25,12 @@ Pour en bénéficier, il convient de justifier que l'élève ou l'étudiant conc
 
 ## Table des matières
 
-- [Simplifier l'attribution des aides facultatives à la scolarité grâce aux API](#simplifier-l-attribution-des-aides-facultatives-a-la-scolarite-grace-aux-API)
-- [Les API et données utiles](#les-api-et-donnees-utiles)
-- [Améliorer la délivrance des aides facultatives avec l'API Particulier](#ameliorer-la-delivrance-des-aides-facultatives-avec-l-api-particulier)
-  - [Exemple d'application](#exemple-d-application)
+- [Simplifier l'attribution des aides facultatives à la scolarité grâce aux API](##simplifier-lattribution-des-aides-facultatives-à-la-scolarité-grâce-aux-api)
+- [Les API et données utiles](#les-api-et-données-utiles)
+- [Améliorer la délivrance des aides facultatives avec l'API Particulier](#améliorer-la-délivrance-des-aides-facultatives-avec-lapi-particulier)
+  - [Exemple d'utilisation](#exemple-dutilisation)
   - [Ils utilisent l'API Particulier](#ils-utilisent-lapi-particulier)
-- [Demander un accès aux API](#demander-un-acces-aux-api)
+- [Demander un accès aux API](#demander-un-accès-aux-api)
 
 ## Simplifier l'attribution des aides facultatives à la scolarité grâce aux API 
 
@@ -41,7 +41,7 @@ Collectivités, en intégrant des API dans vos formulaires en ligne :
    - les **justificatifs de bourse** ;
    - les **justificatifs de revenus**.
 
-- ⏰ Vous pouvez automatiser le traitement des dossiers, les agents n’auront **plus à vérifier les pièces justificatives fournies**, les informations obtenues par les API sous-mentionnées sont certifiées 🔎 ;
+- 🖥 Vous pouvez automatiser le traitement des dossiers, les agents n’auront **plus à vérifier les pièces justificatives fournies**, les informations obtenues par les API sous-mentionnées sont certifiées 🔎 ;
 
 - 🎯 Enfin, vous **participez à la simplification des démarches pour les citoyens** en mettant en oeuvre le « Dites-le-nous une fois », en application de l’[article L114-8 du Code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045213315).
 
@@ -62,7 +62,7 @@ Avec l'API Particulier, vous avez notamment accès au quotient familial CAF, au 
 
 <Button href="https://particulier.api.gouv.fr/catalogue">Découvrir l'API Particulier</Button>
 
-### Exemple d'application
+### Exemple d'utilisation
 
 **Un parent souhaite bénéficier de la fourniture d'un ordinateur pour son enfant scolarisé, depuis le portail de son département connecté à l'API Particulier.**
 
