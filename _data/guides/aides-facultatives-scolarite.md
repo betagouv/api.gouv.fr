@@ -25,7 +25,7 @@ Pour en bénéficier, il convient de justifier que l'élève ou l'étudiant conc
 
 ## Table des matières
 
-- [Simplifier l'attribution des aides facultatives à la scolarité grâce aux API](##simplifier-lattribution-des-aides-facultatives-à-la-scolarité-grâce-aux-api)
+- [Simplifier l'attribution des aides facultatives à la scolarité grâce aux API](#simplifier-lattribution-des-aides-facultatives-à-la-scolarité-grâce-aux-api)
 - [Les API et données utiles](#les-api-et-données-utiles)
 - [Améliorer la délivrance des aides facultatives avec l'API Particulier](#améliorer-la-délivrance-des-aides-facultatives-avec-lapi-particulier)
   - [Exemple d'utilisation](#exemple-dutilisation)
