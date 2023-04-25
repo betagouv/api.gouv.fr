@@ -15,24 +15,17 @@ access_page:
 
       Pour remplir votre demande, vous aurez uniquement besoin de :
 
-      - Créer un compte api.gouv pour accéder au formulaire DataPass ;
       - Attestation fiscale ;
       - Attestation sociale.
 
       <Button href="https://datapass.api.gouv.fr/api-declaration-auto-entrepreneur">Remplir une demande</Button>
   - who:
       - Un auto-entrepreneur
-    is_eligible: 0
+    is_eligible: -1
     description: |
-      Les auto-entrepreneurs peuvent accéder à l'API sous certaines conditions. 
+      Même si l'API Tierce Déclaration concerne les auto-entrepreneurs, elle ne vous est pas directement destinée. Peut-être cherchez vous à accéder à l'[API Tiers de Prestation](https://api.gouv.fr/les-api/api-tiers-de-prestation), pour que vos clients bénéficient de l'avance immédiate de crédit d'impôt ?
 
-      Pour remplir votre demande, vous aurez uniquement besoin de :
-
-      - Créer un compte api.gouv pour accéder au formulaire DataPass ;
-      - Attestation fiscale ;
-      - Attestation sociale.
-
-      <Button href="https://datapass.api.gouv.fr/api-declaration-auto-entrepreneur">Remplir une demande</Button>
+      <Button href="/rechercher-api">Revenir à la recherche</Button>
   - who:
       - Un editeur de logiciel de paie
       - Autres activités
