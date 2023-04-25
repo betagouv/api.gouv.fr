@@ -161,7 +161,7 @@ Chaque année, l'équipe de l'API Particulier envoie un bilan chiffré sur l'uti
 
   ### Je suis une collectivité ou une administration :
 
-  1. **Je consulte [les cas d’usage de l'API Particulier](/les-api/api-particulier#exemples-d’application)** :
+  1. **Je consulte [les cas d’usages de l'API Particulier](/les-api/api-particulier#exemples-d’application)** :
     - Si j'ai un éditeur de logiciel, je consulte le tableau en bas du cas d'usage pour savoir si mon éditeur intègre déjà l’API Particulier.
     - Sinon je contacte mon éditeur et je lui transmets le lien vers la documentation technique pour m'assurer qu'il peut intégrer l'API.
   2. **Je clique sur le bouton "[faire une demande d'habilitation](https://datapass.api.gouv.fr/api-particulier)"**, je crée mon compte DataPass ou je me connecte.
