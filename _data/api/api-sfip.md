@@ -58,7 +58,7 @@ themes:
   - Particulier
 contact_link: dtnum.donnees.demande-acces@dgfip.finances.gouv.fr
 visits_2019: 0
-doc_tech_link: /swaggers/api-impot-particulier.json
+doc_tech_link: /swaggers/api-sfip.json
 content_intro: |
   Le courtier SFiP est un service de la DGFiP simplifiant le recours aux différentes API de la DGFiP. Il permet aux partenaires : entité administrative (administration, ministère, organisme public, collectivité) ou entreprise ; de récupérer les données strictement nécessaires à la simplification des démarches des usagers et au processus de gestion des téléservices. 
   Pour ce faire, il enchaîne pour le compte du partenaire, les appels aux différentes API et restitue les données qu’il aura rassemblées en excluant les données intermédiaires.
