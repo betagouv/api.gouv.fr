@@ -41,9 +41,8 @@ keywords:
   - stage permis
 themes:
   - Particulier
-rate_limiting_resume: 600 appels / minute pour les AEL (Auto-Ecoles en Ligne)
-rate_limiting_description: |
-  Actuellement, le nombre d’appels à l’API est limité à 600 appels par minute pour les AEL et 210 appels par minute par employé d'AE
+rate_limiting_resume: 
+rate_limiting_description: 
 contact_link: support-api-erpc@interieur.gouv.fr
 doc_tech_external: https://api.integediteurs.rdv-permis.interieur.gouv.fr/swagger-ui/index.html
 visits_2019: 100
