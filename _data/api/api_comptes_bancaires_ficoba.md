@@ -73,7 +73,7 @@ last_update: 22/09/2020
 visits_2019: 11000
 ---
 
-L'API FICOBA (*FI*chier des *CO*mptes *B*ancaires et *A*ssimilés) permet aux entités administratives (administration, ministère, organisme public, collectivité) et aux acteurs privés qui sont éligibles d’accèder aux coordonnées bancaires d'un usager afin de permettre d'intégrer et de valider ces données dans leur système d'information.
+L'API FICOBA (*FI*chier des *CO*mptes *B*ancaires et *A*ssimilés) permet aux entités administratives (administrations publiques, ministères, organismes sociaux) et aux acteurs privés qui sont éligibles d’accéder aux coordonnées bancaires d'un usager afin de permettre d'intégrer et de valider ces données dans leur système d'information.
 
 En effet, selon les dispositions de <External href='https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000041578443/2020-02-29'>l'article 1649 A du Code Général des Impôts</External> : _"les administrations publiques, les établissements ou organismes soumis au contrôle de l'autorité administrative, (...) et toutes personnes qui reçoivent habituellement en dépôt des valeurs mobilières, titres ou fonds doivent déclarer à l'administration des impôts l'ouverture et la clôture des comptes de toute nature (...)"_.
 
