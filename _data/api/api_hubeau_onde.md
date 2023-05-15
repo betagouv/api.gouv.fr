@@ -26,7 +26,7 @@ content_intro: |
 
 De par la localisation des stations Onde en tête de bassin versant souvent peu instrumentées, cette API complète les données diffusées par l'API Hydrométrie collectées par le Schapi. La répartition des stations Onde (réseau de plus de 3200 stations) a été pensée pour être représentative du contexte hydrographique des petits et moyens cours d’eau de chaque département. Le mode de recueil des données Onde est exclusivement l’observation visuelle selon des modalités de perturbations d'écoulement des cours d’eau, aucune mesure n’est mise en œuvre sur le terrain.
 
-L'API est actuellement en version beta son passage en version 1 est prévu pour le **mardi 23/05/2023** à la mi-journée.  
+L'API est actuellement en version bêta son passage en version 1 est prévu pour le **mardi 23/05/2023** à la mi-journée.  
 La version bêta de l'API restera disponible jusqu'au vendredi 26/05.  
 **Veillez à prévoir la modification des URL de l'API**.
  
@@ -36,7 +36,9 @@ Les différentes opérations possibles sont :
 - **observations** : permet de consulter les résultats des observations visuelles. 
 
 Dernières évolutions de l'API Ecoulement des cours d'eau de Hub'Eau:
-- 29/06/2022 : mise à disposition de la version beta  
+- 26/05/2023 : arrêt de la version bêta
+- 23/05/2023 : mise à disposition de la version 1 (mi-journée)
+- 29/06/2022 : mise à disposition de la version bêta  
 
 ### Connaissez-vous Hub'Eau ?
 
