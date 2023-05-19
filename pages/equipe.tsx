@@ -6,9 +6,15 @@ import constants from '../constants';
 const teamData = [
   {
     name: 'Vincent Mazalaigue',
-    title: 'Chargé de mission DLNUF',
+    title: 'Responsable circulation de la donnée',
     linkedin: 'https://www.linkedin.com/in/vmazalaigue/',
     img: 'Vincent.jpg',
+  },
+  {
+    name: 'Alexis Leclerc',
+    title: 'Leaddev',
+    linkedin: 'https://www.linkedin.com/in/leclerca/',
+    img: 'Alexis.jpg',
   },
   {
     name: 'Etienne Pichot Damon',
@@ -24,7 +30,7 @@ const teamData = [
   },
   {
     name: 'Samuel Faure',
-    title: 'API Entreprise',
+    title: 'API Entreprise & API Particulier',
     linkedin: 'https://fr.linkedin.com/in/samuel-faure-0a118780',
     img: 'Samuel.jpg',
   },
@@ -42,16 +48,10 @@ const teamData = [
   },
   {
     name: 'Loïc Delmaire',
-    title: 'API Entreprise',
+    title: 'API Entreprise & API Particulier',
     linkedin:
       'https://www.linkedin.com/in/%F0%9F%90%A4-lo%C3%AFc-delmaire-%F0%9F%90%A4-46813649/',
     img: 'Loic.jpg',
-  },
-  {
-    name: 'Alexis Leclerc',
-    title: 'API Entreprise',
-    linkedin: 'https://www.linkedin.com/in/leclerca/',
-    img: 'Alexis.jpg',
   },
   {
     name: 'Dorine Lambinet',
