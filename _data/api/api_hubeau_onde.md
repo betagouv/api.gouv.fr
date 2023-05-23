@@ -14,10 +14,10 @@ keywords:
   - Cours d'eau
   - Observations visuelles
 contact_link: newshubeau@brgm.fr
-doc_tech_link: https://hubeau.eaufrance.fr/api/vbeta/ecoulement/api-docs
+doc_tech_link: https://hubeau.eaufrance.fr/api/v1/ecoulement/api-docs
 themes:
   - Environnement
-last_update: 12/09/2022
+last_update: 23/05/2023
 content_intro: |
   [L'API Ecoulement des cours d'eau](https://hubeau.eaufrance.fr/page/api-ecoulement) diffuse les données de l’observatoire national des étiages, [Onde](https://onde.eaufrance.fr/). Ces données résultent d'observations visuelles de l’écoulement des petits et moyens cours d’eau réalisées par les agents départementaux de l'Office français de la biodiversité (OFB) pendant la période estivale. Elles couvrent la France hexagonale (Corse comprise) et plus de 10 ans de collecte. 
 ---
@@ -26,8 +26,7 @@ content_intro: |
 
 De par la localisation des stations Onde en tête de bassin versant souvent peu instrumentées, cette API complète les données diffusées par l'API Hydrométrie collectées par le Schapi. La répartition des stations Onde (réseau de plus de 3200 stations) a été pensée pour être représentative du contexte hydrographique des petits et moyens cours d’eau de chaque département. Le mode de recueil des données Onde est exclusivement l’observation visuelle selon des modalités de perturbations d'écoulement des cours d’eau, aucune mesure n’est mise en œuvre sur le terrain.
 
-L'API est actuellement en version bêta son passage en version 1 est prévu pour le **mardi 23/05/2023** à la mi-journée.  
-La version bêta de l'API restera disponible jusqu'au vendredi 26/05.  
+L'API est passée en verison 1 le **mardi 23/05/2023** mais la version bêta reste disponible jusqu'au vendredi 26/05.  
 **Veillez à prévoir la modification des URL de l'API**.
  
 Les différentes opérations possibles sont :
@@ -37,7 +36,7 @@ Les différentes opérations possibles sont :
 
 Dernières évolutions de l'API Ecoulement des cours d'eau de Hub'Eau:
 - 26/05/2023 : arrêt de la version bêta
-- 23/05/2023 : mise à disposition de la version 1 (mi-journée)
+- 23/05/2023 : mise à disposition de la version 1
 - 29/06/2022 : mise à disposition de la version bêta  
 
 ### Connaissez-vous Hub'Eau ?
