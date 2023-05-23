@@ -55,6 +55,12 @@ const teamData = [
     img: 'Nicolas.jpg',
   },
   {
+    name: 'Isabelle Lafont',
+    title: 'Datapass',
+    linkedin: 'https://www.linkedin.com/in/isabelle-lafont/',
+    img: 'Isabelle.jpg',
+  },
+  {
     name: 'Hajar Ait El Kadi',
     title: 'Annuaire des Entreprises',
     linkedin: 'https://www.linkedin.com/in/hajaraitelkadi/',
