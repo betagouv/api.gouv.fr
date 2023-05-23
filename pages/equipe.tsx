@@ -29,18 +29,6 @@ const teamData = [
     img: 'Samuel.jpg',
   },
   {
-    name: 'Amandine Audras',
-    title: 'Designeuse produit',
-    linkedin: 'https://www.linkedin.com/in/amandineaudras/',
-    img: 'Amandine.jpg',
-  },
-  {
-    name: 'Raphaël Dubigny',
-    title: 'Datapass',
-    linkedin: 'https://www.linkedin.com/in/rapha%C3%ABl-dubigny-a085034a/',
-    img: 'Raph.jpg',
-  },
-  {
     name: 'Loïc Delmaire',
     title: 'API Entreprise & API Particulier',
     linkedin:
@@ -48,10 +36,17 @@ const teamData = [
     img: 'Loic.jpg',
   },
   {
-    name: 'Dorine Lambinet',
-    title: 'Designeuse produit',
-    linkedin: 'https://www.linkedin.com/in/dorine-lambinet-99534b117/',
-    img: 'Dorine.jpg',
+    name: 'Thomas Comes',
+    title: 'API Entreprise & API Particulier',
+    linkedin:
+      'https://www.linkedin.com/in/thomas-comes-43b19850/',
+    img: 'Thomas.jpg',
+  },
+  {
+    name: 'Raphaël Dubigny',
+    title: 'Datapass',
+    linkedin: 'https://www.linkedin.com/in/rapha%C3%ABl-dubigny-a085034a/',
+    img: 'Raph.jpg',
   },
   {
     name: 'Nicolas Schweisguth',
@@ -64,6 +59,18 @@ const teamData = [
     title: 'Annuaire des Entreprises',
     linkedin: 'https://www.linkedin.com/in/hajaraitelkadi/',
     img: 'Hajar.jpg',
+  },
+  {
+    name: 'Dorine Lambinet',
+    title: 'Designeuse produit',
+    linkedin: 'https://www.linkedin.com/in/dorine-lambinet-99534b117/',
+    img: 'Dorine.jpg',
+  },
+  {
+    name: 'Amandine Audras',
+    title: 'Designeuse produit',
+    linkedin: 'https://www.linkedin.com/in/amandineaudras/',
+    img: 'Amandine.jpg',
   },
   {
     name: 'Anais Tailhade',
