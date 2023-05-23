@@ -44,21 +44,27 @@ const teamData = [
   },
   {
     name: 'Raphaël Dubigny',
-    title: 'Datapass',
+    title: 'DataPass & MonComptePro',
     linkedin: 'https://www.linkedin.com/in/rapha%C3%ABl-dubigny-a085034a/',
     img: 'Raph.jpg',
   },
   {
     name: 'Nicolas Schweisguth',
-    title: 'Datapass',
+    title: 'DataPass',
     linkedin: 'https://www.linkedin.com/in/nicolas-schweisguth-a374744b/',
     img: 'Nicolas.jpg',
   },
   {
     name: 'Isabelle Lafont',
-    title: 'Datapass',
+    title: 'DataPass',
     linkedin: 'https://www.linkedin.com/in/isabelle-lafont/',
     img: 'Isabelle.jpg',
+  },
+  {
+    name: 'Pierre-Eric Garcia',
+    title: 'DataPass',
+    linkedin: 'https://www.linkedin.com/in/pierre-eric-garcia/',
+    img: 'PierreEric.jpg',
   },
   {
     name: 'Hajar Ait El Kadi',
