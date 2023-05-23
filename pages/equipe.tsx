@@ -17,12 +17,6 @@ const teamData = [
     img: 'Alexis.jpg',
   },
   {
-    name: 'Etienne Pichot Damon',
-    title: 'Responsable du catalogue api.gouv.fr',
-    linkedin: 'https://www.linkedin.com/in/etiennepichotdamon/',
-    img: 'Etienne.jpg',
-  },
-  {
     name: 'Xavier Jouppe',
     title: 'Annuaire des Entreprises',
     linkedin: 'https://www.linkedin.com/in/xavier-jouppe-a9030579/',
