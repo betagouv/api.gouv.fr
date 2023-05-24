@@ -6,15 +6,15 @@ import constants from '../constants';
 const teamData = [
   {
     name: 'Vincent Mazalaigue',
-    title: 'Chargé de mission DLNUF',
+    title: 'Responsable circulation de la donnée',
     linkedin: 'https://www.linkedin.com/in/vmazalaigue/',
     img: 'Vincent.jpg',
   },
   {
-    name: 'Etienne Pichot Damon',
-    title: 'Responsable du catalogue api.gouv.fr',
-    linkedin: 'https://www.linkedin.com/in/etiennepichotdamon/',
-    img: 'Etienne.jpg',
+    name: 'Alexis Leclerc',
+    title: 'Leaddev',
+    linkedin: 'https://www.linkedin.com/in/leclerca/',
+    img: 'Alexis.jpg',
   },
   {
     name: 'Xavier Jouppe',
@@ -24,34 +24,47 @@ const teamData = [
   },
   {
     name: 'Samuel Faure',
-    title: 'API Entreprise',
+    title: 'API Entreprise & API Particulier',
     linkedin: 'https://fr.linkedin.com/in/samuel-faure-0a118780',
     img: 'Samuel.jpg',
   },
   {
-    name: 'Amandine Audras',
-    title: 'Designeuse produit',
-    linkedin: 'https://www.linkedin.com/in/amandineaudras/',
-    img: 'Amandine.jpg',
-  },
-  {
-    name: 'Raphaël Dubigny',
-    title: 'Datapass',
-    linkedin: 'https://www.linkedin.com/in/rapha%C3%ABl-dubigny-a085034a/',
-    img: 'Raph.jpg',
-  },
-  {
     name: 'Loïc Delmaire',
-    title: 'API Entreprise',
+    title: 'API Entreprise & API Particulier',
     linkedin:
       'https://www.linkedin.com/in/%F0%9F%90%A4-lo%C3%AFc-delmaire-%F0%9F%90%A4-46813649/',
     img: 'Loic.jpg',
   },
   {
-    name: 'Alexis Leclerc',
-    title: 'API Entreprise',
-    linkedin: 'https://www.linkedin.com/in/leclerca/',
-    img: 'Alexis.jpg',
+    name: 'Thomas Comes',
+    title: 'API Entreprise & API Particulier',
+    linkedin:
+      'https://www.linkedin.com/in/thomas-comes-43b19850/',
+    img: 'Thomas.jpg',
+  },
+  {
+    name: 'Nicolas Schweisguth',
+    title: 'DataPass',
+    linkedin: 'https://www.linkedin.com/in/nicolas-schweisguth-a374744b/',
+    img: 'Nicolas.jpg',
+  },
+  {
+    name: 'Isabelle Lafont',
+    title: 'DataPass',
+    linkedin: 'https://www.linkedin.com/in/isabelle-lafont/',
+    img: 'Isabelle.jpg',
+  },
+  {
+    name: 'Pierre-Eric Garcia',
+    title: 'DataPass',
+    linkedin: 'https://www.linkedin.com/in/pierre-eric-garcia/',
+    img: 'PierreEric.jpg',
+  },
+  {
+    name: 'Hajar Ait El Kadi',
+    title: 'Annuaire des Entreprises',
+    linkedin: 'https://www.linkedin.com/in/hajaraitelkadi/',
+    img: 'Hajar.jpg',
   },
   {
     name: 'Dorine Lambinet',
@@ -60,16 +73,10 @@ const teamData = [
     img: 'Dorine.jpg',
   },
   {
-    name: 'Nicolas Schweisguth',
-    title: 'Datapass',
-    linkedin: 'https://www.linkedin.com/in/nicolas-schweisguth-a374744b/',
-    img: 'Nicolas.jpg',
-  },
-  {
-    name: 'Hajar Ait El Kadi',
-    title: 'Annuaire des Entreprises',
-    linkedin: 'https://www.linkedin.com/in/hajaraitelkadi/',
-    img: 'Hajar.jpg',
+    name: 'Amandine Audras',
+    title: 'Designeuse produit',
+    linkedin: 'https://www.linkedin.com/in/amandineaudras/',
+    img: 'Amandine.jpg',
   },
   {
     name: 'Anais Tailhade',
