@@ -43,12 +43,6 @@ const teamData = [
     img: 'Thomas.jpg',
   },
   {
-    name: 'Raphaël Dubigny',
-    title: 'DataPass & MonComptePro',
-    linkedin: 'https://www.linkedin.com/in/rapha%C3%ABl-dubigny-a085034a/',
-    img: 'Raph.jpg',
-  },
-  {
     name: 'Nicolas Schweisguth',
     title: 'DataPass',
     linkedin: 'https://www.linkedin.com/in/nicolas-schweisguth-a374744b/',
