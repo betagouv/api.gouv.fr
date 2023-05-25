@@ -18,7 +18,6 @@ export enum SUBJECT {
   TELEPOINT,
   CONTACT,
   DS,
-  VACCINATION,
   NONE,
 }
 
@@ -84,11 +83,6 @@ const Questions = [
   {
     value: SUBJECT.TELEPOINT,
     label: 'Je cherche mon solde de points de permis de conduire',
-    public: [VISITOR.PARTICULIER],
-  },
-  {
-    value: SUBJECT.VACCINATION,
-    label: 'Je cherche à obtenir une attestation de vaccination',
     public: [VISITOR.PARTICULIER],
   },
   {
@@ -339,28 +333,6 @@ const Explanations: React.FC<IProps> = ({ subject, visitorType }) => {
               href="https://permisdeconduire.ants.gouv.fr/Vos-demarches/Le-permis-a-points/Solde-de-vos-points-via-une-identite-France-Connect"
             >
               Accéder au site télépoint
-            </ButtonLink>
-          </div>
-        </div>
-      );
-    case SUBJECT.VACCINATION:
-      return (
-        <div className="subject-answer">
-          <p>
-            Ce site internet <b>ne permet pas</b> d’obtenir une attestation de
-            vaccination contre la covid-19.
-          </p>
-          <p>
-            Le service que vous recherchez est proposé par l'assurance santé et
-            il est accessible à tous&nbsp;:
-          </p>
-          <div className="layout-center">
-            <ButtonLink
-              size="large"
-              onClick={logClic}
-              href="https://attestation-vaccin.ameli.fr/"
-            >
-              Accéder au site attestation-vaccination
             </ButtonLink>
           </div>
         </div>
