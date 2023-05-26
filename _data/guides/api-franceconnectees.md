@@ -63,7 +63,7 @@ L'aide juridictionnelle est une prise en charge par l'État des frais judiciaire
 | [API statut demandeur d'emploi](/les-api/api-statut-demandeur-emploi)   |Statut et catégorie (A,B,C,D)   |✅ Disponible |[API  particulier](https://api.gouv.fr/les-api/api-particulier)| Pôle Emploi                        |
 | [API Indemnités Pôle emploi](/les-api/api-indemnisation-pole-emploi)   | Montant des indemnités versées par pôle emploi   |✅ Disponible |⌛️ bientôt disponible |Pôle Emploi                        |
 | [API Prestations sociales](https://particulier.api.gouv.fr/catalogue/cnaf_msa/complementaire_sante_solidaire)   | bénéficiaires de la CSS (complémentaire sociale solidaire) | ⌛️ En cours de développement  |⌛️ **Disponible en bac à sable** |DSS |
-|[API scolarité](https://particulier.api.gouv.fr/catalogue/education_nationale/statut_eleve_scolarise) | statut élève scolarisé et boursier|En cours de spécification  |✅ Disponible|MEN|
+|[API statut élève scolarisé et boursier](https://particulier.api.gouv.fr/catalogue/education_nationale/statut_eleve_scolarise) | Statut élève scolarisé au primaire et secondaire ; et statut boursier |En cours de spécification  |✅ Disponible| Ministère de l'éducation nationale |
 |API quotient familial | Quotient familial, composition familiale|En cours de spécification  | [API  particulier](https://api.gouv.fr/les-api/api-particulier)|CNAF|
 |API quotient familial| Quotient familial, composition familiale |  Juin 2023|juin 2023|MSA|
 
