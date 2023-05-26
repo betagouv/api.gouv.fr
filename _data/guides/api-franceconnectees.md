@@ -62,8 +62,8 @@ L'aide juridictionnelle est une prise en charge par l'État des frais judiciaire
 | [API Statut étudiant boursier](https://api.gouv.fr/les-api/api-statut-etudiant-boursier)| Statut d’étudiant boursier  |✅ Disponible  | [API  particulier](https://api.gouv.fr/les-api/api-particulier) |CNOUS / MESRI                                          |
 | [API statut demandeur d'emploi](/les-api/api-statut-demandeur-emploi)   |Statut et catégorie (A,B,C,D)   |✅ Disponible |[API  particulier](https://api.gouv.fr/les-api/api-particulier)| Pôle Emploi                        |
 | [API Indemnités Pôle emploi](/les-api/api-indemnisation-pole-emploi)   | Montant des indemnités versées par pôle emploi   |✅ Disponible |⌛️ bientôt disponible |Pôle Emploi                        |
-| API Prestations sociales   | bénéficiaires de la CSS (complémentaire sociale solidaire) |⌛️  Mai 2023  |⌛️ Mai 2023 |DSS |
-|API scolarité | attestation de socolarité, apprenti, boursier |En cours de spécification  |Mars 2023|MEN|
+| [API Prestations sociales](https://particulier.api.gouv.fr/catalogue/cnaf_msa/complementaire_sante_solidaire)   | bénéficiaires de la CSS (complémentaire sociale solidaire) | ⌛️ En cours de développement  |⌛️ **Disponible en bac à sable** |DSS |
+|[API scolarité](https://particulier.api.gouv.fr/catalogue/education_nationale/statut_eleve_scolarise) | statut élève scolarisé et boursier|En cours de spécification  |✅ Disponible|MEN|
 |API quotient familial | Quotient familial, composition familiale|En cours de spécification  | [API  particulier](https://api.gouv.fr/les-api/api-particulier)|CNAF|
 |API quotient familial| Quotient familial, composition familiale |  Juin 2023|juin 2023|MSA|
 
