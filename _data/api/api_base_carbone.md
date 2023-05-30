@@ -15,8 +15,8 @@ rate_limiting_resume: 10 appels / seconde / IP
 themes:
   - Environnement
 contact_link: centrederessourcesges@ademe.fr
-doc_tech_link: https://data.ademe.fr/data-fair/api/v1/datasets/base-carbone(r)/api-docs.json
-doc_tech_external: https://data.ademe.fr/datasets/base-carbone(r)
+doc_tech_link: https://data.ademe.fr/data-fair/api/v1/datasets/base-carboner/api-docs.json
+doc_tech_external: https://data.ademe.fr/datasets/base-carboner
 datagouv_uuid:
   - 5f5605e63ee74d0034395703
 last_update: 27/07/2020
@@ -47,7 +47,7 @@ Administrée par l'ADEME, sa gouvernance est multi acteurs : 14 membres la compo
 
 Retrouvez le descriptif complet de la Base dans <External href="https://www.bilans-ges.ademe.fr/fr/accueil/contenu/index/page/presentation/siGras/0">la rubrique « Base Carbone » du site Bilans GES</External>, ainsi que toute sa documentation explicitant périmètre et sources des données proposées pour s’assurer d’une utilisation robuste des données.
 
-Les données sont mises à jour régulièrement et accessibles sur le <External href="https://data.ademe.fr/datasets/base-carbone(r)">portail Open Data de l'ADEME</External>.
+Les données sont mises à jour régulièrement et accessibles sur le <External href="https://data.ademe.fr/datasets/base-carboner">portail Open Data de l'ADEME</External>.
 
 ### À propos de l'Open Data a l’ADEME
 
