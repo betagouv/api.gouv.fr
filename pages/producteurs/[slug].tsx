@@ -114,7 +114,7 @@ const ProducerPage: React.FC<IProps> = ({
             <div className="left-column text-style">
               {producer.short && (
                 <>
-                  <h2>Qu'est ce que {producerWithPronounSafe} ?</h2>
+                  <h2>Qu'est-ce que {producerWithPronounSafe} ?</h2>
                   <p>{producer.short}</p>
                 </>
               )}
@@ -162,7 +162,7 @@ const ProducerPage: React.FC<IProps> = ({
                     <>
                       <div>
                         <Emoji emoji="📝" label="formulaire" />
-                        Ecrire à l'équipe via le{' '}
+                        Écrire à l'équipe via le{' '}
                         <a href={producer.contact}>
                           formulaire de contact
                         </a>{' '}
