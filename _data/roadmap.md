@@ -448,8 +448,11 @@
     - type: ADD_API
       what: Courtier Fonctionnel SFiP, par la DGFiP
       path: /les-api/api-sfip
-  4:
+  5:
+    - type: INFO
+      what: |
+        Mise à jour de [l'API Structures de l'inclusion](/les-api/api-structures-inclusion) : elle est désormais rattachée au producteur Plateforme de l'inclusion
     - type: ADD_API
-      what: data·inclusion, par le GIP Plateforme de l'inclusion
+      what: data·inclusion, par la Plateforme de l'inclusion
       path: /les-api/api-data-inclusion
 ---

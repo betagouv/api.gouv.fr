@@ -1,7 +1,8 @@
 ---
 title: API data·inclusion
 tagline: Créer un référentiel commun de toutes les données de l’offre d’insertion des territoires afin de permettre à tous les services recensant et mettant en visibilité leur offre d’être interopérables et de mutualiser les efforts de recensement et de mise à jour.
-is_open: 1 # 1 means API is fully open
+is_open: 0 # 0 means API require an account
+account_link: https://www.data.inclusion.beta.gouv.fr/api/conditions-generales-dutilisation-de-lapi
 external_site: https://www.data.inclusion.beta.gouv.fr
 partners:
   - gip-inclusion
@@ -58,23 +59,16 @@ L'API data·inclusion aggrège les données de l'insertion sociale et profession
 
 ### Sources de données
 
-Les sources de données traitées comprennent notamment:
-
-- les données du GIP de l'inclusion: les emplois de l'inclusion et dora,
-- les lieux de médiations numérique,
-- la base de ressources partenariales de Pole Emploi,
-- des données de collectivités territoriales (e.g. l'Ille-et-Vilaine)
-- des acteurs publics: 1jeune1solution, mes aides de pôle emploi.
+Les sources de données sont consultables sur [le site Web de data·inclusion](https://www.data.inclusion.beta.gouv.fr/le-projet-data-inclusion/ils-partagent-deja-leurs-donnees).
 
 Les données collectées sont:
 
 - historisées,
 - géocodées,
-- sirétisées automatiquement,
 - enrichies via les outils développés par data·inclusion:
   - l'outil de correspondance, qui permet de faire correspondre 2 jeux de données brutes,
   - l'outil de sirétisation, qui permet d'attribuer un siret aux structures, afin de croiser,
 - alignées sur le schéma de données de data·inclusion
-- publiées régulièrement en open data sur data.gouv, la plateforme de données publiques,
+- publiées régulièrement en open data sur [data.gouv](https://www.data.gouv.fr/fr/datasets/6233723c2c1e4a54af2f6b2d), la plateforme de données publiques,
 - consultables via une api.
 
