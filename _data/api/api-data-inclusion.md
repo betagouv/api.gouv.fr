@@ -67,7 +67,7 @@ Les données collectées sont:
 - géocodées,
 - enrichies via les outils développés par data·inclusion:
   - l'outil de correspondance, qui permet de faire correspondre 2 jeux de données brutes,
-  - l'outil de sirétisation, qui permet d'attribuer un siret aux structures, afin de croiser,
+  - l'outil de sirétisation, qui permet d'attribuer un siret aux structures, afin de croiser les bases de données
 - alignées sur le schéma de données de data·inclusion
 - publiées régulièrement en open data sur [data.gouv](https://www.data.gouv.fr/fr/datasets/6233723c2c1e4a54af2f6b2d), la plateforme de données publiques,
 - consultables via une api.
