@@ -71,7 +71,7 @@ Avec l'API Particulier, vous avez notamment accès au quotient familial CAF, au 
 L'utilisation des données est encadrée légalement. Vous devez formuler une demande auprès de l'API Particulier en justifiant du cadre légal de l'utilisation des données :
 - Cadre légal général : l'[Article L114-8 du Code des relations entre le public et l'administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045213315) fixe le cadre général qui oblige l’administration à échanger des données lors d’une démarche d’un usager ;
 - [L'article  L216-6 du Code de l'éducation](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000027682699/2013-07-10) donne compétence aux lycées pour la gestion des cantines.
-- [L'article R531-52](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000020743085) donne compétance aux collectivités pour fixer les tarifs des cantines
+- [L'article R531-52 du Code de l'éducation](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000020743085) donne compétence aux collectivités pour fixer les tarifs des cantines.
 - Fournir **l'acte/la délibération** qui fixe les critères de la tarification.
 
 ### Formulaires de demande d'accès
