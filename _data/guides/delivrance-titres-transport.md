@@ -14,11 +14,11 @@ api:
 
 ## Table des matières
 
-- [Simplifier la tarification des transports grâce aux API](#simplifier-la-tarification-des-transports-grâce-aux-api)
-- [Exemple d'utilisation](#exemple-dutilisation)
-- [Les API et données utiles](#les-api-et-données-utiles)
-- [Ils utilisent déjà les API](#ils-utilisent-déjà-les-api)
-- [Demander un accès aux API](#demander-un-accès-aux-api)
+- [Simplifier la tarification des transports grâce aux API](#simplifier-la-tarification-des-transports-grace-aux-api)
+- [Exemple d'utilisation](#exemple-d'utilisation)
+- [Les API et données utiles](#les-api-et-donnees-utiles)
+- [Ils utilisent déjà les API](#ils-utilisent-deja-les-api)
+- [Demander un accès aux API](#demander-un-acces-aux-api)
 
 ## Simplifier la tarification des transports grâce aux API
 
