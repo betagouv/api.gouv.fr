@@ -21,11 +21,11 @@ Pour en savoir plus, consulter cette page de [Service-Public.fr](https://www.ser
 
 ## Table des matières
 
-- [Simplifier la tarification des cantines au collège et lycée grâce aux API](#simplifier-la-tarification-des-cantines-au-collège-et-lycée-grâce-aux-api)
-- [Les API et données utiles](#les-api-et-données-utiles)
-- [Améliorer votre tarification cantine avec l'API Particulier](#améliorer-votre-tarification-cantine-avec-lapi-particulier)
-  - [Exemple d'utilisation](#exemple-dutilisation)
-- [Demander un accès aux API](#demander-un-accès-aux-api)
+- [Simplifier la tarification des cantines au collège et lycée grâce aux API](#simplifier-la-tarification-des-cantines-au-college-et-lycee-grace-aux-api)
+- [Les API et données utiles](#les-api-et-donnees-utiles)
+- [Améliorer votre tarification cantine avec l'API Particulier](#ameliorer-votre-tarification-cantine-avec-l'api-particulier)
+  - [Exemple d'utilisation](#exemple-d'utilisation)
+- [Demander un accès aux API](#demander-un-acces-aux-api)
 
 
 ## Simplifier la tarification des cantines au collège et lycée grâce aux API
