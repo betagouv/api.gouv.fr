@@ -52,7 +52,7 @@ const teamData = [
     name: 'Charlotte Choplin',
     title: 'Bizdev API entreprise',
     linkedin: 'https://www.linkedin.com/in/charlotte-choplin-coaching-consulting-0943bb83/',
-    img: '',
+    img: 'Charlotte.jpg',
   },
   {
     name: 'Nicolas Schweisguth',
