@@ -1,9 +1,10 @@
 ---
 title: API Structures de l'inclusion
 tagline: Retrouvez facilement les informations sur les structures de l'inclusion
+is_open: 0 # 0 means API require an account
+account_link: https://lemarche.inclusion.beta.gouv.fr/api/
 external_site: https://lemarche.inclusion.beta.gouv.fr/
-is_open: 1 # 1 means API is fully open
-producer: mtei
+producer: gip-inclusion
 keywords:
   - Insertion
   - social
@@ -63,4 +64,4 @@ On retrouve - entre autres - pour chaque structure :
 | sectors               | Secteurs d'activité                |
 | networks              | Liens avec les différents réseaux  |
 | labels                | Labels de la structure             |
-| updated_at            | Date de dernière mise ç jour       |
+| updated_at            | Date de dernière mise à jour       |
