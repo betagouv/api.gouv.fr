@@ -55,7 +55,7 @@ themes:
 last_update: 20/04/2023
 ---
 
-L'API data·inclusion aggrège les données de l'insertion sociale et professionnelle.
+L'API data·inclusion agrège les données de l'insertion sociale et professionnelle.
 
 ### Sources de données
 
