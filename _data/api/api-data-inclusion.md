@@ -4,10 +4,12 @@ tagline: Créer un référentiel commun de toutes les données de l’offre d’
 is_open: 0 # 0 means API require an account
 account_link: https://www.data.inclusion.beta.gouv.fr/api/conditions-generales-dutilisation-de-lapi
 external_site: https://www.data.inclusion.beta.gouv.fr
+datagouv_uuid:
+  - 6233723c2c1e4a54af2f6b2d
 partners:
   - gip-inclusion
   - pole-emploi
-  - Les lieux de médiations numérique,
+  - Les lieux de médiations numérique
   - Collectivités territoriales
   - 1jeune1solution
 producer: gip-inclusion
@@ -18,41 +20,15 @@ keywords:
   - Sociale
   - Subvention
 contact_link: data.inclusion@beta.gouv.fr
-doc_tech_link: https://api.data.inclusion.beta.gouv.fr/api/v0/docs
-#stat:
-#  lastXdays: 29
-#  url: https://status-api.abes.fr/
+doc_tech_link: https://api.data.inclusion.beta.gouv.fr/openapi.json
+#monitoring_link: https://stats.uptimerobot.com/kXzwzfk7BE
 #monitoring_description: |
-#monitoring_link: https://status-api.abes.fr/
+#  Une supervision du service en temps réel est disponible à cette adresse.
 #uptime: 99.96
-#rate_limiting_resume: 1 appel / seconde / IP
-#rate_limiting_description: |
-#  L'API est disponible à hauteur de 1 appel par seconde et par adresse IP.
 themes:
   - Administration
   - Emploi
-#access_page:
-#  - who:
-#      - Déclarant direct
-#    is_eligible: -1
-#    description: |
-#      Il ne vous est pas nécessaire de souscrire : vous avez déjà accès à l’API en utilisant vos identifiants Urssaf il vous suffit ainsi de [consulter la documentation pour utiliser l’API](https://www.dpae-edi.urssaf.fr/5492-API-DPAE-Guide-Implementation.pdf)
-#  - who:
-#      - Concentrateur
-#    is_eligible: 0
-#    description: |
-#      Pour remplir votre demande, vous aurez uniquement besoin de créer un compte api.gouv.
-#       <Button href="mailto:api-dpae@acoss.fr?subject=Demande d'accès à l'API DPAE&body=Indiquez ici votre nom, prénom et le nom de votre organisation.">Remplir une demande</Button>
-#  - who:
-#      - Un particulier
-#      - Autres activités
-#    is_eligible: -1
-#    description: |
-#      Vous n'êtes pas autorisé à accéder à ces données.
-#
-#      <Button href="/rechercher-api">Revenir à la recherche</Button>
-#visits_2019: 500
-last_update: 20/04/2023
+last_update: 14/06/2023
 ---
 
 L'API data·inclusion agrège les données de l'insertion sociale et professionnelle.
