@@ -9,7 +9,6 @@ external_site: https://pole-emploi.io/data/api
 partners:
   - Pôle emploi
 keywords:
-  - Travail
   - Emploi
   - Marché du travail
   - Compétences
