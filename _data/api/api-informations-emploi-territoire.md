@@ -1,6 +1,6 @@
 ---
 title: API Informations sur l'emploi dans un territoire
-tagline: Accéder à toutes les données clés sur l'emploi pour comprendre un territoire - population, établissements, salariés
+tagline: Accédez aux taux d’accès à l’emploi par métier recherché et par territoire
 producer: pole-emploi
 category: Public
 is_open: 0 # -1 means API not open
