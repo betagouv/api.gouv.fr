@@ -1,6 +1,6 @@
 ---
 title: API Informations sur l'emploi dans un territoire
-tagline: Accédez aux taux d’accès à l’emploi par métier recherché et par territoire
+tagline: Accédez à toutes les données clés pour comprendre un territoire : population, établissements, salariés. L’API fournit également un indicateur de dynamisme du territoire, développé par Pôle emploi et fondé sur l’IA.
 producer: pole-emploi
 category: Public
 is_open: 0 # -1 means API not open
