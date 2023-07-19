@@ -1,6 +1,6 @@
 ---
 title: API Marché du travail
-tagline: Evaluer la situation de l'emploi sur un territoire - tensions, métiers, dynamique
+tagline: Accédez à toutes les données statistiques essentielles pour bien évaluer la situation de l’emploi sur un territoire. L’API vous permet de comprendre les tensions sur les métiers ainsi que la dynamique globale d’un territoire
 producer: pole-emploi
 category: Public
 is_open: 0 # -1 means API not open
