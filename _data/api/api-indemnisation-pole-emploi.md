@@ -1,6 +1,6 @@
 ---
 title: API Indemnisation Pôle emploi
-tagline: Connaitre la situation d’indemnisation d’un demandeur d’emploi
+tagline: Accédez au type de ressources perçues par un utilisateur inscrit sur le site de Pôle emploi.
 is_open: -1 # -1 means API not open
 is_france_connected: 1
 access_page:
