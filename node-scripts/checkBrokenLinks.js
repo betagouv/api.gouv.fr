@@ -46,13 +46,11 @@ const urlChecker = new blc.SiteChecker(
         return;
       }
 
-      // legifrance too slow
-      if (result.url.original.indexOf('www.legifrance.gouv.fr') > -1) {
-        return;
-      }
-
-      // linkedin pain in the ***
-      if (result.url.original.indexOf('www.linkedin.com') > -1) {
+      if (
+        result.url.original.indexOf('www.legifrance.gouv.fr') > -1 ||
+        result.url.original.indexOf('www.linkedin.com') > -1 ||
+        result.url.original.indexOf('twitter.com') > -1
+      ) {
         return;
       }
 
