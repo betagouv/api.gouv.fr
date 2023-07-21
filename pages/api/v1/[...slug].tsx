@@ -58,9 +58,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const {
-    query: { slug },
-  } = req;
+  const slug = (req?.query?.slug || '') as string;
 
   if (!slug.length || ['apis', 'proxy'].indexOf(slug[0]) === -1) {
     res.statusCode = 404;
