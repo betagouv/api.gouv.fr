@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 
 import { Footer, PreFooter, Header, Meta, DocHeader } from '../components';
 import { Question } from '../uiComponents/question';
@@ -15,7 +15,7 @@ interface IProps {
   canonical?: string;
 }
 
-const Page: React.FC<IProps> = ({
+const Page: React.FC<PropsWithChildren<IProps>> = ({
   title,
   description,
   headerKey,

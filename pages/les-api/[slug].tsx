@@ -27,13 +27,13 @@ import { HEADER_PAGE } from '../../components';
 
 import constants from '../../constants';
 import Feedback from '../../components/feedback';
-import { fetchDatagouvDatasets } from '../../components/api/apiOpenDataSources';
+import { IDataGouvDataset, fetchDatagouvDatasets } from '../../components/api/apiOpenDataSources';
 
 interface IProps {
   api: IApi;
   services: IService[];
   guides: IGuideElementShort[];
-  datagouvDatasets: { uuid: string; title: string }[];
+  datagouvDatasets: IDataGouvDataset[];
 }
 
 const API: React.FC<IProps> = ({ api, guides, datagouvDatasets }) => {
