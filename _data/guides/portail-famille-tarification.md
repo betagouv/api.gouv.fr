@@ -91,7 +91,7 @@ Les éditeurs suivants proposent des portails famille et sont déjà connectés 
 | JVS-Mairistem                | Parascol                      |
 | 3D Ouest                     | P3D Ouest                     |
 | Amiciel                      | Malice                        |
-
+| Cosoluce                     | Fluo                          |
 Vous êtes un éditeur et vous souhaitez apparaître dans cette liste ? Écrivez-nous à [api-particulier@api.gouv.fr](mailto:api-particulier@api.gouv.fr)
 
 ## Demander un accès aux API
