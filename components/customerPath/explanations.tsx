@@ -85,18 +85,6 @@ const Questions = [
     label: 'Je cherche mon solde de points de permis de conduire',
     public: [VISITOR.PARTICULIER],
   },
-  {
-    value: SUBJECT.CONTACT,
-    label: 'Autre',
-    public: [
-      VISITOR.ENTREPRISE,
-      VISITOR.ASSO,
-      VISITOR.ADMINISTRATION,
-      VISITOR.COLLECTIVITE,
-      VISITOR.PARTICULIER,
-      VISITOR.EDITOR,
-    ],
-  },
 ];
 
 interface IProps {
