@@ -16,9 +16,9 @@ export enum SUBJECT {
   CANT_FIND,
   CARTE_GRISES,
   TELEPOINT,
-  CONTACT,
   DS,
   NONE,
+  UPDATE_API,
 }
 
 const Questions = [
@@ -40,7 +40,12 @@ const Questions = [
   },
   {
     value: SUBJECT.NEW_API,
-    label: 'J’ai envie de partager mon API sur api.gouv',
+    label: 'Je souhaite publier mon API sur api.gouv.fr',
+    public: [VISITOR.ADMINISTRATION],
+  },
+  {
+    value: SUBJECT.UPDATE_API,
+    label: 'Je souhaite mettre à jour la fiche de mon API sur api.gouv.fr',
     public: [VISITOR.ADMINISTRATION],
   },
   {
@@ -84,18 +89,6 @@ const Questions = [
     value: SUBJECT.TELEPOINT,
     label: 'Je cherche mon solde de points de permis de conduire',
     public: [VISITOR.PARTICULIER],
-  },
-  {
-    value: SUBJECT.CONTACT,
-    label: 'Autre',
-    public: [
-      VISITOR.ENTREPRISE,
-      VISITOR.ASSO,
-      VISITOR.ADMINISTRATION,
-      VISITOR.COLLECTIVITE,
-      VISITOR.PARTICULIER,
-      VISITOR.EDITOR,
-    ],
   },
 ];
 
