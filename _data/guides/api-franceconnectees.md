@@ -13,6 +13,7 @@ api:
   - API Indemnités journalières de la CNAM
   - API Indemnisation Pôle emploi
   - API statut demandeur d'emploi
+  - API complémentaire santé solidaire
 ---
 
 FranceConnect permet au citoyen de s'authentifier à de nombreux services de l'administration. Ce dispositif permet d'utiliser un compte existant sur impots.fr ou ameli.fr par exemple, afin d'accéder à tous les services de l'administration (<External href="https://franceconnect.gouv.fr/partenaires">en savoir plus sur FranceConnect</External>).
@@ -61,12 +62,10 @@ L'aide juridictionnelle est une prise en charge par l'État des frais judiciaire
 | [API Statut étudiant](https://api.gouv.fr/les-api/api-statut-etudiant)| Statut de l’inscription dans un établissement de l’enseignement supérieur |✅ Disponible  |[API  particulier](https://api.gouv.fr/les-api/api-particulier)|MESRI   |
 | [API Statut étudiant boursier](https://api.gouv.fr/les-api/api-statut-etudiant-boursier)| Statut d’étudiant boursier  |✅ Disponible  | [API  particulier](https://api.gouv.fr/les-api/api-particulier) |CNOUS / MESRI                                          |
 | [API statut demandeur d'emploi](/les-api/api-statut-demandeur-emploi)   |Statut et catégorie (A,B,C,D)   |✅ Disponible |[API  particulier](https://api.gouv.fr/les-api/api-particulier)| Pôle Emploi                        |
-| [API Indemnités Pôle emploi](/les-api/api-indemnisation-pole-emploi)   | Montant des indemnités versées par pôle emploi   |✅ Disponible |⌛️ bientôt disponible |Pôle Emploi                        |
-| [API  Complémentaire santé solidaire](https://particulier.api.gouv.fr/catalogue/cnaf_msa/complementaire_sante_solidaire)   | bénéficiaires de la C2S avec ou sans participation | ⌛️ En cours de développement  |⌛️ **Disponible en bac à sable** |DSS |
-|[API statut élève scolarisé et boursier](https://particulier.api.gouv.fr/catalogue/education_nationale/statut_eleve_scolarise) | Statut élève scolarisé au primaire et secondaire ; et statut boursier |En cours de spécification  |✅ Disponible| Ministère de l'éducation nationale |
+| [API Liste de paiements Pôle emploi](/les-api/api-indemnisation-pole-emploi)   | Montants des paiements des allocations ou des aides versées par pôle emploi   |✅ Disponible |[[API  particulier]](https://particulier.api.gouv.fr/catalogue) |Pôle Emploi                        |
+| [API  Complémentaire santé solidaire](https://particulier.api.gouv.fr/catalogue/cnaf_msa/complementaire_sante_solidaire)   | bénéficiaires de la C2S avec ou sans participation | ⌛️ **1er septembre** |⌛️ **1er septembre** |DSS |
+|[API statut élève scolarisé et boursier](https://particulier.api.gouv.fr/catalogue/education_nationale/statut_eleve_scolarise) | Statut élève scolarisé au primaire et secondaire ; et statut boursier |Janvier 2024 |✅ Disponible| Ministère de l'éducation nationale |
 |API quotient familial | Quotient familial, composition familiale|En cours de spécification  | [API  particulier](https://api.gouv.fr/les-api/api-particulier)|CNAF|
-|API quotient familial| Quotient familial, composition familiale |  Juin 2023|juin 2023|MSA|
-
 
 ### Comment ça marche ?
 
