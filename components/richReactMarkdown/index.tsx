@@ -9,7 +9,6 @@ import {
 } from '../../uiComponents';
 import Quote from '../../uiComponents/quote';
 import TeamHelpWidget from '../teamHelpWidget';
-import ApiRnaWidget from '../apiWidgets/apiRna';
 import ApiSireneWidget from '../apiWidgets/apiSirene';
 import DatagouvWidget from '../widgets/datagouv';
 import FlatFileWidget from '../widgets/flatFile';
@@ -76,7 +75,6 @@ const RichReactMarkdown: React.FC<{ source: string; addAnchor?: boolean }> = ({
         Grid: Grid,
         Centered: Centered,
         ContactUs: TeamHelpWidget,
-        ApiRnaWidget: ApiRnaWidget,
         FlatFile: FlatFileWidget,
         ApiSireneWidget: ApiSireneWidget,
         Datagouv: DatagouvWidget,

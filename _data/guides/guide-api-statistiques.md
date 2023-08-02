@@ -190,15 +190,6 @@ L'API Sirene permet d'accéder aux informations concernant les entreprises et le
 <br>
 
 <details>
-<summary>API Répertoire National des Associations</summary>
-Cette API donne accès au registre public des associations.
-
-<Button href="https://api.gouv.fr/les-api/api_rna">Accéder à l'API</Button>
-</details>
-
-<br>
-
-<details>
 <summary>API Data subventions</summary>
 Cette API donne accès aux données sur les subventions attribuées aux associations
 
