@@ -51,7 +51,7 @@ themes:
 contact_link: contact@moncomptepro.beta.gouv.fr
 doc_tech_external: https://github.com/betagouv/moncomptepro
 visits_2019: 5000
-uptime: 99.99 # https://status.api.gouv.fr/791973505
+uptime: 99.99
 last_update: 30/01/2023
 content_intro: |
   MonComptePro permet à des administrations, des collectivités, des entreprises ou des organisation d'ajouter un bouton MonComptePro, pour authentifier les professionnels de manière fiable et ainsi identifier les utilisateurs de services en ligne à leur organisation rattachée (en vue d'une connexion).

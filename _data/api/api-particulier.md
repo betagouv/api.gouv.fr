@@ -33,7 +33,7 @@ access_page:
       <Button href="https://form.typeform.com/to/GU90FCIE">Demander à être référencé</Button>
 stat:
   lastXdays: 30
-  url: https://status.api.gouv.fr/
+  url: https://particulier.api.gouv.fr/stats
   label: justificatifs papier évités
 partners:
   - CNAF
@@ -77,7 +77,7 @@ rate_limiting_description: |
 stats_detail_resume: Les statistiques sont disponibles sur 2 mois
 stats_detail_description: Accédez au suivi des consommations des API
 stats_detail_link: https://particulier.api.gouv.fr/stats
-monitoring_link: https://status.api.gouv.fr/
+monitoring_link:
 monitoring_description: |
   La DINUM s’engage à ce que le Service soit accessible à 95% et la DINUM s’engage à améliorer progressivement ce rendement.
 contact_link: api-particulier@api.gouv.fr
@@ -92,19 +92,19 @@ content_intro: |
 
   L'<External href="https://particulier.api.gouv.fr/">API Particulier</External> permet de **mettre en oeuvre le principe « Dites-le-nous une fois »**, en application de l’<External href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045213315">article L114-8 du Code des relations entre le public et l’administration</External>.
 
-  
+
   L'API Particulier est **un bouquet d'API** donnant accès à des données administratives des particuliers : quotient familial CAF, composition familiale, statut demandeur d’emploi, certificat de scolarité des élèves du primaire, du secondaire et étudiant, statuts élève et étudiant boursier ... il est utilisable dans le cadre des démarches en ligne et téléservices proposés aux usagers, ainsi que dans les logiciels métiers utilisés par les agents habilités en guichet.
 
 
   **Les usagers n'ont plus à fournir de pièces justificatives à l'appui de leurs démarches administratives**, telles que la tarification sociale et solidaire des transports, la cantine à 1 euro, les aides facultatives à la scolarité...
 
-  
+
   ### Ce qu'API Particulier change pour vous, administrations :
 
 
   En intégrant la brique API Particulier dans votre système d’information ou votre site internet :
   - ✅ Vous n’avez **plus besoin de demander certaines informations** aux particuliers, comme le certificat de scolarité ou l'attestation CAF ;
-  - ✅ Vous n’avez **pas de saisie ou de vérification** supplémentaire à réaliser ; 
+  - ✅ Vous n’avez **pas de saisie ou de vérification** supplémentaire à réaliser ;
   - ✅ Les **informations sont certifiées** ;
   - ✅ Vous accédez avec une seule habilitation aux **données de différents fournisseurs** : la Caisse nationale des allocations familiales (CNAF), la sécurité sociale agricole (MSA), Pôle emploi, le ministère de l'enseignement supérieur et de la recherche (MESR), le ministère de l'éduction nationale (MEN) et enfin le Centre national des œuvres universitaires et scolaires (Cnous).
 
@@ -182,7 +182,7 @@ Chaque année, l'équipe de l'API Particulier envoie un bilan chiffré sur l'uti
   - Je repère les données dont mes clients publics ont besoin pour un cas d'usage précis que je peux ou pourrai proposer dans ma solution logicielle ;
   - Je consulte la documentation technique, et j'utilise le bac à sable pour tester les appels d'API ;
   - J'écris à [cette adresse](https://api.gouv.fr/parcours-client?source=preFooter) pour être référencé sur le cas d'usage associé et avoir un formulaire pré-rempli à disposition de mes clients.
-  
+
 </details>
 
 <br>
@@ -210,8 +210,8 @@ Exemple [ici](https://airtable.com/appMEKRGMNrw4YRff) avec les données bac à s
 4. **Vous devez transmettre ce jeton à votre éditeur ? Ou à votre équipe technique ?** Utilisez un moyen de transmission sécurisé (messagerie cryptée par exemple).
 
 </details>
-  
+
 ## Support utilisateur
- 
+
 Vous êtes utilisateur de l'API Particulier, vous rencontrez un problème et avez besoin d'échanger avec nous en transmettant des données sensibles ? Utilisez le [formulaire de transfert d'informations sécurisées](https://www.demarches-simplifiees.fr/commencer/api-particulier-transfert-securise-d-informations).
 
