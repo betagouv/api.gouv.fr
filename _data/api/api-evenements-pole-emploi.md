@@ -1,6 +1,6 @@
 ---
 title: API Evénements Pôle emploi
-tagline: Retrouvez en un coup d’oeil tous les évènements liés à l’emploi sélectionnés par Pôle emploi : formations, forums, job dating et autres temps forts de l’emploi.
+tagline: "Retrouvez en un coup d’oeil tous les évènements liés à l’emploi sélectionnés par Pôle emploi : formations, forums, job dating et autres temps forts de l’emploi."
 producer: pole-emploi
 category: Public
 is_open: 0 # -1 means API not open
