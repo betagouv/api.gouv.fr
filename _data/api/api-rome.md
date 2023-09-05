@@ -1,6 +1,6 @@
 ---
 title: API ROME 4.0
-tagline: Profitez des données du RépertoireOpérationnel des Métiers et des Emplois (ROME) pour favoriser la connaissancedes métiers et la mobilité professionnelle.
+tagline: Profitez des données du Répertoire Opérationnel des Métiers et des Emplois (ROME) pour favoriser la connaissancedes métiers et la mobilité professionnelle.
 producer: pole-emploi
 category: Public
 is_open: 0 # -1 means API not open
@@ -33,7 +33,7 @@ Il a été construit par les équipes de Pôle emploi avec la contribution d’u
 Il est composé d’un ensemble de référentiels d’emplois, de compétences (savoir-faire, savoir-être professionnels et savoirs), et de contextes de travail. 
 En mars 2023, le ROME est entré dans l’ère du 4.0 et propose des informations plus fiables, mieux structurées et actualisées.
 
-### A quoi sert les API du ROME ?
+### A quoi servent les API du ROME ?
 
 L’utilisation des API du ROME 4.0 vous garantit l’utilisation de la dernière version disponible des référentiels.
 4 API distinctes sont désormais proposées (contrairement à l’API ROME v3) pour faciliter les usages possibles des référentiels, combinés ou pas : Compétences, Métiers, Fiches-Métiers et Contextes de travail.
