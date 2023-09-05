@@ -41,27 +41,31 @@ L’utilisation des API du ROME 4.0 vous garantit l’utilisation de la dernièr
 ### Données accessibles dans l'API
 
 [API ROME 4.0 – Compétences](https://pole-emploi.io/data/api/rome-4-0-competences)
+
 Le jeu de données de l’API ROME 4.0 - Compétences donne accès au référentiel des compétences du répertoire Opérationnel des Métiers et des Emplois classées par : 
 
-•	Domaines, enjeux et objectifs
-•	Macro-compétences et compétences détaillées
-•	Savoirs et catégories de savoir
+- Domaines, enjeux et objectifs
+- Macro-compétences et compétences détaillées
+- Savoirs et catégories de savoir
 
 [API ROME 4.0 – Métiers](https://pole-emploi.io/data/api/rome-4-0-metiers)
+
 Le jeu de données de l’API ROME 4.0 - Métiers référence l’ensemble des informations centrées sur les métiers du Répertoire Opérationnel des Métiers et des Emplois : 
 
-•	Appellations, définition et accès à l’emploi
-•	Compétences mobilisées et compétences clés
-•	Contextes de travail
-•	Mobilité professionnelle
+- Appellations, définition et accès à l’emploi
+- Compétences mobilisées et compétences clés
+- Contextes de travail
+- Mobilité professionnelle
 
 [API ROME 4.0 – Contextes de travail](https://pole-emploi.io/data/api/rome-4-0-contextes-travail)
+
 Le jeu de données de l’API ROME 4.0 - Contextes de travail référence les informations concernant les contextes de travail du Répertoire Opérationnel des Métiers et des Emplois organisés en catégories : 
 
-•	Contextes et Catégories de contexte de travail
+- Contextes et Catégories de contexte de travail
 
 [API ROME 4.0 – Fiches métiers](https://pole-emploi.io/data/api/rome-4-0-fiches-metiers)
+
 Le jeu de données de l’API ROME 4.0 – Fiches métiers fournit les informations utiles à la reconstitution d’une fiche métier du Répertoire Opérationnel des Métiers et des Emplois :
 
-•	Groupes de compétences mobilisées : les compétences sont classées et ordonnées par enjeu
-•	Groupes de savoirs : les savoirs sont classés et ordonnés par catégorie de savoir
+- Groupes de compétences mobilisées : les compétences sont classées et ordonnées par enjeu
+- Groupes de savoirs : les savoirs sont classés et ordonnés par catégorie de savoir
