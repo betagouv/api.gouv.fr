@@ -26,7 +26,19 @@ Les fournisseurs, de leur côté, ont avec ce catalogue un moyen simple de faire
 
 ## Fournisseur d'API ? Envie de référencer une nouvelle API ?
 
+### 1- Contacter le service
+Veuillez prendre attache avec l'équipe en complétant le formulaire suivant : 
 [👉 Ajoutez votre API](https://api.gouv.fr/nouvelle-api) !
+
+### 2- Ajouter son API dans le code 
+
+**Créer une fiche métier ([exemple](https://api.gouv.fr/les-api/api-particulier)) :** 
+- Rdv dans le dossier [_data/api](https://github.com/betagouv/api.gouv.fr/tree/master/_data/api).
+- Y ajouter un fichier `api-nom-de-la-nouvelle-api.md`
+
+**Ajouter un swagger qui apparaîtra [ici](https://api.gouv.fr/documentation) :** 
+- Dans la fiche métier, complêter le champ `doc_tech_link` avec un lien vers un swagger en json ou yaml qui est hébergé où vous le souhaitez pour être mis à jour le plus souvent possible.
+- En ajoutant ce lien dans la fiche métier, votre swagger apparaîtra automatiquement dans API.gouv.
 
 ## Comment ça marche ?
 
