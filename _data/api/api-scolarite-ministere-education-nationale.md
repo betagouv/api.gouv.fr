@@ -1,7 +1,7 @@
 ---
 title: API élève scolarisé
 tagline: Statut scolarisé et statut boursier d'un élève du primaire, collège ou lycée. 
-datapass_link: https://datapass.api.gouv.fr/TODO
+datapass_link: https://datapass.api.gouv.fr/api-scolarite
 access_page:
   - who:
       - Un particulier
