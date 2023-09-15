@@ -23,7 +23,17 @@ is_open: -1
 is_france_connected: -1
 producer: men
 keywords:
-  - TODO MOTS CLÉS DE LA RECHERCHE
+  - eleve
+  - scolarite
+  - scolaire
+  - bourse
+  - boursier
+  - etablissement
+  - ecole
+  - primaire
+  - college
+  - lycee
+  - enseignement
 themes:
   - Particulier
   - Education
