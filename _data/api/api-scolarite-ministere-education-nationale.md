@@ -9,16 +9,15 @@ access_page:
       - Une entreprise
     is_eligible: -1
     description: |
-      Vous ne pouvez pas accèder à ces informations.
+      Vous ne pouvez pas accèder à ces informations qui sont des données protégées.
 
       <Button href="/rechercher-api">Rechercher une autre API</Button>
   - who:
       - Une administration
     is_eligible: 1
     description: |
-      Vous êtes éligible. TODO
-      <NextSteps />
-      <QuestionTree tree='france-connected-api TODO' question='statutEtudiant TODO' />
+      En tant que collectivité territoriale ou administration, vous êtes éligible à utiliser cette API selon votre cadre juridique. Vous pouvez déposer une demande d'habilitation :
+      <Button href="https://datapass.api.gouv.fr/api-scolarite">Demander un accès</Button>
 is_open: -1
 is_france_connected: -1
 producer: men
