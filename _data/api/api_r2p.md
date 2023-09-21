@@ -24,7 +24,7 @@ access_page:
       Pour obtenir un agrément, vous devez **justifier du cadre juridique** dans lequel s’inscrit votre demande.
 
       <NextSteps service_description="de la description du cas d’utilisation" />
-      <Button href="https://datapass.api.gouv.fr/api-r2p-sandbox">Remplir une demande</Button>
+      <QuestionTree tree='formulaire-unique' question='r2p' />
   - who:
       - Un éditeur de logiciel
     is_eligible: 0
