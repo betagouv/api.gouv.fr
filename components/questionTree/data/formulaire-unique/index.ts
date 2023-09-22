@@ -1,4 +1,4 @@
-const generateFormulaireUniqueQuestion = (apiName: string) => ({
+export const generateFormulaireUniqueQuestion = (apiName: string) => ({
   question: 'Faites-vous appel à un éditeur de logiciels ?',
   choiceTree: [
     {
