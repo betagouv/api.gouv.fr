@@ -7,11 +7,11 @@ const isFranceConnectedQuestions = {
     choiceTree: [
       {
         choices: ['Oui'],
-        next: generateFormulaireUniqueQuestion('api-impot-particulier-fc'),
+        next: generateFormulaireUniqueQuestion('impot-particulier-fc'),
       },
       {
         choices: ['Non'],
-        next: generateFormulaireUniqueQuestion('api-impot-particulier'),
+        next: generateFormulaireUniqueQuestion('impot-particulier'),
       },
     ],
   },
