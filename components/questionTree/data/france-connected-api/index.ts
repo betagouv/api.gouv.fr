@@ -1,3 +1,5 @@
+import { generateFormulaireUniqueQuestion } from '../formulaire-unique';
+
 const isFranceConnectedQuestions = {
   dgfip: {
     question:
@@ -5,31 +7,12 @@ const isFranceConnectedQuestions = {
     choiceTree: [
       {
         choices: ['Oui'],
-        answer: `Vous pouvez remplir une demande :
-        <Button href="https://datapass.api.gouv.fr/api-impot-particulier-fc-sandbox">Remplir une demande</Button>`,
+        next: generateFormulaireUniqueQuestion('api-impot-particulier-fc'),
       },
       {
         choices: ['Non'],
-        next:
-        {
-          question:
-            'Souhaitez vous migrer de l’API Particulier (DINUM) vers l’API Impôt Particulier (DGFiP) ?',
-          choiceTree: [
-            {
-              choices: ['Oui',],
-              answer: `**<span role='img' aria-label='émoji ok'>👍</span> Vous êtes éligible et pouvez remplir une demande de migration.
-              <br/><br/>
-              <Button href='https://datapass.api.gouv.fr/api-impot-particulier-sandbox?demarche=migration_api_particulier' target='_blank' rel="noreferrer noopener">Déposer une demande</Button>`,
-            },
-            {
-              choices: ['Non',],
-              answer: `**<span role='img' aria-label='émoji ok'>👍</span> Vous êtes éligible et pouvez remplir une demande.
-              <br/><br/>
-              <Button href='https://datapass.api.gouv.fr/api-impot-particulier-sandbox' target='_blank' rel="noreferrer noopener">Déposer une demande</Button>`,
-            },
-          ],
-        },
-      },  
+        next: generateFormulaireUniqueQuestion('api-impot-particulier'),
+      },
     ],
   },
   statutEtudiant: {
@@ -69,8 +52,7 @@ const isFranceConnectedQuestions = {
     ],
   },
   agentConnect: {
-    question:
-      'Vous êtes...',
+    question: 'Vous êtes...',
     choiceTree: [
       {
         choices: ['Fournisseur de services'],
@@ -105,7 +87,7 @@ const isFranceConnectedQuestions = {
       },
     ],
   },
-indemnisationPe: {
+  indemnisationPe: {
     question:
       'Utilisez-vous ou comptez-vous utiliser FranceConnect sur votre service ?',
     choiceTree: [
