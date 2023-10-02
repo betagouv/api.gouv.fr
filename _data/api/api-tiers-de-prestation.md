@@ -4,7 +4,6 @@ tagline: Transmettez directement les factures de service à la personne à l’U
 external_site: https://open.urssaf.fr/explore/?sort=modified
 producer: urssaf
 is_open: -1 # 1 means API is fully open
-datapass_link: https://www.demarches-simplifiees.fr/commencer/api-tiers-de-prestations
 access_page:
   - who:
       - Un prestataire de service à la personne
