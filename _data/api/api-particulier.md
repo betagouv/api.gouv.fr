@@ -124,7 +124,7 @@ content_intro: |
   | **Statut demandeur d'emploi** | Pôle Emploi |Statut et catégorie (A,B,C,D)<br>[📖 Documentation](https://particulier.api.gouv.fr/catalogue/pole_emploi/situation)     | ✅          | ➡️ Pas FranceConnecté dans API Particulier mais disponible avec [cette API](/les-api/api-statut-demandeur-emploi).            |
   | **Statut élève scolarisé et boursier**   | Ministère de l'éducation nationale| Statut élève scolarisé au primaire et secondaire ; et statut boursier |✅     | Prévu       |
   | **Paiements versés par Pôle emploi** | Pôle Emploi | Montants des paiements des allocations ou des aides.<br>[📖 Documentation](https://particulier.api.gouv.fr/catalogue/pole_emploi/indemnites) | ✅              | ➡️ Ne sera pas FranceConnectée dans API Particulier mais déjà disponible avec [cette API](/les-api/api-indemnisation-pole-emploi). |
-  | **Statut Complémentaire santé solidaire (CSS)**              |  Direction de la sécurité sociale | Indique si le particulier a la CSS, avec ou sans participation. | ✅               | ✅               |
+  | **Complémentaire santé solidaire (C2S)**              |  Sécurité sociale | Indique si le particulier a la C2S, avec ou sans participation.<br>[📖 Documentation](https://particulier.api.gouv.fr/catalogue/cnaf_msa/complementaire_sante_solidaire) | ✅               | ✅               |
   | **Statut Revenu de solidarité active (RSA)**                 |Direction de la sécurité sociale | _En cours de définition_| T4 2023               | T4 2023               |
 
 
