@@ -1,6 +1,6 @@
 ---
 title: Offres d'emploi
-tagline: Accédez aux offres d'emploi disponibles sur pole-emploi.fr
+tagline: Exposez en temps réel sur votre service l’ensemble des offres d’emploi disponibles sur le site de Pôle emploi.
 producer: pole-emploi
 category: Public
 is_open: 0 # -1 means API not open

@@ -22,12 +22,12 @@ Selon la politique tarifaire choisie, le calcul des tarifs est réalisé grâce 
 
 ## Table des matières
 
-- [Simplifier les démarches du portail famille grâce aux API](#simplifier-les-démarches-du-portail-famille-grâce-aux-api)
-- [Les API et données utiles](#les-api-et-données-utiles)
-- [Améliorer votre portail famille avec l'API Particulier](#améliorer-votre-portail-famille-avec-lapi-particulier)
-  - [Exemple d'utilisation](#exemple-dutilisation)
-  - [Liste des éditeurs](#liste-des-éditeurs)
-- [Demander un accès aux API](#demander-un-accès-aux-api)
+- [Simplifier les démarches du portail famille grâce aux API](#simplifier-les-demarches-du-portail-famille-grace-aux-api)
+- [Les API et données utiles](#les-api-et-donnees-utiles)
+- [Améliorer votre portail famille avec l'API Particulier](#ameliorer-votre-portail-famille-avec-l'api-particulier)
+  - [Exemple d'utilisation](#exemple-d'utilisation)
+  - [Liste des éditeurs](#liste-des-editeurs)
+- [Demander un accès aux API](#demander-un-acces-aux-api)
 
 ## Simplifier les démarches du portail famille grâce aux API 
 
@@ -91,7 +91,7 @@ Les éditeurs suivants proposent des portails famille et sont déjà connectés 
 | JVS-Mairistem                | Parascol                      |
 | 3D Ouest                     | P3D Ouest                     |
 | Amiciel                      | Malice                        |
-
+| Cosoluce                     | Fluo                          |
 Vous êtes un éditeur et vous souhaitez apparaître dans cette liste ? Écrivez-nous à [api-particulier@api.gouv.fr](mailto:api-particulier@api.gouv.fr)
 
 ## Demander un accès aux API

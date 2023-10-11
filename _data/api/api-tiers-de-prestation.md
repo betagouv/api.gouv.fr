@@ -4,7 +4,6 @@ tagline: Transmettez directement les factures de service à la personne à l’U
 external_site: https://open.urssaf.fr/explore/?sort=modified
 producer: urssaf
 is_open: -1 # 1 means API is fully open
-datapass_link: https://datapass.api.gouv.fr/api-tiers-de-prestation
 access_page:
   - who:
       - Un prestataire de service à la personne
@@ -18,7 +17,7 @@ access_page:
       - Attestation fiscale ;
       - Coordonnées bancaires (RIB) au format pdf. 
 
-      <Button href="https://datapass.api.gouv.fr/api-tiers-de-prestation">Remplir une demande</Button>
+      <Button href="https://www.demarches-simplifiees.fr/commencer/api-tiers-de-prestations">Remplir une demande</Button>
 
   - who:
       - Un editeur de logiciel de service à la personne
@@ -29,7 +28,7 @@ access_page:
       
       Vous ne pourrez toutefois recevoir que des accès à l'environnement de test, et non à l'environnement de production.
 
-      <Button href="https://datapass.api.gouv.fr/api-tiers-de-prestation">Remplir une demande</Button>
+      <Button href="https://www.demarches-simplifiees.fr/commencer/api-tiers-de-prestations">Remplir une demande</Button>
   - who:
       - Un mandataire de service à la personne
     is_eligible: 0
@@ -46,7 +45,7 @@ access_page:
       - Attestation fiscale ;
       - Coordonnées bancaires (RIB) au format pdf. 
 
-      <Button href="https://datapass.api.gouv.fr/api-tiers-de-prestation">Remplir une demande</Button>
+      <Button href="https://www.demarches-simplifiees.fr/commencer/api-tiers-de-prestations">Remplir une demande</Button>
 
   - who:
       - Autre actvité

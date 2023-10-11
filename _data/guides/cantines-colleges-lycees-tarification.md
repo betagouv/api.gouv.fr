@@ -21,11 +21,11 @@ Pour en savoir plus, consulter cette page de [Service-Public.fr](https://www.ser
 
 ## Table des matières
 
-- [Simplifier la tarification des cantines au collège et lycée grâce aux API](#simplifier-la-tarification-des-cantines-au-collège-et-lycée-grâce-aux-api)
-- [Les API et données utiles](#les-api-et-données-utiles)
-- [Améliorer votre tarification cantine avec l'API Particulier](#améliorer-votre-tarification-cantine-avec-lapi-particulier)
-  - [Exemple d'utilisation](#exemple-dutilisation)
-- [Demander un accès aux API](#demander-un-accès-aux-api)
+- [Simplifier la tarification des cantines au collège et lycée grâce aux API](#simplifier-la-tarification-des-cantines-au-college-et-lycee-grace-aux-api)
+- [Les API et données utiles](#les-api-et-donnees-utiles)
+- [Améliorer votre tarification cantine avec l'API Particulier](#ameliorer-votre-tarification-cantine-avec-l'api-particulier)
+  - [Exemple d'utilisation](#exemple-d'utilisation)
+- [Demander un accès aux API](#demander-un-acces-aux-api)
 
 
 ## Simplifier la tarification des cantines au collège et lycée grâce aux API
@@ -70,8 +70,8 @@ Avec l'API Particulier, vous avez notamment accès au quotient familial CAF, au 
 
 L'utilisation des données est encadrée légalement. Vous devez formuler une demande auprès de l'API Particulier en justifiant du cadre légal de l'utilisation des données :
 - Cadre légal général : l'[Article L114-8 du Code des relations entre le public et l'administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045213315) fixe le cadre général qui oblige l’administration à échanger des données lors d’une démarche d’un usager ;
-- Cadre légal spécifique aux téléservices : En tant que collectivités territoriales vous avez donc un droit d'accès à certaines données dans le cadre de demandes, services pro-actifs et déclarations usagers. 
-L'[Arrêté du 04/07/13 sur les téléservices](https://www.legifrance.gouv.fr/loda/id/JORFTEXT000027697207/#:~:text=Dans%20les%20r%C3%A9sum%C3%A9s-,Arr%C3%AAt%C3%A9%20du%204%20juillet%202013%20autorisant%20la%20mise%20en%20%C5%93uvre,publiques%20locales%20dont%20ils%20sont) détaille à l'article 1 la liste des démarches par secteur. Aidez-vous de cet arrêté pour justifier de votre cadre légal.
+- [L'article  L216-6 du Code de l'éducation](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000027682699/2013-07-10) donne compétence aux lycées pour la gestion des cantines.
+- [L'article R531-52 du Code de l'éducation](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000020743085) donne compétence aux collectivités pour fixer les tarifs des cantines.
 - Fournir **l'acte/la délibération** qui fixe les critères de la tarification.
 
 ### Formulaires de demande d'accès

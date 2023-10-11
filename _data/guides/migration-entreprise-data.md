@@ -22,7 +22,7 @@ Les API qui constituaient entreprise.data.gouv.fr, vont être soit décommission
 | [Recherche d’entreprise](#recherche-d’entreprise)                                               | [API Recherche d’Entreprises](/les-api/api-recherche-entreprises) |
 | [Base Sirene](#base-sirene)                                                                     | [API Sirene V3](/les-api/sirene_v3)                               |
 | [Registre National du Commerce et des Sociétés](#registre-national-du-commerce-et-des-societes) | [API RNCS](/les-api/api-rncs)                                     |
-| [Répertoire National des Associations](#repertoire-national-des-associations)                   | API maintenue : vous pouvez continuer à l’utiliser                |
+| [Répertoire National des Associations](#repertoire-national-des-associations)                   | -                                                                 |
 | [Répertoire National des Métiers](#repertoire-national-des-metiers)                             | API maintenue : vous pouvez continuer à l’utiliser                |
 
 Dans le cas des API décommissionnées, les utilisateurs des anciennes API ont 3 mois à compter du 1er Juin 2022 pour migrer leurs téléservices vers les API alternatives.
@@ -97,11 +97,11 @@ C'est l'API la plus à jour possible pour accéder au contenu du RNCS.
 - recherche de siret : _/api/rna/v1/id/_
 - recherche de numéro rna : _/api/rna/v1/siret/_
 
-Ces routes permettent de faire du remplissage automatique de formulaires avec des champs du RNA tels que le numéro RNA etc.
+Ces routes permettaient de faire du remplissage automatique de formulaires avec des champs du RNA tels que le numéro RNA etc.
 
 </details>
 
-[L’API RNA](/les-api/api_rna) n’est pas décommissionnée. Elle est en cours de transfert aux équipes du Ministère de l’Intérieur.
+L’API RNA est décommissionnée, à ce jour il n'hesite pas d'alternative.
 
 ### Répertoire National des Métiers
 

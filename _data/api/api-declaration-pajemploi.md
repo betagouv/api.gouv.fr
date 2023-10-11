@@ -19,7 +19,7 @@ access_page:
       - Attestation fiscale
       - Attestation sociale
 
-      <Button href="https://portailapi.urssaf.fr/fr/component/apiportal/registration">Remplir une demande</Button>
+      <Button href="https://portailapi.urssaf.fr/fr/catalogue-api/prd/15f3effb-abd3-4e6f-acac-e7b6ad584c30/souscription-api-publique">Remplir une demande</Button>
   - who:
       - Un editeur de logiciel de paie
       - Autres activités
@@ -82,7 +82,7 @@ Un particulier employeur est une personne physique qui emploie un ou plusieurs s
 
 L’API Tierce Déclaration Pajemploi est une API REST gratuite avec un accès restreint qui utilise la cinématique d’authentification Oauth2 Client Credentials.
 
-Pour accéder à cette API gratuite, il faut en faire la demande [via le formulaire de demande de souscription](https://portailapi.urssaf.fr/fr/component/apiportal/registration) ou [via email](mailto:contact.tiercedeclaration@urssaf.fr) et signer la licence d’utilisation.
+Pour accéder à cette API gratuite, il faut en faire la demande [via le formulaire de demande de souscription](https://portailapi.urssaf.fr/fr/catalogue-api/prd/15f3effb-abd3-4e6f-acac-e7b6ad584c30/souscription-api-publique) ou [via email](mailto:contact.tiercedeclaration@urssaf.fr) et signer la licence d’utilisation.
 
 Une fois le dossier validé, un accès API bac à sable puis un accès API production sont fournis.
 

@@ -1,6 +1,6 @@
 ---
 title: API Accès à l'emploi
-tagline: Connaître les taux d'accès à l'emploi par métier recherché et par territoire.
+tagline: Accédez aux taux d’accès à l’emploi par métier recherché et par territoire
 producer: pole-emploi
 category: Public
 is_open: 0 # -1 means API not open

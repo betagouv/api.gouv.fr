@@ -1,6 +1,6 @@
 ---
 title: API La Bonne Boite
-tagline: Récupérez la liste des entreprises classées par potentiel d'embauche
+tagline: Profitez à tout moment d’une sélection pointue d’entreprises avec un fort potentiel d’embauche.
 producer: pole-emploi
 is_open: 0 # -1 means API not open
 account_link: https://pole-emploi.io/inscription

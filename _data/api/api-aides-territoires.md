@@ -41,7 +41,7 @@ Elle permet en tant que réutilisateur de données de récupérer les aides et l
 
 ### Alimenter l'API ?
 
-Pour garantir une information de qualité, Aides-territoires s’appuie sur les données référencées par les porteurs d’aides financières et d’ingénierie et les animateurs locaux via le [formulaire en ligne](https://aides-territoires.beta.gouv.fr/aides/publications), après la création d'un compte porteur sur Aides-territoires. 
+Pour garantir une information de qualité, Aides-territoires s’appuie sur les données référencées par les porteurs d’aides financières et d’ingénierie et les animateurs locaux via le [formulaire en ligne](https://aides-territoires.beta.gouv.fr/aides/publier/), après la création d'un compte porteur sur Aides-territoires. 
 
 Si le porteur dispose déjà d’une base de données structurée et porte de nombreux dispositifs, Aides Territoires met en place un flux automatique. 
 [Contacter l'équipe](mailto:aides-territoires@beta.gouv.fr) pour plus d'informations.

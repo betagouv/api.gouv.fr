@@ -58,7 +58,7 @@ jobs:
       - run: npm run lint
 
   no-datapass-staging:
-    name: 'No link to datapass-staging'
+    name: 'No link to staging.datapass'
     runs-on: ubuntu-latest
 
     steps:

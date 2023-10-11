@@ -78,6 +78,4 @@ Une fois vos accès reçus, il est nécessaire d'intégrer l'API dans vos outils
 
 ### Outils alternatifs
 
-Vous souhaitez uniquement utiliser les données de référence d'une association ? [L'API RNA peut vous intéresser](/les-api/api_rna)
-
 Vous souhaitez uniquement visualiser les données sur les subventions ? Accédez à l'outil [Data Subventions](https://datasubvention.beta.gouv.fr/)

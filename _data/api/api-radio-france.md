@@ -25,7 +25,7 @@ rate_limiting_resume: 1000 appels / jour
 rate_limiting_description: |
   La limite est fixée par Radio France à 1000 appels par jour par clé d'API. Si vous avez besoin d'une plus grande limite, contactez le support : support.openapi@radiofrance.com
 contact_link: support.openapi@radiofrance.com
-doc_tech_external: https://docs.google.com/document/d/1SKWunSLpuUtWyaRqrZCI70vNpq_nNCTxeNNVfyCSaPc/edit?usp=sharing
+doc_tech_external: https://developers.radiofrance.fr/doc
 visits_2019: 2500
 last_update: 25/01/2022
 content_intro: |

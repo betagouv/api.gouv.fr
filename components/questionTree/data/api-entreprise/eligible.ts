@@ -68,8 +68,8 @@ export const pathEligible = {
       L’API Entreprise s’utilise au travers d’un logiciel métier, comme par exemple un profil acheteur pour les marchés publics. Si vous collectez et traitez les données à la main, vous n’avez probablement pas un logiciel dédié aux démarches.
       <br/>
       <br/>
-      <span role='img' aria-label='émoji cadeau'>🎁</span>**Nouveauté ! Faîtes partie des premiers utilisateurs de l'annuaire des entreprises pour les agents publics**.<br/> Vous êtes intéressé par un site internet gratuit et permettant d'accéder en un clic aux données des entreprises et des associations ?
-      <br/>- <External href='https://form.typeform.com/to/ol1jlpdf'>Demander un accès au site pour les données utiles "subventions des associations"</External>
+      <span role='img' aria-label='émoji cadeau'>🎁</span>**Nouveauté ! Faites partie des 1ers utilisateurs de « l'espace agent public » de l'annuaire des entreprises !**.<br/> Vous devez vérifier les informations financières, fiscales et sociales des entreprises-associations ? Votre cadre juridique le permet ?
+      <br/>- <External href='https://form.typeform.com/to/ol1jlpdf'>C'est possible en 1 clic en remplissant ce questionnaire</External>
       <br/>
       <br/>
       **Autrement, vous pouvez :<br/>** - **contacter des éditeurs de logiciel ayant déjà intégré l’API Entreprise :**

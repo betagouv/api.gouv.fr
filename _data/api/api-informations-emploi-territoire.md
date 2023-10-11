@@ -1,6 +1,6 @@
 ---
 title: API Informations sur l'emploi dans un territoire
-tagline: Accéder à toutes les données clés sur l'emploi pour comprendre un territoire - population, établissements, salariés
+tagline: "Accédez à toutes les données clés pour comprendre un territoire : population, établissements, salariés. L’API fournit également un indicateur de dynamisme du territoire, développé par Pôle emploi et fondé sur l’IA."
 producer: pole-emploi
 category: Public
 is_open: 0 # -1 means API not open
@@ -38,10 +38,10 @@ Cette API met à disposition toutes les données brutes qui qualifient un territ
 - Nombre d'établissements par secteur (hors secteur public)
 - Salariés par secteur (hors secteur public)
 
-Cette API intègre un indicateur du dynamisme du territoire. Ce dernier est issu d’une méthode d’Intelligence Artificielle prospective qui mesure le dynamisme anticipé de l’évolution des effectifs salariés et des embauches sur le territoire au cours du prochain trimestre.  
+Cette API intègre un indicateur du dynamisme du territoire. Ce dernier est issu d’une méthode d’Intelligence Artificielle prospective qui mesure le dynamisme anticipé de l’évolution des effectifs salariés et des embauches sur le territoire au cours du prochain trimestre.
 
 ### Informations complémentaires
 
-Les sources sont l'INSEE, l'ACOSS et CCMSA.  
+Les sources sont l'INSEE, l'ACOSS et CCMSA.
 
 La fréquence de mise à jour de cette API est annuelle, sauf pour le "dynamisme" qui est réévalué trimestriellement.

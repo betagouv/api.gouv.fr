@@ -10,9 +10,9 @@ const LabelList = ({ title, labels, isLink }) => {
       <div>
         {labels.map(label =>
           isLink ? (
-            <Link key={label.href} href={'/les-api/[slug]'} as={label.href}>
-              <a className="label">{label.title}</a>
-            </Link>
+            <a key={label.href} href={label.href} className="label">
+              {label.title}
+            </a>
           ) : (
             <div key={`${title}-${label}`} className="label">
               {label}

@@ -49,12 +49,10 @@ const DocumentationLeftMenu: React.FC<IProps> = ({ allApis }) => {
           <div>Aucun résultat n'a été trouvé.</div>
         ) : (
           results.map(api => (
-            <Link
-              href="/documentation/[slug]"
-              as={`/documentation/${api.slug}`}
+            <a
+              href={`/documentation/${api.slug}`}
               key={api.slug}
             >
-              <a>
                 <div className="api-title">
                   {api.title}{' '}
                   {!api.doc_tech_link && (
@@ -74,8 +72,7 @@ const DocumentationLeftMenu: React.FC<IProps> = ({ allApis }) => {
                     {lock}
                   </span>
                 )}
-              </a>
-            </Link>
+            </a>
           ))
         )}
       </div>

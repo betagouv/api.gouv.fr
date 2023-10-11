@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 
 const DATAPASS_URL =
   process.env.NEXT_PUBLIC_DATAPASS_URL || 'https://datapass.api.gouv.fr';
@@ -47,7 +47,7 @@ interface IButtonProps {
   type: 'button' | 'submit' | 'reset' | undefined;
 }
 
-const LinkAsAButton: React.FC<ILinkProps> = ({
+const LinkAsAButton: React.FC<PropsWithChildren<ILinkProps>> = ({
   href,
   alt,
   rel,
@@ -69,7 +69,7 @@ const LinkAsAButton: React.FC<ILinkProps> = ({
   </a>
 );
 
-const ClassicButton: React.FC<IButtonProps> = ({
+const ClassicButton: React.FC<PropsWithChildren<IButtonProps>> = ({
   type,
   onClick,
   alt,
@@ -89,7 +89,7 @@ const ClassicButton: React.FC<IButtonProps> = ({
   </button>
 );
 
-const ButtonLink: React.FC<IProps> = ({
+const ButtonLink: React.FC<PropsWithChildren<IProps>> = ({
   href,
   alt,
   rel,

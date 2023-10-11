@@ -23,7 +23,7 @@ access_page:
       Pour obtenir un agrément, vous devez **justifier du cadre juridique** dans lequel s’inscrit votre demande.
 
       <NextSteps service_description="de la description du service justifiant l'accès aux données" />
-      <Button href="https://datapass.api.gouv.fr/api-ficoba-sandbox">Remplir une demande</Button>
+      <QuestionTree tree='formulaire-unique' question='ficoba' />
   - who:
       - Un éditeur de logiciel
     is_eligible: 0

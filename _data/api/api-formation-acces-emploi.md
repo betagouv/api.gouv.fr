@@ -1,6 +1,6 @@
 ---
 title: API Sortants de formation et accès à l'emploi
-tagline: Mieux appréhender les parcours formations des demandeurs d'emploi
+tagline: Retrouvez les chiffres produits par Pôle emploi pour mieux appréhender les parcours formations des demandeurs d’emploi.
 producer: pole-emploi
 category: Public
 is_open: 0 # -1 means API not open

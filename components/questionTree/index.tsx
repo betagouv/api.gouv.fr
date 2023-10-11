@@ -131,6 +131,8 @@ const formatCategoryName = (title: string | undefined) => {
       return 'FranceConnect et les API FranceConnectées';
     case 'api-particulier':
       return 'API Particulier';
+    case 'formulaire-unique':
+      return 'Formulaire Unique'
     default:
       return '*';
   }

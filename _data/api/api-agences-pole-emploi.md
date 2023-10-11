@@ -1,6 +1,6 @@
 ---
 title: API Référentiel des agences Pôle emploi
-tagline: Trouver rapidement les agences et points relais Pôle emploi partout en France
+tagline: Localisez les agences et les points relais Pôle emploi à proximité et partout en France (métropole et DROM).
 producer: pole-emploi
 category: Public
 is_open: 0 # -1 means API not open
