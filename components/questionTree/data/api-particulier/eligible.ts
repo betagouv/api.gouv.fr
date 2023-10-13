@@ -185,7 +185,7 @@ export const pathEligible = {
         `,
         },
         {
-          choices: ['**Mon éditeur ne figure pas dans cette liste**'],
+          choices: ['**Votre éditeur ne figure pas dans cette liste**'],
           answer: `**Vous êtes éligible mais votre éditeur n’a pas intégré l’API&nbsp;Particulier <span role="img" aria-label="émoji loupe">🔎</span>**
           <br/>
           Déposez une demande pour expliciter vos besoins et votre situation. L’équipe API Particulier vous contactera pour identifier des pistes de solutions, et contactera le cas échéant votre éditeur (pensez donc bien à préciser le nom de votre éditeur et ses coordonnées).
