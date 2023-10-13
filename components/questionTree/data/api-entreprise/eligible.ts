@@ -22,13 +22,13 @@ export const pathEligible = {
     },
     {
       choices: [
-        '**Mon éditeur.**<br/>Rien à coder, j’utilise une solution clé en main proposée par un éditeur.',
+        '**Votre éditeur.**<br/>Rien à coder, Vous utilisez une solution clé en main proposée par un éditeur.',
       ],
       next: pathDevelopForEditors
     },
     {
       choices: [
-        '**Je n’ai ni équipe technique, ni éditeur.**<br/>Actuellement, je contacte les entreprises et associations une par une et traite leurs données à la main.',
+        '**Ni équipe technique, ni éditeur.**<br/>Actuellement, vous contactez les entreprises et associations une par une et traitez leurs données à la main.',
       ],
       answer: `** Vous êtes éligible mais n'avez pas les <External href='https://entreprise.api.gouv.fr/developpeurs#prerequis-techniques'>prérequis techniques</External> pour utiliser l’API&nbsp;Entreprise**
       <br/>
