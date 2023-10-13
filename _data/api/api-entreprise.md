@@ -9,16 +9,18 @@ access_page:
       - Un particulier
     is_eligible: -1
     description: |
-      L’usage des données de l’API Entreprise est reservé aux acteurs publics : les administrations, leurs opérateurs et les collectivités, les acteurs de santé, etc.
+      L’usage de l’API Entreprise est **uniquement reservé aux acteurs publics** : les administrations, les collectivités, leurs opérateurs, les acteurs de santé, etc.
 
       <Button href='/les-api/api-entreprise#alternatives-en-acces-libre' >Consulter les alternatives</Button>
   - who:
-      - Une entité administrative
+      - Une collectivité ou une administration
     is_eligible: 1
     description: |
       L’API Entreprise vous permet d’accéder directement aux données administratives des entreprises et des associations pour faciliter leurs démarches (demandes d’aides, marchés publics, ...).
 
-      Pour vérifier que l’API Entreprise vous permet d’accéder aux données dont vous avez besoin, consultez nos différents [cas d'usages](https://entreprise.api.gouv.fr/cas_usages) (marchés publics, aides et subventions, portail GRU ...) et le [catalogue des API](https://entreprise.api.gouv.fr/catalogue).
+      Pour vérifier que l’API Entreprise vous permet d’accéder aux données dont vous avez besoin, consultez nos différents <External href="https://entreprise.api.gouv.fr/cas_usages">cas d'usages</External> (marchés publics, aides et subventions, portail GRU ...) et le <External href="https://entreprise.api.gouv.fr/catalogue">catalogue des API</External>.
+
+      Conformément aux dispositions de <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367412&dateTexte=&categorieLien=cid">l'article L114-8 du *code des relations entre le public et l'administration</External> vous ne pourrez accéder qu'aux seules informations ou données strictement nécessaires pour traiter une démarche de l'entreprise ou association concernée.
 
       <QuestionTree tree='api-entreprise' question='administrations' />
   - who:
