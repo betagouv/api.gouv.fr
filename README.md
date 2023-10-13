@@ -27,16 +27,16 @@ Les fournisseurs, de leur côté, ont avec ce catalogue un moyen simple de faire
 ## Fournisseur d'API ? Envie de référencer une nouvelle API ?
 
 ### 1- Contacter le service
-Veuillez prendre attache avec l'équipe en complétant le formulaire suivant : 
+Veuillez prendre attache avec l'équipe en complétant le formulaire suivant :
 [👉 Ajoutez votre API](https://api.gouv.fr/nouvelle-api) !
 
-### 2- Ajouter son API dans le code 
+### 2- Ajouter son API dans le code
 
-**Créer une fiche métier ([exemple](https://api.gouv.fr/les-api/api-particulier)) :** 
+**Créer une fiche métier ([exemple](https://api.gouv.fr/les-api/api-particulier)) :**
 - Rdv dans le dossier [_data/api](https://github.com/betagouv/api.gouv.fr/tree/master/_data/api).
 - Y ajouter un fichier `api-nom-de-la-nouvelle-api.md`
 
-**Ajouter un swagger qui apparaîtra [ici](https://api.gouv.fr/documentation) :** 
+**Ajouter un swagger qui apparaîtra [ici](https://api.gouv.fr/documentation) :**
 - Dans la fiche métier, complêter le champ `doc_tech_link` avec un lien vers un swagger en json ou yaml qui est hébergé où vous le souhaitez pour être mis à jour le plus souvent possible.
 - En ajoutant ce lien dans la fiche métier, votre swagger apparaîtra automatiquement dans API.gouv.
 
@@ -47,6 +47,8 @@ Veuillez prendre attache avec l'équipe en complétant le formulaire suivant :
 [Node.js](https://nodejs.org/en/) >= 16
 
 ### Serveur de développement
+
+tl;dr: `./bin/install.sh`
 
 Cette application utilise [Next.js](https://github.com/zeit/next.js).
 
@@ -71,8 +73,10 @@ cp .env.sample .env
 3. Lancer le serveur de développement
 
 ```bash
-npm run dev
+./bin/local_dev.sh
 ```
+
+Puis visitez http://localhost:3000/
 
 Par défaut, il écoutera sur le port `3000`, pour changer, utiliser `npm run dev -p 4242`.
 
@@ -144,7 +148,7 @@ Chaque pull request est déployé dans des [review app](https://devcenter.heroku
 
 Le déploiement se fait par [Github action](https://github.com/betagouv/api.gouv.fr/actions)
 
-A chaque "merge" sur master : 
+A chaque "merge" sur master :
 
 - Laissez le déploiement se faire automatiquement sur [staging](https://staging.api.gouv.fr) via l'action [deploy-staging](https://github.com/betagouv/api.gouv.fr/actions/workflows/deploy-staging.yml)
 - Vérifiez vos changements sur [staging](https://staging.api.gouv.fr)
