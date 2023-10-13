@@ -5,7 +5,7 @@ export const pathDevelopForEditors = {
       choices: [
           'E-Attestations - Conformité titulaires de marchés',
       ],
-      answer: `<br/><<Button href="https://datapass.api.gouv.fr/api-entreprise?demarche=e_attestations">Remplir une demande</Button>
+      answer: `<br/><Button href="https://datapass.api.gouv.fr/api-entreprise?demarche=e_attestations">Remplir une demande</Button>
       `,
       },
       {
@@ -19,7 +19,7 @@ export const pathDevelopForEditors = {
       choices: [
           'Achat Solution - Conformité titulaires de marchés',
       ],
-      answer: `<br/><Button href="https://datapass.api.gouv.fr/api-entreprise?achat_solution>Remplir une demande</Button>
+      answer: `<br/><Button href="https://datapass.api.gouv.fr/api-entreprise?demarche=achat_solution">Remplir une demande</Button>
       `,
       },
       {
@@ -65,7 +65,7 @@ export const pathDevelopForEditors = {
       Vous n’avez plus qu’à vous adresser directement à votre éditeur.`,
       },
       {
-      choices: ['**Mon éditeur ou la solution recherchée ne figure pas dans cette liste**'],
+      choices: ['**La solution de votre éditeur ne figure pas dans cette liste**'],
       answer: `**Vous êtes éligible mais votre éditeur/profil acheteur n’a pas intégré l’API&nbsp;Entreprise <span role="img" aria-label="émoji loupe">🔎</span>**
       <br/>
       Déposez une demande pour expliciter vos besoins et votre situation. L’équipe API Entreprise vous contactera pour identifier des pistes de solutions, et contactera le cas échéant votre éditeur (pensez donc bien à préciser le nom de votre éditeur et ses coordonnées).

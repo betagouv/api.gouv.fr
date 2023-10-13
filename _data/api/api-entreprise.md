@@ -20,7 +20,11 @@ access_page:
 
       Pour vérifier que l’API Entreprise vous permet d’accéder aux données dont vous avez besoin, consultez nos différents <External href="https://entreprise.api.gouv.fr/cas_usages">cas d'usages</External> (marchés publics, aides et subventions, portail GRU ...) et le <External href="https://entreprise.api.gouv.fr/catalogue">catalogue des API</External>.
 
-      Conformément aux dispositions de <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367412&dateTexte=&categorieLien=cid">l'article L114-8 du *code des relations entre le public et l'administration</External> vous ne pourrez accéder qu'aux seules informations ou données strictement nécessaires pour traiter une démarche de l'entreprise ou association concernée.
+      <p style="margin-left: 1rem; margin-right: 1rem;font-size: 0.9rem; line-height: 1.5rem;">Conformément aux dispositions de <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367412&dateTexte=&categorieLien=cid">l'article L114-8 du Code des relations entre le public et l'administration</External> vous ne pourrez accéder qu'aux seules informations ou données strictement nécessaires pour traiter une démarche de l'entreprise ou association concernée.</p>
+
+
+      <NextSteps />
+      <p style="margin-top: 0rem; font-size: 0.9rem; line-height: 1.5rem;"> <External href="https://entreprise.api.gouv.fr/faq#api_entreprise_faq_entry_quelles-informations-me-seront-demandees">En savoir plus sur les informations demandées</External></p>
 
       <QuestionTree tree='api-entreprise' question='administrations' />
   - who:

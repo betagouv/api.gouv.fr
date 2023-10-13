@@ -39,7 +39,7 @@ const Grid: React.FC<PropsWithChildren<{}>> = props => (
 
 const NextSteps = ({
   is_editeur = false,
-  service_description = `de la description du service justifiant une simplification pour les citoyens`,
+  service_description = `de la description du service justifiant une simplification pour les usagers`,
 }) => (
   <>
     <p>
@@ -47,8 +47,8 @@ const NextSteps = ({
     </p>
     <ul>
       <li>de votre numéro SIRET</li>
-      <li>du cadre juridique</li>
       <li>{service_description}</li>
+      <li>du cadre juridique</li>
       <li>des coordonnées de l'équipe</li>
       <li>
         des coordonnées de votre délégué à la protection des données et
