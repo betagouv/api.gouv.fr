@@ -1,3 +1,5 @@
+import { pathDevelopForEditors } from './editeurs';
+
 export const pathEligible = {
   question:
     'Qui sera en charge techniquement de l’intégration de l’API Entreprise ?',
@@ -15,49 +17,7 @@ export const pathEligible = {
       choices: [
         '**Mon éditeur.**<br/>Rien à coder, j’utilise une solution clé en main proposée par un éditeur.',
       ],
-      next: {
-        question:
-          "Votre éditeur ou profil acheteur a-t-il déjà intégré l'API Entreprise ? Sélectionnez votre éditeur dans la liste ci-dessous :",
-        choiceTree: [
-          {
-            choices: [
-              'Achatpublic - achatpublic.com',
-              'Actradis',
-              'Arnia - Pack commande publique',
-              'Atexo - LocalTrust',
-              'Atline Services - marches-securises.fr',
-              'AWS - AWS-achat',
-              'Axyus',
-              'Dematis - e-marchespublics.com',
-              'E-attestations - E-attestations.com',
-              'Entr\'ouvert - Publik',
-              'Klekoon - klekoon.com',
-              'Maximilien',
-              'Megalis Bretagne',
-              'MGDIS - Portail des aides',
-              'PICTAV Informatique',
-              'Provigis - Provigis plateforme',
-              'SmartGlobal - Smart Global Governance',
-              'Solution Attestations',
-            ],
-            answer: `**Bonne nouvelle ! Vous êtes éligible et votre éditeur/profil acheteur a déjà intégré l’API Entreprise. <span role='img' aria-label='émoji ok'>👍</span>**
-            <br/><br/>
-            Vous n’avez plus qu’à vous adresser directement à votre éditeur.`,
-          },
-          {
-            choices: ['**Mon éditeur ne figure pas dans cette liste**'],
-            answer: `**Vous êtes éligible mais votre éditeur/profil acheteur n’a pas intégré l’API&nbsp;Entreprise <span role="img" aria-label="émoji loupe">🔎</span>**
-            <br/>
-            Déposez une demande pour expliciter vos besoins et votre situation. L’équipe API Entreprise vous contactera pour identifier des pistes de solutions, et contactera le cas échéant votre éditeur (pensez donc bien à préciser le nom de votre éditeur et ses coordonnées).
-            <br/>
-            <Button href='https://datapass.api.gouv.fr/api-entreprise' target='_blank' rel="noreferrer noopener" alt>Déposer une demande</Button>
-            <br/>
-            **Nota :** L’API Entreprise s’utilise au travers d’un logiciel métier, votre éditeur vous met probablement à disposition un logiciel de ce type.
-            <br/>
-            En revanche, comme ce dernier n’a pas encore intégré l’API Entreprise, les instructeurs de l’API Entreprise devront, entre autres, vérifier si votre éditeur a les <External href='https://entreprise.api.gouv.fr/doc/#fondamentaux'>prérequis techniques</External> pour utiliser l’API Entreprise.`,
-          },
-        ],
-      },
+      next: pathDevelopForEditors
     },
     {
       choices: [
