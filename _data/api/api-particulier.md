@@ -8,20 +8,34 @@ access_page:
       - Un particulier ou une entreprise
     is_eligible: -1
     description: |
-      Seules les administrations sont habilitées à utiliser API Particulier.
+      L’usage de l’API Particulier est **uniquement reservé aux acteurs publics** : les administrations, les collectivités, leurs opérateurs, les acteurs de santé, etc.
 
       <Button href="/rechercher-api">Rechercher une autre API</Button>
   - who:
       - Une collectivité ou une administration
     is_eligible: 1
     description: |
-      Conformément aux dispositions de <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367412&dateTexte=&categorieLien=cid">l'article L114-8</External> du *code des relations entre le public et l'administration*, seules les administrations sont habilitées à échanger entre elles des informations ou données strictement nécessaires pour traiter une démarche.
+      L’API Particulier vous permet d’accéder directement aux données administratives des particuliers pour faciliter leurs démarches (cantines, titres de transport, aides sociales, démarches famille, etc...).
 
-      Pour obtenir un agrément, vous devez **justifier d'une simplification pour les citoyens**, et vous engager à
-      n'accéder aux données personnelles qu'avec **l'accord explicite** de l'usager.
+      Pour vérifier que l’API Particulier vous permet d’accéder aux données dont vous avez besoin, consultez le <External href="https://particulier.api.gouv.fr/catalogue">catalogue des API</External> et nos différents <External href="https://api.gouv.fr/les-api/api-particulier#exemples-d%E2%80%99application">cas d'usages</External>.
+
+      Conformément aux dispositions de <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367412&dateTexte=&categorieLien=cid">l'article L114-8 du *code des relations entre le public et l'administration</External> vous ne pourrez accéder qu'aux seules informations ou données strictement nécessaires pour traiter une démarche du particulier concerné.
 
       <NextSteps />
       <QuestionTree tree='api-particulier' question='apipart'/>
+  - who:
+      - Une entreprise ou une association
+    is_eligible: -1
+    description: |
+      L’usage de l’API Particulier est **uniquement reservé aux acteurs publics** : les administrations, les collectivités, leurs opérateurs, les acteurs de santé, etc.
+
+      Si vous êtes **éditeur de logiciels, c'est à votre collectivité ou administration de faire sa demande d'habilitation.**
+
+      En revanche, vous pouvez nous demander de vous référencer sur un cas d'usage afin de proposer des formulaires pré-remplis et ainsi simplifier l'expérience de vos clients publics.
+
+      <Button href="https://form.typeform.com/to/GU90FCIE">Demander à être référencé</Button>
+
+      <Button href="/rechercher-api">Rechercher une autre API</Button>
   - who:
       - Un éditeur de logiciel
     is_eligible: -1
