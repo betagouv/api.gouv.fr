@@ -12,7 +12,7 @@ api:
 <details>
    <summary>Comment fonctionne la tarification des cantines dans les collèges et lycées ?</summary>
 
-Les départements sont en charge des cantines des collèges, et les régions, des cantines des lycées. Dans ce cadre, ce sont ces collectivités qui fixent les tarifs de la restauration scolaire et qui peuvent décider d'appliquer une tarification sociale sur la base des revenus de la famille.
+Les départements sont en charge des cantines des collèges, et les régions, des cantines des lycées. Dans ce cadre, ce sont ces collectivités qui fixent les tarifs de la restauration scolaire et qui peuvent décider d'appliquer une tarification sociale sur la base des revenus de la famille, dont la tarification [cantine à un euro](https://www.asp-public.fr/aides/cantine-a-1-euro).
 
 Pour en savoir plus, consulter cette page de [Service-Public.fr](https://www.service-public.fr/particuliers/vosdroits/F24569)
 
@@ -34,6 +34,8 @@ Départements et régions, en intégrant l'API Particulier dans votre système d
 - 😃 Pour instruire les dossiers, **il n'est plus nécessaire de demander aux familles de renseigner** : 
    - leur quotient familial CAF ;
    - leur revenu fiscal de référence ;
+   - le justificatif de scolarité ;
+   - l'échelon de la bourse sur critères sociaux.  
 - ⏰ Vous accélérez le traitement des dossiers car vos agents n’ont **pas à vérifier les données saisies et les pièces justificatives fournies**, les informations obtenues par l'API sont certifiées 🔎 ;
 - 🎯 Enfin, vous **participez à la simplification des démarches pour les citoyens** en mettant en oeuvre le [« Dites-le-nous une fois »](https://www.numerique.gouv.fr/services/guichet-dites-le-nous-une-fois/), en application de l’[article L113-12 du Code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037313155).
 
@@ -43,6 +45,7 @@ Départements et régions, en intégrant l'API Particulier dans votre système d
 | --- | --- | --- |
 | Bouquet [API Particulier](https://particulier.api.gouv.fr/catalogue) - opéré par la DINUM | Quotient familial CAF, composition familiale| ⚙️ Certaines API sont disponibles avec FranceConnect |
 | [API Impôt particulier](/les-api/impot-particulier) - DGFIP | Revenu fiscal de référence, nombre de parts fiscales | ✅ |
+| [API Impôt statut élève scolarisé et boursier](https://particulier.api.gouv.fr/catalogue/education_nationale/statut_eleve_scolarise) - Ministère de l'éducation nationale et de la jeunesse | statut boursier des élèves | ❌ |
 
 
 ## Améliorer votre tarification cantine avec l'API Particulier
@@ -63,6 +66,18 @@ Avec l'API Particulier, vous avez notamment accès au quotient familial CAF, au 
 
 **Étape 2 :** La tarification de la cantine scolaire est automatiquement calculée en fonction du quotient familial. Le parent n'a plus qu'à terminer l'inscription.
 
+### Liste des éditeurs
+
+Les éditeurs suivants proposent des logiciels utiles aux établissements scolaires et sont déjà connectés à l'API Particulier :
+
+| Éditeur | Nom de la solution       |
+| ------- | ------------------------ |
+| Edulog-Turboself|          |
+| Alise  |      |
+| Kosmos  |       |
+
+Vous êtes un éditeur et vous souhaitez apparaître dans cette liste ? Écrivez-nous à [contact@particulier.api.gouv.fr](mailto:contact@particulier.api.gouv.fr)
+
 
 ## Demander un accès aux API
 
@@ -78,7 +93,7 @@ L'utilisation des données est encadrée légalement. Vous devez formuler une de
 
 Vous souhaitez demander un accès à l'[API Particulier](https://particulier.api.gouv.fr/catalogue) ? Déposez votre demande d'habilitation :
 
-<Button href="https://datapass.api.gouv.fr/api-particulier?demarche=ccas">Remplir une demande API Particulier</Button>
+<Button href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande API Particulier</Button>
 
 Vous avez besoin des données fiscales ? Il vous faudra faire une [demande d'habilitation dédiée auprès de la DGFIP](/les-api/impot-particulier).
 
