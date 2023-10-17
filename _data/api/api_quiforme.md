@@ -1,5 +1,5 @@
 ---
-title: API élève scolarisé
+title: API Quiforme
 tagline: Statut scolarisé et statut boursier d'un élève du primaire, collège ou lycée. 
 datapass_link: https://datapass.api.gouv.fr/api-scolarite
 access_page:
