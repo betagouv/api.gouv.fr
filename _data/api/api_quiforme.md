@@ -17,7 +17,7 @@ access_page:
     is_eligible: 1
     description: |
       En tant que collectivité territoriale ou administration, vous êtes éligible à utiliser cette API selon votre cadre juridique. Vous pouvez déposer une demande d'habilitation :
-      <Button href="https://datapass.api.gouv.fr/api-scolarite">Demander un accès</Button>
+      <Button href="https://datapass.api.gouv.fr/TODO">Demander un accès</Button>
 is_open: -1
 is_france_connected: -1
 producer: men
