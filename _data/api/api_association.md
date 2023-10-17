@@ -86,3 +86,8 @@ En tant qu'administration ou collectivité, vous avez probablement accès à la 
 Pour accéder à l'API protégée, vous avez deux possibilités : 
 - **contacter la DJEPVA** (contact à venir) pour demander une clé d'authentification. La démarche est détaillée dans le contrat d'interface.
 - **demander un accès au bouquet <External href='/les-api/api-entreprise'>API Entreprise</External>** opéré par la DINUM. Ce dernier vous permet d'obtenir de nombreuses données entreprises et associations avec une seule habilitation.
+
+
+## Vous avez besoin d'autres données sur les entreprises ou les associations ?
+
+**Demander un accès au bouquet <External href='/les-api/api-entreprise'>API Entreprise</External>** opéré par la DINUM. Ce dernier vous permet d'obtenir de nombreuses données entreprises et associations avec une seule habilitation.
