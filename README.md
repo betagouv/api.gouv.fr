@@ -36,6 +36,19 @@ Veuillez prendre attache avec l'équipe en complétant le formulaire suivant :
 - Rdv dans le dossier [_data/api](https://github.com/betagouv/api.gouv.fr/tree/master/_data/api).
 - Y ajouter un fichier `api-nom-de-la-nouvelle-api.md`
 
+**Si vous êtes un nouveau fournisseur de données :**
+- Il faut créer votre fiche fournisseur `fournisseur.md` , en l'ajoutant dans le dossier `api_gouv/_data/producteurs`
+- Dans ce fichier ajouter au minimum : 
+```
+---
+name: Nom complet du fournisseur
+acronym: Nom court qui sera affiché en principal
+type: Association | Entreprise privée 
+logo: fichier.png
+---
+```
+- Il faudra ajouter le logo au format .png et sous le même nom que vous avez mis dans le fichier `fournisseur.md`, ici en exemple `fichier.png` , dans le fichier `api_gouv/public/images/api-logo`
+
 **Ajouter un swagger qui apparaîtra [ici](https://api.gouv.fr/documentation) :**
 - Dans la fiche métier, complêter le champ `doc_tech_link` avec un lien vers un swagger en json ou yaml qui est hébergé où vous le souhaitez pour être mis à jour le plus souvent possible.
 - En ajoutant ce lien dans la fiche métier, votre swagger apparaîtra automatiquement dans API.gouv.
