@@ -1,7 +1,7 @@
 ---
 title: API Quiforme
 tagline: Statut scolarisé et statut boursier d'un élève du primaire, collège ou lycée. 
-datapass_link: https://datapass.api.gouv.fr/api-scolarite
+datapass_link: https://datapass.api.gouv.fr/TODO
 access_page:
   - who:
       - Un particulier
@@ -39,7 +39,6 @@ themes:
   - Administration
 contact_link: api-sco-eleve_contacts@education.gouv.fr
 doc_tech_link: URL TODO
-visits_2019: 4000
 last_update: 10/10/2023
 ---
 
