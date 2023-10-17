@@ -23,6 +23,7 @@ test('All Apis appear in Roadmap', async () => {
 });
 
 const oldAPIs = [
+  'API Associations (RNA)',
   'API Ingres Nomenclatures',
   'API Ingres Noyau',
   'Légifrance Bêta',
