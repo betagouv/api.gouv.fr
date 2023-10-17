@@ -112,3 +112,7 @@ Cette API comprend trois périmètres d'accès :
 | état_boursier | boursier oui/non |
 | niveau_bourse| échelon de la bourse|
 
+
+## Vous avez besoin d'autres données sur les entreprises ou les associations ?
+
+**Demander un accès au bouquet <External href='/les-api/api-entreprise'>API Entreprise</External>** opéré par la DINUM. Ce dernier vous permet d'obtenir de nombreuses données entreprises et associations avec une seule habilitation.
