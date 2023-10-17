@@ -32,6 +32,8 @@ Veuillez prendre attache avec l'équipe en complétant le formulaire suivant :
 
 ### 2- Ajouter son API dans le code
 
+Pour pouvoir ajouter votre API ou commenter un fichier dans ce dépôt, vous devez au préalable avoir un [compte Github](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home).
+
 **Créer une fiche métier ([exemple](https://api.gouv.fr/les-api/api-particulier)) :**
 - Rdv dans le dossier [_data/api](https://github.com/betagouv/api.gouv.fr/tree/master/_data/api).
 - Y ajouter un fichier `api-nom-de-la-nouvelle-api.md`
