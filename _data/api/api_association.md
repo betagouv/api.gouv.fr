@@ -84,5 +84,5 @@ Les données sont issues de deux bases de ressources différentes:
 En tant qu'administration ou collectivité, vous avez probablement accès à la version protégée et complète de cette API.
 
 Pour accéder à l'API protégée, vous avez deux possibilités : 
-- **contacter la DJEPVA** (TODO mail) pour demander une clé d'authentification. La démarche est détaillée dans le contrat d'interface.
+- **contacter la DJEPVA** (contact à venir) pour demander une clé d'authentification. La démarche est détaillée dans le contrat d'interface.
 - **demander un accès au bouquet <External href='/les-api/api-entreprise'>API Entreprise</External>** opéré par la DINUM. Ce dernier vous permet d'obtenir de nombreuses données entreprises et associations avec une seule habilitation.
