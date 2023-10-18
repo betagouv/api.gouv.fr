@@ -107,14 +107,14 @@ access_page:
 
 ##### Options du champ `description: |` :
 
-Vous pouvez ajouter tout le contenu markdown que vous souhaitez dans le champ description. Biensûr, rester le plus concis possible est préférable pour que l'usager se repère. Voici quelques options que vous pouvez utiliser facilement : 
+Vous pouvez ajouter tout le contenu markdown que vous souhaitez dans le champ `description: |`. Biensûr, rester le plus concis possible est préférable pour que l'usager se repère. Voici quelques options que vous pouvez utiliser facilement : 
 
 **Option 1 :**
-Ajouter un bouton pour proposer de chercher une nouvelle API : `<Button href="/rechercher-api">Rechercher une autre API</Button>`
+Ajouter un bouton pour proposer de chercher une nouvelle API, en écrivant : `<Button href="/rechercher-api">Rechercher une autre API</Button>`
 
 **Option 2 :**
 Spécialement pour les API utilisant Datapass comme formulaire d'habilitation, vous pouvez utiliser le composant [`<NextSteps />`](https://github.com/betagouv/api.gouv.fr/tree/master/components/richReactMarkdown/index.tsx) pour ajouter un paragraphe décrivant la liste des documents et informations qui seront demandés.
-Il vous suffit de l'ajouter sur une ligne seule à l'intérieur du champ `description: |`, un exemple est visible dans le [la forme standard du composant ci-dessus](#forme-standard-du-champ).
+Il vous suffit de l'ajouter sur une ligne seule à l'intérieur du champ `description: |`, un exemple est visible dans [la forme standard du composant ci-dessus](#forme-standard-du-champ).
 
 <details>
     <summary>Que va ajouter ce composant ?</summary>
