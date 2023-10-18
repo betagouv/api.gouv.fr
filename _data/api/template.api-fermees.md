@@ -1,8 +1,9 @@
 ---
 title: API XXX # 📍 Nom commercial de l'API, privilégier un nom court.
 tagline: Interrogez l'API ... # 📍 Une phrase pour résumer le service rendu par l'API.
-is_open: 1 # 📍 1 si l'API est entièrement ouverte, 0 si un compte est nécessaire pour utiliser l'API.
-account_link: https://site-api/user/register # URL de la page de demande d'habilitation si l'API nécessite un compte pour être utilisée.
+is_open: -1 # 📍 -1 si l'API est fermée, accessible à un public restreint sous habilitation ; 0 si un compte est nécessaire pour utiliser l'API mais qu'il n'y a pas de conditions pour se créer un compte.
+account_link: https://site-api/user/register # URL de la page de demande d'habilitation si l'API nécessite un compte pour être utilisée. ATTENTION : retirer ce champ si vous utilisez le champ ci-dessous "datapass_link".
+datapass_link: https://datapass.api.gouv.fr/api-xxx # URL vers le formulaire d'habilitation Datapass (uniquement API en accès restreint). ATTENTION : retirer ce champ si vous utilisez le champ ci-dessus "account_link".
 producer: identifiant_fournisseur # 📍 Identifiant du fournisseur de la donnée trouvable ou ajoutable dans le dossier `api_gouv/_data/producteurs`, pour en savoir plus consulter le read.me.
 contact_link: contact@contact.fr # 📍 Adresse e-mail que les usagers peuvent utiliser pour vous contacter.
 partners: # Liste des co-producteurs de l'API
@@ -41,6 +42,7 @@ keywords: # 📍 Ajouter des mots clés qui permettront aux usagers de trouver v
   - rna
 last_update: 11/10/2023 # Date de la dernière mise à jour de la doc
 datagouv_uuid: # Si l'API se base sur un jeu de données ouvertes accessibles depuis data.gouv.fr, ajouter l'uuid du jeu de données pour afficher automatiquement un bloc en fin de page référençant le jeu de données.
+  - 631f4320d215a236920bd4dd
 content_intro: |
   ### À quoi sert l'API XXX ?
 
