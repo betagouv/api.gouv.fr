@@ -45,20 +45,21 @@ Pour plus de facililité, copier/coller tout le contenu du template dans votre f
 
 #### Champ `producer`
 
-Pour que votre fiche API fonctionne, il est impératif qu'elle soit rattaché au nom d'un fournisseur référencé dans le dossier `api_gouv/_data/producteurs`. [🔎 Ajouter un fournisseur de données](#3--créermodifier-sa-fiche-fournisseur-de-données)
+Pour que votre fiche API fonctionne, il est impératif qu'elle soit rattachée au nom d'un fournisseur référencé dans le dossier `api_gouv/_data/producteurs`. [🔎 Ajouter un fournisseur de données](#3--créermodifier-sa-fiche-fournisseur-de-données)
 
-#### Champ `doc_tech_link` ou comment référencer son swagger à la page https://api.gouv.fr/documentation
+#### Champ `doc_tech_link` ou comment référencer son swagger
 
 Pour ajouter votre swagger dans [API.gouv](https://api.gouv.fr/documentation), il vous faut mettre le lien URL vers le fichier openAPI.
 
 - Si vous avez une URL publique permettant d'accéder au fichier OpenAPI, c'est ce lien que vous devez indiquer.
-- Si votre swagger n'est pas disponible par une URL publique. Nous pouvons héberger votre swagger pour le rendre disponible. Veuillez nous contacter : https://api.gouv.fr/parcours-client?source=contact
+- Si votre swagger n'est pas disponible par une URL publique, nous pouvons héberger votre swagger pour le rendre disponible. Veuillez [nous contacter](https://api.gouv.fr/parcours-client?source=contact).
 
-Pour ajouter un lien vers votre documentation, utilisez le champ `doc_tech_external:`.
+Pour ajouter un lien vers la documentation technique, veuillez utiliser le champ `doc_tech_external:`.
 
-#### `account_link:` et `datapass_link:`, deux champs pour renvoyer vers une page de demande d'habilitation
+#### `account_link:` et `datapass_link:`quelle différence ?
 
-Votre API est en accès restreint ? Deux champs sont à votre disposition pour renvoyer les usagers vers la demande d'habilitation :  
+Votre API est en accès restreint ? Deux champs sont à disposition pour renvoyer les usagers vers la demande d'habilitation :  
+
 - `account_link:` vous permet d'ajouter l'URL de votre page de connexion (si il s'agit d'une demande de création de compte) ou de votre procédure d'habilitation.
 - `datapass_link:` permet d'ajouter le lien vers le formulaire d'habilitation DataPass, produit opéré par la DINUM et permettant l'instruction de demandes d'accès à des données.
 
@@ -66,7 +67,7 @@ Votre API est en accès restreint ? Deux champs sont à votre disposition pour r
 
 Si vous êtes un nouveau fournisseur de données, vous avez besoin de référencer votre organisation dans API.gouv :
 
-- Créer la fiche fournisseur `fournisseur.md`, en l'ajoutant dans le dossier `api_gouv/_data/producteurs`
+- Créer la fiche fournisseur `fournisseur.md`, en l'ajoutant dans le dossier [`api_gouv/_data/producteurs`](https://github.com/betagouv/api.gouv.fr/tree/master/_data/producteurs)
 - Dans ce fichier, copier/coller le template `template.fournisseur.md.example` ou ajouter au minimum : 
 ```
 ---
@@ -78,9 +79,6 @@ logo: fichier.png
 ```
 - Ajouter le logo au format .png dans le dossier `api_gouv/public/images/api-logo`. Nommer le logo sous le même nom qu'utilisé dans le fichier `fournisseur.md` au niveau du champ `logo:`.
 
-**Ajouter un swagger qui apparaîtra [ici](https://api.gouv.fr/documentation) :**
-- Dans la fiche métier, complêter le champ `doc_tech_link` avec un lien vers un swagger en json ou yaml qui est hébergé où vous le souhaitez pour être mis à jour le plus souvent possible.
-- En ajoutant ce lien dans la fiche métier, votre swagger apparaîtra automatiquement dans API.gouv.
 
 ## Comment ça marche ?
 
