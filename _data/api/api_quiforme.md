@@ -20,7 +20,7 @@ access_page:
       <Button href="https://datapass.api.gouv.fr/TODO">Demander un accès</Button>
 is_open: -1
 is_france_connected: -1
-producer: men
+producer: carif-oref
 keywords:
   - Qualiopi
   - France compétences
