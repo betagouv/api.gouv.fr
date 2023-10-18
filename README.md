@@ -32,9 +32,26 @@ Veuillez prendre attache avec l'équipe en complétant le formulaire suivant :
 
 ### 2- Ajouter son API dans le code
 
+Pour pouvoir ajouter votre API ou commenter un fichier dans ce dépôt, vous devez au préalable avoir un [compte Github](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home).
+
 **Créer une fiche métier ([exemple](https://api.gouv.fr/les-api/api-particulier)) :**
 - Rdv dans le dossier [_data/api](https://github.com/betagouv/api.gouv.fr/tree/master/_data/api).
-- Y ajouter un fichier `api-nom-de-la-nouvelle-api.md`
+- Y ajouter un fichier `api-nom-de-la-nouvelle-api.md`.
+ 
+Pour les API en open data, appuyez-vous sur le template `template.api-opendata.md.example`, il s'agit d'un pas à pas explicatif de chacun des champs à compléter. 
+
+**Si vous êtes un nouveau fournisseur de données :**
+- Il faut créer votre fiche fournisseur `fournisseur.md` , en l'ajoutant dans le dossier `api_gouv/_data/producteurs`
+- Dans ce fichier ajouter au minimum : 
+```
+---
+name: Nom complet du fournisseur
+acronym: Nom court qui sera affiché en principal
+type: Association | Entreprise privée 
+logo: fichier.png
+---
+```
+- Il faudra ajouter le logo au format .png et sous le même nom que vous avez mis dans le fichier `fournisseur.md`, ici en exemple `fichier.png` , dans le fichier `api_gouv/public/images/api-logo`
 
 **Ajouter un swagger qui apparaîtra [ici](https://api.gouv.fr/documentation) :**
 - Dans la fiche métier, complêter le champ `doc_tech_link` avec un lien vers un swagger en json ou yaml qui est hébergé où vous le souhaitez pour être mis à jour le plus souvent possible.
