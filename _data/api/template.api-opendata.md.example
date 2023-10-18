@@ -1,0 +1,79 @@
+---
+title: API XXX # Le nom de votre API, privilégier un nom court.
+tagline: Interrogez l'API ... # Une phrase pour résumer le service rendu par l'API.
+is_open: 1 # 1 si l'API est entièrement ouverte, 0 si un compte est nécessaire pour utiliser l'API.
+producer: identifiant_fournisseur # Identifiant du fournisseur de la donnée trouvable ou ajoutable dans le dossier `api_gouv/_data/producteurs`, pour en savoir plus consulter le read.me.
+keywords: # Ajouter des mots clés qui permettront aux usagers de trouver votre API avec le moteur de recherche.
+  - associations
+  - rna
+rate_limiting_resume: 10 appels / minute / IP #Volumétrie maximal de votre API.
+rate_limiting_description: |
+  L'API est disponible à hauteur de 10 appels par minutes. 
+# Phrase descriptive de la volumétire
+contact_link: contact@contact.fr # Adresse e-mail que les usagers peuvent utiliser pour vous contacter.
+doc_tech_external: https://swagger/api/open-api.yml #URL qui donne accès au swagger de votre API. Pour en savoir plus, consulter le read.me.
+themes: #Ajouter un ou plusieurs thèmes, qui permettront aux usagers de trouver votre API en filtrant le catalogue par thématique. Pour ajouter un thème ci-dessous, supprimer simplement le # (sans retirer des blancs.)
+#  - Administration
+#  - Administration & législation
+#  - Agriculture
+#  - Culture
+#  - Droit & Justice
+#  - Education
+#  - Emploi
+#  - Energie
+#  - Entreprise
+#  - Environnement
+#  - Géographie
+#  - Particulier
+#  - Professionnels
+#  - Santé
+#  - Sécurité
+#  - Transport
+last_update: 11/10/2023 #Date de la dernière mise à jour de la doc
+content_intro: |
+  ### À quoi sert l'API XXX ?
+
+  L'<External href="https://URL">API XXX</External> délivre les informations et documents de référence de XXX, informations issues du répertoire XXX et de la base YYY.
+# Ce champ apparaîtra en haut de la fiche de l'API, sous le titre description. Le texte ci-dessus est un exemple et montre comment ajouter un lien vers l'extérieur.
+
+---
+<!-- Cette partie de la fiche permet d'ajouter du contenu en utilisant le langage markdown. Nous proposons ici une trame des informations utiles à fournir aux usagers, si votre API est une API permettant d'accéder à de la data. Pour en savoir plus sur la syntaxe markdown, vous pouvez consulter internet et cette page Github : https://docs.github.com/fr/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax -->
+
+## Périmètre de l'API <!-- PARTIE 1  : Quel est le périmètre couvert (ou non couvert par l'API) ? -->
+
+### Entitées concernés : <!-- Cette API délivre des informations sur des entités ? Qui sont-elles ? Quelles sont celles pour lesquelles l'API ne délivre pas d'informations-->
+
+Cette API concerne ✅ **les associations inscrites au répertoire national des associations (RNA) et/ou au répertoire Sirene**.
+
+Cette API ne concerne pas : 
+- ❌ les associations du régime Alsace-Moselle ;
+- ❌ les associations XX.
+
+### Périmètre géographique : <!-- Quelle est la localisation des entités concernées ?-->
+
+- ✅ **Métropole** sauf ❌ Alsace-Moselle ;
+- ✅ **DROM-COM** sauf ❌ les associations de Nouvelle-Calédonie, de la Polynésie française et de Wallis-et-Futuna qui ne sont pas immatriculées à l’INSEE, mais dans des bases locales
+
+### Actualisation de la donnée <!-- Quelle est la fraicheur de la donnée transmise ?-->
+
+Les données sont mises à jour quotidiennement :
+- Les créations et modifications validées par les greffes des associations sont déversées et disponibles le lendemain dans le RNA. Les données du RNA sont transmises deux fois par jour à la DJEPVA pour être intégrées dans cette API.
+- Pour le répertoire Sirene, la mise à jour des données est faite quotidiennement entre 0h et 3h à l’Insee.
+
+## Les données <!-- PARTIE 2  : Quelles sont les données ? -->
+
+Cette API délivre ... <!-- Synthèse des informations transmises -->
+
+Informations renvoyées en JSON : <!-- Tableau détaillé des données -->
+
+
+| Donnée         | Exemple            | Description              |
+| -------------- | ------------------ | ------------------------ |
+| Nom de l'association     | `Sport pour tous` |  Il s'agit du nom de l'association tel que figurant sur ... |
+| Date de création         | `2023-08-31` | Délivrée au format  |
+
+## 🔎 En savoir plus <!-- PARTIE 3  : Des liens pour aller plus loin ? -->
+- <External href="https://URL">API XXX</External>
+- <External href="https://URL">API XXX</External>
+
+
