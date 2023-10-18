@@ -1,14 +1,43 @@
 ---
 title: API XXX # 📍 Nom commercial de l'API, privilégier un nom court.
-tagline: Interrogez l'API ... # 📍 Une phrase pour résumer le service rendu par l'API.
-is_open: -1 # 📍 -1 si l'API est fermée, accessible à un public restreint sous habilitation ; 0 si un compte est nécessaire pour utiliser l'API mais qu'il n'y a pas de conditions pour se créer un compte.
-account_link: https://site-api/user/register # URL de la page de demande d'habilitation si l'API nécessite un compte pour être utilisée. ATTENTION : retirer ce champ si vous utilisez le champ ci-dessous "datapass_link".
-datapass_link: https://datapass.api.gouv.fr/api-xxx # URL vers le formulaire d'habilitation Datapass (uniquement API en accès restreint). ATTENTION : retirer ce champ si vous utilisez le champ ci-dessus "account_link".
+tagline: Entités administratives, interrogez l'API ... # 📍 Une phrase pour résumer le service rendu par l'API. Si votre API est uniquement accessible à certaines organisation, spécifiez-le dès maintenant.
 producer: identifiant_fournisseur # 📍 Identifiant du fournisseur de la donnée trouvable ou ajoutable dans le dossier `api_gouv/_data/producteurs`, pour en savoir plus consulter le read.me.
 contact_link: contact@contact.fr # 📍 Adresse e-mail que les usagers peuvent utiliser pour vous contacter.
 partners: # Liste des co-producteurs de l'API
   - dinum # Sera cliquable vers une page détaillant le partenaire car fait partie des fournisseurs référencés dans le dossier `api_gouv/_data/producteurs`
   - partenaire # Sera listé sans être cliquable.
+is_open: -1 # 📍 -1 si l'API est fermée, accessible à un public restreint sous habilitation ; 0 si un compte est nécessaire pour utiliser l'API mais qu'il n'y a pas de conditions pour se créer un compte.
+account_link: https://site-api/user/register # URL de la page de demande d'habilitation si l'API nécessite un compte pour être utilisée. ATTENTION : retirer ce champ si vous utilisez le champ ci-dessous "datapass_link".
+datapass_link: https://datapass.api.gouv.fr/api-xxx # URL vers le formulaire d'habilitation Datapass (uniquement API en accès restreint). ATTENTION : retirer ce champ si vous utilisez le champ ci-dessus "account_link".
+access_page:
+# Ce tableau vous permet de créer un entonnoir pour vérifier l'éligibilité de l'usager avant de le mener vers votre formulaire d'habilitation. Pour en savoir plus sur le fonctionnement de ce composant consulter le read.me.
+  - who:
+      - Un particulier ou une entreprise
+    is_eligible: -1 # -1 signifie que ce public n'est pas elligible, la mention "Désolé, vous n’êtes pas éligible 🚫" sera affichée.
+    description: |
+      Seules les administrations sont habilitées à utiliser l'API XX.
+
+      <Button href="/rechercher-api">Rechercher une autre API</Button>
+  - who:
+      - Une collectivité ou une administration
+    is_eligible: 1 # 1 signifie que ce public est éligible, la mention "Vous êtes éligible 👌" sera affichée.
+    description: |
+      Conformément aux dispositions XXXX, seul le public XXX est habilité à pouvoir utiliser cette API.
+      Pour obtenir un agrément, vous devrez **justifier de XXXX**, et vous engager à XXXX.
+
+      Vous aurez besoin des informations suivantes pour compléter votre demande d'habilitation : 
+      - Info 1
+      - Info 2
+      - Document 1
+
+      <Button href="https://datapass.api.gouv.fr/api">Remplir une demande</Button>
+  - who:
+      - Un éditeur de logiciel
+    is_eligible: -1
+    description: |
+      Si vous êtes **éditeur de logiciels, c'est à votre collectivité ou administration de faire sa demande d'habilitation.**
+
+      <Button href="/rechercher-api">Rechercher une autre API</Button>
 rate_limiting_resume: 10 appels / minute / IP # 📍 Volumétrie maximal de votre API.
 rate_limiting_description: |
   L'API est disponible à hauteur de 10 appels par minutes.

@@ -1,13 +1,13 @@
 ---
 title: API XXX # 📍 Nom commercial de l'API, privilégier un nom court.
 tagline: Interrogez l'API ... # 📍 Une phrase pour résumer le service rendu par l'API.
-is_open: 1 # 📍 1 si l'API est entièrement ouverte, 0 si un compte est nécessaire pour utiliser l'API.
-account_link: https://site-api/user/register # URL de la page de demande d'habilitation si l'API nécessite un compte pour être utilisée.
 producer: identifiant_fournisseur # 📍 Identifiant du fournisseur de la donnée trouvable ou ajoutable dans le dossier `api_gouv/_data/producteurs`, pour en savoir plus consulter le read.me.
 contact_link: contact@contact.fr # 📍 Adresse e-mail que les usagers peuvent utiliser pour vous contacter.
 partners: # Liste des co-producteurs de l'API
   - dinum # Sera cliquable vers une page détaillant le partenaire car fait partie des fournisseurs référencés dans le dossier `api_gouv/_data/producteurs`
   - partenaire # Sera listé sans être cliquable.
+is_open: 1 # 📍 1 si l'API est entièrement ouverte, 0 si un compte est nécessaire pour utiliser l'API.
+account_link: https://site-api/user/register # URL de la page de demande d'habilitation si l'API nécessite un compte pour être utilisée.
 rate_limiting_resume: 10 appels / minute / IP # 📍 Volumétrie maximal de votre API.
 rate_limiting_description: |
   L'API est disponible à hauteur de 10 appels par minutes.
