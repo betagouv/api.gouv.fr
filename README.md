@@ -71,7 +71,7 @@ Votre API est en accès restreint ? Deux champs sont à disposition pour renvoye
 
 Si votre API est uniquement accessible à un type de public, le champ `access_page` vous permet de créer un composant entonnoir pour vérifier si l'usager est éligible. Vous pouvez voir un exemple de ce parcours [ici](https://api.gouv.fr/les-api/api-statut-demandeur-emploi/demande-acces). Ce parcours est accessible après avoir cliqué sur le bouton "Faire une demande d'habilitation" sur la page de l'API.
 
-**Forme standard du champ :**
+##### Forme standard du champ :
 
 ```
 access_page:
@@ -105,14 +105,19 @@ access_page:
       <Button href="/rechercher-api">Rechercher une autre API</Button>
 ```
 
-**Options :**
+##### Options du champ `description: |` :
 
-Dans le champ `description: |`, vous pouvez : 
-- Ajouter un bouton pour proposer de chercher une nouvelle API : `<Button href="/rechercher-api">Rechercher une autre API</Button>`
-- Spécialement pour les API utilisant Datapass comme formulaire d'habilitation, vous pouvez utiliser le composant [`<NextSteps />`](https://github.com/betagouv/api.gouv.fr/tree/master/components/richReactMarkdown/index.tsx) pour ajouter un paragraphe décrivant la liste des documents et informations qui seront demandés.
+Vous pouvez ajouter tout le contenu markdown que vous souhaitez dans le champ description. Biensûr, rester le plus concis possible est préférable pour que l'usager se repère. Voici quelques options que vous pouvez utiliser facilement : 
+
+**Option 1 :**
+Ajouter un bouton pour proposer de chercher une nouvelle API : `<Button href="/rechercher-api">Rechercher une autre API</Button>`
+
+**Option 2 :**
+Spécialement pour les API utilisant Datapass comme formulaire d'habilitation, vous pouvez utiliser le composant [`<NextSteps />`](https://github.com/betagouv/api.gouv.fr/tree/master/components/richReactMarkdown/index.tsx) pour ajouter un paragraphe décrivant la liste des documents et informations qui seront demandés.
+Il vous suffit de l'ajouter sur une ligne seule à l'intérieur du champ `description: |`, un exemple est visible dans le [la forme standard du composant ci-dessus](#forme-standard-du-champ).
 
 <details>
-    <summary>Que va ajouter le composant `<NextSteps />` ?</summary>
+    <summary>Que va ajouter ce composant ?</summary>
     Ajouter ce composant, revient à ajouter le code suivant : 
       ```
       <p>
@@ -131,6 +136,11 @@ Dans le champ `description: |`, vous pouvez :
           </ul>
       ```
 </details>
+
+**Autres options :** Vous voulez aller plus loin ? Créer plus de niveaux d'information ? 
+Les [API Particulier](https://api.gouv.fr/les-api/api-particulier) et [API Entreprise](https://api.gouv.fr/les-api/api-entreprise) sont un bon exemple dont vous pouvez vous inspirer.
+
+Leur composant entonnoir, également configuré à la base dans le fichier principal, appelle d'autres composants disponibles dans le dossier [`api_gouv/components/questionTree`](https://github.com/betagouv/api.gouv.fr/tree/master/components/questionTree).
 
 
 ### 3- Créer/modifier sa fiche fournisseur de données
