@@ -1,7 +1,9 @@
 ---
-title: API XXX # Le nom de votre API, privilégier un nom court.
+title: API XXX # Nom commercial de l'API, privilégier un nom court.
 tagline: Interrogez l'API ... # Une phrase pour résumer le service rendu par l'API.
 is_open: 1 # 1 si l'API est entièrement ouverte, 0 si un compte est nécessaire pour utiliser l'API.
+account_link: https://site-api/user/register # URL de la page de demande d'habilitation si l'API nécessite un compte pour être utilisée.
+# datapass_link: https://datapass.api.gouv.fr/api-xxx # URL vers le formulaire d'habilitation Datapass (uniquement API en accès restreint)
 producer: identifiant_fournisseur # Identifiant du fournisseur de la donnée trouvable ou ajoutable dans le dossier `api_gouv/_data/producteurs`, pour en savoir plus consulter le read.me.
 keywords: # Ajouter des mots clés qui permettront aux usagers de trouver votre API avec le moteur de recherche.
   - associations
@@ -11,7 +13,8 @@ rate_limiting_description: |
   L'API est disponible à hauteur de 10 appels par minutes.
 # Phrase descriptive de la volumétire
 contact_link: contact@contact.fr # Adresse e-mail que les usagers peuvent utiliser pour vous contacter.
-doc_tech_external: https://swagger/api/open-api.yml #URL qui donne accès au swagger de votre API. Pour en savoir plus, consulter le read.me.
+doc_tech_link: https://swagger/api/open-api.yml #URL qui donne accès au swagger de votre API, sur la page API.gouv suivante : https://api.gouv.fr/documentation, accessible depuis le bouton "Tester l'API" sur la fiche de l'API. Pour en savoir plus, consulter le read.me.
+doc_tech_external: https://doc-tech-de-votre-site.fr #URL vers la documentation technique de l'API
 themes: #Ajouter un ou plusieurs thèmes, qui permettront aux usagers de trouver votre API en filtrant le catalogue par thématique. Pour ajouter un thème ci-dessous, supprimer simplement le # (sans retirer des blancs.)
 #  - Administration
 #  - Administration & législation
@@ -29,7 +32,17 @@ themes: #Ajouter un ou plusieurs thèmes, qui permettront aux usagers de trouver
 #  - Santé
 #  - Sécurité
 #  - Transport
-last_update: 11/10/2023 #Date de la dernière mise à jour de la doc
+partners: #Liste des co-producteurs de l'API
+  - dinum # Sera cliquable vers une page détaillant le partenaire car fait partie des fournisseurs référencés dans le dossier `api_gouv/_data/producteurs`
+  - partenaire # Sera listé sans être cliquable.
+stats_detail_resume: Les statistiques sont disponibles en temps réel # Résumer en un titre à quoi peut s'attendre l'usager en termes de statistiques de consommation de l'API. Cette phrase suit le titre "Stats:" qui permet de déplier un volet avec les détails ci-dessous (description et lien) :
+stats_detail_description: |
+  Accédez au suivi des consommations de l'API
+stats_detail_link: http://page-stats-dusage-de-lapi # URL de la page des statistiques d'usage de l'API
+monitoring_link: https://page-statut-de-lapi # URL de la page de statut de l'API
+last_update: 11/10/2023 # Date de la dernière mise à jour de la doc
+datagouv_uuid: # Si l'API se base sur un jeu de données ouvertes accessibles depuis data.gouv.fr, ajouter l'uuid du jeu de données pour afficher automatiquement un bloc en fin de page référençant le jeu de données.
+  - 631f4320d215a236920bd4dd
 content_intro: |
   ### À quoi sert l'API XXX ?
 
