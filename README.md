@@ -66,6 +66,73 @@ Votre API est en accès restreint ? Deux champs sont à disposition pour renvoye
 - `account_link:` vous permet d'ajouter l'URL de votre page de connexion (si il s'agit d'une demande de création de compte) ou de votre procédure d'habilitation.
 - `datapass_link:` permet d'ajouter le lien vers le formulaire d'habilitation DataPass, produit opéré par la DINUM et permettant l'instruction de demandes d'accès à des données.
 
+
+#### Entonoir d'éligibilité avec `access_page:`
+
+Si votre API est uniquement accessible à un type de public, le champ `access_page` vous permet de créer un composant entonnoir pour vérifier si l'usager est éligible. Vous pouvez voir un exemple de ce parcours [ici](https://api.gouv.fr/les-api/api-statut-demandeur-emploi/demande-acces). Ce parcours est accessible après avoir cliqué sur le bouton "Faire une demande d'habilitation" sur la page de l'API.
+
+**Forme standard du champ :**
+
+```
+access_page:
+  - who: # Chaque "who" crée un bouton de premier niveau. Limitez-en le nombre pour que l'usager s'y retrouve.
+      - Un particulier ou une entreprise # Label du bouton
+    is_eligible: -1 # -1 signifie que ce public n'est pas elligible, la mention "Désolé, vous n’êtes pas éligible 🚫" sera affichée quand l'usager clique sur le bouton.
+    description: |
+      Seules les administrations sont habilitées à utiliser l'API XX.
+
+      <Button href="/rechercher-api">Rechercher une autre API</Button>
+    # Cette description vient compléter la mention indiquée par le champ is_eligible.
+  - who:
+      - Une collectivité ou une administration
+    is_eligible: 1 # 1 signifie que ce public est éligible, la mention "Vous êtes éligible 👌" sera affichée quand l'usager clique sur le bouton.
+    description: |
+      Conformément aux dispositions XXXX, seul le public XXX est habilité à pouvoir utiliser cette API.
+      Pour obtenir un agrément, vous devrez **justifier de XXXX**, et vous engager à XXXX.
+
+      Vous aurez besoin des informations suivantes pour compléter votre demande d'habilitation : 
+      - Info 1
+      - Info 2
+      - Document 1
+
+      <Button href="https://datapass.api.gouv.fr/api">Remplir une demande</Button>
+  - who:
+      - Un éditeur de logiciel
+    is_eligible: -1
+    description: |
+      Si vous êtes **éditeur de logiciels, c'est à votre collectivité ou administration de faire sa demande d'habilitation.**
+
+      <Button href="/rechercher-api">Rechercher une autre API</Button>
+```
+
+**Options :**
+
+Dans le champ `description: |`, vous pouvez : 
+- Ajouter un bouton pour proposer de chercher une nouvelle API : `<Button href="/rechercher-api">Rechercher une autre API</Button>`
+- Spécialement pour les API utilisant Datapass comme formulaire d'habilitation, vous pouvez utiliser le composant [`<NextSteps />`](https://github.com/betagouv/api.gouv.fr/tree/master/components/richReactMarkdown/index.tsx) pour ajouter un paragraphe décrivant la liste des documents et informations qui seront demandés.
+
+<details>
+    <summary>Que va ajouter le composant `<NextSteps />` ?</summary>
+    Ajouter ce composant, revient à ajouter le code suivant : 
+      ```
+      <p>
+            <b>Pour remplir votre demande, vous aurez besoin : </b>
+          </p>
+          <ul>
+            <li>de votre numéro SIRET</li>
+            <li>du cadre juridique</li>
+            <li>{service_description}</li>
+            <li>des coordonnées de l'équipe</li>
+            <li>
+              des coordonnées de votre délégué à la protection des données et
+              responsable de traitement
+              {is_editeur && <b> de l’entité pour laquelle vous opérez</b>}
+            </li>
+          </ul>
+      ```
+</details>
+
+
 ### 3- Créer/modifier sa fiche fournisseur de données
 
 Si vous êtes un nouveau fournisseur de données, vous avez besoin de référencer votre organisation dans API.gouv :
