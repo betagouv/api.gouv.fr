@@ -8,7 +8,7 @@ keywords: # Ajouter des mots clés qui permettront aux usagers de trouver votre 
   - rna
 rate_limiting_resume: 10 appels / minute / IP #Volumétrie maximal de votre API.
 rate_limiting_description: |
-  L'API est disponible à hauteur de 10 appels par minutes. 
+  L'API est disponible à hauteur de 10 appels par minutes.
 # Phrase descriptive de la volumétire
 contact_link: contact@contact.fr # Adresse e-mail que les usagers peuvent utiliser pour vous contacter.
 doc_tech_external: https://swagger/api/open-api.yml #URL qui donne accès au swagger de votre API. Pour en savoir plus, consulter le read.me.
@@ -45,7 +45,7 @@ content_intro: |
 
 Cette API concerne ✅ **les associations inscrites au répertoire national des associations (RNA) et/ou au répertoire Sirene**.
 
-Cette API ne concerne pas : 
+Cette API ne concerne pas :
 - ❌ les associations du régime Alsace-Moselle ;
 - ❌ les associations XX.
 
@@ -59,6 +59,10 @@ Cette API ne concerne pas :
 Les données sont mises à jour quotidiennement :
 - Les créations et modifications validées par les greffes des associations sont déversées et disponibles le lendemain dans le RNA. Les données du RNA sont transmises deux fois par jour à la DJEPVA pour être intégrées dans cette API.
 - Pour le répertoire Sirene, la mise à jour des données est faite quotidiennement entre 0h et 3h à l’Insee.
+
+## Modalités d'appel <!-- PARTIE 2  : Comment l'appel est effectué, avec quels paramètres ? -->
+
+Cette API est appelable avec le SIRET de l'établissement
 
 ## Les données <!-- PARTIE 2  : Quelles sont les données ? -->
 
