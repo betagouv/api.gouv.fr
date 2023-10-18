@@ -36,10 +36,13 @@ Pour ajouter votre API ou commenter un fichier dans ce dépôt, vous devez au pr
 
 #### Créer la page à partir des templates disponibles
 
-1. Rendez-vous dans le dossier [_data/api](https://github.com/betagouv/api.gouv.fr/tree/master/_data/api).
+1. Se rendre dans le dossier [_data/api](https://github.com/betagouv/api.gouv.fr/tree/master/_data/api).
 2. Créer le fichier de votre API `api-nom-de-la-nouvelle-api.md`.
- 
-Pour les API en open data, appuyez-vous sur le template [`template.api-opendata.md.example`](https://github.com/betagouv/api.gouv.fr/tree/master/_data/api/template.api-opendata.md.example), il s'agit d'un pas à pas explicatif de chacun des champs à compléter. 
+3. Utiliser les templates à disposition, commentés avec une explication pour chacun des champs. Les champs indispensables sont indiqués par l'icône épingle (📍) dans le commentaire.
+
+- **Pour les API en open data**, appuyez-vous sur le template [`template.api-opendata.md.example`](https://github.com/betagouv/api.gouv.fr/tree/master/_data/api/template.api-opendata.md.example).
+
+- **Pour les API avec accès restreint**, appuyez-vous sur le template [`template.api-fermees.md.example`](https://github.com/betagouv/api.gouv.fr/tree/master/_data/api/template.api-fermees.md.example).
 
 Pour plus de facililité, copier/coller tout le contenu du template dans votre fichier. Dans le cas où vous n'avez pas toutes les informations permettant de compléter les champs, vous pouvez supprimer le champ ou le commenter en ajoutant un `#` en début de ligne.
 
