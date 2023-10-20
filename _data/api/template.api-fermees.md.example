@@ -9,6 +9,7 @@ partners: # Liste des co-producteurs de l'API
 is_open: -1 # 📍 -1 si l'API est fermée, accessible à un public restreint sous habilitation ; 0 si un compte est nécessaire pour utiliser l'API mais qu'il n'y a pas de conditions pour se créer un compte.
 account_link: https://site-api/user/register # URL de la page de demande d'habilitation si l'API nécessite un compte pour être utilisée. ATTENTION : retirer ce champ si vous utilisez le champ ci-dessous "datapass_link".
 datapass_link: https://datapass.api.gouv.fr/api-xxx # URL vers le formulaire d'habilitation Datapass (uniquement API en accès restreint). ATTENTION : retirer ce champ si vous utilisez le champ ci-dessus "account_link".
+is_france_connected: -1 # 📍 -1 L'API n'est pas FranceConnectée ; 1 L'API est FranceConnectée.
 access_page:
 # Ce tableau vous permet de créer un entonnoir pour vérifier l'éligibilité de l'usager avant de le mener vers votre formulaire d'habilitation. Pour en savoir plus sur le fonctionnement de ce composant consulter le read.me.
   - who:
@@ -38,10 +39,10 @@ access_page:
       Si vous êtes **éditeur de logiciels, c'est à votre collectivité ou administration de faire sa demande d'habilitation.**
 
       <Button href="/rechercher-api">Rechercher une autre API</Button>
-rate_limiting_resume: 10 appels / minute / IP # 📍 Volumétrie maximal de votre API.
+rate_limiting_resume: 10 appels / minute / IP # 📍 Volumétrie maximale de votre API.
 rate_limiting_description: |
-  L'API est disponible à hauteur de 10 appels par minutes.
-# Phrase descriptive de la volumétire
+  L'API est disponible à hauteur de 10 appels par minute.
+# Phrase descriptive de la volumétrie
 doc_tech_link: https://swagger/api/open-api.yml # 📍 URL qui donne accès au swagger de votre API, sur la page API.gouv suivante : https://api.gouv.fr/documentation, accessible depuis le bouton "Tester l'API" sur la fiche de l'API. Pour en savoir plus, consulter le read.me.
 doc_tech_external: https://doc-tech-de-votre-site.fr # 📍 URL vers la documentation technique de l'API
 monitoring_link: https://page-statut-de-lapi # URL de la page de statut de l'API
