@@ -32,7 +32,7 @@ themes:
   - Formation
   - Administration
 contact_link: api-sco-eleve_contacts@education.gouv.fr/TODO
-doc_tech_link: URL TODO
+doc_tech_link: https://api-quiforme.intercariforef.org/docs#/
 last_update: 10/10/2023 /TODO
 ---
 
