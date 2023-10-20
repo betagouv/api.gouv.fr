@@ -1,7 +1,13 @@
 ---
 title: API Quiforme
 tagline: Vérifiez si un établissement est habilité à former en récupérant ses certifications Qualiopi et habilitations France compétences
+producer: carif-oref
+contact_link: api-sco-eleve_contacts@education.gouv.fr/TODO
+partners: # Vous pouvez ajouter ici la liste des co-producteurs de l'API si cela vous paraît cohérent.
+# - insee
+is_open: -1
 datapass_link: https://datapass.api.gouv.fr/TODO
+is_france_connected: -1
 access_page:
   - who:
       - Un particulier
@@ -18,21 +24,36 @@ access_page:
     description: |
       En tant que collectivité territoriale ou administration, vous êtes éligible à utiliser cette API selon votre cadre juridique. Vous pouvez déposer une demande d'habilitation :
       <Button href="https://datapass.api.gouv.fr/TODO">Demander un accès</Button>
-is_open: -1
-is_france_connected: -1
-producer: carif-oref
+rate_limiting_resume: TODO appels / minute / IP # 📍 Volumétrie maximale de votre API.
+rate_limiting_description: |
+  L'API est disponible à hauteur de TODO appels par minute.
+# Phrase descriptive de la volumétrie
+doc_tech_link: https://api-quiforme.intercariforef.org/docs#/
+doc_tech_external: https://TODO # 📍 URL vers la documentation technique de l'API - 
+monitoring_link: https://TODO # URL de la page de statut de l'API
+themes: # 📍 Ajouter un ou plusieurs thèmes, qui permettront aux usagers de trouver votre API en filtrant le catalogue par thématique. Pour ajouter un thème ci-dessous, supprimer simplement le # (sans retirer des blancs.)
+- Administration
+#  - Administration & législation
+#  - Agriculture
+#  - Culture
+#  - Droit & Justice
+#  - Education
+#  - Emploi
+#  - Energie
+- Entreprise
+#  - Environnement
+#  - Géographie
+#  - Particulier
+#  - Professionnels
+#  - Santé
+#  - Sécurité
+#  - Transport
 keywords:
   - Qualiopi
   - France compétences
   - Habilitations
   - Certifications
   - Organismes de formation
-themes:
-  - Entreprises
-  - Formation
-  - Administration
-contact_link: api-sco-eleve_contacts@education.gouv.fr/TODO
-doc_tech_link: https://api-quiforme.intercariforef.org/docs#/
 last_update: 10/10/2023 /TODO
 ---
 
