@@ -8,10 +8,10 @@ partners: # Liste des co-producteurs de l'API
   - partenaire # Sera listé sans être cliquable.
 is_open: 1 # 📍 1 si l'API est entièrement ouverte, 0 si un compte est nécessaire pour utiliser l'API.
 account_link: https://site-api/user/register # URL de la page de demande d'habilitation si l'API nécessite un compte pour être utilisée.
-rate_limiting_resume: 10 appels / minute / IP # 📍 Volumétrie maximal de votre API.
+rate_limiting_resume: 10 appels / minute / IP # 📍 Volumétrie maximale de votre API.
 rate_limiting_description: |
   L'API est disponible à hauteur de 10 appels par minutes.
-# Phrase descriptive de la volumétire
+# Phrase descriptive de la volumétrie
 doc_tech_link: https://swagger/api/open-api.yml # 📍 URL qui donne accès au swagger de votre API, sur la page API.gouv suivante : https://api.gouv.fr/documentation, accessible depuis le bouton "Tester l'API" sur la fiche de l'API. Pour en savoir plus, consulter le read.me.
 doc_tech_external: https://doc-tech-de-votre-site.fr # 📍 URL vers la documentation technique de l'API
 monitoring_link: https://page-statut-de-lapi # URL de la page de statut de l'API
