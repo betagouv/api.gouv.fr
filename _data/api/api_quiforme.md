@@ -31,6 +31,10 @@ rate_limiting_description: |
 doc_tech_link: https://api-quiforme.intercariforef.org/docs#/
 doc_tech_external: https://TODO # 📍 URL vers la documentation technique de l'API - 
 monitoring_link: https://TODO # URL de la page de statut de l'API
+stats_detail_resume: Les statistiques sont disponibles en temps réel # Résumer en un titre à quoi peut s'attendre l'usager en termes de statistiques de consommation de l'API. Cette phrase suit le titre "Stats:" qui permet de déplier un volet avec les détails ci-dessous (description et lien) :
+stats_detail_description: |
+  Accédez au suivi des consommations de l'API
+stats_detail_link: http://page-stats-dusage-de-lapi # URL de la page des statistiques d'usage de l'API
 themes: # 📍 Ajouter un ou plusieurs thèmes, qui permettront aux usagers de trouver votre API en filtrant le catalogue par thématique. Pour ajouter un thème ci-dessous, supprimer simplement le # (sans retirer des blancs.)
 - Administration
 #  - Administration & législation
