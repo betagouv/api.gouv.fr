@@ -6,7 +6,7 @@ const { formatProducteur } = require('./formatters/producteur');
 const fs = require('fs');
 
 const readAllApisOnDisk = async () => {
-  const files = fs.readdirSync('./_data/api', 'utf8');
+  const files = fs.readdirSync('./_data/api', 'utf8').filter(fileName => fileName.endsWith('.md'));
   const allProducers = await readAllProducersOnDisk();
   const formatter = formatApiWithOwner(allProducers);
 
@@ -19,7 +19,7 @@ const readAllApisOnDisk = async () => {
 };
 
 const readAllServicesOnDisk = async () => {
-  const files = fs.readdirSync('./_data/service', 'utf8');
+  const files = fs.readdirSync('./_data/service', 'utf8').filter(fileName => fileName.endsWith('.md'));
   const allApis = await readAllApisOnDisk();
   const formatter = formatServiceWithApis(allApis);
 
@@ -32,7 +32,7 @@ const readAllServicesOnDisk = async () => {
 };
 
 const readAllGuidesOnDisk = async () => {
-  const files = fs.readdirSync('./_data/guides', 'utf8');
+  const files = fs.readdirSync('./_data/guides', 'utf8').filter(fileName => fileName.endsWith('.md'));
 
   return files.map(fileName => {
     const file = fs.readFileSync(`./_data/guides/${fileName}`, 'utf8');
@@ -43,7 +43,7 @@ const readAllGuidesOnDisk = async () => {
 };
 
 const readAllProducersOnDisk = async () => {
-  const files = fs.readdirSync('./_data/producteurs', 'utf8');
+  const files = fs.readdirSync('./_data/producteurs', 'utf8').filter(fileName => fileName.endsWith('.md'));
 
   return files.map(fileName => {
     const file = fs.readFileSync(`./_data/producteurs/${fileName}`, 'utf8');
