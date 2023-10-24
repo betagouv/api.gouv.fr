@@ -71,7 +71,7 @@ Cette API, délivrée directement par le réseau des Cariforef, permet de vérif
 **La valeur ajoutée** de cette API opérée par le réseau des CARIF OREF est :
 
 - De connaître les certificats Qualiopi des établissements et pas uniquement des unités légales ;
-de véritablement dire si un établissement est habilité à former ou à organiser des épreuves car elle indique également les habilitations France Compétences de l’établissement ;
+- De véritablement dire si un établissement est habilité à former ou à organiser des épreuves car elle indique également les habilitations France Compétences de l’établissement ;
 - D’avoir une donnée plus fiable car le réseau des Carif Oref effectue une double vérification en croisant ses bases et les bases du Ministère de l’intérieur.
 - En cas de détection d’anomalie, les Carif Oref peuvent, grâce à leurs réseaux locaux, prendre contact avec l’établissement concerné et vérifier la situation.
 
