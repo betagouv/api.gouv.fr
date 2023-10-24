@@ -75,7 +75,7 @@ Cette API, délivrée directement par le réseau des Cariforef, permet de vérif
 - D’avoir une donnée plus fiable car le réseau des Carif Oref effectue une double vérification en croisant ses bases et les bases du Ministère de l’intérieur.
 - En cas de détection d’anomalie, les Carif Oref peuvent, grâce à leurs réseaux locaux, prendre contact avec l’établissement concerné et vérifier la situation.
 
-Votre service utilisera d'autres API "données entreprises-associations" ? Retrouvez les données de cette API dans le bouquet d'API distribué par la DINUM [API entreprise](https://entreprise.api.gouv.fr/).
+Votre service a besoin d'autres API concernant les données des entreprises ou des associations ? Utilisez le bouquet [API entreprise](https://entreprise.api.gouv.fr/), distribué par la DINUM .
 
 ## Sources de données 
 
