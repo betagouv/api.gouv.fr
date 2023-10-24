@@ -18,8 +18,14 @@ access_page:
 
       <Button href="/rechercher-api">Rechercher une autre API</Button>
   - who:
+      - Un éditeur de logiciel
+    is_eligible: 0
+    description: |
+      En tant qu'éditeur de logiciel, vous êtes éligible à intégrer cette API si vous le faîtes pour le compte d'une entité publique (administrations, collectivités, etc.) dont vous êtes le prestataire. 
+      Vous pouvez déposer une demande d'habilitation :
+      <Button href="https://datapass.api.gouv.fr/TODO">Demander un accès</Button>
+  - who:
       - Une administration
-      - Un acteur privé habilité par une administration
     is_eligible: 1
     description: |
       En tant que collectivité territoriale ou administration, vous êtes éligible à utiliser cette API selon votre cadre juridique. Vous pouvez déposer une demande d'habilitation :
