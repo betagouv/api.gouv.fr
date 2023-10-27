@@ -48,6 +48,7 @@ access_page:
 
       Pour toute autre demande, consultez notre page <External href="https://particulier.api.gouv.fr/faq">FAQ & contact</External>.
       
+stat:
   lastXdays: 30
   url: https://particulier.api.gouv.fr/stats
   label: justificatifs papier évités

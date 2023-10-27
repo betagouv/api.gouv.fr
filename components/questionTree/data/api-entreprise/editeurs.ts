@@ -61,7 +61,7 @@ export const pathDevelopForEditors = {
           'Solution Attestations',
       ],
       answer: `**Bonne nouvelle ! Vous êtes éligible et votre éditeur/profil acheteur a déjà intégré l’API Entreprise. <span role='img' aria-label='émoji ok'>👍</span>**
-      <br/><br/>
+      <br/>
       Vous n’avez plus qu’à vous adresser directement à votre éditeur.`,
       },
       {

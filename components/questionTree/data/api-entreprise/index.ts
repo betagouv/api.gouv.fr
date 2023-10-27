@@ -7,8 +7,13 @@ const apiEntrepriseQuestions = {
     choiceTree: [
       {
         choices: [
-          'dîte **“chargée d’une mission de service public”**',
-          'dîte **"délégataire de service public”**',
+          '**un prestataire d’une entité publique** pour développer des logiciels',
+        ],
+        next: pathDevelopForAdministration,
+      },
+      {
+        choices: [
+          'dite "**chargée d’une mission de service public**" ou "**délégataire de service public**"',
         ],
         answer: `**Vous êtes bien éligible <span role='img' aria-label='émoji oui'>👌</span> !**
         <br/>
@@ -17,12 +22,6 @@ const apiEntrepriseQuestions = {
         Pour vérifier que l’API Entreprise vous permet d’accéder aux données dont vous avez besoin, consultez : <br/> - le [catalogue des données](https://entreprise.api.gouv.fr/catalogue/) ; <br/> - les [cas d’usage](https://entreprise.api.gouv.fr/cas_usage/) de l’API Entreprise.
         `,
         next: pathEligible,
-      },
-      {
-        choices: [
-          '**prestataire d’une entité administrative** et développant des logiciels/interfaces',
-        ],
-        next: pathDevelopForAdministration,
       },
       {
         choices: [
