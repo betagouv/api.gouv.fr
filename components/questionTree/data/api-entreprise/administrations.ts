@@ -3,35 +3,20 @@ export const pathDevelopForAdministration = {
   choiceTree: [
     {
       choices: ['Aux administrations et/ou aux collectivités'],
-      next: {
-        question: 'Quel type de service proposez-vous aux administrations ?',
-        choiceTree: [
-          {
-            choices: [
-              'Un **logiciel métier clé en main**, proposé à de nombreuses entités administratives',
-            ],
-            answer: `**Vous êtes éligible pour mettre à disposition de vos utilisateurs l’API Entreprise <span role='img' aria-label='émoji ok'>👍</span>**
-              <br/>
-              <span role='img' aria-label='émoji avertissement'>⚠️</span> En tant que prestataire technique d’une entité administrative, vous pourrez être destinataire des informations techniques permettant l’usage de l’API mais en aucun cas des données elles-même.
-              <br/>
-              <span role='img' aria-label='émoji information'>ℹ️</span>**Pour que votre demande soit traitée plus rapidement :** Au niveau de la section _Les modèles pré-remplis_, le modèle "_Demande spécifique aux éditeurs de logiciels_" est sélectionné. Il est impératif de garder ce modèle et de ne pas en changer.
-              <br/>
-              <Button href='https://datapass.api.gouv.fr/api-entreprise?demarche=editeur' alt>Déposer une demande pour intégrer l'API Entreprise</Button>`,
-          },
-          {
-            choices: [
-              'Un logiciel conçu **sur mesure** pour une administration',
-            ],
-            answer: `**L’administration pour laquelle vous proposez une prestation est éligible à l’API&nbsp;Entreprise <span role='img' aria-label='émoji ok'>👍</span>**
-            <br/>
-            **C’est à elle de compléter une demande auprès d’API Entreprise.** Elle devra dans sa demande d’habilitation vous renseigner en tant que “contact technique”. Le lien ci-dessous permet à l’administration d’accéder à la demande d’habilitation, partagez-lui :
-            <br/>
-            <External href='/les-api/api-entreprise/demande-acces'>Lien vers la page</External>
-            &nbsp;
-            <ButtonCopy source='https://api.gouv.fr/les-api/api-entreprise/demande-acces'/>`,
-          },
-        ],
-      },
+      answer: `**Vous êtes éligible pour mettre à disposition de vos utilisateurs l’API Entreprise <span role='img' aria-label='émoji ok'>👍</span>**
+          <br/>
+          <span role='img' aria-label='émoji avertissement'>⚠️</span> En tant que prestataire technique d’une entité administrative, vous pourrez être destinataire des informations techniques permettant l’usage de l’API mais en aucun cas des données elles-même.
+          <br/>
+          <span role='img' aria-label='émoji information'>ℹ️</span>** Pour que votre demande soit traitée plus rapidement :** Au niveau de la section "_Les modèles pré-remplis_", le modèle "_Demande spécifique aux éditeurs de logiciels_" est sélectionné. Il est impératif de garder ce modèle et de ne pas en changer.
+          <br/>
+          **Pour remplir votre demande, vous aurez notamment besoin de:**
+          <ul>
+            <li>votre numéro de SIRET ;</li>
+            <li>décrire votre activité ;</li>
+            <li>décrire les cas d'usage de l'API Entreprise qu'auront vos clients publics ;</li>
+            <li>justifier les API demandées.</li>
+          </ul>
+          <Button href='https://datapass.api.gouv.fr/api-entreprise?demarche=editeur' alt>Déposer une demande pour intégrer l'API Entreprise</Button>`,
     },
     {
       choices: ['Aux entreprises, associations et/ou particuliers'],
