@@ -1,0 +1,25 @@
+---
+name: Direction interministérielle du numérique # Nom long qui figure sur les cartes des API dans le catalogue
+acronym: DINUM # Nom court ou acronyme qui figure sur les pages des API.
+nameWithPronoun: la DINUM
+logo: dinum.png
+type: Etablissement public # Choisir parmi les élément suivants : Etablissement public | Groupement d'intérêt public | Collectivité | Département | Autre | Ministère | Juridiction |
+site: https://numerique.gouv.fr # URL du site officiel du fournisseur
+short: Service de la Première ministre, placé sous l’autorité du ministre de la Transformation et de la Fonction publiques, la direction interministérielle du numérique (DINUM) a pour mission d’élaborer la stratégie numérique de l’État et de piloter sa mise en œuvre.   # Description courte répondant à la question "Qu'est ce que le «fournisseur de données» ?"
+description: |
+  La DINUM oeuvre pour un État plus efficace, plus simple et plus souverain grâce au numérique.
+  Les missions de la DINUM sont fixées par décret (<External href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000047478124">décret du 25 octobre 2019</External>, modifié par le <External href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000047478124">décret du 22 avril 2023</External>).
+    - Mission 1
+    - Mission 2
+    - Etc.
+# Description longue répondant à la question "Quelle est sa mission de service public ?"
+data: |
+  | Donnée             | Description                    |
+  | ------------------ | ------------------------------ |
+  | Hydrométrie | mesure du débit des cours d'eau |
+# Tableau listant les données détenues par le fournisseur
+contact: https://contact.service.gouv.fr/ # URL de la page de contact du fournisseur.
+annuaire: https://lannuaire.service-public.fr/ #URL vers l'annuaire du service public
+siteOpenData: https://www.data.gouv.fr/fr/organizations/ # URL du site dédié à l'OpenData du fournisseur de données, peut renvoyer vers le site data.gouv
+siteAPI: https:// # URL du site officiel dédié aux API du fournisseur
+---
