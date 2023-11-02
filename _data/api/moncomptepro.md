@@ -7,29 +7,22 @@ datapass_link: https://moncomptepro.beta.gouv.fr/partenaire
 access_page:
   - who:
       - Un particulier
+      - Une entreprise
     is_eligible: -1
     description: |
-      Seules les administrations et les entreprises sont habilitées à utiliser MonComptePro.
+      Seules les administrations sont habilitées à utiliser MonComptePro.
 
       Si vous cherchez à contacter l'équipe MonComptePro, vous pouvez écrire à [contact@moncomptepro.beta.gouv.fr](mailto:contact@moncomptepro.beta.gouv.fr)
 
       <Button href="/rechercher-api">Ou vous pouvez rechercher une autre API</Button>
   - who:
-      - Une entreprise
-    is_eligible: 0
-    description: |
-      Vous pouvez vérifier votre éligibilité en demandant à [MonComptePro](contact@moncomptepro.beta.gouv.fr) qui vous accompagnera dans vos démarches.
-
-      <NextSteps />
-      <Button href="mailto:contact@moncomptepro.beta.gouv.fr">Contacter l'équipe MonComptePro</Button>
-  - who:
       - Une collectivité ou une administration
     is_eligible: 1
     description: |
-      Si vous souhaitez intégrer MonComptePro, [contactez l'équipe MonComptePro](contact@moncomptepro.beta.gouv.fr) qui vous accompagnera dans vos démarches.
+      Si vous souhaitez intégrer le bouton MonComptePro, [faites votre demande d’habilitation](https://datapass.api.gouv.fr/moncomptepro).
 
       <NextSteps />
-      <Button href="mailto:contact@moncomptepro.beta.gouv.fr">Contacter l'équipe MonComptePro</Button>
+      <Button href="https://datapass.api.gouv.fr/moncomptepro">Remplir une demande</Button>
 partners:
   - DataPass
   - API Entreprise
