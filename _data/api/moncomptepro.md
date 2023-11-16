@@ -26,10 +26,10 @@ access_page:
       - Une collectivité ou une administration
     is_eligible: 1
     description: |
-      Si vous souhaitez intégrer MonComptePro, [contactez l'équipe MonComptePro](contact@moncomptepro.beta.gouv.fr) qui vous accompagnera dans vos démarches.
+      Si vous souhaitez intégrer MonComptePro, faites votre demande sur le DataPass de MonComptePro.
 
       <NextSteps />
-      <Button href="mailto:contact@moncomptepro.beta.gouv.fr">Contacter l'équipe MonComptePro</Button>
+      <Button href="https://datapass.api.gouv.fr/moncomptepro">Faire la demande DataPass</Button>
 partners:
   - DataPass
   - API Entreprise
