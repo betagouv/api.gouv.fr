@@ -1,0 +1,1016 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "ImprimFIP",
+    "description": "Envoi de documents avec la plateforme Imprim'FIP",
+    "termsOfService": "https://adefinir.economie.gouv.fr/terms",
+    "version": "v1"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:7009/api/v1",
+      "description": "Développement"
+    },
+    {
+      "url": "http://vimpfip-piom1a:7009/api/v1",
+      "description": "Qualification BlueCrest"
+    },
+    {
+      "url": "http://impfip-piom1t:7009/api/v1",
+      "description": "Qualification"
+    },
+    {
+      "url": "http://impfip-piom1a:7009/api/v1",
+      "description": "Production"
+    },
+    {
+      "url": "http://impfip-piom1b:7009/api/v1",
+      "description": "Backup"
+    }
+  ],
+  "paths": {
+    "/file/submission": {
+      "post": {
+        "tags": [
+          "File"
+        ],
+        "summary": "Envoi un fichier de documents sur la plateforme",
+        "operationId": "DoSubmission",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "header",
+            "description": "Utilisateur applicatif ayant le droit d'utiliser l'API (déclaré dans Imprim'FIP)",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            },
+            "example": "myfirstname.mylastname"
+          },
+          {
+            "name": "password",
+            "in": "header",
+            "description": "Mot de passe de l'utilisateur applicatif (codé en base 64)",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            },
+            "example": "TXlCYXNlNjRQYXNzd29yZA=="
+          },
+          {
+            "$ref": "#/components/parameters/XJWTAssertion"
+          },
+          {
+            "$ref": "#/components/parameters/XCorrelationID"
+          },
+          {
+            "$ref": "#/components/parameters/XRequestID"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "docFile",
+                  "jsonParameters.Filename",
+                  "jsonParameters.Options.Paper",
+                  "jsonParameters.Options.SendingType"
+                ],
+                "type": "object",
+                "properties": {
+                  "docFile": {
+                    "type": "string",
+                    "description": "Fichier de document(s) à soumettre sur Imprim'FIP",
+                    "format": "binary",
+                    "example": "MonFichierDeDocument(s).pdf"
+                  },
+                  "anxFile": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    },
+                    "description": "Fichiers des annexes à ajouter en fin de document"
+                  },
+                  "jsonParameters": {
+                    "$ref": "#/components/schemas/FileSubmissionJson"
+                  }
+                }
+              },
+              "encoding": {
+                "docFile": {
+                  "style": "form",
+                  "contentType": "application/octet-stream"
+                },
+                "anxFile": {
+                  "style": "form"
+                },
+                "jsonParameters": {
+                  "contentType": "application/json"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileSubmissionResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseJson"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseJson"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseJson"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too Many Requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseJson"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Unclassified authentication failure",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseJson"
+                }
+              }
+            }
+          },
+          "501": {
+            "description": "Not Implemented",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseJson"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseJson"
+                }
+              }
+            }
+          },
+          "default": {
+            "$ref": "#/components/responses/defaultErrorApim"
+          }
+        }
+      }
+    },
+    "/file/{internalRef}/status": {
+      "get": {
+        "tags": [
+          "File"
+        ],
+        "summary": "Récupère le statut d'un fichier et de ses documents envoyés sur la plateforme",
+        "operationId": "GetStatus",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "header",
+            "description": "Utilisateur applicatif ayant le droit d'utiliser l'API (déclaré dans Imprim'FIP)",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            },
+            "example": "myfirstname.mylastname"
+          },
+          {
+            "name": "password",
+            "in": "header",
+            "description": "Mot de passe de l'utilisateur applicatif (codé en base 64)",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            },
+            "example": "TXlCYXNlNjRQYXNzd29yZA=="
+          },
+          {
+            "name": "internalRef",
+            "in": "path",
+            "description": "Référence technique unique d'un fichier fourni par l'API de soumission de fichier",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            },
+            "example": "MonFichierDeDocument(s)_06162022102400@jerome.barrat.pdf"
+          },
+          {
+            "name": "businessRef",
+            "in": "query",
+            "description": "Référence métier d'un document, unique à minima dans le fichier référencé par InternalRef",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            },
+            "example": "038719506"
+          },
+          {
+            "$ref": "#/components/parameters/XJWTAssertion"
+          },
+          {
+            "$ref": "#/components/parameters/XCorrelationID"
+          },
+          {
+            "$ref": "#/components/parameters/XRequestID"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileStatusResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseJson"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseJson"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseJson"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseJson"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too Many Requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseJson"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Unclassified authentication failure",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseJson"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseJson"
+                }
+              }
+            }
+          },
+          "default": {
+            "$ref": "#/components/responses/defaultErrorApim"
+          }
+        }
+      }
+    },
+    "/etatSante": {
+      "get": {
+        "tags": [
+          "Health"
+        ],
+        "summary": "Connaitre l'état de santé de l'API",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/XJWTAssertion"
+          },
+          {
+            "$ref": "#/components/parameters/XCorrelationID"
+          },
+          {
+            "$ref": "#/components/parameters/XRequestID"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "L'API est opérationnelle",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Information"
+                }
+              }
+            }
+          },
+          "default": {
+            "$ref": "#/components/responses/defaultErrorApim"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "DocStatus": {
+        "required": [
+          "status"
+        ],
+        "type": "object",
+        "properties": {
+          "reference": {
+            "type": "string",
+            "description": "Référence métier du document :\r\n- Dans le cas d'un fichier multi-documents soumis, cette référence doit être écrite sur le document, visible ou caché.\r\n- Dans le cas d'un fichier mono-document soumis, la référence du document est celle du fichier (internalRef).",
+            "nullable": true,
+            "example": "038719506"
+          },
+          "date": {
+            "type": "string",
+            "description": "Date de mise à jour du statut au format yyyy-MM-ddTHH:mm:sszzz",
+            "example": "2021-06-16T18:52:12+02:00"
+          },
+          "status": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Statut du document :\r\n- En attente de traitement : statut entre la soumission dans Office Mail et son regroupement avec d’autres documents, période pendant laquelle le propriétaire du document peut le supprimer dans Imprim’Fip.\r\n- Supprimé : supprimé par l’utilisateur sur Imprim’Fip.\r\n- En cours de traitement : statut où le document est entré dans la chaine de production (informatique+impression+MSP).\r\n- Erreur : statut d’erreur sur le document qui nécessite une re-soumission de celui-ci (détaillé dans docStatus.message).\r\n- Expédié : Statut quand le document a été traité en MSP.\r\n- Mis en distribution : en cours de distribution (Envoi LRAR uniquement)\r\n- Echec de distribution : retourné à l'expéditeur pour cause autre que le refus et la négligence, détaillé dans docStatus.message (Envoi LRAR uniquement)\r\n- Distribué : accepté et reçu par le destinataire (Envoi LRE/LRAR uniquement)\r\n- Refusé : refusé par le destinataire (Envoi LRE/LRAR uniquement). Renvoyé à l’expéditeur si LRAR.\r\n- Négligé : négligé par le destinataire (Envoi LRE/LRAR uniquement, en cas de dépassement du délai d'instance). Renvoyé à l’expéditeur si envoi LRAR.",
+            "example": "En attente de traitement"
+          },
+          "message": {
+            "type": "string",
+            "description": "Message d’erreur sur le document (ou message complémentaire pour la non délivrance du pli en LRAR).",
+            "nullable": true,
+            "example": ""
+          }
+        },
+        "additionalProperties": false,
+        "description": "Retour de statut d'un document"
+      },
+      "ErrorResponseDetails": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "Code de l'erreur",
+            "format": "int32",
+            "example": 89000
+          },
+          "message": {
+            "type": "string",
+            "description": "Message d'erreur",
+            "example": "Ceci est l'explication de l'erreur"
+          },
+          "horodatage": {
+            "type": "string",
+            "description": "Horodatage de l'erreur",
+            "example": "1978-05-10T06:06:06+00:01"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Détail d'un message d'erreur"
+      },
+      "ErrorResponseJson": {
+        "type": "object",
+        "properties": {
+          "erreur": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ErrorResponseDetails"
+              }
+            ],
+            "description": "Erreur au format Json"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Retour d'erreur au format Json"
+      },
+      "FileAnnex": {
+        "type": "object",
+        "properties": {
+          "filename": {
+            "type": "string",
+            "description": "Nom de fichier de l'annexe envoyée",
+            "example": "MonFichierAnnexe.pdf"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Description d'une annexe envoyée dans la requête"
+      },
+      "FileOptions": {
+        "required": [
+          "paper",
+          "sendingType"
+        ],
+        "type": "object",
+        "properties": {
+          "paper": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Paper"
+              }
+            ],
+            "description": "Type de papier à utiliser pour l'impression des documents"
+          },
+          "sendingType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SendingType"
+              }
+            ],
+            "description": "Type d'envoi"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Options d'envoi du fichier de document(s)"
+      },
+      "FileRecipient": {
+        "type": "object",
+        "properties": {
+          "information": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/RecipientInformation"
+              }
+            ],
+            "description": "Information sur le destinataire dans le cas d'un envoi LRE",
+            "nullable": true
+          },
+          "address": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/RecipientAddress"
+              }
+            ],
+            "description": "Information sur le destinataire dans le cas d'un envoi LRAR",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Informations du destinataire (obligatoire si le type d'envoi est LRE ou LRAR)"
+      },
+      "FileSender": {
+        "type": "object",
+        "properties": {
+          "returnAddress": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SenderReturnAddress"
+              }
+            ],
+            "description": "Adresse de retour pour l'envoi LRAR"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Informations sur l'expéditeur (obligatoire si le type d'envoi LRAR)"
+      },
+      "FileStatus": {
+        "type": "object",
+        "properties": {
+          "analyzeTime": {
+            "type": "string",
+            "description": "Date/Heure d'analyse du fichier avant soumission dans Office Mail au format yyyy-MM-ddTHH:mm:sszzz",
+            "nullable": true,
+            "example": "2021-06-16T18:52:12+02:00"
+          },
+          "analyzedDoc": {
+            "type": "integer",
+            "description": "Nombre de documents analysés dans le fichier",
+            "format": "int32",
+            "nullable": true
+          },
+          "rejectedDoc": {
+            "type": "integer",
+            "description": "Nombre de documents du fichier rejetés pour la soumission dans Office Mail",
+            "format": "int32",
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "description": "Statut du fichier\r\n- En cours de soumission\r\n- Soumis\r\n- Soumis avec des avertissements\r\n- Soumis avec des erreurs\r\n- Erreur",
+            "example": "Soumis"
+          },
+          "message": {
+            "type": "string",
+            "description": "Message associé au statut Erreur",
+            "nullable": true,
+            "example": ""
+          }
+        },
+        "additionalProperties": false,
+        "description": "Statut du fichier transmis par l'api de soumission"
+      },
+      "FileStatusResponse": {
+        "type": "object",
+        "properties": {
+          "filename": {
+            "type": "string",
+            "description": "Nom du fichier de document(s) soumis",
+            "example": "MonFichierDeDocument(s).pdf"
+          },
+          "internalRef": {
+            "type": "string",
+            "description": "Référence interne unique du fichier généré par Imprim'FIP (A sauvegarder par l'appelant pour interroger le statut)",
+            "example": "MonFichierDeDocument(s)_06162022102400@jerome.barrat.pdf"
+          },
+          "fileStatus": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/FileStatus"
+              }
+            ],
+            "description": "Statut du fichier"
+          },
+          "docStatus": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DocStatus"
+            },
+            "description": "Statut de(s) document(s), obligatoire après l'analyse du fichier (Tout statut de fichier hormis \"En cours de soumission\")",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Paramètres de la réponse de la requête d'interrogation de statut du fichier"
+      },
+      "FileSubmissionJson": {
+        "required": [
+          "filename",
+          "options"
+        ],
+        "type": "object",
+        "properties": {
+          "filename": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Nom du fichier de document(s) soumis",
+            "example": "MonFichierDeDocument(s).pdf"
+          },
+          "onBehalfOf": {
+            "type": "string",
+            "description": "Utilisateur Imprim'FIP propriétaire du document",
+            "nullable": true,
+            "example": "jerome.barrat"
+          },
+          "options": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/FileOptions"
+              }
+            ],
+            "description": "Options d'envoi du fichier"
+          },
+          "recipient": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/FileRecipient"
+              }
+            ],
+            "description": "Informations sur le destinataire",
+            "nullable": true
+          },
+          "sender": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/FileSender"
+              }
+            ],
+            "description": "Informations sur l'expéditeur",
+            "nullable": true
+          },
+          "annexes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FileAnnex"
+            },
+            "description": "Informations sur les annexes soumises",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Paramètres pour la demande d'envoi."
+      },
+      "FileSubmissionResponse": {
+        "type": "object",
+        "properties": {
+          "filename": {
+            "type": "string",
+            "description": "Nom du fichier de document(s) soumis",
+            "example": "MonFichierDeDocument(s).pdf"
+          },
+          "internalRef": {
+            "type": "string",
+            "description": "Référence interne unique du fichier soumis sur la plateforme Imprim'FIP\r\n- [FileNameWithoutExtension]_[Timestamp]@[OnBehalfOf].pdf",
+            "example": "MonFichierDeDocument(s)_06162022102400@jerome.barrat.pdf"
+          },
+          "fileSize": {
+            "type": "number",
+            "description": "Taille du fichier de documents en kilo-octets",
+            "format": "float"
+          },
+          "sendingType": {
+            "type": "string",
+            "description": "Confirmation par description du type d'envoi utilisé :\r\n- Courrier Simple\r\n- Envoi recommandé papier\r\n- Envoi recommandé électronique",
+            "example": "Courrier Simple"
+          },
+          "withAnnexes": {
+            "type": "string",
+            "description": "Confirmation de la présence d'annexes dans l'envoi\r\n- Oui\r\n- Non",
+            "example": "Non"
+          },
+          "withPerforatedPaper": {
+            "type": "string",
+            "description": "Confirmation de la demande d'utilisation de papier microperforé pour l'impression\r\n- Oui\r\n- Non",
+            "example": "Non"
+          },
+          "withReturnEnv": {
+            "type": "string",
+            "description": "Confirmation de la demande d'une enveloppe retour dans l'enveloppe (cas papier avec TIP)\r\n- Oui\r\n- Non",
+            "example": "Non"
+          },
+          "onBehalfOf": {
+            "type": "string",
+            "description": "Utilisateur déclaré dans Imprim'FIP pour lequel le document est envoyé (propriétaire du document)",
+            "nullable": true,
+            "example": "jerome.barrat"
+          },
+          "submissionStatus": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/FileSubmissionStatus"
+              }
+            ],
+            "description": "Propriétés du statut d'envoi de fichier"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Paramètres en réponse de la requête de soumission du fichier"
+      },
+      "FileSubmissionStatus": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "description": "Date du statut au format yyyy-MM-ddTHH:mm:sszzz",
+            "example": "2021-06-16T18:52:12+02:00"
+          },
+          "status": {
+            "type": "string",
+            "description": "Statut du fichier :\r\n- Reçu : Le fichier a été téléchargé avec succès\r\n- Erreur : Le fichier a échoué au téléchargement",
+            "example": "Reçu"
+          },
+          "message": {
+            "type": "string",
+            "description": "Message associé au statut",
+            "nullable": true,
+            "example": ""
+          }
+        },
+        "additionalProperties": false,
+        "description": "Statut du fichier après soumission"
+      },
+      "Information": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "description": "Message d'information",
+            "example": "L'API est opérationnelle"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Paper": {
+        "enum": [
+          "DUPLEX",
+          "DUPLEX_TIP_MICRO"
+        ],
+        "type": "string",
+        "description": "Valeurs pour le papier à utiliser :\r\n- DUPLEX : papier standard/blanc\r\n- DUPLEX_TIP_MICRO : papier avec TIP et microperforation"
+      },
+      "RecipientAddress": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Nom ou raison sociale du destinataire(1ère ligne d'adresse)",
+            "example": "DMT SOLUTIONS FRANCE SAS"
+          },
+          "line2": {
+            "type": "string",
+            "description": "2ème ligne d'adresse",
+            "example": "14 RUE GALILEE"
+          },
+          "line3": {
+            "type": "string",
+            "description": "3ème ligne d'adresse",
+            "nullable": true,
+            "example": ""
+          },
+          "line4": {
+            "type": "string",
+            "description": "4ème ligne d'adresse",
+            "nullable": true,
+            "example": ""
+          },
+          "line5": {
+            "type": "string",
+            "description": "5ème ligne d'adresse",
+            "nullable": true,
+            "example": ""
+          },
+          "zipCode": {
+            "type": "string",
+            "description": "Code postal",
+            "example": "77420"
+          },
+          "town": {
+            "type": "string",
+            "description": "Ville",
+            "example": "CHAMPS-SUR-MARNE"
+          },
+          "country": {
+            "type": "string",
+            "description": "Pays (FRANCE si vide)",
+            "nullable": true,
+            "example": ""
+          }
+        },
+        "additionalProperties": false,
+        "description": "Adresse du destinataire (pour le type d'envoi LRAR)"
+      },
+      "RecipientInformation": {
+        "type": "object",
+        "properties": {
+          "emailAddress": {
+            "type": "string",
+            "description": "Adresse email du destinataire",
+            "example": "regis.thilloy@bluecrestinc.com"
+          },
+          "lastname": {
+            "type": "string",
+            "description": "Nom du destinataire (Obligatoire si Type est PARTICULIER)",
+            "nullable": true,
+            "example": "THILLOY"
+          },
+          "firstname": {
+            "type": "string",
+            "description": "Prénom du destinataire (Obligatoire si Type est PARTICULIER)",
+            "nullable": true,
+            "example": "REGIS"
+          },
+          "type": {
+            "type": "string",
+            "description": "Type de destinataire :\r\n- PROFESSIONNEL\r\n- PARTICULIER",
+            "example": "PARTICULIER"
+          },
+          "socialReason": {
+            "type": "string",
+            "description": "Raison sociale (Obligatoire si Type est PROFESSIONNEL)",
+            "nullable": true,
+            "example": "DMT SOLUTIONS FRANCE SAS"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Informations sur le destinataire (pour le type d'envoi LRE)"
+      },
+      "SenderReturnAddress": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Nom ou raison sociale de l'expoéditeur (1ère ligne d'adresse)",
+            "example": "DMT SOLUTIONS FRANCE SAS"
+          },
+          "line2": {
+            "type": "string",
+            "description": "2ème ligne d'adresse",
+            "example": "14 RUE GALILEE"
+          },
+          "line3": {
+            "type": "string",
+            "description": "3ème ligne d'adresse",
+            "nullable": true,
+            "example": ""
+          },
+          "line4": {
+            "type": "string",
+            "description": "4ème ligne d'adresse",
+            "nullable": true,
+            "example": ""
+          },
+          "line5": {
+            "type": "string",
+            "description": "5ème ligne d'adresse",
+            "nullable": true,
+            "example": ""
+          },
+          "zipCode": {
+            "type": "string",
+            "description": "Code postal",
+            "example": "77420"
+          },
+          "town": {
+            "type": "string",
+            "description": "Ville",
+            "example": "CHAMPS-SUR-MARNE"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Adresse de l'expéditeur (pour le type d'envoi LRAR)"
+      },
+      "SendingType": {
+        "enum": [
+          "STD",
+          "LRE",
+          "LRAR"
+        ],
+        "type": "string",
+        "description": "Valeurs pour le type d'envoi :\r\n- STD  : courrier standard\r\n- LRE  : courrier recommandé électronique\r\n- LRAR : courrier recommandé papier avec accusé de réception"
+      }
+    },
+    "responses": {
+      "defaultErrorApim": {
+        "description": "Erreurs retournées par la brique d'API Management DGFiP (voir guide pratique partenaire présent dans l'onglet documentation de l'API)",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponseJson"
+            },
+            "examples": {
+              "ErreurJetonInvalide": {
+                "description": "Utilisation d'un jeton d'authentification invalide ou expiré. (voir guide pratique partenaire présent dans l'onglet documentation de l'API)",
+                "value": {
+                  "erreur": {
+                    "code": 900901,
+                    "message": "Invalid Credentials",
+                    "horodatage": "2021-06-16T18:50:58+02:00"
+                  }
+                }
+              },
+              "ErreurJetonAbsent": {
+                "description": "Le jeton d'authentification n'est pas présent dans l'en-tête Authorization de la requête. (voir guide pratique partenaire présent dans l'onglet documentation de l'API)",
+                "value": {
+                  "erreur": {
+                    "code": 900902,
+                    "message": "Missing Credentials",
+                    "horodatage": "2021-06-16T18:52:12+02:00"
+                  }
+                }
+              },
+              "ErreurScope": {
+                "description": "Utilisation d'un jeton d'authentification ne présentant pas les scopes nécessaires à l'appel de la ressource ciblée. (voir guide pratique partenaire présent dans l'onglet documentation de l'API)",
+                "value": {
+                  "erreur": {
+                    "code": 900910,
+                    "message": "The access token does not allow you to access the requested resource",
+                    "horodatage": "2020-11-06T10:50:03+01:00"
+                  }
+                }
+              },
+              "ErreurIdCorrelationAbsent": {
+                "description": "L'identifiant de corrélation est absent de la requête dans l'en-tête X-Correlation-ID. (voir guide pratique partenaire présent dans l'onglet documentation de l'API)",
+                "value": {
+                  "erreur": {
+                    "code": 910000,
+                    "message": "Le paramètre X-Correlation-ID n'est pas présent dans le header HTTP",
+                    "horodatage": "2021-06-167T18:57:37+0200"
+                  }
+                }
+              },
+              "ErreurQuotaAtteint": {
+                "description": "Le quota d'appel souscrit a été dépassé. (voir guide pratique partenaire présent dans l'onglet documentation de l'API)",
+                "value": {
+                  "erreur": {
+                    "code": 900804,
+                    "message": "Message throttled out",
+                    "horodatage": "2021-05-06T20:55:58+02:00"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "parameters": {
+      "XJWTAssertion": {
+        "name": "X-JWT-Assertion",
+        "in": "header",
+        "description": "Jeton JWT",
+        "required": true,
+        "style": "simple",
+        "schema": {
+          "type": "string"
+        }
+      },
+      "XCorrelationID": {
+        "name": "X-Correlation-ID",
+        "in": "header",
+        "description": "Identifiant de corrélation de la requête (format UUID)",
+        "required": true,
+        "style": "simple",
+        "schema": {
+          "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
+          "type": "string",
+          "format": "uuid"
+        },
+        "example": "62069016-9780-11eb-a8b3-0242ac130003"
+      },
+      "XRequestID": {
+        "name": "X-Request-ID",
+        "in": "header",
+        "description": "Identifiant de la requête",
+        "required": true,
+        "style": "simple",
+        "schema": {
+          "type": "string"
+        },
+        "example": "X-Request-ID"
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "File",
+      "description": "Opérations sur les fichiers de documents de la plateforme Imprim'FIP"
+    },
+    {
+      "name": "Health",
+      "description": "Opérations sur l'état de santé de l'API"
+    }
+  ]
+}
