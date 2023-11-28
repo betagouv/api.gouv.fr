@@ -29,13 +29,14 @@ Autorités organisatrices de mobilité, en utilisant les API :
    - le certificat de scolarité étudiant et le statut étudiant boursier ;
    - le statut bénéficiaire de la complémentaire santé solidaire avec ou sans participation.
 - 😃 Pour mettre en oeuvre une **tarification solidaire, il n'est plus nécessaire de demander** : 
-   - le quotient familial CAF  ;
+   - le quotient familial CAF & MSA ;
    - le revenu fiscal de référence.
 - 🖥 Vous pouvez **dématérialiser totalement votre service en ligne** car vos agents n’ont **plus besoin de vérifier les justificatifs**, les informations obtenues par les API sous-mentionnées sont certifiées 🔎 ;
 - 👨‍💼 Une **utilisation logicielle au guichet est aussi possible**, tout en évitant le stock des pièces justificatives, les erreurs de saisie et les fraudes.
 - 🎯 Enfin, vous **participez à la simplification des démarches pour les citoyens** en mettant en oeuvre le [« Dites-le-nous une fois »](https://www.numerique.gouv.fr/services/guichet-dites-le-nous-une-fois/), en application de l’[article L113-12 du Code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037313155).
 
 ## Exemple d'utilisation
+**[Voir une démonstration en ligne](https://api-particulier-demonstrateur.osc-secnum-fr1.scalingo.io/transport/choix-personnage)**
 
 **Un usager demandeur d'emploi souhaite obtenir un titre de transport :**
 
@@ -60,7 +61,7 @@ Une première [étude auprès de 20 autorités organisatrices de la mobilité (A
 | Données utiles |  API **avec FranceConnect** | API **sans** FranceConnect |
 | --- | --- | --- |
 | **Revenu fiscal de référence**, nombre de parts fiscales | ✅ Avec FranceConnect&nbsp;: [API Impôt particulier - DGFIP](/les-api/impot-particulier) | ✅ Sans FranceConnect&nbsp;: [API Impôt particulier - DGFIP](/les-api/impot-particulier) |
-| **Quotient familial CAF/MSA** et composition familiale | ⌛️ Avec FranceConnect&nbsp;: _prévu T1 2024_| ✅ Sans FranceConnect&nbsp;: [API Quotient familial CAF du **bouquet API Particulier**](https://particulier.api.gouv.fr/catalogue/cnaf/quotient_familial) |
+| **Quotient familial CAF/MSA** et composition familiale - CNAF & MSA | ⌛️ Avec FranceConnect&nbsp;: _prévu T1 2024_| ✅ Sans FranceConnect&nbsp;: [API Quotient familial CAF du **bouquet API Particulier**](https://particulier.api.gouv.fr/catalogue/cnaf/quotient_familial) |
 | **Certificat de scolarité primaire/secondaire et statut élève boursier** - Ministère de l'éducation nationale | ⌛️ Avec FranceConnect&nbsp;: _À venir_    | ✅ Sans FranceConnect&nbsp;: [API statut élève scolarisé du **bouquet API Particulier**](https://particulier.api.gouv.fr/catalogue/education_nationale/statut_eleve_scolarise) |
 | **Certificat de scolarité étudiant** d'un établissement de l’enseignement supérieur - MESRI |✅ Avec FranceConnect&nbsp;: [API Statut étudiant - MESRI ](https://api.gouv.fr/les-api/api-statut-etudiant)| ✅ Sans FranceConnect&nbsp;: [API statut étudiant du **bouquet API Particulier**](https://particulier.api.gouv.fr/catalogue/mesri/statut_etudiant)|
 | **Statut étudiant boursier** - CNOUS  | ✅ Avec FranceConnect&nbsp;: [API statut étudiant boursier du **bouquet API Particulier**](https://particulier.api.gouv.fr/catalogue/cnous/statut_etudiant_boursier) |  ✅ Sans FranceConnect&nbsp;: [API statut étudiant boursier du **bouquet API Particulier**](https://particulier.api.gouv.fr/catalogue/cnous/statut_etudiant_boursier)|
@@ -68,12 +69,14 @@ Une première [étude auprès de 20 autorités organisatrices de la mobilité (A
 | **Montants des paiements des allocations ou des aides** - Pôle emploi |✅ Avec FranceConnect&nbsp;: [API Indemnités Pôle emploi - Pôle Emploi](https://api.gouv.fr/les-api/api-indemnisation-pole-emploi)  | ✅ Sans FranceConnect&nbsp;: [API Indemnités Pôle emploi - Pôle Emploi](https://particulier.api.gouv.fr/catalogue/pole_emploi/indemnites) |
 | **Statut complémentaire santé solidaire (CSS)**, avec ou sans participation - Direction de la sécurité sociale | ✅ Avec FranceConnect&nbsp;: [API complémentaire santé solidaire](https://particulier.api.gouv.fr/catalogue/cnaf_msa/complementaire_sante_solidaire)  | ✅ Sans FranceConnect&nbsp;: [API complémentaire santé solidaire](https://particulier.api.gouv.fr/catalogue/cnaf_msa/complementaire_sante_solidaire)|
 | **Statut revenu de solidarité active (RSA)** - Direction de la sécurité sociale | ⌛️ Avec FranceConnect&nbsp;: _prévu T4 2023 dans le [bouquet API Particulier](https://particulier.api.gouv.fr/catalogue)_    | ⌛️ Sans FranceConnect&nbsp;: _prévu T4 2023 dans le [bouquet API Particulier](https://particulier.api.gouv.fr/catalogue)_    |
-| **Carte famille nombreuse** - Ministère des transports | ⚙️ Avec FranceConnect&nbsp;: Besoin en cours de qualification, nous écrire à [equipe@particulier.api.gouv.fr](mailto:equipe@particulier.api.gouv.fr) si vous en avez besoin. | ⚙️ Sans FranceConnect&nbsp;: Besoin en cours de qualification, nous écrire à [equipe@particulier.api.gouv.fr](mailto:equipe@particulier.api.gouv.fr) si vous en avez besoin.  |
+| **Statut revenu de solidarité active (RSA)** - Direction de la sécurité sociale | ⌛️ Avec FranceConnect&nbsp;: _prévu T1 2024 dans le [bouquet API Particulier](https://particulier.api.gouv.fr/catalogue)_    | ⌛️ Sans FranceConnect&nbsp;: _prévu T1 2024 dans le [bouquet API Particulier](https://particulier.api.gouv.fr/catalogue)_ |
+|**L'allocation adulte handicapé (AAH)** - CNAF | ⌛️ Avec FranceConnect&nbsp;: _prévu T1 2024 dans le [bouquet API Particulier](https://particulier.api.gouv.fr/catalogue)_    | ⌛️ Sans FranceConnect&nbsp;: _prévu T1 2024 dans le [bouquet API Particulier](https://particulier.api.gouv.fr/catalogue)_ |
+|**l' Allocation de soutien familial (ASF)** - CNAF | ⌛️ Avec FranceConnect&nbsp;: _prévu T1 2024 dans le [bouquet API Particulier](https://particulier.api.gouv.fr/catalogue)_    | ⌛️ Sans FranceConnect&nbsp;: _prévu T1 2024 dans le [bouquet API Particulier](https://particulier.api.gouv.fr/catalogue)_ 
 
 ### Données utiles de l'API Particulier
 
 En synthèse de ce tableau, avec le bouquet [API Particulier](https://particulier.api.gouv.fr/catalogue) opéré par la DINUM, vous avez accès avec une seule habilitation aux données suivantes :
-- Quotient familial CAF et composition familiale (_Usage sans FranceConnect_)
+- Quotient familial CAF & MSA et composition familiale (_Usage sans FranceConnect_)
 - Certificat de scolarité étudiant (_Usage avec et sans FranceConnect_)
 - Statut étudiant boursier (_Usage avec et sans FranceConnect_)
 - Certificat de scolarité primaire/secondaire et statut élève boursier (_Usage avec et sans FranceConnect_)
