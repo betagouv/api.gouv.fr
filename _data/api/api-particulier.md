@@ -142,7 +142,7 @@ content_intro: |
   | **Complémentaire santé solidaire (C2S)**              |  Sécurité sociale | Indique si le particulier a la C2S, avec ou sans participation.<br>[📖 Documentation](https://particulier.api.gouv.fr/catalogue/cnaf_msa/complementaire_sante_solidaire) | ✅               | ✅               |
   | **Statut Revenu de solidarité active (RSA)**                 | Direction de la sécurité sociale | _En cours de définition_| T1 2024               | T1 2024               |
   | **L'allocation adulte handicapé (AAH)**                 | CNAF | _En cours de définition_| T1 2024               | T1 2024               |
-  | **l' Allocation de soutien familial (ASF)**                 | CNAF | _En cours de définition_| T1 2024               | T1 2024               |
+  | **L' Allocation de soutien familial (ASF)**                 | CNAF | _En cours de définition_| T1 2024               | T1 2024               |
 
 
 
