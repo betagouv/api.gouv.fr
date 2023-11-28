@@ -133,7 +133,7 @@ content_intro: |
 
   | API | Fournisseur des données | Données | Disponibilité sur API Particulier | Peut s'utiliser avec FranceConnect |
   |---------------------|----------|------------------------------------- |------------------- |------------- |
-  | **Quotient familial MSA & CAF** | CNAF | Quotient familial, composition familiale<br>[📖 Documentation](https://particulier.api.gouv.fr/catalogue/cnaf-msa/quotient_familial_v2) <br> Extension du périmètre au régime agricole (MSA) prévu T1 2024 | ✅                      | Prévu T1 2024                      |
+  | **Quotient familial MSA & CAF** | CNAF & MSA | Quotient familial, composition familiale<br>[📖 Documentation](https://particulier.api.gouv.fr/catalogue/cnaf-msa/quotient_familial_v2) <br> Extension du périmètre au régime agricole (MSA) prévu T1 2024 | ✅                      | Prévu T1 2024                      |
   | **Certificat de scolarité étudiant** | MESR | Statut, établissement<br>[📖 Documentation](https://particulier.api.gouv.fr/catalogue/mesr/statut_etudiant) | ✅                      |✅             |
   | **Statut étudiant boursier** | Cnous | Statut étudiant, statut boursier<br>[📖 Documentation](https://particulier.api.gouv.fr/catalogue/mesr/cnous/statut_etudiant_boursier)      | ✅      |  ✅             |
   | **Statut demandeur d'emploi** | Pôle Emploi |Statut et catégorie (A,B,C,D)<br>[📖 Documentation](https://particulier.api.gouv.fr/catalogue/pole_emploi/situation)     | ✅          | ➡️ Pas FranceConnecté dans API Particulier mais disponible avec [cette API](/les-api/api-statut-demandeur-emploi).            |
