@@ -7,11 +7,6 @@ module.exports = {
         permanent: true,
       },
       {
-        source: '/les-api/api_inpi',
-        destination: '/les-api/api-rncs',
-        permanent: true,
-      },
-      {
         source: '/signup/api',
         destination: '/datapass/api',
         permanent: true,
