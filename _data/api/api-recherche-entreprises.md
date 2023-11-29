@@ -79,3 +79,10 @@ Pour vous abonner à l'infolettre pour être informé des mises à jour de la pa
 
 <Button href="https://redir.entreprise.api.gouv.fr/wgt/ls12/2qo/form?c=dfdffd14">Abonnez-vous à l'infolettre</Button>
 
+
+## Politique de confidentialité
+
+Consulter [la politique de confidentialité](https://annuaire-entreprises.data.gouv.fr/vie-privee).
+
+
+

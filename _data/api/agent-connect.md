@@ -1,6 +1,6 @@
 ---
 title: AgentConnect
-tagline: Simplifiez le quotidien des agents publics de l'Etat en leur permettant d’utiliser un même identifiant et mot de passe pour accéder à leurs services en ligne.
+tagline: Simplifiez le quotidien des agents publics de l'État en leur permettant d’utiliser un même identifiant et mot de passe pour accéder à leurs services en ligne.
 external_site: https://agentconnect.gouv.fr/
 is_open: -1 # -1 means API not open
 datapass_link: https://datapass.api.gouv.fr/agent-connect-fs
@@ -11,12 +11,12 @@ access_page:
       - Une collectivité territoriale
     is_eligible: -1
     description: |
-      Seules les administrations centrales et les opérateurs de l'Etat sont habilités à utiliser l'API AgentConnect ou intégrer le bouton AgentConnect.
+      Seules les administrations centrales et les opérateurs de l'État sont habilités à utiliser l'API AgentConnect ou intégrer le bouton AgentConnect.
 
       <Button href="/rechercher-api">Rechercher une autre API</Button>
   - who:
       - Un ministère (administration centrale ou service déconcentré)
-      - Un opérateur de l'Etat
+      - Un opérateur de l'État
     is_eligible: 1
     description: |
 
@@ -42,19 +42,19 @@ visits_2019: 4000
 last_update: 20/05/2022
 ---
 
-L’API AgentConnect permet à des ministères (administrations centrales, services déconcentrés) et à des opérateurs de l’Etat d’ajouter un bouton de connexion AgentConnect pour identifier les agents utilisateurs de leurs applications métiers en ligne à partir de données d’identité fiables.
+L’API AgentConnect permet à des ministères (administrations centrales, services déconcentrés) des collectivités territoriales et à des opérateurs de l’État d’ajouter un bouton de connexion AgentConnect pour identifier les agents utilisateurs de leurs applications métiers en ligne à partir de données d’identité fiables.
 
 ### À quoi sert AgentConnect ?
 
-AgentConnect s’adresse aux ministères (administrations centrales, services déconcentrés) ainsi qu'aux opérateurs de l’Etat.
+AgentConnect s’adresse aux ministères (administrations centrales, services déconcentrés), aux collectivités territoriales ainsi qu'aux opérateurs de l’État.
 Les administrations partenaires fournissent des identités, qui permettent aux agents de s'identifier sur les sites qui ont implémenté le bouton AgentConnect.
 
 ### 🔎 À quoi ressemble le parcours ?
 
-1. Je suis agent d’un ministère ou d’un opérateur de l’Etat,
+1. Je suis agent de l’État,
 2. Je souhaite accéder à une application métier,
 3. Je clique sur le bouton AgentConnect de l'application métier,
-4. Je recherche mon ministère / opérateur,
+4. Je recherche mon organisation,
 5. Je choisis mon compte parmi ceux proposés,
 6. AgentConnect me redirige vers une page de connexion pour saisir mon identifiant et mot de passe,
 7. Je suis connecté

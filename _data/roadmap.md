@@ -56,9 +56,6 @@
       what: BDM
       path: /les-api/api_bdm
     - type: ADD_API
-      what: Registre National du Commerce et des Sociétés
-      path: /les-api/api-rncs
-    - type: ADD_API
       what: Professionnels RGE
       path: /les-api/api_professionnels_rge
     - type: ADD_API
@@ -455,4 +452,8 @@
     - type: ADD_API
       what: data·inclusion, par la Plateforme de l'inclusion
       path: /les-api/api-data-inclusion
+  11:
+    - type: ADD_API
+      what: IMPRIM'FIP, par la DGFiP
+      path: /les-api/api-imprimfip
 ---
