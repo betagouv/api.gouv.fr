@@ -18,7 +18,7 @@ doc_tech_link: https://hubeau.eaufrance.fr/api/v1/etat_piscicole/api-docs
 themes:
   - Environnement
 visits_2019: 568
-last_update: 12/06/2018
+last_update: 28/11/2023
 content_intro: |
   [L'API Etat Piscicole](https://hubeau.eaufrance.fr/page/api-poisson) de Hub'Eau ou **API Poisson** diffuse les données collectées lors d'opérations de pêches scientifiques à l'électricité (observations dans un premier temps, puis à terme stations de prélèvement, opérations, et indicateurs). Ces données couvrent la France hexagonale (Corse comprise) et plus de 50 ans de collecte.
   La source de données est la base ASPE opérée par l'OFB.
@@ -26,15 +26,21 @@ content_intro: |
 
 ### Description fonctionnelle de l'API Poissons
 
-L'API Poisson complète les données piscicoles diffusées par l'API Hydrobiologie des cours d'eau collectées sur des stations référencées par le Sandre, et consolidées à l'échelle du prélèvement élémentaire (source des données : base ASPE opérée par l'OFB).
+L'API Poisson diffuse les données collectées lors d'opérations de pêches scientifiques à l'électricité réalisées par l'Office français de la biodiversité (OFB) et et ses partenaires. Ces données concernent les observations, les indicateurs, les opérations et les stations de prélèvement. Elles couvrent la France hexagonale (Corse comprise) sur plus de 50 années de collecte. Elles sont bancarisées dans l'outil Aspe opéré par l'OFB.  
 Les données sont exposées sous la forme d'une API REST, les formats supportés sont : JSON, GeoJSON et CSV.
 
 Les différentes opérations possibles sont :
 
-- **observations** : Elle permet d'accéder aux données des observations piscicoles collectées sur des stations en cours d'eau référencées par le Sandre, et consolidées à l'échelle du prélèvement élémentaire ; 
-- **indicateurs**, **operations** et **stations** seront disponibles fin 2022.
+- **observations** : elle permet d'accéder aux données des observations piscicoles collectées sur des stations en cours d'eau référencées par le Sandre, et consolidées à l'échelle du prélèvement élémentaire ; 
+- **indicateurs** : elle permet d'accéder aux données des indicateurs IPR et IPRPlus calculés à partir des observations piscicoles ;
+- **operations** : elle permet d'accéder aux données des opérations de prélèvement réalisées sur les stations de mesure de la qualité des cours d'eau ;
+- **stations** : elle permet d'accéder aux données des stations de mesure de la qualité des cours d'eau.
 
 Dernières évolutions de l'API Etat piscicole de Hub'Eau:
+- 21/11/2023 : ajout de trois nouveaux endpoints
+  - Indicateurs
+  - Opérations
+  - Stations
 - 16/06/2022 : v1.0.0, version branchée sur les données ASPE, mise à disposition de l'opération observations
 - 03/01/2019 : v0.3.1 basée sur l'ancienne base IMAGE. Cette version, obsolète, reste disponible jusqu'au 31 décembre 2022. La documentation de cette ancienne version est accessible à [cette adresse](https://hubeau.eaufrance.fr/api/v0/etat_piscicole/api-docs).
 
