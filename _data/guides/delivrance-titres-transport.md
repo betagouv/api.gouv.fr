@@ -71,7 +71,7 @@ Une première [étude auprès de 20 autorités organisatrices de la mobilité (A
 | **Statut revenu de solidarité active (RSA)** - Direction de la sécurité sociale | ⌛️ Avec FranceConnect&nbsp;: _prévu T4 2023 dans le [bouquet API Particulier](https://particulier.api.gouv.fr/catalogue)_    | ⌛️ Sans FranceConnect&nbsp;: _prévu T4 2023 dans le [bouquet API Particulier](https://particulier.api.gouv.fr/catalogue)_    |
 | **Statut revenu de solidarité active (RSA)** - Direction de la sécurité sociale | ⌛️ Avec FranceConnect&nbsp;: _prévu T1 2024 dans le [bouquet API Particulier](https://particulier.api.gouv.fr/catalogue)_    | ⌛️ Sans FranceConnect&nbsp;: _prévu T1 2024 dans le [bouquet API Particulier](https://particulier.api.gouv.fr/catalogue)_ |
 |**L'allocation adulte handicapé (AAH)** - CNAF | ⌛️ Avec FranceConnect&nbsp;: _prévu T1 2024 dans le [bouquet API Particulier](https://particulier.api.gouv.fr/catalogue)_    | ⌛️ Sans FranceConnect&nbsp;: _prévu T1 2024 dans le [bouquet API Particulier](https://particulier.api.gouv.fr/catalogue)_ |
-|**l' Allocation de soutien familial (ASF)** - CNAF | ⌛️ Avec FranceConnect&nbsp;: _prévu T1 2024 dans le [bouquet API Particulier](https://particulier.api.gouv.fr/catalogue)_    | ⌛️ Sans FranceConnect&nbsp;: _prévu T1 2024 dans le [bouquet API Particulier](https://particulier.api.gouv.fr/catalogue)_ 
+|**L' Allocation de soutien familial (ASF)** - CNAF | ⌛️ Avec FranceConnect&nbsp;: _prévu T1 2024 dans le [bouquet API Particulier](https://particulier.api.gouv.fr/catalogue)_    | ⌛️ Sans FranceConnect&nbsp;: _prévu T1 2024 dans le [bouquet API Particulier](https://particulier.api.gouv.fr/catalogue)_ 
 
 ### Données utiles de l'API Particulier
 
