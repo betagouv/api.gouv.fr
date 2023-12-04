@@ -1,7 +1,7 @@
 ---
-title: API Quiforme
+title: API QuiForme
 tagline: Vérifiez si un établissement est habilité à former en récupérant ses certifications Qualiopi et habilitations France compétences
-producer: carif-oref
+producer: Carif-Oref
 contact_link: api-sco-eleve_contacts@education.gouv.fr/TODO
 partners: # Vous pouvez ajouter ici la liste des co-producteurs de l'API si cela vous paraît cohérent.
 # - insee
@@ -67,8 +67,8 @@ keywords:
 last_update: 10/10/2023 /TODO
 ---
 
-Cette API, délivrée directement par le réseau des Cariforef, permet de vérifier si un établissement est habilité à délivrer un formation certifiante Qualiopi et/ou France compétences.
-**La valeur ajoutée** de cette API opérée par le réseau des CARIF OREF est :
+Cette API, délivrée directement par le réseau des Carif-Oref, permet de vérifier si un établissement est habilité à délivrer un formation certifiante Qualiopi et/ou France compétences.
+**La valeur ajoutée** de cette API opérée par le réseau des Carif-Oref est :
 
 - De connaître les certificats Qualiopi des établissements et pas uniquement des unités légales ;
 - De véritablement dire si un établissement est habilité à former ou à organiser des épreuves car elle indique également les habilitations France Compétences de l’établissement ;
@@ -79,7 +79,8 @@ Votre service a besoin d'autres API concernant les données des entreprises ou d
 
 ## Sources de données 
 
-- API sirene ( incluant les données non diffusibles )
+- Le reférentiel UAI/SIRET de l'Onisep (MAJ DORINE : API référencée sur api.gouv est celle de cariforef en direct donc j'inclus la BAN ? )
+- Base SIRENE
 - Base Adresse nationale 
 - Certificats Qualiopi ( DGEFP , Liste OF )
 - Habilitations France compétences ( France Compétences, RNCP, RS )
