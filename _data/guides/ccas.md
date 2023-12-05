@@ -75,7 +75,7 @@ Les éditeurs suivants proposent des logiciels utiles aux CCAS et sont déjà co
 | ArcheMC2| ArcheMC2 Social          |
 | Arpège  | Sonate Opus              |
 
-Vous êtes un éditeur et vous souhaitez apparaître dans cette liste ? Écrivez-nous à [contact@particulier.api.gouv.fr](mailto:contact@particulier.api.gouv.fr)
+Vous êtes un éditeur et vous souhaitez apparaître dans cette liste ? Écrivez-nous à [api-particulier@api.gouv.fr](mailto:api-particulier@api.gouv.fr)
 
 
 
