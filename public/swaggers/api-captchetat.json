@@ -1,7 +1,7 @@
 {
   "swagger" : "2.0",
   "info" : {
-    "description" : "L'AIFE a mis en oeuvre une API permettant la génération d'un CAPTCHA dans le but premier de pouvoir l'adresser à ses applications internes mais également, par la suite, à ses partenaires et à l'interministériel.<p> Cette API permet la génération d'un CAPTCHA de type chaine de caractères à reproduire et la vérification de la saisie effectuée.</p> <p>Son intégration doit se faire au niveau de la couche présentation (Front-End) et, étant exposée sur PISTE, ses accès et ses utilisateurs sont gérés via PISTE.<p/> <p>Vous trouverez ci-après le guide d'implémention du CAPTCHEtat de l'AIFE.</p>",
+    "description" : "L'AIFE a mis en oeuvre une API permettant la génération d'un CAPTCHA dans le but premier de pouvoir l'adresser à ses applications internes mais également, par la suite, à ses partenaires et à l'interministériel.\n\nCette API permet la génération d'un CAPTCHA de type chaine de caractères à reproduire et la vérification de la saisie effectuée.\n\nSon intégration doit se faire au niveau de la couche présentation (Front-End) et, étant exposée sur PISTE, ses accès et ses utilisateurs sont gérés via PISTE.\n\nVous trouverez ci-après le guide d'implémention du CAPTCHEtat de l'AIFE.",
     "version" : "1.0",
     "title" : "CaptchEtat",
     "contact" : {
@@ -9,19 +9,15 @@
       "email" : "piste.aife@finances.gouv.fr"
     }
   },
-  "host" : "api.piste.gouv.fr",
+  "host" : "sandbox-api.piste.gouv.fr",
   "basePath" : "/piste/captcha",
-  "schemes" : [ "https" ],
+  "schemes" : [ "https", "http" ],
   "security" : [ {
-    "API Key" : [ ]
+    "API_Key_Oauth.API Key" : [ ]
   }, {
-    "OAuthImplicit" : [ "resource.READ" ]
+    "API_Key_Oauth.OAuthImplicit" : [ "piste.captchetat" ]
   }, {
-    "OAuthImplicit" : [ "apiCAPTCHA" ]
-  }, {
-    "OAuthAccessCode" : [ "resource.READ" ]
-  }, {
-    "OAuthAccessCode" : [ "apiCAPTCHA" ]
+    "API_Key_Oauth.OAuthAccessCode" : [ "piste.captchetat" ]
   } ],
   "paths" : {
     "/simple-captcha-endpoint" : {
@@ -63,6 +59,13 @@
           "description" : "Si le paramètre existe, le navigateur peut créer une balise audio via javascript en tant qu'audio ; c'est un parametre technique non utilisable par le developpeur. Il est renseigné dans les requêtes auto-générées.",
           "required" : false,
           "type" : "string"
+        }, {
+          "name" : "mode",
+          "in" : "query",
+          "description" : "Le navigateur peut utiliser les ressources statiques ou des appels a l'API pour charger la feuille de style (Css) et charger les images statiques(le bouton \"recharger le captcha\" et le bouton \"lire le captcha\"). La valeur par défaut est \"frontal\" pour utiliser les ressources statiques.",
+          "required" : false,
+          "type" : "string",
+          "enum" : [ "frontal", "backend" ]
         } ],
         "responses" : {
           "200" : {
@@ -243,49 +246,29 @@
     }
   },
   "securityDefinitions" : {
-    "API Key" : {
+    "API_Key_Oauth.OAuthImplicit" : {
+      "description" : "OAuth",
+      "type" : "oauth2",
+      "authorizationUrl" : "https://sandbox-oauth.piste.gouv.fr/api/oauth/authorize",
+      "flow" : "implicit",
+      "scopes" : {
+        "piste.captchetat" : ""
+      }
+    },
+    "API_Key_Oauth.API Key" : {
       "description" : "API Key",
       "type" : "apiKey",
       "name" : "KeyId",
       "in" : "header"
     },
-    "OAuthImplicit" : {
+    "API_Key_Oauth.OAuthAccessCode" : {
       "description" : "OAuth",
       "type" : "oauth2",
-      "authorizationUrl" : "https://oauth.piste.dev.chorus.aife/api/oauth/authorize",
-      "flow" : "implicit",
-      "scopes" : {
-        "resource.READ" : "",
-        "apiCAPTCHA" : ""
-      },
-      "x-axway" : {
-        "accessTokenLocationQueryString" : "Bearer",
-        "tokenName" : "access_token",
-        "scopesMatching" : "Any",
-        "accessTokenLocation" : "HEADER",
-        "typeDisplayName" : "OAuth 2.0",
-        "authorizationHeaderPrefix" : ""
-      }
-    },
-    "OAuthAccessCode" : {
-      "description" : "OAuth",
-      "type" : "oauth2",
-      "authorizationUrl" : "https://oauth.piste.dev.chorus.aife/api/oauth/authorize",
-      "tokenUrl" : "https://oauth.piste.dev.chorus.aife/api/oauth/token",
+      "authorizationUrl" : "https://sandbox-oauth.piste.gouv.fr/api/oauth/authorize",
+      "tokenUrl" : "https://sandbox-oauth.piste.gouv.fr/api/oauth/token",
       "flow" : "accessCode",
       "scopes" : {
-        "resource.READ" : "",
-        "apiCAPTCHA" : ""
-      },
-      "x-axway" : {
-        "clientSecretName" : "client_secret",
-        "authorizationHeaderPrefix" : "",
-        "accessTokenLocationQueryString" : "Bearer",
-        "clientIdName" : "client_id",
-        "tokenName" : "access_code",
-        "scopesMatching" : "Any",
-        "accessTokenLocation" : "HEADER",
-        "typeDisplayName" : "OAuth 2.0"
+        "piste.captchetat" : ""
       }
     }
   },
@@ -377,35 +360,6 @@
   },
   "externalDocs" : {
     "description" : "Guide Implementation CAPTCHEtat",
-    "url" : "https://aife.economie.gouv.fr/referentiel/wp-content/uploads/sites/8/2021/12/CAPTCHEtat_GUIDE_IMPLEMENTATION.pdf"
-  },
-  "x-axway" : {
-    "serviceType" : "rest",
-    "image" : "/api/portal/v1.4/discovery/swagger/apis/32d6b18b-0430-47c9-888c-1ebabf7563a5/image",
-    "basePaths" : [ "https://api.piste.dev.chorus.aife" ],
-    "retirementDate" : 0,
-    "corsEnabled" : true,
-    "deprecated" : false,
-    "availableSDK" : {
-      "ios-swift" : "/discovery/sdk/32d6b18b-0430-47c9-888c-1ebabf7563a5/ios-swift",
-      "titanium" : "/discovery/sdk/32d6b18b-0430-47c9-888c-1ebabf7563a5/titanium",
-      "android" : "/discovery/sdk/32d6b18b-0430-47c9-888c-1ebabf7563a5/android",
-      "nodejs" : "/discovery/sdk/32d6b18b-0430-47c9-888c-1ebabf7563a5/nodejs"
-    },
-    "apiResourceType" : "swagger20",
-    "accessGrantedDate" : 1642695595630,
-    "expired" : false,
-    "customProperties" : {
-      "CGU" : "CGU_API_CAPTCHA-V.1.1",
-      "url_oauth" : "oauth.piste.gouv.fr",
-      "need_approval" : "Ext",
-      "approval_ext_org" : "SERVICE-DATAPASS",
-      "url_sdbx" : "sandbox-api.piste.gouv.fr",
-      "url_prod" : "api.piste.gouv.fr",
-      "url_oauth_sdbx" : "sandbox-oauth.piste.gouv.fr"
-    },
-    "id" : "32d6b18b-0430-47c9-888c-1ebabf7563a5",
-    "state" : "published"
+    "url" : "https://static.piste.gouv.fr/captchEtat/docs/CAPTCHA_GUIDE_IMPLEMENTATION.pdf"
   }
 }
-
