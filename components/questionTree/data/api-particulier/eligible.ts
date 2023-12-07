@@ -185,6 +185,18 @@ export const pathEligible = {
         `,
         },
         {
+        choices: [
+            'Coexya',
+        ],
+        answer: `<br/><Button href="https://datapass.api.gouv.fr/api-particulier?demarche=tarification-sociale-et-solidaire">Remplir une demande</Button>
+        },
+        {
+        choices: [
+            'Libreair',
+        ],
+        answer: `<br/><Button href="https://datapass.api.gouv.fr/api-particulier?demarche=demarches-citoyennes">Remplir une demande</Button>
+        },
+        {
           choices: ['**Votre éditeur ne figure pas dans cette liste**'],
           answer: `**Vous êtes éligible mais votre éditeur n’a pas intégré l’API&nbsp;Particulier <span role="img" aria-label="émoji loupe">🔎</span>**
           <br/>
