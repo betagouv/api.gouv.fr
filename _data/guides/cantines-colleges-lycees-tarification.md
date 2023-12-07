@@ -72,9 +72,9 @@ Les éditeurs suivants proposent des logiciels utiles aux établissements scolai
 
 | Éditeurs | Solution logicielle | 
 | ------- | 
-| Edulog-Turboself|
-| Alise  |
-| Kosmos  |
+| Edulog | Turboself |
+| Alise  | Alise |
+| Kosmos  | Kosmos Education |
 
 Vous êtes un éditeur et vous souhaitez apparaître dans cette liste ? Écrivez-nous à [contact@particulier.api.gouv.fr](mailto:contact@particulier.api.gouv.fr)
 
