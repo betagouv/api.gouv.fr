@@ -70,7 +70,7 @@ Avec l'API Particulier, vous avez notamment accès au quotient familial CAF, au 
 
 Les éditeurs suivants proposent des logiciels utiles aux établissements scolaires et sont déjà connectés à l'API Particulier :
 
-| Solution logicielle | 
+| Éditeurs | Solution logicielle | 
 | ------- | 
 | Edulog-Turboself|
 | Alise  |
