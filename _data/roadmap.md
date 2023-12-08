@@ -456,4 +456,8 @@
     - type: ADD_API
       what: IMPRIM'FIP, par la DGFiP
       path: /les-api/api-imprimfip
+  12:
+    - type: ADD_API
+      what: API Annuaire de l’administration et des services publics, par la DILA
+      path: /les-api/api-annuaire-administration-services-publics
 ---
