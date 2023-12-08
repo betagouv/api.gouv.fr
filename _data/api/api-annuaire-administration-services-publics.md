@@ -59,7 +59,7 @@ Ainsi les résultats pourront être obtenus au format JSON, CSV ou Excel.
 ### Utilisation
 
 L’utilisation de l’API Annuaire de l’administration et des services-publics se fait en deux temps :
-Lancement d’une requête d’interrogation/filtrage en passant différents paramètres ;
+- Lancement d’une requête d’interrogation/filtrage en passant différents paramètres ;
 Prévisualisation des premiers résultats ou téléchargement des données complètes.
 
 Les résultats peuvent être obtenus [en JSON, CSV et Excel](https://api-lannuaire.service-public.fr/explore/dataset/api-lannuaire-administration/export/).
