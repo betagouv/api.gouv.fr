@@ -38,7 +38,7 @@ const apiParticulierQuestions = {
         **De nombreux éditeurs de logiciel, ont déjà intégré l'API Particulier, nous vous recommandons d'en <External href='https://particulier.api.gouv.fr/faq#je-recherche-un-editeur-proposant-l-api-particulier'>consulter la liste</External>**.
         <br/>
         <br/>
-        <Button href='https://datapass.api.gouv.fr/api-entreprise' target='_blank' rel="noreferrer noopener" alt>Déposer tout de même une demande</Button>`,
+        <Button href='https://datapass.api.gouv.fr/api-particulier' target='_blank' rel="noreferrer noopener" alt>Déposer tout de même une demande</Button>`,
       },
     ],
 },
