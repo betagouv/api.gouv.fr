@@ -65,7 +65,7 @@ Prévisualisation des premiers résultats ou téléchargement des données compl
 Les résultats peuvent être obtenus [en JSON, CSV et Excel](https://api-lannuaire.service-public.fr/explore/dataset/api-lannuaire-administration/export/).
 
 La description du modèle de données de l’API se trouve [ici](https://api-lannuaire.service-public.fr/explore/dataset/api-lannuaire-administration/information/).
-Une documentation d’aide aux développeurs est disponible [ici](https://echanges.dila.gouv.fr/OPENDATA/RefOrgaAdminEtat/Documentation/DILA-API-Annuaire-administration-Documentation-daide-aux-developpeurs-20231207.pdf).
+Une documentation d’aide aux développeurs est disponible [ici](https://api-lannuaire.service-public.fr/api/datasets/1.0/api-lannuaire-administration/attachments/documentation_technique_api_annuaire_de_l_administration_pdf/).
 
 Pour plus de précisions sur l’utilisation de l'API et pour faciliter l'accès et la réutilisation des données ouvertes, consulter cette [rubrique](https://academy.opendatasoft.com/).
 
