@@ -69,7 +69,8 @@ content_intro: |
 
   ### Modalités d'accès
 
-  ⚠️ Pour les administrations qui ne proposent pas la connexion via FranceConnect ou pour lesquelles les démarches en ligne sont accessibles également sans FranceConnect, les mêmes données sont **disponibles dans [l'API Particulier](/les-api/api-particulier)**
+  ⚠️ Pour les administrations qui ne proposent pas la connexion via FranceConnect ou pour lesquelles les démarches en ligne sont accessibles également sans FranceConnect, les mêmes données sont **disponibles dans [l'API Particulier](/les-api/api-particulier) dont vous pouvez lire <External href="https://particulier.api.gouv.fr/catalogue/pole_emploi/situation">la documentation sur le site dédié</External>.**
+
 
   ### Quel est le périmètre de l'API ?
 
