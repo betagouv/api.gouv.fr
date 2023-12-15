@@ -26,7 +26,7 @@ access_page:
       Conformément aux dispositions XXXX, seul le public XXX est habilité à pouvoir utiliser cette API.
       Pour obtenir un agrément, vous devrez **justifier de XXXX**, et vous engager à XXXX.
 
-      Vous aurez besoin des informations suivantes pour compléter votre demande d'habilitation : 
+      Vous aurez besoin des informations suivantes pour compléter votre demande d'habilitation :
       - Info 1
       - Info 2
       - Document 1
@@ -50,6 +50,7 @@ stats_detail_resume: Les statistiques sont disponibles en temps réel # Résumer
 stats_detail_description: |
   Accédez au suivi des consommations de l'API
 stats_detail_link: http://page-stats-dusage-de-lapi # URL de la page des statistiques d'usage de l'API
+uptime: 98.011 # 📍 Mettre le taux de disponibilité moyen du dernier mois
 themes: # 📍 Ajouter un ou plusieurs thèmes, qui permettront aux usagers de trouver votre API en filtrant le catalogue par thématique. Pour ajouter un thème ci-dessous, supprimer simplement le # (sans retirer des blancs.)
 #  - Administration
 #  - Administration & législation
