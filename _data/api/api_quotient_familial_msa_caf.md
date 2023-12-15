@@ -1,7 +1,7 @@
 ---
-title: API Complémentaire santé solidaire # 📍 Nom commercial de l'API, privilégier un nom court.
-tagline: Entités administratives, simplifiez les démarches des bénéficiaires de la complémentaire santé solidaire en vérifiant leur statut # 📍 Une phrase pour résumer le service rendu par l'API. Si votre API est uniquement accessible à certaines organisation, spécifiez-le dès maintenant.
-producer: securite_sociale # 📍 Identifiant du fournisseur de la donnée trouvable ou ajoutable dans le dossier `api_gouv/_data/producteurs`, pour en savoir plus consulter le read.me.
+title: API Quotient familial MSA & CAF # 📍 Nom commercial de l'API, privilégier un nom court.
+tagline: Entités administratives, simplifiez les démarches des particuliers en récupérant pour eux leur quotient familial # 📍 Une phrase pour résumer le service rendu par l'API. Si votre API est uniquement accessible à certaines organisation, spécifiez-le dès maintenant.
+producer: cnaf-msa # 📍 Identifiant du fournisseur de la donnée trouvable ou ajoutable dans le dossier `api_gouv/_data/producteurs`, pour en savoir plus consulter le read.me.
 contact_link: api-particulier@api.gouv.fr # 📍 Adresse e-mail que les usagers peuvent utiliser pour vous contacter.
 partners: 
   - dinum
@@ -58,7 +58,7 @@ rate_limiting_description: |
    L'API est disponible à hauteur de 20 appels par secondes et par jeton d'accès.
 # Phrase descriptive de la volumétrie
 doc_tech_link: https://particulier.api.gouv.fr/api/open-api.yml # 📍 URL qui donne accès au swagger de votre API, sur la page API.gouv suivante : https://api.gouv.fr/documentation, accessible depuis le bouton "Tester l'API" sur la fiche de l'API. Pour en savoir plus, consulter le read.me.
-doc_tech_external: https://particulier.api.gouv.fr/developpeurs/openapi#tag/Complementaire-sante-solidaire/paths/~1api~1v2~1complementaire-sante-solidaire/get # 📍 URL vers la documentation technique de l'API
+doc_tech_external: https://particulier.api.gouv.fr/developpeurs/openapi#tag/Quotient-familial/paths/~1api~1v2~1composition-familiale-v2/get # 📍 URL vers la documentation technique de l'API
 monitoring_link: https://status.particulier.api.gouv.fr/ 
 stats_detail_resume: Les statistiques sont disponibles sur 2 mois
 stats_detail_description: | 
@@ -69,22 +69,19 @@ themes:
 - Administration
 - Administration & législation
 - Particulier
-- Santé
-- Transport
 keywords: 
-  - particulier
-  - complementaire
-  - sante
-  - solidaire
-  - C2S
-  - assuré
-  - assurance maladie
-  - mutuelle
+  - composition
+    - quotient
+    - famille
+    - familial
+    - allocataire
+    - enfant
+    - adresse
 last_update: 15/12/2023 
 content_intro: |
-  L'<External href="https://particulier.api.gouv.fr/catalogue/cnaf_msa/complementaire_sante_solidaire">API Complémentaire santé solidaire</External> permet de savoir si un particulier est bénéficiaire de la complémentaire santé solidaire (C2S). Elle fait partie du bouquet <External href="https://particulier.api.gouv.fr/catalogue">API Particulier</External>.
+  L'<External href="https://particulier.api.gouv.fr/catalogue/cnaf-msa/quotient_familial_v2">API Quotient familial MSA & CAF</External> permet de récupérer directement le quotient familial d'un particulier du régime général ou agricole. Elle fait partie du bouquet <External href="https://particulier.api.gouv.fr/catalogue">API Particulier</External>.
 
-  <Button href="https://particulier.api.gouv.fr/catalogue/cnaf_msa/complementaire_sante_solidaire">Consulter la documentation</Button>
+  <Button href="https://particulier.api.gouv.fr/catalogue/cnaf-msa/quotient_familial_v2">Consulter la documentation</Button>
 
 ---
 
