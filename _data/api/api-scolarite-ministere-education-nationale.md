@@ -1,7 +1,11 @@
 ---
 title: API scolarité de l'élève
 tagline: Statut scolarisé et statut boursier d'un élève du primaire, collège ou lycée. 
+producer: menj
+contact_link: api-sco-eleve_contacts@education.gouv.fr
+is_open: -1
 datapass_link: https://datapass.api.gouv.fr/api-scolarite
+is_france_connected: -1
 access_page:
   - who:
       - Un particulier
@@ -18,9 +22,13 @@ access_page:
     description: |
       En tant que collectivité territoriale ou administration, vous êtes éligible à utiliser cette API selon votre cadre juridique. Vous pouvez déposer une demande d'habilitation :
       <Button href="https://datapass.api.gouv.fr/api-scolarite">Demander un accès</Button>
-is_open: -1
-is_france_connected: -1
-producer: men
+# rate_limiting_resume: 10 appels / minute / IP # 📍 Volumétrie maximale de votre API.
+# rate_limiting_description: | L'API est disponible à hauteur de 10 appels par minute.
+# Phrase descriptive de la volumétrie
+themes:
+  - Particulier
+  - Education
+  - Administration
 keywords:
   - eleve
   - scolarite
@@ -33,14 +41,9 @@ keywords:
   - college
   - lycee
   - enseignement
-themes:
-  - Particulier
-  - Education
-  - Administration
-contact_link: api-sco-eleve_contacts@education.gouv.fr
-# doc_tech_link: 
+doc_tech_link: TODO
 visits_2019: 4000
-last_update: 10/10/2023
+last_update: 15/12/2023
 ---
 
 Cette API, délivrée par le Ministère de l'éducation nationale, permet de vérifier si un particulier est scolarisé au primaire, au collège ou au lycée, et savoir s'il est boursier.
