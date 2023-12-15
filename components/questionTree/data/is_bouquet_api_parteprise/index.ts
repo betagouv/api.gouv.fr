@@ -36,6 +36,24 @@ const isBouquetApiPartepriseQuestions = {
       },
     ],
   },
+  scolariteEleve: {
+    qusontion:
+      'Votre service a-t’il besoin d’autres données concernant les particuliers ?',
+    choiceTree: [
+      {
+        choices: ['**Non**, j’ai seulement besoin du statut élève scolarisé.'],
+        answer: `Vous pouvez remplir une demande auprès du Ministère de l'éducation nationale et de la Jeunesse :
+        <Button href="https://datapass.api.gouv.fr/api-scolarite">Remplir une demande</Button>`,
+      },
+      {
+        choices: ['**Oui**, le statut étudiant, statut boursier, le quotient familial,... m’intéressent.'],
+      answer: `Les données de l'API scolarité de l'élève sont aussi distribuées par le bouquet API Particulier, sous le nom <External href="https://particulier.api.gouv.fr/catalogue/cnous/statut_etudiant_boursier">API Statut élève scolarisé et boursier</External>. Ce bouquet regroupe <External href="https://particulier.api.gouv.fr/catalogue">différentes données des particuliers</External>, dont vous pourrez aussi demander l'accès en complétant ce formulaire :
+        <br/>
+        <Button href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande API Particulier</Button>
+        `,
+      },
+    ],
+  },
   statutDe: {
     qusontion:
       'Votre service a-t’il besoin d’autres données concernant les particuliers ?',

@@ -8,7 +8,7 @@ access_page:
       - Un étudiant
     is_eligible: -1
     description: |
-      Vous ne pouvez pas accèder a ces informations.
+      L’usage de cette API est **uniquement reservé aux acteurs publics**. En tant que particulier, vous ne pouvez pas y accéder.
 
       <Button href="/rechercher-api">Rechercher une autre API</Button>
   - who:
@@ -19,7 +19,7 @@ access_page:
       <NextSteps />
       <QuestionTree tree='is_bouquet_api_parteprise' question='statutEtudiantBoursier' />
   - who:
-      - Une entreprise
+      - Une entreprise ou une association
     is_eligible: 0
     description: |
       Vous pouvez accéder à l’API uniquement si vous êtes [partenaire de France Connect](https://franceconnect.gouv.fr/partenaires), et pour un cas d’usage autorisé par la loi. Vous devrez fournir le cadre juridique qui vous autorise à utiliser ces données.

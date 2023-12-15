@@ -9,7 +9,7 @@ access_page:
       - Un demandeur d'emploi
     is_eligible: -1
     description: |
-      Ces informations sont résevées aux administrations.
+      L’usage de cette API est **uniquement reservé aux acteurs publics**. En tant que particulier, vous ne pouvez pas y accéder.
 
       <Button href="/rechercher-api">Rechercher une autre API</Button>
   - who:

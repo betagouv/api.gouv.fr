@@ -26,7 +26,7 @@ const isFranceConnectedQuestions = {
       },
       {
         choices: ['Fournisseur d‘identité'],
-        answer: `Si vous souahitez contribuer à AgentConnect en fournissant des données d'identité, vous pouvez remplir cette demande :
+        answer: `Si vous souhaitez contribuer à AgentConnect en fournissant des données d'identité, vous pouvez remplir cette demande :
         <br/>
         <Button href="https://datapass.api.gouv.fr/agent-connect-fi">Remplir une demande</Button>
         `,
