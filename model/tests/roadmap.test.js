@@ -38,6 +38,8 @@ const oldAPIs = [
   'API Infotravail',
   "API de droits à l'Assurance Maladie",
   "API scolarité de l'élève",
+  "API Complémentaire santé solidaire",
+  "API Quotient familial MSA & CAF",
   "Annuaire des établissements publics de l'administration",
   "Hub'Eau - Hydrométrie",
   "Hub'Eau - Indicateurs Eau potable et Assainissement",
