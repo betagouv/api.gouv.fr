@@ -18,7 +18,7 @@ access_page:
     description: |
 
       <NextSteps />
-      <QuestionTree tree='france-connected-api' question='indemnisationPe' />
+      <QuestionTree tree='is_bouquet_api_parteprise' question='indemnisationPe' />
   - who:
       - Une entreprise
     is_eligible: 0
