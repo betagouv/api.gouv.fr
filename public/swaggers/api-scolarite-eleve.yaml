@@ -1,0 +1,260 @@
+openapi: 3.0.1
+info:
+  title: API scolarité de l'élève - Ministère de l'Éducation nationale et de la Jeunesse
+  description:
+    API outil permettant d'exposer les données de la scolarité de manière
+    simplifiée.
+  license:
+    name: GNU GPL v3
+    url: https://www.gnu.org/licenses/gpl-3.0.txt
+  version: 1.0.0
+servers:
+  - url: https://to-be-defined/anges/v1
+paths:
+  /eleve/informations-scolarite:
+    get:
+      tags:
+        - Elève
+      summary: Récupérer les différentes informations relatives à la scolarité de l'élève
+      description: Méthode permettant de récupérer les informations sur la scolarité de l'élève
+      operationId: recupererInfoScolarite
+      parameters:
+        - name: nom
+          in: query
+          description: nom de l'élève
+          required: true
+          schema:
+            $ref: "#/components/schemas/Nom"
+        - name: prenom
+          in: query
+          description: prénom de l'élève
+          required: true
+          schema:
+            $ref: "#/components/schemas/Prenom"
+        - name: sexe
+          in: query
+          description: "sexe de l'élève; 1 : Masculin, 2 : Féminin"
+          required: true
+          schema:
+            $ref: "#/components/schemas/Sexe"
+        - name: date-naissance
+          in: query
+          description: date de naissance de l'élève
+          required: true
+          schema:
+            $ref: "#/components/schemas/DateNaissance"
+        - name: code-uai
+          in: query
+          description: code uai de l'établissement
+          required: true
+          schema:
+            $ref: "#/components/schemas/CodeUai"
+        - name: annee-scolaire
+          in: query
+          description: année scolaire demandée
+          required: true
+          schema:
+            $ref: "#/components/schemas/AnneeScolaire"
+          examples:
+            court:
+              summary: "format court"
+              value: "2022"
+            long:
+              summary: "format long"
+              value: "2022-2023"
+
+      responses:
+        200:
+          description: Informations relatives à la scolarité de l'élève
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/InformationsScolarite"
+        400:
+          description:
+            "Requête incorrecte : paramètre manquant ou type de paramètre
+            incorrecte."
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Erreur"
+              example:
+                type: Requête incorrecte
+                title: Un paramètre de requête obligatoire n'est pas présent
+                detail:
+                  Required request parameter 'date-naissance' for method parameter
+                  type LocalDate is not present
+                status: BAD_REQUEST
+                date-time: 2022-01-27 16:22:48
+        401:
+          description: Unauthorized
+        403:
+          description: Forbidden
+        404:
+          description: Resource non trouvée
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Erreur"
+              example:
+                type: Resource non trouvée
+                title: Une resource n'a pas été trouvée
+                detail: L'élève n’a pas été trouvé.
+                status: NOT_FOUND
+                date-time: 2022-01-27 16:22:48
+        500:
+          description: Erreur interne du serveur.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Erreur"
+              example:
+                type: Erreur interne anges
+                title: Une erreur inattendue est survenue
+                detail:
+                  Degré impossible à déterminer car il s'agit d'un établissement
+                  d'aministration de l'Éducation nationale, de l'enseignement supérieur,
+                  de la jeunesse et des sports
+                status: INTERNAL_SERVER_ERROR
+                date-time: 2022-01-27 16:22:48
+        502:
+          description: La réponse du fournisseur de donnée est inexploitable
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Erreur"
+              example:
+                type: Erreur backend
+                title: Réponse inexploitable
+                detail: La réponse du fournisseur de donnée est inexploitable
+                instance: /ramsese-webservice/replica/v3/uai/0511474P
+                status: BAD_GATEWAY
+                date-time: 2022-01-27 16:22:48
+        504:
+          description: Un service web est inaccessible à cause d'un timeout.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Erreur"
+              example:
+                type: Erreur backend
+                title: Un service web est inaccessible à cause d'un timeout
+                detail: >
+                  I/O error on GET request for "/ramsese-webservice/replica/v3/uai/0210101W":
+                  Connect timed out; nested exception is java.net.SocketTimeoutException:
+                  Connect timed out
+                status: GATEWAY_TIMEOUT
+                date-time: 2022-01-27 16:22:48
+
+components:
+  schemas:
+    InformationsScolarite:
+      type: object
+      properties:
+        identification:
+          $ref: "#/components/schemas/Identification"
+        info-scolarite:
+          $ref: "#/components/schemas/InfoScolarite"
+        info-bourse:
+          $ref: "#/components/schemas/InfoBourse"
+
+    Identification:
+      type: object
+      properties:
+        nom:
+          $ref: "#/components/schemas/Nom"
+        prenom:
+          $ref: "#/components/schemas/Prenom"
+        sexe:
+          $ref: "#/components/schemas/Sexe"
+        date-naissance:
+          $ref: "#/components/schemas/DateNaissance"
+        etablissement:
+          $ref: "#/components/schemas/Etablissement"
+        annee-scolaire:
+          $ref: "#/components/schemas/AnneeScolaire"
+
+    Nom:
+      type: string
+      example: "Martin"
+
+    Prenom:
+      type: string
+      example: "Camille"
+
+    Sexe:
+      type: integer
+      description: 1 = masculin, 2 = féminin
+      enum: [1, 2]
+
+    DateNaissance:
+      type: string
+      format: date
+      example: "2007-07-07"
+
+    Etablissement:
+      type: object
+      properties:
+        code-uai:
+          $ref: "#/components/schemas/CodeUai"
+
+    CodeUai:
+      type: string
+      pattern: '^\d{7}\\w$'
+      example: "0890003V"
+
+    AnneeScolaire:
+      type: string
+      pattern: '^\d{4}$|^\d{4}-\d{4}$'
+      example: "2022-2023"
+
+    InfoScolarite:
+      type: object
+      properties:
+        est-scolarise:
+          type: boolean
+        statut-eleve:
+          $ref: "#/components/schemas/StatutEleve"
+
+    StatutEleve:
+      type: object
+      properties:
+        code:
+          type: string
+          example: "ST"
+        libelle:
+          type: string
+          example: "SCOLAIRE"
+
+    InfoBourse:
+      type: object
+      properties:
+        est-boursier:
+          type: boolean
+          example: true
+        niveau-bourse:
+          type: integer
+          example: 1
+
+    Erreur:
+      title: Erreur
+      type: object
+      properties:
+        type:
+          type: string
+          description: Identificateur du problème
+        title:
+          type: string
+          description: Résumé du problème
+        detail:
+          type: string
+          description: Explication detaillée du problème
+        instance:
+          type: string
+          description: L'url qui a donné lieu à l'erreur
+        status:
+          type: string
+          description: Statut HTTP
+        date-time:
+          type: string
+          description: Date et heure

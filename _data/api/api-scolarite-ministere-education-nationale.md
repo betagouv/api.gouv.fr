@@ -41,7 +41,7 @@ keywords:
   - college
   - lycee
   - enseignement
-doc_tech_link: TODO
+doc_tech_link: /swaggers/api-scolarite-eleve.yaml
 visits_2019: 4000
 last_update: 15/12/2023
 ---
