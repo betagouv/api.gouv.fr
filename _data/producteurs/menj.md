@@ -2,7 +2,7 @@
 name: Ministère de l'Éducation nationale et de la Jeunesse
 acronym: MENJ
 type: Ministère
-logo: logo_menj.jpg
+logo: menj.png
 site: https://www.education.gouv.fr/ 
 #short: Description courte répondant à la question "Qu'est ce que le «fournisseur de données» ?"
 # description: | Description longue répondant à la question "Quelle est sa mission de service public ?"

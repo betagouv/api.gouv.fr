@@ -9,7 +9,7 @@ access_page:
       - Un demandeur d'emploi
     is_eligible: -1
     description: |
-      Vous ne pouvez pas accéder a ces informations.
+      L’usage de cette API est **uniquement reservé aux acteurs publics**. En tant que particulier, vous ne pouvez pas y accéder.
 
       <Button href="/rechercher-api">Rechercher une autre API</Button>
   - who:
@@ -18,9 +18,9 @@ access_page:
     description: |
 
       <NextSteps />
-      <QuestionTree tree='france-connected-api' question='indemnisationPe' />
+      <QuestionTree tree='is_bouquet_api_parteprise' question='indemnisationPe' />
   - who:
-      - Une entreprise
+      - Une entreprise ou une association
     is_eligible: 0
     description: |
       Vous pouvez accéder à l’API uniquement si vous êtes [partenaire de France Connect](https://franceconnect.gouv.fr/partenaires), et pour un cas d’usage autorisé par la loi. Vous devrez fournir le cadre juridique qui vous autorise à utiliser ces données.
@@ -81,7 +81,7 @@ content_intro: |
 
   ### Modalités d'accès
 
-  ⚠️ Pour les administrations qui ne proposent pas la connexion via FranceConnect ou pour lesquelles les démarches en ligne sont accessibles également sans FranceConnect, les mêmes données sont **disponibles dans [l'API Particulier](/les-api/api-particulier) (à compter de décembre 2022).**
+  ⚠️ Pour les administrations qui ne proposent pas la connexion via FranceConnect ou pour lesquelles les démarches en ligne sont accessibles également sans FranceConnect, les mêmes données sont **disponibles dans [l'API Particulier](/les-api/api-particulier) dont vous pouvez lire <External href="https://particulier.api.gouv.fr/catalogue/pole_emploi/indemnites">la documentation sur le site dédié</External>.**
 
   Cette API à un intérêt à être mobilisée en complément de [l'API statut demandeur d'emploi, version FranceConnectée](/les-api/api-statut-demandeur-emploi). 
 

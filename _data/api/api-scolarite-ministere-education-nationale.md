@@ -9,22 +9,30 @@ is_france_connected: -1
 access_page:
   - who:
       - Un particulier
-      - Un étudiant
-      - Une entreprise
     is_eligible: -1
     description: |
-      Vous ne pouvez pas accèder à ces informations qui sont des données protégées.
+      L’usage de cette API est **uniquement reservé aux acteurs publics**. En tant que particulier, vous ne pouvez pas y accéder.
 
       <Button href="/rechercher-api">Rechercher une autre API</Button>
   - who:
       - Une administration
     is_eligible: 1
     description: |
-      En tant que collectivité territoriale ou administration, vous êtes éligible à utiliser cette API selon votre cadre juridique. Vous pouvez déposer une demande d'habilitation :
-      <Button href="https://datapass.api.gouv.fr/api-scolarite">Demander un accès</Button>
+
+      <NextSteps />
+      <QuestionTree tree='is_bouquet_api_parteprise' question='scolariteEleve' />
+  - who:
+      - Une entreprise ou une association
+    is_eligible: -1
+    description: |
+      L’usage de cette API est **uniquement reservé aux acteurs publics**.
+
+      <Button href="/rechercher-api">Rechercher une autre API</Button>
 # rate_limiting_resume: 10 appels / minute / IP # 📍 Volumétrie maximale de votre API.
 # rate_limiting_description: | L'API est disponible à hauteur de 10 appels par minute.
 # Phrase descriptive de la volumétrie
+partners:
+  - dinum
 themes:
   - Particulier
   - Education
