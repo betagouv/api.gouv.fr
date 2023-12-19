@@ -451,6 +451,7 @@
   4:
     - type: ADD_API
       what: API QuiForme, par Carif-Oref
+      path: /les-api/api_quiforme
   6:
     - type: INFO
       what: |
