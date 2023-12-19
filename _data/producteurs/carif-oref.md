@@ -1,6 +1,6 @@
 ---
 name: Le réseau des Centres d’animation, de ressources et d’information sur la formation (Carif) et des Observatoires régionaux de l’emploi et de la formation (Oref)
-acronym: Le réseau des Carif-Oref
+producer: Carif-Oref
 logo: carif-oref.png
 type: Association avec mission de service public
 site: https://www.intercariforef.org/ 
