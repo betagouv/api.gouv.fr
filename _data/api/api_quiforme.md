@@ -35,8 +35,8 @@ rate_limiting_description: |
   L'API est disponible à hauteur de TODO appels par minute.
 # Phrase descriptive de la volumétrie
 doc_tech_link: https://api-quiforme.intercariforef.org/docs#/
-doc_tech_external: https://TODO # 📍 URL vers la documentation technique de l'API - 
-monitoring_link: https://TODO # 📍URL de la page de statut de l'API
+#  doc_tech_external: 
+#   monitoring_link: 
 stats_detail_resume: Les statistiques sont disponibles en temps réel # Résumer en un titre à quoi peut s'attendre l'usager en termes de statistiques de consommation de l'API. Cette phrase suit le titre "Stats:" qui permet de déplier un volet avec les détails ci-dessous (description et lien) :
 stats_detail_description: |
   Accédez au suivi des consommations de l'API
@@ -79,7 +79,7 @@ Votre service a besoin d'autres API concernant les données des entreprises ou d
 
 ## Sources de données 
 
-- Le reférentiel UAI/SIRET de l'Onisep (MAJ DORINE : API référencée sur api.gouv est celle de cariforef en direct donc j'inclus la BAN ? )
+- Le reférentiel UAI/SIRET de l'Onisep
 - Base SIRENE
 - Base Adresse nationale 
 - Certificats Qualiopi ( DGEFP , Liste OF )
