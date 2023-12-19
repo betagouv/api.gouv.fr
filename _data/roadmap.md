@@ -448,6 +448,9 @@
     - type: ADD_API
       what: Courtier Fonctionnel SFiP, par la DGFiP
       path: /les-api/api-sfip
+  4:
+    - type: ADD_API
+      what: API QuiForme, par Carif-Oref
   6:
     - type: INFO
       what: |
