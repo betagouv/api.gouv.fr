@@ -368,9 +368,6 @@
       what: Ma Sécurité, par le Service des Technologies et des Systèmes d'Information de la Sécurité Intérieure
       path: /les-api/api-ma-securite
     - type: ADD_API
-      what: Rendez-vous permis, par le Ministère de l'Intérieur
-      path: /les-api/api-permis-conduire
-    - type: ADD_API
       what: Données locales de consommation d'énergie, par le SDES
       path: /les-api/api-donnees-locales-energie
     - type: ADD_API
