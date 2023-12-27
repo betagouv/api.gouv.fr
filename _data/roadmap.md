@@ -417,6 +417,9 @@
     - type: ADD_API
       what: Transparence Santé, par la Direction Générale de la Santé
       path: /les-api/api-transparence-sante
+    - type: ADD_API
+      what: API QuiForme, par Carif-Oref
+      path: /les-api/api_quiforme
   2:
     - type: ADD_API
       what: MonComptePro, par la DINUM
