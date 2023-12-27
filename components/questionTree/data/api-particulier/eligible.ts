@@ -188,13 +188,13 @@ export const pathEligible = {
         choices: [
             'Coexya',
         ],
-        answer: `<br/><Button href="https://datapass.api.gouv.fr/api-particulier?demarche=tarification-sociale-et-solidaire">Remplir une demande</Button>
+        answer: `<br/><Button href="https://datapass.api.gouv.fr/api-particulier?demarche=Coexya">Remplir une demande</Button>
         },
         {
         choices: [
             'Libreair',
         ],
-        answer: `<br/><Button href="https://datapass.api.gouv.fr/api-particulier?demarche=demarches-citoyennes">Remplir une demande</Button>
+        answer: `<br/><Button href="https://datapass.api.gouv.fr/api-particulier?demarche=Libreair">Remplir une demande</Button>
         },
         {
           choices: ['**Votre éditeur ne figure pas dans cette liste**'],
