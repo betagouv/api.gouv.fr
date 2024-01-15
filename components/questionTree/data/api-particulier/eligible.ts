@@ -31,7 +31,8 @@ export const pathEligible = {
         },
         'APIdev (Millibase)',
         ],
-        answer: `<br/><<Button href="https://datapass.api.gouv.fr/api-particulier?demarche=APIdev-Millibase">Remplir une demande</Button>
+        answer: `<br/><<Button href="https://datapass.api.gouv.fr/api-particulier?demarche=apidev-millibase">Remplir une demande</Button>
+        https://datapass.api.gouv.fr/api-particulier?demarche=APIdev-Millibase
         `,
         {
         choices: [
