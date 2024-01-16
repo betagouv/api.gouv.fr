@@ -1,6 +1,6 @@
 ---
-title: Comment installer le widget formulaire de dépôt d'offre d'alternance sur son site ?
-tagline: Intégrez le widget LBA sur votre site, pour afficher les formations et les entreprises qui proposent un apprentissage.
+title: Installer le widget d'exposition des opportunités d'emploi et/ou de formation en alternance sur son site
+tagline: Intégrez le widget La bonne alternance sur votre site en quelques minutes.
 tags: cas usage, La bonne alternance, apprentissage, widget, pole emploi, matcha, alternance
 image: code.jpg
 noindex: false # this page will appear on Google
