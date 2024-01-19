@@ -32,7 +32,7 @@ access_page:
       <Button href="https://datapass.api.gouv.fr/TODO">Demander un accès</Button>
 rate_limiting_resume: Volumétrie inconnue
 rate_limiting_description: |
-  L'API est disponible à hauteur de appels par minute.
+  Le fournisseur de la donnée n'a pas cette information.
 # Phrase descriptive de la volumétrie
 doc_tech_link: https://api-quiforme.intercariforef.org/docs#/
 #  doc_tech_external:
