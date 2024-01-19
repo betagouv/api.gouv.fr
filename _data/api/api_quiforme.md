@@ -30,7 +30,7 @@ access_page:
     description: |
       En tant que collectivité territoriale ou administration, vous êtes éligible à utiliser cette API selon votre cadre juridique. Vous pouvez déposer une demande d'habilitation :
       <Button href="https://datapass.api.gouv.fr/TODO">Demander un accès</Button>
-rate_limiting_resume: appels / minute / IP # 📍 Volumétrie maximale de votre API.
+rate_limiting_resume: Volumétrie inconnue
 rate_limiting_description: |
   L'API est disponible à hauteur de appels par minute.
 # Phrase descriptive de la volumétrie
