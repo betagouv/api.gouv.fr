@@ -30,9 +30,9 @@ access_page:
     description: |
       En tant que collectivité territoriale ou administration, vous êtes éligible à utiliser cette API selon votre cadre juridique. Vous pouvez déposer une demande d'habilitation :
       <Button href="https://datapass.api.gouv.fr/TODO">Demander un accès</Button>
-rate_limiting_resume: TODO appels / minute / IP # 📍 Volumétrie maximale de votre API.
+rate_limiting_resume: Volumétrie inconnue
 rate_limiting_description: |
-  L'API est disponible à hauteur de TODO appels par minute.
+  Le fournisseur de la donnée n'a pas cette information.
 # Phrase descriptive de la volumétrie
 doc_tech_link: https://api-quiforme.intercariforef.org/docs#/
 #  doc_tech_external:
@@ -82,20 +82,20 @@ Votre service a besoin d'autres API concernant les données des entreprises ou d
 - Le reférentiel UAI/SIRET de l'Onisep
 - Base SIRENE
 - Base Adresse nationale
-- Certificats Qualiopi ( DGEFP , Liste OF )
-- Habilitations France compétences ( France Compétences, RNCP, RS )
+- Certificats Qualiopi (DGEFP, Liste OF)
+- Habilitations France compétences (France Compétences, RNCP, RS)
 
 ## Périmètre
 
 ### Entreprises ou associations concernées :
 
-Cette API concerne ✅ tous les établissements quelque soit leur statut, publics, à but lucratif, associatifs, etc...
+Cette API concerne ✅ tous les établissements, quelque soit leur statut, à but lucratif, associatif, etc...
 Une large majorité d’établissements sont concernés :
 - ✅ établissements publics ;
 - ✅ établissements privés ;
 - ✅ associations ;
 
-Les établissements suivants ne sont pas couverts par l’API /TODO
+Les établissements suivants ne sont pas couverts par l’API :
 - ❌ établissements privés hors contrat ;
 - ❌ lycées agricoles ;
 - ❌ instruction dans la famille.
@@ -108,7 +108,7 @@ Les établissements suivants ne sont pas couverts par l’API /TODO
 Les données sont mises à jour en majorité toutes les 24h mais ce délai peut parfois passer à 72h ou plus pour des cas spécifiques.
 
 ## Modalités d'appel
-Cette API est appelé avec le SIRET de l'établissement recherché.
+Cette API est appelée avec le SIRET de l'établissement recherché.
 
 ## Données
 
