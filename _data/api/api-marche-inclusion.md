@@ -1,5 +1,5 @@
 ---
-title: API Structures de l'inclusion
+title: API Marché de l'inclusion
 tagline: Retrouvez facilement les informations sur les structures de l'inclusion
 is_open: 0 # 0 means API require an account
 account_link: https://lemarche.inclusion.beta.gouv.fr/api/
@@ -25,7 +25,7 @@ themes:
   - Emploi
 contact_link: lemarche.api@inclusion.beta.gouv.fr
 doc_tech_link: https://lemarche.inclusion.beta.gouv.fr/api/schema/
-last_update: 22/12/2021
+last_update: 29/01/2024
 ---
 
 Le marché de l'inclusion est un moteur de recherche qui permet de retrouver facilement l'ensemble des structures de l'inclusion.
