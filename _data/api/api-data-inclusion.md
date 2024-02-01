@@ -14,13 +14,20 @@ partners:
   - 1jeune1solution
 producer: gip-inclusion
 keywords:
+  - Data inclusion
   - Inclusion
   - Insertion
+  - Structures
+  - Services
   - Siret
   - Sociale
   - Subvention
 contact_link: data.inclusion@beta.gouv.fr
 doc_tech_link: https://api.data.inclusion.beta.gouv.fr/openapi.json
+doc_tech_external: https://api.data.inclusion.beta.gouv.fr/api/v0/docs
+stats_detail_resume: Accédez au suivi des consommations des API
+stats_detail_description: Tableau de bord public disponible ci-dessous
+stats_detail_link: https://metabase.data.inclusion.beta.gouv.fr/dashboard/25
 #monitoring_link: https://stats.uptimerobot.com/kXzwzfk7BE
 #monitoring_description: |
 #  Une supervision du service en temps réel est disponible à cette adresse.
@@ -41,10 +48,11 @@ Les données collectées sont:
 
 - historisées,
 - géocodées,
-- enrichies via les outils développés par data·inclusion:
-  - l'outil de correspondance, qui permet de faire correspondre 2 jeux de données brutes,
-  - l'outil de sirétisation, qui permet d'attribuer un siret aux structures, afin de croiser les bases de données
+- enrichies via l'outil de correspondance, développé par data•inclusion, qui permet de faire correspondre 2 jeux de données brutes,
 - alignées sur le schéma de données de data·inclusion
-- publiées régulièrement en open data sur [data.gouv](https://www.data.gouv.fr/fr/datasets/6233723c2c1e4a54af2f6b2d), la plateforme de données publiques,
+- publiées hebdomadairement en open data sur [data.gouv](https://www.data.gouv.fr/fr/datasets/6233723c2c1e4a54af2f6b2d), la plateforme de données publiques,
 - consultables via une api.
+
+<Button href="https://www.data.inclusion.beta.gouv.fr/">Consulter le site data•inclusion</Button>
+
 
