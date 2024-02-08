@@ -27,7 +27,7 @@ doc_tech_link: https://api.data.inclusion.beta.gouv.fr/openapi.json
 doc_tech_external: https://api.data.inclusion.beta.gouv.fr/api/v0/docs
 stats_detail_resume: Accédez au suivi des consommations des API
 stats_detail_description: Tableau de bord public disponible ci-dessous
-stats_detail_link: https://metabase.data.inclusion.beta.gouv.fr/dashboard/25
+stats_detail_link: http://metabase.data.inclusion.beta.gouv.fr/public/dashboard/a53c0d36-3467-41d9-876e-973311604ae2
 #monitoring_link: https://stats.uptimerobot.com/kXzwzfk7BE
 #monitoring_description: |
 #  Une supervision du service en temps réel est disponible à cette adresse.
