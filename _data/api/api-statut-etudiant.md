@@ -1,5 +1,5 @@
 ---
-title: API Statut Etudiant
+title: API Statut étudiant
 tagline: Entités administratives, simplifiez les démarches des étudiants en vérifiant pour eux s'ils sont inscrits dans un établissement de l'enseignement supérieur
 producer: mesri
 partners:
@@ -14,7 +14,7 @@ access_page:
       - Un particulier
     is_eligible: -1
     description: |
-      L’usage de l’API Particulier est **uniquement reservé aux acteurs publics** : les administrations, les collectivités, leurs opérateurs, les acteurs de santé, etc.
+      L’usage de l’API Particulier, incluant l'API statut étudiant, est **uniquement reservé aux acteurs publics** : les administrations, les collectivités, leurs opérateurs, les acteurs de santé, etc.
 
       <Button href="/rechercher-api">Rechercher une autre API</Button>
   - who:
@@ -33,7 +33,7 @@ access_page:
       - Une entreprise ou une association
     is_eligible: -1
     description: |
-      L’usage de l’API Particulier est **uniquement reservé aux acteurs publics** : les administrations, les collectivités, leurs opérateurs, les acteurs de santé, etc.
+      L’usage de l’API Particulier, incluant l'API statut étudiant, est **uniquement reservé aux acteurs publics** : les administrations, les collectivités, leurs opérateurs, les acteurs de santé, etc.
 
       <Button href="/rechercher-api">Rechercher une autre API</Button>
 
