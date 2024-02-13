@@ -1,36 +1,57 @@
 ---
 title: API Statut Etudiant
-tagline: Vérifiez si une personne est inscrite dans un établissement de l'enseignement supérieur
-datapass_link: https://datapass.api.gouv.fr/api-statut-etudiant
-access_page:
-  - who:
-      - Un particulier
-      - Un étudiant
-    is_eligible: -1
-    description: |
-      L’usage de cette API est **uniquement reservé aux acteurs publics**. En tant que particulier, vous ne pouvez pas y accéder.
-
-      <Button href="/rechercher-api">Rechercher une autre API</Button>
-  - who:
-      - Une administration
-    is_eligible: 1
-    description: |
-
-      <NextSteps />
-      <QuestionTree tree='is_bouquet_api_parteprise' question='statutEtudiant' />
-  - who:
-      - Une entreprise ou une association
-    is_eligible: 0
-    description: |
-      Vous pouvez accéder à l’API uniquement si vous êtes [partenaire de France Connect](https://franceconnect.gouv.fr/partenaires), et pour un cas d’usage autorisé par la loi. Vous devrez fournir le cadre juridique qui vous autorise à utiliser ces données.
-
-      <NextSteps />
-      <Button href="https://datapass.api.gouv.fr/api-statut-etudiant">Remplir une demande</Button>
-is_open: -1
-is_france_connected: 1
+tagline: Entités administratives, simplifiez les démarches des étudiants en vérifiant pour eux s'ils sont inscrits dans un établissement de l'enseignement supérieur
 producer: mesri
 partners:
   - renater
+  - dinum
+contact_link: api-particulier@api.gouv.fr
+is_open: -1
+datapass_link: https://datapass.api.gouv.fr/api-particulier
+is_france_connected: 1
+access_page:
+  - who:
+      - Un particulier
+    is_eligible: -1
+    description: |
+      L’usage de l’API Particulier est **uniquement reservé aux acteurs publics** : les administrations, les collectivités, leurs opérateurs, les acteurs de santé, etc.
+
+      <Button href="/rechercher-api">Rechercher une autre API</Button>
+  - who:
+      - Une collectivité ou une administration
+    is_eligible: 1
+    description: |
+        L’API Particulier donne accès à l'API Statut étudiant et plus généralement aux données administratives des particuliers pour faciliter leurs démarches (cantines, titres de transport, aides sociales, démarches famille, etc...).<br/> Pour vérifier que l’API Particulier vous permet d’accéder aux données dont vous avez besoin, consultez le <External href="https://particulier.api.gouv.fr/catalogue">catalogue des API</External> et nos différents <External href="https://api.gouv.fr/les-api/api-particulier#exemples-d%E2%80%99application">cas d'usages</External>.
+
+        <p style="margin-left: 1rem; margin-right: 1rem;font-size: 0.9rem; line-height: 1.5rem;">Conformément aux dispositions de <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367412&dateTexte=&categorieLien=cid">l'article L114-8 du Code des relations entre le public et l'administration</External> vous ne pourrez accéder qu'aux seules informations ou données strictement nécessaires pour traiter une démarche du particulier concerné.</p>
+
+        <NextSteps />
+        <p style="margin-top: 0rem; font-size: 0.9rem; line-height: 1.5rem;"> <External href="https://particulier.api.gouv.fr/faq#quelles-informations-me-seront-demandees">En savoir plus sur les informations demandées</External></p>
+
+        <QuestionTree tree='api-particulier' question='apipart'/>
+  - who:
+      - Une entreprise ou une association
+    is_eligible: -1
+    description: |
+      L’usage de l’API Particulier est **uniquement reservé aux acteurs publics** : les administrations, les collectivités, leurs opérateurs, les acteurs de santé, etc.
+
+      <Button href="/rechercher-api">Rechercher une autre API</Button>
+
+      Si vous êtes **éditeur de logiciels pour des acteurs publics, c'est à vos utilisateurs collectivité ou administration de faire une demande d'habilitation.** En revanche, vous pouvez nous demander de vous référencer sur un cas d'usage afin de proposer des formulaires pré-remplis et ainsi simplifier l'expérience de vos clients publics.
+      <External href="https://form.typeform.com/to/GU90FCIE">Demander à être référencé</External>
+
+  - who:
+      - Un éditeur de logiciel
+    is_eligible: -1
+    description: |
+      Si vous êtes **éditeur de logiciels pour des acteurs publics, c'est à vos utilisateurs collectivité ou administration de faire une demande d'habilitation.** 
+      
+      En revanche, vous pouvez nous demander de vous référencer sur un cas d'usage afin de proposer des formulaires pré-remplis et ainsi simplifier l'expérience de vos clients publics : 
+
+      <Button href="https://form.typeform.com/to/GU90FCIE">Demander à être référencé</Button>
+
+      Pour toute autre demande, consultez notre page <External href="https://particulier.api.gouv.fr/faq">FAQ & contact</External>.
+      
 keywords:
   - etudiant
   - identifiant
@@ -42,85 +63,26 @@ keywords:
   - etablissement
   - INE
   - formation
-themes:
-  - Particulier
-  - Education
-contact_link: statutetudiant@enseignementsup.gouv.fr
-doc_tech_link: https://particulier.api.gouv.fr/api/france-connect/open-api.yml
-visits_2019: 4000
-last_update: 10/01/2022
+themes: 
+- Administration
+- Administration & législation
+- Particulier
+- Education
+rate_limiting_resume: 20 appels / seconde / jeton # 📍 Volumétrie maximale de votre API.
+rate_limiting_description: |
+   L'API est disponible à hauteur de 20 appels par secondes et par jeton d'accès.
+# Phrase descriptive de la volumétrie
+doc_tech_link: https://particulier.api.gouv.fr/api/open-api.yml # 📍 URL qui donne accès au swagger de votre API, sur la page API.gouv suivante : https://api.gouv.fr/documentation, accessible depuis le bouton "Tester l'API" sur la fiche de l'API. Pour en savoir plus, consulter le read.me.
+doc_tech_external: https://particulier.api.gouv.fr/developpeurs/openapi#tag/Statut-etudiant/paths/~1api~1v2~1etudiants/get # 📍 URL vers la documentation technique de l'API
+monitoring_link: https://status.particulier.api.gouv.fr/ 
+stats_detail_resume: Les statistiques sont disponibles sur 2 mois
+stats_detail_description: | 
+  Accédez au suivi des consommations de l'API
+stats_detail_link: https://particulier.api.gouv.fr/stats
+uptime: 98.011
+last_update: 13/02/2024 
+content_intro: |
+  L'<External href="https://particulier.api.gouv.fr/catalogue/mesri/statut_etudiant">API Statut étudiant</External> permet de récupérer la liste des inscriptions et admissions d’un étudiant, en précisant les dates de début et de fin d’études, le régime de formation et le l’établisssement. L’obtention de ces informations permet d’éviter de demander un certificat étudiant. Elle fait partie du bouquet <External href="https://particulier.api.gouv.fr/catalogue">API Particulier</External>.
+
+  <Button href="https://particulier.api.gouv.fr/catalogue/mesri/statut_etudiant">Consulter la documentation</Button>
 ---
-
-Cette API permet de vérifier si un individu identifié avec FranceConnect dispose du statut d'étudiant du fait de son inscription dans un établissement d'enseignement supérieur.
-
-### À quoi sert l’API Statut Etudiant ?
-
-Cette API permet, aux administrations, dans le cadre des démarches en ligne qu'elles mettent en œuvre de vérifier le statut d'étudiant.
-
-Elle permet aux administrations d'accéder à des informations certifiées à la source et ainsi :
-
-- s’affranchir de demander le téléchargement des pièces justificatives,
-- automatiser le processus de traitement des demandes et de supprimer le contrôle en back-office,
-- d'écarter le risque de fraude documentaire.
-
-**Pour les administrations qui souhaitent aussi donner accès à leurs démarches sans FranceConnect, les mêmes données sont disponibles dans [l'API particulier](https://api.gouv.fr/les-api/api-particulier)**.
-
-Il existe aussi une API permettant de connaitre le statut boursier des étudiants et le cas échéant leur échelon.
-
-### Périmètre
-
-Cette api délivre les données des étudiants inscrits dans les établissements sous tutelle du ministère de l'enseignement supérieur.
-
-La couverture des établissements du champ des étudiants sera progressivement complétée.
-
-<iframe src="https://data.enseignementsup-recherche.gouv.fr/explore/embed/dataset/fr-esr-api-statut-etudiant/viz/?static=false&datasetcard=false&apikey=509275f034986f39f87d0ccf2a075efe6c2df21f253e505abb58af38" width="800" height="600" frameborder="0"></iframe>
-
-Si vous êtes un établissement, sous tutelle ou non du ministère de l'enseignement supérieur, et que vous souhaitez inscrire vos étudiants dans le référentiel, consultez cette page : <https://statutetudiant.esr.gouv.fr>.
-
-### Données
-
-L'API retourne selon le cas :
-
-| Donnée                             | Description                                                                                                                                                   |
-| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| INE                                | Identifiant National de l'étudiant                                                                                                                            |
-| Inscriptions en formation continue | Permet d’interroger les données des étudiants en formation continue. Données : date de début, de fin d'inscription, et code COG de la commune du lieu d'étude |
-| Inscriptions en formation initiale | Permet d’interroger les données des étudiants en formation initiale. Données : dates de début, fin d'inscription et code COG de la commune du lieu d'étude    |
-| Admissions                         | Limite la recherche aux seuls étudiants admis (non-inscrits)                                                                                                  |
-| Etablissement                      | Le ou les établissements (nom et identifiant - UAI)                                                                                                           |
-
-### Modalités d'utilisation des scopes
-
-Vous aurez à sélectionner des scopes de données dans votre demande. Voici leur fonctionnement :
-
-Deux scopes sont utilisés comme "masque de données". Ces données ne seront donc pas retournées si le scope n'a pas été sélectionné.
-
-- "Etablissements" : renvoie le ou les établissements et code COG du lieu d'étude
-- "INE (Identifiant National Etudiant)"
-
-Trois scopes ont été réalisés pour ne travailler que sur une population restreinte
-
-- "Admission" : si ce scope est sélectionné la recherche de l'étudiant s'effectuera sur la population restreinte aux seuls admis (inscription non-définitive).
-- "Inscriptions en formation initiale"
-- "Inscription en formation continue"
-
-Cas d'usage principal :
-Si je souhaite m'assurer que les utilisateurs d'un téléservice sont bien des étudiants de mon département, je coche :
-
-- "établissements",
-- "Inscriptions en formation initiale",
-- "Inscription en formation continue".
-
-Si je souhaitais offrir un service d'assistance personnalisé pour les étudiants seulement admis, il me faudrait utiliser le scope admission.
-
-### Scopes à transmettre à FranceConnect
-
-Afin d'accéder aux informations détenues dans l'API Statut Étudiant il faut renseigner à FranceConnect les scopes que vous avez choisi.
-
-Voici la liste des scopes :
-
-- Numéro INE : `mesri_identifiant`
-- Inscriptions en formation continue : `mesri_inscription_autre`
-- Inscriptions en formation initiale : `mesri_inscription_etudiant`
-- Admissions : `mesri_admission`
-- Établissements : `mesri_etablissements`
