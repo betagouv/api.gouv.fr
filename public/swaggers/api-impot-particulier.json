@@ -274,6 +274,171 @@
         ]
       }
     },
+    "/spi/{spi}/lep/departement/{departement}/annrev/{annrev}/bareme/{bareme}": {
+      "get": {
+        "tags": [
+          "Impôt Particulier"
+        ],
+        "summary": "indicateurLEPparDptAnnrevBareme",
+        "description": "indicateur LEP V2",
+        "operationId": "Ouverturelep",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/paramAuthorization"
+          },
+          {
+            "$ref": "#/components/parameters/paramXCorrelationID"
+          },
+          {
+            "$ref": "#/components/parameters/paramIdTeleservice"
+          },
+          {
+            "name": "spi",
+            "in": "path",
+            "description": "Numéro fiscal",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "departement",
+            "in": "path",
+            "description": "Numéro de département",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "annrev",
+            "in": "path",
+            "description": "Année de revenus",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "bareme",
+            "in": "path",
+            "description": "Année barème",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/prs.dgfip.part.ouverturelep.v1+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OuvertureLepJAXBbean"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "Aucune réponse ne peut être apportée"
+          },
+          "400": {
+            "description": "* codeapp 4001 : mauvais format de spi \n* codeapp 4002 : mauvais format d'année (annrev ou bareme) \n* codeapp 4007 : mauvais format de département"
+          },
+          "403": {
+            "description": "codeapp 4031 : L'utilisateur n'a pas accès à la ressource"
+          },
+          "410": {
+            "description": "* codeapp 4101 : La requête avec le spi et l'année ne renvoie aucun résultat \n* codeapp 4102 : Le spi envoyé ne correspond à aucun usager"
+          },
+          "500": {
+            "description": "Erreur technique"
+          }
+        },
+        "security": [
+          {
+            "Authorization": [
+              "RessourceLEP"
+            ]
+          },
+          {
+            "default": [
+              "RessourceLEP"
+            ]
+          }
+        ]
+      }
+    },
+    "/spi/{spi}/situations/ir/assiettes/multiple/annrev/{annrev}": {
+      "get": {
+        "tags": [
+          "Impôt Particulier"
+        ],
+        "summary": "SituationsIrAssiettesMultipleV1",
+        "operationId": "SituationsIrAssiettesMultipleV1",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/paramAuthorization"
+          },
+          {
+            "$ref": "#/components/parameters/paramXCorrelationID"
+          },
+          {
+            "$ref": "#/components/parameters/paramIdTeleservice"
+          },
+          {
+            "name": "spi",
+            "in": "path",
+            "description": "Numéro fiscal",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "annrev",
+            "in": "path",
+            "description": "Année de revenus",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/prs.dgfip.part.situations.ir.assiettes.multiple.v1+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SituationsIRAssiettesMultipleJAXBbean"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Requete mal formée"
+          },
+          "403": {
+            "description": "Accès refusé"
+          }
+        },
+        "security": [
+          {
+            "Authorization": [
+              "RessourceIRMultiple"
+            ]
+          },
+          {
+            "default": [
+              "RessourceIRMultiple"
+            ]
+          }
+        ]
+      }
+    },
     "/spi/{spi}/situations/ir/assiettes/annrev/{annrev}": {
       "get": {
         "tags": [
@@ -338,6 +503,66 @@
           {
             "default": [
               "RessourceIR"
+            ]
+          }
+        ]
+      }
+    },
+    "/situations/ir/assiettes/multiple/annrev/{annrev}": {
+      "get": {
+        "tags": [
+          "Impôt Particulier via France Connect"
+        ],
+        "summary": "SituationsIrAssiettesMultipleV1",
+        "operationId": "SituationsIrAssiettesMultipleFCV1",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/paramAuthorization"
+          },
+          {
+            "$ref": "#/components/parameters/paramXCorrelationID"
+          },
+          {
+            "$ref": "#/components/parameters/paramIdTeleservice"
+          },
+          {
+            "name": "annrev",
+            "in": "path",
+            "description": "Année de revenus",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/prs.dgfip.part.situations.ir.assiettes.multiple.v1+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SituationsIRAssiettesMultipleJAXBbean"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Requete mal formée"
+          },
+          "403": {
+            "description": "Accès refusé"
+          }
+        },
+        "security": [
+          {
+            "Authorization": [
+              "RessourceIRMultiple"
+            ]
+          },
+          {
+            "default": [
+              "RessourceIRMultiple"
             ]
           }
         ]
@@ -851,26 +1076,6 @@
           }
         }
       },
-      "MetaInfoJAXBbean": {
-        "type": "object",
-        "properties": {
-          "versionApplication": {
-            "type": "string"
-          },
-          "versionApi": {
-            "type": "string"
-          },
-          "versionRessource": {
-            "type": "string"
-          },
-          "uuid": {
-            "type": "string"
-          },
-          "uuidGenerated": {
-            "type": "boolean"
-          }
-        }
-      },
       "PacJAXBbean": {
         "type": "object",
         "properties": {
@@ -1111,11 +1316,124 @@
           "fipNum": {
             "type": "string"
           },
-          "metaInfo": {
-            "$ref": "#/components/schemas/MetaInfoJAXBbean"
+          "rev": {
+            "$ref": "#/components/schemas/RevsJAXBbean"
+          }
+        }
+      },
+      "OuvertureLepJAXBbean": {
+        "type": "object",
+        "properties": {
+          "statut": {
+            "type": "string"
+          }
+        }
+      },
+      "SituationIRAssietteMultiJAXBbean": {
+        "type": "object",
+        "properties": {
+          "rfr": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "sitFam": {
+            "type": "string"
+          },
+          "nbPart": {
+            "type": "number",
+            "format": "double"
+          },
+          "pac": {
+            "$ref": "#/components/schemas/PacJAXBbean"
+          },
+          "nmNaiDec1": {
+            "type": "string"
+          },
+          "nmUsaDec1": {
+            "type": "string"
+          },
+          "prnmDec1": {
+            "type": "string"
+          },
+          "dateNaisDec1": {
+            "$ref": "#/components/schemas/DateNaisDecJAXBbean"
+          },
+          "dptNaissDec1": {
+            "type": "string"
+          },
+          "lieuNaissDec1": {
+            "type": "string"
+          },
+          "nmNaiDec2": {
+            "type": "string"
+          },
+          "nmUsaDec2": {
+            "type": "string"
+          },
+          "prnmDec2": {
+            "type": "string"
+          },
+          "dateNaisDec2": {
+            "$ref": "#/components/schemas/DateNaisDecJAXBbean"
+          },
+          "dptNaissDec2": {
+            "type": "string"
+          },
+          "lieuNaissDec2": {
+            "type": "string"
+          },
+          "aft": {
+            "type": "string"
+          },
+          "aftDetail": {
+            "$ref": "#/components/schemas/AftJAXBbean"
+          },
+          "sitParIso": {
+            "type": "string"
+          },
+          "pensAlPer": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "indDeficit": {
+            "type": "string"
+          },
+          "revenuBrutGlobal": {
+            "type": "integer",
+            "format": "int64"
           },
           "rev": {
             "$ref": "#/components/schemas/RevsJAXBbean"
+          },
+          "sitPart": {
+            "type": "string"
+          },
+          "sitParDeclaree": {
+            "$ref": "#/components/schemas/SitPartJAXBbean"
+          },
+          "indOptionImpotSepar": {
+            "type": "string"
+          },
+          "mntRevbareme": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "spiDec1": {
+            "type": "string"
+          },
+          "spiDec2": {
+            "type": "string"
+          }
+        }
+      },
+      "SituationsIRAssiettesMultipleJAXBbean": {
+        "type": "object",
+        "properties": {
+          "situationsIR": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SituationIRAssietteMultiJAXBbean"
+            }
           }
         }
       },
@@ -1228,9 +1546,6 @@
           },
           "fipNum": {
             "type": "string"
-          },
-          "metaInfo": {
-            "$ref": "#/components/schemas/MetaInfoJAXBbean"
           },
           "rev": {
             "$ref": "#/components/schemas/RevsJAXBbean"
@@ -1374,9 +1689,6 @@
           "fipNum": {
             "type": "string"
           },
-          "metaInfo": {
-            "$ref": "#/components/schemas/MetaInfoJAXBbean"
-          },
           "facture": {
             "type": "array",
             "items": {
@@ -1393,9 +1705,6 @@
         "properties": {
           "indicateurIfiIsf": {
             "type": "string"
-          },
-          "metaInfo": {
-            "$ref": "#/components/schemas/MetaInfoJAXBbean"
           }
         }
       },
@@ -1454,9 +1763,6 @@
             "items": {
               "$ref": "#/components/schemas/LocTHJAXBbean"
             }
-          },
-          "metaInfo": {
-            "$ref": "#/components/schemas/MetaInfoJAXBbean"
           }
         }
       },
@@ -1526,7 +1832,8 @@
               "RessourceLEP": "Ressource LEP",
               "RessourceIRFacture": "Ressource IR Facture",
               "RessourceIRDerniere": "Ressource IR Derniere",
-              "RessourceIRDerniere2": "Ressource IR Derniere 2 ans"
+              "RessourceIRDerniere2": "Ressource IR Derniere 2 ans",
+              "RessourceIRMultiple": "Ressource IR Multiple"
             }
           }
         }
@@ -1543,7 +1850,8 @@
               "RessourceLEP": "Accès aux données liées au Livret d'Epargne Populaire.",
               "RessourceIRFacture": "Accès aux données liées à l'impôt sur le revenu et aux factures.",
               "RessourceIRDerniere": ">- Accès aux données liées à l'impôt sur le revenu : situation sur la dernière année.",
-              "RessourceIRDerniere2": ">- Accès aux données liées à l'impôt sur le revenu : situation sur les deux dernières années."
+              "RessourceIRDerniere2": ">- Accès aux données liées à l'impôt sur le revenu : situation sur les deux dernières années.",
+              "RessourceIRMultiple": ">- Accès aux données liées à l'impôt sur le revenu : situations multiples."
             },
             "x-scopes-bindings": {
               "RessourceIR": "Application/ImpotParticulierRessourceIR",
@@ -1552,7 +1860,8 @@
               "RessourceLEP": "Application/ImpotParticulierRessourceLEP",
               "RessourceIRFacture": "Application/ImpotParticulierRessourceIRFac",
               "RessourceIRDerniere": "",
-              "RessourceIRDerniere2": ""
+              "RessourceIRDerniere2": "",
+              "RessourceIRMultiple": ""
             }
           }
         }
