@@ -2,12 +2,12 @@
 title: API Alternance
 tagline: Facilitez la mise en relation des candidats à l’alternance avec les entreprises et organismes de formation. 
 external_site: https://labonnealternance.apprentissage.beta.gouv.fr/
-producer: DINUM, Mission interministérielle pour l’apprentissage - Service La bonne alternance
+producer: dinum
 is_open: 1 # -1 means API not open
 partners:
+  - France Travail
   - Mission interministérielle pour l'apprentissage
   - Le Réseau des Carif-Oref
-  - France travail
 keywords:
   - apprentissage
   - widget
@@ -30,45 +30,47 @@ uptime: 98.82
 monitoring_link: https://mission-apprentissage.github.io/upptime/history/la-bonne-alternance-api
 last_update: 14/12/2020
 content_intro: |
-L’API La bonne alternance rend accessible à tous le marché de l’emploi et de la formation en alternance.
-Elle expose l’offre de formation en apprentissage, l’offre d’emploi en alternance et identifie les entreprises susceptibles de recruter en alternance.
-Utilisée dans sa globalité, elle permet la mise en relation des candidats à l’alternance avec des entreprises accueillant des alternants d’une part et/ou avec des organismes de formation en alternance d’autre part.
+  L’API La bonne alternance rend accessible à tous le marché de l’emploi et de la formation en alternance.
+  Elle expose l’offre de formation en apprentissage, l’offre d’emploi en alternance et identifie les entreprises susceptibles de recruter en alternance.
+  Utilisée dans sa globalité, elle permet la mise en relation des candidats à l’alternance avec des entreprises accueillant des alternants d’une part et/ou avec des organismes de formation en alternance d’autre part.
 
-## Pourquoi utiliser l'API Alternance ?
-**Vous souhaitez exposer tout ou partie de l’offre de formation et d’emploi en alternance auprès de vos utilisateurs, et leur permettre d’y candidater directement depuis votre site ?**
+  ## Pourquoi utiliser l'API Alternance ?
 
-Notre API centralise d’une part l’ensemble de l’offre de formation en apprentissage disponible sur le territoire national, soit environ 50 000 formations, mises à jour en temps réel.
-D’autre part les offres d’emploi en alternance, en provenance de plus d’une centaine de sites (France travail, Monster, Indeed, 1jeune1solution, La bonne alternance, …), soit environ 200 000 offres par an, mises à jour en temps réel.
-Puis, une liste ciblée et exclusive d’entreprises auprès desquelles adresser des candidatures spontanées, identifiées grâce à l’analyse de diverses données publiques, soit environ 300 000 opportunités supplémentaires.
+  **Vous souhaitez exposer tout ou partie de l’offre de formation et d’emploi en alternance auprès de vos utilisateurs, et leur permettre d’y candidater directement depuis votre site ?**
+
+  Notre API centralise d’une part l’ensemble de l’offre de formation en apprentissage disponible sur le territoire national, soit environ 50 000 formations, mises à jour en temps réel.
+  D’autre part les offres d’emploi en alternance, en provenance de plus d’une centaine de sites (France travail, Monster, Indeed, 1jeune1solution, La bonne alternance, …), soit environ 200 000 offres par an, mises à jour en temps réel.
+  Puis, une liste ciblée et exclusive d’entreprises auprès desquelles adresser des candidatures spontanées, identifiées grâce à l’analyse de diverses données publiques, soit environ 300 000 opportunités supplémentaires.
 
   Par ailleurs, l’API Alternance permet à vos utilisateurs de candidater directement à ces opportunités d’emploi et de formation, sans quitter votre site, grâce à un flux d’échange de données sécurisé.
 
-[🚀 C'est parti](#pour-exposer-tout-ou-partie-de-l’offre-de-formation-et-d’emploi-en-alternance-et-permettre-à-vos-utilisateurs-d’y-candidater)
+  [🚀 C'est parti](#pour-exposer-tout-ou-partie-de-l’offre-de-formation-et-d’emploi-en-alternance-et-permettre-à-vos-utilisateurs-d’y-candidater)
 
-**Vous souhaitez mettre en avant des opportunités d’emploi en lien avec les formations que vous exposez ?**
+  **Vous souhaitez mettre en avant des opportunités d’emploi en lien avec les formations que vous exposez ?**
 
-A partir de codes de formation (RNCP), ou de codes d’emploi (ROME), l’API Alternance vous restitue les opportunités d’emploi et/ou de formation associés, avec la possibilité de cibler un périmètre géographique restreint.
-Vous pouvez ainsi facilement lier des emplois à des formations en alternance. 
+  A partir de codes de formation (RNCP), ou de codes d’emploi (ROME), l’API Alternance vous restitue les opportunités d’emploi et/ou de formation associés, avec la possibilité de cibler un périmètre géographique restreint.
+  Vous pouvez ainsi facilement lier des emplois à des formations en alternance. 
 
-[🚀 C'est parti](#pour-mettre-en-avant-des-opportunités-d’emploi-en-lien-avec-les-formations-que-vous-exposez)
+  [🚀 C'est parti](#pour-mettre-en-avant-des-opportunités-d’emploi-en-lien-avec-les-formations-que-vous-exposez)
 
-**Vous souhaitez offrir à vos utilisateurs la possibilité de contacter des entreprises et des centres de formation directement depuis votre site ?**
-Afin de fluidifier le parcours de vos utilisateurs, l'API La bonne alternance vous permet de transmettre directement aux recruteurs et organismes de formations les candidatures et questions de vos usagers, sans que ces derniers n’aient à quitter votre site.
+  **Vous souhaitez offrir à vos utilisateurs la possibilité de contacter des entreprises et des centres de formation directement depuis votre site ?**
 
-[🚀 C'est parti](#pour-offrir-à-vos-utilisateurs-la-possibilité-de-contacter-des-entreprises-et-des-centres-de-formation-directement-depuis-votre-site)
+  Afin de fluidifier le parcours de vos utilisateurs, l'API La bonne alternance vous permet de transmettre directement aux recruteurs et organismes de formations les candidatures et questions de vos usagers, sans que ces derniers n’aient à quitter votre site.
 
-**Vous souhaitez collecter et/ou diffuser vos propres offres d’emploi ?**
+  [🚀 C'est parti](#pour-offrir-à-vos-utilisateurs-la-possibilité-de-contacter-des-entreprises-et-des-centres-de-formation-directement-depuis-votre-site)
 
-Le service La bonne alternance vous propose : 
-- Un formulaire de collecte d’offres clé en main, accessible en marque blanche sous format widget ou API. A l'aide d’un format simplifié, il permet de déposer une offre en moins de 2 minutes en générant une description automatique du poste.
-- Une API vous permettant de partager les offres présentes sur votre plateforme, afin de les diffuser à grande échelle sur le site La bonne alternance ainsi que ses sites partenaires (1jeune1solution, France travail, Parcoursup, …)
+  **Vous souhaitez collecter et/ou diffuser vos propres offres d’emploi ?**
 
-Lorsqu’une offre est partagée à La bonne alternance, nous proposons également de la diffuser aux centres de formation en alternance formant sur ce métier et situés dans la même zone géographique que l’entreprise recrutant. Ce service facultatif de mise en relation permet d’accélérer le recrutement et proposer des candidats aux entreprises.
+  Le service La bonne alternance vous propose : 
+  - Un formulaire de collecte d’offres clé en main, accessible en marque blanche sous format widget ou API. A l'aide d’un format simplifié, il permet de déposer une offre en moins de 2 minutes en générant une description automatique du poste.
+  - Une API vous permettant de partager les offres présentes sur votre plateforme, afin de les diffuser à grande échelle sur le site La bonne alternance ainsi que ses sites partenaires (1jeune1solution, France travail, Parcoursup, …)
 
-Ce service s’adresse également aux organismes de formation qui souhaitent diffuser des offres d’emploi pour le compte d’entreprises partenaires.
+  Lorsqu’une offre est partagée à La bonne alternance, nous proposons également de la diffuser aux centres de formation en alternance formant sur ce métier et situés dans la même zone géographique que l’entreprise recrutant. Ce service facultatif de mise en relation permet d’accélérer le recrutement et proposer des candidats aux entreprises.
+  
+  Ce service s’adresse également aux organismes de formation qui souhaitent diffuser des offres d’emploi pour le compte d’entreprises partenaires.
 
-[🚀 C'est parti](#pour-collecter-et/ou-diffuser-vos-propres-offres-d’emploi)
-
+  [🚀 C'est parti](#pour-collecter-et/ou-diffuser-vos-propres-offres-d’emploi)
+---
 ## Comment utiliser l'API Alternance ?
 L’API Alternance se découpe en différentes routes, toutes documentées [ici](https://api.gouv.fr/documentation/api-la-bonne-alternance).
 
@@ -82,14 +84,18 @@ L’ensemble de ces routes proposent des paramètres de filtres par métier, niv
 5. La route POST /appointment-request/context/create vous permet d’envoyer la prise de contact d’un utilisateur à un centre de formation proposant une formation connue de La bonne alternance.
 
 🔎 Exemple d’exploitation de l’API sur [1jeune1solution](https://www.1jeune1solution.gouv.fr/apprentissage?commune=75101&distance=30&etudes=all&metier=Boulangerie,%20p%C3%A2tisserie,%20chocolaterie&type=company&page=1).
+
 📄 Comment exploiter et tester l’API ? Consulter [cette documentation](https://api.gouv.fr/documentation/api-la-bonne-alternance).
 
 **Utiliser le widget pour une intégration simple et rapide**
+
 Les données présentées liées aux opportunités d’emploi en alternance ainsi qu’aux formations en apprentissage sont également disponibles sous forme de widget. 
 Le widget est disponible en marque blanche et est proposé en plusieurs tailles. Par ailleurs, différents filtres peuvent être appliqués aux données qu’il restitue.
 
 🔎 Exemple d’exploitation du widget sur [jassuremonfutur](https://www.jassuremonfutur.fr/annuaire-formation-assurance), en lançant une recherche “Chargé de clientèle” à “Paris”.
+
 📄 Comment exploiter le widget ? Consultez [cette documentation](https://api.gouv.fr/guides/widget-la-bonne-alternance).
+
 👉 Comment tester le widget ? Consultez [cette page](https://labonnealternance.apprentissage.beta.gouv.fr/test-widget). 
 
 D’où proviennent les données exposées dans ces routes ?
@@ -114,26 +120,34 @@ Pour cela, elle requiert seulement la transmission d’identifiants de la format
 
 ### Pour collecter et/ou diffuser vos propres offres d’emploi
 **Utiliser l’API pour une intégration personnalisée**
+
 Les routes POST /v1/jobs* vous permettent de diffuser vos offres d’emploi en alternance afin d’augmenter leur visibilité.
 L’ordre à suivre est le suivant
 1. Utiliser la route POST /v1/jobs/establishment pour créer l’établissement qui diffusera des offres (à l‘aide d’un couple email - SIRET)
 2. Utiliser la route POST /v1/jobs/{establishmentId}, avec l’id de l’établissement créé afin de diffuser une offre d’emploi liée à cet établissement
 3. Utiliser les routes POST /v1/jobs/provided/{jobId}, /v1/jobs/canceled/{jobId} et /v1/jobs/extend/{jobId} pour mettre à jour l’état de l’offre
+
 **Utiliser le widget pour une intégration simple et rapide**
+
 Pour intégrer facilement le formulaire simplifié de dépôt d’offres.
 
 🔎 Exemple d’exploitation du widget sur le [site de l'OPCO Akto](https://www.akto.fr/deposer-une-offre-demploi-en-alternance/).
+
 📄 Comment exploiter le widget ? 
-Utilisez l’adresse suivante au sein d’une balise HTML
+
+👉 Utilisez l’adresse suivante au sein d’une balise HTML
+
 ```html
 <iframe loading="lazy" src="https://labonnealternance.apprentissage.beta.gouv.fr/espace-pro/widget/ORIGINE" width="100%" height="800" frameborder="0" style="max-width: 100%;"></iframe>
 ```
-en remplaçant ORIGINE par le nom de votre établissement.
+--> en remplaçant "ORIGINE" par le nom de votre établissement.
 
-Exemple:
+Exemple :
+
 ```html
 <iframe loading="lazy" src="https://labonnealternance.apprentissage.beta.gouv.fr/espace-pro/widget/akto" width="100%" height="800" frameborder="0" style="max-width: 100%;"></iframe>
 ```
+
 👉 Comment tester le widget ? Consultez [cette page](https://labonnealternance-recette.apprentissage.beta.gouv.fr/espace-pro/widget/matcha).
 
 ## Réutilisation
