@@ -80,8 +80,8 @@ Deuxièmement, à accéder à des données supplémentaires grâce aux [API “F
 | [API de droits à l'Assurance Maladie](https://api.gouv.fr/les-api/api_ameli_droits_cnam) | Droits d’un individu ou d’une famille (enfants rattachés), gérés par le régime général de l’Assurance Maladie |✅ Disponible  |Non prévu |CNAM   |
 | [API Statut étudiant](https://api.gouv.fr/les-api/api-statut-etudiant)| Statut de l’inscription dans un établissement de l’enseignement supérieur |✅ Disponible  |[API  particulier](https://api.gouv.fr/les-api/api-particulier)|MESRI   |
 | [API Statut étudiant boursier](https://api.gouv.fr/les-api/api-statut-etudiant-boursier)| Statut d’étudiant boursier  |✅ Disponible  | [API  particulier](https://api.gouv.fr/les-api/api-particulier) |CNOUS / MESRI                                          |
-| API statut demandeur d'emploi   |Statut et catégorie (A,B,C,D)   |⌛️ bientôt disponible |[API  particulier](https://api.gouv.fr/les-api/api-particulier)| Pôle Emploi                        |
-| [API Indemnités Pôle emploi](/les-api/api-indemnisation-pole-emploi)   | Montant des indemnités versées par pôle emploi   |✅ Disponible |⌛️ bientôt disponible |Pôle Emploi                        |
+| API statut demandeur d'emploi   |Statut et catégorie (A,B,C,D)   |⌛️ bientôt disponible |[API  particulier](https://api.gouv.fr/les-api/api-particulier)| France Travail                        |
+| [API Indemnités France Travail](/les-api/api-indemnisation-pole-emploi)   | Montant des indemnités versées par France Travail   |✅ Disponible |⌛️ bientôt disponible |France Travail                        |
 | API Prestations sociales   | Inscription au RSA, bénéficiaires de la CSS (complémentaire sociale solidaire) |⌛️ bientôt disponible   |⌛️ bientôt disponible|DSS |
 |API scolarité | attestation de socolarité, apprenti, boursier |Mars 2023  |fin 2022|MEN|
 |API quotient familial | Quotient familial, composition familiale|En cours de spécification  | [API  particulier](https://api.gouv.fr/les-api/api-particulier)|CNAF|

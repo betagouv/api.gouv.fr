@@ -60,11 +60,11 @@ const isBouquetApiPartepriseQuestions = {
     choiceTree: [
       {
         choices: ['**Non**, j’ai seulement besoin du statut demandeur d’emploi.'],
-        answer: `Vous pouvez remplir une demande auprès de Pôle emploi :
+        answer: `Vous pouvez remplir une demande auprès de France Travail :
         <Button href="https://datapass.api.gouv.fr/api-statut-demandeur-emploi">Remplir une demande</Button>`,
       },
       {
-        choices: ['**Oui**, la liste des paiements Pôle emploi, la complémentaire santé solidaire, le quotient familial, le statut étudiant... m’intéressent.'],
+        choices: ['**Oui**, la liste des paiements France Travail, la complémentaire santé solidaire, le quotient familial, le statut étudiant... m’intéressent.'],
         answer: `Les données de l'API statut demandeur d'emploi sont aussi distribuées par l'<External href="https://particulier.api.gouv.fr/catalogue/pole_emploi/situation">API du bouquet API Particulier</External>. Ce bouquet regroupe <External href="https://particulier.api.gouv.fr/catalogue">différentes données des particuliers</External>, dont vous pourrez aussi demander l'accès en complétant ce formulaire :
         <br/>
         <Button href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</Button>
@@ -77,13 +77,13 @@ const isBouquetApiPartepriseQuestions = {
       'Votre service a-t’il besoin d’autres données concernant les particuliers ?',
     choiceTree: [
       {
-        choices: ['**Non**, j’ai seulement besoin de la liste des paiements Pôle emploi.'],
-        answer: `Vous pouvez remplir une demande auprès de Pôle emploi :
+        choices: ['**Non**, j’ai seulement besoin de la liste des paiements France Travail.'],
+        answer: `Vous pouvez remplir une demande auprès de France Travail :
         <Button href="https://datapass.api.gouv.fr/api-indemnisation-pole-emploi">Remplir une demande</Button>`,
       },
       {
         choices: ['**Oui**, le statut demandeur d’emploi, la complémentaire santé solidaire, le statut étudiant... m’intéressent.'],
-        answer: `Les données de l'API des indemnisations Pôle emploi sont aussi distribuées par l'<External href="https://particulier.api.gouv.fr/catalogue/pole_emploi/indemnites">API Liste des paiements Pôle emploi du bouquet API Particulier</External>. Ce bouquet regroupe <External href="https://particulier.api.gouv.fr/catalogue">différentes données des particuliers</External>, dont vous pourrez aussi demander l'accès en complétant ce formulaire :
+        answer: `Les données de l'API des indemnisations France Travail sont aussi distribuées par l'<External href="https://particulier.api.gouv.fr/catalogue/pole_emploi/indemnites">API Liste des paiements France Travail du bouquet API Particulier</External>. Ce bouquet regroupe <External href="https://particulier.api.gouv.fr/catalogue">différentes données des particuliers</External>, dont vous pourrez aussi demander l'accès en complétant ce formulaire :
         <br/>
         <Button href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</Button>
         `,

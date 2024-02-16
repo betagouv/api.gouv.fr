@@ -1,12 +1,12 @@
 ---
-name: Pôle Emploi
-nameWithPronoun: Pôle Emploi
+name: France Travail
+nameWithPronoun: France Travail
 acronym:
-logo: logo_pole_emploi.jpg
+logo: logo_pole_emploi.png
 type: Etablissement public
-short: Pôle Emploi est le service public dédié au marché du travail, composé de 900 agences sur le territoire, et d'un réseau de partenaires.
+short: France Travail est le service public dédié au marché du travail, composé de 900 agences sur le territoire, et d'un réseau de partenaires.
 description: |
-  Les principales missions de pôle emploi consistent à : 
+  Les principales missions de France Travail consistent à : 
 
   - accueillir et orienter les demandeurs d'emploi,
   - mettre en relation les demandeurs et les recruteurs,
