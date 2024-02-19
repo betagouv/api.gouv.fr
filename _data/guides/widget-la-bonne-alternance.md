@@ -26,7 +26,7 @@ Utilisez le code suivant au sein d’une balise HTML, en remplaçant les valeurs
   - remplacer `{perimetre}` par `recherche-apprentissage-formation` pour récupérer uniquement les formations en apprentissage
 - **caller (obligatoire) **: le nom de votre établissement (exemple : `Parcoursup`, `1jeune1solution`, …)
 - **radius (facultatif)** : Rayon de recherche autour du lieu en km. Sa valeur par défaut est 30. Si elle vous convient, vous pouvez supprimer la partie suivante de l’exemple `radius={rayon}&`. Si vous souhaitez instaurer une autre valeur, remplacez `{rayon}` par une des 4 valeurs suivantes `10 | 30 | 60 | 100`.
-- **romes (facultatif) **: Métier(s) sur le(s)quel(s) vous souhaitez restreindre la recherche. Si vous ne souhaitez pas restreindre la liste des métiers, vous pouvez supprimer la partie suivante de l’exemple `&romes={romes}`. Si vous souhaitez instaurer une autre valeur, remplacez `{romes}` par une liste de codes romes séparés par des virgules. Exemple : `A1021 | F1065,F1066,F1067`
+- **romes (facultatif) **: Métier(s) sur le(s)quel(s) vous souhaitez restreindre la recherche. Si vous ne souhaitez pas restreindre la liste des métiers, vous pouvez supprimer la partie suivante de l’exemple `&romes={romes}`. Si vous souhaitez instaurer une autre valeur, remplacez `{romes}` par une liste de maximum 15 codes romes séparés par des virgules. Exemple : `A1021 | F1065,F1066,F1067`
 - **lat (facultatif)** : Latitude géographique en degrés décimaux (float). Sa valeur par défaut est `null`
 - **lon (facultatif)** : Longitude géographique en degrés décimaux (float). Sa valeur par défaut est `null`
 - **return_uri (facultatif)** : L'uri de retour qui sera notifiée au site appelant. Sa valeur par défaut est `/`
