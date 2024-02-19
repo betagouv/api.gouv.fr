@@ -40,14 +40,14 @@ access_page:
       - Un éditeur de logiciel
     is_eligible: -1
     description: |
-      Si vous êtes **éditeur de logiciels pour des acteurs publics, c'est à vos utilisateurs collectivité ou administration de faire une demande d'habilitation.** 
-      
-      En revanche, vous pouvez nous demander de vous référencer sur un cas d'usage afin de proposer des formulaires pré-remplis et ainsi simplifier l'expérience de vos clients publics : 
+      Si vous êtes **éditeur de logiciels pour des acteurs publics, c'est à vos utilisateurs collectivité ou administration de faire une demande d'habilitation.**
+
+      En revanche, vous pouvez nous demander de vous référencer sur un cas d'usage afin de proposer des formulaires pré-remplis et ainsi simplifier l'expérience de vos clients publics :
 
       <Button href="https://form.typeform.com/to/GU90FCIE">Demander à être référencé</Button>
 
       Pour toute autre demande, consultez notre page <External href="https://particulier.api.gouv.fr/faq">FAQ & contact</External>.
-      
+
 stat:
   lastXdays: 30
   url: https://particulier.api.gouv.fr/stats
