@@ -9,7 +9,7 @@ api:
   - API La bonne alternance
 ---
 
-Voici à quoi ressemble le widget La bonne alternance. Il permet d'afficher directement sur votre site les formations et les entreprises qui proposent un apprentissage en interrogeant les données de <External href="/les-api/api-la-bonne-alternance">l'API La bonne alternance</External>
+Voici un aperçu du widget La bonne alternance. Il permet d'exposer directement sur votre site tout ou partie de l’offre de formation et d’emploi en alternance et permet à vos utilisateurs d’entrer en contact avec les organismes de formation ainsi que les entreprises issues de <External href="/les-api/api-la-bonne-alternance">l'API La bonne alternance</External>
 
 <iframe style="height: 700px; width: 380px;max-width: 100%;margin: auto;display: block;" src="https://labonnealternance.apprentissage.beta.gouv.fr/recherche-apprentissage?radius=60&romes=F1702,F1705,F1701&scope=all&lat=47&lon=2.2&caller=ID_service_appelant_labonnealternance&return_uri=/&return_logo_url=https://api.gouv.fr/images/api-logo/dinum.png" />
 
@@ -53,7 +53,7 @@ Le choix d'un périmètre (path) est obligatoire. En l'absence vous serez rediri
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- | --- | ---------------------------------------------------------------------------- |
 | `radius`          | Optionnel. Valeur numérique.<br/> Valeurs autorisées : `10                                                                                                                                            | 30                                                                | 60  | 100` <br/> Le rayon de recherche autour du lieu en km. Valeur par défaut 30. |
 | `romes`           | Optionnel. Une liste de codes romes séparés par des virgules.<br/> Ex : `A1021                                                                                                                        | F1065,F1066,F1067`<br/> Maximum 3 romes. Valeur par défaut `null` |
-| `lat`             | Optionnel. Coordonnée géographique en degrés décimaux (float)<br/> Valeur par défaut `null`<br/> La partie lattitude des coordonnées gps.                                                             |
+| `lat`             | Optionnel. Coordonnée géographique en degrés décimaux (float)<br/> Valeur par défaut `null`<br/> La partie latitude des coordonnées gps.                                                             |
 | `lon`             | Optionnel. Coordonnée géographique en degrés décimaux (float)<br/> Valeur par défaut `null`<br/> La partie longitude des coordonnées gps.                                                             |
 | `caller`          | **Obligatoire**. L'identification du site appelant<br/> A fixer lors de la mise en place avec l’équipe de Labonnealternance.                                                                          |
 | `return_uri`      | Optionnel. Valeur par défaut `/`<br/> L'uri de retour qui sera notifiée au site appelant.                                                                                                             |
