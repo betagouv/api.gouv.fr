@@ -1,6 +1,6 @@
 ---
 title: API data·inclusion
-tagline: Recenser les structures inclusives et leur offre de service sur le territoire pour rendre les acteurs interopérables et de mutualiser les efforts de recensement et de mise à jour.
+tagline: data·inclusion facilite et accélère le partage des données entre les acteurs de l'insertion en mutualisant l’effort de mise à jour et de recensement entre les différents services numériques.
 is_open: 0 # 0 means API require an account
 account_link: https://www.data.inclusion.beta.gouv.fr/api/conditions-generales-dutilisation-de-lapi
 external_site: https://www.data.inclusion.beta.gouv.fr
@@ -32,24 +32,23 @@ stats_detail_link: http://metabase.data.inclusion.beta.gouv.fr/public/dashboard/
 themes:
   - Administration
   - Emploi
-last_update: 14/06/2023
+last_update: 22/02/2024
 ---
 
-data·inclusion facilite et accélère le partage des données entre les acteurs de l'insertion en mutualisant l’effort de mise à jour et de recensement entre les différents services numériques.
+## Description
+L'API data·inclusion permet de mettre en œuvre le principe « Dites-le-nous une fois », en application de [l’article L114-8 du Code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045213315)
 
-L'API data·inclusion permet de mettre en œuvre le principe « Dites-le-nous une fois », en application de (l’article L114-8 du Code des relations entre le public et l’administration)[https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045213315]
-
-L’équipe data·inclusion propose le traitement et l’analyse des jeux de données multi sources en un seul et unique patrimoine commun disponible publiquement 👉 (Accéder à notre site) [https://www.data.inclusion.beta.gouv.fr/]
+L’équipe data·inclusion propose le traitement et l’analyse des jeux de données multi sources en un seul et unique patrimoine commun disponible publiquement 👉 [Accéder à notre site](https://www.data.inclusion.beta.gouv.fr/)
 
 ### À quoi sert l'API data.inclusion  ?
 
-L’API data·inclusion a mis en place un langage commun pour définir l’offre d’insertion. Ce langage se traduit par (un schéma public de données) [https://github.com/gip-inclusion/data-inclusion-schema/tree/main/schemas] que toute donnée intégrée dans data·inclusion respecte.
+L’API data·inclusion a mis en place un langage commun pour définir l’offre d’insertion. Ce langage se traduit par [un schéma public de données](https://github.com/gip-inclusion/data-inclusion-schema/tree/main/schemas) que toute donnée intégrée dans data·inclusion respecte.
 
 Nos données sont disponibles en accès libre open-data ou par API. Le jeu en open-data n’inclut aucune donnée personnelle. L’API offre une connexion en flux direct et permet la mise à jour en temps réel des données, évitant ainsi les risques liés à l’obsolescence des informations.
 
 ### Les différents cas d'usage
 
-![Illustration cas d'usage](https://imgur.com/uQIbZJO)
+![Illustration cas d'usage](https://i.imgur.com/uQIbZJO.png)
 
 ### Quelles sont les données contenues dans l'API data.inclusion  ?
 
@@ -149,10 +148,10 @@ Schéma des structures et services d'insertion
 #### Producteurs
 Les acteurs de l’insertion qui partagent leur offre de service sur notre commun numérique. Leur offre est variée en termes de thématiques abordées, de publics ciblés et de couverture géographique.
 
-➡️(Devenir producteur) [https://tally.so/r/w7N6Zz]
+➡️ [Devenir producteur](https://tally.so/r/w7N6Zz)
 
 #### Consommateurs
 Toute personne qui récupèrent et utilisent les données disponibles sur data·inclusion. Nos consommateurs sont variés : communs numériques, annuaires d'offre d'insertion, logiciels de suivi de parcours, outils de cartographie, outils de pilotage pour l'administration…”
 
-➡️ (Devenir consommateur) [https://tally.so/r/w7N6Zz]
+➡️ [Devenir consommateur](https://tally.so/r/w7N6Zz)
 
