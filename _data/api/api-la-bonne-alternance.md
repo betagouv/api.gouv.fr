@@ -44,20 +44,20 @@ content_intro: |
 
   Par ailleurs, l’API Alternance permet à vos utilisateurs de candidater directement à ces opportunités d’emploi et de formation, sans quitter votre site, grâce à un flux d’échange de données sécurisé.
 
-  [🚀 C'est parti](#pour-exposer-tout-ou-partie-de-l’offre-de-formation-et-d’emploi-en-alternance-et-permettre-à-vos-utilisateurs-d’y-candidater)
+  [🚀 C'est parti](#pour-exposer-tout-ou-partie-de-l’offre-de-formation-et-d’emploi-en-alternance-et-permettre-a-vos-utilisateurs-d’y-candidater)
 
   **Vous souhaitez mettre en avant des opportunités d’emploi en lien avec les formations que vous exposez ?**
 
   A partir de codes de formation (RNCP), ou de codes d’emploi (ROME), l’API Alternance vous restitue les opportunités d’emploi et/ou de formation associés, avec la possibilité de cibler un périmètre géographique restreint.
   Vous pouvez ainsi facilement lier des emplois à des formations en alternance. 
 
-  [🚀 C'est parti](#pour-mettre-en-avant-des-opportunités-d’emploi-en-lien-avec-les-formations-que-vous-exposez)
+  [🚀 C'est parti](#pour-mettre-en-avant-des-opportunites-d’emploi-en-lien-avec-les-formations-que-vous-exposez)
 
   **Vous souhaitez offrir à vos utilisateurs la possibilité de contacter des entreprises et des centres de formation directement depuis votre site ?**
 
   Afin de fluidifier le parcours de vos utilisateurs, l'API La bonne alternance vous permet de transmettre directement aux recruteurs et organismes de formations les candidatures et questions de vos usagers, sans que ces derniers n’aient à quitter votre site.
 
-  [🚀 C'est parti](#pour-offrir-à-vos-utilisateurs-la-possibilité-de-contacter-des-entreprises-et-des-centres-de-formation-directement-depuis-votre-site)
+  [🚀 C'est parti](#pour-offrir-a-vos-utilisateurs-la-possibilite-de-contacter-des-entreprises-et-des-centres-de-formation-directement-depuis-votre-site)
 
   **Vous souhaitez collecter et/ou diffuser vos propres offres d’emploi ?**
 
