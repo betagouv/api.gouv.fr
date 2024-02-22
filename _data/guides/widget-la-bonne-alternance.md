@@ -20,16 +20,16 @@ Utilisez le code suivant au sein d’une balise HTML, en remplaçant les valeurs
 <iframe style="height: 660px; width: 360px;max-width: 100%;margin: auto;display: block;" src="https://labonnealternance.apprentissage.beta.gouv.fr/{perimetre}?radius={rayon}&romes={romes}&scope=all&lat={latitude}&lon={longitude}&caller={caller}&return_uri=/&return_logo_url={return_logo_url}" />
 ```
 
-- **perimètre (obligatoire)**
-  - remplacer `{perimetre}` par `recherche-apprentissage` pour récupérer les formations et opportunités d’emploi en alternance
-  - remplacer `{perimetre}` par `recherche-emploi` pour récupérer uniquement les opportunités d’emploi en alternance
-  - remplacer `{perimetre}` par `recherche-apprentissage-formation` pour récupérer uniquement les formations en apprentissage
-- **caller (obligatoire) **: le nom de votre établissement (exemple : `Parcoursup`, `1jeune1solution`, …)
-- **radius (facultatif)** : Rayon de recherche autour du lieu en km. Sa valeur par défaut est 30. Si elle vous convient, vous pouvez supprimer la partie suivante de l’exemple `radius={rayon}&`. Si vous souhaitez instaurer une autre valeur, remplacez `{rayon}` par une des 4 valeurs suivantes `10 | 30 | 60 | 100`.
-- **romes (facultatif) **: Métier(s) sur le(s)quel(s) vous souhaitez restreindre la recherche. Si vous ne souhaitez pas restreindre la liste des métiers, vous pouvez supprimer la partie suivante de l’exemple `&romes={romes}`. Si vous souhaitez instaurer une autre valeur, remplacez `{romes}` par une liste de maximum 20 codes romes séparés par des virgules. Exemple : `A1021 | F1065,F1066,F1067`
-- **lat (facultatif)** : Latitude géographique en degrés décimaux (float). Sa valeur par défaut est `null`
-- **lon (facultatif)** : Longitude géographique en degrés décimaux (float). Sa valeur par défaut est `null`
-- **return_uri (facultatif)** : L'uri de retour qui sera notifiée au site appelant. Sa valeur par défaut est `/`
+- **périmètre (obligatoire)**
+  - remplacer {perimetre} par recherche-apprentissage pour récupérer les formations et opportunités d’emploi en alternance
+  - remplacer {perimetre} par recherche-emploi pour récupérer uniquement les opportunités d’emploi en alternance
+  - remplacer {perimetre} par recherche-apprentissage-formation pour récupérer uniquement les formations en apprentissage
+- **caller (obligatoire) **: le nom de votre établissement (exemple : Parcoursup, 1jeune1solution, …)
+- **radius (facultatif)** : Rayon de recherche autour du lieu en km. Sa valeur par défaut est 30. Si elle vous convient, vous pouvez supprimer la partie "radius={rayon}&" de l'exemple. Si vous souhaitez instaurer une autre valeur, remplacez {rayon} par une des 4 valeurs suivantes : 10 | 30 | 60 | 100.
+- **romes (facultatif)**: Métier(s) sur le(s)quel(s) vous souhaitez restreindre la recherche. Si vous ne souhaitez pas restreindre la liste des métiers, vous pouvez supprimer la partie "&romes={romes}" de l’exemple. Si vous souhaitez instaurer une autre valeur, remplacez {romes} par une liste de maximum 20 codes romes séparés par des virgules. Exemple : `A1021 | F1065,F1066,F1067`
+- **lat (facultatif)** : Latitude géographique en degrés décimaux (float). Sa valeur par défaut est "null"
+- **lon (facultatif)** : Longitude géographique en degrés décimaux (float). Sa valeur par défaut est "null"
+- **return_uri (facultatif)** : L'uri de retour qui sera notifiée au site appelant. Sa valeur par défaut est "/"
 - **return_logo_url (facultatif)** : L'url du logo du site vers lequel l'utilisateur revient en cliquant sur le bouton de retour. Sa valeur par défaut correspond au logo du site La bonne alternance. Exemple de valeur : `https://api.gouv.fr/images/api-logo/dinum.png`
 
 Vous pouvez utilisez l’outil suivant pour tester les différentes versions possibles du widget :
