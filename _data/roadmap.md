@@ -460,4 +460,9 @@
     - type: ADD_API
       what: API Annuaire de l’administration et des services publics, par la DILA
       path: /les-api/api-annuaire-administration-services-publics
+2024:
+  2:
+    - type: INFO
+      what: Renommage de l'API "Structures de l'inclusion" en "Marché de l'inclusion"
+      path: /les-api/api-marche-inclusion
 ---
