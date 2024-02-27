@@ -32,7 +32,7 @@ stats_detail_link: http://metabase.data.inclusion.beta.gouv.fr/public/dashboard/
 themes:
   - Administration
   - Emploi
-last_update: 22/02/2024
+last_update: 27/02/2024
 ---
 
 ## Description
