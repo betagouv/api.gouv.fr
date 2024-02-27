@@ -27,6 +27,7 @@ contact_link: api@inclusion.beta.gouv.fr
 doc_tech_link: https://emplois.inclusion.beta.gouv.fr/api/v1/redoc/
 last_update: 22/02/2024
 ---
+
 ## Description
 
 L'API Les emplois de l'inclusion offre aux utilisateurs un outil mutualisé pour simplifier les procédures, fluidifier les parcours d'insertion entre professionnels et renforcer la qualité de l'accompagnement des personnes.
@@ -49,19 +50,16 @@ Elles ne seront plus listées par l'API une fois le contrat terminé.
 🔎 Fiches salarié
 
 Retourne la liste des fiches salarié saisies par les SIAE :
-
-```
 - pour toutes les embauches / candidatures des SIAE liées au token d'identification
 - classées par date de création (plus récent au plus ancien)
 
-```
 
 Il est également possible d'obtenir le détail d'une fiche salarié par son identifiant (dans les mêmes conditions d'autorisation que pour la liste complète).
 
 🔎 Liste des SIAE
 
 Renvoie une liste de SIAE à proximité d’une ville (déterminée par son code INSEE) et dans un rayon de recherche en kilomètres autour du centre de cette ville.
-Les coordonnées des centres-villes sont issus de [geo.api.gouv.fr](https://geo.api.gouv.fr/)
+Les coordonnées des centres-villes sont issus de [geo.api.gouv.fr](https://geo.api.gouv.fr/).
 Chaque SIAE est accompagnée d’un certain nombre de métadonnées :
 
 ```
@@ -97,21 +95,16 @@ Description du poste
 
 #### Insertion par l'activité économique (IAE)
 
-```
-➡️ Entreprises d'insertion (EI),
-➡️ Associations intermédiaires (AI),
-➡️ Ateliers de chantier d'insertion (ACI),
-➡️ Entreprises de travail temporaire d'insertion (ETTI),
-➡️ Entreprises d'insertion par le travail indépendant (EITI),
-➡️ Groupements d'employeurs pour l'insertion et la qualification (GEIQ)
-
-```
+➡️  Entreprises d'insertion (EI),<br>
+➡️  Associations intermédiaires (AI),<br>
+➡️  Ateliers de chantier d'insertion (ACI),<br>
+➡️  Entreprises de travail temporaire d'insertion (ETTI),<br>
+➡️  Entreprises d'insertion par le travail indépendant (EITI),<br>
+➡️  Groupements d'employeurs pour l'insertion et la qualification (GEIQ)<br>
 
 #### Handicap :
 
-```
-➡️ Entreprises adaptées (EA),
-➡️ Entreprises adaptées de travail temporaire (EATT),
-➡️ Etablissements et services d'aides par le travail (ESAT)
+➡️  Entreprises adaptées (EA),<br>
+➡️  Entreprises adaptées de travail temporaire (EATT),<br>
+➡️  Etablissements et services d'aides par le travail (ESAT)<br>
 
-```
