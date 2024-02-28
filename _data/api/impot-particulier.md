@@ -32,7 +32,7 @@ access_page:
       Lors de votre demande vous devrez **justifier** dans quelle mesure l'entité pour laquelle vous opérez rentre dans ce cadre juridique.
 
       <NextSteps is_editeur/>
-      <QuestionTree tree='france-connected-api' question='dgfip' />
+      <QuestionTree tree='france-connected-api' question='dgfipediteurs' />
   - who:
       - Un établissement bancaire
     is_eligible: 0

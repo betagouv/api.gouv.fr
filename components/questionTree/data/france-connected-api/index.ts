@@ -14,8 +14,25 @@ const isQuestionsTree = {
         next: generateFormulaireUniqueQuestion('impot-particulier'),
       },
       {
-        choices: [' via l‘état civil'],
+        choices: ['via l‘état civil'],
         next: generateFormulaireUniqueQuestion('sfip'),
+      },
+    ],
+  },
+  dgfipediteurs: {
+    question: 'Comment souhaitez-vous accéder aux données de la DGFiP ?',
+    choiceTree: [
+      {
+        choices: ['via FranceConnect'],
+        answer: `<br/><Button href="https://datapass.api.gouv.fr/api-impot-particulier-fc-sandbox">Remplir une demande</Button>`,
+      },
+      {
+        choices: ['via le numéro fiscal (SPI)'],
+        answer: `<br/><Button href="https://datapass.api.gouv.fr/api-impot-particulier-sandbox">Remplir une demande</Button>`,
+      },
+      {
+        choices: ['via l‘état civil'],
+        answer: `<br/><Button href="https://datapass.api.gouv.fr/api-sfip-sandbox">Remplir une demande</Button>`,
       },
     ],
   },
