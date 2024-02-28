@@ -1,17 +1,21 @@
 import { generateFormulaireUniqueQuestion } from '../formulaire-unique';
 
-const isFranceConnectedQuestions = {
+const isQuestionsTree = {
   dgfip: {
     question:
-      'Utilisez-vous ou comptez-vous utiliser FranceConnect sur votre service ?',
+      'Comment souhaitez-vous accéder aux données de la DGFiP ?',
     choiceTree: [
       {
-        choices: ['Oui'],
+        choices: ['via FranceConnect'],
         next: generateFormulaireUniqueQuestion('impot-particulier-fc'),
       },
       {
-        choices: ['Non'],
+        choices: ['via le numéro fiscal (SPI)'],
         next: generateFormulaireUniqueQuestion('impot-particulier'),
+      },
+      {
+        choices: [' via l‘état civil'],
+        next: generateFormulaireUniqueQuestion('sfip'),
       },
     ],
   },
@@ -35,4 +39,4 @@ const isFranceConnectedQuestions = {
   },
 } as { [key: string]: any };
 
-export default isFranceConnectedQuestions;
+export default isQuestionsTree;
