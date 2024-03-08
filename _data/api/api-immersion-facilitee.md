@@ -7,6 +7,9 @@ external_site: https://immersion-facile.beta.gouv.fr/
 producer: gip-inclusion
 keywords:
   - Insertion
+  - Immersion professionnelle
+  - Recrutement
+  - Projet professionnel
   - social
   - Inclusion
   - Aides
@@ -16,24 +19,23 @@ keywords:
 themes:
   - Entreprise
   - Emploi
-contact_link: 
+contact_link: admin@immersion-facile.beta.gouv.fr
 doc_tech_link: https://immersion-facile.beta.gouv.fr/doc-api
-last_update: 22/02/2024
+last_update: 08/03/2024
 ---
 
 ## Description
 
-Le but d'Immersion facilitée est de simplifier les immersions professionnelles selon plusieurs axes de travail :
+Le but d'Immersion facilitée est de faciliter la réalisation des immersions professionnelles en s’appuyant sur  sur deux piliers :
 
-- Dématérialiser entièrement les demandes d'immersion et les interactions des conseillers pôle emploi, missions locales, etc.
-- Constituer un annuaire des entreprises qui sont susceptible d'accueillir en immersion
-- Rendre les immersions recherchables par les bénéficiaires
+- la dématérialisation de la convention et, à terme, du bilan
+- un annuaire d’entreprises accueillantes, volontaires pour accueillir en immersion professionnelle sur leurs métiers. Cette base entreprise est enrichie par l’appel à des bases existantes (La Bonne Boîte …). La base est accessible grâce à un moteur de recherche et un parcours de mise en relation avec l’entreprise.
 
   
-### À quoi sert l'API Immersion facilitée ?
+## À quoi servent les API  d’Immersion facilitée ?
 
 
-L'API permet :
+Les API permettent  :
 
 🔎 La recherche d'entreprises accueillantes et mise en contact :
 
@@ -51,13 +53,32 @@ L'API permet :
 👉 [Tester le service](https://immersion-facile.beta.gouv.fr/)
 
 
-### Quelles sont les données contenues dans l'API Immersion facilitée ?
+## Quelles sont les données contenues dans l'API Immersion facilitée ?
 
 On retrouve - entre autres :
-- SIRET
-- Raison sociale ou nom d'enseigne
-- NAF
-- Effectifs
-- Adresse de l'entreprise
-- métiers (ROME et  appellations)
+
+### Entreprises accueillantes
+
+➡️ SIRET,<br>
+➡️ Raison sociale ou nom d'enseigne,<br>
+➡️ NAF,<br>
+➡️ Effectifs,<br>
+➡️ Adresse de l'entreprise,<br>
+➡️ Métiers (ROME et appellations) pour lesquels l’entreprise est prête à accueillir en immersion,<br>
+➡️ Les modalités de mise en relation,<br>
+
+### Conventions d’immersion (PMSMP)
+
+➡️ Toutes les informations contenues dans la convention,<br>
+➡️ L’état de la convention :<br> 
+- En brouillon ou demande de modification en cours
+- Obsolète
+- Partiellement signée
+- Prête à signer
+- Rejetée
+- Validée par le prescripteur
+- À valider par le conseiller
+- À valider par le prescripteur
+
+ℹ️ La souscription aux API se fait par  webhook.  Une clé API est nécessaire pour utiliser  les API. Cette clé est fournie sur demande auprès de l’équipe.
 
