@@ -8,7 +8,10 @@ partners:
  
 keywords:
   - Jeux olympiques
-  - 
+  - Data
+  - Sport
+  - Équipements
+
 rate_limiting_resume: 
 rate_limiting_description: |
  
@@ -16,7 +19,14 @@ themes:
   - Sport
 
 content_intro: |
-  Le recensement des équipements sportifs et lieux de pratiques est un dispositif piloté par le ministère chargé des sports. On y retrouve toute les déclarations des propriétaires mis à jour quotidiennement par notre équipe d'enquêteur.
+  
+  Cette API est le point d’entrée à la base de données des équipements sportifs et des lieux de pratiques du ministère chargé des Sports. Celle-ci est mise à jour quotidiennement grâce à nos équipes d'enquêteurs et des déclarations réalisées par les propriétaires. Vous y retrouverez tous les éléments liés à l’équipement (géolocalisation, type d’équipement, dimension, tribunes, aménagements, accessibilité, utilisateurs …) mais aussi les éléments liés à son installation (adresse, propriétaire, erp, type d’établissement …). Chaque équipement possède un code référentiel national unique.
+
+  Cette API s'adresse à tout utilisateur souhaitant récupérer de la donnée liée aux équipements sportifs. Cela peut-être des collectivités voulant mettre à disposition le jeu de donnée sur les équipements sportifs de leur territoire ou bien le ministère de l’intérieur cherchant des gymnases couverts disponibles et géolocalisés en cas de catastrophe naturelle.
+  
+  Exemple -  une startup proposant du matchmaking sur des parties de Basket 3x3 qui cherche les terrains de basket disponible en accès libre autour d’une position GPS.
+
+
 contact_link: contact-equipements@sports.gouv.fr
 doc_tech_link: https://equipements.sports.gouv.fr/explore/dataset/data-es/api/
 doc_tech_external: https://equipements.sports.gouv.fr/explore/dataset/data-es/api/
