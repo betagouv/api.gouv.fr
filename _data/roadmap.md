@@ -466,6 +466,9 @@
       what: Les emplois de l'inclusion, par la Plateforme de l'inclusion
       path: /les-api/api-emplois-inclusion
     - type: ADD_API
+      what: Le marché de l'inclusion, par la Plateforme de l'inclusion
+      path: /les-api/api-marche-inclusion.md
+    - type: ADD_API
       what: Immersion facilitée, par la Plateforme de l'inclusion
       path: /les-api/api-immersion-facilitee
 ---

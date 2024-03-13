@@ -1,5 +1,7 @@
 
 .vscode/
+.history
+
 # MacOS
 .DS_Store
 

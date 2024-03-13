@@ -25,12 +25,11 @@ themes:
   - Emploi
 contact_link: api@inclusion.beta.gouv.fr
 doc_tech_link: https://emplois.inclusion.beta.gouv.fr/api/v1/redoc/
-last_update: 22/02/2024
+content_intro: |
+  L'API Les emplois de l'inclusion offre aux utilisateurs un outil mutualisé pour simplifier les procédures, fluidifier les parcours d'insertion entre professionnels et renforcer la qualité de l'accompagnement des personnes.
+
+last_update: 13/03/2024
 ---
-
-## Description
-
-L'API Les emplois de l'inclusion offre aux utilisateurs un outil mutualisé pour simplifier les procédures, fluidifier les parcours d'insertion entre professionnels et renforcer la qualité de l'accompagnement des personnes.
 
 ### À quoi sert l'API Les emplois de l'inclusion ?
 

@@ -7,7 +7,6 @@ external_site: https://www.data.inclusion.beta.gouv.fr
 datagouv_uuid:
   - 6233723c2c1e4a54af2f6b2d
 partners:
-  - gip-inclusion
   - pole-emploi
   - Les lieux de médiations numérique
   - Collectivités territoriales
@@ -32,13 +31,14 @@ stats_detail_link: http://metabase.data.inclusion.beta.gouv.fr/public/dashboard/
 themes:
   - Administration
   - Emploi
-last_update: 27/02/2024
+
+content_intro: |
+  L'API data·inclusion permet de mettre en œuvre le principe « Dites-le-nous une fois », en application de [l’article L114-8 du Code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045213315)
+
+  L’équipe data·inclusion propose le traitement et l’analyse des jeux de données multi sources en un seul et unique patrimoine commun disponible publiquement 👉 [Accéder à notre site](https://www.data.inclusion.beta.gouv.fr/)
+
+last_update: 13/03/2024
 ---
-
-## Description
-L'API data·inclusion permet de mettre en œuvre le principe « Dites-le-nous une fois », en application de [l’article L114-8 du Code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045213315)
-
-L’équipe data·inclusion propose le traitement et l’analyse des jeux de données multi sources en un seul et unique patrimoine commun disponible publiquement 👉 [Accéder à notre site](https://www.data.inclusion.beta.gouv.fr/)
 
 ### À quoi sert l'API data.inclusion  ?
 
