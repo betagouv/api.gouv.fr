@@ -30,7 +30,7 @@ Autorités organisatrices de mobilité, en utilisant les API :
 - 😃 Pour mettre en oeuvre une **tarification solidaire, il n'est plus nécessaire de demander** : 
    - le quotient familial CAF & MSA ;
    - le revenu fiscal de référence ;
-   - - le statut bénéficiaire de la complémentaire santé solidaire avec ou sans participation.
+   - le statut bénéficiaire de la complémentaire santé solidaire avec ou sans participation.
 - 🖥 Vous pouvez **dématérialiser totalement votre service en ligne** car vos agents n’ont **plus besoin de vérifier les justificatifs**, les informations obtenues par les API sous-mentionnées sont certifiées 🔎 ;
 - 👨‍💼 Une **utilisation logicielle au guichet est aussi possible**, tout en évitant le stock des pièces justificatives, les erreurs de saisie et les fraudes.
 - 🎯 Enfin, vous **participez à la simplification des démarches pour les citoyens** en mettant en oeuvre le [« Dites-le-nous une fois »](https://www.numerique.gouv.fr/services/guichet-dites-le-nous-une-fois/), en application de l’[article L113-12 du Code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037313155).
