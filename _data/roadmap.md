@@ -213,16 +213,16 @@
       path: /les-api/api-sudoc
   8:
     - type: ADD_API
-      what: Référentiel des agences par Pôle emploi
+      what: Référentiel des agences par France Travail
       path: /les-api/api-agences-pole-emploi
     - type: ADD_API
-      what: Anotéa par Pôle emploi
+      what: Anotéa par France Travail
       path: /les-api/api-anotea
     - type: ADD_API
-      what: Eligibilité aux aides à l'emploi (Clara) par Pôle emploi
+      what: Eligibilité aux aides à l'emploi (Clara) par France Travail
       path: /les-api/api-clara
     - type: ADD_API
-      what: Répertoire Opérationnel des Métiers et des Emplois par Pôle emploi
+      what: Répertoire Opérationnel des Métiers et des Emplois par France Travail
       path: /les-api/api-rome
 
   9:
@@ -332,10 +332,10 @@
       path: /les-api/api-mobilic
   8:
     - type: ADD_API
-      what: Indemnisation Pôle Emploi, par Pôle Emploi
+      what: Indemnisation France Travail, par France Travail
       path: /les-api/api-indemnisation-pole-emploi
     - type: ADD_API
-      what: Statut demandeur d'emploi (FranceConnect), par Pôle Emploi
+      what: Statut demandeur d'emploi (FranceConnect), par France Travail
       path: /les-api/api-statut-demandeur-emploi
     - type: ADD_API
       what: Ecobalyse, par le Ministère de la Transition Ecologique
@@ -381,7 +381,7 @@
       what: Accès Libre, par le Ministère de la Transition Ecologique
       path: /les-api/api-acces-libre
     - type: ADD_API
-      what: Evènements par Pôle emploi
+      what: Evènements par France Travail
       path: /les-api/api-evenements-pole-emploi
   12:
     - type: ADD_API
@@ -397,16 +397,16 @@
       what: Services publics plus - résultats, par la DITP
       path: /les-api/api-services-publics-resultats
     - type: ADD_API
-      what: Accès à l'emploi, par Pôle emploi
+      what: Accès à l'emploi, par France Travail
       path: /les-api/api-acces-emploi
     - type: ADD_API
-      what: Informations sur l'emploi dans un territoire, par Pôle emploi
+      what: Informations sur l'emploi dans un territoire, par France Travail
       path: /les-api/api-informations-emploi-territoire
     - type: ADD_API
-      what: Marché du travail, par Pôle emploi
+      what: Marché du travail, par France Travail
       path: /les-api/api-marche-travail
     - type: ADD_API
-      what: Sortants de formation et accès à l'emploi, par Pôle emploi
+      what: Sortants de formation et accès à l'emploi, par France Travail
       path: /les-api/api-formation-acces-emploi
     - type: ADD_API
       what: Prestations sociales par la Direction de la Sécurité Sociale
