@@ -2,7 +2,7 @@
 name: France Travail
 nameWithPronoun: France Travail
 acronym:
-logo: logo-france-travail.png
+logo: logo-ft.png
 type: Etablissement public
 short: France Travail est le service public dédié au marché du travail, composé de 900 agences sur le territoire, et d'un réseau de partenaires.
 description: |
