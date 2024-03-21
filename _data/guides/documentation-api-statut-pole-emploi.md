@@ -15,7 +15,7 @@ publish: false # this page will appear on /guides page
 
 ## Recherche situation individu
 
-L’API “Statut Augmenté” permet d’effectuer une recherche d’individu afin de connaître sa situation actuelle au regard de Pôle Emploi.
+L’API “Statut Augmenté” permet d’effectuer une recherche d’individu afin de connaître sa situation actuelle au regard de France Travail.
 
 ### Description de la requête
 
@@ -138,4 +138,4 @@ Authorization: Bearer [Access token]
 
 ### Cas d'erreurs possibles
 
-[**Consultez la documentation sur le portail de Pôle emploi**](https://pole-emploi.io/data/documentation/erreurs)
+[**Consultez la documentation sur le portail de France Travail**](https://francetravail.io/data/documentation/erreurs)

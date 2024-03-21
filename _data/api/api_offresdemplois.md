@@ -1,25 +1,25 @@
 ---
 title: Offres d'emploi
-tagline: Exposez en temps réel sur votre service l’ensemble des offres d’emploi disponibles sur le site de Pôle emploi.
-producer: pole-emploi
+tagline: Exposez en temps réel sur votre service l’ensemble des offres d’emploi disponibles sur le site de France Travail.
+producer: france-travail
 category: Public
 is_open: 0 # -1 means API not open
-account_link: https://pole-emploi.io/inscription
-external_site: https://pole-emploi.io/data/api
+account_link: https://francetravail.io/inscription
+external_site: https://francetravail.io/data/api
 partners:
-  - Pôle emploi
+  - France Travail
 keywords:
   - Offres
   - Emploi
 contact_link: support@pole-emploi.io
-doc_tech_external: https://pole-emploi.io/data/api/offres-emploi
+doc_tech_external: https://francetravail.io/data/api/offres-emploi
 themes:
   - Emploi
 visits_2019: 1227
 last_update: 14/11/2019
 ---
 
-L'API Offres d'emploi restitue en temps réel les offres d'emploi actives collectés par Pôle emploi ou que Pôle emploi a reçues de ses partenaires à la condition que ceux-ci aient consenti à leur mise à disposition dans l'API.
+L'API Offres d'emploi restitue en temps réel les offres d'emploi actives collectés par France Travail ou que France Travail a reçues de ses partenaires à la condition que ceux-ci aient consenti à leur mise à disposition dans l'API.
 
 L'API s'adresse aux particuliers, entreprises & startups et collectivités territoriales et permet de développer des solutions personnalisées de recherche d'emploi pour un site ou une application.
 

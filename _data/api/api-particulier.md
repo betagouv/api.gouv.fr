@@ -54,7 +54,7 @@ stat:
   label: justificatifs papier évités
 partners:
   - CNAF
-  - pole-emploi
+  - france-travail
   - mesr
 producer: dinum
 keywords:

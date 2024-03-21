@@ -11,7 +11,7 @@ api:
   - API Statut Etudiant
   - API Statut étudiant boursier
   - API Indemnités journalières de la CNAM
-  - API Indemnisation Pôle emploi
+  - API Indemnisation France Travail
   - API statut demandeur d'emploi
   - API complémentaire santé solidaire
 ---

@@ -1,13 +1,13 @@
 ---
 title: API Sortants de formation et accès à l'emploi
-tagline: Retrouvez les chiffres produits par Pôle emploi pour mieux appréhender les parcours formations des demandeurs d’emploi.
-producer: pole-emploi
+tagline: Retrouvez les chiffres produits par France Travail pour mieux appréhender les parcours formations des demandeurs d’emploi.
+producer: france-travail
 category: Public
 is_open: 0 # -1 means API not open
-account_link: https://pole-emploi.io/login
-external_site: https://pole-emploi.io/data/api
+account_link: https://francetravail.io/login
+external_site: https://francetravail.io/data/api
 partners:
-  - Pôle emploi
+  - France Travail
 keywords:
   - Travail
   - Emploi
@@ -17,7 +17,7 @@ keywords:
   - Insertion
   - Formation
 contact_link: support@pole-emploi.io
-doc_tech_external: https://pole-emploi.io/data/api/sortants-formation-acces-emploi
+doc_tech_external: https://francetravail.io/data/api/sortants-formation-acces-emploi
 datagouv_uuid:
   - 593156ff88ee38351b503df3
 themes:
@@ -38,6 +38,6 @@ Cette API met à disposition les informations sur les demandeurs d'emploi sortan
 
 ### Informations complémentaires
 
-Les sources sont de Pôle emploi et de l'ACOSS.
+Les sources sont de France Travail et de l'ACOSS.
 
 Les données sont mise à jour trimestriellement.

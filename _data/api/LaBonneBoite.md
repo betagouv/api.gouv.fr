@@ -1,15 +1,15 @@
 ---
 title: API La Bonne Boite
 tagline: Profitez à tout moment d’une sélection pointue d’entreprises avec un fort potentiel d’embauche.
-producer: pole-emploi
+producer: france-travail
 is_open: 0 # -1 means API not open
-account_link: https://pole-emploi.io/inscription
-external_site: https://pole-emploi.io/data/api
+account_link: https://francetravail.io/inscription
+external_site: https://francetravail.io/data/api
 partners:
-  - Pôle emploi
+  - France Travail
   - La Bonne Boite
 keywords:
-  - Pôle emploi
+  - France Travail
   - Travail
   - Emploi
   - La Bonne Boite
@@ -17,7 +17,7 @@ keywords:
   - Entreprise
   - Recrutement
 contact_link: support@pole-emploi.io
-doc_tech_external: https://pole-emploi.io/data/api/bonne-boite
+doc_tech_external: https://francetravail.io/data/api/bonne-boite
 themes:
   - Emploi
 visits_2019: 2397
@@ -28,4 +28,4 @@ La Bonne Boite cible les entreprises ayant des perspectives d'embauche élevées
 
 L'API s'adresse aux particuliers, entreprises, startups, collectivités et ministères et permet de développer des solutions personnalisées de recherche d'emploi pour un site ou une application.
 
-Vous découvrirez des formats de fichiers supplémentaires, des outils de visualisation et d'autres API liées à l'emploi sur [pole-emploi.io](https://pole-emploi.io/data/api)
+Vous découvrirez des formats de fichiers supplémentaires, des outils de visualisation et d'autres API liées à l'emploi sur [francetravail.io](https://francetravail.io/data/api)

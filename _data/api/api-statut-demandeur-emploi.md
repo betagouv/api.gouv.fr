@@ -1,6 +1,6 @@
 ---
 title: API statut demandeur d'emploi
-tagline: Identifiez immédiatement si un utilisateur est inscrit en tant que demandeur d’emploi grâce à l’authentification via Pôle emploi connect.
+tagline: Identifiez immédiatement si un utilisateur est inscrit en tant que demandeur d’emploi grâce à l’authentification via France Travail Connect.
 is_open: -1 # -1 means API not open
 is_france_connected: 1
 access_page:
@@ -28,7 +28,7 @@ access_page:
       <NextSteps />
       <Button href="https://datapass.api.gouv.fr/api-statut-demandeur-emploi">Remplir une demande</Button>
 datapass_link: https://datapass.api.gouv.fr/api-statut-demandeur-emploi
-producer: pole-emploi
+producer: france-travail
 keywords:
   - emploi
   - solidarite
@@ -46,7 +46,7 @@ rate_limiting_resume:
 rate_limiting_description: |
 monitoring_link: 
 monitoring_description: |
-contact_link: https://pole-emploi.io/contact
+contact_link: https://francetravail.io/contact
 doc_tech_external: https://api.gouv.fr/guides/documentation-api-statut-pole-emploi
 themes:
   - Particulier
@@ -74,7 +74,7 @@ content_intro: |
 
   ### Quel est le périmètre de l'API ?
 
-  Sont disponibles les données des demandeurs d’emploi inscrits ou ayant été inscrits à Pôle emploi depuis 2010, date d’inscription et de cessation d’inscription le cas échéant.
+  Sont disponibles les données des demandeurs d’emploi inscrits ou ayant été inscrits à France Travail depuis 2010, date d’inscription et de cessation d’inscription le cas échéant.
 
    
 
@@ -109,7 +109,7 @@ Non applicable : identité pivot France Connect
 <details>
   <summary>Précisions sur les données</summary>
 Sont disponibles les données des demandeurs d’emploi inscrits ou
-ayant été inscrits à Pôle emploi depuis 2010, date d’inscription et de
+ayant été inscrits à France Travail depuis 2010, date d’inscription et de
 cessation d’inscription le cas échéant.
 
 

@@ -1,13 +1,13 @@
 ---
-title: API Référentiel des agences Pôle emploi
-tagline: Localisez les agences et les points relais Pôle emploi à proximité et partout en France (métropole et DROM).
-producer: pole-emploi
+title: API Référentiel des agences France Travail
+tagline: Localisez les agences et les points relais France Travail à proximité et partout en France (métropole et DROM).
+producer: france-travail
 category: Public
 is_open: 0 # -1 means API not open
-account_link: https://pole-emploi.io/inscription
-external_site: https://pole-emploi.io/data/api
+account_link: https://francetravail.io/inscription
+external_site: https://francetravail.io/data/api
 partners:
-  - Pôle emploi
+  - France Travail
 keywords:
   - Travail
   - Emploi
@@ -16,16 +16,16 @@ keywords:
   - Horaires
   - Adresse
 contact_link: support@pole-emploi.io
-doc_tech_external: https://pole-emploi.io/data/api/referentiel-agences
+doc_tech_external: https://francetravail.io/data/api/referentiel-agences
 themes:
   - Emploi
 visits_2019: 500
 last_update: 02/08/2021
 ---
 
-L’API référentiel des agences Pôle emploi permet d’obtenir l’annuaire des agences et des points relais Pôle emploi (métropole et DROM) avec des informations complémentaires.
+L’API référentiel des agences France Travail permet d’obtenir l’annuaire des agences et des points relais France Travail (métropole et DROM) avec des informations complémentaires.
 
-Ce jeu de données repose sur une ressource unique qui fournit la liste des agences Pôle emploi ouvertes au public sans rendez-vous.
+Ce jeu de données repose sur une ressource unique qui fournit la liste des agences France Travail ouvertes au public sans rendez-vous.
 
 ### Données accessibles dans l'API
 

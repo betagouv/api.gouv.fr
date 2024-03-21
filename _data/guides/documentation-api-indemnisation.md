@@ -1,5 +1,5 @@
 ---
-title: Documentation de l'API Indemnisation Pôle emploi
+title: Documentation de l'API Indemnisation France Travail
 noindex: false # this page will appear on Google
 publish: false # this page will appear on /guides page
 ---
@@ -88,4 +88,4 @@ Pragma: no-cache
 
 ### Cas d'erreurs possibles
 
-[**Consultez la documentation sur le portail de Pôle emploi**](https://pole-emploi.io/data/documentation/erreurs)
+[**Consultez la documentation sur le portail de France Travail**](https://francetravail.io/data/documentation/erreurs)

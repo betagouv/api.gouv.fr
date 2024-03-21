@@ -1,13 +1,13 @@
 ---
 title: API Anotéa
 tagline: Exposez à vos utilisateurs les notes et les avis des personnes ayant suivi une formation pour les guider dans leur orientation.
-producer: pole-emploi
+producer: france-travail
 category: Public
 is_open: 0 # -1 means API not open
-account_link: https://pole-emploi.io/inscription
-external_site: https://pole-emploi.io/data/api
+account_link: https://francetravail.io/inscription
+external_site: https://francetravail.io/data/api
 partners:
-  - Pôle emploi
+  - France Travail
 keywords:
   - Formation
   - Emploi
@@ -17,7 +17,7 @@ keywords:
   - Avis
   - Stagiaires
 contact_link: support@pole-emploi.io
-doc_tech_external: https://pole-emploi.io/data/api/anotea
+doc_tech_external: https://francetravail.io/data/api/anotea
 themes:
   - Emploi
   - Education
