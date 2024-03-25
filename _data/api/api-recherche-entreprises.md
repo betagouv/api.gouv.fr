@@ -77,7 +77,7 @@ Pour en savoir plus sur les filtres avancés, consultez la [documentation.](/doc
 
 Pour vous abonner à l'infolettre pour être informé des mises à jour de la part de l’équipe :
 
-<Button href="https://redir.entreprise.api.gouv.fr/wgt/ls12/2qo/form?c=dfdffd14">Abonnez-vous à l'infolettre</Button>
+<Button href="https://2f62ff46.sibforms.com/serve/MUIFAO95z3V-BJo1feDe7qoHnkmSCfysBZZFjIFSjvvnqZ1C8aAGCT1-vESBVRjnjM8fKD_Mt7Q0ENMgGon61yySA7u3dn8MS3rdd5Ax_aQ7ORuB5tglGXJ00VEnG5Tp5ggraqa5x6oPoyaleNDDkDmijlzwmSxWRs5zfSubvr3dGQMlxymwf2uU4xY1N51BjN5F5vvNMDu-s9IT">Abonnez-vous à l'infolettre</Button>
 
 
 ## Politique de confidentialité
