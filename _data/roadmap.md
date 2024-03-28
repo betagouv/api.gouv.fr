@@ -461,8 +461,14 @@
       what: API Annuaire de l’administration et des services publics, par la DILA
       path: /les-api/api-annuaire-administration-services-publics
 2024:
-  2:
-    - type: INFO
-      what: Renommage de l'API "Structures de l'inclusion" en "Marché de l'inclusion"
-      path: /les-api/api-marche-inclusion
+  3:
+    - type: ADD_API
+      what: Les emplois de l'inclusion, par la Plateforme de l'inclusion
+      path: /les-api/api-emplois-inclusion
+    - type: ADD_API
+      what: Le marché de l'inclusion, par la Plateforme de l'inclusion
+      path: /les-api/api-marche-inclusion.md
+    - type: ADD_API
+      what: Immersion facilitée, par la Plateforme de l'inclusion
+      path: /les-api/api-immersion-facilitee
 ---
