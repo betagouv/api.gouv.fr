@@ -12,6 +12,7 @@ keywords:
   - Sport
   - Équipements
   - Terrain
+  - Football
 
 rate_limiting_resume: 
 rate_limiting_description: |
