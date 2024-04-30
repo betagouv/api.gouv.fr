@@ -30,6 +30,10 @@ datagouv_uuid:
 last_update: 23/12/2021
 ---
 
+⚠️ ATTENTION : Cette API a été dépréciée au profit de l'API Recherche d'entreprises : https://api.gouv.fr/les-api/api-recherche-entreprises
+
+--------
+
 L'API Conventions collectives permet de rechercher les conventions collectives d'une entreprise à partir de son SIRET, SIREN ou raison sociale.
 
 ### À quoi sert l’API Conventions collectives ?
