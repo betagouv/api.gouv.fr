@@ -35,7 +35,8 @@ contact_link: thelec@abes.fr
 doc_tech_link: https://theses.fr/api/v1/diffusion/openapi.yaml
 
 
-uptime: 
+uptime: 99.99
+monitoring_link: https://status-api.abes.fr/
 visits_2019: 1000
 last_update: 08/04/2024
 ---

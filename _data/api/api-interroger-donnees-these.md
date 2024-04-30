@@ -16,8 +16,8 @@ keywords:
   - Enseignement
   - ABES
 
-rate_limiting_resume: 
-rate_limiting_description: |
+rate_limiting_resume: 100 000
+rate_limiting_description: Le nombre de thèses remontées est limité à 100 000
  
 themes:
   - Enseignement Supérieur
@@ -37,7 +37,8 @@ doc_tech_link: https://theses.fr/api/v1/recherche/openapi.yaml
 doc_tech_external: https://documentation.abes.fr/aidetheses/thesesfr/index.html#PrincipeAPI
 
 
-uptime: 
+uptime: 99.99
+monitoring_link: https://status-api.abes.fr/
 visits_2019: 1000
 last_update: 08/04/2024
 ---
