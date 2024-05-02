@@ -33,7 +33,7 @@ L'administration regorge d'API. Elles permettent d'échanger des données entre 
 
 ### Des API ouvertes : en accès libre
 
-La majorité des API visibles sur la page [rechercher une api](/les-api/rechercher-api) sont des API libres d'accès. On parle aussi d'API en opendata, ce qui veut dire que les données sont ouvertes et publiques. Elles peuvent vous permettre d'accèder à des données comme :
+La majorité des API visibles sur la page [rechercher une api](/rechercher-api) sont des API libres d'accès. On parle aussi d'API en opendata, ce qui veut dire que les données sont ouvertes et publiques. Elles peuvent vous permettre d'accèder à des données comme :
 
 - l'ensemble des [adresses du territoire français](/les-api/base-adresse-nationale)
 - les Diagnostic de Performance Energetique des logements particuliers (DPE)

@@ -25,11 +25,12 @@ themes:
   - Emploi
 contact_link: lemarche.api@inclusion.beta.gouv.fr
 doc_tech_link: https://lemarche.inclusion.beta.gouv.fr/api/schema/
-last_update: 27/02/2024
----
-## Description
 
-L'API Marché de l'inclusion simplifie et accélère l'identification et la mise en relation avec toutes les structure sociales et inclusives. Une solution permettant aux acheteurs de sourcer parmi plus de 6000 prestataires socialement responsables conventionnés par l'Etat. 
+content_intro: |
+  L'API Marché de l'inclusion simplifie et accélère l'identification et la mise en relation avec toutes les structure sociales et inclusives. Une solution permettant aux acheteurs de sourcer parmi plus de 6000 prestataires socialement responsables conventionnés par l'Etat. 
+
+last_update: 13/03/2024
+---
 
 ## À quoi sert l'API Marché de l'inclusion ?
 

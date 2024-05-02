@@ -90,9 +90,9 @@ const Footer = () => {
               <li className="fr-footer__content-item">
                 <a
                   className="fr-footer__content-link"
-                  href="https://gouvernement.fr"
+                  href="https://info.gouv.fr"
                 >
-                  gouvernement.fr
+                  info.gouv.fr
                 </a>
               </li>
               <li className="fr-footer__content-item">

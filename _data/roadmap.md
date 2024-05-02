@@ -461,8 +461,30 @@
       what: API Annuaire de l’administration et des services publics, par la DILA
       path: /les-api/api-annuaire-administration-services-publics
 2024:
-  2:
-    - type: INFO
-      what: Renommage de l'API "Structures de l'inclusion" en "Marché de l'inclusion"
-      path: /les-api/api-marche-inclusion
+  3:
+    - type: ADD_API
+      what: Data ES, par le Ministère des Sports et des Jeux Olympiques et Paralympiques
+      path: /les-api/api-data-es
+    - type: ADD_API
+      what: Data Inclusion, par la Plateforme de l'inclusion
+      path: /les-api/api-data-inclusion
+    - type: ADD_API
+      what: Les emplois de l'inclusion, par la Plateforme de l'inclusion
+      path: /les-api/api-emplois-inclusion
+    - type: ADD_API
+      what: Le marché de l'inclusion, par la Plateforme de l'inclusion
+      path: /les-api/api-marche-inclusion.md
+    - type: ADD_API
+      what: Immersion facilitée, par la Plateforme de l'inclusion
+      path: /les-api/api-immersion-facilitee
+  4:
+    - type: ADD_API
+      what: Diffusion des fichiers de theses.fr, par l'Agence bibliographique de l'enseignement supérieur
+      path: /les-api/api-diffusion-fichiers-these
+    - type: ADD_API
+      what: Interroger les Données de theses.fr, par l'Agence bibliographique de l'enseignement supérieur
+      path: /les-api/api-interroger-donnees-these
+    - type: ADD_API
+      what: Export des Données de theses.fr, par l'Agence bibliographique de l'enseignement supérieur
+      path: /les-api/api-export-donnees-these
 ---

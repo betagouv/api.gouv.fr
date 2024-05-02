@@ -1423,6 +1423,46 @@
           },
           "spiDec2": {
             "type": "string"
+          },
+          "datRec": {
+            "type": "string"
+          },
+          "datEtab": {
+            "type": "string"
+          },
+          "impAvImput": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "montTotIr": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "revImposable": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "numRole": {
+            "type": "string"
+          },
+          "fipNum": {
+            "type": "string"
+          },
+          "dateDebutPeriode": {
+            "type": "string"
+          },
+          "dateFinPeriode": {
+            "type": "string"
+          },
+          "typeAvis": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dateDecesdec1": {
+            "type": "string"
+          },
+          "dateDecesdec2": {
+            "type": "string"
           }
         }
       },
