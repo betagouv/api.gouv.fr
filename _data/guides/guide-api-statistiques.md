@@ -42,11 +42,11 @@ Plusieurs dizaines d'API sont produites par les administrations françaises pour
 
 ## 👩🏽‍💻 Les API sur l'Emploi
 
-Plusieurs API sont produites par Pôle emploi, et permettent de suivre les dynamiques territoriales :
+Plusieurs API sont produites par France Travail, et permettent de suivre les dynamiques territoriales :
 
 <details>
 <summary>API Marché du travail</summary>
-Cette API de Pôle emploi permet d'évaluer la situation de l'emploi sur un territoire - tensions, métiers, dynamique.
+Cette API de France Travail permet d'évaluer la situation de l'emploi sur un territoire - tensions, métiers, dynamique.
 
 <Button href="https://api.gouv.fr/les-api/api-marche-travail">Accéder à l'API</Button>
 </details>
@@ -218,7 +218,7 @@ Cette API permet d'accéder au catalogue Open.Urssaf : les jeux de données open
 
 <details>
 <summary>API Marché du travail</summary>
-Cette API de Pôle emploi permet d'évaluer la situation de l'emploi sur un territoire - tensions, métiers, dynamique.
+Cette API de France Travail permet d'évaluer la situation de l'emploi sur un territoire - tensions, métiers, dynamique.
 
 <Button href="https://api.gouv.fr/les-api/api-marche-travail">Accéder à l'API</Button>
 </details>

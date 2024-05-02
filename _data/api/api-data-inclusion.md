@@ -7,7 +7,8 @@ external_site: https://www.data.inclusion.beta.gouv.fr
 datagouv_uuid:
   - 6233723c2c1e4a54af2f6b2d
 partners:
-  - pole-emploi
+  - gip-inclusion
+  - France Travail
   - Les lieux de médiations numérique
   - Collectivités territoriales
   - 1jeune1solution

@@ -1,13 +1,13 @@
 ---
 title: API Accès à l'emploi
 tagline: Accédez aux taux d’accès à l’emploi par métier recherché et par territoire
-producer: pole-emploi
+producer: france-travail
 category: Public
 is_open: 0 # -1 means API not open
-account_link: https://pole-emploi.io/login
-external_site: https://pole-emploi.io/data/api
+account_link: https://francetravail.io/login
+external_site: https://francetravail.io/data/api
 partners:
-  - Pôle emploi
+  - France Travail
 keywords:
   - Travail
   - Emploi
@@ -17,7 +17,7 @@ keywords:
   - AFPA
   - Mobilité professionnelle
 contact_link: support@pole-emploi.io
-doc_tech_external: https://pole-emploi.io/data/api/acces-emploi-demandeurs-emploi?tabgroup-api=documentation&doc-section=api-doc-section-stats-d-acc%C3%A8s-%C3%A0-l-emploi-des-demandeurs-d-emploi-cat%C3%A9gories-a-et-b-%28acc_1%29
+doc_tech_external: https://francetravail.io/data/api/acces-emploi-demandeurs-emploi?tabgroup-api=documentation&doc-section=api-doc-section-stats-d-acc%C3%A8s-%C3%A0-l-emploi-des-demandeurs-d-emploi-cat%C3%A9gories-a-et-b-%28acc_1%29
 datagouv_uuid:
   - 593156ff88ee38351b503df3
 themes:
@@ -33,9 +33,9 @@ Il permet de  trouver les informations essentielles pour décrypter le marché d
 
 Cette API présente les taux d'accès à l'emploi à 6 mois des demandeurs d'emploi selon le métier recherché. 
 
-Il s’agit de la part des demandeurs d’emploi ayant accédé à un emploi dans les 6 mois ayant suivi leur présence sur les listes de Pôle emploi. 
+Il s’agit de la part des demandeurs d’emploi ayant accédé à un emploi dans les 6 mois ayant suivi leur présence sur les listes de France Travail. 
 
-L’accès à l’emploi étant défini comme l’accès à un emploi d’une durée minimale d’un mois au cours des six mois qui suivent la présence en fin de mois sur les listes de Pôle emploi en catégorie A ou B.
+L’accès à l’emploi étant défini comme l’accès à un emploi d’une durée minimale d’un mois au cours des six mois qui suivent la présence en fin de mois sur les listes de France Travail en catégorie A ou B.
 
 ### Données accessibles dans l'API
 

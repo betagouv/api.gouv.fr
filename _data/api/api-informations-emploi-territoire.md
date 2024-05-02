@@ -1,13 +1,13 @@
 ---
 title: API Informations sur l'emploi dans un territoire
-tagline: "Accédez à toutes les données clés pour comprendre un territoire : population, établissements, salariés. L’API fournit également un indicateur de dynamisme du territoire, développé par Pôle emploi et fondé sur l’IA."
-producer: pole-emploi
+tagline: "Accédez à toutes les données clés pour comprendre un territoire : population, établissements, salariés. L’API fournit également un indicateur de dynamisme du territoire, développé par France Travail et fondé sur l’IA."
+producer: france-travail
 category: Public
 is_open: 0 # -1 means API not open
-account_link: https://pole-emploi.io/login
-external_site: https://pole-emploi.io/data/api
+account_link: https://francetravail.io/login
+external_site: https://francetravail.io/data/api
 partners:
-  - Pôle emploi
+  - France Travail
 keywords:
   - Travail
   - Emploi
@@ -17,7 +17,7 @@ keywords:
   - AFPA
   - Mobilité professionnelle
 contact_link: support@pole-emploi.io
-doc_tech_external: https://pole-emploi.io/data/api/informations-territoire
+doc_tech_external: https://francetravail.io/data/api/informations-territoire
 datagouv_uuid:
   - 593156ff88ee38351b503df3
 themes:
