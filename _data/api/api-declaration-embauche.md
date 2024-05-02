@@ -24,7 +24,7 @@ access_page:
       Vous n'êtes pas autorisé à accéder à ces données.
 
       <Button href="/rechercher-api">Revenir à la recherche</Button>
-contact_link: habilitation-api@urssaf.fr
+contact_link: api-dpae@acoss.fr
 useSwaggerProxy: true
 doc_tech_link: https://portailapi.urssaf.fr/index.php?option=com_apiportal&view=definition&managerId=1&menuId=181&format=raw&stateReturn=L2ZyLz9JdGVtaWQ9MTgxJmFwaUlkPTRmMWM2ZWVhLTZiZTEtNDMxYy1hYjE3LTk0ZWE5MzdjOWQwYyZhcGlOYW1lPUFQSSUyMERQQUUmYXBpVmVyc2lvbj0xLjAuMCZhcGl0YWI9dGVzdHMmbWFuYWdlcklkPTEmbWVudUlkPTE4MSZvcHRpb249Y29tX2FwaXBvcnRhbCZyZW5kZXJUb29sPTImdHlwZT1yZXN0JnVzYWdlPWFwaSZ2aWV3PWFwaXRlc3Rlcg==&path=%2Fdiscovery%2Fswagger%2Fapi%2Fid%2F4f1c6eea-6be1-431c-ab17-94ea937c9d0c%3FswaggerVersion%3D2.0%26filename%3DAPI%2520DPAE.json%26extensions%3Dfalse
 doc_tech_external: https://www.dpae-edi.urssaf.fr/5492-API-DPAE-Guide-Implementation.pdf
