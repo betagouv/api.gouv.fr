@@ -19,7 +19,7 @@ keywords:
 contact_link: support@pole-emploi.io
 doc_tech_external: https://francetravail.io/data/api/sortants-formation-acces-emploi
 datagouv_uuid:
-  - 593156ff88ee38351b503df3
+  - 58595d4888ee387bd4c65bb3
 themes:
   - Emploi
 visits_2019: 1500
