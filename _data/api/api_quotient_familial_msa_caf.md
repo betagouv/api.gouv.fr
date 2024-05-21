@@ -80,7 +80,7 @@ last_update: 15/12/2023
 content_intro: |
   L'<External href="https://particulier.api.gouv.fr/catalogue/cnav/quotient_familial_v2">API Quotient familial MSA & CAF</External> permet de récupérer directement le quotient familial d'un particulier du régime général ou agricole. Elle fait partie du bouquet <External href="https://particulier.api.gouv.fr/catalogue">API Particulier</External>.
 
-  <Button href="https://particulier.api.gouv.fr/catalogue/cnaf-msa/quotient_familial_v2">Consulter la documentation</Button>
+  <Button href="https://particulier.api.gouv.fr/catalogue/cnav/quotient_familial_v2">Consulter la documentation</Button>
 
 ---
 

@@ -478,7 +478,7 @@
       what: Immersion facilitée, par la Plateforme de l'inclusion
       path: /les-api/api-immersion-facilitee
     - type: ADD_API
-      what: France Chaleur Urbaine
+      what: France Chaleur Urbaine, par le Ministère de la Transition écologique et solidaire
       path: /les-api/api-france-chaleur-urbaine
   4:
     - type: ADD_API
@@ -490,4 +490,20 @@
     - type: ADD_API
       what: Export des Données de theses.fr, par l'Agence bibliographique de l'enseignement supérieur
       path: /les-api/api-export-donnees-these
+    - type: ADD_API
+      what: Mes Aides Reno, par la Direction Interministérielle du Numérique
+      path: /les-api/api-mes-aides-reno
+  5:
+    - type: ADD_API
+      what: Fonds Vert, par la Direction générale de l'aménagement, du logement et de la nature
+      path: /les-api/api-fonds-vert
+    - type: ADD_API
+      what: Sudocuh, par la Direction générale de l'aménagement, du logement et de la nature
+      path: /les-api/api-sudocuh
+    - type: ADD_API
+      what: ECLAIRE, par l'Agence du Numérique en Santé (ANS)
+      path: /les-api/api-eclaire
+    - type: ADD_API
+      what: VigiEau, par le Ministère de la Transition écologique et solidaire
+      path: /les-api/api-vigieau
 ---
