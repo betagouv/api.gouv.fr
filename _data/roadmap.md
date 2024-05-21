@@ -477,6 +477,9 @@
     - type: ADD_API
       what: Immersion facilitée, par la Plateforme de l'inclusion
       path: /les-api/api-immersion-facilitee
+    - type: ADD_API
+      what: France Chaleur Urbaine
+      path: /les-api/api-france-chaleur-urbaine
   4:
     - type: ADD_API
       what: Diffusion des fichiers de theses.fr, par l'Agence bibliographique de l'enseignement supérieur
