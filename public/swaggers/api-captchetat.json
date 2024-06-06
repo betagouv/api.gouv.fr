@@ -1,71 +1,56 @@
 {
   "swagger" : "2.0",
   "info" : {
-    "description" : "L'AIFE a mis en oeuvre une API permettant la génération d'un CAPTCHA dans le but premier de pouvoir l'adresser à ses applications internes mais également, par la suite, à ses partenaires et à l'interministériel.\n\nCette API permet la génération d'un CAPTCHA de type chaine de caractères à reproduire et la vérification de la saisie effectuée.\n\nSon intégration doit se faire au niveau de la couche présentation (Front-End) et, étant exposée sur PISTE, ses accès et ses utilisateurs sont gérés via PISTE.\n\nVous trouverez ci-après le guide d'implémention du CAPTCHEtat de l'AIFE.",
-    "version" : "1.0",
-    "title" : "CaptchEtat",
+    "description" : "L'AIFE a mis en oeuvre une API permettant la génération d'un CAPTCHA dans le but premier de pouvoir l'adresser à ses applications internes mais également, par la suite, à ses partenaires et à l'interministériel.\n\nIl s'agit de la v2 de cette API qui permet la génération d'un CAPTCHA de type chaine de caractères à reproduire et la vérification de la saisie effectuée.\n\nSon intégration doit se faire au niveau de la couche présentation (Front-End) et, étant exposée sur PISTE, ses accès et ses utilisateurs sont gérés via PISTE.\n\nVous trouverez ci-après le guide d'implémention du CAPTCHEtat de l'AIFE.",
+    "version" : "2.0",
+    "title" : "CaptchEtat v2",
     "contact" : {
       "name" : "Support CaptchEtat",
       "email" : "piste.aife@finances.gouv.fr"
     }
   },
   "host" : "sandbox-api.piste.gouv.fr",
-  "basePath" : "/piste/captcha",
+  "basePath" : "/piste/captchetat/v2",
   "schemes" : [ "https", "http" ],
   "security" : [ {
     "API_Key_Oauth.API Key" : [ ]
   }, {
     "API_Key_Oauth.OAuthImplicit" : [ "piste.captchetat" ]
   }, {
+    "API_Key_Oauth.OAuthImplicit" : [ "aife.captchetatv2" ]
+  }, {
     "API_Key_Oauth.OAuthAccessCode" : [ "piste.captchetat" ]
+  }, {
+    "API_Key_Oauth.OAuthAccessCode" : [ "aife.captchetatv2" ]
   } ],
   "paths" : {
     "/simple-captcha-endpoint" : {
       "get" : {
         "tags" : [ "Captcha" ],
         "summary" : "Endpoint permettant de récupérer un élément du captcha",
-        "description" : "La génération d'un captcha se réalise au travers de plusieurs appels à ce endpoint, en fonction du type de ressource qui doit être généré. <p>Seul le premier appel de génération est à composer, les autres sont auto-générés dans le retour obtenu dans le premier appel.</p>",
+        "description" : "La génération d'un captcha se réalise au travers d'un premier appel à ce endpoint par la librairie front avec les paramètre c et get=image. Cet appel renvoie un json comportant l'image en base 64 et l'uuid du captcha généré.\n\n Ce premier appel est effectué automatiquement au chargement d'une page dans lequel est intégré le composant captchetat front.\n\n Au clic sur le bouton de rechargement, on réitère cet appel qui met à jour l'image et l'uuid avec les nouvelles données récupérées.\n\n Au clic sur le bouton de génération du son, un appel est effectué avec les paramètre c, get=sound et t=uuid. Cet appel renvoie le captcha audio correspondant à l'image sous forme de byte array au format audio/xwave.",
         "operationId" : "GET /simple-captcha-endpoint",
-        "produces" : [ "application/json", "text/html", "text/css", "image/png", "image/gif", "text/javascript", "audio/x-wav" ],
+        "produces" : [ "application/json", "audio/x-wav" ],
         "parameters" : [ {
           "name" : "get",
           "in" : "query",
           "description" : "Type d'objet voulant être récupéré.",
           "required" : true,
           "type" : "string",
-          "enum" : [ "html", "layout-stylesheet", "script-include", "image", "reload-icon", "sound-icon", "reload-disabled-icon", "sound-disabled-icon", "sound", "p" ]
+          "enum" : [ "image", "sound" ]
         }, {
           "name" : "c",
           "in" : "query",
-          "description" : "Nom du captcha voulant être récupéré. Ce parametre est obligatoire lorsqu'on choisi les types d'objets du parametre get suivants (html, script-include, image, sound, p(refresh))",
+          "description" : "Nom du captcha voulant être récupéré. Ce parametre est obligatoire lorsqu'on choisi les types d'objets du parametre get suivants (image, sound)",
           "required" : false,
           "type" : "string",
           "enum" : [ "captchaFR", "captchaEN", "numerique6_7CaptchaFR", "numerique6_7CaptchaEN", "alphabetique6_7CaptchaFR", "alphabetique6_7CaptchaEN", "alphanumerique12CaptchaFR", "alphanumerique12CaptchaEN", "alphabetique12CaptchaFR", "alphabetique12CaptchaEN", "numerique12CaptchaFR", "numerique12CaptchaEN", "alphanumerique6to9LightCaptchaEN", "alphanumerique6to9LightCaptchaFR", "alphanumerique4to6LightCaptchaEN", "alphanumerique4to6LightCaptchaFR" ]
         }, {
           "name" : "t",
           "in" : "query",
-          "description" : "Identifiant captcha, c'est un parametre technique non utilisable par le developpeur. Il est renseigné dans les requêtes auto-générées.",
+          "description" : "Identifiant captcha, c'est un parametre technique non utilisable par le developpeur. Il est renseigné automatiquement par l'appel avec get=sound, pour récupérer le captcha audio correspondant à l'image affichée.",
           "required" : false,
           "type" : "string"
-        }, {
-          "name" : "cs",
-          "in" : "query",
-          "description" : "Code style du captcha, c'est un parametre technique non utilisable par le developpeur. Il est renseigné dans les requêtes auto-générées.",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "d",
-          "in" : "query",
-          "description" : "Si le paramètre existe, le navigateur peut créer une balise audio via javascript en tant qu'audio ; c'est un parametre technique non utilisable par le developpeur. Il est renseigné dans les requêtes auto-générées.",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "mode",
-          "in" : "query",
-          "description" : "Le navigateur peut utiliser les ressources statiques ou des appels a l'API pour charger la feuille de style (Css) et charger les images statiques(le bouton \"recharger le captcha\" et le bouton \"lire le captcha\"). La valeur par défaut est \"frontal\" pour utiliser les ressources statiques.",
-          "required" : false,
-          "type" : "string",
-          "enum" : [ "frontal", "backend" ]
         } ],
         "responses" : {
           "200" : {
@@ -78,7 +63,7 @@
             "description" : "Bad request. Mauvais format de la requête."
           },
           "500" : {
-            "description" : "Internal Server Error. Erreur Interne du Serveur"
+            "description" : "Internal Server Error. Erreur Interne du Serveur."
           },
           "404" : {
             "description" : "Not found. Ressource introuvable."
@@ -175,6 +160,41 @@
         }
       }
     },
+    "/captcha/{uuid}/code/infos" : {
+      "get" : {
+        "tags" : [ "CaptchEtat" ],
+        "summary" : "Récupère les informations d'un captcha à partir de son identifiant.",
+        "description" : "Endpoint permettant de récupérer la taille et le type d'un captcha à partir de son identifiant.",
+        "operationId" : "GET /captcha/{uuid}/code/infos",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "uuid",
+          "in" : "path",
+          "description" : "Identifiant du captcha",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Ok",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "taille" : {
+                  "type" : "integer"
+                },
+                "type" : {
+                  "type" : "string"
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "Bad Request"
+          }
+        }
+      }
+    },
     "/info" : {
       "get" : {
         "tags" : [ "CaptchEtat" ],
@@ -208,41 +228,6 @@
           }
         }
       }
-    },
-    "/captcha/{id}/code/infos" : {
-      "get" : {
-        "tags" : [ "CaptchEtat" ],
-        "summary" : "Récupère les informations d'un captcha à partir de son identifiant.",
-        "description" : "Endpoint permettant de récupérer la taille et le type d'un captcha à partir de son identifiant.",
-        "operationId" : "GET /captcha/{id}/code/infos",
-        "produces" : [ "application/json" ],
-        "parameters" : [ {
-          "name" : "id",
-          "in" : "path",
-          "description" : "Identifiant du captcha",
-          "required" : true,
-          "type" : "string"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "Ok",
-            "schema" : {
-              "type" : "object",
-              "properties" : {
-                "taille" : {
-                  "type" : "integer"
-                },
-                "type" : {
-                  "type" : "string"
-                }
-              }
-            }
-          },
-          "400" : {
-            "description" : "Bad Request"
-          }
-        }
-      }
     }
   },
   "securityDefinitions" : {
@@ -252,7 +237,8 @@
       "authorizationUrl" : "https://sandbox-oauth.piste.gouv.fr/api/oauth/authorize",
       "flow" : "implicit",
       "scopes" : {
-        "piste.captchetat" : ""
+        "piste.captchetat" : "",
+        "aife.captchetatv2" : ""
       }
     },
     "API_Key_Oauth.API Key" : {
@@ -268,7 +254,8 @@
       "tokenUrl" : "https://sandbox-oauth.piste.gouv.fr/api/oauth/token",
       "flow" : "accessCode",
       "scopes" : {
-        "piste.captchetat" : ""
+        "piste.captchetat" : "",
+        "aife.captchetatv2" : ""
       }
     }
   },
@@ -336,19 +323,27 @@
       }
     },
     "resultCaptcha" : {
-      "type" : "string",
-      "description" : "Plusieurs types de réponses sont possibles html, son ...",
-      "example" : "exemple d'une réponse html = <div> <link type=\"text/css\" rel=\"stylesheet\" href=\"/api/simple-captcha-endpoint?get=layout-stylesheet&amp;t=1629882000\" /> <div class=\"BDC_CaptchaDiv \" id=\"captchaFR_CaptchaDiv\" style=\"width: 280px !important; height: 75px !important; \"><!-- --><div class=\"BDC_CaptchaImageDiv\" id=\"captchaFR_CaptchaImageDiv\" style=\"width: 250px !important; height: 75px !important;\"><!-- --><img class=\"BDC_CaptchaImage\" id=\"captchaFR_CaptchaImage\" src=\"/api/simple-captcha-endpoint?get=image&amp;c=captchaFR&amp;t=7b9901b234c34f08aa168da6109791f4\" alt=\"Retype the CAPTCHA code from the image\" style=\"visibility: hidden !important\" /><!-- --></div><!-- --><div class=\"BDC_CaptchaIconsDiv\" id=\"captchaFR_CaptchaIconsDiv\" style=\"width: 24px !important;\"><!-- --><a class=\"BDC_ReloadLink\" id=\"captchaFR_ReloadLink\" href=\"#\" title=\"Générer un nouveau captcha\"><img class=\"BDC_ReloadIcon\" id=\"captchaFR_ReloadIcon\" src=\"/api/simple-captcha-endpoint?get=reload-icon\" alt=\"Générer un nouveau captcha\" /></a><!-- --><a rel=\"nofollow\" class=\"BDC_SoundLink\" id=\"captchaFR_SoundLink\" href=\"/api/simple-captcha-endpoint?get=sound&amp;c=captchaFR&amp;t=7b9901b234c34f08aa168da6109791f4\" title=\"Énoncez le code du captcha\"><img class=\"BDC_SoundIcon\" id=\"captchaFR_SoundIcon\" src=\"/api/simple-captcha-endpoint?get=sound-icon\" alt=\"Énoncez le code du captcha\" /></a><!-- --><div class=\"BDC_Placeholder\" id=\"captchaFR_AudioPlaceholder\">&amp;nbsp;</div><!-- --></div> <script src=\"/api/simple-captcha-endpoint?get=script-include&amp;c=captchaFR&amp;t=7b9901b234c34f08aa168da6109791f4\" type=\"text/javascript\"></script> <input type=\"hidden\" id=\"BDC_VCID_captchaFR\" name=\"BDC_VCID_captchaFR\" value=\"7b9901b234c34f08aa168da6109791f4\" /> <input type=\"hidden\" id=\"BDC_BackWorkaround_captchaFR\" name=\"BDC_BackWorkaround_captchaFR\" value=\"0\" /> <input type=\"hidden\" id=\"BDC_Hs_captchaFR\" name=\"BDC_Hs_captchaFR\" value=\"9d8c19caf07a3ec31fa6f61d7082c6c6e4ec8b9b\" /> <input type=\"hidden\" id=\"BDC_SP_captchaFR\" name=\"BDC_SP_captchaFR\" value=\"304647208\" /> </div> </div>"
+      "type" : "object",
+      "properties" : {
+        "uuid" : {
+          "type" : "string",
+          "example" : "d6f533f7-743c-449e-b496-79fb2192b46c"
+        },
+        "imageb64" : {
+          "type" : "string",
+          "example" : "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"
+        }
+      },
+      "description" : "Deux types de réponses sont possibles : image et audio."
     },
     "validerCaptcha" : {
       "type" : "object",
-      "required" : [ "code", "id" ],
+      "required" : [ "code", "uuid" ],
       "properties" : {
-        "id" : {
-          "type" : "integer",
-          "format" : "int64",
-          "example" : 304647208,
-          "description" : "identifiant du captcha à valider"
+        "uuid" : {
+          "type" : "string",
+          "example" : "e7da1f49-07d6-4ed7-8d5b-21e4ec4e22ec",
+          "description" : "Identifiant du captcha à valider"
         },
         "code" : {
           "type" : "string",
@@ -360,6 +355,6 @@
   },
   "externalDocs" : {
     "description" : "Guide Implementation CAPTCHEtat",
-    "url" : "https://static.piste.gouv.fr/captchEtat/docs/CAPTCHA_GUIDE_IMPLEMENTATION.pdf"
+    "url" : "https://static.piste.gouv.fr/captchEtat/docs/CAPTCHA_v2_GUIDE_IMPLEMENTATION.pdf"
   }
 }

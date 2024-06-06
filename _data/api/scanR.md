@@ -19,32 +19,33 @@ keywords: # utilisé dans la recherche
 themes:
   - Education
 contact_link: https://scanr.enseignementsup-recherche.gouv.fr/contact
-doc_tech_link: https://scanr-api.enseignementsup-recherche.gouv.fr/api/v2/api-docs
+doc_tech_external: https://scanr.enseignementsup-recherche.gouv.fr/docs/overview
 monitoring_link: https://scanr-api.enseignementsup-recherche.gouv.fr/api/services/counts
 datagouv_uuid:
   - 577cc85ac751df4e1b9901a0
 last_update: 01/05/2020
 ---
 
-### Description de l'API
 
-#### L'api scanR recense 4 types de données :
+### L'api scanR recense 4 types de données :
 
-- 40 000 entités liées à la recherche et l’innovation
-- 490 000 auteurs de travaux de recherche
-- 87 000 financements
-- +2 000 000 productions : thèses de doctorat, publications et brevets
+-   entités liées à la recherche et l’innovation
+-  auteurs de travaux de recherche
+-   financements
+-   publications : thèses de doctorat, articles et autres
+- brevets
 
-#### Pour chaque type de données (entités, auteurs, financements et productions), l'api scanR propose :
+#### Pour chaque type de données (entités, auteurs, financements et productions),  un index elasticsearch est disponible :
+ - scanr-organizations
+ - scanr-persons
+ - scanr-projects
+ - scanr-publications
+ - scanr-patents
 
-- un search, par exemple `POST /v2/publications/search`
-- une description détaillée de chaque objet, par exemple `GET /v2/publications/{id}`
-- une liste d'objets similaires, par exemple `POST /v2/publications/like`
+La page https://scanr.enseignementsup-recherche.gouv.fr/docs/overview détaille les URL et schéma de données des index.
 
-#### Un outil d’exploration mais pas d’évaluation
-
+### Un outil d’exploration mais pas d’évaluation
 scanR enrichit et structure toutes les données qu’il parvient à récolter, mais ne garantit pas :
 
-- L’absence d’erreur : Le caractère automatique des traitements engendre inéluctablement des approximations ou des erreurs
-- La complétude des informations : scanR utilise l’information qui est ouverte et disponible et réutilisable. La couverture du paysage ne peut donc être que partielle, en particulier sur les financements.
-  scanR ne doit donc être un aucun cas perçu ou utilisé comme un outil d’évaluation
+ - L’absence d’erreur : Le caractère automatique des traitements engendre inéluctablement des approximations ou des erreurs
+ - La complétude des informations : scanR utilise l’information qui est ouverte et disponible et réutilisable. La couverture du paysage ne peut donc être que partielle, en particulier sur les financements. scanR ne doit donc être un aucun cas perçu ou utilisé comme un outil d’évaluation
