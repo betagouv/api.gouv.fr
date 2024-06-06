@@ -1,12 +1,12 @@
 ---
-name: Ministère de l'Enseignement Supérieur, de la Recherche et de l'Innovation # producteur de l'API
-nameWithPronoun: le MESRI
-logo: mesri.png
-acronym: MESRI # acronyme du producteur
+name: Ministère de l'Enseignement Supérieur et de la Recherche # producteur de l'API
+nameWithPronoun: le MESR
+logo: mesr.jpg
+acronym: MESR # acronyme du producteur
 type: Ministère
-short: Le ministère de l’Enseignement supérieur, de la Recherche et de l’Innovation (MESRI) est en charge de la préparation et la mise en œuvre de la politique du Gouvernement relative au développement de l’enseignement supérieur, à la recherche et à la technologie.
+short: Le ministère de l’Enseignement supérieur et de la Recherche (MESR) est en charge de la préparation et la mise en œuvre de la politique du Gouvernement relative au développement de l’enseignement supérieur, à la recherche et à la technologie.
 description: |
-  Le ministère de l’Enseignement supérieur, de la Recherche et de l’Innovation est compétent concernant :
+  Le ministère de l’Enseignement supérieur et de la Recherche est compétent concernant :
 
   - la politique de l’espace ;
   - la définition des projets pédagogiques des établissements d’enseignement supérieur ;
