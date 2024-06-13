@@ -38,7 +38,7 @@ content_intro: |
 
   L'API permet de rechercher une entreprise de deux manières :
 
-  - Recherche textuelle
+  - Recherche textuelle (dénomination, adresse, dirigeants et élus)
   - Recherche géographique
 ---
 
