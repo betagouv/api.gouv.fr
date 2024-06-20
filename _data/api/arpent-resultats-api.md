@@ -19,7 +19,7 @@ keywords:
   - Arpent
   - Diplôme
 contact_link: arpent-resultat.sg@agriculture.gouv.fr
-doc_tech_link: https://teleservices-ea.agriculture.gouv.fr/arpent-resultats-api/v2/api-docs?group=arpent-resultats
+doc_tech_external: https://api-pprd.agriculture.gouv.fr/apimportal/catalog/api/505466d0-fb4b-34c6-a468-1e8b9c991c20?c=ensagri
 themes:
   - Education
 visits_2019: 2050
@@ -41,7 +41,7 @@ L'API Résultats aux examens exposant des **données à caractère personnel**, 
 
 ### Aller à l'essentiel...
 
-Nous avons choisi d'exposer toutes les ressources utilisées par le service [ARPENT(résultats)](https://teleservices-ea.agriculture.gouv.fr/arpent-resultats/). La [documentation technique](https://teleservices-ea.agriculture.gouv.fr/arpent-resultats-api/swagger-ui.html#/) peut donc paraître assez riche.
+Nous avons choisi d'exposer toutes les ressources utilisées par le service [ARPENT(résultats)](https://teleservices-ea.agriculture.gouv.fr/arpent-resultats/). La [documentation technique](https://api.agriculture.gouv.fr/apimportal/catalog/api/505466d0-fb4b-34c6-a468-1e8b9c991c20?c=ensagri) peut donc paraître assez riche.
 _A noter : certaines ressources relevent d'une authentification renforcée. Les modalités d'accès seront fournies ultérieurement._
 
 Pour aller à l'essentiel, voici celles qui exposent le plus simplement les calendriers et résultats aux examens :
@@ -49,7 +49,7 @@ Pour aller à l'essentiel, voici celles qui exposent le plus simplement les cale
 - Calendriers de délibération :
 
 ```sh
-Curl -X GET --header 'Accept: application/json' 'https://ensagri.agriculture.gouv.fr/arpent-resultats-api/api/arpent-resultats/resultats-grand-public/calendriers?departement=30'
+Curl -X GET --header 'Accept: application/json' 'https://ensagri.api.agriculture.gouv.fr/arpent-resultats-api/api/arpent-resultats/resultats-grand-public/calendriers?departement=30'
 ```
 
 ```Json
@@ -65,7 +65,7 @@ Curl -X GET --header 'Accept: application/json' 'https://ensagri.agriculture.gou
 - Résultats d'un département :
 
 ```sh
-curl -X GET --header 'Accept: application/json' 'https://ensagri.agriculture.gouv.fr/arpent-resultats-api/api/arpent-resultats/resultats-grand-public/resultats?departement=30'
+curl -X GET --header 'Accept: application/json' 'https://ensagri.api.agriculture.gouv.fr/arpent-resultats-api/api/arpent-resultats/resultats-grand-public/resultats?departement=30'
 ```
 
 ```Json
@@ -83,4 +83,4 @@ curl -X GET --header 'Accept: application/json' 'https://ensagri.agriculture.gou
 ### Se lancer !
 
 Le ministère en charge de l'agriculture met à votre disposition un environnement de pré-production pour tester vos développements.
-Il est accessible à l'adresse : [https://ensagri-pprd.agriculture.gouv.fr/arpent-resultats-api/swagger-ui.html](https://ensagri-pprd.agriculture.gouv.fr/arpent-resultats-api/swagger-ui.html)
+Il est accessible à l'adresse : [https://api-pprd.agriculture.gouv.fr/apimportal/catalog/api/505466d0-fb4b-34c6-a468-1e8b9c991c20?c=ensagri](https://api-pprd.agriculture.gouv.fr/apimportal/catalog/api/505466d0-fb4b-34c6-a468-1e8b9c991c20?c=ensagri)
