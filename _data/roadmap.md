@@ -506,4 +506,8 @@
     - type: ADD_API
       what: VigiEau, par le Ministère de la Transition écologique et solidaire
       path: /les-api/api-vigieau
+  6:
+    - type: ADD_API
+      what: INES, par le Ministère de l'Enseignement Supérieur et de la Recherche
+      path: /les-api/api-ines
 ---
