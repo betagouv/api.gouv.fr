@@ -10,22 +10,23 @@ access_page:
       - Un particulier
     is_eligible: -1
     description: |
-      L'API s'adresse aux administrations.
-
+      L’API s’adresse à tous les établissements proposant une formation dans l’enseignement supérieur et aux systèmes d’information dans l'enseignement supérieur, comme les plateformes de candidature aux établissements d’enseignement supérieur ou le CNOUS.
       <Button href="/rechercher-api">Rechercher une autre API</Button>
   - who:
       - Une entreprise
-    is_eligible: -1
+    is_eligible: 0
     description: |
-      L'API s'adresse aux administrations.
+      Si vous êtes une entreprise dans l'enseignement supérieur, vous êtes alors peut-être éligible.
+      Contactez le projet INES à l'adresse : projet.ines@enseignementsup.gouv.fr
 
       <Button href="/rechercher-api">Rechercher une autre API</Button>
   - who:
-      - Une administration
+      - Etablissement ou système d'information dans l'enseignement supérieur
     is_eligible: 1
     description: |
-
-      <Button href="https://ines.enseignementsup-recherche.gouv.fr">Demander un accès</Button>
+      Une authentification (identifiants d’accès directement fourni par le MESR aux établissements) est nécessaire.
+      Contactez le projet INES à cette adresse si besoin : projet.ines@enseignementsup.gouv.fr
+      <Button href="https://ines.enseignementsup-recherche.gouv.fr">Se connecter</Button>
 
 themes:
  - Education
@@ -58,7 +59,7 @@ L'identifiant national de l’étudiant est une donnée pivot pour mettre en rel
 
 ## Principales données disponibles
 
-L’API s’adresse à tous les établissements proposant une formation dans l’enseignement supérieur et aux systèmes d’information dans enseignement supérieur, comme les plateformes de candidature aux établissements d’enseignement supérieur ou le CNOUS.
+L’API s’adresse à tous les établissements proposant une formation dans l’enseignement supérieur et aux systèmes d’information dans l'enseignement supérieur, comme les plateformes de candidature aux établissements d’enseignement supérieur ou le CNOUS.
 
 L’obtention d’un identifiant national étudiant (INE) d’INES se fait à partir des données d’état civil de l’étudiant.
 
