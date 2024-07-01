@@ -200,9 +200,10 @@ export const pathEligible = {
             },
          choices: [
                'Agedi',
-        ],
-        answer: `<br/><Button href="https://datapass.api.gouv.fr/api-particulier?demarche=agedi">Remplir une demande</Button>
-        `,
+            ],
+           answer: `<br/><Button href="https://datapass.api.gouv.fr/api-particulier?demarche=agedi">Remplir une demande</Button>
+        `   ,
+           },
         {
           choices: ['**Votre éditeur ne figure pas dans cette liste**'],
           answer: `**Vous êtes éligible mais votre éditeur n’a pas intégré l’API&nbsp;Particulier <span role="img" aria-label="émoji loupe">🔎</span>**
