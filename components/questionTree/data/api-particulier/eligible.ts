@@ -68,14 +68,14 @@ export const pathEligible = {
         choices: [
              'Odyssée Informatique',
         ],
-        answer: `<br/><Button href="https://datapass.api.gouv.fr/api-particulier">Remplir une demande</Button>
+        answer: `<br/><Button href="https://datapass.api.gouv.fr/api-particulier?demarche=odyssee-pandore">Remplir une demande</Button>
         `,
         },
         {
         choices: [
             'Technocarte',
         ],
-        answer: 
+        answer:
         `<br/><Button href="https://datapass.api.gouv.fr/api-particulier?demarche=technocarte">Remplir une demande</Button>
         `,
         },
