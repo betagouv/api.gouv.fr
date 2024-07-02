@@ -1,9 +1,9 @@
 ---
-title: Légifrance Bêta
+title: Légifrance
 tagline: Réutilisation des données juridiques disponibles sur le site Légifrance # une phrase maximum
 producer: dila
 is_open: 0 # -1 means API not open
-account_link: https://developer.aife.economie.gouv.fr/component/apiportal/registration
+account_link: https://piste.gouv.fr/registration
 keywords:
   - Journal officiel
   - Codes
@@ -30,9 +30,7 @@ datagouv_uuid:
 last_update: 13/01/2020
 ---
 
-Afin de faciliter la réutilisation des données juridiques, la DILA met à disposition une API via [le portail PISTE](https://developer.aife.economie.gouv.fr/). Cette API est accessible gratuitement, après inscription.
-
-Cette version de l'API est une version bêta. Elle permet de recueillir vos remarques et vos suggestions d’amélioration ; elle pourra donc évoluer pendant toute la durée du test.
+Afin de faciliter la réutilisation des données juridiques, la DILA met à disposition une API via [le portail PISTE](https://piste.gouv.fr). Cette API est accessible gratuitement, après inscription.
 
 Les données juridiques disponibles via l'API sont celles du site Légifrance. 
 Principales fonctionnalités:
