@@ -1,9 +1,9 @@
 ---
-title: Légifrance Bêta
+title: Légifrance
 tagline: Réutilisation des données juridiques disponibles sur le site Légifrance # une phrase maximum
 producer: dila
 is_open: 0 # -1 means API not open
-account_link: https://developer.aife.economie.gouv.fr/component/apiportal/registration
+account_link: https://piste.gouv.fr/registration
 keywords:
   - Journal officiel
   - Codes
@@ -21,7 +21,7 @@ rate_limiting_resume: quota / jeton
 rate_limiting_description: |
   Les appels API sont limités par quotas par jetons d'accès.
 contact_link: retours-legifrance-modernise@dila.gouv.fr
-doc_tech_link: /swaggers/api-legifrance-v2.json
+doc_tech_external: https://piste.gouv.fr/api-catalog-sandbox?filter=legifrance
 themes:
   - Administration & législation
 visits_2019: 0
@@ -30,9 +30,7 @@ datagouv_uuid:
 last_update: 13/01/2020
 ---
 
-Afin de faciliter la réutilisation des données juridiques, la DILA met à disposition une API via [le portail PISTE](https://developer.aife.economie.gouv.fr/). Cette API est accessible gratuitement, après inscription.
-
-Cette version de l'API est une version bêta. Elle permet de recueillir vos remarques et vos suggestions d’amélioration ; elle pourra donc évoluer pendant toute la durée du test.
+Afin de faciliter la réutilisation des données juridiques, la DILA met à disposition une API via [le portail PISTE](https://piste.gouv.fr). Cette API est accessible gratuitement, après inscription.
 
 Les données juridiques disponibles via l'API sont celles du site Légifrance. 
 Principales fonctionnalités:
@@ -54,6 +52,7 @@ L'utilisation de ces données est soumise :
 
 Une documentation technique sur chaque méthode de l'API est disponible sur le portail PISTE (Swagger).
 De la documentation complémentaire est mise à disposition concernant :
-- les tris et filtres disponibles dans les différents fonds  ;
-- des exemples pratiques d'utilisation.
+- [Les tris et filtres disponibles dans les différents fonds](https://www.legifrance.gouv.fr/contenu/pied-de-page/open-data-et-api)  ;
+- [Des exemples pratiques d'utilisation](https://www.legifrance.gouv.fr/contenu/pied-de-page/open-data-et-api) ;
+- Les [définitions principales des termes utilisés dans l'API](https://www.legifrance.gouv.fr/contenu/Media/files/lexique-api-lgf.docx) (exemple : LEGI, NOR, CID, etc.).
 
