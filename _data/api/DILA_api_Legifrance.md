@@ -21,7 +21,7 @@ rate_limiting_resume: quota / jeton
 rate_limiting_description: |
   Les appels API sont limités par quotas par jetons d'accès.
 contact_link: retours-legifrance-modernise@dila.gouv.fr
-doc_tech_link: /swaggers/api-legifrance-v2.json
+doc_tech_external: https://piste.gouv.fr/api-catalog-sandbox?filter=legifrance
 themes:
   - Administration & législation
 visits_2019: 0
@@ -52,6 +52,7 @@ L'utilisation de ces données est soumise :
 
 Une documentation technique sur chaque méthode de l'API est disponible sur le portail PISTE (Swagger).
 De la documentation complémentaire est mise à disposition concernant :
-- les tris et filtres disponibles dans les différents fonds  ;
-- des exemples pratiques d'utilisation.
+- [Les tris et filtres disponibles dans les différents fonds](https://www.legifrance.gouv.fr/contenu/pied-de-page/open-data-et-api)  ;
+- [Des exemples pratiques d'utilisation](https://www.legifrance.gouv.fr/contenu/pied-de-page/open-data-et-api) ;
+- Les [définitions principales des termes utilisés dans l'API](https://www.legifrance.gouv.fr/contenu/Media/files/lexique-api-lgf.docx) (exemple : LEGI, NOR, CID, etc.).
 
