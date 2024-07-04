@@ -24,7 +24,7 @@ content_intro: |
 
 ---
 
-### À quoi sert l'API France Chaleur Urbaine ?
+### À quoi sert l'API Impact CO2 ?
 
 Gratuite, personnalisable, et régulièrement mise à jour elle vous permet d'accéder aux données carbone utilisées sur notre site et dans toutes les ressources Impact CO2. Ces données sont issues des bases de données de l'ADEME : la Base Carbone et la Base Agribalyse.
 
