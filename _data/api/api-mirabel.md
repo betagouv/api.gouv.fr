@@ -1,6 +1,6 @@
 ---
 title: API Mir@bel (revues)
-tagline: Accéder aux contenus de milliers de revues scientifiques
+tagline: Accéder aux contenus de milliers de revues
 producer: sciencespo-lyon
 category: public
 is_open: 1
@@ -33,7 +33,7 @@ Le réseau Mir@bel, piloté par Sciences Po Lyon et un ensemble de partenaires, 
 
 ### A quoi sert l'API Mir@bel ?
 
-L'API Mir@bel référence plus de 13,000 revues scientifiques.
+L'API Mir@bel référence plus de 20,000 revues.
 
 Elle permet de consulter les données de la base de connaissance Mir@bel qui décrit les revues et les contenus en ligne qu'elles proposent.
 
@@ -41,6 +41,7 @@ Elle permet de consulter les données de la base de connaissance Mir@bel qui dé
 - revues professionnelles, 
 - magazines spécialisés, 
 - presse,
+- publications officielles,
 - ...
 
 
