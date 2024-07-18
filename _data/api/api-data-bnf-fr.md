@@ -17,27 +17,38 @@ themes:
   - Culture
 last_update: 25/11/2020
 content_intro: |
-  L'API donne un accès à data.bnf.fr, un projet de la Bibliothèque nationale de France qui agrège les données issues de ses différentes bases et catalogues pour fournir un accès fédéré par auteurs, œuvres, thèmes, lieux et dates.
+  L’API donne un accès aux données de data.bnf.fr, un projet de la Bibliothèque nationale de France qui agrège les données issues de ses différentes bases et catalogues pour permettre une recherche fédérée sur les auteurs, œuvres, thèmes, lieux et dates. 
 
-  La Bibliothèque nationale de France recevant par dépôt légal tous les documents publiés en France, ses collections sont très complètes et reflètent la diversité de la production culturelle française.
+  La Bibliothèque nationale de France recevant par dépôt légal tous les documents publiés en France, ses collections sont très complètes et reflètent la diversité de la production culturelle française. 
+
+  Les données de data.bnf.fr sont enrichies par des alignements avec d'autres données publiées sur le Web, comme Wikidata. Elles sont exprimées selon les standards du web sémantique.
+
 
   ### À quoi sert l’API ?
 
-  L‘API data.bnf.fr permet de :
-
-  - interroger et de récupérer les données de data.bnf.fr
-  - accéder à plusieurs millions de documents, libres de droits, grâce à des liens pointant vers la bibliothèque numérique <External href='/les-api/api_gallica_recherche'>Gallica</External>.
+  L’API Data.bnf.fr permet d’interroger et de récupérer les données de data.bnf.fr, d’accéder à plusieurs millions de documents, libres de droits, grâce à des liens pointant vers la bibliothèque numérique Gallica. 
+  
 ---
 
 ### Volumétrie
 
 Les données de data.bnf.fr sont enrichies par des alignements avec d'autres données publiées sur le Web, comme Wikidata. Elles sont exprimées selon les standards du web sémantique.
 
-Éléments de volumétrie (octobre 2020) :
+Éléments de volumétrie (juin 2024) :
 
-- Plus de 2,3 millions de notices d’auteurs
-- Plus d’1,2 millions de notices d’œuvres
+- Plus de 2,5 millions de notices d’auteurs
+- Plus d’1,9 millions de notices d’œuvres
 - Près de 200 000 notices de sujets
-- Plus de 118 000 notices de lieux
-- Plus de 60 000 notices de spectacles
-- Plus de 348 000 notices de publications périodiques.
+- Plus de 120 000 notices de lieux
+- Plus de 5400 notices de dates
+- Plus de 62 000 notices de spectacles
+- Plus de 515 000 notices de publications périodiques.
+
+### Description des conditions d'accès et de contact
+
+Adresse du Sparql endpoint : https://data.bnf.fr/sparql
+
+L’accès au Sparql endpoint est ouvert à tous, pour tout type d’usage.
+
+Les données de data.bnf.fr sont publiées sous le régime de la licence ouverte de l’État. Elles sont réutilisables sous la seule condition de mentionner leur origine.
+
