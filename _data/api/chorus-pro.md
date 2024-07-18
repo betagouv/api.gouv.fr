@@ -11,7 +11,7 @@ access_page:
     description: |
       La plateforme s’adresse à l’ensemble des fournisseurs de l'Etat, tant privés que publics, afin de leur permettre de transmettre de façon efficace et automatique leurs factures à destination de la sphère publique.
 
-      <Button href="https://developer.aife.economie.gouv.fr/">Faire une demande d'habilitation</Button>
+      <Button href="https://piste.gouv.fr/en/api-catalog-sandbox">Faire une demande d'habilitation</Button>
   - who:
       - Une collectivité
       - Un établissement public
@@ -22,7 +22,7 @@ access_page:
 
       Elle permet de traiter l’ensemble des factures de manière optimisée en réduisant les délais de validation et d’enregistrement.
 
-      <Button href="https://developer.aife.economie.gouv.fr/">Faire une demande d'habilitation</Button>
+      <Button href="https://piste.gouv.fr/en/api-catalog-sandbox">Faire une demande d'habilitation</Button>
   - who:
       - Un particulier
     is_eligible: -1
@@ -110,7 +110,7 @@ Chorus Pro de production est accessible à cette [adresse](http://chorus-pro.gou
 
 L’AIFE a mis en place la plateforme PISTE: Plateforme d’Intermédiation des Services pour la Transformation de l’Etat. Celle-ci mutualise les services API (Application Programming Interface) de l’Etat et de la sphère publique. Autrement dit, cette plateforme a pour vocation de fournir un point d’entrée unique pour invoquer l’ensemble des API mis à disposition par le secteur public. Le catalogue des API accessibles à partir de PISTE couvre notamment la facturation électronique, avec Chorus Pro, mais aussi le Service DUME, Légifrance ou encore Guichet entreprises.
 
-PISTE est accessible à cette [adresse](https://developer.aife.economie.gouv.fr/)
+PISTE est accessible à cette [adresse](https://piste.gouv.fr/en/api-catalog-sandbox)
 
 ### Site de la communauté Chorus Pro
 
