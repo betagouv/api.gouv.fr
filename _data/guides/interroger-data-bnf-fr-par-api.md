@@ -42,9 +42,9 @@ OPTIONAL {
 
 L'API renvoie toutes les éditions connues, avec le lien vers la version numérique dans Gallica, quand elle existe.
 
-## Un autre exemple : la liste de tous les spectacles représentés dans une ville
+## Autre exemple : Lister tous les spectacles représentés dans une ville
 
-De nouveau, copiez-collez la requête et cliquez sur le bouton pour exécuter la requête :
+Dans l'espace de requête, copiez-collez la requête suivante pour lister les spectacles représentés dans la ville de Bordeaux. Puis cliquez sur le bouton triangulaire pour exécuter la requête :
 
 ```sql
 PREFIX schemaorg: <http://schema.org/>
@@ -61,11 +61,11 @@ FILTER (REGEX (?lieu,"Bordeaux"))
 }
 ```
 
-### En savoir plus
+### Description technique
 
 Le modèle de données de data.bnf.fr est présenté dans <External href="https://data.bnf.fr/images/modele_donnees_2018_02.pdf">ce document.</External>
 
-Il repose sur l’organisation conceptuelle des Functional Requirements for Bibliographic Records, qui distingue notamment les œuvres des expressions (une traduction, par exemple) et des manifestations (une édition précise d’un livre, par exemple).
+Il repose sur le modèle conceptuel de référence pour la structuration des données catalographiques en bibliothèque : IFLA LRM (Library Reference Model), défini par la Fédération internationale des associations de bibliothécaires et des bibliothèques (IFLA). Ce modèle  distingue notamment les œuvres des  expressions (une traduction, par exemple) et des manifestations (une édition précise d’un livre, par exemple).
 
 Les vocabulaires et ontologies suivantes sont utilisées :
 
@@ -112,4 +112,4 @@ Ex : ark:/12148/cb140094767
 Les informations portées par un ARK suffixé par #about concernent les entités elles-mêmes, les choses du monde réel.
 Les informations portées par un ARK non suffixé concernent les notices, les descriptions des entités.
 
-Attention : les URI du triplestore sont préfixées `http://`, et non `https://`
+Attention : les URI du triplestore sont : `http://` , et non `https://`
