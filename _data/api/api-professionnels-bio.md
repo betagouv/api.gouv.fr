@@ -58,4 +58,4 @@ Les données mises à disposition sont directement issues des organismes agréé
 
 ## Conditions générales d'utilisation
 
-Les conditions générales d'utilisation sont disponibles [ici en PDF](http://api.gouv.fr/resources/CGU%20Professionnels%20du%20bio.pdf).
+Les conditions générales d'utilisation sont disponibles [ici en PDF](http://api.gouv.fr/resources/CGU%20API%20Professionnels%20du%20bio.pdf).
