@@ -16,7 +16,7 @@ keywords:
   - Embauche
   - Entreprise
   - Recrutement
-contact_link: support@pole-emploi.io
+contact_link: support@francetravail.io
 doc_tech_external: https://francetravail.io/data/api/bonne-boite
 themes:
   - Emploi

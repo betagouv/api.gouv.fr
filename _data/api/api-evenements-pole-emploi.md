@@ -11,7 +11,7 @@ partners:
 keywords:
   - Offres
   - Emploi
-contact_link: support@pole-emploi.io
+contact_link: support@francetravail.io
 doc_tech_external: https://francetravail.io/data/api/evenements-pole-emploi?tabgroup-api=documentation&doc-section=api-doc-section-rechercher-les-salons-en-ligne-en-cours-et-%C3%A0-venir
 themes:
   - Emploi

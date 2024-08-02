@@ -58,7 +58,7 @@ rate_limiting_resume:
 rate_limiting_description: |
 monitoring_link: 
 monitoring_description: |
-contact_link: https://francetravail.io/contact
+contact_link: support@francetravail.io
 doc_tech_external: https://api.gouv.fr/guides/documentation-api-indemnisation
 themes:
   - Particulier

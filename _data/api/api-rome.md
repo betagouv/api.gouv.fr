@@ -16,7 +16,7 @@ keywords:
   - ROME
   - Métiers
   - Mobilité professionnelle
-contact_link: support@pole-emploi.io
+contact_link: support@francetravail.io
 doc_tech_external: https://francetravail.io/data/api/rome
 datagouv_uuid:
   - 58da857388ee384902e505f5

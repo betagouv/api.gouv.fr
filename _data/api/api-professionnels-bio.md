@@ -55,3 +55,7 @@ Voici les données accessibles :
 #### D'où vient la donnée ?
 
 Les données mises à disposition sont directement issues des organismes agréés pour la certification des opérateurs. Elles sont mises à jour lors des contrôles.
+
+## Conditions générales d'utilisation
+
+Les conditions générales d'utilisation sont disponibles [ici en PDF](http://api.gouv.fr/resources/CGU%20Professionnels%20du%20bio.pdf).
