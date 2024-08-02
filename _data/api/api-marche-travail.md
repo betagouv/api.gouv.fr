@@ -17,7 +17,7 @@ keywords:
   - CCMSA
   - Mobilité professionnelle
   - Territoires
-contact_link: support@pole-emploi.io
+contact_link: support@francetravail.io
 doc_tech_external: https://francetravail.io/data/api/marche-travail
 datagouv_uuid:
   - 593156ff88ee38351b503df3

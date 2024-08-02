@@ -2,7 +2,7 @@
 title: API QuiForme
 tagline: Vérifiez si un établissement est habilité à former en récupérant ses certifications Qualiopi et habilitations France compétences
 producer: carif-oref
-contact_link: api-sco-eleve_contacts@education.gouv.fr/TODO
+contact_link: quiforme@intercariforef.org
 partners: # Vous pouvez ajouter ici la liste des co-producteurs de l'API si cela vous paraît cohérent.
 # - insee
 is_open: -1

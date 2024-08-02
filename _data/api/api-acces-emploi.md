@@ -16,7 +16,7 @@ keywords:
   - ROME
   - AFPA
   - Mobilité professionnelle
-contact_link: support@pole-emploi.io
+contact_link: support@francetravail.io
 doc_tech_external: https://francetravail.io/data/api/acces-emploi-demandeurs-emploi?tabgroup-api=documentation&doc-section=api-doc-section-stats-d-acc%C3%A8s-%C3%A0-l-emploi-des-demandeurs-d-emploi-cat%C3%A9gories-a-et-b-%28acc_1%29
 datagouv_uuid:
   - 593156ff88ee38351b503df3

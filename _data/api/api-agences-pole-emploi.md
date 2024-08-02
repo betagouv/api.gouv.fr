@@ -15,7 +15,7 @@ keywords:
   - Point relais
   - Horaires
   - Adresse
-contact_link: support@pole-emploi.io
+contact_link: support@francetravail.io
 doc_tech_external: https://francetravail.io/data/api/referentiel-agences
 themes:
   - Emploi

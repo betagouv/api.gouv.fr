@@ -16,7 +16,7 @@ keywords:
   - Mobilité professionnelle
   - Insertion
   - Formation
-contact_link: support@pole-emploi.io
+contact_link: support@francetravail.io
 doc_tech_external: https://francetravail.io/data/api/sortants-formation-acces-emploi
 datagouv_uuid:
   - 58595d4888ee387bd4c65bb3
