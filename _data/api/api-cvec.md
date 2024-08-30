@@ -21,7 +21,7 @@ themes:
   - Particulier
   - Education
 contact_link: api-boursier@cnous.fr
-doc_tech_link: /swaggers/api-cvec.json
+doc_tech_link: /swaggers/api-cvec-new.json
 visits_2019: 3000
 last_update: 15/04/2022
 ---
