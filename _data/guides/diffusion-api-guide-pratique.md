@@ -115,7 +115,7 @@ L'[API Entreprise](https://api.gouv.fr/les-api/api-entreprise) et l'[API Particu
 
 Pour les API qui demandent une habilitation pour y avoir accès, DataPass permet de dématérialiser les conventions entre les producteurs d'API et les demandeurs. Plusieurs avantages : centraliser les demandes, fluidifier et accélérer le traitement des demandes, et sécuriser les échanges.
 
-[Voir la présentation complète de DataPass](/resources/DataPass_presentation_produit.pdf)
+[Voir la présentation complète de DataPass](/resources/DataPass_presentation_new.pdf)
 
 <details>
   <summary>**Dans le cas des API exposées avec une page dédiée**</summary>

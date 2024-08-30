@@ -1,0 +1,194 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "CVEC",
+    "description": "API controle des attestations",
+    "version": "4.1.24"
+  },
+  "paths": {
+    "/api/attestation/{code}": {
+      "get": {
+        "parameters": [
+          {
+            "name": "code",
+            "in": "path",
+            "description": "n°attestation",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "etudiant",
+            "in": "query",
+            "description": "5 premières lettres du nom de l'étudiant"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Contient l'attestation.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CertificateDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "L'attestation n'a pas été trouvée.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CertificateErrorDto"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Le paramètre code est manquant.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CertificateErrorDto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "servers": [
+        {
+          "url": "https://cvec-ctrl.etudiant.gouv.fr"
+        },
+        {
+          "url": "https://cve-controle-prod.nuonet.fr"
+        },
+        {
+          "url": "https://cve-2020-controle-prod.nuonet.fr"
+        },
+        {
+          "url": "https://cve-2021-controle-prod.nuonet.fr"
+        },
+        {
+          "url": "https://cve-2022-controle-prod.nuonet.fr"
+        },
+        {
+          "url": "https://cve-2023-controle-prod.nuonet.fr"
+        }
+      ]
+    }
+  },
+  "components": {
+    "schemas": {
+      "CertificateErrorDto": {
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "GrantNotificationErrorDto": {
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "libelle": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "CertificateIneDto": {
+        "properties": {
+          "nom": {
+            "type": "string"
+          },
+          "nomUsage": {
+            "type": "string"
+          },
+          "prenom": {
+            "type": "string"
+          },
+          "sexe": {
+            "type": "string"
+          },
+          "date_naissance": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string"
+          },
+          "crous": {
+            "type": "string"
+          },
+          "etat": {
+            "$ref": "#/components/schemas/StateDto"
+          },
+          "exoneration": {
+            "$ref": "#/components/schemas/ExonerationDto"
+          }
+        },
+        "type": "object"
+      },
+      "CertificateDto": {
+        "properties": {
+          "nom": {
+            "type": "string"
+          },
+          "nomUsage": {
+            "type": "string"
+          },
+          "prenom": {
+            "type": "string"
+          },
+          "sexe": {
+            "type": "string"
+          },
+          "date_naissance": {
+            "type": "string"
+          },
+          "ine": {
+            "type": "string"
+          },
+          "crous": {
+            "type": "string"
+          },
+          "etat": {
+            "$ref": "#/components/schemas/StateDto"
+          },
+          "exoneration": {
+            "$ref": "#/components/schemas/ExonerationDto"
+          }
+        },
+        "type": "object"
+      },
+      "StateDto": {
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "libelle": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "ExonerationDto": {
+        "properties": {
+          "active": {
+            "type": "boolean"
+          },
+          "motif": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    }
+  }
+}

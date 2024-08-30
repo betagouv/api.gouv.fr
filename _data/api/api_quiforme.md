@@ -6,7 +6,6 @@ contact_link: quiforme@intercariforef.org
 partners: # Vous pouvez ajouter ici la liste des co-producteurs de l'API si cela vous paraît cohérent.
 # - insee
 is_open: -1
-datapass_link: https://datapass.api.gouv.fr/TODO
 is_france_connected: -1
 access_page:
   - who:
@@ -22,14 +21,12 @@ access_page:
     is_eligible: 0
     description: |
       En tant qu'éditeur de logiciel, vous êtes éligible à intégrer cette API si vous le faîtes pour le compte d'une entité publique (administrations, collectivités, etc.) dont vous êtes le prestataire.
-      Vous pouvez déposer une demande d'habilitation :
-      <Button href="https://datapass.api.gouv.fr/TODO">Demander un accès</Button>
+      Vous pouvez demander l'accès à l'API en écrivant à cette adresse : quiforme@intercariforef.org
   - who:
       - Une administration
     is_eligible: 1
     description: |
-      En tant que collectivité territoriale ou administration, vous êtes éligible à utiliser cette API selon votre cadre juridique. Vous pouvez déposer une demande d'habilitation :
-      <Button href="https://datapass.api.gouv.fr/TODO">Demander un accès</Button>
+      En tant que collectivité territoriale ou administration, vous êtes éligible à utiliser cette API selon votre cadre juridique. Vous pouvez demander l'accès à l'API en écrivant à cette adresse : quiforme@intercariforef.org
 rate_limiting_resume: Volumétrie inconnue
 rate_limiting_description: |
   Le fournisseur de la donnée n'a pas cette information.
