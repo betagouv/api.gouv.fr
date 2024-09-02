@@ -2,6 +2,7 @@ import React, { PropsWithChildren } from 'react';
 
 import { Footer, PreFooter, Header, Meta, DocHeader } from '../components';
 import { Question } from '../uiComponents/question';
+import { AlertFusion } from '../uiComponents/alertFusion';
 
 interface IProps {
   title: string;
@@ -35,6 +36,7 @@ const Page: React.FC<PropsWithChildren<IProps>> = ({
       canonical={canonical}
     />
     {useDocHeader ? <DocHeader /> : <Header headerKey={headerKey || 'home'} />}
+    <AlertFusion/>
     <main>{children}</main>
     <Question />
     {usePreFooter && <PreFooter background={preFooterBackground} />}
