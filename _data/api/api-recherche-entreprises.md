@@ -18,7 +18,7 @@ rate_limiting_resume: 7 appels / seconde
 rate_limiting_description: |
   Actuellement, le nombre d’appels à l’API est limité à 7 appels par seconde
 uptime: 100
-monitoring_link: https://stats.uptimerobot.com/kXzwzfk7BE
+monitoring_link: https://annuaire-entreprises.data.gouv.fr/donnees/api#recherche-entreprise
 monitoring_description: |
   Une supervision du service en temps réel est disponible à cette adresse.
 contact_link: recherche-entreprises@api.gouv.fr
