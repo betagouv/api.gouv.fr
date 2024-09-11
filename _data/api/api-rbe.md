@@ -25,7 +25,6 @@ access_page:
       <Button href="/rechercher-api">Rechercher une autre API</Button>
   - who:
       - Une entreprise
-      - Une administration
     is_eligible: 0
     description: |
       Les personnes éligibles au services sont définies dans les <External href="https://www.legifrance.gouv.fr/codes/id/LEGIARTI000041577735/2020-02-14/">articles L561-2 à L561-4</External> du *Code monétaire et financier* concernant les personnes assujetties aux obligations de lutte contre le blanchiment des capitaux et le financement du terrorisme.
@@ -34,6 +33,17 @@ access_page:
       Une fois le formulaire complété, soumettez votre demande d'habilitation à l'API :
 
       <Button href="mailto:rbe@inpi.fr">Soumettre ma demande</Button>
+  - who:
+      - Une administration
+    is_eligible: 0
+    description: |
+      Les personnes éligibles au services sont définies dans les <External href="https://www.legifrance.gouv.fr/codes/id/LEGIARTI000041577735/2020-02-14/">articles L561-2 à L561-4</External> du *Code monétaire et financier* concernant les personnes assujetties aux obligations de lutte contre le blanchiment des capitaux et le financement du terrorisme.
+
+      **Si vous faites parties des administrations éligibles, deux API, distribuant les mêmes données, sont à votre disposition :** 
+      - **L'API RBE opérée par l'Inpi**. Pour y accéder, vous pouvez devez d'abord remplir une demande en téléchargeant et en complétant <External href='/resources/formulaire_rbe.pdf'>le formulaire suivant</External>.
+      Une fois le formulaire complété, soumettez votre demande d'habilitation à l'API à <a href="mailto:rbe@inpi.fr">rbe@inpi.fr</a>
+      - **L'<a href="https://entreprise.api.gouv.fr/catalogue/inpi/rne/beneficiaires_effectifs">API RBE opérée par API Entreprise</a>**. Le bouquet API Entreprise permet aux administrations d'accéder à de nombreuses données entreprises et associations, dont les bénéficiaires effectifs. _La demande d'accès se fait directement en ligne avec <a href="https://datapass.api.gouv.fr/api-entreprise">Datapass</a>_. 
+
 doc_tech_external: https://www.inpi.fr/sites/default/files/inpi_doc_tech_rbe_api_fevrier_2020_v1.4.pdf
 contact_link: https://www.inpi.fr/fr/contactez-nous
 last_update: 21/10/2020

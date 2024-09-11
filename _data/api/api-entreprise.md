@@ -146,6 +146,10 @@ keywords:
   - Organismes certificateurs
   - Compétences
   - Rénovation énergétique
+  - RBE
+  - bénéficiaire
+  - bénéficiaires effectifs
+  - registre
 rate_limiting_resume: 1000 requêtes/min par IP
 rate_limiting_description: 'Les limites de volumétrie sont détaillées ici :'
 rate_limiting_link: https://entreprise.api.gouv.fr/developpeurs#respecter-la-volum%C3%A9trie
