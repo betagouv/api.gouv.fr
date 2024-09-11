@@ -1,6 +1,6 @@
 ---
-title: API Bénéficiaires effectifs - Bouquet API Entreprise
-tagline: Entités administratives, parmi les données entreprises/associations distribuées par le bouquet API Entreprise, récupérez la liste des bénéficiaires effectifs d'une unité légale inscrite au RNE fournie par l'Inpi.
+title: API Bénéficiaires effectifs - Inpi | Bouquet API Entreprise
+tagline: Entités administratives, parmi les données entreprises/associations distribuées par le bouquet API Entreprise, récupérez la liste Inpi des bénéficiaires effectifs d'une unité légale inscrite au RNE.
 external_site: https://entreprise.api.gouv.fr/catalogue/inpi/rne/beneficiaires_effectifs
 is_open: -1 # -1 means API not open
 datapass_link: https://datapass.api.gouv.fr/api-entreprise
@@ -77,9 +77,9 @@ visits_2019: 12610
 uptime: 100
 last_update: 14/09/2020
 content_intro: |
-  <External href="https://entreprise.api.gouv.fr/catalogue/inpi/rne/beneficiaires_effectifs">L'API bénéficiaires effectifs du bouquet API Entreprise</External> permet aux entités administratives d'accéder à la liste des bénéficiaires effectifs d'une unité légale inscrite au répertoire national des entreprises (RNE).
+  <External href="https://entreprise.api.gouv.fr/catalogue/inpi/rne/beneficiaires_effectifs">L'API bénéficiaires effectifs - Inpi - du bouquet API Entreprise</External> permet aux entités administratives d'accéder à la liste des bénéficiaires effectifs d'une unité légale inscrite au répertoire national des entreprises (RNE).
 
   <Button href="https://entreprise.api.gouv.fr/catalogue/inpi/rne/beneficiaires_effectifs">Consulter l'API RBE du bouquet API Entreprise</Button>
 
 ---
-Todo
+
