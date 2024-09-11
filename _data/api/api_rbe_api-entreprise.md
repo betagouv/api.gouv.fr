@@ -16,13 +16,15 @@ access_page:
       - Une collectivité ou une administration
     is_eligible: 1
     description: |
+      **Si vous avez besoin des bénéficiaires effectifs et d'autres données entreprise/assocation :**
       L’API Entreprise vous permet d’accéder directement aux données administratives des entreprises et des associations pour faciliter leurs démarches (demandes d’aides, marchés publics, ...) dont les données des bénéficiaires effectifs issues de l'Inpi.
-
-      Pour vérifier que l’API Entreprise vous permet d’accéder aux données dont vous avez besoin, consultez nos différents <External href="https://entreprise.api.gouv.fr/cas_usages">cas d'usages</External> (marchés publics, aides et subventions, portail GRU ...) et le <External href="https://entreprise.api.gouv.fr/catalogue">catalogue des API</External>.
 
       <p style="margin-left: 1rem; margin-right: 1rem;font-size: 0.9rem; line-height: 1.5rem;">Conformément aux dispositions de <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367412&dateTexte=&categorieLien=cid">l'article L114-8 du Code des relations entre le public et l'administration</External> vous ne pourrez accéder qu'aux seules informations ou données strictement nécessaires pour traiter une démarche de l'entreprise ou association concernée.</p>
       <br/><br/>
       <Button href='https://datapass.api.gouv.fr/api-entreprise' target='_blank' rel="noreferrer noopener">Déposer une demande</Button>
+
+      **Si vous avez seulement besoin des données bénéficiaires effectifs :** 
+      Vous pouvez demander un accès à l'[API de l'Inpi](https://api.gouv.fr/les-api/api-rbe).
   - who:
       - Une entreprise ou une association
     is_eligible: -1
@@ -32,13 +34,15 @@ access_page:
       - Un organisme "chargé d'une mission ou délégataire de service public" (statut spécifique)
     is_eligible: 1
     description: |
+      **Si vous avez besoin des bénéficiaires effectifs et d'autres données entreprise/assocation :**
       Si votre cadre légal le justifie, l’API Entreprise vous permet d’accéder directement aux données administratives des entreprises et des associations pour faciliter leurs démarches  (demandes d’aides, marchés publics, ...) dont les données des bénéficiaires effectifs issues de l'Inpi.
-
-      Pour vérifier que l’API Entreprise vous permet d’accéder aux données dont vous avez besoin, consultez nos différents <External href="https://entreprise.api.gouv.fr/cas_usages">cas d'usages</External> (marchés publics, aides et subventions, portail GRU ...) et le <External href="https://entreprise.api.gouv.fr/catalogue">catalogue des API</External>.
 
       <p style="margin-left: 1rem; margin-right: 1rem;font-size: 0.9rem; line-height: 1.5rem;">Conformément aux dispositions de <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367412&dateTexte=&categorieLien=cid">l'article L114-8 du Code des relations entre le public et l'administration</External> vous ne pourrez accéder qu'aux seules informations ou données strictement nécessaires pour traiter une démarche de l'entreprise ou association concernée.</p>
       <br/><br/>
       <Button href='https://datapass.api.gouv.fr/api-entreprise' target='_blank' rel="noreferrer noopener">Déposer une demande</Button>
+
+      **Si vous avez seulement besoin des données bénéficiaires effectifs :** 
+      Vous pouvez demander un accès à l'[API de l'Inpi](https://api.gouv.fr/les-api/api-rbe).
   - who:
       - Un éditeur de logiciel
     is_eligible: 0
