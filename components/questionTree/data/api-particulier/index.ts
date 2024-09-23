@@ -25,7 +25,7 @@ const apiParticulierQuestions = {
         choices: [
           '**Votre éditeur.**<br/>Rien à coder, vous utilisez une solution clé en main proposée par un éditeur.',
         ],
-        next: pathEligible,
+        answer: `**<span role='img' aria-label='émoji ok'>👍</span> Vous êtes probablement éligible, pour vérifier si votre éditeur intègre API Particulier vous pouvez <Button href='https://datapass.api.gouv.fr/api-particulier' target='_blank' rel="noreferrer noopener">déposer une demande</Button>`,
       },
       {
         choices: [
