@@ -28,8 +28,14 @@ titles.each do |title|
   #   puts ";#{title}"
   # end]
 
-  if data
-    puts "https://api.gouv.fr/les-api/#{data[:api_id]};#{title}"
+  # if data
+  #   puts "https://api.gouv.fr/les-api/#{data[:api_id]};#{title}"
+  # else
+  #   puts ";#{title}"
+  # end
+
+  if data['access_page']
+    puts "https://api.gouv.fr/les-api/#{data[:api_id]}/demande-acces;#{title}"
   else
     puts ";#{title}"
   end
