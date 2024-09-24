@@ -125,8 +125,6 @@ const QuestionTree: React.FC<{ tree: string; question: string }> = ({
 // Category name for analytics should be the API title
 const formatCategoryName = (title: string | undefined) => {
   switch (title) {
-    case 'api-entreprise':
-      return 'API Entreprise';
     case 'france-connected-api':
       return 'FranceConnect et les API FranceConnectées';
     case 'api-particulier':
