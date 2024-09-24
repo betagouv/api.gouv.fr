@@ -1,7 +1,7 @@
 ---
 title: API Annuaire de l’administration - compétence géographique des services locaux
 tagline: Recherchez et consultez les administrations et services publics locaux de proximité.
-is_open: 1 # 1 means API is fully open
+is_open: 1
 keywords:
   - DILA
   - Annuaire
