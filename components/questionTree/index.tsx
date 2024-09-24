@@ -127,8 +127,6 @@ const formatCategoryName = (title: string | undefined) => {
   switch (title) {
     case 'france-connected-api':
       return 'FranceConnect et les API FranceConnectées';
-    case 'api-particulier':
-      return 'API Particulier';
     case 'formulaire-unique':
       return 'Formulaire Unique'
     default:
