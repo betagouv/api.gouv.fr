@@ -3,7 +3,6 @@ title: MonComptePro
 tagline: Identifiez les utilisateurs professionnels du privé ou du public
 external_site: https://moncomptepro.beta.gouv.fr/partenaire
 is_open: -1 # -1 means API not open
-datapass_link: https://moncomptepro.beta.gouv.fr/partenaire
 access_page:
   - who:
       - Un particulier
