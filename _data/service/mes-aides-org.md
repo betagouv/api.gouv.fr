@@ -5,7 +5,6 @@ description: Simulez vos droits aux aides sociales en ligne
 screenshot: mes-aides-org.jpg
 api:
   - OpenFisca
-  - Annuaire des établissements publics de l'administration
   - API Découpage Administratif - (API Geo)
 ---
 

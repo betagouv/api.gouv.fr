@@ -4,7 +4,6 @@ link: https://camino.beta.gouv.fr
 description: Le cadastre minier numérique ouvert
 api:
   - API Sirene
-  - Annuaire des établissements publics de l'administration
   - API Camino
 screenshot: ecran_camino.jpg
 ---
