@@ -70,5 +70,5 @@ L’API Annuaire de l’administration : compétence géographique des services 
 
 ### Conditions d’utilisation
 
-L’API Annuaire de l’Administration : compétence géographique des servicces locaux est utilisable gratuitement.
-[Réutilisation des données](https://www.etalab.gouv.fr/wp-content/uploads/2017/04/ETALAB-Licence-Ouverte-v2.0.pdf) et [Avertissement sur les données personnelles](https://echanges.dila.gouv.fr/OPENDATA/AVERTISSEMENT-Donnees_a_caractere_personnel.pdf) :  voir fiches [Référentiel de l’organisation administrative de l’Etat](https://echanges.dila.gouv.fr/OPENDATA/RefOrgaAdminEtat/Documentation/DILA_RefOrgaAdminEtat_Presentation_20231205.pdf) et [Base de données locales](https://echanges.dila.gouv.fr/OPENDATA/Base_donn%C3%A9es_locales/DILA_BASE_DONNEES_LOCALES_SERVICE-PUBLIC_FR_Presentation_20231205.pdf) du site Service-public.fr.
+L’API Annuaire de l’Administration : compétence géographique des services locaux est utilisable gratuitement.
+[Réutilisation des données](https://www.etalab.gouv.fr/wp-content/uploads/2017/04/ETALAB-Licence-Ouverte-v2.0.pdf) et [Avertissement sur les données personnelles](https://echanges.dila.gouv.fr/OPENDATA/AVERTISSEMENT-Donnees_a_caractere_personnel.pdf) : voir fiche [Base de données locales](https://echanges.dila.gouv.fr/OPENDATA/Base_donn%c3%a9es_locales/DILA_BASE_DONNEES_LOCALES_SERVICE-PUBLIC_FR_Presentation_20240805.pdf) du site Service-public.fr.
