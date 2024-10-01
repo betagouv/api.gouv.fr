@@ -1,9 +1,9 @@
 ---
 title: API data·inclusion
 tagline: data·inclusion facilite et accélère le partage des données entre les acteurs de l'insertion en mutualisant l’effort de mise à jour et de recensement entre les différents services numériques.
-is_open: 0 # 0 means API require an account
-account_link: https://www.data.inclusion.beta.gouv.fr/api/conditions-generales-dutilisation-de-lapi
-external_site: https://www.data.inclusion.beta.gouv.fr
+is_open: 0 # 0 means the API requires an account
+account_link: https://data.inclusion.gouv.fr/api/conditions-generales-dutilisation-de-lapi
+external_site: https://data.inclusion.gouv.fr
 datagouv_uuid:
   - 6233723c2c1e4a54af2f6b2d
 partners:
@@ -20,15 +20,13 @@ keywords:
   - Sociale
   - Subvention
 contact_link: https://tally.so/r/w7N6Zz
-doc_tech_link: https://api.data.inclusion.beta.gouv.fr/openapi.json
-doc_tech_external: https://api.data.inclusion.beta.gouv.fr/api/v0/docs
+doc_tech_link: https://api.data.inclusion.gouv.fr/openapi.json
+doc_tech_external: https://api.data.inclusion.gouv.fr/api/v0/docs
 stats_detail_resume: Accédez au suivi des consommations des API
 stats_detail_description: Tableau de bord public disponible ci-dessous
-stats_detail_link: http://metabase.data.inclusion.beta.gouv.fr/public/dashboard/a53c0d36-3467-41d9-876e-973311604ae2
-#monitoring_link: https://stats.uptimerobot.com/kXzwzfk7BE
-#monitoring_description: |
-#  Une supervision du service en temps réel est disponible à cette adresse.
-#uptime: 99.96
+stats_detail_link: https://metabase.data.inclusion.gouv.fr/public/dashboard/a53c0d36-3467-41d9-876e-973311604ae2
+monitoring_link: https://updown.io/bcpz
+monitoring_description: Une supervision du service en temps réel est disponible à cette adresse.
 themes:
   - Administration
   - Emploi
@@ -36,9 +34,9 @@ themes:
 content_intro: |
   L'API data·inclusion permet de mettre en œuvre le principe « Dites-le-nous une fois », en application de [l’article L114-8 du Code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045213315)
 
-  L’équipe data·inclusion propose le traitement et l’analyse des jeux de données multi sources en un seul et unique patrimoine commun disponible publiquement 👉 [Accéder à notre site](https://www.data.inclusion.beta.gouv.fr/)
+  L’équipe data·inclusion propose le traitement et l’analyse des jeux de données multi sources en un seul et unique patrimoine commun disponible publiquement 👉 [Accéder à notre site](https://data.inclusion.gouv.fr/)
 
-last_update: 13/03/2024
+last_update: 01/10/2024
 ---
 
 ### À quoi sert l'API data.inclusion  ?
