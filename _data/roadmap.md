@@ -517,4 +517,12 @@
    - type: ADD_API
      what: Ma Cantine, par la DINUM
      path: /les-api/api-ma-cantine
+  9:
+   - type: ADD_API
+     what: Annuaire Administration - Compétence Géographique des Services Locaux, par la DILA
+     path: /les-api/api-annuaire-administration-competence-geographique-services-locaux
+  10:
+   - type: ADD_API
+     what: ALN - Aménagement Logement Nature, par la DGALN 
+     path: /les-api/api-aln
 ---

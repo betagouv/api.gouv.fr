@@ -44,7 +44,7 @@ last_update: 26/09/2024
 
   ### Quelles sont les données disponibles dans cette API ?
 
-  L'API peut être utilisée poour récupérer les informations liées:
+  L'API peut être utilisée pour récupérer les informations liées:
 
   - Aux communes et aux référentiels et décrets auxquelles elles sont soumises (exemple: Trait de Cote, Loi Montagne, Loi Littoral...).
   - Aux documents d'urbanisme.
