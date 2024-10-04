@@ -3,7 +3,7 @@ title: Webstat # nom commercial de l'API
 tagline: Accédez aux séries économiques de la Banque de France # une phrase maximum
 producer: banque-de-france
 is_open: 0 # -1 means API not open
-account_link: https://developer.webstat.banque-france.fr/user/register # URL d'une page de demande d'habilitation si l'API est à accès restreint
+account_link: https://webstat.banque-france.fr/signup/ # URL d'une page de demande d'habilitation si l'API est à accès restreint
 partners: # liste de co-producteurs de l'API
   - BCE (ECB)
   - FMI (IMF)
@@ -19,8 +19,8 @@ keywords: # utilisés pour la recherche
 rate_limiting_resume: 5 appels / seconde / jeton
 rate_limiting_description: |
   L'API est disponible à hauteur de 5 appels par secondes et par jetons d'accès.
-contact_link: https://developer.webstat.banque-france.fr/contact
-doc_tech_link: https://developer.webstat.banque-france.fr/ibm_apim/swaggerjson/d2Vic3RhdC1iYW5xdWUtZGUtZnJhbmNlLWZyX3YxOjEuMC4wXzQ3MDE%2C
+contact_link: support-technique-webstat@banque-france.fr
+doc_tech_external: https://webstat.banque-france.fr/fr/pages/guide-migration-api/
 themes:
   - Administration & législation
 visits_2019: 8
