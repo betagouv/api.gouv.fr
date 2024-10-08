@@ -1,5 +1,5 @@
 ---
-title: API Statut étudiant
+title: API Statut étudiant | Bouquet API Particulier
 tagline: Entités administratives, simplifiez les démarches des étudiants en vérifiant pour eux s'ils sont inscrits dans un établissement de l'enseignement supérieur
 producer: mesri
 partners:

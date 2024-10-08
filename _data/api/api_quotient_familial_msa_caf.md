@@ -1,5 +1,5 @@
 ---
-title: API Quotient familial MSA & CAF # 📍 Nom commercial de l'API, privilégier un nom court.
+title: API Quotient familial MSA & CAF | Bouquet API Particulier # 📍 Nom commercial de l'API, privilégier un nom court.
 tagline: Entités administratives, simplifiez les démarches des particuliers en récupérant pour eux leur quotient familial # 📍 Une phrase pour résumer le service rendu par l'API. Si votre API est uniquement accessible à certaines organisation, spécifiez-le dès maintenant.
 producer: cnaf-msa # 📍 Identifiant du fournisseur de la donnée trouvable ou ajoutable dans le dossier `api_gouv/_data/producteurs`, pour en savoir plus consulter le read.me.
 contact_link: api-particulier@api.gouv.fr # 📍 Adresse e-mail que les usagers peuvent utiliser pour vous contacter.
