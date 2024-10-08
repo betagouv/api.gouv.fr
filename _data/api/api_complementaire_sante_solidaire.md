@@ -1,5 +1,5 @@
 ---
-title: API Complémentaire santé solidaire # 📍 Nom commercial de l'API, privilégier un nom court.
+title: API Complémentaire santé solidaire | Bouquet API Particulier # 📍 Nom commercial de l'API, privilégier un nom court.
 tagline: Entités administratives, simplifiez les démarches des bénéficiaires de la complémentaire santé solidaire en vérifiant leur statut # 📍 Une phrase pour résumer le service rendu par l'API. Si votre API est uniquement accessible à certaines organisation, spécifiez-le dès maintenant.
 producer: securite_sociale # 📍 Identifiant du fournisseur de la donnée trouvable ou ajoutable dans le dossier `api_gouv/_data/producteurs`, pour en savoir plus consulter le read.me.
 contact_link: api-particulier@api.gouv.fr # 📍 Adresse e-mail que les usagers peuvent utiliser pour vous contacter.
