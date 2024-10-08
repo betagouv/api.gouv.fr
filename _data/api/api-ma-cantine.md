@@ -46,13 +46,15 @@ themes:
 
 content_intro: |
   
-  L'API s'adresse aux éditeurs de logiciel de la restauration collective.
+L'API "approvisionnement" Egalim s'adresse aux éditeurs de logiciel de la restauration collective.
   
-  L'API permet aux gestionnaires de cantines de :
+Cette API permet aux gestionnaires de cantines d'envoyer depuis leur logiciel tiers leurs données d'approvisionnements au format détaillé, à la fréquence de leurs choix, dans le but de réaliser leur déclaration annuelle.
 
-  - enregistrer une nouvelle cantine
-  - effectuer leur bilan annuel du suivi des mesures Egalim (suivi bio, SIQO, repas végétariens...)
-  - télédéclarer leurs données
+Lorsque les données sont envoyées, celles-ci s'incrémentent dans le bilan de l'année concernée, pour la cantine concerné. Cela permet aux gestionnaires de visualiser ses objectifs Egalim sur le bio et les produits de qualité. Également, ces taux sont directement publié sur sa cantine en ligne afin que ses convives puissent consulter ces informations. 
+
+Pour rappel, la déclaration de ses approvisionnements et sa communication sont obligatoires. 
+
+Enfin, pour réaliser la synchronisation entre le logiciel tiers et l'établissement référencé sur ma cantine, cela se fait via le numéro SIRET. 
 
 
 contact_link: contact@egalim.beta.gouv.fr
