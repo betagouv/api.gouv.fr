@@ -28,7 +28,7 @@ Une fois implémenté par l'administration, il permet non seulement de garantir 
 
 ### 🏛️ Connecter des professionnels
 
-Certaines applications veulent pouvoir identifier des professionnels, que ce soit par exemple pour des démarches, du logiciel bureatique, des accès à des données.
+Certaines applications veulent pouvoir identifier des professionnels, que ce soit par exemple pour des démarches, du logiciel bureautique, des accès à des données.
 
 Plutôt que de demander des justificatifs et de les vérifier manuellement, ProConnect permet d'**obtenir l'identité de la structure** : Numéro SIRET, code Commune (COG), Code d'activité (NAF), etc... et de **vérifier automatiquement l'adresse e-mail** (correspondance du nom de domaine et vérification de la réception des e-mails).
 

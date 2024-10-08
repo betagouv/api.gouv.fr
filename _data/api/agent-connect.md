@@ -1,6 +1,6 @@
 ---
 title: ProConnect
-tagline: Le solution officielle qui vous identifie en tant que .
+tagline: Le solution officielle qui vous identifie en tant que professionnel.
 external_site: https://proconnect.gouv.fr/
 is_open: -1 # -1 means API not open
 datapass_link: https://datapass.api.gouv.fr/agent-connect-fs
@@ -60,7 +60,7 @@ Les organisations partenaires fournissent des identités qui permettent aux agen
 
 ### Les données disponibles via l'API
 
-Utiliser l'API ProCOnnect pour identifier les agents utilisateurs de votre site permet d'accéder à **l'identité pivot**.
+Utiliser l'API ProConnect pour identifier les agents utilisateurs de votre site permet d'accéder à **l'identité pivot**.
 
 | Nom                       | Valeur                   |Caractère                |Description                                 |
 | ------------------------- | -------------------------|-------------------------|--------------------------------------------|
