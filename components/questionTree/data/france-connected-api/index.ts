@@ -41,13 +41,13 @@ const isQuestionsTree = {
     choiceTree: [
       {
         choices: ['Fournisseur de services'],
-        answer: `Si vous souhaitez intégrer le bouton AgentConnect dans votre service, pouvez remplir cette demande :
+        answer: `Si vous souhaitez intégrer le bouton ProConnect dans votre service, pouvez remplir cette demande :
         <Button href="https://datapass.api.gouv.fr/agent-connect-fs">Remplir une demande</Button>
         `,
       },
       {
         choices: ['Fournisseur d‘identité'],
-        answer: `Si vous souhaitez contribuer à AgentConnect en fournissant des données d'identité, vous pouvez remplir cette demande :
+        answer: `Si vous souhaitez contribuer à ProConnect en fournissant des données d'identité, vous pouvez remplir cette demande :
         <br/>
         <Button href="https://datapass.api.gouv.fr/agent-connect-fi">Remplir une demande</Button>
         `,

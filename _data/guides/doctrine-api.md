@@ -72,12 +72,11 @@ L’accès aux API à accès restreint se fait par demande du réutilisateur (ad
 
 Les API peuvent s’appuyer sur un mécanisme d’authentification de l’utilisateur final assurant une gestion des droits au sein de la plateforme qui les fournit. Les dispositifs d’authentification des citoyens, des agents ou des personnes morales conçus par les pouvoirs publics pourront être utilisés, en particulier lorsque le consentement de l’utilisateur est nécessaire pour faire circuler la donnée :
 
-- Pour les personnes physiques : FranceConnect, AgentConnect, EduConnect et MonComptePro
-- Pour les personnes morales : ProConnect
+- Pour les personnes physiques : FranceConnect, ProConnect, EduConnect
 
 #### Recommandation 4
 
-Si le droit d’accès n’est pas préétabli, le processus de demande se fait de la manière la plus simple possible pour le réutilisateur. 
+Si le droit d’accès n’est pas préétabli, le processus de demande se fait de la manière la plus simple possible pour le réutilisateur.
 
 Dans le cadre de demandes d’accès prévues par la loi et si le demandeur est éligible, une réponse sera transmise aux réutilisateurs **dans un délai recommandé de 15 jours calendaires.** Le code des relations entre le public et l’administration prévoit un délai légal maximum de 30 jours pour répondre à une demande [(article R311-13)](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000031370409).
 
@@ -106,7 +105,7 @@ Pour les API ouvertes, le bac à sable potentiel est accessible au grand public,
 
 Les données et services sont exposés selon des standards techniques communément partagés et adoptés.
 
-En 2022, le principe d’architecture et d’encodage le plus connu et pratiqué est le **standard REST Json** pour les API synchrones. 
+En 2022, le principe d’architecture et d’encodage le plus connu et pratiqué est le **standard REST Json** pour les API synchrones.
 Il est utilisé par exemple pour les spécifications du standard OpenAPI (https://spec.openapis.org/oas/v3.1.0) ou les standards "API" de l'OGC (https://ogcapi.ogc.org). Concernant les API asynchrones, le principe AsyncAPI est le plus répandu.
 
 > ***👍 Bonne pratique :*** *L’approche « contract first », par opposition à l’approche « code first », est recommandée dans le développement de nouvelles interfaces car elle permet de les stabiliser et de faire travailler plusieurs équipes en parallèle au sein d’une même architecture.*
@@ -121,7 +120,7 @@ Les développements Agile ou nécessitant une évolution prévisible seront rend
 
 #### Recommandation 8
 
-**Ces périodes de validité de l’interface sont explicitement présentées aux réutilisateurs dans la documentation.** Les modifications prévisibles s’accompagneront de l’actualisation préalable des informations descriptives intégrant des liens vers des communications et guides permettant aux réutilisateurs d’anticiper les évolutions. 
+**Ces périodes de validité de l’interface sont explicitement présentées aux réutilisateurs dans la documentation.** Les modifications prévisibles s’accompagneront de l’actualisation préalable des informations descriptives intégrant des liens vers des communications et guides permettant aux réutilisateurs d’anticiper les évolutions.
 
 Les réutilisateurs pourront basculer durant une période définie et communiquée sur la version modifiée de l’interface. Durant ce laps de temps, deux interfaces cohabiteront, la version précédente dépréciée et la nouvelle version.
 
@@ -199,6 +198,6 @@ Les données ainsi que les API sont mises à disposition gratuitement, pour les 
 
 > 💡 ***Exemple :*** *Dans le cas où des usages nécessiteraient une qualité de service au-dessus de ce que la multitude d’utilisateurs a couramment besoin, comme par exemple une bande passante élevée pour de la donnée temps-réel volumineuse desservie sur quelques organismes, il sera possible d’organiser un système freemium avec une égalité d’accès à des APIs par défaut et des APIs faisant l’objet de redevances pour les usages les plus exigeants.*
 
-## Vous souhaitez distribuer une API ? 
+## Vous souhaitez distribuer une API ?
 
 <Button href="/guides/diffusion-api-guide-pratique">Accéder au guide pratique</Button>

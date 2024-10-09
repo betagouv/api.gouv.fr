@@ -8,10 +8,9 @@ publish: true # this page will appear on /guides page
 api:
   - API Pro Santé Connect
   - FranceConnect et les API FranceConnectées
-  - AgentConnect
+  - ProConnect
   - API Statut Etudiant
   - API Statut étudiant boursier
-  - MonComptePro
 ---
 
 ## Dans quel cas l'authentification des personnes ou des organisations est nécessaire ?
@@ -27,34 +26,27 @@ Une fois implémenté par l'administration, il permet non seulement de garantir 
 
 [🔎 En savoir plus sur FranceConnect les API FranceConnectées](/les-api/franceconnect)
 
-### 🏛️ Démarches administratives des entreprises et des associations
+### 🏛️ Connecter des professionnels
 
-Les entreprises et les associations doivent également s'authentifier auprès de l'administration, par exemple dans le cadre de demandes d'aides ou de subventions.
+Certaines applications veulent pouvoir identifier des professionnels, que ce soit par exemple pour des démarches, du logiciel bureautique, des accès à des données.
 
-Plutôt que de demander des justificatifs et de les vérifier manuellement, MonComptePro permet d'**obtenir l'identité de la structure** : Numéro SIRET, code Commune (COG), Code d'activité (NAF), etc... et de **vérifier automatiquement l'adresse e-mail** (correspondance du nom de domaine et vérification de la réception des e-mails).
+Plutôt que de demander des justificatifs et de les vérifier manuellement, ProConnect permet d'**obtenir l'identité de la structure** : Numéro SIRET, code Commune (COG), Code d'activité (NAF), etc... et de **vérifier automatiquement l'adresse e-mail** (correspondance du nom de domaine et vérification de la réception des e-mails).
 
-### 🔐 Accès à des données ou des logiciels
+- [ProConnect](/les-api/agent-connect) pour les professionnels,
+- [Pro Santé Connect](/les-api/api-pro-sante-connect) pour les professionnels de la sphère sanitaire et sociale
 
-Certains logiciels et services en ligne sont réservés aux agents de l’État, d'autres sont accessibles uniquement aux professionnels de la santé. Lors de la création de compte pour accéder à ces applications, il est possible d'authentifier les utilisateurs de manière sécurisée :
-
-- [AgentConnect](/les-api/agent-connect) pour les agents de l'État,
-- [Pro Santé Connect](/les-api/api-pro-sante-connect) pour les professionnels de la sphère sanitaire et sociale,
-- [MonComptePro](https://moncomptepro.beta.gouv.fr/partenaire) pour les agents l'État et l’ensemble des professionnels.
 
 ## Quelles API utiliser pour authentifier des personnes ou des organisations ?
 
-| Population                             | FranceConnect | AgentConnect | MonComptePro | ProSantéConnect |
-|----------------------------------------|---------------|--------------|--------------|-----------------|
-| Particuliers                           | ✅             | ❌            | ❌            | ❌               |
-| Professionnels                         | ❌             | ✅            | ✅            | ✅               |
-| Professionnels de la santé             | ❌             | ❌            | ❌            | ✅               |
-| Entreprises                            | ❌             | ❌            | ✅            | ❌               |
-| Agents de l'administration centrale    | ❌             | ✅            | ✅            | ❌               |
-| Agents des collectivités territoriales | ❌             | ✅            | ✅            | ❌               |
+| Population                             | FranceConnect | ProConnect | ProSantéConnect |
+|----------------------------------------|---------------|--------------|-----------------|
+| Particuliers                           | ✅             | ❌           | ❌               |
+| Professionnels                         | ❌             | ✅            | ✅               |
+| Professionnels de la santé             | ❌             | ✅            | ✅               |
+| Entreprises                            | ❌             | ✅            | ❌               |
+| Agents de l'administration centrale    | ❌             | ✅            | ❌               |
+| Agents des collectivités territoriales | ❌             | ✅            | ❌               |
 
-## Quid de ProConnect ?
-
-ProConnect ne permet pas d’authentifier les personnes. Il permet de certifier qu’une personne est bien un dirigeant. [Plus d’info](https://proconnect.gouv.fr/).
 
 ## Comment accéder aux API ?
 
@@ -62,8 +54,6 @@ Les API d’authentification sont réservées aux administrations et à leurs é
 
 #### [🇫🇷 API FranceConnect](/les-api/franceconnect)
 
-#### [🏛️ API Agent Connect](/les-api/agent-connect)
+#### [🏛️ API ProConnect](/les-api/agent-connect)
 
 #### [🏥 API Pro Santé Connect](/les-api/api-pro-sante-connect)
-
-#### [🏢 API MonComptePro](/les-api/moncomptepro)
