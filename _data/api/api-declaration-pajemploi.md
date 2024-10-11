@@ -19,7 +19,7 @@ access_page:
       - Attestation fiscale
       - Attestation sociale
 
-      <Button href="https://portailapi.urssaf.fr/fr/catalogue-api/prd/15f3effb-abd3-4e6f-acac-e7b6ad584c30/souscription-api-publique">Remplir une demande</Button>
+      <Button href="https://portailapi.urssaf.fr/fr/catalogue-api">Remplir une demande</Button>
   - who:
       - Un editeur de logiciel de paie
       - Autres activités
