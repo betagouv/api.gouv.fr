@@ -48,7 +48,7 @@ themes:
   - Particulier
   - Education
 contact_link: support-statutetudiant@renater.fr
-doc_tech_link: /swaggers/api-statut-etudiant-ecriture.json
+doc_tech_link: /swaggers/StatutEtudiant-POST-inscription-v4-complet.json
 visits_2019: 4000
 last_update: 25/01/2022
 ---
@@ -70,10 +70,14 @@ Seuls les étudiants dont les établissements transmettent leurs données pourro
 
 | Donnée                                                  | Description                                                              |
 | ------------------------------------------------------- | ------------------------------------------------------------------------ |
-| INE                                                     | Identifiant National étudiant                                            |
-| Date de naissance                                       | Date de naissance de l'étudiant                                          |
-| Code commune                                            | Code postal de la commune de l'établissement                             |
-| Régime                                                  | Formation initiale / formation continue                                  |
-| Statut                                                  | Exemple : admis                                                          |
-| Date de début                                           | Date de début de l’inscription. Exemple : 2021-09-01                     |
-| Date de fin                                             | Date de fin de l’inscription. Exemple : 2022-08-31                       |
+| ine                                                     | Identifiant National étudiant                                            |
+| dateNaissance                                       | Date de naissance de l'étudiant                                          |
+| codeCommne                                            | Code postal de la commune de l'établissement                             |
+| regime                                                  | Formation initiale / formation continue                                  |
+| statut                                                  | Exemple : admis                                                          |
+| dateDebutInscription                                           | Date de début de l’inscription. Exemple : 2021-09-01                     |
+| dateFinInscription                                             | Date de fin de l’inscription. Exemple : 2022-08-31                       
+| uai                                                  | Identifiant de l'établissement                                                          |
+| cursus                                           | L = Licence, M = Master, D = Doctorat (Par défaut : non renseigné)                      |
+| diplome                                             | Code diplôme SISE ou code MEFSTAT11 (pour lycées)                      
+| niveauDiplome                                                  | Niveau d'année dans le diplôme                                                          |
