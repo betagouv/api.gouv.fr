@@ -1,5 +1,5 @@
 ---
-title: API Statut étudiant boursier
+title: API Statut étudiant boursier | Bouquet API Particulier
 tagline:  Entités administratives, simplifiez les démarches des étudiants boursiers en vérifiant pour eux leur statut boursier et leur échelon de bourse.
 producer: cnous
 partners:
