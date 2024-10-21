@@ -1,7 +1,7 @@
 ---
 title: API Ma Sécurité
 tagline: Publier des informations et actualités sur l'application Ma Sécurité
-producer: stsi
+producer: anfsi
 partners:
   - minint 
 category: public
