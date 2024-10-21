@@ -73,7 +73,7 @@ Seuls les étudiants dont les établissements transmettent leurs données pourro
 | ine                                                     | Identifiant National étudiant                                            |
 | dateNaissance                                       | Date de naissance de l'étudiant                                          |
 | codeCommne                                            | Code postal de la commune de l'établissement                             |
-| regime                                                  | Formation initiale / formation continue                                  |
+| regime                                                  | Formation initiale / formation continue / formation initiale hors apprentissage / reprise d'études non financée sans convention / contrat d'apprentissage / formation continue hors contrat professionnel / contrat de professionnalisation                                  |
 | statut                                                  | Exemple : admis                                                          |
 | dateDebutInscription                                           | Date de début de l’inscription. Exemple : 2021-09-01                     |
 | dateFinInscription                                             | Date de fin de l’inscription. Exemple : 2022-08-31                       
