@@ -7,7 +7,7 @@ noindex: false # this page will appear on Google
 publish: true # this page will appear on /guides page
 api:
   - API de droits à l'Assurance Maladie
-  - FranceConnect et les API FranceConnectées
+  - API FranceConnect
 
 ---
 

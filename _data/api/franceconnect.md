@@ -1,5 +1,5 @@
 ---
-title: FranceConnect et les API FranceConnectées
+title: API FranceConnect
 tagline: Identifier les utilisateurs de votre site internet et accéder à certaines données d'identité certifiées. Accéder à des données supplémentaires via les API FranceConnectées
 external_site: https://franceconnect.gouv.fr/partenaires
 is_open: -1 # -1 means API not open

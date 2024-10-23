@@ -5,7 +5,7 @@ description: Consultez gratuitement le nombre de points que vous avez sur votre 
 screenshot: ecran_pointspermis.png
 noindex: true
 api:
-  - FranceConnect et les API FranceConnectées
+  - API FranceConnect
 ---
 
 Le téléservice [Mes points permis](https://mespoints.permisdeconduire.gouv.fr/) permet de consulter gratuitement le nombre de points que vous avez sur votre permis de conduire.
