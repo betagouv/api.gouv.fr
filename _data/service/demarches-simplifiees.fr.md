@@ -6,7 +6,7 @@ screenshot: demarches-simplifiees.fr.jpg
 noindex: true
 api:
   - API Entreprise
-  - FranceConnect et les API FranceConnectées
+  - API FranceConnect
 ---
 
 demarches-simplifiees.fr est une application entièrement en ligne qui permet à tous les organismes assurant des missions de service public de créer des démarches en quelques minutes et de gérer les demandes des usagers sur une plateforme dédiée.

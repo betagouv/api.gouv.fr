@@ -6,7 +6,7 @@ image: etudiants.png
 noindex: false # this page will appear on Google
 publish: true # this page will appear on /guides page
 api:
-  - FranceConnect et les API FranceConnectées
+  - API FranceConnect
   - API Statut Etudiant
   - API Statut étudiant boursier
   - API contrôle CVEC (contribution de vie étudiante)

@@ -126,7 +126,7 @@ const QuestionTree: React.FC<{ tree: string; question: string }> = ({
 const formatCategoryName = (title: string | undefined) => {
   switch (title) {
     case 'france-connected-api':
-      return 'FranceConnect et les API FranceConnectées';
+      return 'API FranceConnect'
     case 'formulaire-unique':
       return 'Formulaire Unique'
     default:
