@@ -36,7 +36,7 @@ const isQuestionsTree = {
       },
     ],
   },
-  agentConnect: {
+  ProConnect: {
     question: 'Vous êtes...',
     choiceTree: [
       {
