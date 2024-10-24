@@ -75,12 +75,6 @@ last_update: 11/10/2023 # Date de la dernière mise à jour de la doc
 datagouv_uuid: # Si l'API se base sur un jeu de données ouvertes accessibles depuis data.gouv.fr, ajouter l'uuid du jeu de données pour afficher automatiquement un bloc en fin de page référençant le jeu de données.
   - 631f4320d215a236920bd4dd
 content_intro: |
-  <div style="background-color:#FFE9E6; color: #B34000; padding:1rem">
-    <strong>⚠️ Ces informations ne sont plus mises à jour depuis le 06/09/2024.</strong><br>
-    Le site API.gouv.fr va progressivement être fusionné dans le catalogue unique data.gouv.fr. <br>
-    Retrouvez la fiche d'information à jour de cette API sur la nouvelle page API de Data.gouv.fr <a href="TODO" target="_blank" rel="noopener noreferrer">⇢ Consulter la fiche à jour</a>
-  </div>
-
   ### À quoi sert l'API XXX ?
 
   L'<External href="https://URL">API XXX</External> délivre les informations et documents de référence de XXX, informations issues du répertoire XXX et de la base YYY.
