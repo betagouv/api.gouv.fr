@@ -10,7 +10,7 @@ rate_limiting_description: |
 monitoring_description: |
   L'Insee s'engage à une obligation de moyens pour maintenir la disponibilité du service 99,5 % du temps mensuel, apprécié au terme de chaque mois.
 keywords:
-  - INSEE
+  - Insee
   - communes
   - indice
   - séries chronologiques
