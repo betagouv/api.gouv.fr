@@ -56,7 +56,7 @@ monitoring_description: |
   La DGFIP s’engage à ce que le service soit accessible à plus de 98,5% et à communiquer sur les coupures de service ponctuelles qui pourraient survenir.
 themes:
   - Particulier
-contact_link: dtnum.donnees.demande-acces@dgfip.finances.gouv.fr
+contact_link: dtnum.donnees.demande-acces@dgfip.finances.gouv.fr, tapir.dgfip@dgfip.finances.gouv.fr
 visits_2019: 0
 doc_tech_link: /swaggers/api-sfip.json
 content_intro: |
