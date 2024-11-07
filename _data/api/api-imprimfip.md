@@ -39,7 +39,7 @@ rate_limiting_description: |
   Offre de couverture du service : 8h-18h
 themes:
   - Particulier
-contact_link: imprimfip@dgfip.finances.gouv.fr
+contact_link: imprimfip@dgfip.finances.gouv.fr, tapir.dgfip@dgfip.finances.gouv.fr
 visits_2019: 1000
 doc_tech_link: /swaggers/api-imprimfip.json
 content_intro: |
