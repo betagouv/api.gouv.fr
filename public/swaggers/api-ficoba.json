@@ -1,579 +1,51 @@
 {
-  "swagger": "2.0",
-  "info": {
-    "description": "FICOBA API : FICOBA gère les éléments des comptes relatifs aux établissements bancaires situés sur le territoire français.  <br>L'API FICOBA propose diverses ressources (IBAN, SPI, SIRET) qui permettent de restituer les éléments associés à ces ressources.",
-    "version": "v1",
-    "title": "FICOBA_API"
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "FICOBA_API",
+    "description" : "Offres de services REST de l'API FICOBA - Restitutions",
+    "version" : "v2"
   },
-  "host": "10.156.14.25",
-  "basePath": "/ficoba-api/v1",
-  "schemes": ["https", "http"],
-  "paths": {
-    "/recherchesIBAN": {
-      "post": {
-        "tags": ["Recherche par IBAN"],
-        "summary": "Interrogation de FICOBA en fournissant un numéro de compte au format IBAN",
-        "description": "- Cette ressource permet d'interroger FICOBA en fournissant un numéro de compte au format IBAN.\n- La ressource fournit en réponse le(s) comptes(s) associé(s) à cet IBAN.\n- Dans la grande majorité des cas, un seul compte sera retourné. Il est néanmoins possible d'avoir plusieurs comptes associés à un même IBAN dans des cas marginaux.\n- Le schema de restitution est le plus complet. En fonction du profil du demandeur, il est possible que certaines rubriques n'apparaissent pas.",
-        "consumes": ["application/json"],
-        "produces": ["application/json"],
-        "parameters": [
-          {
-            "name": "Authorization",
-            "type": "string",
-            "in": "header",
-            "required": true,
-            "description": "Jeton d'authentification. Header Authorization standard, utilisant un schéma Bearer. Exemple: \"Bearer {token}\""
-          },
-          {
-            "name": "X-Correlation-ID",
-            "type": "string",
-            "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
-            "in": "header",
-            "required": true,
-            "description": "Identifiant de corrélation de la requête (format UUID)"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "description": "JSON d'entrée",
-            "required": true,
-            "schema": { "$ref": "#/definitions/IBAN_Entree" }
+  "servers" : [ {
+    "url" : "/fcb-masrestit/api/v2"
+  } ],
+  "paths" : {
+    "/etatSante" : {
+      "get" : {
+        "tags" : [ "Etat Santé" ],
+        "description" : "Vérifier le statut de l'API",
+        "operationId" : "getInfo",
+        "parameters" : [ {
+          "name" : "X-Correlation-ID",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
           }
-        ],
-        "responses": {
-          "201": {
-            "description": "Demande traitée. Une personne morale peut remplacer une personne physique dans l'objet \"titulaires\".",
-            "schema": { "$ref": "#/definitions/IBAN_Sortie" }
-          },
-          "400": {
-            "description": "Bad Request. La syntaxe de la requête est erronée.",
-            "schema": { "$ref": "#/definitions/Erreur" }
-          },
-          "401": {
-            "description": "Unauthorized. Une authentification est nécessaire pour accéder à la ressource.",
-            "schema": { "$ref": "#/definitions/Erreur" }
-          },
-          "403": {
-            "description": "Forbidden. L'accès à cette ressource est interdit.",
-            "schema": { "$ref": "#/definitions/Erreur" }
-          },
-          "406": {
-            "description": "Not Acceptable. Ressource non disponible dans un format qui respecterait les en-têtes \"Accept\" de la requête.",
-            "schema": { "$ref": "#/definitions/Erreur" }
-          },
-          "408": {
-            "description": "Request Time-out. Temps d'attente d'une réponse du serveur écoulé.",
-            "schema": { "$ref": "#/definitions/Erreur" }
-          },
-          "429": {
-            "description": "Too Many Requests. Le seuil de requêtes envoyées est dépassé.",
-            "schema": { "$ref": "#/definitions/Erreur" }
-          },
-          "500": {
-            "description": "Internal Server Error. Erreur interne du serveur.",
-            "schema": { "$ref": "#/definitions/Erreur" }
-          },
-          "503": {
-            "description": "Service Unavailable. Service temporairement indisponible ou en maintenance.",
-            "schema": { "$ref": "#/definitions/Erreur" }
-          },
-          "509": {
-            "description": "Bandwidth Limit Exceeded. Limite de bande passante dépassée.",
-            "schema": { "$ref": "#/definitions/Erreur" }
+        }, {
+          "name" : "X-Request-ID",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
           }
-        },
-        "x-auth-type": "Application & Application User",
-        "x-throttling-tier": "Unlimited"
-      }
-    },
-    "/recherchesSPI": {
-      "post": {
-        "tags": ["Recherche par SPI"],
-        "summary": "Interrogation de FICOBA en fournissant un numéro fiscal (SPI)",
-        "description": "- Cette ressource permet d'interroger FICOBA en fournissant un numéro fiscal (SPI)\n- La ressource fournit en réponse le(s) comptes(s) associé(s) à ce SPI.\n- Le schema de restitution est le plus complet. En fonction du profil du demandeur, il est possible que certaines rubriques n'apparaissent pas.        ",
-        "consumes": ["application/json"],
-        "produces": ["application/json"],
-        "parameters": [
-          { "$ref": "#/parameters/paramAuthorization" },
-          { "$ref": "#/parameters/paramXCorrelationID" },
-          {
-            "name": "body",
-            "in": "body",
-            "description": "JSON d'entrée. Le SPI doit commencer par 0, 1, 2 ou 3 et doit comporter 13 chiffres",
-            "required": true,
-            "schema": { "$ref": "#/definitions/SPI_Entree" }
-          }
-        ],
-        "responses": {
-          "201": {
-            "description": "Demande traitée. Une personne morale peut remplacer une personne physique dans les objets \"historiqueTitu\" et \"cotitulaires\".",
-            "schema": { "$ref": "#/definitions/SPI_Sortie" }
-          },
-          "400": {
-            "description": "Bad Request. La syntaxe de la requête est erronée.",
-            "schema": { "$ref": "#/definitions/Erreur" }
-          },
-          "401": {
-            "description": "Unauthorized. Une authentification est nécessaire pour accéder à la ressource.",
-            "schema": { "$ref": "#/definitions/Erreur" }
-          },
-          "403": {
-            "description": "Forbidden. L'accès à cette ressource est interdit.",
-            "schema": { "$ref": "#/definitions/Erreur" }
-          },
-          "406": {
-            "description": "Not Acceptable. Ressource non disponible dans un format qui respecterait les en-têtes \"Accept\" de la requête.",
-            "schema": { "$ref": "#/definitions/Erreur" }
-          },
-          "408": {
-            "description": "Request Time-out. Temps d'attente d'une réponse du serveur écoulé.",
-            "schema": { "$ref": "#/definitions/Erreur" }
-          },
-          "429": {
-            "description": "Too Many Requests. Le seuil de requêtes envoyées est dépassé.",
-            "schema": { "$ref": "#/definitions/Erreur" }
-          },
-          "500": {
-            "description": "Internal Server Error. Erreur interne du serveur.",
-            "schema": { "$ref": "#/definitions/Erreur" }
-          },
-          "503": {
-            "description": "Service Unavailable. Service temporairement indisponible ou en maintenance.",
-            "schema": { "$ref": "#/definitions/Erreur" }
-          },
-          "509": {
-            "description": "Bandwidth Limit Exceeded. Limite de bande passante dépassée.",
-            "schema": { "$ref": "#/definitions/Erreur" }
-          }
-        },
-        "x-auth-type": "Application & Application User",
-        "x-throttling-tier": "Unlimited"
-      }
-    },
-    "/recherchesSIRET": {
-      "post": {
-        "tags": ["Recherche par SIRET"],
-        "summary": "Interrogation de FICOBA en fournissant un SIREN ou SIRET",
-        "description": "- Cette ressource permet d'interroger FICOBA en fournissant un SIREN ou un SIRET\n- La ressource fournit en réponse le(s) comptes(s) associé(s) à ce SPI.\n- La recherche doit tenir compte du type de répertoire\n  1 > Répertoire SIRENE ; SIREN (9c) ou SIRET (14c)\n  2 > Répertoire RIDE ; Nouvelle Calédonie (9c ou 10c)\n  3 > Répertoire TAHITI ; Tahiti (9c)\n  \n- Le schema de restitution est le plus complet. En fonction du profil du demandeur, il est possible que certaines rubriques n'apparaissent pas.          ",
-        "consumes": ["application/json"],
-        "produces": ["application/json"],
-        "parameters": [
-          { "$ref": "#/parameters/paramAuthorization" },
-          { "$ref": "#/parameters/paramXCorrelationID" },
-          {
-            "name": "body",
-            "in": "body",
-            "description": "JSON d'entrée",
-            "required": true,
-            "schema": { "$ref": "#/definitions/SIRET_Entree" }
-          }
-        ],
-        "responses": {
-          "201": {
-            "description": "Demande traitée. Une personne morale peut remplacer une personne physique dans les objets \"historiqueTitu\" et \"cotitulaires\".",
-            "schema": { "$ref": "#/definitions/Complet_Sortie" }
-          },
-          "400": {
-            "description": "Bad Request. La syntaxe de la requête est erronée.",
-            "schema": { "$ref": "#/definitions/Erreur" }
-          },
-          "401": {
-            "description": "Unauthorized. Une authentification est nécessaire pour accéder à la ressource.",
-            "schema": { "$ref": "#/definitions/Erreur" }
-          },
-          "403": {
-            "description": "Forbidden. L'accès à cette ressource est interdit.",
-            "schema": { "$ref": "#/definitions/Erreur" }
-          },
-          "406": {
-            "description": "Not Acceptable. Ressource non disponible dans un format qui respecterait les en-têtes \"Accept\" de la requête.",
-            "schema": { "$ref": "#/definitions/Erreur" }
-          },
-          "408": {
-            "description": "Request Time-out. Temps d'attente d'une réponse du serveur écoulé.",
-            "schema": { "$ref": "#/definitions/Erreur" }
-          },
-          "429": {
-            "description": "Too Many Requests. Le seuil de requêtes envoyées est dépassé.",
-            "schema": { "$ref": "#/definitions/Erreur" }
-          },
-          "500": {
-            "description": "Internal Server Error. Erreur interne du serveur.",
-            "schema": { "$ref": "#/definitions/Erreur" }
-          },
-          "503": {
-            "description": "Service Unavailable. Service temporairement indisponible ou en maintenance.",
-            "schema": { "$ref": "#/definitions/Erreur" }
-          },
-          "509": {
-            "description": "Bandwidth Limit Exceeded. Limite de bande passante dépassée.",
-            "schema": { "$ref": "#/definitions/Erreur" }
-          }
-        },
-        "x-auth-type": "Application & Application User",
-        "x-throttling-tier": "Unlimited"
-      }
-    },
-    "/recherchesPersonnePhysique": {
-      "post": {
-        "tags": ["Recherche d'une Personne Physique"],
-        "summary": "Interrogation de FICOBA en fournissant les informations d'une personne physique",
-        "description": "- Cette ressource permet d'interroger FICOBA en fournissant les éléments d'état civil d'une personne physique\n- La ressource s'appuie sur ces éléments afin d'effectuer un rapporchement dans FICOBA et de restituer les éléments associés à la personne de référence identifiée.\n- La recherche sur l'état civil peut être complétée par des éléments liés à l'adresse de la personne (adresse limitée au département et à la commune).\n- Selon le cadre juridique associé au partenaire utilisant la ressource, les éléments restitués peuvent être plus ou moins complets.\n- Pour les codes de département de naissance valorisés à 975, 98 et 99, il est possible de renseigner une date de naissance au format AAAA-mm ou AAAA.",
-        "consumes": ["application/json"],
-        "produces": ["application/json"],
-        "parameters": [
-          { "$ref": "#/parameters/paramAuthorization" },
-          { "$ref": "#/parameters/paramXCorrelationID" },
-          {
-            "name": "body",
-            "in": "body",
-            "description": "JSON d'entrée",
-            "required": true,
-            "schema": { "$ref": "#/definitions/PersonnePhysique_Entree" }
-          }
-        ],
-        "responses": {
-          "201": {
-            "description": "Demande traitée. Une personne morale peut remplacer une personne physique dans les objets \"historiqueTitu\" et \"cotitulaires\".",
-            "schema": { "$ref": "#/definitions/SPI_Sortie" }
-          },
-          "400": {
-            "description": "Bad Request. La syntaxe de la requête est erronée.",
-            "schema": { "$ref": "#/definitions/Erreur" }
-          },
-          "401": {
-            "description": "Unauthorized. Une authentification est nécessaire pour accéder à la ressource.",
-            "schema": { "$ref": "#/definitions/Erreur" }
-          },
-          "403": {
-            "description": "Forbidden. L'accès à cette ressource est interdit.",
-            "schema": { "$ref": "#/definitions/Erreur" }
-          },
-          "406": {
-            "description": "Not Acceptable. Ressource non disponible dans un format qui respecterait les en-têtes \"Accept\" de la requête.",
-            "schema": { "$ref": "#/definitions/Erreur" }
-          },
-          "408": {
-            "description": "Request Time-out. Temps d'attente d'une réponse du serveur écoulé.",
-            "schema": { "$ref": "#/definitions/Erreur" }
-          },
-          "429": {
-            "description": "Too Many Requests. Le seuil de requêtes envoyées est dépassé.",
-            "schema": { "$ref": "#/definitions/Erreur" }
-          },
-          "500": {
-            "description": "Internal Server Error. Erreur interne du serveur.",
-            "schema": { "$ref": "#/definitions/Erreur" }
-          },
-          "503": {
-            "description": "Service Unavailable. Service temporairement indisponible ou en maintenance.",
-            "schema": { "$ref": "#/definitions/Erreur" }
-          },
-          "509": {
-            "description": "Bandwidth Limit Exceeded. Limite de bande passante dépassée.",
-            "schema": { "$ref": "#/definitions/Erreur" }
-          }
-        },
-        "x-auth-type": "Application & Application User",
-        "x-throttling-tier": "Unlimited"
-      }
-    },
-    "/recherchesPersonneMorale": {
-      "post": {
-        "tags": ["Recherche d'une Personne Morale"],
-        "summary": "Interrogation de FICOBA en fournissant les informations d'une personne morale",
-        "description": "- Cette ressource permet d'interroger FICOBA en fournissant les éléments d'état civil d'une personne morale\n- La ressource s'appuie sur ces éléments afin d'effectuer un rapporchement dans FICOBA et de restituer les éléments associés à la personne de référence identifiée.\n- La recherche sur la raison sociale peut être complétée par des éléments liés à l'adresse de la personne (adresse limitée au département et à la commune).\n- Selon le cadre juridique associé au partenaire utilisant la ressource, les éléments restitués peuvent être plus ou moins complets.",
-        "consumes": ["application/json"],
-        "produces": ["application/json"],
-        "parameters": [
-          { "$ref": "#/parameters/paramAuthorization" },
-          { "$ref": "#/parameters/paramXCorrelationID" },
-          {
-            "name": "body",
-            "in": "body",
-            "description": "JSON d'entrée",
-            "required": true,
-            "schema": { "$ref": "#/definitions/PersonneMorale_Entree" }
-          }
-        ],
-        "responses": {
-          "201": {
-            "description": "Demande traitée. Une personne morale peut remplacer une personne physique dans les objets \"historiqueTitu\" et \"cotitulaires\".",
-            "schema": { "$ref": "#/definitions/Complet_Sortie" }
-          },
-          "400": {
-            "description": "Bad Request. La syntaxe de la requête est erronée.",
-            "schema": { "$ref": "#/definitions/Erreur" }
-          },
-          "401": {
-            "description": "Unauthorized. Une authentification est nécessaire pour accéder à la ressource.",
-            "schema": { "$ref": "#/definitions/Erreur" }
-          },
-          "403": {
-            "description": "Forbidden. L'accès à cette ressource est interdit.",
-            "schema": { "$ref": "#/definitions/Erreur" }
-          },
-          "406": {
-            "description": "Not Acceptable. Ressource non disponible dans un format qui respecterait les en-têtes \"Accept\" de la requête.",
-            "schema": { "$ref": "#/definitions/Erreur" }
-          },
-          "408": {
-            "description": "Request Time-out. Temps d'attente d'une réponse du serveur écoulé.",
-            "schema": { "$ref": "#/definitions/Erreur" }
-          },
-          "429": {
-            "description": "Too Many Requests. Le seuil de requêtes envoyées est dépassé.",
-            "schema": { "$ref": "#/definitions/Erreur" }
-          },
-          "500": {
-            "description": "Internal Server Error. Erreur interne du serveur.",
-            "schema": { "$ref": "#/definitions/Erreur" }
-          },
-          "503": {
-            "description": "Service Unavailable. Service temporairement indisponible ou en maintenance.",
-            "schema": { "$ref": "#/definitions/Erreur" }
-          },
-          "509": {
-            "description": "Bandwidth Limit Exceeded. Limite de bande passante dépassée.",
-            "schema": { "$ref": "#/definitions/Erreur" }
-          }
-        },
-        "x-auth-type": "Application & Application User",
-        "x-throttling-tier": "Unlimited"
-      }
-    }
-  },
-  "definitions": {
-    "IBAN_Entree": {
-      "type": "object",
-      "required": ["dateDemande", "motif", "criteresRecherche"],
-      "properties": {
-        "dateDemande": { "type": "string", "format": "date" },
-        "motif": { "type": "integer", "example": "0150" },
-        "justificatifs": {
-          "type": "object",
-          "description": "Obligatoire ou non selon le motif",
-          "properties": {
-            "cadreJuridique": {
-              "type": "string",
-              "example": "Affaire no 612345"
-            },
-            "dateJustificatif": { "type": "string", "format": "date" },
-            "referenceJustificatif": {
-              "type": "string",
-              "example": "reference1"
-            }
-          }
-        },
-        "criteresRecherche": {
-          "type": "object",
-          "properties": {
-            "iban": {
-              "type": "string",
-              "example": "FR7614706000571066005012345"
-            }
-          }
-        }
-      }
-    },
-    "SPI_Entree": {
-      "type": "object",
-      "required": ["dateDemande", "motif", "criteresRecherche"],
-      "properties": {
-        "dateDemande": { "type": "string", "format": "date" },
-        "motif": { "type": "integer", "example": "0150" },
-        "justificatifs": {
-          "type": "object",
-          "description": "Obligatoire ou non selon le motif",
-          "properties": {
-            "cadreJuridique": {
-              "type": "string",
-              "example": "Affaire no 612345"
-            },
-            "dateJustificatif": { "type": "string", "format": "date" },
-            "referenceJustificatif": {
-              "type": "string",
-              "example": "reference1"
-            }
-          }
-        },
-        "criteresRecherche": {
-          "type": "object",
-          "properties": {
-            "numeroSPI": {
-              "type": "integer",
-              "format": "int64",
-              "example": "1234567890123"
-            }
-          }
-        }
-      }
-    },
-    "SIRET_Entree": {
-      "type": "object",
-      "required": ["dateDemande", "motif", "criteresRecherche"],
-      "properties": {
-        "dateDemande": { "type": "string", "format": "date" },
-        "motif": { "type": "integer", "example": "0150" },
-        "justificatifs": {
-          "type": "object",
-          "description": "Obligatoire ou non selon le motif",
-          "properties": {
-            "cadreJuridique": {
-              "type": "string",
-              "example": "Affaire no 612345"
-            },
-            "dateJustificatif": { "type": "string", "format": "date" },
-            "referenceJustificatif": {
-              "type": "string",
-              "example": "reference1"
-            }
-          }
-        },
-        "criteresRecherche": {
-          "type": "object",
-          "properties": {
-            "repertoire": { "type": "integer", "example": "1" },
-            "numeroProfessionnel": {
-              "type": "integer",
-              "format": "int64",
-              "example": "123456789"
-            }
-          }
-        }
-      }
-    },
-    "PersonnePhysique_Entree": {
-      "type": "object",
-      "required": ["dateDemande", "motif", "criteresRecherche"],
-      "properties": {
-        "dateDemande": { "type": "string", "format": "date" },
-        "motif": { "type": "integer", "example": "0118" },
-        "justificatifs": {
-          "type": "object",
-          "description": "Obligatoire ou non selon le motif",
-          "properties": {
-            "cadreJuridique": {
-              "type": "string",
-              "example": "Affaire no 612223"
-            },
-            "dateJustificatif": { "type": "string", "format": "date" },
-            "referenceJustificatif": {
-              "type": "string",
-              "example": "reference1"
-            }
-          }
-        },
-        "criteresRecherche": {
-          "type": "object",
-          "properties": {
-            "etatCivil": {
-              "type": "object",
-              "properties": {
-                "nom": { "type": "string", "example": "DUCHATEAU" },
-                "prenom": { "type": "string", "example": "Martin" },
-                "nomUsage": { "type": "string", "example": "" },
-                "prenomUsage": { "type": "string", "example": "" },
-                "sexe": { "type": "string", "example": "1" },
-                "alias": { "type": "string", "example": "" },
-                "dateNaissanceExacte": {
-                  "type": "string",
-                  "format": "date",
-                  "example": "1967-09-05"
-                },
-                "dateNaissanceDebut": {
-                  "type": "string",
-                  "format": "date",
-                  "example": ""
-                },
-                "dateNaissanceFin": {
-                  "type": "string",
-                  "format": "date",
-                  "example": ""
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "L'API est disponible",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/EtatSante"
                 }
               }
-            },
-            "lieuNaissance": {
-              "type": "object",
-              "properties": {
-                "codeTerritorialiteNaissance": {
-                  "type": "string",
-                  "example": "1"
-                },
-                "metropoleDOMNaissance": {
-                  "type": "object",
-                  "properties": {
-                    "codeDepartementNaissance": {
-                      "type": "string",
-                      "example": "44"
-                    },
-                    "codeCommuneNaissance": {
-                      "type": "string",
-                      "example": "109"
-                    },
-                    "communeNaissance": {
-                      "type": "string",
-                      "example": "NANTES"
-                    }
-                  }
-                },
-                "tomNaissance": {
-                  "type": "object",
-                  "properties": {
-                    "codeTOMNaissance": { "type": "string", "example": "" }
-                  }
-                },
-                "etrangerNaissance": {
-                  "type": "object",
-                  "properties": {
-                    "codePaysEtrangerNaissance": {
-                      "type": "string",
-                      "example": ""
-                    },
-                    "paysEtrangerNaissance": { "type": "string", "example": "" }
-                  }
-                }
-              }
-            },
-            "lieuResidence": {
-              "type": "object",
-              "properties": {
-                "codeTerritorialiteResidence": {
-                  "type": "string",
-                  "example": "1"
-                },
-                "metropoleDOMResidence": {
-                  "type": "object",
-                  "properties": {
-                    "codeDepartementResidence": {
-                      "type": "string",
-                      "example": "44"
-                    },
-                    "codeCommuneResidence": {
-                      "type": "string",
-                      "example": "123"
-                    },
-                    "communeResidence": {
-                      "type": "string",
-                      "example": "CHATEAUVILLE"
-                    }
-                  }
-                },
-                "tomResidence": {
-                  "type": "object",
-                  "properties": {
-                    "codeTOMResidence": { "type": "string", "example": "" }
-                  }
-                },
-                "etrangerResidence": {
-                  "type": "object",
-                  "properties": {
-                    "codePaysEtrangerResidence": {
-                      "type": "string",
-                      "example": ""
-                    },
-                    "paysEtrangerResidence": { "type": "string", "example": "" }
-                  }
+            }
+          },
+          "503" : {
+            "description" : "L'API est actuellement indisponible",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ResultatRechercheErreur"
                 }
               }
             }
@@ -581,604 +53,2743 @@
         }
       }
     },
-    "PersonneMorale_Entree": {
-      "type": "object",
-      "required": ["dateDemande", "motif", "criteresRecherche"],
-      "properties": {
-        "dateDemande": { "type": "string", "format": "date" },
-        "motif": { "type": "integer", "example": "0118" },
-        "justificatifs": {
-          "type": "object",
-          "description": "Obligatoire ou non selon le motif",
-          "properties": {
-            "cadreJuridique": {
-              "type": "string",
-              "example": "Affaire no 612345"
-            },
-            "dateJustificatif": { "type": "string", "format": "date" },
-            "referenceJustificatif": {
-              "type": "string",
-              "example": "reference1"
-            }
+    "/comptes/siretSiren" : {
+      "post" : {
+        "tags" : [ "OS044 - RechercherComptesParSiretSiren" ],
+        "description" : "Rechercher compte par SIRET SIREN",
+        "operationId" : "rechercherCompteParSiretSiren",
+        "parameters" : [ {
+          "name" : "X-Correlation-ID",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
           }
-        },
-        "criteresRecherche": {
-          "type": "object",
-          "properties": {
-            "designation": {
-              "type": "object",
-              "required": ["categorieJuridique"],
-              "properties": {
-                "raisonSociale": {
-                  "type": "string",
-                  "example": "A and Co Enterprise"
-                },
-                "sigle": { "type": "string", "example": "A and Co" },
-                "enseigne": { "type": "string", "example": "A" },
-                "codeCategorieJuridique": { "type": "string", "example": "54" }
+        }, {
+          "name" : "X-Request-ID",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/DemandeRestitSiretSiren"
               }
-            },
-            "adresse": {
-              "type": "object",
-              "required": ["libelleCommune", "voie"],
-              "properties": {
-                "codeTerritorialiteAdresse": {
-                  "type": "string",
-                  "example": "1"
-                },
-                "libellePaysAdresse": { "type": "string", "example": "FRANCE" },
-                "codeDepartementAdresse": { "type": "string", "example": "44" },
-                "libelleDepartementAdresse": {
-                  "type": "string",
-                  "example": "LOIRE ATLANTIQUE"
-                },
-                "codeCommuneAdresse": { "type": "string", "example": "123" },
-                "libelleCommuneAdresse": {
-                  "type": "string",
-                  "example": "CHATEAUVILLE"
-                },
-                "zoneVoie": {
-                  "type": "object",
-                  "properties": {
-                    "numeroVoie": { "type": "string", "example": "10" },
-                    "btq": { "type": "string", "example": "" },
-                    "typeVoie": { "type": "string", "example": "AV" },
-                    "voie": { "type": "string", "example": "DU BEAU CHATEAU" }
-                  }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Recherche effectuée avec succés ",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ReponseListeFinaleComptesPourPM"
                 }
               }
             }
+          },
+          "400" : {
+            "description" : "Erreur pendant le traitement de la recherche"
           }
         }
       }
     },
-    "IBAN_Sortie": {
-      "type": "object",
-      "properties": {
-        "numeroDemande": {
-          "type": "integer",
-          "format": "int64",
-          "example": 127588227
-        },
-        "reponse": {
-          "type": "object",
-          "properties": {
-            "nombreComptes": { "type": "integer", "example": 1 },
-            "comptes": { "$ref": "#/definitions/IBAN_Comptes" }
+    "/comptes/spi" : {
+      "post" : {
+        "tags" : [ "OS045 - RechercherComptesParSpi" ],
+        "description" : "Rechercher compte par Spi",
+        "operationId" : "rechercherComptesSpi",
+        "parameters" : [ {
+          "name" : "X-Correlation-ID",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
           }
-        }
-      }
-    },
-    "SPI_Sortie": {
-      "type": "object",
-      "properties": {
-        "numeroDemande": {
-          "type": "integer",
-          "format": "int64",
-          "example": 134588350
-        },
-        "reponse": {
-          "type": "object",
-          "properties": {
-            "nombreTitulaires": { "type": "integer", "example": 1 },
-            "titulaires": { "$ref": "#/definitions/SPI_Titulaires" }
+        }, {
+          "name" : "X-Request-ID",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
           }
-        }
-      }
-    },
-    "Complet_Sortie": {
-      "type": "object",
-      "properties": {
-        "numeroDemande": {
-          "type": "integer",
-          "format": "int64",
-          "example": 127588350
-        },
-        "reponse": {
-          "type": "object",
-          "properties": {
-            "nombreTitulaires": { "type": "integer", "example": 1 },
-            "titulaires": { "$ref": "#/definitions/Complet_Titulaires" }
-          }
-        }
-      }
-    },
-    "Complet_Titulaires": {
-      "type": "array",
-      "items": { "$ref": "#/definitions/Complet_Titulaire" }
-    },
-    "Complet_Titulaire": {
-      "type": "object",
-      "properties": {
-        "historiqueTitu": { "$ref": "#/definitions/Complet_HistoriquesTitu" },
-        "comptes": { "$ref": "#/definitions/Complet_Comptes" }
-      }
-    },
-    "Complet_HistoriquesTitu": {
-      "type": "array",
-      "items": { "$ref": "#/definitions/Complet_HistoriqueTitu" }
-    },
-    "Complet_HistoriqueTitu": {
-      "type": "object",
-      "properties": {
-        "dateHistoriqueTitu": {
-          "type": "string",
-          "format": "date",
-          "example": "2008-10-21"
-        },
-        "personneMorale": { "$ref": "#/definitions/PersonneMorale" },
-        "complements": { "$ref": "#/definitions/Complements" }
-      }
-    },
-    "Complet_Comptes": {
-      "type": "array",
-      "items": { "$ref": "#/definitions/Complet_Compte" }
-    },
-    "Complet_Compte": {
-      "type": "object",
-      "properties": {
-        "caracteristiquesCompte": {
-          "$ref": "#/definitions/Complet_CaracteristiquesCompte"
-        },
-        "etablissementGestionnaire": {
-          "$ref": "#/definitions/EtablissementGestionnaire"
-        },
-        "adresseTitulaire": {
-          "$ref": "#/definitions/Complet_AdressesTitulaires"
-        },
-        "cotitulaires": { "$ref": "#/definitions/Complet_Cotitulaires" }
-      }
-    },
-    "Complet_CaracteristiquesCompte": {
-      "type": "object",
-      "properties": {
-        "bic": { "type": "string", "example": "AGRIFRPP123" },
-        "iban": { "type": "string", "example": "FR7614706000571066005012345" },
-        "dateOuverture": {
-          "type": "string",
-          "format": "date",
-          "example": "1982-07-17"
-        },
-        "dateCloture": {
-          "type": "string",
-          "format": "date",
-          "example": "2015-01-28"
-        },
-        "nature": {
-          "type": "object",
-          "properties": {
-            "codeNature": { "type": "integer", "example": 101 },
-            "libelleNature": {
-              "type": "string",
-              "example": "Compte courant bancaire"
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/DemandeRestitRechSpi"
+              }
             }
-          }
+          },
+          "required" : true
         },
-        "caracteristique": {
-          "type": "object",
-          "properties": {
-            "codeCaracteristique": { "type": "integer", "example": 1 },
-            "libelleCaracteristique": {
-              "type": "string",
-              "example": "Compte unique"
-            }
-          }
-        },
-        "succession": {
-          "type": "object",
-          "properties": {
-            "codeSuccession": { "type": "integer", "example": 0 },
-            "libelleSuccession": { "type": "string", "example": "NON" }
-          }
-        },
-        "resident": {
-          "type": "object",
-          "properties": {
-            "codeResident": { "type": "integer", "example": 0 },
-            "libelleResident": { "type": "string", "example": "NON" }
-          }
-        },
-        "devise": {
-          "type": "object",
-          "properties": {
-            "codeDevise": { "type": "integer", "example": "" },
-            "libelleDevise": { "type": "string", "example": "" }
-          }
-        },
-        "type": {
-          "type": "object",
-          "properties": {
-            "codeType": { "type": "integer", "example": "3" },
-            "libelleType": { "type": "string", "example": "Compte collectif" }
-          }
-        }
-      }
-    },
-    "Complet_AdressesTitulaires": {
-      "type": "array",
-      "items": { "$ref": "#/definitions/Complet_AdresseTitulaire" }
-    },
-    "Complet_AdresseTitulaire": {
-      "type": "object",
-      "properties": {
-        "codeTerritorialiteResidence": { "type": "string", "example": "1" },
-        "codeDepartementResidence": { "type": "string", "example": "44" },
-        "departementResidence": {
-          "type": "string",
-          "example": "LOIRE ATLANTIQUE"
-        },
-        "codeCommuneResidence": { "type": "string", "example": "123" },
-        "communeResidence": { "type": "string", "example": "CHATEAUVILLE" },
-        "zoneVoie": { "type": "string", "example": "DU BEAU CHATEAU" },
-        "lieuDit": { "type": "string", "example": "" },
-        "datePeremption": { "type": "string", "format": "date", "example": "" },
-        "dateHistoriqueAdresse": {
-          "type": "string",
-          "format": "date",
-          "example": "2001-03-21"
-        }
-      }
-    },
-    "Complet_Cotitulaires": {
-      "type": "array",
-      "items": { "$ref": "#/definitions/Complet_Cotitulaire" }
-    },
-    "Complet_Cotitulaire": {
-      "type": "object",
-      "properties": {
-        "personneMorale": {
-          "type": "object",
-          "properties": {
-            "raisonSociale": {
-              "type": "string",
-              "example": "B and Co Enterprise"
-            },
-            "sigle": { "type": "string", "example": "B and Co" },
-            "enseigne": { "type": "string", "example": "B" },
-            "categorieJuridique": {
-              "type": "object",
-              "properties": {
-                "codecategorie": { "type": "integer", "example": "54" },
-                "libellecategorie": {
-                  "type": "string",
-                  "example": "SOCIETE A RESPONSABILITE LIMITEE SARL"
+        "responses" : {
+          "200" : {
+            "description" : "Recherche  effectuée avec succés ",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ReponseListeFinaleComptesPourPP"
                 }
               }
             }
-          }
-        },
-        "complements": { "$ref": "#/definitions/Complements" },
-        "adresse": {
-          "type": "object",
-          "properties": {
-            "codeTerritorialiteResidence": { "type": "string", "example": "1" },
-            "codeDepartementResidence": { "type": "string", "example": "37" },
-            "departementResidence": {
-              "type": "string",
-              "example": "INDRE ET LOIRE"
-            },
-            "codeCommuneResidence": { "type": "string", "example": "456" },
-            "communeResidence": { "type": "string", "example": "JOLIEVILLE" },
-            "zoneVoie": {
-              "type": "string",
-              "example": "RESIDENCE DES JOLIS OISEAUX"
-            },
-            "lieuDit": { "type": "string", "example": "7 RUE DES COLOMBES" },
-            "datePeremption": {
-              "type": "string",
-              "format": "date",
-              "example": ""
-            }
+          },
+          "400" : {
+            "description" : "Erreur pendant le traitement de la recherche"
           }
         }
       }
     },
-    "IBAN_CaracteristiquesCompte": {
-      "type": "array",
-      "items": { "$ref": "#/definitions/IBAN_CaracteristiqueCompte" }
-    },
-    "IBAN_CaracteristiqueCompte": {
-      "type": "object",
-      "properties": {
-        "bic": { "type": "string", "example": "CEPAFRPP123" },
-        "iban": { "type": "string", "example": "FR7614706000571066005012345" },
-        "dateOuverture": {
-          "type": "string",
-          "format": "date",
-          "example": "1987-03-12"
-        },
-        "dateCloture": { "type": "string", "format": "date", "example": "" },
-        "nature": {
-          "type": "object",
-          "properties": {
-            "codeNature": { "type": "integer", "example": 101 },
-            "libelleNature": {
-              "type": "string",
-              "example": "Compte courant bancaire"
+    "/comptes/perPhy" : {
+      "post" : {
+        "tags" : [ "OS043 - RechercherComptesPerPhy" ],
+        "description" : "Rechercher les comptes pour une personne physique",
+        "operationId" : "rechercherComptesPersonnePhysique",
+        "parameters" : [ {
+          "name" : "X-Correlation-ID",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "X-Request-ID",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/DemandeRestitRechPerPhy"
+              }
             }
-          }
+          },
+          "required" : true
         },
-        "caracteristique": {
-          "type": "object",
-          "properties": {
-            "codeCaracteristique": { "type": "integer", "example": 1 },
-            "libelleCaracteristique": {
-              "type": "string",
-              "example": "Compte unique"
+        "responses" : {
+          "200" : {
+            "description" : "Recherche comptes personne physique effectuée avec succés ",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ReponseListeFinaleComptesPourPP"
+                }
+              }
             }
-          }
-        },
-        "succession": {
-          "type": "object",
-          "properties": {
-            "codeSuccession": { "type": "integer", "example": 0 },
-            "libelleSuccession": { "type": "string", "example": "NON" }
-          }
-        },
-        "resident": {
-          "type": "object",
-          "properties": {
-            "codeResident": { "type": "integer", "example": 0 },
-            "libelleResident": { "type": "string", "example": "NON" }
-          }
-        },
-        "devise": {
-          "type": "object",
-          "properties": {
-            "codeDevise": { "type": "integer", "example": "" },
-            "libelleDevise": { "type": "string", "example": "" }
-          }
-        },
-        "type": {
-          "type": "object",
-          "properties": {
-            "codeType": { "type": "integer", "example": 2 },
-            "libelleType": { "type": "string", "example": "Compte joint" }
-          }
-        },
-        "dateHistoriqueCompte": {
-          "type": "string",
-          "format": "date",
-          "example": "1986-10-12"
-        }
-      }
-    },
-    "IBAN_Comptes": {
-      "type": "array",
-      "items": { "$ref": "#/definitions/IBAN_Compte" }
-    },
-    "IBAN_Compte": {
-      "type": "object",
-      "properties": {
-        "caracteristiquesCompte": {
-          "$ref": "#/definitions/IBAN_CaracteristiquesCompte"
-        },
-        "etablissementGestionnaire": {
-          "$ref": "#/definitions/EtablissementGestionnaire"
-        },
-        "titulaires": { "$ref": "#/definitions/IBAN_Titulaires" }
-      }
-    },
-    "IBAN_Titulaires": {
-      "type": "array",
-      "items": { "$ref": "#/definitions/IBAN_Titulaire" }
-    },
-    "IBAN_Titulaire": {
-      "type": "object",
-      "properties": {
-        "personnePhysique": { "$ref": "#/definitions/PersonnePhysique" },
-        "complements": {
-          "type": "object",
-          "properties": {
-            "droitSurCompte": { "type": "integer", "example": "1" },
-            "typeRepertoire": { "type": "string", "example": "" },
-            "numeroProfessionnel": { "type": "integer", "example": "" },
-            "datePeremption": {
-              "type": "string",
-              "format": "date",
-              "example": ""
-            }
-          }
-        },
-        "adresse": {
-          "type": "object",
-          "properties": {
-            "codeTerritorialiteResidence": { "type": "integer", "example": 1 },
-            "codeDepartementResidence": { "type": "string", "example": "44" },
-            "departementResidence": {
-              "type": "string",
-              "example": "LOIRE ATLANTIQUE"
-            },
-            "codeCommuneResidence": { "type": "integer", "example": 123 },
-            "communeResidence": { "type": "string", "example": "CHATEAUVILLE" },
-            "zoneVoie": { "type": "string", "example": "DU BEAU CHATEAU" },
-            "lieuDit": { "type": "string", "example": "" },
-            "datePeremption": {
-              "type": "string",
-              "format": "date",
-              "example": "2003-12-20"
-            }
+          },
+          "400" : {
+            "description" : "Erreur pendant le traitement de la recherche"
           }
         }
       }
     },
-    "SPI_Titulaires": {
-      "type": "array",
-      "items": { "$ref": "#/definitions/SPI_Titulaire" }
-    },
-    "SPI_Titulaire": {
-      "type": "object",
-      "properties": {
-        "historiqueTitu": { "$ref": "#/definitions/SPI_HistoriquesTitu" },
-        "comptes": { "$ref": "#/definitions/Complet_Comptes" }
-      }
-    },
-    "SPI_HistoriquesTitu": {
-      "type": "array",
-      "items": { "$ref": "#/definitions/SPI_HistoriqueTitu" }
-    },
-    "SPI_HistoriqueTitu": {
-      "type": "object",
-      "properties": {
-        "dateHistoriqueTitu": {
-          "type": "string",
-          "format": "date",
-          "example": "2008-10-21"
+    "/comptes/perPro" : {
+      "post" : {
+        "tags" : [ "OS042 - RechercherComptesPerPro" ],
+        "description" : "Rechercher les comptes d'une personne morale",
+        "operationId" : "rechercherComptesPerPro",
+        "parameters" : [ {
+          "name" : "X-Correlation-ID",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "X-Request-ID",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/DemandeRestitRechPerPro"
+              }
+            }
+          },
+          "required" : true
         },
-        "personnePhysique": { "$ref": "#/definitions/PersonnePhysique" },
-        "complements": { "$ref": "#/definitions/Complements" }
+        "responses" : {
+          "200" : {
+            "description" : "Recherche effectuée avec succés ",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ReponseListeFinaleComptesPourPM"
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "Erreur pendant le traitement de la recherche"
+          }
+        }
       }
     },
-    "EtablissementGestionnaire": {
-      "type": "object",
-      "properties": {
-        "etablissement": {
-          "type": "object",
-          "properties": {
-            "numeroEtablissement": { "type": "integer", "example": 14567 },
-            "libelleEtablissement": {
-              "type": "string",
-              "example": "CRCAM CHATEAUVILLE"
+    "/comptes/multiDet" : {
+      "post" : {
+        "tags" : [ "OS035 - RechercherMutiDetention" ],
+        "description" : "Rechercher compte réglementé",
+        "operationId" : "rechercherMultiDetention",
+        "parameters" : [ {
+          "name" : "X-Correlation-ID",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "X-Request-ID",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/DemandeRestitMultiDet"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Recherche  effectuée avec succés ",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ReponseMultiDetention"
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "Erreur pendant le traitement de la recherche"
+          }
+        }
+      }
+    },
+    "/comptes/verifIban" : {
+      "post" : {
+        "tags" : [ "OS050 - VerifierTitulaireIban" ],
+        "description" : "Verifier le titulaire d'un iban",
+        "operationId" : "rechercherCompteParNumCpte",
+        "parameters" : [ {
+          "name" : "X-Correlation-ID",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "X-Request-ID",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/DemandeRestitVerifIban"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Recherche effectuée avec succés ",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ReponseRechercherCompteDTO"
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "Erreur pendant le traitement de la recherche"
+          }
+        }
+      }
+     }
+    },
+  "components" : {
+    "schemas" : {
+      "EtatSante" : {
+        "type" : "object",
+        "properties" : {
+          "descriptif" : {
+            "type" : "string",
+            "description" : "L'API est opérationnelle",
+            "example" : "L'API est opérationnelle"
+          }
+        }
+      },
+      "DemandeRestit" : {
+        "type" : "object",
+        "properties" : {
+          "dateDemande" : {
+            "type" : "string"
+          },
+          "motif" : {
+            "type" : "string"
+          },
+          "siretDemandeur" : {
+            "type" : "string"
+          },
+          "sirenDemandeur" : {
+            "type" : "string"
+          },
+          "justification" : {
+            "type" : "string"
+          }
+        }
+      },
+      "ReponseErreur" : {
+        "type" : "object",
+        "properties" : {
+          "code" : {
+            "type" : "string"
+          },
+          "message" : {
+            "type" : "string"
+          },
+          "horodatage" : {
+            "type" : "string"
+          }
+        }
+      },
+      "ResultatRechercheErreur" : {
+        "type" : "object",
+        "properties" : {
+          "caracteristiquesDemande" : {
+            "$ref" : "#/components/schemas/DemandeRestit"
+          },
+          "erreur" : {
+            "$ref" : "#/components/schemas/ReponseErreur"
+          }
+        }
+      },
+      "Adresse" : {
+        "type" : "object",
+        "properties" : {
+          "codePaysResidence" : {
+            "type" : "string"
+          },
+          "libellePaysResidence" : {
+            "type" : "string"
+          },
+          "codeDepartementResidence" : {
+            "type" : "string"
+          },
+          "libelleDepartementResidence" : {
+            "type" : "string"
+          },
+          "codeCommuneResidence" : {
+            "type" : "string"
+          },
+          "libelleCommuneResidence" : {
+            "type" : "string"
+          },
+          "codeNatureVoie" : {
+            "type" : "string"
+          },
+          "libelleVoie" : {
+            "type" : "string"
+          },
+          "numeroVoie" : {
+            "type" : "string"
+          },
+          "indiceRepetition" : {
+            "type" : "string"
+          },
+          "indicateurCodifAdresse" : {
+            "type" : "string"
+          },
+          "codePostal" : {
+            "type" : "string"
+          },
+          "libelleComplAdr" : {
+            "type" : "string"
+          }
+        }
+      },
+      "AdresseGuichet" : {
+        "type" : "object",
+        "properties" : {
+          "libAdr1" : {
+            "type" : "string"
+          },
+          "libAdr2" : {
+            "type" : "string"
+          },
+          "libAdr3" : {
+            "type" : "string"
+          },
+          "libAdr4" : {
+            "type" : "string"
+          }
+        }
+      },
+      "CaracteristiqueCompte" : {
+        "type" : "object",
+        "properties" : {
+          "codeCaracteristique" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "libelleCaracteristique" : {
+            "type" : "string"
+          }
+        }
+      },
+      "CompteCaracteristiques" : {
+        "type" : "object",
+        "properties" : {
+          "iban" : {
+            "type" : "string"
+          },
+          "dateOuverture" : {
+            "type" : "string"
+          },
+          "dateFiscale" : {
+            "type" : "string"
+          },
+          "motifOuverture" : {
+            "type" : "string"
+          },
+          "dateCloture" : {
+            "type" : "string"
+          },
+          "nature" : {
+            "$ref" : "#/components/schemas/NatureCompte"
+          },
+          "type" : {
+            "$ref" : "#/components/schemas/TypeCompte"
+          },
+          "formatCompte" : {
+            "type" : "string"
+          },
+          "caracteristique" : {
+            "$ref" : "#/components/schemas/CaracteristiqueCompte"
+          },
+          "succession" : {
+            "type" : "string"
+          },
+          "resident" : {
+            "type" : "string"
+          },
+          "devise" : {
+            "$ref" : "#/components/schemas/DeviseCompte"
+          }
+        }
+      },
+      "CompteStructure" : {
+        "type" : "object",
+        "properties" : {
+          "caracteristiqueCompte" : {
+            "$ref" : "#/components/schemas/CompteCaracteristiques"
+          },
+          "etablissementGestionnaire" : {
+            "$ref" : "#/components/schemas/EtablissementGestionnaire"
+          },
+          "ayantsDroits" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/TitulaireCompte"
             }
           }
-        },
-        "guichet": {
-          "type": "object",
-          "properties": {
-            "numeroGuichet": { "type": "integer", "example": 39 },
-            "libelleGuichet": { "type": "string", "example": "AG CHATEAUVILLE" }
-          }
-        },
-        "adressePostale": {
-          "type": "object",
-          "properties": {
-            "libelle": { "type": "string", "example": "PL DU CHATEAU" },
-            "compl": { "type": "string", "example": "" },
-            "cpVille": { "type": "string", "example": "12345 CHATEAUVILLE" },
-            "lieuDit": { "type": "string", "example": "" }
+        }
+      },
+      "DeviseCompte" : {
+        "type" : "object",
+        "properties" : {
+          "codeDevise" : {
+            "type" : "string"
           }
         }
-      }
-    },
-    "Complements": {
-      "type": "object",
-      "properties": {
-        "droitsSurCompte": { "type": "integer", "example": 1 },
-        "typeRepertoire": { "type": "string", "example": "1" },
-        "numeroProfessionnel": { "type": "string", "example": "123456789" },
-        "datePeremption": {
-          "type": "string",
-          "format": "date",
-          "example": "2023-03-23"
+      },
+      "EtablissementBancaire" : {
+        "type" : "object",
+        "properties" : {
+          "numeroEtablissement" : {
+            "type" : "string"
+          },
+          "libelleEtablissement" : {
+            "type" : "string"
+          }
         }
-      }
-    },
-    "PersonnePhysique": {
-      "type": "object",
-      "properties": {
-        "nomPatronymique": { "type": "string", "example": "DUCHATEAU" },
-        "prenom": { "type": "string", "example": "MARTIN" },
-        "dateNaissance": {
-          "type": "string",
-          "format": "date",
-          "example": "1967-09-04"
-        },
-        "sexe": { "type": "string", "example": "1" },
-        "nomUsage": { "type": "string", "example": "" },
-        "prenomUsage": { "type": "string", "example": "" },
-        "alias": { "type": "string", "example": "" },
-        "codeTerritorialiteNaissance": { "type": "integer", "example": 1 },
-        "codeDepartementNaissance": { "type": "string", "example": "44" },
-        "departementNaissance": { "type": "string", "example": "" },
-        "codeCommuneNaissance": { "type": "integer", "example": 109 },
-        "communeNaissance": { "type": "string", "example": "NANTES" }
-      }
-    },
-    "PersonneMorale": {
-      "type": "object",
-      "properties": {
-        "raisonSociale": { "type": "string", "example": "A and Co Enterprise" },
-        "sigle": { "type": "string", "example": "A and Co" },
-        "enseigne": { "type": "string", "example": "A" },
-        "categorieJuridique": {
-          "type": "object",
-          "properties": {
-            "codecategorie": { "type": "integer", "example": "54" },
-            "libellecategorie": {
-              "type": "string",
-              "example": "SOCIETE A RESPONSABILITE LIMITEE SARL"
+      },
+      "EtablissementGestionnaire" : {
+        "type" : "object",
+        "properties" : {
+          "etablissement" : {
+            "$ref" : "#/components/schemas/EtablissementBancaire"
+          },
+          "guichet" : {
+            "$ref" : "#/components/schemas/Guichet"
+          }
+        }
+      },
+      "Guichet" : {
+        "required" : [ "codeGeoInsee", "codeGuichet", "codeOrigGuichet", "codeSituation", "dateAppliSource", "dateDebutValidite", "dateMaj", "denomGuichet", "natureGuichet" ],
+        "type" : "object",
+        "properties" : {
+          "version" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "idtGuichet" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "unEtabFi" : {
+            "$ref" : "#/components/schemas/EtabFi"
+          },
+          "codeGuichet" : {
+            "type" : "string"
+          },
+          "denomGuichet" : {
+            "type" : "string"
+          },
+          "codeOrigGuichet" : {
+            "type" : "string",
+            "enum" : [ "FEGABDF", "IHM", "TIERS" ]
+          },
+          "codeSituation" : {
+            "type" : "string",
+            "enum" : [ "OUVERT", "TRANSFERE", "FERME" ]
+          },
+          "dateDebutValidite" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "dateFinValidite" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "dateFinDiffusion" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "natureGuichet" : {
+            "type" : "string",
+            "enum" : [ "GUICHETPERMANENT", "IDENTIFIANTDOMICILATION", "GUICHETNONDOMICILIATAIRE", "GUICHETFICTIF", "GUICHETFICTIFFCB2" ]
+          },
+          "dateAppliSource" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "codeGeoInsee" : {
+            "type" : "string"
+          },
+          "libAdr1" : {
+            "type" : "string"
+          },
+          "libAdr2" : {
+            "type" : "string"
+          },
+          "libAdr3" : {
+            "type" : "string"
+          },
+          "libAdr4" : {
+            "type" : "string"
+          },
+          "cdGuiSuivi" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "bicGui" : {
+            "type" : "string"
+          },
+          "dateMaj" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "listeCompte" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/Compte"
             }
           }
         }
-      }
-    },
-    "Erreur": {
-      "type": "object",
-      "properties": {
-        "erreur": {
-          "type": "object",
-          "properties": {
-            "code": { "type": "string", "example": "Code erreur" },
-            "message": { "type": "string", "example": "Message d'erreur" },
-            "horodatage": {
-              "type": "string",
-              "example": "2019-04-23T18:25:43.511Z"
+      },
+      "NatureCompte" : {
+        "required" : [ "codeNature", "libelleNature" ],
+        "type" : "object",
+        "properties" : {
+          "version" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "idtNatureCompte" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "codeNature" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "libelleNature" : {
+            "type" : "string"
+          }
+        }
+      },
+      "PersonneMorale" : {
+        "type" : "object",
+        "properties" : {
+          "raisonSociale" : {
+            "type" : "string"
+          },
+          "sigle" : {
+            "type" : "string"
+          },
+          "enseigne" : {
+            "type" : "string"
+          },
+          "siret" : {
+            "type" : "string"
+          },
+          "categorieJuridique" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "siren" : {
+            "type" : "string"
+          },
+          "adresse" : {
+            "$ref" : "#/components/schemas/Adresse"
+          }
+        }
+      },
+      "ReponseListeComptesPourPM" : {
+        "type" : "object",
+        "properties" : {
+          "caracteristiquesDemande" : {
+            "$ref" : "#/components/schemas/DemandeRestit"
+          },
+          "referenceDemande" : {
+            "type" : "string"
+          },
+          "nombreReponses" : {
+            "type" : "string"
+          },
+          "messageInformatif" : {
+            "$ref" : "#/components/schemas/ReponseErreur"
+          },
+          "personneRecherche" : {
+            "$ref" : "#/components/schemas/PersonneMorale"
+          },
+          "nombreComptes" : {
+            "type" : "string"
+          },
+          "comptes" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/CompteStructure"
             }
           }
         }
+      },
+      "ReponseListeFinaleComptesPourPM" : {
+        "type" : "object",
+        "properties" : {
+          "caracteristiquesDemande" : {
+            "$ref" : "#/components/schemas/DemandeRestit"
+          },
+          "referenceDemande" : {
+            "type" : "string"
+          },
+          "nombreReponses" : {
+            "type" : "string"
+          },
+          "messageInformatif" : {
+            "$ref" : "#/components/schemas/ReponseErreur"
+          },
+          "reponses" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/ReponseListeComptesPourPM"
+            }
+          }
+        }
+      },
+      "TitulaireCompte" : {
+        "type" : "object"
+      },
+      "TypeCompte" : {
+        "type" : "object",
+        "properties" : {
+          "codeType" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "libelleType" : {
+            "type" : "string"
+          }
+        }
+      },
+      "CriteresRechercheSiretSiren" : {
+        "type" : "object",
+        "properties" : {
+          "siret" : {
+            "type" : "string"
+          },
+          "siren" : {
+            "type" : "string"
+          }
+        }
+      },
+      "DemandeRestitSiretSiren" : {
+        "type" : "object",
+        "properties" : {
+          "dateDemande" : {
+            "type" : "string"
+          },
+          "motif" : {
+            "type" : "string"
+          },
+          "siretDemandeur" : {
+            "type" : "string"
+          },
+          "sirenDemandeur" : {
+            "type" : "string"
+          },
+          "justification" : {
+            "type" : "string"
+          },
+          "criteresRecherche" : {
+            "$ref" : "#/components/schemas/CriteresRechercheSiretSiren"
+          }
+        }
+      },
+      "CommuneNaissance" : {
+        "type" : "object",
+        "properties" : {
+          "codeCommune" : {
+            "type" : "string"
+          },
+          "libelleCommune" : {
+            "type" : "string"
+          }
+        }
+      },
+      "DepartementNaissance" : {
+        "type" : "object",
+        "properties" : {
+          "codeDepartement" : {
+            "type" : "string"
+          },
+          "libelleDepartement" : {
+            "type" : "string"
+          }
+        }
+      },
+      "PaysNaissance" : {
+        "type" : "object",
+        "properties" : {
+          "codePays" : {
+            "type" : "string"
+          },
+          "libellePays" : {
+            "type" : "string"
+          }
+        }
+      },
+      "PersonnePhysique" : {
+        "type" : "object",
+        "properties" : {
+          "nomNaissance" : {
+            "type" : "string"
+          },
+          "nomUsage" : {
+            "type" : "string"
+          },
+          "prenom" : {
+            "type" : "string"
+          },
+          "sexe" : {
+            "type" : "string"
+          },
+          "anneeNaissance" : {
+            "type" : "string"
+          },
+          "moisNaissance" : {
+            "type" : "string"
+          },
+          "jourNaissance" : {
+            "type" : "string"
+          },
+          "dateDeces" : {
+            "type" : "string"
+          },
+          "paysNaissance" : {
+            "$ref" : "#/components/schemas/PaysNaissance"
+          },
+          "departementNaissance" : {
+            "$ref" : "#/components/schemas/DepartementNaissance"
+          },
+          "communeNaissance" : {
+            "$ref" : "#/components/schemas/CommuneNaissance"
+          },
+          "numeroSpi" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "adresse" : {
+            "$ref" : "#/components/schemas/Adresse"
+          }
+        }
+      },
+      "ReponseListeComptesPourPP" : {
+        "type" : "object",
+        "properties" : {
+          "caracteristiquesDemande" : {
+            "$ref" : "#/components/schemas/DemandeRestit"
+          },
+          "referenceDemande" : {
+            "type" : "string"
+          },
+          "nombreReponses" : {
+            "type" : "string"
+          },
+          "messageInformatif" : {
+            "$ref" : "#/components/schemas/ReponseErreur"
+          },
+          "personneRecherche" : {
+            "$ref" : "#/components/schemas/PersonnePhysique"
+          },
+          "nombreComptes" : {
+            "type" : "string"
+          },
+          "comptes" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/CompteStructure"
+            }
+          }
+        }
+      },
+      "ReponseListeFinaleComptesPourPP" : {
+        "type" : "object",
+        "properties" : {
+          "caracteristiquesDemande" : {
+            "$ref" : "#/components/schemas/DemandeRestit"
+          },
+          "referenceDemande" : {
+            "type" : "string"
+          },
+          "nombreReponses" : {
+            "type" : "string"
+          },
+          "messageInformatif" : {
+            "$ref" : "#/components/schemas/ReponseErreur"
+          },
+          "reponses" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/ReponseListeComptesPourPP"
+            }
+          }
+        }
+      },
+      "CriteresRechercheSpi" : {
+        "type" : "object",
+        "properties" : {
+          "numeroSPI" : {
+            "type" : "string"
+          }
+        }
+      },
+      "DemandeRestitRechSpi" : {
+        "type" : "object",
+        "properties" : {
+          "dateDemande" : {
+            "type" : "string"
+          },
+          "motif" : {
+            "type" : "string"
+          },
+          "siretDemandeur" : {
+            "type" : "string"
+          },
+          "sirenDemandeur" : {
+            "type" : "string"
+          },
+          "justification" : {
+            "type" : "string"
+          },
+          "criteresRecherche" : {
+            "$ref" : "#/components/schemas/CriteresRechercheSpi"
+          }
+        }
+      },
+      "CriteresRecherchePerPhy" : {
+        "type" : "object",
+        "properties" : {
+          "etatCivil" : {
+            "$ref" : "#/components/schemas/EtatCivil"
+          },
+          "lieuNaissance" : {
+            "$ref" : "#/components/schemas/LieuNaissance"
+          },
+          "domiciliation" : {
+            "$ref" : "#/components/schemas/Domiciliation"
+          }
+        }
+      },
+      "DemandeRestitRechPerPhy" : {
+        "type" : "object",
+        "properties" : {
+          "dateDemande" : {
+            "type" : "string"
+          },
+          "motif" : {
+            "type" : "string"
+          },
+          "siretDemandeur" : {
+            "type" : "string"
+          },
+          "sirenDemandeur" : {
+            "type" : "string"
+          },
+          "justification" : {
+            "type" : "string"
+          },
+          "criteresRecherche" : {
+            "$ref" : "#/components/schemas/CriteresRecherchePerPhy"
+          }
+        }
+      },
+      "Domiciliation" : {
+        "type" : "object",
+        "properties" : {
+          "codePays" : {
+            "type" : "string"
+          },
+          "codeDepartement" : {
+            "type" : "string"
+          },
+          "codeCommune" : {
+            "type" : "string"
+          },
+          "codeNatureVoie" : {
+            "type" : "string"
+          },
+          "libelleVoie" : {
+            "type" : "string"
+          },
+          "numeroVoie" : {
+            "type" : "string"
+          },
+          "indiceRepetition" : {
+            "type" : "string"
+          },
+          "codePostal" : {
+            "type" : "string"
+          }
+        }
+      },
+      "EtatCivil" : {
+        "type" : "object",
+        "properties" : {
+          "anneeNaissance" : {
+            "type" : "string"
+          },
+          "moisNaissance" : {
+            "type" : "string"
+          },
+          "jourNaissance" : {
+            "type" : "string"
+          },
+          "anneeNaissanceDebut" : {
+            "type" : "string"
+          },
+          "moisNaissanceDebut" : {
+            "type" : "string"
+          },
+          "jourNaissanceDebut" : {
+            "type" : "string"
+          },
+          "anneeNaissanceFin" : {
+            "type" : "string"
+          },
+          "moisNaissanceFin" : {
+            "type" : "string"
+          },
+          "jourNaissanceFin" : {
+            "type" : "string"
+          },
+          "nom" : {
+            "type" : "string"
+          },
+          "prenoms" : {
+            "type" : "string"
+          },
+          "sexe" : {
+            "type" : "string"
+          }
+        }
+      },
+      "LieuNaissance" : {
+        "type" : "object",
+        "properties" : {
+          "codePaysNaissance" : {
+            "type" : "string"
+          },
+          "codeDepartementNaissance" : {
+            "type" : "string"
+          },
+          "codeCommuneNaissance" : {
+            "type" : "string"
+          }
+        }
+      },
+      "CriteresRecherchePerPro" : {
+        "type" : "object",
+        "properties" : {
+          "designation" : {
+            "$ref" : "#/components/schemas/Designation"
+          },
+          "domiciliation" : {
+            "$ref" : "#/components/schemas/Domiciliation"
+          }
+        }
+      },
+      "DemandeRestitRechPerPro" : {
+        "type" : "object",
+        "properties" : {
+          "dateDemande" : {
+            "type" : "string"
+          },
+          "motif" : {
+            "type" : "string"
+          },
+          "siretDemandeur" : {
+            "type" : "string"
+          },
+          "sirenDemandeur" : {
+            "type" : "string"
+          },
+          "justification" : {
+            "type" : "string"
+          },
+          "criteresRecherche" : {
+            "$ref" : "#/components/schemas/CriteresRecherchePerPro"
+          }
+        }
+      },
+      "Designation" : {
+        "type" : "object",
+        "properties" : {
+          "raisonSociale" : {
+            "type" : "string"
+          },
+          "sigle" : {
+            "type" : "string"
+          },
+          "enseigne" : {
+            "type" : "string"
+          },
+          "codeCategorieJuridique" : {
+            "type" : "string"
+          }
+        }
+      },
+      "CompteMultiDet" : {
+        "type" : "object",
+        "properties" : {
+          "iban" : {
+            "type" : "string"
+          },
+          "nature" : {
+            "type" : "string"
+          },
+          "dateOuverture" : {
+            "type" : "string"
+          },
+          "dateFiscale" : {
+            "type" : "string"
+          },
+          "motifOuverture" : {
+            "type" : "string"
+          },
+          "codeEtab" : {
+            "type" : "string"
+          },
+          "guichet" : {
+            "$ref" : "#/components/schemas/Guichet"
+          }
+        }
+      },
+      "ReponseMultiDetention" : {
+        "type" : "object",
+        "properties" : {
+          "caracteristiquesDemande" : {
+            "$ref" : "#/components/schemas/DemandeRestit"
+          },
+          "referenceDemande" : {
+            "type" : "string"
+          },
+          "nombreReponses" : {
+            "type" : "string"
+          },
+          "messageInformatif" : {
+            "$ref" : "#/components/schemas/ReponseErreur"
+          },
+          "getnRep" : {
+            "type" : "string"
+          },
+          "comptes" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/CompteMultiDet"
+            }
+          }
+        }
+      },
+      "CriteresRechercheMultiDet" : {
+        "type" : "object",
+        "properties" : {
+          "accordClient" : {
+            "type" : "string"
+          },
+          "codeNatureCompte" : {
+            "type" : "string"
+          },
+          "recherchePP" : {
+            "type" : "string"
+          },
+          "recherchePM" : {
+            "type" : "string"
+          },
+          "rechercheSIRENSIRET" : {
+            "type" : "string"
+          },
+          "criteresRecherchePro" : {
+            "$ref" : "#/components/schemas/CriteresRecherchePerPro"
+          },
+          "criteresRecherchePhy" : {
+            "$ref" : "#/components/schemas/CriteresRecherchePerPhyMD"
+          },
+          "criteresSiretSiren" : {
+            "$ref" : "#/components/schemas/CriteresRechercheSiretSiren"
+          }
+        }
+      },
+      "CriteresRecherchePerPhyMD" : {
+        "type" : "object",
+        "properties" : {
+          "etatCivil" : {
+            "$ref" : "#/components/schemas/EtatCivilTitulaire"
+          },
+          "lieuNaissance" : {
+            "$ref" : "#/components/schemas/LieuNaissance"
+          },
+          "domiciliation" : {
+            "$ref" : "#/components/schemas/Domiciliation"
+          }
+        }
+      },
+      "DemandeRestitMultiDet" : {
+        "type" : "object",
+        "properties" : {
+          "dateDemande" : {
+            "type" : "string"
+          },
+          "motif" : {
+            "type" : "string"
+          },
+          "siretDemandeur" : {
+            "type" : "string"
+          },
+          "sirenDemandeur" : {
+            "type" : "string"
+          },
+          "justification" : {
+            "type" : "string"
+          },
+          "criteresRecherche" : {
+            "$ref" : "#/components/schemas/CriteresRechercheMultiDet"
+          }
+        }
+      },
+      "EtatCivilTitulaire" : {
+        "type" : "object",
+        "properties" : {
+          "nom" : {
+            "type" : "string"
+          },
+          "prenoms" : {
+            "type" : "string"
+          },
+          "sexe" : {
+            "type" : "string"
+          },
+          "anneeNaissance" : {
+            "type" : "string"
+          },
+          "moisNaissance" : {
+            "type" : "string"
+          },
+          "jourNaissance" : {
+            "type" : "string"
+          }
+        }
+      },
+      "CarCompte" : {
+        "required" : [ "caractCpt", "codeEvenement", "codeNonResident", "codeOrigine", "dateMaj", "dateOperationEtb", "dateOuverture", "formatCpt", "mentionSuccession", "topDgfip", "typeCompte", "versionCompte" ],
+        "type" : "object",
+        "properties" : {
+          "version" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "idtCarCompte" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "unCompte" : {
+            "$ref" : "#/components/schemas/Compte"
+          },
+          "versionCompte" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "codeOrigine" : {
+            "type" : "string",
+            "enum" : [ "ETABLISSEMENTBANCAIRE", "DGFIP", "IHM" ]
+          },
+          "topDgfip" : {
+            "type" : "boolean"
+          },
+          "motifOuverture" : {
+            "type" : "string",
+            "enum" : [ "OUVERTURE_TITULAIRE", "OUVERTURE_TRANSFERT_ETABLISSEMENT", "OUVERTURE_SUITE_SUCCESSION", "OUVERTURE_TRANSFERT_SUCCESSION" ]
+          },
+          "dateFiscale" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "mentionSuccession" : {
+            "type" : "boolean"
+          },
+          "codeNonResident" : {
+            "type" : "boolean"
+          },
+          "dateOuverture" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "dateCloture" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "caractCpt" : {
+            "type" : "string",
+            "enum" : [ "CPTUNIQUE", "CPTPRINCIPAL" ]
+          },
+          "codeEvenement" : {
+            "type" : "string",
+            "enum" : [ "OUVERTURE", "CLOTURE", "MODIFCARACTOUTITULAIRES", "MODIFDATECLOTURE", "ANNULATIONOUVERTURE", "ANNULATIONCLOTURE", "REGULARISATION", "INITIALISATIONETAB", "INITIALISATIONFICOBA2" ]
+          },
+          "dateOperationEtb" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "formatCpt" : {
+            "type" : "string",
+            "enum" : [ "IBAN", "NUMEROCLIENT" ]
+          },
+          "typeCompte" : {
+            "type" : "string",
+            "enum" : [ "SIMPLE", "JOINT", "COLLECTIF", "INDIVIS" ]
+          },
+          "dateMaj" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "uneNatureCompte" : {
+            "$ref" : "#/components/schemas/NatureCompte"
+          },
+          "uneDevise" : {
+            "$ref" : "#/components/schemas/Devise"
+          },
+          "compteActif" : {
+            "type" : "boolean"
+          }
+        }
+      },
+      "CarPerPhy" : {
+        "required" : [ "anneeNais", "codeActifPerPhy", "codePaysNais", "codeSexe", "dateMaj", "indicateurCodifNais", "nomNais", "prenom", "versionPerPhy" ],
+        "type" : "object",
+        "properties" : {
+          "version" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "idtCarPerPhy" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "unPerPhy" : {
+            "$ref" : "#/components/schemas/PerPhy"
+          },
+          "versionPerPhy" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "codeCertif" : {
+            "type" : "string",
+            "enum" : [ "ACERTIFER", "ENCOURSINSEE", "ENCOURSPERS", "CERTIFIEINSEE", "CERTIFIEPERS", "CERTIFIEDGFIP", "NONCERTIFIE", "ENANOMALIE", "AREPRESENTER" ]
+          },
+          "codeOrigineCertif" : {
+            "type" : "string",
+            "enum" : [ "PERS", "INSEE", "ETAB" ]
+          },
+          "nomNais" : {
+            "type" : "string"
+          },
+          "prenom" : {
+            "type" : "string"
+          },
+          "codeSexe" : {
+            "type" : "string",
+            "enum" : [ "MASCULIN", "FEMININ", "INCONNU", "NONDEFINI" ]
+          },
+          "anneeNais" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "moisNais" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "jourNais" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "codePaysNais" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "codeDeptNais" : {
+            "type" : "string"
+          },
+          "codeComNais" : {
+            "type" : "string"
+          },
+          "nomUsage" : {
+            "type" : "string"
+          },
+          "topSensibilite" : {
+            "type" : "string",
+            "enum" : [ "NEANT", "DOSSIERSECURISE", "PEP", "DOSSIERSECUPEP" ]
+          },
+          "indicateurCodifNais" : {
+            "type" : "string",
+            "enum" : [ "LIEUNAISSCODIFIE", "ECHECDECODIFICATION" ]
+          },
+          "dateDeces" : {
+            "type" : "string"
+          },
+          "codeOrigineDeces" : {
+            "type" : "string",
+            "enum" : [ "PERS", "INSEE", "IHM" ]
+          },
+          "dateMaj" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "ppNom" : {
+            "type" : "string"
+          },
+          "metaNom" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "itip" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "getnSpi" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "codeActifPerPhy" : {
+            "type" : "string",
+            "enum" : [ "ACTIF", "DESACTIVEDOUBLON", "DESACTIVEAMALGAME", "NONACTIF", "ARCHIVE" ]
+          }
+        }
+      },
+      "CarPerPro" : {
+        "required" : [ "categorieJuridique", "codeActifPerPro", "codeCertification", "codeOrigine", "codePaysAdr", "codeSiege", "dateImmat", "dateMaj", "raisonSociale", "versionPerPro" ],
+        "type" : "object",
+        "properties" : {
+          "version" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "idtCarPerPro" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "unPerPro" : {
+            "$ref" : "#/components/schemas/PerPro"
+          },
+          "versionPerPro" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "codeCertification" : {
+            "type" : "string",
+            "enum" : [ "CERTIFINSEESIRENE", "CERTIFPERS", "NONCERTIFIE" ]
+          },
+          "origineCertification" : {
+            "type" : "string",
+            "enum" : [ "PERS", "INSEE", "ETAB" ]
+          },
+          "codeOrigine" : {
+            "type" : "string",
+            "enum" : [ "ETABLISSEMENTBANCAIRE", "INSEE", "IHM", "PERS" ]
+          },
+          "raisonSociale" : {
+            "type" : "string"
+          },
+          "sigle" : {
+            "type" : "string"
+          },
+          "enseigne" : {
+            "type" : "string"
+          },
+          "typeRepertoire" : {
+            "type" : "string",
+            "enum" : [ "SIRENE", "SOCIETEFORMATION", "SOCIETEETRANGERE", "ASSOSANSSIRET", "COPROSANSSIRET", "PMNONREPERTORIEE" ]
+          },
+          "siren" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "categorieJuridique" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "codeSiege" : {
+            "type" : "string",
+            "enum" : [ "ETBSECONDAIRE", "ETBPRINCIPAL" ]
+          },
+          "dateImmat" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "dateFinActivite" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "numeroRna" : {
+            "type" : "string"
+          },
+          "numeroCopro" : {
+            "type" : "string"
+          },
+          "codePaysAdr" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "codeDeptAdr" : {
+            "type" : "string"
+          },
+          "codeCommAdr" : {
+            "type" : "string"
+          },
+          "libelleCommAdr" : {
+            "type" : "string"
+          },
+          "libelleVoieAdr" : {
+            "type" : "string"
+          },
+          "codeNatureVoieAdr" : {
+            "type" : "string"
+          },
+          "numeroVoieAdr" : {
+            "type" : "string"
+          },
+          "indiceRepetitionAdr" : {
+            "type" : "string"
+          },
+          "libCompAdr" : {
+            "type" : "string"
+          },
+          "codePostalAdr" : {
+            "type" : "string"
+          },
+          "pmRaisonSociale" : {
+            "type" : "string"
+          },
+          "pmAdresse" : {
+            "type" : "string"
+          },
+          "metaAdr" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "metaRs" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "siret" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "codeActifPerPro" : {
+            "type" : "string",
+            "enum" : [ "ACTIF", "DESACTIVEDOUBLON", "DESACTIVEAMALGAME", "NONACTIF", "ARCHIVE" ]
+          },
+          "dateMaj" : {
+            "type" : "string",
+            "format" : "date-time"
+          }
+        }
+      },
+      "Compte" : {
+        "required" : [ "dateMaj", "numeroCompte" ],
+        "type" : "object",
+        "properties" : {
+          "version" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "idtCompte" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "numeroCompte" : {
+            "type" : "string"
+          },
+          "unGuichet" : {
+            "$ref" : "#/components/schemas/Guichet"
+          },
+          "dateMaj" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "listeCarCpt" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/CarCompte"
+            }
+          },
+          "listeDroitCompte" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/DroitCompte"
+            }
+          },
+          "nbOperation" : {
+            "type" : "integer",
+            "format" : "int32"
+          }
+        }
+      },
+      "Correspondant" : {
+        "required" : [ "nom", "prenom" ],
+        "type" : "object",
+        "properties" : {
+          "version" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "correspondantId" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "nom" : {
+            "type" : "string"
+          },
+          "prenom" : {
+            "type" : "string"
+          },
+          "tel" : {
+            "type" : "string"
+          },
+          "mail" : {
+            "type" : "string"
+          },
+          "listeLienDeclarantCorrespondant" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/LienDeclarantCorrespondant"
+            }
+          },
+          "listeLienEmetteurCorrespondant" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/LienEmetteurCorrespondant"
+            }
+          }
+        }
+      },
+      "Declarant" : {
+        "required" : [ "codePays", "dateMaj", "denomDeclarant", "libAdr2", "libAdr4" ],
+        "type" : "object",
+        "properties" : {
+          "version" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "idtDeclarant" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "unEtabFi" : {
+            "$ref" : "#/components/schemas/EtabFi"
+          },
+          "denomDeclarant" : {
+            "type" : "string"
+          },
+          "codePays" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "libAdr1" : {
+            "type" : "string"
+          },
+          "libAdr2" : {
+            "type" : "string"
+          },
+          "libAdr3" : {
+            "type" : "string"
+          },
+          "libAdr4" : {
+            "type" : "string"
+          },
+          "siretDec" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "dateDernierDepot" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "datePremierDepot" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "nomCorrespondant" : {
+            "type" : "string"
+          },
+          "prenomCorrespondant" : {
+            "type" : "string"
+          },
+          "telCorrespondant" : {
+            "type" : "string"
+          },
+          "mailCorrespondant" : {
+            "type" : "string"
+          },
+          "balfDeclarant" : {
+            "type" : "string"
+          },
+          "dateDebut" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "dateFin" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "blocNoteDec" : {
+            "type" : "string"
+          },
+          "dateMaj" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "idtDecSuivant" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "listeLienDeclarant" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/LienDeclarant"
+            }
+          },
+          "autorisationDepot" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "listeLienDeclarantCorrespondant" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/LienDeclarantCorrespondant"
+            }
+          }
+        }
+      },
+      "Devise" : {
+        "required" : [ "codeAlpha", "codeDevise", "libelleDevise" ],
+        "type" : "object",
+        "properties" : {
+          "version" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "idtDevise" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "codeDevise" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "codeAlpha" : {
+            "type" : "string"
+          },
+          "libelleDevise" : {
+            "type" : "string"
+          }
+        }
+      },
+      "DroitCompte" : {
+        "required" : [ "codeDroit", "dateDebutVal", "dateMaj", "versionCompte" ],
+        "type" : "object",
+        "properties" : {
+          "version" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "idtDroitCompte" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "unCompte" : {
+            "$ref" : "#/components/schemas/Compte"
+          },
+          "versionCompte" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "unDroitPhy" : {
+            "$ref" : "#/components/schemas/DroitPhy"
+          },
+          "unDroitPro" : {
+            "$ref" : "#/components/schemas/DroitPro"
+          },
+          "dateDebutVal" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "dateMaj" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "codeDroit" : {
+            "type" : "string",
+            "enum" : [ "TITULAIRE", "PROCURATION", "MANDATAIRE", "ETCIEI", "BENEFICIAIREEFFECTIF" ]
+          },
+          "idPerphy" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "idPerpro" : {
+            "type" : "integer",
+            "format" : "int64"
+          }
+        }
+      },
+      "DroitPhy" : {
+        "required" : [ "anneeNais", "codePaysNais", "codeSexe", "dateMaj", "nomNais", "prenom", "unCompte", "versionCompte" ],
+        "type" : "object",
+        "properties" : {
+          "version" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "idtDroitPhy" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "unCompte" : {
+            "$ref" : "#/components/schemas/Compte"
+          },
+          "versionCompte" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "nomNais" : {
+            "type" : "string"
+          },
+          "nomUsage" : {
+            "type" : "string"
+          },
+          "prenom" : {
+            "type" : "string"
+          },
+          "codeSexe" : {
+            "type" : "string",
+            "enum" : [ "MASCULIN", "FEMININ", "INCONNU", "NONDEFINI" ]
+          },
+          "anneeNais" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "moisNais" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "jourNais" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "codePaysNais" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "codeDeptNais" : {
+            "type" : "string"
+          },
+          "codeComNais" : {
+            "type" : "string"
+          },
+          "persPolExp" : {
+            "type" : "boolean"
+          },
+          "codePaysAdr" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "codeDeptAdr" : {
+            "type" : "string"
+          },
+          "codeComAdr" : {
+            "type" : "string"
+          },
+          "libelleComAdr" : {
+            "type" : "string"
+          },
+          "libelleVoieAdr" : {
+            "type" : "string"
+          },
+          "codeNatureVoieAdr" : {
+            "type" : "string"
+          },
+          "numeroVoieAdr" : {
+            "type" : "string"
+          },
+          "indiceRepetitionAdr" : {
+            "type" : "string"
+          },
+          "libCompAdr" : {
+            "type" : "string"
+          },
+          "indicateurCodifAdr" : {
+            "type" : "string",
+            "enum" : [ "ADRESSECODIFIEE", "ECHECCODIFCOMMUNE", "ECHECCODIFVOIE", "ADRESSEETRANGERE", "ADRESSEMILITAIRE", "ECHECINDISPOTOPAD", "ADRESSEFICTIVE" ]
+          },
+          "codePostalAdr" : {
+            "type" : "string"
+          },
+          "dateMaj" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "unPerPhy" : {
+            "$ref" : "#/components/schemas/PerPhy"
+          }
+        }
+      },
+      "DroitPro" : {
+        "required" : [ "categorieJuridique", "codePaysAdr", "dateMaj", "indicateurCodifAdr", "raisonSociale", "typeRepertoire", "unCompte", "versionCompte" ],
+        "type" : "object",
+        "properties" : {
+          "version" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "idtDroitPro" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "unCompte" : {
+            "$ref" : "#/components/schemas/Compte"
+          },
+          "versionCompte" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "raisonSociale" : {
+            "type" : "string"
+          },
+          "sigle" : {
+            "type" : "string"
+          },
+          "enseigne" : {
+            "type" : "string"
+          },
+          "typeRepertoire" : {
+            "type" : "string",
+            "enum" : [ "SIRENE", "SOCIETEFORMATION", "SOCIETEETRANGERE", "ASSOSANSSIRET", "COPROSANSSIRET", "PMNONREPERTORIEE" ]
+          },
+          "siret" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "categorieJuridique" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "dateMaj" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "numeroRnaDrpr" : {
+            "type" : "string"
+          },
+          "numeroCoproDrpr" : {
+            "type" : "string"
+          },
+          "leiPro" : {
+            "type" : "string"
+          },
+          "codePaysAdr" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "codeDeptAdr" : {
+            "type" : "string"
+          },
+          "codeComAdr" : {
+            "type" : "string"
+          },
+          "libelleComAdr" : {
+            "type" : "string"
+          },
+          "libelleVoieAdr" : {
+            "type" : "string"
+          },
+          "codeNatureVoieAdr" : {
+            "type" : "string"
+          },
+          "numeroVoieAdr" : {
+            "type" : "string"
+          },
+          "indiceRepetitionAdr" : {
+            "type" : "string"
+          },
+          "libCompAdr" : {
+            "type" : "string"
+          },
+          "indicateurCodifAdr" : {
+            "type" : "string",
+            "enum" : [ "ADRESSECODIFIEE", "ECHECCODIFCOMMUNE", "ECHECCODIFVOIE", "ADRESSEETRANGERE", "ADRESSEMILITAIRE", "ECHECINDISPOTOPAD", "ADRESSEFICTIVE" ]
+          },
+          "codePostalAdr" : {
+            "type" : "string"
+          },
+          "unPerPro" : {
+            "$ref" : "#/components/schemas/PerPro"
+          }
+        }
+      },
+      "Emetteur" : {
+        "required" : [ "codePays", "dateMaj", "denomEmetteur", "libAdr2", "libAdr4" ],
+        "type" : "object",
+        "properties" : {
+          "version" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "idtEmetteur" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "codeEmetteur" : {
+            "type" : "string"
+          },
+          "listeLienDeclarant" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/LienDeclarant"
+            }
+          },
+          "denomEmetteur" : {
+            "type" : "string"
+          },
+          "siretEmetteur" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "nomEmetteur" : {
+            "type" : "string"
+          },
+          "prenomEmetteur" : {
+            "type" : "string"
+          },
+          "telEmetteur" : {
+            "type" : "string"
+          },
+          "mailEmetteur" : {
+            "type" : "string"
+          },
+          "codePays" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "libAdr1" : {
+            "type" : "string"
+          },
+          "libAdr2" : {
+            "type" : "string"
+          },
+          "libAdr3" : {
+            "type" : "string"
+          },
+          "libAdr4" : {
+            "type" : "string"
+          },
+          "balfEmetteur" : {
+            "type" : "string"
+          },
+          "typeCodage" : {
+            "type" : "string",
+            "enum" : [ "ASCII", "EBCDIC" ]
+          },
+          "formatSupport" : {
+            "type" : "string",
+            "enum" : [ "CDROM", "CLE_USB", "WEB", "FICHIER" ]
+          },
+          "dateMaj" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "listeSuiviDepot" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/SuiviDepot"
+            }
+          },
+          "autorisationDepot" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "creationFcb3" : {
+            "type" : "boolean"
+          },
+          "listeLienEmetteurCorrespondant" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/LienEmetteurCorrespondant"
+            }
+          }
+        }
+      },
+      "EtabFi" : {
+        "required" : [ "categEtab", "codeActifEtb", "codeEtab", "codeOrigEtab", "codePays", "codeSituation", "dateAppliSource", "dateDebut", "dateMaj", "denomEtab", "invariant", "libAdr2", "libAdr4", "livretEpargne", "obligationDeclarative" ],
+        "type" : "object",
+        "properties" : {
+          "version" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "idtEtabFi" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "codeEtab" : {
+            "type" : "string"
+          },
+          "denomEtab" : {
+            "type" : "string"
+          },
+          "codeOrigEtab" : {
+            "type" : "string",
+            "enum" : [ "FEGABDF", "IHM", "TIERS" ]
+          },
+          "codeActifEtb" : {
+            "type" : "string",
+            "enum" : [ "ACTIF", "CESSE", "ENCOURSDECESSATION", "FUSIONNE" ]
+          },
+          "codeSituation" : {
+            "type" : "string",
+            "enum" : [ "AGREE", "RETRAITAGREMENTSUITEAFUSIONABSORPTION", "RETRAITAGREMENTSUITECESSATIONRADIATION", "SANSOBJETNONCONNUFEGA" ]
+          },
+          "dateDebut" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "dateFinValidite" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "dateFinDiffusion" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "categEtab" : {
+            "type" : "string",
+            "enum" : [ "ETABSERVPOUROPERATIONBANCAIRE", "BANQUES", "BANQMUTUALISTECOOP", "CAISSECREDITMUNICIPAL", "SOCIETESFINANCIERES1", "SOCIETESFINANCIERES2", "INSTITUTIONFINANCIERESPEC", "ENTREPRISEINVESTISS" ]
+          },
+          "dateAppliSource" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "codePays" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "libAdr1" : {
+            "type" : "string"
+          },
+          "libAdr2" : {
+            "type" : "string"
+          },
+          "libAdr3" : {
+            "type" : "string"
+          },
+          "libAdr4" : {
+            "type" : "string"
+          },
+          "siren" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "siret" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "identifiantLei" : {
+            "type" : "string"
+          },
+          "bicEtab" : {
+            "type" : "string"
+          },
+          "dateMaj" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "listeGuichet" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/Guichet"
+            }
+          },
+          "obligationDeclarative" : {
+            "type" : "string",
+            "enum" : [ "OUI", "NON", "ENCOURSDEDRC" ]
+          },
+          "invariant" : {
+            "type" : "boolean"
+          },
+          "dateInvariant" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "dateEnvoiDrc" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "dateRecepDrcAr" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "idEtabSuivi" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "dateRelance" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "livretEpargne" : {
+            "type" : "boolean"
+          },
+          "listeDeclarant" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/Declarant"
+            }
+          }
+        }
+      },
+      "LienDeclarant" : {
+        "required" : [ "dateDebutLienDecl" ],
+        "type" : "object",
+        "properties" : {
+          "pk" : {
+            "$ref" : "#/components/schemas/LienDeclarantId"
+          },
+          "dateDebutLienDecl" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "dateFinLienDecl" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "unEmetteur" : {
+            "$ref" : "#/components/schemas/Emetteur"
+          },
+          "unDeclarant" : {
+            "$ref" : "#/components/schemas/Declarant"
+          }
+        }
+      },
+      "LienDeclarantCorrespondant" : {
+        "required" : [ "dateDebut" ],
+        "type" : "object",
+        "properties" : {
+          "pk" : {
+            "$ref" : "#/components/schemas/LienDeclarantCorrespondantId"
+          },
+          "dateDebut" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "unCorrespondant" : {
+            "$ref" : "#/components/schemas/Correspondant"
+          },
+          "unDeclarant" : {
+            "$ref" : "#/components/schemas/Declarant"
+          }
+        }
+      },
+      "LienDeclarantCorrespondantId" : {
+        "type" : "object",
+        "properties" : {
+          "unDeclarant" : {
+            "$ref" : "#/components/schemas/Declarant"
+          },
+          "unCorrespondant" : {
+            "$ref" : "#/components/schemas/Correspondant"
+          }
+        }
+      },
+      "LienDeclarantId" : {
+        "type" : "object",
+        "properties" : {
+          "unDeclarant" : {
+            "$ref" : "#/components/schemas/Declarant"
+          },
+          "unEmetteur" : {
+            "$ref" : "#/components/schemas/Emetteur"
+          }
+        }
+      },
+      "LienEmetteurCorrespondant" : {
+        "required" : [ "dateDebut" ],
+        "type" : "object",
+        "properties" : {
+          "pk" : {
+            "$ref" : "#/components/schemas/LienEmetteurCorrespondantId"
+          },
+          "dateDebut" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "unEmetteur" : {
+            "$ref" : "#/components/schemas/Emetteur"
+          },
+          "unCorrespondant" : {
+            "$ref" : "#/components/schemas/Correspondant"
+          }
+        }
+      },
+      "LienEmetteurCorrespondantId" : {
+        "type" : "object",
+        "properties" : {
+          "unEmetteur" : {
+            "$ref" : "#/components/schemas/Emetteur"
+          },
+          "unCorrespondant" : {
+            "$ref" : "#/components/schemas/Correspondant"
+          }
+        }
+      },
+      "PerPhy" : {
+        "required" : [ "codeActifPerPhy", "dateMaj" ],
+        "type" : "object",
+        "properties" : {
+          "version" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "idtPerPhy" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "codeActifPerPhy" : {
+            "type" : "string",
+            "enum" : [ "ACTIF", "DESACTIVEDOUBLON", "DESACTIVEAMALGAME", "NONACTIF", "ARCHIVE" ]
+          },
+          "getnSpi" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "dateMaj" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "listeCarPerPhy" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/CarPerPhy"
+            }
+          },
+          "listeDroitPhy" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/DroitPhy"
+            }
+          },
+          "listePerPhyLien" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/PerPhyLien"
+            }
+          },
+          "listePerPhyLienActif" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/PerPhyLien"
+            }
+          },
+          "scoreAppariement" : {
+            "type" : "number",
+            "format" : "double"
+          },
+          "ppNom" : {
+            "type" : "string"
+          }
+        }
+      },
+      "PerPhyLien" : {
+        "required" : [ "codeLienTransition", "dateMaj" ],
+        "type" : "object",
+        "properties" : {
+          "version" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "idtPerPhylien" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "perphyDesactive" : {
+            "$ref" : "#/components/schemas/PerPhy"
+          },
+          "perphyNouveau" : {
+            "$ref" : "#/components/schemas/PerPhy"
+          },
+          "codeLienTransition" : {
+            "type" : "string",
+            "enum" : [ "RESODOUBLON", "RESOAMALGAME", "LIENHOMONYMIE" ]
+          },
+          "dateMaj" : {
+            "type" : "string",
+            "format" : "date-time"
+          }
+        }
+      },
+      "PerPro" : {
+        "required" : [ "codeActifPerPro", "dateMaj" ],
+        "type" : "object",
+        "properties" : {
+          "version" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "idtPerPro" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "siret" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "codeActifPerPro" : {
+            "type" : "string",
+            "enum" : [ "ACTIF", "DESACTIVEDOUBLON", "DESACTIVEAMALGAME", "NONACTIF", "ARCHIVE" ]
+          },
+          "dateMaj" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "listeDroitPro" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/DroitPro"
+            }
+          },
+          "listeCarPerPro" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/CarPerPro"
+            }
+          },
+          "scoreAppariement" : {
+            "type" : "number",
+            "format" : "double"
+          },
+          "scoreAppariementAdr" : {
+            "type" : "number",
+            "format" : "double"
+          },
+          "pmAdresse" : {
+            "type" : "string"
+          },
+          "pmRaisonSociale" : {
+            "type" : "string"
+          }
+        }
+      },
+      "RefAnomalie" : {
+        "required" : [ "codeAnomalie", "dateMaj", "libelleAnomalie", "statutAnomalie" ],
+        "type" : "object",
+        "properties" : {
+          "version" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "idtRefAnomalie" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "codeAnomalie" : {
+            "type" : "string"
+          },
+          "libelleAnomalie" : {
+            "type" : "string"
+          },
+          "statutAnomalie" : {
+            "type" : "string",
+            "enum" : [ "BLOQUANTE", "ARECYCLER", "INFORMATIVE", "NON_INTEGRE" ]
+          },
+          "dateSuppRfan" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "dateMaj" : {
+            "type" : "string",
+            "format" : "date-time"
+          }
+        }
+      },
+      "ReponseRechercherCompteDTO" : {
+        "type" : "object",
+        "properties" : {
+          "listeCompte" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/Compte"
+            }
+          }
+        }
+      },
+      "SuiviAnomalie" : {
+        "required" : [ "dateCreation", "dateMaj", "dateOperation", "numeroCompte" ],
+        "type" : "object",
+        "properties" : {
+          "version" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "idtSuiviAnomalie" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "unSuiviLot" : {
+            "$ref" : "#/components/schemas/SuiviLot"
+          },
+          "unSuiviDepot" : {
+            "$ref" : "#/components/schemas/SuiviDepot"
+          },
+          "numeroCompte" : {
+            "type" : "string"
+          },
+          "zoneDecCompte" : {
+            "type" : "string"
+          },
+          "dateOperation" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "uneAnomalie" : {
+            "$ref" : "#/components/schemas/RefAnomalie"
+          },
+          "dateCreation" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "dateResolution" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "dateMaj" : {
+            "type" : "string",
+            "format" : "date-time"
+          }
+        }
+      },
+      "SuiviDepot" : {
+        "required" : [ "dateDebutTraitement", "dateDepot", "dateFinTraitement", "dateMaj", "etatDepot", "identifiantDepot", "nbreLot", "nbreLotATraiter", "nbreLotExpl", "nbreLotInExpl", "nbreLotLus", "typedepot" ],
+        "type" : "object",
+        "properties" : {
+          "version" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "idtSuiviDepot" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "unEmetteur" : {
+            "$ref" : "#/components/schemas/Emetteur"
+          },
+          "identifiantDepot" : {
+            "type" : "string"
+          },
+          "dateDepot" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "typedepot" : {
+            "type" : "string",
+            "enum" : [ "FLUX", "WEB", "API", "SUPPORT_PHYSIQUE" ]
+          },
+          "etatDepot" : {
+            "type" : "string",
+            "enum" : [ "RECU", "EN_COURS", "TERMINE_SANS_BILAN", "TERMINE_BILAN_ENVOYE", "EN_ANOMALIE" ]
+          },
+          "dateDebutTraitement" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "dateFinTraitement" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "nbreLot" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "nbreLotLus" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "nbreLotExpl" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "nbreLotInExpl" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "nbreLotATraiter" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "zoneEmetteur" : {
+            "type" : "string"
+          },
+          "dateBilan" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "dateEnvoiBilan" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "dateMaj" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "listeLot" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/SuiviLot"
+            }
+          },
+          "listeAnomalies" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/SuiviAnomalie"
+            }
+          }
+        }
+      },
+      "SuiviLot" : {
+        "required" : [ "codeDeclarant", "dateDebutTraitement", "dateFinTraitement", "dateMaj", "etatLot", "identifiantLot" ],
+        "type" : "object",
+        "properties" : {
+          "version" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "idtSuiviLot" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "unSuiviDepot" : {
+            "$ref" : "#/components/schemas/SuiviDepot"
+          },
+          "identifiantLot" : {
+            "type" : "string"
+          },
+          "codeDeclarant" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "zoneDeclarant" : {
+            "type" : "string"
+          },
+          "etatLot" : {
+            "type" : "string",
+            "enum" : [ "NON_TRAITE", "EN_COURS", "TERMINE_SANS_BILAN", "TERMINE_BILAN_ENVOYE", "EN_ANOMALIE" ]
+          },
+          "dateDebutTraitement" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "dateFinTraitement" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "dateMaj" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "nbreAvisFournis" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "nbreAvisIntegres" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "nbreAnomalies" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "nbreAnoBloquantes" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "nbreAnoARecycler" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "nbreAnoInformatives" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "listeAnomalies" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/SuiviAnomalie"
+            }
+          }
+        }
+      },
+      "CriteresRechercheVerifTitulaireIban" : {
+        "type" : "object",
+        "properties" : {
+          "iban" : {
+            "type" : "string"
+          },
+          "recherchePP" : {
+            "type" : "string"
+          },
+          "recherchePM" : {
+            "type" : "string"
+          },
+          "rechercheSirenSiret" : {
+            "type" : "string"
+          },
+          "etatCivil" : {
+            "$ref" : "#/components/schemas/EtatCivilTitulaire"
+          },
+          "lieuNaissance" : {
+            "$ref" : "#/components/schemas/LieuNaissance"
+          },
+          "designation" : {
+            "$ref" : "#/components/schemas/Designation"
+          },
+          "siret" : {
+            "type" : "string"
+          },
+          "siren" : {
+            "type" : "string"
+          }
+        }
+      },
+      "DemandeRestitVerifIban" : {
+        "type" : "object",
+        "properties" : {
+          "dateDemande" : {
+            "type" : "string"
+          },
+          "motif" : {
+            "type" : "string"
+          },
+          "siretDemandeur" : {
+            "type" : "string"
+          },
+          "sirenDemandeur" : {
+            "type" : "string"
+          },
+          "justification" : {
+            "type" : "string"
+          },
+          "criteresRecherche" : {
+            "$ref" : "#/components/schemas/CriteresRechercheVerifTitulaireIban"
+          }
+        }
       }
-    }
-  },
-  "security": [{ "Authorization": [] }],
-  "securityDefinitions": {
-    "Authorization": {
-      "type": "apiKey",
-      "in": "header",
-      "name": "Authorization",
-      "description": "Header Authorization standard, utilisant un schéma Bearer. Exemple: \"Bearer {token}\""
-    },
-    "default": {
-      "type": "oauth2",
-      "authorizationUrl": "https://10.156.14.25/authorize",
-      "flow": "implicit",
-      "scopes": {}
-    }
-  },
-  "parameters": {
-    "paramAuthorization": {
-      "name": "Authorization",
-      "type": "string",
-      "in": "header",
-      "required": true,
-      "description": "Jeton d'authentification. Header Authorization standard, utilisant un schéma Bearer. Exemple: \"Bearer {token}\""
-    },
-    "paramXCorrelationID": {
-      "name": "X-Correlation-ID",
-      "type": "string",
-      "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
-      "in": "header",
-      "required": true,
-      "description": "Identifiant de corrélation de la requête (format UUID)"
     }
   }
 }
