@@ -4,7 +4,7 @@ import RichReactMarkdown from '../../components/richReactMarkdown';
 import Section from '../../components/api/section';
 import { IGuideElementShort } from '../../model';
 import { H3WithAnchor } from '../../uiComponents/titleWithAnchor';
-import { kebabCase } from 'lodash';
+import slugify from 'slugify';
 
 const ApiDescription: React.FC<{
   content_intro?: string;
@@ -17,7 +17,7 @@ const ApiDescription: React.FC<{
       <div style={{backgroundColor: "#FFE9E6", color: "#B34000", padding: "1rem"}}>
         <strong>⚠️ Ces informations ne sont plus mises à jour depuis le 06/09/2024.</strong><br />
         Le site API.gouv.fr va progressivement être fusionné dans le catalogue unique data.gouv.fr. <br /><br />
-        Retrouvez la fiche d'information à jour de cette API sur la nouvelle page API de Data.gouv.fr <a href={`https://data.gouv.fr/fr/dataservices/${kebabCase(title)}`} target="_blank" rel="noopener noreferrer">⇢ Consulter la fiche à jour</a>
+        Retrouvez la fiche d'information à jour de cette API sur la nouvelle page API de Data.gouv.fr <a href={`https://data.gouv.fr/fr/dataservices/${slugify(title)}`} target="_blank" rel="noopener noreferrer">⇢ Consulter la fiche à jour</a>
       </div>
       
       {content_intro && <RichReactMarkdown source={content_intro} />}
