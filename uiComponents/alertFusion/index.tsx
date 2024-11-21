@@ -6,7 +6,7 @@ export const AlertFusion: React.FC<{}> = () => (
       <div className="fr-container">
         <div className="fr-notice__body">
           <p><span className="fr-notice__title">⚠️ Le site API.gouv.fr fusionne dans le catalogue unique Data.gouv.fr :</span> <span className="fr-notice__desc">Pour découvrir les nouvelles API et obtenir les informations les plus à jour, rendez-vous sur </span>
-          <a target="_blank" rel="noopener external" title="Page API du catalogue Data.gouv.fr - nouvelle fenêtre" href="https://www.data.gouv.fr/api" className="fr-notice__link">⇢ data.gouv.fr/api</a>.
+          <a target="_blank" rel="noopener external" title="Page API du catalogue Data.gouv.fr - nouvelle fenêtre" href="https://www.data.gouv.fr/dataservices" className="fr-notice__link">⇢ data.gouv.fr/dataservices</a>.
           </p>
           </div>
         </div>
