@@ -90,6 +90,7 @@ const API: React.FC<IProps> = ({ api, guides, datagouvDatasets }) => {
               guides={guides}
               body={body}
               content_intro={content_intro}
+              title={title}
             />
 
             {datagouvDatasets.length > 0 && (
