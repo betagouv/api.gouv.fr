@@ -2,7 +2,7 @@
   "openapi" : "3.0.1",
   "info" : {
     "title" : "FICOBA_API",
-    "description" : "Offres de services REST de l'API FICOBA - Restitution \n\nPour plus d'informations sur cette API, vous pouvez vous référer à son [protocole technique](/resources/ProtocoleTechniqueFicoba3-v5.pdf).",
+    "description" : "Offres de services REST de l'API FICOBA - Restitution \n\nPour plus d'informations sur cette API et ses différents webservices, vous pouvez vous référer à son [protocole technique](/resources/ProtocoleTechniqueFicoba3-v5.pdf).",
     "version" : "v2"
   },
   "servers" : [ {
