@@ -73,7 +73,7 @@ themes:
   - Particulier
   - Entreprise
 contact_link: dtnum.donnees.demande-acces@dgfip.finances.gouv.fr, tapir.dgfip@dgfip.finances.gouv.fr
-doc_tech_link: /swaggers/api-ficoba.json
+doc_tech_link: /swaggers/openapi-ficoba.json
 last_update: 22/09/2020
 visits_2019: 11000
 ---
