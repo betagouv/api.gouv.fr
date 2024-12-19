@@ -1,0 +1,1385 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "FICOBA_API",
+    "description" : "Offres de services REST de l'API FICOBA - Restitutions",
+    "version" : "v2"
+  },
+  "servers" : [ {
+    "url" : "/fcb-masrestit/api/v2"
+  } ],
+  "paths" : {
+    "/etatSante" : {
+      "get" : {
+        "tags" : [ "Etat Santé" ],
+        "description" : "Vérifier le statut de l'API",
+        "operationId" : "getInfo",
+        "parameters" : [ {
+          "name" : "X-Correlation-ID",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "X-JWT-Assertion",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "L'API est disponible",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/EtatSante"
+                }
+              }
+            }
+          },
+          "503" : {
+            "description" : "L'API est actuellement indisponible",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ResultatErreurApiSante"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/comptes/numCpte" : {
+      "post" : {
+        "tags" : [ "OS041 - RechercherComptesParNumCpte" ],
+        "description" : "Rechercher compte clos et actif par numero compte",
+        "operationId" : "rechercherCompteParNumCpte",
+        "parameters" : [ {
+          "name" : "X-Correlation-ID",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "X-JWT-Assertion",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/DemandeRestitRechCompte"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Recherche effectuée avec succés ",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ReponseListeFinaleComptes"
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "Erreur pendant le traitement de la recherche"
+          }
+        }
+      }
+    },
+    "/comptes/siretSiren" : {
+      "post" : {
+        "tags" : [ "OS044 - RechercherComptesParSiretSiren" ],
+        "description" : "Rechercher compte par SIRET SIREN",
+        "operationId" : "rechercherCompteParSiretSiren",
+        "parameters" : [ {
+          "name" : "X-Correlation-ID",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "X-JWT-Assertion",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/DemandeRestitSiretSiren"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Recherche effectuée avec succés ",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ReponseListeFinaleComptesPourPM"
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "Erreur pendant le traitement de la recherche"
+          }
+        }
+      }
+    },
+    "/comptes/spi" : {
+      "post" : {
+        "tags" : [ "OS045 - RechercherComptesParSpi" ],
+        "description" : "Rechercher compte par Spi",
+        "operationId" : "rechercherComptesSpi",
+        "parameters" : [ {
+          "name" : "X-Correlation-ID",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "X-JWT-Assertion",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/DemandeRestitRechSpi"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Recherche  effectuée avec succés ",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ReponseListeFinaleComptesPourPP"
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "Erreur pendant le traitement de la recherche"
+          }
+        }
+      }
+    },
+    "/comptes/perPhy" : {
+      "post" : {
+        "tags" : [ "OS043 - RechercherComptesPerPhy" ],
+        "description" : "Rechercher les comptes pour une personne physique",
+        "operationId" : "rechercherComptesPersonnePhysique",
+        "parameters" : [ {
+          "name" : "X-Correlation-ID",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "X-JWT-Assertion",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/DemandeRestitRechPerPhy"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Recherche comptes personne physique effectuée avec succés ",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ReponseListeFinaleComptesPourPP"
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "Erreur pendant le traitement de la recherche"
+          }
+        }
+      }
+    },
+    "/comptes/perPro" : {
+      "post" : {
+        "tags" : [ "OS042 - RechercherComptesPerPro" ],
+        "description" : "Rechercher les comptes d'une personne morale",
+        "operationId" : "rechercherComptesPerPro",
+        "parameters" : [ {
+          "name" : "X-Correlation-ID",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "X-JWT-Assertion",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/DemandeRestitRechPerPro"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Recherche effectuée avec succés ",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ReponseListeFinaleComptesPourPM"
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "Erreur pendant le traitement de la recherche"
+          }
+        }
+      }
+    },
+    "/comptes/multiDet" : {
+      "post" : {
+        "tags" : [ "OS035 - RechercherMutiDetention" ],
+        "description" : "Rechercher compte réglementé",
+        "operationId" : "rechercherMultiDetention",
+        "parameters" : [ {
+          "name" : "X-Correlation-ID",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "X-JWT-Assertion",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/DemandeRestitMultiDet"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Recherche  effectuée avec succés ",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ReponseMultiDetention"
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "Erreur pendant le traitement de la recherche"
+          }
+        }
+      }
+    },
+    "/comptes/verifIban" : {
+      "post" : {
+        "tags" : [ "OS050 - VerifierTitulaireIban" ],
+        "description" : "Verifier le titulaire d'un iban",
+        "operationId" : "rechercherCompteParNumCpte_1",
+        "parameters" : [ {
+          "name" : "X-Correlation-ID",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "X-JWT-Assertion",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/DemandeRestitVerifIban"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Recherche effectuée avec succés ",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ReponseListeFinaleComptes"
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "Erreur pendant le traitement de la recherche"
+          }
+        }
+      }
+     } 
+   },
+  "components" : {
+    "schemas" : {
+      "EtatSante" : {
+        "type" : "object",
+        "properties" : {
+          "descriptif" : {
+            "type" : "string",
+            "description" : "L'API est opérationnelle",
+            "example" : "L'API est opérationnelle"
+          }
+        }
+      },
+      "ReponseErreur" : {
+        "type" : "object",
+        "properties" : {
+          "code" : {
+            "type" : "string"
+          },
+          "message" : {
+            "type" : "string"
+          },
+          "horodatage" : {
+            "type" : "string"
+          }
+        }
+      },
+      "ResultatErreurApiSante" : {
+        "type" : "object",
+        "properties" : {
+          "erreur" : {
+            "$ref" : "#/components/schemas/ReponseErreur"
+          }
+        }
+      },
+      "AdresseGuichet" : {
+        "type" : "object",
+        "properties" : {
+          "libAdr1" : {
+            "type" : "string"
+          },
+          "libAdr2" : {
+            "type" : "string"
+          },
+          "libAdr3" : {
+            "type" : "string"
+          },
+          "libAdr4" : {
+            "type" : "string"
+          }
+        }
+      },
+      "CaracteristiqueCompte" : {
+        "type" : "object",
+        "properties" : {
+          "codeCaracteristique" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "libelleCaracteristique" : {
+            "type" : "string"
+          }
+        }
+      },
+      "CompteCaracteristiques" : {
+        "type" : "object",
+        "properties" : {
+          "iban" : {
+            "type" : "string"
+          },
+          "dateOuverture" : {
+            "type" : "string"
+          },
+          "dateFiscale" : {
+            "type" : "string"
+          },
+          "motifOuverture" : {
+            "type" : "string"
+          },
+          "dateCloture" : {
+            "type" : "string"
+          },
+          "nature" : {
+            "$ref" : "#/components/schemas/NatureCompteDto"
+          },
+          "type" : {
+            "$ref" : "#/components/schemas/TypeCompte"
+          },
+          "formatCompte" : {
+            "type" : "string"
+          },
+          "caracteristique" : {
+            "$ref" : "#/components/schemas/CaracteristiqueCompte"
+          },
+          "succession" : {
+            "type" : "string"
+          },
+          "resident" : {
+            "type" : "string"
+          },
+          "devise" : {
+            "$ref" : "#/components/schemas/DeviseCompte"
+          }
+        }
+      },
+      "CompteStructure" : {
+        "type" : "object",
+        "properties" : {
+          "caracteristiqueCompte" : {
+            "$ref" : "#/components/schemas/CompteCaracteristiques"
+          },
+          "etablissementGestionnaire" : {
+            "$ref" : "#/components/schemas/EtablissementGestionnaire"
+          },
+          "ayantsDroits" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/TitulaireCompte"
+            }
+          }
+        }
+      },
+      "DemandeRestit" : {
+        "type" : "object",
+        "properties" : {
+          "dateDemande" : {
+            "type" : "string"
+          },
+          "motif" : {
+            "type" : "string"
+          },
+          "siretDemandeur" : {
+            "type" : "string"
+          },
+          "sirenDemandeur" : {
+            "type" : "string"
+          },
+          "justification" : {
+            "type" : "string"
+          }
+        }
+      },
+      "DeviseCompte" : {
+        "type" : "object",
+        "properties" : {
+          "codeDevise" : {
+            "type" : "string"
+          }
+        }
+      },
+      "EtablissementBancaire" : {
+        "type" : "object",
+        "properties" : {
+          "numeroEtablissement" : {
+            "type" : "string"
+          },
+          "libelleEtablissement" : {
+            "type" : "string"
+          }
+        }
+      },
+      "EtablissementGestionnaire" : {
+        "type" : "object",
+        "properties" : {
+          "etablissement" : {
+            "$ref" : "#/components/schemas/EtablissementBancaire"
+          },
+          "guichet" : {
+            "$ref" : "#/components/schemas/GuichetDto"
+          }
+        }
+      },
+      "GuichetDto" : {
+        "type" : "object",
+        "properties" : {
+          "numeroGuichet" : {
+            "type" : "string"
+          },
+          "libelleGuichet" : {
+            "type" : "string"
+          },
+          "adresse" : {
+            "$ref" : "#/components/schemas/AdresseGuichet"
+          }
+        }
+      },
+      "NatureCompteDto" : {
+        "type" : "object",
+        "properties" : {
+          "codeNature" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "libelleNature" : {
+            "type" : "string"
+          }
+        }
+      },
+      "ReponseListeComptes" : {
+        "type" : "object",
+        "properties" : {
+          "caracteristiquesDemande" : {
+            "$ref" : "#/components/schemas/DemandeRestit"
+          },
+          "referenceDemande" : {
+            "type" : "string"
+          },
+          "nombreReponses" : {
+            "type" : "string"
+          },
+          "messageInformatif" : {
+            "$ref" : "#/components/schemas/ReponseErreur"
+          },
+          "comptes" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/CompteStructure"
+            }
+          },
+          "verificationCompte" : {
+            "$ref" : "#/components/schemas/ReponseVerifCompte"
+          }
+        }
+      },
+      "ReponseListeFinaleComptes" : {
+        "type" : "object",
+        "properties" : {
+          "caracteristiquesDemande" : {
+            "$ref" : "#/components/schemas/DemandeRestit"
+          },
+          "referenceDemande" : {
+            "type" : "string"
+          },
+          "nombreReponses" : {
+            "type" : "string"
+          },
+          "messageInformatif" : {
+            "$ref" : "#/components/schemas/ReponseErreur"
+          },
+          "reponses" : {
+            "$ref" : "#/components/schemas/ReponseListeComptes"
+          }
+        }
+      },
+      "ReponseVerifCompte" : {
+        "type" : "object",
+        "properties" : {
+          "ibanExistant" : {
+            "type" : "string"
+          },
+          "dateCloture" : {
+            "type" : "string"
+          }
+        }
+      },
+      "TitulaireCompte" : {
+        "type" : "object"
+      },
+      "TypeCompte" : {
+        "type" : "object",
+        "properties" : {
+          "codeType" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "libelleType" : {
+            "type" : "string"
+          }
+        }
+      },
+      "CriteresRechercheCompte" : {
+        "type" : "object",
+        "properties" : {
+          "iban" : {
+            "type" : "string"
+          },
+          "verificationCompte" : {
+            "type" : "string"
+          }
+        }
+      },
+      "DemandeRestitRechCompte" : {
+        "type" : "object",
+        "properties" : {
+          "dateDemande" : {
+            "type" : "string"
+          },
+          "motif" : {
+            "type" : "string"
+          },
+          "siretDemandeur" : {
+            "type" : "string"
+          },
+          "sirenDemandeur" : {
+            "type" : "string"
+          },
+          "justification" : {
+            "type" : "string"
+          },
+          "criteresRecherche" : {
+            "$ref" : "#/components/schemas/CriteresRechercheCompte"
+          }
+        }
+      },
+      "Adresse" : {
+        "type" : "object",
+        "properties" : {
+          "codePaysResidence" : {
+            "type" : "string"
+          },
+          "libellePaysResidence" : {
+            "type" : "string"
+          },
+          "codeDepartementResidence" : {
+            "type" : "string"
+          },
+          "libelleDepartementResidence" : {
+            "type" : "string"
+          },
+          "codeCommuneResidence" : {
+            "type" : "string"
+          },
+          "libelleCommuneResidence" : {
+            "type" : "string"
+          },
+          "codeNatureVoie" : {
+            "type" : "string"
+          },
+          "libelleVoie" : {
+            "type" : "string"
+          },
+          "numeroVoie" : {
+            "type" : "string"
+          },
+          "indiceRepetition" : {
+            "type" : "string"
+          },
+          "indicateurCodifAdresse" : {
+            "type" : "string"
+          },
+          "codePostal" : {
+            "type" : "string"
+          },
+          "libelleComplAdr" : {
+            "type" : "string"
+          }
+        }
+      },
+      "PersonneMorale" : {
+        "type" : "object",
+        "properties" : {
+          "raisonSociale" : {
+            "type" : "string"
+          },
+          "sigle" : {
+            "type" : "string"
+          },
+          "enseigne" : {
+            "type" : "string"
+          },
+          "siret" : {
+            "type" : "string"
+          },
+          "categorieJuridique" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "siren" : {
+            "type" : "string"
+          },
+          "adresse" : {
+            "$ref" : "#/components/schemas/Adresse"
+          },
+          "scoreAppariement" : {
+            "type" : "number",
+            "format" : "double"
+          }
+        }
+      },
+      "ReponseListeComptesPourPM" : {
+        "type" : "object",
+        "properties" : {
+          "caracteristiquesDemande" : {
+            "$ref" : "#/components/schemas/DemandeRestit"
+          },
+          "referenceDemande" : {
+            "type" : "string"
+          },
+          "nombreReponses" : {
+            "type" : "string"
+          },
+          "messageInformatif" : {
+            "$ref" : "#/components/schemas/ReponseErreur"
+          },
+          "personneRecherche" : {
+            "$ref" : "#/components/schemas/PersonneMorale"
+          },
+          "nombreComptes" : {
+            "type" : "string"
+          },
+          "comptes" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/CompteStructure"
+            }
+          }
+        }
+      },
+      "ReponseListeFinaleComptesPourPM" : {
+        "type" : "object",
+        "properties" : {
+          "caracteristiquesDemande" : {
+            "$ref" : "#/components/schemas/DemandeRestit"
+          },
+          "referenceDemande" : {
+            "type" : "string"
+          },
+          "nombreReponses" : {
+            "type" : "string"
+          },
+          "messageInformatif" : {
+            "$ref" : "#/components/schemas/ReponseErreur"
+          },
+          "reponses" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/ReponseListeComptesPourPM"
+            }
+          }
+        }
+      },
+      "CriteresRechercheSiretSiren" : {
+        "type" : "object",
+        "properties" : {
+          "siret" : {
+            "type" : "string"
+          },
+          "siren" : {
+            "type" : "string"
+          }
+        }
+      },
+      "DemandeRestitSiretSiren" : {
+        "type" : "object",
+        "properties" : {
+          "dateDemande" : {
+            "type" : "string"
+          },
+          "motif" : {
+            "type" : "string"
+          },
+          "siretDemandeur" : {
+            "type" : "string"
+          },
+          "sirenDemandeur" : {
+            "type" : "string"
+          },
+          "justification" : {
+            "type" : "string"
+          },
+          "criteresRecherche" : {
+            "$ref" : "#/components/schemas/CriteresRechercheSiretSiren"
+          }
+        }
+      },
+      "CommuneNaissance" : {
+        "type" : "object",
+        "properties" : {
+          "codeCommune" : {
+            "type" : "string"
+          },
+          "libelleCommune" : {
+            "type" : "string"
+          }
+        }
+      },
+      "DepartementNaissance" : {
+        "type" : "object",
+        "properties" : {
+          "codeDepartement" : {
+            "type" : "string"
+          },
+          "libelleDepartement" : {
+            "type" : "string"
+          }
+        }
+      },
+      "PaysNaissance" : {
+        "type" : "object",
+        "properties" : {
+          "codePays" : {
+            "type" : "string"
+          },
+          "libellePays" : {
+            "type" : "string"
+          }
+        }
+      },
+      "PersonnePhysique" : {
+        "type" : "object",
+        "properties" : {
+          "nomNaissance" : {
+            "type" : "string"
+          },
+          "nomUsage" : {
+            "type" : "string"
+          },
+          "prenom" : {
+            "type" : "string"
+          },
+          "sexe" : {
+            "type" : "string"
+          },
+          "anneeNaissance" : {
+            "type" : "string"
+          },
+          "moisNaissance" : {
+            "type" : "string"
+          },
+          "jourNaissance" : {
+            "type" : "string"
+          },
+          "dateDeces" : {
+            "type" : "string"
+          },
+          "paysNaissance" : {
+            "$ref" : "#/components/schemas/PaysNaissance"
+          },
+          "departementNaissance" : {
+            "$ref" : "#/components/schemas/DepartementNaissance"
+          },
+          "communeNaissance" : {
+            "$ref" : "#/components/schemas/CommuneNaissance"
+          },
+          "numeroSpi" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "adresse" : {
+            "$ref" : "#/components/schemas/Adresse"
+          },
+          "scoreAppariement" : {
+            "type" : "number",
+            "format" : "double"
+          }
+        }
+      },
+      "ReponseListeComptesPourPP" : {
+        "type" : "object",
+        "properties" : {
+          "caracteristiquesDemande" : {
+            "$ref" : "#/components/schemas/DemandeRestit"
+          },
+          "referenceDemande" : {
+            "type" : "string"
+          },
+          "nombreReponses" : {
+            "type" : "string"
+          },
+          "messageInformatif" : {
+            "$ref" : "#/components/schemas/ReponseErreur"
+          },
+          "personneRecherche" : {
+            "$ref" : "#/components/schemas/PersonnePhysique"
+          },
+          "nombreComptes" : {
+            "type" : "string"
+          },
+          "comptes" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/CompteStructure"
+            }
+          }
+        }
+      },
+      "ReponseListeFinaleComptesPourPP" : {
+        "type" : "object",
+        "properties" : {
+          "caracteristiquesDemande" : {
+            "$ref" : "#/components/schemas/DemandeRestit"
+          },
+          "referenceDemande" : {
+            "type" : "string"
+          },
+          "nombreReponses" : {
+            "type" : "string"
+          },
+          "messageInformatif" : {
+            "$ref" : "#/components/schemas/ReponseErreur"
+          },
+          "reponses" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/ReponseListeComptesPourPP"
+            }
+          }
+        }
+      },
+      "CriteresRechercheSpi" : {
+        "type" : "object",
+        "properties" : {
+          "numeroSPI" : {
+            "type" : "string"
+          }
+        }
+      },
+      "DemandeRestitRechSpi" : {
+        "type" : "object",
+        "properties" : {
+          "dateDemande" : {
+            "type" : "string"
+          },
+          "motif" : {
+            "type" : "string"
+          },
+          "siretDemandeur" : {
+            "type" : "string"
+          },
+          "sirenDemandeur" : {
+            "type" : "string"
+          },
+          "justification" : {
+            "type" : "string"
+          },
+          "criteresRecherche" : {
+            "$ref" : "#/components/schemas/CriteresRechercheSpi"
+          }
+        }
+      },
+      "CriteresRecherchePerPhy" : {
+        "type" : "object",
+        "properties" : {
+          "etatCivil" : {
+            "$ref" : "#/components/schemas/EtatCivil"
+          },
+          "lieuNaissance" : {
+            "$ref" : "#/components/schemas/LieuNaissance"
+          },
+          "domiciliation" : {
+            "$ref" : "#/components/schemas/Domiciliation"
+          }
+        }
+      },
+      "DemandeRestitRechPerPhy" : {
+        "type" : "object",
+        "properties" : {
+          "dateDemande" : {
+            "type" : "string"
+          },
+          "motif" : {
+            "type" : "string"
+          },
+          "siretDemandeur" : {
+            "type" : "string"
+          },
+          "sirenDemandeur" : {
+            "type" : "string"
+          },
+          "justification" : {
+            "type" : "string"
+          },
+          "criteresRecherche" : {
+            "$ref" : "#/components/schemas/CriteresRecherchePerPhy"
+          }
+        }
+      },
+      "Domiciliation" : {
+        "type" : "object",
+        "properties" : {
+          "codePays" : {
+            "type" : "string"
+          },
+          "codeDepartement" : {
+            "type" : "string"
+          },
+          "codeCommune" : {
+            "type" : "string"
+          },
+          "codeNatureVoie" : {
+            "type" : "string"
+          },
+          "libelleVoie" : {
+            "type" : "string"
+          },
+          "numeroVoie" : {
+            "type" : "string"
+          },
+          "indiceRepetition" : {
+            "type" : "string"
+          },
+          "codePostal" : {
+            "type" : "string"
+          }
+        }
+      },
+      "EtatCivil" : {
+        "type" : "object",
+        "properties" : {
+          "anneeNaissance" : {
+            "type" : "string"
+          },
+          "moisNaissance" : {
+            "type" : "string"
+          },
+          "jourNaissance" : {
+            "type" : "string"
+          },
+          "anneeNaissanceDebut" : {
+            "type" : "string"
+          },
+          "moisNaissanceDebut" : {
+            "type" : "string"
+          },
+          "jourNaissanceDebut" : {
+            "type" : "string"
+          },
+          "anneeNaissanceFin" : {
+            "type" : "string"
+          },
+          "moisNaissanceFin" : {
+            "type" : "string"
+          },
+          "jourNaissanceFin" : {
+            "type" : "string"
+          },
+          "nom" : {
+            "type" : "string"
+          },
+          "prenoms" : {
+            "type" : "string"
+          },
+          "sexe" : {
+            "type" : "string"
+          }
+        }
+      },
+      "LieuNaissance" : {
+        "type" : "object",
+        "properties" : {
+          "codePaysNaissance" : {
+            "type" : "string"
+          },
+          "codeDepartementNaissance" : {
+            "type" : "string"
+          },
+          "codeCommuneNaissance" : {
+            "type" : "string"
+          }
+        }
+      },
+      "CriteresRecherchePerPro" : {
+        "type" : "object",
+        "properties" : {
+          "designation" : {
+            "$ref" : "#/components/schemas/Designation"
+          },
+          "domiciliation" : {
+            "$ref" : "#/components/schemas/Domiciliation"
+          }
+        }
+      },
+      "DemandeRestitRechPerPro" : {
+        "type" : "object",
+        "properties" : {
+          "dateDemande" : {
+            "type" : "string"
+          },
+          "motif" : {
+            "type" : "string"
+          },
+          "siretDemandeur" : {
+            "type" : "string"
+          },
+          "sirenDemandeur" : {
+            "type" : "string"
+          },
+          "justification" : {
+            "type" : "string"
+          },
+          "criteresRecherche" : {
+            "$ref" : "#/components/schemas/CriteresRecherchePerPro"
+          }
+        }
+      },
+      "Designation" : {
+        "type" : "object",
+        "properties" : {
+          "raisonSociale" : {
+            "type" : "string"
+          },
+          "sigle" : {
+            "type" : "string"
+          },
+          "enseigne" : {
+            "type" : "string"
+          },
+          "codeCategorieJuridique" : {
+            "type" : "string"
+          }
+        }
+      },
+      "CompteMultiDet" : {
+        "type" : "object",
+        "properties" : {
+          "iban" : {
+            "type" : "string"
+          },
+          "nature" : {
+            "type" : "string"
+          },
+          "dateOuverture" : {
+            "type" : "string"
+          },
+          "dateFiscale" : {
+            "type" : "string"
+          },
+          "motifOuverture" : {
+            "type" : "string"
+          },
+          "codeEtab" : {
+            "type" : "string"
+          },
+          "guichet" : {
+            "$ref" : "#/components/schemas/GuichetDto"
+          }
+        }
+      },
+      "ReponseMultiDetention" : {
+        "type" : "object",
+        "properties" : {
+          "caracteristiquesDemande" : {
+            "$ref" : "#/components/schemas/DemandeRestit"
+          },
+          "referenceDemande" : {
+            "type" : "string"
+          },
+          "nombreReponses" : {
+            "type" : "string"
+          },
+          "messageInformatif" : {
+            "$ref" : "#/components/schemas/ReponseErreur"
+          },
+          "getnRep" : {
+            "type" : "string"
+          },
+          "comptes" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/CompteMultiDet"
+            }
+          }
+        }
+      },
+      "CriteresRechercheMultiDet" : {
+        "type" : "object",
+        "properties" : {
+          "accordClient" : {
+            "type" : "string"
+          },
+          "codeNatureCompte" : {
+            "type" : "string"
+          },
+          "recherchePP" : {
+            "type" : "string"
+          },
+          "recherchePM" : {
+            "type" : "string"
+          },
+          "rechercheSIRENSIRET" : {
+            "type" : "string"
+          },
+          "criteresRecherchePro" : {
+            "$ref" : "#/components/schemas/CriteresRecherchePerPro"
+          },
+          "criteresRecherchePhy" : {
+            "$ref" : "#/components/schemas/CriteresRecherchePerPhyMD"
+          },
+          "criteresSiretSiren" : {
+            "$ref" : "#/components/schemas/CriteresRechercheSiretSiren"
+          }
+        }
+      },
+      "CriteresRecherchePerPhyMD" : {
+        "type" : "object",
+        "properties" : {
+          "etatCivil" : {
+            "$ref" : "#/components/schemas/EtatCivilTitulaire"
+          },
+          "lieuNaissance" : {
+            "$ref" : "#/components/schemas/LieuNaissance"
+          },
+          "domiciliation" : {
+            "$ref" : "#/components/schemas/Domiciliation"
+          }
+        }
+      },
+      "DemandeRestitMultiDet" : {
+        "type" : "object",
+        "properties" : {
+          "dateDemande" : {
+            "type" : "string"
+          },
+          "motif" : {
+            "type" : "string"
+          },
+          "siretDemandeur" : {
+            "type" : "string"
+          },
+          "sirenDemandeur" : {
+            "type" : "string"
+          },
+          "justification" : {
+            "type" : "string"
+          },
+          "criteresRecherche" : {
+            "$ref" : "#/components/schemas/CriteresRechercheMultiDet"
+          }
+        }
+      },
+      "EtatCivilTitulaire" : {
+        "type" : "object",
+        "properties" : {
+          "nom" : {
+            "type" : "string"
+          },
+          "prenoms" : {
+            "type" : "string"
+          },
+          "sexe" : {
+            "type" : "string"
+          },
+          "anneeNaissance" : {
+            "type" : "string"
+          },
+          "moisNaissance" : {
+            "type" : "string"
+          },
+          "jourNaissance" : {
+            "type" : "string"
+          }
+        }
+      },
+      "CriteresRechercheVerifTitulaireIban" : {
+        "type" : "object",
+        "properties" : {
+          "iban" : {
+            "type" : "string"
+          },
+          "recherchePP" : {
+            "type" : "string"
+          },
+          "recherchePM" : {
+            "type" : "string"
+          },
+          "rechercheSirenSiret" : {
+            "type" : "string"
+          },
+          "etatCivil" : {
+            "$ref" : "#/components/schemas/EtatCivilTitulaire"
+          },
+          "lieuNaissance" : {
+            "$ref" : "#/components/schemas/LieuNaissance"
+          },
+          "designation" : {
+            "$ref" : "#/components/schemas/Designation"
+          },
+          "siret" : {
+            "type" : "string"
+          },
+          "siren" : {
+            "type" : "string"
+          }
+        }
+      },
+      "DemandeRestitVerifIban" : {
+        "type" : "object",
+        "properties" : {
+          "dateDemande" : {
+            "type" : "string"
+          },
+          "motif" : {
+            "type" : "string"
+          },
+          "siretDemandeur" : {
+            "type" : "string"
+          },
+          "sirenDemandeur" : {
+            "type" : "string"
+          },
+          "justification" : {
+            "type" : "string"
+          },
+          "criteresRecherche" : {
+            "$ref" : "#/components/schemas/CriteresRechercheVerifTitulaireIban"
+          }
+        }
+      }
+    }
+  }
+}
