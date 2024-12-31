@@ -525,4 +525,8 @@
    - type: ADD_API
      what: ALN - Aménagement Logement Nature, par la DGALN 
      path: /les-api/api-aln
+    12:
+   - type: ADD_API
+     what: RIAL (Répertoire Inter-Administratif des Locaux), par la DGFiP
+     path: /les-api/api_rial
 ---
