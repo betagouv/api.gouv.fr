@@ -86,4 +86,4 @@ L’API RIAL permet d’obtenir le descriptif sommaire d’un local dès lors qu
 | Descriptif de l’habitation ou du local professionnel | Descriptif sommaire et surfaces composant le local |
 
 Une partie des informations contenues dans le RIAL et restituées par l’API sont des données codifiées.
-La [documentation fonctionnelle de l’API RIAL](/public/resources/documentation_api_rial_v2024-11.pdf) permet de consulter le détail des données échangées.
+La [documentation fonctionnelle de l’API RIAL](/resources/documentation_api_rial_v2024-11.pdf) permet de consulter le détail des données échangées.
