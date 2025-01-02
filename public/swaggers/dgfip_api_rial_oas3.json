@@ -1,0 +1,1096 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "description": "L'API `R`épertoire `I`nter-`A`dministratif des `L`ocaux (`RIAL`) permet la mise à disposition de données descriptives actualisées relatives aux locaux sur le territoire national. \n\nElle propose des opérations de recherche de locaux à partir des critères suivants : __identifiant fiscal__, __adresse codifiée__, __parcelle cadastrale__.\n\nQuel que soit le mode de recherche, seuls les __locaux « fonciers »__ sont restitués.\n\nSeul le mode de recherche par identifiant fiscal revoie le descriptif complet d'un local. Les deux autres modes ne renvoient qu'une liste d'identifiants fiscaux de locaux, qui peuvent ensuite être utilisés dans le premier mode de recherche afin de récupérer leurs descriptifs respectifs. \n",
+    "version": "v1",
+    "title": "RIAL : Répertoire Inter-Administratif des Locaux",
+    "termsOfService": "https://datapass.api.gouv.fr"
+  },
+  "externalDocs": {
+    "description": "Additional Documentation",
+    "url": "https://api.dgfip.finances.gouv.fr"
+  },
+  "servers": [
+    {
+      "url": "https://IP-GATEWAY/rial/v1"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Restitution de locaux par identifiants fiscaux"
+    },
+    {
+      "name": "Recherche de locaux par adresse codifiée"
+    },
+    {
+      "name": "Recherche de locaux par parcelle cadastrale"
+    }
+  ],
+  "paths": {
+    "/locaux/{identifiantFiscal}": {
+      "get": {
+        "tags": [
+          "Restitution de locaux par identifiants fiscaux"
+        ],
+        "summary": "Obtenir les descriptifs détaillés de locaux à partir de leurs identifiants fiscaux respectifs",
+        "operationId": "rechercheParID",
+        "parameters": [
+          {
+            "name": "identifiantFiscal",
+            "in": "path",
+            "description": "Identifiant fiscal du local (invariant) composé de 12 caractères : 5 caractères représentant les codes Insee département et commune + 7 caractères réprésentant un numéro séquentiel.\n\n_Exemple: 2A1810028562_\n\n--\n\n L'identifiant fiscal d'un local peut être récupéré en utilisant les deux autres opérations proposées par cette API.\n\n--\n\n__NB : il est possible de saisir plusieurs identifiants fiscaux afin de récupérer les descriptifs de plusieurs locaux (1 descriptif par identifiant). Pour cela, il faudra saisir les identifiants de manière successive, séparés par des virgules, et sans espace.__\n\n_Exemple: 2A1810028562,2A1230028577,2A1456828510_\n\n--\n\n__Important : Le nombre maximum d'identifiants à saisir en simultané est de `200`__",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 12,
+                "maxLength": 12
+              }
+            },
+            "style": "simple",
+            "explode": false
+          },
+          {
+            "$ref": "#/components/parameters/jetonOAuth2"
+          },
+          {
+            "$ref": "#/components/parameters/correlationID"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Locaux retrouvés avec succès",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "description": "Descriptifs détaillés des locaux retrouvés",
+                  "items": {
+                    "$ref": "#/components/schemas/local"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/badRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/notFound"
+          },
+          "429": {
+            "$ref": "#/components/responses/tooManyRequests"
+          },
+          "500": {
+            "$ref": "#/components/responses/internalServerError"
+          },
+          "503": {
+            "$ref": "#/components/responses/serviceUnavailable"
+          },
+          "default": {
+            "$ref": "#/components/responses/defaultErrors"
+          }
+        },
+        "security": [
+          {
+            "oAuth2": []
+          }
+        ]
+      }
+    },
+    "/locaux/adresseTopographique": {
+      "get": {
+        "tags": [
+          "Recherche de locaux par adresse codifiée"
+        ],
+        "summary": "Obtenir un ou plusieurs identifiants de locaux à partir de leur adresse topographique codifiée",
+        "operationId": "rechercheParAdresseTopo",
+        "parameters": [
+          {
+            "name": "codeDepartementInsee",
+            "in": "query",
+            "description": "Code Insee du département de situation du local (sur 2 caractères pour les départements métropolitains, sur 3 caractères pour les DOM)",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 2,
+              "maxLength": 3
+            },
+            "examples": {
+              "DM": {
+                "value": "2A",
+                "summary": "Cas d'un département métropolitain"
+              },
+              "DOM": {
+                "value": "971",
+                "summary": "Cas d'un DOM"
+              }
+            }
+          },
+          {
+            "name": "codeCommuneInsee",
+            "in": "query",
+            "description": "Code Insee de la commune de situation du bien (sur 3 caractères pour les départements métropolitains, sur 2 caractères pour les DOM). \n\n_NB : pour les communes de Lyon, Marseille et Paris, le code de la commune correspond au code Insee de l’arrondissement de situation du bien (exemple Paris, 20 arrondissements ⇒ 20 communes codes 101 à 120)_",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 2,
+              "maxLength": 3
+            },
+            "examples": {
+              "DM": {
+                "value": "435",
+                "summary": "Cas d'une commune d'un département métropolitain"
+              },
+              "DOM": {
+                "value": "14",
+                "summary": "Cas d'une commune d'un DOM"
+              }
+            }
+          },
+          {
+            "name": "codeVoieTopo",
+            "in": "query",
+            "description": "Code topographique de la voie (Le fichier -Topo- géré par la DGFIP, anciennement fichier -Fantoir-, est mis à disposition sur data.gouv.fr). \n\n_NB : Le code topo de la voie est également restitué lors de la recherche d’une adresse sur le site national des adresses : https://adresse.data.gouv.fr/_",
+            "required": true,
+            "example": "4699",
+            "schema": {
+              "type": "string",
+              "minLength": 4,
+              "maxLength": 4
+            }
+          },
+          {
+            "name": "numeroVoirie",
+            "in": "query",
+            "description": "Numéro de l’adresse dans la voie. Il est déterminé par les services municipaux et concerne les immeubles situés en bordure des voies publiques ou privées (ouvertes à la circulation publique)",
+            "required": true,
+            "example": "119",
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4
+            }
+          },
+          {
+            "name": "indiceRepetitionNumeroVoirie",
+            "in": "query",
+            "description": "Mention qui complète une numérotation de voirie. Il permet de différencier plusieurs adresses portant le même numéro dans la même voie",
+            "example": "B",
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1
+            }
+          },
+          {
+            "name": "etage",
+            "in": "query",
+            "description": "Donnée sur 2 caractères numériques destinée à identifier l’étage du local. Par convention le RDC est désigné par 00 et les niveaux en sous-sol par 81 (1er sous-sol), 82 (2ème sous-sol, …) Dans les immeubles collectifs, les dépendances de cave et parfois de stationnement peuvent détenir un numéro d’étage équivalent à celui du local principal qui lui est généralement associé (même propriétaire)",
+            "example": "01",
+            "schema": {
+              "type": "string",
+              "minLength": 2,
+              "maxLength": 2
+            }
+          },
+          {
+            "name": "codeNatureLocal",
+            "in": "query",
+            "description": "Code décrivant la nature du local. \n\nPour les locaux d’habitation : \r\n- AP = appartement \r\n- DA = dépendance d’appartement \r\n- DE = dépendance bâtie isolée ou assimilée \r\n- DM = dépendance de maison \r\n- LC = locaux communs \r\n- MA = maison \r\n- MP = maison partagée (maison à cheval sur 2 communes). \n\n Pour les locaux professionnels : \r\n- CB = local professionnel. \n\nD'autres natures de locaux (à la marge) sont également supportées, et dont les codes natures sont les suivants : \r\n- AT = antenne téléphonique \r\n- AU = autoroute \r\n- CF = local SNCF évalué par barème \r\n- ME = maison exceptionnelle d'habitation \r\n- SM = sol de maison \r\n- PP = port de plaisance \r\n- SH = shelter \r\n- U = établissement industriel \r\n- UE = local évalué au barème \r\n- UG = appareil a gaz \r\n- UN = usine nucléaire \r\n- NB = local «non bâti»",
+            "schema": {
+              "type": "string",
+              "minLength": 2,
+              "maxLength": 2,
+              "enum": [
+                "AP",
+                "DA",
+                "DE",
+                "DM",
+                "LC",
+                "MA",
+                "MP",
+                "CB",
+                "AT",
+                "AU",
+                "CF",
+                "ME",
+                "SM",
+                "PP",
+                "SH",
+                "U",
+                "UE",
+                "UG",
+                "UN",
+                "NB"
+              ]
+            }
+          },
+          {
+            "$ref": "#/components/parameters/jetonOAuth2"
+          },
+          {
+            "$ref": "#/components/parameters/correlationID"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Locaux retrouvés avec succès",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Liste des identifiants fiscaux des locaux retrouvés",
+                  "properties": {
+                    "listeIdentifiantsFiscaux": {
+                      "type": "array",
+                      "description": "Identifiants fiscaux des locaux (invariants). Chacun est composé de 12 caractères : 5 caractères représentant les codes Insee département et commune + 7 caractères réprésentant un numéro séquentiel",
+                      "example": [
+                        "920020145586",
+                        "920020145789"
+                      ],
+                      "items": {
+                        "type": "string",
+                        "example": "920020145586"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/badRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/notFound"
+          },
+          "429": {
+            "$ref": "#/components/responses/tooManyRequests"
+          },
+          "500": {
+            "$ref": "#/components/responses/internalServerError"
+          },
+          "503": {
+            "$ref": "#/components/responses/serviceUnavailable"
+          },
+          "default": {
+            "$ref": "#/components/responses/defaultErrors"
+          }
+        },
+        "security": [
+          {
+            "oAuth2": []
+          }
+        ]
+      }
+    },
+    "/locaux/parcelleCadastrale": {
+      "get": {
+        "tags": [
+          "Recherche de locaux par parcelle cadastrale"
+        ],
+        "summary": "Obtenir un ou plusieurs identifiants de locaux à partir de leur référence cadastrale de parcelle",
+        "operationId": "rechercheParIdCadastral",
+        "parameters": [
+          {
+            "name": "codeDepartementInsee",
+            "in": "query",
+            "description": "Code Insee du département de situation du local (sur 2 caractères pour les départements métropolitains, sur 3 caractères pour les DOM)",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 2,
+              "maxLength": 3
+            },
+            "examples": {
+              "DM": {
+                "value": "2A",
+                "summary": "Cas d'un département métropolitain"
+              },
+              "DOM": {
+                "value": "971",
+                "summary": "Cas d'un DOM"
+              }
+            }
+          },
+          {
+            "name": "codeCommuneCadastral",
+            "in": "query",
+            "description": "Le code commune cadastral est toujours sur 3 caractères. Il est identique au code Insee de la commune lorsqu’elle est située dans un département métropolitain. Sinon, pour les communes situées dans les DOM, il est composé du code Insee de la commune, précédé du dernier chiffre du code département. \n\n_NB : pour les communes de Lyon, Marseille et Paris, le code de la commune correspond au code Insee de l’arrondissement de situation du bien (exemple Paris, 20 arrondissements ⇒ 20 communes codes 101 à 120)_",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 3,
+              "maxLength": 3
+            },
+            "examples": {
+              "DM": {
+                "value": "435",
+                "summary": "Cas d'une commune d'un département métropolitain"
+              },
+              "DOM": {
+                "value": "106",
+                "summary": "Cas d'une commune d'un DOM (ex. Bouillante - Guadeloupe)"
+              }
+            }
+          },
+          {
+            "name": "codeCommuneAbsorbee",
+            "in": "query",
+            "description": "Dans le cas des fusions de communes, il s’agit du code cadastral de la commune absorbée, c.a.d. la commune originelle de situation géographique des biens. Exception : Pour Marseille et Toulouse il est renseigné avec le code quartier de la Commune",
+            "example": "150",
+            "schema": {
+              "type": "string",
+              "minLength": 3,
+              "maxLength": 3
+            }
+          },
+          {
+            "name": "codeSectionParcelle",
+            "in": "query",
+            "description": "La section cadastrale est l’une des composantes de la désignation cadastrale d’une parcelle. La section est un découpage infra-communal du plan cadastral. Le code section peut être composé de 1 à 2 lettres, ou, dans les départements d’alsace moselle composé de 2 chiffres",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2
+            },
+            "examples": {
+              "DM": {
+                "value": "B ou ZC",
+                "summary": "Cas général"
+              },
+              "DOM": {
+                "value": "14",
+                "summary": "Cas d'un département d’alsace moselle"
+              }
+            }
+          },
+          {
+            "name": "numeroPlanParcelle",
+            "in": "query",
+            "description": "Le numéro de plan est l’une des composantes de la désignation cadastrale d’une parcelle. Le numéro de plan est un découpage infra-section, il correspond à une portion de terrain d'un seul tenant appartenant à un même propriétaire. Il composé de 4 caractères numériques",
+            "required": true,
+            "example": "0013",
+            "schema": {
+              "type": "string",
+              "minLength": 4,
+              "maxLength": 4
+            }
+          },
+          {
+            "name": "etage",
+            "in": "query",
+            "description": "Donnée sur 2 caractères numériques destinée à identifier l’étage du local. Par convention le RDC est désigné par 00 et les niveaux en sous-sol par 81 (1er sous-sol), 82 (2ème sous-sol, …) Dans les immeubles collectifs, les dépendances de cave et parfois de stationnement peuvent détenir un numéro d’étage équivalent à celui du local principal qui lui est généralement associé (même propriétaire)",
+            "example": "02",
+            "schema": {
+              "type": "string",
+              "minLength": 2,
+              "maxLength": 2
+            }
+          },
+          {
+            "name": "codeNatureLocal",
+            "in": "query",
+            "description": "Code décrivant la nature du local. \n\nPour les locaux d’habitation : \r\n- AP = appartement \r\n- DA = dépendance d’appartement \r\n- DE = dépendance bâtie isolée ou assimilée \r\n- DM = dépendance de maison \r\n- LC = locaux communs \r\n- MA = maison \r\n- MP = maison partagée (maison à cheval sur 2 communes). \n\n Pour les locaux professionnels : \r\n- CB = local professionnel. \n\nD'autres natures de locaux (à la marge) sont également supportées, et dont les codes natures sont les suivants : \r\n- AT = antenne téléphonique \r\n- AU = autoroute \r\n- CF = local SNCF évalué par barème \r\n- ME = maison exceptionnelle d'habitation \r\n- SM = sol de maison \r\n- PP = port de plaisance \r\n- SH = shelter \r\n- U = établissement industriel \r\n- UE = local évalué au barème \r\n- UG = appareil a gaz \r\n- UN = usine nucléaire \r\n- NB = local «non bâti»",
+            "schema": {
+              "type": "string",
+              "minLength": 2,
+              "maxLength": 2,
+              "enum": [
+                "AP",
+                "DA",
+                "DE",
+                "DM",
+                "LC",
+                "MA",
+                "MP",
+                "CB",
+                "AT",
+                "AU",
+                "CF",
+                "ME",
+                "SM",
+                "PP",
+                "SH",
+                "U",
+                "UE",
+                "UG",
+                "UN",
+                "NB"
+              ]
+            }
+          },
+          {
+            "$ref": "#/components/parameters/jetonOAuth2"
+          },
+          {
+            "$ref": "#/components/parameters/correlationID"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Locaux retrouvés avec succès",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Liste des identifiants fiscaux des locaux retrouvés",
+                  "properties": {
+                    "listeIdentifiantsFiscaux": {
+                      "type": "array",
+                      "description": "Identifiants fiscaux des locaux (invariants). Chacun est composé de 12 caractères : 5 caractères représentant les codes Insee département et commune + 7 caractères réprésentant un numéro séquentiel",
+                      "example": [
+                        "920020145586",
+                        "920020145789"
+                      ],
+                      "items": {
+                        "type": "string",
+                        "example": "920020145586"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/badRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/notFound"
+          },
+          "429": {
+            "$ref": "#/components/responses/tooManyRequests"
+          },
+          "500": {
+            "$ref": "#/components/responses/internalServerError"
+          },
+          "503": {
+            "$ref": "#/components/responses/serviceUnavailable"
+          },
+          "default": {
+            "$ref": "#/components/responses/defaultErrors"
+          }
+        },
+        "security": [
+          {
+            "oAuth2": []
+          }
+        ]
+      }
+    },
+    "/etatSante": {
+      "get": {
+        "tags": [
+          "Vérification de l'état de santé de l'API"
+        ],
+        "summary": "Connaitre l'état de santé de l'API (test technique de type echo)",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/jetonOAuth2"
+          },
+          {
+            "$ref": "#/components/parameters/correlationID"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "L'API est disponible et opérationnelle",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "API opérationnelle",
+                  "required": [
+                    "message"
+                  ],
+                  "properties": {
+                    "message": {
+                      "type": "string",
+                      "example": "L'API est disponible et opérationnelle",
+                      "description": "Message de confirmation de la bonne santé de l'API"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/badRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/notFound"
+          },
+          "429": {
+            "$ref": "#/components/responses/tooManyRequests"
+          },
+          "500": {
+            "$ref": "#/components/responses/internalServerError"
+          },
+          "503": {
+            "$ref": "#/components/responses/serviceUnavailable"
+          },
+          "default": {
+            "$ref": "#/components/responses/defaultErrors"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "local": {
+        "type": "object",
+        "description": "Structure d'informations descriptives d'un local",
+        "properties": {
+          "etatLocal": {
+            "type": "object",
+            "description": "Informations sur l'état d'un local",
+            "required": [
+              "codeEtatLocal",
+              "dateEffetEtatLocal"
+            ],
+            "properties": {
+              "codeEtatLocal": {
+                "type": "string",
+                "enum": [
+                  "A",
+                  "D"
+                ],
+                "description": "Code désignant l’état d’un local : un local est actif (A) dès lors qu’il est achevé et détient une évaluation permettant d’assurer sa taxation fiscale. Un local démoli (D) est un local qui a été supprimé, soit parce qu’il a été démoli physiquement, soit parce qu’il a subi un changement profond d’évaluation (changement d’affectation, restructuration importante, réunion avec d’autres locaux par exemple)"
+              },
+              "dateEffetEtatLocal": {
+                "type": "string",
+                "format": "date-time",
+                "example": "2022-10-22T00:00:00.000Z",
+                "description": "Date de début d’effet de l’état du local, c.a.d date à partir de laquelle l’état du local détient la valeur qui lui est associée. Pour un état actif,  il s’agit en principe de la date de son achèvement. Pour un état démoli, il s’agit en principe de la date de sa démolition. Date au format ISO 8601 (voir RFC 3339, section 5.6)"
+              },
+              "codeMotifSuppressionLocal": {
+                "type": "string",
+                "enum": [
+                  "CA",
+                  "CX",
+                  "DL",
+                  "DT",
+                  "RL",
+                  "CU"
+                ],
+                "description": "Code décrivant le motif de la suppression du local dans le système d’information : \r\n- CA = suppression suite à un changement d’affectation \r\n- CX = suppression suite à un contentieux (réclamation de l’usager) \r\n- DL = suppression suite à une division de locaux \r\n- DT = suppression suite à une démolition totale \r\n- RL = suppression suite à un regroupement de locaux \r\n- CU = suppression suite à un changement d'utilisation"
+              }
+            }
+          },
+          "adresseLocal": {
+            "type": "object",
+            "description": "Structure de l'adresse d'un local",
+            "required": [
+              "codeDepartementInsee",
+              "libelleDepartement",
+              "codeCommuneInsee",
+              "libelleCommune",
+              "codeVoieTopo",
+              "libelleVoie",
+              "numeroVoirie"
+            ],
+            "properties": {
+              "codeDepartementInsee": {
+                "type": "string",
+                "example": "07",
+                "description": "Code Insee du département de situation du local (sur 2 caractères pour les départements métropolitains, sur 3 caractères pour les DOM)"
+              },
+              "libelleDepartement": {
+                "type": "string",
+                "example": "Ardèche",
+                "description": "Nom officiel du département de situation des biens"
+              },
+              "codeCommuneInsee": {
+                "type": "string",
+                "example": "112",
+                "description": "Code Insee de la commune de situation du bien (sur 3 caractères pour les départements métropolitains, sur 2 caractères pour les DOM). \n\n_NB : pour les communes de Lyon, Marseille et Paris, le code de la commune correspond au code Insee de l’arrondissement de situation du bien (exemple Paris, 20 arrondissements ⇒ 20 communes codes 101 à 120)_"
+              },
+              "libelleCommune": {
+                "type": "string",
+                "example": "Paris 05",
+                "description": "Nom officiel de la commune de situation des biens"
+              },
+              "codeVoieTopo": {
+                "type": "string",
+                "example": "4699",
+                "description": "Code topographique de la voie (Le fichier -Topo- géré par la DGFIP, anciennement fichier -Fantoir-, est mis à disposition sur data.gouv.fr). \n\n_NB : Le code topo de la voie est également restitué lors de la recherche d’une adresse sur le site national des adresses : https://adresse.data.gouv.fr/_"
+              },
+              "libelleVoie": {
+                "type": "string",
+                "example": "Rue de la Ferronnerie",
+                "description": "Nom complet de la voie ou du lieu-dit de l’adresse du bien"
+              },
+              "numeroVoirie": {
+                "type": "string",
+                "example": "119",
+                "description": "Numéro de l’adresse dans la voie. Il est déterminé par les services municipaux et concerne les immeubles situés en bordure des voies publiques ou privées (ouvertes à la circulation publique)"
+              },
+              "indiceRepetitionNumeroVoirie": {
+                "type": "string",
+                "example": "B",
+                "description": "Mention qui complète une numérotation de voirie. Il permet de différencier plusieurs adresses portant le même numéro dans la même voie."
+              }
+            }
+          },
+          "identifiantCadastral": {
+            "type": "object",
+            "description": "Informations d'identification cadastrale d'un local",
+            "required": [
+              "codeDepartementInsee",
+              "codeCommuneCadastral",
+              "codeSectionParcelle",
+              "numeroPlanParcelle",
+              "numeroBatiment",
+              "numeroEntree",
+              "etage",
+              "numeroPorte",
+              "nombreNiveaux"
+            ],
+            "properties": {
+              "codeDepartementInsee": {
+                "type": "string",
+                "example": "971",
+                "description": "Code Insee du département de situation du local (sur 2 caractères pour les départements métropolitains, sur 3 caractères pour les DOM)"
+              },
+              "codeCommuneCadastral": {
+                "type": "string",
+                "example": "435",
+                "description": "Le code commune cadastral est toujours sur 3 caractères. Il est identique au code Insee de la commune lorsqu’elle est située dans un département métropolitain. Sinon, pour les communes situées dans les DOM, il est composé du code Insee de la commune, précédé du dernier chiffre du code département. \n\n_NB : pour les communes de Lyon, Marseille et Paris, le code de la commune correspond au code Insee de l’arrondissement de situation du bien (exemple Paris, 20 arrondissements ⇒ 20 communes codes 101 à 120)_"
+              },
+              "codeCommuneAbsorbee": {
+                "type": "string",
+                "example": "002",
+                "description": "Dans le cas des fusions de communes, il s’agit du code cadastral de la commune absorbée, c.a.d. la commune originelle de situation géographique des biens. Exception : Pour Marseille et Toulouse il est renseigné avec le code quartier de la Commune"
+              },
+              "codeSectionParcelle": {
+                "type": "string",
+                "example": "BR",
+                "description": "La section cadastrale est l’une des composantes de la désignation cadastrale d’une parcelle. La section est un découpage infra-communal du plan cadastral. Le code section peut être composé de 1 à 2 lettres, ou, dans les départements d’alsace moselle composé de 2 chiffres"
+              },
+              "numeroPlanParcelle": {
+                "type": "string",
+                "example": "0013",
+                "description": "Le numéro de plan est l’une des composantes de la désignation cadastrale d’une parcelle. Le numéro de plan est un découpage infra-section, il correspond à une portion de terrain d'un seul tenant appartenant à un même propriétaire. Il composé de 4 caractères numériques"
+              },
+              "numeroBatiment": {
+                "type": "string",
+                "example": "02",
+                "description": "Numéro composé de 1 ou 2 caractères alphabétiques ou numériques. Lorsqu’il existe un seul bâtiment sur une parcelle, son numéro est généralement désigné par A"
+              },
+              "numeroEntree": {
+                "type": "string",
+                "example": "AA",
+                "description": "Numéro composé de 1 ou 2 caractères alphabétiques ou numériques. Lorsqu’il existe une seule entrée dans un bâtiment, son numéro est généralement désigné par 01"
+              },
+              "etage": {
+                "type": "string",
+                "example": "10",
+                "description": "Donnée sur 2 caractères numériques destinée à identifier l’étage du local. Par convention le RDC est désigné par 00 et les niveaux en sous-sol par 81 (1er sous-sol), 82 (2ème sous-sol, …) Dans les immeubles collectifs, les dépendances de cave et parfois de stationnement peuvent détenir un numéro d’étage équivalent à celui du local principal qui lui est généralement associé (même propriétaire)"
+              },
+              "numeroPorte": {
+                "type": "string",
+                "example": "01002",
+                "description": "Numéro composé de 5 caractères numériques généralement non signifiants."
+              },
+              "nombreNiveaux": {
+                "type": "integer",
+                "example": 3,
+                "description": "Nombre de niveaux du bâtiment dans lequel est situé le local"
+              }
+            }
+          },
+          "lotCopropriete": {
+            "type": "object",
+            "description": "Lot de copropriété d'un local",
+            "properties": {
+              "numeroLotCopropriete": {
+                "type": "string",
+                "example": "24",
+                "description": "Identifiant du lot de copropriété. Ce dernier représente une fraction d'un immeuble suite à sa division"
+              }
+            }
+          },
+          "descriptifGeneralLocal": {
+            "type": "object",
+            "description": "Descriptif général d'un local",
+            "required": [
+              "identifiantFiscalLocal",
+              "dateEffetLocal",
+              "codeChangementLocal",
+              "codeNatureLocal"
+            ],
+            "properties": {
+              "identifiantFiscalLocal": {
+                "type": "string",
+                "example": "920020145586",
+                "description": "Identifiant fiscal du local (invariant) composé de 12 caractères : 5 caractères représentant les codes Insee département et commune + 7 caractères réprésentant un numéro séquentiel"
+              },
+              "dateEffetLocal": {
+                "type": "string",
+                "format": "date-time",
+                "example": "2022-10-23T00:00:00.000Z",
+                "description": "Date de début d’effet du descriptif du local, c.a.d, date à partir de laquelle les données descriptives du local prennent effet. Date au format ISO 8601 (voir RFC 3339, section 5.6)"
+              },
+              "codeChangementLocal": {
+                "type": "string",
+                "enum": [
+                  "CN",
+                  "AC",
+                  "DP",
+                  "CA",
+                  "CC",
+                  "DT",
+                  "ME",
+                  "CX",
+                  "CU",
+                  "CI",
+                  "RL",
+                  "DL",
+                  "CE"
+                ],
+                "description": "Code décrivant l’origine de la dernière mise à jour effectuée pour le local dans le système d’information : \r\n- CN = construction neuve \r\n- AC = addition de construction \r\n- DP = démolition partielle \r\n- CA = changement d’affectation \r\n- CC = changement de consistance \r\n- DT = démolition totale \r\n- ME = modification des critères d’évaluation \r\n- CX = modification suite à contentieux \r\n- CU = changement d’utilisation d’un local \r\n- CI = changement de l’identification du local (bâtiment, entrée, niveau, porte, adresse) \r\n- RL = réunion de locaux \r\n- DL = division de locaux \r\n- CE = changement de méthode d’évaluation"
+              },
+              "codeNatureLocal": {
+                "type": "string",
+                "enum": [
+                  "AP",
+                  "DA",
+                  "DE",
+                  "DM",
+                  "LC",
+                  "MA",
+                  "MP",
+                  "CB",
+                  "AT",
+                  "AU",
+                  "CF",
+                  "ME",
+                  "SM",
+                  "PP",
+                  "SH",
+                  "U",
+                  "UE",
+                  "UG",
+                  "UN",
+                  "NB"
+                ],
+                "description": "Code décrivant la nature du local. \n\nPour les locaux d’habitation : \r\n- AP = appartement \r\n- DA = dépendance d’appartement \r\n- DE = dépendance bâtie isolée ou assimilée \r\n- DM = dépendance de maison \r\n- LC = locaux communs \r\n- MA = maison \r\n- MP = maison partagée (maison à cheval sur 2 communes). \n\n Pour les locaux professionnels : \r\n- CB = local professionnel. \n\nL’API est susceptible de restituer à la marge des locaux sans descriptif dont les codes natures sont les suivants : \r\n- AT = antenne téléphonique \r\n- AU = autoroute \r\n- CF = local SNCF évalué par barème \r\n- ME = maison exceptionnelle d'habitation \r\n- SM = sol de maison \r\n- PP = port de plaisance \r\n- SH = shelter \r\n- U = établissement industriel \r\n- UE = local évalué au barème \r\n- UG = appareil a gaz \r\n- UN = usine nucléaire \r\n- NB = local «non bâti»"
+              },
+              "codeTypeLocal": {
+                "type": "string",
+                "enum": [
+                  "1",
+                  "2",
+                  "3",
+                  "4"
+                ],
+                "description": "Les locaux sont rattachés à un type spécifique permettant dans certains cas d’affiner leur qualification : \r\n- 1 = appartement \r\n- 2 = maison \r\n- 3 = dépendance (il ne s’agit ici que d’une dépendance d’habitation, les dépendances d’activité étant classés dans la catégorie suivante) \r\n- 4 = local professionnel, commercial ou biens divers"
+              }
+            }
+          },
+          "descriptifHabitation": {
+            "type": "object",
+            "description": "Eléments de description complémentaires dans le cas d'un local d'habitation",
+            "properties": {
+              "surfaceDescriptifHabitation": {
+                "type": "integer",
+                "example": 25,
+                "description": "Surface réelle du local d’habitation (ou d’une de ses composantes dans le cas où le local est composé de plusieurs descriptifs (une partie principale + 1 à 4 dépendances incorporées)"
+              },
+              "codeDescriptifHabitation": {
+                "type": "string",
+                "enum": [
+                  "CN",
+                  "AC",
+                  "DP",
+                  "CA",
+                  "CC",
+                  "DT",
+                  "ME",
+                  "CX",
+                  "CU",
+                  "CI",
+                  "RL",
+                  "DL",
+                  "CE"
+                ],
+                "description": "Le code descriptif définit le type de descriptif d’habitation composant le local. \n\nSi le local est une maison, il détient toujours une partie principale (PP) et, le cas échéant 1 à 4 dépendances incorporées de nature = CV, GA, GR ou TT. \n\nSi le local est un appartement il détient toujours une partie principale (PP) et, le cas échéant 1 dépendance incorporée de nature = TT. \n\nPour une dépendance d’habitation, le local détient 1 dépendance de nature différente de PP. Il peut prendre les valeurs suivantes : \r\n- PP = partie principale \r\n- GA = garage \r\n- BX = box \r\n- PK = parking \r\n- CV = cave \r\n- DC = dépendance locaux communs \r\n- CL = cellier \r\n- BD = buanderie \r\n- BC = bûcher \r\n- RS = remise \r\n- GR = grenier \r\n- TR = terrasse \r\n- PI = pièce indépendante \r\n- PA = pur agrément \r\n- JH = jardin d'hiver \r\n- PS = piscine \r\n- SR = serre"
+              },
+              "nombrePiecesPrincipalesHabitation": {
+                "type": "integer",
+                "example": 3,
+                "description": "Concerne uniquement les descriptifs d’habitation dont le code descriptif est égale à PP (partie principale). Il s’agit du nombre de pièces principales comprises dans l’habitation (hors dépendances). Il résulte du total de Nb de salles à manger + Nb de cuisines + Nb de chambres + Nb de salle d'eau"
+              }
+            }
+          },
+          "descriptifLocalProfessionnel": {
+            "type": "object",
+            "description": "Eléments de description complémentaires dans le cas d'un local professionnel",
+            "properties": {
+              "categorieLocalProfessionnel": {
+                "type": "string",
+                "example": "MAG2",
+                "description": "Catégorie révisée du local professionnel. (cf. liste des catégories dans la déclaration 6660-REV : https://www.impots.gouv.fr/formulaire/6660-rev/declaration-dun-local-usage-professionnel)"
+              },
+              "surfacePrincipaleLocalProfessionnel": {
+                "type": "integer",
+                "example": 58,
+                "description": "Surface au sol (en m²) des parties principales du local, parties essentielles à l’exercice de l’activité"
+              },
+              "surfaceInterieureAnnexeLocalProfessionnel": {
+                "type": "integer",
+                "example": 40,
+                "description": "Surface au sol (en m²) des parties annexes du local, parties moins importantes à l’exercice de l’activité"
+              },
+              "surfaceExterieureAnnexeLocalProfessionnel": {
+                "type": "integer",
+                "example": 15,
+                "description": "Surface au sol (en m²) des parties annexes non couvertes du local (dépôt et stockage extérieur)"
+              },
+              "surfaceStationnementCouvertLocalProfessionnel": {
+                "type": "integer",
+                "example": 4,
+                "description": "Surface au sol (en m²) des parties couvertes réservées à l’usage du stationnement (emplacement de parking et circulations)"
+              },
+              "surfaceStationnementExterieurLocalProfessionnel": {
+                "type": "integer",
+                "example": 5,
+                "description": "Surface au sol (en m²) réservées à l’usage du stationnement en extérieur (emplacement de parking et circulations)"
+              }
+            }
+          }
+        }
+      },
+      "erreur": {
+        "type": "object",
+        "properties": {
+          "erreur": {
+            "required": [
+              "horodatage",
+              "message"
+            ],
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string",
+                "description": "Code d'erreur interne à l'application métier quand il existe (facultatif)\n",
+                "example": "15403"
+              },
+              "message": {
+                "type": "string",
+                "description": "Message d'erreur explicite\n",
+                "example": "Ceci est l'explication de l'erreur"
+              },
+              "horodatage": {
+                "type": "string",
+                "description": "Horodatage de l'erreur au format ISO 8601 (voir RFC 3339, section 5.6)\n",
+                "format": "date-time",
+                "example": "2019-03-21T09:00:00Z"
+              }
+            },
+            "description": "Structure standard d'un message d'erreur"
+          }
+        }
+      }
+    },
+    "responses": {
+      "badRequest": {
+        "description": "La requête est mal formée ou contient des paramètres invalides",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/erreur"
+            }
+          }
+        }
+      },
+      "notFound": {
+        "description": "Les informations demandées sont introuvables",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/erreur"
+            }
+          }
+        }
+      },
+      "unauthorized": {
+        "description": "Vous n’est pas autorisé à accéder à ces informations",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/erreur"
+            }
+          }
+        }
+      },
+      "forbidden": {
+        "description": "Les informations demandées sont non communicables",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/erreur"
+            }
+          }
+        }
+      },
+      "tooManyRequests": {
+        "description": "La limite de requêtes autorisées a été dépassée",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/erreur"
+            }
+          }
+        }
+      },
+      "internalServerError": {
+        "description": "Une erreur inattendue s'est produite au niveau du serveur",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/erreur"
+            }
+          }
+        }
+      },
+      "serviceUnavailable": {
+        "description": "Le service est temporairement indisponible",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/erreur"
+            }
+          }
+        }
+      },
+      "defaultErrors": {
+        "description": "Autres erreurs (retournées majoritairement par la plateforme d'API Management, _voir le guide pratique partenaire présent dans l'onglet [documentation](https://api.dgfip.finances.gouv.fr)_)",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/erreur"
+            },
+            "examples": {
+              "ErreurJetonInvalide": {
+                "description": "Utilisation d'un jeton d'authentification invalide ou expiré. (_voir le guide pratique partenaire présent dans l'onglet [documentation](https://api.dgfip.finances.gouv.fr)_)",
+                "value": {
+                  "erreur": {
+                    "code": "900901",
+                    "message": "Invalid Credentials",
+                    "horodatage": "2021-06-16T18:50:58+02:00"
+                  }
+                }
+              },
+              "ErreurJetonAbsent": {
+                "description": "Le jeton d'authentification n'est pas présent dans l'en-tête Authorization de la requête. (_voir le guide pratique partenaire présent dans l'onglet [documentation](https://api.dgfip.finances.gouv.fr)_)",
+                "value": {
+                  "erreur": {
+                    "code": "900902",
+                    "message": "Missing Credentials",
+                    "horodatage": "2021-06-16T18:52:12+02:00"
+                  }
+                }
+              },
+              "ErreurScope": {
+                "description": "Utilisation d'un jeton d'authentification ne présentant pas les scopes nécessaires à l'appel de la ressource ciblée. (_voir le guide pratique partenaire présent dans l'onglet [documentation](https://api.dgfip.finances.gouv.fr)_)",
+                "value": {
+                  "erreur": {
+                    "code": "900910",
+                    "message": "The access token does not allow you to access the requested resource",
+                    "horodatage": "2020-11-06T10:50:03+01:00"
+                  }
+                }
+              },
+              "ErreurIdCorrelationAbsent": {
+                "description": "L'identifiant de corrélation est absent de la requête dans l'en-tête X-Correlation-ID. (_voir le guide pratique partenaire présent dans l'onglet [documentation](https://api.dgfip.finances.gouv.fr)_)",
+                "value": {
+                  "erreur": {
+                    "code": "910000",
+                    "message": "Le paramètre X-Correlation-ID n'est pas présent dans le header HTTP",
+                    "horodatage": "2021-06-167T18:57:37+0200"
+                  }
+                }
+              },
+              "ErreurQuotaAtteint": {
+                "description": "Le quota d'appel souscrit a été dépassé. (_voir le guide pratique partenaire présent dans l'onglet [documentation](https://api.dgfip.finances.gouv.fr)_)",
+                "value": {
+                  "erreur": {
+                    "code": "900804",
+                    "message": "Message throttled out",
+                    "horodatage": "2021-05-06T20:55:58+02:00"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "oAuth2": {
+        "type": "oauth2",
+        "description": "Protocole permettant d'obtenir un jeton d'accès à l'API",
+        "flows": {
+          "clientCredentials": {
+            "tokenUrl": "https://gw.dgfip.finances.gouv.fr/token",
+            "scopes": {}
+          }
+        }
+      }
+    },
+    "parameters": {
+      "jetonOAuth2": {
+        "name": "Authorization",
+        "in": "header",
+        "description": "Jeton d'accès (access token OAuth2) au format JWT précédement récupéré par un appel à la gateway _(voir le guide pratique partenaire présent dans l'onglet [documentation](https://api.dgfip.finances.gouv.fr))_, précédé du préfixe `Bearer`",
+        "required": true,
+        "example": "Bearer eyJ4NXQiOiJNR1E1WW1KbU5qRTNO- […] QkslUQD5z9RQORJpZdh_JQZh3Gx5n1 9pJJr1ia5DtOFxo5IzvUPQo-UowZBWX2k2A",
+        "schema": {
+          "type": "string"
+        }
+      },
+      "correlationID": {
+        "name": "X-Correlation-ID",
+        "in": "header",
+        "description": "Identifiant de corrélation de la requête (au format UUID) pour la traçabilité de bout en bout de l'appel (généré et transmis par le client)",
+        "required": true,
+        "example": "123e4567-e89b-12d3-a456-426655440000",
+        "schema": {
+          "type": "string",
+          "format": "uuid",
+          "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"
+        }
+      }
+    }
+  }
+}
