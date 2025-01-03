@@ -7,8 +7,6 @@ datapass_link: https://datapass.api.gouv.fr/api-rial-sandbox
 access_page:
   - who:
       - Un particulier
-      - Une entreprise
-      - Un établissement bancaire
     is_eligible: -1
     description: |
       Vous n’êtes pas autorisé à accéder aux données de l’API RIAL (Répertoire Inter-Administratif des Locaux).
@@ -18,18 +16,16 @@ access_page:
       - Une entité administrative
     is_eligible: 1
     description: |
-      Conformément aux dispositions de <External href="https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367412&dateTexte=&categorieLien=cid">l'article L114-8</External> du *code des relations entre le public et l'administration*, seules les administrations sont habilitées à échanger entre elles des informations ou données strictement nécessaires pour traiter une démarche.
+      Conformément aux dispositions de <External href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000036588629">l'article L107</External> et <External href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000025176297">R* 107 A-7</External> du *livre des procédures fiscales*, ainsi que de <External href="https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000020883923/2021-07-02">l'article 4</External> de l'arrêté du 16 août 1984 (arrêté CNIL relatif à l'application Majic3), seules les administrations sont habilitées à échanger entre elles des informations ou données strictement nécessaires pour traiter une démarche.
 
       Pour obtenir l’accès à l’API, vous devez notamment **justifier d'une simplification pour les citoyens** et vous engager à n'accéder qu’aux données strictement nécessaires à la démarche conformément au principe de proportionnalité.
 
       <Button href="https://datapass.api.gouv.fr/api-rial-sandbox">Remplir une demande</Button>
   - who:
-      - Un éditeur de logiciel
+      - Une entreprise
     is_eligible: 0
     description: |
-      Si vous êtes éditeur de logiciels et agissez pour le compte d'une administration ou d'une collectivité, vous pouvez remplir une demande d'habilitation à l'API RIAL en bac à sable.
-
-      En conséquence, les informations restituées par l'API RIAL ne peuvent être communiquées qu’aux personnes, organismes ou autorités bénéficiant d’une telle mesure et dans la limite fixée par la loi.
+     Conformément aux dispositions de <External href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000036588629">l'article L107</External> et <External href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000025176297">R* 107 A-7</External> du *livre des procédures fiscales*, ainsi que de <External href="https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000020883923/2021-07-02">l'article 4</External> de l'arrêté du 16 août 1984 (arrêté CNIL relatif à l'application Majic3), vous pouvez obtenir une habilitation aux données exposées par l'API RIAL sous conditions.
 
       Pour obtenir un agrément, vous devez **justifier du cadre juridique** dans lequel s’inscrit votre demande.
 
