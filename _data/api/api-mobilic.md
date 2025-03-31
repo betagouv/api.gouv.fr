@@ -15,9 +15,9 @@ access_page:
       - Un éditeur de logiciel des secteurs du transport léger et du déménagement
     is_eligible: 1
     description: |
-      L'API est accessible aux éditeurs, vous devrez créer un compte pour accéder à l'API
+      L’API est accessible aux éditeurs. Prenez contact avec l’équipe en écrivant à interfacage@mobilic.beta.gouv.fr
 
-      <Button href="https://developers.mobilic.beta.gouv.fr/guides/oauth">Demander un accès</Button>
+      <Button href="https://developers.mobilic.beta.gouv.fr/">Consulter la documentation</Button>
   - who:
       - Une entreprise
     is_eligible: 0
@@ -27,7 +27,7 @@ access_page:
       - les éditeurs de solutions du secteur des transports
       - les entreprises de livraison et de transports routiers
 
-      <Button href="https://developers.mobilic.beta.gouv.fr/guides/oauth">Demander un accès</Button>
+      <Button href="https://developers.mobilic.beta.gouv.fr/">Consulter la documentation API</Button>
 partners:
   - DINUM
 producer: mtes
