@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: ${{ env.node-version }}
       - name: Cache node modules
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         id: restore-dependencies
         env:
           cache-name: cache-node-modules
@@ -48,7 +48,7 @@ jobs:
         with:
           node-version: ${{ env.node-version }}
       - name: Load node modules
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         id: restore-dependencies
         env:
           cache-name: cache-node-modules
@@ -81,7 +81,7 @@ jobs:
         with:
           node-version: ${{ env.node-version }}
       - name: Load node modules
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         id: restore-dependencies
         env:
           cache-name: cache-node-modules
@@ -89,7 +89,7 @@ jobs:
           path: ./node_modules
           key: ${{ runner.os }}-npm-cache-${{ hashFiles('**/package-lock.json') }}
       - run: npm run build
-      - uses: actions/cache@v2
+      - uses: actions/cache@v4
         id: restore-build
         with:
           path: ./*
@@ -107,7 +107,7 @@ jobs:
         with:
           node-version: ${{ env.node-version }}
       - name: Load node modules
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         id: restore-dependencies
         env:
           cache-name: cache-node-modules
