@@ -42,9 +42,6 @@ const API: React.FC<IProps> = ({ api, guides }) => {
       <div id="description" className="fr-container">
         <div className="text-style">
           <ApiDescription
-            guides={guides}
-            body={body}
-            content_intro={content_intro}
             title={title}
           />
         </div>
