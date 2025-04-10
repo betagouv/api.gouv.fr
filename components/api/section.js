@@ -7,17 +7,19 @@ const Section = ({ id, title, children }) => {
         This is a hidden anchor. It is a trick to avoid having the header hiding
         the top of the page.
       </a>
-      <h2 className="ui dividing header">
-        <a
-          href={`#${id}`}
-          aria-hidden="true"
-          tabIndex="-1"
-          className="header-anchor"
-        >
-          #
-        </a>
-        {title}
-      </h2>
+      {title && (
+        <h2 className="ui dividing header">
+          <a
+            href={`#${id}`}
+            aria-hidden="true"
+            tabIndex="-1"
+            className="header-anchor"
+          >
+            #
+          </a>
+          {title}
+        </h2>
+      )}
 
       {children}
 

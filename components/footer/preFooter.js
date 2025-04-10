@@ -21,7 +21,7 @@ const PreFooter = ({ background }) => (
       </div>
       <div>
         <p>Vous voulez partager une API ?</p>
-        <ButtonLink href={constants.links.ADD_API} alt>
+        <ButtonLink href="https://guides.data.gouv.fr/guide-data.gouv.fr/api/publier-une-api" alt>
           Partager votre API
         </ButtonLink>
       </div>

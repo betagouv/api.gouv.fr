@@ -13,7 +13,6 @@ import {
 import Page from '../../layouts';
 
 import {
-  PageHeader,
   Access,
   SupportAndTeam,
   Partners,
@@ -26,7 +25,6 @@ import ApiDetails from '../../components/api/apiDetails';
 import { HEADER_PAGE } from '../../components';
 
 import constants from '../../constants';
-import Feedback from '../../components/feedback';
 import { IDataGouvDataset, fetchDatagouvDatasets } from '../../components/api/apiOpenDataSources';
 
 interface IProps {
@@ -74,92 +72,23 @@ const API: React.FC<IProps> = ({ api, guides, datagouvDatasets }) => {
       canonical={`https://api.gouv.fr/les-api/${slug}`}
       usePreFooter={!hide_pre_footer}
     >
-      <PageHeader
-        title={title}
-        logo={logo || constants.logo}
-        tagline={tagline}
-        owner={owner}
-        owner_acronym={owner_acronym}
-        owner_slug={owner_slug}
-      />
-
       <div id="description" className="fr-container">
-        <div className="right-column-grid">
-          <div className="left-column text-style">
-            <ApiDescription
-              guides={guides}
-              body={body}
-              content_intro={content_intro}
-              title={title}
-            />
+        <div className="text-style">
+          <ApiDescription
+            guides={guides}
+            body={body}
+            content_intro={content_intro}
+            title={title}
+          />
 
-            {datagouvDatasets.length > 0 && (
-              <ApiOpenDataSources datasetsList={datagouvDatasets} />
-            )}
-
-            <Feedback />
-          </div>
-          <div className="right-column info-column">
-            <Access
-              is_open={is_open}
-              slug={slug}
-              doc_swagger_link={doc_tech_link}
-              doc_external_link={doc_tech_external}
-              account_link={account_link}
-            />
-            <SupportAndTeam
-              logo={logo}
-              owner={owner}
-              owner_acronym={owner_acronym}
-              owner_slug={owner_slug}
-              link={contact_link}
-            />
-            <TechnicalDocumentation
-              swagger_link={doc_tech_link}
-              external_link={doc_tech_external}
-              slug={slug}
-            />
-            <ApiDetails
-              monitoring={monitoring_description}
-              monitoring_link={monitoring_link}
-              rate_limiting={rate_limiting_description}
-              rate_limiting_resume={rate_limiting_resume}
-              rate_limiting_link={rate_limiting_link}
-              stats_detail={stats_detail_description}
-              stats_detail_resume={stats_detail_resume}
-              stats_detail_link={stats_detail_link}
-              uptime={uptime}
-              is_france_connected={is_france_connected}
-            />
-
-            <Partners partners={partners} />
-          </div>
+          {datagouvDatasets.length > 0 && (
+            <ApiOpenDataSources datasetsList={datagouvDatasets} />
+          )}
         </div>
       </div>
       <style jsx>{`
         #description {
           margin-bottom: 70px;
-        }
-
-        .right-column-grid {
-          display: grid;
-          grid-template-columns: 65% 31%;
-          grid-gap: 40px;
-        }
-
-        .info-column {
-          border-left: 2px solid ${constants.colors.lightBlue};
-          padding: 0 0 0 40px;
-        }
-        @media only screen and (min-width: 1px) and (max-width: 900px) {
-          .right-column-grid {
-            display: flex;
-            flex-direction: column-reverse;
-          }
-          .info-column {
-            border: none;
-            padding: 0;
-          }
         }
       `}</style>
     </Page>

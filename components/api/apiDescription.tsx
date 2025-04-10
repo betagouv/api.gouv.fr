@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { RichLink } from '../../uiComponents';
 import RichReactMarkdown from '../../components/richReactMarkdown';
-import Section from '../../components/api/section';
 import { IGuideElementShort } from '../../model';
 import { H3WithAnchor } from '../../uiComponents/titleWithAnchor';
 import slugify from 'slugify';
@@ -11,42 +10,76 @@ const ApiDescription: React.FC<{
   body: string;
   guides: IGuideElementShort[];
   title: string;
-}> = ({ content_intro, guides, body, title }) => (
-  <Section id="api-description" title="Description">
-    <>
-      <div style={{backgroundColor: "#FFE9E6", color: "#B34000", padding: "1rem"}}>
-        <strong>⚠️ Ces informations ne sont plus mises à jour depuis le 20/11/2024.</strong><br />
-        Le site API.gouv.fr va progressivement être fusionné dans le catalogue unique data.gouv.fr. <br /><br />
-        Retrouvez la fiche d'information à jour de cette API sur la nouvelle page API de Data.gouv.fr <a href={`https://data.gouv.fr/fr/dataservices/${slugify(title.replace(/[|&$%<>]/g, ""))}`} target="_blank" rel="noopener noreferrer">⇢ Consulter la fiche à jour</a>
+}> = ({ title }) => {
+  const [searchQuery, setSearchQuery] = useState(title);
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    const encodedQuery = encodeURIComponent(searchQuery);
+    window.location.href = `https://www.data.gouv.fr/fr/dataservices/?q=${encodedQuery}`;
+  };
+
+  return (
+    <div className="deprecation-notice">
+      <div className="search-container">
+        <h1>Rechercher "{title}" sur data.gouv.fr</h1>
+        <form onSubmit={handleSearch} className="search-form">
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder="Rechercher sur data.gouv.fr..."
+            className="search-input"
+          />
+          <button type="submit" className="search-button">
+            Rechercher sur data.gouv.fr
+          </button>
+        </form>
       </div>
-      
-      {content_intro && <RichReactMarkdown source={content_intro} />}
-      {guides.length > 0 && (
-        <>
-          <H3WithAnchor>Exemples d’application</H3WithAnchor>
-          <div className="default-grid api-examples">
-            {guides.map(guide => (
-              <RichLink
-                key={guide.slug}
-                title={guide.title}
-                image={
-                  guide.image
-                    ? `/images/guides/thumbnail_${guide.image}`
-                    : undefined
-                }
-                href={`/guides/${guide.slug}`}
-              />
-            ))}
-          </div>
-        </>
-      )}
-      <RichReactMarkdown source={body} />
-    </>
-    <style jsx>{`
-      .api-examples {
-        margin-bottom: 40px;
-      }
-    `}</style>
-  </Section>
-);
+
+      <style jsx>{`
+        .deprecation-notice {
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 2rem;
+        }
+
+        .search-container {
+          text-align: center;
+          margin-top: 2rem;
+        }
+
+        .search-form {
+          display: flex;
+          gap: 1rem;
+          max-width: 600px;
+          margin: 5rem auto;
+        }
+
+        .search-input {
+          flex: 1;
+          padding: 0.75rem;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          font-size: 1rem;
+        }
+
+        .search-button {
+          padding: 0.75rem 1.5rem;
+          background-color: #000091;
+          color: white;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          font-size: 1rem;
+        }
+
+        .search-button:hover {
+          background-color: #1212ff;
+        }
+      `}</style>
+    </div>
+  );
+};
+
 export default ApiDescription;
