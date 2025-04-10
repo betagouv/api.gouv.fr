@@ -1,14 +1,6 @@
 import React, { useState } from 'react';
-import { RichLink } from '../../uiComponents';
-import RichReactMarkdown from '../../components/richReactMarkdown';
-import { IGuideElementShort } from '../../model';
-import { H3WithAnchor } from '../../uiComponents/titleWithAnchor';
-import slugify from 'slugify';
 
 const ApiDescription: React.FC<{
-  content_intro?: string;
-  body: string;
-  guides: IGuideElementShort[];
   title: string;
 }> = ({ title }) => {
   const [searchQuery, setSearchQuery] = useState(title);
