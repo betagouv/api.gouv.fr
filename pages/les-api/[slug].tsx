@@ -11,20 +11,17 @@ import {
 import Page from '../../layouts';
 
 import {
-  ApiOpenDataSources,
   ApiDescription,
 } from '../../components/api';
 
 import { HEADER_PAGE } from '../../components';
-import { IDataGouvDataset, fetchDatagouvDatasets } from '../../components/api/apiOpenDataSources';
 
 interface IProps {
   api: IApi;
   guides: IGuideElementShort[];
-  datagouvDatasets: IDataGouvDataset[];
 }
 
-const API: React.FC<IProps> = ({ api, guides, datagouvDatasets }) => {
+const API: React.FC<IProps> = ({ api, guides }) => {
   const {
     slug,
     title,
@@ -50,10 +47,6 @@ const API: React.FC<IProps> = ({ api, guides, datagouvDatasets }) => {
             content_intro={content_intro}
             title={title}
           />
-
-          {datagouvDatasets.length > 0 && (
-            <ApiOpenDataSources datasetsList={datagouvDatasets} />
-          )}
         </div>
       </div>
       <style jsx>{`
@@ -88,8 +81,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   //@ts-ignore
   const api = await getAPI(slug);
 
-  const datagouvDatasets = await fetchDatagouvDatasets(api.datagouv_uuid || []);
-
   const allGuides = await getAllGuides();
   const guides = allGuides
     .filter(guide => {
@@ -100,7 +91,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       return { title, slug, image };
     });
 
-  return { props: { api, guides, datagouvDatasets } };
+  return { props: { api, guides } };
 };
 
 export default API;
