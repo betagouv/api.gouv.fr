@@ -18,7 +18,7 @@ La base juridique d'accès aux données est le code des relations entre le publi
 
 ## Les données à caractères personnel qui peuvent être enregistrées
 
-Pour la gestion de l'accès aux téléservices, en fonction du niveau d'identification requis par lesdits téléservices :
+Pour la gestion de l'accès aux téléservices, en fonction du niveau d'identification requis par les dits téléservices :
 
 - l'identifiant de connexion choisi par l'usager
 - le mot de passe choisi par l'usager
@@ -33,18 +33,18 @@ Pour l'accomplissement des démarches administratives :
 
 Par ailleurs, pour certaine démarche, un texte réglementaire peut lister précisément les informations qui peuvent être demandées aux usagers.
 
-## Est-il besoin de faire une nouvelle délibération pour accéder à API Particulier ?
+## Y a t-il besoin de faire une nouvelle délibération pour accéder à API Particulier ?
 
-Oui ! Il est indispensable de fournir l'acte/ la délibération qui fixe les conditions tarifaires qui permettra d'apprécier finement le droit d'accès à chaque donnée.
+**Non, pas forcément.**
+Il est indispensable de fournir l'acte/la délibération qui fixe les conditions tarifaires qui permettra d'apprécier finement le droit d'accès à chaque donnée.
+La délibération doit préciser les données dont vous avez besoin pour la démarche. Par exemple, si l'adresse de l'usager est collectée dans votre traitement ou qu'elle est une condition de l'attribution d'un avantage, il convient de le préciser.
 
-Eventuellement : vous pouvez retrouver une délibération passée qui expose le mode de fonctionnement d'une démarche. Par exemple dans le cadre d'une facturation de prestation enfance : une délibération avec les barèmes appliqués suivant le montant du quotient familial est le type de délibération nécessaire et suffisant.
+Si il existe une délibération passée qui fixe la tarification, il n'est pas nécessaire d'en produire une nouvelle.
 
-Une délibération qui dirait "le conseil communal décide d'utiliser API Particulier pour consommer les données CAF en vue de simplifier la démarche" manquerait de précision sur la finalité des données nécessaires et ne permettrait pas de vérifier le respect de la minimisation des données appelées.
+## Pour différentes données, voici des exemples de finalités valides
 
-## Pour différentes données, voilà des exemples de finalités valides
 
-- pour le revenu fiscal de référence produit par la Direction générale des finances publiques, quelques finalités possibles : le revenu fiscal de référence apparait dans les grilles de tarifs, les barèmes d'attribution d'aides en prennent compte, il fait office de quotient familial par défaut quand la CAF ne renvoie pas de données (car le citoyen est immatriculé à la MSA ou radié de la CAF par exemple)
-- pour l'adresse DGFiP/CAF : le tarif est différent suivant que la personne habite ou non sur le territoire
+- pour l'adresse : le tarif est différent suivant que la personne habite ou non sur le territoire
 - pour le quotient familial de la CAF : une grille tarifiaire dépendant du quotient
 - pour les allocataires connus de la CAF : la vérification de l'identité des parents associés au numéro d'allocataire
 - pour les enfants connus de la CAF : les tarifs ou les aides suivant le nombre d'enfants
