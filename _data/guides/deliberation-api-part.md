@@ -18,7 +18,7 @@ La base juridique d'accès aux données est le code des relations entre le publi
 
 ## Les données à caractères personnel qui peuvent être enregistrées
 
-Pour la gestion de l'accès aux téléservices, en fonction du niveau d'identification requis par lesdits téléservices :
+Pour la gestion de l'accès aux téléservices, en fonction du niveau d'identification requis par les dits téléservices :
 
 - l'identifiant de connexion choisi par l'usager
 - le mot de passe choisi par l'usager
@@ -33,15 +33,15 @@ Pour l'accomplissement des démarches administratives :
 
 Par ailleurs, pour certaine démarche, un texte réglementaire peut lister précisément les informations qui peuvent être demandées aux usagers.
 
-## Est-il besoin de faire une nouvelle délibération pour accéder à API Particulier ?
+## Y a t-il besoin de faire une nouvelle délibération pour accéder à API Particulier ?
 
-**Non pas forcement.**
-Il est indispensable de fournir l'acte/ la délibération qui fixe les conditions tarifaires qui permettra d'apprécier finement le droit d'accès à chaque donnée.
+**Non, pas forcément.**
+Il est indispensable de fournir l'acte/la délibération qui fixe les conditions tarifaires qui permettra d'apprécier finement le droit d'accès à chaque donnée.
 La délibération doit préciser les données dont vous avez besoin pour la démarche. Par exemple, si l'adresse de l'usager est collectée dans votre traitement ou qu'elle est une condition de l'attribution d'un avantage, il convient de le préciser.
 
-Si il existe une délibération passée qui fixe la tarificatio il n'est pas nécessaire d'en produire une nouvelle.
+Si il existe une délibération passée qui fixe la tarification, il n'est pas nécessaire d'en produire une nouvelle.
 
-## Pour différentes données, voilà des exemples de finalités valides
+## Pour différentes données, voici des exemples de finalités valides
 
 
 - pour l'adresse : le tarif est différent suivant que la personne habite ou non sur le territoire
