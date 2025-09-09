@@ -9,7 +9,7 @@ const RechercherApi: React.FC = () => {
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     const encodedQuery = encodeURIComponent(searchQuery);
-    window.location.href = `https://www.data.gouv.fr/fr/dataservices/?q=${encodedQuery}`;
+    window.location.href = `https://www.data.gouv.fr/dataservices/search?q=${encodedQuery}`;
   };
 
   return (
