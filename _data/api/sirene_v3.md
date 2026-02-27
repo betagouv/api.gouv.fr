@@ -1,5 +1,5 @@
 ---
-title: API Sirene
+title: API Sirene dont unités à diffusion partielle
 tagline: Accéder aux informations concernant les entreprises et les établissements immatriculés au répertoire interadministratif Sirene de l'Insee
 external_site: https://api.insee.fr
 producer: insee
