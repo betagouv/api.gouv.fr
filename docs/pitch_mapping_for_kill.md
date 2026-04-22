@@ -25,3 +25,9 @@ For example :
 - the final mapping is https://api.gouv.fr/les-api/impot-particulier -> https://www.data.gouv.fr/dataservices/672cf984cbc098058850c092
 
 If there is no result, leave the new page empty in the mapping, and make me a summary of the not found at the end.
+
+
+## Map github files
+
+I want to add columns to the docs/api_mappings.csv and docs/guides_mapping.csv . The new column is "old_content", and comes second.
+In this column, add a link to the file of the api or guide on github.
