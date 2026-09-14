@@ -9,7 +9,7 @@ const formatApiWithOwner = producers => (slug, data) => {
     producer => producer.slug === document.attributes.producer
   );
 
-  if (!producer.name) {
+  if (!producer || !producer.name) {
     throw new Error(
       `No matching producer for : ${document.attributes.producer} - in API : ${slug}`
     );
